@@ -1,0 +1,271 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------
+   GraceWell design tokens
+   Enterprise data-engineering palette: midnight navy, near-black, white,
+   soft gray, with electric blue / cyan / teal used sparingly as accent.
+------------------------------------------------------------------- */
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  --font-display: var(--font-manrope), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", "SF Mono", Menlo, Consolas, monospace;
+
+  --color-ink-950: #04060c;
+  --color-ink-900: #070b15;
+  --color-ink-800: #0b1120;
+
+  --color-navy-950: #050a18;
+  --color-navy-900: #081124;
+  --color-navy-850: #0a1830;
+  --color-navy-800: #0d2044;
+  --color-navy-700: #123063;
+  --color-navy-600: #1a4287;
+
+  --color-mist-50: #f8fafc;
+  --color-mist-100: #f1f5f9;
+  --color-mist-200: #e4eaf2;
+  --color-mist-300: #cfd8e6;
+  --color-mist-400: #a3b0c4;
+  --color-mist-500: #5f6d82;
+  --color-mist-600: #4a5768;
+
+  --color-accent-300: #8ab4ff;
+  --color-accent-400: #5b93ff;
+  --color-accent-500: #2f6bff;
+  --color-accent-600: #1a4fe0;
+  --color-accent-700: #143cb0;
+
+  --color-cyan-400: #38d9f0;
+  --color-cyan-500: #12b8d6;
+  --color-teal-400: #2fd8a8;
+  --color-teal-500: #12a97f;
+
+  --shadow-elevate: 0 1px 2px rgba(8, 17, 36, 0.04), 0 12px 32px -12px rgba(8, 17, 36, 0.14);
+  --shadow-lift: 0 2px 4px rgba(8, 17, 36, 0.05), 0 24px 48px -20px rgba(8, 17, 36, 0.22);
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --border-hairline: color-mix(in oklab, var(--color-navy-900) 10%, transparent);
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+
+  * {
+    border-color: var(--border-hairline);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: var(--color-ink-900);
+    font-family: var(--font-sans);
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.022em;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: var(--color-accent-500);
+    color: #ffffff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent-500);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  .dark-section :focus-visible {
+    outline-color: var(--color-accent-300);
+  }
+}
+
+@layer components {
+  /* Fluid display type used for hero and major section headlines. */
+  .text-display {
+    font-size: clamp(2.5rem, 1.4rem + 4.4vw, 4.5rem);
+    line-height: 1.02;
+    letter-spacing: -0.035em;
+    font-weight: 700;
+  }
+
+  .text-headline {
+    font-size: clamp(1.875rem, 1.2rem + 2.4vw, 3rem);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    font-weight: 700;
+  }
+
+  .text-subhead {
+    font-size: clamp(1.25rem, 1rem + 0.9vw, 1.75rem);
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+  }
+
+  .text-lede {
+    font-size: clamp(1.0625rem, 0.98rem + 0.42vw, 1.3125rem);
+    line-height: 1.6;
+    color: var(--color-mist-600);
+  }
+
+  /* Fine architectural grid used behind dark sections. */
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+
+  .bg-grid-light {
+    background-image:
+      linear-gradient(to right, rgba(8, 17, 36, 0.045) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(8, 17, 36, 0.045) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+
+  .mask-fade-b {
+    -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 55%, transparent 100%);
+  }
+
+  .mask-fade-x {
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+  }
+
+  /* Horizontal scroll rails used on mobile for dense card groups. */
+  .scroll-rail {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .scroll-rail::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer utilities {
+  .reveal {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0);
+    transition:
+      opacity 0.7s var(--ease-out-expo),
+      transform 0.7s var(--ease-out-expo);
+    transition-delay: var(--reveal-delay, 0ms);
+    will-change: opacity, transform;
+  }
+
+  .reveal[data-visible="true"] {
+    opacity: 1;
+    transform: none;
+  }
+
+  .flow-dash {
+    stroke-dasharray: 4 10;
+    animation: flow-dash 1.6s linear infinite;
+  }
+
+  .pulse-node {
+    animation: pulse-node 3.2s ease-in-out infinite;
+  }
+
+  .drift-slow {
+    animation: drift 22s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes flow-dash {
+  to {
+    stroke-dashoffset: -28;
+  }
+}
+
+@keyframes pulse-node {
+  0%,
+  100% {
+    opacity: 0.55;
+    r: 3.2;
+  }
+  50% {
+    opacity: 1;
+    r: 4.4;
+  }
+}
+
+@keyframes drift {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  to {
+    transform: translate3d(2%, -3%, 0) scale(1.06);
+  }
+}
+
+@keyframes particle-travel {
+  0% {
+    offset-distance: 0%;
+    opacity: 0;
+  }
+  10%,
+  85% {
+    opacity: 1;
+  }
+  100% {
+    offset-distance: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ------------------------------------------------------------------
+   Reduced motion: keep the interface, remove the movement.
+------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
