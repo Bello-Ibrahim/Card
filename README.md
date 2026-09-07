@@ -148,10 +148,13 @@ src/
     industries|training|team-setup|about/
     privacy-policy|terms-of-use|cookie-policy/
     sitemap.ts robots.ts not-found.tsx opengraph-image.tsx icon.svg
+    <dynamic routes each carry their own opengraph-image.tsx>
   components/              # Reusable UI (header, footer, hero, cards, sections, form)
     ui/                    # Primitives: container, button, section header, reveal, icon, json-ld
+    visuals/               # Generated artwork: cover-art, cover-banner, motif, variant map
   content/                 # All copy — see the table above
-  lib/                     # seo.ts (metadata), schema.ts (JSON-LD), utils.ts
+  lib/                     # seo.ts (metadata), schema.ts (JSON-LD), art.ts (seeded PRNG),
+                           # og.tsx (social cards), utils.ts
 ```
 
 ### Design system
@@ -167,6 +170,69 @@ Scroll entrances use one `IntersectionObserver` per element (`components/ui/reve
 disconnects after firing. The hero architecture diagram is inline SVG animated with CSS only —
 no animation library, no image request. Every animation is switched off by the
 `prefers-reduced-motion` block at the bottom of `globals.css`.
+
+---
+
+## Imagery
+
+The site's artwork is **generated, original SVG** — not stock photography. Every cover,
+masthead visual and social card is drawn from code at build time, which means:
+
+- no licensing question, and nothing that implies a client, office or employee we cannot verify
+- no image files to download — covers add markup that gzips to roughly 12–18% of its raw size
+- crisp at every density, correct in the brand palette by construction, and zero layout shift
+
+### How it works
+
+`src/lib/art.ts` provides a seeded PRNG (FNV-1a → mulberry32). Everything is a pure function
+of a string seed — usually a slug — so a given article always renders the same artwork on the
+server, on the client, and across builds.
+
+`src/components/visuals/cover-art.tsx` renders one of eight variants, each an abstract reading
+of its subject rather than decoration:
+
+| Variant | Reads as | Used for |
+| --- | --- | --- |
+| `flow` | routed pipelines with junction nodes | Data Engineering, migration |
+| `strata` | layered platform bands | Data Architecture, warehouses, lakehouses |
+| `mesh` | distributed node network | Cloud, integration, managed engineering |
+| `radial` | concentric arcs and spokes | Data Strategy, About |
+| `field` | column field with a trend line | Analytics, data quality |
+| `embedding` | clustered vectors with links | AI & Data |
+| `tree` | hierarchical graph | Engineering Leadership, governance, Team Setup |
+| `steps` | ascending progression | Career & Training, Training |
+
+`src/components/visuals/variants.ts` maps subjects to variants. To change a page's artwork,
+edit that map — nothing else needs to move. New insight categories need an entry in
+`CATEGORY_VARIANT`; TypeScript will tell you if one is missing.
+
+`src/components/visuals/motif.tsx` draws the small 4×4 lattice glyph on industry cards.
+
+All generated art is decorative and rendered `aria-hidden`, because the adjacent heading
+already carries the meaning.
+
+### Social cards
+
+`src/lib/og.tsx` renders the shared Open Graph card, and each dynamic route has its own
+`opengraph-image.tsx`, so services, solutions, insights and case studies each get a social
+preview carrying their own title. These are drawn with plain divs and gradients rather than
+SVG, because Satori (the renderer behind `next/og`) supports only a subset of CSS.
+
+### If you want real photography
+
+Nothing here prevents it — the brand direction simply calls for architectural visuals over
+stock imagery, and we will not ship photos that imply a client, office or team we cannot
+evidence. To add licensed photography:
+
+1. Put the files in `public/` (or a CDN) and use `next/image` so they are served as AVIF/WebP
+   at responsive sizes.
+2. Give every image real `alt` text, or `alt=""` if it is purely decorative.
+3. Set explicit `width`/`height` (or `fill` with a sized parent) to keep CLS at zero.
+4. Replace the `media` prop on `PageHeader`, or the cover in `InsightCard` / `CaseStudyCard`,
+   with your `<Image>` — both are single, isolated call sites.
+
+Do not use photographs of people, offices or events to represent GraceWell's team, clients or
+premises unless they genuinely are GraceWell's.
 
 ---
 

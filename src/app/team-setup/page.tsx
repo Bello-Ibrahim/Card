@@ -8,6 +8,7 @@ import { Reveal } from "@/components/ui/reveal";
 import { CtaSection } from "@/components/cta-section";
 import { ButtonLink, Arrow } from "@/components/ui/button";
 import { teamSetupModes, teamSetupCapabilities } from "@/content/team-setup";
+import { CoverBanner } from "@/components/visuals/cover-banner";
 
 export const metadata = buildMetadata({
   title: "Data Engineering Team Setup",
@@ -33,6 +34,7 @@ export default function TeamSetupPage() {
           { name: "Home", path: "/" },
           { name: "Team Setup", path: "/team-setup" },
         ]}
+        media={<CoverBanner seed="gracewell-team-setup" variant="tree" />}
       >
         <ButtonLink href="/contact?topic=team-setup" size="lg" variant="onDark">
           Build Your Data Team

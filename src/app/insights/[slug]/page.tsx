@@ -10,6 +10,8 @@ import { InsightCard } from "@/components/cards";
 import { CtaSection } from "@/components/cta-section";
 import { insights, getInsight } from "@/content/insights";
 import { formatDate } from "@/lib/utils";
+import { CoverBanner } from "@/components/visuals/cover-banner";
+import { CATEGORY_VARIANT } from "@/components/visuals/variants";
 
 export function generateStaticParams() {
   return insights.map((insight) => ({ slug: insight.slug }));
@@ -48,7 +50,13 @@ export default async function InsightPage({ params }: { params: Promise<{ slug: 
 
   return (
     <>
-      <PageHeader eyebrow={insight.category} title={insight.title} lede={insight.excerpt} breadcrumbs={crumbs}>
+      <PageHeader
+        eyebrow={insight.category}
+        title={insight.title}
+        lede={insight.excerpt}
+        breadcrumbs={crumbs}
+        media={<CoverBanner seed={insight.slug} variant={CATEGORY_VARIANT[insight.category]} />}
+      >
         <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-[0.875rem] text-mist-400">
           <time dateTime={insight.publishedAt}>{formatDate(insight.publishedAt)}</time>
           <span aria-hidden="true" className="h-1 w-1 rounded-full bg-mist-600" />

@@ -8,6 +8,8 @@ import { PageHeader } from "@/components/page-header";
 import { Reveal } from "@/components/ui/reveal";
 import { CtaSection } from "@/components/cta-section";
 import { ButtonLink, Arrow } from "@/components/ui/button";
+import { CoverBanner } from "@/components/visuals/cover-banner";
+import { solutionVariant } from "@/components/visuals/variants";
 import { solutions, getSolution } from "@/content/solutions";
 
 export function generateStaticParams() {
@@ -41,7 +43,13 @@ export default async function SolutionDetailPage({ params }: { params: Promise<{
 
   return (
     <>
-      <PageHeader eyebrow="Solution" title={solution.title} lede={solution.summary} breadcrumbs={crumbs}>
+      <PageHeader
+        eyebrow="Solution"
+        title={solution.title}
+        lede={solution.summary}
+        breadcrumbs={crumbs}
+        media={<CoverBanner seed={solution.slug} variant={solutionVariant(solution.slug)} />}
+      >
         <ButtonLink href="/contact" size="lg" variant="onDark">
           {solution.cta}
           <Arrow />

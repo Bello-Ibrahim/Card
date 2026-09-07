@@ -8,6 +8,8 @@ import { Reveal } from "@/components/ui/reveal";
 import { CaseStudyCard } from "@/components/cards";
 import { CtaSection } from "@/components/cta-section";
 import { ButtonLink, Arrow } from "@/components/ui/button";
+import { CoverBanner } from "@/components/visuals/cover-banner";
+import { caseStudyVariant } from "@/components/visuals/variants";
 import { caseStudies, getCaseStudy } from "@/content/case-studies";
 
 export function generateStaticParams() {
@@ -45,6 +47,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
         title={study.title}
         lede={study.challenge}
         breadcrumbs={crumbs}
+        media={<CoverBanner seed={study.slug} variant={caseStudyVariant(study.slug)} />}
       >
         <ButtonLink href="/contact" size="lg" variant="onDark">
           Discuss a similar engagement

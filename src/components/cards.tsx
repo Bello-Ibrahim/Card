@@ -1,5 +1,8 @@
 import Link from "next/link";
 import { Arrow } from "@/components/ui/button";
+import { CoverArt } from "@/components/visuals/cover-art";
+import { Motif } from "@/components/visuals/motif";
+import { CATEGORY_VARIANT, caseStudyVariant } from "@/components/visuals/variants";
 import { Icon, type IconName } from "@/components/ui/icon";
 import { cn, formatDate } from "@/lib/utils";
 import type { Service } from "@/content/services";
@@ -8,8 +11,10 @@ import type { Industry } from "@/content/industries";
 import type { Insight } from "@/content/insights";
 import type { CaseStudy } from "@/content/case-studies";
 
-const cardBase =
-  "group/card relative flex h-full flex-col rounded-2xl border border-navy-950/8 bg-white p-7 transition-[border-color,box-shadow,transform] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-0.5 hover:border-navy-950/16 hover:shadow-lift";
+const cardFrame =
+  "group/card relative flex h-full flex-col overflow-hidden rounded-2xl border border-navy-950/8 bg-white transition-[border-color,box-shadow,transform] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-0.5 hover:border-navy-950/16 hover:shadow-lift";
+
+const cardBase = `${cardFrame} p-7`;
 
 export function ServiceCard({ service }: { service: Service }) {
   return (
@@ -70,9 +75,16 @@ export function SolutionCard({ solution }: { solution: Solution }) {
 export function IndustryCard({ industry }: { industry: Industry }) {
   return (
     <article className={cn(cardBase, "p-6 sm:p-7")}>
-      <h3 className="text-[1.0625rem] font-semibold tracking-[-0.02em] text-navy-950">
-        {industry.name}
-      </h3>
+      <div className="flex items-start justify-between gap-4">
+        <h3 className="text-[1.0625rem] font-semibold tracking-[-0.02em] text-navy-950">
+          {industry.name}
+        </h3>
+        <Motif
+          seed={industry.slug}
+          size={48}
+          className="-mt-1 text-navy-950 opacity-70 transition-opacity duration-300 group-hover/card:opacity-100"
+        />
+      </div>
       <p className="mt-2.5 text-[0.9375rem] font-medium leading-snug text-accent-700">
         {industry.headline}
       </p>
@@ -93,7 +105,15 @@ export function IndustryCard({ industry }: { industry: Industry }) {
 
 export function InsightCard({ insight, featured = false }: { insight: Insight; featured?: boolean }) {
   return (
-    <article className={cn(cardBase, featured && "bg-mist-50")}>
+    <article className={cn(cardFrame, featured && "bg-mist-50")}>
+      <div className="relative aspect-[16/9] overflow-hidden border-b border-navy-950/8 bg-navy-950">
+        <CoverArt
+          seed={insight.slug}
+          variant={CATEGORY_VARIANT[insight.category]}
+          className="transition-transform duration-[900ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover/card:scale-[1.05]"
+        />
+      </div>
+      <div className="flex flex-1 flex-col p-7">
       <div className="flex items-center gap-3 text-[0.75rem] text-mist-500">
         <span className="font-medium text-accent-600">{insight.category}</span>
         <span aria-hidden="true" className="h-1 w-1 rounded-full bg-mist-300" />
@@ -119,13 +139,22 @@ export function InsightCard({ insight, featured = false }: { insight: Insight; f
           <Arrow />
         </span>
       </div>
+      </div>
     </article>
   );
 }
 
 export function CaseStudyCard({ caseStudy }: { caseStudy: CaseStudy }) {
   return (
-    <article className="group/card flex h-full flex-col rounded-2xl border border-white/12 bg-white/[0.04] p-7 transition-[border-color,background-color] duration-300 hover:border-white/25 hover:bg-white/[0.07]">
+    <article className="group/card flex h-full flex-col overflow-hidden rounded-2xl border border-white/12 bg-white/[0.04] transition-[border-color,background-color] duration-300 hover:border-white/25 hover:bg-white/[0.07]">
+      <div className="relative aspect-[16/9] overflow-hidden border-b border-white/10">
+        <CoverArt
+          seed={caseStudy.slug}
+          variant={caseStudyVariant(caseStudy.slug)}
+          className="transition-transform duration-[900ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover/card:scale-[1.05]"
+        />
+      </div>
+      <div className="flex flex-1 flex-col p-7">
       <div className="flex items-center gap-3">
         <p className="text-[0.6875rem] font-semibold uppercase tracking-[0.16em] text-accent-300">
           Case Study
@@ -164,6 +193,7 @@ export function CaseStudyCard({ caseStudy }: { caseStudy: CaseStudy }) {
         View Case Study
         <Arrow />
       </Link>
+      </div>
     </article>
   );
 }

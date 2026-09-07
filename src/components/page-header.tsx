@@ -13,6 +13,7 @@ export function PageHeader({
   breadcrumbs,
   children,
   align = "left",
+  media,
 }: {
   eyebrow: string;
   title: string;
@@ -20,7 +21,11 @@ export function PageHeader({
   breadcrumbs?: Crumb[];
   children?: React.ReactNode;
   align?: "left" | "center";
+  /** Optional artwork rendered beside the copy on large screens. */
+  media?: React.ReactNode;
 }) {
+  const hasMedia = Boolean(media);
+
   return (
     <section className="dark-section relative isolate overflow-hidden bg-navy-950 pt-[4.5rem] text-white lg:pt-20">
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-grid opacity-50 mask-fade-b" />
@@ -31,10 +36,12 @@ export function PageHeader({
       <Container className="relative">
         <div
           className={cn(
-            "flex flex-col py-16 sm:py-20 lg:py-24",
-            align === "center" && "items-center text-center",
+            "py-16 sm:py-20 lg:py-24",
+            hasMedia ? "lg:grid lg:grid-cols-12 lg:items-center lg:gap-12 xl:gap-16" : "flex flex-col",
+            !hasMedia && align === "center" && "items-center text-center",
           )}
         >
+          <div className={cn("flex flex-col", hasMedia && "lg:col-span-7")}>
           {breadcrumbs?.length ? (
             <nav aria-label="Breadcrumb" className="mb-8">
               <ol className="flex flex-wrap items-center gap-2 text-[0.8125rem] text-mist-400">
@@ -81,6 +88,13 @@ export function PageHeader({
           {children ? (
             <Reveal delay={200}>
               <div className="mt-9">{children}</div>
+            </Reveal>
+          ) : null}
+          </div>
+
+          {media ? (
+            <Reveal delay={180} className="mt-12 lg:col-span-5 lg:mt-0">
+              {media}
             </Reveal>
           ) : null}
         </div>

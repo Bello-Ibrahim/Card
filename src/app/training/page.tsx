@@ -8,6 +8,7 @@ import { Reveal } from "@/components/ui/reveal";
 import { CtaSection } from "@/components/cta-section";
 import { ButtonLink, Arrow } from "@/components/ui/button";
 import { trainingTracks, trainingPrinciples } from "@/content/training";
+import { CoverBanner } from "@/components/visuals/cover-banner";
 
 export const metadata = buildMetadata({
   title: "Data Engineering Training",
@@ -34,6 +35,7 @@ export default function TrainingPage() {
           { name: "Home", path: "/" },
           { name: "Training", path: "/training" },
         ]}
+        media={<CoverBanner seed="gracewell-training" variant="steps" />}
       >
         <div className="flex flex-col gap-3 sm:flex-row">
           <ButtonLink href="/contact?topic=training" size="lg" variant="onDark">

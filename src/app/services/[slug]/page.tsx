@@ -9,6 +9,8 @@ import { Reveal } from "@/components/ui/reveal";
 import { CtaSection } from "@/components/cta-section";
 import { ButtonLink, Arrow } from "@/components/ui/button";
 import { Icon, type IconName } from "@/components/ui/icon";
+import { CoverBanner } from "@/components/visuals/cover-banner";
+import { SERVICE_ICON_VARIANT } from "@/components/visuals/variants";
 import { services, getService } from "@/content/services";
 
 export function generateStaticParams() {
@@ -42,7 +44,13 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
   return (
     <>
-      <PageHeader eyebrow="Service" title={service.title} lede={service.summary} breadcrumbs={crumbs}>
+      <PageHeader
+        eyebrow="Service"
+        title={service.title}
+        lede={service.summary}
+        breadcrumbs={crumbs}
+        media={<CoverBanner seed={service.slug} variant={SERVICE_ICON_VARIANT[service.icon]} />}
+      >
         <ButtonLink href="/contact" size="lg" variant="onDark">
           Talk to an Expert
           <Arrow />

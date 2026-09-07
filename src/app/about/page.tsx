@@ -12,6 +12,7 @@ import { CtaSection } from "@/components/cta-section";
 import { ButtonLink, Arrow } from "@/components/ui/button";
 import { faqs } from "@/content/faqs";
 import { contact } from "@/content/site";
+import { CoverBanner } from "@/components/visuals/cover-banner";
 
 export const metadata = buildMetadata({
   title: "About GraceWell Consulting Group",
@@ -47,6 +48,7 @@ export default function AboutPage() {
           { name: "Home", path: "/" },
           { name: "About", path: "/about" },
         ]}
+        media={<CoverBanner seed="gracewell-about" variant="radial" />}
       >
         <div className="flex flex-col gap-3 sm:flex-row">
           <ButtonLink href="/contact" size="lg" variant="onDark">
