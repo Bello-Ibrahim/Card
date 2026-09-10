@@ -1,0 +1,60 @@
+# Service accounts and the minimum RBAC each component needs.
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: reconx
+  namespace: reconx
+  labels: {app.kubernetes.io/name: reconx}
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: reconx-spark
+  namespace: reconx
+  labels: {app.kubernetes.io/name: reconx}
+---
+# Spark-on-Kubernetes drivers create and watch their own executor pods.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: reconx-spark
+  namespace: reconx
+rules:
+  - apiGroups: [""]
+    resources: ["pods"]
+    verbs: ["get", "list", "watch", "create", "delete", "deletecollection"]
+  - apiGroups: [""]
+    resources: ["pods/log", "pods/status"]
+    verbs: ["get", "list", "watch"]
+  - apiGroups: [""]
+    resources: ["services", "configmaps", "persistentvolumeclaims"]
+    verbs: ["get", "list", "watch", "create", "delete"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: reconx-spark
+  namespace: reconx
+subjects:
+  - kind: ServiceAccount
+    name: reconx-spark
+    namespace: reconx
+roleRef:
+  kind: Role
+  name: reconx-spark
+  apiGroup: rbac.authorization.k8s.io
+---
+# The scheduler submits Spark applications, so it needs the same pod rights.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: reconx-scheduler-spark
+  namespace: reconx
+subjects:
+  - kind: ServiceAccount
+    name: reconx
+    namespace: reconx
+roleRef:
+  kind: Role
+  name: reconx-spark
+  apiGroup: rbac.authorization.k8s.io

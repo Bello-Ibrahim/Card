@@ -1,0 +1,146 @@
+# ReconX example connections.
+#
+# Secrets are NEVER written in the clear. Every secret-bearing field holds a
+# *reference* that is resolved at execution time:
+#
+#   env:NAME          process environment (Kubernetes env)
+#   file:/path        a file (Docker secret, mounted volume)
+#   k8s:key           <RECONX_SECURITY_SECRETS_FILE_DIR>/key (projected Secret)
+#   vault:path#key    external secret manager
+#   enc:gAAAA...      encrypted with RECONX_SECURITY_ENCRYPTION_KEY (what the UI writes)
+#
+# Import with:
+#   for c in $(yq '.connections[].connectionId' examples/sample-connections.yaml); do ... done
+# or create them through the UI (Connections -> New connection), which encrypts
+# whatever you type before it reaches MongoDB.
+connections:
+  # ------------------------------------------------------------------ S3
+  - connectionId: payments_s3
+    name: Payments S3 bucket
+    description: Inbound gateway extracts and reconciliation results
+    type: s3
+    environment: production
+    config:
+      region: eu-west-1
+      bucket: payments-inbound
+      # In EKS prefer IRSA over static keys:
+      useInstanceProfile: false
+      accessKey: k8s:s3_access_key
+      secretKey: k8s:s3_secret_key
+      pathStyleAccess: false
+      sslEnabled: true
+      maxConnections: 128
+
+  # ---------------------------------------------------------- StorageGRID
+  - connectionId: archive_storagegrid
+    name: NetApp StorageGRID archive
+    description: On-premise object store for archived results
+    type: storagegrid
+    environment: production
+    config:
+      endpoint: https://storagegrid.corp.example.com:8082
+      region: eu-west-1            # tenant-defined, not an AWS region
+      bucket: recon-archive
+      tenantAccountId: "12345678901234567890"
+      accessKey: k8s:storagegrid_access_key
+      secretKey: k8s:storagegrid_secret_key
+      pathStyleAccess: true        # the norm for StorageGRID
+      sslEnabled: true
+      sslVerify: true              # set false only with an internal CA you cannot install
+
+  # ---------------------------------------------------------------- SFTP
+  - connectionId: settlements_sftp
+    name: Settlement house SFTP
+    type: sftp
+    environment: production
+    config:
+      host: sftp.settlement-house.example.com
+      port: 22
+      username: recon_svc
+      privateKey: k8s:sftp_private_key
+      knownHosts: /etc/ssh/ssh_known_hosts
+      strictHostKeyChecking: true
+      basePath: /
+      timeoutSeconds: 60
+      compression: true
+
+  # ------------------------------------------------------- JDBC (SQL Server)
+  - connectionId: ledger_mssql
+    name: General ledger (SQL Server)
+    type: jdbc
+    environment: production
+    config:
+      databaseType: sqlserver
+      host: sql-ledger.corp.example.com
+      port: 1433
+      database: GeneralLedger
+      schema: dbo
+      username: recon_reader
+      password: k8s:ledger_db_password
+      ssl: true
+      fetchSize: 50000
+      queryTimeoutSeconds: 900
+      # Partitioned reads keep a large table off a single connection:
+      partitionColumn: TransactionId
+      numPartitions: 8
+      lowerBound: "0"
+      upperBound: "100000000"
+      extraProperties:
+        applicationName: ReconX
+        encrypt: "true"
+        trustServerCertificate: "false"
+
+  # ------------------------------------------------------ JDBC (PostgreSQL)
+  - connectionId: reporting_db
+    name: Reconciliation reporting database
+    type: jdbc
+    environment: production
+    config:
+      databaseType: postgresql
+      host: postgres.corp.example.com
+      port: 5432
+      database: reconx_results
+      schema: public
+      username: reconx
+      password: k8s:reporting_db_password
+      ssl: true
+      batchSize: 20000
+
+  # ------------------------------------------------------- JDBC (Oracle)
+  - connectionId: treasury_oracle
+    name: Treasury system (Oracle)
+    type: jdbc
+    environment: production
+    config:
+      databaseType: oracle
+      # Structured fields or an explicit URL - either works.
+      jdbcUrl: "jdbc:oracle:thin:@//oracle.corp.example.com:1521/TREASURY"
+      driver: oracle.jdbc.OracleDriver
+      username: recon_reader
+      password: vault:database/treasury#password
+      fetchSize: 20000
+
+  # --------------------------------------------------------------- Kafka
+  - connectionId: events_kafka
+    name: Enterprise Kafka
+    type: kafka
+    environment: production
+    config:
+      bootstrapServers: kafka-1.corp.example.com:9093,kafka-2.corp.example.com:9093
+      securityProtocol: SASL_SSL
+      saslMechanism: SCRAM-SHA-512
+      saslUsername: reconx
+      saslPassword: k8s:kafka_sasl_password
+      sslCaLocation: /etc/ssl/certs/corp-ca.pem
+      consumerGroupPrefix: reconx
+
+  # ---------------------------------------------------------- Filesystem
+  - connectionId: shared_landing
+    name: Shared landing area
+    description: NFS mount visible to every node (RWX PersistentVolume in Kubernetes)
+    type: filesystem
+    environment: production
+    config:
+      basePath: /mnt/recon-landing
+      writable: true
+      createMissingDirectories: true

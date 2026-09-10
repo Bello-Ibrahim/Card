@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: reconx
+  labels:
+    app.kubernetes.io/name: reconx
+    app.kubernetes.io/part-of: reconx

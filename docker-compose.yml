@@ -1,0 +1,264 @@
+# ReconX local development stack.
+#
+#   ./scripts/fetch-jdbc-drivers.sh deployment/docker/jars   # once
+#   docker compose up -d
+#   open http://localhost:8501       (UI)      http://localhost:8000/docs (API)
+#
+# Everything here is development-grade: default passwords, single-node brokers,
+# no TLS. Production deployment is described in docs/DEPLOYMENT.md.
+name: reconx
+
+x-reconx-env: &reconx-env
+  RECONX_ENVIRONMENT: local
+  LOG_LEVEL: INFO
+  LOG_FORMAT: json
+  MONGODB_URI: mongodb://mongodb:27017/?replicaSet=rs0
+  MONGODB_DATABASE: reconx
+  KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+  KAFKA_ENABLED: "true"
+  KAFKA_TOPIC_PREFIX: reconciliation
+  RESULT_JDBC_URL: jdbc:postgresql://postgres:5432/reconx_results
+  RESULT_JDBC_USER: reconx
+  RESULT_JDBC_PASSWORD: reconx
+  RESULT_JDBC_DRIVER: org.postgresql.Driver
+  RESULT_AUTO_CREATE_SCHEMA: "true"
+  SMTP_HOST: mailpit
+  SMTP_PORT: "1025"
+  SMTP_USE_TLS: "false"
+  SMTP_FROM_ADDRESS: reconx@example.com
+  SPARK_MASTER: spark://spark-master:7077
+  SPARK_SUBMIT_MODE: spark-submit
+  SPARK_EXECUTOR_INSTANCES: "2"
+  SPARK_EXECUTOR_MEMORY: 1g
+  SPARK_EXECUTOR_CORES: "1"
+  SPARK_SHUFFLE_PARTITIONS: "8"
+  SPARK_EXTRA_JARS: /opt/reconx/jars/postgresql-42.7.4.jar
+  RECONX_STAGING_DIR: /var/reconx/staging
+  RECONX_SECURITY_JWT_SECRET: local-development-jwt-secret-change-me-in-production
+  RECONX_SECURITY_ENCRYPTION_KEY: local-development-encryption-key-change-me
+  RECONX_SECURITY_BOOTSTRAP_ADMIN_USERNAME: admin
+  RECONX_SECURITY_BOOTSTRAP_ADMIN_PASSWORD: reconx-admin
+  API_BASE_URL: http://localhost:8501
+
+services:
+  # ------------------------------------------------------------------ state
+  mongodb:
+    image: mongo:7
+    container_name: reconx-mongodb
+    command: ["--replSet", "rs0", "--bind_ip_all"]
+    ports: ["27017:27017"]
+    volumes: ["mongodb-data:/data/db"]
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping').ok"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 20s
+
+  # A single-node replica set: MongoDB transactions and change streams need one.
+  mongodb-init:
+    image: mongo:7
+    container_name: reconx-mongodb-init
+    depends_on:
+      mongodb: {condition: service_healthy}
+    restart: "no"
+    entrypoint:
+      - bash
+      - -c
+      - |
+        mongosh --host mongodb:27017 --quiet --eval '
+          try { rs.status().ok } catch (e) {
+            rs.initiate({_id: "rs0", members: [{_id: 0, host: "mongodb:27017"}]});
+          }'
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: reconx-postgres
+    environment:
+      POSTGRES_USER: reconx
+      POSTGRES_PASSWORD: reconx
+      POSTGRES_DB: reconx_results
+    ports: ["5432:5432"]
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./src/reconx/metrics/migrations:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U reconx -d reconx_results"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  kafka:
+    image: bitnami/kafka:3.7
+    container_name: reconx-kafka
+    environment:
+      KAFKA_CFG_NODE_ID: "1"
+      KAFKA_CFG_PROCESS_ROLES: broker,controller
+      KAFKA_CFG_CONTROLLER_QUORUM_VOTERS: 1@kafka:9093
+      KAFKA_CFG_LISTENERS: PLAINTEXT://:9092,CONTROLLER://:9093,EXTERNAL://:29092
+      KAFKA_CFG_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,EXTERNAL://localhost:29092
+      KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT,EXTERNAL:PLAINTEXT
+      KAFKA_CFG_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_CFG_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_CFG_OFFSETS_TOPIC_REPLICATION_FACTOR: "1"
+      KAFKA_CFG_AUTO_CREATE_TOPICS_ENABLE: "true"
+      ALLOW_PLAINTEXT_LISTENER: "yes"
+    ports: ["29092:29092"]
+    volumes: ["kafka-data:/bitnami/kafka"]
+    healthcheck:
+      test: ["CMD-SHELL", "kafka-topics.sh --bootstrap-server localhost:9092 --list || exit 1"]
+      interval: 15s
+      timeout: 10s
+      retries: 10
+      start_period: 30s
+
+  kafka-ui:
+    image: provectuslabs/kafka-ui:latest
+    container_name: reconx-kafka-ui
+    depends_on:
+      kafka: {condition: service_healthy}
+    environment:
+      KAFKA_CLUSTERS_0_NAME: reconx
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:9092
+      DYNAMIC_CONFIG_ENABLED: "true"
+    ports: ["8080:8080"]
+
+  minio:
+    image: minio/minio:latest
+    container_name: reconx-minio
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: reconx
+      MINIO_ROOT_PASSWORD: reconx-secret
+    ports: ["9000:9000", "9001:9001"]
+    volumes: ["minio-data:/data"]
+    healthcheck:
+      test: ["CMD", "mc", "ready", "local"]
+      interval: 15s
+      timeout: 10s
+      retries: 10
+
+  minio-init:
+    image: minio/mc:latest
+    container_name: reconx-minio-init
+    depends_on:
+      minio: {condition: service_healthy}
+    restart: "no"
+    entrypoint:
+      - sh
+      - -c
+      - |
+        mc alias set local http://minio:9000 reconx reconx-secret &&
+        mc mb --ignore-existing local/reconx-data &&
+        mc mb --ignore-existing local/reconx-results &&
+        echo "MinIO buckets ready"
+
+  sftp:
+    image: atmoz/sftp:alpine
+    container_name: reconx-sftp
+    command: reconx:reconx:1001:::upload
+    ports: ["2222:22"]
+    volumes: ["sftp-data:/home/reconx/upload"]
+
+  mailpit:
+    image: axllent/mailpit:latest
+    container_name: reconx-mailpit
+    environment:
+      MP_MAX_MESSAGES: "500"
+      MP_SMTP_AUTH_ACCEPT_ANY: "true"
+      MP_SMTP_AUTH_ALLOW_INSECURE: "true"
+    ports: ["1025:1025", "8025:8025"]
+
+  # ------------------------------------------------------------------ spark
+  spark-master:
+    build:
+      context: .
+      dockerfile: deployment/docker/Dockerfile.spark
+    image: reconx/spark:1.0.0
+    container_name: reconx-spark-master
+    command: ["/opt/spark/bin/spark-class", "org.apache.spark.deploy.master.Master"]
+    environment:
+      SPARK_NO_DAEMONIZE: "true"
+      <<: *reconx-env
+    ports: ["7077:7077", "8090:8080"]
+    volumes:
+      - reconx-staging:/var/reconx/staging
+      - ./examples/data:/data:ro
+
+  spark-worker:
+    build:
+      context: .
+      dockerfile: deployment/docker/Dockerfile.spark
+    image: reconx/spark:1.0.0
+    command: ["/opt/spark/bin/spark-class", "org.apache.spark.deploy.worker.Worker", "spark://spark-master:7077"]
+    depends_on: [spark-master]
+    environment:
+      SPARK_NO_DAEMONIZE: "true"
+      SPARK_WORKER_CORES: "2"
+      SPARK_WORKER_MEMORY: 2g
+      <<: *reconx-env
+    deploy:
+      replicas: 2
+    volumes:
+      - reconx-staging:/var/reconx/staging
+      - ./examples/data:/data:ro
+
+  # ------------------------------------------------------------- reconx apps
+  api:
+    build:
+      context: .
+      dockerfile: deployment/docker/Dockerfile.api
+    image: reconx/api:1.0.0
+    container_name: reconx-api
+    depends_on:
+      mongodb: {condition: service_healthy}
+      postgres: {condition: service_healthy}
+    environment:
+      <<: *reconx-env
+      RECONX_SERVICE: reconx-api
+    ports: ["8000:8000"]
+    volumes:
+      - reconx-staging:/var/reconx/staging
+      - ./examples/data:/data:ro
+
+  scheduler:
+    build:
+      context: .
+      dockerfile: deployment/docker/Dockerfile.scheduler
+    image: reconx/scheduler:1.0.0
+    depends_on:
+      mongodb: {condition: service_healthy}
+      postgres: {condition: service_healthy}
+      spark-master: {condition: service_started}
+    environment:
+      <<: *reconx-env
+      RECONX_SERVICE: reconx-scheduler
+      SCHEDULER_POLL_INTERVAL_SECONDS: "20"
+      SPARK_HOME: /opt/spark
+    # Two replicas prove the distributed locking: only one fires each schedule.
+    deploy:
+      replicas: 2
+    volumes:
+      - reconx-staging:/var/reconx/staging
+      - ./examples/data:/data:ro
+
+  ui:
+    build:
+      context: .
+      dockerfile: deployment/docker/Dockerfile.ui
+    image: reconx/ui:1.0.0
+    container_name: reconx-ui
+    depends_on: [api]
+    environment:
+      <<: *reconx-env
+      RECONX_SERVICE: reconx-ui
+      RECONX_API_URL: http://api:8000
+    ports: ["8501:8501"]
+
+volumes:
+  mongodb-data:
+  postgres-data:
+  kafka-data:
+  minio-data:
+  sftp-data:
+  reconx-staging:

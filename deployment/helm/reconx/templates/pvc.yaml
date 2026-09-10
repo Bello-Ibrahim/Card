@@ -1,0 +1,15 @@
+{{- if and .Values.storage.staging.enabled (not .Values.storage.staging.existingClaim) }}
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ include "reconx.fullname" . }}-staging
+  labels: {{- include "reconx.labels" . | nindent 4 }}
+spec:
+  accessModes: [{{ .Values.storage.staging.accessMode | quote }}]
+  resources:
+    requests:
+      storage: {{ .Values.storage.staging.size | quote }}
+  {{- if .Values.storage.staging.storageClassName }}
+  storageClassName: {{ .Values.storage.staging.storageClassName | quote }}
+  {{- end }}
+{{- end }}

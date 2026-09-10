@@ -1,0 +1,65 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: reconx-config
+  namespace: reconx
+  labels: {app.kubernetes.io/name: reconx}
+data:
+  # --- environment -----------------------------------------------------
+  RECONX_ENVIRONMENT: "production"
+  LOG_LEVEL: "INFO"
+  LOG_FORMAT: "json"
+  RECONX_STAGING_DIR: "/var/reconx/staging"
+
+  # --- state stores (point these at your managed services) --------------
+  MONGODB_URI: "mongodb://reconx-mongodb-0.reconx-mongodb:27017,reconx-mongodb-1.reconx-mongodb:27017/?replicaSet=rs0"
+  MONGODB_DATABASE: "reconx"
+  MONGODB_TLS: "false"
+
+  KAFKA_BOOTSTRAP_SERVERS: "kafka:9092"
+  KAFKA_ENABLED: "true"
+  KAFKA_TOPIC_PREFIX: "reconciliation"
+  KAFKA_SECURITY_PROTOCOL: "PLAINTEXT"
+
+  RESULT_JDBC_URL: "jdbc:postgresql://postgres:5432/reconx_results"
+  RESULT_JDBC_DRIVER: "org.postgresql.Driver"
+  RESULT_JDBC_USER: "reconx"
+  # DBAs normally apply migrations themselves in production:
+  RESULT_AUTO_CREATE_SCHEMA: "false"
+
+  # --- Spark on Kubernetes ---------------------------------------------
+  SPARK_MASTER: "k8s://https://kubernetes.default.svc:443"
+  SPARK_SUBMIT_MODE: "kubernetes"
+  SPARK_NAMESPACE: "reconx"
+  SPARK_IMAGE: "reconx/spark:1.0.0"
+  SPARK_SERVICE_ACCOUNT: "reconx-spark"
+  SPARK_DRIVER_CORES: "1"
+  SPARK_DRIVER_MEMORY: "2g"
+  SPARK_EXECUTOR_CORES: "2"
+  SPARK_EXECUTOR_MEMORY: "4g"
+  SPARK_EXECUTOR_INSTANCES: "3"
+  SPARK_DYNAMIC_ALLOCATION: "true"
+  SPARK_DYNAMIC_ALLOCATION_MIN_EXECUTORS: "1"
+  SPARK_DYNAMIC_ALLOCATION_MAX_EXECUTORS: "20"
+  SPARK_SHUFFLE_PARTITIONS: "400"
+  SPARK_ADAPTIVE_ENABLED: "true"
+
+  # --- scheduler --------------------------------------------------------
+  SCHEDULER_ENABLED: "true"
+  SCHEDULER_POLL_INTERVAL_SECONDS: "30"
+  SCHEDULER_LOCK_TTL_SECONDS: "120"
+  SCHEDULER_MAX_CONCURRENT_RUNS: "10"
+
+  # --- notifications ----------------------------------------------------
+  SMTP_HOST: "smtp.internal.example.com"
+  SMTP_PORT: "587"
+  SMTP_USE_TLS: "true"
+  SMTP_FROM_ADDRESS: "reconx@example.com"
+  SMTP_FROM_NAME: "ReconX Platform"
+
+  # --- API / UI ---------------------------------------------------------
+  API_BASE_URL: "https://reconx.example.com"
+  API_CORS_ORIGINS: "https://reconx.example.com"
+  RECONX_SECURITY_AUTH_ENABLED: "true"
+  RECONX_SECURITY_SECRETS_BACKEND: "k8s"
+  RECONX_SECURITY_SECRETS_FILE_DIR: "/var/run/secrets/reconx"

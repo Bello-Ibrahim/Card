@@ -1,0 +1,133 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reconx-api
+  namespace: reconx
+  labels:
+    app.kubernetes.io/name: reconx
+    app.kubernetes.io/component: api
+spec:
+  replicas: 3
+  revisionHistoryLimit: 5
+  selector:
+    matchLabels: {app.kubernetes.io/name: reconx, app.kubernetes.io/component: api}
+  strategy:
+    type: RollingUpdate
+    rollingUpdate: {maxSurge: 1, maxUnavailable: 0}
+  template:
+    metadata:
+      labels: {app.kubernetes.io/name: reconx, app.kubernetes.io/component: api}
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "8000"
+        prometheus.io/path: "/metrics"
+    spec:
+      serviceAccountName: reconx
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1001
+        runAsGroup: 1001
+        fsGroup: 1001
+        seccompProfile: {type: RuntimeDefault}
+      # Spread replicas so a node failure cannot take the API down.
+      topologySpreadConstraints:
+        - maxSkew: 1
+          topologyKey: kubernetes.io/hostname
+          whenUnsatisfiable: ScheduleAnyway
+          labelSelector:
+            matchLabels: {app.kubernetes.io/name: reconx, app.kubernetes.io/component: api}
+      containers:
+        - name: api
+          image: reconx/api:1.0.0
+          imagePullPolicy: IfNotPresent
+          ports:
+            - {name: http, containerPort: 8000}
+          envFrom:
+            - configMapRef: {name: reconx-config}
+            - secretRef: {name: reconx-secrets}
+          env:
+            - name: RECONX_SERVICE
+              value: reconx-api
+            - name: RECONX_NODE_ID
+              valueFrom: {fieldRef: {fieldPath: metadata.name}}
+          volumeMounts:
+            - {name: staging, mountPath: /var/reconx/staging}
+            - {name: connection-secrets, mountPath: /var/run/secrets/reconx, readOnly: true}
+            # The root filesystem is read-only, so anything that writes needs a volume.
+            - {name: tmp, mountPath: /tmp}
+          resources:
+            requests: {cpu: 250m, memory: 512Mi}
+            limits: {cpu: "2", memory: 2Gi}
+          livenessProbe:
+            httpGet: {path: /health, port: http}
+            initialDelaySeconds: 20
+            periodSeconds: 20
+            timeoutSeconds: 5
+            failureThreshold: 3
+          readinessProbe:
+            httpGet: {path: /ready, port: http}
+            initialDelaySeconds: 10
+            periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 3
+          startupProbe:
+            httpGet: {path: /health, port: http}
+            periodSeconds: 5
+            failureThreshold: 30
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities: {drop: ["ALL"]}
+      volumes:
+        - name: tmp
+          emptyDir: {sizeLimit: 1Gi}
+        - name: staging
+          persistentVolumeClaim: {claimName: reconx-staging}
+        - name: connection-secrets
+          secret:
+            secretName: reconx-secrets
+            items:
+              - {key: s3_access_key, path: s3_access_key}
+              - {key: s3_secret_key, path: s3_secret_key}
+              - {key: sftp_private_key, path: sftp_private_key}
+              - {key: ledger_db_password, path: ledger_db_password}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: reconx-api
+  namespace: reconx
+  labels: {app.kubernetes.io/name: reconx, app.kubernetes.io/component: api}
+spec:
+  type: ClusterIP
+  selector: {app.kubernetes.io/name: reconx, app.kubernetes.io/component: api}
+  ports:
+    - {name: http, port: 8000, targetPort: http}
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: reconx-api
+  namespace: reconx
+spec:
+  scaleTargetRef: {apiVersion: apps/v1, kind: Deployment, name: reconx-api}
+  minReplicas: 3
+  maxReplicas: 12
+  metrics:
+    - type: Resource
+      resource: {name: cpu, target: {type: Utilization, averageUtilization: 70}}
+    - type: Resource
+      resource: {name: memory, target: {type: Utilization, averageUtilization: 80}}
+  behavior:
+    scaleDown:
+      stabilizationWindowSeconds: 300
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: reconx-api
+  namespace: reconx
+spec:
+  minAvailable: 2
+  selector:
+    matchLabels: {app.kubernetes.io/name: reconx, app.kubernetes.io/component: api}

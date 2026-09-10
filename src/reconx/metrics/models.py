@@ -1,0 +1,291 @@
+"""Relational schema for the metrics / results database.
+
+Defined with SQLAlchemy Core so the DDL is portable across PostgreSQL, MySQL,
+Oracle, SQL Server and DB2.  Checked-in SQL migrations live in
+``reconx/metrics/migrations`` for DBAs who prefer to apply them by hand.
+"""
+
+from __future__ import annotations
+
+from sqlalchemy import (
+    BigInteger,
+    Boolean,
+    Column,
+    DateTime,
+    Float,
+    Index,
+    Integer,
+    MetaData,
+    Numeric,
+    String,
+    Table,
+    Text,
+    func,
+)
+
+metadata = MetaData()
+
+TIMESTAMP = DateTime(timezone=True)
+
+#: Auto-incrementing surrogate key.
+#: SQLite only auto-increments INTEGER PRIMARY KEY, so the variant keeps
+#: BIGINT everywhere else while staying usable for local/CI runs.
+AutoId = BigInteger().with_variant(Integer, "sqlite")
+
+reconciliation_definition = Table(
+    "reconciliation_definition",
+    metadata,
+    Column("recon_id", String(128), primary_key=True),
+    Column("version", Integer, primary_key=True),
+    Column("name", String(256), nullable=False),
+    Column("description", Text),
+    Column("product", String(128)),
+    Column("customer", String(128)),
+    Column("environment", String(64)),
+    Column("status", String(32), nullable=False),
+    Column("enabled", Boolean, nullable=False, default=True),
+    Column("owner", String(128)),
+    Column("leg_count", Integer, default=0),
+    Column("schedule_type", String(32)),
+    Column("schedule_expression", String(256)),
+    Column("definition_json", Text),
+    Column("created_by", String(128)),
+    Column("created_at", TIMESTAMP),
+    Column("updated_by", String(128)),
+    Column("updated_at", TIMESTAMP),
+    Index("ix_definition_product", "product", "customer"),
+)
+
+reconciliation_run = Table(
+    "reconciliation_run",
+    metadata,
+    Column("run_id", String(64), primary_key=True),
+    Column("recon_id", String(128), nullable=False),
+    Column("recon_name", String(256)),
+    Column("version", Integer, nullable=False),
+    Column("product", String(128)),
+    Column("customer", String(128)),
+    Column("environment", String(64)),
+    Column("business_date", String(32)),
+    Column("status", String(32), nullable=False),
+    Column("trigger_type", String(32)),
+    Column("triggered_by", String(128)),
+    Column("node", String(128)),
+    Column("spark_application_id", String(128)),
+    Column("idempotency_key", String(256)),
+    Column("attempt", Integer, default=1),
+    Column("start_time", TIMESTAMP),
+    Column("end_time", TIMESTAMP),
+    Column("duration_ms", BigInteger),
+    Column("records_read", BigInteger, default=0),
+    Column("records_written", BigInteger, default=0),
+    Column("records_matched", BigInteger, default=0),
+    Column("records_unmatched", BigInteger, default=0),
+    Column("duplicates", BigInteger, default=0),
+    Column("exceptions", BigInteger, default=0),
+    Column("field_mismatches", BigInteger, default=0),
+    Column("match_percentage", Float),
+    Column("read_time_ms", BigInteger),
+    Column("process_time_ms", BigInteger),
+    Column("write_time_ms", BigInteger),
+    Column("spark_time_ms", BigInteger),
+    Column("error_message", Text),
+    Column("created_at", TIMESTAMP),
+    Index("ix_run_recon_start", "recon_id", "start_time"),
+    Index("ix_run_status", "status", "start_time"),
+    Index("ix_run_business_date", "business_date"),
+)
+
+reconciliation_leg_run = Table(
+    "reconciliation_leg_run",
+    metadata,
+    Column("id", AutoId, primary_key=True, autoincrement=True),
+    Column("run_id", String(64), nullable=False),
+    Column("recon_id", String(128), nullable=False),
+    Column("leg_id", String(128), nullable=False),
+    Column("leg_name", String(256)),
+    Column("status", String(32), nullable=False),
+    Column("stage", Integer, default=0),
+    Column("start_time", TIMESTAMP),
+    Column("end_time", TIMESTAMP),
+    Column("duration_ms", BigInteger),
+    Column("left_source", String(128)),
+    Column("right_source", String(128)),
+    Column("recon_key", String(512)),
+    Column("match_logic", String(1024)),
+    Column("left_records", BigInteger, default=0),
+    Column("right_records", BigInteger, default=0),
+    Column("matched", BigInteger, default=0),
+    Column("mismatched", BigInteger, default=0),
+    Column("left_only", BigInteger, default=0),
+    Column("right_only", BigInteger, default=0),
+    Column("duplicates_left", BigInteger, default=0),
+    Column("duplicates_right", BigInteger, default=0),
+    Column("duplicate_keys", BigInteger, default=0),
+    Column("field_mismatches", BigInteger, default=0),
+    Column("exceptions", BigInteger, default=0),
+    Column("match_percentage", Float),
+    Column("read_time_ms", BigInteger),
+    Column("process_time_ms", BigInteger),
+    Column("write_time_ms", BigInteger),
+    Column("error_message", Text),
+    Index("ix_leg_run", "run_id", "leg_id", unique=True),
+)
+
+reconciliation_metrics = Table(
+    "reconciliation_metrics",
+    metadata,
+    Column("id", AutoId, primary_key=True, autoincrement=True),
+    Column("run_id", String(64), nullable=False),
+    Column("recon_id", String(128), nullable=False),
+    Column("leg_id", String(128)),
+    Column("metric_name", String(128), nullable=False),
+    Column("metric_value", Numeric(38, 6)),
+    Column("metric_text", String(1024)),
+    Column("metric_type", String(32), default="COUNTER"),
+    Column("business_date", String(32)),
+    Column("recorded_at", TIMESTAMP),
+    Index("ix_metrics_run", "run_id", "metric_name"),
+    Index("ix_metrics_recon", "recon_id", "recorded_at"),
+)
+
+reconciliation_exceptions = Table(
+    "reconciliation_exceptions",
+    metadata,
+    Column("id", AutoId, primary_key=True, autoincrement=True),
+    Column("run_id", String(64), nullable=False),
+    Column("recon_id", String(128), nullable=False),
+    Column("leg_id", String(128), nullable=False),
+    Column("business_date", String(32)),
+    Column("reconciliation_key", String(1024)),
+    Column("exception_type", String(64), nullable=False),
+    Column("source", String(128)),
+    Column("field", String(256)),
+    Column("rule", String(256)),
+    Column("expected_value", String(2048)),
+    Column("actual_value", String(2048)),
+    Column("key_components", Text),
+    #: JSON object of the business columns configured via ``leg.exceptionColumns``.
+    Column("context_columns", Text),
+    Column("left_occurrences", Integer),
+    Column("right_occurrences", Integer),
+    # --- officer workflow -------------------------------------------------
+    Column("status", String(32), default="OPEN"),
+    Column("assigned_to", String(128)),
+    Column("resolution_code", String(64)),
+    Column("resolution_note", Text),
+    Column("resolved_by", String(128)),
+    Column("resolved_at", TIMESTAMP),
+    Column("reopened_count", Integer, default=0),
+    Column("comment_count", Integer, default=0),
+    #: Server-side default: exception rows are written by Spark over JDBC, and
+    #: letting the database stamp the time avoids per-driver timestamp encoding
+    #: differences (and makes the database clock the single authority).
+    Column("created_at", TIMESTAMP, server_default=func.now()),
+    Column("updated_at", TIMESTAMP),
+    Index("ix_exceptions_run", "run_id", "exception_type"),
+    Index("ix_exceptions_recon_date", "recon_id", "business_date"),
+    Index("ix_exceptions_status", "status", "recon_id"),
+    Index("ix_exceptions_key", "recon_id", "reconciliation_key"),
+)
+
+reconciliation_exception_comment = Table(
+    "reconciliation_exception_comment",
+    metadata,
+    Column("id", AutoId, primary_key=True, autoincrement=True),
+    Column("exception_id", BigInteger, nullable=False),
+    Column("run_id", String(64)),
+    Column("recon_id", String(128)),
+    Column("author", String(128), nullable=False),
+    Column("comment", Text, nullable=False),
+    Column("status_before", String(32)),
+    Column("status_after", String(32)),
+    Column("created_at", TIMESTAMP, nullable=False),
+    Index("ix_exception_comment", "exception_id", "created_at"),
+)
+
+reconciliation_source_metrics = Table(
+    "reconciliation_source_metrics",
+    metadata,
+    Column("id", AutoId, primary_key=True, autoincrement=True),
+    Column("run_id", String(64), nullable=False),
+    Column("recon_id", String(128), nullable=False),
+    Column("leg_id", String(128), nullable=False),
+    Column("source_id", String(128), nullable=False),
+    Column("source_type", String(64)),
+    Column("connection_ref", String(128)),
+    Column("records_read", BigInteger),
+    Column("column_count", Integer),
+    Column("read_time_ms", BigInteger),
+    Column("data_quality_passed", Boolean),
+    Column("data_quality_details", Text),
+    Column("schema_json", Text),
+    Column("created_at", TIMESTAMP),
+    Index("ix_source_metrics_run", "run_id", "leg_id", "source_id"),
+)
+
+reconciliation_field_metrics = Table(
+    "reconciliation_field_metrics",
+    metadata,
+    Column("id", AutoId, primary_key=True, autoincrement=True),
+    Column("run_id", String(64), nullable=False),
+    Column("recon_id", String(128), nullable=False),
+    Column("leg_id", String(128), nullable=False),
+    Column("rule_id", String(128)),
+    Column("rule_name", String(256)),
+    Column("field_name", String(256)),
+    Column("compared_count", BigInteger),
+    Column("mismatch_count", BigInteger),
+    Column("mismatch_percentage", Float),
+    Column("created_at", TIMESTAMP),
+    Index("ix_field_metrics_run", "run_id", "leg_id"),
+)
+
+audit_log = Table(
+    "audit_log",
+    metadata,
+    Column("id", AutoId, primary_key=True, autoincrement=True),
+    Column("event_time", TIMESTAMP, nullable=False),
+    Column("action", String(64), nullable=False),
+    Column("entity_type", String(64), nullable=False),
+    Column("entity_id", String(256), nullable=False),
+    Column("actor", String(128), nullable=False),
+    Column("success", Boolean, default=True),
+    Column("old_version", Integer),
+    Column("new_version", Integer),
+    Column("changes", Text),
+    Column("details", Text),
+    Column("source_ip", String(64)),
+    Index("ix_audit_entity", "entity_type", "entity_id"),
+    Index("ix_audit_time", "event_time"),
+)
+
+scheduler_execution = Table(
+    "scheduler_execution",
+    metadata,
+    Column("id", AutoId, primary_key=True, autoincrement=True),
+    Column("recon_id", String(128), nullable=False),
+    Column("node", String(128), nullable=False),
+    Column("scheduled_time", TIMESTAMP),
+    Column("fired_at", TIMESTAMP, nullable=False),
+    Column("status", String(32), nullable=False),
+    Column("run_id", String(64)),
+    Column("business_date", String(32)),
+    Column("conditions_met", Boolean),
+    Column("condition_detail", Text),
+    Column("message", Text),
+    Index("ix_scheduler_recon", "recon_id", "fired_at"),
+)
+
+ALL_TABLES = (
+    reconciliation_definition,
+    reconciliation_run,
+    reconciliation_leg_run,
+    reconciliation_metrics,
+    reconciliation_exceptions,
+    reconciliation_exception_comment,
+    reconciliation_source_metrics,
+    reconciliation_field_metrics,
+    audit_log,
+    scheduler_execution,
+)

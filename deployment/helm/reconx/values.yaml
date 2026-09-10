@@ -1,0 +1,186 @@
+# Default values for the ReconX chart.
+# Every dependency can point at a managed service you already run.
+
+nameOverride: ""
+fullnameOverride: ""
+
+image:
+  registry: ""            # e.g. registry.example.com/
+  pullPolicy: IfNotPresent
+  pullSecrets: []
+  api: {repository: reconx/api, tag: ""}         # tag defaults to .Chart.AppVersion
+  ui: {repository: reconx/ui, tag: ""}
+  scheduler: {repository: reconx/scheduler, tag: ""}
+  spark: {repository: reconx/spark, tag: ""}
+
+# --------------------------------------------------------------------------- #
+# Platform configuration
+# --------------------------------------------------------------------------- #
+config:
+  environment: production
+  logLevel: INFO
+  logFormat: json
+  stagingDir: /var/reconx/staging
+
+mongodb:
+  # Set `enabled: false` and provide `uri` to use a managed MongoDB.
+  enabled: false
+  uri: "mongodb://mongodb:27017/?replicaSet=rs0"
+  database: reconx
+  tls: false
+  existingSecret: ""        # secret holding MONGODB_URI, if the URI carries credentials
+
+kafka:
+  enabled: true
+  bootstrapServers: "kafka:9092"
+  topicPrefix: reconciliation
+  securityProtocol: PLAINTEXT
+  saslMechanism: ""
+  saslUsername: ""
+
+resultDatabase:
+  jdbcUrl: "jdbc:postgresql://postgres:5432/reconx_results"
+  driver: org.postgresql.Driver
+  user: reconx
+  autoCreateSchema: false   # DBAs apply src/reconx/metrics/migrations in production
+
+smtp:
+  enabled: true
+  host: smtp.internal.example.com
+  port: 587
+  useTls: true
+  fromAddress: reconx@example.com
+  fromName: ReconX Platform
+  username: ""
+
+spark:
+  master: "k8s://https://kubernetes.default.svc:443"
+  submitMode: kubernetes
+  namespace: ""            # defaults to the release namespace
+  serviceAccount: reconx-spark
+  driver: {cores: 1, memory: 2g}
+  executor: {cores: 2, memory: 4g, instances: 3}
+  dynamicAllocation: {enabled: true, minExecutors: 1, maxExecutors: 20}
+  shufflePartitions: 400
+  adaptiveEnabled: true
+  extraJars: ""
+  extraPackages: ""
+
+scheduler:
+  enabled: true
+  replicaCount: 2
+  pollIntervalSeconds: 30
+  lockTtlSeconds: 120
+  maxConcurrentRuns: 10
+  resources:
+    requests: {cpu: 500m, memory: 1Gi}
+    limits: {cpu: "2", memory: 4Gi}
+  podDisruptionBudget: {enabled: true, minAvailable: 1}
+  nodeSelector: {}
+  tolerations: []
+  affinity: {}
+
+api:
+  replicaCount: 3
+  service: {type: ClusterIP, port: 8000}
+  corsOrigins: "*"
+  resources:
+    requests: {cpu: 250m, memory: 512Mi}
+    limits: {cpu: "2", memory: 2Gi}
+  autoscaling:
+    enabled: true
+    minReplicas: 3
+    maxReplicas: 12
+    targetCPUUtilizationPercentage: 70
+    targetMemoryUtilizationPercentage: 80
+  podDisruptionBudget: {enabled: true, minAvailable: 2}
+  nodeSelector: {}
+  tolerations: []
+  affinity: {}
+
+ui:
+  enabled: true
+  replicaCount: 2
+  service: {type: ClusterIP, port: 8501}
+  resources:
+    requests: {cpu: 200m, memory: 512Mi}
+    limits: {cpu: "1", memory: 2Gi}
+  podDisruptionBudget: {enabled: true, minAvailable: 1}
+  nodeSelector: {}
+  tolerations: []
+  affinity: {}
+
+ingress:
+  enabled: true
+  className: nginx
+  host: reconx.example.com
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-body-size: "32m"
+    # Streamlit's websocket must stay on one replica.
+    nginx.ingress.kubernetes.io/affinity: "cookie"
+    nginx.ingress.kubernetes.io/session-cookie-name: "reconx-ui"
+  tls:
+    enabled: true
+    secretName: reconx-tls
+
+security:
+  authEnabled: true
+  secretsBackend: k8s
+  secretsFileDir: /var/run/secrets/reconx
+  bootstrapAdminUsername: admin
+  # Provide these through an existing secret in production.
+  existingSecret: ""
+  jwtSecret: ""
+  encryptionKey: ""
+  resultDatabasePassword: ""
+  smtpPassword: ""
+  kafkaSaslPassword: ""
+  # Connection-level secrets referenced from reconciliations as k8s:<key>
+  connectionSecrets: {}
+
+storage:
+  staging:
+    enabled: true
+    # ReadWriteMany is required: SFTP/Excel staging is shared between the
+    # submitting node and the Spark executors.
+    accessMode: ReadWriteMany
+    size: 50Gi
+    storageClassName: ""
+    existingClaim: ""
+
+serviceAccount:
+  create: true
+  name: reconx
+  annotations: {}          # e.g. eks.amazonaws.com/role-arn for IRSA
+
+rbac:
+  create: true
+
+maintenance:
+  enabled: true
+  schedule: "30 3 * * *"
+
+monitoring:
+  serviceMonitor:
+    enabled: false
+    interval: 30s
+    labels: {}
+
+networkPolicy:
+  enabled: false
+  ingressNamespace: ingress-nginx
+
+podSecurityContext:
+  runAsNonRoot: true
+  runAsUser: 1001
+  runAsGroup: 1001
+  fsGroup: 1001
+  seccompProfile: {type: RuntimeDefault}
+
+containerSecurityContext:
+  allowPrivilegeEscalation: false
+  capabilities: {drop: ["ALL"]}
+
+extraEnv: []
+podAnnotations: {}
+podLabels: {}

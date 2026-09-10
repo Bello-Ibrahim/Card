@@ -1,0 +1,97 @@
+{{- if .Values.scheduler.enabled }}
+{{- /* Several replicas are safe: MongoDB locks plus the unique run
+       idempotency key make duplicate execution impossible. */}}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "reconx.fullname" . }}-scheduler
+  labels:
+    {{- include "reconx.labels" . | nindent 4 }}
+    app.kubernetes.io/component: scheduler
+spec:
+  replicas: {{ .Values.scheduler.replicaCount }}
+  selector:
+    matchLabels:
+      {{- include "reconx.selectorLabels" . | nindent 6 }}
+      app.kubernetes.io/component: scheduler
+  strategy:
+    type: RollingUpdate
+    rollingUpdate: {maxSurge: 1, maxUnavailable: 0}
+  template:
+    metadata:
+      labels:
+        {{- include "reconx.selectorLabels" . | nindent 8 }}
+        app.kubernetes.io/component: scheduler
+      annotations:
+        checksum/config: {{ include (print $.Template.BasePath "/configmap.yaml") . | sha256sum }}
+        {{- with .Values.podAnnotations }}{{- toYaml . | nindent 8 }}{{- end }}
+    spec:
+      serviceAccountName: {{ include "reconx.serviceAccountName" . }}
+      terminationGracePeriodSeconds: 120
+      {{- with .Values.image.pullSecrets }}
+      imagePullSecrets: {{- toYaml . | nindent 8 }}
+      {{- end }}
+      securityContext: {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      topologySpreadConstraints:
+        - maxSkew: 1
+          topologyKey: kubernetes.io/hostname
+          whenUnsatisfiable: ScheduleAnyway
+          labelSelector:
+            matchLabels:
+              {{- include "reconx.selectorLabels" . | nindent 14 }}
+              app.kubernetes.io/component: scheduler
+      containers:
+        - name: scheduler
+          image: {{ include "reconx.image" (list . "scheduler") }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          envFrom: {{- include "reconx.envFrom" . | nindent 12 }}
+          env:
+            - {name: RECONX_SERVICE, value: reconx-scheduler}
+            - name: RECONX_NODE_ID
+              valueFrom: {fieldRef: {fieldPath: metadata.name}}
+            - {name: SPARK_HOME, value: /opt/spark}
+            {{- with .Values.extraEnv }}{{- toYaml . | nindent 12 }}{{- end }}
+          volumeMounts:
+            {{- if .Values.storage.staging.enabled }}
+            - {name: staging, mountPath: {{ .Values.config.stagingDir }}}
+            {{- end }}
+            - {name: connection-secrets, mountPath: {{ .Values.security.secretsFileDir }}, readOnly: true}
+          resources: {{- toYaml .Values.scheduler.resources | nindent 12 }}
+          livenessProbe:
+            exec:
+              command: ["sh", "-c", "pgrep -f reconx.scheduler.service > /dev/null"]
+            initialDelaySeconds: 30
+            periodSeconds: 30
+            failureThreshold: 3
+          securityContext: {{- toYaml .Values.containerSecurityContext | nindent 12 }}
+      volumes:
+        {{- if .Values.storage.staging.enabled }}
+        - name: staging
+          persistentVolumeClaim: {claimName: {{ include "reconx.stagingClaimName" . }}}
+        {{- end }}
+        - name: connection-secrets
+          secret: {secretName: {{ include "reconx.secretName" . }}}
+      {{- with .Values.scheduler.nodeSelector }}
+      nodeSelector: {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.scheduler.tolerations }}
+      tolerations: {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.scheduler.affinity }}
+      affinity: {{- toYaml . | nindent 8 }}
+      {{- end }}
+{{- if .Values.scheduler.podDisruptionBudget.enabled }}
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: {{ include "reconx.fullname" . }}-scheduler
+  labels: {{- include "reconx.labels" . | nindent 4 }}
+spec:
+  minAvailable: {{ .Values.scheduler.podDisruptionBudget.minAvailable }}
+  selector:
+    matchLabels:
+      {{- include "reconx.selectorLabels" . | nindent 6 }}
+      app.kubernetes.io/component: scheduler
+{{- end }}
+{{- end }}

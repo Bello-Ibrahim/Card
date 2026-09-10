@@ -1,0 +1,16 @@
+# Shared staging area.
+#
+# ReadWriteMany matters: SFTP and Excel sources are staged to disk by whichever
+# node runs the job, and the Spark executors must be able to read them back.
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: reconx-staging
+  namespace: reconx
+  labels: {app.kubernetes.io/name: reconx}
+spec:
+  accessModes: ["ReadWriteMany"]
+  resources:
+    requests:
+      storage: 50Gi
+  # storageClassName: nfs-client   # set to a RWX-capable class (NFS, CephFS, EFS, Azure Files)

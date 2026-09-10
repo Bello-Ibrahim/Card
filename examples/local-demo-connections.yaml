@@ -1,0 +1,8 @@
+connections:
+  - connectionId: local_files
+    name: Local data directory
+    type: filesystem
+    environment: local
+    config:
+      basePath: /
+      writable: true
