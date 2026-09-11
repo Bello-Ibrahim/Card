@@ -1,0 +1,45 @@
+# ReconX Spark image
+#
+# Used for spark-submit workers and as spark.kubernetes.container.image for
+# Spark-on-Kubernetes drivers and executors.
+ARG SPARK_VERSION=3.5.3
+FROM apache/spark:${SPARK_VERSION}-python3
+
+USER root
+
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    RECONX_SERVICE=reconx-spark \
+    PIP_NO_CACHE_DIR=1
+
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends python3-pip libpq5 \
+ && rm -rf /var/lib/apt/lists/*
+
+COPY pyproject.toml README.md /opt/reconx/
+COPY src/ /opt/reconx/src/
+RUN pip3 install --no-cache-dir "/opt/reconx[spark,connectors]"
+
+# JDBC drivers on the Spark classpath (populate with scripts/fetch-jdbc-drivers.sh)
+COPY deployment/docker/jars/ /opt/spark/jars-extra/
+RUN cp -f /opt/spark/jars-extra/*.jar /opt/spark/jars/ 2>/dev/null || true
+
+# Hadoop AWS + SDK for s3a:// (S3, StorageGRID, MinIO)
+ARG HADOOP_AWS_VERSION=3.3.4
+ARG AWS_SDK_VERSION=1.12.767
+RUN set -eu; \
+    MAVEN=${MAVEN_REPOSITORY:-https://repo1.maven.org/maven2}; \
+    curl -fsSL -o /opt/spark/jars/hadoop-aws-${HADOOP_AWS_VERSION}.jar \
+      "${MAVEN}/org/apache/hadoop/hadoop-aws/${HADOOP_AWS_VERSION}/hadoop-aws-${HADOOP_AWS_VERSION}.jar" || \
+      echo "WARNING: hadoop-aws not downloaded; s3a:// will be unavailable"; \
+    curl -fsSL -o /opt/spark/jars/aws-java-sdk-bundle-${AWS_SDK_VERSION}.jar \
+      "${MAVEN}/com/amazonaws/aws-java-sdk-bundle/${AWS_SDK_VERSION}/aws-java-sdk-bundle-${AWS_SDK_VERSION}.jar" || \
+      echo "WARNING: aws-sdk-bundle not downloaded; s3a:// will be unavailable"
+
+RUN mkdir -p /var/reconx/staging && chown -R 185:0 /var/reconx /opt/reconx
+
+# 185 is the non-root spark user in the upstream image
+USER 185
+WORKDIR /opt/spark/work-dir
+
+ENTRYPOINT ["/opt/entrypoint.sh"]

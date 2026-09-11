@@ -1,0 +1,72 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "reconx.fullname" . }}-config
+  labels: {{- include "reconx.labels" . | nindent 4 }}
+data:
+  RECONX_ENVIRONMENT: {{ .Values.config.environment | quote }}
+  LOG_LEVEL: {{ .Values.config.logLevel | quote }}
+  LOG_FORMAT: {{ .Values.config.logFormat | quote }}
+  RECONX_STAGING_DIR: {{ .Values.config.stagingDir | quote }}
+
+  MONGODB_URI: {{ .Values.mongodb.uri | quote }}
+  MONGODB_DATABASE: {{ .Values.mongodb.database | quote }}
+  MONGODB_TLS: {{ .Values.mongodb.tls | quote }}
+
+  KAFKA_ENABLED: {{ .Values.kafka.enabled | quote }}
+  KAFKA_BOOTSTRAP_SERVERS: {{ .Values.kafka.bootstrapServers | quote }}
+  KAFKA_TOPIC_PREFIX: {{ .Values.kafka.topicPrefix | quote }}
+  KAFKA_SECURITY_PROTOCOL: {{ .Values.kafka.securityProtocol | quote }}
+  {{- if .Values.kafka.saslMechanism }}
+  KAFKA_SASL_MECHANISM: {{ .Values.kafka.saslMechanism | quote }}
+  KAFKA_SASL_USERNAME: {{ .Values.kafka.saslUsername | quote }}
+  {{- end }}
+
+  RESULT_JDBC_URL: {{ .Values.resultDatabase.jdbcUrl | quote }}
+  RESULT_JDBC_DRIVER: {{ .Values.resultDatabase.driver | quote }}
+  RESULT_JDBC_USER: {{ .Values.resultDatabase.user | quote }}
+  RESULT_AUTO_CREATE_SCHEMA: {{ .Values.resultDatabase.autoCreateSchema | quote }}
+
+  SMTP_ENABLED: {{ .Values.smtp.enabled | quote }}
+  SMTP_HOST: {{ .Values.smtp.host | quote }}
+  SMTP_PORT: {{ .Values.smtp.port | quote }}
+  SMTP_USE_TLS: {{ .Values.smtp.useTls | quote }}
+  SMTP_FROM_ADDRESS: {{ .Values.smtp.fromAddress | quote }}
+  SMTP_FROM_NAME: {{ .Values.smtp.fromName | quote }}
+  {{- if .Values.smtp.username }}
+  SMTP_USERNAME: {{ .Values.smtp.username | quote }}
+  {{- end }}
+
+  SPARK_MASTER: {{ .Values.spark.master | quote }}
+  SPARK_SUBMIT_MODE: {{ .Values.spark.submitMode | quote }}
+  SPARK_NAMESPACE: {{ default .Release.Namespace .Values.spark.namespace | quote }}
+  SPARK_IMAGE: {{ include "reconx.image" (list . "spark") | quote }}
+  SPARK_SERVICE_ACCOUNT: {{ .Values.spark.serviceAccount | quote }}
+  SPARK_DRIVER_CORES: {{ .Values.spark.driver.cores | quote }}
+  SPARK_DRIVER_MEMORY: {{ .Values.spark.driver.memory | quote }}
+  SPARK_EXECUTOR_CORES: {{ .Values.spark.executor.cores | quote }}
+  SPARK_EXECUTOR_MEMORY: {{ .Values.spark.executor.memory | quote }}
+  SPARK_EXECUTOR_INSTANCES: {{ .Values.spark.executor.instances | quote }}
+  SPARK_DYNAMIC_ALLOCATION: {{ .Values.spark.dynamicAllocation.enabled | quote }}
+  SPARK_DYNAMIC_ALLOCATION_MIN_EXECUTORS: {{ .Values.spark.dynamicAllocation.minExecutors | quote }}
+  SPARK_DYNAMIC_ALLOCATION_MAX_EXECUTORS: {{ .Values.spark.dynamicAllocation.maxExecutors | quote }}
+  SPARK_SHUFFLE_PARTITIONS: {{ .Values.spark.shufflePartitions | quote }}
+  SPARK_ADAPTIVE_ENABLED: {{ .Values.spark.adaptiveEnabled | quote }}
+  {{- if .Values.spark.extraJars }}
+  SPARK_EXTRA_JARS: {{ .Values.spark.extraJars | quote }}
+  {{- end }}
+  {{- if .Values.spark.extraPackages }}
+  SPARK_EXTRA_PACKAGES: {{ .Values.spark.extraPackages | quote }}
+  {{- end }}
+
+  SCHEDULER_ENABLED: {{ .Values.scheduler.enabled | quote }}
+  SCHEDULER_POLL_INTERVAL_SECONDS: {{ .Values.scheduler.pollIntervalSeconds | quote }}
+  SCHEDULER_LOCK_TTL_SECONDS: {{ .Values.scheduler.lockTtlSeconds | quote }}
+  SCHEDULER_MAX_CONCURRENT_RUNS: {{ .Values.scheduler.maxConcurrentRuns | quote }}
+
+  API_CORS_ORIGINS: {{ .Values.api.corsOrigins | quote }}
+  API_BASE_URL: {{ printf "https://%s" .Values.ingress.host | quote }}
+  RECONX_SECURITY_AUTH_ENABLED: {{ .Values.security.authEnabled | quote }}
+  RECONX_SECURITY_SECRETS_BACKEND: {{ .Values.security.secretsBackend | quote }}
+  RECONX_SECURITY_SECRETS_FILE_DIR: {{ .Values.security.secretsFileDir | quote }}
+  RECONX_SECURITY_BOOTSTRAP_ADMIN_USERNAME: {{ .Values.security.bootstrapAdminUsername | quote }}

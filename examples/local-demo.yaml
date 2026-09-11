@@ -1,0 +1,102 @@
+# A self-contained demo that runs with no external services:
+#
+#   python -m reconx.spark.job \
+#     --definition-file examples/local-demo.yaml \
+#     --connections-file examples/local-demo-connections.yaml \
+#     --business-date 2026-09-10 \
+#     --param data_dir=examples/data --param out_dir=/tmp/reconx-demo \
+#     --profile --no-notifications
+#
+# It reproduces every core behaviour: composite normalised keys, two matching
+# logics combined with OR, duplicate detection, exception context columns,
+# aggregate reconciliation and a second leg consuming the first leg's output.
+reconciliation:
+  reconId: local_demo_recon
+  name: Local Demo Reconciliation
+  description: Gateway extract vs ledger, then matched transactions vs settlements
+  product: DEMO
+  customer: LOCAL
+  status: ACTIVE
+  events: {enabled: false}
+  notifications: {email: {enabled: false}}
+  schedule: {type: manual, timezone: UTC}
+
+  legs:
+    - id: transaction_leg
+      name: Gateway vs ledger
+      sources:
+        - id: gateway
+          type: filesystem
+          connectionRef: local_files
+          path: ${data_dir}/gateway_transactions.csv
+          format: csv
+          dataQuality:
+            - {type: not_null, columns: [customer_id, transaction_id], onFailure: STOP}
+            - {type: row_count, minRows: 1, onFailure: STOP}
+        - id: ledger
+          type: filesystem
+          connectionRef: local_files
+          path: ${data_dir}/ledger_entries.csv
+          format: csv
+      leftSource: gateway
+      rightSource: ledger
+      keys:
+        - {left: country, right: country, alias: country}
+        - left: customer_id
+          right: customer_id
+          alias: customer_id
+          normalization: {trim: true, stripLeadingZeros: true}
+        - {left: transaction_id, right: transaction_id, alias: transaction_id}
+      matchLogic:
+        operator: OR
+        rules:
+          - id: value_rule
+            name: Amount and currency agree
+            operator: AND
+            comparisons:
+              - {left: amount, right: amount, rule: numeric_tolerance, tolerance: 0.01}
+              - {left: currency, right: currency, rule: case_insensitive}
+          - id: reference_rule
+            name: External reference agrees
+            comparisons:
+              - {left: ext_ref, right: ext_ref, rule: trimmed}
+      exceptionColumns:
+        - trade_date
+        - {alias: country, left: country, right: country}
+        - {alias: channel, left: channel, source: left}
+        - {alias: posting_status, right: posting_status, source: right}
+        - {alias: amounts, left: amount, right: amount, source: both}
+      aggregates:
+        - {name: total_amount, function: SUM, leftField: amount, rightField: amount, tolerance: 0.01}
+        - {name: record_count, function: COUNT}
+      matching: {duplicateDetection: true, exceptionThreshold: 100}
+      outputs:
+        - {id: results, type: filesystem, connectionRef: local_files,
+           path: "${out_dir}/transaction_leg", format: parquet, mode: overwrite}
+
+    - id: settlement_leg
+      name: Matched transactions vs settlements
+      sources:
+        - id: matched
+          type: leg_output
+          legRef: transaction_leg
+          transformations:
+            - {type: filter, condition: "match_category = 'MATCHED'"}
+            - {type: select, columns: [key_transaction_id, left_amount]}
+            - {type: rename, mapping: {key_transaction_id: transaction_id, left_amount: amount}}
+        - id: settlements
+          type: filesystem
+          connectionRef: local_files
+          path: ${data_dir}/settlements.csv
+          format: csv
+      leftSource: matched
+      rightSource: settlements
+      keys:
+        - {left: transaction_id, right: transaction_id, alias: transaction_id}
+      comparisons:
+        - {left: amount, right: settled_amount, rule: numeric_tolerance, tolerance: 0.01}
+      exceptionColumns:
+        - {alias: settlement_status, right: status, source: right}
+      outputs:
+        - {id: results, type: filesystem, connectionRef: local_files,
+           path: "${out_dir}/settlement_leg", format: parquet, mode: overwrite}

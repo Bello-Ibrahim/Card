@@ -1,0 +1,32 @@
+# Retention enforcement and Kafka outbox replay.
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: reconx-maintenance
+  namespace: reconx
+  labels: {app.kubernetes.io/name: reconx, app.kubernetes.io/component: maintenance}
+spec:
+  schedule: "30 3 * * *"
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 3
+  failedJobsHistoryLimit: 3
+  jobTemplate:
+    spec:
+      backoffLimit: 2
+      template:
+        spec:
+          restartPolicy: OnFailure
+          serviceAccountName: reconx
+          securityContext:
+            runAsNonRoot: true
+            runAsUser: 1001
+          containers:
+            - name: maintenance
+              image: reconx/api:1.0.0
+              command: ["python", "-m", "reconx.cli", "maintenance", "--purge", "--replay-events"]
+              envFrom:
+                - configMapRef: {name: reconx-config}
+                - secretRef: {name: reconx-secrets}
+              resources:
+                requests: {cpu: 100m, memory: 256Mi}
+                limits: {cpu: "1", memory: 1Gi}

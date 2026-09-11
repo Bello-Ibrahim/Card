@@ -1,0 +1,13 @@
+apiVersion: v2
+name: reconx
+description: ReconX - Enterprise Distributed Data Reconciliation Platform (Spark + Streamlit)
+type: application
+version: 1.0.0
+appVersion: "1.0.0"
+keywords: [reconciliation, spark, data-quality, streamlit, enterprise]
+home: https://github.com/your-org/reconx
+sources: [https://github.com/your-org/reconx]
+maintainers:
+  - name: ReconX Platform Team
+annotations:
+  category: Analytics

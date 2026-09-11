@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ ctx.recon_name }} - {{ ctx.status }}</title>
+  </head>
+  <body style="margin:0;padding:0;background:#f6f8fa;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;color:#1f2328;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f6f8fa;padding:24px 12px;">
+      <tr>
+        <td align="center">
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:680px;background:#ffffff;border:1px solid #d1d9e0;border-radius:8px;overflow:hidden;">
+            <tr>
+              <td style="background:{{ colour }};padding:18px 24px;color:#ffffff;">
+                <div style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;opacity:.85;">
+                  ReconX reconciliation {{ ctx.status.replace('_', ' ')|lower }}
+                </div>
+                <div style="font-size:20px;font-weight:600;margin-top:4px;">{{ ctx.recon_name }}</div>
+                <div style="font-size:13px;opacity:.9;margin-top:2px;">
+                  {{ ctx.recon_id }}{% if ctx.business_date %} &middot; business date {{ ctx.business_date }}{% endif %}
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding:20px 24px 4px;">
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="font-size:14px;">
+                  <tr>
+                    <td style="padding:4px 0;color:#59636e;width:150px;">Status</td>
+                    <td style="padding:4px 0;font-weight:600;color:{{ colour }};">{{ ctx.status }}</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:4px 0;color:#59636e;">Run ID</td>
+                    <td style="padding:4px 0;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;">{{ ctx.run_id }}</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:4px 0;color:#59636e;">Duration</td>
+                    <td style="padding:4px 0;">{{ ctx.duration_ms|duration }}</td>
+                  </tr>
+                  {% if ctx.trigger %}
+                  <tr>
+                    <td style="padding:4px 0;color:#59636e;">Trigger</td>
+                    <td style="padding:4px 0;">{{ ctx.trigger }}</td>
+                  </tr>
+                  {% endif %}
+                  {% if ctx.product or ctx.customer %}
+                  <tr>
+                    <td style="padding:4px 0;color:#59636e;">Scope</td>
+                    <td style="padding:4px 0;">{{ ctx.product or '-' }} / {{ ctx.customer or '-' }}</td>
+                  </tr>
+                  {% endif %}
+                  {% if ctx.spark_application_id %}
+                  <tr>
+                    <td style="padding:4px 0;color:#59636e;">Spark app</td>
+                    <td style="padding:4px 0;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;">{{ ctx.spark_application_id }}</td>
+                  </tr>
+                  {% endif %}
+                </table>
+              </td>
+            </tr>
+
+            {% if config.include_metrics and ctx.metrics %}
+            <tr>
+              <td style="padding:16px 24px 0;">
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #d1d9e0;border-radius:6px;font-size:14px;">
+                  <tr style="background:#f6f8fa;">
+                    <th align="left" style="padding:8px 12px;font-weight:600;border-bottom:1px solid #d1d9e0;">Metric</th>
+                    <th align="right" style="padding:8px 12px;font-weight:600;border-bottom:1px solid #d1d9e0;">Value</th>
+                  </tr>
+                  <tr><td style="padding:7px 12px;">Records read</td><td align="right" style="padding:7px 12px;">{{ ctx.metrics.get('recordsRead')|thousands }}</td></tr>
+                  <tr><td style="padding:7px 12px;">Matched</td><td align="right" style="padding:7px 12px;color:#1a7f37;">{{ ctx.metrics.get('recordsMatched')|thousands }}</td></tr>
+                  <tr><td style="padding:7px 12px;">Unmatched</td><td align="right" style="padding:7px 12px;color:#cf222e;">{{ ctx.metrics.get('recordsUnmatched')|thousands }}</td></tr>
+                  <tr><td style="padding:7px 12px;">Duplicates</td><td align="right" style="padding:7px 12px;">{{ ctx.metrics.get('duplicates')|thousands }}</td></tr>
+                  <tr><td style="padding:7px 12px;">Exceptions</td><td align="right" style="padding:7px 12px;">{{ ctx.metrics.get('exceptions')|thousands }}</td></tr>
+                  {% if ctx.metrics.get('matchPercentage') is not none %}
+                  <tr><td style="padding:7px 12px;">Match rate</td><td align="right" style="padding:7px 12px;font-weight:600;">{{ ctx.metrics.get('matchPercentage') }}%</td></tr>
+                  {% endif %}
+                </table>
+              </td>
+            </tr>
+            {% endif %}
+
+            {% if ctx.legs %}
+            <tr>
+              <td style="padding:16px 24px 0;">
+                <div style="font-size:13px;font-weight:600;margin-bottom:6px;">Legs</div>
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #d1d9e0;border-radius:6px;font-size:13px;">
+                  <tr style="background:#f6f8fa;">
+                    <th align="left" style="padding:7px 10px;border-bottom:1px solid #d1d9e0;">Leg</th>
+                    <th align="right" style="padding:7px 10px;border-bottom:1px solid #d1d9e0;">Matched</th>
+                    <th align="right" style="padding:7px 10px;border-bottom:1px solid #d1d9e0;">Unmatched</th>
+                    <th align="right" style="padding:7px 10px;border-bottom:1px solid #d1d9e0;">Match %</th>
+                  </tr>
+                  {% for leg in ctx.legs %}
+                  <tr>
+                    <td style="padding:6px 10px;">{{ leg.get('legId') }}</td>
+                    <td align="right" style="padding:6px 10px;">{{ leg.get('matched')|thousands }}</td>
+                    <td align="right" style="padding:6px 10px;">{{ leg.get('unmatched')|thousands }}</td>
+                    <td align="right" style="padding:6px 10px;">{{ leg.get('matchPercentage') if leg.get('matchPercentage') is not none else '-' }}</td>
+                  </tr>
+                  {% endfor %}
+                </table>
+              </td>
+            </tr>
+            {% endif %}
+
+            {% if show_exceptions %}
+            <tr>
+              <td style="padding:16px 24px 0;">
+                <div style="font-size:13px;font-weight:600;margin-bottom:6px;">Exception sample ({{ ctx.exceptions_sample|length }} of {{ ctx.metrics.get('exceptions')|thousands }})</div>
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #d1d9e0;border-radius:6px;font-size:12px;">
+                  <tr style="background:#f6f8fa;">
+                    <th align="left" style="padding:6px 10px;border-bottom:1px solid #d1d9e0;">Key</th>
+                    <th align="left" style="padding:6px 10px;border-bottom:1px solid #d1d9e0;">Type</th>
+                    <th align="left" style="padding:6px 10px;border-bottom:1px solid #d1d9e0;">Field</th>
+                    <th align="left" style="padding:6px 10px;border-bottom:1px solid #d1d9e0;">Expected</th>
+                    <th align="left" style="padding:6px 10px;border-bottom:1px solid #d1d9e0;">Actual</th>
+                  </tr>
+                  {% for row in ctx.exceptions_sample %}
+                  <tr>
+                    <td style="padding:5px 10px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;">{{ row.get('reconciliation_key', '')|truncate(40) }}</td>
+                    <td style="padding:5px 10px;">{{ row.get('exception_type', '') }}</td>
+                    <td style="padding:5px 10px;">{{ row.get('field') or '-' }}</td>
+                    <td style="padding:5px 10px;">{{ row.get('expected_value') or '-' }}</td>
+                    <td style="padding:5px 10px;">{{ row.get('actual_value') or '-' }}</td>
+                  </tr>
+                  {% endfor %}
+                </table>
+              </td>
+            </tr>
+            {% endif %}
+
+            {% if ctx.error_message %}
+            <tr>
+              <td style="padding:16px 24px 0;">
+                <div style="background:#fff8f8;border:1px solid #ffcecb;border-radius:6px;padding:12px;font-size:13px;color:#82071e;">
+                  <strong>Error</strong><br />
+                  <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;">{{ ctx.error_message }}</span>
+                </div>
+              </td>
+            </tr>
+            {% endif %}
+
+            {% if ctx.ui_url %}
+            <tr>
+              <td style="padding:20px 24px 4px;">
+                <a href="{{ ctx.ui_url }}" style="display:inline-block;background:#0969da;color:#ffffff;text-decoration:none;padding:9px 16px;border-radius:6px;font-size:14px;font-weight:600;">Open run details</a>
+              </td>
+            </tr>
+            {% endif %}
+
+            <tr>
+              <td style="padding:20px 24px;color:#59636e;font-size:11px;border-top:1px solid #d1d9e0;margin-top:16px;">
+                Sent by the ReconX reconciliation platform{% if ctx.environment %} ({{ ctx.environment }}){% endif %}.
+                This message is generated automatically - reply to your platform administrator for support.
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+# ReconX scheduler
+#
+# Bundles Spark so the scheduler can submit jobs with spark-submit. When
+# SPARK_SUBMIT_MODE=kubernetes the driver runs in its own pod from the Spark
+# image; this container only submits and monitors.
+FROM python:3.11-slim-bookworm AS builder
+
+ENV PIP_NO_CACHE_DIR=1
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends build-essential gcc \
+ && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /build
+COPY pyproject.toml README.md ./
+COPY src/ ./src/
+RUN python -m pip install --upgrade pip setuptools wheel \
+ && pip wheel --wheel-dir /wheels ".[spark,connectors]"
+
+# --------------------------------------------------------------------------- #
+FROM python:3.11-slim-bookworm AS runtime
+
+LABEL org.opencontainers.image.title="ReconX Scheduler" \
+      org.opencontainers.image.licenses="Apache-2.0"
+
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    RECONX_SERVICE=reconx-scheduler \
+    JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64 \
+    PATH="/usr/lib/jvm/java-17-openjdk-amd64/bin:${PATH}"
+
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends openjdk-17-jre-headless libpq5 procps curl \
+ && rm -rf /var/lib/apt/lists/* \
+ && groupadd --gid 1001 reconx \
+ && useradd --uid 1001 --gid reconx --create-home --shell /usr/sbin/nologin reconx \
+ && mkdir -p /var/reconx/staging /var/reconx/logs \
+ && chown -R reconx:reconx /var/reconx
+
+COPY --from=builder /wheels /wheels
+RUN pip install --no-index --find-links=/wheels reconx[spark,connectors] && rm -rf /wheels
+
+# JDBC drivers for the databases ReconX reads/writes (see scripts/fetch-jdbc-drivers.sh)
+COPY deployment/docker/jars/ /opt/reconx/jars/
+ENV SPARK_EXTRA_JARS=/opt/reconx/jars
+
+USER reconx
+WORKDIR /home/reconx
+
+HEALTHCHECK --interval=60s --timeout=10s --start-period=30s --retries=3 \
+  CMD pgrep -f reconx.scheduler.service > /dev/null || exit 1
+
+CMD ["python", "-m", "reconx.scheduler.service"]

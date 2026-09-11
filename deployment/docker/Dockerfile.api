@@ -1,0 +1,48 @@
+# ReconX control-plane API
+# Multi-stage: wheels are built once, the runtime image carries no toolchain.
+FROM python:3.11-slim-bookworm AS builder
+
+ENV PIP_NO_CACHE_DIR=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1
+
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends build-essential gcc \
+ && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /build
+COPY pyproject.toml README.md ./
+COPY src/ ./src/
+RUN python -m pip install --upgrade pip setuptools wheel \
+ && pip wheel --wheel-dir /wheels ".[api,connectors]"
+
+# --------------------------------------------------------------------------- #
+FROM python:3.11-slim-bookworm AS runtime
+
+LABEL org.opencontainers.image.title="ReconX API" \
+      org.opencontainers.image.description="Control plane for the ReconX reconciliation platform" \
+      org.opencontainers.image.licenses="Apache-2.0"
+
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PIP_NO_CACHE_DIR=1 \
+    RECONX_SERVICE=reconx-api
+
+# libpq for PostgreSQL, curl for the container healthcheck
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends libpq5 curl \
+ && rm -rf /var/lib/apt/lists/* \
+ && groupadd --gid 1001 reconx \
+ && useradd --uid 1001 --gid reconx --create-home --shell /usr/sbin/nologin reconx
+
+COPY --from=builder /wheels /wheels
+RUN pip install --no-index --find-links=/wheels reconx[api,connectors] && rm -rf /wheels
+
+USER reconx
+WORKDIR /home/reconx
+EXPOSE 8000
+
+HEALTHCHECK --interval=30s --timeout=5s --start-period=20s --retries=3 \
+  CMD curl -fsS http://localhost:8000/health || exit 1
+
+CMD ["uvicorn", "reconx.api.main:app", "--host", "0.0.0.0", "--port", "8000", \
+     "--proxy-headers", "--forwarded-allow-ips", "*", "--no-access-log"]

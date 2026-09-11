@@ -1,0 +1,65 @@
+# Run once with:  .venv/bin/pre-commit install
+# Run over everything:  .venv/bin/pre-commit run --all-files
+default_language_version:
+  python: python3.11
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: trailing-whitespace
+        exclude: '\.md$'
+      - id: end-of-file-fixer
+      - id: check-yaml
+        # Helm templates are Go templates, not YAML.
+        exclude: '^deployment/helm/reconx/templates/'
+      - id: check-json
+      - id: check-toml
+      - id: check-merge-conflict
+      - id: check-added-large-files
+        args: [--maxkb=512]
+      - id: check-case-conflict
+      - id: mixed-line-ending
+        args: [--fix=lf]
+      - id: detect-private-key
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.16.6
+    hooks:
+      - id: ruff
+        args: [--fix]
+      - id: ruff-format
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.11.2
+    hooks:
+      - id: mypy
+        files: '^src/reconx/'
+        additional_dependencies:
+          - pydantic>=2.7
+          - pydantic-settings>=2.3
+          - types-requests
+
+  - repo: local
+    hooks:
+      - id: validate-example-definitions
+        name: validate example reconciliation definitions
+        entry: python -m reconx.cli validate
+        language: system
+        pass_filenames: true
+        files: '^examples/.*\.(ya?ml)$'
+        exclude: '^examples/(sample-connections|local-demo-connections)\.ya?ml$'
+
+      - id: validate-helm-chart
+        name: validate the Helm chart
+        entry: python scripts/validate_helm_chart.py
+        language: system
+        pass_filenames: false
+        files: '^deployment/helm/'
+
+      - id: no-unbounded-collect
+        name: reject unbounded collect()/toPandas() in the Spark engine
+        entry: scripts/check_no_unbounded_collect.sh
+        language: script
+        pass_filenames: false
+        files: '^src/reconx/spark/'

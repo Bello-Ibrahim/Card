@@ -1,0 +1,44 @@
+ReconX {{ .Chart.AppVersion }} is installed as release "{{ .Release.Name }}" in namespace {{ .Release.Namespace }}.
+
+1. Check the components are healthy:
+
+   kubectl -n {{ .Release.Namespace }} get pods -l app.kubernetes.io/instance={{ .Release.Name }}
+   kubectl -n {{ .Release.Namespace }} exec deploy/{{ include "reconx.fullname" . }}-api -- curl -s localhost:8000/ready
+
+2. Reach the UI:
+{{- if .Values.ingress.enabled }}
+
+   https://{{ .Values.ingress.host }}
+{{- else }}
+
+   kubectl -n {{ .Release.Namespace }} port-forward svc/{{ include "reconx.fullname" . }}-ui {{ .Values.ui.service.port }}:{{ .Values.ui.service.port }}
+   open http://localhost:{{ .Values.ui.service.port }}
+{{- end }}
+
+3. Sign in. The API creates the first ADMIN user on startup; if you did not set
+   security.bootstrapAdminPassword, the generated password is printed once in the
+   API log:
+
+   kubectl -n {{ .Release.Namespace }} logs deploy/{{ include "reconx.fullname" . }}-api | grep bootstrap_admin_password_generated
+
+   Change it immediately under Administration -> Users.
+
+{{- if not .Values.resultDatabase.autoCreateSchema }}
+
+4. Apply the metrics database migrations (autoCreateSchema is off):
+
+   psql "{{ .Values.resultDatabase.jdbcUrl }}" -f src/reconx/metrics/migrations/V1__initial_schema.sql
+{{- end }}
+
+{{- if eq .Values.storage.staging.accessMode "ReadWriteOnce" }}
+
+WARNING: storage.staging.accessMode is ReadWriteOnce. SFTP and Excel sources are
+staged to that volume and must be readable by the Spark executors on other nodes.
+Use a ReadWriteMany storage class in a multi-node cluster.
+{{- end }}
+{{- if not .Values.security.existingSecret }}
+
+NOTE: chart-managed secrets are in use. For production, set
+security.existingSecret to a secret you manage (External Secrets, Sealed
+Secrets, Vault) so credentials are not stored in your values file.
+{{- end }}

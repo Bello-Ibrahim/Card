@@ -1,0 +1,278 @@
+# ReconX example: a two-leg daily payments reconciliation.
+#
+# Import it with:
+#   reconx-admin import examples/sample-reconciliation.yaml --activate
+#
+# Everything here is configuration - no code is written to add a reconciliation.
+reconciliation:
+  reconId: payments_daily_recon
+  name: Payments Daily Reconciliation
+  description: >-
+    Reconciles the payments gateway extract against the general ledger, then
+    reconciles the matched transactions against the settlement file.
+  product: PAYMENTS
+  customer: CUSTOMER_A
+  environment: production
+  owner: payments-ops@example.com
+  tags: [daily, payments, tier-1]
+  status: DRAFT           # activate explicitly once reviewed
+  enabled: true
+
+  # ---------------------------------------------------------------- variables
+  # Usable as ${name} in queries, table names, paths and filters. The built-ins
+  # (${business_date}, ${business_date_compact}, ${prev_business_date}, ...)
+  # are always available.
+  variables:
+    - name: ledger_table
+      label: Ledger table
+      default: "[dbo].[GeneralLedger]"
+      description: Fully qualified ledger table, overridable per run
+    - name: business_unit
+      label: Business unit
+      type: choice
+      choices: [RETAIL, CORPORATE]
+      default: CORPORATE
+      promptAtRun: true
+
+  # -------------------------------------------------------- idempotency
+  # recon_id + version + these dimensions form the unique run key, so two
+  # scheduler nodes can never start the same logical run twice.
+  idempotencyDimensions: [business_date]
+
+  # --------------------------------------------------------------- schedule
+  schedule:
+    type: cron
+    expression: "0 2 * * *"
+    timezone: Europe/London
+    enabled: true
+    timeoutMinutes: 120
+    maxConcurrentRuns: 1
+    waitForDataMinutes: 180       # hold in WAITING_FOR_DATA before giving up
+    businessDateOffsetDays: -1    # reconcile yesterday's business date
+    retries:
+      maxAttempts: 3
+      initialDelaySeconds: 300
+      multiplier: 2
+
+  # ------------------------------------------------- data availability
+  # The run only starts when the data is actually there; otherwise it waits
+  # rather than reporting every record as a break.
+  conditions:
+    operator: AND
+    conditions:
+      - type: s3_file_exists
+        connectionRef: payments_s3
+        path: "s3://payments-inbound/gateway/${business_date}/*.parquet"
+        minCount: 1
+        minSizeBytes: 1
+      - type: jdbc_query
+        connectionRef: ledger_mssql
+        query: |
+          SELECT COUNT(*)
+          FROM ${ledger_table}
+          WHERE BusinessDate = '${business_date}'
+        comparator: gt
+        threshold: 0
+      - operator: OR
+        conditions:
+          - type: sftp_file_exists
+            connectionRef: settlements_sftp
+            path: /outbound/settlements
+            filePattern: "settlement_${business_date_compact}*.csv"
+          - type: previous_run_successful
+            lookbackHours: 48
+
+  # -------------------------------------------------------------------- legs
+  legs:
+    # --- LEG 1: gateway extract vs general ledger -------------------------
+    - id: transaction_leg
+      name: Gateway transactions vs general ledger
+      enabled: true
+      sources:
+        - id: gateway
+          type: s3
+          connectionRef: payments_s3
+          path: "s3://payments-inbound/gateway/${business_date}/*.parquet"
+          format: parquet
+          schema:
+            mode: validate
+            fields:
+              - {name: country, type: string, nullable: false}
+              - {name: customer_id, type: string, nullable: false}
+              - {name: transaction_id, type: string, nullable: false}
+              - {name: amount, type: "decimal(18,2)"}
+              - {name: currency, type: string}
+              - {name: trade_date, type: date}
+              - {name: ext_ref, type: string}
+            allowExtraColumns: true
+          dataQuality:
+            - {type: not_null, columns: [customer_id, transaction_id], onFailure: STOP}
+            - {type: unique, columns: [transaction_id], onFailure: CONTINUE_WITH_WARNING}
+            - {type: row_count, minRows: 1, onFailure: STOP}
+
+        - id: ledger
+          type: jdbc
+          connectionRef: ledger_mssql
+          dialect: mssql
+          # T-SQL, sent verbatim. ${variables} are substituted in the query and
+          # in the table name before execution.
+          query: |
+            SELECT
+                l.[Country]        AS country,
+                l.[CustomerId]     AS customer_id,
+                l.[TransactionId]  AS transaction_id,
+                l.[Amount]         AS amount,
+                l.[CurrencyCode]   AS currency,
+                l.[TradeDate]      AS trade_date,
+                l.[ExternalRef]    AS ext_ref
+            FROM ${ledger_table} AS l WITH (NOLOCK)
+            WHERE l.[BusinessDate]  = '${business_date}'
+              AND l.[BusinessUnit]  = '${business_unit}'
+              AND l.[Status]        <> 'CANCELLED'
+
+      leftSource: gateway
+      rightSource: ledger
+
+      # Composite, normalised key. Normalisation is what makes real feeds match:
+      # '0001' on one side and '1' on the other are the same customer.
+      keys:
+        - {left: country, right: country, alias: country}
+        - left: customer_id
+          right: customer_id
+          alias: customer_id
+          normalization: {trim: true, stripLeadingZeros: true, case: upper}
+        - {left: transaction_id, right: transaction_id, alias: transaction_id}
+
+      # Two matching logics combined with OR: a pair matches when the values
+      # agree, OR when the external reference agrees (a known, benign case
+      # where the ledger books the FX leg differently).
+      matchLogic:
+        operator: OR
+        rules:
+          - id: value_rule
+            name: Amount and currency agree
+            operator: AND
+            comparisons:
+              - {left: amount, right: amount, rule: numeric_tolerance, tolerance: 0.01}
+              - {left: currency, right: currency, rule: case_insensitive}
+              - {left: trade_date, right: trade_date, rule: date_only}
+          - id: reference_rule
+            name: External reference agrees
+            operator: AND
+            comparisons:
+              - {left: ext_ref, right: ext_ref, rule: trimmed}
+
+      # Business columns copied onto every exception record, so an officer can
+      # work the break without opening the source data.
+      exceptionColumns:
+        - trade_date
+        - {alias: country, left: country, right: country}
+        - {alias: gateway_amount, left: amount, source: left}
+        - {alias: ledger_amount, right: amount, source: right}
+        - {alias: currency_pair, left: currency, right: currency, source: both}
+
+      aggregates:
+        - {name: total_amount, function: SUM, leftField: amount, rightField: amount, tolerance: 0.01}
+        - {name: record_count, function: COUNT}
+
+      matching:
+        duplicateDetection: true
+        nullEqualsNull: true
+        trimKeys: true
+        exceptionThreshold: 500          # above this the run is PARTIAL_SUCCESS
+        maxExceptionRecords: 1000000
+
+      outputs:
+        - id: results
+          type: s3
+          connectionRef: payments_s3
+          path: "s3://payments-results/transaction_leg/${business_date}"
+          format: parquet
+          mode: overwrite
+          partitionBy: [match_category]
+
+      exceptionOutput:
+        type: jdbc
+        connectionRef: reporting_db
+        table: recon_exceptions_detail
+        mode: append
+
+    # --- LEG 2: matched transactions vs settlements -----------------------
+    - id: settlement_leg
+      name: Matched transactions vs settlements
+      sources:
+        - id: matched_transactions
+          type: leg_output          # consumes leg 1's result - this is the DAG
+          legRef: transaction_leg
+          transformations:
+            - {type: filter, condition: "match_category = 'MATCHED'"}
+            - {type: select, columns: [key_transaction_id, left_amount, key_country]}
+            - type: rename
+              mapping:
+                key_transaction_id: transaction_id
+                left_amount: amount
+                key_country: country
+
+        - id: settlements
+          type: sftp
+          connectionRef: settlements_sftp
+          path: /outbound/settlements
+          filePattern: "settlement_${business_date_compact}*.csv"
+          format: csv
+          options: {header: "true", delimiter: ","}
+
+      leftSource: matched_transactions
+      rightSource: settlements
+
+      keys:
+        - {left: transaction_id, right: transaction_id, alias: transaction_id}
+
+      comparisons:
+        - {left: amount, right: settled_amount, rule: numeric_tolerance, tolerance: 0.01}
+
+      exceptionColumns:
+        - {alias: country, left: country, source: left}
+        - {alias: settlement_status, right: status, source: right}
+
+      outputs:
+        - id: final_results
+          type: jdbc
+          connectionRef: reporting_db
+          table: recon_settlement_results
+          mode: append
+
+  # --------------------------------------------------------- notifications
+  notifications:
+    email:
+      enabled: true
+      recipients: [payments-ops@example.com, recon-team@example.com]
+      cc: [head-of-ops@example.com]
+      on: [SUCCESS, FAILURE, PARTIAL_SUCCESS, DATA_UNAVAILABLE, EXCEPTION_THRESHOLD]
+      subjectPrefix: "[RECON]"
+      includeMetrics: true
+      includeExceptionSample: true
+      exceptionSampleSize: 25
+      exceptionThreshold: 100
+
+  # ---------------------------------------------------------------- events
+  events:
+    enabled: true
+    topicPrefix: reconciliation
+    onFailure: WARN_ONLY      # FAIL_RUN | RETRY | WARN_ONLY
+    emitStageEvents: true
+    includeMetrics: true
+
+  # -------------------------------------------------------------- retention
+  retention:
+    runsDays: 730
+    exceptionsDays: 180
+    resultsDays: 180
+    eventsDays: 30
+
+  # ------------------------------------------------------------------ spark
+  spark:
+    executorInstances: 6
+    executorMemory: 8g
+    executorCores: 4
+    shufflePartitions: 600
+    dynamicAllocation: true

@@ -1,0 +1,77 @@
+# The scheduler is safe to run with several replicas: each tick takes a
+# MongoDB lock per reconciliation, and the unique idempotency key on the runs
+# collection is the second line of defence against duplicate execution.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reconx-scheduler
+  namespace: reconx
+  labels: {app.kubernetes.io/name: reconx, app.kubernetes.io/component: scheduler}
+spec:
+  replicas: 2
+  selector:
+    matchLabels: {app.kubernetes.io/name: reconx, app.kubernetes.io/component: scheduler}
+  strategy:
+    type: RollingUpdate
+    rollingUpdate: {maxSurge: 1, maxUnavailable: 0}
+  template:
+    metadata:
+      labels: {app.kubernetes.io/name: reconx, app.kubernetes.io/component: scheduler}
+    spec:
+      serviceAccountName: reconx
+      # Give in-flight submissions time to finish before the pod is killed.
+      terminationGracePeriodSeconds: 120
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1001
+        fsGroup: 1001
+        seccompProfile: {type: RuntimeDefault}
+      topologySpreadConstraints:
+        - maxSkew: 1
+          topologyKey: kubernetes.io/hostname
+          whenUnsatisfiable: ScheduleAnyway
+          labelSelector:
+            matchLabels: {app.kubernetes.io/name: reconx, app.kubernetes.io/component: scheduler}
+      containers:
+        - name: scheduler
+          image: reconx/scheduler:1.0.0
+          envFrom:
+            - configMapRef: {name: reconx-config}
+            - secretRef: {name: reconx-secrets}
+          env:
+            - name: RECONX_SERVICE
+              value: reconx-scheduler
+            - name: RECONX_NODE_ID
+              valueFrom: {fieldRef: {fieldPath: metadata.name}}
+            - name: SPARK_HOME
+              value: /opt/spark
+          volumeMounts:
+            - {name: staging, mountPath: /var/reconx/staging}
+            - {name: connection-secrets, mountPath: /var/run/secrets/reconx, readOnly: true}
+          resources:
+            requests: {cpu: 500m, memory: 1Gi}
+            limits: {cpu: "2", memory: 4Gi}
+          livenessProbe:
+            exec:
+              command: ["sh", "-c", "pgrep -f reconx.scheduler.service > /dev/null"]
+            initialDelaySeconds: 30
+            periodSeconds: 30
+            failureThreshold: 3
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities: {drop: ["ALL"]}
+      volumes:
+        - name: staging
+          persistentVolumeClaim: {claimName: reconx-staging}
+        - name: connection-secrets
+          secret: {secretName: reconx-secrets}
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: reconx-scheduler
+  namespace: reconx
+spec:
+  minAvailable: 1
+  selector:
+    matchLabels: {app.kubernetes.io/name: reconx, app.kubernetes.io/component: scheduler}

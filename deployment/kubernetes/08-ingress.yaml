@@ -1,0 +1,34 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: reconx
+  namespace: reconx
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-body-size: "32m"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "300"
+    # Streamlit needs sticky sessions: its websocket must reach the same replica.
+    nginx.ingress.kubernetes.io/affinity: "cookie"
+    nginx.ingress.kubernetes.io/session-cookie-name: "reconx-ui"
+    nginx.ingress.kubernetes.io/session-cookie-max-age: "86400"
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts: ["reconx.example.com"]
+      secretName: reconx-tls
+  rules:
+    - host: reconx.example.com
+      http:
+        paths:
+          - path: /api
+            pathType: Prefix
+            backend: {service: {name: reconx-api, port: {number: 8000}}}
+          - path: /docs
+            pathType: Prefix
+            backend: {service: {name: reconx-api, port: {number: 8000}}}
+          - path: /openapi.json
+            pathType: Exact
+            backend: {service: {name: reconx-api, port: {number: 8000}}}
+          - path: /
+            pathType: Prefix
+            backend: {service: {name: reconx-ui, port: {number: 8501}}}
