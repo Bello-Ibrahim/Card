@@ -4,7 +4,7 @@ import { caseStudies, getCaseStudy } from "@/content/case-studies";
 
 export const size = OG_SIZE;
 export const contentType = OG_CONTENT_TYPE;
-export const alt = "GraceWell Consulting Group case study";
+export const alt = "DataForge Consulting case study";
 
 export function generateStaticParams() {
   return caseStudies.map((study) => ({ slug: study.slug }));

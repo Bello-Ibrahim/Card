@@ -17,11 +17,11 @@ export function TechEcosystem({ tone = "light" }: { tone?: "light" | "dark" }) {
         <SectionHeader
           eyebrow="Technology Ecosystem"
           tone={tone}
-          title="The stack we build, operate and teach on."
+          title="The technology we build, operate and teach on."
           lede="Selection follows your constraints — existing investment, team skills, compliance and cost — not a preferred vendor."
         />
 
-        <div className="mt-14 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
           {technologyGroups.map((group, index) => (
             <Reveal key={group.category} delay={index * 60}>
               <div
@@ -62,7 +62,7 @@ export function TechEcosystem({ tone = "light" }: { tone?: "light" | "dark" }) {
 
         <p className={`mt-8 text-[0.8125rem] ${dark ? "text-mist-400" : "text-mist-500"}`}>
           Technologies listed are the tools our engineers work with. They do not represent vendor
-          partnerships, certifications or affiliations.
+          partnerships, certifications, affiliations or client endorsements.
         </p>
       </Container>
     </section>

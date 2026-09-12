@@ -4,7 +4,7 @@ import { insights, getInsight } from "@/content/insights";
 
 export const size = OG_SIZE;
 export const contentType = OG_CONTENT_TYPE;
-export const alt = "GraceWell Consulting Group insight";
+export const alt = "DataForge Consulting insight";
 
 export function generateStaticParams() {
   return insights.map((insight) => ({ slug: insight.slug }));

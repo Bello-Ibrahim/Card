@@ -47,8 +47,8 @@ export async function submitContactForm(
     errors.workEmail = "Enter a valid email address.";
   }
 
-  if (values.message && values.message.length < 20) {
-    errors.message = "Please give us a little more detail — at least 20 characters.";
+  if (values.description && values.description.length < 20) {
+    errors.description = "Please give us a little more detail — at least 20 characters.";
   }
 
   if (Object.keys(errors).length) {
@@ -63,7 +63,7 @@ export async function submitContactForm(
   const submission = {
     ...values,
     submittedAt: new Date().toISOString(),
-    source: "gracewellconsulting.com/contact",
+    source: "dataforgeconsulting.com/contact",
   };
 
   const webhook = process.env.CONTACT_WEBHOOK_URL;
@@ -89,7 +89,7 @@ export async function submitContactForm(
       headers: {
         "content-type": "application/json",
         ...(process.env.CONTACT_WEBHOOK_SECRET
-          ? { "x-gracewell-signature": process.env.CONTACT_WEBHOOK_SECRET }
+          ? { "x-dataforge-signature": process.env.CONTACT_WEBHOOK_SECRET }
           : {}),
       },
       body: JSON.stringify(submission),

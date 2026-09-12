@@ -12,11 +12,12 @@ export const CATEGORY_VARIANT: Record<InsightCategory, CoverVariant> = {
   "Data Engineering": "flow",
   "Data Architecture": "strata",
   Cloud: "mesh",
-  "Data Strategy": "radial",
+  AI: "embedding",
   Analytics: "field",
-  "AI & Data": "embedding",
+  "Data Strategy": "radial",
   "Engineering Leadership": "tree",
-  "Career & Training": "steps",
+  Careers: "steps",
+  Training: "steps",
 };
 
 export const SERVICE_ICON_VARIANT: Record<Service["icon"], CoverVariant> = {
@@ -41,7 +42,7 @@ const SOLUTION_VARIANT: Record<string, CoverVariant> = {
   "data-quality": "field",
   "data-governance": "tree",
   "analytics-engineering": "field",
-  "ai-ml-data-foundations": "embedding",
+  "ai-data-foundation": "embedding",
   "data-platform-optimization": "field",
   "managed-data-engineering": "mesh",
 };

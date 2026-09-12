@@ -28,7 +28,7 @@ export default function OpengraphImage() {
         <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
           <div style={{ width: 46, height: 46, borderRadius: 13, background: "#2f6bff", display: "flex" }} />
           <div style={{ color: "#ffffff", fontSize: 29, fontWeight: 600, letterSpacing: -0.5 }}>
-            GraceWell Consulting Group
+            DataForge Consulting
           </div>
         </div>
 

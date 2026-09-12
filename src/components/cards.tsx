@@ -1,13 +1,12 @@
 import Link from "next/link";
 import { Arrow } from "@/components/ui/button";
 import { CoverArt } from "@/components/visuals/cover-art";
-import { Motif } from "@/components/visuals/motif";
-import { CATEGORY_VARIANT, caseStudyVariant } from "@/components/visuals/variants";
+import { CATEGORY_VARIANT } from "@/components/visuals/variants";
+import { Photo } from "@/components/media/photo";
 import { Icon, type IconName } from "@/components/ui/icon";
 import { cn, formatDate } from "@/lib/utils";
 import type { Service } from "@/content/services";
 import type { Solution } from "@/content/solutions";
-import type { Industry } from "@/content/industries";
 import type { Insight } from "@/content/insights";
 import type { CaseStudy } from "@/content/case-studies";
 
@@ -72,37 +71,6 @@ export function SolutionCard({ solution }: { solution: Solution }) {
   );
 }
 
-export function IndustryCard({ industry }: { industry: Industry }) {
-  return (
-    <article className={cn(cardBase, "p-6 sm:p-7")}>
-      <div className="flex items-start justify-between gap-4">
-        <h3 className="text-[1.0625rem] font-semibold tracking-[-0.02em] text-navy-950">
-          {industry.name}
-        </h3>
-        <Motif
-          seed={industry.slug}
-          size={48}
-          className="-mt-1 text-navy-950 opacity-70 transition-opacity duration-300 group-hover/card:opacity-100"
-        />
-      </div>
-      <p className="mt-2.5 text-[0.9375rem] font-medium leading-snug text-accent-700">
-        {industry.headline}
-      </p>
-      <p className="mt-3 flex-1 text-[0.875rem] leading-relaxed text-mist-600">
-        {industry.description}
-      </p>
-      <ul className="mt-5 space-y-1.5 border-t border-navy-950/8 pt-4">
-        {industry.focus.map((item) => (
-          <li key={item} className="flex items-start gap-2 text-[0.8125rem] text-mist-500">
-            <span aria-hidden="true" className="mt-[0.45rem] h-1 w-1 shrink-0 rounded-full bg-accent-500" />
-            {item}
-          </li>
-        ))}
-      </ul>
-    </article>
-  );
-}
-
 export function InsightCard({ insight, featured = false }: { insight: Insight; featured?: boolean }) {
   return (
     <article className={cn(cardFrame, featured && "bg-mist-50")}>
@@ -146,14 +114,14 @@ export function InsightCard({ insight, featured = false }: { insight: Insight; f
 
 export function CaseStudyCard({ caseStudy }: { caseStudy: CaseStudy }) {
   return (
-    <article className="group/card flex h-full flex-col overflow-hidden rounded-2xl border border-white/12 bg-white/[0.04] transition-[border-color,background-color] duration-300 hover:border-white/25 hover:bg-white/[0.07]">
-      <div className="relative aspect-[16/9] overflow-hidden border-b border-white/10">
-        <CoverArt
-          seed={caseStudy.slug}
-          variant={caseStudyVariant(caseStudy.slug)}
-          className="transition-transform duration-[900ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover/card:scale-[1.05]"
-        />
-      </div>
+    <article className="group/media group/card flex h-full flex-col overflow-hidden rounded-2xl border border-white/12 bg-white/[0.04] transition-[border-color,background-color] duration-300 hover:border-white/25 hover:bg-white/[0.07]">
+      <Photo
+        name={caseStudy.photo}
+        sizes="(min-width: 1024px) 33vw, 100vw"
+        zoomOnHover
+        overlay="soft"
+        className="relative aspect-[16/9] border-b border-white/10"
+      />
       <div className="flex flex-1 flex-col p-7">
       <div className="flex items-center gap-3">
         <p className="text-[0.6875rem] font-semibold uppercase tracking-[0.16em] text-accent-300">

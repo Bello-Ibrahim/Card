@@ -5,7 +5,7 @@ import { Reveal } from "@/components/ui/reveal";
 export function CtaSection({
   eyebrow = "Get started",
   title = "Have a data challenge? Let's engineer the solution.",
-  body = "Whether you're building a data platform, modernizing legacy infrastructure, developing your engineering team, or preparing your organization for AI, GraceWell can help.",
+  body = "Whether you're building a data platform, modernizing legacy infrastructure, developing your engineering team, or preparing your organization for AI, DataForge can help.",
   primary = { label: "Talk to an Expert", href: "/contact" },
   secondary = { label: "Book a Consultation", href: "/contact?topic=consultation" },
 }: {

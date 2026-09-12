@@ -1,107 +1,152 @@
+import type { PhotoKey } from "./media";
+
 export type Industry = {
   slug: string;
   name: string;
   headline: string;
   description: string;
-  focus: string[];
+  /** Surfaced on hover / focus of the immersive industry cards. */
+  challenges: string[];
+  solutions: { label: string; href: string }[];
+  photo: PhotoKey;
 };
 
 export const industries: Industry[] = [
   {
     slug: "financial-services",
     name: "Financial Services",
-    headline: "Regulated reporting that reconciles, and risk data that arrives on time.",
+    headline: "Build reliable data foundations for payments, banking and financial analytics.",
     description:
-      "Banks and asset managers carry decades of accumulated systems and non-negotiable reporting obligations. Better data engineering shortens the close, makes regulatory submissions reproducible, and gives risk and finance a lineage trail they can defend under examination.",
-    focus: ["Regulatory reporting", "Risk data aggregation", "Finance reconciliation", "Auditability and lineage"],
-  },
-  {
-    slug: "fintech",
-    name: "Fintech",
-    headline: "Move fast on product without losing the ledger.",
-    description:
-      "Fintechs need product analytics, fraud signals and financial controls from the same data foundation. Engineering that separates event data from ledger truth — and keeps both reconciled — lets teams ship quickly while remaining auditable as regulatory scrutiny grows.",
-    focus: ["Transaction pipelines", "Fraud and risk signals", "Ledger reconciliation", "Product analytics"],
+      "Banks, payment providers and asset managers carry decades of accumulated systems and non-negotiable reporting obligations. Better engineering shortens the close, makes submissions reproducible, and gives risk and finance a lineage trail they can defend under examination.",
+    challenges: [
+      "Regulatory reporting that must reconcile exactly",
+      "Risk data scattered across legacy cores",
+      "Slow month-end close and manual adjustments",
+    ],
+    solutions: [
+      { label: "Enterprise Data Warehouse", href: "/solutions/enterprise-data-warehouse" },
+      { label: "Data Quality & Observability", href: "/solutions/data-quality" },
+    ],
+    photo: "industryFinancialServices",
   },
   {
     slug: "telecommunications",
     name: "Telecommunications",
-    headline: "Network and subscriber data at volumes that punish weak architecture.",
+    headline: "Turn network and subscriber volume into usable operational signal.",
     description:
-      "Telecom estates generate enormous event volumes from network elements, billing and customer channels. Careful partitioning, streaming design and cost engineering turn that volume into usable signal for network operations, churn analysis and revenue assurance.",
-    focus: ["Network event processing", "Revenue assurance", "Churn and subscriber analytics", "High-volume streaming"],
+      "Telecom estates generate enormous event volumes from network elements, billing and customer channels. Careful partitioning, streaming design and cost engineering turn that volume into signal for network operations, churn analysis and revenue assurance.",
+    challenges: [
+      "Event volumes that punish weak architecture",
+      "Revenue assurance gaps between systems",
+      "Network and customer data that never meet",
+    ],
+    solutions: [
+      { label: "Real-Time Data Platform", href: "/solutions/real-time-data-platform" },
+      { label: "Lakehouse", href: "/solutions/lakehouse" },
+    ],
+    photo: "industryTelecommunications",
   },
   {
     slug: "healthcare",
     name: "Healthcare",
-    headline: "Clinical and operational data, integrated under strict access control.",
+    headline: "Integrate clinical and operational data under strict access control.",
     description:
-      "Healthcare data is fragmented across clinical, administrative and claims systems, and every integration carries privacy obligations. Engineering with classification, minimisation and access control built in allows analytics to improve care and operations without widening exposure.",
-    focus: ["Clinical and claims integration", "Privacy and access control", "Operational analytics", "Interoperability standards"],
+      "Healthcare data is fragmented across clinical, administrative and claims systems, and every integration carries privacy obligations. Engineering with classification, minimisation and access control designed in allows analytics to improve care and operations without widening exposure.",
+    challenges: [
+      "Clinical, claims and administrative systems in isolation",
+      "Privacy obligations on every integration",
+      "Reporting that cannot be reproduced for audit",
+    ],
+    solutions: [
+      { label: "Data Governance", href: "/solutions/data-governance" },
+      { label: "Modern Data Platform", href: "/solutions/modern-data-platform" },
+    ],
+    photo: "industryHealthcare",
   },
   {
     slug: "retail-and-ecommerce",
     name: "Retail & E-commerce",
     headline: "One view of the customer, the order and the inventory.",
     description:
-      "Retail data lives in commerce platforms, stores, marketplaces, logistics providers and marketing tools. Unifying it — with identity resolution and near-real-time inventory — is what makes demand forecasting, personalization and margin analysis credible rather than directional.",
-    focus: ["Customer identity resolution", "Inventory and supply signals", "Marketing attribution", "Demand forecasting inputs"],
+      "Retail data lives in commerce platforms, stores, marketplaces, logistics providers and marketing tools. Unifying it — with identity resolution and near-real-time inventory — is what makes forecasting, personalization and margin analysis credible rather than directional.",
+    challenges: [
+      "Customer identity split across channels",
+      "Inventory signals that arrive too late to act on",
+      "Marketing attribution nobody trusts",
+    ],
+    solutions: [
+      { label: "Data Integration", href: "/solutions/data-integration" },
+      { label: "Analytics Engineering", href: "/solutions/analytics-engineering" },
+    ],
+    photo: "industryRetail",
+  },
+  {
+    slug: "logistics-and-transportation",
+    name: "Logistics & Transportation",
+    headline: "Visibility across carriers, warehouses and partners.",
+    description:
+      "Supply chain performance depends on data arriving from partners who each use different formats and cadences. Robust integration and quality controls turn scattered partner feeds into dependable tracking, exception management and planning inputs.",
+    challenges: [
+      "Partner feeds in every format imaginable",
+      "Exceptions discovered after the customer notices",
+      "Planning built on stale position data",
+    ],
+    solutions: [
+      { label: "Data Integration", href: "/solutions/data-integration" },
+      { label: "Real-Time Data Platform", href: "/solutions/real-time-data-platform" },
+    ],
+    photo: "industryLogistics",
   },
   {
     slug: "manufacturing",
     name: "Manufacturing",
-    headline: "Shop-floor telemetry joined to enterprise systems.",
+    headline: "Join shop-floor telemetry to the systems where decisions are made.",
     description:
-      "Manufacturers hold rich sensor and machine data that rarely reaches the systems where planning decisions are made. Bridging operational technology and enterprise data enables quality analysis, maintenance planning and yield improvement grounded in measured reality.",
-    focus: ["Sensor and telemetry pipelines", "OT/IT integration", "Quality and yield analytics", "Maintenance data foundations"],
+      "Manufacturers hold rich sensor and machine data that rarely reaches planning systems. Bridging operational technology and enterprise data enables quality analysis, maintenance planning and yield improvement grounded in measured reality.",
+    challenges: [
+      "OT and IT data that never reconcile",
+      "Sensor history too expensive to keep queryable",
+      "Quality issues found after the batch ships",
+    ],
+    solutions: [
+      { label: "Lakehouse", href: "/solutions/lakehouse" },
+      { label: "AI Data Foundation", href: "/solutions/ai-data-foundation" },
+    ],
+    photo: "industryManufacturing",
   },
   {
-    slug: "logistics-and-supply-chain",
-    name: "Logistics & Supply Chain",
-    headline: "Visibility across carriers, warehouses and partners.",
+    slug: "government",
+    name: "Government",
+    headline: "Transparent, auditable data platforms built for public accountability.",
     description:
-      "Supply chain performance depends on data arriving from partners who each use different formats and cadences. Robust integration and quality controls turn scattered partner feeds into dependable tracking, exception management and planning inputs.",
-    focus: ["Partner data integration", "Shipment and route data", "Exception detection", "Planning data foundations"],
+      "Public sector organizations must combine data across agencies while meeting strict transparency, residency and access requirements. Architecture with governance, lineage and documentation designed in supports both service improvement and public accountability.",
+    challenges: [
+      "Cross-agency data sharing under strict controls",
+      "Residency and sovereignty requirements",
+      "Evidence trails required for public scrutiny",
+    ],
+    solutions: [
+      { label: "Data Governance", href: "/solutions/data-governance" },
+      { label: "Modern Data Platform", href: "/solutions/modern-data-platform" },
+    ],
+    photo: "industryGovernment",
   },
   {
     slug: "technology",
     name: "Technology",
-    headline: "Product telemetry engineered like production software.",
+    headline: "Treat product telemetry like production software.",
     description:
-      "Software companies generate more data than most, and usually govern it least. Treating event schemas as contracts, and analytics models as reviewed code, gives product, growth and finance teams a shared and trustworthy account of usage.",
-    focus: ["Event schema governance", "Usage and product analytics", "Multi-tenant data isolation", "Usage-based billing data"],
-  },
-  {
-    slug: "professional-services",
-    name: "Professional Services",
-    headline: "Utilisation, delivery and pipeline data in one place.",
-    description:
-      "Professional services firms run on people, time and pipeline, tracked across finance, CRM and delivery tools that rarely agree. Integrating them gives leadership a dependable view of utilisation, margin and demand.",
-    focus: ["Utilisation and capacity", "Project profitability", "Pipeline integration", "Resource planning data"],
-  },
-  {
-    slug: "government-and-public-sector",
-    name: "Government & Public Sector",
-    headline: "Transparent, auditable data platforms built for public accountability.",
-    description:
-      "Public sector organizations must combine data across agencies while meeting strict transparency, residency and access requirements. Architecture with governance, lineage and documentation designed in supports both service improvement and public accountability.",
-    focus: ["Cross-agency integration", "Data residency and sovereignty", "Transparency and reporting", "Records and retention"],
-  },
-  {
-    slug: "energy",
-    name: "Energy",
-    headline: "Time-series data at grid and asset scale.",
-    description:
-      "Energy organizations manage dense time-series data from generation, distribution and metering assets. Engineering that handles late-arriving readings, corrections and long histories makes forecasting, asset performance and settlement analysis dependable.",
-    focus: ["Time-series pipelines", "Metering and settlement data", "Asset performance", "Forecasting inputs"],
-  },
-  {
-    slug: "education",
-    name: "Education",
-    headline: "Student and institutional data joined responsibly.",
-    description:
-      "Institutions hold learner data across admissions, learning platforms and student services, governed by clear privacy expectations. Careful integration supports retention, outcomes analysis and planning while keeping sensitive records tightly controlled.",
-    focus: ["Student lifecycle data", "Learning platform integration", "Outcomes analytics", "Privacy-conscious modelling"],
+      "Software companies generate more data than most, and usually govern it least. Treating event schemas as contracts, and analytics models as reviewed code, gives product, growth and finance a shared and trustworthy account of usage.",
+    challenges: [
+      "Event schemas that drift without warning",
+      "Multi-tenant isolation in shared analytics",
+      "Usage-based billing built on unverified data",
+    ],
+    solutions: [
+      { label: "Analytics Engineering", href: "/solutions/analytics-engineering" },
+      { label: "Data Quality & Observability", href: "/solutions/data-quality" },
+    ],
+    photo: "industryTechnology",
   },
 ];
 

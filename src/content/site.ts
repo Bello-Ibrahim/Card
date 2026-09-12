@@ -1,29 +1,31 @@
 /**
  * Global site configuration.
  *
- * IMPORTANT — factual accuracy policy for this repository:
- * Nothing in `src/content` may state a client name, testimonial, certification,
- * award, partnership, revenue figure, project metric, headcount, founding year or
- * office address unless GraceWell has verified it. Unverified fields are left as
- * `null` and the UI hides them rather than showing a placeholder that reads as fact.
+ * FACTUAL ACCURACY POLICY for this repository:
+ * Nothing in `src/content` may state a client name, logo, testimonial, certification,
+ * award, partnership, revenue figure, project metric, headcount, founding year or office
+ * address unless DataForge has verified it. Unverified fields stay `null` and the UI hides
+ * them rather than rendering a placeholder that reads as fact.
  */
 
 export const site = {
-  name: "GraceWell Consulting Group",
-  shortName: "GraceWell",
-  tagline: "Engineering the data foundations behind better decisions.",
+  name: "DataForge Consulting",
+  shortName: "DataForge",
+  wordmark: "DATAFORGE",
+  descriptor: "CONSULTING",
+  tagline: "Engineering the Data Foundations Behind Intelligent Business.",
+  alternateTagline: "Forge Better Data. Build Better Business.",
   description:
-    "GraceWell Consulting Group helps organizations design, build, modernize and scale reliable data platforms — from data strategy and architecture through production data engineering, analytics enablement, training and team setup.",
+    "DataForge Consulting designs, builds and modernizes the data platforms, pipelines and engineering capabilities organizations need to turn complex data into reliable business intelligence.",
+  disciplines: ["Consulting", "Engineering", "Training", "Team Building", "Managed Services"],
   /** Override in production with NEXT_PUBLIC_SITE_URL. */
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.gracewellconsulting.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.dataforgeconsulting.com",
   locale: "en_US",
 } as const;
 
 /**
  * Verified contact channels only.
- *
- * Set each value once GraceWell confirms it. Anything left as `null` is simply not
- * rendered — the site never invents an address, phone number or social profile.
+ * Set each value once DataForge confirms it; anything left `null` is simply not rendered.
  */
 export const contact: {
   email: string | null;
@@ -45,6 +47,12 @@ export const hasDirectContactChannels =
   Boolean(contact.email) || Boolean(contact.phone) || Boolean(contact.linkedin);
 
 export const cta = {
-  primary: { label: "Talk to an Expert", href: "/contact" },
+  primary: { label: "Talk to a Data Expert", href: "/contact" },
+  short: { label: "Talk to an Expert", href: "/contact" },
   secondary: { label: "Explore Our Services", href: "/services" },
+  capabilities: { label: "Explore Capabilities", href: "/services" },
+  consultation: { label: "Book a Consultation", href: "/contact?intent=consultation" },
+  training: { label: "Request Corporate Training", href: "/contact?intent=training" },
+  team: { label: "Build My Data Team", href: "/contact?intent=team-setup" },
+  challenge: { label: "Discuss My Data Challenge", href: "/contact?intent=project" },
 } as const;

@@ -25,19 +25,23 @@ const solutionLinks: NavLink[] = solutions.map((s) => ({
   description: s.summary,
 }));
 
-const half = (arr: NavLink[]) => [arr.slice(0, Math.ceil(arr.length / 2)), arr.slice(Math.ceil(arr.length / 2))];
+const split = (arr: NavLink[]) => {
+  const half = Math.ceil(arr.length / 2);
+  return [arr.slice(0, half), arr.slice(half)];
+};
 
-const [servicesA, servicesB] = half(serviceLinks);
-const [solutionsA, solutionsB] = half(solutionLinks);
+const [servicesA, servicesB] = split(serviceLinks);
+const [solutionsA, solutionsB] = split(solutionLinks);
 
 export const mainNav: NavItem[] = [
+  { label: "Home", href: "/" },
   {
     label: "Services",
     href: "/services",
     menu: {
       intro: {
-        title: "Services",
-        body: "From data strategy and architecture through production engineering, quality and enablement.",
+        title: "What we build",
+        body: "Pipelines, platforms and the engineering practice around them — designed and built by the same team.",
         href: "/services",
         cta: "View all services",
       },
@@ -52,7 +56,7 @@ export const mainNav: NavItem[] = [
     href: "/solutions",
     menu: {
       intro: {
-        title: "Solutions",
+        title: "Solutions that move data forward",
         body: "Outcome-shaped engagements built on the platforms and practices your teams will operate.",
         href: "/solutions",
         cta: "View all solutions",
@@ -68,54 +72,52 @@ export const mainNav: NavItem[] = [
   { label: "Team Setup", href: "/team-setup" },
   { label: "About", href: "/about" },
   { label: "Insights", href: "/insights" },
-  { label: "Contact", href: "/contact" },
 ];
 
 export const footerNav: { heading: string; links: NavLink[] }[] = [
-  {
-    heading: "Company",
-    links: [
-      { label: "About", href: "/about" },
-      { label: "Leadership", href: "/about#leadership" },
-      { label: "Careers", href: "/about#careers" },
-      { label: "Insights", href: "/insights" },
-      { label: "Contact", href: "/contact" },
-    ],
-  },
   {
     heading: "Services",
     links: [
       { label: "Data Engineering", href: "/services/data-engineering" },
       { label: "Data Architecture", href: "/services/data-platform-architecture" },
-      { label: "Cloud Data", href: "/services/cloud-data-engineering" },
-      { label: "Data Integration", href: "/services/data-integration" },
-      { label: "Data Migration", href: "/services/data-migration-and-modernization" },
+      { label: "Cloud", href: "/services/cloud-data-engineering" },
+      { label: "Integration", href: "/services/data-integration" },
+      { label: "Modernization", href: "/services/data-modernization" },
       { label: "Data Quality", href: "/services/data-quality-and-observability" },
-      { label: "Analytics Engineering", href: "/services/analytics-engineering" },
     ],
   },
   {
     heading: "Solutions",
     links: [
       { label: "Data Platforms", href: "/solutions/modern-data-platform" },
-      { label: "Data Warehouses", href: "/solutions/enterprise-data-warehouse" },
+      { label: "Warehouses", href: "/solutions/enterprise-data-warehouse" },
       { label: "Lakehouses", href: "/solutions/lakehouse" },
-      { label: "Data Modernization", href: "/solutions/data-migration" },
-      { label: "Managed Engineering", href: "/solutions/managed-data-engineering" },
+      { label: "Streaming", href: "/solutions/real-time-data-platform" },
+      { label: "AI Foundations", href: "/solutions/ai-data-foundation" },
     ],
   },
   {
-    heading: "Capability Development",
+    heading: "Capability",
     links: [
       { label: "Training", href: "/training" },
       { label: "Team Setup", href: "/team-setup" },
-      { label: "Engineering Enablement", href: "/team-setup#enable" },
+      { label: "Managed Services", href: "/solutions/managed-data-engineering" },
+      { label: "Advisory", href: "/services/data-strategy-and-advisory" },
+    ],
+  },
+  {
+    heading: "Company",
+    links: [
+      { label: "About", href: "/about" },
+      { label: "Insights", href: "/insights" },
+      { label: "Careers", href: "/about#careers" },
+      { label: "Contact", href: "/contact" },
     ],
   },
 ];
 
 export const legalNav: NavLink[] = [
   { label: "Privacy Policy", href: "/privacy-policy" },
-  { label: "Terms of Use", href: "/terms-of-use" },
+  { label: "Terms", href: "/terms-of-use" },
   { label: "Cookie Policy", href: "/cookie-policy" },
 ];

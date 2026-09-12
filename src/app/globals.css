@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* ------------------------------------------------------------------
-   GraceWell design tokens
+   DataForge design tokens
    Enterprise data-engineering palette: midnight navy, near-black, white,
    soft gray, with electric blue / cyan / teal used sparingly as accent.
 ------------------------------------------------------------------- */
@@ -235,6 +235,41 @@
   100% {
     offset-distance: 100%;
     opacity: 0;
+  }
+}
+
+/* Width-agnostic flow indicator: a highlight sweeping along a connector.
+   Connectors run vertically on small screens and horizontally from xl up, so the sweep
+   axis switches with them. */
+.flow-sheen {
+  background: linear-gradient(180deg, transparent 0%, var(--color-cyan-400) 50%, transparent 100%);
+  background-size: 100% 220%;
+  animation: sheen-y 2.6s linear infinite;
+}
+
+@media (min-width: 1280px) {
+  .flow-sheen {
+    background: linear-gradient(90deg, transparent 0%, var(--color-cyan-400) 50%, transparent 100%);
+    background-size: 220% 100%;
+    animation: sheen-x 2.6s linear infinite;
+  }
+}
+
+@keyframes sheen-x {
+  from {
+    background-position: 120% 0;
+  }
+  to {
+    background-position: -120% 0;
+  }
+}
+
+@keyframes sheen-y {
+  from {
+    background-position: 0 -120%;
+  }
+  to {
+    background-position: 0 120%;
   }
 }
 

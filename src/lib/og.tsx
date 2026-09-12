@@ -89,7 +89,7 @@ export function renderOgImage({
             }}
           />
           <div style={{ color: "#ffffff", fontSize: 28, fontWeight: 600, letterSpacing: -0.4 }}>
-            GraceWell Consulting Group
+            DataForge Consulting
           </div>
         </div>
 

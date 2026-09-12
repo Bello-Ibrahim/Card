@@ -153,7 +153,7 @@ export const solutions: Solution[] = [
   },
   {
     slug: "data-quality",
-    title: "Data Quality",
+    title: "Data Quality & Observability",
     summary: "Detect problems before the business does.",
     description:
       "A quality framework that defines what correct means for your critical datasets, tests it continuously, and routes failures to the team that owns the data — with severity levels and response expectations set in advance.",
@@ -221,8 +221,8 @@ export const solutions: Solution[] = [
     category: "Data Management",
   },
   {
-    slug: "ai-ml-data-foundations",
-    title: "AI/ML Data Foundations",
+    slug: "ai-data-foundation",
+    title: "AI Data Foundation",
     summary: "Get the data ready before the models arrive.",
     description:
       "The unglamorous work that decides whether AI initiatives succeed: reliable feature pipelines, reproducible training datasets, documented lineage and access controls, and evaluation data that reflects production reality.",
@@ -271,7 +271,7 @@ export const solutions: Solution[] = [
     title: "Managed Data Engineering",
     summary: "Ongoing engineering capacity to run and evolve your platform.",
     description:
-      "An ongoing engagement where GraceWell operates and extends your data platform — monitoring, incident response, source onboarding and roadmap delivery — with documentation and handover designed in, so you retain the option to take it back in-house.",
+      "An ongoing engagement where DataForge operates and extends your data platform — monitoring, incident response, source onboarding and roadmap delivery — with documentation and handover designed in, so you retain the option to take it back in-house.",
     capabilities: [
       "Platform operations",
       "Monitoring and incident response",

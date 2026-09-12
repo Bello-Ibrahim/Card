@@ -4,7 +4,7 @@ import { LegalPage, type LegalSection } from "@/components/legal-page";
 export const metadata = buildMetadata({
   title: "Privacy Policy",
   description:
-    "How GraceWell Consulting Group collects, uses, stores and protects personal information submitted through this website.",
+    "How DataForge Consulting collects, uses, stores and protects personal information submitted through this website.",
   path: "/privacy-policy",
 });
 
@@ -12,7 +12,7 @@ const sections: LegalSection[] = [
   {
     heading: "Scope of this policy",
     paragraphs: [
-      "This policy explains how GraceWell Consulting Group handles personal information collected through this website. It covers the information you choose to give us and the limited technical information our hosting infrastructure processes in order to serve the site.",
+      "This policy explains how DataForge Consulting handles personal information collected through this website. It covers the information you choose to give us and the limited technical information our hosting infrastructure processes in order to serve the site.",
       "It does not cover personal data processed under a separate client agreement. Where we act as a processor on a client's behalf during a consulting engagement, the terms of that agreement govern instead.",
     ],
   },

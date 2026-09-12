@@ -1,7 +1,7 @@
 export type TrainingTrack = {
   slug: string;
   title: string;
-  level: "Foundation" | "Intermediate" | "Advanced" | "Custom";
+  level: "Beginner" | "Intermediate" | "Advanced" | "Enterprise";
   summary: string;
   modules: string[];
   audience: string;
@@ -10,84 +10,49 @@ export type TrainingTrack = {
 
 export const trainingTracks: TrainingTrack[] = [
   {
-    slug: "data-engineering-fundamentals",
-    title: "Data Engineering Fundamentals",
-    level: "Foundation",
-    summary:
-      "The core craft: querying, programming, modelling and moving data reliably between systems.",
-    modules: [
-      "SQL for data engineering",
-      "Python for data workflows",
-      "Data modelling foundations",
-      "ETL and ELT patterns",
-      "Working with APIs",
-      "Relational and NoSQL databases",
-    ],
-    audience: "Analysts, software engineers and graduates moving into data engineering roles.",
+    slug: "beginner",
+    title: "Foundations",
+    level: "Beginner",
+    summary: "The core craft: querying, programming, modelling and moving data between systems.",
+    modules: ["SQL", "Python", "Databases", "ETL fundamentals", "Data modelling basics", "Working with APIs"],
+    audience: "Analysts, software engineers and graduates moving into data engineering.",
     format: "Instructor-led sessions with hands-on labs and a build project.",
   },
   {
-    slug: "modern-data-stack",
+    slug: "intermediate",
     title: "Modern Data Stack",
     level: "Intermediate",
-    summary:
-      "How today's warehouse-centric toolchain fits together, and how to run it responsibly.",
-    modules: [
-      "dbt: modelling, testing and documentation",
-      "Apache Airflow orchestration",
-      "Cloud data warehouses in practice",
-      "Lakehouse fundamentals",
-      "Version control and CI/CD for data",
-      "Environment and release management",
-    ],
+    summary: "How today's warehouse-centric toolchain fits together, and how to run it responsibly.",
+    modules: ["PySpark", "Apache Airflow", "Data modelling", "Cloud data services", "dbt", "CI/CD for data"],
     audience: "Data and analytics engineers adopting or standardising a modern stack.",
-    format: "Workshop series with a shared project repository and code review.",
+    format: "Workshop series against a shared project repository, with code review.",
   },
   {
-    slug: "advanced-data-engineering",
-    title: "Advanced Data Engineering",
+    slug: "advanced",
+    title: "Advanced Engineering",
     level: "Advanced",
-    summary:
-      "Distributed processing, streaming and the architectural judgement that comes after the basics.",
+    summary: "Distributed processing, streaming and the architectural judgement that comes after the basics.",
     modules: [
-      "Apache Spark at scale",
-      "Streaming architectures and semantics",
-      "Distributed systems fundamentals",
-      "Data architecture patterns and trade-offs",
+      "Distributed systems",
+      "Apache Kafka",
+      "Streaming architectures",
+      "Data architecture patterns",
       "Data quality engineering",
       "Observability and incident response",
     ],
     audience: "Experienced engineers responsible for large or latency-sensitive platforms.",
-    format: "Deep-dive sessions built around realistic failure scenarios.",
+    format: "Deep dives built around realistic failure scenarios.",
   },
   {
-    slug: "cloud-data-engineering",
-    title: "Cloud Data Engineering",
-    level: "Intermediate",
-    summary:
-      "Building and operating data platforms natively on your chosen cloud.",
-    modules: [
-      "AWS data services",
-      "Microsoft Azure data services",
-      "Google Cloud data services",
-      "Infrastructure as code",
-      "Identity, access and network security",
-      "Cost management and workload tuning",
-    ],
-    audience: "Engineers and platform teams building on AWS, Azure or Google Cloud.",
-    format: "Cloud-specific tracks delivered against your own reference architecture.",
-  },
-  {
-    slug: "corporate-training",
-    title: "Corporate Training",
-    level: "Custom",
-    summary:
-      "Customized programs designed around your technology stack, business objectives and employee skill levels.",
+    slug: "enterprise",
+    title: "Corporate Programs",
+    level: "Enterprise",
+    summary: "Customized programs designed around your stack, objectives and current skill levels.",
     modules: [
       "Skills assessment and gap analysis",
       "Curriculum designed to your stack",
-      "Training on your own datasets and patterns",
-      "Team-based capstone projects",
+      "Training on your own data and patterns",
+      "Team capstone projects",
       "Mentoring and follow-up clinics",
       "Progress reporting for sponsors",
     ],
@@ -99,7 +64,7 @@ export const trainingTracks: TrainingTrack[] = [
 export const trainingPrinciples = [
   {
     title: "Taught by practitioners",
-    body: "Sessions are delivered by engineers who build these systems, using examples drawn from real delivery rather than tutorial datasets.",
+    body: "Sessions are delivered by engineers who build these systems, using examples from real delivery rather than tutorial datasets.",
   },
   {
     title: "Built on your stack",
@@ -107,7 +72,7 @@ export const trainingPrinciples = [
   },
   {
     title: "Assessed and evidenced",
-    body: "Programs include practical exercises and a capstone, so sponsors can see capability rather than attendance.",
+    body: "Programs include practical exercises and a capstone, so sponsors see capability rather than attendance.",
   },
   {
     title: "Followed by support",

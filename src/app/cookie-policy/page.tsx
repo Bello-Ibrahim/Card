@@ -4,7 +4,7 @@ import { LegalPage, type LegalSection } from "@/components/legal-page";
 export const metadata = buildMetadata({
   title: "Cookie Policy",
   description:
-    "How this website uses cookies and similar technologies. GraceWell Consulting Group does not run advertising or cross-site tracking on this site.",
+    "How this website uses cookies and similar technologies. DataForge Consulting does not run advertising or cross-site tracking on this site.",
   path: "/cookie-policy",
 });
 

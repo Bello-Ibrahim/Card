@@ -7,29 +7,25 @@ import { Arrow } from "@/components/ui/button";
 
 const connectLinks = [
   contact.linkedin ? { label: "LinkedIn", href: contact.linkedin, external: true } : null,
+  contact.email ? { label: "Email", href: `mailto:${contact.email}`, external: true } : null,
   { label: "Contact", href: "/contact", external: false },
-  { label: "Insights", href: "/insights", external: false },
 ].filter(Boolean) as { label: string; href: string; external: boolean }[];
 
 export function SiteFooter() {
   return (
-    <footer className="dark-section relative overflow-hidden bg-navy-950 text-mist-300">
+    <footer className="dark-section relative overflow-hidden bg-ink-950 text-mist-300">
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-grid opacity-40 mask-fade-b" />
       <Container className="relative">
         <div className="grid gap-12 border-b border-white/10 py-16 lg:grid-cols-12 lg:gap-8 lg:py-20">
           <div className="lg:col-span-4">
-            <Link href="/" className="inline-flex items-center gap-2.5" aria-label="GraceWell Consulting Group — home">
-              <Logo className="h-9 w-9" tone="dark" />
-              <span className="text-[1.0625rem] font-semibold leading-none tracking-[-0.02em] text-white">
-                GraceWell
-              </span>
+            <Link href="/" aria-label="DataForge Consulting — home" className="inline-flex">
+              <Logo tone="dark" markClassName="h-9 w-9" />
             </Link>
             <p className="mt-6 max-w-sm text-[0.9375rem] leading-relaxed text-mist-400">
               {site.tagline}
             </p>
             <p className="mt-4 max-w-sm text-[0.875rem] leading-relaxed text-mist-400/85">
-              Data engineering consulting, modern data platforms, analytics enablement, training and
-              team setup for data-intensive organizations.
+              {site.disciplines.join(" • ")}
             </p>
 
             {contact.email || contact.phone || contact.location ? (
@@ -79,7 +75,7 @@ export function SiteFooter() {
                     {link.external ? (
                       <a
                         href={link.href}
-                        target="_blank"
+                        target={link.href.startsWith("mailto:") ? undefined : "_blank"}
                         rel="noreferrer noopener"
                         className="text-[0.875rem] text-mist-400 transition-colors hover:text-white"
                       >
@@ -97,10 +93,10 @@ export function SiteFooter() {
                 ))}
                 <li>
                   <Link
-                    href="/contact?topic=newsletter"
+                    href="/contact?intent=consultation"
                     className="group/btn inline-flex items-center gap-1.5 text-[0.875rem] text-mist-400 transition-colors hover:text-white"
                   >
-                    Newsletter
+                    Book a Consultation
                     <Arrow className="h-3.5 w-3.5" />
                   </Link>
                 </li>

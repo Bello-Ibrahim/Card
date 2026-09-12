@@ -8,8 +8,7 @@ import { Reveal } from "@/components/ui/reveal";
 import { CaseStudyCard } from "@/components/cards";
 import { CtaSection } from "@/components/cta-section";
 import { ButtonLink, Arrow } from "@/components/ui/button";
-import { CoverBanner } from "@/components/visuals/cover-banner";
-import { caseStudyVariant } from "@/components/visuals/variants";
+import { Photo } from "@/components/media/photo";
 import { caseStudies, getCaseStudy } from "@/content/case-studies";
 
 export function generateStaticParams() {
@@ -47,7 +46,14 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
         title={study.title}
         lede={study.challenge}
         breadcrumbs={crumbs}
-        media={<CoverBanner seed={study.slug} variant={caseStudyVariant(study.slug)} />}
+        media={
+          <Photo
+            name={study.photo}
+            sizes="(min-width: 1024px) 40vw, 100vw"
+            overlay="soft"
+            className="relative aspect-[4/3] rounded-2xl border border-white/12"
+          />
+        }
       >
         <ButtonLink href="/contact" size="lg" variant="onDark">
           Discuss a similar engagement

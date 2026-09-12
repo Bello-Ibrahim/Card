@@ -2,7 +2,7 @@
  * Insights (editorial hub).
  *
  * Articles are original technical writing. They contain no client references and no
- * unverified claims about GraceWell. Publication dates are editorial metadata for the
+ * unverified claims about DataForge. Publication dates are editorial metadata for the
  * article, set when the piece is published.
  */
 
@@ -10,11 +10,12 @@ export const insightCategories = [
   "Data Engineering",
   "Data Architecture",
   "Cloud",
-  "Data Strategy",
+  "AI",
   "Analytics",
-  "AI & Data",
+  "Data Strategy",
   "Engineering Leadership",
-  "Career & Training",
+  "Careers",
+  "Training",
 ] as const;
 
 export type InsightCategory = (typeof insightCategories)[number];
@@ -33,6 +34,102 @@ export type Insight = {
 };
 
 export const insights: Insight[] = [
+  {
+    slug: "why-data-quality-is-an-engineering-problem",
+    title: "Why Data Quality Is an Engineering Problem",
+    excerpt:
+      "Quality is not a governance committee or a dashboard. It is tests, ownership and response design — the same practices that keep any production system honest.",
+    category: "Data Engineering",
+    readingTime: 7,
+    publishedAt: "2026-07-22",
+    featured: true,
+    sections: [
+      {
+        heading: "The framing that fails",
+        paragraphs: [
+          "Most quality programmes begin as governance exercises: a policy document, a steering group, a catalogue nobody opens. They fail because none of that changes what happens at 02:00 when a source system sends yesterday's file twice.",
+          "Quality is decided in the pipeline. Whether a duplicate load is caught, whether a renamed category silently collapses a segment, whether anyone is paged — those are engineering decisions, made in code, long before they reach a committee.",
+        ],
+      },
+      {
+        heading: "Tests belong next to the transformation",
+        paragraphs: [
+          "The most effective quality controls live in the same repository as the logic they protect, run on every change, and block a merge when they fail. That is unremarkable in application engineering and still unusual in data.",
+          "Write assertions for what the business actually believes: that order totals reconcile to the ledger, that every customer has exactly one active record, that no region silently disappears. These catch the failures that damage trust.",
+        ],
+        bullets: [
+          "Technical checks: freshness, volume, schema, nullability",
+          "Semantic checks: referential integrity, distributions, business rules",
+          "Reconciliation: agreement with an authoritative source",
+        ],
+      },
+      {
+        heading: "An alert without an owner is not a control",
+        paragraphs: [
+          "Every check needs a named owner, a severity and an expected response. Without those, failures accumulate as background noise until the monitoring itself loses credibility and people start muting channels.",
+          "This is why quality work is inseparable from ownership work. The tooling is straightforward; deciding who is accountable for a dataset is the hard part, and it is not a technical decision.",
+        ],
+      },
+      {
+        heading: "Treat data incidents like production incidents",
+        paragraphs: [
+          "Detection through monitoring rather than through a stakeholder. An assigned responder. A severity level. A written follow-up when it matters. None of this is novel — it is simply applying to data the practices that software teams settled on years ago.",
+          "The follow-up is where compounding improvement happens. A team that asks why a failure was not detected earlier will, over time, stop being surprised.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "building-real-time-data-pipelines",
+    title: "Building Real-Time Data Pipelines",
+    excerpt:
+      "Streaming is not faster batch. It is a different failure model — and the question worth answering first is whether latency genuinely changes the decision.",
+    category: "Data Engineering",
+    readingTime: 8,
+    publishedAt: "2026-07-08",
+    sections: [
+      {
+        heading: "Start with the decision, not the technology",
+        paragraphs: [
+          "Streaming infrastructure costs more to build and considerably more to operate. It earns that cost only where latency changes an outcome: a fraud signal that must arrive before settlement, inventory that must not oversell, a network fault that must page someone now.",
+          "For most reporting, an hourly batch is indistinguishable from real time to the person reading it. Asking each consumer what freshness they genuinely require routinely removes half the proposed streaming scope.",
+        ],
+      },
+      {
+        heading: "Delivery semantics are a design decision",
+        paragraphs: [
+          "At-least-once delivery means duplicates will happen; your consumers must be idempotent. Exactly-once is achievable within some systems but rarely end to end across every hop. Decide explicitly which guarantee each pipeline needs, and write it down.",
+          "The practical approach is usually at-least-once transport with idempotent writes keyed on a stable business identifier — simpler to reason about, and it degrades predictably.",
+        ],
+        bullets: [
+          "Idempotent writes keyed on a stable identifier",
+          "Explicit handling for late and out-of-order events",
+          "Replay from a retained log rather than re-extraction from source",
+        ],
+      },
+      {
+        heading: "Late data is normal, not exceptional",
+        paragraphs: [
+          "Events arrive out of order, devices buffer while offline, and partners resend. A pipeline that assumes ordered arrival will quietly produce wrong aggregates rather than failing loudly.",
+          "Use event time rather than processing time, define a watermark that reflects how late data realistically arrives, and decide what happens to anything later than that. The answer can be to discard it — but it should be a decision, not an accident.",
+        ],
+      },
+      {
+        heading: "Reconcile streaming against batch",
+        paragraphs: [
+          "The fastest way to lose confidence in a streaming platform is for its numbers to disagree with the warehouse. Run a periodic batch reconciliation over the same source and alert on divergence beyond a defined tolerance.",
+          "This also catches the subtle failures — a consumer lagging, a partition stalled, a schema change silently dropping a field — that latency dashboards alone will not show you.",
+        ],
+      },
+      {
+        heading: "Operate it like a service",
+        paragraphs: [
+          "Consumer lag, partition skew, throughput and error rates need dashboards and alerts with owners, exactly as an application would. Streaming systems fail in ways batch systems do not: they fail slowly and continuously rather than loudly and once.",
+          "If the team cannot answer \"is it keeping up right now\" in under a minute, the platform is not yet in production regardless of what the deployment pipeline says.",
+        ],
+      },
+    ],
+  },
   {
     slug: "how-to-build-a-modern-data-platform",
     title: "How to Build a Modern Data Platform",
@@ -224,7 +321,7 @@ export const insights: Insight[] = [
     title: "How Organizations Should Prepare Their Data for AI",
     excerpt:
       "Most AI initiatives are blocked by data foundations rather than by models. Reproducibility, lineage and access control are the prerequisites worth funding first.",
-    category: "AI & Data",
+    category: "AI",
     readingTime: 9,
     publishedAt: "2026-03-24",
     sections: [
@@ -319,7 +416,7 @@ export const insights: Insight[] = [
     title: "A Practical Path Into Data Engineering",
     excerpt:
       "For analysts, software engineers and DBAs moving into data engineering: the skills that compound, in the order worth learning them.",
-    category: "Career & Training",
+    category: "Careers",
     readingTime: 8,
     publishedAt: "2026-01-28",
     sections: [

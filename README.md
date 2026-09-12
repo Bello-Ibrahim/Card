@@ -1,9 +1,9 @@
-# GraceWell Consulting Group — Website
+# DataForge Consulting — Website
 
-Enterprise marketing site for **GraceWell Consulting Group**, a data engineering consulting and
-technology advisory firm.
+Enterprise marketing site for **DataForge Consulting**, a data engineering and technology
+consulting firm.
 
-> Engineering the data foundations behind better decisions.
+> Engineering the Data Foundations Behind Intelligent Business.
 
 Built with Next.js (App Router), TypeScript and Tailwind CSS. Every page is statically
 prerendered, ships ~102 kB of shared JavaScript, and is designed to be edited by the marketing
@@ -38,9 +38,9 @@ Two things must be set or the site will be live with placeholders:
 
 | Variable | Required | Purpose |
 | --- | --- | --- |
-| `NEXT_PUBLIC_SITE_URL` | **Yes** | Canonical URLs, `sitemap.xml`, `robots.txt`, Open Graph. Defaults to `https://www.gracewellconsulting.com`. |
+| `NEXT_PUBLIC_SITE_URL` | **Yes** | Canonical URLs, `sitemap.xml`, `robots.txt`, Open Graph. Defaults to `https://www.dataforgeconsulting.com`. |
 | `CONTACT_WEBHOOK_URL` | **Yes** | HTTPS endpoint that receives contact-form submissions as a JSON `POST` (CRM webhook, Zapier/Make hook, or a small function that emails your inbox). |
-| `CONTACT_WEBHOOK_SECRET` | No | Sent as the `x-gracewell-signature` header so your endpoint can verify the caller. |
+| `CONTACT_WEBHOOK_SECRET` | No | Sent as the `x-dataforge-signature` header so your endpoint can verify the caller. |
 
 > **Important:** if `CONTACT_WEBHOOK_URL` is unset, submissions are validated and written to the
 > server log with a warning, but **nobody receives them**. Set it before launch.
@@ -53,7 +53,7 @@ The webhook receives:
   "country": "…", "phone": "…", "topic": "…", "scope": "…",
   "engagementType": "…", "message": "…",
   "submittedAt": "2026-09-04T09:00:00.000Z",
-  "source": "gracewellconsulting.com/contact"
+  "source": "dataforgeconsulting.com/contact"
 }
 ```
 
@@ -64,7 +64,7 @@ each one until it is filled in. Nothing is invented. Set the values you have con
 
 ```ts
 export const contact = {
-  email: "hello@gracewellconsulting.com",
+  email: "hello@dataforgeconsulting.com",
   phone: null,
   location: null,
   linkedin: "https://www.linkedin.com/company/…",
@@ -90,11 +90,12 @@ navigation menu and `sitemap.xml` entry that uses it updates automatically.
 | `services.ts` | Services section + one detail page per service |
 | `solutions.ts` | Solutions section + one detail page per solution |
 | `industries.ts` | Industries page and home section |
-| `approach.ts` | The six-step Discover → Scale timeline |
+| `process.ts` | The six-step Discover → Scale consulting timeline |
 | `training.ts` | Training tracks and teaching principles |
-| `team-setup.ts` | Build / Scale / Enable modes and capability list |
+| `team-setup.ts` | Build / Scale / Enable modes, six pillars, team structure |
 | `technologies.ts` | Technology ecosystem and the hero credibility strip |
-| `why.ts` | The six "Why GraceWell" pillars |
+| `principles.ts` | The six core principles |
+| `media.ts` | Photography manifest — slots, alt text, art direction |
 | `case-studies.ts` | Case studies (see the honesty rules below) |
 | `insights.ts` | Articles, categories and article bodies |
 | `faqs.ts` | FAQ accordion + FAQ structured data |
@@ -119,13 +120,13 @@ the client has agreed to. The disclosure banner disappears automatically.
 This site is deliberately built so it cannot drift into unsupported claims. **Do not add**
 client logos, client names, testimonials, certifications, awards, partnerships, revenue figures,
 project metrics, employee counts, years of experience, office addresses or case-study statistics
-unless GraceWell has verified them.
+unless DataForge has verified them.
 
 Where a fact is not available the pattern is: leave the field `null` and let the UI hide it, or
 label the content as illustrative. That convention is already applied to contact details,
 leadership profiles, careers listings and case studies.
 
-The technology list is a list of tools GraceWell's engineers work with — it is not a claim of
+The technology list is a list of tools DataForge's engineers work with — it is not a claim of
 vendor partnership, certification or affiliation, and the ecosystem section says so on the page.
 
 ---
@@ -147,14 +148,17 @@ src/
       form-state.ts        # Shared types/constants (a "use server" file may only export functions)
     industries|training|team-setup|about/
     privacy-policy|terms-of-use|cookie-policy/
+    scene/[key]/route.ts   # Prerendered SVG scenes, cached immutably
     sitemap.ts robots.ts not-found.tsx opengraph-image.tsx icon.svg
     <dynamic routes each carry their own opengraph-image.tsx>
   components/              # Reusable UI (header, footer, hero, cards, sections, form)
     ui/                    # Primitives: container, button, section header, reveal, icon, json-ld
-    visuals/               # Generated artwork: cover-art, cover-banner, motif, variant map
+    media/                 # Photo slot component (next/image + designed scene fallback)
+    visuals/               # Architecture diagram, quality dashboard, org chart, globe,
+                           # before/after, cover art, variant map
   content/                 # All copy — see the table above
   lib/                     # seo.ts (metadata), schema.ts (JSON-LD), art.ts (seeded PRNG),
-                           # og.tsx (social cards), utils.ts
+                           # scene-svg.ts (designed scenes), og.tsx (social cards), utils.ts
 ```
 
 ### Design system
@@ -173,66 +177,81 @@ no animation library, no image request. Every animation is switched off by the
 
 ---
 
-## Imagery
+## Imagery & photography
 
-The site's artwork is **generated, original SVG** — not stock photography. Every cover,
-masthead visual and social card is drawn from code at build time, which means:
+The design calls for roughly 40% photography. **No licensed photographs ship with this
+repository** — we do not publish stock images of people, offices or teams presented as
+DataForge's own. Instead every photographic slot exists as a real component backed by a
+designed cinematic scene, so supplying a photograph is a one-line change.
 
-- no licensing question, and nothing that implies a client, office or employee we cannot verify
-- no image files to download — covers add markup that gzips to roughly 12–18% of its raw size
-- crisp at every density, correct in the brand palette by construction, and zero layout shift
+### The photography manifest — `src/content/media.ts`
 
-### How it works
+Each slot declares finished `alt` text, an art-direction `brief` for whoever sources or
+shoots it, and the `scene` used until then:
 
-`src/lib/art.ts` provides a seeded PRNG (FNV-1a → mulberry32). Everything is a pure function
-of a string seed — usually a slug — so a given article always renders the same artwork on the
-server, on the client, and across builds.
+```ts
+heroOperations: {
+  src: null,                       // ← set to "/photography/hero.jpg" to use a real image
+  alt: "Data engineers working in a technology operations centre…",
+  brief: "Wide, cinematic. Operations environment at low light…",
+  scene: "control-room",
+},
+```
 
-`src/components/visuals/cover-art.tsx` renders one of eight variants, each an abstract reading
-of its subject rather than decoration:
+Set `src` and `<Photo name="heroOperations" />` renders it through `next/image` (AVIF/WebP,
+responsive `sizes`, lazy by default) in exactly the same box, with the same overlay and hover
+treatment. Nothing around it needs to move.
+
+**Art direction for all photography:** cinematic, high contrast, dark modern environments,
+professional African and international teams, real technology settings. No handshakes, no
+people pointing at charts, no meaningless dashboards. Never use photographs of people,
+offices or events to represent DataForge's team, clients or premises unless they genuinely
+are DataForge's.
+
+### Designed scenes — `src/lib/scene-svg.ts`
+
+Five scene types stand in for photography: `control-room`, `racks`, `workspace`, `skyline`
+and `workshop`. They are deliberately *designed* rather than imitation photographs —
+cinematic lighting, architectural geometry and screen glow — so an unfilled slot reads as
+intentional art direction rather than a missing asset.
+
+They are emitted as SVG **source strings** and served from a prerendered image route at
+`/scene/[key]`, which matters for performance: rendered inline they cost several hundred DOM
+nodes per slot and pushed the home page past 8,000 elements. As image routes each slot costs
+one lazy-loaded `<img>`, and a scene reused across pages is fetched once and cached
+immutably.
+
+### Generated cover art — `src/components/visuals/cover-art.tsx`
+
+Insight cards and article headers use generated abstract art rather than photography. Eight
+variants, each an abstract reading of its subject, mapped in
+`src/components/visuals/variants.ts`:
 
 | Variant | Reads as | Used for |
 | --- | --- | --- |
-| `flow` | routed pipelines with junction nodes | Data Engineering, migration |
-| `strata` | layered platform bands | Data Architecture, warehouses, lakehouses |
-| `mesh` | distributed node network | Cloud, integration, managed engineering |
-| `radial` | concentric arcs and spokes | Data Strategy, About |
-| `field` | column field with a trend line | Analytics, data quality |
-| `embedding` | clustered vectors with links | AI & Data |
-| `tree` | hierarchical graph | Engineering Leadership, governance, Team Setup |
-| `steps` | ascending progression | Career & Training, Training |
+| `flow` | routed pipelines | Data Engineering |
+| `strata` | layered platform bands | Data Architecture |
+| `mesh` | distributed nodes | Cloud |
+| `radial` | concentric arcs | Data Strategy |
+| `field` | column field with trend | Analytics |
+| `embedding` | clustered vectors | AI |
+| `tree` | hierarchical graph | Engineering Leadership |
+| `steps` | ascending progression | Careers, Training |
 
-`src/components/visuals/variants.ts` maps subjects to variants. To change a page's artwork,
-edit that map — nothing else needs to move. New insight categories need an entry in
-`CATEGORY_VARIANT`; TypeScript will tell you if one is missing.
+### Technical illustrations
 
-`src/components/visuals/motif.tsx` draws the small 4×4 lattice glyph on industry cards.
+Built from real markup rather than flat images, so the content is selectable, searchable and
+screen-reader readable, and reflows on a phone:
 
-All generated art is decorative and rendered `aria-hidden`, because the adjacent heading
-already carries the meaning.
+- `visuals/architecture-diagram.tsx` — the signature Sources → Consumption platform diagram
+- `visuals/quality-dashboard.tsx` — data observability surface (**illustrative figures**, not
+  measurements of DataForge or any client; the page says so)
+- `visuals/org-chart.tsx` — data engineering team structure, as a nested list
+- `visuals/global-reach.tsx` — orthographic dot-globe oriented to Africa, computed by
+  projection rather than hand-drawn
+- `visuals/before-after.tsx` — the modernization comparison
 
-### Social cards
-
-`src/lib/og.tsx` renders the shared Open Graph card, and each dynamic route has its own
-`opengraph-image.tsx`, so services, solutions, insights and case studies each get a social
-preview carrying their own title. These are drawn with plain divs and gradients rather than
-SVG, because Satori (the renderer behind `next/og`) supports only a subset of CSS.
-
-### If you want real photography
-
-Nothing here prevents it — the brand direction simply calls for architectural visuals over
-stock imagery, and we will not ship photos that imply a client, office or team we cannot
-evidence. To add licensed photography:
-
-1. Put the files in `public/` (or a CDN) and use `next/image` so they are served as AVIF/WebP
-   at responsive sizes.
-2. Give every image real `alt` text, or `alt=""` if it is purely decorative.
-3. Set explicit `width`/`height` (or `fill` with a sized parent) to keep CLS at zero.
-4. Replace the `media` prop on `PageHeader`, or the cover in `InsightCard` / `CaseStudyCard`,
-   with your `<Image>` — both are single, isolated call sites.
-
-Do not use photographs of people, offices or events to represent GraceWell's team, clients or
-premises unless they genuinely are GraceWell's.
+All decorative artwork is `aria-hidden`; the adjacent heading carries the meaning.
 
 ---
 

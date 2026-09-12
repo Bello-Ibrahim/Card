@@ -1,3 +1,5 @@
+import type { PhotoKey } from "./media";
+
 export type Service = {
   slug: string;
   title: string;
@@ -8,6 +10,10 @@ export type Service = {
   capabilities: string[];
   outcomes: string[];
   technologies: string[];
+  /** Photographic slot from src/content/media.ts. */
+  photo: PhotoKey;
+  /** Featured services get a full visual module on the home page, in this order. */
+  featured?: number;
   icon:
     | "pipeline"
     | "architecture"
@@ -23,6 +29,8 @@ export type Service = {
 export const services: Service[] = [
   {
     slug: "data-engineering",
+    photo: "serviceDataEngineering",
+    featured: 1,
     title: "Data Engineering",
     short: "Batch and real-time pipelines built to run in production.",
     summary:
@@ -47,6 +55,8 @@ export const services: Service[] = [
   },
   {
     slug: "data-platform-architecture",
+    photo: "serviceArchitecture",
+    featured: 2,
     title: "Data Platform Architecture",
     short: "Architecture that survives contact with the roadmap.",
     summary:
@@ -71,6 +81,8 @@ export const services: Service[] = [
   },
   {
     slug: "cloud-data-engineering",
+    photo: "serviceCloud",
+    featured: 3,
     title: "Cloud Data Engineering",
     short: "Cloud-native platforms across AWS, Azure and Google Cloud.",
     summary:
@@ -95,6 +107,7 @@ export const services: Service[] = [
   },
   {
     slug: "data-warehousing-and-lakehouses",
+    photo: "serviceArchitecture",
     title: "Data Warehousing & Lakehouses",
     short: "Warehouses, lakes and lakehouses for analytics and AI.",
     summary:
@@ -119,6 +132,8 @@ export const services: Service[] = [
   },
   {
     slug: "data-integration",
+    photo: "serviceIntegration",
+    featured: 4,
     title: "Data Integration",
     short: "Fragmented systems joined into one coherent estate.",
     summary:
@@ -142,8 +157,10 @@ export const services: Service[] = [
     icon: "integration",
   },
   {
-    slug: "data-migration-and-modernization",
-    title: "Data Migration & Modernization",
+    slug: "data-modernization",
+    photo: "serviceModernization",
+    featured: 5,
+    title: "Data Modernization",
     short: "Legacy platforms retired without breaking the business.",
     summary:
       "Modernize legacy data infrastructure and migrate workloads to scalable cloud and modern data platforms.",
@@ -167,6 +184,7 @@ export const services: Service[] = [
   },
   {
     slug: "analytics-engineering",
+    photo: "serviceDataEngineering",
     title: "Analytics Engineering",
     short: "Trusted, documented, analysis-ready datasets.",
     summary:
@@ -191,6 +209,7 @@ export const services: Service[] = [
   },
   {
     slug: "data-quality-and-observability",
+    photo: "serviceIntegration",
     title: "Data Quality & Observability",
     short: "Reliability you can measure, not hope for.",
     summary:
@@ -215,6 +234,7 @@ export const services: Service[] = [
   },
   {
     slug: "data-strategy-and-advisory",
+    photo: "serviceArchitecture",
     title: "Data Strategy & Advisory",
     short: "Roadmaps, operating models and investment priorities.",
     summary:
@@ -238,5 +258,9 @@ export const services: Service[] = [
     icon: "strategy",
   },
 ];
+
+export const featuredServices = services
+  .filter((s): s is Service & { featured: number } => typeof s.featured === "number")
+  .sort((a, b) => a.featured - b.featured);
 
 export const getService = (slug: string) => services.find((s) => s.slug === slug);

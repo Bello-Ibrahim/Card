@@ -3,7 +3,7 @@ import { LegalPage, type LegalSection } from "@/components/legal-page";
 
 export const metadata = buildMetadata({
   title: "Terms of Use",
-  description: "The terms that apply to your use of the GraceWell Consulting Group website.",
+  description: "The terms that apply to your use of the DataForge Consulting website.",
   path: "/terms-of-use",
 });
 
@@ -17,7 +17,7 @@ const sections: LegalSection[] = [
   {
     heading: "Purpose of this site",
     paragraphs: [
-      "This website describes the services offered by GraceWell Consulting Group and publishes editorial material about data engineering practice. It is provided for general information.",
+      "This website describes the services offered by DataForge Consulting and publishes editorial material about data engineering practice. It is provided for general information.",
       "Nothing on this site constitutes professional, technical, financial or legal advice for your specific circumstances, and no client relationship is created by reading it or by submitting an enquiry. Advice is given only under a written engagement agreement.",
     ],
   },
@@ -31,7 +31,7 @@ const sections: LegalSection[] = [
   {
     heading: "Intellectual property",
     paragraphs: [
-      "The content, design, code and materials on this site are owned by GraceWell Consulting Group or used with permission, and are protected by intellectual property law.",
+      "The content, design, code and materials on this site are owned by DataForge Consulting or used with permission, and are protected by intellectual property law.",
       "You may read, share links to, and quote short extracts of our published articles with clear attribution and a link to the original. You may not republish substantial portions, or use our material to train commercial models or to create derivative works, without our written permission.",
     ],
   },
@@ -60,7 +60,7 @@ const sections: LegalSection[] = [
   {
     heading: "Limitation of liability",
     paragraphs: [
-      "To the fullest extent permitted by law, GraceWell Consulting Group is not liable for any loss or damage arising from reliance on the content of this site or from its use or unavailability. Nothing in these terms limits liability that cannot lawfully be limited.",
+      "To the fullest extent permitted by law, DataForge Consulting is not liable for any loss or damage arising from reliance on the content of this site or from its use or unavailability. Nothing in these terms limits liability that cannot lawfully be limited.",
     ],
   },
   {

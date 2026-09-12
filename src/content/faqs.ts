@@ -2,9 +2,9 @@ export type Faq = { question: string; answer: string };
 
 export const faqs: Faq[] = [
   {
-    question: "What does GraceWell Consulting Group do?",
+    question: "What does DataForge Consulting do?",
     answer:
-      "GraceWell is a data engineering consulting and technology advisory firm. We help organizations design, build, modernize, operate and scale reliable data platforms — covering data strategy and architecture, data pipelines, cloud data engineering, warehousing and lakehouses, integration, migration, analytics engineering, data quality and governance, plus training and data engineering team setup.",
+      "DataForge is a data engineering consulting and technology advisory firm. We help organizations design, build, modernize, operate and scale reliable data platforms — covering data strategy and architecture, data pipelines, cloud data engineering, warehousing and lakehouses, integration, migration, analytics engineering, data quality and governance, plus training and data engineering team setup.",
   },
   {
     question: "What size of organization do you work with?",

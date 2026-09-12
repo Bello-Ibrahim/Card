@@ -1,7 +1,7 @@
 /**
  * Engagement patterns.
  *
- * These are ILLUSTRATIVE descriptions of the kinds of problems GraceWell works on.
+ * These are ILLUSTRATIVE descriptions of the kinds of problems DataForge works on.
  * They intentionally name no client, quote no metric and claim no result, because none
  * has been verified for publication.
  *
@@ -10,8 +10,11 @@
  * "illustrative" disclosure only while `verified` is false.
  */
 
+import type { PhotoKey } from "./media";
+
 export type CaseStudy = {
   slug: string;
+  photo: PhotoKey;
   title: string;
   sector: string;
   challenge: string;
@@ -25,6 +28,7 @@ export type CaseStudy = {
 export const caseStudies: CaseStudy[] = [
   {
     slug: "modernizing-an-enterprise-data-platform",
+    photo: "caseModernization",
     title: "Modernizing an Enterprise Data Platform",
     sector: "Enterprise",
     challenge:
@@ -38,6 +42,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "migrating-a-legacy-data-warehouse",
+    photo: "caseMigration",
     title: "Migrating a Legacy Data Warehouse",
     sector: "Regulated industry",
     challenge:
@@ -51,6 +56,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "building-an-internal-data-engineering-team",
+    photo: "caseTeam",
     title: "Building an Internal Data Engineering Team",
     sector: "Growth-stage organization",
     challenge:

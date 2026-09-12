@@ -5,7 +5,8 @@ import { Container } from "@/components/ui/container";
 import { PageHeader } from "@/components/page-header";
 import { Reveal } from "@/components/ui/reveal";
 import { ServiceCard } from "@/components/cards";
-import { ApproachTimeline } from "@/components/approach-timeline";
+import { ProcessTimeline } from "@/components/process-timeline";
+import { PlatformArchitecture } from "@/components/services-showcase";
 import { TechEcosystem } from "@/components/tech-ecosystem";
 import { CtaSection } from "@/components/cta-section";
 import { ButtonLink, Arrow } from "@/components/ui/button";
@@ -14,7 +15,7 @@ import { services } from "@/content/services";
 export const metadata = buildMetadata({
   title: "Data Engineering Services",
   description:
-    "Data engineering, platform architecture, cloud data engineering, warehousing and lakehouses, integration, migration, analytics engineering, data quality and data strategy advisory from GraceWell Consulting Group.",
+    "Data engineering, platform architecture, cloud data engineering, warehousing and lakehouses, integration, migration, analytics engineering, data quality and data strategy advisory from DataForge Consulting.",
   path: "/services",
   keywords: [
     "data engineering services",
@@ -30,7 +31,7 @@ export default function ServicesPage() {
     <>
       <PageHeader
         eyebrow="Services"
-        title="From data strategy to production-grade engineering."
+        title="What we build"
         lede="Advisory work that sets direction, and engineering work that makes it real — delivered by the same team, so the architecture that gets designed is the architecture that gets built."
         breadcrumbs={[
           { name: "Home", path: "/" },
@@ -63,7 +64,8 @@ export default function ServicesPage() {
         </Container>
       </section>
 
-      <ApproachTimeline />
+      <PlatformArchitecture />
+      <ProcessTimeline />
       <TechEcosystem tone="dark" />
       <CtaSection
         title="Not sure which service you need?"

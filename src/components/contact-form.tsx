@@ -4,59 +4,34 @@ import { useActionState, useEffect, useId, useMemo, useRef } from "react";
 import { useFormStatus } from "react-dom";
 import { useSearchParams } from "next/navigation";
 import { submitContactForm } from "@/app/contact/actions";
-import { initialContactState, type ContactField } from "@/app/contact/form-state";
+import {
+  BUDGET_OPTIONS,
+  ENGAGEMENT_OPTIONS,
+  SERVICE_OPTIONS,
+  TIMELINE_OPTIONS,
+  initialContactState,
+  type ContactField,
+} from "@/app/contact/form-state";
 import { Button, Arrow } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-
-const TOPICS = [
-  "Building a new data platform",
-  "Modernizing or migrating an existing platform",
-  "Data pipelines and integration",
-  "Data quality and reliability",
-  "Analytics and BI enablement",
-  "Preparing our data for AI",
-  "Data strategy or architecture review",
-  "Training our team",
-  "Building or scaling a data team",
-  "Something else",
-];
-
-const SCOPES = [
-  "Not yet defined",
-  "Assessment or advisory engagement",
-  "Focused project",
-  "Multi-phase programme",
-  "Ongoing / managed engagement",
-];
-
-const ENGAGEMENT_TYPES = [
-  "Consulting",
-  "Data Engineering Project",
-  "Cloud/Data Platform",
-  "Training",
-  "Team Setup",
-  "Staff Augmentation",
-  "Architecture Review",
-  "Managed Services",
-  "Other",
-];
 
 /**
  * Deep links such as /contact?topic=training pre-select the right options so a visitor
  * arriving from a service or training page does not restate what they already told us.
  */
-const TOPIC_PREFILL: Record<string, string> = {
-  training: "Training our team",
-  "team-setup": "Building or scaling a data team",
-  consultation: "Data strategy or architecture review",
-  newsletter: "Something else",
-  careers: "Something else",
+const SERVICE_PREFILL: Record<string, string> = {
+  training: "Training",
+  "team-setup": "Team Setup",
+  consultation: "Data Strategy & Advisory",
+  project: "Data Engineering",
+  careers: "Not sure yet",
 };
 
 const ENGAGEMENT_PREFILL: Record<string, string> = {
   training: "Training",
-  "team-setup": "Team Setup",
+  "team-setup": "Team setup",
   consultation: "Consulting",
+  project: "Project delivery",
 };
 
 const fieldClass =
@@ -108,7 +83,7 @@ function SubmitButton() {
   const { pending } = useFormStatus();
   return (
     <Button type="submit" size="lg" disabled={pending} className="w-full sm:w-auto">
-      {pending ? "Sending…" : "Send Inquiry"}
+      {pending ? "Sending…" : "Start the Conversation"}
       {pending ? null : <Arrow />}
     </Button>
   );
@@ -120,21 +95,20 @@ export function ContactForm() {
   const uid = useId();
 
   const defaults = useMemo<Partial<Record<ContactField, string>>>(() => {
-    const topic = searchParams.get("topic") ?? "";
+    const intent = searchParams.get("intent") ?? "";
     const program = searchParams.get("program");
     const mode = searchParams.get("mode");
 
-    const messageParts = [
-      topic === "newsletter" ? "I'd like to receive GraceWell insights by email." : "",
-      topic === "careers" ? "I'm interested in working at GraceWell." : "",
+    const parts = [
+      intent === "careers" ? "I'm interested in working at DataForge." : "",
       program ? `I'd like to know more about the ${program.replace(/-/g, " ")} program.` : "",
       mode ? `We're looking at the "${mode}" route for our data team.` : "",
     ].filter(Boolean);
 
     return {
-      ...(TOPIC_PREFILL[topic] ? { topic: TOPIC_PREFILL[topic] } : {}),
-      ...(ENGAGEMENT_PREFILL[topic] ? { engagementType: ENGAGEMENT_PREFILL[topic] } : {}),
-      ...(messageParts.length ? { message: `${messageParts.join(" ")} ` } : {}),
+      ...(SERVICE_PREFILL[intent] ? { service: SERVICE_PREFILL[intent] } : {}),
+      ...(ENGAGEMENT_PREFILL[intent] ? { engagement: ENGAGEMENT_PREFILL[intent] } : {}),
+      ...(parts.length ? { description: `${parts.join(" ")} ` } : {}),
     };
   }, [searchParams]);
 
@@ -289,98 +263,97 @@ export function ContactForm() {
         </Field>
       </div>
 
-      <Field
-        id={id("topic")}
-        label="What can we help you with?"
-        required
-        error={state.errors.topic}
-      >
+      <Field id={id("service")} label="Service required" required error={state.errors.service}>
         <select
-          id={id("topic")}
-          name="topic"
-          defaultValue={value("topic")}
-          aria-invalid={invalid("topic")}
-          aria-describedby={describedBy("topic")}
-          className={cn(fieldClass, borderFor("topic"), "appearance-none pr-10")}
+          id={id("service")}
+          name="service"
+          defaultValue={value("service")}
+          aria-invalid={invalid("service")}
+          aria-describedby={describedBy("service")}
+          className={cn(fieldClass, borderFor("service"), "appearance-none pr-10")}
         >
           <option value="">Select an option</option>
-          {TOPICS.map((topic) => (
-            <option key={topic} value={topic}>
-              {topic}
+          {SERVICE_OPTIONS.map((option) => (
+            <option key={option} value={option}>
+              {option}
             </option>
           ))}
         </select>
       </Field>
 
-      <div className="grid gap-6 sm:grid-cols-2">
-        <Field
-          id={id("scope")}
-          label="Estimated project scope"
-          error={state.errors.scope}
-          hint="A rough sense is fine — this only helps us route your enquiry."
-        >
+      <Field
+        id={id("description")}
+        label="Project description"
+        required
+        error={state.errors.description}
+        hint="What are you trying to achieve, and what's currently in the way?"
+      >
+        <textarea
+          id={id("description")}
+          name="description"
+          rows={6}
+          defaultValue={value("description")}
+          aria-invalid={invalid("description")}
+          aria-describedby={describedBy("description", true)}
+          className={cn(fieldClass, borderFor("description"), "h-auto resize-y py-3.5 leading-relaxed")}
+        />
+      </Field>
+
+      <div className="grid gap-6 sm:grid-cols-3">
+        <Field id={id("timeline")} label="Expected timeline" error={state.errors.timeline}>
           <select
-            id={id("scope")}
-            name="scope"
-            defaultValue={value("scope")}
-            aria-invalid={invalid("scope")}
-            aria-describedby={describedBy("scope", true)}
-            className={cn(fieldClass, borderFor("scope"), "appearance-none pr-10")}
+            id={id("timeline")}
+            name="timeline"
+            defaultValue={value("timeline")}
+            aria-invalid={invalid("timeline")}
+            aria-describedby={describedBy("timeline")}
+            className={cn(fieldClass, borderFor("timeline"), "appearance-none pr-10")}
           >
             <option value="">Select an option</option>
-            {SCOPES.map((scope) => (
-              <option key={scope} value={scope}>
-                {scope}
+            {TIMELINE_OPTIONS.map((option) => (
+              <option key={option} value={option}>
+                {option}
               </option>
             ))}
           </select>
         </Field>
 
-        <Field
-          id={id("engagementType")}
-          label="Preferred engagement type"
-          required
-          error={state.errors.engagementType}
-        >
+        <Field id={id("budget")} label="Budget range" error={state.errors.budget}>
           <select
-            id={id("engagementType")}
-            name="engagementType"
-            defaultValue={value("engagementType")}
-            aria-invalid={invalid("engagementType")}
-            aria-describedby={describedBy("engagementType")}
-            className={cn(fieldClass, borderFor("engagementType"), "appearance-none pr-10")}
+            id={id("budget")}
+            name="budget"
+            defaultValue={value("budget")}
+            aria-invalid={invalid("budget")}
+            aria-describedby={describedBy("budget")}
+            className={cn(fieldClass, borderFor("budget"), "appearance-none pr-10")}
           >
             <option value="">Select an option</option>
-            {ENGAGEMENT_TYPES.map((type) => (
-              <option key={type} value={type}>
-                {type}
+            {BUDGET_OPTIONS.map((option) => (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
+        </Field>
+
+        <Field id={id("engagement")} label="Preferred engagement" error={state.errors.engagement}>
+          <select
+            id={id("engagement")}
+            name="engagement"
+            defaultValue={value("engagement")}
+            aria-invalid={invalid("engagement")}
+            aria-describedby={describedBy("engagement")}
+            className={cn(fieldClass, borderFor("engagement"), "appearance-none pr-10")}
+          >
+            <option value="">Select an option</option>
+            {ENGAGEMENT_OPTIONS.map((option) => (
+              <option key={option} value={option}>
+                {option}
               </option>
             ))}
           </select>
         </Field>
       </div>
-
-      <Field
-        id={id("message")}
-        label="Message"
-        required
-        error={state.errors.message}
-        hint="What are you trying to achieve, and what's currently in the way?"
-      >
-        <textarea
-          id={id("message")}
-          name="message"
-          rows={6}
-          defaultValue={value("message")}
-          aria-invalid={invalid("message")}
-          aria-describedby={describedBy("message", true)}
-          className={cn(
-            fieldClass,
-            borderFor("message"),
-            "h-auto resize-y py-3.5 leading-relaxed",
-          )}
-        />
-      </Field>
 
       {/* Honeypot — hidden from users and assistive technology, attractive to bots. */}
       <div aria-hidden="true" className="absolute left-[-9999px] h-px w-px overflow-hidden">

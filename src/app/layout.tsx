@@ -3,6 +3,7 @@ import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { FloatingCta } from "@/components/floating-cta";
 import { JsonLd } from "@/components/ui/json-ld";
 import { organizationSchema, websiteSchema } from "@/lib/schema";
 import { site } from "@/content/site";
@@ -24,7 +25,7 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} — Data Engineering Consulting & Data Platform Advisory`,
+    default: `${site.name} — Data Engineering & Technology Consulting`,
     template: `%s | ${site.name}`,
   },
   description: site.description,
@@ -43,6 +44,7 @@ export const metadata: Metadata = {
     "analytics engineering",
     "data warehouse consulting",
     "lakehouse consulting",
+    "real-time data engineering",
   ],
   authors: [{ name: site.name }],
   creator: site.name,
@@ -59,7 +61,7 @@ export const metadata: Metadata = {
     siteName: site.name,
     locale: site.locale,
     url: site.url,
-    title: `${site.name} — Data Engineering Consulting & Data Platform Advisory`,
+    title: `${site.name} — Data Engineering & Technology Consulting`,
     description: site.description,
   },
   twitter: {
@@ -92,6 +94,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <SiteHeader />
         <main id="main">{children}</main>
         <SiteFooter />
+        <FloatingCta />
         <JsonLd data={[organizationSchema(), websiteSchema()]} />
       </body>
     </html>

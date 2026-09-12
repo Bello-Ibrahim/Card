@@ -4,7 +4,7 @@ import { solutions, getSolution } from "@/content/solutions";
 
 export const size = OG_SIZE;
 export const contentType = OG_CONTENT_TYPE;
-export const alt = "GraceWell Consulting Group solution";
+export const alt = "DataForge Consulting solution";
 
 export function generateStaticParams() {
   return solutions.map((solution) => ({ slug: solution.slug }));

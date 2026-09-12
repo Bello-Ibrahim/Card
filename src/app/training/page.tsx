@@ -8,12 +8,12 @@ import { Reveal } from "@/components/ui/reveal";
 import { CtaSection } from "@/components/cta-section";
 import { ButtonLink, Arrow } from "@/components/ui/button";
 import { trainingTracks, trainingPrinciples } from "@/content/training";
-import { CoverBanner } from "@/components/visuals/cover-banner";
+import { Photo } from "@/components/media/photo";
 
 export const metadata = buildMetadata({
   title: "Data Engineering Training",
   description:
-    "Data engineering training from GraceWell Consulting Group: fundamentals, the modern data stack, advanced data engineering, cloud data engineering on AWS, Azure and Google Cloud, and customized corporate programs.",
+    "Data engineering training from DataForge Consulting: fundamentals, the modern data stack, advanced data engineering, cloud data engineering on AWS, Azure and Google Cloud, and customized corporate programs.",
   path: "/training",
   keywords: [
     "data engineering training",
@@ -29,13 +29,20 @@ export default function TrainingPage() {
     <>
       <PageHeader
         eyebrow="Training"
-        title="Develop the data engineering capability your organization needs."
-        lede="GraceWell is both a consulting firm and a data engineering education and workforce development partner. Programs are taught by practising engineers, against the stack your teams actually use."
+        title="Turn your team into a data engineering team."
+        lede="DataForge is both a consulting firm and a data engineering education and workforce development partner. Programs are taught by practising engineers, against the stack your teams actually use."
         breadcrumbs={[
           { name: "Home", path: "/" },
           { name: "Training", path: "/training" },
         ]}
-        media={<CoverBanner seed="gracewell-training" variant="steps" />}
+        media={
+          <Photo
+            name="training"
+            sizes="(min-width: 1024px) 40vw, 100vw"
+            overlay="soft"
+            className="relative aspect-[4/3] rounded-2xl border border-white/12"
+          />
+        }
       >
         <div className="flex flex-col gap-3 sm:flex-row">
           <ButtonLink href="/contact?topic=training" size="lg" variant="onDark">

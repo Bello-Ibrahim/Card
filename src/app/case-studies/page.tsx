@@ -11,7 +11,7 @@ import { caseStudies } from "@/content/case-studies";
 export const metadata = buildMetadata({
   title: "Case Studies",
   description:
-    "Engagement patterns from GraceWell Consulting Group: modernizing enterprise data platforms, migrating legacy data warehouses and building internal data engineering teams.",
+    "Engagement patterns from DataForge Consulting: modernizing enterprise data platforms, migrating legacy data warehouses and building internal data engineering teams.",
   path: "/case-studies",
 });
 
@@ -23,7 +23,7 @@ export default function CaseStudiesPage() {
       <PageHeader
         eyebrow="Case Studies"
         title="Engagement patterns we're built for."
-        lede="Named client stories are published only with client approval. Until then, these describe the shape of the problems GraceWell solves — without invented names, figures or results."
+        lede="Named client stories are published only with client approval. Until then, these describe the shape of the problems DataForge solves — without invented names, figures or results."
         breadcrumbs={[
           { name: "Home", path: "/" },
           { name: "Case Studies", path: "/case-studies" },
