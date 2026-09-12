@@ -6,8 +6,14 @@
  * change: set `src` to the file path and the real photograph replaces the designed scene
  * everywhere that slot is used.
  *
- * `src` is null until DataForge supplies a licensed or original photograph. We do not ship
- * stock images of people, offices or teams presented as DataForge's own.
+ * TWO WAYS TO SUPPLY A PHOTOGRAPH — no code change needed for either:
+ *
+ *  1. Drop a file into `public/photography/` named after the slot in kebab-case
+ *     (`heroOperations` -> `hero-operations.jpg`). The prebuild scan picks it up.
+ *  2. Or set `src` below explicitly, which always wins over a detected file.
+ *
+ * Until then each slot renders a designed cinematic scene. We do not ship stock images of
+ * people, offices or teams presented as DataForge's own.
  *
  * Art direction for all photography: cinematic, high contrast, dark modern environments,
  * professional African and international teams, real technology settings. No handshakes,
@@ -15,6 +21,8 @@
  */
 
 export type SceneKind = "control-room" | "racks" | "workspace" | "skyline" | "workshop";
+
+import photoFiles from "./photo-files.json";
 
 export type Photo = {
   /** Path under /public once supplied, e.g. "/photography/hero-operations.jpg". */
@@ -166,5 +174,18 @@ export const photos = {
 
 export type PhotoKey = keyof typeof photos;
 
+const detected = photoFiles as Partial<Record<PhotoKey, string>>;
+
+/**
+ * The manifest with detected files merged in. An explicit `src` above always wins; otherwise
+ * a matching file in public/photography/ is used; otherwise the designed scene renders.
+ */
+export const resolvedPhotos = Object.fromEntries(
+  (Object.entries(photos) as [PhotoKey, Photo][]).map(([key, photo]) => [
+    key,
+    { ...photo, src: photo.src ?? detected[key] ?? null },
+  ]),
+) as Record<PhotoKey, Photo>;
+
 /** True once at least one real photograph has been supplied. */
-export const hasPhotography = Object.values(photos).some((photo) => photo.src !== null);
+export const hasPhotography = Object.values(resolvedPhotos).some((photo) => photo.src !== null);

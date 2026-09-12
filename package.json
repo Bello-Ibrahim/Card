@@ -2,13 +2,16 @@
   "name": "gracewell-consulting-group",
   "version": "1.0.0",
   "private": true,
-  "description": "Enterprise website for GraceWell Consulting Group — data engineering consulting, data platforms, training and team setup.",
+  "description": "Enterprise website for GraceWell Consulting Group \u2014 data engineering consulting, data platforms, training and team setup.",
   "scripts": {
+    "predev": "node scripts/scan-photography.mjs",
     "dev": "next dev",
+    "prebuild": "node scripts/scan-photography.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "photos": "node scripts/scan-photography.mjs"
   },
   "dependencies": {
     "lucide-react": "0.400.0",

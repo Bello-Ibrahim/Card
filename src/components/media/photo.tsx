@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { photos, type PhotoKey } from "@/content/media";
+import { resolvedPhotos, type PhotoKey } from "@/content/media";
 import { cn } from "@/lib/utils";
 
 /**
@@ -32,7 +32,7 @@ export function Photo({
   overlay?: "none" | "soft" | "strong" | "bottom";
   zoomOnHover?: boolean;
 }) {
-  const photo = photos[name];
+  const photo = resolvedPhotos[name];
 
   const overlayClass = {
     none: null,
