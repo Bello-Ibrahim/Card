@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-12",
+  "module_id": "M3",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L11",
+      "objective": "O4",
+      "question": "A bike-demand model has MAE = 90 and RMSE = 124 bikes per hour. What does the gap between the two numbers suggest?",
+      "options": [
+        "The model is perfect, because both errors are positive.",
+        "The model makes some large misses, because RMSE punishes big errors more than MAE does.",
+        "The model is underfitting, because RMSE is always twice MAE for a good model.",
+        "The metrics were calculated on different test sets."
+      ],
+      "answer_index": 1,
+      "explanation": "MAE is the average error size, while RMSE gives extra weight to large errors, so RMSE above MAE points to some big misses. The most tempting wrong option is underfitting: there is no fixed ratio between RMSE and MAE that shows underfitting; you need to compare training and test errors for that."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L11",
+      "objective": "O3",
+      "question": "Bike rentals peak at 8 a.m. and 6 p.m. A LinearRegression model uses the raw hour (0 to 23) as a number. Why does it perform poorly on this pattern?",
+      "options": [
+        "Linear regression cannot use numeric features.",
+        "The hour column must be scaled first, and then the model would capture the peaks.",
+        "Linear regression can only draw a straight-line relationship with the hour, so it cannot follow two separate peaks.",
+        "Linear regression needs a classification target."
+      ],
+      "answer_index": 2,
+      "explanation": "A linear model gives the hour one weight, so rentals can only rise or fall steadily across the day. The most tempting wrong option is scaling. Scaling changes the units of the hour, but the relationship is still a straight line, so the peaks are still missed."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L12",
+      "objective": "O3",
+      "question": "What is the main difference between a random forest and gradient boosting?",
+      "options": [
+        "A random forest trains many trees independently and averages them; gradient boosting trains trees one after another, each correcting earlier errors.",
+        "A random forest uses one deep tree; gradient boosting uses many shallow trees.",
+        "A random forest needs scaled features; gradient boosting does not.",
+        "A random forest is for regression only; gradient boosting is for classification only."
+      ],
+      "answer_index": 0,
+      "explanation": "Forests reduce noise by averaging many independent trees, while boosting builds trees in sequence to fix remaining errors. The most tempting wrong option is that a forest uses one deep tree. A forest always contains many trees; that is where its name and its stability come from."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L13",
+      "objective": "O5",
+      "question": "You are forecasting bike rentals for each hour. Which new feature would cause data leakage?",
+      "options": [
+        "The day of the week of the timestamp.",
+        "Rentals at the same hour on the previous day.",
+        "A flag for whether the date is a weekend.",
+        "The average number of rentals for the whole day, including later hours."
+      ],
+      "answer_index": 3,
+      "explanation": "The whole-day average uses hours that have not happened yet at prediction time, so it leaks future information. The most tempting wrong option is yesterday's rentals, because it uses the target. But it is already known when you predict, so it is a valid feature."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L14",
+      "objective": "O5",
+      "question": "You tune a pipeline with RandomizedSearchCV. When should you look at the test-set score?",
+      "options": [
+        "After each search, so you can adjust the parameter ranges.",
+        "Once, after all tuning and model choices are finished.",
+        "Before tuning, to choose which settings to search.",
+        "Never, because best_score_ already is the test score."
+      ],
+      "answer_index": 1,
+      "explanation": "The search uses cross-validation on training data; the test set is a single final check. The most tempting wrong option is checking after each search. Each look lets the test set influence your choices, so the final score becomes too optimistic."
+    }
+  ]
+}

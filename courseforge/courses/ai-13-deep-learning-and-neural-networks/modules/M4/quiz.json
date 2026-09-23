@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-13",
+  "module_id": "M4",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L16",
+      "objective": "O6",
+      "question": "A learner has time for only a few short runs to improve a fine-tuned model. Which plan uses that time best?",
+      "options": [
+        "Try learning rates of 0.001, 0.002, 0.003 and 0.004, because small linear steps are more precise.",
+        "Tune dropout, weight decay, batch size and model depth together in one large grid.",
+        "Tune the number of epochs first, then the learning rate if time remains.",
+        "Try learning rates on a log scale, such as 1e-4, 3e-4, 1e-3 and 3e-3, on a data subset, then confirm the best with extra seeds."
+      ],
+      "answer_index": 3,
+      "explanation": "The learning rate usually matters most, and a log scale covers the useful range in few runs. The most tempting wrong option is the linear set of values: it looks careful, but all four rates are in a narrow band, so it could miss a much better rate that is 10 times smaller or larger."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L17",
+      "objective": "O7",
+      "question": "Which set of habits best allows another person to repeat a training run exactly and reuse its model?",
+      "options": [
+        "Fix seeds, keep all settings in a config dictionary, log each run to a results table, and save the best checkpoint together with its config outside the session.",
+        "Save the final notebook output as a screenshot and keep the model in the Colab session.",
+        "Record only the best validation score, because failed runs are not useful.",
+        "Save a checkpoint after every epoch to the local Colab disk."
+      ],
+      "answer_index": 0,
+      "explanation": "Seeds, a single config, a results table and a checkpoint stored with its config make a run describable, comparable and reloadable. The most tempting wrong option is saving every epoch's checkpoint: the local Colab disk is deleted when the session ends, and a checkpoint without its config does not say which settings or preprocessing it needs."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L18",
+      "objective": "O7",
+      "question": "Before training any deep model for the capstone, which step is most important to do first?",
+      "options": [
+        "Fine-tune the largest pretrained model available to get a high score quickly.",
+        "Upload the dataset to the Hugging Face Hub so it is backed up.",
+        "Check the dataset's licence, source and personal-data risks, then build a simple baseline and write an experiment plan.",
+        "Evaluate several candidate models on the test set to choose a direction."
+      ],
+      "answer_index": 2,
+      "explanation": "A usable dataset, a baseline score and a plan with hypotheses make every later result meaningful. The most tempting wrong option is starting with the largest model: without a baseline, you cannot show it is worth its cost, and without checking the licence first, you may have to restart with different data."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L19",
+      "objective": "O6",
+      "question": "Two fine-tuned models have validation macro F1 scores of 0.842 ± 0.006 and 0.845 ± 0.007 over 3 seeds. The second uses a more complex schedule. Which choice is best justified?",
+      "options": [
+        "Choose the second model, because its mean score is higher.",
+        "Choose the simpler first model, because the scores are within seed variation, and state this reason in the report.",
+        "Evaluate both on the test set and choose the one with the higher test score.",
+        "Choose neither and report the baseline, because the difference is small."
+      ],
+      "answer_index": 1,
+      "explanation": "When results are within seed variation, the simpler model is a reasonable choice, and the reasoning should be written down. The most tempting wrong option is testing both and picking the higher test score, which turns the test set into a validation set and makes the reported test result too optimistic."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L20",
+      "objective": "O7",
+      "question": "Which addition would most improve a capstone report that already contains the final test score and a confusion matrix?",
+      "options": [
+        "A longer description of how neural networks work in general.",
+        "Only the best run, with failed runs removed to keep the report short.",
+        "The Hugging Face access token used during the project, so others can reproduce the upload.",
+        "An experiments table with every run, known limitations and out-of-scope uses, and instructions to run the notebook from the start."
+      ],
+      "answer_index": 3,
+      "explanation": "A model-card-style report needs the full experiment history, the limits and a reproducible path, not just the final numbers. The most tempting wrong option is removing failed runs to keep it short: failed runs are evidence for how the final model was chosen, and hiding them makes the report less credible."
+    }
+  ]
+}

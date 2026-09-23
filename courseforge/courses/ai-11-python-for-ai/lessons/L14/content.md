@@ -100,4 +100,5 @@ Beginners often start fixing the first problem they see, for example deleting th
 
 ## Review Flags
 - [VERSION] Text column dtype names (str in pandas 3, object in earlier versions) and printed output formats differ between pandas versions. Outputs were produced with Python 3.11 and pandas 3.0.6.
+- [VERIFY] Curriculum flag for L11–L15 (Gapminder source, access method and licence): this lesson uses only the synthetic order data, so no Gapminder check is needed here.
 - The order data is synthetic and was created for this course, as the curriculum requires.

@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-17",
+  "module_id": "M1",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L01",
+      "objective": "O1",
+      "question": "In a data system, which item is a consumer rather than a source?",
+      "options": [
+        "A payment service that records every card transaction",
+        "A churn model that retrains every week on a prepared table",
+        "A CSV file that a partner sends every night",
+        "GPS pings sent by drivers' phones"
+      ],
+      "answer_index": 1,
+      "explanation": "A consumer uses the result of a pipeline, and a model that trains on a prepared table does exactly that. The most tempting wrong option is the nightly CSV from a partner, because it arrives on a schedule like pipeline output. It is still a source: it is where the data enters your system."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L02",
+      "objective": "O2",
+      "question": "A team loads raw sales data into its warehouse first and transforms it there with SQL. Six months later a business rule changes. Why is this ELT pattern helpful now?",
+      "options": [
+        "Because ELT processes each sale within seconds of its arrival.",
+        "Because ELT does not need any SQL transformations.",
+        "Because ELT stores only the final report tables, which saves space.",
+        "Because the raw data is still in the warehouse, so the team can change the SQL and rebuild the history."
+      ],
+      "answer_index": 3,
+      "explanation": "ELT keeps the raw data, so a changed rule only needs a changed model and a rebuild. The most tempting wrong option is that ELT processes each sale within seconds. That describes streaming, which is about timing; ELT is about where and when the transformation happens, and it is usually run in batches."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L03",
+      "objective": "O3",
+      "question": "A raw CSV has a 'value' column that contains numbers, empty cells and the placeholder '..'. How should you load it into the raw schema?",
+      "options": [
+        "As a TEXT column, unchanged, and convert '..' to NULL later in the staging layer.",
+        "As a NUMERIC column, so the database rejects bad values at load time.",
+        "Open the file in a spreadsheet, delete the '..' rows, then load it.",
+        "Replace '..' with 0 in the CSV before loading, so the column is numeric."
+      ],
+      "answer_index": 0,
+      "explanation": "The raw layer keeps data exactly as it arrived, and text columns never make the load fail. The most tempting wrong option is a NUMERIC column, because strict types feel safer. In fact the load would fail on '..', and a type conversion is a transformation that belongs in staging, where it is visible and tested."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L04",
+      "objective": "O6",
+      "question": "A grocery chain's fact table mixes rows for whole receipts with rows for single product lines. What is the main problem?",
+      "options": [
+        "The table has too few dimension tables.",
+        "The table cannot have a primary key in PostgreSQL.",
+        "The grain is unclear, so totals and counts can be double counted.",
+        "The table should be stored as CSV instead."
+      ],
+      "answer_index": 2,
+      "explanation": "Every fact table needs one grain, meaning one clear definition of what a row represents. Mixing receipts and lines makes sums and counts wrong. The most tempting wrong option is 'too few dimension tables', but adding dimensions does not fix rows that represent different things."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L05",
+      "objective": "O6",
+      "question": "Which situation is the best fit for DuckDB rather than PostgreSQL?",
+      "options": [
+        "A web shop where hundreds of customers update their addresses at the same time",
+        "An analyst who builds a feature dataset from large Parquet files on a laptop",
+        "A shared server that many applications must reach over the network all day",
+        "A system that needs separate user accounts and permissions for each team"
+      ],
+      "answer_index": 1,
+      "explanation": "DuckDB is an in-process analytical database, designed for fast queries on local files by one process. The most tempting wrong option is the web shop, because DuckDB is fast. Speed on analytics does not make it suitable for many users writing small updates at once; that is PostgreSQL's strength."
+    }
+  ]
+}

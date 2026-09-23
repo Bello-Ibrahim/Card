@@ -8,33 +8,31 @@ A user asks, "How many days of parental leave do employees get?" Your assistant 
 ## Explanation
 Retrieval works one query at a time and has no memory. In a chat, many questions depend on earlier turns: "And in 2022?", "What about the second option?", "Does that apply to Kenya too?" These are **follow-up questions**. Before retrieval, we rewrite them into **standalone queries**, such as "How many days of parental leave do contractors get?"
 
-The LLM is good at this, and you already know from AI-14 how to get a **structured output** that your code can trust. Here we use a tool definition with a forced tool choice, so the model must return JSON that matches a schema. You may use your API's native structured-output option instead. [VERSION]
+The LLM is good at this, and you already know from AI-14 how to get a **structured output** that your code can trust. Here we pass a JSON Schema with `output_config`, so the reply is JSON that matches it. Some current models reject a *forced* tool choice, so prefer this native option. [VERSION]
 
 ```python
-REWRITE_TOOL = {
-    "name": "search_queries",
-    "description": "Search queries for the user's latest question.",
-    "input_schema": {
-        "type": "object",
-        "properties": {
-            "standalone": {"type": "string"},
-            "variants": {"type": "array", "items": {"type": "string"}},
-        },
-        "required": ["standalone", "variants"],
+import json
+
+REWRITE_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "standalone": {"type": "string"},
+        "variants": {"type": "array", "items": {"type": "string"}},
     },
+    "required": ["standalone", "variants"],
+    "additionalProperties": False,
 }
 
 def rewrite(history, question):
     convo = "\n".join(f"{role}: {text}" for role, text in history[-6:])
     msg = client.messages.create(
         model=MODEL, max_tokens=300,  # MODEL: check the current models page
-        tools=[REWRITE_TOOL],
-        tool_choice={"type": "tool", "name": "search_queries"},
+        output_config={"format": {"type": "json_schema", "schema": REWRITE_SCHEMA}},
         messages=[{"role": "user", "content":
             f"Conversation:\n{convo}\n\nLatest question: {question}\n"
             "Rewrite the latest question as one complete search query. "
             "Add up to 3 other phrasings that use different words."}])
-    return next(b.input for b in msg.content if b.type == "tool_use")
+    return json.loads(next(b.text for b in msg.content if b.type == "text"))
 ```
 
 Example output:
@@ -74,7 +72,7 @@ Developers often send the whole chat history to the embedding model as the searc
 
 ## Key Takeaways
 1. Follow-up questions depend on earlier turns and must be rewritten into standalone queries before retrieval.
-2. A structured output (such as a forced tool call) gives your code a reliable standalone query and extra phrasings for multi-query retrieval.
+2. A structured output (a JSON Schema in the request) gives your code a reliable standalone query and extra phrasings for multi-query retrieval.
 3. Use the rewrite only for search, keep the user's original question for the answer, and test that complete questions stay unchanged.
 
 ## Hands-on Exercise
@@ -90,4 +88,4 @@ Developers often send the whole chat history to the embedding model as the searc
 **Time:** about 40 minutes
 
 ## Review Flags
-- [VERSION] Claude API tool use with forced `tool_choice`, the response content block format, native structured-output options, and model choice (MODEL constant; check the current models page).
+- [VERSION] Claude API structured outputs (`output_config` JSON Schema; forced `tool_choice` is rejected by some current models), the response content block format, and model choice (MODEL constant; check the current models page).

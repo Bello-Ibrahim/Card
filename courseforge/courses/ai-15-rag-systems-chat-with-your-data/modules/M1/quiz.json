@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-15",
+  "module_id": "M1",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L01",
+      "objective": "O2",
+      "question": "A company has 500 internal policy documents that change every quarter, and staff need answers that show the exact clause. Which approach fits best?",
+      "options": [
+        "Fine-tune a model on the documents every year.",
+        "Use RAG: retrieve the relevant clauses for each question and have the model answer from them with citations.",
+        "Paste all 500 documents into every prompt.",
+        "Ask the model without any documents, because large models know most policies."
+      ],
+      "answer_index": 1,
+      "explanation": "RAG suits large, changing collections and can cite the source clause. The most tempting wrong option is fine-tuning, but fine-tuning teaches style or format better than facts, cannot easily cite a source, and would need retraining whenever the policies change."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L01",
+      "objective": "O1",
+      "question": "In which order do the stages of a RAG pipeline run?",
+      "options": [
+        "Embedding, loading, retrieval, chunking, indexing, generation",
+        "Retrieval, generation, loading, chunking, embedding, indexing",
+        "Loading, chunking, embedding, indexing, retrieval, generation",
+        "Chunking, loading, indexing, embedding, generation, retrieval"
+      ],
+      "answer_index": 2,
+      "explanation": "Documents are loaded, split into chunks, embedded and indexed at ingestion; retrieval and generation run for each question. The most tempting wrong option starts with chunking, but you cannot chunk text you have not loaded and cleaned yet."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L02",
+      "objective": "O2",
+      "question": "A question in French finds a relevant passage written in English. What makes this possible?",
+      "options": [
+        "BM25 keyword matching",
+        "A multilingual embedding model that places the same meaning in different languages close together",
+        "Cosine similarity, which translates the text before comparing",
+        "Normalising the vectors to length 1"
+      ],
+      "answer_index": 1,
+      "explanation": "Multilingual embedding models are trained so that equivalent meanings in different languages get similar vectors. The most tempting wrong option is cosine similarity, but it only measures the angle between vectors; it does not translate anything."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L03",
+      "objective": "O3",
+      "question": "Your first pipeline gives a wrong answer. What should you check first?",
+      "options": [
+        "Whether the chunk containing the answer was in the retrieved top-k results",
+        "Whether a longer system prompt fixes it",
+        "Whether a larger model fixes it",
+        "Whether the temperature setting is too high"
+      ],
+      "answer_index": 0,
+      "explanation": "If the right chunk was not retrieved, no prompt or model can produce a grounded answer, so retrieval is checked first. The most tempting wrong option is changing the prompt, which only helps when the right chunk is already in the context."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L04",
+      "objective": "O3",
+      "question": "Most pages of a PDF report start with the same line, \"Annual Review\". What should the loader do, and why?",
+      "options": [
+        "Keep it, because more text gives the embedding model more context.",
+        "Delete every line that contains a capital letter.",
+        "Convert the PDF to images so the header is ignored.",
+        "Remove lines that repeat on most pages, because repeated headers add noise to chunks and answers."
+      ],
+      "answer_index": 3,
+      "explanation": "A line that repeats on most pages is almost always a header or footer, and it adds noise to every chunk. The most tempting wrong option is keeping it for context, but it carries no meaning about the page and makes unrelated chunks look similar."
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-11",
+  "module_id": "M4",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L16",
+      "objective": "O6",
+      "question": "A price column has 3 missing values in 2,000 rows, and a few prices are very high. You decide to keep the rows. Which fill value is usually the best choice, and why?",
+      "options": [
+        "The mean, because it uses every value in the column.",
+        "0, because a missing price means the item was free.",
+        "The maximum, so that no price is underestimated.",
+        "The median, because a few very high prices would pull the mean up."
+      ],
+      "answer_index": 3,
+      "explanation": "The median is the middle value, so a few extreme prices do not move it much. The most tempting wrong option is the mean. It does use every value, but the very high prices pull it up, so the filled values would be higher than a typical price."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L17",
+      "objective": "O6",
+      "question": "A city column contains \"Lagos\", \"lagos \" and \"LAGOS\". What should you do before one-hot encoding it?",
+      "options": [
+        "Nothing, because get_dummies treats them as the same city.",
+        "Standardise the text with .str.strip() and .str.lower(), then check the result with value_counts().",
+        "Number the cities 1, 2 and 3 instead of encoding them.",
+        "Drop the city column, because text cannot be used by models."
+      ],
+      "answer_index": 1,
+      "explanation": "Cleaning the text first makes the three spellings one value, so encoding creates one Lagos column. The most tempting wrong option is numbering the cities. A model would read the numbers as an order, as if one city were larger than another, which has no meaning."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L18",
+      "objective": "O6",
+      "question": "You are building a table to predict whether a loan will be repaid. Which column is most likely to be leaky?",
+      "options": [
+        "The number of late-payment letters sent after the loan started",
+        "The loan amount requested",
+        "The applicant's monthly income at the time of application",
+        "The length of the loan in months"
+      ],
+      "answer_index": 0,
+      "explanation": "Late-payment letters are created after the loan starts, as a result of the outcome you want to predict, so they would not be known at prediction time. The most tempting wrong option is monthly income, because it is strongly linked to repayment. But it is known at the time of application, so it is a fair feature, not leakage."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L19",
+      "objective": "O7",
+      "question": "You find an interesting dataset on a public website for your capstone. What should you record in your notebook before any analysis?",
+      "options": [
+        "Only the file name, because the source does not matter for cleaning.",
+        "The number of charts you plan to make.",
+        "The source name, web address, download date and licence.",
+        "The names of the people who appear in the data."
+      ],
+      "answer_index": 2,
+      "explanation": "Recording the source, address, date and licence lets others find the same data and confirms that your use is allowed. The most tempting wrong option is recording only the file name. A file name alone does not say where the data came from or whether you may share results based on it."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L20",
+      "objective": "O7",
+      "question": "Your notebook works when you run the cells in the order you wrote them over several days. What is the best way to check that it is reproducible?",
+      "options": [
+        "Run only the last cell again.",
+        "Share it immediately; if there are errors, reviewers will tell you.",
+        "Save it to Google Drive twice.",
+        "Restart the session and run all cells from top to bottom, then fix any error and repeat."
+      ],
+      "answer_index": 3,
+      "explanation": "A restart clears every hidden variable and uploaded file, so running all cells shows whether the notebook works from a fresh start. The most tempting wrong option is running only the last cell. It can still use variables from deleted or earlier cells, so hidden problems stay hidden."
+    }
+  ]
+}

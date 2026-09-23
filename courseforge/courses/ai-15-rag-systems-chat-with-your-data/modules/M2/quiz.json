@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-15",
+  "module_id": "M2",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L05",
+      "objective": "O6",
+      "question": "How should you choose the chunk size for a new document collection?",
+      "options": [
+        "Use the size from a popular tutorial.",
+        "Build the index with several sizes and compare a retrieval metric such as hit@5 on the same test questions.",
+        "Always use the largest size the model's context window allows.",
+        "Always use one sentence per chunk."
+      ],
+      "answer_index": 1,
+      "explanation": "The best size depends on the collection, so it must be measured. The most tempting wrong option is the tutorial default, which may have been tuned for very different documents, such as news instead of contracts."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L06",
+      "objective": "O3",
+      "question": "A user asks about 2023 reports, but vector search returns a very similar passage from 2015. What is the most direct fix?",
+      "options": [
+        "Increase n_results to 50.",
+        "Switch to a larger embedding model.",
+        "Add a metadata filter such as year >= 2023 to the query.",
+        "Remove all documents older than 2023 from the collection."
+      ],
+      "answer_index": 2,
+      "explanation": "A metadata filter limits search to the right year while keeping meaning-based ranking. The most tempting wrong option is deleting old documents, which removes information other users may legitimately need."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L07",
+      "objective": "O6",
+      "question": "Why do we combine BM25 and vector results with reciprocal rank fusion instead of adding their scores?",
+      "options": [
+        "Because BM25 and cosine scores are on different scales, and RRF uses only rank positions.",
+        "Because RRF is the only method that works with Chroma.",
+        "Because adding scores would make the search slower.",
+        "Because BM25 scores are always negative."
+      ],
+      "answer_index": 0,
+      "explanation": "RRF sums 1/(k + rank) from each list, so different score scales do not matter. The most tempting wrong option is speed; adding two numbers is fast, but it gives a meaningless result when the scales differ."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L07",
+      "objective": "O6",
+      "question": "After adding a cross-encoder reranker, a question still fails because the right chunk is not among the 25 candidates. What does this show?",
+      "options": [
+        "The reranker model is too small.",
+        "A reranker only reorders the candidates it receives, so candidate retrieval (recall) must be improved.",
+        "The reranker should score all chunks in the collection for every question.",
+        "Reranking always lowers accuracy."
+      ],
+      "answer_index": 1,
+      "explanation": "A reranker cannot find chunks it never receives. The most tempting wrong option is to rerank the whole collection, but cross-encoders are too slow for that, which is why they are used only on a shortlist."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L08",
+      "objective": "O3",
+      "question": "In a chat, the user's second question is \"And for contractors?\". What should the system search with?",
+      "options": [
+        "The exact text \"And for contractors?\"",
+        "The whole conversation history as one long query",
+        "A standalone query rewritten from the conversation, such as \"parental leave for contractors\"",
+        "Only the first question in the conversation"
+      ],
+      "answer_index": 2,
+      "explanation": "A standalone rewrite contains the missing context in one focused query. The most tempting wrong option is the whole history, but mixing several topics in one query makes the vector less specific and retrieval vaguer."
+    }
+  ]
+}

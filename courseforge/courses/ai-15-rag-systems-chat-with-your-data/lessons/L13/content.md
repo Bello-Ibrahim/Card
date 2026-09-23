@@ -6,7 +6,7 @@ Course: AI-15 · Module: M4 · Objectives: O6 · Video: 5 min (screen demo)
 A junior employee asks your assistant, "What is the salary range for managers?" The answer is correct, well cited, and taken from a confidential HR file that this employee should never see. Nothing in your evaluation caught it, because the system was working as designed.
 
 ## Explanation
-A RAG system can only be as safe as the documents it retrieves. Three production topics matter here.
+Three production topics matter here.
 
 **1. Access control before generation.** Every chunk needs metadata that says who may see it, copied from the source document's permissions at ingestion. At query time, filter retrieval by the user's permissions, so restricted chunks never reach the prompt. Do not rely on the model to "hide" restricted content; once a chunk is in the prompt, it can appear in the answer.
 
@@ -30,7 +30,7 @@ col.delete(where={"doc_id": "policy-hr-07"})
 col.add(ids=new_ids, documents=new_chunks, metadatas=new_metas)
 ```
 
-Run this in a scheduled ingestion job, and log what was added and deleted. Remember that deleted data may still exist in caches, logs and backups.
+Run this in a scheduled job and log what changed. Deleted data may still exist in caches, logs and backups.
 
 **Personal data.** Avoid indexing personal data that users do not need. Remove or mask it at ingestion where possible, limit what you log, and check where your vector database, logs and LLM provider store and process data. Rules on personal data and on data location differ by country and sector. [REGION]
 
@@ -42,7 +42,7 @@ Run this in a scheduled ingestion job, and log what was added and deleted. Remem
 - Check outputs: citations must be valid, and links or email addresses in answers can be compared with an allowed list.
 - Only index sources you trust, and record where each document came from.
 
-No single defence is complete, so test them with your own injected documents.
+No single defence is complete; test them with your own injected documents.
 
 **Analogy:** A RAG system with access control is like a hotel key card system. The front desk (authentication) decides which rooms your card opens. The card reader on each door (the retrieval filter) checks every time. A polite note on the door asking guests not to enter would be the same as telling the model to hide restricted content: easy to ignore.
 

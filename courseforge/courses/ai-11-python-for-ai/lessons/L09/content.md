@@ -96,4 +96,5 @@ Beginners sometimes run `%pip install pandas` in every notebook, or try `import`
 
 ## Review Flags
 - [VERSION] Install commands in Colab (%pip vs !pip), the list of libraries pre-installed in Colab, the pandas version printed and how long installed packages last in a Colab session must be checked against the live tool.
+- Judgement call (curriculum): NumPy is introduced by name only; its maths use is covered in AI-05.
 - The random.seed(42) output ("Tariq") was produced with Python 3.11; confirm it in the Colab runtime before recording.

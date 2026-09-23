@@ -91,4 +91,5 @@ Beginners often keep every column "because more data is better". But identifiers
 
 ## Review Flags
 - [VERSION] The Colab file panel and its download option must be checked against the live interface.
+- Judgement call (curriculum): the course ends at an ML-ready table; train/test splits, scaling and modelling are left to AI-12.
 - The order data is synthetic and created for this course, and every output was produced by running the code with Python 3.11 and pandas 3.0.6 (also tested with pandas 2.2.3).
