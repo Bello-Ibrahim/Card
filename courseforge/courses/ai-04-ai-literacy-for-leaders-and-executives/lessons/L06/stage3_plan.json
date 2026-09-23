@@ -3,7 +3,11 @@
   "thumbnail": {
     "headline": "Six Risks, Six Owners",
     "image": "Navy background, a clean risk grid in teal with one cell glowing amber, a senior leader reviewing it in the lower corner, headline in teal Inter Bold.",
-    "slide": {"layout": "title", "title": "Six Risks, Six Owners", "body": "Six small risk icons in a row (warning sign, balance scale, lock, shield, gavel, speech bubble), each with a person icon underneath. Small tag: AI Literacy for Leaders · Lesson 6."}
+    "slide": {
+      "layout": "title",
+      "title": "Six Risks, Six Owners",
+      "body": "Six small risk icons in a row (warning sign, balance scale, lock, shield, gavel, speech bubble), each with a person icon underneath. Small tag: AI Literacy for Leaders · Lesson 6."
+    }
   },
   "production_notes": [
     "[REGION] Data protection, employment, equality and consumer rules differ by country and change often. The script names no specific laws and says only that rules differ; keep it that way unless a reviewer adds sourced regional notes.",
@@ -12,61 +16,131 @@
   ],
   "sections": {
     "Hook": [
-      {"visual_type": "presenter_full",
-       "voiceover": "An AI tool saves your team many hours a week. Then one wrong output reaches a customer, a regulator or a journalist. Suddenly the conversation is not about time saved, but about trust lost. Which risks should you manage before that day comes?",
-       "on_screen_text": "From time saved to trust lost"}
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "An AI tool saves your team many hours a week. Then one wrong output reaches a customer, a regulator or a journalist. Suddenly the conversation is not about time saved, but about trust lost. Which risks should you manage before that day comes?",
+        "on_screen_text": "From time saved to trust lost"
+      }
     ],
     "Explain": [
-      {"visual_type": "slide",
-       "voiceover": "Welcome to week two. Last week, you found and prioritised your AI opportunities. Now we manage the risks. AI risk is manageable when you name it clearly, rate it and give it an owner. Six categories cover most situations.",
-       "slide": {"layout": "title", "title": "AI Risks Every Leader Must Manage", "body": "AI Literacy for Leaders and Executives · Lesson 6 of 10 · Week 2"}},
-      {"visual_type": "slide",
-       "voiceover": "The first is wrong or invented outputs. Generative AI can invent facts, sources or numbers with confidence. The control is human review for anything that reaches customers or affects decisions, plus regular sample checks.",
-       "slide": {"layout": "comparison", "title": "1. Wrong or invented outputs", "body": "Risk: inaccurate predictions; invented facts, sources, numbers. Control: human review for customer-facing or decision outputs + regular sample checks."}},
-      {"visual_type": "slide",
-       "voiceover": "The second is bias and unfair treatment. A model trained on past decisions can repeat past unfairness towards certain groups. The control is to test results across groups before and after launch, and keep a person responsible for final decisions about people.",
-       "slide": {"layout": "comparison", "title": "2. Bias and unfair treatment", "body": "Risk: repeats past unfairness to certain groups. Control: test results across groups, before and after launch; a person makes final decisions about people."}},
-      {"visual_type": "slide",
-       "voiceover": "Third, privacy and data leaks. Staff may paste confidential data into tools that store or reuse it. Control it with clear data rules, approved business accounts and training. Fourth, security. Hidden instructions in a document or email can change a tool's behaviour. Limit what each tool can access, involve IT security and keep logs.",
-       "slide": {"layout": "comparison", "title": "3. Privacy · 4. Security", "body": "Privacy risk: confidential data pasted into tools → Control: data rules, approved accounts, training. Security risk: hidden instructions, too much access → Control: limit access, IT security, logs."}},
-      {"visual_type": "slide",
-       "voiceover": "Fifth, legal and contractual exposure. AI use can conflict with data protection, employment or consumer rules, or with client contracts. These rules differ by country and change over time, so ask your legal team to review high-impact uses before launch.",
-       "slide": {"layout": "comparison", "title": "5. Legal and contractual", "body": "Risk: conflict with data protection, employment, consumer rules or contracts; rules differ by country. Control: legal review of high-impact use cases and contracts before launch."}},
-      {"visual_type": "slide",
-       "voiceover": "Sixth, damage to reputation. Even a legal and accurate use can upset people if it feels hidden or unfair. The control is to be open about where you use AI, and to offer a way to reach a person.",
-       "slide": {"layout": "comparison", "title": "6. Reputation", "body": "Risk: use feels hidden or unfair to customers or staff. Control: be open about AI use; always offer a way to reach a person."}},
-      {"visual_type": "stock",
-       "voiceover": "Think of a building site. You do not stop building. You wear helmets, fence off dangerous areas and name a safety officer. Each hazard has a matching control, and a person who checks it.",
-       "stock_query": "construction site safety officer with helmets",
-       "on_screen_text": "Every hazard has a control and an owner"}
+      {
+        "visual_type": "slide",
+        "voiceover": "Welcome to week two. Last week, you found and prioritised your AI opportunities. Now we manage the risks. AI risk is manageable when you name it clearly, rate it and give it an owner. Six categories cover most situations.",
+        "slide": {
+          "layout": "title",
+          "title": "AI Risks Every Leader Must Manage",
+          "body": "AI Literacy for Leaders and Executives · Lesson 6 of 10 · Week 2"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "The first is wrong or invented outputs. AI can give inaccurate predictions. Generative AI can invent facts, sources or numbers with confidence. The control is human review for anything that reaches customers or affects decisions, plus regular sample checks.",
+        "slide": {
+          "layout": "comparison",
+          "title": "1. Wrong or invented outputs",
+          "body": "Risk: inaccurate predictions; invented facts, sources, numbers. Control: human review for customer-facing or decision outputs + regular sample checks."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "The second is bias and unfair treatment. A model trained on past decisions can repeat past unfairness towards certain groups. The control is to test results across groups before and after launch, and keep a person responsible for final decisions about people.",
+        "slide": {
+          "layout": "comparison",
+          "title": "2. Bias and unfair treatment",
+          "body": "Risk: repeats past unfairness to certain groups. Control: test results across groups, before and after launch; a person makes final decisions about people."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Third, privacy and data leaks. Staff may paste confidential data into tools that store or reuse it. Control it with clear data rules, approved business accounts and training. Fourth, security. Hidden instructions in a document or email can change a tool's behaviour. Limit what each tool can access, involve IT security and keep logs.",
+        "slide": {
+          "layout": "comparison",
+          "title": "3. Privacy · 4. Security",
+          "body": "Privacy risk: confidential data pasted into tools → Control: data rules, approved accounts, training. Security risk: hidden instructions, too much access → Control: limit access, IT security, logs."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Fifth, legal and contractual exposure. AI use can conflict with data protection, employment or consumer rules, or with client contracts. These rules differ by country and change over time, so ask your legal team to review high-impact uses before launch.",
+        "slide": {
+          "layout": "comparison",
+          "title": "5. Legal and contractual",
+          "body": "Risk: conflict with data protection, employment, consumer rules or contracts; rules differ by country. Control: legal review of high-impact use cases and contracts before launch."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Sixth, damage to reputation. Even a legal and accurate use can upset people if it feels hidden or unfair. The control is to be open about where you use AI, and to offer a way to reach a person.",
+        "slide": {
+          "layout": "comparison",
+          "title": "6. Reputation",
+          "body": "Risk: use feels hidden or unfair to customers or staff. Control: be open about AI use; always offer a way to reach a person."
+        }
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "Think of a building site. You do not stop building. You wear helmets, fence off dangerous areas and name a safety officer. Each hazard has a matching control, and a person who checks it. AI risk works the same way.",
+        "stock_query": "construction site safety officer with helmets",
+        "on_screen_text": "Every hazard has a control and an owner"
+      }
     ],
     "Demonstrate": [
-      {"visual_type": "slide",
-       "voiceover": "The tool for this is a risk register. It is a simple table. It lists each risk, rates likelihood and impact from one to five, and names a control and an owner. Multiply likelihood by impact to see which risks need attention first.",
-       "slide": {"layout": "diagram", "title": "The risk register", "body": "Empty table header: Risk | Likelihood 1–5 | Impact 1–5 | Score (L × I) | Control | Owner. Arrow to Score column: 'highest first'."}},
-      {"visual_type": "stock",
-       "voiceover": "Here is an example. Priya Sandhu is HR director at a fictional engineering company in Canada. Her team wants an AI tool that screens job applications and ranks candidates. Before any pilot, she builds a risk register.",
-       "stock_query": "HR director reviewing job applications office",
-       "on_screen_text": "Priya · engineering company · Canada"},
-      {"visual_type": "slide",
-       "voiceover": "Her register has six risks. The tool might rank strong candidates low because of unusual CV formats. Applicant data might be reused by the vendor. Hidden text in a CV might change the ranking. Each risk gets a control and an owner, from the recruitment lead to legal counsel.",
-       "slide": {"layout": "diagram", "title": "Priya's risk register", "body": "Six-row table from content.md: unusual CV formats 3×4 · bias toward past hires 3×5 · vendor data reuse 2×5 · hidden text in CV 2×3 · employment rules 2×5 · candidates feel judged 3×3. Each with control and owner by role."}},
-      {"visual_type": "slide",
-       "voiceover": "The highest score is bias, three times five, fifteen. The tool could favour groups that were hired more often in the past. So Priya sets a condition for the pilot. The tool may only sort applications for recruiters to review. It may not reject anyone automatically.",
-       "slide": {"layout": "quote", "title": "Top risk: bias · score 15", "body": "Highlighted row: 'Tool favours groups hired more often in the past' 3 × 5 = 15. Pilot condition in large text: Sort for review only. No automatic rejections."}},
-      {"visual_type": "text",
-       "voiceover": "Notice who owns that risk. It is Priya, the HR director, not the IT team. That is the common mistake. Most AI risks are business risks, such as unfair treatment, broken trust and legal exposure. Technical staff help with controls, but a business leader must decide how much risk is acceptable.",
-       "on_screen_text": "AI risk is business risk"}
+      {
+        "visual_type": "slide",
+        "voiceover": "The tool for this is a risk register. It is a simple table. It lists each risk, rates likelihood and impact from one to five, and names a control and an owner. Multiply likelihood by impact to see which risks need attention first.",
+        "slide": {
+          "layout": "diagram",
+          "title": "The risk register",
+          "body": "Empty table header: Risk | Likelihood 1–5 | Impact 1–5 | Score (L × I) | Control | Owner. Arrow to Score column: 'highest first'."
+        }
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "Here is an example. Priya Sandhu is HR director at a fictional engineering company in Canada. Her team wants an AI tool that screens job applications and ranks candidates. Before any pilot, she builds a risk register.",
+        "stock_query": "HR director reviewing job applications office",
+        "on_screen_text": "Priya · engineering company · Canada"
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Her register has six risks. The tool might rank strong candidates low because of unusual CV formats. Applicant data might be reused by the vendor. Hidden text in a CV might change the ranking. Candidates might feel judged by a machine. Each risk gets a control and an owner, from the recruitment lead to legal counsel.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Priya's risk register",
+          "body": "Six-row table from content.md: unusual CV formats 3×4 · bias toward past hires 3×5 · vendor data reuse 2×5 · hidden text in CV 2×3 · employment rules 2×5 · candidates feel judged 3×3. Each with control and owner by role."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "The highest score is bias, three times five, fifteen. The tool could favour groups that were hired more often in the past. So Priya sets a condition for the pilot. The tool may only sort applications for recruiters to review. It may not reject anyone automatically.",
+        "slide": {
+          "layout": "quote",
+          "title": "Top risk: bias · score 15",
+          "body": "Highlighted row: 'Tool favours groups hired more often in the past' 3 × 5 = 15. Pilot condition in large text: Sort for review only. No automatic rejections."
+        }
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "Notice who owns that risk. It is Priya, the HR director, not the IT team. That is the common mistake. Most AI risks are business risks, such as unfair treatment, broken trust and legal exposure. Technical staff help with controls, but a business leader must decide how much risk is acceptable.",
+        "on_screen_text": "AI risk is business risk"
+      }
     ],
     "Recap": [
-      {"visual_type": "slide",
-       "voiceover": "Let's recap. First, the main AI risks are wrong outputs, bias, privacy, security, legal exposure and damage to reputation. Second, a risk register rates each risk on likelihood and impact, and names one control and one owner. Third, business leaders, not only technical teams, must own AI risks.",
-       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Six risks: wrong outputs · bias · privacy · security · legal · reputation. 2. Risk register: likelihood × impact, one control, one owner. 3. Business leaders own AI risk."}}
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, the main AI risks are wrong outputs, bias, privacy, security, legal exposure and damage to reputation. Second, a risk register rates each risk on likelihood and impact, and names one control and one owner. Third, business leaders, not only technical teams, must own AI risks.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. Six risks: wrong outputs · bias · privacy · security · legal · reputation. 2. Risk register: likelihood × impact, one control, one owner. 3. Business leaders own AI risk."
+        }
+      }
     ],
     "CTA": [
-      {"visual_type": "presenter_full",
-       "voiceover": "Now it is your turn. In the exercise below this video, you will take one of your top use cases from lesson four and build a risk register with at least five risks. Rate each one, and name a control and an owner by role. This register will feed into your capstone roadmap. In the next lesson, we look at governance, policy and regulation. See you there.",
-       "on_screen_text": "Next: Governance, Policy and Regulation"}
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Now it is your turn. In the exercise below this video, you will take one of your top use cases from lesson four and build a risk register with at least five risks. Rate each one, and name a control and an owner by role. This register will feed into your capstone roadmap. In the next lesson, we look at governance, policy and regulation. See you there.",
+        "on_screen_text": "Next: Governance, Policy and Regulation"
+      }
     ]
   }
 }

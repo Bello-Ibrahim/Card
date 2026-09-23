@@ -1,0 +1,223 @@
+{
+  "course_id": "AI-03",
+  "lesson_id": "L09",
+  "duration_s": 300.9,
+  "thumbnail": {
+    "headline": "Let the AI Interview You",
+    "slide": {
+      "layout": "title",
+      "title": "Let the AI Interview You",
+      "body": "Chat window: five numbered AI question bubbles (teal) alternating with short user answers (white), ending in a one-page document icon. Small tag: Prompt Engineering Masterclass · Lesson 9."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.3,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Build the result in steps",
+      "voiceover": "You do not have to get everything right in one message. Some of the best results come from a conversation: a clear role, a few questions, and a result built in steps. Today, I will show you how."
+    },
+    {
+      "scene": 2,
+      "start": 16.3,
+      "end": 26.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Roles and Multi-Turn Conversations",
+        "body": "Lesson 9 · Screen demo in Claude"
+      },
+      "voiceover": "In the last lesson, you asked the AI to show its reasoning. Now we add two more tools: roles, and conversations with several turns."
+    },
+    {
+      "scene": 3,
+      "start": 26.6,
+      "end": 50.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Roles change the angle",
+        "body": "'Act as a strict editor' → critical feedback. 'Act as a first-time customer' → confusing steps. 'Act as an experienced trainer' → tone and structure. Footer: angle, not knowledge."
+      },
+      "voiceover": "A role gives the AI a point of view, and it often changes what the tool pays attention to. Act as a strict editor gives you critical feedback, not praise. Act as a first-time customer helps you find confusing steps. But a role changes the angle, not the knowledge, so you still check the facts."
+    },
+    {
+      "scene": 4,
+      "start": 50.6,
+      "end": 67.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Build in steps",
+        "body": "Four connected steps: Outline → Correct → Full draft → Change one section."
+      },
+      "voiceover": "In a chat, the tool can use the earlier messages in the same conversation. So you can build a result in steps. Ask for an outline, correct it, ask for the full draft, then ask for changes to one section."
+    },
+    {
+      "scene": 5,
+      "start": 67.7,
+      "end": 81.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "The interview pattern",
+        "body": "\"Before you write anything, ask me five questions about this task, one at a time.\""
+      },
+      "voiceover": "One very useful pattern is the interview. You say: before you write anything, ask me five questions, one at a time. The tool asks for the context it needs, and you answer."
+    },
+    {
+      "scene": 6,
+      "start": 81.4,
+      "end": 100.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "When a chat gets long",
+        "body": "Earlier instructions may get less attention. Very long chats may hit a limit. Fix: new chat + short summary of what you agreed."
+      },
+      "voiceover": "Long conversations have limits. The tool may give less attention to instructions from much earlier, and a very long chat may reach a length limit. If the results start to drift, open a new chat and paste a short summary of what you agreed."
+    },
+    {
+      "scene": 7,
+      "start": 100.3,
+      "end": 116.2,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "architect showing house sketch to clients",
+      "on_screen_text": "The plan grows from the exchange",
+      "voiceover": "Think of working with an architect. You do not describe the whole house in one sentence. You discuss your needs, they ask questions, they show a sketch, you correct it, and the plan grows from that exchange."
+    },
+    {
+      "scene": 8,
+      "start": 116.2,
+      "end": 133.8,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "construction site safety briefing workers helmets",
+      "on_screen_text": "Mateo · training coordinator, Bogotá",
+      "voiceover": "Let's see it live. Mateo is a training coordinator at a construction company in Bogotá. He needs a one-page safety briefing for new site workers. His single-message prompt gave a long, general text. So now he tries a conversation."
+    },
+    {
+      "scene": 9,
+      "start": 133.8,
+      "end": 155.2,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open Claude in a web browser and start a new chat.",
+        "Type the interview prompt from content.md: 'Act as an experienced safety trainer for construction sites. I need a one-page safety briefing for new site workers. Before you write anything, ask me five questions, one at a time, about what you need to know.'",
+        "Press Enter and wait for the first reply."
+      ],
+      "on_screen_text": "Role + task + interview",
+      "voiceover": "I open Claude in a web browser and start a new chat. I type a role, an experienced safety trainer for construction sites, then the task, a one-page briefing for new workers. And then the key line: before you write anything, ask me five questions, one at a time."
+    },
+    {
+      "scene": 10,
+      "start": 155.2,
+      "end": 174.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Show the first question on screen, for example 'What type of site is this?'",
+        "Type the answer: 'A 6-storey residential building, concrete frame.'",
+        "Answer the other four questions briefly, using invented site details only.",
+        "Highlight each question as it appears to show the context it adds."
+      ],
+      "on_screen_text": "Each question adds context",
+      "voiceover": "The first question appears, for example, what type of site is this? I answer briefly: a six-storey residential building with a concrete frame. Then I answer the other four questions in the same way. Notice that each question asks for context Mateo might have forgotten."
+    },
+    {
+      "scene": 11,
+      "start": 174.9,
+      "end": 187.3,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "After the fifth answer, let the tool write the briefing.",
+        "Scroll slowly through the full briefing on screen."
+      ],
+      "voiceover": "After the fifth answer, the tool writes the briefing. As I scroll through it, you can see it is specific to Mateo's site, not a general text about safety."
+    },
+    {
+      "scene": 12,
+      "start": 187.3,
+      "end": 205.7,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Type: 'Now act as a strict editor. List the three least clear sentences for a worker who reads slowly.'",
+        "Show the feedback.",
+        "Type: 'Rewrite those three sentences in simpler words.'",
+        "Show the improved briefing."
+      ],
+      "on_screen_text": "New role: strict editor",
+      "voiceover": "Now I change the role. I type: now act as a strict editor, and list the three least clear sentences for a worker who reads slowly. The tool points them out. Then I ask it to rewrite those three sentences in simpler words."
+    },
+    {
+      "scene": 13,
+      "start": 205.7,
+      "end": 222.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open Claude's settings area and show where saved or custom instructions are entered (check the current name and location first).",
+        "Type the example: 'I work in construction training. Write in plain language for adult learners.'",
+        "Point out that it will apply to future chats."
+      ],
+      "on_screen_text": "Saved instructions",
+      "voiceover": "Finally, saved instructions. Many tools let you save context that applies to future chats, so you do not repeat it. I open the settings and type an example: I work in construction training, write in plain language for adult learners."
+    },
+    {
+      "scene": 14,
+      "start": 222.8,
+      "end": 232.7,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Briefly show where a similar saved-instruction feature is found in ChatGPT and in Gemini, only if it is available on the free plan at recording time.",
+        "Return to the Claude chat."
+      ],
+      "on_screen_text": "No confidential data in saved instructions",
+      "voiceover": "Other tools have similar features, but the names and limits differ between tools and plans. And never put confidential information in saved instructions."
+    },
+    {
+      "scene": 15,
+      "start": 232.7,
+      "end": 247.3,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "A role is not a qualification",
+      "voiceover": "A common mistake is to think a role like world-class lawyer makes the answer legally reliable. It does not. For law, health, safety or finance, a qualified person must still check the content."
+    },
+    {
+      "scene": 16,
+      "start": 247.3,
+      "end": 277.3,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Roles change the angle, not the knowledge. 2. Build in steps; let the AI interview you. 3. Saved instructions: useful, tool-specific, never confidential."
+      },
+      "voiceover": "Let's recap. First, a role gives the AI a point of view, such as a strict editor or a first-time customer. It changes the angle, not the knowledge. Second, conversations let you build a result in steps, and the interview pattern helps the tool ask for the context it needs. Third, saved instructions can reduce repetition, but their names and limits differ, and they must not contain confidential information."
+    },
+    {
+      "scene": 17,
+      "start": 277.3,
+      "end": 300.9,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Fixing Weak Outputs",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will ask the AI to interview you with five questions before it writes anything. Then you compare the result with a single-message prompt. It takes about twenty-five minutes. In the next lesson, we look at fixing weak outputs. See you there."
+    }
+  ]
+}

@@ -7,7 +7,7 @@
   },
   "production_notes": [
     "[VERSION] Google Colab: confirm current sign-in requirements, free usage limits and the interface before recording the screen scenes.",
-    "[VERSION] NumPy random generator: the outputs 16.023 and 29.61 and the 'about 67%' share were produced with default_rng(42) in NumPy 2.4. Confirm they are the same in Colab's current NumPy version, and that Matplotlib is still pre-installed. If they differ, update the on-screen numbers and the voiceover in scenes 11 and 13.",
+    "[VERSION] NumPy random generator: the outputs 16.023 and 29.61 and the 'about 67%' share were produced with default_rng(42) in NumPy 2.4. Confirm they are the same in Colab's current NumPy version, and that Matplotlib is still pre-installed. If they differ, update the on-screen numbers and the voiceover in scenes 9 and 11.",
     "Kofi and the Kumasi logistics start-up are fictional; the 80% accuracy and the 30-minute, 5-minute delivery settings are invented.",
     "The 68% and 95% figures are the standard rule of thumb for normal distributions."
   ],
@@ -63,7 +63,7 @@
     ],
     "CTA": [
       {"visual_type": "presenter_full",
-       "voiceover": "Your turn. In the exercise, you simulate one thousand coin-flip experiments and one thousand normal values in Colab, plot them, and change one parameter to see the shape move. It takes about twenty-five minutes. Next: Samples, Uncertainty and Meaningful Differences. See you there.",
+       "voiceover": "Your turn. In the exercise, you simulate one thousand coin-flip experiments and one thousand normal values in Colab, plot them, and change one parameter to see the shape move. There is no hurry, so play with the numbers and enjoy watching the shapes change. It takes about twenty-five minutes. Next: Samples, Uncertainty and Meaningful Differences. See you there.",
        "on_screen_text": "Next: Samples, Uncertainty and Meaningful Differences"}
     ]
   }

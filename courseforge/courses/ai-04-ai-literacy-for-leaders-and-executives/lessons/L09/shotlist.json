@@ -1,0 +1,179 @@
+{
+  "course_id": "AI-04",
+  "lesson_id": "L09",
+  "duration_s": 292.2,
+  "thumbnail": {
+    "headline": "Was It a Success?",
+    "slide": {
+      "layout": "title",
+      "title": "Was It a Success?",
+      "body": "Two bars: 'Baseline' and 'Pilot', with a calendar icon and a circled decision date. Three small buttons: Go · Adjust · Stop. Small tag: AI Literacy for Leaders · Lesson 9."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.1,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Going well, compared to what?",
+      "voiceover": "Three months after launch, a manager says the new AI tool is going well. You ask how much time it saves, and how many errors it makes. Nobody knows, because nobody measured the work before. So, was it a success?"
+    },
+    {
+      "scene": 2,
+      "start": 17.1,
+      "end": 36.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Running a Pilot and Measuring Results",
+        "body": "AI Literacy for Leaders and Executives · Lesson 9 of 10"
+      },
+      "voiceover": "In the last lesson, you learned how to question vendors. Now let's test a use case properly. A pilot is a small, time-limited test of an AI use case in real work, designed to produce evidence for a decision. A good pilot has five parts."
+    },
+    {
+      "scene": 3,
+      "start": 36.8,
+      "end": 60.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "1. Scope · 2. Baseline",
+        "body": "Scope: one use case · one team · limited tasks. Baseline, measured before the pilot: time per task · error rate · cost · satisfaction."
+      },
+      "voiceover": "First, a clear scope: one use case, one team and a limited set of tasks. A small scope keeps risk low, and makes results easier to understand. Second, a baseline. Measure how the work performs before the pilot starts, such as time per task, error rate and satisfaction. Without a baseline, you cannot prove any change."
+    },
+    {
+      "scene": 4,
+      "start": 60.8,
+      "end": 78.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "3. Three success measures",
+        "body": "Three tiles, each with a target box: Value (time, cost) · Quality or risk (error rate) · People (staff or customer satisfaction)."
+      },
+      "voiceover": "Third, about three success measures, agreed before you start. Include one for value, such as time or cost. One for quality or risk, such as error rate. And one for people, such as staff or customer satisfaction. Set a target for each."
+    },
+    {
+      "scene": 5,
+      "start": 78.8,
+      "end": 105.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "4. Decision date · 5. Feedback",
+        "body": "Calendar with a circled date → three paths: Go (scale up) · Adjust (change and test again) · Stop (valid result, money saved). Side note: regular staff check-ins."
+      },
+      "voiceover": "Fourth, a fixed duration, long enough for staff to learn the tool and for results to settle, and a decision date, in the calendar on day one. Fifth, a feedback plan, because staff who use the tool see problems first. On the decision date, you choose go, adjust or stop. And stopping is a valid result. Stopping a weak idea early saves money."
+    },
+    {
+      "scene": 6,
+      "start": 105.8,
+      "end": 123.4,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "medical researchers reviewing trial results together",
+      "on_screen_text": "Measure first, then decide",
+      "voiceover": "Think of a clinical trial for a new treatment. You record the patient's condition first, give the treatment for a fixed period, measure agreed outcomes, and then decide. You do not decide based on how the patient feels on day two."
+    },
+    {
+      "scene": 7,
+      "start": 123.4,
+      "end": 142.7,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "customer service agents working at headsets",
+      "on_screen_text": "Carlos · insurance company · Mexico",
+      "voiceover": "Let's build one. Carlos Herrera is head of customer service at a fictional insurance company in Mexico. He wants to test an AI tool that drafts replies to customer emails about claims status. Agents edit and send every reply. The tool never sends anything automatically."
+    },
+    {
+      "scene": 8,
+      "start": 142.7,
+      "end": 159.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Carlos's pilot plan: scope and baseline",
+        "body": "Scope: 12 agents · claims-status emails · Spanish. Baseline, 4 weeks before: average handling time · second-contact rate · customer satisfaction."
+      },
+      "voiceover": "The scope is one team of twelve agents, claims-status emails only, in Spanish. For four weeks before the pilot, the team records the baseline: handling time per email, how often a customer must contact them again, and customer satisfaction."
+    },
+    {
+      "scene": 9,
+      "start": 159.8,
+      "end": 180.4,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Measures and controls",
+        "body": "1. Handling time falls by agreed target. 2. Second-contact rate does not rise. 3. Agent satisfaction ≥ 3.5 / 5. Controls: agents check every draft · no automatic sending · no training on customer data, in contract."
+      },
+      "voiceover": "His three measures are these. Handling time falls by an agreed target. The second-contact rate does not rise. And agents rate the tool at least three and a half out of five. Agents check every draft, and customer data is not used to train the vendor's models."
+    },
+    {
+      "scene": 10,
+      "start": 180.4,
+      "end": 203.5,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Decision in week nine: Adjust",
+        "body": "Timeline: 8 weeks with Friday check-ins → week 9 decision. Results: handling time ↑ improved (green) · second contacts stable (green) · complex claims weak (amber). Outcome button lit: Adjust, simple emails only."
+      },
+      "voiceover": "The pilot runs for eight weeks, with a decision meeting in week nine, and a short team check-in every Friday. At the meeting, handling time has improved and repeat contacts are stable. But agents say drafts are weak for complex claims. So Carlos decides to adjust. The tool stays for simple emails only."
+    },
+    {
+      "scene": 11,
+      "start": 203.5,
+      "end": 223.6,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Liking the tool is not evidence",
+      "voiceover": "Notice what Carlos did not do. He did not just ask agents whether they liked the tool. Opinions matter, but without a baseline and agreed measures, decisions depend on who argues best. Carlos also kept a shared log of weak drafts, so the feedback was evidence too."
+    },
+    {
+      "scene": 12,
+      "start": 223.6,
+      "end": 245.5,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Small, time-limited, measured against a baseline. 2. Three measures agreed in advance: value · quality or risk · people. 3. Decision date: go, adjust or stop."
+      },
+      "voiceover": "Let's recap. First, a good pilot is small, time-limited and measured against a baseline taken before it starts. Second, agree about three success measures in advance, covering value, quality or risk, and people. Third, set a decision date for go, adjust or stop, and treat stopping as a valid result."
+    },
+    {
+      "scene": 13,
+      "start": 245.5,
+      "end": 266.9,
+      "section": "CTA",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Your capstone: 90-Day AI Adoption Roadmap",
+        "body": "Building blocks stacking up: L04 use-case scores · L05 readiness · L06 risk register · L07 policy · L08 vendor questions → L09 pilot plan (step 1, highlighted) → L10 roadmap (step 2)."
+      },
+      "voiceover": "Now for your capstone. You will write a ninety-day AI adoption roadmap for your own team or organisation. It builds on your use-case scores, readiness check, risk register, policy and vendor questions. Today's pilot plan is step one. Step two, the full roadmap, comes in the last lesson."
+    },
+    {
+      "scene": 14,
+      "start": 266.9,
+      "end": 292.2,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Your 90-Day AI Adoption Roadmap",
+      "voiceover": "So here is your exercise, below this video. Choose one or two of your priority use cases, and write a one-page pilot plan with a scope, a baseline, three success measures, a duration and a decision date. In the next and final lesson, we bring it all together in your ninety-day AI adoption roadmap. See you there."
+    }
+  ]
+}

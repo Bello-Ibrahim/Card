@@ -1,25 +1,25 @@
 # L08 Thinking Tasks: Analysis, Planning and Decisions | Presenter Script
 
-Course: AI-03 · Video: 5 min · Words: 640
+Course: AI-03 · Video: 5 min · Words: 688
 
 ## Hook
-Which option should I choose? AI tools are happy to answer that question, often with great confidence. But a confident answer is only as good as the reasoning and the information behind it.
+Which option should I choose? AI tools are happy to answer that question, often with great confidence. But a confident answer is only as good as the reasoning and the information behind it. Today, you will learn how to see that reasoning.
 
 ## Explain
 So far, you have used AI for writing, where you mostly check the wording. For thinking tasks, such as analysis, planning and decisions, you need to see the reasoning. Four prompt techniques often help.
 
 Technique one: ask it to work step by step before it gives a recommendation. This makes the reasoning visible, so you can check each step. With many tools this often helps, but it does not guarantee a correct answer. Technique two: ask it to list the assumptions it is making. Seeing them lets you correct the wrong ones.
 
-Technique three: name the criteria. Instead of asking which is best, ask the tool to compare the options on cost, reliability and ease of use, in a table. Your criteria reflect your priorities, which the tool cannot know. Technique four: ask it to ask you up to five questions before it answers.
+Technique three: name the criteria. Instead of asking which is best, ask the tool to compare the options on cost, reliability and ease of use, in a table. Your criteria reflect your priorities, which the tool cannot know. Technique four: ask it to ask you up to five questions before it answers. This is useful when you are not sure what context matters.
 
-After the analysis, one more request is very useful. Ask: what is the weakest assumption in your analysis? This asks the tool to question its own answer, and it often shows where you need to check facts yourself.
+After the analysis, one more request is very useful. Ask: what is the weakest assumption in your analysis? This asks the tool to question its own answer, and it often shows where you need to check facts yourself. It takes only one line to ask.
 
 Think of a well-read friend helping you compare three flats to rent. They can organise your thinking, and point out things you forgot. But they have not visited the flats. So you still check the facts before you sign. The tool does not know current prices, local conditions or your finances unless you tell it.
 
 ## Demonstrate
-Let's try it. Ravi runs a small café in Chennai. He wants to start delivery, and he is comparing three delivery partners. He has their offers written down.
+Let's try it. Ravi runs a small café in Chennai. He wants to start delivery, and he is comparing three delivery partners. He has their offers written down. He wants a clear comparison, not a general list.
 
-His first prompt asks: which delivery partner is best for my café? The answer is a general list of things to consider, with no clear recommendation.
+His first prompt asks: which delivery partner is best for my café? The answer is a general list of things to consider, with no clear recommendation. It is polite and sensible, but it does not help him choose.
 
 His second prompt describes the café: delivery within five kilometres, about thirty orders a day, mostly at lunch. It names three criteria: cost per order, lunchtime delivery time, and control over customer service. It includes each partner's terms. Then it asks the tool to work step by step, list its assumptions, show a table, and give a two-sentence recommendation.
 

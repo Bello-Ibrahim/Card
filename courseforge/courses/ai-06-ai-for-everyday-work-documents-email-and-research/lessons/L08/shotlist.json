@@ -1,0 +1,192 @@
+{
+  "course_id": "AI-06",
+  "lesson_id": "L08",
+  "duration_s": 296.1,
+  "thumbnail": {
+    "headline": "Open Every Source",
+    "slide": {
+      "layout": "title",
+      "title": "Open Every Source",
+      "body": "Answer card with three references: green tick, amber half-tick, red cross. Small tag: AI for Everyday Work · Lesson 8."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.3,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "The report does not exist",
+      "voiceover": "You ask an AI assistant about a work topic. It gives you a clear answer with three references and a link. You click the link. It does not work. You search for the report. It does not exist."
+    },
+    {
+      "scene": 2,
+      "start": 16.3,
+      "end": 41.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "AI at the start of research",
+        "body": "Explain a topic in plain language · List questions to answer · Suggest search terms and types of sources · Compare options at a general level"
+      },
+      "voiceover": "In the last lesson, we summarised documents that we already had. Today, we research a topic that is new to us. AI assistants are very useful at the start of research. They can explain a topic in plain language, list the questions you should answer, suggest search terms and types of sources, and compare options at a general level."
+    },
+    {
+      "scene": 3,
+      "start": 41.6,
+      "end": 65.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Not the final source",
+        "body": "Can invent facts · Can invent citations: titles, authors, statistics, laws, links · Web links help, but the answer can still misreport the source"
+      },
+      "voiceover": "But AI is not reliable as the final source of facts. It can invent facts. It can also invent citations: report titles, authors, statistics, laws and web links that look real but do not exist. Some tools can search the web and show links, which helps. But the answer can still misreport what the source says."
+    },
+    {
+      "scene": 4,
+      "start": 65.6,
+      "end": 90.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Research in two stages",
+        "body": "Stage 1: Explore with AI (topic, questions, search terms) → Stage 2: Verify in original sources (exists? trustworthy? recent? says the same?)"
+      },
+      "voiceover": "So research with AI in two stages. Stage one, explore with AI. Understand the topic and collect questions and search terms. Stage two, verify in original sources. For every key claim, find the original yourself. Open every link. Check that the source exists, that it is trustworthy and recent, and that it really says what the AI claimed."
+    },
+    {
+      "scene": 5,
+      "start": 90.5,
+      "end": 98.6,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "No source? Don't use it.",
+      "voiceover": "And one simple rule. If you cannot find an original source for a claim, do not use the claim."
+    },
+    {
+      "scene": 6,
+      "start": 98.6,
+      "end": 112.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "A first-stage research prompt",
+        "body": "I am new to [topic]. Explain the main ideas in plain English. Then list 8 questions I should research, and suggest search terms and the types of official sources I should check."
+      },
+      "voiceover": "Here is a useful first-stage prompt. It asks for the main ideas in plain English, then a list of questions to research, and suggestions for search terms and official sources to check."
+    },
+    {
+      "scene": 7,
+      "start": 112.7,
+      "end": 130.7,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "people chatting at professional conference break",
+      "on_screen_text": "Helpful, but not a source",
+      "voiceover": "Think of a helpful person at a conference who tells you what they remember from many talks. They help you understand the subject and know where to look. But you would not quote them until you had read the original talk yourself."
+    },
+    {
+      "scene": 8,
+      "start": 130.7,
+      "end": 144.0,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "HR officer researching at laptop Asia",
+      "on_screen_text": "Mei · HR officer · Kuala Lumpur",
+      "voiceover": "Let's see this in practice. Mei is an HR officer at a technology company in Kuala Lumpur, in Malaysia. Her director asks her to research options for a hybrid-work policy."
+    },
+    {
+      "scene": 9,
+      "start": 144.0,
+      "end": 159.9,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Mei's prompt",
+        "body": "Explain the common types of hybrid-work policy for office staff, with advantages and disadvantages of each. List questions an HR team should answer before choosing one."
+      },
+      "voiceover": "She starts with a general prompt, with no company details. She asks for the common types of hybrid-work policy, the advantages and disadvantages of each, and the questions an HR team should answer before choosing one."
+    },
+    {
+      "scene": 10,
+      "start": 159.9,
+      "end": 180.9,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "What the AI gave her",
+        "body": "Four policy types · Questions on fairness, equipment, team meetings · A claim about a national law · A named report with a productivity statistic"
+      },
+      "voiceover": "The answer gives her four policy types, and useful questions about fairness, equipment and team meetings. It also makes a claim about what a national law requires, and it cites a named report with a statistic about productivity. Some of this is useful, and some of it needs checking."
+    },
+    {
+      "scene": 11,
+      "start": 180.9,
+      "end": 204.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Mei checks each claim",
+        "body": "Four policy types → found in professional HR guidance → Correct (green). Legal claim → official government website → Partly correct: use the official wording (amber)."
+      },
+      "voiceover": "Mei checks every claim before she shares her notes. The four policy types appear in guidance from professional HR bodies, so they are correct. For the legal claim, she checks the official government website. The rules are different from what the AI said, so she marks it partly correct and uses the official wording."
+    },
+    {
+      "scene": 12,
+      "start": 204.0,
+      "end": 226.7,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "The missing report",
+        "body": "Named report and statistic → searched title and authors → Not found → Deleted (red). Final notes: only checked claims, each with its source."
+      },
+      "voiceover": "Then the report and its statistic. She searches for the title and the authors. She cannot find the report anywhere, so she deletes the claim completely. An invented report in her notes could have misled her director. Her final notes contain only claims she has checked, and each one lists its original source."
+    },
+    {
+      "scene": 13,
+      "start": 226.7,
+      "end": 244.7,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "Before you quote it",
+        "body": "\"Open every source. Read the relevant part. Use only what you have confirmed.\""
+      },
+      "voiceover": "The most serious mistake is copying AI references into a report without opening them. And a real link is not enough, because the page may say something different. Open every source, read the relevant part, and use only what you have confirmed."
+    },
+    {
+      "scene": 14,
+      "start": 244.7,
+      "end": 268.7,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Explore with AI: ideas, questions, search terms. 2. Open and check every reference and link. 3. Use only confirmed claims; record the source."
+      },
+      "voiceover": "Let's recap. First, use AI to explore a new topic: explain it, list questions, and suggest search terms and types of sources. Second, AI can invent facts and citations, so open and check every reference and link. Third, use only claims you have confirmed in an original, trustworthy source, and record that source in your notes."
+    },
+    {
+      "scene": 15,
+      "start": 268.7,
+      "end": 296.1,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Organising Your Work",
+      "voiceover": "Now it is your turn. In the exercise below this video, research a work question with public information and no company details. Choose three key claims from the answer and check each one against an original source. Mark each as correct, partly correct, or wrong. Next week, we redesign your work week, starting with Organising Your Work: Plans, Lists and Templates. See you there."
+    }
+  ]
+}

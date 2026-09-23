@@ -1,0 +1,206 @@
+{
+  "course_id": "AI-03",
+  "lesson_id": "L12",
+  "duration_s": 293.1,
+  "thumbnail": {
+    "headline": "Same Prompt, Three Tools",
+    "slide": {
+      "layout": "title",
+      "title": "Same Prompt, Three Tools",
+      "body": "Three browser windows labelled Tool A, Tool B, Tool C with one shared prompt above them, and a score table below (Accuracy, Format, Tone). Small tag: Prompt Engineering Masterclass · Lesson 12."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.1,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Will it work everywhere?",
+      "voiceover": "You have a prompt that works well in one tool. Will it work as well in another tool, or next month in the same tool? The only way to know is to test it. Today, I will show you how."
+    },
+    {
+      "scene": 2,
+      "start": 17.1,
+      "end": 27.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Testing a Prompt Across Tools",
+        "body": "Lesson 12 · Screen demo in Claude, ChatGPT and Gemini"
+      },
+      "voiceover": "In the last lesson, you learned to check one output. Now we compare outputs from different tools, in a fair and simple way."
+    },
+    {
+      "scene": 3,
+      "start": 27.0,
+      "end": 45.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "One prompt, different results",
+        "body": "One prompt card → three arrows → three outputs of different lengths and shapes. Small clock icon: 'results can change over time'."
+      },
+      "voiceover": "Claude, ChatGPT and Gemini are built by different companies and trained in different ways. The same prompt can give a different length, structure and tone in each one, and sometimes different facts. Tools are also updated, so a result can change over time."
+    },
+    {
+      "scene": 4,
+      "start": 45.4,
+      "end": 66.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "A fair test",
+        "body": "Same prompt (copied exactly) · Same input · New chat in each tool · Note any saved instructions."
+      },
+      "voiceover": "A fair test keeps everything the same except the tool. Use the same prompt, copied exactly, without improving it between tools. Use the same input. And start a new chat in each tool, so earlier messages do not affect the result. If you use saved instructions, note that too."
+    },
+    {
+      "scene": 5,
+      "start": 66.4,
+      "end": 87.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Score and record",
+        "body": "Score 1–5: Accuracy · Format · Tone. Record: tool · model (if shown) · date."
+      },
+      "voiceover": "Then score each output from one, poor, to five, excellent, on three criteria. Accuracy: the facts are correct, and nothing is invented or missing. Format: it follows the requested format and length. Tone: it suits the audience. Finally, record the tool, the model if it is shown, and the date."
+    },
+    {
+      "scene": 6,
+      "start": 87.8,
+      "end": 106.7,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "A practical choice for one task",
+      "voiceover": "Your scores are your judgement, not a scientific measurement. That is fine. The aim is a practical choice for one task, not finding the best AI. Free plans may also limit how many messages you can send in a day, so plan your tests."
+    },
+    {
+      "scene": 7,
+      "start": 106.7,
+      "end": 123.0,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "three cakes baking in ovens kitchen",
+      "on_screen_text": "Same recipe, three ovens",
+      "voiceover": "Think of testing one recipe in three different ovens. Same ingredients, same steps, same time. If one cake is dry, you know it is the oven, not the recipe. And you write a note on the recipe card."
+    },
+    {
+      "scene": 8,
+      "start": 123.0,
+      "end": 136.3,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "volunteers river clean up collecting waste",
+      "on_screen_text": "Chloé · communications officer, Montréal",
+      "voiceover": "Let's run a test. Chloé is a communications officer at an environmental charity in Montréal. She wants to test her prompt for turning event notes into a short social media post."
+    },
+    {
+      "scene": 9,
+      "start": 136.3,
+      "end": 160.3,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Show three browser tabs open: Claude, ChatGPT and Gemini, each signed in to the free plan.",
+        "Switch to a notes app and show the full prompt and notes from content.md."
+      ],
+      "on_screen_text": "Same prompt, same input",
+      "voiceover": "I have three browser tabs open: Claude, ChatGPT and Gemini, each on its free plan. Here is the prompt in a notes app. It asks for a post under sixty words, in a friendly and hopeful tone, ending with one question, and with no figures that are not in the notes. The notes are below it."
+    },
+    {
+      "scene": 10,
+      "start": 160.3,
+      "end": 175.7,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "In Claude, start a new chat, paste the prompt exactly and send it. Show the output.",
+        "In ChatGPT, start a new chat, paste the same prompt and send it. Show the output.",
+        "In Gemini, start a new chat, paste the same prompt and send it. Show the output."
+      ],
+      "on_screen_text": "New chat in each tool",
+      "voiceover": "I start a new chat in Claude, paste the prompt exactly, and send it. Then I do the same in ChatGPT, and then in Gemini. A new chat each time, and no changes to the prompt."
+    },
+    {
+      "scene": 11,
+      "start": 175.7,
+      "end": 186.4,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Place the three outputs side by side on screen.",
+        "Open a spreadsheet with columns: Tool, Date, Accuracy, Format, Tone, Total, Notes. Type today's date in each row."
+      ],
+      "voiceover": "Now I place the three outputs side by side, and open a simple spreadsheet. The columns are tool, date, accuracy, format, tone, total and notes."
+    },
+    {
+      "scene": 12,
+      "start": 186.4,
+      "end": 206.1,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Count the words of each output and enter the Format score.",
+        "Highlight any phrase or figure that is not in the notes and enter the Accuracy score.",
+        "Read each output for tone and enter the Tone score. Let the Total column add up."
+      ],
+      "on_screen_text": "Score what you actually see",
+      "voiceover": "Let's score them. For example, one output might count sixty-four words, so it loses a point on format. Another might add a phrase like our biggest event ever, which is not in the notes, so it scores low on accuracy. Another might follow every instruction."
+    },
+    {
+      "scene": 13,
+      "start": 206.1,
+      "end": 221.1,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Fill in the Notes column with one reason for each lowest score.",
+        "Type the final choice: 'Use the highest-scoring tool for this task. Retest in 3 months.'"
+      ],
+      "on_screen_text": "Evidence, not a feeling",
+      "voiceover": "Finally, I fill in the notes column, and write the choice: use the highest-scoring tool for this task, and retest in three months. Chloé now has evidence for her choice, not only a feeling."
+    },
+    {
+      "scene": 14,
+      "start": 221.1,
+      "end": 241.7,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Unfair vs fair",
+        "body": "Unfair: prompt tweaked per tool · old chat · tested once. Fair: identical prompt · new chat · dated · retested."
+      },
+      "voiceover": "A common mistake is to change the prompt a little in each tool, or to test in a chat that already has earlier messages. Then the test is not fair. Another is to test once and decide forever. Tools change, so record the date and retest important prompts."
+    },
+    {
+      "scene": 15,
+      "start": 241.7,
+      "end": 267.4,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Same prompt · same input · new chat. 2. Score 1–5 on accuracy, format, tone; record tool and date. 3. Best tool depends on the task; retest."
+      },
+      "voiceover": "Let's recap. First, a fair test uses the same prompt, the same input, and a new chat in each tool. Second, score each output from one to five on accuracy, format and tone, and record the tool and the date. Third, the best tool depends on the task, and results can change when tools are updated, so retest important prompts."
+    },
+    {
+      "scene": 16,
+      "start": 267.4,
+      "end": 293.1,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Turning Prompts into Reusable Templates",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will run one of your own prompts in Claude, ChatGPT and Gemini, score each output on three criteria, and choose a tool for that task. It takes about twenty-five minutes. In the next lesson, we turn prompts into reusable templates, and start your capstone. See you there."
+    }
+  ]
+}

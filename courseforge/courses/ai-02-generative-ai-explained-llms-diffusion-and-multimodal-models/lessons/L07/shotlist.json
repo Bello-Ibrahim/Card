@@ -1,0 +1,194 @@
+{
+  "course_id": "AI-02",
+  "lesson_id": "L07",
+  "duration_s": 295.5,
+  "thumbnail": {
+    "headline": "Photo In, Table Out",
+    "slide": {
+      "layout": "title",
+      "title": "Photo In, Table Out",
+      "body": "Left: photo of a handwritten list on paper. Arrow. Right: neat three-column table (Item, Unit, Price) with one cell marked 'unclear'. Small tag: Generative AI Explained · Lesson 7."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.9,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Picture, voice and text together",
+      "voiceover": "You take a photo of a handwritten note, and seconds later the text appears neatly typed on your screen. You speak a question, and get a written answer. One tool understood a picture, a voice and a sentence. What kind of model does that?"
+    },
+    {
+      "scene": 2,
+      "start": 18.9,
+      "end": 40.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Multimodal Models: Text, Images and Audio Together",
+        "body": "Generative AI Explained · Lesson 7 of 12 · Modality = a type of data"
+      },
+      "voiceover": "In the last two lessons, we worked with images. Most models so far use one type of data. A language model takes in text and gives text. A diffusion model takes in text and gives images. Each type of data, such as text, images, audio or video, is called a modality."
+    },
+    {
+      "scene": 3,
+      "start": 40.8,
+      "end": 65.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Multimodal: more than one type",
+        "body": "Four rows with icons: Image → text · Speech → text · Text → speech · Photo + question → answer"
+      },
+      "voiceover": "A multimodal model can take in, and sometimes produce, more than one modality. You upload a photo, chart or screenshot, and it describes it or copies out the text. You speak, and it writes down what you said. It can read its answer aloud. Or you give a photo and a question together, and it uses both."
+    },
+    {
+      "scene": 4,
+      "start": 65.2,
+      "end": 81.9,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "colleague reading handwritten notes at desk",
+      "on_screen_text": "A fast, helpful colleague",
+      "voiceover": "These tools are very useful for turning messy real-world input into clean text. Think of a helpful colleague who can read your notes, look at your photos and listen to your voice messages, and then write a summary."
+    },
+    {
+      "scene": 5,
+      "start": 81.9,
+      "end": 107.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Typical mistakes",
+        "body": "Misread small, blurred or handwritten text · Confuse 1 and 7 · Skip a row · Fill in likely text that is not there"
+      },
+      "voiceover": "The colleague is fast and usually right, but sometimes misreads untidy handwriting. You would not send their summary to a client without checking it. Multimodal tools make typical mistakes too. They misread small, blurred or handwritten characters. They confuse numbers like one and seven. They skip a row, or fill in text that looks likely but is not there."
+    },
+    {
+      "scene": 6,
+      "start": 107.2,
+      "end": 124.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Check and protect",
+        "body": "Left: Check every value against the original. Right: Before upload, crop or cover names, addresses, card numbers, faces."
+      },
+      "voiceover": "So you must check every value against the original. And think about safety. Photos often contain more personal information than you notice, such as names, addresses, card numbers or faces. Crop or cover these first, or use a sample document."
+    },
+    {
+      "scene": 7,
+      "start": 124.3,
+      "end": 138.0,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "small hardware store owner behind counter",
+      "on_screen_text": "Diego's hardware shop · Lima",
+      "voiceover": "Let's see it in action. Diego owns a small hardware shop in Lima. His price list is handwritten on paper, and he wants a clean table he can paste into a spreadsheet."
+    },
+    {
+      "scene": 8,
+      "start": 138.0,
+      "end": 154.3,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Show the photo of the handwritten price list, taken from above in good light",
+        "Crop the photo so only the list remains",
+        "Open Google AI Studio and start a new chat"
+      ],
+      "voiceover": "First, he takes a clear photo in good light, straight from above, and crops out everything that is not the list. Then he opens Google AI Studio and starts a new chat. Claude or ChatGPT would also work."
+    },
+    {
+      "scene": 9,
+      "start": 154.3,
+      "end": 179.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Click the upload or attach button and add the cropped photo",
+        "Type: 'Copy this price list into a table with the columns Item, Unit and Price. Do not guess: if a value is unclear, write \"unclear\".'",
+        "Highlight the 'Do not guess' line"
+      ],
+      "on_screen_text": "Do not guess. Write 'unclear'.",
+      "voiceover": "He uses the upload button to add the photo. Then he types his request. Copy this price list into a table with the columns item, unit and price. And one important line. Do not guess. If a value is unclear, write unclear. That line gives the model permission to say it is not sure, instead of inventing a value."
+    },
+    {
+      "scene": 10,
+      "start": 179.6,
+      "end": 195.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Send the request and wait for the table",
+        "Place the table and the photo side by side",
+        "Move a highlight down the rows, comparing each row with the photo"
+      ],
+      "voiceover": "He sends it, and a neat fifteen-row table comes back. It looks complete. But Diego does not trust the look. He places the table next to the photo and checks every row, one line at a time."
+    },
+    {
+      "scene": 11,
+      "start": 195.9,
+      "end": 213.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Circle the row showing 17.00 and the matching handwritten 11.00 in the photo",
+        "Point to the item at the edge of the photo that is missing from the table",
+        "Point to the value marked 'unclear'",
+        "Correct the price, add the missing row and fill in the unclear value"
+      ],
+      "on_screen_text": "2 errors found, 1 marked unclear",
+      "voiceover": "He finds two problems. A price of seventeen is really eleven in his handwriting. And one item is missing, because it was written at the edge of the paper. One value is marked unclear, which is helpful. He fixes them all."
+    },
+    {
+      "scene": 12,
+      "start": 213.5,
+      "end": 225.1,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Copy the corrected table",
+        "Paste it into a blank spreadsheet and show the three columns"
+      ],
+      "voiceover": "Then he copies the corrected table into his spreadsheet. The task took minutes instead of an hour of typing. But it only worked because he checked it."
+    },
+    {
+      "scene": 13,
+      "start": 225.1,
+      "end": 247.0,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Neat does not mean correct.",
+      "voiceover": "A common mistake is to trust a table because it looks neat and complete. A neat format says nothing about the values. The model predicts likely text from what it sees, so it can turn an unclear seven into a one. Ask it to mark unclear values, and check every one."
+    },
+    {
+      "scene": 14,
+      "start": 247.0,
+      "end": 271.9,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Multimodal = more than one type of data. 2. Useful for photos → tables, but can misread details. 3. Check every value; remove personal details first."
+      },
+      "voiceover": "Let's recap. First, a multimodal model can take in or produce more than one type of data, such as images, speech and text. Second, it can turn photos, charts and recordings into clean text or tables, but it can misread small or unclear details. Third, check every value against the original, and remove personal details before you upload."
+    },
+    {
+      "scene": 15,
+      "start": 271.9,
+      "end": 295.5,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Where Each Model Type Fails",
+      "voiceover": "Now it is your turn. In the exercise below, upload a photo of a receipt, a timetable or a chart, ask for a table, and check every value against the original. Remember to cover any personal details first. It takes about twenty minutes. Next, we look at where each model type fails. See you there."
+    }
+  ]
+}

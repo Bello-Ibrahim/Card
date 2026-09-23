@@ -1,0 +1,215 @@
+{
+  "course_id": "AI-04",
+  "lesson_id": "L10",
+  "duration_s": 298.9,
+  "thumbnail": {
+    "headline": "Your 90-Day AI Roadmap",
+    "slide": {
+      "layout": "title",
+      "title": "Your 90-Day AI Roadmap",
+      "body": "Three-phase timeline: Prepare (days 0–30) · Pilot (days 31–60) · Decide and scale (days 61–90). Small tag: AI Literacy for Leaders · Lesson 10."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.0,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Six documents, one plan",
+      "voiceover": "You now have use cases, a readiness score, a risk register, a policy draft, vendor questions and a pilot plan. On their own, they are six documents. Joined in the right order, they become a plan your team can follow from Monday."
+    },
+    {
+      "scene": 2,
+      "start": 18.0,
+      "end": 30.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Your 90-Day AI Adoption Roadmap",
+        "body": "AI Literacy for Leaders and Executives · Lesson 10 of 10"
+      },
+      "voiceover": "In the last lesson, you wrote your pilot plan. In this final lesson, we turn all your work into a ninety-day roadmap, in three phases of thirty days each."
+    },
+    {
+      "scene": 3,
+      "start": 30.9,
+      "end": 47.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Days 0–30: Prepare",
+        "body": "Sponsor and owner named · Policy shared · Pilot team trained · Data checked, baseline taken · Vendor questions and contract terms complete."
+      },
+      "voiceover": "Days zero to thirty are for preparing. Name a sponsor and a project owner. Share the acceptable-use policy. Train the pilot team, check the data and take the baseline. And finish vendor due diligence and contract terms."
+    },
+    {
+      "scene": 4,
+      "start": 47.2,
+      "end": 62.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Days 31–60: Pilot",
+        "body": "Run and measure · Weekly check-ins · Problem log · Review risks against the register · Do not change the success measures."
+      },
+      "voiceover": "Days thirty-one to sixty are the pilot. Run it and measure it. Hold weekly check-ins, log problems and review risks against your register. Adjust small things quickly, but do not change the success measures."
+    },
+    {
+      "scene": 5,
+      "start": 62.6,
+      "end": 84.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Days 61–90: Decide and scale",
+        "body": "Review against baseline · Go, adjust or stop · Communicate what you learned · Plan next steps · Legal check before scaling."
+      },
+      "voiceover": "Days sixty-one to ninety are for deciding and scaling. Review results against the baseline. Make the go, adjust or stop decision. Share what you learned, and plan the next step. Before you scale, confirm with your legal team that the wider use still fits the rules where you operate."
+    },
+    {
+      "scene": 6,
+      "start": 84.0,
+      "end": 97.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "CertifAI roadmap template",
+        "body": "Empty grid. Columns: Days 0–30 Prepare | Days 31–60 Pilot | Days 61–90 Decide and scale. Rows: Goals · Key actions · Owners · Risks and controls · Success measures · Communication."
+      },
+      "voiceover": "Here is the CertifAI roadmap template. It has one column for each phase. For every phase, you fill in six rows: goals, key actions, owners, risks and controls, success measures, and communication."
+    },
+    {
+      "scene": 7,
+      "start": 97.7,
+      "end": 115.3,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "diverse team workshop with leader listening",
+      "on_screen_text": "Involve, train, listen, act",
+      "voiceover": "Bring your staff with you. Involve them in choosing and testing use cases. Be honest about how roles may change. Train people before you expect results. And give a clear way to raise concerns, then show that you act on them."
+    },
+    {
+      "scene": 8,
+      "start": 115.3,
+      "end": 134.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Communicating the plan",
+        "body": "Each phase: Why · What will happen · What it means for each group · How to give feedback. Board: what we will decide, and when. Risks: explained openly."
+      },
+      "voiceover": "Then communicate at every phase. Say why you are doing this, what will happen, what it means for each group, and how people can give feedback. Tell the board what you will decide, and when. And explain risks openly, because hiding them damages trust later."
+    },
+    {
+      "scene": 9,
+      "start": 134.6,
+      "end": 153.9,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "cargo ship leaving port at sunrise",
+      "on_screen_text": "Everyone knows who is steering",
+      "voiceover": "A roadmap is like a ship's voyage plan. You prepare the crew and supplies before you leave, check your position during the trip, and decide at the port whether to go further. The plan can change, but everyone knows the route and who is steering."
+    },
+    {
+      "scene": 10,
+      "start": 153.9,
+      "end": 168.9,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "food factory managers reviewing ingredient stock",
+      "on_screen_text": "Minh Anh · food manufacturer · Vietnam",
+      "voiceover": "Here is a roadmap in action. Tran Minh Anh is managing director of a fictional food manufacturer in Vietnam, with two hundred staff. Her priority use case is AI support for forecasting weekly ingredient orders."
+    },
+    {
+      "scene": 11,
+      "start": 168.9,
+      "end": 190.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Minh Anh's roadmap: Prepare",
+        "body": "Filled template column 1: Owner: supply chain manager · Actions: clean 2 years of order data, vendor questions · Risk: poor data → data check · Measure: baseline of ordering errors."
+      },
+      "voiceover": "In the first thirty days, the supply chain manager owns the project. The IT manager cleans two years of order data, and the team completes the vendor questions. The main risk is poor data quality, so there is a data check before the pilot. The baseline of ordering errors is recorded."
+    },
+    {
+      "scene": 12,
+      "start": 190.8,
+      "end": 208.4,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Minh Anh's roadmap: Pilot",
+        "body": "Filled template column 2: Buyers place every order · Risk: over-trust → weekly review of large differences · Measures: ordering errors · waste · buyer satisfaction."
+      },
+      "voiceover": "In the pilot, buyers use the forecast as advice, and still place every order themselves. The risk is that buyers trust the forecast too much, so large differences are reviewed every week. The team measures ordering errors, waste and buyer satisfaction."
+    },
+    {
+      "scene": 13,
+      "start": 208.4,
+      "end": 224.3,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Minh Anh's roadmap: Decide and scale",
+        "body": "Filled template column 3: Decision: adjust and extend to a second factory · Communication: results shared with all staff · Next: prepare the next use case."
+      },
+      "voiceover": "In the last phase, the leadership team reviews the results and decides to adjust and extend the pilot to a second factory. Minh Anh presents the results to all staff, and starts preparing the next use case."
+    },
+    {
+      "scene": 14,
+      "start": 224.3,
+      "end": 240.6,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "No owners? It is a wish list.",
+      "voiceover": "Avoid one common mistake. Many roadmaps are just lists of technology to buy. A strong roadmap is about people, decisions and evidence. If yours has no owners or decision dates, it is a wish list, not a plan."
+    },
+    {
+      "scene": 15,
+      "start": 240.6,
+      "end": 258.6,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Three phases: prepare · pilot · decide and scale. 2. Every phase: goals, owners, risks and controls, measures, communication. 3. Bringing staff with you is part of the plan."
+      },
+      "voiceover": "Let's recap. First, a ninety-day roadmap has three phases: prepare, pilot, and decide and scale. Second, every phase needs goals, owners, risks and controls, success measures and communication. Third, bringing staff with you is part of the plan, not an extra."
+    },
+    {
+      "scene": 16,
+      "start": 258.6,
+      "end": 274.9,
+      "section": "CTA",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Capstone rubric",
+        "body": "Use-case prioritisation · 20 | Risks and controls · 20 | Pilot plan and vendor due diligence · 20 | Roadmap structure, owners and measures · 25 | People and communication · 15. Total 100."
+      },
+      "voiceover": "Your capstone roadmap is assessed on five criteria: use-case prioritisation, risks and controls, your pilot and vendor plan, the roadmap structure with owners and measures, and people and communication. The full rubric is on the course page."
+    },
+    {
+      "scene": 17,
+      "start": 274.9,
+      "end": 298.9,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Submit your 90-day roadmap",
+      "voiceover": "Congratulations. You have completed AI Literacy for Leaders and Executives. Your final exercise is capstone step two. Use the template to write your ninety-day roadmap, check it against the rubric, and submit it. Describe people by role, with no confidential figures. You are now ready to lead AI in your organisation with confidence. Well done."
+    }
+  ]
+}

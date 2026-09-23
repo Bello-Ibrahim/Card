@@ -1,12 +1,12 @@
 # L06 Describing Data: Mean, Median and Spread | Presenter Script
 
-Course: AI-05 · Video: 5 min · Words: 706
+Course: AI-05 · Video: 5 min · Words: 707
 
 ## Hook
 Five people work in a small team. Four of them earn about the same, and one earns six times more. Someone says: the average income in this team is ten thousand. Is that true? Yes. Is it fair? Not really.
 
 ## Explain
-Welcome to Module 2, probability and statistics. Before you train any model, you describe your data with a few numbers. They answer two questions. Where is the centre of the data? And how spread out is it?
+Now we begin Module 2, probability and statistics. Before you train any model, you describe your data with a few numbers. They answer two questions. Where is the centre of the data? And how spread out is it?
 
 First, the centre. The mean is the ordinary average: add all the values, and divide by how many there are. The median is the middle value after you sort the data. With an even number of values, it is the mean of the two middle ones.
 

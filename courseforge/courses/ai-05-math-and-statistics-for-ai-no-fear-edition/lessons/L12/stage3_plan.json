@@ -1,0 +1,73 @@
+{
+  "title": "Loss Functions: How Wrong Is the Model?",
+  "thumbnail": {
+    "headline": "How Wrong Is It?",
+    "image": "Navy background, five small squares of different sizes with one very large square, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "How Wrong Is It?", "body": "Five squared-error boxes drawn to scale (100, 25, 900, 4, 0), the 900 box towering over the others. Small tag: Math and Statistics for AI · Lesson 12."}
+  },
+  "production_notes": [
+    "No facts to verify: content.md Review Flags say None. All fares are hypothetical and every calculation was recalculated with NumPy 2.4.",
+    "content.md gives RMSE as 'about 14.3 lira' in the text and 'about 14.35' in the code comment. The voiceover says 'about fourteen point three'; the code slide shows the code comment as written.",
+    "Emre and the Istanbul taxi app are fictional. No real taxi app brands or logos in stock footage.",
+    "Not a screen demo lesson: code appears only on a code slide."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "A model makes five predictions. Two are almost perfect, two are a little wrong, and one is badly wrong. Is this a good model? To improve anything, you first need to measure it. And that means turning all those errors into one number.",
+       "on_screen_text": "Many errors, one number"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Last time, we met derivatives. Now we need something to take the derivative of. An error, also called a residual, is the prediction minus the truth. A positive error means the model predicted too high. A negative error means too low.",
+       "slide": {"layout": "code", "title": "Error = prediction − truth", "body": "error = y_pred − y_true\n+ → predicted too high\n− → predicted too low"}},
+      {"visual_type": "slide",
+       "voiceover": "A loss function combines all the errors into a single number that says how wrong the model is overall. A smaller loss means a better fit. Training a model means searching for the weights that make the loss as small as possible. The loss is the score to beat.",
+       "slide": {"layout": "diagram", "title": "The loss function", "body": "Many error arrows funnel into one box 'Loss' → one number. Caption: training = find weights that make the loss smallest."}},
+      {"visual_type": "slide",
+       "voiceover": "The most common loss for predicting numbers is the mean squared error, or M S E. In words: take each error, square it, then take the mean of the squares. On screen, M S E equals the mean of y pred minus y true, squared.",
+       "slide": {"layout": "code", "title": "Mean squared error", "body": "MSE = mean((y_pred − y_true)²)\n1. error  2. square  3. mean"}},
+      {"visual_type": "slide",
+       "voiceover": "Why square? One, squares are never negative, so minus ten and plus ten do not cancel. Both count as one hundred. Two, big errors count much more. An error of two becomes four, but thirty becomes nine hundred. Three, the square is smooth, which makes gradients easy in the next lesson.",
+       "slide": {"layout": "bullets", "title": "Why square the errors?", "body": "1. Never negative: −10 and +10 both → 100. 2. Big errors count more: 2 → 4, 30 → 900. 3. Smooth: easy gradients (L13)."}},
+      {"visual_type": "slide",
+       "voiceover": "Two related measures help you explain results. R M S E is the square root of M S E, so it is back in the original units, like lira or minutes. And M A E, the mean absolute error, is the mean of the errors without their signs. It is less affected by one big error.",
+       "slide": {"layout": "comparison", "title": "RMSE and MAE", "body": "RMSE = √MSE, back in original units. MAE = mean of |errors|, less affected by one big error."}},
+      {"visual_type": "stock",
+       "voiceover": "Picture a teacher who marks late homework with a penalty that grows faster and faster. One day late loses one point, two days lose four, five days lose twenty-five. Small delays hardly matter, but one very late assignment costs a lot. That is exactly how M S E treats errors.",
+       "stock_query": "teacher marking homework at desk",
+       "on_screen_text": "Penalty grows faster and faster"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Emre is a data analyst for a taxi app in Istanbul, Türkiye. He compares five fare predictions with the real fares. All values are invented, in lira.",
+       "stock_query": "taxi driving through busy city at dusk",
+       "on_screen_text": "Emre · Istanbul · five taxi fares"},
+      {"visual_type": "slide",
+       "voiceover": "Trip one: true fare one hundred and twenty, predicted one hundred and ten, error minus ten. Trip two: error five. Trip three: true two hundred, predicted two hundred and thirty, error thirty. Trip four: error minus two. Trip five: exactly right, error zero. Squared, that is one hundred, twenty-five, nine hundred, four and zero.",
+       "slide": {"layout": "diagram", "title": "Five fares", "body": "Table: Trip | True | Predicted | Error | Squared. 1 | 120 | 110 | −10 | 100 · 2 | 85 | 90 | 5 | 25 · 3 | 200 | 230 | 30 | 900 · 4 | 60 | 58 | −2 | 4 · 5 | 150 | 150 | 0 | 0"}},
+      {"visual_type": "slide",
+       "voiceover": "Add the squares: one thousand and twenty-nine. Divide by five: two hundred and five point eight. That is the M S E. The R M S E is its square root, about fourteen point three lira. And look at trip three. Its nine hundred is about eighty-seven percent of the total. One big mistake dominates the loss.",
+       "slide": {"layout": "code", "title": "MSE by hand", "body": "100 + 25 + 900 + 4 + 0 = 1,029\nMSE = 1,029 ÷ 5 = 205.8\nRMSE = √205.8 ≈ 14.3 lira\nTrip 3: 900 ≈ 87% of the total"}},
+      {"visual_type": "slide",
+       "voiceover": "M A E tells a different story. Ten plus five plus thirty plus two plus zero, divided by five, is nine point four lira: a typical error size. In NumPy, Emre writes a small function called m s e. It takes the mean of the squared differences, and prints two hundred and five point eight.",
+       "slide": {"layout": "code", "title": "MAE and the mse function", "body": "MAE = (10 + 5 + 30 + 2 + 0) ÷ 5 = 9.4 lira\ndef mse(y_true, y_pred):\n    return np.mean((y_pred - y_true) ** 2)\nprint(mse(y_true, y_pred))          # 205.8\nprint(np.sqrt(mse(y_true, y_pred)))  # about 14.35"}},
+      {"visual_type": "text",
+       "voiceover": "Emre learns that the model is close on most trips. The biggest gain would come from understanding trip three, perhaps a long airport trip.",
+       "on_screen_text": "Study the biggest error first"},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is reading two hundred and five point eight as the model being that many lira off. It is not. M S E is in squared units. Take the square root first. And only compare M S E values on the same data, because they depend on the scale of the target.",
+       "on_screen_text": "MSE is in squared units"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, a loss function turns all prediction errors into one number, and training searches for weights that make it small. Second, M S E is the mean of the squared errors: squaring removes signs and punishes big errors much more. Third, M S E is in squared units, so report R M S E or M A E when you explain error size.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Loss = one number for all errors; training makes it small. 2. MSE = mean of squared errors; big errors count most. 3. Explain with RMSE or MAE (original units)."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Your turn. In the exercise, you calculate an M S E by hand for five predictions, then write your own m s e function in NumPy and test it. It takes about twenty-five minutes. Next: Gradients and the Chain Rule, Intuitively. See you there.",
+       "on_screen_text": "Next: Gradients and the Chain Rule"}
+    ]
+  }
+}

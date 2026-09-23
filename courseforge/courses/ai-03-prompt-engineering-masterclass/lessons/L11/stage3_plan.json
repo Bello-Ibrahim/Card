@@ -1,0 +1,74 @@
+{
+  "title": "Checking Outputs: Accuracy, Bias and Confidentiality",
+  "thumbnail": {
+    "headline": "Check Before You Send",
+    "image": "Navy background, an AI-written document with four coloured margin marks (Facts, Sources, Bias, Confidentiality), headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Check Before You Send", "body": "A short document with four margin tags: Facts · Sources · Bias · Confidentiality, each with a small tick box. Small tag: Prompt Engineering Masterclass · Lesson 11."}
+  },
+  "production_notes": [
+    "[REGION] Data protection and workplace AI rules differ by country and employer. The voiceover names no laws and points learners to their own organisation's policy; keep it that way in all language versions.",
+    "[VERSION] Free-tier availability of Claude, ChatGPT and Gemini must be checked before recording (content.md Review Flags).",
+    "Kwame, the farmers' cooperative in Kumasi, the members 'Mr K. Boateng' and 'Mrs A. Owusu' and the '2021 West Africa Water Report' are all invented for teaching. The report is deliberately fake; label it on the slide as 'not found' so no viewer takes it as real. Consider blurring the two member names on screen.",
+    "The AI output, the checklist marks and the improved prompt appear on slides with the exact text from content.md; the voiceover summarises them and does not read the invented figure as fact.",
+    "Checking prompts are presented as 'often help', not as a replacement for a human check."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "When you send a document written with AI help, your name is on it, not the tool's. A two-minute check before you use an output protects you, your colleagues and your organisation.",
+       "on_screen_text": "Your name is on it"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Welcome to week three. This week is about reliable prompts, and about your own prompt library. We start with a four-part checklist to use before any AI output goes into your work.",
+       "slide": {"layout": "title", "title": "Checking Outputs", "body": "Lesson 11 · Week 3: Reliable Prompts and Your Prompt Library"}},
+      {"visual_type": "slide",
+       "voiceover": "Part one is facts and figures. Check every number, date, name and quotation. AI tools can produce figures that look exact but are invented, and they may not know recent events. Part two is sources. If the output mentions a study, a law or a report, check that it exists and says what the output claims. If you cannot find it, remove it.",
+       "slide": {"layout": "bullets", "title": "Checks 1 and 2", "body": "1. Facts and figures: numbers, dates, names, quotes. 2. Sources: does it exist? does it say that? If not found → remove."}},
+      {"visual_type": "slide",
+       "voiceover": "Part three is bias and one-sided wording. Read the output as the people it describes would read it. Look for one side presented as the only view, assumptions about gender, age or background, and strong words like obviously or failed, where a neutral word would be fairer.",
+       "slide": {"layout": "bullets", "title": "Check 3: Bias", "body": "One side as the only view · Assumptions about gender, age, nationality, background ('the engineer... he') · Strong words: 'obviously', 'failed'."}},
+      {"visual_type": "slide",
+       "voiceover": "Part four is confidentiality. Confirm that you did not paste personal data, client details or internal secrets, and that the output contains none. Rules on personal data and workplace AI use differ between countries and employers. So always check your own organisation's policy.",
+       "slide": {"layout": "bullets", "title": "Check 4: Confidentiality", "body": "No personal data, client details or secrets in the prompt or the output. Rules differ by country and employer → follow your organisation's policy."}},
+      {"visual_type": "slide",
+       "voiceover": "You can also write prompts that make checking easier. For example, ask the tool to mark any figure that did not come from your notes, to include no sources unless you gave them, and to say when it is not sure. These lines often help, but they do not replace your own check.",
+       "slide": {"layout": "code", "title": "Prompts that help you check", "body": "Mark any figure that did not come from my notes with [CHECK].\nDo not include sources unless I provided them.\nIf you are not sure about something, say so."}},
+      {"visual_type": "stock",
+       "voiceover": "Checking an AI output is like checking a restaurant bill before you pay. Most of the time, it is correct. But it is your payment, so you look at each line, and you do not pay for a dish you never ordered.",
+       "stock_query": "person checking restaurant bill at table",
+       "on_screen_text": "Check each line before you pay"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's use the checklist. Kwame is a policy analyst at a farmers' cooperative in Kumasi. He asked an AI tool for a short briefing on drip irrigation for the cooperative's board.",
+       "stock_query": "drip irrigation on farm field Africa",
+       "on_screen_text": "Kwame · policy analyst, Kumasi"},
+      {"visual_type": "slide",
+       "voiceover": "Here is part of the output. It reads well. But look closely. It gives one exact water saving for every farm, cites a named report, says every modern farmer has already switched, and names two cooperative members with their plot numbers.",
+       "slide": {"layout": "code", "title": "The AI output", "body": "Show the output block from content.md exactly. Tag the report name 'not found' and blur or grey out the two member names."}},
+      {"visual_type": "slide",
+       "voiceover": "Kwame works through the four checks. Facts: the exact saving has no basis in his notes, because real savings depend on crop, soil and climate. He marks it to check. Sources: he cannot find the report anywhere, so he removes it.",
+       "slide": {"layout": "bullets", "title": "Facts and sources", "body": "Facts: '60% on every farm' → no basis, depends on crop, soil, climate → [CHECK]. Sources: '2021 West Africa Water Report' → not found → removed."}},
+      {"visual_type": "slide",
+       "voiceover": "Bias: all modern farmers and clearly falling behind are one-sided, and unfair to members who cannot afford new equipment. He rewrites them in neutral words. Confidentiality: two members' names appear, because he pasted them in his notes. He removes them, and will use placeholders next time.",
+       "slide": {"layout": "bullets", "title": "Bias and confidentiality", "body": "Bias: 'All modern farmers', 'clearly falling behind' → neutral wording. Confidentiality: two member names and plots → removed → [MEMBER A], [MEMBER B] next time."}},
+      {"visual_type": "slide",
+       "voiceover": "His improved prompt adds four short lines. Use only the figures in my notes. Mark anything else to check. Present benefits and costs in a balanced way. And do not name members.",
+       "slide": {"layout": "code", "title": "Kwame's added lines", "body": "Use only the figures in my notes. Mark anything else with [CHECK]. Present benefits and costs in a balanced way. Do not name members."}},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is to check only the parts that look wrong. The most dangerous errors look correct: a realistic figure, a believable report title, a confident sentence. So go through the whole checklist every time.",
+       "on_screen_text": "The worst errors look correct"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, before using any AI output, check facts and figures, check sources, look for bias, and confirm confidentiality. Second, prompts can make checking easier, but they do not replace your own check. Third, rules on data and AI use differ between countries and employers, so always follow your own organisation's policy.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Facts · Sources · Bias · Confidentiality. 2. Checking prompts help, but you still check. 3. Follow your organisation's policy."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below this video, you will check a short AI-written briefing with the checklist, mark every issue you find, and rewrite the prompt so the next output is easier to check. It takes about twenty minutes. Soon, you will use this checklist on every prompt in your capstone library. In the next lesson, we look at testing a prompt across tools. See you there.",
+       "on_screen_text": "Next: Testing a Prompt Across Tools"}
+    ]
+  }
+}

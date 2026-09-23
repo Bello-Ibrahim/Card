@@ -1,7 +1,7 @@
 {
   "course_id": "AI-03",
   "lesson_id": "L08",
-  "duration_s": 274.2,
+  "duration_s": 294.9,
   "thumbnail": {
     "headline": "Show Me Your Reasoning",
     "slide": {
@@ -14,16 +14,16 @@
     {
       "scene": 1,
       "start": 0.0,
-      "end": 14.1,
+      "end": 18.0,
       "section": "Hook",
       "visual_type": "presenter_full",
       "on_screen_text": "Confident is not the same as right",
-      "voiceover": "Which option should I choose? AI tools are happy to answer that question, often with great confidence. But a confident answer is only as good as the reasoning and the information behind it."
+      "voiceover": "Which option should I choose? AI tools are happy to answer that question, often with great confidence. But a confident answer is only as good as the reasoning and the information behind it. Today, you will learn how to see that reasoning."
     },
     {
       "scene": 2,
-      "start": 14.1,
-      "end": 28.7,
+      "start": 18.0,
+      "end": 32.6,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -35,8 +35,8 @@
     },
     {
       "scene": 3,
-      "start": 28.7,
-      "end": 53.6,
+      "start": 32.6,
+      "end": 57.5,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -48,8 +48,8 @@
     },
     {
       "scene": 4,
-      "start": 53.6,
-      "end": 75.9,
+      "start": 57.5,
+      "end": 84.5,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -57,12 +57,12 @@
         "title": "Techniques 3 and 4",
         "body": "3. Name the criteria: cost · reliability · ease of use, in a table. 4. 'Before you answer, ask me up to five questions.'"
       },
-      "voiceover": "Technique three: name the criteria. Instead of asking which is best, ask the tool to compare the options on cost, reliability and ease of use, in a table. Your criteria reflect your priorities, which the tool cannot know. Technique four: ask it to ask you up to five questions before it answers."
+      "voiceover": "Technique three: name the criteria. Instead of asking which is best, ask the tool to compare the options on cost, reliability and ease of use, in a table. Your criteria reflect your priorities, which the tool cannot know. Technique four: ask it to ask you up to five questions before it answers. This is useful when you are not sure what context matters."
     },
     {
       "scene": 5,
-      "start": 75.9,
-      "end": 92.2,
+      "start": 84.5,
+      "end": 103.8,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -70,12 +70,12 @@
         "title": "The follow-up question",
         "body": "\"What is the weakest assumption in your analysis?\""
       },
-      "voiceover": "After the analysis, one more request is very useful. Ask: what is the weakest assumption in your analysis? This asks the tool to question its own answer, and it often shows where you need to check facts yourself."
+      "voiceover": "After the analysis, one more request is very useful. Ask: what is the weakest assumption in your analysis? This asks the tool to question its own answer, and it often shows where you need to check facts yourself. It takes only one line to ask."
     },
     {
       "scene": 6,
-      "start": 92.2,
-      "end": 116.2,
+      "start": 103.8,
+      "end": 127.8,
       "section": "Explain",
       "visual_type": "stock",
       "stock_query": "friends comparing apartment listings on laptop",
@@ -84,18 +84,18 @@
     },
     {
       "scene": 7,
-      "start": 116.2,
-      "end": 128.2,
+      "start": 127.8,
+      "end": 143.7,
       "section": "Demonstrate",
       "visual_type": "stock",
       "stock_query": "small cafe owner counter India",
       "on_screen_text": "Ravi · café owner, Chennai",
-      "voiceover": "Let's try it. Ravi runs a small café in Chennai. He wants to start delivery, and he is comparing three delivery partners. He has their offers written down."
+      "voiceover": "Let's try it. Ravi runs a small café in Chennai. He wants to start delivery, and he is comparing three delivery partners. He has their offers written down. He wants a clear comparison, not a general list."
     },
     {
       "scene": 8,
-      "start": 128.2,
-      "end": 139.3,
+      "start": 143.7,
+      "end": 160.0,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -103,12 +103,12 @@
         "title": "Before",
         "body": "Which delivery partner is best for my café?  → Output note in red: general checklist, no recommendation."
       },
-      "voiceover": "His first prompt asks: which delivery partner is best for my café? The answer is a general list of things to consider, with no clear recommendation."
+      "voiceover": "His first prompt asks: which delivery partner is best for my café? The answer is a general list of things to consider, with no clear recommendation. It is polite and sensible, but it does not help him choose."
     },
     {
       "scene": 9,
-      "start": 139.3,
-      "end": 165.0,
+      "start": 160.0,
+      "end": 185.7,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -120,8 +120,8 @@
     },
     {
       "scene": 10,
-      "start": 165.0,
-      "end": 184.7,
+      "start": 185.7,
+      "end": 205.4,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -133,8 +133,8 @@
     },
     {
       "scene": 11,
-      "start": 184.7,
-      "end": 199.7,
+      "start": 205.4,
+      "end": 220.4,
       "section": "Demonstrate",
       "visual_type": "stock",
       "stock_query": "food delivery rider collecting order cafe",
@@ -143,8 +143,8 @@
     },
     {
       "scene": 12,
-      "start": 199.7,
-      "end": 219.8,
+      "start": 220.4,
+      "end": 240.5,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -156,8 +156,8 @@
     },
     {
       "scene": 13,
-      "start": 219.8,
-      "end": 245.9,
+      "start": 240.5,
+      "end": 266.6,
       "section": "Recap",
       "visual_type": "slide",
       "slide": {
@@ -169,8 +169,8 @@
     },
     {
       "scene": 14,
-      "start": 245.9,
-      "end": 274.2,
+      "start": 266.6,
+      "end": 294.9,
       "section": "CTA",
       "visual_type": "presenter_full",
       "on_screen_text": "Next: Roles and Multi-Turn Conversations",

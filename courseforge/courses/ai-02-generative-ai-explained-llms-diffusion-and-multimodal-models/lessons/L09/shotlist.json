@@ -1,0 +1,202 @@
+{
+  "course_id": "AI-02",
+  "lesson_id": "L09",
+  "duration_s": 297.8,
+  "thumbnail": {
+    "headline": "Start From the Task",
+    "slide": {
+      "layout": "title",
+      "title": "Start From the Task",
+      "body": "A task card in the centre with three arrows to three model icons: language (text), image (picture), multimodal (photo → table). Small tag: Generative AI Explained · Lesson 9."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.1,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Which one do you open?",
+      "voiceover": "You now know three families of generative AI, and where each one fails. But on a busy Monday morning, with a real task in front of you, which one should you open? A few simple questions can guide the choice."
+    },
+    {
+      "scene": 2,
+      "start": 17.1,
+      "end": 34.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Matching the Task to the Model",
+        "body": "Generative AI Explained · Lesson 9 of 12 · Five questions"
+      },
+      "voiceover": "Welcome to the final week. Choosing a tool is not about finding the best AI. It is about matching the task to the right type of model, and then choosing a tool that fits your limits. Ask five questions, in order."
+    },
+    {
+      "scene": 3,
+      "start": 34.7,
+      "end": 48.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "1. What output do I need?",
+        "body": "Text → Language model · New image → Diffusion or other image model · Read an image or audio → Multimodal model"
+      },
+      "voiceover": "One. What type of output do I need? Text points to a language model. New images point to a diffusion or other image model. Reading images or audio needs a multimodal model."
+    },
+    {
+      "scene": 4,
+      "start": 48.4,
+      "end": 68.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "2. How accurate must it be?",
+        "body": "Left, low need: slogan brainstorm. Right, high need: price table, legal summary → give a source · lower temperature · check."
+      },
+      "voiceover": "Two. How accurate must it be? A list of slogan ideas can include weak ones. A price table or a legal summary cannot include errors. The higher the need for accuracy, the more you give a source, lower the temperature where you can, and check the result."
+    },
+    {
+      "scene": 5,
+      "start": 68.5,
+      "end": 89.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "3. Is the input private?",
+        "body": "Customer data · health records · contracts → not in a free public tool. Options: remove personal details · approved tool · no AI"
+      },
+      "voiceover": "Three. Is the input private or confidential? Customer data, health records and contracts should not go into a free public tool. Check the tool's privacy terms and your organisation's rules. Sometimes the right choice is to remove personal details, use an approved tool, or not use AI at all."
+    },
+    {
+      "scene": 6,
+      "start": 89.5,
+      "end": 116.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "4. Cost? 5. Who checks?",
+        "body": "4. Money · time to prompt · time to fix. 5. A reviewer who knows the subject. Nobody can check? Too risky."
+      },
+      "voiceover": "Four. What will it cost? Think about money, but also the time to write prompts and fix the output. A free tool with daily limits may be enough for you, but not for a whole team. Five. Who checks the result? Every important output needs a reviewer who knows the subject. If nobody can check it, the task may be too risky for AI."
+    },
+    {
+      "scene": 7,
+      "start": 116.9,
+      "end": 135.3,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "bicycle bus and truck on city street",
+      "on_screen_text": "Know the journey first",
+      "voiceover": "It is like choosing transport. A bicycle, a bus and a lorry are all useful, but for different trips. Nobody asks which vehicle is best without knowing the journey. The answers give you a model type, a tool, and one risk to watch."
+    },
+    {
+      "scene": 8,
+      "start": 135.3,
+      "end": 146.0,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "translator working with documents and laptop",
+      "on_screen_text": "Nour · translator · Cairo",
+      "voiceover": "Let's meet three people with three different tasks. Nour is a translator in Cairo. She must translate a short tourism brochure from Arabic into English."
+    },
+    {
+      "scene": 9,
+      "start": 146.0,
+      "end": 165.3,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Nour's choice",
+        "body": "Output: text → Language model · Accuracy: high · Privacy: public, free tool OK · Checker: Nour · Risk: added details, place names"
+      },
+      "voiceover": "The output is text, so she needs a language model. Accuracy must be high, because it will be printed. The brochure is public, so a free tool is fine. She reviews every sentence herself. Her risk to watch: added details, or wrongly translated place names."
+    },
+    {
+      "scene": 10,
+      "start": 165.3,
+      "end": 175.6,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "teacher writing timetable on classroom whiteboard",
+      "on_screen_text": "Carmela · teacher · Manila",
+      "voiceover": "Carmela is a secondary school teacher in Manila. She wants to turn a photo of a handwritten class timetable into a clean digital table."
+    },
+    {
+      "scene": 11,
+      "start": 175.6,
+      "end": 194.5,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Carmela's choice",
+        "body": "Output: table from a photo → Multimodal model · Privacy: remove student names · Accuracy: high · Risk: 1:00 read as 7:00"
+      },
+      "voiceover": "An image goes in and a table comes out, so she needs a multimodal model. She removes student names from the photo first. Accuracy is high, because students depend on it. Her risk to watch: misread times, like one o'clock read as seven o'clock."
+    },
+    {
+      "scene": 12,
+      "start": 194.5,
+      "end": 219.4,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Thiago's team's choice",
+        "body": "Output: images → Diffusion or other image model · Accuracy: medium, style first · Cost: maybe a paid plan · Risk: text in images, bias"
+      },
+      "voiceover": "Thiago's marketing team in São Paulo needs ten background images for a juice campaign. So they need an image model. Style matters more than facts. They may need a paid plan with commercial rights. Risks to watch: text inside images, and people who all look the same. The designer adds the brand name later and reviews each image."
+    },
+    {
+      "scene": 13,
+      "start": 219.4,
+      "end": 231.4,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Three tasks, three choices",
+        "body": "Three columns: Nour → Language model · Carmela → Multimodal model · Thiago's team → Image model. Each with its risk to watch."
+      },
+      "voiceover": "So, three people, three tasks, and three different model types. Nobody asked which AI is best. Each one started from the task, and named a risk before starting."
+    },
+    {
+      "scene": 14,
+      "start": 231.4,
+      "end": 250.3,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Task first, tool second.",
+      "voiceover": "A common mistake is to choose the tool first, and force every task into it. That leads to weak results, or to real risks, like pasting confidential data into a free tool. Start from the task. Then choose the model type and the tool."
+    },
+    {
+      "scene": 15,
+      "start": 250.3,
+      "end": 273.4,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Task first: output → model family. 2. Accuracy, privacy, cost, checker → tool or no AI. 3. Name one risk to watch."
+      },
+      "voiceover": "Let's recap. First, start from the task, not the tool. The output you need points to the model family. Second, accuracy, privacy, cost and who checks the result decide which tool fits, or whether to use AI at all. Third, for every choice, name one risk to watch, based on that family's typical failures."
+    },
+    {
+      "scene": 16,
+      "start": 273.4,
+      "end": 297.8,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Designing a Fair Comparison",
+      "voiceover": "Now it is your turn. In the exercise below, complete a decision table for six workplace tasks. For each, choose the model type, a free tool and one risk to watch. It takes about twenty minutes. From the next lesson, you start your capstone, a three-tool comparison report. Next: designing a fair comparison. See you there."
+    }
+  ]
+}

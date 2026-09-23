@@ -1,7 +1,7 @@
 {
   "course_id": "AI-03",
   "lesson_id": "L07",
-  "duration_s": 267.4,
+  "duration_s": 297.3,
   "thumbnail": {
     "headline": "Correct, Missing or Invented?",
     "slide": {
@@ -36,7 +36,7 @@
     {
       "scene": 3,
       "start": 35.6,
-      "end": 55.3,
+      "end": 60.0,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -44,12 +44,12 @@
         "title": "A good summary prompt",
         "body": "Purpose: 'so my manager can decide on the budget'. Length and format: '5 bullet points'. Focus: 'risks and costs; ignore technical details'."
       },
-      "voiceover": "Summarising means making a text shorter while keeping what matters. A good summary prompt states three things. The purpose, for example, so my manager can decide on the budget. The length and format, such as five bullet points. And the focus, such as risks and costs."
+      "voiceover": "Summarising means making a text shorter while keeping what matters. A good summary prompt states three things. The purpose, for example, so my manager can decide on the budget. The length and format, such as five bullet points. And the focus, such as risks and costs. Without a purpose, the tool cannot know what matters to you."
     },
     {
       "scene": 4,
-      "start": 55.3,
-      "end": 78.0,
+      "start": 60.0,
+      "end": 82.7,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -61,17 +61,17 @@
     },
     {
       "scene": 5,
-      "start": 78.0,
-      "end": 89.1,
+      "start": 82.7,
+      "end": 99.8,
       "section": "Explain",
       "visual_type": "text",
       "on_screen_text": "Make the gaps visible",
-      "voiceover": "Why does this matter? When information is missing, AI tools sometimes fill the gap with a likely-sounding answer. Writing not stated makes the gaps visible."
+      "voiceover": "Why does this matter? When information is missing, AI tools sometimes fill the gap with a likely-sounding answer. Writing not stated makes the gaps visible. A gap you can see is much safer than a guess you cannot see."
     },
     {
       "scene": 6,
-      "start": 89.1,
-      "end": 108.4,
+      "start": 99.8,
+      "end": 119.1,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -83,18 +83,18 @@
     },
     {
       "scene": 7,
-      "start": 108.4,
-      "end": 123.4,
+      "start": 119.1,
+      "end": 139.2,
       "section": "Explain",
       "visual_type": "stock",
       "stock_query": "colleague sharing handwritten meeting notes",
       "on_screen_text": "Check the deadline at the source",
-      "voiceover": "An AI summary is like a colleague's quick notes from a meeting you missed. Very useful. But before you act on a deadline in those notes, you check it with the person who set it."
+      "voiceover": "An AI summary is like a colleague's quick notes from a meeting you missed. Very useful. But before you act on a deadline in those notes, you check it with the person who set it. The same is true for every summary an AI tool gives you."
     },
     {
       "scene": 8,
-      "start": 123.4,
-      "end": 140.5,
+      "start": 139.2,
+      "end": 156.3,
       "section": "Demonstrate",
       "visual_type": "stock",
       "stock_query": "city cycle lane urban street",
@@ -103,8 +103,8 @@
     },
     {
       "scene": 9,
-      "start": 140.5,
-      "end": 158.1,
+      "start": 156.3,
+      "end": 177.3,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -112,12 +112,12 @@
         "title": "Aroha's notes",
         "body": "Show the 'Meeting notes: Cycle lane, Stage 2' block from content.md exactly."
       },
-      "voiceover": "The notes have five lines. The drawings are almost done, the consultation will run for four weeks, the comms lead will prepare a web page, finance will confirm a lighting cost, and there will be no work during the market weekend."
+      "voiceover": "The notes have five lines. The drawings are almost done, the consultation will run for four weeks, the comms lead will prepare a web page, finance will confirm a lighting cost, and there will be no work during the market weekend. Notice that two of them have no deadline."
     },
     {
       "scene": 10,
-      "start": 158.1,
-      "end": 180.8,
+      "start": 177.3,
+      "end": 200.0,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -129,8 +129,8 @@
     },
     {
       "scene": 11,
-      "start": 180.8,
-      "end": 192.8,
+      "start": 200.0,
+      "end": 218.9,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -138,12 +138,12 @@
         "title": "One new line",
         "body": "List every line that starts with 'Agreed' as a decision."
       },
-      "voiceover": "Aroha fixes both in the table. Then she improves her prompt for next time, with one new line: list every line that starts with agreed as a decision."
+      "voiceover": "Aroha fixes both in the table. Then she improves her prompt for next time, with one new line: list every line that starts with agreed as a decision. Now the prompt is a little better, and the next table will be easier to check."
     },
     {
       "scene": 12,
-      "start": 192.8,
-      "end": 217.7,
+      "start": 218.9,
+      "end": 243.8,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -155,8 +155,8 @@
     },
     {
       "scene": 13,
-      "start": 217.7,
-      "end": 242.1,
+      "start": 243.8,
+      "end": 268.2,
       "section": "Recap",
       "visual_type": "slide",
       "slide": {
@@ -168,12 +168,12 @@
     },
     {
       "scene": 14,
-      "start": 242.1,
-      "end": 267.4,
+      "start": 268.2,
+      "end": 297.3,
       "section": "CTA",
       "visual_type": "presenter_full",
       "on_screen_text": "Next: Thinking Tasks",
-      "voiceover": "Now it is your turn. In the exercise below this video, you will turn a set of meeting notes into a table of decisions, owners and deadlines. Then you will mark every item as correct, missing or invented. It takes about twenty minutes. In the next lesson, we look at thinking tasks: analysis, planning and decisions. See you there."
+      "voiceover": "Now it is your turn. In the exercise below this video, you will turn a set of meeting notes into a table of decisions, owners and deadlines. Then you will mark every item as correct, missing or invented. You can use Aroha's notes, or write your own. It takes about twenty minutes. In the next lesson, we look at thinking tasks: analysis, planning and decisions. See you there."
     }
   ]
 }

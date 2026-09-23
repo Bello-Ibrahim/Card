@@ -1,0 +1,188 @@
+{
+  "course_id": "AI-03",
+  "lesson_id": "L10",
+  "duration_s": 291.6,
+  "thumbnail": {
+    "headline": "Diagnose, Don't Delete",
+    "slide": {
+      "layout": "title",
+      "title": "Diagnose, Don't Delete",
+      "body": "A prompt card with a small wrench icon and a four-item checklist: Task? Context? Format? Conflict? Small tag: Prompt Engineering Masterclass · Lesson 10."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.1,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Fix one part, not everything",
+      "voiceover": "When an AI output is disappointing, most people delete everything and start again. But often, a small change to one part of the prompt is faster, and gives a better result. Today, you will learn how to find that part."
+    },
+    {
+      "scene": 2,
+      "start": 17.1,
+      "end": 31.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Fixing Weak Outputs",
+        "body": "Lesson 10 · A four-point diagnosis"
+      },
+      "voiceover": "In the last lesson, you built results through conversation. Now, what do you do when a result is weak? Before you fix a prompt, find the cause. Four questions cover most weak outputs."
+    },
+    {
+      "scene": 3,
+      "start": 31.2,
+      "end": 56.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Causes 1 and 2",
+        "body": "1. Unclear task → use a precise verb: review · compare · list the risks in. 2. Missing context → add audience, purpose, background, material (L03)."
+      },
+      "voiceover": "Question one: was the task unclear? The output does something different from what you wanted. The fix is a precise verb, such as review, compare, or list the risks in. Question two: was context missing? The output is correct, but generic, or makes wrong guesses about the audience. The fix is to add audience, purpose, background or material."
+    },
+    {
+      "scene": 4,
+      "start": 56.1,
+      "end": 82.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Causes 3 and 4",
+        "body": "3. No format → name it and give numbers (L04). 4. Conflicting instructions ('detailed' + 'under 50 words') → remove one or say which matters more."
+      },
+      "voiceover": "Question three: was the format specified? The content is fine, but it is too long, or has no structure. The fix is to name the format and give a number for length. Question four: did instructions conflict? For example, be detailed and under fifty words in the same prompt. The fix is to remove one instruction, or say which one matters more."
+    },
+    {
+      "scene": 5,
+      "start": 82.7,
+      "end": 94.7,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "One cause. One change. Test again.",
+      "voiceover": "After you name the cause, make one targeted change, and run the prompt again. If you change five things at once, you will not know which change helped."
+    },
+    {
+      "scene": 6,
+      "start": 94.7,
+      "end": 113.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "When the cause is hard to see",
+        "body": "Add an example (L05). Ask: 'Which parts of my prompt were unclear to you?' (not always reliable)."
+      },
+      "voiceover": "If the cause is harder to see, two more techniques can help. Add an example of the output you want. Or ask the tool which parts of your prompt were unclear. That answer is not always reliable, but it can give you useful ideas."
+    },
+    {
+      "scene": 7,
+      "start": 113.6,
+      "end": 129.5,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "mechanic listening to car engine garage",
+      "on_screen_text": "Check, change one part, test",
+      "voiceover": "Think of a mechanic who hears a strange noise in a car. A good mechanic does not replace the whole engine. They check a short list of likely causes, change one part, and test the car again."
+    },
+    {
+      "scene": 8,
+      "start": 129.5,
+      "end": 141.9,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "office manager reviewing documents Scandinavian office",
+      "on_screen_text": "Ingrid · office manager, Stockholm",
+      "voiceover": "Let's look at three cases. Ingrid is an office manager at an architecture firm in Stockholm. Here are three weak outputs she received, and how she diagnosed each one."
+    },
+    {
+      "scene": 9,
+      "start": 141.9,
+      "end": 166.3,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Case 1: Unclear task",
+        "body": "Before: 'Look at this supplier contract summary.' After (code style): 'List the three terms in this contract summary that carry the most risk for a small office, and explain each in one sentence.'"
+      },
+      "voiceover": "Case one. She asked the tool to look at a supplier contract summary, and got a shorter summary of the same text. But she wanted to know which terms were risky. The cause is an unclear task. Her fix asks for the three terms with the most risk for a small office, each explained in one sentence."
+    },
+    {
+      "scene": 10,
+      "start": 166.3,
+      "end": 191.2,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Case 2: Missing context",
+        "body": "Before: 'Write a welcome message for a new employee.' After (code style): the full fixed prompt from content.md (new receptionist, Monday, 08:30, ask for [OFFICE MANAGER], bring ID, warm tone, under 100 words)."
+      },
+      "voiceover": "Case two. She asked for a welcome message for a new employee, and got a friendly message about our exciting company, with no useful information. The cause is missing context. Her fix names the role and start day, the arrival time, who to ask for, and what to bring, with a warm tone and under one hundred words."
+    },
+    {
+      "scene": 11,
+      "start": 191.2,
+      "end": 212.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Case 3: Conflicting instructions",
+        "body": "Before: 'Write a detailed, complete report on our office energy use in under 50 words.' After (code style): 'Summarise our office energy use in 3 bullet points for the monthly team newsletter. Focus on the biggest change since last month. [PASTE FIGURES]'"
+      },
+      "voiceover": "Case three. She asked for a detailed, complete report on office energy use, in under fifty words. She got fifty words that said almost nothing. The cause is conflicting instructions. Her fix chooses one goal: three bullet points for the team newsletter, focused on the biggest change since last month."
+    },
+    {
+      "scene": 12,
+      "start": 212.6,
+      "end": 224.2,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Change one part, not all of it",
+      "voiceover": "In each case, Ingrid changed one part of the prompt, not all of it. This habit will matter when you build your prompt library in module three."
+    },
+    {
+      "scene": 13,
+      "start": 224.2,
+      "end": 244.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "The right order",
+        "body": "Three steps: Diagnose → Fix the prompt → Then compare tools (L12)."
+      },
+      "voiceover": "A common mistake is to blame the tool, and try a different one immediately. Sometimes another tool does help. But if the prompt has a clear weakness, the same weakness usually gives a weak result in any tool. Diagnose first, fix the prompt, and only then compare tools."
+    },
+    {
+      "scene": 14,
+      "start": 244.8,
+      "end": 266.7,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Task · Context · Format · Conflict. 2. Name the cause, change one thing, test. 3. Fix the prompt before you switch tools."
+      },
+      "voiceover": "Let's recap. First, four questions diagnose most weak outputs: an unclear task, missing context, a missing format, or conflicting instructions. Second, name the cause, then make one targeted change and test again. Third, starting again or changing tools is rarely the fastest fix when the prompt itself has a clear weakness."
+    },
+    {
+      "scene": 15,
+      "start": 266.7,
+      "end": 291.6,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Checking Outputs",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will diagnose three weak outputs, name the cause of each one, and write an improved prompt with one targeted change. It takes about twenty minutes. That completes week two. In the next lesson, we look at checking outputs for accuracy, bias and confidentiality. See you there."
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "course_id": "AI-04",
+  "lesson_id": "L08",
+  "duration_s": 294.9,
+  "thumbnail": {
+    "headline": "After the Demo Ends",
+    "slide": {
+      "layout": "title",
+      "title": "After the Demo Ends",
+      "body": "Left: a glossy demo screen icon, fading. Right: a clipboard with five teal group labels: Data · Accuracy · Security · Cost and exit · Support. Small tag: AI Literacy for Leaders · Lesson 8."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.4,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "What happens after the demo?",
+      "voiceover": "Every AI vendor demonstration looks impressive. The data is clean, the examples are well chosen, and the presenter knows exactly what to type. Your job is to find out what happens with your data, your staff and your contract after the demo ends."
+    },
+    {
+      "scene": 2,
+      "start": 18.4,
+      "end": 39.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Asking Vendors the Right Questions",
+        "body": "AI Literacy for Leaders and Executives · Lesson 8 of 10"
+      },
+      "voiceover": "Last time, we set the rules for AI inside your organisation. Now let's look outside, at the vendors who sell it. Vendor due diligence means asking structured questions before you buy, and getting the important answers in writing. Ask every vendor the same questions, so you can compare them fairly."
+    },
+    {
+      "scene": 3,
+      "start": 39.8,
+      "end": 62.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "CertifAI Vendor Questions: Data",
+        "body": "1. Where is our data stored, in which countries? 2. Is it used to train your models? Can we switch it off, in the contract? 3. Who can access our data? 4. How long do you keep it, and how do we delete it?"
+      },
+      "voiceover": "Here is the CertifAI Vendor Question List. It has fifteen questions in five groups. The first group is data. Where is our data stored? Is it used to train your models, can we switch that off, and is it in the contract? Who can access it, and how do we delete it?"
+    },
+    {
+      "scene": 4,
+      "start": 62.1,
+      "end": 88.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Accuracy · Security",
+        "body": "5. Evidence on data like ours? 6. Known limits and common errors? 7. Test on our own sample first? 8. Which security and compliance standards, with current evidence? 9. Protection against hidden instructions? 10. How and how fast do you report incidents?"
+      },
+      "voiceover": "The second group is accuracy and evidence. What accuracy can you show on data like ours, not only demo data? What are the known limits? Can we test it on our own sample first? The third group is security and compliance. Which standards do you meet, how do you prevent misuse, and how fast will you tell us about an incident?"
+    },
+    {
+      "scene": 5,
+      "start": 88.2,
+      "end": 110.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Cost and exit · Support",
+        "body": "11. How does pricing grow with use? 12. Costs not in the quote: setup, integration, support? 13. How do we leave, and in what format is our data returned? 14. Who do we contact about wrong outputs, how fast? 15. How will you tell us about model changes?"
+      },
+      "voiceover": "The fourth group is cost and exit. How does pricing grow as our use grows? What costs are not in the quote? How can we leave, and how do we get our data back? The fifth group is support. Who fixes wrong outputs, and how will you tell us about model changes?"
+    },
+    {
+      "scene": 6,
+      "start": 110.5,
+      "end": 123.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Three warning signs",
+        "body": "Red flags: answers that avoid the question · claims without evidence · refusal to put commitments in writing."
+      },
+      "voiceover": "Listen for three warning signs. Answers that avoid the question. Claims without evidence. And a refusal to put important commitments in writing. When you hear one, ask a follow-up question."
+    },
+    {
+      "scene": 7,
+      "start": 123.8,
+      "end": 141.8,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "executives interviewing senior candidate boardroom",
+      "on_screen_text": "Your structured interview",
+      "voiceover": "Choosing an AI vendor is like hiring a senior employee. A confident interview is not enough. You check references, ask for examples of past work, agree terms in a contract and plan a trial period. The question list is your structured interview."
+    },
+    {
+      "scene": 8,
+      "start": 141.8,
+      "end": 161.9,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "procurement team comparing proposals at meeting",
+      "on_screen_text": "Ingrid · transport authority · Norway",
+      "voiceover": "Let's see it in action. Ingrid Solberg is procurement director at a fictional public transport authority in Norway. Her team is comparing two vendors of an AI assistant that answers passenger questions. Both demos are strong, so the team asks all fifteen questions and records every answer."
+    },
+    {
+      "scene": 9,
+      "start": 161.9,
+      "end": 183.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Vendor A vs Vendor B",
+        "body": "Vendor A column, green ticks: training opt-out on business plan · 2-week test on own anonymised data · current security evidence · clear pricing by conversations. Vendor B column appears in next scene."
+      },
+      "voiceover": "Vendor A says conversations may be used to improve its models on the standard plan, but this can be switched off on the business plan. It offers a two-week test on the authority's own anonymised questions, shows current security evidence, and explains that pricing grows with the number of conversations."
+    },
+    {
+      "scene": 10,
+      "start": 183.8,
+      "end": 204.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Vendor A vs Vendor B",
+        "body": "Vendor B column, red flags: 'fully secure' but no data location · accuracy only on demo data · unclear exit · won't confirm training use in writing."
+      },
+      "voiceover": "Vendor B says the data is fully secure, but does not say where it is stored. It shows accuracy only on its own demo data. Its exit terms are unclear, and it will not confirm in writing whether data is used for training. That is all three warning signs."
+    },
+    {
+      "scene": 11,
+      "start": 204.8,
+      "end": 223.7,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "In writing before the pilot",
+        "body": "Contract must include: training opt-out · data location · incident notice time · data return on exit. Finance check: cost at 2× expected volume."
+      },
+      "voiceover": "Ingrid chooses Vendor A for a pilot. She lists four answers she needs in the contract: training opt-out, data location, incident notice time and data return on exit. And because pricing grows with use, finance models the cost at double the expected volume."
+    },
+    {
+      "scene": 12,
+      "start": 223.7,
+      "end": 244.3,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "A demo shows the best case",
+      "voiceover": "This avoids a common mistake: judging vendors mainly on the demo and the price. A demo shows the best case, not your case. The real differences are in data use, evidence on real data, cost at scale and exit terms, and these only appear when you ask directly."
+    },
+    {
+      "scene": 13,
+      "start": 244.3,
+      "end": 266.6,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Same structured questions for every vendor. 2. Evidence on data like yours; test on your own sample. 3. In writing: training use of your data, and exit terms."
+      },
+      "voiceover": "Let's recap. First, ask every vendor the same structured questions about data, accuracy, security, cost, exit and support. Second, ask for evidence on data like yours, and test on your own sample before you commit. Third, get important answers in writing, especially about training on your data and how you can leave."
+    },
+    {
+      "scene": 14,
+      "start": 266.6,
+      "end": 294.9,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Running a Pilot",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will ask Claude or ChatGPT to play a vendor pitching an AI product. Question it with at least ten questions from the list, and rate each answer clear, vague or missing. Remember not to paste any confidential data. In the next lesson, we look at running a pilot and measuring results. See you there."
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "course_id": "AI-02",
+  "lesson_id": "L10",
+  "duration_s": 294.1,
+  "thumbnail": {
+    "headline": "Make the Test Fair",
+    "slide": {
+      "layout": "title",
+      "title": "Make the Test Fair",
+      "body": "Three identical cards (same task, same input, same prompt) → three tool boxes A, B, C → one rubric sheet with scores. Small tag: Generative AI Explained · Lesson 10 · Capstone step 1."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 19.7,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Fair test, or just an opinion?",
+      "voiceover": "A colleague says, tool A is much better than tool B. I tried both last week. But did they give both tools the same task? The same prompt? Did they decide in advance what better means? Without a fair test, a comparison is only an opinion."
+    },
+    {
+      "scene": 2,
+      "start": 19.7,
+      "end": 37.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Designing a Fair Comparison",
+        "body": "Generative AI Explained · Lesson 10 of 12 · Capstone step 1"
+      },
+      "voiceover": "In the last lesson, you learned to match the task to the model. Now your capstone begins. You will compare three generative AI tools on one real task from your work or studies. Before you run anything, you need a fair design."
+    },
+    {
+      "scene": 3,
+      "start": 37.7,
+      "end": 60.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Four features of a fair test (1 and 2)",
+        "body": "1. Same task: exactly the same job. 2. Same input: same document, photo or data, with personal details removed."
+      },
+      "voiceover": "A fair test has four features. First, the same task. Every tool does exactly the same job, such as summarising a meeting transcript for your manager, or creating a poster for a community event. Second, the same input. Every tool gets the same document, photo or data, with personal or confidential information removed."
+    },
+    {
+      "scene": 4,
+      "start": 60.4,
+      "end": 78.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Four features of a fair test (3)",
+        "body": "3. Same prompt: write once, copy exactly. Different setting needed? Write it down."
+      },
+      "voiceover": "Third, the same prompt. Write it once and copy it exactly into each tool. If you change the prompt for one tool, you are testing your prompt, not the tool. If a tool needs a different setting, write down the difference."
+    },
+    {
+      "scene": 5,
+      "start": 78.0,
+      "end": 95.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Four features of a fair test (4)",
+        "body": "4. Criteria decided in advance, before you see any results."
+      },
+      "voiceover": "Fourth, criteria decided in advance. Decide how you will judge the results before you see them. If you decide afterwards, it is easy to choose criteria that favour the tool you already like. Setting the rules first keeps you honest."
+    },
+    {
+      "scene": 6,
+      "start": 95.1,
+      "end": 114.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "A simple scoring rubric",
+        "body": "Rubric grid: rows Accuracy, Usefulness, Clarity, Speed, Effort to fix; columns 1, 3, 5 and Weight."
+      },
+      "voiceover": "For judging, build a simple scoring rubric with four to six criteria. Useful ones are accuracy, usefulness, clarity, speed, and effort to fix. For each criterion, write what a score of one, three and five means. And give more weight to what matters most."
+    },
+    {
+      "scene": 7,
+      "start": 114.0,
+      "end": 130.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Record version and date",
+        "body": "Tool · Version · Date of test. Tools change without notice."
+      },
+      "voiceover": "Finally, record the tool version and the date of each test. Generative AI tools change often, and the model behind a free tool may be updated without notice. A result from one month may not be true the next."
+    },
+    {
+      "scene": 8,
+      "start": 130.7,
+      "end": 148.3,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "cooking competition judges tasting dishes",
+      "on_screen_text": "Same ingredients, rules set first",
+      "voiceover": "Think of a cooking competition. Every cook gets the same ingredients, the same recipe card and the same time. The judges agree on the scoring before they taste anything. If they changed the rules after tasting, the result would mean nothing."
+    },
+    {
+      "scene": 9,
+      "start": 148.3,
+      "end": 165.0,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "university student studying with laptop library",
+      "on_screen_text": "Ingrid · public health · Bergen",
+      "voiceover": "Let's see a fair design. Ingrid is a public health student in Bergen. For her capstone, she chooses a real task. Turn a four-page public research summary into a one-page plain-language fact sheet for community members."
+    },
+    {
+      "scene": 10,
+      "start": 165.0,
+      "end": 189.9,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Ingrid's fixed prompt",
+        "body": "You are writing for adults with no medical training. Using only the text below, write a one-page fact sheet with a title, five key points and one 'What you can do' section. If something is not in the text, do not add it."
+      },
+      "voiceover": "Her input is the public summary, with no personal data, saved as one file. Her prompt asks for a fact sheet for adults with no medical training, using only the text provided, with a title, five key points, and a what you can do section. It also says, do not add anything that is not in the text."
+    },
+    {
+      "scene": 11,
+      "start": 189.9,
+      "end": 203.2,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Ingrid's rubric",
+        "body": "Table: Accuracy (1 several errors / 3 one small error / 5 no errors, weight x2) · Plain language (x1) · Follows structure (x1) · Effort to fix (x1)"
+      },
+      "voiceover": "Before testing, she writes her rubric. Four criteria. Accuracy, plain language, following the structure, and effort to fix. Each has a clear description for a score of one, three and five."
+    },
+    {
+      "scene": 12,
+      "start": 203.2,
+      "end": 223.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Accuracy counts double",
+        "body": "Accuracy row highlighted with 'x2'. Four ticks: Task ✓ Input ✓ Prompt ✓ Rubric ✓ → Ready to test"
+      },
+      "voiceover": "She gives accuracy double weight, because a fact sheet with wrong health information could cause harm. Now her task, input, prompt and rubric are fixed, and she is ready to test. She will use three free text tools, and note the version and the date for each one."
+    },
+    {
+      "scene": 13,
+      "start": 223.8,
+      "end": 247.8,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Fix the prompt before testing.",
+      "voiceover": "A common mistake is to improve the prompt during testing, after the first tool gives a weak answer. Then the other tools get a better prompt, and the test is no longer fair. Finish the prompt and rubric first. Try the prompt once in a separate trial run if you need to. Then keep everything fixed."
+    },
+    {
+      "scene": 14,
+      "start": 247.8,
+      "end": 270.5,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Same task, same input, same prompt. 2. Criteria and scores defined first. 3. Record tool version and date."
+      },
+      "voiceover": "Let's recap. First, a fair comparison gives every tool the same task, the same input and the same prompt. Second, decide the scoring criteria before you see any results, and define low, middle and high scores. Third, record the tool version and the date of every test, because generative AI tools change often."
+    },
+    {
+      "scene": 15,
+      "start": 270.5,
+      "end": 294.1,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Running the Comparison",
+      "voiceover": "This is capstone step one. In the exercise below, choose one real task, prepare the input with no personal data, write the exact prompt, and build a rubric with four to six criteria. Save it all in one document. It takes about thirty minutes. Next, we move on to running the comparison. See you there."
+    }
+  ]
+}

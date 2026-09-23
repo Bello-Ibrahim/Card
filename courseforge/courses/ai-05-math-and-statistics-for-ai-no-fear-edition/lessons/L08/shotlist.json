@@ -1,0 +1,178 @@
+{
+  "course_id": "AI-05",
+  "lesson_id": "L08",
+  "duration_s": 295.6,
+  "thumbnail": {
+    "headline": "Positive Test, Only 15%?",
+    "slide": {
+      "layout": "title",
+      "title": "Positive Test, Only 15%?",
+      "body": "The fraction 90 ÷ 585 ≈ 15% in large type over a faint frequency table. Small tag: Math and Statistics for AI · Lesson 8. Label: hypothetical numbers."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.0,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "90%? Or about 15%?",
+      "voiceover": "A screening test is correct for ninety percent of people who have a condition. Your result is positive. What is the chance you really have it? Most people say about ninety percent. In our hypothetical example, the answer is about fifteen percent."
+    },
+    {
+      "scene": 2,
+      "start": 18.0,
+      "end": 42.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Bayes' theorem: update a belief",
+        "body": "Prior (before) → Evidence (e.g. positive test) → Posterior (after). Three boxes joined by arrows."
+      },
+      "voiceover": "Don't worry. By the end of this lesson, you will see why, with simple counting. Bayes' theorem is a rule for updating a belief when new evidence arrives. You start with a prior: how likely something is before the evidence. Then you see evidence, like a positive test. The result is the posterior: how likely it is after."
+    },
+    {
+      "scene": 3,
+      "start": 42.9,
+      "end": 63.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "The formula, for reference",
+        "body": "P(A | B) = P(B | A) × P(A) ÷ P(B)\nposterior = likelihood × prior ÷ evidence"
+      },
+      "voiceover": "The formula uses the conditional probabilities from the last lesson. In words: the chance of A given evidence B equals the chance of B when A is true, times the prior chance of A, divided by the overall chance of B. You do not need to memorise it."
+    },
+    {
+      "scene": 4,
+      "start": 63.5,
+      "end": 83.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "The counting method",
+        "body": "1. Imagine a large group. 2. Turn percentages into counts. 3. Fill in a frequency table. 4. Read the answer from one column."
+      },
+      "voiceover": "There is an easier method that gives the same answer. Imagine a large group of people, and count. Turn every percentage into a number of people, fill in a frequency table, then read the answer from one column. Many people find this much easier to trust."
+    },
+    {
+      "scene": 5,
+      "start": 83.2,
+      "end": 112.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Rare events",
+        "body": "A small group of true cases next to a huge group without the condition; a small percentage of the huge group turns orange (false alarms) and outnumbers the true alarms. Note: → precision in L15."
+      },
+      "voiceover": "The key lesson is about rare events. When something is rare, most people in the group do not have it. So even a small false-alarm rate on that big group can produce more false alarms than true cases. In machine learning, when a model flags fraud or spam, what fraction of the flags are real? That is a Bayes question, and in lesson fifteen we call it precision."
+    },
+    {
+      "scene": 6,
+      "start": 112.8,
+      "end": 132.1,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "burnt toast smoke in home kitchen",
+      "on_screen_text": "Rings mostly for toast",
+      "voiceover": "Think of a kitchen smoke alarm. Real fires are very rare, but toast burns often. Even a good alarm that almost never misses a fire will ring mostly for toast. Not because the alarm is bad, but because fires are rare and toast is common."
+    },
+    {
+      "scene": 7,
+      "start": 132.1,
+      "end": 154.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Valeria's test (hypothetical numbers)",
+        "body": "Prior: 1% have the condition. Has it → positive 90% of the time. Does not have it → positive 5% (false alarm)."
+      },
+      "voiceover": "Valeria is a health data analyst in Lima, Peru. She evaluates a screening test. The numbers are invented for teaching. One percent of people have the condition. If they have it, the test is positive ninety percent of the time. If they do not, it is still positive five percent of the time."
+    },
+    {
+      "scene": 8,
+      "start": 154.8,
+      "end": 175.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Imagine 10,000 people",
+        "body": "Tree: 10,000 → 100 with condition (90 positive, 10 missed) and 9,900 without (495 positive). Label: hypothetical numbers."
+      },
+      "voiceover": "Now imagine ten thousand people. One percent is one hundred people with the condition, and nine thousand nine hundred without. Of the one hundred, ninety percent test positive: ninety people. Ten are missed. Of the nine thousand nine hundred, five percent test positive: four hundred and ninety-five people."
+    },
+    {
+      "scene": 9,
+      "start": 175.8,
+      "end": 195.9,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Read one column",
+        "body": "Table: Has condition 90 | 10 | 100. No condition 495 | 9,405 | 9,900. Total 585 | 9,415 | 10,000. The 'Test positive' column glows teal: 90 ÷ 585 ≈ 0.154 ≈ 15%."
+      },
+      "voiceover": "Here is the table. Look only at the test positive column. There are five hundred and eighty-five positive results, and only ninety belong to people with the condition. Ninety divided by five hundred and eighty-five is about zero point one five four. About fifteen percent."
+    },
+    {
+      "scene": 10,
+      "start": 195.9,
+      "end": 216.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Formula and code agree",
+        "body": "0.9 × 0.01 ÷ 0.0585 ≈ 0.154\nn = 10000; has = n * 0.01\ntrue_pos = has * 0.90       # 90\nfalse_pos = (n - has) * 0.05  # 495\ntrue_pos / (true_pos + false_pos)  # about 0.1538"
+      },
+      "voiceover": "The formula agrees. Zero point nine times zero point zero one, divided by zero point zero five eight five, is about zero point one five four. In Python, a few lines calculate the true positives and false positives, and print about zero point one five three eight."
+    },
+    {
+      "scene": 11,
+      "start": 216.0,
+      "end": 227.1,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "1% → about 15%",
+      "voiceover": "A positive result raised the chance from one percent to about fifteen percent. That is a big increase, but most positive results are still false alarms."
+    },
+    {
+      "scene": 12,
+      "start": 227.1,
+      "end": 246.8,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Ask: how common is it?",
+      "voiceover": "The classic mistake is confusing positive given condition, which is ninety percent, with condition given positive, which is about fifteen percent. This is sometimes called ignoring the base rate. So whenever someone quotes a detection rate, ask: how common is the thing we are looking for?"
+    },
+    {
+      "scene": 13,
+      "start": 246.8,
+      "end": 272.9,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Prior + evidence → posterior. 2. Imagine a group, count, read one column. 3. Rare events → false alarms can outnumber true cases."
+      },
+      "voiceover": "Let's recap. First, Bayes' theorem updates a prior belief into a posterior belief when new evidence arrives. Second, the easiest way to use it is to imagine a large group, turn percentages into counts, and read the answer from a table. Third, when an event is rare, even an accurate test or model can produce more false alarms than true cases."
+    },
+    {
+      "scene": 14,
+      "start": 272.9,
+      "end": 295.6,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Distributions: Normal and Binomial",
+      "voiceover": "Your turn. In the exercise, you use a frequency table for a hypothetical bank fraud alert on ten thousand transactions, and check your answer in Python. Take your time with the counting, because the counting is the whole trick. It takes about twenty-five minutes. Next: Distributions, Normal and Binomial. See you there."
+    }
+  ]
+}

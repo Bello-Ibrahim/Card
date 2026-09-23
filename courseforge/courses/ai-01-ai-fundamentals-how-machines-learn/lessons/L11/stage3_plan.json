@@ -1,0 +1,85 @@
+{
+  "title": "Build Your Own Image Classifier",
+  "thumbnail": {
+    "headline": "Train Your Own Model",
+    "image": "Navy background, a laptop webcam view of a plastic bottle and a metal can, with two teal confidence bars beside them, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Train Your Own Model", "body": "Simple laptop outline; on screen, a plastic bottle and a metal can with two confidence bars (bottle 92%, can 8%). Small tag: AI Fundamentals · Lesson 11."}
+  },
+  "production_notes": [
+    "[VERSION] Record the screen demo in Google Teachable Machine only after checking the live tool: project type names, the default class names, the Webcam and Upload options, the Train button, the Preview area, advanced settings and export options. Adjust the screen_steps to the live labels; the voiceover avoids exact button names except Train, Webcam, Upload and Preview, so change those words too if the live tool uses different ones.",
+    "[VERSION] The voiceover says learners do not need the advanced or export options. Keep this if it still holds for the live tool.",
+    "[VERIFY] Where Teachable Machine stores images during and after training is NOT stated in the voiceover. It only tells learners to check the tool's privacy information. Confirm from the tool's current privacy information before adding any claim.",
+    "Screen recording: record with the OBS Screen Demo Pack in a clean browser profile with no bookmarks, extensions, account names or other tabs visible. Use a plain wall background, and do not show any person on the webcam; only hands holding objects.",
+    "Chiamaka's recycling project in Enugu is fictional; the demo recreates her bottle-and-can example. Use unbranded bottles and cans, or turn labels away from the camera.",
+    "Scenes 7 to 13 are screen scenes. Where the real training time is longer than the scene, speed up the recording or cut the progress bar."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "You have learned how machines learn from examples. Today, you will teach one yourself, in your web browser, with no code and no maths. You will build a model that recognises objects you choose, and see where it succeeds, and where it fails.",
+       "on_screen_text": "Today, you train a model"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "We will use Google Teachable Machine. It is a free tool that trains simple models in your browser. We will make an image project, a model that looks at a picture and predicts its class. That is supervised classification, from lesson five.",
+       "slide": {"layout": "title", "title": "Build Your Own Image Classifier", "body": "Google Teachable Machine · AI Fundamentals · Lesson 11 of 12"}},
+      {"visual_type": "slide",
+       "voiceover": "Every step in the tool matches a word you already know. The classes are your labels. The example images are your data. You do not choose the features. The model finds its own patterns, like shapes, colours and textures. Training adjusts the model's dials. And the preview is where you test it, with new images.",
+       "slide": {"layout": "comparison", "title": "Tool words, course words", "body": "Two columns, matched with arrows: Classes → Labels · Example images → Data · (found by the model) → Features · Train → Training · Preview → Testing and prediction"}},
+      {"visual_type": "stock",
+       "voiceover": "It is like teaching a young child to name fruit with real examples. If you only show yellow bananas on a white table, a green banana on a wooden table may confuse them. Varied examples help the child, and the model, handle new cases.",
+       "stock_query": "young child holding different fruits kitchen",
+       "on_screen_text": "Varied examples handle new cases"},
+      {"visual_type": "text",
+       "voiceover": "One privacy point before we start. Use objects, such as fruit, or pens and cups. Do not use photos of other people without their clear consent. And check the tool's privacy information before you begin.",
+       "on_screen_text": "Use objects, not other people"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's follow Chiamaka. She runs a small recycling project at a community centre in Enugu, Nigeria. She wants a simple demonstration that tells a plastic bottle from a metal can. Let's build it together.",
+       "stock_query": "community recycling project plastic bottles cans",
+       "on_screen_text": "Chiamaka · recycling project · Enugu"},
+      {"visual_type": "screen",
+       "voiceover": "First, open Teachable Machine in your browser. Start a new project, and choose a standard image project. The interface may look a little different when you try it, so follow the ideas, not the exact screen.",
+       "screen_steps": ["Open Google Teachable Machine in a clean browser window", "Click the button to get started", "Choose Image Project", "Choose the standard image model option", "Show the empty project with two default classes and the Train and Preview panels"],
+       "on_screen_text": "Step 1: new image project"},
+      {"visual_type": "screen",
+       "voiceover": "Next, rename the two empty classes. Chiamaka calls them plastic bottle, and metal can. These are the labels. You can add a third class if you want.",
+       "screen_steps": ["Click the name of the first default class and type 'plastic bottle'", "Click the name of the second default class and type 'metal can'", "Point to the option to add a class, without clicking it"],
+       "on_screen_text": "Step 2: classes are labels"},
+      {"visual_type": "screen",
+       "voiceover": "Now add the data. Use the Webcam option to record frames of each object, or the Upload option to choose image files. Chiamaka records about thirty images per class. She uses different sizes and colours, different angles, and some crushed and some whole items.",
+       "screen_steps": ["In the 'plastic bottle' class, click Webcam and allow camera access", "Hold to record while turning several unbranded bottles of different sizes and colours, some crushed, until about 30 images appear", "Repeat in the 'metal can' class with several cans, some crushed, until about 30 images appear", "Briefly show the Upload option as the alternative", "Scroll through the thumbnails to show the variety"],
+       "on_screen_text": "Step 3: add about thirty images each"},
+      {"visual_type": "screen",
+       "voiceover": "Then click Train, and keep the browser tab open until it finishes. This is the training phase. The model is nudging its dials to match the images to the labels.",
+       "screen_steps": ["Click Train", "Show the training progress message", "Speed up the wait if needed", "Show that training is complete"],
+       "on_screen_text": "Step 4: Train, keep the tab open"},
+      {"visual_type": "screen",
+       "voiceover": "Now test it in the preview area, with ten new items it has never seen. For each one, read the confidence bars. Chiamaka's model gets eight out of ten right.",
+       "screen_steps": ["Turn on the webcam in the Preview area", "Hold up new bottles and cans not used in training, one at a time", "Pause on the confidence bars for a correct bottle and a correct can", "Show a simple tally on a sticky note: 8 of 10 correct"],
+       "on_screen_text": "Step 5: test with new items"},
+      {"visual_type": "screen",
+       "voiceover": "It fails on a clear bottle held in front of a window, and on a very shiny can. Her training images all had dull indoor light. So the model may have learned that bright and shiny means can. She adds images taken near the window, trains again, and tests with new items. The results improve.",
+       "screen_steps": ["In Preview, hold a clear plastic bottle in front of a bright window: the bar leans to 'metal can'", "Hold a very shiny can: show the wrong or uncertain result", "Go back to the 'plastic bottle' class and record extra images near the window", "Click Train again and wait", "Test again with new items near the window and show the improved result"],
+       "on_screen_text": "Better data, better model"},
+      {"visual_type": "screen",
+       "voiceover": "You do not need the advanced settings or the export options for your capstone. But before you close the tab, take two screenshots. One of your classes, and one of a test result. You will need them as evidence.",
+       "screen_steps": ["Point to the advanced settings and export area without opening them", "Take a screenshot of both classes with their image thumbnails", "Take a screenshot of the Preview area showing one test result with its confidence bars"],
+       "on_screen_text": "Screenshot your classes and a result"},
+      {"visual_type": "text",
+       "voiceover": "That is the full cycle. Data, labels, training, testing, and better data. And watch out for one mistake. If you test with the same objects, angles and light you trained on, the results look perfect, but they tell you almost nothing. Test with new objects, backgrounds and lighting, and record the failures honestly.",
+       "on_screen_text": "Record the failures honestly"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, in Teachable Machine, classes are labels, your images are the data, the Train button runs training, and the preview is where the model makes predictions. Second, varied examples help the model handle new cases. Third, test with new images the model has never seen, and record every result, including the mistakes.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Classes = labels · images = data · Train = training · Preview = prediction 2. Vary angle, background and lighting 3. Test on new images; record every mistake"}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. This is step one of your capstone. Train a classifier with at least two classes, and twenty or more varied images per class. Then test it on ten new images, and record the results in a table, with two screenshots. Keep them safe. In the last lesson, Should I Trust This AI? A Practical Checklist, you will explain your model. See you there.",
+       "on_screen_text": "Next: Should I Trust This AI?"}
+    ]
+  }
+}

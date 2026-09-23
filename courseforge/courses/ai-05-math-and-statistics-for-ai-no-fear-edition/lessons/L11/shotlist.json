@@ -1,0 +1,205 @@
+{
+  "course_id": "AI-05",
+  "lesson_id": "L11",
+  "duration_s": 314.0,
+  "thumbnail": {
+    "headline": "How Steep Is It?",
+    "slide": {
+      "layout": "title",
+      "title": "How Steep Is It?",
+      "body": "The curve y = x² with a tangent line at x = 3 labelled 'slope 6'. Small tag: Math and Statistics for AI · Lesson 11."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.4,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Steeper or flatter?",
+      "voiceover": "The word calculus worries many people. Here is a secret. For machine learning, you need one main idea from calculus, and you already use it when you walk up a hill. Is the ground getting steeper or flatter? That feeling is a derivative."
+    },
+    {
+      "scene": 2,
+      "start": 18.4,
+      "end": 37.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "A function",
+        "body": "f(x) = x²   read: 'f of x equals x squared'\nf(3) = 3 × 3 = 9"
+      },
+      "voiceover": "This is Module 3. A function is a rule that turns an input into an output. We write f of x. For example, f of x equals x squared means: take the input and multiply it by itself. So f of three is nine."
+    },
+    {
+      "scene": 3,
+      "start": 37.3,
+      "end": 63.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Lines vs curves",
+        "body": "Left: straight line, slope 2 = 'up 2 for every 1 right'. Right: the curve y = x², flat near 0 and steeper further out."
+      },
+      "voiceover": "The slope of a straight line tells you how much the output changes when the input goes up by one. A slope of two means up two for every one step right. But a curve like y equals x squared is flat near zero and gets steeper as x grows. So we ask: what is the slope at one particular point?"
+    },
+    {
+      "scene": 4,
+      "start": 63.4,
+      "end": 90.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Tangent line and derivative",
+        "body": "Curve y = x² with tangent lines at x = 1, 2, 3 labelled slope 2, 4, 6. Formula: f'(x) = 2x ('f prime of x equals two x')."
+      },
+      "voiceover": "Imagine a straight line that just touches the curve at that point, going in the same direction. This is the tangent line. The derivative is a function that gives this slope at every point. For x squared, the derivative is two x. We write f prime of x equals two x. At one, the slope is two. At two, four. At three, six."
+    },
+    {
+      "scene": 5,
+      "start": 90.4,
+      "end": 114.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Nudge and measure",
+        "body": "(f(3 + h) − f(3)) ÷ h, with h = 0.001\n= (3.001² − 3²) ÷ 0.001 = 6.001 ≈ 6"
+      },
+      "voiceover": "You can also estimate a derivative with numbers. Nudge the input by a tiny amount, h, see how much the output changes, and divide. At three, with h equal to zero point zero zero one, you get six point zero zero one. This nudge and measure idea is how you will check gradients in code."
+    },
+    {
+      "scene": 6,
+      "start": 114.0,
+      "end": 135.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Four rules, no proofs",
+        "body": "1. Constant: 7 → 0. 2. Power: xⁿ → n·xⁿ⁻¹ (x² → 2x). 3. Constant multiple: 5x² → 10x. 4. Sum: x² + 3x → 2x + 3."
+      },
+      "voiceover": "You only need four rules, and no proofs. A fixed number has derivative zero. The power rule turns x squared into two x. A constant multiple stays: five x squared becomes ten x. And for a sum, take each part: x squared plus three x becomes two x plus three."
+    },
+    {
+      "scene": 7,
+      "start": 135.4,
+      "end": 158.1,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "car dashboard speedometer while driving",
+      "on_screen_text": "Derivative = speedometer reading",
+      "voiceover": "Why does this matter? The derivative tells a model which way is downhill for its error, and how steep the hill is. Think of a car's speedometer. The trip record shows the distance travelled. The speedometer shows how fast that distance is changing, right now. A derivative is the speedometer of any function."
+    },
+    {
+      "scene": 8,
+      "start": 158.1,
+      "end": 174.0,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "colourful mosaic tiles craftsman workshop",
+      "on_screen_text": "Area = x² · how fast does it grow?",
+      "voiceover": "Youssef runs a tile workshop in Fez, Morocco. A square tile with side x centimetres has area x squared. He wants to know: if he makes the side a little longer, how fast does the area grow?"
+    },
+    {
+      "scene": 9,
+      "start": 174.0,
+      "end": 189.0,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open the Desmos graphing calculator in a browser.",
+        "Line 1: type f(x)=x^2 and show the curve.",
+        "Line 2: type a=1.",
+        "Click the offer to add a slider for a."
+      ],
+      "voiceover": "Let's look in Desmos. Open the graphing calculator and type f of x equals x squared. The curve appears. Then type a equals one. Desmos offers to make a slider for a, so accept it."
+    },
+    {
+      "scene": 10,
+      "start": 189.0,
+      "end": 202.3,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Line 3: type y=2a(x-a)+f(a).",
+        "Show the straight line touching the curve at x = 1."
+      ],
+      "on_screen_text": "Tangent line at x = a",
+      "voiceover": "Now type the tangent line: y equals two a times x minus a, plus f of a. It uses the slope two a, and touches the curve at x equals a."
+    },
+    {
+      "scene": 11,
+      "start": 202.3,
+      "end": 214.7,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Drag the slider a to 1, then 2, then 3.",
+        "Pause at each value so the line is clearly touching the curve.",
+        "Editor overlay: slope labels 2, 4, 6."
+      ],
+      "voiceover": "Move the slider to one, then two, then three. It touches the curve at each point, and it gets steeper each time. The slopes are two, four and six."
+    },
+    {
+      "scene": 12,
+      "start": 214.7,
+      "end": 222.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Line 4: type f'(x).",
+        "Show the straight line y = 2x appear."
+      ],
+      "voiceover": "Now type f prime of x. Desmos draws the derivative for you: the straight line y equals two x."
+    },
+    {
+      "scene": 13,
+      "start": 222.8,
+      "end": 249.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Hand and code check",
+        "body": "f'(3) = 2 × 3 = 6 → +0.001 cm side adds about 6 × 0.001 = 0.006 cm²\ndef f(x): return x**2\nh = 0.001\nprint((f(3 + h) - f(3)) / h)   # 6.000999999999479"
+      },
+      "voiceover": "Now by hand. At a side of three centimetres, the derivative is two times three, which is six. So a tiny increase of zero point zero zero one centimetres adds about zero point zero zero six square centimetres of area. In code, the nudge method prints about six point zero zero one. The long tail of digits is just rounding, not a mistake."
+    },
+    {
+      "scene": 14,
+      "start": 249.8,
+      "end": 270.8,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Value = how high. Derivative = how steep.",
+      "voiceover": "A common mistake is to confuse a function's value with its slope. At three, f of three is nine, but f prime of three is six. The first says how high. The second says how steep. Positive means going up, negative means going down, and zero means flat here."
+    },
+    {
+      "scene": 15,
+      "start": 270.8,
+      "end": 293.9,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Derivative = slope at each point. 2. x² → 2x; four rules cover the course. 3. Check by nudging: (f(x + h) − f(x)) ÷ h."
+      },
+      "voiceover": "Let's recap. First, the derivative gives the slope of a function at each point: how fast the output changes when the input changes a little. Second, for x squared the derivative is two x, and four simple rules cover this course. Third, you can check any derivative by nudging the input a tiny amount."
+    },
+    {
+      "scene": 16,
+      "start": 293.9,
+      "end": 314.0,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Loss Functions: How Wrong Is the Model?",
+      "voiceover": "Your turn. In the exercise, you draw tangent lines in Desmos at three points, estimate each slope, and compare with two x. It takes about twenty-five minutes. Next, we measure how wrong a model is, in Loss Functions: How Wrong Is the Model? See you there."
+    }
+  ]
+}

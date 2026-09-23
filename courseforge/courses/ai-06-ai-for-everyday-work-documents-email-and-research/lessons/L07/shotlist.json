@@ -1,0 +1,210 @@
+{
+  "course_id": "AI-06",
+  "lesson_id": "L07",
+  "duration_s": 305.9,
+  "thumbnail": {
+    "headline": "Summaries With a Purpose",
+    "slide": {
+      "layout": "title",
+      "title": "Summaries With a Purpose",
+      "body": "Tall stack of pages → arrow → five short teal bullets, with a magnifying glass over one bullet. Small tag: AI for Everyday Work · Lesson 7."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.7,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Forty pages by Tuesday",
+      "voiceover": "A forty-page report arrives on Monday, and your manager wants the main points by Tuesday. An AI assistant can give you a summary in seconds. But does that summary contain what your manager needs? And is it correct?"
+    },
+    {
+      "scene": 2,
+      "start": 16.7,
+      "end": 38.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Give your summary a purpose",
+        "body": "Left: 'Summarise this.' → general summary. Right: prompt with a purpose → exactly what you need."
+      },
+      "voiceover": "In the last lesson, we built documents step by step. Today we go the other way, and make long texts short. A summary is only useful if it has a purpose. Just saying summarise this gives you a general summary. A prompt with a purpose gives you what you really need."
+    },
+    {
+      "scene": 3,
+      "start": 38.6,
+      "end": 58.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Four useful purposes",
+        "body": "Key decisions · Actions with owners and deadlines (table) · 5 bullets for a busy manager · What changed between two versions"
+      },
+      "voiceover": "For example, ask for the key decisions in a document. Or every action, who is responsible and the deadline, in a table. Or five bullet points for a busy manager who has not read it. Or, when you have two versions, a list of what has changed."
+    },
+    {
+      "scene": 4,
+      "start": 58.7,
+      "end": 84.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Way 1: Paste into a chatbot",
+        "body": "Paste text or upload a file · Good for public documents · Free plans may limit length · Never confidential documents or meeting notes (red icon)"
+      },
+      "voiceover": "There are two main ways to summarise at work. The first is to paste text, or upload a file, into a chatbot such as Claude or ChatGPT. This works well for public documents, such as a government guidance page. Free plans may limit how long the text can be. And never upload confidential documents or meeting notes to a free tool."
+    },
+    {
+      "scene": 5,
+      "start": 84.8,
+      "end": 106.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Two ways to summarise",
+        "body": "Way 1: Free chatbot → public documents only. Way 2: Built-in AI in work tools (Copilot, Gemini in Workspace) → internal documents, if your employer approves. Footer: features depend on your plan."
+      },
+      "voiceover": "The second way is the AI built into your work tools, such as Microsoft Copilot or Gemini in Workspace. They can summarise documents and email threads, and in some plans meetings, without copying the text out. If your employer provides them, they are often the approved route for internal documents."
+    },
+    {
+      "scene": 6,
+      "start": 106.2,
+      "end": 122.9,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Compare with the original",
+      "voiceover": "Whichever tool you use, follow your employer's AI policy. And for anything important, compare the summary with the original. A summary can miss a condition, merge two points, change a number, or say something more strongly than the original."
+    },
+    {
+      "scene": 7,
+      "start": 122.9,
+      "end": 140.0,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "two colleagues talking in office corridor",
+      "on_screen_text": "A corridor summary, then check",
+      "voiceover": "Think of a colleague who reads the report and tells you the main points in the corridor. It saves you a lot of time. But before you make a decision, you open the report and check the parts that matter."
+    },
+    {
+      "scene": 8,
+      "start": 140.0,
+      "end": 157.1,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "policy officer reading long report office",
+      "on_screen_text": "Rangi · policy officer · Wellington",
+      "voiceover": "Let's try it. Rangi is a policy officer at a local council in Wellington, in New Zealand. He needs to brief his team on a long public consultation report. I'll show the same steps with a public government guidance page."
+    },
+    {
+      "scene": 9,
+      "start": 157.1,
+      "end": 174.7,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open a long public government guidance page in the browser",
+        "Scroll slowly to show its length",
+        "Open Claude (free tier) in a new tab and start a new chat",
+        "Copy a section of the public page, or upload the file if the plan allows it, and paste it into the chat"
+      ],
+      "on_screen_text": "Public document: safe to paste",
+      "voiceover": "Here is the public document in my browser. As I scroll, you can see it is long. Next, I open Claude in a new tab and start a new chat. This is a public document, so it is safe to paste."
+    },
+    {
+      "scene": 10,
+      "start": 174.7,
+      "end": 190.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "A prompt with a purpose",
+        "body": "Summarise this document in 5 bullet points for a team manager who has not read it. Then list any actions or deadlines it mentions in a table with columns: Action, Who, Deadline."
+      },
+      "voiceover": "Now the prompt with a purpose. Summarise this in five bullet points for a team manager who has not read it. Then list any actions or deadlines in a table with three columns: action, who and deadline."
+    },
+    {
+      "scene": 11,
+      "start": 190.6,
+      "end": 201.3,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Type the purpose-driven prompt below the pasted text",
+        "Press Enter",
+        "Show the five bullets and the Action, Who, Deadline table"
+      ],
+      "voiceover": "I type the prompt under the pasted text and press Enter. Here is the answer: five short bullets, and a table of actions and deadlines."
+    },
+    {
+      "scene": 12,
+      "start": 201.3,
+      "end": 217.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Switch back to the original page tab",
+        "Find the passage behind one summary bullet and highlight it: correct",
+        "Find the passage behind a second bullet and highlight the difference: a missed or changed detail"
+      ],
+      "on_screen_text": "One right, one changed",
+      "voiceover": "Now the important part. I go back to the original and check two points. This bullet matches the original, so it is correct. But this one has changed a detail. The original is more careful than the summary."
+    },
+    {
+      "scene": 13,
+      "start": 217.6,
+      "end": 236.5,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "One small word",
+        "body": "AI summary: 'The council will reduce parking fees.' (amber) → Original: 'The council will consider reducing parking fees.' (green)"
+      },
+      "voiceover": "That is exactly what happens to Rangi. One bullet says the council will reduce parking fees. The original says the council will consider reducing them. Rangi corrects it before he sends the brief, because that small change would give his team the wrong message."
+    },
+    {
+      "scene": 14,
+      "start": 236.5,
+      "end": 254.1,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open a non-confidential sample document in Microsoft Copilot in Microsoft 365 or Gemini in Google Workspace",
+        "Click the built-in summarise button",
+        "Show the summary panel next to the document",
+        "Point out that no text was copied out of the work system"
+      ],
+      "on_screen_text": "Built-in: text stays inside",
+      "voiceover": "Finally, the built-in route. In a work account, I open a document and use the built-in summary button. Notice that the text never leaves the work system. Use this route for internal documents, if your employer has approved it."
+    },
+    {
+      "scene": 15,
+      "start": 254.1,
+      "end": 279.8,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Summaries need a purpose. 2. Public documents → free chatbot; internal → approved tools. 3. Compare with the original."
+      },
+      "voiceover": "Let's recap. First, ask for summaries with a clear purpose, such as key decisions, actions with owners, or a short version for one reader. Second, paste only public documents into free chatbots, and use your employer's approved tools for internal documents and meetings. Third, AI summaries can miss or change details, so compare them with the original for anything important."
+    },
+    {
+      "scene": 16,
+      "start": 279.8,
+      "end": 305.9,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Researching a Topic with AI",
+      "voiceover": "Your turn. In the exercise below this video, choose a long public document, such as a government guidance page. Ask a free AI assistant for a five-point summary and a list of action items. Then mark one point it got right, and one detail it missed or changed. The next lesson is Researching a Topic with AI. See you there."
+    }
+  ]
+}

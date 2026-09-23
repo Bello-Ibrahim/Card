@@ -1,0 +1,175 @@
+{
+  "course_id": "AI-01",
+  "lesson_id": "L12",
+  "duration_s": 297.1,
+  "thumbnail": {
+    "headline": "Five Questions Before Trusting",
+    "slide": {
+      "layout": "title",
+      "title": "Five Questions Before Trusting",
+      "body": "Clipboard with five check boxes, the first three ticked; beside it a phone outline with a leaf photo. Small tag: AI Fundamentals · Lesson 12."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.0,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Five good questions",
+      "voiceover": "An app says a photo of your plant shows a disease. A chatbot gives you a clear summary of a new law. Should you act on either? You do not need to be an engineer to decide. You need five good questions."
+    },
+    {
+      "scene": 2,
+      "start": 18.0,
+      "end": 36.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Should I Trust This AI?",
+        "body": "A Practical Checklist · AI Fundamentals · Lesson 12 of 12"
+      },
+      "voiceover": "You have learned how models learn from data, how they are tested, why chatbots hallucinate, and how biased data causes unfair results. You even trained your own model. In this final lesson, we turn all of that into a checklist for any AI system."
+    },
+    {
+      "scene": 3,
+      "start": 36.9,
+      "end": 62.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "The trust checklist: 1 and 2",
+        "body": "1. What data did it learn from? Varied? Representative? Unknown = warning sign · 2. How was it tested? New examples? Results for each group?"
+      },
+      "voiceover": "Question one. What data did it learn from? Were the examples varied, and do they represent the people and situations it will meet? If you cannot find out, treat that as a warning sign. Question two. How was it tested? On new examples it never saw? And were results checked for different groups, not only as one overall score?"
+    },
+    {
+      "scene": 4,
+      "start": 62.2,
+      "end": 81.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "The trust checklist: 3 and 4",
+        "body": "3. Who could it fail? Rare groups and situations · 4. Can I verify the output? Reliable source, second opinion, own knowledge"
+      },
+      "voiceover": "Question three. Who could it fail? Think about the groups or situations that were rare in the data. Question four. Can I verify the output, against a reliable source, a second opinion, or my own knowledge? Remember, a fluent answer is not a verified answer."
+    },
+    {
+      "scene": 5,
+      "start": 81.5,
+      "end": 99.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "5. What happens if it is wrong?",
+        "body": "Scale from low to high risk: wrong song suggestion (a few minutes lost) → wrong medical, legal or money answer (real harm). Caption: higher cost = more checking and human review."
+      },
+      "voiceover": "Question five. What happens if it is wrong? A wrong song suggestion costs you a few minutes. A wrong medical, legal or money answer can cause real harm. The higher the cost of a mistake, the more checking and human review you need."
+    },
+    {
+      "scene": 6,
+      "start": 99.9,
+      "end": 108.5,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Not reject AI. Match trust to risk.",
+      "voiceover": "The aim is not to reject AI. It is to match your trust to the evidence, and to the risk."
+    },
+    {
+      "scene": 7,
+      "start": 108.5,
+      "end": 132.1,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "person inspecting used car before buying",
+      "on_screen_text": "Check carefully, then decide",
+      "voiceover": "Using the checklist is like checking a used car before you buy it. You ask where it has been driven, whether it passed an inspection, what problems it is known for, whether you can test drive it, and what a breakdown would cost you. You would not refuse every used car. You simply decide carefully."
+    },
+    {
+      "scene": 8,
+      "start": 132.1,
+      "end": 144.5,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "vineyard worker photographing grape leaves phone",
+      "on_screen_text": "Sofía · farming cooperative · Mendoza",
+      "voiceover": "Let's use the checklist. Sofía works for a farming cooperative in Mendoza, Argentina. Members want to use a free phone app that identifies grape leaf diseases from a photo."
+    },
+    {
+      "scene": 9,
+      "start": 144.5,
+      "end": 168.5,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Sofía's checklist: 1 and 2",
+        "body": "1. Data: leaf photos; regions and varieties unknown (orange) · 2. Testing: none published → her own test, 15 expert-checked leaves: most healthy leaves right, some early disease missed"
+      },
+      "voiceover": "Data. The app's website says it learned from leaf photos, but not which regions or grape varieties. Sofía notes this as unknown. Testing. No test results are published. So she runs a small test herself, with fifteen leaves an expert has already checked. The app is right on most healthy leaves, but misses some early disease."
+    },
+    {
+      "scene": 10,
+      "start": 168.5,
+      "end": 188.2,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Sofía's checklist: 3 to 5",
+        "body": "3. Could fail: local varieties, strong midday sun · 4. Verify: send unclear cases to the plant expert · 5. If wrong: disease spreads across a field, high cost (red)"
+      },
+      "voiceover": "Who could it fail? Local grape varieties, and leaves photographed in strong midday sun. Can members verify? Yes. They can send unclear cases to the cooperative's plant expert. And if it is wrong? A missed disease could spread across a field, so the cost is high."
+    },
+    {
+      "scene": 11,
+      "start": 188.2,
+      "end": 216.5,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "A draft, a first check, or final?",
+      "voiceover": "Her decision. Members may use the app as a first check. But any healthy result on a leaf that looks unusual must still go to the expert. Notice that trust is not yes or no. The same system can be trustworthy for one task, and not for another. The question is how to use the output, as a draft, a first check, or a final decision."
+    },
+    {
+      "scene": 12,
+      "start": 216.5,
+      "end": 243.9,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Capstone step 2: one page",
+        "body": "How it learned (data, features, labels, training, prediction) · How you tested it (10 new images) · Where it failed and why (2+ mistakes) · The 5 checklist questions · One improvement to the data"
+      },
+      "voiceover": "Now use the same checklist on your own model. This is step two of your capstone. On one page, explain how your classifier learned, how you tested it, where it failed and why, your answers to the five questions, and one improvement to your data. Use the course words correctly, and write it so that a friend with no technical background can follow it."
+    },
+    {
+      "scene": 13,
+      "start": 243.9,
+      "end": 269.2,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Data? Testing? Who could it fail? Verify? Cost if wrong? 2. Match trust to evidence and risk 3. Use the checklist for your capstone"
+      },
+      "voiceover": "Let's recap. First, ask five questions. What data did it learn from? How was it tested? Who could it fail? Can I verify the output? And what happens if it is wrong? Second, match your trust to the evidence, and to the cost of a mistake. Third, the same checklist helps you explain your own model in your capstone."
+    },
+    {
+      "scene": 14,
+      "start": 269.2,
+      "end": 297.1,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Submit your capstone",
+      "voiceover": "Congratulations. You have finished AI Fundamentals. You now know how machines learn, how to test them, and when to trust them. Your last step is the capstone. Write your one-page explanation, attach your test table and screenshots, and check your work against the rubric. It takes about forty minutes. Then submit it below this video. Well done, and thank you for learning with us."
+    }
+  ]
+}

@@ -47,4 +47,4 @@ Image: Navy background, a hand hovering over a paste key, with a shield icon and
 - [VERSION] The statement that deleting a chat may not remove data already stored is kept hedged ('depending on the provider').
 - [REGION] Data protection laws and workplace AI rules differ by country and organisation. The voiceover gives no legal advice and points learners to their employer's policy.
 - Priya and her Pune insurance company are hypothetical; no real insurer's name or logo in stock footage.
-- Priya's rewritten prompt is shown in full on a code-layout slide (scene 12).
+- Priya's rewritten prompt is shown in full on a code-layout slide (scene 11).

@@ -1,6 +1,6 @@
 # L06 Writing and Rewriting: Emails, Reports and Messages | Presenter Script
 
-Course: AI-03 · Video: 5 min · Words: 673
+Course: AI-03 · Video: 5 min · Words: 702
 
 ## Hook
 Most of us spend a large part of our working week writing emails, updates and short reports. An AI tool can produce a first draft in seconds. The real skill is getting a draft that sounds like you, and says exactly what you mean.
@@ -14,7 +14,7 @@ Pattern three is change the tone: more formal, warmer, or more direct. Again, na
 
 Two instructions often help with every pattern. First, do not add new facts. When rewriting, AI tools sometimes add promises, figures or details that were not in your text. Second, keep these points, followed by a list of the facts that must survive, such as dates, amounts and decisions.
 
-After any rewrite, compare the meaning. Put your original and the new version side by side. Check that every key point is still there, and that nothing new has appeared.
+After any rewrite, compare the meaning. Put your original and the new version side by side. Check that every key point is still there, and that nothing new has appeared. A polished sentence that changes a promise can cause real problems with a client.
 
 Rewriting with AI is like using a translator in a business meeting. A good translator makes you sound natural. But you still check that they did not promise a discount you never offered.
 
@@ -27,7 +27,7 @@ The new version is clearer and better organised. Sofia compares it with her orig
 
 Her original offer did not include free support. She deletes the phrase, and adds a line to her prompt for next time: do not describe support terms. Her check took two minutes. Without it, she might have sent a promise her company could not keep.
 
-A common mistake is to accept the first draft because it reads well. Good grammar is not the same as correct content.
+A common mistake is to accept the first draft because it reads well. Good grammar is not the same as correct content. A draft can read beautifully and still carry a wrong date or a new promise.
 
 The most common problems are added facts, lost details, and a tone that is too enthusiastic, such as thrilled or delighted in a message about a problem. Read the output as your reader will.
 

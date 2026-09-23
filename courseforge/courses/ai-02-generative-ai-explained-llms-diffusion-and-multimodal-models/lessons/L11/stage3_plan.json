@@ -1,0 +1,81 @@
+{
+  "title": "Running the Comparison",
+  "thumbnail": {
+    "headline": "Test, Save, Score",
+    "image": "Navy background, three browser windows in a row, each with a saved file icon and a small teal score card, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Test, Save, Score", "body": "Three tool windows labelled 1, 2, 3, each with a saved output file and a score card; a log table below. Small tag: Generative AI Explained · Lesson 11 · Capstone step 2."}
+  },
+  "production_notes": [
+    "Screen demo tools: tool 1 is Claude or ChatGPT free tier, tool 2 is Google AI Studio, tool 3 is another free chatbot chosen by the reviewer (the task is text only, so no image generator is needed; for image tasks the course uses Google Gemini per DECISIONS.md).",
+    "[VERSION] Before recording, confirm where Claude, ChatGPT and Google AI Studio show the model name or version, and that Google AI Studio still shows a temperature control with a default value. Check current free limits.",
+    "[VERSION] The voiceover never says a model name or version aloud. On screen, the log shows whatever the tool displays, or 'not shown'. Blur nothing in the log, but use a clean demo account.",
+    "Props needed: a hypothetical one-page public information sheet about a nature park near Suva (no real park rules or fees), Sione's capstone document with the fixed prompt, a results folder with three sub-folders, and the log table. The sheet must NOT mention a parking fee, so an invented parking fee can be shown as a failure; if the live output does not invent one, describe the real note instead in scene 11.",
+    "Scores shown for tool 1 (accuracy 4, clarity 5, structure 5, effort to fix 4) come from content.md; replace them with the presenter's real scoring of the live output if it differs.",
+    "Sione and the Suva visitor centre are fictional."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Your task, input, prompt and rubric are ready. Now comes the part that feels easy, running the tests. But small mistakes here, like one changed word or a lost output, can make the whole comparison unfair. Let's run it carefully.",
+       "on_screen_text": "Easy to run, easy to spoil"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "In the last lesson, you designed a fair test. This is capstone step two. Running it well is about discipline and records. You follow the same routine for every tool.",
+       "slide": {"layout": "title", "title": "Running the Comparison", "body": "Generative AI Explained · Lesson 11 of 12 · Capstone step 2"}},
+      {"visual_type": "slide",
+       "voiceover": "Before you start, open your capstone document with the fixed prompt, the input and the rubric. Create a results folder, with one folder inside for each tool. And create a log table, with the tool, the version shown, the date, any settings you changed, the output file, the scores and notes.",
+       "slide": {"layout": "diagram", "title": "Before you start", "body": "Capstone document icon · Results folder with sub-folders Tool 1, Tool 2, Tool 3 · Log table columns: Tool | Version shown | Date and time | Settings changed | Output file | Scores | Notes"}},
+      {"visual_type": "slide",
+       "voiceover": "Then, for each tool. Start a new, empty chat, so earlier conversations do not affect the result. Write down the version the tool shows, or not shown. Note any settings you change. Paste the exact prompt and input, with no improvements.",
+       "slide": {"layout": "bullets", "title": "For each tool (1)", "body": "1. New, empty chat · 2. Record the version shown (or 'not shown') · 3. Note settings changed · 4. Paste the exact prompt and input"}},
+      {"visual_type": "slide",
+       "voiceover": "Save the complete output, and take a screenshot. Then score the result straight away, before you open the next tool. That way you judge each tool against your criteria, not against another tool. Finally, note anything surprising, like a refusal or a long wait.",
+       "slide": {"layout": "bullets", "title": "For each tool (2)", "body": "5. Save the full output + screenshot · 6. Score it now, before the next tool · 7. Note surprises: failure, refusal, long wait, error"}},
+      {"visual_type": "stock",
+       "voiceover": "It is like a science experiment in a school laboratory. You follow the method exactly, write down every measurement when you take it, and label every sample. If you try to remember the results the next day, nobody can trust the conclusion.",
+       "stock_query": "students recording results in science laboratory",
+       "on_screen_text": "Record it when it happens"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's watch a real run. Sione is a tourism officer at a visitor centre in Suva. His task is to turn a public information sheet about a nature park into six frequently asked questions for the centre's website.",
+       "stock_query": "tourism officer at visitor information desk",
+       "on_screen_text": "Sione · visitor centre · Suva"},
+      {"visual_type": "screen",
+       "voiceover": "He opens his capstone document and shows the fixed prompt. It asks for six questions and short answers for first-time visitors, using only the text, and without inventing missing information.",
+       "screen_steps": ["Open the capstone document", "Highlight the fixed prompt: 'Using only the text below, write 6 frequently asked questions and short answers for first-time visitors. If information is missing, do not invent it.'", "Show the empty log table and the results folder with three sub-folders"]},
+      {"visual_type": "screen",
+       "voiceover": "He opens the first tool, a free chatbot, and starts a new chat. He reads the model name shown on screen and types it into his log, with today's date. Then he pastes the prompt and the information sheet, and runs it.",
+       "screen_steps": ["Open Claude or ChatGPT (free tier) and start a new chat", "Point to the model name shown in the interface", "Type the version shown and today's date into row 1 of the log", "Paste the fixed prompt and the information sheet, and send"],
+       "on_screen_text": "Tool 1: new chat, log first"},
+      {"visual_type": "screen",
+       "voiceover": "He copies the full answer into a file called tool one output, and takes a screenshot. Then he scores it straight away. Accuracy four, clarity five, structure five, effort to fix four. His note says one answer adds a parking fee that is not in the sheet.",
+       "screen_steps": ["Copy the full answer into a file named tool1_output and save it in the Tool 1 folder", "Take a screenshot showing the tool and the output", "Enter scores in the log: Accuracy 4, Clarity 5, Structure 5, Effort to fix 4", "Highlight the invented parking fee and type the note in the log"],
+       "on_screen_text": "Score it now, not later"},
+      {"visual_type": "screen",
+       "voiceover": "Next, he opens Google AI Studio, starts a new prompt, and checks that the temperature is at its default value. He records that in the log. Then he repeats the same steps, and saves tool two output.",
+       "screen_steps": ["Open Google AI Studio and start a new prompt", "Point to the Temperature control and confirm it is at the default value", "Write the version shown, date and temperature setting in row 2 of the log", "Paste the same prompt and sheet, run, save tool2_output, screenshot and score"]},
+      {"visual_type": "screen",
+       "voiceover": "He runs the third tool in exactly the same way, and saves tool three output. Now his log has three complete rows.",
+       "screen_steps": ["Open the third free chatbot and start a new chat", "Record the version shown and date in row 3", "Paste the same prompt and sheet, run, save tool3_output, screenshot and score", "Show the completed log table with three rows"]},
+      {"visual_type": "screen",
+       "voiceover": "The scores differ, but Sione does not choose a winner yet. First, he checks that every row has a date, a version entry, a saved output and all the scores. The analysis comes next.",
+       "screen_steps": ["Move down the log, ticking date, version, output file and scores in each row", "Open the results folder to show three saved outputs and three screenshots"],
+       "on_screen_text": "Check the log. No winner yet."},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is to run all three tools first, and score them later from memory, or side by side. Then a good output looks worse next to the best one, and details are forgotten. Score each output against your rubric straight away.",
+       "on_screen_text": "Score each one straight away."}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, use a new chat for each tool, paste the exact same prompt and input, and record any settings you change. Second, save every complete output, with the tool name, the version shown and the date. Third, score each result against your rubric straight away, before you look at the next tool.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. New chat, exact prompt, settings recorded. 2. Save full output + version + date. 3. Score straight away."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "This is capstone step two. In the exercise below, run your task in three tools, save each output with the date and version, and score each one with your rubric. It takes about forty-five minutes. In the final lesson, you bring it all together by writing the comparison report. See you there.",
+       "on_screen_text": "Next: Writing the Comparison Report"}
+    ]
+  }
+}

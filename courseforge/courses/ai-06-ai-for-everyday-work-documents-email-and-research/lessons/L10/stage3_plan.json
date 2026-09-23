@@ -1,0 +1,147 @@
+{
+  "title": "Map Your Tasks: Where AI Helps and Where It Does Not",
+  "thumbnail": {
+    "headline": "Map Every Step",
+    "image": "Navy background, a six-step task map with coloured labels (teal AI can draft, amber AI can check, navy human only), headline in teal Inter Bold.",
+    "slide": {
+      "layout": "title",
+      "title": "Map Every Step",
+      "body": "Six boxes in a row with coloured tags: AI can draft (teal) · AI can check (amber) · Human only (navy). Small tag: AI for Everyday Work · Lesson 10."
+    }
+  },
+  "production_notes": [
+    "[REGION] Employer and school AI policies on which tasks and data may be used with AI differ by organisation and country; the voiceover tells learners to follow their own policy.",
+    "Fatima and her Casablanca school are hypothetical; stock footage must not show identifiable children or a real school name or logo.",
+    "The course makes no general time-saving claims. The voiceover tells learners to record their own 'before' times and not to rely on general claims.",
+    "Scenes 9 to 11 show Fatima's full six-step table; build them as diagram slides that reveals the steps one by one."
+  ],
+  "sections": {
+    "Hook": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Use AI for everything is not a plan. Some of your tasks will get faster with AI. Others will get slower, riskier or simply worse. The skill is knowing which is which, and that starts with looking closely at your own work.",
+        "on_screen_text": "Which tasks, which steps?"
+      }
+    ],
+    "Explain": [
+      {
+        "visual_type": "slide",
+        "voiceover": "In the last lesson, we organised a week of tasks. Now we start the capstone, by choosing the right tasks for AI. Good tasks usually have three features. They are repeated, so a good method pays back many times. They are text-based, about writing, reading or organising words. And they are low-risk, so a mistake is easy to notice and fix.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Good tasks for AI",
+          "body": "Repeated: weekly or monthly · Text-based: writing, reading, rewording, organising · Low-risk: mistakes are easy to spot and fix"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Tasks that involve personal data, legal or financial decisions, sensitive conversations or judgement about people are poor candidates, or they need strict human control. Your employer's AI policy may also say which tasks and data are allowed.",
+        "slide": {
+          "layout": "comparison",
+          "title": "Poor candidates",
+          "body": "Personal data · Legal or financial decisions · Sensitive conversations · Judgement about people → Avoid, or keep strict human control. Footer: check your employer's AI policy."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Most tasks are not all AI or no AI. They are made of steps. So break each task into steps, and give each step one of three labels.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Break the task into steps",
+          "body": "One large box 'Weekly task' → splits into five smaller step boxes, each with an empty label tag."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "AI can draft, where it writes a first version that you check. AI can check, where you do the work and it helps you review it. And human only, where the step needs your judgement, your relationships, private data or a final decision. Each label tells you who does the work.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Three labels for every step",
+          "body": "AI can draft (teal): it writes, you check · AI can check (amber): you write, it reviews · Human only (navy): judgement, relationships, private data, final decisions"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Then time the task as you do it now. This is your before measurement for the capstone. Do not rely on general claims about how much time AI saves. Your own tasks, your own speed and your own checking time are what matter.",
+        "slide": {
+          "layout": "quote",
+          "title": "Your before time",
+          "body": "\"Measure your own tasks. Don't trust general claims.\" Stopwatch icon."
+        }
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "Think of reading a recipe before you cook with a helper. You decide which steps the helper can do, such as chopping. Which steps they can check, such as tasting the salt. And which steps you must do yourself, such as deciding when the dish is ready.",
+        "stock_query": "two people cooking together home kitchen",
+        "on_screen_text": "Do, check, or decide"
+      }
+    ],
+    "Demonstrate": [
+      {
+        "visual_type": "stock",
+        "voiceover": "Let's map a real task. Fatima is a school administrator in Casablanca, in Morocco. Every week she writes a newsletter for parents. It takes time every week, and it is mostly text, so it is a good task to map. She breaks it into six steps.",
+        "stock_query": "school administrator writing at office desk",
+        "on_screen_text": "Fatima · school administrator · Casablanca"
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Step one, collect news from teachers. That is human only, because it needs her relationships with staff. Step two, choose which items to include. Also human only, because it needs judgement about what parents need. Step three, write short paragraphs from the teachers' notes. AI can draft that, once she removes student names.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Fatima's newsletter: steps 1 to 3",
+          "body": "1. Collect news from teachers → Human only. 2. Choose items → Human only. 3. Write short paragraphs → AI can draft (remove student names first)."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Step four, make the language simple and friendly. AI can draft that, because rewording is a strength. Step five, check dates, times and event details. AI can list all the dates for her, but she confirms each one herself. Step six, approve and send. Human only, because the final responsibility is hers.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Fatima's newsletter: steps 4 to 6",
+          "body": "4. Simple, friendly language → AI can draft. 5. Check dates and details → AI can check, then human. 6. Approve and send → Human only."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "So three of her six steps, three, four and five, are good candidates for AI support. And step five still needs her to confirm every date.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Three of six steps",
+          "body": "Row of six boxes; steps 3, 4 and 5 highlighted in teal; steps 1, 2 and 6 in navy (human only)."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Fatima also writes a safety rule for step three. Teachers' notes sometimes include student names, so she removes them before pasting anything into a free tool, following the school's policy. Then she writes the newsletter the usual way this week, and records her before time.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Safety note and before time",
+          "body": "Safety rule: remove student names before pasting · follow the school's policy. Before time: recorded in minutes this week (stopwatch icon)."
+        }
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "A common mistake is to start with your hardest or most important task. Those tasks need the most judgement and carry the most risk. Start with repeated, text-based, low-risk tasks, and map every step.",
+        "on_screen_text": "Start small, low-risk, repeated"
+      }
+    ],
+    "Recap": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, good tasks for AI are repeated, text-based and low-risk. Second, break each task into steps, and label each step AI can draft, AI can check, or human only. Third, time each task as you do it now, so you can measure your own results later instead of trusting general claims.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. Repeated · text-based · low-risk. 2. Label each step: draft · check · human only. 3. Record your own before time."
+        }
+      }
+    ],
+    "CTA": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "This is capstone step one. In the exercise below this video, choose three weekly tasks from your own job. Map each task into steps, label each step, add a safety note, and time each task the usual way this week. Save your table, because you will need it next. The next lesson is Build Reusable Prompts and a Personal Prompt Library. See you there.",
+        "on_screen_text": "Capstone step 1: map three tasks"
+      }
+    ]
+  }
+}

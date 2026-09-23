@@ -1,0 +1,79 @@
+{
+  "title": "Organising Your Work: Plans, Lists and Templates",
+  "thumbnail": {
+    "headline": "AI Plans, You Decide",
+    "image": "Navy background, a weekly planner grid with task cards being moved by a hand, one card highlighted in teal, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "AI Plans, You Decide", "body": "Monday-to-Friday planner grid with task cards; a hand moves one card to Monday (teal highlight). Small tag: AI for Everyday Work · Lesson 9."}
+  },
+  "production_notes": [
+    "[REGION] Employer AI policies on pasting task lists and project information differ by organisation and country; the voiceover tells learners to follow their own policy.",
+    "Oksana and her Lviv non-profit are hypothetical; 'Donor A' is a placeholder label, and no real donor or organisation name appears on screen.",
+    "The planning prompt appears in full on a code-layout slide (scene 5).",
+    "The voiceover makes no claim about how much time AI saves; learners measure their own time in the capstone."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "It is Monday morning. You have fifteen things to do, some urgent, some large, and some you have avoided for weeks. An AI assistant can turn that list into a neat plan in seconds. But only you know which task really cannot be late.",
+       "on_screen_text": "Fifteen tasks. One week."}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Welcome to week three, where we redesign your work week. In this lesson, AI helps you organise your work in three ways. First, it can turn a messy list into a plan. It can group similar tasks, suggest an order, and spread the work across the days.",
+       "slide": {"layout": "diagram", "title": "Way 1: From messy list to plan", "body": "Jumbled sticky notes on the left → arrow → neat Monday-to-Friday plan on the right, with similar tasks grouped by colour."}},
+      {"visual_type": "slide",
+       "voiceover": "Second, it can suggest checklists for tasks with many small steps, such as preparing a meeting or welcoming a new team member. You add the steps it missed and remove the ones that do not apply.",
+       "slide": {"layout": "bullets", "title": "Way 2: Checklists", "body": "AI suggests the steps · You add what is missing · You remove what does not apply. Example: preparing a meeting."}},
+      {"visual_type": "slide",
+       "voiceover": "Third, it can build reusable templates for tasks you repeat, such as a weekly status update or a meeting agenda. The template has headings and spaces to fill in, so you do not start from a blank page each week.",
+       "slide": {"layout": "diagram", "title": "Way 3: Reusable templates", "body": "A template page with headings (Updates · Decisions · Actions) and empty spaces to fill in, with a circular arrow labelled 'every week'."}},
+      {"visual_type": "slide",
+       "voiceover": "Here is a useful planning prompt. It asks the assistant to group the tasks, suggest a priority order, and spread them across the week, with your available hours per day. It also asks for a table with a column called why this order.",
+       "slide": {"layout": "code", "title": "A planning prompt", "body": "Here is my task list for next week. Group similar tasks, suggest a priority order and spread them across Monday to Friday. I have about 5 hours per day for this work. Show it as a table with Day, Task and Why this order."}},
+      {"visual_type": "slide",
+       "voiceover": "That why column matters. It shows the assistant's reasoning, so you can see where it guessed. Remember, it does not know your deadlines, your manager's priorities, or which task depends on another team. It may put an easy task first because it looks quick.",
+       "slide": {"layout": "bullets", "title": "What the AI cannot see", "body": "Your deadlines · Your manager's priorities · Who is waiting for you · Tasks that depend on other teams · Days you are on leave"}},
+      {"visual_type": "text",
+       "voiceover": "So here is the rule for this lesson. AI can suggest an order, but you decide the priorities.",
+       "on_screen_text": "AI suggests. You decide."},
+      {"visual_type": "stock",
+       "voiceover": "Think of a planning partner who arranges the pieces on the table. They put the pieces in a neat order quickly. But you know which pieces matter most, because you know the deadlines and the people.",
+       "stock_query": "two people arranging sticky notes planning board",
+       "on_screen_text": "A planning partner"},
+      {"visual_type": "slide",
+       "voiceover": "And before you paste any task list, replace the names of clients, colleagues and projects with general labels, such as client A report or project X. As always, follow your employer's AI policy.",
+       "slide": {"layout": "comparison", "title": "Remove names first", "body": "Before: real client, colleague and project names (red). After: 'Client A report' · 'Project X' · 'Colleague B' (green)."}}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's see an example. Oksana is a programme assistant at a non-profit organisation in Lviv, in Ukraine. Her list for next week has twelve tasks, including a report for a donor, booking a venue for volunteer training, and the Friday team meeting agenda.",
+       "stock_query": "non-profit office worker planning week laptop",
+       "on_screen_text": "Oksana · programme assistant · Lviv"},
+      {"visual_type": "slide",
+       "voiceover": "She replaces the donor's real name with donor A, and pastes the list with the planning prompt. The AI puts update contact list on Monday morning, because it is quick and easy. It puts the donor report on Thursday.",
+       "slide": {"layout": "diagram", "title": "The AI's plan", "body": "Weekly grid: Monday 'Update contact list (quick and easy)' · Thursday 'Donor report (Donor A)'. Other tasks spread across the week."}},
+      {"visual_type": "slide",
+       "voiceover": "Oksana changes two things and writes down why. First, she moves the donor report to Monday and Tuesday. The AI did not know that her manager must review it on Wednesday, before it goes to the donor on Thursday.",
+       "slide": {"layout": "comparison", "title": "Change 1: The donor report", "body": "AI: Thursday → Oksana: Monday and Tuesday. Why: manager reviews on Wednesday; donor receives it on Thursday."}},
+      {"visual_type": "slide",
+       "voiceover": "Second, she moves the venue booking to Monday. Venues in her city book up quickly at this time of year, and she knows the training date cannot change.",
+       "slide": {"layout": "comparison", "title": "Change 2: The venue booking", "body": "AI: later in the week → Oksana: Monday. Why: venues book up quickly; the training date cannot change."}},
+      {"visual_type": "slide",
+       "voiceover": "Then she asks for a reusable agenda template for the Friday team meeting, with headings for updates, decisions and actions. She edits it once and saves it to use every week.",
+       "slide": {"layout": "bullets", "title": "A template for every Friday", "body": "Team meeting agenda: Updates · Decisions · Actions. Edited once, saved, reused weekly."}},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is to accept the AI's plan because it looks organised. But a neat plan is not the same as a correct plan. Read the why behind each choice, change what conflicts with what you know, and write down your reason.",
+       "on_screen_text": "Neat is not the same as correct"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, AI can turn a messy list into a weekly plan, suggest checklists and draft reusable templates. Second, the assistant does not know your deadlines, dependencies or people, so you decide the final priorities. Third, remove client, colleague and project names before pasting a task list, and ask the AI to explain its order so you can see where it guessed.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Plans · checklists · templates. 2. You decide the priorities. 3. Remove names; ask 'why this order'."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Your turn. In the exercise below this video, paste your real task list for next week, with sensitive details removed, and ask for a prioritised plan. Change at least two of its choices and write down why. Your capstone starts in the next lesson, Map Your Tasks: Where AI Helps and Where It Does Not. See you there.",
+       "on_screen_text": "Next: Map Your Tasks"}
+    ]
+  }
+}

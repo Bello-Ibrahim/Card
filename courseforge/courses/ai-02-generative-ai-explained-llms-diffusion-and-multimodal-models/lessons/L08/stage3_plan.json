@@ -1,0 +1,77 @@
+{
+  "title": "Where Each Model Type Fails",
+  "thumbnail": {
+    "headline": "Know Where to Check",
+    "image": "Navy background, three cards in a row, a document with a question mark, a hand with six fingers and a blurred number, each with a teal magnifying glass, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Know Where to Check", "body": "Three cards: Text (invented reference), Image (hand with six fingers), Multimodal ('1.5 kg' read as '15 kg'). Magnifying glass over each. Small tag: Generative AI Explained · Lesson 8."}
+  },
+  "production_notes": [
+    "[VERIFY] Hands, text inside images, exact counts and typical-looking people are presented as things image models 'can' struggle with (scenes 4 and 5). A reviewer must confirm these are still common failure types for current image models and that the stated causes are accurate enough for beginners. Drop any that no longer apply.",
+    "[VERIFY] Scene 8 says realistic generated audio and video make it easier to fake a message. Confirm this wording, without naming specific tools or incidents.",
+    "[VERSION] Free text, image and multimodal tools for the exercise, and their upload options, must be chosen and checked before recording (image tool: Google Gemini, per DECISIONS.md).",
+    "The deception and bias cases are hypothetical on purpose, to avoid unverified claims about real companies or people. Do not use real people's faces or voices in any visual; the fake voice message in scene 13 is shown only as a generic audio waveform on a phone screen.",
+    "Farida and the Casablanca news website are fictional; no real outlet name or logo in stock footage."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "A chatbot gives you a perfect-looking reference to a report that does not exist. An image generator draws a person with six fingers. A photo reader turns one point five kilos into fifteen. Each tool failed differently. If you know why, you know where to check.",
+       "on_screen_text": "Know why, know where to check"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "In the last lesson, Diego caught two errors in his table. Today we look at the typical failures of all three families. Each one comes from how the model works. Start with language models.",
+       "slide": {"layout": "title", "title": "Where Each Model Type Fails", "body": "Generative AI Explained · Lesson 8 of 12"}},
+      {"visual_type": "slide",
+       "voiceover": "Language models generate likely text, token by token. So they can invent facts and sources, like names, numbers, quotes or references that sound real but are not. And because of the knowledge cut-off, their answers can be out of date.",
+       "slide": {"layout": "bullets", "title": "Language models", "body": "Cause: likely text, token by token. Failures: invented facts and sources · out-of-date answers"}},
+      {"visual_type": "slide",
+       "voiceover": "Image models build pictures from learned patterns. They can struggle with hands and fingers, which vary a lot and are small in most images. They can produce letters that are not real words, because they learned what text looks like, not how to spell.",
+       "slide": {"layout": "bullets", "title": "Image models (1)", "body": "Cause: pictures built from learned patterns. Failures: hands and fingers · letters that are not real words"}},
+      {"visual_type": "slide",
+       "voiceover": "They may not follow exact counts or positions, like exactly seven chairs. And if you ask for a doctor, you may get a very typical-looking person, because the model fills gaps with common patterns.",
+       "slide": {"layout": "bullets", "title": "Image models (2)", "body": "Failures: exact counts and positions ('exactly seven chairs') · typical instead of specific ('a doctor')"}},
+      {"visual_type": "slide",
+       "voiceover": "Multimodal models read images and audio and answer in text. They can misread small, blurred or handwritten details. They can miss parts, like a skipped row or quiet speech. And they can fill gaps with likely values that are not in the input.",
+       "slide": {"layout": "bullets", "title": "Multimodal models", "body": "Cause: reading images and audio, answering in text. Failures: misread details · missing parts · filled gaps"}},
+      {"visual_type": "slide",
+       "voiceover": "Bias affects all three families. Models learn from huge collections of human-made text and images. If some groups, languages or places are missing or stereotyped in that data, the model can repeat it. In a chatbot's words, in the people an image model draws, or in how well a speech tool understands accents.",
+       "slide": {"layout": "diagram", "title": "Bias affects all three", "body": "Training data box with some groups small or missing → three outputs: chatbot words · people in images · accent understanding. Label: patterns repeated"}},
+      {"visual_type": "stock",
+       "voiceover": "There is one more risk. Realistic generated audio and video make it easier for someone to fake a voice message or a video of a person saying something they never said. Here the problem is not a model mistake. It is a person using the output to deceive.",
+       "stock_query": "person listening to voice message on phone worried",
+       "on_screen_text": "Not a mistake: a deception"},
+      {"visual_type": "slide",
+       "voiceover": "Think of three skilled workers. The writer is fluent, but sometimes invents a quote. The painter makes beautiful scenes, but struggles with small hands and signs. The typist is fast, but misreads untidy handwriting. A good manager knows where each one goes wrong and checks there first.",
+       "slide": {"layout": "diagram", "title": "Three skilled workers", "body": "Three icons: Writer (invents a quote) · Painter (small hands, signs) · Typist (untidy handwriting). Manager icon with magnifying glass: check these places first."}}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's see how this works in a newsroom. Farida is an editor at a news website in Casablanca. Her team uses three types of AI tool, and she writes a simple checking guide for her staff.",
+       "stock_query": "editor working in busy newsroom",
+       "on_screen_text": "Farida · news website · Casablanca"},
+      {"visual_type": "slide",
+       "voiceover": "A reporter's AI draft includes a quote from a ministry spokesperson that nobody can find. Rule one: check every quote, number and source against an original document.",
+       "slide": {"layout": "comparison", "title": "Rule 1: Text tool", "body": "Draft with a highlighted quote, 'source not found'. Rule: check every quote, number and source against an original."}},
+      {"visual_type": "slide",
+       "voiceover": "A designer's market illustration shows signs with letters that are not real words. Rule two: add real text in a design tool, and label AI images as illustrations, not photos. An intern turns a photo of a printed table into text, and one row is missing. Rule three: count the rows and check every number.",
+       "slide": {"layout": "comparison", "title": "Rules 2 and 3", "body": "Image tool: market signs with fake letters → add real text later; label as illustration. Multimodal tool: table with a missing row → count rows, check every number."}},
+      {"visual_type": "slide",
+       "voiceover": "Farida adds a hypothetical case. A staff member gets a voice message that sounds exactly like Farida, asking for an urgent payment to a new supplier. It is fake. Rule four: for unusual requests about money or private data, confirm through a second, known channel, like calling back on a saved number.",
+       "slide": {"layout": "diagram", "title": "Rule 4: Confirm another way", "body": "Phone showing a generic audio waveform, label 'urgent payment request'. Arrow → second phone calling a saved number. Caption: confirm through a known channel."}},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is to think a newer or more expensive model has no failures. It may fail less often, but the causes remain. So learn each family's typical failures, and check those points every time.",
+       "on_screen_text": "Newer does not mean flawless."}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, language models can invent facts and sources, image models can struggle with hands, text and counts, and multimodal models can misread details. Second, all three can repeat bias from their training data. Third, realistic generated audio and video increase the risk of deception, so confirm unusual requests another way.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Text: invented facts. Image: hands, text, counts. Multimodal: misread details. 2. All three can repeat bias. 3. Confirm unusual requests another way."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Your turn. In the exercise below, collect one failure from a text tool, one from an image tool and one from a multimodal tool. For each, write one sentence about the likely cause. It takes about twenty-five minutes. Next week, we start choosing tools, with matching the task to the model. See you there.",
+       "on_screen_text": "Next: Matching the Task to the Model"}
+    ]
+  }
+}

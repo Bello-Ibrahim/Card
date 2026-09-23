@@ -1,0 +1,189 @@
+{
+  "course_id": "AI-07",
+  "lesson_id": "L03",
+  "duration_s": 298.3,
+  "thumbnail": {
+    "headline": "A Guess, Not Research",
+    "slide": {
+      "layout": "title",
+      "title": "A Guess, Not Research",
+      "body": "A persona card drawn as a pencil sketch, with three small labels: green 'Confirmed', amber 'Needs checking', red 'Stereotype'. Small tag: AI for Content Creators · Lesson 3."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.7,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "It looks like research",
+      "voiceover": "Ask an AI assistant to describe your ideal customer. In ten seconds, you get a name, an age, a job, three hobbies and a favourite app. It looks like research. It is not. It is a well-written guess."
+    },
+    {
+      "scene": 2,
+      "start": 16.7,
+      "end": 37.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "What is a persona?",
+        "body": "A simple profile card with four fields: Who they are · What they need · Their problems · Where they spend time online."
+      },
+      "voiceover": "Last time, we taught AI your brand voice. Now we ask a different question. Who are you talking to? A persona is a short description of a typical member of your audience: who they are, what they need, what problems they have, and where they spend time online."
+    },
+    {
+      "scene": 3,
+      "start": 37.3,
+      "end": 54.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "A persona prompt",
+        "body": "Suggest two audience personas for a small bicycle repair shop in a large city. For each, list their main questions, problems and favourite channels."
+      },
+      "voiceover": "AI assistants can draft personas very quickly. You might ask for two audience personas for a small bicycle repair shop in a large city, with their main questions, problems and favourite channels. In seconds, you have a structure to work with."
+    },
+    {
+      "scene": 4,
+      "start": 54.9,
+      "end": 76.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Three kinds of detail",
+        "body": "Three columns: Reasonable (green) · Wrong for your market (amber) · Stereotype (red), example under red: 'All older customers avoid social media'."
+      },
+      "voiceover": "But the AI does not know your customers. It combines general patterns from its training text. Some details will be reasonable. Some will be wrong for your market. And some will be stereotypes, simple and often unfair ideas about a group, such as assuming that all older customers avoid social media."
+    },
+    {
+      "scene": 5,
+      "start": 76.8,
+      "end": 102.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Test against real sources",
+        "body": "Comments and messages · Reviews · Short surveys (3–4 questions) · Your own analytics · Staff who talk to customers"
+      },
+      "voiceover": "So treat every AI persona as a starting hypothesis. A hypothesis is a guess that you test. Test it against real sources. What do customers ask you in comments and messages? What do reviews praise or complain about? What do short surveys and your own analytics show? And what do staff who talk to customers every day already know?"
+    },
+    {
+      "scene": 6,
+      "start": 102.1,
+      "end": 122.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Sort every detail",
+        "body": "Persona details flow into three labelled trays: Confirmed by real data · Plausible, needs checking · Probably a stereotype. Small lock note: remove names and personal details before sharing data."
+      },
+      "voiceover": "As you check each detail, sort it into one of three groups: confirmed by real data, plausible but needs checking, or probably a stereotype. Then rewrite the persona from what you confirmed. And if you give AI real comments to summarise, remove names and personal details first."
+    },
+    {
+      "scene": 7,
+      "start": 122.2,
+      "end": 140.6,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "artist drawing pencil portrait sketch",
+      "on_screen_text": "A sketch helps you start looking",
+      "voiceover": "Think of an AI persona like a sketch that a police artist draws from a short description. It helps you start looking. But you would never arrest someone based only on the sketch. You compare it with real evidence, and you correct it."
+    },
+    {
+      "scene": 8,
+      "start": 140.6,
+      "end": 151.3,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "bicycle repair workshop mechanic fixing wheel",
+      "on_screen_text": "Sample bike shop · Casablanca",
+      "voiceover": "Let's see this in practice. Karim runs marketing for a sample bicycle repair shop in Casablanca, Morocco. He asks an AI assistant for two personas."
+    },
+    {
+      "scene": 9,
+      "start": 151.3,
+      "end": 174.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Persona 1: Youssef, 28",
+        "body": "Fast repairs → green 'Confirmed' (messages: 'Can you fix it today?') · Delivery rider → amber 'Needs checking' (no numbers yet)"
+      },
+      "voiceover": "The first persona is Youssef, twenty-eight, a delivery rider who needs fast repairs, uses Instagram and wants low prices. Karim checks his sources. Fast repairs is confirmed, because many messages ask, can you fix it today? Delivery rider is plausible. The shop has some riders as customers, but Karim has no numbers."
+    },
+    {
+      "scene": 10,
+      "start": 174.0,
+      "end": 190.7,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Persona 1: Youssef, 28",
+        "body": "Uses Instagram → red cross 'Partly wrong' (most requests come by messaging app) · Wants low prices → red 'Probably a stereotype' (reviews stress speed and reliability)"
+      },
+      "voiceover": "Uses Instagram is partly wrong. His analytics and messages show that most repair requests come through a messaging app. And wants low prices is probably a stereotype. Reviews from riders talk about speed and reliability much more than price."
+    },
+    {
+      "scene": 11,
+      "start": 190.7,
+      "end": 206.6,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "older man cycling on weekend road",
+      "on_screen_text": "Persona 2: mostly a stereotype",
+      "voiceover": "The second persona is a retired man who rides on weekends and does not use smartphones. This is mostly a stereotype. Several weekend riders in their sixties send photos of their bikes by phone before they book."
+    },
+    {
+      "scene": 12,
+      "start": 206.6,
+      "end": 231.9,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "The rewritten persona",
+        "body": "Card: \"Delivery riders and daily commuters who lose income when their bike is broken. Need: same-day repair, clear price first. Channel: messaging app.\" Footer in amber: To check: share of delivery riders → added to survey."
+      },
+      "voiceover": "So Karim rewrites the first persona. Delivery riders and daily commuters who lose income when their bike is broken. Their main need is a same-day repair and a clear price before work starts. Their main channel is a messaging app. To check: what share of customers are delivery riders. He adds that question to a short customer survey."
+    },
+    {
+      "scene": 13,
+      "start": 231.9,
+      "end": 247.3,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Detail is not evidence",
+      "voiceover": "The common mistake is copying the AI persona straight into a strategy document, because it looks detailed and professional. But detail is not evidence. A name and an exact age only make a guess feel real."
+    },
+    {
+      "scene": 14,
+      "start": 247.3,
+      "end": 270.0,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. AI personas = starting hypotheses. 2. Test against comments, reviews, surveys, analytics. 3. Label each detail, then rewrite from evidence."
+      },
+      "voiceover": "Let's recap. First, AI can draft personas quickly, but they are starting hypotheses, not research about your customers. Second, test each detail against real sources, such as comments, reviews, surveys and your own analytics. Third, label every detail as confirmed, needing checks or a probable stereotype, then rewrite the persona from the evidence."
+    },
+    {
+      "scene": 15,
+      "start": 270.0,
+      "end": 298.3,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Generating and Filtering Content Ideas",
+      "voiceover": "Now it is your turn. In the exercise below, ask a free AI assistant for two personas for your brand. Mark every detail with one of the three labels, and rewrite one persona with a short list of things to check. It takes about twenty minutes. In the next lesson, Generating and Filtering Content Ideas, we turn these people into ideas worth making. See you there."
+    }
+  ]
+}

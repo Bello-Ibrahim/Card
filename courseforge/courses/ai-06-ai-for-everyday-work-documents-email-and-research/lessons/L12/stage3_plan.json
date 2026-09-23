@@ -1,0 +1,71 @@
+{
+  "title": "Measure Time Saved and Present Your Redesign",
+  "thumbnail": {
+    "headline": "Measure Your Own Results",
+    "image": "Navy background, a stopwatch beside a simple before-and-after table with one row marked in amber, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Measure Your Own Results", "body": "Stopwatch icon next to a three-row before/after table; one row shows a small negative result in amber. Small tag: AI for Everyday Work · Lesson 12."}
+  },
+  "production_notes": [
+    "No general time-saving claims: the voiceover never states how many hours or minutes AI saves. The course brief's 'saving several hours each week' is deliberately not used (curriculum judgement call).",
+    "Lucía's times are hypothetical examples, not measured results. They appear only on the scene 10 slide, which must carry the label 'Hypothetical example'; the presenter does not read the numbers aloud.",
+    "[REGION] Employer AI policies and approved tools differ by organisation and country; learners follow and report their own policy.",
+    "Lucía and her Santiago accounting firm are hypothetical; no real firm name or logo in stock footage. The tax guidance page in her table is a generic public page, not a named one.",
+    "The capstone rubric on the course page is the reference for scene 13; the slide lists the four deliverables only, not the points."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "You may have heard claims that AI will save you many hours every week. Maybe it will, and maybe it will not. The only honest way to know is to measure your own work, including the time you spend checking what the AI produced.",
+       "on_screen_text": "Don't trust claims. Measure."}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "In the last lesson, you built reusable prompts. In this final lesson, you measure the results. Real time savings differ from person to person and from task to task. A task with many facts may need so much checking that AI saves no time at all. That is why this course makes no general claims.",
+       "slide": {"layout": "quote", "title": "Measure your own", "body": "\"Savings differ by person and by task. This course makes no general claims.\""}},
+      {"visual_type": "slide",
+       "voiceover": "Here is how to measure honestly. Your before time is how long the task took the usual way. You recorded it in lesson ten. Your after time is how long it takes with AI. Include all of it: writing the prompt, waiting, reading, checking, editing and correcting.",
+       "slide": {"layout": "diagram", "title": "Before and after", "body": "Before: one bar 'usual way'. After: one bar split into segments: prompt · wait · read · check · edit. Caption: include every segment."}},
+      {"visual_type": "slide",
+       "voiceover": "Time saved is the before time minus the after time. It can be zero, or even negative. That is a useful result, not a failure. It tells you that this task, or this step, is better done without AI. And measure more than once if you can, because the first try with a new prompt is usually slower.",
+       "slide": {"layout": "bullets", "title": "Time saved", "body": "Before time − after time · Zero or negative is a useful result · Measure more than once: the first try is usually slower"}},
+      {"visual_type": "slide",
+       "voiceover": "Time is not the only result. Also judge quality. Was the result as good as your usual work? And judge safety. Did you follow the data rules and your employer's AI policy? A task that is faster but less accurate is not an improvement.",
+       "slide": {"layout": "diagram", "title": "Three results, not one", "body": "Three columns: Time (stopwatch) · Quality (star) · Safety (shield). Caption: faster but less accurate is not better."}},
+      {"visual_type": "text",
+       "voiceover": "And review every output with the checklist from lesson four. Facts and numbers, names and dates, tone for the reader, and confidential content. Record what you found and fixed.",
+       "on_screen_text": "Checklist on every output"},
+      {"visual_type": "stock",
+       "voiceover": "Think of testing a new route to work. You do not trust someone else's claim that it is faster. You time the old route and the new one yourself, on normal days, and include the time to find parking. Then you decide.",
+       "stock_query": "commuter checking watch city morning",
+       "on_screen_text": "Time your own route"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's look at an example. Lucía is an office administrator at an accounting firm in Santiago, in Chile. She redesigned three weekly tasks: a team update, a summary of a public tax guidance page, and replies to routine client questions.",
+       "stock_query": "office administrator working laptop Latin America",
+       "on_screen_text": "Lucía · office administrator · Santiago"},
+      {"visual_type": "slide",
+       "voiceover": "Here is her results table. For the team update and the summary, her after times were shorter, even with checking included. The checklist still found a wrong date in one, and a changed condition in the other. But her client replies were slightly slower with AI.",
+       "slide": {"layout": "comparison", "title": "Lucía's results (hypothetical example)", "body": "Table: Task · Before · After (incl. checking) · Saved · Checks found. Weekly team update: 40 · 22 · 18 min · 1 wrong date. Public tax guidance summary: 50 · 35 · 15 min · 1 changed condition. Routine client replies: 30 · 32 · −2 min (amber) · tone too formal. Label: Hypothetical example."}},
+      {"visual_type": "slide",
+       "voiceover": "Each reply needed a lot of editing to sound personal. So she decides to write those replies herself, and to use AI only to check them for clarity. She also notes her safety rules. Client names and figures were never pasted, and she used her firm's approved tool for internal notes.",
+       "slide": {"layout": "bullets", "title": "Lucía's decisions", "body": "Team update: keep · Summary: keep · Client replies: change (write herself, AI checks clarity). Safety: no client names or figures pasted · approved tool for internal notes."}},
+      {"visual_type": "slide",
+       "voiceover": "Now, your capstone. It brings together lessons ten, eleven and twelve. You submit your task maps with before times, your three reusable prompts with first and improved versions, a results table like Lucía's, and a one-page summary. For each task, decide: keep, change, or stop using AI.",
+       "slide": {"layout": "bullets", "title": "Your capstone", "body": "1. Task maps with before times (L10) · 2. Three reusable prompts, first and improved (L11) · 3. Results table: times, quality, checklist findings · 4. One-page summary: keep, change or stop, with reasons"}},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is to time only the moment the AI writes the answer. That makes AI look faster than it really is. Time the whole task, and report every result honestly, including zero or negative savings.",
+       "on_screen_text": "Time the whole task"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, measure time saved yourself: before time minus after time, including prompts, checking and editing. Second, judge quality and safety as well as time, and review every output with the four-step checklist. Third, a zero or negative result is useful, because it shows you where AI does not help.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Before − after, including checking and editing. 2. Time, quality and safety; checklist on every output. 3. Zero or negative results are useful."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Congratulations. You have finished AI for Everyday Work. Now complete capstone step three. Do your three tasks with AI, time them, check every output, and write your one-page summary. Keep confidential data out, and follow your employer's policy. Then submit your capstone on the course page. Well done, and good luck.",
+       "on_screen_text": "Submit your capstone"}
+    ]
+  }
+}

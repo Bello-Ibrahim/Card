@@ -1,0 +1,186 @@
+{
+  "course_id": "AI-05",
+  "lesson_id": "L09",
+  "duration_s": 293.9,
+  "thumbnail": {
+    "headline": "Why Results Wobble",
+    "slide": {
+      "layout": "title",
+      "title": "Why Results Wobble",
+      "body": "Two small histograms side by side: a bell curve and bars from 10 to 20 peaking at 16. Small tag: Math and Statistics for AI · Lesson 9."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.4,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "16 out of 20? Sometimes.",
+      "voiceover": "If a model is right eighty percent of the time, will it get exactly sixteen out of twenty test questions right? Sometimes. Sometimes fourteen, sometimes nineteen. A distribution tells you how often each result appears, and you can see it yourself with code."
+    },
+    {
+      "scene": 2,
+      "start": 18.4,
+      "end": 38.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "A distribution and its histogram",
+        "body": "A simple histogram with labelled axes: x = value ranges, y = how many values. Caption: each bar = how many values fall in that range."
+      },
+      "voiceover": "In the last lesson, we counted people in a table. Today we look at the shape of data. A distribution describes how often each possible value appears. Its best picture is a histogram: a bar chart where each bar shows how many values fall into a range."
+    },
+    {
+      "scene": 3,
+      "start": 38.5,
+      "end": 58.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Normal: the bell curve",
+        "body": "A bell curve. Arrow at the centre labelled 'mean'; a horizontal bracket labelled 'standard deviation = width'."
+      },
+      "voiceover": "The normal distribution describes many measurements that cluster around an average, like delivery times or adult heights. Its histogram is the famous bell curve. It has two settings, called parameters. The mean sets the centre of the bell, and the standard deviation sets how wide it is."
+    },
+    {
+      "scene": 4,
+      "start": 58.6,
+      "end": 71.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "The 68–95 rule",
+        "body": "Bell curve with a shaded middle band 'about 68% within 1 std' and a wider band 'about 95% within 2 std'."
+      },
+      "voiceover": "A useful rule of thumb: in a normal distribution, about sixty-eight percent of values lie within one standard deviation of the mean, and about ninety-five percent lie within two."
+    },
+    {
+      "scene": 5,
+      "start": 71.9,
+      "end": 100.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Binomial: counting successes",
+        "body": "n = number of trials · p = chance of success\naverage = n × p\n20 × 0.8 = 16"
+      },
+      "voiceover": "The binomial distribution counts successes in a fixed number of yes-or-no trials, when each trial has the same chance. Like heads in ten coin flips, or correct predictions out of twenty. Its parameters are n, the number of trials, and p, the chance of success. The average is n times p. For twenty predictions with p equal to zero point eight, that is sixteen."
+    },
+    {
+      "scene": 6,
+      "start": 100.2,
+      "end": 122.1,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "worn footpath across green park grass",
+      "on_screen_text": "Most wear in the middle",
+      "voiceover": "You rarely need the formulas. With NumPy, you can simulate: generate thousands of random values and draw the histogram. Picture footprints on a path across a park. Most people walk near the centre, so the grass is most worn there. A histogram shows where values usually fall, in the same way."
+    },
+    {
+      "scene": 7,
+      "start": 122.1,
+      "end": 149.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Kofi's two questions",
+        "body": "1. Model right 80% of the time, 20 tests → average 20 × 0.8 = 16 correct. 2. Delivery times: mean 30 min, std 5 min → about 68% between 25 and 35 min."
+      },
+      "voiceover": "Kofi is a machine learning engineer at a logistics start-up in Kumasi, Ghana. His settings are invented. If his model is right eighty percent of the time, the average number correct out of twenty is sixteen. And if delivery times average thirty minutes with a standard deviation of five, about sixty-eight percent should fall between twenty-five and thirty-five minutes."
+    },
+    {
+      "scene": 8,
+      "start": 149.1,
+      "end": 164.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open a Colab notebook and add a new code cell.",
+        "Type: import numpy as np and import matplotlib.pyplot as plt",
+        "Type: rng = np.random.default_rng(42)",
+        "Highlight the seed 42."
+      ],
+      "voiceover": "Let's check in Colab. In a new code cell, Kofi imports NumPy and Matplotlib, the plotting library. Then he creates a random number generator with a fixed seed, forty-two, so the results can be repeated."
+    },
+    {
+      "scene": 9,
+      "start": 164.5,
+      "end": 188.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Type: correct = rng.binomial(n=20, p=0.8, size=1000)",
+        "Type: times = rng.normal(loc=30, scale=5, size=1000)",
+        "Type: print(correct.mean()) and print(times.mean().round(2))",
+        "Run the cell and zoom in on 16.023 and 29.61."
+      ],
+      "voiceover": "Next, he simulates one thousand tests of twenty predictions with p of zero point eight, and one thousand delivery times with a mean of thirty and a standard deviation of five. He prints both averages. In this run, the number correct averages sixteen point zero two three, and the times average twenty-nine point six one."
+    },
+    {
+      "scene": 10,
+      "start": 188.5,
+      "end": 200.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Type: plt.hist(correct, bins=range(8, 22)) and plt.show()",
+        "Run the cell.",
+        "Point at the tall bars at 15, 16 and 17, then at the short bars near 10 and 20."
+      ],
+      "on_screen_text": "Mostly 15 to 17",
+      "voiceover": "Now he plots a histogram of the correct counts. Most tests score fifteen, sixteen or seventeen. But some score as low as ten, or as high as twenty."
+    },
+    {
+      "scene": 11,
+      "start": 200.5,
+      "end": 219.4,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Edit the plot line to: plt.hist(times)",
+        "Run the cell.",
+        "Show the bell-shaped histogram centred near 30.",
+        "Shade the band from 25 to 35 as an editor overlay."
+      ],
+      "voiceover": "Then he swaps correct for times, removes the bins setting, and runs again. The bell shape appears around thirty. In this run, about sixty-seven percent of the times fell between twenty-five and thirty-five minutes, close to the sixty-eight percent rule."
+    },
+    {
+      "scene": 12,
+      "start": 219.4,
+      "end": 242.5,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "14 out of 20 can be normal",
+      "voiceover": "A common mistake is to expect every result to equal the average. You see fourteen correct out of twenty, and decide the model got worse. But the histogram shows that fourteen is normal for a model with an eighty percent success rate. Before you react to one number, ask what range chance would produce."
+    },
+    {
+      "scene": 13,
+      "start": 242.5,
+      "end": 268.2,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Distribution = how often each value appears; histogram = its picture. 2. Normal: mean + std. Binomial: n, p, average n × p. 3. Simulate in NumPy, then plot."
+      },
+      "voiceover": "Let's recap. First, a distribution shows how often each value appears, and a histogram is its picture. Second, the normal distribution is a bell set by its mean and standard deviation, and the binomial counts successes out of n trials, with average n times p. Third, you can explore any distribution by simulating values in NumPy and plotting a histogram."
+    },
+    {
+      "scene": 14,
+      "start": 268.2,
+      "end": 293.9,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Samples, Uncertainty and Meaningful Differences",
+      "voiceover": "Your turn. In the exercise, you simulate one thousand coin-flip experiments and one thousand normal values in Colab, plot them, and change one parameter to see the shape move. There is no hurry, so play with the numbers and enjoy watching the shapes change. It takes about twenty-five minutes. Next: Samples, Uncertainty and Meaningful Differences. See you there."
+    }
+  ]
+}

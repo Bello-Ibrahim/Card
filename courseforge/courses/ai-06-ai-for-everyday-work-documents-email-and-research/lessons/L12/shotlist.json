@@ -1,0 +1,175 @@
+{
+  "course_id": "AI-06",
+  "lesson_id": "L12",
+  "duration_s": 276.6,
+  "thumbnail": {
+    "headline": "Measure Your Own Results",
+    "slide": {
+      "layout": "title",
+      "title": "Measure Your Own Results",
+      "body": "Stopwatch icon next to a three-row before/after table; one row shows a small negative result in amber. Small tag: AI for Everyday Work · Lesson 12."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.9,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Don't trust claims. Measure.",
+      "voiceover": "You may have heard claims that AI will save you many hours every week. Maybe it will, and maybe it will not. The only honest way to know is to measure your own work, including the time you spend checking what the AI produced."
+    },
+    {
+      "scene": 2,
+      "start": 18.9,
+      "end": 42.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "Measure your own",
+        "body": "\"Savings differ by person and by task. This course makes no general claims.\""
+      },
+      "voiceover": "In the last lesson, you built reusable prompts. In this final lesson, you measure the results. Real time savings differ from person to person and from task to task. A task with many facts may need so much checking that AI saves no time at all. That is why this course makes no general claims."
+    },
+    {
+      "scene": 3,
+      "start": 42.5,
+      "end": 62.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Before and after",
+        "body": "Before: one bar 'usual way'. After: one bar split into segments: prompt · wait · read · check · edit. Caption: include every segment."
+      },
+      "voiceover": "Here is how to measure honestly. Your before time is how long the task took the usual way. You recorded it in lesson ten. Your after time is how long it takes with AI. Include all of it: writing the prompt, waiting, reading, checking, editing and correcting."
+    },
+    {
+      "scene": 4,
+      "start": 62.6,
+      "end": 87.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Time saved",
+        "body": "Before time − after time · Zero or negative is a useful result · Measure more than once: the first try is usually slower"
+      },
+      "voiceover": "Time saved is the before time minus the after time. It can be zero, or even negative. That is a useful result, not a failure. It tells you that this task, or this step, is better done without AI. And measure more than once if you can, because the first try with a new prompt is usually slower."
+    },
+    {
+      "scene": 5,
+      "start": 87.5,
+      "end": 106.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Three results, not one",
+        "body": "Three columns: Time (stopwatch) · Quality (star) · Safety (shield). Caption: faster but less accurate is not better."
+      },
+      "voiceover": "Time is not the only result. Also judge quality. Was the result as good as your usual work? And judge safety. Did you follow the data rules and your employer's AI policy? A task that is faster but less accurate is not an improvement."
+    },
+    {
+      "scene": 6,
+      "start": 106.4,
+      "end": 118.8,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Checklist on every output",
+      "voiceover": "And review every output with the checklist from lesson four. Facts and numbers, names and dates, tone for the reader, and confidential content. Record what you found and fixed."
+    },
+    {
+      "scene": 7,
+      "start": 118.8,
+      "end": 136.8,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "commuter checking watch city morning",
+      "on_screen_text": "Time your own route",
+      "voiceover": "Think of testing a new route to work. You do not trust someone else's claim that it is faster. You time the old route and the new one yourself, on normal days, and include the time to find parking. Then you decide."
+    },
+    {
+      "scene": 8,
+      "start": 136.8,
+      "end": 153.9,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "office administrator working laptop Latin America",
+      "on_screen_text": "Lucía · office administrator · Santiago",
+      "voiceover": "Let's look at an example. Lucía is an office administrator at an accounting firm in Santiago, in Chile. She redesigned three weekly tasks: a team update, a summary of a public tax guidance page, and replies to routine client questions."
+    },
+    {
+      "scene": 9,
+      "start": 153.9,
+      "end": 173.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Lucía's results (hypothetical example)",
+        "body": "Table: Task · Before · After (incl. checking) · Saved · Checks found. Weekly team update: 40 · 22 · 18 min · 1 wrong date. Public tax guidance summary: 50 · 35 · 15 min · 1 changed condition. Routine client replies: 30 · 32 · −2 min (amber) · tone too formal. Label: Hypothetical example."
+      },
+      "voiceover": "Here is her results table. For the team update and the summary, her after times were shorter, even with checking included. The checklist still found a wrong date in one, and a changed condition in the other. But her client replies were slightly slower with AI."
+    },
+    {
+      "scene": 10,
+      "start": 173.6,
+      "end": 195.5,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Lucía's decisions",
+        "body": "Team update: keep · Summary: keep · Client replies: change (write herself, AI checks clarity). Safety: no client names or figures pasted · approved tool for internal notes."
+      },
+      "voiceover": "Each reply needed a lot of editing to sound personal. So she decides to write those replies herself, and to use AI only to check them for clarity. She also notes her safety rules. Client names and figures were never pasted, and she used her firm's approved tool for internal notes."
+    },
+    {
+      "scene": 11,
+      "start": 195.5,
+      "end": 216.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Your capstone",
+        "body": "1. Task maps with before times (L10) · 2. Three reusable prompts, first and improved (L11) · 3. Results table: times, quality, checklist findings · 4. One-page summary: keep, change or stop, with reasons"
+      },
+      "voiceover": "Now, your capstone. It brings together lessons ten, eleven and twelve. You submit your task maps with before times, your three reusable prompts with first and improved versions, a results table like Lucía's, and a one-page summary. For each task, decide: keep, change, or stop using AI."
+    },
+    {
+      "scene": 12,
+      "start": 216.1,
+      "end": 232.0,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Time the whole task",
+      "voiceover": "A common mistake is to time only the moment the AI writes the answer. That makes AI look faster than it really is. Time the whole task, and report every result honestly, including zero or negative savings."
+    },
+    {
+      "scene": 13,
+      "start": 232.0,
+      "end": 254.3,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Before − after, including checking and editing. 2. Time, quality and safety; checklist on every output. 3. Zero or negative results are useful."
+      },
+      "voiceover": "Let's recap. First, measure time saved yourself: before time minus after time, including prompts, checking and editing. Second, judge quality and safety as well as time, and review every output with the four-step checklist. Third, a zero or negative result is useful, because it shows you where AI does not help."
+    },
+    {
+      "scene": 14,
+      "start": 254.3,
+      "end": 276.6,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Submit your capstone",
+      "voiceover": "Congratulations. You have finished AI for Everyday Work. Now complete capstone step three. Do your three tasks with AI, time them, check every output, and write your one-page summary. Keep confidential data out, and follow your employer's policy. Then submit your capstone on the course page. Well done, and good luck."
+    }
+  ]
+}
