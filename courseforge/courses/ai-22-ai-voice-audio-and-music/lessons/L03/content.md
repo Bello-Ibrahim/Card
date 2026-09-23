@@ -6,21 +6,19 @@ Course: AI-22 · Module: M1 · Objectives: O3, O5 · Video: 5 min (screen demo)
 You have a clear script. Now you want it spoken in a calm, natural voice, and you do not have a studio or a professional voice actor. A free text-to-speech tool can produce a first version in a few minutes. The skill is not pressing "generate". The skill is listening carefully and fixing what sounds wrong.
 
 ## Explanation
-Most free text-to-speech (TTS) tools follow the same basic workflow, even though their screens look different. In this lesson we use "a free text-to-speech tool of your choice" [VERSION]. Your course team will show one tool on screen, but the steps below work in most tools.
+Most free text-to-speech (TTS) tools follow the same workflow, even though their screens look different. We use "a free text-to-speech tool of your choice" [VERSION]. The steps below work in most tools.
 
-**1. Choose the voice.** Pick the language first, then the accent, then the voice. Choose an accent that suits your audience. Listen to 3 or 4 sample voices with your own script, not only the tool's demo sentence. A voice that sounds good on "Hello, welcome" may sound flat on a long explanation.
+**1. Choose the voice.** Pick the language first, then the accent, then the voice. Listen to 3 or 4 voices with your own script, not only the demo sentence. A voice that sounds good on "Hello, welcome" may sound flat on a long explanation.
 
-**2. Set the speed.** Many AI voices are slightly fast by default. For teaching and training content, a slightly slower speed is often clearer. Change the speed in small steps and listen after each change.
+**2. Set the speed.** For teaching content, a slightly slower speed is often clearer. Change the speed in small steps and listen after each change.
 
-**3. Add pauses.** Full stops and new paragraphs usually create pauses. Some tools also let you insert a pause of a set length, or accept special markup such as SSML (Speech Synthesis Markup Language), a simple code for pauses and pronunciation [VERSION]. If your tool has neither, a new paragraph or an extra full stop often works.
+**3. Add pauses.** Full stops and new paragraphs usually create pauses. Some tools also let you insert a pause of a set length, or accept special markup such as SSML (Speech Synthesis Markup Language), a simple code for pauses and pronunciation [VERSION].
 
 **4. Fix pronunciation.** When a name or term is wrong, try these fixes in order: a phonetic spelling ("Wrocław" typed as "VROTS-waff"), a hyphen or space to split the word, or the tool's pronunciation dictionary if it has one [VERSION].
 
 **5. Listen for problems.** Play the whole voiceover with headphones. Listen for five things: **robotic rhythm** (every sentence has the same shape), **wrong stress** (the voice emphasises the wrong word or syllable), **wrong pronunciation**, **pace** (too fast, too slow, or rushed at the end of sentences) and **odd sounds** (clicks, breaths in strange places or a strange end to the file).
 
-**6. Export.** Download the audio in the best quality the free plan allows, usually MP3 or WAV [VERSION]. Before you export, note the tool name, the plan and the date. You will need them for your rights log in L08.
-
-Free plans often limit the number of characters per month, the voices you can use and whether you may use the audio in commercial projects [VERSION]. Read the plan details before you start a project.
+**6. Export.** Download the best quality the free plan allows, usually MP3 or WAV [VERSION]. Note the tool, plan and date for your rights log in L08. Free plans often limit characters per month, voices and commercial use [VERSION], so read the plan details first.
 
 **Analogy:** Working with a TTS voice is like directing a talented actor who has never seen your script before. The actor reads well, but does not know which word matters most or how to say your company's name. Your job is to give short, clear directions and try again.
 
@@ -36,10 +34,10 @@ Agnieszka runs training at a logistics company in Poland. She needs a 60-second 
 7. Fix 3: she lowers the speed slightly and adds a paragraph break before the final sentence.
 8. She listens again from the start, confirms the three fixes, and exports the file as WAV. She writes the tool name, the plan and the date in her project notes.
 
-The final voiceover is 62 seconds long, and every name and number is clear.
+
 
 ## Common Mistake
-Many beginners fix a problem and export without listening to the whole file again. A change in one place can create a new problem elsewhere, such as a slower speed that makes another section sound heavy. Always listen from the beginning after your final change. Also, do not paste personal or confidential information, such as staff names or internal figures, into an online TTS tool unless your organisation has approved it.
+Many beginners fix a problem and export without listening to the whole file again. A change in one place can create a new problem elsewhere. Always listen from the beginning after your final change. Also, do not paste personal or confidential information, such as staff names or internal figures, into an online TTS tool unless your organisation has approved it.
 
 ## Key Takeaways
 1. The TTS workflow is: choose language, accent and voice; set the speed; add pauses; fix pronunciation; listen; export.
@@ -62,5 +60,5 @@ Many beginners fix a problem and export without listening to the whole file agai
 **Time:** about 30 minutes
 
 ## Review Flags
-- [VERSION] The chosen free TTS tool must be selected by a reviewer. Its interface, sign-in, available voices and accents, speed controls, pause or SSML support, pronunciation dictionary, export formats (MP3/WAV) and free-plan limits (characters, voices, commercial use) must be checked against the live tool before scripting.
+- [VERSION] A reviewer must choose the free TTS tool, then check its interface, voices, speed and pause controls, SSML and pronunciation support, export formats and free-plan limits against the live tool before scripting.
 - Curriculum flag carried: L03 [VERSION] free TTS tools, voices and limits change often.

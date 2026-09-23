@@ -39,7 +39,7 @@ Aigerim is a data analyst at a hypothetical logistics company in Almaty, Kazakhs
 For the parcel-volume model, Aigerim explains why ELT helps. Last month the team changed the rule for "delivered" to exclude parcels left with a neighbour. Because the raw scan data was already in the warehouse, she changed one SQL model and rebuilt two years of history in one run. With ETL she would have needed a new extract from the source system.
 
 ## Common Mistake
-Many learners believe streaming is always better because "real time is faster". Speed has a cost: more moving parts, harder testing and harder recovery after failures. Ask one question first: "If this answer arrives one hour later, does anyone lose value?" If the answer is no, choose batch. A reliable nightly batch is worth more than a fragile real-time system.
+Many learners believe streaming is always better because "real time is faster". Speed has a cost: more components, harder testing and harder recovery after failures. Ask one question first: "If this answer arrives one hour later, does anyone lose value?" If the answer is no, choose batch. A reliable nightly batch is worth more than a fragile real-time system.
 
 ## Key Takeaways
 1. ETL transforms data before loading it; ELT loads raw data first and transforms it inside the warehouse, which keeps raw data available for rebuilds.

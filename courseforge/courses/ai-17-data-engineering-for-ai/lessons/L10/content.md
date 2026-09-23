@@ -3,7 +3,7 @@
 Course: AI-17 · Module: M2 · Objectives: O2 · Video: 5 min (screen demo)
 
 ## Hook
-A data scientist asks: "Where does `days_since_last` come from, and does it include cancelled orders?" If the answer lives only in your head, every question interrupts you, and when you leave the team the answer leaves with you.
+A data scientist asks: "Where does `days_since_last` come from, and does it include cancelled orders?" If the answer is only in your memory, every question interrupts you, and when you leave the team the answer leaves with you.
 
 ## Explanation
 Documentation in dbt lives next to the code. You add a `description` to each model and to its important columns in a YAML file, usually the same `schema.yml` file where tests will go (L12). Because descriptions sit in the project, they are reviewed and versioned with the SQL, and they change when the SQL changes.

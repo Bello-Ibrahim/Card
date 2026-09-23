@@ -8,9 +8,9 @@ Your voice is part of who you are. Friends recognise it on the phone before you 
 ## Explanation
 **Voice cloning** means training or adapting a voice model so that it sounds like one specific real person. Some tools need only a short sample of speech to do this [VERIFY]. The result can then read any text in that person's voice.
 
-Voice cloning has helpful uses. A podcaster who loses their voice through illness can still publish episodes. A teacher can produce lessons in their own voice more quickly. A company can keep a narrator's voice consistent across many videos. But the same technology can be used to deceive: fake phone calls, fake endorsements or fake statements that damage someone's reputation.
+Voice cloning has helpful uses. A podcaster who loses their voice through illness can still publish episodes. But the same technology can deceive: fake phone calls, fake endorsements or fake statements that damage someone's reputation.
 
-Laws about voice, likeness and deepfakes differ by country and are changing quickly [VERIFY] [REGION]. This course does not give legal advice and does not state any legal rule as settled. Instead, it teaches principles that are good practice everywhere. Check local rules, and your tool's terms, before any real project.
+Laws about voice, likeness and deepfakes differ by country and change quickly [VERIFY] [REGION]. This course gives no legal advice. It teaches principles that are good practice everywhere. Check local rules and your tool's terms before any real project.
 
 **Principle 1: Clear, informed and recorded consent.** Only clone a voice when the person has agreed in writing, after you have explained in plain language what will happen. "Informed" means they understand what a clone is, what it could say and who will hear it.
 
