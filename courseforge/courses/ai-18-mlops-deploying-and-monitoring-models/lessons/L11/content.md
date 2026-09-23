@@ -13,7 +13,7 @@ An ML service needs four kinds of test. Each one catches problems the others mis
 3. **Model quality gates** train or load the model and check a metric on a **fixed** test set against a minimum, for example "F1 must be at least 0.50". This is the test that catches a worse model.
 4. **API tests** send HTTP requests to the service and check status codes and response shapes. FastAPI's `TestClient` does this without starting a real server.
 
-Use pytest for all four. Name files `test_*.py` and functions `test_*`, and run `pytest -q`.
+Use pytest for all four. Put tests in `tests/`, name files `test_*.py` and functions `test_*`, and run `pytest -q`. Add a `pytest.ini` file in the project root with the two lines `[pytest]` and `pythonpath = .`, so tests can import `data.py` and `app.py`.
 
 ```python
 from sklearn.linear_model import LogisticRegression
@@ -79,7 +79,7 @@ Many learners compute the quality gate on a new random split each time, or on da
 **Task:** Write at least 5 pytest tests: 2 unit tests, 1 data test, 1 model quality gate and 1 API test. Make one fail on purpose to check that it catches the problem.
 **Tools:** pytest, FastAPI `TestClient` (with its HTTP client dependency), scikit-learn (all free) [VERSION], your `wine-api` project.
 **Steps:**
-1. Create a `tests/` folder.
+1. Create a `tests/` folder and the `pytest.ini` file.
 2. Write 2 unit tests for your data or helper functions.
 3. Write 1 data test for missing values and value ranges.
 4. Write 1 quality gate on a fixed test set. Base the threshold on your champion's score.
