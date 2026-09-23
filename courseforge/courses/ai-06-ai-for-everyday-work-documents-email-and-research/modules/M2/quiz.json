@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-06",
+  "module_id": "M2",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L05",
+      "objective": "O3",
+      "question": "You need to send a firm reminder to a late supplier. Which approach with an AI assistant follows this course's advice?",
+      "options": [
+        "Paste the whole email thread with all names and addresses, and send the first draft the AI writes.",
+        "Give the AI your key facts as bullets without names, ask for two versions in different tones, combine the best parts and edit it in your own words.",
+        "Ask the AI to write the most formal email possible, because formal emails are always firmer.",
+        "Ask the AI to invent a delivery date so the email sounds more specific."
+      ],
+      "answer_index": 1,
+      "explanation": "Your bullets keep the facts correct, two versions give you choices, and editing makes it sound like you. The most tempting wrong option is the very formal email, because it sounds firm. But the right tone depends on the reader and your relationship; a cold, overly formal message can damage a long working relationship, and it still needs editing."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L06",
+      "objective": "O3",
+      "question": "What is the recommended way to create a new procedure document with an AI assistant?",
+      "options": [
+        "Ask for the full document in one prompt, then fix the spelling.",
+        "Ask several different AI tools for full documents and choose the longest.",
+        "Ask for an outline, improve it yourself, draft one section at a time, then edit each section.",
+        "Paste a confidential internal document from another department and ask the AI to change the names."
+      ],
+      "answer_index": 2,
+      "explanation": "Working step by step keeps each part small enough to check and lets your knowledge shape the structure. The most tempting wrong option is asking for the full document in one prompt, because it is fastest. But a long result hides invented steps and sections that do not apply, and checking only the spelling misses them."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L07",
+      "objective": "O4",
+      "question": "Which prompt is most likely to give a useful summary of a long public report for your manager?",
+      "options": [
+        "\"Summarise this.\"",
+        "\"Make this shorter.\"",
+        "\"Tell me if this report is good.\"",
+        "\"Summarise this in 5 bullet points for a manager who has not read it, then list the actions with owners and deadlines in a table.\""
+      ],
+      "answer_index": 3,
+      "explanation": "A purpose-driven prompt names the reader, the length and the information needed. The most tempting wrong option is \"Summarise this\", because it is simple and does produce a summary. But without a purpose it gives a general summary that may leave out the decisions and actions your manager needs."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L07",
+      "objective": "O4",
+      "question": "An AI summary says the council \"will reduce parking fees\". What should you do before you share it?",
+      "options": [
+        "Check that point against the original document, because summaries can state things more strongly than the source.",
+        "Share it, because AI summaries are shorter and therefore more accurate.",
+        "Ask the AI whether it is sure, and share it if it says yes.",
+        "Delete the whole summary and never use AI for summaries again."
+      ],
+      "answer_index": 0,
+      "explanation": "Important points must be compared with the original, which might say \"will consider\" rather than \"will\". The most tempting wrong option is asking the AI whether it is sure. The AI can confirm a wrong answer with the same confidence, so only the original document can settle the question."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L08",
+      "objective": "O6",
+      "question": "An AI assistant gives you a statistic and the title of a report as its source. What is the correct next step?",
+      "options": [
+        "Copy the statistic and the report title into your notes, because the AI named a source.",
+        "Search for the report and open it; use the statistic only if the report exists and says the same thing.",
+        "Ask the AI for two more sources to make the claim stronger.",
+        "Use the statistic but remove the report title, so nobody can check it."
+      ],
+      "answer_index": 1,
+      "explanation": "AI can invent citations that look real, so you must find and read the original source yourself. The most tempting wrong option is copying the claim because a source was named. A named source is not proof: the report may not exist, or it may say something different."
+    }
+  ]
+}

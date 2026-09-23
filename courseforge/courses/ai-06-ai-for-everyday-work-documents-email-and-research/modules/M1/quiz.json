@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-06",
+  "module_id": "M1",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L01",
+      "objective": "O1",
+      "question": "For which of these tasks is a free AI assistant usually most reliable without much checking?",
+      "options": [
+        "Stating the current legal rest-time rules for drivers in your country.",
+        "Rewording a short thank-you note to your team so it sounds friendlier.",
+        "Telling you your customer's delivery deadline.",
+        "Giving the exact price of a product your company launched last week."
+      ],
+      "answer_index": 1,
+      "explanation": "Rewording text you provide is a core strength of AI assistants, and the facts come from you. The most tempting wrong option is the legal rest-time rules, because the answer will sound confident and expert. But exact rules are facts that can be wrong or out of date, so they must be checked in an official source."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L02",
+      "objective": "O1",
+      "question": "Which list shows the four parts of a clear prompt taught in this course?",
+      "options": [
+        "Task, context, format and examples.",
+        "Question, answer, source and date.",
+        "Greeting, request, deadline and signature.",
+        "Topic, length, language and password."
+      ],
+      "answer_index": 0,
+      "explanation": "A clear prompt says what to do (task), gives background (context), describes the output (format) and, if possible, shows a sample (examples). The most tempting wrong option is greeting, request, deadline and signature, because it sounds like a good email. But those are parts of a message to a person, not the parts that help an AI assistant avoid guessing."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L02",
+      "objective": "O3",
+      "question": "Your prompt 'Write a notice about the parking rules' gives a long, generic answer. What is the best next step?",
+      "options": [
+        "Give up, because the tool is not useful for notices.",
+        "Paste in the full staff list with car registration numbers so the AI has more context.",
+        "Ask the same short prompt again and hope for a better answer.",
+        "Add context (dates, which car park, who is affected) and format (length and tone), without personal data."
+      ],
+      "answer_index": 3,
+      "explanation": "The answer was generic because the prompt had no context or format, so adding those is the fix. The most tempting wrong option is pasting the full staff list, because it does add context. But it also adds personal data, which must never go into a free AI tool, and the task does not need it."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L03",
+      "objective": "O2",
+      "question": "You want help replying to a customer's complaint in a free AI tool. What is the safest approach?",
+      "options": [
+        "Paste the full email, then delete the chat when you are finished.",
+        "Paste the full email, because one message is a very small risk.",
+        "Describe the situation in general terms, with names, account numbers and amounts removed, after checking your employer's AI policy.",
+        "Paste the email but ask the AI to keep it private."
+      ],
+      "answer_index": 2,
+      "explanation": "Removing personal details and following your employer's policy lets you get help without sending private data outside approved systems. The most tempting wrong option is deleting the chat afterwards. Depending on the provider, the data may already be stored once it is sent, so deleting it later does not undo the risk."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L04",
+      "objective": "O6",
+      "question": "An AI-written invitation has perfect grammar. Which check from the 4-step review checklist is most likely to find the serious errors?",
+      "options": [
+        "Checking only the spelling, because AI usually makes spelling mistakes.",
+        "Counting the words to make sure it is not too long.",
+        "Reading it once quickly, because well-written text is usually correct.",
+        "Checking facts, numbers, names and dates against your own notes, and removing any promises you did not make."
+      ],
+      "answer_index": 3,
+      "explanation": "AI output is usually fluent, so the real risks are wrong facts, dates and added promises. The most tempting wrong option is a quick read, because the text feels correct. Good writing does not mean correct content: AI can be wrong with full confidence."
+    }
+  ]
+}

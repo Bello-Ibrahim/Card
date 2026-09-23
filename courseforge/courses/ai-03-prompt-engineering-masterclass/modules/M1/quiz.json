@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-03",
+  "module_id": "M1",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L01",
+      "objective": "O2",
+      "question": "A colleague types \"write a report about sales\" into an AI chat tool and gets a very general report. What is the most likely reason?",
+      "options": [
+        "The AI tool is broken and should be restarted.",
+        "The prompt gave almost no context, so the tool filled the gaps with common, average choices.",
+        "AI chat tools can only write emails, not reports.",
+        "The tool looked at the company's sales files but could not understand them."
+      ],
+      "answer_index": 1,
+      "explanation": "An AI chat tool predicts a likely answer from the words it receives, so a prompt with no audience, purpose or figures produces a general answer. The most tempting wrong option is that the tool looked at the company's files. It does not see your files or systems unless you give it that material."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L02",
+      "objective": "O1",
+      "question": "Which list shows the six parts of a structured prompt taught in this course?",
+      "options": [
+        "Title, introduction, body, conclusion, references, signature",
+        "Question, answer, source, date, tool, score",
+        "Audience, purpose, background, material, placeholder, tone",
+        "Role, task, context, format, constraints, examples"
+      ],
+      "answer_index": 3,
+      "explanation": "The six parts are role, task, context, format, constraints and examples. The most tempting wrong option is the list that starts with audience, purpose, background and material. Those are the four questions that make up good context, which is only one of the six parts."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L03",
+      "objective": "O2",
+      "question": "Rosa wants help with a reply to an unhappy client. Which prompt gives useful context while protecting confidential data?",
+      "options": [
+        "\"Reply to [CLIENT], a hotel chain whose booking system update was 2 weeks late. Apologise, explain that testing took longer, and offer a free training session.\"",
+        "\"Reply to a client about a problem.\"",
+        "\"Reply to Mr Omar Haddad at Blue Palm Hotels, contract number 44821, whose booking system update was 2 weeks late.\"",
+        "\"Reply to the client. You already know who they are from our earlier work.\""
+      ],
+      "answer_index": 0,
+      "explanation": "The first prompt keeps the situation, purpose and offer, but uses a placeholder instead of the client's name. The most tempting wrong option is \"Reply to a client about a problem\". It is safe, but it removes the situation as well as the identity, so the answer will be generic."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L04",
+      "objective": "O3",
+      "question": "You asked for \"a short summary\" and received 300 words. Which change is most likely to fix this?",
+      "options": [
+        "Ask the same prompt again without changes.",
+        "Add the word \"very\" so it says \"a very short summary\".",
+        "Replace \"short\" with a measurable limit, such as \"3 bullet points, under 60 words in total\".",
+        "Add a role: \"You are an expert writer.\""
+      ],
+      "answer_index": 2,
+      "explanation": "Numbers and a named format are clearer than words like \"short\", which mean different things to different readers. The most tempting wrong option is adding \"very\". It still does not tell the tool how long the summary should be, so the result may still be too long."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L05",
+      "objective": "O3",
+      "question": "You want an AI tool to label support tickets as \"billing\", \"technical\" or \"account\". Which few-shot prompt is best?",
+      "options": [
+        "A prompt with three examples, all labelled \"billing\", so the pattern is very clear.",
+        "A prompt with one invented example for each label, in the same input-and-label layout, plus a rule for mixed tickets.",
+        "A prompt that pastes 50 real tickets with customer names so the tool has more data.",
+        "A prompt with no examples, because examples always confuse the tool."
+      ],
+      "answer_index": 1,
+      "explanation": "Good examples cover every category, use the same layout and are invented, and a rule helps with difficult cases. The most tempting wrong option is three examples of \"billing\". Examples that all show one category teach a narrow pattern, so the tool may label too many new tickets as billing."
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-02",
+  "module_id": "M2",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L05",
+      "objective": "O3",
+      "question": "How does a diffusion model create a new image from a text prompt?",
+      "options": [
+        "It searches the internet for a matching photo and edits it.",
+        "It starts from random noise and removes it step by step, with the prompt steering each step.",
+        "It draws the outline first and then fills in colours from a stored palette.",
+        "It combines pieces of several stored training images into a collage."
+      ],
+      "answer_index": 1,
+      "explanation": "A diffusion model begins with pure noise and removes it in many small steps, and the text prompt guides each step toward the description. The most tempting wrong option is the collage of stored training images. The model does not store and cut up images; it builds a new image from patterns it learned during training."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L05",
+      "objective": "O3",
+      "question": "Leila runs the same image prompt four times with the same settings and gets four different pictures. What is the main reason?",
+      "options": [
+        "The tool is broken and should give the same image every time.",
+        "The model learns from each image and improves before the next one.",
+        "The prompt was too long for the model to read.",
+        "Each run starts from different random noise, and details not in the prompt are filled in differently."
+      ],
+      "answer_index": 3,
+      "explanation": "Each generation starts from new random noise, so parts of the picture that the prompt does not describe come out differently. The most tempting wrong option is that the model learns between runs. The model does not change while you use it; the variation comes from the starting noise."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L06",
+      "objective": "O4",
+      "question": "Nikhil wants a wide website banner of his bicycle shop with space on the left for a title. Which change will help most?",
+      "options": [
+        "Choose a wide aspect ratio and describe the composition, for example \"bicycles on the right, plain wall on the left\".",
+        "Add the words \"amazing, ultra-detailed, masterpiece\" to the prompt.",
+        "Ask the image generator to write the shop name and title inside the image.",
+        "Keep the prompt very short so the model has more freedom."
+      ],
+      "answer_index": 0,
+      "explanation": "The aspect ratio sets the shape of the banner, and a composition description tells the model where to leave space. The most tempting wrong option is asking the model to write the title in the image. Image models often produce wrong letters, so it is better to leave space and add exact text later in a design tool."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L07",
+      "objective": "O1",
+      "question": "Which task is the clearest example of a multimodal model at work?",
+      "options": [
+        "Writing a product description from a list of bullet points.",
+        "Creating a poster image from a text prompt.",
+        "Reading a photo of a bus timetable and returning the times as a text table.",
+        "Translating an email from Spanish into English."
+      ],
+      "answer_index": 2,
+      "explanation": "Reading an image and producing text uses two different types of data, which is what makes a model multimodal. The most tempting wrong option is creating a poster image from text. That is usually described as a diffusion or image model task in this course, because it is text in and image out with no image or audio input to understand."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L08",
+      "objective": "O5",
+      "question": "An image generator is asked for a shop sign that says \"FRESH FISH\". The sign shows letters that are not real words. What is the most likely cause?",
+      "options": [
+        "The model's knowledge cut-off is too old to include those words.",
+        "The model learned what text looks like in images, not how to spell words correctly.",
+        "The context window was full, so the model forgot the prompt.",
+        "The model is biased against shop signs."
+      ],
+      "answer_index": 1,
+      "explanation": "Image models build pictures from visual patterns, so they often produce shapes that look like letters without correct spelling. The most tempting wrong option is the knowledge cut-off. A cut-off affects knowledge of recent events, but \"FRESH FISH\" is a common phrase; the problem is how image models create text, not missing knowledge."
+    }
+  ]
+}

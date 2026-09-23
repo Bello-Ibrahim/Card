@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-03",
+  "module_id": "M2",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L06",
+      "objective": "O3",
+      "question": "Nadia asks an AI tool to rewrite a client proposal in a more formal tone. What should she do before sending the new version?",
+      "options": [
+        "Check only the spelling, because the AI already kept the meaning.",
+        "Send it immediately, because a formal tone is always safer.",
+        "Compare it with her original and check that no facts were lost, changed or added.",
+        "Ask the AI to rewrite it three more times and choose the longest version."
+      ],
+      "answer_index": 2,
+      "explanation": "Rewrites can add promises or drop details even when the wording is excellent, so the meaning must be compared with the original. The most tempting wrong option is checking only the spelling. Good grammar does not show whether a new promise, such as free support, was added."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L07",
+      "objective": "O5",
+      "question": "An AI tool turns meeting notes into a table of action items. One row shows a deadline that you cannot find in the notes. How should you mark it?",
+      "options": [
+        "Invented, because it is in the output but not in the source.",
+        "Correct, because the deadline looks realistic.",
+        "Missing, because it was not in the notes.",
+        "Correct, because the AI probably knew the deadline from other meetings."
+      ],
+      "answer_index": 0,
+      "explanation": "Anything in the output that is not in the source is invented, even if it looks reasonable. The most tempting wrong option is \"missing\". Missing means something in the source was left out of the output, which is the opposite situation."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L08",
+      "objective": "O4",
+      "question": "You asked an AI tool to compare three software options and it recommended Option B. What is the most useful next prompt?",
+      "options": [
+        "\"Are you sure?\"",
+        "\"Write an email to my manager recommending Option B.\"",
+        "\"Explain Option B in more detail.\"",
+        "\"What is the weakest assumption in your analysis?\""
+      ],
+      "answer_index": 3,
+      "explanation": "Asking for the weakest assumption often shows which guessed facts the recommendation depends on, so you know what to check. The most tempting wrong option is \"Are you sure?\". It gives the tool no direction, and the answer usually adds confidence rather than showing what needs checking."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L09",
+      "objective": "O3",
+      "question": "A colleague writes \"You are a world-class tax lawyer\" at the start of a prompt. What does this role most likely change?",
+      "options": [
+        "It makes the answer legally reliable, so no expert review is needed.",
+        "It changes the point of view and style of the answer, but not the tool's knowledge.",
+        "It gives the tool access to current tax laws in the colleague's country.",
+        "It has no effect at all on the answer."
+      ],
+      "answer_index": 1,
+      "explanation": "A role changes the angle and tone the tool uses, but its knowledge and access to information stay the same. The most tempting wrong option is that the answer becomes legally reliable. Expert topics still need checking by a qualified person."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L10",
+      "objective": "O4",
+      "question": "A prompt says \"Write a detailed, complete overview in under 40 words\" and the output says almost nothing. What is the cause, and the best fix?",
+      "options": [
+        "Missing context; add a long background section.",
+        "The tool is weak; try the same prompt in another tool.",
+        "Conflicting instructions; decide which matters more, detail or length, and remove the other.",
+        "Missing format; ask for a table instead."
+      ],
+      "answer_index": 2,
+      "explanation": "\"Detailed and complete\" and \"under 40 words\" pull in opposite directions, so the fix is to remove the conflict. The most tempting wrong option is trying another tool. The conflict is in the prompt, so it will usually produce a weak result in any tool."
+    }
+  ]
+}

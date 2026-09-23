@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-06",
+  "module_id": "M3",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L09",
+      "objective": "O5",
+      "question": "An AI assistant plans your week and puts an important report on Thursday, but your manager must review it on Wednesday. What should you do?",
+      "options": [
+        "Keep the AI plan, because it looked at all your tasks together.",
+        "Ask the AI to make the plan again until it chooses Wednesday by chance.",
+        "Delete the report from the list, because the plan does not fit it.",
+        "Move the report earlier yourself and note why, because you know the deadline and the AI did not."
+      ],
+      "answer_index": 3,
+      "explanation": "AI can suggest an order, but you decide the priorities because you know the deadlines and dependencies. The most tempting wrong option is keeping the plan because it looks complete and organised. But the AI did not know about the Wednesday review, so a neat plan can still be wrong."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L10",
+      "objective": "O5",
+      "question": "Which task is the best first candidate for AI support, according to this course?",
+      "options": [
+        "A weekly internal newsletter based on short notes from colleagues, with names removed before pasting.",
+        "Deciding which employee should get a promotion.",
+        "Writing a reply to a sensitive complaint that includes a customer's health details, in a free tool.",
+        "Approving a supplier contract."
+      ],
+      "answer_index": 0,
+      "explanation": "Good first tasks are repeated, text-based and low-risk, and the newsletter is all three. The most tempting wrong option is the complaint reply, because replying to emails is a strength of AI. But it involves health data, which must never go into a free tool, and a sensitive situation that needs human judgement."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L10",
+      "objective": "O5",
+      "question": "When you map a task into steps, what does the label \"AI can check\" mean?",
+      "options": [
+        "The AI does the whole step and nobody needs to look at it.",
+        "You do the work, and the AI helps review it, for example for clarity or missing points.",
+        "The step must never involve AI.",
+        "The AI checks your employer's AI policy for you."
+      ],
+      "answer_index": 1,
+      "explanation": "\"AI can check\" means the human does the work and the AI supports the review. The most tempting wrong option is that the AI does the whole step, which confuses \"check\" with \"draft\". Even for \"AI can draft\" steps, a human still checks and edits the result."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L11",
+      "objective": "O7",
+      "question": "What should you store in your personal prompt library?",
+      "options": [
+        "Every filled-in prompt, including client names and figures, so you have a full history.",
+        "Only the AI's answers, not the prompts.",
+        "Templates with empty spaces for the facts, saved in a place your employer allows, with no confidential data.",
+        "Prompts copied from the internet without testing them."
+      ],
+      "answer_index": 2,
+      "explanation": "Templates with empty spaces can be reused each week and contain no confidential data. The most tempting wrong option is saving every filled-in prompt for a full history. That turns the library into a store of confidential data, and a prompt full of last week's details does not fit the next week."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L12",
+      "objective": "O6",
+      "question": "A task took 30 minutes the usual way. With AI, the answer appeared in 1 minute, but prompting, checking and editing took 32 minutes in total. What is the honest time saved?",
+      "options": [
+        "29 minutes, because the AI wrote the answer in 1 minute.",
+        "It cannot be measured, so you should use a general estimate instead.",
+        "30 minutes, because the AI did the writing.",
+        "Minus 2 minutes: the task took longer with AI, which is a useful result to report."
+      ],
+      "answer_index": 3,
+      "explanation": "Honest measurement includes all the time: prompting, waiting, checking and editing, so 30 minus 32 gives minus 2 minutes. The most tempting wrong option is 29 minutes, because the AI answer really was fast. But it ignores the checking and editing time, which is part of doing the task properly."
+    }
+  ]
+}

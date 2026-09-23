@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-02",
+  "module_id": "M1",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L01",
+      "objective": "O1",
+      "question": "A tool reads a photo of a restaurant menu and answers the question \"Which dishes are vegetarian?\" in text. Which model family is most likely involved?",
+      "options": [
+        "A diffusion model, because the input is an image.",
+        "A predictive model, because it gives a label to each dish.",
+        "A multimodal model, because it takes in an image and produces text.",
+        "A language model only, because the answer is written in text."
+      ],
+      "answer_index": 2,
+      "explanation": "The tool takes in one type of data (an image) and produces another (text), which is what multimodal models do. The most tempting wrong option is \"a language model only\". A text-only language model cannot read the photo; the ability to take in the image is what makes it multimodal."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L02",
+      "objective": "O2",
+      "question": "How does a large language model produce a long answer?",
+      "options": [
+        "It predicts the next token, adds it to the text, and repeats this many times.",
+        "It finds a complete answer in a stored database and copies it.",
+        "It plans the full answer in advance and then types it out word by word.",
+        "It searches the internet for every sentence it writes."
+      ],
+      "answer_index": 0,
+      "explanation": "A language model builds its answer one token at a time, each time predicting a likely next token from all the text so far. The most tempting wrong option is that it plans the full answer first. It does not write from a finished plan, which is why a small change in the prompt or temperature can change the direction of the answer."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L02",
+      "objective": "O2",
+      "question": "Ines needs a model to extract dates from invoices in the same way every time. Which temperature setting should she choose?",
+      "options": [
+        "A high temperature, so the model can be more creative.",
+        "A high temperature, so the model reads more of the invoice.",
+        "Temperature does not matter for this kind of task.",
+        "A low temperature, so the model gives more predictable, consistent answers."
+      ],
+      "answer_index": 3,
+      "explanation": "A low temperature makes the model choose the most likely tokens almost every time, which gives consistent results for tasks like extraction. The most tempting wrong option is a high temperature for creativity. Creativity and variety are useful for brainstorming, but for data extraction they only add the risk of different or invented answers."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L03",
+      "objective": "O2",
+      "question": "In the simplified training picture, which stage mainly teaches a model to behave like a helpful assistant that answers questions and follows instructions?",
+      "options": [
+        "Pre-training on a very large collection of text.",
+        "Fine-tuning on examples of good requests and answers.",
+        "The user's conversation, which trains the model in real time.",
+        "The context window, which stores the rules of good behaviour."
+      ],
+      "answer_index": 1,
+      "explanation": "Fine-tuning uses carefully prepared examples of requests and helpful answers, so the model learns the format and behaviour of an assistant. The most tempting wrong option is pre-training. Pre-training gives general language skills and knowledge, but a pre-trained model is good at continuing text, not yet at acting as a helpful assistant."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L04",
+      "objective": "O5",
+      "question": "Arjun gives a chatbot his team's leave policy and asks about a rule the policy does not mention. The chatbot answers with a clear, specific rule. What is the best description of this answer?",
+      "options": [
+        "A context window error, because the policy was too long to read.",
+        "A correct answer from the model's training data.",
+        "A hallucination: a fluent, confident answer that is not supported by the source.",
+        "A knowledge cut-off, because the policy is newer than the model."
+      ],
+      "answer_index": 2,
+      "explanation": "The model generated a likely-sounding rule that is not in the policy, which is a hallucination. The most tempting wrong option is the knowledge cut-off. The cut-off explains why a model does not know recent events, but here the source was given to the model; the problem is that it invented an answer instead of saying \"not stated\"."
+    }
+  ]
+}
