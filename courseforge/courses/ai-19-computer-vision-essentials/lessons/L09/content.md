@@ -37,7 +37,7 @@ Nadia Rahman evaluates a parking-lot detector for a shopping centre in Dhaka, Ba
 4. Union = 20,000 + 18,000 − 12,000 = 26,000.
 5. IoU = 12,000 ÷ 26,000 ≈ 0.46.
 
-At a threshold of 0.5, this prediction is a false positive, and the car is a false negative, even though the box is clearly on the car. Nadia checks the images and sees that the model's boxes often shift towards the car's shadow. She notes this as a pattern to fix with more training images taken at midday.
+At a threshold of 0.5, this prediction is a false positive, and the car is a false negative, even though the box is clearly on the car. Nadia sees that the model's boxes often shift towards the car's shadow, a pattern to fix with more training images.
 
 She checks her calculation with a short function:
 
@@ -57,7 +57,7 @@ print(round(iou((100, 50, 300, 150), (150, 70, 330, 170)), 3))  # 0.462
 The `max(0, ...)` parts matter: when boxes do not overlap, the width or height would be negative, and without them two negative numbers could multiply into a positive overlap that does not exist.
 
 ## Common Mistake
-Many learners compare mAP numbers from different sources as if they meant the same thing. A model with "mAP 0.70" at IoU 0.5 may be worse than one with "mAP 0.50" at IoU 0.5-0.95. The numbers also depend on the test images. Only compare mAP values that use the same version and the same test set. Another mistake is mixing box formats, such as passing `(x, y, width, height)` to a function that expects corners, which gives wrong IoU values with no error.
+Many learners compare mAP numbers from different sources as if they meant the same thing. A model with "mAP 0.70" at IoU 0.5 may be worse than one with "mAP 0.50" at IoU 0.5-0.95. Only compare mAP values that use the same version and the same test set. Another mistake is mixing box formats, such as passing `(x, y, width, height)` to a function that expects corners, which gives wrong IoU values with no error.
 
 ## Key Takeaways
 1. A detector returns a box, a class and a confidence score for each object, and NMS removes duplicate boxes.

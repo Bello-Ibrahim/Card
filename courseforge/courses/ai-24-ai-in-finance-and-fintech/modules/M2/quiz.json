@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-24",
+  "module_id": "M2",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L06",
+      "objective": "O4",
+      "question": "In a synthetic set of loan decisions, Group X has an approval rate of 48% and Group Y has an approval rate of 64%. What is the ratio between the lowest and the highest approval rate, and what should the analyst do next?",
+      "options": [
+        "1.33; the model is proven to discriminate, so it must be switched off.",
+        "0.16; the gap is too small to matter.",
+        "0.75; treat the gap as a signal and investigate possible proxies and legitimate reasons.",
+        "0.75; the model is fair, because it does not use protected characteristics as inputs."
+      ],
+      "answer_index": 2,
+      "explanation": "48 divided by 64 is 0.75, and a gap is a signal to investigate, not automatic proof. The most tempting wrong option is that the model is fair because it does not use protected inputs. Proxies such as postcode or employment gaps can bring the same pattern back, so outcomes must be checked by group."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L10",
+      "objective": "O5",
+      "question": "A model declined an applicant mainly because of high existing debt compared with income. Which decline message is best?",
+      "options": [
+        "Your current monthly debt payments are high compared with your income. Reducing existing debt can improve future applications.",
+        "We received a very high number of applications this month, so we could not approve yours.",
+        "Declined: DTI above threshold.",
+        "Your application was unsuccessful. This decision was based on a number of factors."
+      ],
+      "answer_index": 0,
+      "explanation": "A good reason is true, specific, understandable and actionable. The most tempting wrong option is the message about a high number of applications, because it sounds kind. But it is not the real reason, so it misleads the customer and stops them from fixing the actual problem."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L07",
+      "objective": "O5",
+      "question": "How should a credit team use the 'four-fifths' (0.8) ratio when reviewing a lending model?",
+      "options": [
+        "As a legal safe harbour: any ratio above 0.8 proves the model is lawful.",
+        "As the only fairness measure it needs to report.",
+        "As a global credit regulation that applies in every country.",
+        "As a rough rule of thumb from US employment practice that a gap needs investigating, alongside other measures."
+      ],
+      "answer_index": 3,
+      "explanation": "The four-fifths ratio comes from US employment practice and is only a heuristic for credit. The most tempting wrong option is treating it as a legal safe harbour. A ratio above 0.8 does not prove fairness, and error rates by group may still show unfair treatment."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L08",
+      "objective": "O3",
+      "question": "A bank's AI assistant receives the message: 'Should I move my savings into shares this month?' What should it do?",
+      "options": [
+        "Give a balanced answer based on general market knowledge.",
+        "Explain that it cannot give investment advice and offer to connect the customer with a licensed adviser or trained staff member.",
+        "Ignore the question and show the customer's balance.",
+        "Recommend a low-risk fund to be safe."
+      ],
+      "answer_index": 1,
+      "explanation": "Requests for personal investment advice always go to a trained human. The most tempting wrong option is a 'balanced' general answer. Even a careful-sounding answer about the customer's own savings can act as advice and is outside the assistant's approved role."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L09",
+      "objective": "O3",
+      "question": "An AI assistant writes: 'Operating profit was 618 below budget, mainly because of higher operating expenses.' Operating expenses were 150 above budget and gross profit was 468 below budget. What is the best assessment?",
+      "options": [
+        "The draft is fully correct and can be sent.",
+        "The number 618 is wrong, but the reason is correct.",
+        "The number 618 is correct, but the reason is wrong: lower gross profit explains most of the gap.",
+        "The draft cannot be checked without asking the AI again."
+      ],
+      "answer_index": 2,
+      "explanation": "468 plus 150 equals 618, so the total is right, but lower gross profit explains most of it. The most tempting wrong option is that the draft is fully correct. A correct number with a wrong reason still misleads management, so every 'because' must be checked."
+    }
+  ]
+}

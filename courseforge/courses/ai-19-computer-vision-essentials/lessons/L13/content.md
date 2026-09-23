@@ -54,6 +54,8 @@ names = list(counted.values())
 print({v: names.count(v) for v in VEHICLES.values()})
 ```
 
+The `if` line counts only vehicles moving down the image across the line, once per ID.
+
 Example output: `{'car': 41, 'bus': 6, 'truck': 3}`. Camila counts the same 2-minute clip by hand and finds 44 cars, 6 buses and 3 trucks. She checks the three missed cars: two were hidden behind a bus while crossing the line, and one was a dark car in shadow. She moves the line 80 pixels lower, where vehicles are more separated, and runs the test again.
 
 **On screen (presenter steps):**

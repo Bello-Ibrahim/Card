@@ -17,11 +17,11 @@ You already know basic Docker: images, containers, `docker build` and `docker ru
 
 In this course we copy the model into the image, because it makes rollback simple: run the previous image. Before building, export the champion model from the registry to a local `model/` folder with a small script (`export_model.py`) that calls `mlflow.sklearn.load_model("models:/wine-quality-clf@champion")` and then `mlflow.sklearn.save_model(model, "model")`.
 
-Image size and start-up time matter when a platform starts many copies of your service, for example during a traffic peak. A large image takes longer to download to each new machine.
+Image size and start-up time matter when a platform starts many copies of your service during a traffic peak.
 
 Never put secrets in a Dockerfile or image. Anyone who can pull the image can read its layers and environment variables. Pass secrets at runtime, for example with `docker run --env-file`, and keep that file out of Git.
 
-**Analogy:** A container is like a shipping container for goods. Everything the product needs travels inside it, so it arrives the same at every port. A multi-stage build is packing the finished product without the factory tools, and a non-root user is locking the cargo so that the crew cannot open every box.
+**Analogy:** A container is like a shipping container for goods. Everything the product needs travels inside it, so it arrives the same at every port. A multi-stage build packs the product without the factory tools.
 
 ## Worked Example
 Lars Eriksson is a platform engineer at a hypothetical energy company in Gothenburg, Sweden. He containerises the wine API on screen:
@@ -41,7 +41,7 @@ FROM python:3.11-slim
 WORKDIR /app
 COPY --from=build /wheels /wheels
 RUN pip install --no-cache-dir /wheels/* && rm -rf /wheels \
-    && useradd --create-home appuser
+    && useradd --create-home appuser && chown appuser /app
 COPY app.py .
 COPY model/ ./model/
 ENV MODEL_URI=/app/model
@@ -52,7 +52,7 @@ CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
 4. Build: `docker build -t wine-api:v1 .`
 5. Run: `docker run --rm -p 8000:8000 -e MODEL_VERSION=1 wine-api:v1`, then open `http://127.0.0.1:8000/health`.
 6. Show the size with `docker images wine-api`. Then show the size of a single-stage build that uses the full `python:3.11` base image, and compare the two.
-7. Check the user: `docker run --rm wine-api:v1 whoami` prints `appuser`.
+7. Check the user: `docker run --rm wine-api:v1 whoami` prints `appuser`. The `chown` line lets this user write `predictions.jsonl` from L07.
 
 Record your own sizes; they depend on your requirements and platform.
 

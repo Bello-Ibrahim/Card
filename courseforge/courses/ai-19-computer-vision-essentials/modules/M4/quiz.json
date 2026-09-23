@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-19",
+  "module_id": "M4",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L13",
+      "objective": "O3",
+      "question": "A video pipeline counts every car detection in every frame, and reports 900 cars for a clip where about 30 cars passed. What is the correct fix?",
+      "options": [
+        "Add tracking so each car gets an ID, and count each ID once when it crosses a counting line.",
+        "Raise the confidence threshold until the count falls to about 30.",
+        "Process only one frame per second so there are fewer detections.",
+        "Divide the total by the frame rate of the video."
+      ],
+      "answer_index": 0,
+      "explanation": "Detection sees the same car in many frames, so you need tracking IDs and a line-crossing rule to count each car once. The most tempting wrong option is raising the threshold. It lowers the number only by removing real detections, so the count becomes right by accident and wrong on the next clip."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L13",
+      "objective": "O5",
+      "question": "Your automatic count is 3 cars lower than a manual count. The missed cars were hidden behind buses when they crossed the counting line. What is the most sensible next step?",
+      "options": [
+        "Count unique track IDs across the whole video instead of line crossings.",
+        "Stop using tracking, because it caused the error.",
+        "Move the counting line to a place where vehicles are more separated and rarely hidden, then compare with the manual count again.",
+        "Report the automatic count, because the manual count is probably wrong."
+      ],
+      "answer_index": 2,
+      "explanation": "The cause is occlusion at the line, so moving the line to a clearer place targets the cause, and a new manual comparison shows whether it worked. The most tempting wrong option is counting unique IDs. That also counts parked cars and objects that never cross the line, and every lost track adds an extra ID."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L14",
+      "objective": "O6",
+      "question": "A team's depot camera records workers while counting vans. Which plan best protects privacy?",
+      "options": [
+        "Blur only faces with a face detector, and keep the raw video for as long as possible in case it is needed.",
+        "Blur whole person boxes before storing frames, keep raw video only for a short, fixed time, show notices, and check local rules on cameras and consent.",
+        "Upload the raw video to an online AI tool to check how many people appear in it.",
+        "Record in a lower resolution, because low-resolution video is never personal data."
+      ],
+      "answer_index": 1,
+      "explanation": "Blurring whole people, limiting storage, informing people and checking local rules work together. The most tempting wrong option is blurring only faces. Face detectors miss small or turned faces, clothes can still identify people, and keeping raw video for a long time adds risk."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L15",
+      "objective": "O7",
+      "question": "In a Gradio app, the annotated output image has red and blue swapped. The input comes from gr.Image(type=\"numpy\"). What is the most likely cause?",
+      "options": [
+        "The confidence slider is set too low.",
+        "The model file best.pt was trained on greyscale images.",
+        "Hugging Face Spaces does not support colour images on free hardware.",
+        "The code did not convert between Gradio's RGB arrays and the BGR arrays that ultralytics and OpenCV use."
+      ],
+      "answer_index": 3,
+      "explanation": "Gradio passes RGB arrays, while ultralytics treats NumPy arrays as BGR and its plot() returns BGR, so you convert on the way in and on the way out. The most tempting wrong option is the confidence slider. The threshold changes which boxes appear, not the colour order of the image."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L16",
+      "objective": "O5",
+      "question": "After adding contrast correction, a car park counter's mean count error falls from 0.75 to 0.46, but the error on daytime photos rises from 0.12 to 0.25. How should the learner report this?",
+      "options": [
+        "Report the overall improvement and the daytime result, explain the likely cause, and state where the app is and is not fit for use.",
+        "Report only the overall improvement, because the mean is what matters.",
+        "Remove the daytime photos from the test set so the result is clearly positive.",
+        "Keep changing the settings while looking at the test set until every condition improves."
+      ],
+      "answer_index": 0,
+      "explanation": "Honest evaluation reports mixed results by condition and uses them in the fitness decision. The most tempting wrong option is tuning while looking at the test set until everything improves. That uses the test set for training decisions, so the final numbers become too optimistic."
+    }
+  ]
+}

@@ -21,12 +21,12 @@ Scripts also matter. Arabic is written right to left, and letters change shape d
 
 To measure OCR, type the true text by hand and compare. The **character error rate (CER)** is the number of character edits (insertions, deletions and substitutions) needed to turn the OCR output into the true text, divided by the length of the true text. A CER of 0 is perfect.
 
-Receipts and signs can contain personal data, such as names, card numbers or addresses. Use your own receipts or public signs, and do not upload other people's documents to online OCR services.
+Receipts can contain personal data, such as names or card numbers. Use your own receipts or public signs, and do not upload other people's documents to online OCR services.
 
 **Analogy:** OCR is like a person reading a handwritten note through a dirty window. They may know the language well, but they will still misread letters. Cleaning the window (preprocessing) often helps more than finding a better reader.
 
 ## Worked Example
-Amira Ben Salem manages expenses for a design studio in Tunis, Tunisia. Receipts come in French and Arabic. She tests OCR on one receipt photo before and after preprocessing, using her own receipts with card numbers covered.
+Amira Ben Salem manages expenses for a design studio in Tunis, Tunisia, with receipts in French and Arabic. She tests OCR on one of her own receipts, card number covered, before and after preprocessing.
 
 **On screen (presenter steps):**
 1. In a Colab cell, run `!apt-get install -y tesseract-ocr tesseract-ocr-fra tesseract-ocr-ara tesseract-ocr-por` and `!pip install pytesseract`. [VERSION]

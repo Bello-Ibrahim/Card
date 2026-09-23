@@ -55,13 +55,11 @@ demo.launch()
 **On screen (presenter steps):**
 1. In Colab, run `!pip install ultralytics gradio` and upload `best.pt`. [VERSION]
 2. Run the cell, open the temporary link that Gradio prints, upload a shelf photo and move the slider.
-5. On huggingface.co, create a new Space and choose the Gradio SDK and free CPU hardware. [VERSION]
-6. Upload `app.py` (the code above), `best.pt` and a `requirements.txt` that lists `ultralytics` and `gradio`.
-7. Wait for the build to finish, then test the Space with a new photo.
+3. On huggingface.co, create a new Space with the Gradio SDK and free CPU hardware. [VERSION]
+4. Upload `app.py` (the code above), `best.pt` and a `requirements.txt` listing `ultralytics` and `gradio`.
+5. When the build finishes, test the Space with a new photo.
 
-Example result: a photo with 14 cartons shows 13 boxes and "Count: 13". One carton hidden behind a price label is missed, the same failure Karim saw in training. He writes it down for L16.
-
-Before making the Space public, Karim checks two things: the app shows no people, and the licence of the detector allows public use. A public app built on AGPL-3.0 code may need its source code published. [VERIFY]
+Example result: a photo with 14 cartons shows "Count: 13"; a carton behind a price label is missed, as in training. He notes it for L16. Before making the Space public, Karim checks that the app shows no people and that the detector's licence allows public use. A public app built on AGPL-3.0 code may need its source code published. [VERIFY]
 
 ## Common Mistake
 Many learners spend most of their capstone time on colours and extra buttons. The rubric rewards a correct count, honest evaluation and a clear fitness judgement, so get a plain interface working first. Another mistake is forgetting the colour conversion, which gives wrong colours in the output and can lower detection quality.
@@ -78,15 +76,14 @@ Many learners spend most of their capstone time on colours and extra buttons. Th
 1. Write your use case in two sentences: target objects, scene and the number the user needs.
 2. Choose a pre-trained or fine-tuned model and record its licence.
 3. Write and test the counting function on 3 images in a notebook cell.
-4. Wrap it in a Gradio interface with an image input, a confidence slider, an annotated image output and a count.
-5. Launch it in Colab and test it with 2 new images.
+4. Wrap it in a Gradio interface with an image input, a confidence slider, an annotated output and a count.
+5. Launch it in Colab and test 2 new images.
 6. Optional: deploy it to a Hugging Face Space.
 7. Save screenshots of two results.
 **What good looks like:** An app that accepts a new image, shows boxes around the target objects and displays a total, plus a short note of the use case, the model and its licence.
 **Time:** about 60 minutes
 
 ## Review Flags
-- [VERSION] Curriculum flag: Hugging Face Spaces free hardware, the Space creation steps and the Gradio SDK option change. The Gradio interface (`gr.Interface`, `gr.Image(type="numpy")`, `gr.Slider`, `gr.Number`) and Gradio's temporary public link must also be checked; Gradio is not in the brief's tool list.
-- [VERSION] `ultralytics` treating NumPy input as BGR, `Results.plot()` returning BGR, and the model files used. Code was checked for syntax only; counts are example output.
-- [VERIFY] Curriculum flag: Ultralytics licence (AGPL-3.0 with a separate commercial licence), including what it requires for a public app on a Space; confirm before scripting. Also confirm the licence of any dataset learners use.
+- [VERSION] Curriculum flags: Hugging Face Spaces free hardware and Space creation steps; the Gradio interface (`gr.Interface`, `gr.Image(type="numpy")`, `gr.Slider`, `gr.Number`) and temporary link (Gradio is not in the brief's tool list); `ultralytics` treating NumPy input as BGR and `Results.plot()` returning BGR. Code was checked for syntax only; counts are example output.
+- [VERIFY] Curriculum flag: Ultralytics licence (AGPL-3.0 with a separate commercial licence), including what it requires for a public Space; confirm before scripting.
 - [VERSION] Curriculum flag: Google Colab free resources and session limits are not guaranteed.

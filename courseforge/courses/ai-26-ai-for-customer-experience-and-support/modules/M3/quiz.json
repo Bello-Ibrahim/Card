@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-26",
+  "module_id": "M3",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L09",
+      "objective": "O6",
+      "question": "You are building the first version of a support assistant in a free chatbot builder. Which plan is best?",
+      "options": [
+        "Upload every document the company has, so the assistant can answer any question.",
+        "Hide the fact that it is AI, so customers trust it more.",
+        "Let the assistant guess when the knowledge base has no answer, so customers always get a reply.",
+        "Cover 3 to 5 frequent, low-risk topics with clean articles, say it is AI, and offer a person for everything else."
+      ],
+      "answer_index": 3,
+      "explanation": "A small, clear scope with clean content and honest disclosure gives the best first version. The most tempting wrong option is uploading every document. More content sounds helpful, but old or overlapping documents give the assistant more chances to find the wrong text."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L10",
+      "objective": "O4",
+      "question": "Outside office hours, a customer asks for a person. Which final message from the assistant is best?",
+      "options": [
+        "\"Your request has been escalated.\"",
+        "\"Our team is offline now. I have passed a summary of our chat to them, and a person will reply by email when the office opens.\"",
+        "\"A person will contact you in a few minutes.\"",
+        "\"Please try again later when our agents are online.\""
+      ],
+      "answer_index": 1,
+      "explanation": "The customer learns who will reply, how and when, and does not need to repeat the story. The most tempting wrong option is \"A person will contact you in a few minutes\". It sounds helpful, but it is a promise the team cannot keep outside office hours."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L11",
+      "objective": "O5",
+      "question": "Which test set gives the most useful picture of a support assistant before launch?",
+      "options": [
+        "About 20 questions, including standard, tricky, out-of-scope, emotional, hand-off and non-English questions.",
+        "The 3 questions that match the article titles exactly.",
+        "100 copies of the most common question, to test speed.",
+        "Only questions written by the person who built the assistant."
+      ],
+      "answer_index": 0,
+      "explanation": "A mixed test set checks accuracy, tone, hand-off and fairness in realistic situations. The most tempting wrong option is testing with the article titles. The assistant will pass easily, but real customers do not write like help articles, so the result tells you very little."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L11",
+      "objective": "O5",
+      "question": "During testing you find three problems: one reply is a little too long, one answer invents a pet policy, and one injury complaint was not handed off. Which should you fix first?",
+      "options": [
+        "The long reply, because customers notice length first.",
+        "All three at the same time, without retesting.",
+        "The missed hand-off for the injury complaint, then the invented answer.",
+        "None of them, because the other answers were good."
+      ],
+      "answer_index": 2,
+      "explanation": "Fix the highest-risk problems first: a missed safety hand-off, then an invented answer, and retest after the fixes. The most tempting wrong option is fixing all three at once without retesting. A fix in one place can break something else, so you must run the test set again."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L12",
+      "objective": "O5",
+      "question": "An assistant's containment rate (conversations that never reach a person) is very high, but customer satisfaction is low and many customers contact the team again by phone. What does this most likely mean?",
+      "options": [
+        "The assistant is working very well and the phone calls are unrelated.",
+        "Many customers are giving up or not getting answers, so the assistant is not really solving their problems.",
+        "The hand-off rate is too high and should be reduced.",
+        "Satisfaction surveys are not useful for AI assistants."
+      ],
+      "answer_index": 1,
+      "explanation": "Measures must be read together: high containment with low satisfaction and repeat contacts suggests customers are leaving without help. The most tempting wrong option is that the assistant is working well, because the containment number looks good on its own. It ignores the warning signs in the other measures."
+    }
+  ]
+}
