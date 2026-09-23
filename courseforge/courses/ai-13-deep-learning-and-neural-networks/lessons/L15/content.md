@@ -57,10 +57,11 @@ Cause: vanishing gradients; the first layer's gradient norm is almost zero. Fix:
 ```python
 losses = []
 for xb, yb in train_dl:
-    ...
+    ...                                          # normal training step
+    loss = loss_fn(model(xb), yb)                # extra loss, for the log
     losses.append(loss)                          # keeps every graph alive
 ```
-Cause: storing the loss tensor keeps each step's computation graph in memory, so use grows every step. Fix: `losses.append(loss.item())`, then reduce the batch size or add mixed precision if memory is still short. On CPU, the same bug shows as growing RAM in the Colab resource panel.
+Cause: the logged loss is a tensor whose graph was never used for `backward()`, so PyTorch never frees it, and memory grows every step. Fix: `losses.append(loss.item())`, or compute the logged loss inside `with torch.no_grad():`. Then reduce the batch size or add mixed precision if memory is still short. On CPU, the same bug shows as growing RAM in the Colab resource panel.
 
 ## Common Mistake
 Many learners respond to every problem by changing the learning rate or the architecture, without first reading the error or checking shapes. Several bugs, such as a missing `zero_grad` or a stored loss tensor, produce symptoms that look like tuning problems. Follow the checklist in order, and change one thing at a time.
@@ -79,7 +80,7 @@ Many learners respond to every problem by changing the learning rate or the arch
 3. Use the checklist: shapes, one-batch overfit, loss format, learning rate, gradient norms, memory.
 4. Apply one fix at a time until the notebook trains correctly.
 5. Fill a table with four rows: notebook, symptom, cause, fix, evidence that it worked.
-**What good looks like:** A complete table matching the answer key (A: unscaled inputs, fixed with standardisation and clipping; B: logits and label shape or dtype mismatch, fixed with `squeeze(1)` and `float()`; C: vanishing gradients from deep sigmoid layers, fixed with ReLU and BatchNorm; D: stored loss tensors, fixed with `.item()`), with printed evidence for each fix.
+**What good looks like:** A complete table matching the answer key (A: unscaled inputs, fixed with standardisation and clipping; B: logits and label shape or dtype mismatch, fixed with `squeeze(1)` and `float()`; C: vanishing gradients from deep sigmoid layers, fixed with ReLU and BatchNorm; D: stored logging-loss tensors that keep their graphs, fixed with `.item()` or `torch.no_grad()`), with printed evidence for each fix.
 **Time:** about 40 minutes
 
 ## Review Flags

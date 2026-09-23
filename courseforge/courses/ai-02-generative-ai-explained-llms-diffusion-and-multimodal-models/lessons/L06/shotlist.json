@@ -1,0 +1,206 @@
+{
+  "course_id": "AI-02",
+  "lesson_id": "L06",
+  "duration_s": 294.4,
+  "thumbnail": {
+    "headline": "Brief It Like a Photographer",
+    "slide": {
+      "layout": "title",
+      "title": "Brief It Like a Photographer",
+      "body": "Three poster thumbnails labelled v1, v2, v3: a plain loaf in the dark → warm baskets of bread → baskets in the lower half with clear sky on top. Small tag: Generative AI Explained · Lesson 6."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.4,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Not wrong, just not yours",
+      "voiceover": "You type bread into an image generator and get a plain loaf on a white table. It is not wrong, but it is not what you imagined. The model filled every gap with the most typical choice. So how do you guide it?"
+    },
+    {
+      "scene": 2,
+      "start": 18.4,
+      "end": 37.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Guiding Image Generators",
+        "body": "Generative AI Explained · Lesson 6 of 12"
+      },
+      "voiceover": "In the last lesson, you saw that the prompt steers every step, and that the model fills in anything you do not describe. So a better prompt does not need magic words. It simply gives clearer guidance on the details that matter to you."
+    },
+    {
+      "scene": 3,
+      "start": 37.3,
+      "end": 56.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Six-part checklist (1 to 3)",
+        "body": "1. Subject: what is in it ('round loaves and small rolls') 2. Setting: where it is ('outdoor market stall') 3. Style: photo, flat illustration, watercolour"
+      },
+      "voiceover": "A useful checklist has six parts. The subject, meaning what is in the image. Say round loaves and small rolls, not just bread. The setting, meaning where it is. And the style, for example a realistic photograph, a flat illustration or a watercolour painting."
+    },
+    {
+      "scene": 4,
+      "start": 56.2,
+      "end": 79.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Six-part checklist (4 to 6)",
+        "body": "4. Composition: close-up, wide view, space for a title 5. Lighting: soft morning sun, warm evening light 6. Aspect ratio: square, tall, wide (often a menu)"
+      },
+      "voiceover": "Then the composition, meaning how the image is arranged. A close-up, a wide view, or empty space at the top for a title. The lighting, like soft morning sunlight or warm evening light. And the aspect ratio, the shape of the image. Many tools set this with a menu, not in the prompt."
+    },
+    {
+      "scene": 5,
+      "start": 79.3,
+      "end": 93.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Extra settings (vary by tool)",
+        "body": "Number of images · Style preset · Things to avoid (negative prompt). Caption: check your tool's settings first"
+      },
+      "voiceover": "Some generators also offer extra settings, such as the number of images, a style preset, or a list of things to avoid. These differ between tools, so look around the settings before you start."
+    },
+    {
+      "scene": 6,
+      "start": 93.9,
+      "end": 112.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Two more tips",
+        "body": "Change one or two things at a time · No exact text inside the image: add it later in a design tool"
+      },
+      "voiceover": "Two more tips. Change one or two things at a time, so you can see which change caused which effect. And do not ask for exact text inside the image. Image models often get letters wrong. Add the text later in a design tool."
+    },
+    {
+      "scene": 7,
+      "start": 112.8,
+      "end": 132.1,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "photographer shooting bread in bakery",
+      "on_screen_text": "Give a clear brief",
+      "voiceover": "Think of it like briefing a photographer you cannot speak to again. If you only say, take a photo of bread, they choose the place, the angle and the light themselves. A clear brief brings the result much closer to what you had in mind."
+    },
+    {
+      "scene": 8,
+      "start": 132.1,
+      "end": 148.8,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "fresh bread baskets at outdoor market",
+      "on_screen_text": "Wanjiru's bakery · Nairobi",
+      "voiceover": "Let's try it. Wanjiru runs a small bakery in Nairobi. She wants a poster image of fresh bread on a market stall, to advertise her weekend stall. We will use the Gemini app, but any free image generator works."
+    },
+    {
+      "scene": 9,
+      "start": 148.8,
+      "end": 160.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open Google Gemini image generation and start a new chat",
+        "Choose a portrait (tall) aspect ratio",
+        "Type version 1: 'bread on a market stall' and generate"
+      ],
+      "on_screen_text": "Version 1: four words",
+      "voiceover": "First, she opens the image generator and chooses a tall, portrait shape, because the poster is tall. Then she types her first version. Bread on a market stall."
+    },
+    {
+      "scene": 10,
+      "start": 160.8,
+      "end": 177.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Show the version 1 image full size",
+        "Type version 2: 'Fresh round loaves and small brown bread rolls in woven baskets on a wooden market stall, soft morning sunlight.'",
+        "Generate"
+      ],
+      "voiceover": "The result shows a generic loaf on a grey table, in a dark setting. It does not look fresh, local or inviting. Four words left almost everything to the model. So she adds the subject, the setting and the lighting."
+    },
+    {
+      "scene": 11,
+      "start": 177.9,
+      "end": 200.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Show the version 2 image and point to the full edges",
+        "Type version 3: 'Realistic photograph of fresh round loaves and small brown bread rolls in woven baskets on a wooden market stall, soft morning sunlight, close-up, baskets in the lower half, plain light sky in the upper half for a title.'",
+        "Generate"
+      ],
+      "on_screen_text": "Version 3: style + composition",
+      "voiceover": "Version two looks fresh and warm. Much better. But the image is full to the edges, and there is no space for the poster title. So she adds style and composition. A realistic photograph, a close-up, baskets in the lower half, and plain light sky in the upper half for a title."
+    },
+    {
+      "scene": 12,
+      "start": 200.6,
+      "end": 218.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Place the three images side by side with their prompts",
+        "Label what each change improved: v2 fresh and warm, v3 space for a title",
+        "Briefly show the poster with the bakery name and hours added in a design tool"
+      ],
+      "voiceover": "Now she compares all three side by side. Each change fixed one problem. Version three has empty sky at the top, ready for the bakery name and opening hours, which she adds later in a design tool so the letters are correct."
+    },
+    {
+      "scene": 13,
+      "start": 218.6,
+      "end": 229.3,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Zoom into the version 3 image to check the baskets and bread for strange details",
+        "Open the tool's terms page and scroll to the section on using generated images"
+      ],
+      "voiceover": "Before printing, she checks the image closely for strange details. She also checks the tool's terms, to confirm she may use the image in advertising."
+    },
+    {
+      "scene": 14,
+      "start": 229.3,
+      "end": 246.0,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Clear parts beat magic words.",
+      "voiceover": "A common mistake is to add words like amazing, ultra-detailed and masterpiece, hoping for better quality. They rarely help, and very long prompts can confuse the model. Describe the six parts clearly, and use the tool's settings instead."
+    },
+    {
+      "scene": 15,
+      "start": 246.0,
+      "end": 269.1,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Gaps get typical patterns: guide clearly. 2. Subject, setting, style, composition, lighting + aspect ratio. 3. Small steps; add text later."
+      },
+      "voiceover": "Let's recap. First, the model fills every gap with typical patterns, so a clear prompt gives better guidance. Second, describe subject, setting, style, composition and lighting, and choose the aspect ratio in the settings when you can. Third, improve in small steps, and add exact text in a design tool, not in the prompt."
+    },
+    {
+      "scene": 16,
+      "start": 269.1,
+      "end": 294.4,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Multimodal Models",
+      "voiceover": "Your turn. In the exercise below, write three versions of an image prompt for a business of your choice, such as a tea stall or a language school. Then generate each one, and note what each change improved. It takes about twenty-five minutes. Next, we look at multimodal models, with text, images and audio together. See you there."
+    }
+  ]
+}

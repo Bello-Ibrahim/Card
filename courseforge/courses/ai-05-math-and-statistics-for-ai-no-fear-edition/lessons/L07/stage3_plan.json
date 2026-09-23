@@ -1,0 +1,70 @@
+{
+  "title": "Probability and Conditional Probability",
+  "thumbnail": {
+    "headline": "Spam, Given 'Prize'?",
+    "image": "Navy background, a grid of small squares with some red and some starred, one column highlighted in teal, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Spam, Given 'Prize'?", "body": "A two-way table with the 'Contains prize' column glowing teal and the fraction 60 ÷ 80 = 0.75. Small tag: Math and Statistics for AI · Lesson 7."}
+  },
+  "production_notes": [
+    "No facts to verify: content.md Review Flags say None. All counts and probabilities are hypothetical.",
+    "Aigerim, the Almaty email service and the 1,000 emails are fictional. Stock inbox footage must not show real email brands, real addresses or readable personal messages.",
+    "Say P(spam | prize) as 'the probability of spam, given prize'; the slides show the notation.",
+    "Not a screen demo lesson: code appears only on a code slide."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "An email arrives with the word prize in the subject line. Is it spam? You probably feel: very likely. But how likely, exactly? With one small table and some counting, you can put a number on that feeling.",
+       "on_screen_text": "How likely, exactly?"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Last time, we described data with a few numbers. Today we measure how likely things are. Probability is a number from zero to one. Zero means it never happens, one means it always happens, and zero point five means half of the time. You can also say zero point two is twenty percent.",
+       "slide": {"layout": "diagram", "title": "Probability: from 0 to 1", "body": "A horizontal scale: 0 'never' · 0.5 'half of the time' · 1 'always'. Marker at 0.2 = 20%."}},
+      {"visual_type": "slide",
+       "voiceover": "When you have counts, probability is simply a fraction: the number of times the event happens, divided by the total number of cases. We write P of A, the probability of A. Joint probability is the chance that two things are both true, like spam and contains prize.",
+       "slide": {"layout": "code", "title": "Probability from counts", "body": "P(A) = count(A) ÷ total\nP(A and B) = both true, e.g. spam AND contains 'prize'"}},
+      {"visual_type": "slide",
+       "voiceover": "Conditional probability is the chance that something is true, when we already know something else is true. We write P of A, a vertical line, then B. The line is read as given. The rule in words: look only at the cases where B is true, and ask what fraction of them also have A.",
+       "slide": {"layout": "code", "title": "Conditional probability", "body": "P(A | B)  read: 'the probability of A, given B'\nP(A | B) = count(A and B) ÷ count(B)\nLook only inside B."}},
+      {"visual_type": "slide",
+       "voiceover": "A two-way frequency table makes this visible. The rows answer one question, spam or not. The columns answer another, contains prize or not. Machine learning uses this all the time. When a classifier says eighty-five percent likely to be spam, that is a conditional probability: the chance of a class, given the features it sees.",
+       "slide": {"layout": "diagram", "title": "Two-way table", "body": "Empty 2 × 2 grid with totals: rows Spam / Not spam, columns Contains 'prize' / No 'prize'. Side note: '85% likely spam' = P(class | features)."}},
+      {"visual_type": "stock",
+       "voiceover": "Here is an easy way to picture it. Conditional probability is like a filter in a spreadsheet. First you filter the table to show only the rows where B is true. Then you count how many visible rows also have A. Everything filtered out no longer matters.",
+       "stock_query": "person filtering spreadsheet rows on laptop",
+       "on_screen_text": "Filter to B, then count A"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Aigerim is a data analyst for an email service in Almaty, Kazakhstan. She takes a sample of one thousand labelled emails. All the counts are invented for the example.",
+       "stock_query": "data analyst reviewing charts at desk",
+       "on_screen_text": "Aigerim · Almaty · 1,000 emails"},
+      {"visual_type": "slide",
+       "voiceover": "Two hundred emails are spam, and eight hundred are not. Of the spam emails, sixty contain prize and one hundred and forty do not. Of the other emails, twenty contain prize and seven hundred and eighty do not. So eighty emails in total contain prize.",
+       "slide": {"layout": "diagram", "title": "Aigerim's table", "body": "Spam: 60 | 140 | 200. Not spam: 20 | 780 | 800. Total: 80 | 920 | 1,000. Columns: Contains 'prize' | No 'prize' | Total. Beside it: 1,000 small squares, 200 red, stars on 60 red and 20 grey."}},
+      {"visual_type": "slide",
+       "voiceover": "First, the simple ones. The probability of spam is two hundred divided by one thousand, which is zero point two. The probability of prize is eighty divided by one thousand, zero point zero eight. The probability of spam and prize is sixty divided by one thousand, zero point zero six.",
+       "slide": {"layout": "code", "title": "Simple and joint", "body": "P(spam) = 200 ÷ 1,000 = 0.2\nP(prize) = 80 ÷ 1,000 = 0.08\nP(spam and prize) = 60 ÷ 1,000 = 0.06"}},
+      {"visual_type": "slide",
+       "voiceover": "Now the conditional ones. Spam given prize: look only at the prize column. It has eighty emails, and sixty are spam. Sixty divided by eighty is zero point seven five. Prize given spam: look only at the spam row. It has two hundred emails, and sixty contain prize. Sixty divided by two hundred is zero point three.",
+       "slide": {"layout": "comparison", "title": "Which group are we inside?", "body": "Left, prize column highlighted: P(spam | prize) = 60 ÷ 80 = 0.75. Right, spam row highlighted: P(prize | spam) = 60 ÷ 200 = 0.3."}},
+      {"visual_type": "slide",
+       "voiceover": "So knowing that an email contains prize raises the chance of spam from zero point two to zero point seven five. But only thirty percent of spam contains prize, so this word alone would miss most spam. In NumPy, Aigerim puts the four inner counts in an array and gets the same three answers.",
+       "slide": {"layout": "code", "title": "Check in NumPy", "body": "t = np.array([[60, 140], [20, 780]])\nt[0].sum() / t.sum()       # 0.2\nt[0, 0] / t[:, 0].sum()    # 0.75\nt[0, 0] / t[0].sum()       # 0.3"}},
+      {"visual_type": "text",
+       "voiceover": "The most common mistake is swapping the two sides of the line. Spam given prize and prize given spam are different questions, with different answers: zero point seven five and zero point three. Before you divide, say in words which group you are looking inside. That group goes at the bottom of the fraction.",
+       "on_screen_text": "P(spam | prize) ≠ P(prize | spam)"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, probability is a number from zero to one, and with counts it is matching cases divided by the total. Second, P of A given B means: look only at the cases where B is true, and find the fraction that also have A. Third, A given B and B given A are usually different, because they divide by different groups.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Probability: 0 to 1; matching ÷ total. 2. P(A | B): look only inside B. 3. P(A | B) ≠ P(B | A): different groups at the bottom."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Your turn. In the exercise, you fill in a table for five hundred online orders, late or on time, returned or kept, and calculate five probabilities. It takes about twenty-five minutes. Next, we use these tables to update beliefs, in Bayes' Theorem with Frequency Tables. See you there.",
+       "on_screen_text": "Next: Bayes' Theorem with Frequency Tables"}
+    ]
+  }
+}

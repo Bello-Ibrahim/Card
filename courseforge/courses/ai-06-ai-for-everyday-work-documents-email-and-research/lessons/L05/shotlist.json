@@ -1,0 +1,205 @@
+{
+  "course_id": "AI-06",
+  "lesson_id": "L05",
+  "duration_s": 298.2,
+  "thumbnail": {
+    "headline": "Emails That Sound Like You",
+    "slide": {
+      "layout": "title",
+      "title": "Emails That Sound Like You",
+      "body": "Two email icons labelled 'Polite' and 'Firm' with arrows merging into one email labelled 'You'. Small tag: AI for Everyday Work · Lesson 5."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.0,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Start faster. Still sound like you.",
+      "voiceover": "Some emails take two minutes to write. Others take much longer: the reminder to a late supplier, or the reply where every word matters. AI can help you start those difficult emails, as long as the final version still sounds like you."
+    },
+    {
+      "scene": 2,
+      "start": 18.0,
+      "end": 30.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Drafting and Replying to Emails",
+        "body": "Week 2 · Lesson 5 · Three email jobs: new drafts · replies to threads · changing tone"
+      },
+      "voiceover": "Welcome to week two. We now put the prompt and checking skills from week one to work, starting with email. AI assistants can help with three common email jobs."
+    },
+    {
+      "scene": 3,
+      "start": 30.4,
+      "end": 47.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Job 1: From notes to draft",
+        "body": "Three short bullet notes (labelled 'your facts') → arrow → full email draft. Caption: the facts come from you, not from guesses."
+      },
+      "voiceover": "The first job is drafting a new email from notes. Write your main points as short bullets, and let the assistant turn them into full sentences. Your bullets hold the facts, so the AI does not need to guess them."
+    },
+    {
+      "scene": 4,
+      "start": 47.5,
+      "end": 75.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Job 2: Replying to a long thread",
+        "body": "Ask: list the open questions · draft a reply to each. Before you paste: remove names, addresses, signatures, confidential details · check your AI policy · an approved tool in your email system may be better."
+      },
+      "voiceover": "The second job is replying to a long thread. You can ask the assistant to list the open questions and draft a reply that answers each one. But before you paste a thread, remove names, email addresses, signatures and anything confidential, and check your employer's AI policy. If your organisation has an approved AI tool inside your email system, that may be the better choice."
+    },
+    {
+      "scene": 5,
+      "start": 75.4,
+      "end": 88.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Job 3: Changing tone",
+        "body": "Make this more formal for a senior manager.\nMake this friendlier but keep it short.\nMake this more direct. The deadline must be clear in the first sentence."
+      },
+      "voiceover": "The third job is changing tone. The same message can be more formal, friendlier, shorter or more direct. You simply ask in a follow-up message, like the examples on screen."
+    },
+    {
+      "scene": 6,
+      "start": 88.7,
+      "end": 102.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Ask for two versions",
+        "body": "Version A (friendly) + Version B (formal) → you pick the best parts → one email."
+      },
+      "voiceover": "A useful habit is to ask for two versions in different tones, and then combine the best parts yourself. That gives you choices, instead of one answer you must accept or reject."
+    },
+    {
+      "scene": 7,
+      "start": 102.4,
+      "end": 124.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Then you edit",
+        "body": "Run the 4-step checklist · Replace phrases you would never say · Make it sound like you"
+      },
+      "voiceover": "After the AI drafts, you edit. Check it with the four-step checklist from lesson four. Then make it sound like you. AI drafts often use phrases you would never say, such as very formal openings or too many polite words. Your reader knows how you write, so change those phrases."
+    },
+    {
+      "scene": 8,
+      "start": 124.3,
+      "end": 139.3,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "person signing letter at office desk",
+      "on_screen_text": "You read it. You sign it.",
+      "voiceover": "Think of a skilled assistant who types up your rough notes. The letter looks professional, but you still read it, correct it and sign it. If it does not sound like you, you change it."
+    },
+    {
+      "scene": 9,
+      "start": 139.3,
+      "end": 155.6,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "purchasing assistant office stacked chairs",
+      "on_screen_text": "Carlos · purchasing · São Paulo",
+      "voiceover": "Let's see an example. Carlos is a purchasing assistant in São Paulo, in Brazil. A supplier has not delivered an order of office chairs that was due last week. He needs a reminder that is polite but firm."
+    },
+    {
+      "scene": 10,
+      "start": 155.6,
+      "end": 177.5,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Carlos's prompt",
+        "body": "Write a reminder email to a supplier. Points:\n- Order of 40 office chairs was due last Monday, not delivered\n- We need them before our new team starts on the 1st of next month\n- Please confirm a delivery date by Thursday\nGive me two versions: one very polite, one polite but firm. About 100 words each."
+      },
+      "voiceover": "He writes three points, with the supplier's name removed. Forty chairs were due last Monday. The new team starts on the first of next month. And please confirm a delivery date by Thursday. He asks for two versions of about one hundred words, one very polite, and one polite but firm."
+    },
+    {
+      "scene": 11,
+      "start": 177.5,
+      "end": 195.5,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Two versions",
+        "body": "Very polite: friendly opening ✓, deadline hidden in the last line ✗. Firm: deadline first ✓, 'Failure to respond will be escalated.' sounds cold ✗."
+      },
+      "voiceover": "The very polite version is kind but weak. The Thursday deadline is in the last line, and it is easy to miss. The firm version puts the deadline first, but it sounds cold. It ends with, failure to respond will be escalated."
+    },
+    {
+      "scene": 12,
+      "start": 195.5,
+      "end": 212.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Carlos combines the best parts",
+        "body": "Friendly opening (from version 1) + clear deadline (from version 2) → final email. Crossed-out line: 'Failure to respond will be escalated.'"
+      },
+      "voiceover": "Carlos combines them. He keeps the friendly opening from the first version and the clear deadline from the second. He removes the cold last line, because he has worked with this supplier for years, and he would never write that."
+    },
+    {
+      "scene": 13,
+      "start": 212.6,
+      "end": 229.7,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Final checks",
+        "body": "Names and order number added in the company email system · 40 chairs ✓ · due last Monday ✓ · confirm by Thursday ✓"
+      },
+      "voiceover": "He adds the supplier's name and the order number himself, inside his company email system. Then he checks the facts. Forty chairs, due last Monday, confirmation by Thursday. All correct. The final email is clear, firm, and sounds like Carlos."
+    },
+    {
+      "scene": 14,
+      "start": 229.7,
+      "end": 246.4,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Edit it into your own words",
+      "voiceover": "A common mistake is to send the AI draft with only small changes. The email is correct, but it does not sound like the sender, and it can feel cold. Always edit the final version in your own words."
+    },
+    {
+      "scene": 15,
+      "start": 246.4,
+      "end": 275.1,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Your bullets = your facts. 2. Two tones → combine → your words. 3. Remove personal details · follow your policy · check before sending."
+      },
+      "voiceover": "Let's recap. First, give the AI your key points as bullets, so the facts come from you and not from its guesses. Second, ask for two versions in different tones, then combine the best parts and edit them so they sound like you. Third, remove names and personal details before pasting any email, follow your employer's AI policy, and check the final email before you send it."
+    },
+    {
+      "scene": 16,
+      "start": 275.1,
+      "end": 298.2,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Writing and Editing Documents",
+      "voiceover": "Now it is your turn. In the exercise below this video, write three bullet points for a real email you need to send, with names replaced by roles. Ask for two versions in different tones, combine the best parts, and check the result. The next lesson is Writing and Editing Documents. See you there."
+    }
+  ]
+}

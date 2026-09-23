@@ -1,0 +1,185 @@
+{
+  "course_id": "AI-01",
+  "lesson_id": "L05",
+  "duration_s": 293.1,
+  "thumbnail": {
+    "headline": "A Box or a Number?",
+    "slide": {
+      "layout": "title",
+      "title": "A Box or a Number?",
+      "body": "Left half: three sorting boxes (icon) labelled 'Classification'. Right half: a scale display showing '2.4 kg' labelled 'Regression'. Small tag: AI Fundamentals · Lesson 5."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.6,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "A category, or a number?",
+      "voiceover": "A food delivery app tells you two things. Your order is likely to be on time. And, arrives in about thirty five minutes. Both answers can come from machine learning. But one is a category, and the other is a number."
+    },
+    {
+      "scene": 2,
+      "start": 17.6,
+      "end": 34.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Supervised Learning",
+        "body": "Classification and Regression · AI Fundamentals · Lesson 5 of 12"
+      },
+      "voiceover": "Welcome to week two. You already know that a model trains on examples with features and labels. When every training example comes with the correct answer attached, we call this supervised learning. The labels act as an answer key."
+    },
+    {
+      "scene": 3,
+      "start": 34.3,
+      "end": 57.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Classification: a category",
+        "body": "One choice from a fixed list. Spam / not spam · Low / medium / high risk · Cat / dog / bird"
+      },
+      "voiceover": "Supervised learning has two main types, depending on the kind of answer you want. Classification predicts a category. The answer is one choice from a fixed list. Is this email spam or not spam? Is this loan application low, medium or high risk? Does this photo show a cat, a dog or a bird?"
+    },
+    {
+      "scene": 4,
+      "start": 57.4,
+      "end": 74.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Regression: a number",
+        "body": "Any value in a range. Delivery time in minutes · Used car price · Umbrellas sold next week"
+      },
+      "voiceover": "Regression predicts a number on a scale. The answer can be any value in a range. How many minutes will this delivery take? What price will this used car sell for? How many umbrellas will this shop sell next week?"
+    },
+    {
+      "scene": 5,
+      "start": 74.5,
+      "end": 92.5,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Somewhere in between? Then regression.",
+      "voiceover": "Here is a simple test. Ask, could the answer be somewhere in between? A delivery could take thirty four minutes, or thirty five, or anything in between. That is regression. But spam or not spam has no halfway point. That is classification."
+    },
+    {
+      "scene": 6,
+      "start": 92.5,
+      "end": 120.4,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "post office worker sorting letters parcels",
+      "on_screen_text": "Boxes = classification. Scale = regression.",
+      "voiceover": "Think of a post office. A postal worker reads each letter, and puts it into one of several boxes: local, national or international. That is classification. Next to her, a scale weighs each parcel and shows a number, such as two point four kilograms. That is regression. Both learned their job from past examples. But one gives a box, and the other gives a measurement."
+    },
+    {
+      "scene": 7,
+      "start": 120.4,
+      "end": 137.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "How you judge each type",
+        "body": "Classification: how often is the box right? (ticks and crosses). Regression: how close is the number? (predicted vs. real on a number line)"
+      },
+      "voiceover": "The type matters, because it changes the labels you collect and how you judge the model. For classification, you check how often it picks the right box. For regression, you check how close its number is to the real one."
+    },
+    {
+      "scene": 8,
+      "start": 137.5,
+      "end": 156.8,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "courier on motorbike delivering parcels city",
+      "on_screen_text": "Andrés · courier company · Medellín",
+      "voiceover": "Let's see both types in one business. Andrés manages a small courier company in Medellín, Colombia. Customers often call to ask when their parcels will arrive. He has records of five thousand past deliveries, with features such as distance, time of day, weather and neighbourhood."
+    },
+    {
+      "scene": 9,
+      "start": 156.8,
+      "end": 173.9,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Task 1: Late or on time?",
+        "body": "Delivery records table (distance, time of day, weather, neighbourhood) + label column 'Late / On time' → model → new delivery goes into one of two boxes. Tag: Classification."
+      },
+      "voiceover": "First, he wants to warn customers early about problems. So he adds a label to each old record: late, or on time. A model trained on these records puts new deliveries into one of the two groups. This is classification."
+    },
+    {
+      "scene": 10,
+      "start": 173.9,
+      "end": 193.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Task 2: How many minutes?",
+        "body": "Same records table, label column now 'Minutes taken' → model → '47 min'. Tag: Regression."
+      },
+      "voiceover": "Next, he wants to show an exact arrival time in the tracking message. He uses the same records, but this time the label is the actual number of minutes each delivery took. Now the model predicts a number, such as forty seven minutes. This is regression."
+    },
+    {
+      "scene": 11,
+      "start": 193.6,
+      "end": 202.6,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "The label decides the task",
+      "voiceover": "Notice what happened. The features stay almost the same. Only the label changes, and the label decides the type of task."
+    },
+    {
+      "scene": 12,
+      "start": 202.6,
+      "end": 215.9,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "tea plantation workers picking leaves hills",
+      "on_screen_text": "Healthy leaf? Harvest in kilograms?",
+      "voiceover": "The same pattern appears in other industries. A tea farm in Sri Lanka might classify leaf photos as healthy or diseased, and use regression to predict next month's harvest in kilograms."
+    },
+    {
+      "scene": 13,
+      "start": 215.9,
+      "end": 244.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Looks like a number, but…",
+        "body": "Left: five star icons, one chosen → a choice from a list → Classification. Right: kilogram scale → a measurement → Regression."
+      },
+      "voiceover": "One common mistake is to think that any answer with a number must be regression. A star rating from one to five is written as a number. But a model that picks four stars from five fixed choices is doing classification. A shoe size or a postcode can work the same way. So ask, is this a choice from a list, or a measurement on a scale?"
+    },
+    {
+      "scene": 14,
+      "start": 244.6,
+      "end": 266.5,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Supervised learning = learning with an answer key (labels) 2. Classification = a category from a fixed list 3. Regression = a number on a scale"
+      },
+      "voiceover": "Let's recap. First, supervised learning means the model learns from examples that include the correct answer, called labels. Second, classification predicts a category from a fixed list, such as spam or not spam. Third, regression predicts a number on a scale, such as a delivery time in minutes, or a price."
+    },
+    {
+      "scene": 15,
+      "start": 266.5,
+      "end": 293.1,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Unsupervised and Reinforcement Learning",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will read ten business questions and label each one as classification or regression. Watch out for question nine. It looks like a scale, but think carefully. It takes about fifteen minutes. In the next lesson, we meet two more ways machines learn, in Unsupervised and Reinforcement Learning. See you there."
+    }
+  ]
+}

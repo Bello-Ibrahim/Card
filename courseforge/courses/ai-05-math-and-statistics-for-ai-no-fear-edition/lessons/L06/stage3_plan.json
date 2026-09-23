@@ -1,0 +1,72 @@
+{
+  "title": "Describing Data: Mean, Median and Spread",
+  "thumbnail": {
+    "headline": "Is the Average Fair?",
+    "image": "Navy background, a dot plot with four teal dots close together and one far to the right, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Is the Average Fair?", "body": "Dot plot: dots at 4, 5, 5, 6 and one far away at 30; a 'mean' marker at 10 and a 'median' marker at 5. Small tag: Math and Statistics for AI · Lesson 6."}
+  },
+  "production_notes": [
+    "[VERSION] Spreadsheet functions: the voiceover does not name spreadsheet functions. The code slide mentions ddof=1 only. If the editor adds STDEV (n − 1) or STDEV.P (n) to a slide, confirm them first in Google Sheets.",
+    "Kwame, the Accra software team and the incomes (4, 5, 5, 6 and 30 thousand Ghana cedis) are hypothetical. Do not show real salary data or a real company logo.",
+    "Not a screen demo lesson: code appears only on a code slide."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Five people work in a small team. Four of them earn about the same, and one earns six times more. Someone says: the average income in this team is ten thousand. Is that true? Yes. Is it fair? Not really.",
+       "on_screen_text": "True, but fair?"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Welcome to Module 2, probability and statistics. Before you train any model, you describe your data with a few numbers. They answer two questions. Where is the centre of the data? And how spread out is it?",
+       "slide": {"layout": "title", "title": "Describing Data: Mean, Median and Spread", "body": "Math and Statistics for AI · Lesson 6 of 18 · Module 2"}},
+      {"visual_type": "slide",
+       "voiceover": "First, the centre. The mean is the ordinary average: add all the values, and divide by how many there are. The median is the middle value after you sort the data. With an even number of values, it is the mean of the two middle ones.",
+       "slide": {"layout": "bullets", "title": "The centre", "body": "Mean = sum ÷ count. Median = middle value after sorting (even count: mean of the two middle values)."}},
+      {"visual_type": "slide",
+       "voiceover": "The mean uses every value, so one very large or very small value, called an outlier, can pull it a long way. The median only cares about the middle position, so outliers hardly move it.",
+       "slide": {"layout": "comparison", "title": "Mean vs median", "body": "Mean: uses every value, pulled by outliers. Median: middle position, hardly moved by outliers."}},
+      {"visual_type": "slide",
+       "voiceover": "Now the spread. The variance measures how far values are from the mean, on average. Find each distance from the mean, square it, then take the mean of those squares. Squaring makes every distance positive, and makes big distances count more. The standard deviation is the square root of the variance, so it is in the same units as the data.",
+       "slide": {"layout": "bullets", "title": "The spread", "body": "Variance = mean of (value − mean)². Standard deviation = √variance, same units as the data. Small = close together; large = spread out."}},
+      {"visual_type": "slide",
+       "voiceover": "In NumPy, you use mean, median, var and std. One detail: n p dot std divides by the number of values, n. Some tools divide by n minus one instead, which gives a slightly larger answer for a sample. Both are correct. Just be consistent.",
+       "slide": {"layout": "code", "title": "In NumPy", "body": "np.mean(x)   np.median(x)\nnp.var(x)    np.std(x)      # divides by n\nnp.std(x, ddof=1)           # divides by n − 1"}},
+      {"visual_type": "stock",
+       "voiceover": "Here is a picture. The mean is like the balance point of a see-saw. If one very heavy person sits at the far end, the balance point moves a long way. The median is like the person in the middle of a queue sorted by height. The tallest person does not change who stands in the middle.",
+       "stock_query": "children playing on see-saw in park",
+       "on_screen_text": "Mean = balance point. Median = middle."}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Kwame leads a team of five at a software company in Accra, Ghana. Their monthly incomes, in thousands of Ghana cedis, are invented for this example: four, five, five, six and thirty. The last one belongs to a senior partner.",
+       "stock_query": "small software team working in office",
+       "on_screen_text": "4, 5, 5, 6, 30 thousand cedis"},
+      {"visual_type": "slide",
+       "voiceover": "Picture a dot plot. Four dots sit close together near five, and one dot sits far away at thirty. Now the centre. Four plus five plus five plus six plus thirty is fifty, and fifty divided by five is ten. That is the mean. Sorted, the middle value is five. That is the median.",
+       "slide": {"layout": "diagram", "title": "Mean 10, median 5", "body": "Dot plot: 4, 5, 5, 6 clustered, 30 far right. Mean marker at 10; median marker at 5. Below: 4 + 5 + 5 + 6 + 30 = 50; 50 ÷ 5 = 10. Sorted: 4, 5, 5, 6, 30 → middle 5."}},
+      {"visual_type": "text",
+       "voiceover": "The mean of ten is higher than what four of the five people earn. The median of five describes a typical team member much better.",
+       "on_screen_text": "Median 5 describes the team better"},
+      {"visual_type": "slide",
+       "voiceover": "Now the spread. Subtract the mean of ten from each value: minus six, minus five, minus five, minus four, and twenty. Square them: thirty-six, twenty-five, twenty-five, sixteen and four hundred. They add up to five hundred and two. Divide by five, and the variance is one hundred point four. The standard deviation is about ten point zero two.",
+       "slide": {"layout": "code", "title": "Variance by hand", "body": "Distances: −6, −5, −5, −4, 20\nSquares: 36, 25, 25, 16, 400\nSum = 502 → 502 ÷ 5 = 100.4 (variance)\n√100.4 ≈ 10.02 (standard deviation)"}},
+      {"visual_type": "slide",
+       "voiceover": "Without the senior partner, the values four, five, five and six have a mean of five, a variance of zero point five, and a standard deviation of about zero point seven one. One value changed the spread enormously. And in NumPy, the four functions give the same results as our hand calculation for the full team.",
+       "slide": {"layout": "code", "title": "One value changes everything", "body": "income = np.array([4, 5, 5, 6, 30])\nnp.mean → 10.0 · np.median → 5.0\nnp.var → 100.4 · np.std → 10.0199...\nWithout 30: mean 5, variance 0.5, std ≈ 0.71"}},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is to report only the mean, and assume it is typical. With incomes, house prices or delivery times, the mean can mislead. Always look at the median and the standard deviation too, and draw a quick plot.",
+       "on_screen_text": "Report centre and spread together"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, the mean is the sum divided by the count, and the median is the middle sorted value, which resists outliers. Second, the variance is the mean of the squared distances from the mean, and the standard deviation is its square root, in the original units. Third, always report centre and spread together, and compare mean and median to spot outliers.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Mean = sum ÷ count; median = middle, resists outliers. 2. Variance = mean squared distance; std = √variance. 3. Report centre + spread; compare mean and median."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Your turn. In the exercise, you take ten delivery times, find the mean, median and standard deviation by hand, check them in NumPy, then add an outlier and watch what changes. It takes about twenty-five minutes. Next: Probability and Conditional Probability. See you there.",
+       "on_screen_text": "Next: Probability and Conditional Probability"}
+    ]
+  }
+}

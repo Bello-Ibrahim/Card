@@ -1,0 +1,209 @@
+{
+  "course_id": "AI-05",
+  "lesson_id": "L02",
+  "duration_s": 313.0,
+  "thumbnail": {
+    "headline": "Data as Arrows",
+    "slide": {
+      "layout": "title",
+      "title": "Data as Arrows",
+      "body": "A simple grid with arrows (3, 1), (1, 2) and their sum (4, 3). Small tag: Math and Statistics for AI · Lesson 2."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.0,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Things become lists of numbers",
+      "voiceover": "How does a computer see a flat for rent, a customer or a song? It cannot see them at all. It sees a short list of numbers. Once you understand that list, you understand how almost all machine learning data is stored."
+    },
+    {
+      "scene": 2,
+      "start": 18.0,
+      "end": 36.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Vectors: Data as Lists of Numbers",
+        "body": "Math and Statistics for AI · Lesson 2 of 18"
+      },
+      "voiceover": "In the last lesson, you ran your first NumPy cell. Today we meet the most basic building block of all: the vector. A vector is an ordered list of numbers that describes one thing. Ordered means the position of each number matters."
+    },
+    {
+      "scene": 3,
+      "start": 36.0,
+      "end": 57.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "One flat, one vector",
+        "body": "[75, 3, 20] with labels under each number: size m² · rooms · age in years. Below, crossed out in red: [3, 75, 20] 'a very strange flat'."
+      },
+      "voiceover": "Imagine a flat in Lisbon, described by three numbers: size in square metres, number of rooms, and age in years. The vector seventy-five, three, twenty means seventy-five square metres, three rooms and twenty years old. Swap the first two numbers and you describe a very strange flat."
+    },
+    {
+      "scene": 4,
+      "start": 57.0,
+      "end": 80.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Components and arrows",
+        "body": "Left: component = feature, dimension = 3. Right: a grid with an arrow from (0, 0) to (3, 1), labelled 'three right, one up'."
+      },
+      "voiceover": "Each position is called a component, and each component is one feature of the thing we describe. The number of components is the dimension. This flat vector has dimension three. A vector with two components, like three, one, can be drawn as an arrow from the origin: three steps right and one step up."
+    },
+    {
+      "scene": 5,
+      "start": 80.1,
+      "end": 105.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Add and scale",
+        "body": "[3, 1] + [1, 2] = [4, 3]\n2 × [3, 1] = [6, 2]\nscalar = one number that scales a vector"
+      },
+      "voiceover": "You need three operations. One, adding vectors. First plus first, second plus second. So three, one plus one, two equals four, three. Two, multiplying by a number. Two times three, one equals six, two. The arrow keeps its direction but becomes twice as long. A single number like this is called a scalar, because it scales the vector."
+    },
+    {
+      "scene": 6,
+      "start": 105.0,
+      "end": 129.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Length (norm)",
+        "body": "length of [3, 4] = √(3² + 4²) = √(9 + 16) = √25 = 5\nNumPy: np.linalg.norm"
+      },
+      "voiceover": "Three, length, also called the norm. For a 2D vector, square each component, add them, and take the square root. For three, four: three squared plus four squared is nine plus sixteen, which is twenty-five, and the square root of twenty-five is five. In NumPy, n p dot linalg dot norm does this for any dimension."
+    },
+    {
+      "scene": 7,
+      "start": 129.9,
+      "end": 150.9,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "handwritten recipe card eggs flour milk",
+      "on_screen_text": "Double the recipe = scalar × vector",
+      "voiceover": "Here is a simple picture. A vector is like a row on a recipe card: two eggs, three hundred grams of flour, one cup of milk. The order matters, because everyone must agree which number means eggs. Doubling the recipe multiplies every amount by two, exactly like a scalar."
+    },
+    {
+      "scene": 8,
+      "start": 150.9,
+      "end": 162.5,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "apartment buildings Lisbon street",
+      "on_screen_text": "Flat A = [75, 3, 20]",
+      "voiceover": "Inês is a data analyst at an estate agency in Lisbon, Portugal. She describes flats as size, rooms and age. Flat A is seventy-five, three, twenty."
+    },
+    {
+      "scene": 9,
+      "start": 162.5,
+      "end": 183.5,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Twice this flat?",
+        "body": "2 × [75, 3, 20] = [150, 6, 40]\nAge 40 highlighted in amber: 'does this make sense?'"
+      },
+      "voiceover": "A client asks: what would twice this flat look like? Two times seventy-five, three, twenty gives one hundred and fifty, six, forty. Inês notices the age is silly, because a larger flat is not older. The maths always works, but you must check that the result makes sense."
+    },
+    {
+      "scene": 10,
+      "start": 183.5,
+      "end": 205.4,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open the Desmos graphing calculator in a browser.",
+        "Line 1: type a=(3,1).",
+        "Line 2: type b=(1,2).",
+        "Line 3: type vector((0,0),a).",
+        "Line 4: type vector((0,0),b)."
+      ],
+      "voiceover": "Now let's see it in 2D with Desmos. Open the Desmos graphing calculator in your browser. In the first line, type a equals three, one. In the second, b equals one, two. Desmos shows two points. Then use the vector function to draw an arrow from the origin to each point."
+    },
+    {
+      "scene": 11,
+      "start": 205.4,
+      "end": 221.3,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Type vector(a,a+b) to place arrow b at the tip of arrow a.",
+        "Type vector((0,0),a+b).",
+        "Hover over the end point to show (4, 3)."
+      ],
+      "on_screen_text": "a + b = (4, 3)",
+      "voiceover": "To add them, place arrow b at the end of arrow a. Then draw one arrow from the origin to a plus b. It ends at four, three, which is exactly the sum we calculated by hand."
+    },
+    {
+      "scene": 12,
+      "start": 221.3,
+      "end": 231.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Type 2a on a new line.",
+        "Show the point (6, 2) on the same line as a.",
+        "Hover to show the coordinates (6, 2)."
+      ],
+      "voiceover": "Now type two a. The point six, two appears. It is in the same direction as a, but twice as far from the origin."
+    },
+    {
+      "scene": 13,
+      "start": 231.6,
+      "end": 249.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open a Colab notebook.",
+        "Type: import numpy as np; a = np.array([3, 1]); b = np.array([1, 2])",
+        "Type: print(a + b), print(2 * a), print(np.linalg.norm(np.array([3, 4])))",
+        "Run the cell and zoom in on [4 3], [6 2] and 5.0."
+      ],
+      "voiceover": "Finally, Inês checks everything in Colab. She creates a and b as NumPy arrays, then prints a plus b, two times a, and the length of three, four. The output is four, three, then six, two, then five point zero. Everything agrees."
+    },
+    {
+      "scene": 14,
+      "start": 249.6,
+      "end": 271.0,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Same feature order, every time",
+      "voiceover": "A common mistake is adding vectors whose components mean different things. For example, one flat stored as size, rooms, age, and another as rooms, size, age. NumPy adds them without any warning, and the result is nonsense. So keep the same feature order, and write it down in your notebook."
+    },
+    {
+      "scene": 15,
+      "start": 271.0,
+      "end": 292.4,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Vector = ordered list; each position is a feature. 2. Add component by component; a scalar multiplies every component. 3. Norm = √(sum of squares) → np.linalg.norm"
+      },
+      "voiceover": "Let's recap. First, a vector is an ordered list of numbers that describes one thing, and each position is one feature. Second, you add vectors component by component, and a scalar multiplies every component. Third, the length, or norm, is the square root of the sum of the squared components."
+    },
+    {
+      "scene": 16,
+      "start": 292.4,
+      "end": 313.0,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: The Dot Product",
+      "voiceover": "Now it is your turn. In the exercise, you draw two vectors in Desmos, add them, and check with NumPy. Then you describe three things from your own work as vectors. It takes about twenty minutes. Next time: the dot product, weighted sums and similarity. See you there."
+    }
+  ]
+}

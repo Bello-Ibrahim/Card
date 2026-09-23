@@ -1,0 +1,72 @@
+{
+  "title": "The Dot Product: Weighted Sums and Similarity",
+  "thumbnail": {
+    "headline": "One Number, Many Features",
+    "image": "Navy background, two short vectors meeting in a single teal number 31, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "One Number, Many Features", "body": "[2, 5] · [8, 3] = 31 in large type. Small tag: Math and Statistics for AI · Lesson 3."}
+  },
+  "production_notes": [
+    "[VERSION] NumPy: np.dot is stable, but confirm its behaviour and any warnings against the current NumPy version before recording. content.md outputs were checked with NumPy 2.4.",
+    "All numbers (Dewi's delivery weights of 2 minutes per kilometre and 5 minutes per stop, the taste scores) are hypothetical and must not be presented as real data. Dewi and the Jakarta start-up are fictional; no real courier brand or logo in stock footage.",
+    "Not a screen demo lesson: code appears only on code slides."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "If a courier needs two minutes for every kilometre and five minutes for every stop, how long will a trip take? You can answer that in your head. Without noticing, you just did the most common calculation in machine learning.",
+       "on_screen_text": "2 min per km, 5 min per stop"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Last time, we learned that a vector is a list of numbers. Today we combine two vectors into one number, with the dot product. In words: multiply the matching components, then add the results.",
+       "slide": {"layout": "title", "title": "The Dot Product", "body": "Weighted Sums and Similarity · Lesson 3 of 18"}},
+      {"visual_type": "slide",
+       "voiceover": "Take a equals two, five and b equals eight, three. First components: two times eight is sixteen. Second components: five times three is fifteen. Add them: sixteen plus fifteen is thirty-one. So a dot b equals thirty-one. In NumPy, you write n p dot dot, with a and b inside.",
+       "slide": {"layout": "code", "title": "Multiply, then add", "body": "a = [2, 5], b = [8, 3]\n2 × 8 = 16\n5 × 3 = 15\n16 + 15 = 31 → a · b = 31\nNumPy: np.dot(a, b)"}},
+      {"visual_type": "slide",
+       "voiceover": "Why does this matter? Many models predict with a weighted sum. Each feature has a weight that says how much it matters. The prediction is weight times feature, for every feature, all added together. That is exactly a dot product of weights and features.",
+       "slide": {"layout": "diagram", "title": "Prediction = weighted sum", "body": "Weights vector × Features vector → one prediction. Each pair joined by a line labelled 'weight × feature', then all added."}},
+      {"visual_type": "slide",
+       "voiceover": "Later, we also add a starting value called the bias. So a one-feature model reads: y equals w times x plus b. In words, the prediction is the weight times the input, plus a starting value.",
+       "slide": {"layout": "code", "title": "A one-feature model", "body": "y = w·x + b\ny = prediction · w = weight · x = input · b = bias (starting value)"}},
+      {"visual_type": "slide",
+       "voiceover": "The dot product also measures similarity. Imagine taste scores for spicy, sweet and sour, from zero to four. Customer A is one, two, zero. Customer B is two, four, zero. Customer C is zero, zero, three. A dot B is two plus eight plus zero, which is ten. A dot C is zero. A and B like the same things. A and C share nothing.",
+       "slide": {"layout": "comparison", "title": "Similar tastes?", "body": "A = [1, 2, 0], B = [2, 4, 0], C = [0, 0, 3]. A · B = 2 + 8 + 0 = 10 (similar). A · C = 0 (nothing shared)."}},
+      {"visual_type": "slide",
+       "voiceover": "Recommendation systems use this idea to find similar users or products. Long vectors give bigger dot products, so people often divide by both lengths. This is called cosine similarity, and it is always between minus one and one. For A and B it is exactly one, because B is just A doubled.",
+       "slide": {"layout": "bullets", "title": "Cosine similarity", "body": "Dot product ÷ (length × length). Always between −1 and 1. A and B: exactly 1, because B = 2 × A."}},
+      {"visual_type": "stock",
+       "voiceover": "Here is an everyday picture. A dot product is like a shopping bill. The quantities in your basket are the features, and the prices are the weights. Multiply each quantity by its price, add everything up, and you get one total. A prediction is the bill for one example.",
+       "stock_query": "shopping receipt and grocery basket",
+       "on_screen_text": "Quantities × prices = one bill"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's use it. Dewi is an operations planner for a delivery start-up in Jakarta, Indonesia. Her team estimates that each kilometre adds about two minutes, and each stop adds about five minutes. These numbers are invented for the example.",
+       "stock_query": "delivery scooter rider busy Asian city",
+       "on_screen_text": "Dewi · Jakarta · delivery planning"},
+      {"visual_type": "slide",
+       "voiceover": "Her weight vector is two, five: minutes per kilometre, and minutes per stop. Tomorrow's first trip is eight kilometres with three stops, so the feature vector is eight, three. Picture two bars stacked on top of each other, one for distance time and one for stop time.",
+       "slide": {"layout": "diagram", "title": "Weights and features", "body": "w = [2, 5] (min per km, min per stop); x = [8, 3] (km, stops). A stacked bar: bottom block 'distance time', top block 'stop time'."}},
+      {"visual_type": "slide",
+       "voiceover": "By hand: two times eight is sixteen minutes for distance. Five times three is fifteen minutes for stops. The total is thirty-one minutes. In code, Dewi makes two NumPy arrays, w and x, and prints n p dot of w and x. The answer is thirty-one again.",
+       "slide": {"layout": "code", "title": "Hand, then NumPy", "body": "import numpy as np\nw = np.array([2, 5])   # minutes per km, minutes per stop\nx = np.array([8, 3])   # km, stops\nprint(np.dot(w, x))    # 31"}},
+      {"visual_type": "slide",
+       "voiceover": "Dewi also learns to read the weights. If the trip had one more stop, the prediction would rise by five minutes, the weight for stops. Each weight tells you how much the prediction changes when its feature grows by one. You will use this same reading in the capstone.",
+       "slide": {"layout": "diagram", "title": "Reading a weight", "body": "Stops 3 → 4: stacked bar grows by one block of 5 minutes; 31 → 36. Caption: weight = change in prediction when the feature grows by 1."}},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is to multiply the matching components and forget to add them. In NumPy, w star x gives sixteen, fifteen, which is still a vector. N p dot gives thirty-one, one number. And if the vectors have different lengths, NumPy stops with an error. That error is helpful: every feature needs exactly one weight.",
+       "on_screen_text": "w * x ≠ np.dot(w, x)"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, the dot product multiplies matching components and adds the results, giving one number. Second, a model's prediction is often a weighted sum of features, which is a dot product of weights and features. Third, a large dot product, or a cosine similarity close to one, means two vectors point in a similar direction, and zero means they share nothing.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Dot product: multiply matching components, add. 2. Prediction = weights · features. 3. Large dot product / cosine ≈ 1 → similar; 0 → nothing shared."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Your turn. In the exercise, you calculate three dot products by hand, check them with n p dot, and make a price prediction for a small invented product. It takes about twenty minutes. Next, we store a whole dataset at once, in Matrices: A Whole Dataset at Once. See you there.",
+       "on_screen_text": "Next: Matrices: A Whole Dataset at Once"}
+    ]
+  }
+}

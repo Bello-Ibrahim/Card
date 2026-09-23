@@ -1,0 +1,74 @@
+{
+  "title": "How AI Chat Tools Respond to You",
+  "thumbnail": {
+    "headline": "Why So Generic?",
+    "image": "Navy background, a chat bubble with a blurred, generic email on the left and a sharp, specific email on the right, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Why So Generic?", "body": "Left: grey chat bubble with blurred lines labelled 'vague prompt'. Right: teal chat bubble with clear lines labelled 'clear prompt'. Small tag: Prompt Engineering Masterclass · Lesson 1."}
+  },
+  "production_notes": [
+    "[VERSION] Availability of Claude, ChatGPT and Gemini free tiers, and whether a free account is needed, must be checked before recording (content.md Review Flags).",
+    "Mariana and her engineering firm in São Paulo are hypothetical; Mr Diallo in the analogy is fictional. Do not show real company names or logos in stock footage.",
+    "Before/after prompts are shown on slides, not read in full. Use the exact prompt text from content.md on the slides, including the placeholder [CLIENT CONTACT].",
+    "Judgement call carried from the curriculum: this first lesson briefly explains what an AI chat tool does before any technique."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "You type write an email to a client into an AI chat tool. In a few seconds, you get a polite, well-written email. But it could be sent by anyone, to anyone, about anything. Why did a clever tool give you such a general answer?",
+       "on_screen_text": "Why such a general answer?"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Hi, and welcome to the Prompt Engineering Masterclass. In this first lesson, we look at how AI chat tools respond to you, and why your words matter so much.",
+       "slide": {"layout": "title", "title": "How AI Chat Tools Respond to You", "body": "Prompt Engineering Masterclass · Lesson 1 of 15"}},
+      {"visual_type": "stock",
+       "voiceover": "An AI chat tool, such as Claude, ChatGPT or Gemini, is a program that reads the text you type and writes a reply. You do not need any technical knowledge. You type a request in normal language, which is called a prompt, and the tool responds.",
+       "stock_query": "person typing message on laptop office",
+       "on_screen_text": "Your request = a prompt"},
+      {"visual_type": "slide",
+       "voiceover": "The tool learned from a very large amount of text during its training. When you send a prompt, it predicts a likely, useful answer, word by word, based on your words and the patterns it learned. It does not look into your inbox or your files unless you give it that material. And it does not know your client, your team or your goal.",
+       "slide": {"layout": "diagram", "title": "How a reply is made", "body": "Your prompt + patterns from training → 'predict a likely answer, word by word' → reply. Greyed-out icons outside the box: inbox, files, client, team, goal, labelled 'not known unless you say'."}},
+      {"visual_type": "slide",
+       "voiceover": "This explains two surprises. First, a vague prompt gives a generic answer. The tool fills the gaps with safe, common choices. Second, the same prompt can give different answers, because the tool is predicting, not looking up one fixed answer. Clear context and instructions leave fewer gaps, so the answers vary less.",
+       "slide": {"layout": "bullets", "title": "Two surprises", "body": "1. Vague prompt → generic answer (gaps filled with safe choices). 2. Same prompt → different answers (predicting, not looking up). Fix for both: clear context and instructions = fewer gaps."}},
+      {"visual_type": "stock",
+       "voiceover": "Here is a simple way to picture it. Imagine a capable new colleague on their first day. They have read a lot and write well. But they know nothing about your team, your client or your goal.",
+       "stock_query": "new employee first day friendly office",
+       "on_screen_text": "A capable colleague on day one"},
+      {"visual_type": "slide",
+       "voiceover": "If you say write to the client, they produce something polite and general. If you say write to Mr Diallo, whose delivery was three days late, apologise, and offer Friday, they can do excellent work. The AI tool is that new colleague, every time you start a new chat.",
+       "slide": {"layout": "comparison", "title": "Briefing the new colleague", "body": "Left: 'Write to the client.' → polite, general. Right: 'Write to Mr Diallo, delivery 3 days late, apologise, offer Friday.' → excellent, specific."}}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's see this at work. Mariana is an account manager at an engineering firm in São Paulo. A client's inspection visit has to move, because a key engineer is ill.",
+       "stock_query": "account manager working at desk city",
+       "on_screen_text": "Mariana · São Paulo"},
+      {"visual_type": "slide",
+       "voiceover": "Her first prompt is just five words: write an email to a client. The tool returns a friendly email about their continued partnership. Nothing in it is wrong, but she cannot send it. It does not mention the visit, the new date or the reason.",
+       "slide": {"layout": "comparison", "title": "Before", "body": "Prompt (code style): 'Write an email to a client.' → Output card: friendly email, 'thank you for your continued partnership'. Red notes: no visit, no date, no reason."}},
+      {"visual_type": "slide",
+       "voiceover": "Her second prompt is a few lines. It says who the reader is, that the Tuesday inspection must move because the lead engineer is ill, and that she can offer Thursday or Friday morning. It asks for one apology, a warm, professional tone, and a reply by Monday.",
+       "slide": {"layout": "code", "title": "After", "body": "Write a short email to [CLIENT CONTACT], facilities manager at a food-processing company. Our site inspection planned for Tuesday must move because our lead engineer is ill. Offer Thursday or Friday morning instead. Apologise once, keep a professional and warm tone, and ask them to confirm by Monday."}},
+      {"visual_type": "slide",
+       "voiceover": "This time, the email names the visit, gives the reason in one sentence, offers both dates and asks for a reply by Monday. Mariana changes one phrase and sends it.",
+       "slide": {"layout": "comparison", "title": "The difference", "body": "Before: general, unusable. After: visit named, reason, two dates, reply by Monday (green ticks). One phrase changed, then sent."}},
+      {"visual_type": "text",
+       "voiceover": "Notice that she used no special tricks. She gave the information a new colleague would need. She also used a placeholder instead of the client's real name. You will learn more about that in lesson three.",
+       "on_screen_text": "No tricks. Just the right information."},
+      {"visual_type": "slide",
+       "voiceover": "A common mistake is to think a generic answer means the tool is not very smart, and to keep pressing regenerate. Usually, the problem is missing information. Before you judge the output, ask yourself: did I tell it who, what and why? Adding two or three lines of context often helps more than asking again with the same words.",
+       "slide": {"layout": "quote", "title": "Before you press regenerate", "body": "\"Did I tell it who, what and why?\""}}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, an AI chat tool predicts a likely answer from your prompt and its training. It does not know your situation unless you tell it. Second, vague prompts get generic answers, and the same prompt can give different answers. Third, clear context and instructions leave fewer gaps, so the output is often more useful and more consistent.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. It predicts from your prompt and training; it doesn't know your situation. 2. Vague → generic; same prompt → different answers. 3. Clear context = fewer gaps, often better output."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below this video, you will ask Claude for an email to a client, first with five words, then with who, what and why. Then you compare the two answers in three short points. It takes about fifteen minutes. In the next lesson, we look at the anatomy of a strong prompt. See you there.",
+       "on_screen_text": "Next: The Anatomy of a Strong Prompt"}
+    ]
+  }
+}

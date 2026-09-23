@@ -1,0 +1,73 @@
+{
+  "title": "Writing and Editing Documents",
+  "thumbnail": {
+    "headline": "Outline First, Then Build",
+    "image": "Navy background, a simple house blueprint turning into a document outline with five headings, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Outline First, Then Build", "body": "Blueprint of a small house on the left, arrow to a five-heading document outline on the right. Small tag: AI for Everyday Work · Lesson 6."}
+  },
+  "production_notes": [
+    "[REGION] Employer AI policies and approved tools for internal documents differ by organisation and country; the voiceover tells learners to follow their own policy.",
+    "Aigerim and her Almaty engineering company are hypothetical; no real company name or logo in stock footage.",
+    "Aigerim's outline prompt and the editing prompts appear in full on code-layout slides (scenes 8 and 11).",
+    "Scene 7 hero clip is 7 seconds and the scene is about 15 seconds: hold the clip with a slow push-in, then cut to scene 8."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Ask an AI assistant to write our new safety procedure, and it will give you three pages in seconds. They will look professional. They will also be full of steps that your workplace does not use. There is a better way.",
+       "on_screen_text": "Three pages in seconds?"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "In the last lesson, we worked on emails. Today we move to longer documents. AI can help with two kinds of document work. Drafting means first versions of reports, procedures, briefings, agendas and job descriptions. Editing means making your own text clearer, shorter, better organised or easier for non-experts.",
+       "slide": {"layout": "comparison", "title": "Two kinds of document work", "body": "Drafting: reports · procedures · briefings · agendas · job descriptions. Editing: clearer · shorter · better organised · easier for non-experts."}},
+      {"visual_type": "slide",
+       "voiceover": "When you edit, the facts come from your own text, so the risk of invented content is lower. But you must still check that the meaning has not changed.",
+       "slide": {"layout": "quote", "title": "Editing", "body": "\"Lower risk, because the facts are yours. Still check the meaning.\""}},
+      {"visual_type": "slide",
+       "voiceover": "For drafting, the key idea is to build the document step by step. First, ask for an outline: a list of headings and short notes. Second, improve the outline yourself. Remove sections that do not apply, add what is missing, and put the steps in the order your team really follows. This is where your knowledge matters most.",
+       "slide": {"layout": "diagram", "title": "Build it step by step", "body": "Four boxes in a row: 1. Outline → 2. Improve the outline yourself (highlighted) → 3. Draft one section → 4. Edit each section"}},
+      {"visual_type": "slide",
+       "voiceover": "Third, draft one section at a time. Give the assistant the facts for that section and ask it to write it. Fourth, edit each section. Check the facts, remove anything invented, and adjust the words for your readers. Each step is small enough to check properly.",
+       "slide": {"layout": "diagram", "title": "Build it step by step", "body": "Same four boxes, now with 3. Draft one section and 4. Edit each section highlighted. Caption: small steps, easy to check."}},
+      {"visual_type": "slide",
+       "voiceover": "For editing, you can use prompts like the ones on screen. Rewrite a paragraph in plain English for new staff, and keep all the facts. Make a section shorter without removing any steps. Or list any sentences that could be read in two ways.",
+       "slide": {"layout": "code", "title": "Useful editing prompts", "body": "Rewrite this paragraph in plain English for new staff with no technical background. Keep all the facts.\nMake this section 30% shorter without removing any steps.\nList any sentences in this text that are unclear or could be read in two ways."}},
+      {"visual_type": "hero_broll",
+       "voiceover": "Here is a picture to remember. Building a document with AI is like working with a builder from a plan. You would not say build me a house in one sentence and accept whatever appears.",
+       "broll_tool": "FLOW",
+       "broll_prompt": "A Central Asian woman architect and a South Asian male builder study a large paper floor plan spread on a table at a half-built house, pointing at one room; slow orbit around the table from medium shot; warm late-afternoon sunlight through open walls; cinematic, natural colours, shallow depth of field; 7 seconds; no readable text, no logos."},
+      {"visual_type": "stock",
+       "voiceover": "You agree the plan first, then build one room at a time, and inspect each room before you move on. And as always, keep confidential documents out of free tools, and follow your employer's AI policy.",
+       "stock_query": "builder inspecting finished room interior",
+       "on_screen_text": "Plan, build, inspect"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "slide",
+       "voiceover": "Let's see it in practice. Aigerim is an office coordinator at an engineering company in Almaty, in Kazakhstan. Her manager asks her for a one-page procedure for new staff on how to request office equipment. She starts by asking for an outline only.",
+       "slide": {"layout": "code", "title": "Aigerim's outline prompt", "body": "Create an outline for a one-page procedure for new office staff: how to request equipment such as a laptop, monitor or headset. Headings and one line per section only."}},
+      {"visual_type": "slide",
+       "voiceover": "The AI suggests seven sections, including budget approval by the finance director, and vendor selection. Aigerim knows these do not apply. New staff choose from a fixed list, and their team leader approves. So she removes both, adds where to collect your equipment, and reorders the rest. Her outline now has five sections.",
+       "slide": {"layout": "comparison", "title": "Aigerim improves the outline", "body": "AI outline: 7 sections, with 'Budget approval by finance director' and 'Vendor selection' crossed out. Added: 'Where to collect your equipment'. Result: 5 sections in the real order."}},
+      {"visual_type": "slide",
+       "voiceover": "Next, she asks the AI to draft just one section, how to submit a request. She gives it the facts. Use the online form, choose from the standard list, and your team leader approves within two working days. Now the AI has the real facts, so it does not need to guess them.",
+       "slide": {"layout": "bullets", "title": "Draft one section", "body": "Section: How to submit a request. Facts given: use the online form · choose from the standard list · team leader approves within 2 working days"}},
+      {"visual_type": "slide",
+       "voiceover": "The draft adds a new promise. You will receive an email confirmation within one hour. Aigerim is not sure this is true, so she asks the IT team. It is not, so she deletes it. She keeps only facts that she can confirm.",
+       "slide": {"layout": "comparison", "title": "An invented detail", "body": "Draft sentence (amber): 'You will receive an email confirmation within one hour.' → Checked with IT: not true → deleted (red cross)."}},
+      {"visual_type": "slide",
+       "voiceover": "Finally, she asks the AI to rewrite the section in shorter sentences for new staff. Then she checks that no step was lost. The most common mistake is to ask for the whole document in one prompt. The long result hides invented steps and wrong details, and it is tiring to check.",
+       "slide": {"layout": "comparison", "title": "Small parts are easier to check", "body": "Left: one huge document from one prompt (hidden errors). Right: outline → section → edit, each part checked while small."}}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, use AI both for first drafts and for editing your own text, to make it clearer, shorter or simpler. Second, build documents step by step: outline, improve the outline yourself, draft one section, then edit. Third, check every section for invented details and changed meaning, and keep confidential documents out of free tools.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Drafting and editing. 2. Outline → improve → draft one section → edit. 3. Check each section; no confidential documents in free tools."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Your turn. In the exercise below this video, choose a simple procedure you know well, such as booking a meeting room. Ask for an outline, improve it yourself, then have the AI draft one section and check it line by line. The next lesson is Summarising Long Documents and Meetings. See you there.",
+       "on_screen_text": "Next: Summarising Long Documents"}
+    ]
+  }
+}

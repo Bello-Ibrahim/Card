@@ -1,0 +1,222 @@
+{
+  "course_id": "AI-05",
+  "lesson_id": "L01",
+  "duration_s": 313.6,
+  "thumbnail": {
+    "headline": "Maths Without Fear",
+    "slide": {
+      "layout": "title",
+      "title": "Maths Without Fear",
+      "body": "Five simple bars with a dashed average line across them, and a small tag: Math and Statistics for AI · Lesson 1."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.9,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "One small step at a time",
+      "voiceover": "Many people feel their stomach tighten when they see a page of maths symbols. If that is you, you are in the right place. Machine learning uses a surprisingly small amount of maths, and you can learn it one small step at a time."
+    },
+    {
+      "scene": 2,
+      "start": 18.9,
+      "end": 33.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Maths for AI Without Fear",
+        "body": "Math and Statistics for AI (No-Fear Edition) · Lesson 1 of 18"
+      },
+      "voiceover": "Hi, and welcome to Math and Statistics for AI, the No-Fear Edition. In this first lesson, we draw a map of the whole course, and you will run your very first line of Python."
+    },
+    {
+      "scene": 3,
+      "start": 33.9,
+      "end": 51.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "What a model does",
+        "body": "Data → Calculations → Prediction, with a curved arrow back labelled 'improve'. Four small labels appear under the boxes, one per area of maths."
+      },
+      "voiceover": "A machine learning model is a set of calculations. It turns data into a prediction, and then it improves itself. This course covers the four areas of maths that make that possible. Each one has a clear job inside the model."
+    },
+    {
+      "scene": 4,
+      "start": 51.5,
+      "end": 65.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "The four areas, part 1",
+        "body": "1. Linear algebra: stores data, makes predictions (Module 1). 2. Probability and statistics: describe data and uncertainty (Module 2)."
+      },
+      "voiceover": "First, linear algebra, which means vectors and matrices. It stores the data and makes the predictions. That is Module 1. Second, probability and statistics. They describe data and uncertainty. That is Module 2."
+    },
+    {
+      "scene": 5,
+      "start": 65.6,
+      "end": 90.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "The four areas, part 2",
+        "body": "3. Calculus: how a model learns (Module 3). 4. Metrics: judge the results (Module 4) + capstone: linear regression from scratch."
+      },
+      "voiceover": "Third, calculus, which means derivatives and gradients. This is how a model learns. It tells the model which way to change its numbers so its errors get smaller. That is Module 3. And fourth, metrics, which turn results into numbers you can judge. That is Module 4, with the capstone, where you build linear regression from scratch."
+    },
+    {
+      "scene": 6,
+      "start": 90.0,
+      "end": 105.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "You already have what you need",
+        "body": "Fractions · Percentages · Reading a simple graph. Promise: every symbol is explained in words first."
+      },
+      "voiceover": "You already know the maths you need to start. Fractions, percentages and reading a simple graph. We will add new words slowly, and we will always explain a symbol in words before we use it."
+    },
+    {
+      "scene": 7,
+      "start": 105.0,
+      "end": 128.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Our routine",
+        "body": "Three steps left to right with icons: 1 Picture (eye) → 2 Small hand calculation (pencil) → 3 Code in NumPy (laptop). Caption: the code checks your work."
+      },
+      "voiceover": "Every lesson follows the same three-step routine. First, a picture: a drawing, a graph, or an everyday situation. Second, a small hand calculation with tiny numbers. Third, code: the same calculation in Python with NumPy, a free library for numbers, in Google Colab. The code never replaces your understanding. It checks your work."
+    },
+    {
+      "scene": 8,
+      "start": 128.1,
+      "end": 145.2,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "person cooking small portion following recipe",
+      "on_screen_text": "Photo, small portion, kitchen machine",
+      "voiceover": "Think of it like learning to cook from a recipe. The picture is the photo of the finished dish. The hand calculation is cooking a small portion slowly. The code is the kitchen machine that cooks a large portion quickly."
+    },
+    {
+      "scene": 9,
+      "start": 145.2,
+      "end": 160.6,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "small bakery counter with cakes",
+      "on_screen_text": "12, 15, 9, 20, 14 cakes",
+      "voiceover": "Let's try the routine together. Mariana runs a small bakery in Bogotá, Colombia. She wants her average daily sales of a new cake over five days. The numbers are twelve, fifteen, nine, twenty and fourteen cakes."
+    },
+    {
+      "scene": 10,
+      "start": 160.6,
+      "end": 186.3,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Picture, then hand calculation",
+        "body": "Five bars: 12, 15, 9, 20, 14; a dashed level line at 14. Below: 12 + 15 + 9 + 20 + 14 = 70. Mean = 70 ÷ 5 = 14 cakes per day."
+      },
+      "voiceover": "Step one, the picture. Five bars of different heights. The average is the height they would all have if you made them level. Step two, the hand calculation. Twelve plus fifteen plus nine plus twenty plus fourteen equals seventy cakes. The mean is the total divided by the number of days. Seventy divided by five equals fourteen cakes per day."
+    },
+    {
+      "scene": 11,
+      "start": 186.3,
+      "end": 201.3,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open a web browser and go to Google Colab.",
+        "Sign in with a Google account if Colab asks.",
+        "Open the File menu and choose New notebook.",
+        "Show the empty first code cell."
+      ],
+      "voiceover": "Step three, the code. Open a web browser and go to Google Colab. If Colab asks you to, sign in with a Google account. Then create a new notebook, for example from the File menu."
+    },
+    {
+      "scene": 12,
+      "start": 201.3,
+      "end": 219.7,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Click in the first code cell.",
+        "Type: import numpy as np",
+        "Type: sales = np.array([12, 15, 9, 20, 14])",
+        "Highlight the array line."
+      ],
+      "voiceover": "Click in the first code cell. The first line loads NumPy with the short name n p. The next line creates a NumPy array, which is a list of numbers that NumPy can calculate with quickly. Here it holds Mariana's five sales numbers."
+    },
+    {
+      "scene": 13,
+      "start": 219.7,
+      "end": 234.3,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Type: print(sales.sum())",
+        "Type: print(sales.mean())",
+        "Hover over the play button next to the cell.",
+        "Run the cell with Shift + Enter."
+      ],
+      "voiceover": "Then we print two things. Sales dot sum adds the numbers. Sales dot mean finds the average. Now run the cell with the play button next to it, or press Shift and Enter together."
+    },
+    {
+      "scene": 14,
+      "start": 234.3,
+      "end": 240.7,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Zoom in on the output: 70 and 14.0.",
+        "Place the handwritten 70 ÷ 5 = 14 next to the output.",
+        "Add a green tick beside each matching number."
+      ],
+      "on_screen_text": "70 and 14.0: it matches",
+      "voiceover": "And there it is. Seventy, and fourteen point zero. It matches our hand calculation exactly."
+    },
+    {
+      "scene": 15,
+      "start": 240.7,
+      "end": 264.3,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Understanding grows in layers",
+      "voiceover": "One common mistake is to think you must understand every formula perfectly before you are allowed to write code. So people stop at the first hard symbol and decide they are not a maths person. In fact, understanding grows in layers. If a symbol confuses you, go back to the picture and the tiny numbers."
+    },
+    {
+      "scene": 16,
+      "start": 264.3,
+      "end": 291.3,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Four areas: linear algebra, statistics, calculus, metrics. 2. Routine: picture → hand calculation → code. 3. NumPy array: .sum() and .mean()"
+      },
+      "voiceover": "Let's recap. First, machine learning uses four areas of maths. Linear algebra stores data and makes predictions, statistics describes data and uncertainty, calculus drives learning, and metrics judge results. Second, every lesson follows the same routine: a picture, a small hand calculation, then code. Third, a NumPy array is a list of numbers you can calculate with, for example with sum and mean."
+    },
+    {
+      "scene": 17,
+      "start": 291.3,
+      "end": 313.6,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Vectors: Data as Lists of Numbers",
+      "voiceover": "Now it is your turn. In the exercise below this video, you choose five made-up numbers, find their sum and mean on paper, then check them in your own Colab notebook. It takes about fifteen minutes. In the next lesson, we meet vectors: data as lists of numbers. See you there."
+    }
+  ]
+}

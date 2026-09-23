@@ -62,15 +62,15 @@
       "id": "Q5",
       "lesson_id": "L15",
       "objective": "O5",
-      "question": "A training run's GPU memory use grows every step until it fails with an out-of-memory error. The loop contains losses.append(loss). What is the best first fix?",
+      "question": "A training run's GPU memory use grows every step until it fails with an out-of-memory error. After each training step, the loop computes an extra loss for logging and runs losses.append(loss). What is the best first fix?",
       "options": [
         "Increase the batch size so that fewer steps are needed.",
         "Add gradient clipping with clip_grad_norm_.",
         "Switch the activation functions from ReLU to sigmoid.",
-        "Store loss.item() instead of the loss tensor, so that each step's computation graph can be freed."
+        "Store loss.item() (or compute the logged loss under torch.no_grad()), so its computation graph can be freed."
       ],
       "answer_index": 3,
-      "explanation": "Keeping the loss tensor keeps its whole computation graph alive, so memory grows with every step; storing a Python number frees it. The most tempting wrong option is gradient clipping, which fixes exploding gradients, not memory; it would not stop the graphs from accumulating."
+      "explanation": "The logged loss tensor was never used for backward(), so keeping it keeps its whole computation graph alive, so memory grows with every step; storing a Python number frees it. The most tempting wrong option is gradient clipping, which fixes exploding gradients, not memory; it would not stop the graphs from accumulating."
     }
   ]
 }

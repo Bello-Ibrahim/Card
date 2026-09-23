@@ -1,0 +1,192 @@
+{
+  "course_id": "AI-02",
+  "lesson_id": "L03",
+  "duration_s": 295.4,
+  "thumbnail": {
+    "headline": "Read, Practise, Improve",
+    "slide": {
+      "layout": "title",
+      "title": "Read, Practise, Improve",
+      "body": "Three rising steps: book icon (pre-training), chef's hat icon (fine-tuning), star rating icon (human feedback). Small tag: Generative AI Explained · Lesson 3."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.0,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Where does the behaviour come from?",
+      "voiceover": "A language model can write a polite email, explain a science topic, and refuse to help with something harmful. Nobody typed those answers in for it. So where does this behaviour come from? The answer is in how the model was trained."
+    },
+    {
+      "scene": 2,
+      "start": 18.0,
+      "end": 39.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "How a Language Model Is Trained",
+        "body": "Generative AI Explained · Lesson 3 of 12 · A simplified picture"
+      },
+      "voiceover": "In the last lesson, you saw that a model writes by predicting the next token. Today we ask how it learns to do that well. Training usually happens in stages. What you will see is a simplified picture. Providers use different methods, and they combine these stages in their own ways."
+    },
+    {
+      "scene": 3,
+      "start": 39.9,
+      "end": 60.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Stage 1: Pre-training",
+        "body": "Pile of books, web pages and code → loop: Predict next token → Check the real token → Adjust slightly → repeat. Counter spinning very fast."
+      },
+      "voiceover": "Stage one is pre-training. The model sees a very large collection of text, such as books, articles, websites and computer code. Its only task is next-token prediction. It sees some text, predicts the next token, checks the real one, and adjusts itself a tiny bit."
+    },
+    {
+      "scene": 4,
+      "start": 60.0,
+      "end": 79.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "After pre-training",
+        "body": "Left: Learned: grammar, common facts, writing styles. Right: Prompt 'What is the capital of Kenya?' → output continues 'What is the capital of Uganda? What is…' (not an answer)."
+      },
+      "voiceover": "After a huge number of these small adjustments, the model has learned grammar, common facts and styles of writing. It is good at continuing text. But it is not yet a helpful assistant. Ask it a question, and it might just continue with more questions."
+    },
+    {
+      "scene": 5,
+      "start": 79.3,
+      "end": 98.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Stage 2: Fine-tuning",
+        "body": "Small stack of example cards: 'Request' → 'Helpful, clear, safe answer'. Arrow → model learns: answer · follow instructions · helpful tone."
+      },
+      "voiceover": "Stage two is fine-tuning. The model trains further on a much smaller set of carefully prepared conversations. A request, followed by a helpful, clear and safe answer. From these, it learns how an assistant behaves. Answer the question, follow instructions, use a helpful tone."
+    },
+    {
+      "scene": 6,
+      "start": 98.6,
+      "end": 119.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Stage 3: Human feedback",
+        "body": "Two answers side by side, a person gives a thumbs up to one. Arrow: ratings → adjust model → preferred answers more often."
+      },
+      "voiceover": "Stage three is adjustment from human feedback. People compare different answers from the model and rate which ones are better, more accurate or safer. The ratings are used to adjust the model, so it gives the preferred kind of answer more often. Some providers also use other methods here."
+    },
+    {
+      "scene": 7,
+      "start": 119.6,
+      "end": 135.5,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "young chef learning from head chef kitchen",
+      "on_screen_text": "Recipes, practice, feedback",
+      "voiceover": "Here is a way to picture it. A trainee chef first reads thousands of recipes. Then the trainee practises under a head chef. Finally, the trainee improves from customer feedback, and makes the popular dishes more often."
+    },
+    {
+      "scene": 8,
+      "start": 135.5,
+      "end": 156.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "What this means for you",
+        "body": "Text only up to a certain date · Patterns, not checked facts · Tone and caution from stages 2 and 3 · No live learning from your chat"
+      },
+      "voiceover": "This simplified picture has real effects for you. The model learned from text up to a certain date. It learned patterns, not a database of checked facts. Its tone and caution come mostly from stages two and three. And it does not normally learn from your chat in real time."
+    },
+    {
+      "scene": 9,
+      "start": 156.9,
+      "end": 174.9,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "clinic receptionist using computer at desk",
+      "on_screen_text": "Aroha · health clinic · Wellington",
+      "voiceover": "Let's see this in practice. Aroha is an administrator at a health clinic in Wellington. She asks a chatbot about new clinic opening-hour rules that her regional health office announced last month. The chatbot gives a confident answer, with exact times."
+    },
+    {
+      "scene": 10,
+      "start": 174.9,
+      "end": 192.5,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Stage 1 check",
+        "body": "Calendar showing 'last month' outside a box labelled 'Training text'. Note: local, recent → probably not learned. Output: sounds likely."
+      },
+      "voiceover": "Aroha uses the three stages to think it through. Pre-training: the announcement was local and recent, so it was probably not in the training text. The model knows general patterns about opening hours, so it produced something that sounds likely."
+    },
+    {
+      "scene": 11,
+      "start": 192.5,
+      "end": 207.5,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Stage 2 and 3 check",
+        "body": "Fine-tuning → 'Always give a full answer'. Human feedback → 'Be honest when unsure' with a small warning sign: not perfect."
+      },
+      "voiceover": "Fine-tuning: the model learned to give helpful, complete answers, so it answered instead of saying I don't know. Human feedback: good training usually rewards honesty about uncertainty, but this does not work every time."
+    },
+    {
+      "scene": 12,
+      "start": 207.5,
+      "end": 220.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Aroha's decision",
+        "body": "Answer probably invented · Check the official website · Never paste patient details"
+      },
+      "voiceover": "So Aroha concludes that the answer is probably invented. She checks the real announcement on the health office website instead. She also remembers not to paste patient details into the chatbot."
+    },
+    {
+      "scene": 13,
+      "start": 220.8,
+      "end": 246.9,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Chatting does not retrain the model.",
+      "voiceover": "A common mistake is to believe that a chatbot learns from each conversation, and remembers what you taught it yesterday. In most cases, the core model does not change when you chat. Some apps have a memory feature that saves notes about you, and some may use chats to train future models. That is not live learning. Check each tool's settings."
+    },
+    {
+      "scene": 14,
+      "start": 246.9,
+      "end": 273.5,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Simplified: pre-training → fine-tuning → human feedback. 2. Knowledge from pre-training; behaviour from later stages. 3. Can be out of date or confidently wrong."
+      },
+      "voiceover": "Let's recap. First, in simple terms, a language model is trained in stages. Pre-training on lots of text, fine-tuning on good answers, and adjustment from human feedback. Second, pre-training gives general knowledge and language skills, while the later stages shape tone and behaviour. Third, a model can be out of date, or confidently wrong about rare or recent topics."
+    },
+    {
+      "scene": 15,
+      "start": 273.5,
+      "end": 295.4,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Context Windows and Hallucinations",
+      "voiceover": "Your turn. In the exercise below, ask a free chatbot what it cannot know or do because of how it was trained. Then link each point to one of the three stages. It takes about twenty minutes. Next, we look at context windows, knowledge cut-offs and hallucinations. See you there."
+    }
+  ]
+}

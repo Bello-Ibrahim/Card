@@ -1,0 +1,74 @@
+{
+  "title": "Unsupervised and Reinforcement Learning",
+  "thumbnail": {
+    "headline": "No Answer Key? No Problem",
+    "image": "Navy background, left: coloured dots gathering into four clusters; right: a small robot next to a star reward icon, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "No Answer Key? No Problem", "body": "Left half: scattered dots forming four coloured groups ('Groups'). Right half: simple agent icon with a star and a cross ('Rewards'). Small tag: AI Fundamentals · Lesson 6."}
+  },
+  "production_notes": [
+    "No facts to verify: game-playing agents, the shops and the warehouse are generic and hypothetical (content.md Review Flags: None). Do not name or show any real game-playing system.",
+    "Leila's shops in Casablanca and the warehouse company in Poland are fictional; stock footage must not show real brand names or logos.",
+    "Scene 11 hero clip is 6 seconds and the scene is about 22 seconds: hold the clip with a slow push-in, or extend it with stock footage of a warehouse robot moving between shelves."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Imagine you get ten thousand customer records, and nobody tells you what to look for. There is no answer key. Can a computer still learn something useful? It can. It can even learn to play a game it was never taught.",
+       "on_screen_text": "No answer key. Still learning?"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "In the last lesson, we met supervised learning, where every example has a label. But labels cost time and money, and sometimes there is no single correct answer to label. For these situations, there are two other types of machine learning.",
+       "slide": {"layout": "title", "title": "Unsupervised and Reinforcement Learning", "body": "AI Fundamentals · Lesson 6 of 12"}},
+      {"visual_type": "slide",
+       "voiceover": "The first is unsupervised learning. It works with data that has no labels. The model looks for patterns on its own, most often by putting similar items into groups. This is called clustering. For example, a shop can give a model its customers' shopping habits, and the model may find groups of customers who behave in similar ways.",
+       "slide": {"layout": "diagram", "title": "Unsupervised: finding groups", "body": "Grey unlabelled dots (customers) → animation: dots move into three coloured clusters. Caption: Clustering. Nobody told the model these groups existed."}},
+      {"visual_type": "slide",
+       "voiceover": "The second is reinforcement learning. It works through trial and error. A program, called an agent, takes actions. After an action, it receives a reward, a signal that the result was good, or a penalty, a signal that it was bad. Over many attempts, the agent learns which actions lead to more reward.",
+       "slide": {"layout": "diagram", "title": "Reinforcement: learning from rewards", "body": "Loop diagram: Agent → Action → Environment → Reward (star) or Penalty (cross) → back to Agent. Caption: repeat many times."}},
+      {"visual_type": "stock",
+       "voiceover": "Game-playing agents are a well-known example. An agent that plays a board game may start with random moves. It loses many games. But slowly, it learns which moves tend to lead to a win.",
+       "stock_query": "board game pieces close up hands",
+       "on_screen_text": "Lose many games, slowly learn"},
+      {"visual_type": "stock",
+       "voiceover": "Here is one picture for all three types. Imagine learning about food in a new country. A local friend tells you the name of every dish you taste. That is supervised learning, because you have labels.",
+       "stock_query": "friends sharing street food at night market",
+       "on_screen_text": "Friend names each dish = supervised"},
+      {"visual_type": "slide",
+       "voiceover": "You visit the market alone, and sort dishes into groups, such as sweet, spicy and fried, with nobody naming them. That is unsupervised learning. And you order a different dish each day, then order the ones you enjoy more often. That is reinforcement learning, because you learn from rewards.",
+       "slide": {"layout": "comparison", "title": "Three ways to learn about food", "body": "Three columns with food icons. Supervised: a friend names each dish. Unsupervised: you sort dishes into sweet / spicy / fried. Reinforcement: you reorder the dishes you enjoy (star)."}},
+      {"visual_type": "slide",
+       "voiceover": "So how do you choose? If you have examples with the correct answer, use supervised learning. If you have data but no answers, and you want to discover groups, use unsupervised learning. If there is a series of decisions, and success is only clear after acting, use reinforcement learning.",
+       "slide": {"layout": "bullets", "title": "Which type do I need?", "body": "Examples with correct answers? → Supervised · Data but no answers, want groups? → Unsupervised · A series of decisions, success clear only after acting? → Reinforcement"}}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Now let's see two real-life cases. Leila runs a chain of three clothing shops in Casablanca, Morocco. She wants to send better offers, but she does not know what types of customers she has.",
+       "stock_query": "woman shop owner in clothing boutique",
+       "on_screen_text": "Leila · clothing shops · Casablanca"},
+      {"visual_type": "slide",
+       "voiceover": "She gives a model two years of anonymous sales records, with no labels. The model finds four clusters. Leila studies them. She recognises one group that buys school uniforms every August, and another that buys formal wear before weddings. She names the groups herself, and creates an offer for each. This is unsupervised learning.",
+       "slide": {"layout": "diagram", "title": "Four clusters", "body": "Unlabelled sales records → model → four coloured clusters (Group A–D). Then Leila adds names to two: 'School uniforms in August', 'Formal wear before weddings'. Tag: Unsupervised."}},
+      {"visual_type": "hero_broll",
+       "voiceover": "A warehouse company in Poland wants a robot to find fast ways to move boxes between shelves. There is no list of correct routes. Instead, the robot tries routes in a computer simulation. It gets a reward when a box arrives quickly, and a penalty when it bumps into a shelf.",
+       "broll_tool": "KLING",
+       "broll_prompt": "A small wheeled warehouse robot carrying a cardboard box moves between tall metal shelves, pauses, turns and finds a clear path, while a warehouse worker of South Asian heritage watches from a distance with a tablet; slow tracking shot following the robot at floor level; cool, even industrial lighting with soft highlights; realistic, clean, modern style; 6 seconds; no readable text, no labels on boxes, no logos."},
+      {"visual_type": "slide",
+       "voiceover": "After many attempts, it learns efficient routes. This is reinforcement learning. And if Leila later wanted to predict whether one customer will return next month, using past records labelled returned or did not return, she would use supervised learning.",
+       "slide": {"layout": "comparison", "title": "Which type fits?", "body": "Robot routes: tries, gets reward or penalty → Reinforcement. Leila: will this customer return? Labelled past records → Supervised."}},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is to think that the computer understands the groups it finds. It does not. It only notices that some items are similar in the data. It cannot tell you that a group is wedding shoppers. A person must interpret each group, and some groups will turn out to be meaningless.",
+       "on_screen_text": "A person must interpret the groups"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, unsupervised learning finds groups or patterns in data with no labels, and a person must decide what those groups mean. Second, reinforcement learning learns through trial and error, from rewards and penalties. Third, choose by asking what you have. Labelled answers, data without answers, or a series of decisions with a reward.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Unsupervised: groups in unlabelled data; people interpret them 2. Reinforcement: trial and error with rewards 3. Labels → supervised · No labels → unsupervised · Decisions + reward → reinforcement"}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below this video, you will match six scenarios to supervised, unsupervised or reinforcement learning. Then justify one choice in a single sentence, using the words labels, groups or reward. In the next lesson, we open the box, with Neural Networks Without the Maths. See you there.",
+       "on_screen_text": "Next: Neural Networks Without the Maths"}
+    ]
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "title": "Matrices: A Whole Dataset at Once",
+  "thumbnail": {
+    "headline": "Your Spreadsheet Is a Matrix",
+    "image": "Navy background, a small spreadsheet grid morphing into a bracketed matrix of numbers, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Your Spreadsheet Is a Matrix", "body": "Left: a 4-row, 3-column table. Right: the same numbers inside square brackets, labelled 4 × 3. Small tag: Math and Statistics for AI · Lesson 4."}
+  },
+  "production_notes": [
+    "No facts to verify: content.md Review Flags say None. All data is hypothetical and the NumPy output was run and confirmed.",
+    "Zofia and the Kraków bicycle rental shop are fictional; the four days of data (18, 0, 120 / 22, 2, 95 / 15, 10, 40 / 25, 0, 150) are invented. No real shop names or logos in stock footage.",
+    "Not a screen demo lesson: code appears only on code slides. Say shapes as 'four by three'; the slides show 4 × 3."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "You already know how to read a spreadsheet. Each row is one record, and each column is one kind of information. Good news: that is almost exactly what a matrix is. You have been using matrices for years without the name.",
+       "on_screen_text": "You already use matrices"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "In the last lesson, we made one prediction with a dot product. Today we store a whole dataset at once. A matrix is a rectangle of numbers, arranged in rows and columns. In machine learning, it follows one simple rule.",
+       "slide": {"layout": "title", "title": "Matrices: A Whole Dataset at Once", "body": "Math and Statistics for AI · Lesson 4 of 18"}},
+      {"visual_type": "slide",
+       "voiceover": "Each row is one example, like one day, one customer or one flat. Each column is one feature, like temperature, age or price. So each row is a vector, and a matrix is many vectors stacked on top of each other.",
+       "slide": {"layout": "diagram", "title": "Rows and columns", "body": "A grid: rows highlighted one at a time and labelled 'example = one vector'; a column highlighted and labelled 'feature'."}},
+      {"visual_type": "slide",
+       "voiceover": "The shape of a matrix is rows by columns. A matrix with four rows and three columns has shape four by three. In NumPy, capital X dot shape tells you. Check the shape first in any dataset, because it tells you how many examples and features you have.",
+       "slide": {"layout": "code", "title": "Shape = rows × columns", "body": "4 rows, 3 columns → shape 4 × 3 ('four by three')\nX.shape → (4, 3)\nCapital X = matrix · small w = vector"}},
+      {"visual_type": "slide",
+       "voiceover": "To get one number, give its row and its column. But careful: NumPy counts from zero, not one. So X, row one, column two means the second row and the third column. A colon means all rows, so colon, two gives every value in column two. And X with just one number gives a whole row.",
+       "slide": {"layout": "code", "title": "Indexing starts at 0", "body": "X[1, 2] → second row, third column\nX[:, 2] → whole column 2 (':' = all rows)\nX[1] → whole row 1"}},
+      {"visual_type": "slide",
+       "voiceover": "The transpose flips a matrix, so rows become columns. The first row becomes the first column. A four by three matrix becomes three by four. In NumPy you write X dot T. You will need it in the capstone, when you calculate gradients.",
+       "slide": {"layout": "diagram", "title": "Transpose: X.T", "body": "A 4 × 3 grid rotates into a 3 × 4 grid; the first row (teal) becomes the first column. Label: X.T"}},
+      {"visual_type": "stock",
+       "voiceover": "Think of a cinema seating plan. To find one seat, you need a row and a seat number. A whole row is one line of seats. A column is every seat with the same number, from front to back. Transposing is like turning the plan on its side.",
+       "stock_query": "empty cinema seats rows from above",
+       "on_screen_text": "Row and seat number = one value"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's meet Zofia. She manages a bicycle rental shop in Kraków, Poland. She records four days in a spreadsheet, with three columns: temperature in degrees Celsius, rain in millimetres, and bikes rented. The numbers are invented.",
+       "stock_query": "row of rental bicycles in old town",
+       "on_screen_text": "Zofia's bike rentals · Kraków"},
+      {"visual_type": "slide",
+       "voiceover": "Here is the table. Day one: eighteen degrees, no rain, one hundred and twenty bikes. Day two: twenty-two, two, ninety-five. Day three: fifteen, ten, forty. Day four: twenty-five, no rain, one hundred and fifty bikes. Four rows, three columns. So the shape is four by three.",
+       "slide": {"layout": "diagram", "title": "Four days, three columns", "body": "Table: Temperature | Rain | Bikes rented. 18 | 0 | 120 · 22 | 2 | 95 · 15 | 10 | 40 · 25 | 0 | 150. Badge: shape 4 × 3."}},
+      {"visual_type": "slide",
+       "voiceover": "By hand: row one, the second day, is twenty-two, two, ninety-five. Column two, bikes rented, is one hundred and twenty, ninety-five, forty, one hundred and fifty. And the value at row one, column two, is ninety-five.",
+       "slide": {"layout": "diagram", "title": "Picking values by hand", "body": "Same table: row 1 highlighted teal → [22, 2, 95]; column 2 highlighted amber → [120, 95, 40, 150]; the cell where they cross circled: 95."}},
+      {"visual_type": "slide",
+       "voiceover": "In code, Zofia types the table into a NumPy array, one inner list per row. Then she prints the shape, the bikes column, row one, the single value, and the shape of the transpose. The results are four by three, the four bike numbers, the second day, ninety-five, and three by four.",
+       "slide": {"layout": "code", "title": "The same in NumPy", "body": "X = np.array([[18, 0, 120], [22, 2, 95], [15, 10, 40], [25, 0, 150]])\nprint(X.shape)    # (4, 3)\nprint(X[:, 2])    # [120  95  40 150]\nprint(X[1])       # [22  2 95]\nprint(X[1, 2])    # 95\nprint(X.T.shape)  # (3, 4)"}},
+      {"visual_type": "slide",
+       "voiceover": "Then Zofia notices something important. Bikes rented is the value she wants to predict, so it should not sit with the inputs. We usually split the table into a feature matrix X, with temperature and rain, and a target vector y, with bikes rented. You will do this in the capstone.",
+       "slide": {"layout": "comparison", "title": "Features vs target", "body": "Left: X = temperature and rain columns (inputs). Right: y = bikes rented column (what we predict)."}},
+      {"visual_type": "text",
+       "voiceover": "The most common mistake is counting from one. You want the first column, you write colon, one, and you get the second column. In NumPy, the first column is colon, zero. And remember: row first, then column. If a result looks strange, print the shape and compare with your table.",
+       "on_screen_text": "NumPy counts from 0. Row, then column."}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, a data matrix stores one example per row and one feature per column, and its shape is rows by columns. Second, NumPy counts from zero, so row one, column two is the second row and the third column. Third, the transpose swaps rows and columns, so four by three becomes three by four.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Rows = examples, columns = features; shape = rows × columns. 2. Count from 0: X[1, 2], X[:, 2], X[1]. 3. X.T: 4 × 3 → 3 × 4"}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Your turn. In the exercise, you invent a small sales table with six rows and three columns, build it in NumPy, select a column and a row, and transpose it. It takes about twenty minutes. Next, we put matrices to work, in Matrix Multiplication as Many Predictions. See you there.",
+       "on_screen_text": "Next: Matrix Multiplication as Many Predictions"}
+    ]
+  }
+}

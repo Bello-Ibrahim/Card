@@ -1,0 +1,188 @@
+{
+  "course_id": "AI-03",
+  "lesson_id": "L04",
+  "duration_s": 300.7,
+  "thumbnail": {
+    "headline": "One Update, Three Shapes",
+    "slide": {
+      "layout": "title",
+      "title": "One Update, Three Shapes",
+      "body": "A project note card on the left with three arrows to: a one-line message bubble, a three-column table, an email with a subject line. Small tag: Prompt Engineering Masterclass · Lesson 4."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.3,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "You choose the shape",
+      "voiceover": "The same information can be a one-line message, a table or a polite email. If you do not say which one you want, the AI chooses for you. And it often chooses something longer than you need."
+    },
+    {
+      "scene": 2,
+      "start": 16.3,
+      "end": 30.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Controlling Format, Length and Tone",
+        "body": "Lesson 4 · Format · Length · Reading level · Tone"
+      },
+      "voiceover": "In the last lesson, you learned what context to give. Now we look at how the output looks and sounds. Three parts of the structured prompt control this: format, constraints and tone."
+    },
+    {
+      "scene": 3,
+      "start": 30.0,
+      "end": 57.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Name the format",
+        "body": "Table with columns Task · Owner · Status. 5 bullet points, one sentence each. Email with a subject line. Slide outline: title + 3 bullets per slide, 4 slides."
+      },
+      "voiceover": "Format is the shape of the output, and it pays to be specific. For example, a table with the columns task, owner and status. Or five bullet points, one sentence each. Or an email with a subject line. Or a slide outline, with a title and three bullet points per slide. The more exact the shape, the less the tool has to guess."
+    },
+    {
+      "scene": 4,
+      "start": 57.0,
+      "end": 73.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Use numbers for length",
+        "body": "Vague (red): 'short', 'brief'. Measurable (green): 'under 100 words', '3 sentences', 'one line'. Footnote: limits are not always exact, check the result."
+      },
+      "voiceover": "Length is a constraint. Numbers work better than words like short. Under one hundred words, three sentences, or one line are easier for the tool to follow than brief. Word limits are not always exact, so check the result."
+    },
+    {
+      "scene": 5,
+      "start": 73.7,
+      "end": 102.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Reading level and tone",
+        "body": "Reading level: 'simple words for readers of English as a second language'. Tone: formal · friendly · firm · warm. Pairs work well: 'polite but firm' · 'warm and professional'."
+      },
+      "voiceover": "Reading level is also a constraint. For example, use simple words for readers who speak English as a second language. Tone is the voice, such as formal, friendly, firm or warm. Two words together often work well, like polite but firm, or warm and professional. If you have a sample of the tone you want, you can paste it in. You will practise that in the next lesson."
+    },
+    {
+      "scene": 6,
+      "start": 102.8,
+      "end": 115.2,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Format and length go last",
+      "voiceover": "A useful habit is to put format and length at the end of your prompt, on their own lines. This keeps them easy to see and easy to change."
+    },
+    {
+      "scene": 7,
+      "start": 115.2,
+      "end": 134.5,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "coffee and biscuits on meeting table",
+      "on_screen_text": "Say the shape and the quantity",
+      "voiceover": "Asking for content without a format is like asking a caterer for food for a meeting. You might get a three-course lunch, when you wanted coffee and biscuits for ten people. Say the shape and the quantity, and you get what the meeting needs."
+    },
+    {
+      "scene": 8,
+      "start": 134.5,
+      "end": 151.6,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "project manager factory floor tablet",
+      "on_screen_text": "Kenji · project manager, Osaka",
+      "voiceover": "Let's see this in action. Kenji is a project manager at an equipment manufacturer in Osaka. His project to install a new packaging line is one week late, because a part is delayed. He needs to tell three different people."
+    },
+    {
+      "scene": 9,
+      "start": 151.6,
+      "end": 168.7,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Kenji's notes",
+        "body": "Show the 'Project notes' block from content.md exactly, including the [MONTH] placeholder."
+      },
+      "voiceover": "First, he pastes his project notes into the prompt. A motor part is late at the supplier. Testing moves from week three to week four. The budget is not affected. And the supplier must confirm the delivery time by Friday."
+    },
+    {
+      "scene": 10,
+      "start": 168.7,
+      "end": 195.7,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Same notes, three requests",
+        "body": "Three columns. Director: ONE line, under 25 words, formal. Team: table with columns Team member · What changes · New date, neutral, no extra text. Supplier: email under 100 words, polite but firm, subject line."
+      },
+      "voiceover": "For his director, he asks for one line, under twenty-five words, in a formal tone, with the delay, the new week and the budget. For his team, he asks for a table with three named columns, a neutral tone, and no extra text. For the supplier, he asks for a polite but firm email under one hundred words, with a subject line."
+    },
+    {
+      "scene": 11,
+      "start": 195.7,
+      "end": 210.7,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Three outputs",
+        "body": "Output 1: one-line message. Output 2: the team table, with one unwanted sentence above it circled in red. Output 3: supplier email with subject line."
+      },
+      "voiceover": "The results are three very different outputs from the same facts. But Kenji notices one thing. The tool added a sentence before the table, even though he asked for no extra text. He deletes it."
+    },
+    {
+      "scene": 12,
+      "start": 210.7,
+      "end": 222.7,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Noticing small failures is the skill",
+      "voiceover": "Small failures like this are normal. Noticing them is part of the skill. Always count the words, check the columns and check the tone before you send anything."
+    },
+    {
+      "scene": 13,
+      "start": 222.7,
+      "end": 251.4,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Vague vs measurable",
+        "body": "Vague: 'keep it short', 'make it professional'. Measurable: word or bullet count + named format + two tone words. Follow-up fix: 'Shorten this to 50 words.'"
+      },
+      "voiceover": "A common mistake is to write keep it short, or make it professional, and then be surprised when the result is still long or too stiff. These words mean different things to different readers. Use a number, a named format and two tone words instead. If the tool still ignores an instruction, ask for a fix in a follow-up, such as shorten this to fifty words."
+    },
+    {
+      "scene": 14,
+      "start": 251.4,
+      "end": 276.3,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Name the format exactly. 2. Numbers for length; plain words for reading level. 3. One or two tone words, and always check the output."
+      },
+      "voiceover": "Let's recap. First, name the format exactly, such as a table with named columns, a number of bullet points, or an email with a subject line. Second, use numbers for length, and plain descriptions for reading level. Third, describe tone with one or two clear words, and check the output, because tools do not always follow every instruction."
+    },
+    {
+      "scene": 15,
+      "start": 276.3,
+      "end": 300.7,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Showing Examples: Few-Shot Prompting",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will ask for the same content in three formats, each with a length limit, and note which instruction the tool followed least well. It takes about twenty minutes. In the next lesson, we look at showing examples, also called few-shot prompting. See you there."
+    }
+  ]
+}

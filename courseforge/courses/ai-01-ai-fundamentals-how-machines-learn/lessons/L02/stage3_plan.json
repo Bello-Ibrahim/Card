@@ -1,0 +1,80 @@
+{
+  "title": "AI in Your Day",
+  "thumbnail": {
+    "headline": "Spot the AI Today",
+    "image": "Navy background, a phone screen surrounded by small icons for mail, map, music, face and translation, each with a teal glow, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Spot the AI Today", "body": "Centre: simple phone outline. Around it, five small glowing icons: envelope, map pin, music note, face outline, speech bubble with two letters. Small tag: AI Fundamentals · Lesson 2."}
+  },
+  "production_notes": [
+    "[REGION] Worked example: translation, voice assistant and keyboard features differ by country and language. Check that Rahul's and Sofía's examples suit the learner markets.",
+    "Show generic, unbranded apps only. Do not show the logo or interface of any real email, map, video or music product in stock footage or slides.",
+    "Rahul, Pune and Sofía, Valparaíso are fictional examples; the Tamil message on the scene 11 slide should be a neutral placeholder, not real text that needs a language check."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Before lunch today, you may already have used five or more AI systems, without noticing any of them. In this lesson, we follow one ordinary day, and we stop each time AI is working in the background.",
+       "on_screen_text": "Five AI systems before lunch?"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "In the last lesson, we saw that machine learning systems learn patterns from examples. Now let's learn to spot them in daily life. For any feature, ask two simple questions.",
+       "slide": {"layout": "title", "title": "AI in Your Day", "body": "AI Fundamentals · Lesson 2 of 12"}},
+      {"visual_type": "slide",
+       "voiceover": "Question one. What does it predict? Almost every machine learning feature makes a guess about something it cannot know for certain. Is this email spam? Which song will this person enjoy next? Question two. What data did it probably learn from? To make that guess, the system needed many past examples.",
+       "slide": {"layout": "bullets", "title": "Two questions", "body": "1. What does it predict? (a guess it cannot know for certain) 2. What data did it probably learn from? (many past examples)"}},
+      {"visual_type": "slide",
+       "voiceover": "Let's try the questions on some common features. A spam filter predicts whether a new email is spam. It probably learned from huge numbers of emails that people marked as spam or not spam. Video and music recommendations predict what you will play next. They probably learned from what many people chose, skipped or replayed.",
+       "slide": {"layout": "comparison", "title": "Predict · Learned from", "body": "Two rows, each with an icon. Spam filter: spam or not? ← emails people marked. Recommendations: what you play next ← what people chose, skipped, replayed."}},
+      {"visual_type": "slide",
+       "voiceover": "A map app predicts how long your trip will take right now, from past trips on the same roads. Face unlock predicts whether the face in front of the camera is yours. And translation tools and voice assistants predict the most likely words, from large collections of text and speech.",
+       "slide": {"layout": "comparison", "title": "Predict · Learned from", "body": "Four rows, each with an icon. Map travel time ← past trips on the same roads. Face unlock: is it you? ← face images + your setup photos. Translation: likely sentence ← texts in two languages. Voice assistant: your words ← speech matched with text."}},
+      {"visual_type": "text",
+       "voiceover": "Notice the word probably. Companies do not always explain what data they use, so our answers are informed guesses. That is fine. The goal is the habit of asking the two questions.",
+       "on_screen_text": "Informed guesses are fine"},
+      {"visual_type": "stock",
+       "voiceover": "Here is a helpful way to picture it. Think of a weather forecaster. They cannot see tomorrow. But they have studied years of past weather, so each morning they can say, there is a seventy percent chance of rain.",
+       "stock_query": "weather forecaster pointing at weather map",
+       "on_screen_text": "70% chance of rain"},
+      {"visual_type": "slide",
+       "voiceover": "Every AI feature in your day is a small forecaster. It looks at the situation right now, and it makes a guess based on past examples.",
+       "slide": {"layout": "diagram", "title": "Every feature is a small forecaster", "body": "Left: 'Past examples' (stack of cards) → centre: 'Present situation' → right: 'A guess' speech bubble with a percentage."}}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's follow one ordinary day. Rahul is a delivery driver in Pune, India. At seven in the morning, he opens his email. Two messages about free prizes are already in the spam folder. The prediction is spam or not spam. The data is emails that other users have marked.",
+       "stock_query": "delivery driver checking phone early morning",
+       "on_screen_text": "Rahul · delivery driver · Pune"},
+      {"visual_type": "slide",
+       "voiceover": "At eight, he checks his map app. It says the route to the warehouse will take twenty five minutes, not the usual fifteen. The prediction is travel time. The data is past and current trips by many drivers on those roads.",
+       "slide": {"layout": "diagram", "title": "8:00 · Map app", "body": "Simple unbranded map with a route to a warehouse, orange traffic section, label '25 min (usually 15)'. Tags: Predicts: travel time · Data: past and current trips."}},
+      {"visual_type": "slide",
+       "voiceover": "At half past twelve, a customer writes to him in Tamil, which he does not read well. So he uses a translation tool. The prediction is the most likely English sentence. The data is texts that exist in both languages.",
+       "slide": {"layout": "diagram", "title": "12:30 · Translation", "body": "Chat bubble with placeholder script → arrow → English sentence bubble. Tags: Predicts: most likely English sentence · Data: texts in both languages."}},
+      {"visual_type": "stock",
+       "voiceover": "In the evening, a video app suggests a cricket highlights video. The prediction is what he will watch next. The data is his own viewing history, and the choices of people with similar habits.",
+       "stock_query": "man relaxing watching cricket on phone",
+       "on_screen_text": "Predicts: what he watches next"},
+      {"visual_type": "stock",
+       "voiceover": "Sofía, a nurse in Valparaíso, Chile, has a different day. Her keyboard suggests the next word in Spanish, and a music app builds a playlist for her night shift. The features change, but the pattern stays the same: a prediction, plus past data.",
+       "stock_query": "nurse listening to music on night shift",
+       "on_screen_text": "Prediction + past data"},
+      {"visual_type": "slide",
+       "voiceover": "Now, a common mistake. Many people think that anything smart on a phone must be AI. But an alarm that rings at half past six every day follows a fixed rule. So does a calculator.",
+       "slide": {"layout": "comparison", "title": "Smart is not always AI", "body": "Left, 'Fixed rule': alarm clock at 6:30, calculator. Right, 'Learns from examples': spam filter, map travel time."}},
+      {"visual_type": "text",
+       "voiceover": "Here is a useful test. If the feature makes a guess that could be wrong, and it improves with more examples, it is probably machine learning. If it always gives the same output for the same input, it is probably not.",
+       "on_screen_text": "Could it guess wrong? Probably ML."}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, you can spot machine learning by asking two questions. What does it predict, and what data did it probably learn from? Second, common examples include spam filters, recommendations, map travel times, face unlock, translation and voice assistants. Third, not every automatic feature is AI. Fixed rules, like a timed alarm, do not learn from examples.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Ask: What does it predict? What data did it learn from? 2. Spam filters, recommendations, maps, face unlock, translation, voice assistants 3. Fixed rules (a timed alarm) are not AI"}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below this video, you will keep an AI diary for one day. List five AI features you use, and write what each one predicts and what data it probably learned from. In the next lesson, we look inside those examples, with Learning from Examples: Data, Features and Labels. See you there.",
+       "on_screen_text": "Next: Data, Features and Labels"}
+    ]
+  }
+}

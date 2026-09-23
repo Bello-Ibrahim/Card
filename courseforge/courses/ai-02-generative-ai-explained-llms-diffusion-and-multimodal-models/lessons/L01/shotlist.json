@@ -1,0 +1,218 @@
+{
+  "course_id": "AI-02",
+  "lesson_id": "L01",
+  "duration_s": 304.9,
+  "thumbnail": {
+    "headline": "Predict or Create?",
+    "slide": {
+      "layout": "title",
+      "title": "Predict or Create?",
+      "body": "Left half: simple icon of a label tag (one answer). Right half: three icons coming out of a spark: a page of text, a picture frame, a sound wave. Small tag: Generative AI Explained · Lesson 1."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 19.7,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Same thing, or three different things?",
+      "voiceover": "You ask a chatbot for a birthday poem, and it writes one in seconds. Another tool draws a cat in a spacesuit. A third listens to a voice note and replies in writing. Are these three tools doing the same thing? Not quite. Let's see why."
+    },
+    {
+      "scene": 2,
+      "start": 19.7,
+      "end": 32.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "From Predicting to Generating",
+        "body": "Generative AI Explained · Lesson 1 of 12"
+      },
+      "voiceover": "Hi, and welcome to Generative AI Explained: LLMs, Diffusion and Multimodal Models. In this first lesson, we draw a simple map of the tools you will meet in this course."
+    },
+    {
+      "scene": 3,
+      "start": 32.6,
+      "end": 52.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Predictive models",
+        "body": "Email icon → 'Spam filter' box → label tag 'Spam / Not spam'. Parcel icon → 'Delivery app' box → number '25 min'. Caption: small answer from a limited set"
+      },
+      "voiceover": "In AI Fundamentals, you learned that most machine learning models predict. A spam filter predicts a label, spam or not spam. A delivery app predicts a number, the minutes until your parcel arrives. The answer is small, and it comes from a limited set of options."
+    },
+    {
+      "scene": 4,
+      "start": 52.3,
+      "end": 68.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Generative AI creates new content",
+        "body": "Paragraph · Picture · Music · Spoken sentence · Short video. Caption: almost endless possible outputs"
+      },
+      "voiceover": "Generative AI is different. A generative model produces new content. A paragraph, a picture, a piece of music, a spoken sentence or a short video. This content did not exist before, and the possible outputs are almost endless."
+    },
+    {
+      "scene": 5,
+      "start": 68.6,
+      "end": 84.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Same learning, different job",
+        "body": "Left: Predictive model uses patterns to choose an answer. Right: Generative model uses patterns to build something new."
+      },
+      "voiceover": "Generative models still learn patterns from huge numbers of examples, like all machine learning models. The difference is what they do with those patterns. They use them to build something new that looks like the examples."
+    },
+    {
+      "scene": 6,
+      "start": 84.0,
+      "end": 104.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Three families",
+        "body": "Map with three regions, revealed one by one: 1. Large language models (text; Module 1). 2. Diffusion models (images; Module 2). 3. Multimodal models (more than one type of data; Module 2)."
+      },
+      "voiceover": "This course uses a map with three families. Large language models work with text. They write emails, answer questions and summarise documents. Diffusion models are a common way to create images. They start from random visual noise and slowly turn it into a picture that matches a description."
+    },
+    {
+      "scene": 7,
+      "start": 104.6,
+      "end": 122.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Three families",
+        "body": "Same map, third region highlighted: Multimodal models: photo in → text out; speech in → text out. Dotted lines connect the three regions: tools often combine them."
+      },
+      "voiceover": "And multimodal models can take in or produce more than one type of data. They can read a photo and answer in text, or listen to speech and write it down. The borders are not always sharp. Many tools combine these families."
+    },
+    {
+      "scene": 8,
+      "start": 122.6,
+      "end": 140.2,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "chef plating food in restaurant kitchen",
+      "on_screen_text": "Check the dish, or create one?",
+      "voiceover": "Here is a simple way to picture it. Think of a restaurant kitchen. A predictive model is like a cook who checks each dish and says ready or not ready. A generative model is a cook who creates a new dish."
+    },
+    {
+      "scene": 9,
+      "start": 140.2,
+      "end": 160.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "The generative kitchen",
+        "body": "Three cook icons: Language model → menu card. Diffusion model → beautifully plated dish. Multimodal model (head chef) → looks at photo, reads order, speaks to waiters."
+      },
+      "voiceover": "In this kitchen, the language model writes the menu descriptions. The diffusion model arranges the food so it looks beautiful on the plate. And the multimodal model is the head chef, who can look at a photo of a dish, read the order and speak to the waiters."
+    },
+    {
+      "scene": 10,
+      "start": 160.8,
+      "end": 177.1,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "young woman working on laptop office Asia",
+      "on_screen_text": "Mei Lin · Kuala Lumpur",
+      "voiceover": "Let's use the map. Mei Lin is a communications officer for an environmental charity in Kuala Lumpur. In one week she uses several AI tools, and she wants to know what type of model is behind each one."
+    },
+    {
+      "scene": 11,
+      "start": 177.1,
+      "end": 190.4,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Monday: social media posts",
+        "body": "Text prompt → chatbot → three short posts. Label: Language model"
+      },
+      "voiceover": "On Monday, she asks a chatbot for three short social media posts about a beach clean-up. Text goes in, text comes out. So a language model most likely wrote them."
+    },
+    {
+      "scene": 12,
+      "start": 190.4,
+      "end": 206.7,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Tuesday: a beach picture",
+        "body": "Text prompt → image tool → picture of volunteers on a beach at sunrise. Label: Diffusion model (or similar)"
+      },
+      "voiceover": "On Tuesday, she asks an image tool for volunteers collecting plastic on a beach at sunrise. Text goes in, and a new image comes out. So a diffusion model, or a similar image model, most likely made it."
+    },
+    {
+      "scene": 13,
+      "start": 206.7,
+      "end": 220.4,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Wednesday: a chart summary",
+        "body": "Photo of hand-drawn chart → tool → short text summary. Label: Multimodal model"
+      },
+      "voiceover": "On Wednesday, she uploads a photo of a hand-drawn chart and asks for a short summary. An image goes in, and text comes out. That means a multimodal model is involved."
+    },
+    {
+      "scene": 14,
+      "start": 220.4,
+      "end": 238.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Thursday: an 'important' label",
+        "body": "Email → label 'Important'. Predictive, not generative. Big caption: What goes in? What comes out?"
+      },
+      "voiceover": "And on Thursday, her email app marks a message as important. That is a label, not new content. So it is a predictive model, not generative AI. Her simple question is always the same. What goes in, and what comes out?"
+    },
+    {
+      "scene": 15,
+      "start": 238.0,
+      "end": 259.9,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "It builds, it does not copy.",
+      "voiceover": "One common mistake is to think that generative AI searches the internet and copies an answer. Usually it does not. It builds new output from patterns it learned. That is why the output can be original. It is also why it can be wrong. It looks right, but nobody checked it."
+    },
+    {
+      "scene": 16,
+      "start": 259.9,
+      "end": 281.3,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Predict = label or number. Generate = new content. 2. Three families: language, diffusion, multimodal. 3. Ask: what goes in, what comes out?"
+      },
+      "voiceover": "Let's recap. First, predictive models choose a label or a number, while generative models produce new text, images, audio or video. Second, this course covers three families: language models, diffusion models and multimodal models. Third, to place a tool on the map, ask what goes in and what comes out."
+    },
+    {
+      "scene": 17,
+      "start": 281.3,
+      "end": 304.9,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Tokens and Next-Token Prediction",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will sort ten example outputs, from a product description to a watercolour mountain, into the three families. Then you check the answer key. It takes about fifteen minutes. In the next lesson, we look at tokens and next-token prediction. See you there."
+    }
+  ]
+}

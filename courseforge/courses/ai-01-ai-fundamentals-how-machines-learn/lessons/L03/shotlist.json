@@ -1,0 +1,212 @@
+{
+  "course_id": "AI-01",
+  "lesson_id": "L03",
+  "duration_s": 306.0,
+  "thumbnail": {
+    "headline": "Data, Features, Labels",
+    "slide": {
+      "layout": "title",
+      "title": "Data, Features, Labels",
+      "body": "Simple illustrated cat card: thin teal lines point to ears and whiskers (features), a luggage-style tag on the corner says 'cat' (label). Small tag: AI Fundamentals · Lesson 3."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.6,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "No definition. Just examples.",
+      "voiceover": "Nobody gives a three year old a written definition of cat. Yet after seeing enough cats and dogs, the child can point at an animal they have never seen before, and say cat. Machine learning works in a surprisingly similar way."
+    },
+    {
+      "scene": 2,
+      "start": 17.6,
+      "end": 30.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Learning from Examples",
+        "body": "Data · Features · Labels. AI Fundamentals · Lesson 3 of 12"
+      },
+      "voiceover": "In lesson one, we said that machine learning means finding patterns in examples. Today we give names to the parts of those examples. Three words matter most: data, features and labels."
+    },
+    {
+      "scene": 3,
+      "start": 30.9,
+      "end": 40.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Data",
+        "body": "A large box labelled 'Data' containing small icons: photos, emails, sound waves, table rows."
+      },
+      "voiceover": "Data is the full collection of examples the system learns from. It could be photos, emails, sound recordings, or rows in a table."
+    },
+    {
+      "scene": 4,
+      "start": 40.8,
+      "end": 64.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Features",
+        "body": "Left, animal photo: ear shape · body size · nose length. Right, email: certain words · sender · number of links."
+      },
+      "voiceover": "Features are the pieces of information in each example that the system can use to decide. For a photo of an animal, features could be the shape of the ears, the size of the body, or the length of the nose. For an email, they could be certain words, the sender, or the number of links."
+    },
+    {
+      "scene": 5,
+      "start": 64.8,
+      "end": 86.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "One example = features + label",
+        "body": "Photo of a cat with feature callouts (ears, whiskers, tail) + a tag 'Label: cat'. Equation-style layout: Features + Label = one example."
+      },
+      "voiceover": "A label is the correct answer for an example. A photo labelled cat tells the system, this one is a cat. Labels are usually added by people, and they are what the system tries to predict for new examples. So one example is a set of features, plus its label."
+    },
+    {
+      "scene": 6,
+      "start": 86.2,
+      "end": 106.3,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "parent and child reading picture book",
+      "on_screen_text": "Pictures = data. Ears, whiskers = features.",
+      "voiceover": "Here is a picture to remember. A child and a parent look at a picture book. On each page, the parent points and says cat, or dog. The pictures are the data. The pointy ears, the whiskers and the long tail are the features the child notices."
+    },
+    {
+      "scene": 7,
+      "start": 106.3,
+      "end": 115.7,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "child pointing at animal in book",
+      "on_screen_text": "Cat, dog = labels",
+      "voiceover": "The words cat and dog are the labels. After many pages, the child can name animals in a new book, without help."
+    },
+    {
+      "scene": 8,
+      "start": 115.7,
+      "end": 140.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "What makes good examples",
+        "body": "Quantity: enough examples · Variety: grey cat indoors ≠ black cat in a garden · Quality: correct labels, clear images"
+      },
+      "voiceover": "Three things decide how well the system learns. Quantity: a few examples are rarely enough. Variety: the examples should cover the situations the system will meet later. If every cat photo shows a grey cat indoors, it may fail on a black cat in a garden. And quality: labels must be correct, and images must be clear."
+    },
+    {
+      "scene": 9,
+      "start": 140.1,
+      "end": 155.5,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "textile factory fabric rolls quality inspection",
+      "on_screen_text": "Chidi · textile factory · Aba",
+      "voiceover": "Let's see this in a real situation. Chidi manages quality control at a textile factory in Aba, Nigeria. Workers check every roll of fabric by eye for faults, and he wants a camera system to help."
+    },
+    {
+      "scene": 10,
+      "start": 155.5,
+      "end": 176.9,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Chidi's setup",
+        "body": "Three columns. Data: 2,000 fabric photos. Features: holes · uneven colour · loose threads · broken pattern lines. Labels: good / faulty (added by experienced workers)."
+      },
+      "voiceover": "The data is two thousand photos of fabric, taken as it comes off the machines. The features are the things that might show a fault: small holes, uneven colour, loose threads, and lines where the pattern breaks. The labels come from experienced workers, who mark each photo good or faulty."
+    },
+    {
+      "scene": 11,
+      "start": 176.9,
+      "end": 192.3,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Problem 1: Variety",
+        "body": "Left: grid of blue cotton photos (training). Right: patterned fabric photo with a question mark (factory floor)."
+      },
+      "voiceover": "But the first version often fails on the factory floor. Chidi finds two reasons. First, variety was missing. Almost all the photos showed blue cotton. When the factory switched to patterned fabric, the system was confused."
+    },
+    {
+      "scene": 12,
+      "start": 192.3,
+      "end": 203.9,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Problem 2: Label quality",
+        "body": "Same fabric photo shown twice: Worker A tag 'faulty' (red), Worker B tag 'good' (green). Caption: mixed messages."
+      },
+      "voiceover": "Second, quality was uneven. Two workers disagreed about small colour differences. One labelled them faulty, and the other labelled them good. So the system received mixed messages."
+    },
+    {
+      "scene": 13,
+      "start": 203.9,
+      "end": 217.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "The fix",
+        "body": "Add photos of every fabric type · Agree a written rule for 'faulty' before labelling · Version 2: much more useful (green tick)"
+      },
+      "voiceover": "The team adds photos of every fabric type. The workers also agree on a clear written rule for what counts as faulty, before they label. The second version is much more useful."
+    },
+    {
+      "scene": 14,
+      "start": 217.6,
+      "end": 233.5,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "librarian sorting donated books on shelves",
+      "on_screen_text": "Keiko · library · Sapporo",
+      "voiceover": "The same ideas work far from a factory. Keiko, a librarian in Sapporo, Japan, sorts donated books. Her data is book descriptions, her features are the words in them, and her labels are topics, such as history."
+    },
+    {
+      "scene": 15,
+      "start": 233.5,
+      "end": 255.4,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "What's missing? Are labels correct?",
+      "voiceover": "A common mistake is to think that more data always fixes a problem. If thousands of new photos look like the old ones, or carry the same wrong labels, the system learns the same mistake with more confidence. Before collecting more, ask: what situations are missing, and are my labels correct?"
+    },
+    {
+      "scene": 16,
+      "start": 255.4,
+      "end": 279.4,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Data = examples · Features = useful details · Labels = correct answers 2. Learning = which features go with which label 3. Quantity, variety and quality all matter"
+      },
+      "voiceover": "Let's recap. First, data is the collection of examples, features are the useful details in each example, and labels are the correct answers. Second, a system learns by finding which features usually go with which label, across many examples. Third, the quantity, variety and quality of examples all affect how well it works on new cases."
+    },
+    {
+      "scene": 17,
+      "start": 279.4,
+      "end": 306.0,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Training vs. Using a Model",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will design a fruit-sorting machine. Choose its labels and features, then list three examples that could confuse it, like a green apple next to an unripe orange. In the next lesson, Training versus Using a Model, we see what the system does with all these examples. See you there."
+    }
+  ]
+}

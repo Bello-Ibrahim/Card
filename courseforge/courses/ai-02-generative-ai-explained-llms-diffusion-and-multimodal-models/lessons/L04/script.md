@@ -1,0 +1,49 @@
+# L04 Context Windows, Knowledge Cut-offs and Hallucinations | Presenter Script
+
+Course: AI-02 · Video: 5 min · Words: 680
+
+## Hook
+You paste a long document into a chatbot and ask about page one. The answer is strange, as if it never read it. Later, it tells you about a company rule that does not exist. What went wrong? Three ideas explain most of it.
+
+## Explain
+In the last lesson, you saw how a model is trained. Today we look at what happens when you use it. The first idea is the context window.
+
+A model does not remember a conversation the way a person does. Each time it answers, it looks at one block of text. Your instructions, the conversation so far, and any documents you added. This block is the context window, and it has a maximum size, measured in tokens.
+
+Picture a desk. The model can only work with the papers on the desk. When the desk is full, older papers fall off the edge, and the model cannot see them anymore. Even on a full desk, it is easier to miss details.
+
+The second idea is the knowledge cut-off. A model learns from text collected up to a certain date. It does not know about later events. It may still guess about them from older patterns. It is like a library that stopped buying new books.
+
+Some tools fix part of this by searching the web or reading files, and placing the results in the context window. Then the model answers from the new text. But it can still misread it.
+
+The third idea is hallucination. The model generates likely text, not checked facts. So it can give answers that are fluent and confident, but false. Think of invented quotes, wrong numbers, sources that do not exist, or policy rules that sound real.
+
+Hallucinations are more likely when the answer is not in the context window, when the question assumes something false, or when you ask for exact dates, names or references. It is like a student who writes a confident paragraph, because a blank answer earns no marks.
+
+## Demonstrate
+Let's see all three ideas at work. Kwame is an HR officer at a logistics company in Accra. He gives a chatbot the company's two-page travel policy, with all staff names removed, and asks some questions.
+
+How many days before a trip must staff send a request? The policy says five working days, and the chatbot is correct. What is the daily meal allowance? Also correct, and it quotes the right paragraph.
+
+Then he asks: can staff book business class for flights over six hours? The policy says nothing about this. But the chatbot replies, yes, with manager approval. That is a hallucination. It sounds like a normal rule, but it is not in the text.
+
+So Kwame asks again with a new instruction. Answer only from the policy. If the policy does not say, reply not stated. This time, the chatbot says not stated.
+
+Kwame also notices something else. After a very long conversation, the chatbot forgets an instruction he gave at the start. It has fallen off the desk. So he starts a new chat and repeats the key instruction.
+
+A common mistake is to think hallucinations are a rare bug that will soon disappear. They come directly from how language models work. Better tools reduce them, but a fluent answer is never proof. Give the source, ask for not stated, and check every important fact.
+
+## Recap
+Let's recap. First, the context window is the amount of text a model can consider at one time. Text outside it cannot be used. Second, a knowledge cut-off means the model does not know later events, unless a tool gives it new information. Third, hallucinations are confident but false answers, so check important answers against a source.
+
+## CTA
+Now it is your turn. In the exercise below, you give a free chatbot a two-page sample policy and ask five questions, including one that the policy does not answer. Then you label each answer correct, invented or honestly uncertain. It takes about twenty-five minutes. Next, we move to images, with how diffusion models create images. See you there.
+
+## Thumbnail
+Headline: Why Chatbots Invent Things
+Image: Navy background, a desk covered in papers with one sheet sliding off the edge and a speech bubble with a teal question mark, headline in teal Inter Bold.
+
+## Production Notes
+- No context window sizes or cut-off dates are given on purpose, because they change with each model version. Do not add numbers in the edit or on slides.
+- [VERSION] Free chatbot options (Claude, ChatGPT, Google AI Studio) and their limits on pasted text length must be checked before recording, because the exercise depends on them.
+- Kwame and the Accra logistics company are fictional; the travel policy is hypothetical and has no staff names. Slides should show a generic policy page with no real company name.

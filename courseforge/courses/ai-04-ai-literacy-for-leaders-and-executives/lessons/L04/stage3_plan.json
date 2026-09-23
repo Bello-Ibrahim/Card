@@ -1,0 +1,143 @@
+{
+  "title": "Finding and Prioritising Use Cases",
+  "thumbnail": {
+    "headline": "Twenty Ideas, Pick Two",
+    "image": "Navy background, a clean two-by-two matrix in teal with a few dots, one dot highlighted in the top-right 'quick wins' box, headline in teal Inter Bold.",
+    "slide": {
+      "layout": "title",
+      "title": "Twenty Ideas, Pick Two",
+      "body": "Two-by-two matrix: Value (up) × Feasibility (right). Several grey dots; two dots glowing teal in the top-right box 'Quick wins'. Small tag: AI Literacy for Leaders · Lesson 4."
+    }
+  },
+  "production_notes": [
+    "[VERIFY] The curriculum refers to free AI readiness or prioritisation templates without naming one. Per DECISIONS.md, this lesson uses the CertifAI-owned scoring template (scene 5). Reviewer to confirm it replaces any third-party template.",
+    "The CertifAI scoring template slide (scene 5) should match the table in content.md exactly, so learners can copy it from the lesson page.",
+    "Mei Ling and her hotel group in Malaysia are fictional. Stock footage must not show a real hotel name or logo."
+  ],
+  "sections": {
+    "Hook": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "After a workshop, your managers hand you twenty AI ideas. All of them sound promising. You have budget and attention for two. How do you choose, without simply picking the idea from the loudest person in the room?",
+        "on_screen_text": "Twenty ideas. Room for two."
+      }
+    ],
+    "Explain": [
+      {
+        "visual_type": "slide",
+        "voiceover": "In the last lesson, we saw the real costs of AI. Now let's decide which ideas are worth them. A simple scoring method makes the choice clear and fair. You score each use case on two dimensions.",
+        "slide": {
+          "layout": "title",
+          "title": "Finding and Prioritising Use Cases",
+          "body": "AI Literacy for Leaders and Executives · Lesson 4 of 10"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "The first is business value. If this works, how much does it matter? Score it from one, low, to five, high. Think about time saved, quality improved, cost or risk reduced, and a better customer experience. Also ask how closely it supports your strategy.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Business value",
+          "body": "If it works, how much does it matter? Time saved · quality · cost · risk · customer experience · fit with strategy."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "The second is feasibility. How easy is it to deliver safely? Score four factors. Is the data available and allowed? How serious is a mistake? How much effort is needed? And do we have the skills? For every factor, a higher score is always better. So for risk and effort, five means low risk or low effort.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Feasibility: four factors",
+          "body": "Data available · Risk (5 = low risk) · Effort (5 = low effort) · Skills. Score each 1 to 5, then average for one feasibility score."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Here is the CertifAI scoring template. Each row is a use case. You score value, then data, risk, effort and skills, each from one to five. Average the four feasibility factors, and the last column tells you which box it falls into. You can copy it into any spreadsheet.",
+        "slide": {
+          "layout": "diagram",
+          "title": "CertifAI scoring template",
+          "body": "Table header row, one empty example row: Use case | Value 1–5 | Data 1–5 | Risk 1–5 | Effort 1–5 | Skills 1–5 | Feasibility (average) | Box. Footer: copy into any spreadsheet."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Now place each idea on a two by two matrix. High value and high feasibility are quick wins, so start there. High value but low feasibility are strategic projects. Plan them, and fix the data or skills gaps first. Low value but easy ideas are small improvements. And low on both, you avoid.",
+        "slide": {
+          "layout": "diagram",
+          "title": "The two-by-two matrix",
+          "body": "Axes: Value (up), Feasibility (right). Top-right: Quick wins, start here. Top-left: Strategic, fix gaps first. Bottom-right: Small improvements. Bottom-left: Avoid."
+        }
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "Think of planning a family trip on a fixed budget. Some places need visas and months of planning. Others are close and still enjoyable. You take the easy trip now and save for the big one. Remember, scores are judgements, not facts. They make your reasons visible.",
+        "stock_query": "family planning trip together at table",
+        "on_screen_text": "Easy trip now, big trip later"
+      }
+    ],
+    "Demonstrate": [
+      {
+        "visual_type": "stock",
+        "voiceover": "Let's see it in action. Mei Ling is operations director of a fictional hotel group in Malaysia, with twelve properties. Her managers suggest six ideas, and she scores them with her team.",
+        "stock_query": "hotel managers meeting around conference table",
+        "on_screen_text": "Mei Ling · hotel group · Malaysia"
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Drafting replies to guest reviews scores four for value and four and a half for feasibility, because staff check every draft and no personal data is needed. Summarising maintenance reports is also a quick win. Translating staff notices is easy but low value, so it is a small improvement.",
+        "slide": {
+          "layout": "comparison",
+          "title": "Mei Ling's scores",
+          "body": "Table: Review replies 4 | 4.5 | Quick win · Maintenance summaries 3 | 4 | Quick win · Demand forecasting 5 | 2.5 | Strategic · Personalised offers 4 | 2 | Strategic · Notice translation 2 | 4.5 | Small improvement · Face recognition at check-in 2 | 1.5 | Avoid. Highlight rows as they are mentioned."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Forecasting room demand has the highest value, five. But the booking data sits in three systems with different formats, so data scores only two. Face recognition at check-in scores low on risk, because of privacy and guest trust. She avoids it.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Placing the six ideas",
+          "body": "Matrix with six labelled dots: two in Quick wins, Demand forecasting and Personalised offers in Strategic, Notice translation in Small improvements, Face recognition in Avoid (red)."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Personalised offers based on guest history also have high value, four. But feasibility is only two. So this idea is strategic too, and it waits until the basics are in place.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Personalised offers",
+          "body": "Value 4 · Feasibility 2 → Strategic. Tag: later, after the basics."
+        }
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "Notice how the scoring worked in the room. Each score came with a short reason, so managers could challenge it. The loudest voice no longer decides. The reasons do.",
+        "stock_query": "executives debating around whiteboard matrix",
+        "on_screen_text": "Reasons decide, not volume"
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "Mei Ling chooses the two quick wins, review replies and maintenance summaries, to build skills and trust. She picks demand forecasting as the longer-term project, and starts cleaning the data now. That avoids a common mistake: choosing the highest-value idea first, stalling on data, and deciding that AI does not work here.",
+        "on_screen_text": "Two quick wins, one strategic project"
+      }
+    ],
+    "Recap": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, score each use case on business value and on feasibility, which covers data, risk, effort and skills. Second, use the two by two matrix to find quick wins, strategic projects, small improvements and ideas to avoid. Third, start with one or two quick wins, and prepare one longer-term project.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. Score value and feasibility: data, risk, effort, skills. 2. Matrix: quick wins · strategic · small improvements · avoid. 3. Start with 1–2 quick wins; prepare one long-term project."
+        }
+      }
+    ],
+    "CTA": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Now it is your turn. In the exercise below this video, you will copy the CertifAI scoring template and score at least five use cases for your organisation. You can use your task list from lesson two. Then choose your top two, and ask a colleague to challenge one score. It takes about thirty minutes. In the next lesson, we look at assessing your AI readiness. See you there.",
+        "on_screen_text": "Next: Assessing Your AI Readiness"
+      }
+    ]
+  }
+}

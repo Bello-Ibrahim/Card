@@ -1,0 +1,205 @@
+{
+  "course_id": "AI-02",
+  "lesson_id": "L04",
+  "duration_s": 291.5,
+  "thumbnail": {
+    "headline": "Why Chatbots Invent Things",
+    "slide": {
+      "layout": "title",
+      "title": "Why Chatbots Invent Things",
+      "body": "Illustrated desk with papers, one sliding off the edge; a speech bubble with a confident tick next to a small red cross. Small tag: Generative AI Explained · Lesson 4."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.9,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "What went wrong?",
+      "voiceover": "You paste a long document into a chatbot and ask about page one. The answer is strange, as if it never read it. Later, it tells you about a company rule that does not exist. What went wrong? Three ideas explain most of it."
+    },
+    {
+      "scene": 2,
+      "start": 18.9,
+      "end": 30.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Context Windows, Knowledge Cut-offs and Hallucinations",
+        "body": "Generative AI Explained · Lesson 4 of 12"
+      },
+      "voiceover": "In the last lesson, you saw how a model is trained. Today we look at what happens when you use it. The first idea is the context window."
+    },
+    {
+      "scene": 3,
+      "start": 30.9,
+      "end": 51.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "The context window",
+        "body": "One frame containing three stacked parts: Instructions · Conversation so far · Added documents. Label on frame: maximum size, measured in tokens."
+      },
+      "voiceover": "A model does not remember a conversation the way a person does. Each time it answers, it looks at one block of text. Your instructions, the conversation so far, and any documents you added. This block is the context window, and it has a maximum size, measured in tokens."
+    },
+    {
+      "scene": 4,
+      "start": 51.9,
+      "end": 70.3,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "messy office desk covered in papers",
+      "on_screen_text": "Only what is on the desk",
+      "voiceover": "Picture a desk. The model can only work with the papers on the desk. When the desk is full, older papers fall off the edge, and the model cannot see them anymore. Even on a full desk, it is easier to miss details."
+    },
+    {
+      "scene": 5,
+      "start": 70.3,
+      "end": 89.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "The knowledge cut-off",
+        "body": "Timeline with a vertical line 'cut-off'. Left side: books on shelves (learned). Right side: empty shelves with 'later events' and a question mark."
+      },
+      "voiceover": "The second idea is the knowledge cut-off. A model learns from text collected up to a certain date. It does not know about later events. It may still guess about them from older patterns. It is like a library that stopped buying new books."
+    },
+    {
+      "scene": 6,
+      "start": 89.6,
+      "end": 104.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Adding new information",
+        "body": "Search results and a file icon → arrow into the context window frame → answer. Small warning: can still be misread."
+      },
+      "voiceover": "Some tools fix part of this by searching the web or reading files, and placing the results in the context window. Then the model answers from the new text. But it can still misread it."
+    },
+    {
+      "scene": 7,
+      "start": 104.6,
+      "end": 122.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Hallucinations",
+        "body": "Confident but false. Examples: invented quotes · wrong numbers · sources that do not exist · policy rules that sound real"
+      },
+      "voiceover": "The third idea is hallucination. The model generates likely text, not checked facts. So it can give answers that are fluent and confident, but false. Think of invented quotes, wrong numbers, sources that do not exist, or policy rules that sound real."
+    },
+    {
+      "scene": 8,
+      "start": 122.6,
+      "end": 142.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "When risk is higher",
+        "body": "Answer not in the context window · Question assumes something false · Asking for exact dates, names or references. Side icon: student writing confidently on an exam."
+      },
+      "voiceover": "Hallucinations are more likely when the answer is not in the context window, when the question assumes something false, or when you ask for exact dates, names or references. It is like a student who writes a confident paragraph, because a blank answer earns no marks."
+    },
+    {
+      "scene": 9,
+      "start": 142.3,
+      "end": 158.2,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "HR officer reading document at office desk",
+      "on_screen_text": "Kwame · logistics company · Accra",
+      "voiceover": "Let's see all three ideas at work. Kwame is an HR officer at a logistics company in Accra. He gives a chatbot the company's two-page travel policy, with all staff names removed, and asks some questions."
+    },
+    {
+      "scene": 10,
+      "start": 158.2,
+      "end": 173.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Questions 1 and 2",
+        "body": "Q1: request deadline → 'five working days' ✓ matches policy. Q2: daily meal allowance → correct, quotes paragraph ✓."
+      },
+      "voiceover": "How many days before a trip must staff send a request? The policy says five working days, and the chatbot is correct. What is the daily meal allowance? Also correct, and it quotes the right paragraph."
+    },
+    {
+      "scene": 11,
+      "start": 173.6,
+      "end": 192.5,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Question 3",
+        "body": "Q3: business class over six hours? Policy: nothing. Chatbot: 'Yes, with manager approval.' Red label: Hallucination."
+      },
+      "voiceover": "Then he asks: can staff book business class for flights over six hours? The policy says nothing about this. But the chatbot replies, yes, with manager approval. That is a hallucination. It sounds like a normal rule, but it is not in the text."
+    },
+    {
+      "scene": 12,
+      "start": 192.5,
+      "end": 204.9,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "A better instruction",
+        "body": "Answer only from the policy. If the policy does not say, reply 'not stated'. → Chatbot: 'not stated' ✓"
+      },
+      "voiceover": "So Kwame asks again with a new instruction. Answer only from the policy. If the policy does not say, reply not stated. This time, the chatbot says not stated."
+    },
+    {
+      "scene": 13,
+      "start": 204.9,
+      "end": 220.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Fell off the desk",
+        "body": "Long chat scroll; the first instruction at the top slides out of the context window frame. Arrow: new chat, instruction repeated at the top."
+      },
+      "voiceover": "Kwame also notices something else. After a very long conversation, the chatbot forgets an instruction he gave at the start. It has fallen off the desk. So he starts a new chat and repeats the key instruction."
+    },
+    {
+      "scene": 14,
+      "start": 220.8,
+      "end": 240.5,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Fluent is not proof. Check it.",
+      "voiceover": "A common mistake is to think hallucinations are a rare bug that will soon disappear. They come directly from how language models work. Better tools reduce them, but a fluent answer is never proof. Give the source, ask for not stated, and check every important fact."
+    },
+    {
+      "scene": 15,
+      "start": 240.5,
+      "end": 265.4,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Context window = what the model can see now. 2. Knowledge cut-off = no later events without new information. 3. Hallucinations: confident but false; check the source."
+      },
+      "voiceover": "Let's recap. First, the context window is the amount of text a model can consider at one time. Text outside it cannot be used. Second, a knowledge cut-off means the model does not know later events, unless a tool gives it new information. Third, hallucinations are confident but false answers, so check important answers against a source."
+    },
+    {
+      "scene": 16,
+      "start": 265.4,
+      "end": 291.5,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: How Diffusion Models Create Images",
+      "voiceover": "Now it is your turn. In the exercise below, you give a free chatbot a two-page sample policy and ask five questions, including one that the policy does not answer. Then you label each answer correct, invented or honestly uncertain. It takes about twenty-five minutes. Next, we move to images, with how diffusion models create images. See you there."
+    }
+  ]
+}

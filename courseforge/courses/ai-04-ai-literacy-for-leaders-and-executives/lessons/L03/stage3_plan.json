@@ -1,0 +1,143 @@
+{
+  "title": "The Real Costs: Data, People and Process",
+  "thumbnail": {
+    "headline": "The Hidden Cost of AI",
+    "image": "Navy background, an iceberg drawn in clean teal lines: a small tip labelled with a price tag above the water, a large mass below, headline in teal Inter Bold.",
+    "slide": {
+      "layout": "title",
+      "title": "The Hidden Cost of AI",
+      "body": "Iceberg outline: small tip 'Subscription'; large underwater part split into Data · People · Process · Oversight. Small tag: AI Literacy for Leaders · Lesson 3."
+    }
+  },
+  "production_notes": [
+    "No facts to verify: the case is hypothetical and the lesson uses no statistics, real tools or prices (content.md Review Flags: None).",
+    "Aroha Tane and the regional council in New Zealand are fictional. Stock footage must not show a real council name, crest or logo.",
+    "Pronunciation: 'te reo Māori' is said 'teh REH-aw MAH-aw-ree'. Check the HeyGen voice pronounces it respectfully; use a phonetic override if needed."
+  ],
+  "sections": {
+    "Hook": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "A vendor quotes a monthly subscription that fits easily inside your budget. Six months later, the project has used far more money and staff time than planned, and the tool is barely used. Where did the cost go?",
+        "on_screen_text": "Where did the cost go?"
+      }
+    ],
+    "Explain": [
+      {
+        "visual_type": "slide",
+        "voiceover": "In the last lesson, we saw where AI creates value. Now let's look at what it really costs. The licence or subscription is often only a small part of the total. The larger costs usually sit in four areas.",
+        "slide": {
+          "layout": "diagram",
+          "title": "The Real Costs",
+          "body": "Iceberg: small tip 'Licence or subscription'. Under the water, four blocks revealed one by one: Data · People · Process · Oversight."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "The first is data. AI needs data that is available, accurate and allowed to be used. Often the data sits in several systems, in different formats, with gaps. Cleaning and joining it takes time from people who know the business, and you may need a legal review first.",
+        "slide": {
+          "layout": "bullets",
+          "title": "1. Data",
+          "body": "Available? Accurate? Allowed to use? Often spread across systems, different formats, gaps. Cost: cleaning, joining, labelling, legal review."
+        }
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "The second is people. Staff need training to use the tool and know its limits. Someone must own the project. Some staff will worry about their jobs, and managers need time to listen and explain. If people do not trust the tool, they will work around it.",
+        "stock_query": "diverse staff training session in meeting room",
+        "on_screen_text": "People: training, ownership, trust"
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "The third is process. An AI tool changes how work flows. Who checks the output? What happens when the tool is unsure? Which steps are removed, and which are added? If the old process stays the same, AI often adds work instead of removing it.",
+        "slide": {
+          "layout": "bullets",
+          "title": "3. Process",
+          "body": "Who checks the output? · What happens when the tool is unsure? · Which steps are removed or added? · Templates and targets may change."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "The fourth is oversight. Outputs must be checked, especially at the start. Models can become less accurate when conditions change, so someone must monitor results and decide when to adjust or stop. This is an ongoing cost, not a one-time task.",
+        "slide": {
+          "layout": "bullets",
+          "title": "4. Oversight",
+          "body": "Check outputs, especially early · Monitor accuracy over time · Decide when to retrain, adjust or stop. Tag: ongoing, not one-time."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Here is a simple rule for leaders. Before you approve an AI project, ask for an estimate under each of the four headings, in staff days as well as money. If the team can only describe the licence cost, the plan is not ready.",
+        "slide": {
+          "layout": "quote",
+          "title": "A simple rule",
+          "body": "Large quote: 'Estimate all four headings, in staff days and money. Licence cost only? The plan is not ready.'"
+        }
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "Think of a gym membership. Buying one does not make you fit. Results come from routine, coaching and time. An AI subscription is the membership. Clean data, trained staff, changed workflows and regular checks are the routine that produces results.",
+        "stock_query": "coach training people in a gym",
+        "on_screen_text": "The subscription is only the membership"
+      }
+    ],
+    "Demonstrate": [
+      {
+        "visual_type": "stock",
+        "voiceover": "Let's see this in practice. Aroha Tane is director of customer services at a fictional regional council in New Zealand. She wants an AI tool to summarise and sort thousands of public comments on local plans. The subscription is modest. So she asks her team to list the hidden costs.",
+        "stock_query": "council office team reviewing public feedback",
+        "on_screen_text": "Aroha · regional council · New Zealand"
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Data first. Comments arrive by email, web form and paper letter, so letters must be scanned. Comments include names and addresses, so personal details must be removed, or the tool must be approved for this data. That is several weeks of one person's time.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Data",
+          "body": "Email · web form · paper letters to scan. Names and addresses: remove, or confirm tool is approved. Estimate: several weeks of one staff member."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "People next. Five officers need training on how to read the summaries, and when to go back to the original comments. Two are worried their role will disappear, so Aroha explains that their work will move to checking and deeper analysis.",
+        "slide": {
+          "layout": "bullets",
+          "title": "People",
+          "body": "Train 5 officers: read summaries, go back to originals. 2 officers worried → meeting: role moves to checking and deeper analysis."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "For process, the report template changes, and an officer checks a sample of comments against each summary. For oversight, a senior officer reviews whether any group's views were missed, for example comments written in te reo Māori.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Process and oversight",
+          "body": "Process: new report template · sample check against each summary. Oversight: every consultation, check no group was missed, e.g. comments in te reo Māori."
+        }
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "Aroha estimates that data and oversight together will cost more than the subscription in the first year. She still approves the project, because it will free officers for deeper work. But her budget is now honest. That avoids a common mistake: comparing the subscription with salary costs, calling it cheap, and then stopping a useful tool too soon.",
+        "on_screen_text": "An honest budget protects the project"
+      }
+    ],
+    "Recap": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, the licence or subscription is often only a small part of the total cost of an AI project. Second, hidden costs sit in four areas: data, people, process and oversight. Third, before you approve a project, ask for estimates in staff time and money under all four headings.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. Subscription = a small part of total cost. 2. Hidden costs: data · people · process · oversight. 3. Ask for staff days and money under all four before approving."
+        }
+      }
+    ],
+    "CTA": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Now it is your turn. In the exercise below this video, you will take one AI idea, perhaps from your task list in the last lesson. You will list its hidden costs under the four headings, estimate staff days, and mark the largest. In the next lesson, we cover finding and prioritising use cases. See you there.",
+        "on_screen_text": "Next: Finding and Prioritising Use Cases"
+      }
+    ]
+  }
+}

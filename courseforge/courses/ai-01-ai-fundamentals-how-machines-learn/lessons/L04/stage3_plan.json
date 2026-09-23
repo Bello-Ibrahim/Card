@@ -1,0 +1,77 @@
+{
+  "title": "Training vs. Using a Model",
+  "thumbnail": {
+    "headline": "Study First, Then Exam",
+    "image": "Navy background, split card: an open notebook with study notes on the left and an exam paper with a pen on the right, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Study First, Then Exam", "body": "Left half: icon of books and notes labelled 'Training'. Right half: icon of an exam paper labelled 'Inference'. Small tag: AI Fundamentals · Lesson 4."}
+  },
+  "production_notes": [
+    "[VERSION] The script says the model itself does not change while you chat. It does not mention memory features that save notes between chats; content.md flags these as differing between products and plans. Keep it that way unless the check against current free tiers of ChatGPT and Claude says otherwise.",
+    "[VERSION] Exercise: sign-up steps and free-tier limits for ChatGPT and Claude may change. The CTA names the tools but no plan details.",
+    "Grace in Mbarara and Mateus in Recife are fictional. Stock of cassava leaves and farmers must not show real organisation logos or app names.",
+    "The leaf-check app on the scene 11 slide is a generic mock-up, not a real product."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "When you ask a chatbot a question, is it searching a giant list of stored answers? The real answer explains why AI can be both very helpful, and sometimes wrong.",
+       "on_screen_text": "Is it looking up answers?"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "In the last lesson, we met data, features and labels. Now we look at what the system does with them. A machine learning system has two separate phases.",
+       "slide": {"layout": "title", "title": "Training vs. Using a Model", "body": "AI Fundamentals · Lesson 4 of 12"}},
+      {"visual_type": "slide",
+       "voiceover": "Phase one is training. The system studies many labelled examples and looks for patterns that connect the features to the labels. It adjusts itself again and again, until its guesses on the training examples are mostly correct. The result of training is called a model.",
+       "slide": {"layout": "diagram", "title": "Phase 1: Training", "body": "Stack of labelled examples → circular arrow 'adjust again and again' → box labelled 'Model'."}},
+      {"visual_type": "text",
+       "voiceover": "This is important. A model is a stored set of patterns. It is not a stored copy of the examples.",
+       "on_screen_text": "A model stores patterns, not examples"},
+      {"visual_type": "slide",
+       "voiceover": "Phase two is prediction. The finished model is given a new example it has never seen, and it uses its patterns to produce an answer. This phase is also called inference. When you unlock your phone, or get a song suggestion, you are seeing inference.",
+       "slide": {"layout": "diagram", "title": "Phase 2: Inference", "body": "New example (never seen) → 'Model' box → answer. Small icons below: phone unlock, song suggestion."}},
+      {"visual_type": "slide",
+       "voiceover": "Training usually happens once, or from time to time, and it can take a lot of data, time and computing power. Inference happens every time someone uses the model, and it is usually fast. And during inference, the model normally does not learn. If the world changes, the model only improves when people collect new data and train it again.",
+       "slide": {"layout": "comparison", "title": "Two phases", "body": "Training: once or now and then · lots of data, time, computing power. Inference: every use · usually fast · model does not learn."}},
+      {"visual_type": "stock",
+       "voiceover": "Think of a student preparing for an exam. For weeks, the student studies past questions and their answers. That is training.",
+       "stock_query": "student studying with notes at desk",
+       "on_screen_text": "Studying = training"},
+      {"visual_type": "stock",
+       "voiceover": "Then the student sits the exam, without the textbook, and answers new questions using only what they learned. That is inference. A good student learns the ideas behind the answers, not every answer, so they can handle new questions.",
+       "stock_query": "students writing exam in classroom",
+       "on_screen_text": "Sitting the exam = inference"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's see both phases in a real situation. Grace is a farm adviser in Mbarara, Uganda. Her organisation wants a phone app that helps farmers check whether cassava leaves look healthy or diseased.",
+       "stock_query": "farmer examining cassava leaves in field",
+       "on_screen_text": "Grace · farm adviser · Mbarara"},
+      {"visual_type": "slide",
+       "voiceover": "First, training. The organisation collects thousands of leaf photos. Plant experts label each one healthy or diseased. A technical team trains a model on powerful computers. This takes time, and it happens before any farmer uses the app.",
+       "slide": {"layout": "diagram", "title": "Training happens first", "body": "Thousands of leaf photos → experts add labels (healthy / diseased) → powerful computers → Model. Caption: before any farmer uses the app."}},
+      {"visual_type": "slide",
+       "voiceover": "Then, inference. The model is placed inside the app. A farmer takes a photo of a leaf, and within seconds the app says, probably diseased. It has never seen this exact leaf, so it is not searching a list. It compares the features in the new photo with the patterns it learned.",
+       "slide": {"layout": "diagram", "title": "Inference in the field", "body": "Generic phone mock-up: photo of one cassava leaf → result card 'Probably diseased'. Side note: new leaf, compared with learned patterns, not a list."}},
+      {"visual_type": "slide",
+       "voiceover": "Later, farmers in a hilly region report wrong answers. Their photos are taken in strong morning light, which was rare in the training photos. The model does not fix itself. Grace's team collects new photos from that region, and trains a new version.",
+       "slide": {"layout": "diagram", "title": "The model does not fix itself", "body": "Bright morning-light leaf photo with a red cross → new photos from the hilly region added to data → retrain → 'Model version 2' with a green tick."}},
+      {"visual_type": "text",
+       "voiceover": "Chatbots work the same way. Mateus, a hotel owner in Recife, Brazil, asks a chatbot to write a welcome message for guests. The model was trained earlier on a large amount of text. His request triggers inference. The model produces new text from patterns, one piece at a time. It does not copy a stored message.",
+       "on_screen_text": "New text from patterns, not copies"},
+      {"visual_type": "slide",
+       "voiceover": "This clears up a common mistake. AI does not look up the answer, like a search engine. That is why it can handle questions it has never seen. It is also why it can sound correct but be wrong. There is no stored true answer to check against.",
+       "slide": {"layout": "comparison", "title": "Not a lookup", "body": "Left, crossed out: search engine / database looking up a stored answer. Right: model producing an answer from patterns → handles new questions, but can be confidently wrong."}}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, training is the phase where a system finds patterns in labelled examples, and the result is a model. Second, inference is the phase where the model applies those patterns to new examples, and it normally does not learn while doing this. Third, models do not look up stored answers. They produce answers from patterns, so they can handle new cases, but they can also be confidently wrong.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Training: find patterns in labelled examples → a model 2. Inference: apply patterns to new examples; no learning 3. No lookup: answers come from patterns, so they can be wrong"}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below this video, ask a free chatbot, ChatGPT or Claude, to explain training and inference to a ten year old. Then write down one thing it got right, and one thing it simplified. It takes about fifteen minutes. In the next lesson, we start a new module with Supervised Learning: Classification and Regression. See you there.",
+       "on_screen_text": "Next: Supervised Learning"}
+    ]
+  }
+}

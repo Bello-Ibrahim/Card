@@ -1,0 +1,192 @@
+{
+  "course_id": "AI-05",
+  "lesson_id": "L03",
+  "duration_s": 312.1,
+  "thumbnail": {
+    "headline": "One Number, Many Features",
+    "slide": {
+      "layout": "title",
+      "title": "One Number, Many Features",
+      "body": "[2, 5] · [8, 3] = 31 in large type. Small tag: Math and Statistics for AI · Lesson 3."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.1,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "2 min per km, 5 min per stop",
+      "voiceover": "If a courier needs two minutes for every kilometre and five minutes for every stop, how long will a trip take? You can answer that in your head. Without noticing, you just did the most common calculation in machine learning."
+    },
+    {
+      "scene": 2,
+      "start": 17.1,
+      "end": 31.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "The Dot Product",
+        "body": "Weighted Sums and Similarity · Lesson 3 of 18"
+      },
+      "voiceover": "Last time, we learned that a vector is a list of numbers. Today we combine two vectors into one number, with the dot product. In words: multiply the matching components, then add the results."
+    },
+    {
+      "scene": 3,
+      "start": 31.7,
+      "end": 54.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Multiply, then add",
+        "body": "a = [2, 5], b = [8, 3]\n2 × 8 = 16\n5 × 3 = 15\n16 + 15 = 31 → a · b = 31\nNumPy: np.dot(a, b)"
+      },
+      "voiceover": "Take a equals two, five and b equals eight, three. First components: two times eight is sixteen. Second components: five times three is fifteen. Add them: sixteen plus fifteen is thirty-one. So a dot b equals thirty-one. In NumPy, you write n p dot dot, with a and b inside."
+    },
+    {
+      "scene": 4,
+      "start": 54.0,
+      "end": 72.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Prediction = weighted sum",
+        "body": "Weights vector × Features vector → one prediction. Each pair joined by a line labelled 'weight × feature', then all added."
+      },
+      "voiceover": "Why does this matter? Many models predict with a weighted sum. Each feature has a weight that says how much it matters. The prediction is weight times feature, for every feature, all added together. That is exactly a dot product of weights and features."
+    },
+    {
+      "scene": 5,
+      "start": 72.9,
+      "end": 88.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "A one-feature model",
+        "body": "y = w·x + b\ny = prediction · w = weight · x = input · b = bias (starting value)"
+      },
+      "voiceover": "Later, we also add a starting value called the bias. So a one-feature model reads: y equals w times x plus b. In words, the prediction is the weight times the input, plus a starting value."
+    },
+    {
+      "scene": 6,
+      "start": 88.8,
+      "end": 116.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Similar tastes?",
+        "body": "A = [1, 2, 0], B = [2, 4, 0], C = [0, 0, 3]. A · B = 2 + 8 + 0 = 10 (similar). A · C = 0 (nothing shared)."
+      },
+      "voiceover": "The dot product also measures similarity. Imagine taste scores for spicy, sweet and sour, from zero to four. Customer A is one, two, zero. Customer B is two, four, zero. Customer C is zero, zero, three. A dot B is two plus eight plus zero, which is ten. A dot C is zero. A and B like the same things. A and C share nothing."
+    },
+    {
+      "scene": 7,
+      "start": 116.7,
+      "end": 139.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Cosine similarity",
+        "body": "Dot product ÷ (length × length). Always between −1 and 1. A and B: exactly 1, because B = 2 × A."
+      },
+      "voiceover": "Recommendation systems use this idea to find similar users or products. Long vectors give bigger dot products, so people often divide by both lengths. This is called cosine similarity, and it is always between minus one and one. For A and B it is exactly one, because B is just A doubled."
+    },
+    {
+      "scene": 8,
+      "start": 139.0,
+      "end": 160.0,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "shopping receipt and grocery basket",
+      "on_screen_text": "Quantities × prices = one bill",
+      "voiceover": "Here is an everyday picture. A dot product is like a shopping bill. The quantities in your basket are the features, and the prices are the weights. Multiply each quantity by its price, add everything up, and you get one total. A prediction is the bill for one example."
+    },
+    {
+      "scene": 9,
+      "start": 160.0,
+      "end": 177.1,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "delivery scooter rider busy Asian city",
+      "on_screen_text": "Dewi · Jakarta · delivery planning",
+      "voiceover": "Let's use it. Dewi is an operations planner for a delivery start-up in Jakarta, Indonesia. Her team estimates that each kilometre adds about two minutes, and each stop adds about five minutes. These numbers are invented for the example."
+    },
+    {
+      "scene": 10,
+      "start": 177.1,
+      "end": 197.2,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Weights and features",
+        "body": "w = [2, 5] (min per km, min per stop); x = [8, 3] (km, stops). A stacked bar: bottom block 'distance time', top block 'stop time'."
+      },
+      "voiceover": "Her weight vector is two, five: minutes per kilometre, and minutes per stop. Tomorrow's first trip is eight kilometres with three stops, so the feature vector is eight, three. Picture two bars stacked on top of each other, one for distance time and one for stop time."
+    },
+    {
+      "scene": 11,
+      "start": 197.2,
+      "end": 218.2,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Hand, then NumPy",
+        "body": "import numpy as np\nw = np.array([2, 5])   # minutes per km, minutes per stop\nx = np.array([8, 3])   # km, stops\nprint(np.dot(w, x))    # 31"
+      },
+      "voiceover": "By hand: two times eight is sixteen minutes for distance. Five times three is fifteen minutes for stops. The total is thirty-one minutes. In code, Dewi makes two NumPy arrays, w and x, and prints n p dot of w and x. The answer is thirty-one again."
+    },
+    {
+      "scene": 12,
+      "start": 218.2,
+      "end": 239.2,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Reading a weight",
+        "body": "Stops 3 → 4: stacked bar grows by one block of 5 minutes; 31 → 36. Caption: weight = change in prediction when the feature grows by 1."
+      },
+      "voiceover": "Dewi also learns to read the weights. If the trip had one more stop, the prediction would rise by five minutes, the weight for stops. Each weight tells you how much the prediction changes when its feature grows by one. You will use this same reading in the capstone."
+    },
+    {
+      "scene": 13,
+      "start": 239.2,
+      "end": 263.6,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "w * x ≠ np.dot(w, x)",
+      "voiceover": "A common mistake is to multiply the matching components and forget to add them. In NumPy, w star x gives sixteen, fifteen, which is still a vector. N p dot gives thirty-one, one number. And if the vectors have different lengths, NumPy stops with an error. That error is helpful: every feature needs exactly one weight."
+    },
+    {
+      "scene": 14,
+      "start": 263.6,
+      "end": 290.2,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Dot product: multiply matching components, add. 2. Prediction = weights · features. 3. Large dot product / cosine ≈ 1 → similar; 0 → nothing shared."
+      },
+      "voiceover": "Let's recap. First, the dot product multiplies matching components and adds the results, giving one number. Second, a model's prediction is often a weighted sum of features, which is a dot product of weights and features. Third, a large dot product, or a cosine similarity close to one, means two vectors point in a similar direction, and zero means they share nothing."
+    },
+    {
+      "scene": 15,
+      "start": 290.2,
+      "end": 312.1,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Matrices: A Whole Dataset at Once",
+      "voiceover": "Your turn. In the exercise, you calculate three dot products by hand, check them with n p dot, and make a price prediction for a small invented product. It takes about twenty minutes. Next, we store a whole dataset at once, in Matrices: A Whole Dataset at Once. See you there."
+    }
+  ]
+}

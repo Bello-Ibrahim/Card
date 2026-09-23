@@ -1,0 +1,76 @@
+{
+  "title": "When AI Gets It Wrong: Checking Output",
+  "thumbnail": {
+    "headline": "Check Before You Send",
+    "image": "Navy background, a polished email draft with three small amber circles marking errors and a teal checklist beside it, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Check Before You Send", "body": "Email draft icon with three amber circles on a number, a time and a sentence. Beside it a four-item teal checklist. Small tag: AI for Everyday Work · Lesson 4."}
+  },
+  "production_notes": [
+    "The date in Kofi's example (Tuesday 13 October, shown on the scene 10 slide) is hypothetical, and the lesson tells learners to check the weekday against a calendar. The voiceover does not say the date aloud; before recording, check the slide date matches a Tuesday in the year shown, or remove the year.",
+    "[REGION] Public holiday dates and official sources differ by country; learners check their own country's official list. No specific holiday dates are stated. Employer AI policies also differ by organisation and country.",
+    "Kofi and his Kumasi university are hypothetical; no real university name or logo in stock footage.",
+    "Kofi's prompt appears in full on a code-layout slide (scene 10)."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "An AI assistant writes you a perfect-looking email in five seconds. The grammar is excellent. But one date is wrong, and it has added a promise you never made. If you send it, your name is on that mistake, not the AI's.",
+       "on_screen_text": "Your name is on it"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "In the last lesson, we kept confidential data out of AI tools. Today, we check what comes back. Remember, AI assistants predict likely text. They do not look up the truth before they answer.",
+       "slide": {"layout": "title", "title": "When AI Gets It Wrong", "body": "Predicting likely text ≠ looking up the truth"}},
+      {"visual_type": "slide",
+       "voiceover": "This means they can state wrong facts with full confidence, such as a wrong date, number or name. They can invent sources, such as a report or a web link that does not exist. They can change your meaning, for example turning we may offer a discount into we will offer a discount. And they can add or lose details.",
+       "slide": {"layout": "bullets", "title": "Four ways AI gets it wrong", "body": "Wrong facts, said with confidence · Invented sources and links · Changed meaning: 'may offer' → 'will offer' · Details added or lost"}},
+      {"visual_type": "slide",
+       "voiceover": "When an AI tool invents information, people often call it a hallucination. It does not mean the tool is broken. It is a normal risk of how these tools work. So checking is part of every task.",
+       "slide": {"layout": "quote", "title": "Hallucination", "body": "\"Not a broken tool. A normal risk. So checking is part of every task.\""}},
+      {"visual_type": "slide",
+       "voiceover": "Here is a four-step review checklist. Step one, facts and numbers. Check every figure, price and quantity against your notes or an original source. Step two, names and dates. Are the names, days and dates right? Does Friday match the date you wrote?",
+       "slide": {"layout": "bullets", "title": "The 4-step review checklist", "body": "1. Facts and numbers · 2. Names and dates · 3. Tone for the reader (greyed) · 4. Confidential content (greyed)"}},
+      {"visual_type": "slide",
+       "voiceover": "Step three, tone for the reader. Is it too formal, too casual or too long? Does it promise something you cannot deliver? Step four, confidential content. Was anything confidential added, and was anything important lost? Remember the rules from the last lesson, and your employer's AI policy.",
+       "slide": {"layout": "bullets", "title": "The 4-step review checklist", "body": "1. Facts and numbers · 2. Names and dates · 3. Tone for the reader · 4. Confidential content added or lost"}},
+      {"visual_type": "slide",
+       "voiceover": "The more important the text, the more carefully you check. A thank-you note to your team needs a quick read. A message to a customer about money or deadlines needs a careful, line-by-line check.",
+       "slide": {"layout": "comparison", "title": "Check to match the risk", "body": "Low risk: thank-you note to your team → quick read. High risk: customer message about money or deadlines → line-by-line check."}},
+      {"visual_type": "stock",
+       "voiceover": "Think of it like proofreading a colleague's draft before your name goes on it. The colleague may be skilled and quick, but you are the one who signs it. So you read every number and date.",
+       "stock_query": "person proofreading document with pen",
+       "on_screen_text": "You sign it, so you check it"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's use the checklist. Kofi is an events coordinator at a university in Kumasi, in Ghana. He asks a free AI assistant for an email that invites staff to a first-aid training day.",
+       "stock_query": "university campus staff office Africa",
+       "on_screen_text": "Kofi · events coordinator · Kumasi"},
+      {"visual_type": "slide",
+       "voiceover": "His prompt gives the day and date, the time from nine until one, the room, a limit of twenty places, and a request to reply by Friday. The draft looks good. Now he checks it.",
+       "slide": {"layout": "code", "title": "Kofi's prompt", "body": "Write a short email inviting staff to a first-aid training day on Tuesday 13 October, 9 a.m. to 1 p.m., in Room B12. Places are limited to 20. Ask people to reply by Friday."}},
+      {"visual_type": "slide",
+       "voiceover": "Step one, facts and numbers. The draft says places are limited to twenty-five. That is wrong, so he changes it to twenty. Step two, names and dates. He checks a calendar to make sure the date really is a Tuesday, because the AI does not always know. He also sees the end time is two, not one, and corrects it.",
+       "slide": {"layout": "comparison", "title": "Steps 1 and 2", "body": "Draft: 'limited to 25' (amber) → Fixed: 20. Draft: date checked against a calendar (green tick). Draft: '9 a.m. to 2 p.m.' (amber) → Fixed: 1 p.m."}},
+      {"visual_type": "slide",
+       "voiceover": "Step three, tone. The draft ends with, lunch will be provided. Kofi never said that. He deletes it, because it is a promise he cannot keep. Step four, confidential content. Nothing confidential was added, and the reply deadline is still there.",
+       "slide": {"layout": "comparison", "title": "Steps 3 and 4", "body": "Draft: 'Lunch will be provided!' (amber) → Deleted: a promise he cannot keep. Confidential content: none added (green tick). Reply deadline: still there (green tick)."}},
+      {"visual_type": "text",
+       "voiceover": "Three errors in one short email. Each one would have caused confusion if Kofi had sent the first draft.",
+       "on_screen_text": "Three errors in one short email"},
+      {"visual_type": "slide",
+       "voiceover": "A common mistake is to check only spelling and grammar. AI output is usually well written, so it feels correct. The real risks are in the facts, numbers, dates and promises. So spend most of your checking time there.",
+       "slide": {"layout": "comparison", "title": "Where to spend your checking time", "body": "Small area: spelling and grammar. Large area: facts · numbers · dates · promises."}}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, AI assistants can state wrong facts, invent sources and change your meaning, all with full confidence. Second, use the four-step checklist: facts and numbers, names and dates, tone for the reader, and confidential content added or lost. Third, you are responsible for anything you send, so always check AI output before you use or share it.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Wrong facts, invented sources, changed meaning. 2. Checklist: facts · names and dates · tone · confidential content. 3. You send it, you own it: check first."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below this video, ask a free AI assistant for a short team email that lists the next three public holidays in your country. Check each date against the official list, go through all four steps, and correct the email yourself. This week is done. Next week starts with Drafting and Replying to Emails. See you there.",
+       "on_screen_text": "Next: Drafting and Replying to Emails"}
+    ]
+  }
+}

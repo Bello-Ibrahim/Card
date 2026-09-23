@@ -1,0 +1,73 @@
+{
+  "title": "Showing Examples: Few-Shot Prompting",
+  "thumbnail": {
+    "headline": "Show, Don't Describe",
+    "image": "Navy background, three small labelled example cards feeding into a prompt window, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Show, Don't Describe", "body": "Three example cards, each with a comment and a label (praise, complaint, question), stacked beside a prompt window. Small tag: Prompt Engineering Masterclass · Lesson 5."}
+  },
+  "production_notes": [
+    "[VERSION] Free-tier availability of Claude, ChatGPT and Gemini must be checked before recording (content.md Review Flags).",
+    "Youssef and his hotel in Marrakesh are hypothetical, and all guest comments are invented. Do not show a real hotel name or logo in stock footage.",
+    "The full few-shot prompt appears on a code slide with the exact text from content.md; the voiceover summarises it. The placeholder [PASTE COMMENTS] is shown on screen only.",
+    "Examples are presented as often improving consistency, not as making results perfect."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Sometimes you know exactly what you want, but you find it hard to describe. In those cases, showing is often easier than explaining. Today, you will learn how to show the AI what you mean.",
+       "on_screen_text": "Show, don't describe"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "In the last lesson, you controlled format and tone with clear instructions. Now we add the sixth part of the structured prompt: examples. This is called few-shot prompting.",
+       "slide": {"layout": "title", "title": "Showing Examples: Few-Shot Prompting", "body": "Lesson 5 · The sixth part: examples"}},
+      {"visual_type": "slide",
+       "voiceover": "Few-shot prompting means you include a few examples of the output you want inside your prompt. Few usually means two or three. A prompt with no examples is sometimes called zero-shot. Most of the prompts you have written so far in this course were zero-shot.",
+       "slide": {"layout": "comparison", "title": "Zero-shot vs few-shot", "body": "Zero-shot: instruction only. Few-shot: instruction + 2–3 examples of input and output."}},
+      {"visual_type": "slide",
+       "voiceover": "Examples help because they show several things at once: the format, the length, the tone and the way you make decisions. A description like label each comment by type leaves questions open. What are the types? And what about a comment that is both praise and a question? Two or three examples answer this without long explanations.",
+       "slide": {"layout": "diagram", "title": "What one example shows", "body": "One example card in the centre with four arrows out to: Format · Length · Tone · How you decide."}},
+      {"visual_type": "slide",
+       "voiceover": "Few-shot prompting often helps with sorting and labelling, like customer comments or survey answers. It helps with repeated writing patterns, like short posts in your brand voice. And it helps with extracting information in a fixed shape, like a name, a date and an amount from each line.",
+       "slide": {"layout": "bullets", "title": "Where examples often help", "body": "Sorting and labelling: comments, tickets, survey answers. Repeated writing: product descriptions, short posts. Extracting in a fixed shape: name · date · amount."}},
+      {"visual_type": "slide",
+       "voiceover": "A few rules make examples work well. Show the input and the output for each example, in the same layout every time. Cover the different cases, so if there are three labels, show at least one of each. Keep examples realistic, but invented. And check the results, because the tool may copy your examples too closely.",
+       "slide": {"layout": "bullets", "title": "Four rules for examples", "body": "1. Input + output, same layout every time. 2. Cover every case. 3. Realistic but invented, no personal data. 4. Check the results."}},
+      {"visual_type": "stock",
+       "voiceover": "Think of a tailor. You could describe the collar, the fit and the sleeves in words. But the tailor understands much faster when you bring a shirt you already like. Examples work the same way for an AI tool.",
+       "stock_query": "tailor measuring shirt in workshop",
+       "on_screen_text": "Bring the shirt you like"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's try it. Youssef is the guest relations manager at a hotel in Marrakesh. Every week, he receives many short guest comments. He wants to sort each one into praise, complaint or question.",
+       "stock_query": "hotel manager reading guest feedback lobby",
+       "on_screen_text": "Youssef · hotel in Marrakesh"},
+      {"visual_type": "slide",
+       "voiceover": "His first prompt simply asks the tool to sort the comments into categories. The tool invents its own categories, such as food, staff and other, and some comments get two labels. This is not what he needs.",
+       "slide": {"layout": "code", "title": "Before", "body": "Sort these guest comments into categories.  → Output note in red: invented categories Food / Staff / Other, some comments with two labels."}},
+      {"visual_type": "slide",
+       "voiceover": "His new prompt names the three labels and says each comment gets exactly one. It adds a rule: if a comment contains a complaint, label it complaint. Then it shows three short example comments, one for each label, each followed by its label. Finally, it asks the tool to label new comments in the same format.",
+       "slide": {"layout": "code", "title": "After", "body": "Show the full 'After' prompt from content.md: the instruction, the mixed-comment rule, three examples (rooftop breakfast → praise; room not cleaned → complaint; airport transfer → question), then 'Now label these comments in the same format: [PASTE COMMENTS]'."}},
+      {"visual_type": "slide",
+       "voiceover": "Youssef tests it with ten invented comments. Nine labels are correct. But one comment, lovely staff, but is the pool heated, is labelled praise. His rule covers complaints, not questions. So he adds one more line: if a comment contains a question and praise, label it question. He runs it again, and the label is now correct.",
+       "slide": {"layout": "diagram", "title": "Test, then add a rule", "body": "10 test comments: 9 green ticks, 1 red cross on 'Lovely staff, but is the pool heated?' → praise. Arrow to new rule: 'question + praise → question'. Rerun: all green."}},
+      {"visual_type": "text",
+       "voiceover": "Notice what Youssef did. The examples set the pattern, and the extra rule handled the difficult case. He still checked every label himself, because examples improve results, but do not make them perfect.",
+       "on_screen_text": "Examples help. You still check."},
+      {"visual_type": "slide",
+       "voiceover": "A common mistake is to give examples that are all the same type, such as three positive comments. The tool then learns a narrow pattern, and may label too many new items as positive. Cover every category, and include a mixed case if you can.",
+       "slide": {"layout": "comparison", "title": "Cover every category", "body": "Weak: three praise examples. Strong: one praise, one complaint, one question, plus a mixed case."}}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, few-shot prompting means including two or three examples of input and output in your prompt. Second, good examples use the same layout, cover every category, and are invented rather than copied from real, personal data. Third, examples often improve consistency, but you must still check each result, and add a rule for difficult cases.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Few-shot = 2–3 examples of input and output. 2. Same layout, every category, invented data. 3. Often more consistent, but check and add rules."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below this video, you will write a prompt with three labelled example comments, use it to sort ten new invented comments, and check every label yourself. It takes about twenty minutes. That completes week one. In the next lesson, we start on everyday work with writing and rewriting emails, reports and messages. See you there.",
+       "on_screen_text": "Next: Emails, Reports and Messages"}
+    ]
+  }
+}

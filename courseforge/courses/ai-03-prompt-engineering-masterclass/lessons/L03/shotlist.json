@@ -1,0 +1,188 @@
+{
+  "course_id": "AI-03",
+  "lesson_id": "L03",
+  "duration_s": 293.7,
+  "thumbnail": {
+    "headline": "Enough Context, Not Too Much",
+    "slide": {
+      "layout": "title",
+      "title": "Enough Context, Not Too Much",
+      "body": "Prompt card with four lines labelled Audience, Purpose, Background, Material; one real-looking name crossed out and replaced by a grey tag [CLIENT]. Small tag: Prompt Engineering Masterclass · Lesson 3."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.0,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Enough context, not too much",
+      "voiceover": "Context is the part of a prompt that turns a general answer into your answer. But some context should never go into an AI tool. So how do you give enough, without giving too much?"
+    },
+    {
+      "scene": 2,
+      "start": 15.0,
+      "end": 25.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Giving Context That Matters",
+        "body": "Lesson 3 · Four questions, and what to leave out"
+      },
+      "voiceover": "In lesson one, you saw that an AI tool fills gaps with safe, average choices. Context closes those gaps. Useful context answers four questions."
+    },
+    {
+      "scene": 3,
+      "start": 25.3,
+      "end": 50.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Four questions",
+        "body": "1. Audience: who will read it? 2. Purpose: what should it achieve? 3. Background: what happened, what was agreed? 4. Material: notes, draft, figures you already have."
+      },
+      "voiceover": "First, audience. Who will read the output? A board member, a new employee, or an angry customer? Second, purpose. Should it inform, persuade, apologise, or get a reply by a date? Third, background. What happened, and what was agreed before? Fourth, material. What do you already have? Pasting your own rough notes is often better than describing them."
+    },
+    {
+      "scene": 4,
+      "start": 50.2,
+      "end": 57.9,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Four short lines are often enough",
+      "voiceover": "Four short lines, one for each question, are often enough. You do not need to write a story."
+    },
+    {
+      "scene": 5,
+      "start": 57.9,
+      "end": 85.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Never paste",
+        "body": "Personal data: names, phone numbers, addresses, health details, salaries. Confidential client data: client names, contract values, accounts. Internal secrets: unreleased products, prices, strategy, passwords."
+      },
+      "voiceover": "Now, the other side: what not to share. Many AI tools may store your conversations, and your employer may have rules about which tools you can use. Before you paste anything, remove personal data, such as names, phone numbers and salaries of real people. Remove confidential client data, like client names and contract values. And remove internal secrets, such as unreleased products, prices and passwords."
+    },
+    {
+      "scene": 6,
+      "start": 85.8,
+      "end": 115.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Use placeholders",
+        "body": "Real detail (blurred) → arrow → [CLIENT] · [PRODUCT] · [EMPLOYEE] · [AMOUNT] · [DATE]. Footer: Follow your organisation's AI policy."
+      },
+      "voiceover": "Replace them with neutral placeholders in square brackets, such as client, product or amount, in capital letters. The AI can still write a good output, and you add the real details afterwards, outside the tool. Always follow your organisation's policy on AI tools. A simple habit helps. Before you press send, read your prompt once more and look for any name, number or address. If you find one, replace it."
+    },
+    {
+      "scene": 7,
+      "start": 115.8,
+      "end": 132.5,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "passenger talking to taxi driver city",
+      "on_screen_text": "Tell the terminal, keep your passport",
+      "voiceover": "Think of briefing a taxi driver. The airport is not enough if there are two terminals and your flight is in forty minutes. You tell them the terminal and the time. But you do not hand them your passport."
+    },
+    {
+      "scene": 8,
+      "start": 132.5,
+      "end": 151.8,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "marketing coordinator reading email office Asia",
+      "on_screen_text": "Lan · marketing coordinator, Hanoi",
+      "voiceover": "Let's see this in practice. Lan is a marketing coordinator at a cosmetics company in Hanoi. A large retail client has complained that a product launch campaign started late in their stores. She needs to reply quickly, and she wants an AI tool to help."
+    },
+    {
+      "scene": 9,
+      "start": 151.8,
+      "end": 166.4,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Before",
+        "body": "Show the 'Before' prompt from content.md, with the person's name, email address, client name and product name highlighted in red."
+      },
+      "voiceover": "Her first prompt has useful facts. But it also contains a real person's name, her email address, the client's company name and an unreleased product name. None of that should go into the tool."
+    },
+    {
+      "scene": 10,
+      "start": 166.4,
+      "end": 196.4,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "After",
+        "body": "Show the 'After' prompt from content.md with the labels Audience, Purpose, Background, Material and Task in teal, and [CLIENT] and [PRODUCT] placeholders highlighted."
+      },
+      "voiceover": "Her second prompt uses the four questions. The audience is the marketing lead at a retail chain, who is unhappy and busy. The purpose is to apologise and keep the relationship strong. The background is a five-day delay in forty stores, caused by late displays from a supplier. The material is her own short notes. Then comes the task, a polite, direct email under one hundred and fifty words."
+    },
+    {
+      "scene": 11,
+      "start": 196.4,
+      "end": 201.5,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Facts stay. Identities go.",
+      "voiceover": "Notice that the facts are still there. Only the identities are gone."
+    },
+    {
+      "scene": 12,
+      "start": 201.5,
+      "end": 212.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Real names go in last",
+        "body": "AI draft with [CLIENT] and [PRODUCT] → arrow → Lan's email program → real names added. Caption: the AI tool never saw them."
+      },
+      "voiceover": "The reply is clear and specific. Lan copies it into her email program and puts in the real names there. The AI tool never saw them."
+    },
+    {
+      "scene": 13,
+      "start": 212.6,
+      "end": 242.2,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Remove identities, keep the situation",
+        "body": "Too vague: 'Write to a client about a problem.' Just right: 'A retail client, a 5-day delay in 40 stores, caused by a supplier.'"
+      },
+      "voiceover": "A common mistake is to remove so much detail that the prompt becomes vague again. Write to a client about a problem is safe, but not useful. The goal is to remove identities and secrets, not the situation. A retail client, a five-day delay in forty stores, caused by a supplier. That sentence contains no personal or confidential data, but it still gives the AI what it needs."
+    },
+    {
+      "scene": 14,
+      "start": 242.2,
+      "end": 265.8,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Audience · Purpose · Background · Material. 2. No personal data, client data or secrets: use placeholders. 3. Keep the situation, remove the identities."
+      },
+      "voiceover": "Let's recap. First, useful context answers four questions: audience, purpose, background and material. Second, never paste personal data, confidential client data or internal secrets into an AI tool. Use placeholders instead, and add the real details yourself, outside the tool. Third, keep the situation and remove the identities, so the output stays specific and safe."
+    },
+    {
+      "scene": 15,
+      "start": 265.8,
+      "end": 293.7,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Controlling Format, Length and Tone",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will take a real work task, write its context in four short lines, and replace every name or sensitive detail with a placeholder. If you like, test it in Claude, ChatGPT or Gemini. It takes about fifteen minutes. In the next lesson, we look at controlling format, length and tone. See you there."
+    }
+  ]
+}

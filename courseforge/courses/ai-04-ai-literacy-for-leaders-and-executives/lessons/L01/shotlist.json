@@ -1,0 +1,189 @@
+{
+  "course_id": "AI-04",
+  "lesson_id": "L01",
+  "duration_s": 297.0,
+  "thumbnail": {
+    "headline": "Five Terms Every Leader Needs",
+    "slide": {
+      "layout": "title",
+      "title": "Five Terms Every Leader Needs",
+      "body": "Five small cards in a fan: AI · Machine learning · Training data · Model · Generative AI, with a separate grey card: Automation. Small tag: AI Literacy for Leaders · Lesson 1."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.4,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Three names, or three things?",
+      "voiceover": "Your team proposes an AI solution. A vendor promises machine learning. A board member asks about your generative AI strategy. Are these three different things, or one thing with three names? A leader who cannot tell the difference will approve the wrong projects."
+    },
+    {
+      "scene": 2,
+      "start": 18.4,
+      "end": 33.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "AI for Leaders: What You Need to Know",
+        "body": "AI Literacy for Leaders and Executives · Lesson 1 of 10"
+      },
+      "voiceover": "Hello, and welcome to AI Literacy for Leaders and Executives. You do not need to build AI. You need to understand enough to ask good questions and make sound decisions. Five terms cover most conversations."
+    },
+    {
+      "scene": 3,
+      "start": 33.4,
+      "end": 51.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "1. Artificial intelligence",
+        "body": "Umbrella term for systems doing tasks we link with human judgement: recognising images · understanding language · making recommendations. On its own, it tells you very little."
+      },
+      "voiceover": "The first is artificial intelligence, or AI. It is the broad name for systems that do tasks we link with human judgement, such as understanding language or making recommendations. It is an umbrella term, so on its own it tells you very little."
+    },
+    {
+      "scene": 4,
+      "start": 51.8,
+      "end": 72.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "2. Machine learning · 3. Training data",
+        "body": "Stack of past invoices labelled 'Training data' → arrow → box 'Learns patterns' → new invoice with an amber flag 'Unusual'."
+      },
+      "voiceover": "The second is machine learning, the most common way to build AI today. Instead of people writing every rule, the system learns patterns from past examples. Those examples are the third term, training data. A system trained on thousands of past invoices can learn to flag unusual ones."
+    },
+    {
+      "scene": 5,
+      "start": 72.4,
+      "end": 94.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "4. Model",
+        "body": "Large quote: 'What data was it trained on, and does it look like our situation?' Caption: the first question for any AI system."
+      },
+      "voiceover": "The result of training is the fourth term, the model. It is the learned engine that makes predictions on new cases. A model is only as good as its data, and it can go out of date. So always ask, what was it trained on, and does it look like our situation?"
+    },
+    {
+      "scene": 6,
+      "start": 94.7,
+      "end": 111.4,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "executive reading chat assistant answer laptop",
+      "on_screen_text": "Fluent does not mean correct",
+      "voiceover": "The fifth term is generative AI. It creates new content, such as text, images or code. Chat assistants such as Claude and ChatGPT are examples. They write fluent answers by predicting likely words. But fluent does not mean correct."
+    },
+    {
+      "scene": 7,
+      "start": 111.4,
+      "end": 129.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Automation is not always AI",
+        "body": "Left: Rule-based automation, 'If invoice approved → pay on day 30': predictable, cheap to check. Right: Machine learning, needs good data and monitoring. Generative AI, fast to try, needs human review."
+      },
+      "voiceover": "Finally, automation is different from all of these. It means a process runs without a person doing each step, and it often uses simple fixed rules with no AI at all. For example, if the invoice is approved, send payment on day thirty."
+    },
+    {
+      "scene": 8,
+      "start": 129.8,
+      "end": 153.4,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "mechanic and manager inspecting truck engine",
+      "on_screen_text": "Fuel, load, breakdowns",
+      "voiceover": "Think of it this way. A leader does not need to repair an engine. But you do need to know what fuel it uses, what it can carry and when it can break down. For AI, the fuel is data, the load is the task, and the breakdowns are wrong outputs, bias and outdated models."
+    },
+    {
+      "scene": 9,
+      "start": 153.4,
+      "end": 167.1,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "textile factory workers inspecting fabric rolls",
+      "on_screen_text": "Nadia · textile exporter · Bangladesh",
+      "voiceover": "Let's see this in practice. Nadia Rahman is chief executive of a fictional textile exporter in Bangladesh, with about four hundred staff. In one week, her managers bring her three AI proposals."
+    },
+    {
+      "scene": 10,
+      "start": 167.1,
+      "end": 184.7,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Proposal 1: Payment reminders",
+        "body": "Question: What decides when a reminder is sent? Answer: a fixed schedule. Verdict tag: Automation with rules · No AI needed."
+      },
+      "voiceover": "The finance manager wants AI to send payment reminders. Nadia asks what decides when a reminder goes out. The answer is a fixed schedule. So this is simple automation, and their accounting software may already do it. No AI is needed."
+    },
+    {
+      "scene": 11,
+      "start": 184.7,
+      "end": 204.4,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Proposal 2: Fabric fault camera",
+        "body": "Question: What does it learn from? Answer: thousands of labelled photos, good and faulty. Verdict tag: Machine learning · Real work = training data."
+      },
+      "voiceover": "The quality manager wants a camera system that spots fabric faults. Nadia asks what it learns from. The vendor needs thousands of labelled photos of good and faulty fabric. This is machine learning, and the real work is collecting that training data from her own factory."
+    },
+    {
+      "scene": 12,
+      "start": 204.4,
+      "end": 224.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Proposal 3: Email reply drafts",
+        "body": "Question: Who checks the drafts? What goes into the tool? Answer: a person reviews every draft; no prices or contract terms in free tools. Verdict tag: Generative AI · Human review."
+      },
+      "voiceover": "The sales director wants a generative AI assistant to draft replies to buyer emails. Nadia asks who checks the drafts and what goes into the tool. They agree that a person reviews every draft, and that prices and contract terms never go into a free tool."
+    },
+    {
+      "scene": 13,
+      "start": 224.1,
+      "end": 245.5,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Which type of AI do you mean?",
+      "voiceover": "With five terms, Nadia turns three vague AI projects into three clear decisions, each with its own cost and risk. That is the common mistake to avoid. AI is not one product that is good or bad. Ask your team which type they mean before you discuss budget or risk."
+    },
+    {
+      "scene": 14,
+      "start": 245.5,
+      "end": 269.1,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. ML learns from training data; the model is only as good as that data. 2. Generative AI is fluent but can be wrong: review outputs. 3. Automation does not always need AI; rules suit stable tasks."
+      },
+      "voiceover": "Let's recap. First, machine learning learns patterns from training data, and the model it produces is only as good as that data. Second, generative AI writes fluent content that can be wrong, so people must review it. Third, automation does not always need AI. Simple rules are often cheaper and more reliable for stable tasks."
+    },
+    {
+      "scene": 15,
+      "start": 269.1,
+      "end": 297.0,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Where AI Creates Value",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will ask Claude or ChatGPT to explain these five terms with examples from your own industry. Then you will correct anything you would not say to your board. Please do not paste confidential company data into a free tool. In the next lesson, we look at where AI creates value. See you there."
+    }
+  ]
+}

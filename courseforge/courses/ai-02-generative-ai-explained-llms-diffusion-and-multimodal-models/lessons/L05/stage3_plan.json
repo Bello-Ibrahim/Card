@@ -1,0 +1,151 @@
+{
+  "title": "How Diffusion Models Create Images",
+  "thumbnail": {
+    "headline": "From Noise to Picture",
+    "image": "Navy background, a square that fades from grey static on the left into a clear lighthouse at sunset on the right, headline in teal Inter Bold.",
+    "slide": {
+      "layout": "title",
+      "title": "From Noise to Picture",
+      "body": "Five small squares in a row: pure grey noise → blurry shapes → rough lighthouse → clearer → sharp lighthouse at sunset. Small tag: Generative AI Explained · Lesson 5."
+    }
+  },
+  "production_notes": [
+    "[VERIFY] The descriptions of diffusion training (noise added step by step, the model learns to predict and remove it, linked to text descriptions) and generation (from pure noise, step by step, steered by the prompt) are simplified on purpose. The voiceover says 'in simple terms'. A reviewer must confirm they are accurate enough for beginners.",
+    "[VERIFY] content.md says not every image generator uses diffusion and some tools combine methods. The voiceover only calls diffusion 'one common type of image generator' and does not state the wider claim; add it only after review.",
+    "[VERIFY] The darkroom analogy is kept with its stated limit (the darkroom photo already exists; a diffusion model creates a new one). Confirm it is not misleading.",
+    "[VERIFY] content.md's point that generators can sometimes produce results very close to training images or known styles, raising copyright and fairness questions, is left out of the voiceover. It stays on the lesson page after review.",
+    "[VERSION] Kenji's four lantern images for scenes 11 to 13, and the noise-to-image steps in scene 5, should be generated in Google Gemini (DECISIONS.md) with the exact prompt 'A paper lantern festival on a river at night, warm light, wide view.' Check the free limits and the licence terms for generated images before use. If none of the four shows a sign with letters that are not real words, adjust the voiceover in scene 13 or pick a run that does.",
+    "[VERSION] The seed setting is not mentioned in the voiceover because its availability differs between tools.",
+    "Kenji and his Osaka class project are fictional."
+  ],
+  "sections": {
+    "Hook": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Think of the grey snow on an old television with no signal. Many image generators start from this kind of randomness. A few seconds later, you have a detailed picture of a lighthouse at sunset. How does noise become a picture?",
+        "on_screen_text": "How does noise become a picture?"
+      }
+    ],
+    "Explain": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Welcome to Module two. So far, we have looked at language models. Now we turn to images, and to one common type of image generator, the diffusion model. What follows is a simplified picture. We look at training first, and then at generating.",
+        "slide": {
+          "layout": "title",
+          "title": "How Diffusion Models Create Images",
+          "body": "Generative AI Explained · Lesson 5 of 12 · A simplified picture"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "In simple terms, training works like this. The model sees a huge number of images, each with a text description. Random noise is added to each image a little at a time, until only noise is left.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Training: add noise, step by step",
+          "body": "A photo of a cat with caption 'a cat on a sofa' → four squares getting noisier → pure grey noise. Arrow labelled 'noise added a little at a time'."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "The model's task is to look at a noisy image and work out what noise was added, so that it can remove it and make the image a little clearer. Because it also sees the description, it learns what words like cat, watercolour or evening light usually look like.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Training: learn to remove noise",
+          "body": "Noisy square → model box → slightly clearer square. Side labels linking words to visuals: 'cat' → whiskers, 'watercolour' → soft brush texture, 'evening light' → warm orange glow."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Now, generating. When you type a prompt, the model starts from pure random noise. It removes noise in many small steps. At each step, your prompt steers the result, so the image looks more like your description. Early steps decide the large shapes. Later steps add details like texture and edges.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Generating: noise to picture",
+          "body": "Prompt 'a lighthouse at sunset' above a row of five squares: pure noise → large shapes → layout → textures → sharp lighthouse at sunset. Arrows from the prompt into every step labelled 'steers'."
+        }
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "You can picture a photo slowly coming into focus in a darkroom. At first, the paper shows only grey shapes. Step by step, the details appear. Here, the prompt decides what the photo shows.",
+        "stock_query": "photo developing in darkroom tray red light",
+        "on_screen_text": "The prompt decides what appears"
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "But the picture has one limit. In a real darkroom, the photo already exists on the film. A diffusion model creates a new picture that never existed before.",
+        "on_screen_text": "New picture, not a stored photo"
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "This matters for you in two ways. Every image starts from different random noise, so the same prompt gives a different image each time. And the prompt guides, but it does not control every detail. Anything you do not describe is filled in with typical patterns from training.",
+        "slide": {
+          "layout": "bullets",
+          "title": "What this means for you",
+          "body": "Different starting noise → different image each time · The prompt guides, not controls · Undescribed details are filled in with typical patterns"
+        }
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "So if something matters to you, like the colour, the angle or the time of day, put it in the prompt. You will practise this in the next lesson.",
+        "on_screen_text": "If it matters, describe it."
+      }
+    ],
+    "Demonstrate": [
+      {
+        "visual_type": "stock",
+        "voiceover": "Let's see this in an example. Kenji is a design student in Osaka. For a class project about local festivals, he types the same prompt into a free image generator four times. A paper lantern festival on a river at night, warm light, wide view.",
+        "stock_query": "design student working on laptop studio",
+        "on_screen_text": "Kenji · design student · Osaka"
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "First, what stays the same. All four images show lanterns, water and a night sky, with warm orange light. The prompt steered these things in every run. The words in the prompt acted like fixed points that every image had to follow.",
+        "slide": {
+          "layout": "diagram",
+          "title": "What stays the same",
+          "body": "Grid of Kenji's four generated lantern images. Teal outlines around lanterns, water, night sky and warm light in each one."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Next, what changes. The number of lanterns, the position of the river, the camera angle, and whether there are people. None of these were in the prompt, so they came from the different starting noise.",
+        "slide": {
+          "layout": "comparison",
+          "title": "What changes",
+          "body": "Same four images with labels: 12 lanterns / 30 lanterns · river left / river centre · high angle / low angle · people / no people. Caption: from different starting noise."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "And one thing goes wrong. One image has a sign on a boat, with letters that are not real words. Kenji learns that if he wants people on a bridge, or exactly five lanterns, he must describe it. Even then, exact counts and readable text may not be reliable.",
+        "slide": {
+          "layout": "diagram",
+          "title": "What goes wrong",
+          "body": "Close-up crop of the boat sign with made-up letters, circled in red. Note: exact counts and text are not reliable (see Lesson 8)."
+        }
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "A common mistake is to think an image generator searches the internet for a matching picture and edits it. A diffusion model does not search when it generates. It starts from noise and builds a new image. That is why you can ask for scenes nobody has ever photographed.",
+        "on_screen_text": "It builds from noise, not search."
+      }
+    ],
+    "Recap": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, in simple terms, a diffusion model learns by removing noise from images that were gradually covered with noise, together with their descriptions. Second, to generate, it starts from pure noise and removes it step by step, with your prompt steering each step. Third, different starting noise explains why the same prompt gives different images.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. Training: learn to remove noise, linked to descriptions. 2. Generating: pure noise → step by step, steered by the prompt. 3. Different noise → different images from one prompt."
+        }
+      }
+    ],
+    "CTA": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Now try it yourself. In the exercise below, use a free image generator to create the same prompt four times. Then list what stays the same and what changes, and link it to noise and the prompt. It takes about twenty minutes. Next, we learn about guiding image generators. See you there.",
+        "on_screen_text": "Next: Guiding Image Generators"
+      }
+    ]
+  }
+}

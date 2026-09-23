@@ -1,0 +1,201 @@
+{
+  "course_id": "AI-04",
+  "lesson_id": "L05",
+  "duration_s": 292.5,
+  "thumbnail": {
+    "headline": "How Ready Are You?",
+    "slide": {
+      "layout": "title",
+      "title": "How Ready Are You?",
+      "body": "Five vertical bars labelled Data · Skills · Culture · Leadership · Governance; the lowest bar in amber. Small tag: AI Literacy for Leaders · Lesson 5."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 14.6,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Same tool. Different results.",
+      "voiceover": "Two organisations buy the same AI tool. Three months later, one is using it well. The other has stopped. The tool was the same, so the difference was the organisation. How ready is yours?"
+    },
+    {
+      "scene": 2,
+      "start": 14.6,
+      "end": 30.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Assessing Your AI Readiness",
+        "body": "AI Literacy for Leaders and Executives · Lesson 5 of 10"
+      },
+      "voiceover": "In the last lesson, you chose your top use cases. Now let's check whether your organisation is ready for them. AI readiness is how prepared your team is to adopt AI safely and usefully. It has five parts."
+    },
+    {
+      "scene": 3,
+      "start": 30.9,
+      "end": 51.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Five parts of readiness, 1 to 3",
+        "body": "1. Data: accurate, accessible, allowed. 2. Skills: use tools, check outputs, know limits. 3. Culture: safe to try and to report problems."
+      },
+      "voiceover": "Data. Is the data you need accurate, accessible and allowed to be used? Skills. Can staff use AI tools, check their outputs and see their limits? Is there someone who can manage vendors and technical questions? Culture. Do people feel safe to try new tools and report problems?"
+    },
+    {
+      "scene": 4,
+      "start": 51.5,
+      "end": 70.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Five parts of readiness, 4 and 5",
+        "body": "4. Leadership support: time, budget, clear priorities. 5. Governance: approved tools, data rules, a named owner for each system."
+      },
+      "voiceover": "Leadership support. Do senior leaders give time, budget and clear priorities? Do they speak about AI in a consistent way? And governance. Are there rules for which tools staff may use, what data goes into them, who owns each system, and how decisions are reviewed?"
+    },
+    {
+      "scene": 5,
+      "start": 70.8,
+      "end": 93.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "CertifAI AI Readiness Checklist",
+        "body": "Five rows, each with a statement and a 1–5 score box. Data: we know where the data is, it is reasonably accurate, we may use it. Skills: some staff use AI tools and check outputs; someone can lead AI projects. Culture: staff try new ways of working and feel safe to report mistakes. Leadership: a senior sponsor gives time and budget. Governance: written rules for tool use, data and human review; each system has an owner. Key: 1 not true · 3 partly · 5 fully."
+      },
+      "voiceover": "Here is the CertifAI AI Readiness Checklist. For each part, read the statement and score one if it is not true at all, three if it is partly true, and five if it is fully true. Be honest. A high score that is not true leads you to projects you cannot deliver."
+    },
+    {
+      "scene": 6,
+      "start": 93.1,
+      "end": 115.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Weak area → where to start",
+        "body": "Low data → drafting with low-risk information. Low skills → simple tools, human check, training. Low culture → a task staff dislike, involve them. Low leadership → start small, build evidence. Low governance → acceptable-use policy first."
+      },
+      "voiceover": "Readiness does not stop you from starting. It changes where you start. Low on data? Begin with drafting tasks that use public or low-risk information. Low on skills? Choose simple tools with a human check, and train first. Low on governance? Write a simple acceptable-use policy before any pilot."
+    },
+    {
+      "scene": 7,
+      "start": 115.0,
+      "end": 126.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "More starting points",
+        "body": "Low culture → start with a task staff dislike; involve them. Low leadership support → start small, measure, build evidence."
+      },
+      "voiceover": "Low on culture? Start with a task your staff dislike, and involve them in the choice. Low on leadership support? Start small, measure carefully and build evidence."
+    },
+    {
+      "scene": 8,
+      "start": 126.6,
+      "end": 143.3,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "doctor checking runner before training",
+      "on_screen_text": "A health check, not a stop sign",
+      "voiceover": "Think of a health check before training for a long race. It does not tell you to stay at home. It tells you whether to begin with short runs or long ones, and which weakness to work on first."
+    },
+    {
+      "scene": 9,
+      "start": 143.3,
+      "end": 157.0,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "rural community clean water project team",
+      "on_screen_text": "Lucía · clean-water non-profit · Peru",
+      "voiceover": "Let's see it in practice. Lucía Quispe is executive director of a fictional non-profit in Peru that runs clean-water projects in rural areas. She scores her team of thirty people."
+    },
+    {
+      "scene": 10,
+      "start": 157.0,
+      "end": 181.9,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Lucía's readiness scores",
+        "body": "Bar chart built bar by bar: Data 2 · Skills 3 · Culture 4 · Leadership 4 · Governance (hidden until next scene). Short evidence note under each bar."
+      },
+      "voiceover": "Data scores two, because project reports come in many formats, and some are only on paper. Skills score three. Several staff use free AI chat tools for drafting, but nobody has been trained. Culture scores four, because staff are open to new tools. Leadership support also scores four. The board has asked for better use of staff time."
+    },
+    {
+      "scene": 11,
+      "start": 181.9,
+      "end": 191.8,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Governance: 1 out of 5",
+      "voiceover": "But governance scores only one. There are no rules on AI tool use, and staff sometimes paste community members' names into free tools."
+    },
+    {
+      "scene": 12,
+      "start": 191.8,
+      "end": 209.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Plan before and after",
+        "body": "Before: analyse all past project reports (needs strong data). After: draft donor reports from notes with no personal data (needs little data, fits current skills)."
+      },
+      "voiceover": "Lucía had planned to analyse all past project reports with AI. With these scores, she changes her plan. She starts with drafting donor reports from summary notes that contain no personal data. This task needs little data and suits her staff's skills."
+    },
+    {
+      "scene": 13,
+      "start": 209.8,
+      "end": 227.4,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "One action for governance",
+        "body": "Action: one-page AI use policy · Owner: Lucía · Due: within one month. Key rule: no personal or confidential data in AI tools. Later: digitise paper reports."
+      },
+      "voiceover": "Her one action for the lowest area is a one-page AI use policy, written within a month. It includes a clear rule: no personal or confidential data in AI tools. Digitising the old paper reports becomes a longer-term goal."
+    },
+    {
+      "scene": 14,
+      "start": 227.4,
+      "end": 243.7,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Look at the lowest score, not the average",
+      "voiceover": "Notice the common mistake she avoided. Her average score is close to three, which feels reassuring. But an average hides the weakest area, and the weakest area is where projects fail. Always look at the lowest score first."
+    },
+    {
+      "scene": 15,
+      "start": 243.7,
+      "end": 265.1,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Five parts: data · skills · culture · leadership · governance. 2. Rate 1–5 honestly; focus on the lowest. 3. Weak areas change where you start, not whether you start."
+      },
+      "voiceover": "Let's recap. First, AI readiness has five parts: data, skills, culture, leadership support and governance. Second, rate each part honestly from one to five, and focus on the lowest score, not the average. Third, weak areas change which use cases you start with. They do not mean you cannot start."
+    },
+    {
+      "scene": 16,
+      "start": 265.1,
+      "end": 292.5,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: AI Risks Every Leader Must Manage",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will complete the CertifAI readiness checklist for your team, with evidence for each score. Ask a colleague to score it too, then write one action for your lowest area, with an owner and a date. That completes week one. Next week begins with AI risks every leader must manage. See you there."
+    }
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "course_id": "AI-06",
+  "lesson_id": "L03",
+  "duration_s": 294.8,
+  "thumbnail": {
+    "headline": "Think Before You Paste",
+    "slide": {
+      "layout": "title",
+      "title": "Think Before You Paste",
+      "body": "Centre: clipboard icon with a teal shield and padlock. Three small labels underneath: Safe · Remove details · Never paste. Small tag: AI for Everyday Work · Lesson 3."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.4,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Two seconds to paste",
+      "voiceover": "It takes two seconds to copy a customer complaint, paste it into a chatbot and ask for a polite reply. It can take much longer to explain to your manager why that customer's name and account number are now in an outside tool."
+    },
+    {
+      "scene": 2,
+      "start": 18.4,
+      "end": 40.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Where does your text go?",
+        "body": "Your computer → arrow → provider's computers (cloud). Under the cloud, two amber labels: 'may be stored' · 'may be used to improve the tool'. Footer: depends on tool, plan and settings."
+      },
+      "voiceover": "In this lesson, we look at safe use. When you type or paste text into an AI assistant, it is sent to the provider's computers. Depending on the tool, the plan and your settings, it may be stored for some time, and it may even be used to improve the tool."
+    },
+    {
+      "scene": 3,
+      "start": 40.3,
+      "end": 50.2,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Don't assume a free chat is private",
+      "voiceover": "These settings are different on free and paid plans, and they change often. So you cannot assume that a free chat is private."
+    },
+    {
+      "scene": 4,
+      "start": 50.2,
+      "end": 73.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Never paste into a free tool",
+        "body": "Personal data: names, addresses, ID numbers, health, salary · Passwords and access codes · Non-public contracts · Unreleased figures, prices, plans · Anything marked confidential or internal. Red stop icon."
+      },
+      "voiceover": "So, what should you never paste into a free, public AI tool? Personal data about customers, patients, students or colleagues, such as names, addresses, ID numbers, health or salary details. Passwords and access codes. Contracts that are not public. Unreleased financial figures, prices or plans. And anything your organisation marks as confidential or internal."
+    },
+    {
+      "scene": 5,
+      "start": 73.3,
+      "end": 93.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Safe after removing details",
+        "body": "Before: '[Customer name], account [number], is upset…' → After: 'A customer is upset…'. Tips: names → roles · remove or round numbers · describe in general terms."
+      },
+      "voiceover": "But some text is safe after you remove the details. Replace names with roles, such as the customer or colleague A. Remove numbers or round them, and describe the situation in general terms. The AI still helps with the wording, but no private data leaves your computer."
+    },
+    {
+      "scene": 6,
+      "start": 93.4,
+      "end": 112.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Free tool or approved tool?",
+        "body": "Left: Free consumer tool (general use, personal account). Right: Company-approved tool (business version, chosen by IT or legal). Arrow to footer: Check which tools are approved, and for what data."
+      },
+      "voiceover": "Free consumer tools and company-approved tools are also different. Many organisations pay for business versions, such as Microsoft Copilot or Gemini in Workspace, which can come with different data agreements. Your IT or legal team decides which tools are approved, and for what data."
+    },
+    {
+      "scene": 7,
+      "start": 112.7,
+      "end": 135.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "Rule number one",
+        "body": "\"Follow your employer's AI policy. No policy? Ask your manager first.\""
+      },
+      "voiceover": "That is why the first rule is always the same. Follow your employer's AI policy. If there is no policy, ask your manager before you use AI with work documents. Data protection laws also differ by country and region, and this course does not give legal advice. Your employer's policy is your best guide."
+    },
+    {
+      "scene": 8,
+      "start": 135.8,
+      "end": 155.1,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "people talking in busy public cafe",
+      "on_screen_text": "A free tool is a public café",
+      "voiceover": "Here is a simple picture. Using a free AI tool is like talking about work in a busy public café. You can discuss general ideas, or how to word a polite reply. But you would not read a customer's file aloud at the next table."
+    },
+    {
+      "scene": 9,
+      "start": 155.1,
+      "end": 171.0,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "office worker reading email at desk",
+      "on_screen_text": "Priya · claims assistant · Pune",
+      "voiceover": "Let's see this in practice. Priya is a claims assistant at an insurance company in Pune, in India. A customer has written an angry email about a late payment, and Priya wants help with a calm reply."
+    },
+    {
+      "scene": 10,
+      "start": 171.0,
+      "end": 189.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Priya checks the policy first",
+        "body": "Policy card: 'Approved business tool: internal text OK' · 'Free tools: no customer data'. Arrow: Using a free tool today → Do not paste the email (red cross over the email icon)."
+      },
+      "voiceover": "First, she checks her company's AI policy. It says staff may use the approved business tool for internal text, but must not paste customer data into free tools. Today Priya is using a free tool, so she does not paste the email."
+    },
+    {
+      "scene": 11,
+      "start": 189.0,
+      "end": 209.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Priya's safe prompt",
+        "body": "A customer is upset because an insurance payment is two weeks late. We have now approved it and it will arrive within 5 working days. Write a calm, polite reply of about 100 words that apologises and explains the next step."
+      },
+      "voiceover": "Instead, she writes a general prompt. A customer is upset because a payment is two weeks late. It is now approved and will arrive within five working days. She asks for a calm, polite reply of about one hundred words that apologises and explains the next step."
+    },
+    {
+      "scene": 12,
+      "start": 209.1,
+      "end": 225.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Details go in last, in the right place",
+        "body": "Step 1: general prompt (no name, no policy number, no amount) → Step 2: AI draft → Step 3: Priya adds details in the company email system → Step 4: final check → Send."
+      },
+      "voiceover": "She has removed the name, the policy number and the exact amount. The AI writes a good reply. Then Priya adds the customer's details herself, inside the company email system, and checks the whole message before she sends it."
+    },
+    {
+      "scene": 13,
+      "start": 225.8,
+      "end": 245.1,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Remove details before you paste",
+      "voiceover": "A common mistake is to think, it is only one email, nobody will read it. But the risk is data leaving the systems your organisation controls. And deleting the chat afterwards may not help, because depending on the provider, the data may already be stored."
+    },
+    {
+      "scene": 14,
+      "start": 245.1,
+      "end": 269.5,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Never paste personal or confidential data into a free tool. 2. Remove names and numbers; describe in general terms. 3. Follow your employer's AI policy first."
+      },
+      "voiceover": "Let's recap. First, never paste personal data, passwords, contracts, unreleased figures or anything confidential into a free AI tool. Second, you can often still get help by removing names and numbers and describing the situation in general terms. Third, free tools and company-approved tools have different data terms, so always follow your employer's AI policy first."
+    },
+    {
+      "scene": 15,
+      "start": 269.5,
+      "end": 294.8,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: When AI Gets It Wrong",
+      "voiceover": "Now it is your turn. In the exercise below this video, sort ten example snippets of work text into safe to paste, safe after removing details, or never paste. Then find out whether your organisation has an AI policy, and note one rule from it. The next lesson is When AI Gets It Wrong: Checking Output. See you there."
+    }
+  ]
+}

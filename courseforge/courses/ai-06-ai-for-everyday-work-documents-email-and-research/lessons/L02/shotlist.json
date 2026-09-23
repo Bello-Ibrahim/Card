@@ -1,0 +1,221 @@
+{
+  "course_id": "AI-06",
+  "lesson_id": "L02",
+  "duration_s": 316.8,
+  "thumbnail": {
+    "headline": "Same Tool, Better Prompt",
+    "slide": {
+      "layout": "title",
+      "title": "Same Tool, Better Prompt",
+      "body": "Left: short chat bubble 'Write a notice…' with grey cross. Right: four-line bubble labelled Task · Context · Format · Example with teal tick. Small tag: AI for Everyday Work · Lesson 2."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 19.7,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Same tool. Different prompt.",
+      "voiceover": "Two people ask the same AI assistant for a notice about the office move. One gets a vague, generic text that needs rewriting. The other gets a draft she can send after a few small edits. The tool is the same. The difference is the prompt."
+    },
+    {
+      "scene": 2,
+      "start": 19.7,
+      "end": 43.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "What is a prompt?",
+        "body": "Speech bubble 'Your prompt' → assistant icon. Empty gaps in the bubble are filled with question marks labelled 'guesses'."
+      },
+      "voiceover": "In the last lesson, we saw what an AI assistant is good at. Today we learn how to ask it clearly. A prompt is the instruction you type. The assistant only knows what is in your prompt and in the conversation so far. If you leave out important details, it fills the gaps with guesses."
+    },
+    {
+      "scene": 3,
+      "start": 43.3,
+      "end": 64.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Four parts of a clear prompt",
+        "body": "1. Task: a clear verb (write, summarise, list, compare) · 2. Context: reader, situation, key facts · 3. Format (greyed) · 4. Example (greyed)"
+      },
+      "voiceover": "A clear prompt has four parts. First, the task, what you want the assistant to do. Use a clear verb, such as write, summarise, list or compare. Second, the context, the background it needs. Who is the reader? What is the situation? What are the key dates and places?"
+    },
+    {
+      "scene": 4,
+      "start": 64.3,
+      "end": 83.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Four parts of a clear prompt",
+        "body": "1. Task · 2. Context · 3. Format: length, layout, tone · 4. Example: an old notice or a sentence in the style you like"
+      },
+      "voiceover": "Third, the format, what the answer should look like. For example, an email of about one hundred and twenty words, five bullet points, or a friendly and simple tone. Fourth, an example, if you have one. An old notice that worked well helps a lot."
+    },
+    {
+      "scene": 5,
+      "start": 83.6,
+      "end": 104.2,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "manager briefing new colleague at desk",
+      "on_screen_text": "Brief it like a new colleague",
+      "voiceover": "Think of it like briefing a temporary colleague who has just arrived. If you only say do the notice, they will guess. If you tell them what it is about, who will read it and how long it should be, they can do good work the first time."
+    },
+    {
+      "scene": 6,
+      "start": 104.2,
+      "end": 126.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "How much do you need?",
+        "body": "Quick question → Task only. Anything you send to others → Task + Context + Format (+ Example). Footer: You can always follow up: 'Make it shorter.'"
+      },
+      "voiceover": "You do not always need all four parts. A quick question may only need a task. But for anything you will send to other people, context and format usually give a much better first draft. And you can continue the conversation. If the answer is too long, just ask for a shorter one."
+    },
+    {
+      "scene": 7,
+      "start": 126.9,
+      "end": 141.0,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Context yes. Confidential data no.",
+      "voiceover": "One safety rule from lesson one still applies. Your context must not include confidential or personal data. Use general descriptions, such as our team of forty staff, instead of names and private details."
+    },
+    {
+      "scene": 8,
+      "start": 141.0,
+      "end": 156.9,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "office manager packing boxes office move",
+      "on_screen_text": "Amara · office manager · Lagos",
+      "voiceover": "Let's try it. Amara is an office manager in Lagos, in Nigeria. Her company is moving to a new floor, and she must tell the staff. I'm using the free version of Claude in a web browser."
+    },
+    {
+      "scene": 9,
+      "start": 156.9,
+      "end": 163.3,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "The vague prompt",
+        "body": "Write a notice about the office move."
+      },
+      "voiceover": "Here is her first prompt. It is one short sentence, with no details at all."
+    },
+    {
+      "scene": 10,
+      "start": 163.3,
+      "end": 180.0,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open Claude (free tier) in a web browser and start a new chat",
+        "Type 'Write a notice about the office move.' and press Enter",
+        "Scroll slowly through the answer",
+        "Highlight any invented or missing details, for example a new city location or no date"
+      ],
+      "on_screen_text": "Generic, and it guesses",
+      "voiceover": "I open a new chat, type the vague prompt and press Enter. Look at the answer. It is long and very general. It may also invent details that are not true, such as a move to a new city."
+    },
+    {
+      "scene": 11,
+      "start": 180.0,
+      "end": 206.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "The improved prompt",
+        "body": "Task: Write a notice to staff about our office move.\nContext: We move from the 3rd floor to the 7th floor of the same building on Friday. Staff must pack their desks by Thursday at 4 p.m. Boxes are at reception.\nFormat: An email of about 120 words, friendly and clear, with the key dates in bold.\nExample: Start like this: \"Good news: we are moving up!\""
+      },
+      "voiceover": "Now the improved prompt, with the four parts on separate lines. The task is a notice to staff. The context gives the facts: from the third floor to the seventh floor, on Friday, desks packed by Thursday at four, boxes at reception. The format is a friendly email of about one hundred and twenty words. And the example is an opening line."
+    },
+    {
+      "scene": 12,
+      "start": 206.6,
+      "end": 218.2,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Start a second new chat",
+        "Type the improved prompt with Task, Context, Format and Example each on its own line",
+        "Press Enter and wait for the answer"
+      ],
+      "voiceover": "I open a second new chat, so the first answer does not influence this one. I type the improved prompt, one part per line, and press Enter."
+    },
+    {
+      "scene": 13,
+      "start": 218.2,
+      "end": 233.2,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Place the two chats in two browser windows side by side",
+        "Highlight the correct floors and dates in the second answer",
+        "Compare the length of the two answers",
+        "Point to the friendly opening line in the second answer"
+      ],
+      "on_screen_text": "Correct facts, right length",
+      "voiceover": "Now let's put the two answers side by side. The second one uses the correct floors and dates. It is the right length, and the tone is friendly. The first one is longer and guesses."
+    },
+    {
+      "scene": 14,
+      "start": 233.2,
+      "end": 245.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "In the second chat, type 'Make it 20 words shorter.' and press Enter",
+        "Show the new, shorter answer"
+      ],
+      "voiceover": "I don't need to start again to improve it. In the second chat I type a follow-up, make it twenty words shorter, and the assistant rewrites the draft."
+    },
+    {
+      "scene": 15,
+      "start": 245.6,
+      "end": 266.2,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "Before you press Enter",
+        "body": "\"Would a new colleague understand this request?\""
+      },
+      "voiceover": "Amara still checks the dates, changes one sentence so it sounds like her, and then sends it. A common mistake is to write a very short prompt and then decide that AI is not useful. Before you press Enter, ask yourself: would a new colleague understand this request?"
+    },
+    {
+      "scene": 16,
+      "start": 266.2,
+      "end": 291.9,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Task · Context · Format · Example. 2. More context, fewer guesses (no confidential data). 3. Improve by following up: 'Make it shorter.'"
+      },
+      "voiceover": "Let's recap. First, a clear prompt has four parts: task, context, format and, if you have one, an example. Second, the more relevant context you give, the fewer guesses the assistant makes, but never include confidential or personal data. Third, you can improve an answer by continuing the conversation, for example make it shorter, or use a more formal tone."
+    },
+    {
+      "scene": 17,
+      "start": 291.9,
+      "end": 316.8,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Safe Use at Work",
+      "voiceover": "Your turn. In the exercise below this video, take the vague request, write a notice about the new parking rules, and rewrite it with the four parts. Invent the details and use no real names. Compare the two answers and note three differences. The next lesson is Safe Use at Work: Privacy and Confidential Data. See you there."
+    }
+  ]
+}

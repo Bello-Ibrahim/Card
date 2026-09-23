@@ -1,0 +1,147 @@
+{
+  "title": "The Anatomy of a Strong Prompt",
+  "thumbnail": {
+    "headline": "Six Parts, One Prompt",
+    "image": "Navy background, a prompt card split into six coloured labelled strips, headline in teal Inter Bold.",
+    "slide": {
+      "layout": "title",
+      "title": "Six Parts, One Prompt",
+      "body": "A single prompt card divided into six labelled strips: Role, Task, Context, Format, Constraints, Examples. Task strip highlighted in teal. Small tag: Prompt Engineering Masterclass · Lesson 2."
+    }
+  },
+  "production_notes": [
+    "[VERSION] Free-tier availability of Claude and ChatGPT must be checked before recording (content.md Review Flags).",
+    "Amara and her logistics company in Lagos are hypothetical. Do not show real company names or logos in stock footage.",
+    "The full 'after' job-advert prompt is shown on a code slide and summarised in the voiceover, not read aloud. Use the exact text from content.md.",
+    "The claim that constraints reduce invented details is phrased as 'help reduce' and 'often', not as a guarantee."
+  ],
+  "sections": {
+    "Hook": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Most strong prompts are built from the same six parts. Once you know them, you can look at any weak prompt and quickly see what is missing. Today, you will learn all six.",
+        "on_screen_text": "Six parts of a strong prompt"
+      }
+    ],
+    "Explain": [
+      {
+        "visual_type": "slide",
+        "voiceover": "In the last lesson, you saw that an AI tool fills the gaps you leave. Now let's look at a structure that helps you close those gaps. A structured prompt can contain six parts. Think of them as a checklist, not a form.",
+        "slide": {
+          "layout": "title",
+          "title": "The Anatomy of a Strong Prompt",
+          "body": "Lesson 2 · A checklist, not a form"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Part one is the role, the point of view the AI should take. For example, you are an experienced HR officer. A role often helps with tone and vocabulary. Part two is the task, the action you want, with a clear verb such as write, summarise, compare or list. The task is the only part you always need.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Role and task",
+          "body": "1. Role: point of view · 'You are an experienced HR officer' · often helps tone. 2. Task: a clear verb · write, summarise, compare, list · always needed (highlighted)."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Part three is context, the background the AI cannot know, such as the audience and the situation. Part four is format, the shape of the output, like an email, a table or five bullet points. Part five is constraints, the limits and rules, such as a word limit or words to avoid. Part six is examples, a sample of what good output looks like.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Context, format, constraints, examples",
+          "body": "3. Context: audience, situation (more in L03). 4. Format: email, table, 5 bullets (L04). 5. Constraints: word limit, words to avoid, must-include facts. 6. Examples: a sample of good output (L05)."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "When is each part worth adding? A quick question needs only a task. A document that other people will read usually needs task, context, format and constraints. A role helps when tone or expertise matters. Examples help most when you want a specific style or a repeated pattern.",
+        "slide": {
+          "layout": "diagram",
+          "title": "When to add each part",
+          "body": "Three rows: Quick question → Task only. Document for others → Task + Context + Format + Constraints. Special tone or pattern → add Role or Examples."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "slide": {
+          "layout": "diagram",
+          "title": "Order is flexible",
+          "body": "Common order shown as a flow: Role → Task → Context → Format → Constraints. Note underneath: each part clear, no contradictions."
+        },
+        "voiceover": "The order is flexible. Many people write role and task first, then context, then format and constraints. What matters is that each part is clear, and that the parts do not contradict each other."
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "Think of a good order form at a print shop. The shop needs to know what to print, for which event, what size and paper, and by which date and budget. A sample helps too. Leave out a field, and the shop has to guess.",
+        "stock_query": "print shop worker checking printed posters",
+        "on_screen_text": "Leave out a field, they guess"
+      }
+    ],
+    "Demonstrate": [
+      {
+        "visual_type": "stock",
+        "voiceover": "Let's see the six parts at work. Amara is an HR officer at a logistics company in Lagos. She needs a job advert for a logistics coordinator.",
+        "stock_query": "HR officer working at laptop office",
+        "on_screen_text": "Amara · HR officer, Lagos"
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Her first prompt is just four words: write a job advert. The result is a general advert with invented benefits and no details about the real job. It looks finished, but Amara cannot use it.",
+        "slide": {
+          "layout": "code",
+          "title": "Before",
+          "body": "Write a job advert.  → Output note in red: general advert, invented benefits, no job details."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Her new prompt is about eight lines. In short, it gives the AI an HR role, the job title and city, what the person will do each day, the experience needed, a clear layout, a limit of two hundred and fifty words, and a rule not to invent salary figures or benefits.",
+        "slide": {
+          "layout": "code",
+          "title": "After",
+          "body": "Show the full 'After' prompt from content.md: You are an experienced HR officer at a mid-sized logistics company. Write a job advert for a Logistics Coordinator based in Lagos. ... Keep it under 250 words, use inclusive, plain language, and do not invent salary figures or benefits."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Amara labels each part for her team. Role, the HR officer. Task, write the advert. Context, the trucks, the warehouse staff and the experience needed. Format, an introduction, two bullet lists and how to apply. Constraints, the word limit, inclusive language and no invented pay. She uses no examples this time, because the format is already clear.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Amara's labelled prompt",
+          "body": "The After prompt with coloured highlights and side labels: Role · Task · Context · Format · Constraints. Sixth label 'Examples' greyed out: 'not needed this time'."
+        }
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "The constraint about salary is important. AI tools often fill gaps with details that sound real, so it helps to say what the tool must not add. The new advert is specific and ready for her manager to review.",
+        "on_screen_text": "Say what the AI must not add"
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "A common mistake is to think a longer prompt is always better. They add every part, repeat themselves, and include background that does not matter. Long prompts can hide the task and create conflicting instructions. Add a part only when it changes the result.",
+        "slide": {
+          "layout": "comparison",
+          "title": "Longer is not always better",
+          "body": "Left: long, repetitive prompt with the task buried (red). Right: short prompt with only the parts that change the result (green)."
+        }
+      }
+    ],
+    "Recap": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, the six parts of a structured prompt are role, task, context, format, constraints and examples. Second, only the task is always needed. Add the other parts when they change the result, especially for documents other people will read. Third, constraints such as do not invent figures help reduce made-up details.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. Role · Task · Context · Format · Constraints · Examples. 2. Only the task is always needed; add parts that change the result. 3. 'Do not invent figures' helps reduce made-up details."
+        }
+      }
+    ],
+    "CTA": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Now it is your turn. In the exercise below this video, you will rewrite three weak prompts using the six parts, run one of them in Claude or ChatGPT, and label every part. Try to use at least four of the six parts in each one. It takes about twenty minutes. In the next lesson, we look at giving context that matters. See you there.",
+        "on_screen_text": "Next: Giving Context That Matters"
+      }
+    ]
+  }
+}
