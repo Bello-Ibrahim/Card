@@ -69,7 +69,7 @@ bias = torch.rand(10, 1); out + bias  # error 3: bias shape
 ```
 4. For each fix, write one line explaining the shape rule you used.
 5. Convert a `(64, 64, 3)` image to `(1, 3, 64, 64)` with `permute` and `unsqueeze`.
-**What good looks like:** Three working fixes (flatten to `(32, 12288)`, use `w` not `w.T`, bias of shape `(10,)`), each with a correct one-line reason, and no `reshape` used where `permute` was needed.
+**What good looks like:** Three working fixes (flatten to `(32, 12288)`, use `w` not `w.T`, bias of shape `(10,)` on the same device), each with a correct one-line reason, and no `reshape` used where `permute` was needed.
 **Time:** about 20 minutes
 
 ## Review Flags

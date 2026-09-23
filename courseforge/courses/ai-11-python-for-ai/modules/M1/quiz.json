@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-11",
+  "module_id": "M1",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L01",
+      "objective": "O1",
+      "question": "You type print(\"Hello\") into a Colab cell and press Shift + Enter, but nothing runs and the words simply appear as formatted text. What is the most likely reason?",
+      "options": [
+        "Python cannot print text; it can only print numbers.",
+        "You typed the code into a text cell instead of a code cell.",
+        "You forgot to save the notebook to Google Drive first.",
+        "Colab only runs code after you add a heading."
+      ],
+      "answer_index": 1,
+      "explanation": "Text cells display notes and never run code, so the code must go in a code cell. The most tempting wrong option is saving to Google Drive first. Saving keeps your work, but it has no effect on whether a cell runs."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L02",
+      "objective": "O1",
+      "question": "A form gives you qty = \"4\". What does print(qty + qty) show?",
+      "options": [
+        "8",
+        "A TypeError",
+        "44",
+        "4 4"
+      ],
+      "answer_index": 2,
+      "explanation": "\"4\" is a str (text), and + joins two strings, so the result is 44. The most tempting wrong option is 8. You would only get 8 after converting the text with int(qty) first. A TypeError happens when you mix text and a number, not when you add two strings."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L03",
+      "objective": "O2",
+      "question": "cities = [\"Accra\", \"Lima\", \"Hanoi\", \"Quito\"]. What does print(cities[1], len(cities)) show?",
+      "options": [
+        "Lima 4",
+        "Accra 4",
+        "Lima 3",
+        "Accra 3"
+      ],
+      "answer_index": 0,
+      "explanation": "List positions start at 0, so index 1 is the second item, Lima, and len() counts all 4 items. The most tempting wrong option is Accra 4, which assumes counting starts at 1. Options with 3 confuse the number of items with the last index."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L04",
+      "objective": "O2",
+      "question": "What does this code print?\n\nscore = 80\nif score >= 50:\n    print(\"Pass\")\nelif score >= 80:\n    print(\"Distinction\")\nelse:\n    print(\"Not yet\")",
+      "options": [
+        "Distinction",
+        "Pass and then Distinction",
+        "Not yet",
+        "Pass"
+      ],
+      "answer_index": 3,
+      "explanation": "Python checks conditions from top to bottom and runs only the first true one. 80 >= 50 is true, so it prints Pass and skips the rest. The most tempting wrong option is Distinction, but that block is never reached because the conditions are in the wrong order; the larger threshold should come first."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L05",
+      "objective": "O2",
+      "question": "What does this code print?\n\nsales = [3, 5, 2]\nfor s in sales:\n    total = 0\n    total = total + s\nprint(total)",
+      "options": [
+        "10",
+        "0",
+        "2",
+        "3"
+      ],
+      "answer_index": 2,
+      "explanation": "total = 0 is inside the loop, so it is reset on every pass. After the last pass total is 0 + 2, so the code prints 2. The most tempting wrong option is 10, which is what you would get if total = 0 were placed before the loop."
+    }
+  ]
+}

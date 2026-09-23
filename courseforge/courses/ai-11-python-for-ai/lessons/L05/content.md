@@ -19,7 +19,7 @@ A very common pattern is the **running total**. You create a variable at 0 befor
 
 `range()` gives a sequence of numbers to loop over. `range(1, 4)` gives 1, 2 and 3: it starts at the first number and stops **before** the second.
 
-A **while loop** repeats as long as a condition stays true. It is useful when you do not know in advance how many passes you need, for example "keep asking until the user types a valid number". It is also easier to get wrong, because if the condition never becomes false, the loop never ends. In Colab you can stop a running cell with the stop button next to it.
+A **while loop** repeats as long as a condition stays true. It is useful when you do not know in advance how many passes you need, for example "keep asking until the user types a valid number". It is also easier to get wrong, because if the condition never becomes false, the loop never ends. In Colab you can stop a running cell with the stop button next to it. [VERSION]
 
 **Analogy:** A for loop is like a cashier at a supermarket. The cashier picks up each item in the basket, one after another, scans it and adds its price to the total on the screen. The cashier does not need to know in advance how many items there are. When the basket is empty, the cashier stops and shows the total.
 
@@ -101,4 +101,5 @@ The most common mistake is putting the starting value inside the loop, such as w
 **Time:** about 20 minutes
 
 ## Review Flags
-- None. All sales and box figures are made up, and every output was produced by running the code with Python 3.11. The Colab stop button is described in general terms only.
+- [VERSION] The Colab button for stopping a running cell must be checked against the live interface before scripting.
+- All sales and box figures are made up, and every output was produced by running the code with Python 3.11.

@@ -3,7 +3,7 @@
 Course: AI-10 · Module: M3 · Objectives: O5, O4 · Video: 5 min (screen demo)
 
 ## Hook
-Every time a new enquiry arrives, you copy the name into a spreadsheet and send the same thank-you email. It takes a few minutes. Now imagine it happening by itself, correctly, even while you sleep. Today you will build that.
+Every new enquiry means copying a name into a spreadsheet and sending the same thank-you email. Imagine it happening by itself, correctly, while you sleep. Today you will build that.
 
 ## Explanation
 Every automation has two parts:
@@ -26,7 +26,7 @@ An automation copies client data between services, so connect only accounts you 
 ## Worked Example
 Sipho is a freelance video editor in Durban, South Africa. His L09 map shows he copies every form enquiry into a spreadsheet and sends a thank-you email by hand. He builds: **new form entry → add spreadsheet row → send welcome email.**
 
-He prepares three things first: a free online form with fields for name, email and project type; a spreadsheet with matching column headings; and a short welcome email with a placeholder for the name.
+He first prepares a free online form (name, email, project type), a spreadsheet with matching columns, and a short welcome email with a name placeholder.
 
 **Screen demo steps (Zapier version):** [VERSION] [VERIFY]
 1. Sign in to Zapier and choose to create a new automation (Zapier calls it a "Zap"). [VERSION]
@@ -66,6 +66,6 @@ Many beginners test once, turn it on and never check again. Then a changed colum
 
 ## Review Flags
 - [VERSION] Zapier and n8n interfaces, menu names ("Zap", "workflow", "node", "test", "execute"), trigger and action names, and app connections must be checked against the live tools before the screen demo is recorded.
-- [VERSION] Free-tier task limits, number of steps allowed per automation, and available apps on Zapier's and n8n's free options change often and must be confirmed before scripting.
+- [VERSION] Free-tier task limits, steps per automation and available apps for Zapier and n8n change often; confirm before scripting.
 - [VERIFY] Whether n8n can be used free only by self-hosting, and whether its online version offers a free tier or a time-limited trial, must be confirmed.
 - [VERIFY] Whether a two-action (multi-step) automation is available on Zapier's free tier must be confirmed; if not, the demo should use one action or n8n.
