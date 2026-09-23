@@ -18,7 +18,7 @@
     ],
     "Explain": [
       {"visual_type": "slide",
-       "voiceover": "Welcome to the final module. This lesson shows you how to see what one number hides. A classifier predicts a category, like fraud or not fraud. The class we are looking for is called positive. Positive does not mean good. It means the thing we are searching for.",
+       "voiceover": "This is the final module, and you have come a long way. This lesson shows you how to see what one number hides. A classifier predicts a category, like fraud or not fraud. The class we are looking for is called positive. Positive does not mean good. It means the thing we are searching for.",
        "slide": {"layout": "title", "title": "Classification Metrics", "body": "Confusion Matrix, Precision and Recall · Lesson 15 of 18 · Module 4"}},
       {"visual_type": "slide",
        "voiceover": "Every prediction falls into one of four groups. A true positive: predicted fraud, and it was fraud. A false positive: predicted fraud, but it was honest, a false alarm. A false negative: predicted honest, but it was fraud, a miss. And a true negative: predicted honest, and it was honest. Together they make a two by two table, the confusion matrix.",

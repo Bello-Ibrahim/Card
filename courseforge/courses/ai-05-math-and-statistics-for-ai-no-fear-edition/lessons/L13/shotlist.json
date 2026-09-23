@@ -1,0 +1,179 @@
+{
+  "course_id": "AI-05",
+  "lesson_id": "L13",
+  "duration_s": 297.4,
+  "thumbnail": {
+    "headline": "Which Weight, Which Way?",
+    "slide": {
+      "layout": "title",
+      "title": "Which Weight, Which Way?",
+      "body": "Three connected gears labelled ×2 and ×3 → ×6, next to the vector [−16, −8]. Small tag: Math and Statistics for AI · Lesson 13."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.9,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Which weight? Which way? How much?",
+      "voiceover": "A real model has many weights, not one. If the loss is too high, which weight should you change, in which direction, and by how much? The gradient answers all three questions at once. And the chain rule shows you how to calculate it."
+    },
+    {
+      "scene": 2,
+      "start": 18.9,
+      "end": 36.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "More than one weight",
+        "body": "y_pred = w·x + b\n'y pred equals w times x plus b'\nLoss depends on w AND b"
+      },
+      "voiceover": "In lesson eleven, a function had one input and one slope. But a loss usually depends on several weights. For a simple model, y pred equals w times x plus b, the loss depends on the weight w and the bias b."
+    },
+    {
+      "scene": 3,
+      "start": 36.9,
+      "end": 57.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Partial derivative",
+        "body": "∂L/∂w  read: 'the partial derivative of L with respect to w'\nChange w a little, keep b fixed, watch the loss."
+      },
+      "voiceover": "A partial derivative is the slope in one direction only. Change one weight a tiny amount, keep every other weight fixed, and see how fast the loss changes. We call it the partial derivative of L with respect to w. The curly d symbol just means partial."
+    },
+    {
+      "scene": 4,
+      "start": 57.0,
+      "end": 80.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "The gradient",
+        "body": "Gradient = [∂L/∂w, ∂L/∂b], drawn as an arrow pointing uphill on a loss surface; a second arrow pointing the opposite way labelled 'learn: go this way'. Notes: sign = direction · size = strength."
+      },
+      "voiceover": "The gradient collects the partial derivatives for every weight into one vector. It points in the direction where the loss increases fastest. So to reduce the loss, we move the weights the opposite way. Each part has a sign, which tells you the direction, and a size, which tells you how strongly the loss reacts."
+    },
+    {
+      "scene": 5,
+      "start": 80.6,
+      "end": 108.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "The chain rule",
+        "body": "w → prediction → error → loss. Rates on the arrows: ×2, then ×(−8). Result: 2 × (−8) = −16 per unit of w."
+      },
+      "voiceover": "Now the chain rule. A loss is often built in steps: first a prediction, then an error, then a square. To find how the end reacts to the start, multiply the rates of each step. If the error changes two for each unit of w, and the loss changes minus eight for each unit of error, the loss changes minus sixteen for each unit of w."
+    },
+    {
+      "scene": 6,
+      "start": 108.9,
+      "end": 129.5,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "close up of interlocking metal gears turning",
+      "on_screen_text": "2 × 3 = 6 turns",
+      "voiceover": "Picture a set of connected gears. Turn the first gear once, and the second turns twice. Each turn of the second turns the third three times. So one turn of the first turns the third two times three, which is six times. Each step's rate multiplies the next."
+    },
+    {
+      "scene": 7,
+      "start": 129.5,
+      "end": 147.5,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "young plants growing in greenhouse nursery",
+      "on_screen_text": "x = 2 litres · y = 7 cm",
+      "voiceover": "Chloé is a researcher at a plant nursery in Montréal, Canada. She has one invented training example. With two litres of a new fertiliser, a plant grew seven centimetres. Her model starts with w equal to one and b equal to one."
+    },
+    {
+      "scene": 8,
+      "start": 147.5,
+      "end": 162.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Forward, step by step",
+        "body": "Prediction: 1 × 2 + 1 = 3\nError: 3 − 7 = −4\nLoss: (−4)² = 16"
+      },
+      "voiceover": "Step by step. The prediction is one times two plus one, which is three. The error is prediction minus truth: three minus seven, minus four. The loss is minus four squared, which is sixteen."
+    },
+    {
+      "scene": 9,
+      "start": 162.1,
+      "end": 187.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Backward, with the chain rule",
+        "body": "Loss → error: 2 × (−4) = −8\nError → w: x = 2   Error → b: 1\n∂L/∂w = −8 × 2 = −16\n∂L/∂b = −8 × 1 = −8\nGradient = [−16, −8]"
+      },
+      "voiceover": "Now the chain. The loss is the error squared, so it changes by two times the error: minus eight. The error changes by x, which is two, for each unit of w, and by one for each unit of b. Multiply along the chain. For w: minus eight times two, minus sixteen. For b: minus eight times one, minus eight."
+    },
+    {
+      "scene": 10,
+      "start": 187.8,
+      "end": 204.5,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Reading the gradient",
+        "body": "Both negative → increase w and b. Prediction 3 is too low. |−16| > |−8| → w has more influence (it is multiplied by x = 2)."
+      },
+      "voiceover": "Both parts are negative, so increasing w and b should reduce the loss. That makes sense: a prediction of three is too low. The w part is bigger, because w is multiplied by two, so it has more influence."
+    },
+    {
+      "scene": 11,
+      "start": 204.5,
+      "end": 230.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Check by nudging",
+        "body": "loss(w, b) = (w·x + b − y)²,  h = 0.0001\n(loss(1 + h, 1) − loss(1 − h, 1)) ÷ 2h → −16.0\n(loss(1, 1 + h) − loss(1, 1 − h)) ÷ 2h → −8.0\nStep: w = 1.16, b = 1.08 → loss 16 → 12.96"
+      },
+      "voiceover": "To check in code, Chloé nudges one weight a tiny amount up and down, and divides the change in loss by the total nudge. This is a numerical gradient. It prints minus sixteen and minus eight, just like her hand result. Then she takes a small step against the gradient, and the loss falls from sixteen to twelve point nine six."
+    },
+    {
+      "scene": 12,
+      "start": 230.6,
+      "end": 250.7,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Subtract the gradient. Finish the chain.",
+      "voiceover": "A common mistake is to move with the gradient instead of against it. The gradient points uphill, so to learn, you subtract it. Another is to stop the chain too early and forget to multiply by x. If your numerical check disagrees, look for a missing link."
+    },
+    {
+      "scene": 13,
+      "start": 250.7,
+      "end": 276.8,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Partial derivative = slope for one weight; gradient = all of them. 2. Gradient points uphill → learn by going the other way. 3. Chain rule multiplies rates; check by nudging."
+      },
+      "voiceover": "Let's recap. First, a partial derivative is the slope for one weight with the others fixed, and the gradient collects them into one vector. Second, the gradient points where the loss increases fastest, so learning moves the weights the opposite way. Third, the chain rule multiplies the rates of each step, and you can always check it by nudging each weight."
+    },
+    {
+      "scene": 14,
+      "start": 276.8,
+      "end": 297.4,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Gradient Descent Step by Step",
+      "voiceover": "You are doing really well. In the exercise, you calculate a two-weight gradient by hand, then check it in Colab by nudging each weight. It takes about twenty-five minutes. Next, we put it all in a loop, in Gradient Descent Step by Step. See you there."
+    }
+  ]
+}

@@ -9,7 +9,7 @@
     "[VERSION] Google Colab and Matplotlib: confirm the current Colab interface and that plt.yscale(\"log\") and plt.legend() behave as shown before recording the screen scenes. Outputs (0.01 → 1.3635, 0.1 → 2.9963, 1.1 → −709.1289) were checked with Python and NumPy 2.4.",
     "Aroha and the Wellington setting are fictional. The toy loss (w − 3)² is a teaching example.",
     "Say the update rule as 'the new weight equals the old weight minus the learning rate times the gradient'; the slide shows the formula.",
-    "Optional hero B-roll (scene 7): if the stock search finds a suitable misty hillside walker, use stock instead and drop the hero clip."
+    "Optional hero B-roll (scene 5): if the stock search finds a suitable misty hillside walker, use stock instead and drop the hero clip."
   ],
   "sections": {
     "Hook": [
@@ -50,7 +50,7 @@
        "voiceover": "Then she runs it for three learning rates, zero point zero one, zero point one and one point one. She prints the final weight for each, and plots the loss curves. The vertical axis uses a log scale, where each grid line is ten times the one below.",
        "screen_steps": ["Type the loop: for lr in [0.01, 0.1, 1.1]: w, losses = descend(lr); print(lr, round(w, 4)); plt.plot(losses, label=f\"lr={lr}\")", "Type: plt.yscale(\"log\"); plt.legend(); plt.show()", "Run the cell."]},
       {"visual_type": "screen",
-       "voiceover": "Look at the output. With zero point zero one, w has only reached about one point three six after thirty steps: too slow. With zero point one, it is two point nine nine six three, very close to three. With one point one, it is minus seven hundred and nine. It jumped across the valley, further every time. That is divergence.",
+       "voiceover": "Look at the output. With zero point zero one, w has only reached about one point three six after thirty steps: too slow. With zero point one, it is two point nine nine six three, very close to three. With one point one, it is about minus seven hundred and nine. It jumped across the valley, further every time. That is divergence.",
        "screen_steps": ["Zoom in on the printed lines: 0.01 1.3635, 0.1 2.9963, 1.1 -709.1289.", "Point at the three loss curves: slow falling line, fast line that flattens, and a line that rises steeply."],
        "on_screen_text": "Too slow · just right · diverges"},
       {"visual_type": "text",

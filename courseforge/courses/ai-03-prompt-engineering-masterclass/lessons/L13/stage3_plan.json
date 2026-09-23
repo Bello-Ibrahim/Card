@@ -1,0 +1,70 @@
+{
+  "title": "Turning Prompts into Reusable Templates",
+  "thumbnail": {
+    "headline": "Write Once, Reuse Forever",
+    "image": "Navy background, a prompt card with teal placeholder blanks in capital letters, stacked on copies of itself, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Write Once, Reuse Forever", "body": "A prompt card with highlighted placeholders [AUDIENCE], [TOPICS], [WORD LIMIT], with two faded copies behind it. Small tag: Prompt Engineering Masterclass · Lesson 13 · Capstone step 1."}
+  },
+  "production_notes": [
+    "[VERSION] Free-tier availability of Claude, ChatGPT and Gemini, and of free spreadsheet or document tools, must be checked before recording (content.md Review Flags).",
+    "Ana and her pharmacy chain in Lisbon are hypothetical. Do not show real pharmacy names, logos or patient information in stock footage.",
+    "Ana's tested prompt and her template appear side by side on a comparison slide, using the exact text from content.md; the voiceover summarises them. Placeholders are spoken as plain words.",
+    "This lesson introduces the capstone (Personal Prompt Library, capstone step 1). Keep the capstone name identical to the curriculum."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "If you write a good prompt once and never use it again, you lose most of its value. A template lets you, and your colleagues, get the same quality every time, in a few seconds.",
+       "on_screen_text": "Same quality, every time"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "In the last lesson, you tested one prompt across three tools. Now we make good prompts reusable. This lesson also starts your capstone project.",
+       "slide": {"layout": "title", "title": "Turning Prompts into Reusable Templates", "body": "Lesson 13 · Capstone step 1"}},
+      {"visual_type": "slide",
+       "voiceover": "A prompt template is a prompt where the parts that change are replaced with clear placeholders. You used placeholders in lesson three to protect confidential data. In a template, they also show what the user must fill in.",
+       "slide": {"layout": "comparison", "title": "Prompt vs template", "body": "Prompt: 'Write an update for pharmacy assistants about opening hours.' Template: 'Write an update for [AUDIENCE] about [TOPICS].'"}},
+      {"visual_type": "slide",
+       "voiceover": "Here is how to make one. Start from a prompt that worked, one you have tested and improved. Find the parts that change each time, such as the audience, the document or the date. Replace them with placeholders in capital letters and square brackets. Keep the parts that make it work: the role, the format, the constraints and the checking instructions.",
+       "slide": {"layout": "diagram", "title": "From prompt to template", "body": "Four steps: 1. Start from a tested prompt → 2. Find what changes → 3. Replace with [PLACEHOLDERS] → 4. Keep role, format, constraints, checks fixed. Optional note: add a hint such as '[TONE]: formal or friendly'."}},
+      {"visual_type": "slide",
+       "voiceover": "Most work tasks fit one of six patterns from this course. Draft from notes. Rewrite. Summarise or extract. Classify with examples. Analyse or compare step by step. And interview first, when the context is unclear. Choose the pattern first, and each template is faster to write.",
+       "slide": {"layout": "bullets", "title": "Six prompt patterns", "body": "Draft (L06) · Rewrite (L06) · Summarise or extract (L07) · Classify (L05) · Analyse or compare (L08) · Interview first (L09)"}},
+      {"visual_type": "stock",
+       "voiceover": "A template is like a form letter with blank lines. The structure, the tone and the important sentences are already written. Each time, you only fill in the name, the date and the details, and the quality stays the same.",
+       "stock_query": "person filling in paper form at desk",
+       "on_screen_text": "Fill in the blanks, keep the quality"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's make one. Ana is a pharmacy manager at a chain of pharmacies in Lisbon. Every week, she writes a short update for her staff, and she has a prompt that she has tested and improved.",
+       "stock_query": "pharmacy manager talking with staff",
+       "on_screen_text": "Ana · pharmacy manager, Lisbon"},
+      {"visual_type": "slide",
+       "voiceover": "Her prompt gives a manager role, names the audience and the two topics, asks for a friendly tone, five bullet points under one hundred and twenty words, and says do not add facts that are not in my notes. In the template, the role, the audience, the topics, the tone, the number of points and the word limit all become placeholders.",
+       "slide": {"layout": "comparison", "title": "Ana's prompt → template", "body": "Left: the tested prompt from content.md. Right: the template from content.md, starting 'PATTERN: Draft from notes', with each placeholder highlighted in teal."}},
+      {"visual_type": "slide",
+       "voiceover": "Look at the last line. The notes placeholder includes a reminder: no personal or patient data. Because it is part of the template, every future user will see it. Ana tests the template with a different topic, stock changes, and the result has the same quality.",
+       "slide": {"layout": "code", "title": "A built-in reminder", "body": "Notes: [PASTE NOTES - no personal or patient data]"}},
+      {"visual_type": "slide",
+       "voiceover": "A common mistake is to replace too much. A template like write output for audience in format is too empty to help anyone. Keep fixed everything that made the original prompt work, and use placeholders only for what really changes.",
+       "slide": {"layout": "comparison", "title": "Not too empty", "body": "Too empty: 'Write [OUTPUT] for [AUDIENCE] in [FORMAT].' Useful: role, format and constraints fixed; only audience, topic and limits as placeholders."}},
+      {"visual_type": "slide",
+       "voiceover": "Now, your capstone. Over the next three lessons, you will build a personal prompt library: fifteen tested, documented templates for your own job role. To choose the fifteen tasks, look for tasks that are frequent, time-consuming, and safe to do with AI, which means they need no personal or confidential data. Those tasks usually save the most time.",
+       "slide": {"layout": "bullets", "title": "Capstone: Personal Prompt Library", "body": "15 tested, documented templates for your role. Choose tasks that are: Frequent (weekly or more) · Time-consuming · Safe (no personal or confidential data)."}},
+      {"visual_type": "slide",
+       "voiceover": "Ana does this too. She lists her fifteen recurring tasks, such as a reply to a supplier delay, a rota change message, or sorting customer feedback, and she writes the pattern next to each one.",
+       "slide": {"layout": "diagram", "title": "Ana's task list", "body": "A short table: Task | Pattern. 'Reply to supplier delay' → Draft · 'Summarise head-office circular' → Summarise · 'Rota change message' → Draft · 'Classify customer feedback' → Classify · ... up to 15."}}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, a template replaces the changing parts of a tested prompt with clear placeholders, such as audience or document. Second, keep the role, format, constraints and checking instructions fixed, because they make the template reliable. Third, for the capstone, choose fifteen tasks that are frequent, time-consuming and safe to do with AI.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Placeholders for what changes. 2. Keep role, format, constraints, checks fixed. 3. Capstone: 15 frequent, time-consuming, safe tasks."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. This exercise is capstone step one. You will list fifteen recurring tasks from your job, choose a pattern for each, and turn your first three prompts into templates on a prompt card. It takes about forty minutes. In the next lesson, we look at building and testing your library. See you there.",
+       "on_screen_text": "Next: Building and Testing Your Library"}
+    ]
+  }
+}
