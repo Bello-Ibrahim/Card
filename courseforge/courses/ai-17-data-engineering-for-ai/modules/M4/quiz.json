@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-17",
+  "module_id": "M4",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L15",
+      "objective": "O6",
+      "question": "A model will predict next month's loan defaults. How should the feature table be split into training and test data?",
+      "options": [
+        "Randomly, so both sets contain rows from every month",
+        "By borrower name, in alphabetical order",
+        "By time: train on earlier feature dates and test on later ones",
+        "Put all rows in training and test on the same rows"
+      ],
+      "answer_index": 2,
+      "explanation": "A time-based split copies real use, where the model learns from the past and predicts the future. The most tempting wrong option is a random split, which is common in tutorials. For a forecasting use case it lets the model learn from later rows, so the test score looks better than real results will be."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L15",
+      "objective": "O5",
+      "question": "A team replaces borrower IDs with an md5 hash of the ID plus a secret salt, and removes names and phone numbers. How should this dataset be described?",
+      "options": [
+        "Anonymised, so personal data rules no longer apply anywhere",
+        "Pseudonymised: the risk is lower, but with the salt the IDs can be matched again, and local rules still apply",
+        "Encrypted, so it can be shared publicly",
+        "Unchanged, because hashing has no effect on privacy"
+      ],
+      "answer_index": 1,
+      "explanation": "Hashing with a salt hides the original ID, but whoever has the salt can match it again, so this is pseudonymisation and rules on personal data may still apply depending on the country. The most tempting wrong option is 'anonymised', because the names are gone. IDs, dates and rare combinations can still identify people."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L16",
+      "objective": "O6",
+      "question": "A learner designs a capstone pipeline that one person runs nightly to build a Parquet feature dataset. No application writes to the database. Which storage choice is easiest to justify?",
+      "options": [
+        "DuckDB, because one process builds the dataset locally and exports Parquet",
+        "PostgreSQL, because every pipeline must use a server database",
+        "A spreadsheet, because it is easy to open",
+        "A streaming platform, because nightly data should be processed in real time"
+      ],
+      "answer_index": 0,
+      "explanation": "DuckDB fits a single pipeline that builds and exports an analytical dataset, with no server to run. The most tempting wrong option is PostgreSQL 'because every pipeline must use a server database'. PostgreSQL is a valid choice too, but it is not required; the design should give a reason linked to the use case."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L17",
+      "objective": "O5",
+      "question": "In the capstone, a test finds shipments delivered before they were picked up. Where and how should this be tested?",
+      "options": [
+        "Only in the final mart, as a warning",
+        "Nowhere; delete the rows by hand in the raw table",
+        "In the source system's user interface",
+        "As a singular test with error severity on the layer where the dates are first combined"
+      ],
+      "answer_index": 3,
+      "explanation": "An impossible order of dates is a business rule that would make the label wrong, so a singular test with error severity fits, placed where the problem first appears. The most tempting wrong option is a warning on the final mart. That lets bad rows reach the dataset and makes the cause harder to find."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L18",
+      "objective": "O4",
+      "question": "The capstone DAG runs load_raw >> dbt_build >> [dbt_docs, export]. The dbt_build task fails because an error test fails. What happens to export?",
+      "options": [
+        "It runs anyway, because it is in a list.",
+        "It runs before dbt_build to save time.",
+        "It does not run, because it depends on dbt_build succeeding, so bad data is not exported.",
+        "It deletes the raw data."
+      ],
+      "answer_index": 2,
+      "explanation": "Tasks after >> wait for the previous task to succeed, so a failed build stops the export. The most tempting wrong option is that it runs because it is in a list. The list only means dbt_docs and export can run in parallel after dbt_build; both still depend on it."
+    }
+  ]
+}

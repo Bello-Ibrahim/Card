@@ -6,9 +6,9 @@ Course: AI-19 · Module: M2 · Objectives: O2 · Video: 5 min (screen demo)
 In L03 you chose the blur size and the edge thresholds yourself. That works for a document on a desk. But who could write the rules that separate a healthy leaf from a leaf with early rust, in every light and at every angle? A convolutional neural network does not need those rules. It learns its own filters from examples.
 
 ## Explanation
-A **filter** (also called a **kernel**) is a small grid of numbers, for example 3 × 3. **Convolution** slides the filter across the image. At each position, it multiplies the filter values by the pixel values under it and adds the results. The output is a new image, called a **feature map**, that is bright where the image matches the filter's pattern.
+A **filter** (or **kernel**) is a small grid of numbers, for example 3 × 3. **Convolution** slides the filter across the image. At each position, it multiplies the filter values by the pixel values under it and adds the results. The output is a new image, called a **feature map**, that is bright where the image matches the filter's pattern.
 
-The filter values decide what it detects. A filter with negative numbers on the left and positive numbers on the right responds to vertical edges, where dark changes to light. A filter of equal values averages its neighbours, which is a blur. You used such filters in L03 without seeing the numbers: Gaussian blur and Canny are built from them.
+The filter values decide what it detects. A filter with negative numbers on the left and positive numbers on the right responds to vertical edges, where dark changes to light. A filter of equal values averages its neighbours, which is a blur. Gaussian blur and Canny from L03 are built from filters like these.
 
 A **convolutional neural network (CNN)** stacks many layers of filters. You already know neural networks, weights and training from Python for AI; the difference here is that the weights *are* filter values.
 
@@ -17,9 +17,9 @@ A **convolutional neural network (CNN)** stacks many layers of filters. You alre
 - **Later layers** combine shapes into object parts, such as a wheel, an eye or the vein pattern of a leaf.
 - A final **classification layer** turns the last feature maps into scores for each class.
 
-**Pooling** layers, or filters with a larger step (**stride**), shrink the feature maps between layers. Each later filter therefore "sees" a larger area of the original image.
+**Pooling** layers shrink the feature maps between layers, so each later filter "sees" a larger area of the image.
 
-The most important idea: **nobody designs these filters by hand.** They start as random numbers. During training, the network adjusts them so that its predictions match the labels. If rust spots help separate the classes, some filters become rust-spot detectors. This is why a CNN trained on millions of general photos has already learned useful early and middle filters, which you will reuse in L07.
+The most important idea: **nobody designs these filters by hand.** They start as random numbers, and training adjusts them so that predictions match the labels. If rust spots help separate the classes, some filters become rust-spot detectors. This is why a CNN trained on many general photos has useful early filters, which you will reuse in L07.
 
 **Analogy:** Imagine a set of stencils, each cut with a small pattern: a line, a curve, a dot. You slide each stencil across a picture, and it lights up wherever the picture matches its pattern. A CNN starts with blank stencils and cuts its own patterns by looking at thousands of labelled pictures. Later layers use stencils made from combinations of earlier ones.
 
@@ -48,7 +48,7 @@ for name, k in kernels.items():
     print(name, out.mean().round(1))
 ```
 
-The vertical edge map is bright along vertical threads and printed stripes, and dark on flat areas. The blur softens the weave texture. The sharpen filter makes small defects, such as a pulled thread, stand out. `CV_32F` keeps negative values during the calculation, and `convertScaleAbs` turns them into positive 0-255 values for display.
+The edge map is bright along vertical threads and stripes, and dark on flat areas. The blur softens the weave. The sharpen filter makes small defects, such as a pulled thread, stand out. `CV_32F` keeps negative values, and `convertScaleAbs` turns them into 0-255 values for display.
 
 **On screen (presenter steps):**
 1. Upload a fabric or texture photo to Colab and run the cell.
@@ -57,7 +57,7 @@ The vertical edge map is bright along vertical threads and printed stripes, and 
 4. Show a prepared image of the first-layer filters of a pre-trained CNN, and point out edge-like and colour-blob filters that look similar to the hand-made ones.
 
 ## Common Mistake
-Many learners believe each filter in a CNN detects one named thing, such as "the wheel filter". Early filters do match simple, clear patterns, but most deeper filters respond to mixtures of patterns that have no simple name. Treat visualisations as a rough guide, not as a full explanation of why a model made a decision. Also, a CNN learns whatever separates the labels in its training data, including shortcuts such as a background colour that appears in only one class.
+Many learners believe each filter in a CNN detects one named thing, such as "the wheel filter". Early filters do match simple, clear patterns, but most deeper filters respond to mixtures of patterns that have no simple name. Treat visualisations as a rough guide, not a full explanation. Also, a CNN learns whatever separates the labels in its training data, including shortcuts such as a background colour that appears in only one class.
 
 ## Key Takeaways
 1. A filter is a small grid of numbers; convolution slides it over the image and produces a feature map that is bright where the pattern matches.
@@ -73,7 +73,7 @@ Many learners believe each filter in a CNN detects one named thing, such as "the
 3. Make a horizontal edge filter by transposing the vertical one, and describe the difference.
 4. Load a small pre-trained CNN, for example `torchvision.models.resnet18(weights="DEFAULT")`, and print the shape of `model.conv1.weight`. [VERSION]
 5. Display the first 16 filters as small colour images (normalise each one to 0-1 first).
-6. Find two learned filters that look like edge detectors and one that looks like a colour detector.
+6. Find two learned filters that look like edge detectors and one colour detector.
 **What good looks like:** Three clear filter outputs with correct descriptions, and a short comparison stating that some learned filters look like edge detectors, but they were learned from data and include colour patterns that the hand-made filters do not have.
 **Time:** about 30 minutes
 

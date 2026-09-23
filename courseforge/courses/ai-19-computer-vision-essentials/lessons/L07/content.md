@@ -3,25 +3,25 @@
 Course: AI-19 · Module: M2 · Objectives: O2, O4 · Video: 5 min (screen demo)
 
 ## Hook
-In L06 the general model did not know your categories. Training a new model from zero would need a very large labelled dataset. With transfer learning, a thousand or so labelled images and a short, free Colab session can be enough to teach a pre-trained model a completely new task.
+In L06 the general model did not know your categories. Training a new model from zero needs a very large labelled dataset. With transfer learning, around a thousand labelled images and a short Colab session can be enough to teach a pre-trained model a new task.
 
 ## Explanation
-Recall from L05 that a CNN (and newer image models such as vision transformers) learns general features in its early and middle layers: edges, textures, shapes and parts. These features are useful for almost any photo. Only the last layer, the **classification head**, is specific to the original labels.
+Recall from L05 that image models learn general features in their early and middle layers: edges, textures, shapes and parts. Only the last layer, the **classification head**, is specific to the original labels.
 
 **Transfer learning** keeps the pre-trained layers, called the **backbone**, and replaces the head with a new one that has your classes. There are two common levels:
 
-- **Feature extraction:** freeze the backbone (its weights do not change) and train only the new head. This is fast, needs little data and works well when your images are similar to everyday photos.
-- **Full fine-tuning:** also update some or all backbone layers, usually with a small learning rate. This can fit your data better, but it needs more data and time, and it can overfit on small datasets.
+- **Feature extraction:** freeze the backbone and train only the new head. This is fast and needs little data.
+- **Full fine-tuning:** also update backbone layers with a small learning rate. This can fit your data better, but needs more data and time, and can overfit small datasets.
 
-Start with feature extraction. Move to full fine-tuning only if the results are not good enough and you have enough data.
+Start with feature extraction.
 
-This works with little data because the backbone does not need to learn what an edge or a leaf vein looks like. It already knows. Your data only needs to teach the head which combination of existing features means "rust" and which means "healthy".
+This works with little data because the backbone already knows what an edge or a leaf vein looks like. Your data only teaches the head which combination of features means "rust" or "healthy".
 
-Always keep three separate splits: **train** (to learn), **validation** (to choose settings and watch for overfitting) and **test** (checked once at the end).
+Keep **train**, **validation** and **test** splits separate, and check the test split once, at the end.
 
 Free Colab GPUs are useful here but are not guaranteed, and session length is limited. [VERSION] Save your model to Google Drive or the Hub when training ends. [VERIFY]
 
-**Analogy:** Transfer learning is like hiring an experienced photographer to sort plant photos. They already know light, focus, shapes and colours. You do not teach them to see; you only show them a few hundred examples of each plant disease. A beginner would need years of practice, but the photographer needs an afternoon.
+**Analogy:** Transfer learning is like hiring an experienced photographer to sort plant photos. They already know light, shapes and colours. You only show them a few hundred examples of each plant disease. A beginner would need years; the photographer needs an afternoon.
 
 ## Worked Example
 Grace Namukasa works for an agricultural advice service in Mbale, Uganda. She wants a model that classifies bean leaf photos as healthy or as one of two diseases. She uses a public bean leaf dataset collected in Uganda and hosted on the Hugging Face Hub. [VERIFY]
@@ -67,17 +67,16 @@ trainer.train()
 print("after: ", accuracy("test"))
 ```
 
-The "before" score uses the new, untrained head, so it is close to guessing (about one in three for three classes). After training, the score should rise clearly. Example output: `before: 0.34`, followed by a clearly higher "after" value. Your numbers will differ, and they are not a benchmark.
+The "before" score uses the untrained head, so it is close to guessing (about one in three). Example output: `before: 0.34`, followed by a clearly higher "after" value. Your numbers will differ, and they are not a benchmark.
 
 **On screen (presenter steps):**
 1. In Colab, choose Runtime, then Change runtime type, and select a GPU if one is available. [VERSION]
-2. Run the dataset cell and show `names` and three sample images.
-3. Run the model cell and point to the line that freezes the backbone.
-4. Run the "before" accuracy, then `trainer.train()`, and show the training loss going down.
-5. Show the "after" accuracy and save the model with `trainer.save_model()`.
+2. Run the cell and point to the line that freezes the backbone.
+3. Show the "before" accuracy and the training loss going down.
+4. Show the "after" accuracy and save the model with `trainer.save_model()`.
 
 ## Common Mistake
-Many learners check accuracy on the training images and report a very high number. That number only shows that the model remembers what it saw. Report the score on the test split, which the model never saw during training or tuning. A second common mistake is unfreezing the whole backbone with a high learning rate on a small dataset. This can destroy the useful pre-trained features. Use a small learning rate when you unfreeze.
+Many learners report accuracy on the training images. That only shows the model remembers what it saw; report the test split instead. Another mistake is unfreezing the whole backbone with a high learning rate on a small dataset, which can destroy the pre-trained features. Use a small learning rate when you unfreeze.
 
 ## Key Takeaways
 1. Transfer learning reuses a pre-trained backbone and trains a new head for your classes, so it needs much less data and time.

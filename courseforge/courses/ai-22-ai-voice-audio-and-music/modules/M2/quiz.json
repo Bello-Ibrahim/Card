@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-22",
+  "module_id": "M2",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L06",
+      "objective": "O4",
+      "question": "After applying Noise Reduction in Audacity, the background hum is gone but the voice now sounds thin and metallic. What is the most likely cause and fix?",
+      "options": [
+        "The file was exported as WAV; export it as MP3 instead.",
+        "The recording is too quiet; apply Normalize before anything else.",
+        "The noise reduction settings were too strong; undo, use gentler settings and preview before applying.",
+        "The noise profile was taken from a section with speech; delete the whole recording and start again."
+      ],
+      "answer_index": 2,
+      "explanation": "Too much noise reduction damages the voice, so the fix is gentler settings and a preview. The most tempting wrong option is the noise profile taken from speech, because a bad profile can also cause problems. But deleting the recording is not needed: you would simply undo and take a new profile from a quiet section."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L07",
+      "objective": "O3",
+      "question": "Which prompt is best for generating an intro music bed for a calm education podcast?",
+      "options": [
+        "Calm, warm acoustic folk, about 80 BPM, fingerpicked guitar and soft piano, instrumental, no vocals, 30 seconds with a gentle ending.",
+        "Music that sounds exactly like a famous living singer's latest hit.",
+        "Nice background music.",
+        "Energetic rock with loud drums and lead vocals, 3 minutes."
+      ],
+      "answer_index": 0,
+      "explanation": "It describes mood, genre, tempo, instruments and length, and asks for no vocals so the music will not compete with speech. The most tempting wrong option is \"nice background music\", because it sounds harmless. It is too vague, so the results will be random, and it gives the tool no information about mood or tempo."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L08",
+      "objective": "O6",
+      "question": "You made a music bed on a free AI music plan and now want to use it in a paid advert for a client. What should you do?",
+      "options": [
+        "Use it, because the tool was free to use.",
+        "Use it, because you wrote the prompt and therefore own the copyright in every country.",
+        "Use it only if the client does not ask where the music came from.",
+        "Read the current licence for the free plan, check whether commercial use and attribution are allowed, and record the result in your rights log."
+      ],
+      "answer_index": 3,
+      "explanation": "The licence for the plan you used decides whether commercial use is allowed, and the rights log records what you found and when. The most tempting wrong option is that writing the prompt makes you the copyright owner. Ownership depends on the tool's terms, and whether AI music can be protected by copyright is unsettled and differs by country."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L09",
+      "objective": "O5",
+      "question": "Your mix sounds good on headphones, but on a phone speaker one word is hard to hear under the music. What should you do?",
+      "options": [
+        "Nothing, because most listeners use headphones.",
+        "Lower the music at that point with the Envelope tool or track volume, then check again on both systems.",
+        "Make the whole mix louder until the word is clear.",
+        "Remove the music completely from the episode."
+      ],
+      "answer_index": 1,
+      "explanation": "The voice must stay on top, so you lower the music where it covers the word and check again on both systems. The most tempting wrong option is making the whole mix louder. That raises the music and the voice together, so the balance does not change and the word is still hidden."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L10",
+      "objective": "O7",
+      "question": "During your final review you cut one sentence from the audio. Your SRT captions were made before the cut. What is the best next step?",
+      "options": [
+        "Regenerate the captions from the final audio, correct them by hand and export a new SRT.",
+        "Keep the old SRT, because one sentence will not matter.",
+        "Remove the captions and submit without them.",
+        "Add the sentence back to the captions text so viewers can read what was cut."
+      ],
+      "answer_index": 0,
+      "explanation": "Captions must match the final audio, so you make them again after the last edit and check them by hand. The most tempting wrong option is keeping the old SRT. After the cut, every caption that follows appears at the wrong time, so the captions drift out of time with the speech."
+    }
+  ]
+}

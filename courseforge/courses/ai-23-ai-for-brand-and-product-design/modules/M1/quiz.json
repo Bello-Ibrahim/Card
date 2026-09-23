@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-23",
+  "module_id": "M1",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L01",
+      "objective": "O1",
+      "question": "A designer is planning AI use on a rebrand. For which task does AI add the most value with the least risk?",
+      "options": [
+        "Deciding whether the new brand name is free to register as a trademark.",
+        "Drafting 40 tone-of-voice variations for the designer to review and shortlist.",
+        "Producing the final logo artwork that is delivered to the client.",
+        "Choosing which research insight the whole project should focus on."
+      ],
+      "answer_index": 1,
+      "explanation": "Drafting many variations is a volume and variation task, and the designer still reviews and decides. The most tempting wrong option is the final logo artwork, because image generators are fast. But final art needs originality and clear rights, which are exactly the areas where AI adds risk."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L02",
+      "objective": "O2",
+      "question": "Claude gives you five research themes, each with two quotes. What should you do before putting them in a client deck?",
+      "options": [
+        "Ask Claude whether it is confident that the quotes are correct.",
+        "Keep the themes that sound most realistic and remove the others.",
+        "Rewrite the quotes in your own words so they are easier to read.",
+        "Search for every quote in the original notes and check that the listed participants support each theme."
+      ],
+      "answer_index": 3,
+      "explanation": "Only the source notes can confirm a quote and its supporting participants. The most tempting wrong option is asking Claude if it is confident. A model can say it is confident and still be wrong, because it is not checking the source in the way a text search does."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L03",
+      "objective": "O5",
+      "question": "An AI-generated persona says: 'Rina works as a teacher and books appointments during lunch.' No research theme mentions her job or booking time. What is the best action?",
+      "options": [
+        "Label the claim as an assumption and turn it into a question for future research.",
+        "Keep it, because realistic details help the team feel empathy.",
+        "Ask Claude to add more details so the persona feels complete.",
+        "Delete the whole persona and design without one."
+      ],
+      "answer_index": 0,
+      "explanation": "Claims without evidence should be labelled as assumptions, not presented as research. The most tempting wrong option is keeping the detail for empathy. Unsupported detail makes the persona feel more real while making it less true, which is how 'synthetic users' mislead teams."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L04",
+      "objective": "O2",
+      "question": "Which prompt uses Claude best as a sparring partner for a design brief?",
+      "options": [
+        "Rewrite my brief so it sounds more professional.",
+        "Write a full design brief for an olive oil rebrand.",
+        "Act as a senior creative director. Ask me the 5 most important critical questions about this brief. Do not rewrite it or suggest designs.",
+        "Tell me which design direction the client will like best."
+      ],
+      "answer_index": 2,
+      "explanation": "The sparring-partner prompt sets a reviewer role and asks for questions only, so the designer keeps the decisions. The most tempting wrong option is asking for a more professional rewrite. A polished rewrite can add goals the client never agreed to and hides where the real gaps are."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L05",
+      "objective": "O6",
+      "question": "A designer wants to use a new Figma plugin that writes microcopy on a confidential client project. What should they do first?",
+      "options": [
+        "Nothing, because Figma's own terms cover every plugin in the Figma community.",
+        "Check the plugin's own data-use terms, confirm the client agreed to AI use, and avoid entering unreleased names or personal data.",
+        "Use it only on a paid Figma plan, because paid plans always protect client data.",
+        "Ask the plugin itself whether it stores client data."
+      ],
+      "answer_index": 1,
+      "explanation": "A plugin may send content to its own service under its own terms, so it needs its own check and client permission. The most tempting wrong option is that Figma's terms cover every plugin. Plugins are often made by third parties, and their data handling can differ from Figma's."
+    }
+  ]
+}

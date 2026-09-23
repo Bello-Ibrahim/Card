@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-20",
+  "module_id": "M3",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L09",
+      "objective": "O5",
+      "question": "A restaurant image is good overall, but the menu card in the corner has misspelled, warped letters. What is the best fix?",
+      "options": [
+        "Regenerate the whole image until the spelling is correct.",
+        "Replace the lettering with a plain card using generative fill, then add the real text in Canva.",
+        "Publish it, because customers will not notice small text.",
+        "Add 'correct spelling, high quality text' to the prompt and keep trying."
+      ],
+      "answer_index": 1,
+      "explanation": "Generators often spell badly, so the reliable fix is to remove the text area and add real text in a design tool. The most tempting wrong option is regenerating the whole image. It uses credits, may still misspell the words, and can lose the parts of the image that were already good."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L10",
+      "objective": "O6",
+      "question": "A client asks whether they will own the copyright in the AI images you create for them. What is the most responsible answer?",
+      "options": [
+        "Yes, the person who writes the prompt always owns full copyright everywhere.",
+        "No, AI images can never be used for commercial purposes.",
+        "The tool made the images, so the tool company always owns them.",
+        "Rules on ownership and copyright of AI images differ by country and are changing, so check the tool's terms and ask a legal adviser in the relevant country."
+      ],
+      "answer_index": 3,
+      "explanation": "The course teaches principles only: ownership and protection depend on the country and the tool's terms. The most tempting wrong option is that the prompt writer always owns full copyright. That states a legal conclusion as settled everywhere, which this course does not do."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L10",
+      "objective": "O6",
+      "question": "Which action is appropriate before publishing an AI image for a client campaign?",
+      "options": [
+        "Remove any watermark or content credential so the image looks more professional.",
+        "Add a well-known sports brand's logo to make the image more familiar.",
+        "Read the tool's current commercial-use terms and review the set for bias in who is shown.",
+        "Create a realistic image of a famous athlete drinking the client's product."
+      ],
+      "answer_index": 2,
+      "explanation": "Checking current terms and reviewing who is shown are both part of responsible publishing. The most tempting wrong option is removing watermarks or content credentials. These signals help viewers know an image was made with AI, and removing them works against honest disclosure."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L11",
+      "objective": "O7",
+      "question": "Why should you generate 3 very different test shots from your shot list before producing all 12 images?",
+      "options": [
+        "To check that the style block keeps different subjects and formats consistent before you invest time in the full set.",
+        "Because the free tier only allows 3 images in total.",
+        "To choose the 3 best images and skip the rest of the shot list.",
+        "Because the rubric requires exactly 3 images."
+      ],
+      "answer_index": 0,
+      "explanation": "Different shots test whether the style block really holds the look together; fixing it early is much cheaper. The most tempting wrong option is choosing the 3 best images and skipping the rest. The capstone needs 12 images, and the tests exist to check the plan, not to replace it."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L12",
+      "objective": "O5",
+      "question": "During production, a learner finds that the light direction started to drift in batch 2. What should they have done to catch it earlier?",
+      "options": [
+        "Checked all 12 images only once at the end.",
+        "Compared all images so far side by side after each batch.",
+        "Used a different style block for each batch.",
+        "Increased the image size to see the light better."
+      ],
+      "answer_index": 1,
+      "explanation": "Checking after every batch catches drift before it spreads to later images. The most tempting wrong option is checking once at the end. It seems efficient, but by then the drift may have been copied into many images that all need to be fixed."
+    }
+  ]
+}

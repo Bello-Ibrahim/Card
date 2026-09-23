@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-17",
+  "module_id": "M3",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L11",
+      "objective": "O5",
+      "question": "A clinic dataset shows twice as many malaria visits as last season. Profiling finds that every malaria visit_id appears exactly twice. Which quality dimension is the main problem?",
+      "options": [
+        "Timeliness",
+        "Validity",
+        "Completeness",
+        "Uniqueness"
+      ],
+      "answer_index": 3,
+      "explanation": "Each real visit should be recorded once, so repeated visit_id values are a uniqueness problem that doubles the count. The most tempting wrong option is validity, because the numbers look wrong. But each duplicated row is itself valid; the problem is that it appears twice."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L12",
+      "objective": "O5",
+      "question": "Which dbt test best checks that every exporter_id in stg_shipments exists in stg_exporters?",
+      "options": [
+        "unique on stg_shipments.exporter_id",
+        "relationships from stg_shipments.exporter_id to stg_exporters.exporter_id",
+        "not_null on stg_shipments.exporter_id",
+        "accepted_values on stg_shipments.exporter_id"
+      ],
+      "answer_index": 1,
+      "explanation": "The relationships test works like a foreign key check: every value must exist in the other model. The most tempting wrong option is not_null, because a missing ID is also a problem. But not_null only checks that a value is present, not that it points to a real exporter."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L12",
+      "objective": "O3",
+      "question": "A test finds duplicated order IDs in a staging model that feeds an AI feature table. What severity should it have, and why?",
+      "options": [
+        "Error, so dbt build stops the downstream feature table from being built on duplicated data",
+        "Warn, so the pipeline always finishes on time",
+        "No test is needed, because duplicates are removed by the model later",
+        "Warn, because duplicates only affect dashboards, not models"
+      ],
+      "answer_index": 0,
+      "explanation": "Duplicates change counts and features, so the test should be an error that stops dependent models. The most tempting wrong option is warn 'so the pipeline always finishes on time'. A pipeline that finishes on time with wrong data quietly teaches the model the wrong thing."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L13",
+      "objective": "O4",
+      "question": "In an Airflow DAG, what does the line load_raw >> dbt_run >> dbt_test do?",
+      "options": [
+        "It runs the three tasks at the same time to save time.",
+        "It schedules the DAG to run three times a day.",
+        "It sets dependencies, so dbt_run starts only after load_raw succeeds, and dbt_test only after dbt_run succeeds.",
+        "It sends the output of load_raw as a file into dbt_run."
+      ],
+      "answer_index": 2,
+      "explanation": "The >> operator sets the order of tasks in the DAG. The most tempting wrong option is that it passes output as a file, because the arrow looks like a data flow. In Airflow it only sets dependencies; data moves through the database or files that the tasks read and write."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L14",
+      "objective": "O6",
+      "question": "A load task appends rows for the logical date. It failed halfway, and Airflow retried it. What is the best design change?",
+      "options": [
+        "Make the task idempotent: delete the rows for that date, then insert them again.",
+        "Increase retries from 3 to 10.",
+        "Remove retries, so the task never runs twice.",
+        "Change the schedule from daily to hourly."
+      ],
+      "answer_index": 0,
+      "explanation": "An idempotent task gives the same result however many times it runs, so retries and backfills cannot duplicate rows. The most tempting wrong option is increasing retries, which sounds more reliable. With an appending task, more retries mean more chances to leave partial or doubled data."
+    }
+  ]
+}

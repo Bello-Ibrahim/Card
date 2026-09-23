@@ -27,7 +27,7 @@ Many tools also require you to confirm that you have the right to use a voice be
 **Analogy:** Consent for a voice clone is like lending someone your car. You agree who will drive it, where, for how long and when they must give it back. Saying "yes, you can borrow it" does not mean "you can keep it forever and lend it to strangers".
 
 ## Worked Example
-Kwame and Efua host a weekly business podcast in Accra, Ghana. Efua will travel for six weeks and suggests that Kwame use a clone of her voice to read the short sponsor-free introduction to each episode while she is away.
+Kwame and Efua host a weekly business podcast in Accra, Ghana. Efua will travel for six weeks and suggests that Kwame use a clone of her voice to read the short introduction to each episode while she is away.
 
 Kwame does not start with a tool. He writes a one-page agreement and they discuss it together:
 

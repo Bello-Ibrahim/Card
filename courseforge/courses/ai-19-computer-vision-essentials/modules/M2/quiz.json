@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-19",
+  "module_id": "M2",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L05",
+      "objective": "O2",
+      "question": "Which statement best describes how the filters in a CNN get their values?",
+      "options": [
+        "Engineers design each filter by hand, for example an edge filter and a wheel filter.",
+        "The filters are copied from OpenCV functions such as GaussianBlur and Canny.",
+        "They start as random numbers and are adjusted during training so that predictions match the labels.",
+        "Each filter is fixed at the start and only the final classification layer is trained."
+      ],
+      "answer_index": 2,
+      "explanation": "CNN filters are learned from labelled data during training. The most tempting wrong option is that engineers design the filters by hand. Some learned early filters look like hand-made edge filters, but nobody sets their values; training finds them."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L06",
+      "objective": "O3",
+      "question": "A pre-trained classifier labels an X-ray image as \"envelope\" with a score of 0.62. What is the most likely explanation?",
+      "options": [
+        "The model was not trained on X-ray images, so it chose the nearest label it knows.",
+        "The score of 0.62 means there is a 62% chance that the image is really an envelope.",
+        "The pipeline failed to convert the image from BGR to RGB.",
+        "The model is broken and must be downloaded again."
+      ],
+      "answer_index": 0,
+      "explanation": "A classifier can only output labels from its training, and it always returns a label, even for images unlike its training data. The most tempting wrong option reads the score as a real-world probability. The score only shows how strongly the model prefers this label over its other labels."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L07",
+      "objective": "O4",
+      "question": "You have 900 labelled leaf photos in 3 classes and a free Colab session. Which approach should you try first?",
+      "options": [
+        "Train a new CNN from random weights, so it learns only leaf features.",
+        "Unfreeze all layers of a pre-trained model and train with a high learning rate.",
+        "Use the pre-trained model's original labels without any training.",
+        "Load a pre-trained model, replace the head with 3 classes, freeze the backbone and train only the head."
+      ],
+      "answer_index": 3,
+      "explanation": "Feature extraction reuses the pre-trained features and needs little data and time, so it is the right first step. The most tempting wrong option is unfreezing all layers with a high learning rate. On a small dataset this can destroy the useful pre-trained features; full fine-tuning should come later, with a small learning rate."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L07",
+      "objective": "O2",
+      "question": "Why does transfer learning need much less data than training a model from zero?",
+      "options": [
+        "Because the pre-trained model already contains your images.",
+        "Because the backbone has already learned general visual features such as edges, textures and shapes, so only the new head must learn your classes.",
+        "Because transfer learning does not use a test split.",
+        "Because frozen layers train faster, so each image counts several times."
+      ],
+      "answer_index": 1,
+      "explanation": "The backbone's general features are reused, so your data only has to teach the head how to combine them. The most tempting wrong option is that frozen layers train faster. Freezing does make training faster, but speed is not why less data is needed; the reason is the reused features."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L08",
+      "objective": "O5",
+      "question": "A defect classifier has 95% accuracy. The test set has 950 good parts and 50 defective parts, and recall for \"defective\" is 0.10. What does this mean?",
+      "options": [
+        "The model is excellent, because 95% accuracy is high.",
+        "When the model says \"defective\", it is correct only 10% of the time.",
+        "The model finds only 5 of the 50 defective parts, so it misses most defects despite the high accuracy.",
+        "The test set should be balanced to 50 good and 50 defective parts to fix the accuracy."
+      ],
+      "answer_index": 2,
+      "explanation": "Recall is the share of real defective parts that the model found: 0.10 × 50 = 5. The most tempting wrong option mixes up recall with precision. \"Correct 10% of the time when it says defective\" describes precision, which counts false alarms, not missed cases."
+    }
+  ]
+}

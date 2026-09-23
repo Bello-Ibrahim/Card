@@ -18,16 +18,15 @@ for r in results:
     print(f"{r['label']:<30} {r['score']:.2f}")
 ```
 
-The task name `"image-classification"`, the argument names and the model ID can change between library versions, so check them against the current documentation. [VERSION] The first run downloads the model weights, which can take a minute. Later runs use the cached copy.
+The task name `"image-classification"`, the argument names and the model ID can change between library versions, so check them against the current documentation. [VERSION] The first run downloads the model weights; later runs use the cached copy.
 
 Each result is a dictionary with a `label` and a `score`. The scores come from a **softmax**, so they add up to 1 across all classes the model knows. A score of 0.90 does not mean "90% chance of being correct in the real world". It means the model prefers this label strongly compared with its other labels.
 
-Before you trust a model, read its **model card**: the page on the Hub that describes it. Look for four things:
+Before you trust a model, read its **model card**: the page on the Hub that describes it. Look for three things:
 
 1. **Training data.** Many general classifiers were trained on ImageNet-style data with about 1,000 everyday classes. [VERIFY] If your images look very different, for example microscope slides or satellite images, expect poor results.
 2. **Label list.** The model can only output labels it was trained on. It has no "none of these" option unless one was included.
-3. **Input expectations.** Image size and colour order are handled by the pipeline, but image style still matters.
-4. **Licence and limits.** Check what use the licence allows, and read any known limitations.
+3. **Licence and limits.** Check what use the licence allows, and read any known limitations.
 
 Do not send photos of people or private documents to online demo widgets on model pages. In Colab, the model runs inside your session.
 
@@ -51,10 +50,10 @@ folding chair                  0.12
 park bench                     0.04
 ```
 
-Tomasz sees that most chairs, tables and wardrobes get sensible labels. Two results are wrong. A modern sofa bed is labelled "studio couch", which is close but not in his category list. A wooden shelf photographed from above is labelled "crossword puzzle", probably because the grid of shelves looks like a grid pattern the model knows. He decides that the general model is useful for a first suggestion, but that his own categories will need fine-tuning, which is the topic of L07.
+Most chairs, tables and wardrobes get sensible labels. Two results are wrong. A sofa bed is labelled "studio couch", which is close but not in his category list. A shelf photographed from above is labelled "crossword puzzle", probably because its grid looks like a pattern the model knows. He decides that the general model is useful for a first suggestion, but that his own categories will need fine-tuning, which is the topic of L07.
 
 ## Common Mistake
-Many developers treat the top label as the answer and ignore the score and the label list. A pipeline always returns labels, even for an image that fits none of them. Set a minimum score for automatic decisions, send low-score images to a person, and map the model's labels to your own categories deliberately. Also, do not compare scores between different models: each model's scores have their own scale.
+Many developers treat the top label as the answer and ignore the score and the label list. A pipeline always returns labels, even for an image that fits none of them. Set a minimum score for automatic decisions and send low-score images to a person. Also, do not compare scores between different models: each model's scores have their own scale.
 
 ## Key Takeaways
 1. A Hugging Face pipeline loads a pre-trained model and handles preprocessing, so you can classify images in a few lines of code.

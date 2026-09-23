@@ -18,14 +18,14 @@ To save a result, create a `cv2.VideoWriter` with a file name, a **codec** code,
 
 Always call `release()` on both the reader and the writer at the end. Otherwise the output file may be incomplete.
 
-Google Colab runs on a remote server, so it cannot stream your webcam like a local script can. In this course we use recorded video files, which also make results repeatable: you can run the same clip again after every change.
+Colab runs on a remote server, so it cannot stream your webcam like a local script. This course uses recorded video files, which also make results repeatable.
 
-Processing time matters for video. If a step takes 100 milliseconds per frame, a 25 FPS clip is processed four times slower than real time. A common solution is to process every second or third frame, or to resize frames before heavier steps.
+Processing time matters. At 100 milliseconds per frame, a 25 FPS clip is processed four times slower than real time. Process every second or third frame, or resize frames before heavier steps.
 
 **Analogy:** Video processing works like a factory conveyor belt. Items (frames) arrive one at a time, each worker (processing step) does the same job on every item, and a packer at the end (the writer) puts them back in order. If one worker is slow, the whole line slows down.
 
 ## Worked Example
-Mateus Oliveira works at a fruit packing plant in Petrolina, Brazil. A fixed camera films the sorting belt, and he wants a greyscale copy of each clip with a frame number on every frame, so the team can refer to exact moments in their reports.
+Mateus Oliveira works at a fruit packing plant in Petrolina, Brazil. A fixed camera films the sorting belt. He wants a greyscale copy of each clip with a frame number on every frame, so reports can refer to exact moments.
 
 ```python
 import cv2

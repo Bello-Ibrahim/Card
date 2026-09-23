@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-21",
+  "module_id": "M3",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L11",
+      "objective": "O4",
+      "question": "When building a rough cut, what should you place on the timeline first?",
+      "options": [
+        "The narration or avatar voice, so the clips can be placed against the words",
+        "Every transition effect you plan to use",
+        "The music track, so the edit follows the beat",
+        "The automatic captions, before any audio"
+      ],
+      "answer_index": 0,
+      "explanation": "The voice sets the timing, so each clip can be placed where its words are spoken. The most tempting wrong option is the music track. Cutting to music can work for some videos, but in an explainer the narration carries the message, so pictures must match the words first."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L11",
+      "objective": "O7",
+      "question": "CapCut's automatic captions write a brand name wrongly in two places. What should the editor do?",
+      "options": [
+        "Leave them, because automatic captions are usually correct.",
+        "Delete all captions, because viewers watch with sound.",
+        "Read every caption line and correct the errors by hand.",
+        "Generate the captions again until the name is right."
+      ],
+      "answer_index": 2,
+      "explanation": "Automatic captions save time but often get names, brands and numbers wrong, so every line must be read and corrected. The most tempting wrong option is generating again. The tool will probably make the same mistake, and it does not remove the need to check every line."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L12",
+      "objective": "O4",
+      "question": "A creator makes the vertical 9:16 version by changing the aspect ratio only. What is the main risk?",
+      "options": [
+        "The file will be too large to upload.",
+        "Subjects may be cut off, and captions may sit under the app's buttons outside the safe area.",
+        "The music licence will stop being valid.",
+        "The voice will become too quiet."
+      ],
+      "answer_index": 1,
+      "explanation": "Changing the ratio without reframing can cut off subjects, and captions near the edges can be covered by app buttons, so each shot must be reframed and captions moved into the safe area. The most tempting wrong option is file size, but aspect ratio alone does not make a file too large."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L13",
+      "objective": "O6",
+      "question": "A video includes a realistic AI-generated 'customer' praising a product. No real customer said these words. The creator plans to add an 'AI-generated' label. Is this enough?",
+      "options": [
+        "Yes, because a label solves every disclosure and consent problem.",
+        "Yes, as long as the music is royalty-free.",
+        "No, because the tool's free plan never allows commercial use.",
+        "No, because a fake testimonial can mislead viewers even with a label, so it should be removed or presented clearly as a presenter."
+      ],
+      "answer_index": 3,
+      "explanation": "A realistic fake testimonial can deceive viewers and harm the brand, so a label alone does not make it acceptable. The most tempting wrong option is that a label solves everything. Disclosure is important, but it does not replace honesty about who said what, or consent for real people."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L14",
+      "objective": "O5",
+      "question": "In the final quality pass, a creator notices a character's helmet changes colour between two shots. Several regenerations have already failed. What is the best choice?",
+      "options": [
+        "Replace one shot with a different framing, such as a close-up that does not show the helmet.",
+        "Keep generating new versions until the deadline.",
+        "Ignore it, because viewers never notice continuity changes.",
+        "Add a transition effect between the two shots to hide it."
+      ],
+      "answer_index": 0,
+      "explanation": "After the regeneration limit, replacing the shot with a framing that avoids the problem is fastest and most reliable. The most tempting wrong option is a transition effect. It does not remove the colour change, and extra transitions can make the video look less professional."
+    }
+  ]
+}

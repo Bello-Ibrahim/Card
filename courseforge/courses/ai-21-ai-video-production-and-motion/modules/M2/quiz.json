@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-21",
+  "module_id": "M2",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L06",
+      "objective": "O3",
+      "question": "A creator's first Flow clip shows a hiker whose legs blur. What is the best next step?",
+      "options": [
+        "Rewrite the whole prompt with new lighting, a new camera move and a new style.",
+        "Change one element, such as the action to 'walks slowly and steadily', generate again and log the result.",
+        "Press Generate again many times with the same prompt until a clip looks good.",
+        "Remove the watermark and use the clip as it is."
+      ],
+      "answer_index": 1,
+      "explanation": "Changing one element at a time shows which change fixed the problem, so the creator can repeat it. The most tempting wrong option is repeating the same prompt. It can sometimes produce a better clip, but it spends credits and teaches nothing about what works."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L07",
+      "objective": "O3",
+      "question": "Which prompt is best for animating a keyframe of a café table with a cup of tea in Kling?",
+      "options": [
+        "A cosy café with wooden tables, warm lamps and a cup of tea, cinematic style, golden palette.",
+        "A different café at night with neon lights, and a cup of coffee instead of tea.",
+        "A cosy café, warm light, cinematic style, a cup of tea, pastel colours, 4K, highly detailed.",
+        "Steam rises gently from the cup. Slow dolly-in towards the table."
+      ],
+      "answer_index": 3,
+      "explanation": "In image-to-video the image already fixes the look, so the prompt should describe only what moves and what the camera does. The most tempting wrong option is the detailed café description. Repeating setting and style words can make the model change the image to match the text."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L08",
+      "objective": "O5",
+      "question": "In 3 clips of the same fictional baker, the apron changes colour and the face changes a little. Which approach will most likely reduce these changes?",
+      "options": [
+        "Start each clip from the same keyframe and paste the same character description every time.",
+        "Describe the baker in different words each time so the model understands better.",
+        "Make every shot of the baker longer so viewers see more detail.",
+        "Review each clip on its own instead of side by side."
+      ],
+      "answer_index": 0,
+      "explanation": "Reusing a keyframe and a fixed description gives the model the same starting point each time, which reduces drift. The most tempting wrong option is describing the baker in new words. Different words allow different results, so they usually increase drift instead of reducing it."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L09",
+      "objective": "O6",
+      "question": "A team member suggests making a HeyGen avatar from a video of a popular local presenter they found online, because it would look more real. What is the best response?",
+      "options": [
+        "Do it, because the tool allows uploads.",
+        "Do it, but add a small label saying the presenter is AI-generated.",
+        "Do not do it: use a stock avatar, because a custom avatar of a real person needs that person's clear, recorded consent.",
+        "Do it only for the free version, because it has a watermark."
+      ],
+      "answer_index": 2,
+      "explanation": "Using a real person's face without their clear, recorded consent is not acceptable, and laws differ by country. The most tempting wrong option is adding an AI label. A label helps with disclosure, but it does not replace the person's consent to use their face."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L10",
+      "objective": "O5",
+      "question": "A 6-second clip is clean for the first 4 seconds, and then the background flickers. The shot needs 4 seconds. What is the best decision?",
+      "options": [
+        "Replace it with a stock clip.",
+        "Regenerate it several times until there is no flicker at all.",
+        "Keep the full clip, because viewers will not notice.",
+        "Trim it to the clean first 4 seconds."
+      ],
+      "answer_index": 3,
+      "explanation": "The problem is only at the end, and the clean part is long enough, so trimming is fastest and keeps a good clip. The most tempting wrong option is regenerating. It spends credits and time on a problem that a simple trim already solves."
+    }
+  ]
+}

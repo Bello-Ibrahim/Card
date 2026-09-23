@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-20",
+  "module_id": "M2",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L05",
+      "objective": "O2",
+      "question": "A brand wants a distinctive illustrated look. Which prompt approach follows this course's guidance on style?",
+      "options": [
+        "Add 'in the style of' and the name of a popular living illustrator.",
+        "Add the name of a famous cartoon character so the model knows the look.",
+        "Describe the medium, texture, era, colour and mood, such as 'flat vector illustration, light paper grain, 1980s sports poster, orange and teal, energetic'.",
+        "Write only 'pop art' and let the model decide the rest."
+      ],
+      "answer_index": 2,
+      "explanation": "Describing visual attributes gives full control and avoids imitating a named living artist. The most tempting wrong option is writing only a movement such as 'pop art'. It avoids naming an artist, but it still leaves medium, colour and mood for the model to guess."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L06",
+      "objective": "O3",
+      "question": "A designer needs 4 product images that look like one set. Which method is the most reliable in every tool?",
+      "options": [
+        "Paste the same style block, word for word, into every prompt and change only the subject line.",
+        "Rewrite the style description slightly for each image so it sounds natural.",
+        "Rely on the seed number, because every tool shows and reuses it.",
+        "Generate all 4 images first and check consistency only at the end."
+      ],
+      "answer_index": 0,
+      "explanation": "A fixed style block works in every tool and keeps lighting, palette and framing the same. The most tempting wrong option is relying on the seed. Many consumer tools hide the seed, so it cannot be the main method for consistency."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L06",
+      "objective": "O5",
+      "question": "In a set of 4 skincare images, one image has a strong dark shadow while the others have soft shadows. What is this flaw, and what is the best first fix?",
+      "options": [
+        "A broken seed; delete the whole set and start again.",
+        "An aspect ratio problem; change the image to 16:9.",
+        "A text error; add the product name in Canva.",
+        "Style drift; regenerate that one image with the same style block plus a phrase such as 'very soft, faint shadow'."
+      ],
+      "answer_index": 3,
+      "explanation": "When one image moves away from the look of the set, that is style drift, and fixing only that image saves time and credits. The most tempting wrong option is deleting the whole set. Three images are already consistent, so starting again wastes good work."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L07",
+      "objective": "O4",
+      "question": "A shop has a square image but needs a wide 16:9 website banner without stretching the subject. Which feature should they use?",
+      "options": [
+        "Generative fill on the main subject",
+        "Generative expand (outpainting) to extend the canvas",
+        "Background removal",
+        "Regenerating the image from a new prompt"
+      ],
+      "answer_index": 1,
+      "explanation": "Generative expand adds new, matching content around the original image to reach a new aspect ratio. The most tempting wrong option is generative fill. Fill changes a selected area inside the existing canvas; it does not make the canvas larger."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L08",
+      "objective": "O4",
+      "question": "A café needs the headline 'Weekend Brunch 10–2' on an AI image. What is the recommended workflow?",
+      "options": [
+        "Ask the image generator to write the headline and fix spelling errors by regenerating.",
+        "Add the headline in the generator's prompt with the brand hex code.",
+        "Generate the image with empty space, then add the headline in Canva with the exact brand colour.",
+        "Skip the headline, because text cannot be added to AI images."
+      ],
+      "answer_index": 2,
+      "explanation": "Design tools place exact, correctly spelled text and follow hex codes, while generators often misspell words. The most tempting wrong option is including the hex code in the prompt. Most generators do not follow hex codes reliably, and the text may still be misspelled."
+    }
+  ]
+}
