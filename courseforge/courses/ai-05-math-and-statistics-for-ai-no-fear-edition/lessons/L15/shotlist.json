@@ -1,7 +1,7 @@
 {
   "course_id": "AI-05",
   "lesson_id": "L15",
-  "duration_s": 280.3,
+  "duration_s": 294.0,
   "thumbnail": {
     "headline": "99% Accurate, Still Useless?",
     "slide": {
@@ -62,7 +62,7 @@
     {
       "scene": 5,
       "start": 85.7,
-      "end": 105.0,
+      "end": 108.8,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -70,12 +70,12 @@
         "title": "A trade-off",
         "body": "Flag more → recall up, precision down. Flag less → precision up, recall down. Choose by the cost of each mistake."
       },
-      "voiceover": "Accuracy misleads when one class is rare. This is called class imbalance. And precision and recall usually pull against each other. Flag more cases, and you catch more fraud, but raise more false alarms. Which one matters more depends on the cost of each mistake."
+      "voiceover": "Accuracy misleads when one class is rare. This is called class imbalance. And precision and recall usually pull against each other. Flag more cases, and you catch more fraud, but raise more false alarms. Which one matters more depends on the cost of each mistake. In other tasks, the balance can be the opposite."
     },
     {
       "scene": 6,
-      "start": 105.0,
-      "end": 125.6,
+      "start": 108.8,
+      "end": 129.4,
       "section": "Explain",
       "visual_type": "stock",
       "stock_query": "fisherman pulling net from lake",
@@ -84,8 +84,8 @@
     },
     {
       "scene": 7,
-      "start": 125.6,
-      "end": 143.2,
+      "start": 129.4,
+      "end": 147.0,
       "section": "Demonstrate",
       "visual_type": "stock",
       "stock_query": "person paying with mobile phone at shop",
@@ -94,8 +94,8 @@
     },
     {
       "scene": 8,
-      "start": 143.2,
-      "end": 163.8,
+      "start": 147.0,
+      "end": 167.6,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -107,8 +107,8 @@
     },
     {
       "scene": 9,
-      "start": 163.8,
-      "end": 181.8,
+      "start": 167.6,
+      "end": 185.6,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -120,8 +120,8 @@
     },
     {
       "scene": 10,
-      "start": 181.8,
-      "end": 204.9,
+      "start": 185.6,
+      "end": 208.7,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -133,17 +133,17 @@
     },
     {
       "scene": 11,
-      "start": 204.9,
-      "end": 216.0,
+      "start": 208.7,
+      "end": 227.1,
       "section": "Demonstrate",
       "visual_type": "text",
       "on_screen_text": "Report recall first for fraud",
-      "voiceover": "Farhana reports recall first, because each missed fraud is costly. She asks the team to improve it, while watching that precision does not fall too far."
+      "voiceover": "Farhana reports recall first, because each missed fraud is costly. Missing fraud may cost a lot of money, while a false alarm may only annoy a customer. She asks the team to improve it, while watching that precision does not fall too far."
     },
     {
       "scene": 12,
-      "start": 216.0,
-      "end": 234.4,
+      "start": 227.1,
+      "end": 245.5,
       "section": "Demonstrate",
       "visual_type": "text",
       "on_screen_text": "Predicted positive vs actually positive",
@@ -151,8 +151,8 @@
     },
     {
       "scene": 13,
-      "start": 234.4,
-      "end": 261.0,
+      "start": 245.5,
+      "end": 272.1,
       "section": "Recap",
       "visual_type": "slide",
       "slide": {
@@ -164,12 +164,12 @@
     },
     {
       "scene": 14,
-      "start": 261.0,
-      "end": 280.3,
+      "start": 272.1,
+      "end": 294.0,
       "section": "CTA",
       "visual_type": "presenter_full",
       "on_screen_text": "Next: Overfitting, Train/Test Splits and Baselines",
-      "voiceover": "Your turn. In the exercise, you build a confusion matrix from twenty hypothetical predictions, calculate the three metrics in NumPy, and decide which one matters most for fraud. It takes about twenty-five minutes. Next: Overfitting, Train and Test Splits, and Baselines. See you there."
+      "voiceover": "Your turn. In the exercise, you build a confusion matrix from twenty hypothetical predictions, calculate the three metrics in NumPy, and decide which one matters most for fraud. Take your time with the counting. It takes about twenty-five minutes. Next: Overfitting, Train and Test Splits, and Baselines. See you there."
     }
   ]
 }

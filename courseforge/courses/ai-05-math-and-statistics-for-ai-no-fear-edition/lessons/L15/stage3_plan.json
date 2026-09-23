@@ -27,7 +27,7 @@
        "voiceover": "Three metrics come from it. Accuracy is the fraction of all predictions that were correct. Precision asks: of everything the model flagged, what fraction was really positive? That is the Bayes question from lesson eight. Recall asks: of all the real positives, what fraction did the model find?",
        "slide": {"layout": "code", "title": "Three metrics", "body": "Accuracy = (TP + TN) ÷ all\nPrecision = TP ÷ (TP + FP)   'how many alerts are real'\nRecall = TP ÷ (TP + FN)      'how many real cases we found'"}},
       {"visual_type": "slide",
-       "voiceover": "Accuracy misleads when one class is rare. This is called class imbalance. And precision and recall usually pull against each other. Flag more cases, and you catch more fraud, but raise more false alarms. Which one matters more depends on the cost of each mistake.",
+       "voiceover": "Accuracy misleads when one class is rare. This is called class imbalance. And precision and recall usually pull against each other. Flag more cases, and you catch more fraud, but raise more false alarms. Which one matters more depends on the cost of each mistake. In other tasks, the balance can be the opposite.",
        "slide": {"layout": "comparison", "title": "A trade-off", "body": "Flag more → recall up, precision down. Flag less → precision up, recall down. Choose by the cost of each mistake."}},
       {"visual_type": "stock",
        "voiceover": "Think of fishing with a net. Recall asks: of all the fish in the lake, how many did my net catch? Precision asks: of everything in my net, how much is fish, and how much is old boots? A huge net catches many fish, but also many boots.",
@@ -49,7 +49,7 @@
        "voiceover": "Now compare a lazy model that always predicts honest. It has zero true positives, one hundred misses, zero false alarms, and nine thousand nine hundred true negatives. Its accuracy is also ninety-nine percent, but its recall is zero. The ninety-nine percent hides that the real detector misses eighty of one hundred frauds.",
        "slide": {"layout": "comparison", "title": "Same accuracy, very different", "body": "Real detector: accuracy 99%, recall 0.2 (misses 80 of 100). Lazy 'always honest' model: TP 0, FN 100, FP 0, TN 9,900 → accuracy 99%, recall 0."}},
       {"visual_type": "text",
-       "voiceover": "Farhana reports recall first, because each missed fraud is costly. She asks the team to improve it, while watching that precision does not fall too far.",
+       "voiceover": "Farhana reports recall first, because each missed fraud is costly. Missing fraud may cost a lot of money, while a false alarm may only annoy a customer. She asks the team to improve it, while watching that precision does not fall too far.",
        "on_screen_text": "Report recall first for fraud"},
       {"visual_type": "text",
        "voiceover": "A common mistake is to judge a classifier by accuracy alone. With imbalanced data, build the confusion matrix first, and compare with an always predict the common class baseline. And remember: precision divides by everything predicted positive. Recall divides by everything actually positive.",
@@ -62,7 +62,7 @@
     ],
     "CTA": [
       {"visual_type": "presenter_full",
-       "voiceover": "Your turn. In the exercise, you build a confusion matrix from twenty hypothetical predictions, calculate the three metrics in NumPy, and decide which one matters most for fraud. It takes about twenty-five minutes. Next: Overfitting, Train and Test Splits, and Baselines. See you there.",
+       "voiceover": "Your turn. In the exercise, you build a confusion matrix from twenty hypothetical predictions, calculate the three metrics in NumPy, and decide which one matters most for fraud. Take your time with the counting. It takes about twenty-five minutes. Next: Overfitting, Train and Test Splits, and Baselines. See you there.",
        "on_screen_text": "Next: Overfitting, Train/Test Splits and Baselines"}
     ]
   }

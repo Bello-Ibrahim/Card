@@ -1,6 +1,6 @@
 # L15 Classification Metrics: Confusion Matrix, Precision and Recall | Presenter Script
 
-Course: AI-05 · Video: 5 min · Words: 654
+Course: AI-05 · Video: 5 min · Words: 686
 
 ## Hook
 A fraud detector is ninety-nine percent accurate. Impressive? Now imagine a detector that never flags anything at all. In our hypothetical example, it is also ninety-nine percent accurate. One number can hide a lot.
@@ -12,7 +12,7 @@ Every prediction falls into one of four groups. A true positive: predicted fraud
 
 Three metrics come from it. Accuracy is the fraction of all predictions that were correct. Precision asks: of everything the model flagged, what fraction was really positive? That is the Bayes question from lesson eight. Recall asks: of all the real positives, what fraction did the model find?
 
-Accuracy misleads when one class is rare. This is called class imbalance. And precision and recall usually pull against each other. Flag more cases, and you catch more fraud, but raise more false alarms. Which one matters more depends on the cost of each mistake.
+Accuracy misleads when one class is rare. This is called class imbalance. And precision and recall usually pull against each other. Flag more cases, and you catch more fraud, but raise more false alarms. Which one matters more depends on the cost of each mistake. In other tasks, the balance can be the opposite.
 
 Think of fishing with a net. Recall asks: of all the fish in the lake, how many did my net catch? Precision asks: of everything in my net, how much is fish, and how much is old boots? A huge net catches many fish, but also many boots.
 
@@ -25,7 +25,7 @@ Precision is twenty divided by twenty plus twenty, which is zero point five. Hal
 
 Now compare a lazy model that always predicts honest. It has zero true positives, one hundred misses, zero false alarms, and nine thousand nine hundred true negatives. Its accuracy is also ninety-nine percent, but its recall is zero. The ninety-nine percent hides that the real detector misses eighty of one hundred frauds.
 
-Farhana reports recall first, because each missed fraud is costly. She asks the team to improve it, while watching that precision does not fall too far.
+Farhana reports recall first, because each missed fraud is costly. Missing fraud may cost a lot of money, while a false alarm may only annoy a customer. She asks the team to improve it, while watching that precision does not fall too far.
 
 A common mistake is to judge a classifier by accuracy alone. With imbalanced data, build the confusion matrix first, and compare with an always predict the common class baseline. And remember: precision divides by everything predicted positive. Recall divides by everything actually positive.
 
@@ -33,7 +33,7 @@ A common mistake is to judge a classifier by accuracy alone. With imbalanced dat
 Let's recap. First, a confusion matrix counts true positives, false positives, false negatives and true negatives. Second, precision tells you how many alerts are real, and recall tells you how many real cases you found. Third, accuracy can hide poor performance when one class is rare, so compare with a common-class baseline and choose metrics by the cost of each mistake.
 
 ## CTA
-Your turn. In the exercise, you build a confusion matrix from twenty hypothetical predictions, calculate the three metrics in NumPy, and decide which one matters most for fraud. It takes about twenty-five minutes. Next: Overfitting, Train and Test Splits, and Baselines. See you there.
+Your turn. In the exercise, you build a confusion matrix from twenty hypothetical predictions, calculate the three metrics in NumPy, and decide which one matters most for fraud. Take your time with the counting. It takes about twenty-five minutes. Next: Overfitting, Train and Test Splits, and Baselines. See you there.
 
 ## Thumbnail
 Headline: 99% Accurate, Still Useless?

@@ -1,0 +1,179 @@
+{
+  "course_id": "AI-02",
+  "lesson_id": "L12",
+  "duration_s": 270.0,
+  "thumbnail": {
+    "headline": "Which Tool, and Why?",
+    "slide": {
+      "layout": "title",
+      "title": "Which Tool, and Why?",
+      "body": "A short report with six section tabs (Task, Method, Results, Strengths and failures, Recommendation, Limits) and a results table with one row highlighted. Small tag: Generative AI Explained · Lesson 12 · Capstone step 3."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 19.3,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Which tool, and why?",
+      "voiceover": "You have three outputs, three sets of scores and a page of notes. Your manager does not want to read all of that. They want one answer. Which tool should we use for this task, and why? Your report must answer that clearly and honestly."
+    },
+    {
+      "scene": 2,
+      "start": 19.3,
+      "end": 33.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Writing the Comparison Report",
+        "body": "Generative AI Explained · Lesson 12 of 12 · Capstone step 3"
+      },
+      "voiceover": "In the last lesson, you ran your tests. Now, in this final lesson, you write the report. This is capstone step three. A good report is short, and it follows six parts."
+    },
+    {
+      "scene": 3,
+      "start": 33.0,
+      "end": 57.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Six parts (1 to 3)",
+        "body": "1. Task: what, who, why. 2. Method: tools, versions, dates, prompt, input, settings, rubric. 3. Results table: one row per tool + weighted total."
+      },
+      "voiceover": "First, the task. What it is, who needs the output, and why it matters. Second, the method. The three tools, their versions and test dates, the exact prompt, the input, any settings, and your rubric. A reader should be able to repeat your test. Third, a results table, with one row per tool and a weighted total."
+    },
+    {
+      "scene": 4,
+      "start": 57.4,
+      "end": 75.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Six parts (4)",
+        "body": "4. Strengths and failures: for each tool, what went well, what failed, and the likely cause."
+      },
+      "voiceover": "Fourth, strengths and failures. For each tool, say what it did well and where it failed. And here is the important part. Do not only describe a failure. Explain its likely cause, using what you learned about how the model works."
+    },
+    {
+      "scene": 5,
+      "start": 75.0,
+      "end": 99.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Failure → likely cause",
+        "body": "Invented fact → likely text, not checked (L02, L04) · Out of date → knowledge cut-off (L04) · Wrong letters or counts → visual patterns (L05, L08) · Misread number → multimodal misreading (L07) · Very different answers → temperature or starting noise (L02, L05)"
+      },
+      "voiceover": "An invented fact means the model predicts likely text, not checked facts. An out-of-date statement points to the knowledge cut-off. Wrong letters in an image come from visual patterns. A misread number from a photo is a multimodal reading error. And very different answers each time can come from temperature or random starting noise."
+    },
+    {
+      "scene": 6,
+      "start": 99.4,
+      "end": 122.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Six parts (5 and 6)",
+        "body": "5. Recommendation: for this task; quality, cost, privacy, risk; human checks. 6. Limits: one task, one prompt, one day."
+      },
+      "voiceover": "Fifth, your recommendation. Name the tool for this task, and justify it with quality, cost, privacy and risk. Say what checks a person must still do. You can even recommend none of these. Sixth, the limits of your test. One task, one prompt, one day. Being honest here makes your report more trustworthy."
+    },
+    {
+      "scene": 7,
+      "start": 122.1,
+      "end": 138.8,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "doctor explaining results to patient in clinic",
+      "on_screen_text": "Trust comes from the method",
+      "voiceover": "Think of a doctor's summary after tests. It says what was tested, shows the key results, explains what they mean, and gives a clear recommendation. The patient does not need every measurement, but they need to trust the method."
+    },
+    {
+      "scene": 8,
+      "start": 138.8,
+      "end": 152.1,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "community volunteers meeting around table notes",
+      "on_screen_text": "Amara · non-profit · Kigali",
+      "voiceover": "Let's look at an example. Amara is a coordinator at a non-profit organisation in Kigali. She tested three free chatbots on turning volunteer meeting notes into a short action list."
+    },
+    {
+      "scene": 9,
+      "start": 152.1,
+      "end": 163.2,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Amara's results",
+        "body": "Table: Tool | Accuracy (x2) | Clarity | Structure | Effort to fix | Total /25. Tool A 5 4 5 4 = 23 (highlighted). Tool B 3 5 5 3 = 19. Tool C 4 3 3 3 = 17."
+      },
+      "voiceover": "Her results table shows tool A with twenty-three points out of twenty-five, tool B with nineteen, and tool C with seventeen. Accuracy counts double."
+    },
+    {
+      "scene": 10,
+      "start": 163.2,
+      "end": 181.2,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "Linking failure to cause",
+        "body": "\"Tool B had the clearest wording but gave a volunteer a deadline that was not in the notes. This is a typical language model hallucination: the model filled a gap with a likely detail.\""
+      },
+      "voiceover": "In strengths and failures, she writes that tool B had the clearest wording, but gave a volunteer a deadline that was not in the notes. She explains why. It is a typical hallucination. The model filled a gap with a likely detail."
+    },
+    {
+      "scene": 11,
+      "start": 181.2,
+      "end": 203.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Recommendation and limits",
+        "body": "Use Tool A for this task: most accurate, least editing. Checks: every name and date. Privacy: remove phone numbers first. Limits: one set of notes, one day."
+      },
+      "voiceover": "Her recommendation is to use tool A for this task, because it was the most accurate and needed the least editing. A coordinator must still check every name and date, and personal phone numbers are removed before pasting. Her limits section says she tested one set of notes on one day."
+    },
+    {
+      "scene": 12,
+      "start": 203.1,
+      "end": 223.7,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Best for this task, not overall.",
+      "voiceover": "A common mistake is to write, tool A is the best AI. That is too broad. Your test shows which tool worked best for one task, with one prompt, on one date. So limit your claim. For this task, under these conditions, tool A is the best choice."
+    },
+    {
+      "scene": 13,
+      "start": 223.7,
+      "end": 245.6,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Six parts: task, method, results, strengths and failures, recommendation, limits. 2. Every failure gets a cause. 3. Specific, justified, honest about limits."
+      },
+      "voiceover": "Let's recap. First, a strong report has six parts. Task, method, results table, strengths and failures, recommendation, and limits. Second, explain each failure with its likely cause, using how that type of model works. Third, make a specific recommendation for this task, justify it, and state the limits of your test."
+    },
+    {
+      "scene": 14,
+      "start": 245.6,
+      "end": 270.0,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Submit your capstone report",
+      "voiceover": "Congratulations. You have finished Generative AI Explained. You now know how language, diffusion and multimodal models work, where they fail, and how to choose between them. Your last step is the capstone. Write your two to three page report, check it against the capstone rubric, and submit it on the course page. Well done, and good luck."
+    }
+  ]
+}
