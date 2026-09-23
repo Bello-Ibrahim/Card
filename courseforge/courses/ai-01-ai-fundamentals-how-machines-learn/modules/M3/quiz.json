@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-01",
+  "module_id": "M3",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L09",
+      "objective": "O6",
+      "question": "A chatbot gives you a confident answer that includes the title of a book that does not exist. What is the best explanation?",
+      "options": [
+        "The chatbot found a website with wrong information and copied it.",
+        "The model produces likely text by predicting the next word, and a likely-looking title is not always a real one.",
+        "The chatbot is trying to trick you because it was trained to be persuasive.",
+        "The model's database of books is out of date."
+      ],
+      "answer_index": 1,
+      "explanation": "A language model builds answers by predicting likely next words, so it can produce text that has the shape of a real reference without it being true. This is a hallucination. The most tempting wrong option is the 'database' answer, but a trained model does not look up answers in a stored list of books; it generates them from learned patterns."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L10",
+      "objective": "O6",
+      "question": "A loan model is trained on past decisions made by loan officers. Some of those officers treated applicants from certain districts unfairly. What is the most likely result?",
+      "options": [
+        "The model removes the unfairness, because computers are neutral.",
+        "The model ignores the past decisions and learns only from income.",
+        "The model will be unfair only if a programmer writes an unfair rule.",
+        "The model learns the unfair pattern as if it were correct and repeats it."
+      ],
+      "answer_index": 3,
+      "explanation": "A model learns whatever patterns help it match its labels. If the labels come from unfair past decisions, the model learns that unfairness. The most tempting wrong option is that computers are neutral, but a model reflects the data and labels people give it, so it is not neutral just because it uses numbers."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L11",
+      "objective": "O4",
+      "question": "In Google Teachable Machine, what do the classes you create (for example, 'banana' and 'orange') represent?",
+      "options": [
+        "The labels the model learns to predict.",
+        "The features the model uses, such as colour and shape.",
+        "The test images used to check the model.",
+        "The settings that control how long training takes."
+      ],
+      "answer_index": 0,
+      "explanation": "Each class is a category name, which is a label. The images you add to it are the data. The most tempting wrong option is 'features', but you do not choose features in Teachable Machine; the model finds its own patterns, such as colour and shape, during training."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L11",
+      "objective": "O2",
+      "question": "Kenji trains an image classifier and then tests it with the same objects, angles and lighting he used for training. It gets every test right. What should he conclude?",
+      "options": [
+        "The model is ready to use in any situation.",
+        "He needs more classes before the model can be tested.",
+        "The test says little about new cases; he should test with new objects, angles and lighting.",
+        "Training was too short, so he should train again with the same images."
+      ],
+      "answer_index": 2,
+      "explanation": "A fair test uses examples the model has never seen, so a perfect score on training-like images does not show how it will handle new cases. The most tempting wrong option is that the model is ready for any situation, but a perfect result on familiar images can hide overfitting to one background or one kind of light."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L12",
+      "objective": "O6",
+      "question": "A clinic considers using an AI tool to suggest medicine doses. Which checklist question should most strongly push the clinic toward strict human review?",
+      "options": [
+        "Can I verify the output?",
+        "What happens if it is wrong?",
+        "What data did it learn from?",
+        "How was it tested?"
+      ],
+      "answer_index": 1,
+      "explanation": "The cost of a mistake decides how much checking and human review is needed, and a wrong dose can cause serious harm. The most tempting wrong option is 'Can I verify the output?', which matters too, but it asks whether checking is possible, not how much is at stake if the tool is wrong."
+    }
+  ]
+}

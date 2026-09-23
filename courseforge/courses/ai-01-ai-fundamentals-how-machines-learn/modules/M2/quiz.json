@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-01",
+  "module_id": "M2",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L05",
+      "objective": "O3",
+      "question": "A hotel in Portugal wants to predict how many rooms will be booked next Saturday, using past booking records. Which type of task is this?",
+      "options": [
+        "Classification, because the answer is written as a number",
+        "Unsupervised learning, because the hotel wants to find groups of guests",
+        "Regression, because the answer is a number on a scale",
+        "Reinforcement learning, because bookings change from week to week"
+      ],
+      "answer_index": 2,
+      "explanation": "The answer is a count that can take many values on a scale, and the past records give the correct numbers to learn from, so this is supervised regression. The tempting option is classification, but the question is not whether the answer looks like a number: it is whether the answer is a choice from a fixed list or a measurement on a scale. A room count is a measurement."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L06",
+      "objective": "O3",
+      "question": "A supermarket gives a model its customers' shopping records with no labels, and the model puts the customers into four groups. What must happen next for these groups to be useful?",
+      "options": [
+        "A person must study each group and decide what it means",
+        "The model must be given a reward for each group it finds",
+        "Nothing, because the model already knows what each group is called",
+        "The groups must be deleted and the model trained with labels instead"
+      ],
+      "answer_index": 0,
+      "explanation": "In unsupervised learning, the model only notices that some customers behave in similar ways. A person has to interpret each group and judge whether it is meaningful. The tempting option is that the model already knows what each group is, but the model does not understand the groups. It cannot tell you that one group is 'weekend family shoppers'."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L06",
+      "objective": "O3",
+      "question": "A program learns to play a board game by playing many games, winning some and losing others, and slowly choosing better moves. Which type of learning is this?",
+      "options": [
+        "Supervised learning",
+        "Unsupervised learning",
+        "Regression",
+        "Reinforcement learning"
+      ],
+      "answer_index": 3,
+      "explanation": "The program learns by trial and error and receives a reward when it wins, which is reinforcement learning. Supervised learning is the tempting option because the program does improve, but nobody gives it a labelled 'correct move' for every position. It only learns which moves tend to lead to a win."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L07",
+      "objective": "O2",
+      "question": "In a neural network, what happens during training?",
+      "options": [
+        "The network stores a copy of every training example and looks up the closest match later",
+        "The network's dials (weights) are nudged a little after each mistake, and this is repeated many times",
+        "A programmer writes a rule for each pattern the network needs to recognise",
+        "The network adds a new layer every time it makes a mistake"
+      ],
+      "answer_index": 1,
+      "explanation": "Training means making a prediction, comparing it with the correct label and nudging the dials slightly to reduce the mistake, over many rounds. The tempting option is that the network stores every example, but after training the examples are not needed: only the final dial positions remain, which is why the network can handle new cases."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L08",
+      "objective": "O6",
+      "question": "A model scores 99% on its training examples but only 68% on a test set of examples it never saw. What is the most likely explanation?",
+      "options": [
+        "The test set is too large to give a fair result",
+        "The model is excellent, because the training score is what matters most",
+        "The model has overfitted: it memorised its training examples instead of learning the general pattern",
+        "The model needs fewer layers, because neural networks cannot be tested"
+      ],
+      "answer_index": 2,
+      "explanation": "A large gap between a high training score and a much lower test score is the main warning sign of overfitting, like a student who memorised the practice exam. The tempting option is that the high training score shows the model is excellent, but the training examples are ones it has already seen. The test score is the better guide to how it will do on new cases."
+    }
+  ]
+}
