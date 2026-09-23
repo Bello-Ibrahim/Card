@@ -26,7 +26,7 @@ AI can help you choose. Describe the question and the columns, and ask: "Which c
 3. In the **Chart editor**, on the **Setup** tab, choose the chart type. [VERSION]
 4. On the **Customise** tab, open **Chart and axis titles** and type your finding as the title. [VERSION]
 
-**Analogy:** Choosing a chart is like choosing a way to give directions. For a route through a city, you draw a map. For "turn left at the bank", a single sentence is enough. The best format depends on what the other person needs to understand, not on which format looks most impressive.
+**Analogy:** Choosing a chart is like choosing how to give directions. For a route across a city, you draw a map. For "turn left at the bank", one sentence is enough. The format depends on what the other person needs to understand.
 
 ## Worked Example
 Mei Lin is a marketing analyst for a fictional online bookshop in Kuala Lumpur, Malaysia. Her report has a 3D pie chart of revenue by book category, with nine slices and the title "Q2 Revenue".
@@ -38,7 +38,7 @@ Mei Lin builds it in Google Sheets from her pivot table. She sorts the categorie
 She also has a line chart of monthly visitors. The AI suggested the title "Visitors grew strongly", but the chart shows two up months and one down month. She writes a more careful title: "Visitors rose in April and May, then fell in June."
 
 ## Common Mistake
-Many learners choose the chart that looks most interesting, or accept the AI's first suggestion without checking it against the question. Another common mistake is a title that only names the topic. Choose the chart for the message, and make the title say the finding in one sentence that the data supports.
+Many learners choose the chart that looks most interesting, or accept the AI's first suggestion without checking it. Another mistake is a title that only names the topic. Choose the chart for the message, and make the title state a finding the data supports.
 
 ## Key Takeaways
 1. Use line charts for change over time and bar charts for comparisons; avoid pie charts with many slices and all 3D effects.

@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-10",
+  "module_id": "M2",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L05",
+      "objective": "O4",
+      "question": "A freelance video editor asks AI to create an onboarding questionnaire. The AI suggests 28 questions. What should he do?",
+      "options": [
+        "Use all 28 questions, because more questions look more professional.",
+        "Remove the questionnaire and ask the client questions by email when they come up.",
+        "Keep only the 8 to 10 questions he needs before he can start, and ask the others later.",
+        "Ask the AI to add more questions so nothing is missed."
+      ],
+      "answer_index": 2,
+      "explanation": "A short questionnaire with only the necessary questions is more likely to be completed well. The most tempting wrong option is using all 28 because it looks professional. Clients often do not finish long forms or answer them quickly and badly, so he gets worse information."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L06",
+      "objective": "O4",
+      "question": "Which rule is most important to include in a prompt template for a monthly client report?",
+      "options": [
+        "Use only the figures I give and mark anything uncertain for me to check.",
+        "Make the report as long as possible.",
+        "Add industry statistics to make the report more impressive.",
+        "Write recommendations based on what similar businesses usually do."
+      ],
+      "answer_index": 0,
+      "explanation": "A report must be accurate, so the template should stop the AI inventing or changing figures. The most tempting wrong option is adding industry statistics. The AI may invent them or use outdated figures, and the freelancer would then send unchecked claims to the client."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L06",
+      "objective": "O4",
+      "question": "A tutor wants to know how much time her new lesson-plan template saves. What is the best way to find out?",
+      "options": [
+        "Use a general percentage that she read online.",
+        "Ask the AI tool how much time it saves.",
+        "Assume it saves all the time the task used to take.",
+        "Record her own time for the task with and without the template, including checking time."
+      ],
+      "answer_index": 3,
+      "explanation": "Time savings vary a lot by task and person, so measuring her own work, including the checking, gives a real answer. The most tempting wrong option is a general percentage from online. It may not match her trade, her inputs or her checking needs."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L07",
+      "objective": "O2",
+      "question": "A client sends a freelancer a confidential plan for an unlaunched product. The freelancer wants AI help with structure. What is the best approach?",
+      "options": [
+        "Paste the full plan, because the freelancer changed a privacy setting last year.",
+        "Write a general summary without names, prices or dates, and use that with the AI tool.",
+        "Paste the plan into a different AI tool that the client does not know about.",
+        "Ask the AI tool whether it will keep the plan confidential and trust its answer."
+      ],
+      "answer_index": 1,
+      "explanation": "Removing identifying and confidential details protects the client while still getting help with structure. The most tempting wrong option is relying on a setting changed last year. Plans, settings and terms change, and the client may not have agreed to any external tool at all."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L08",
+      "objective": "O2",
+      "question": "An AI tool drafts an invoice template that includes a tax rate and a late-payment fee. What should the freelancer do before using it?",
+      "options": [
+        "Use it as it is, because AI tools know tax rules for every country.",
+        "Delete the whole template and write invoices by hand.",
+        "Check the tax and late-payment details with an official source or a qualified professional in their country.",
+        "Ask the AI to confirm the rules a second time and use the answer if it is the same."
+      ],
+      "answer_index": 2,
+      "explanation": "Invoice and tax rules differ by country, and AI drafts are not tax or legal advice, so an official source or professional must confirm them. The most tempting wrong option is asking the AI a second time. A repeated answer can be repeated wrongly, because the AI may be using another country's rules or out-of-date information."
+    }
+  ]
+}

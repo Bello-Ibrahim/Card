@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-10",
+  "module_id": "M3",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L09",
+      "objective": "O5",
+      "question": "Which step in a freelance translator's workflow is the best candidate for automation?",
+      "options": [
+        "Deciding the price for a complex legal translation.",
+        "Checking the final translation for correct meaning.",
+        "Having a discovery call with a new client.",
+        "Copying each new enquiry form entry into a client spreadsheet."
+      ],
+      "answer_index": 3,
+      "explanation": "Copying form entries happens for every client, follows a fixed rule and is easy to check, so it is repeated, rule-based and low-risk. The most tempting wrong option is the final check, because it is also repeated. But it is not rule-based: it needs expert judgement, so automating it would send unchecked work to clients."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L10",
+      "objective": "O5",
+      "question": "In the automation 'new form entry, then add a spreadsheet row, then send a welcome email', what is the trigger?",
+      "options": [
+        "The new form entry.",
+        "Adding the spreadsheet row.",
+        "Sending the welcome email.",
+        "The freelancer turning the automation on."
+      ],
+      "answer_index": 0,
+      "explanation": "The trigger is the event that starts the automation each time, which is the new form entry. The most tempting wrong option is turning the automation on. That only makes the automation ready; it is not the event that starts each run."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L10",
+      "objective": "O4",
+      "question": "A freelancer has just built her first automation. How should she test it?",
+      "options": [
+        "With one real client's enquiry, because real data is the best test.",
+        "She does not need to test it if every step shows no error.",
+        "Three times with example data, including an incomplete entry, checking every connected app each time.",
+        "Once with example data, then turn it on and stop checking."
+      ],
+      "answer_index": 2,
+      "explanation": "Several tests with varied example data find problems, such as an empty name field, before any client sees them. The most tempting wrong option is testing once and never checking again. Automations can fail silently later, for example after a column name changes, so regular checks are needed."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L11",
+      "objective": "O6",
+      "question": "A consultant can automate messages that tell clients their project is delayed. Using the decision checklist, what is the best decision?",
+      "options": [
+        "Automate it, because it saves time every week.",
+        "Keep it human, because bad news needs a personal touch and a poor message could damage the relationship.",
+        "Automate it, but only for clients who pay less.",
+        "Remove all messages about delays."
+      ],
+      "answer_index": 1,
+      "explanation": "Delay messages are bad news, clients expect a personal explanation, and the risk to the relationship is high. The most tempting wrong option is automating to save time. The checklist asks all four questions, not only how often the task happens, and time saved does not balance a damaged client relationship."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L12",
+      "objective": "O7",
+      "question": "What best shows that a freelancer's AI-assisted workflow from proposal to invoice actually works?",
+      "options": [
+        "A folder containing many separate templates.",
+        "A long list of AI tools the freelancer has tried.",
+        "A statement from the AI tool that the workflow is complete.",
+        "A record of one test client run through every step, with problems found and changes made."
+      ],
+      "answer_index": 3,
+      "explanation": "A full test run shows how the parts work together and reveals gaps to fix. The most tempting wrong option is a folder of separate templates. Templates are useful parts, but without a map that links them and a test run, there is no evidence they work as one workflow."
+    }
+  ]
+}

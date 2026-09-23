@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-05",
+  "module_id": "M3",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L11",
+      "objective": "O1",
+      "question": "For f(x) = x², what are f(3) and the derivative f'(3)?",
+      "options": [
+        "f(3) = 6 and f'(3) = 9",
+        "f(3) = 9 and f'(3) = 9",
+        "f(3) = 6 and f'(3) = 6",
+        "f(3) = 9 and f'(3) = 6"
+      ],
+      "answer_index": 3,
+      "explanation": "f(3) = 3 × 3 = 9 is the height of the curve, and the derivative 2x gives the slope 2 × 3 = 6. The most tempting wrong option swaps them. The value of a function says 'how high', while the derivative says 'how steep'."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L12",
+      "objective": "O5",
+      "question": "A hypothetical model has errors of −10, 5, 30, −2 and 0 on five predictions. Its MSE is 205.8. Which statement is the best interpretation?",
+      "options": [
+        "The single error of 30 contributes most of the MSE, because squaring punishes big errors much more than small ones.",
+        "The model is typically wrong by about 205.8 units per prediction.",
+        "The MSE is low because the positive and negative errors cancel out.",
+        "All five errors contribute equally to the MSE."
+      ],
+      "answer_index": 0,
+      "explanation": "The squared errors are 100, 25, 900, 4 and 0, so the error of 30 gives 900 of the total 1,029. The most tempting wrong option reads 205.8 as a typical error size. MSE is in squared units; its square root, about 14.3, is the typical size."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L13",
+      "objective": "O4",
+      "question": "For one hypothetical example with x = 2 and y = 7, the model y_pred = w*x + b has w = 1 and b = 1, and the loss is the squared error. What is ∂L/∂w?",
+      "options": [
+        "−8",
+        "16",
+        "−16",
+        "−4"
+      ],
+      "answer_index": 2,
+      "explanation": "The error is 3 − 7 = −4, so ∂L/∂error = 2 × (−4) = −8. The chain rule then multiplies by ∂error/∂w = x = 2, giving −16. The most tempting wrong option is −8, which stops the chain too early and forgets to multiply by x."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L14",
+      "objective": "O4",
+      "question": "You minimise (w − 3)² with gradient descent, starting at w = 0 with a learning rate of 0.1. The derivative is 2 × (w − 3). What is w after the first step?",
+      "options": [
+        "−0.6",
+        "0.6",
+        "3",
+        "6"
+      ],
+      "answer_index": 1,
+      "explanation": "The gradient is 2 × (0 − 3) = −6, and w_new = 0 − 0.1 × (−6) = 0.6. The most tempting wrong option is −0.6, which moves with the gradient instead of against it. Subtracting a negative gradient increases w, towards the minimum at 3."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L14",
+      "objective": "O4",
+      "question": "During training, the loss curve rises with every step and the weights become very large. What is the most likely cause and first fix?",
+      "options": [
+        "The model needs more steps, so run the loop for longer.",
+        "The loss function is wrong, so replace MSE with a different loss.",
+        "The data has too few features, so add more columns.",
+        "The learning rate is too large, so try a much smaller one, for example 10 times smaller."
+      ],
+      "answer_index": 3,
+      "explanation": "A rising loss with growing weights is the typical sign of steps that overshoot the minimum, which is divergence. The most tempting wrong option is running for longer. With a learning rate that is too large, more steps only make the loss grow further."
+    }
+  ]
+}

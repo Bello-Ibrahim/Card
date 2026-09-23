@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-08",
+  "module_id": "M3",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L11",
+      "objective": "O6",
+      "question": "An AI says the average order was 383 dollars. Total revenue was 3,450 dollars and your sheet has 10 orders. Which check from the 5-point routine finds the problem fastest?",
+      "options": [
+        "Ask the AI to repeat its answer, and accept it if the number is the same.",
+        "Look for other explanations for the result.",
+        "Check row counts: 3,450 ÷ 383 is about 9, so the AI probably ignored one of the 10 rows.",
+        "Ask \"compared with what?\" and look for last year's average."
+      ],
+      "answer_index": 2,
+      "explanation": "Comparing the AI's row count with your own shows that it divided by 9 instead of 10; the correct average is 345. The most tempting wrong option is asking the AI to repeat its answer. The same mistake can be repeated, so agreement with itself is not a check against the source data."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L11",
+      "objective": "O6",
+      "question": "An AI writes: \"Revenue grew strongly every month (470, 820, 2,160) because more businesses are returning to offices.\" The numbers are correct, and one order of 1,800 was in March. What is the main problem?",
+      "options": [
+        "The sentence is misleading: one order drives the March total, three months is too little for a trend, and the cause is not in the data.",
+        "There is no problem, because every number in the sentence is correct.",
+        "The monthly totals should be averages, not sums.",
+        "The AI should have used a pie chart instead of numbers."
+      ],
+      "answer_index": 0,
+      "explanation": "Without the 1,800 order, March is only 360, lower than February, and no column supports the office explanation. The most tempting wrong option is that there is no problem because the numbers are correct. Correct numbers can still support a misleading conclusion, so you check the reasoning as well as the arithmetic."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L12",
+      "objective": "O5",
+      "question": "During your capstone, the AI suggests a finding that fails your check: it names a cause that is not in the data. What should you do with it in your findings log?",
+      "options": [
+        "Delete it so the log only shows good findings.",
+        "Keep it as confirmed, because the AI is usually right about causes.",
+        "Move it straight to your key finding slide, because it is the most interesting result.",
+        "Keep it in the log, marked \"rejected\", with the reason, such as \"invented cause\"."
+      ],
+      "answer_index": 3,
+      "explanation": "Recording rejected findings with reasons shows your checking and judgement. The most tempting wrong option is deleting it to keep the log tidy. A log with only confirmed findings hides the checks you made, and the rubric gives credit for showing how you checked the AI."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L13",
+      "objective": "O7",
+      "question": "You have a checked finding: \"Most appointments are for general check-ups.\" It is true but does not lead to any decision. According to the \"so what?\" test, what should you do?",
+      "options": [
+        "Put it on the key finding slide, because it is based on the most rows.",
+        "Leave it out of the main story, or move it to the notes or an appendix.",
+        "Change the business question so this finding becomes the answer.",
+        "Present it first, because findings should appear in the order you found them."
+      ],
+      "answer_index": 1,
+      "explanation": "The \"so what?\" test keeps only findings that support the message and lead to action. The most tempting wrong option is putting it on the key finding slide because it is based on many rows. A finding can be large and well supported but still not answer the business question or lead to a decision."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L14",
+      "objective": "O6",
+      "question": "When is the best time to check every number on your five slides against the source data?",
+      "options": [
+        "As the very last step, after all titles, charts and notes are finished.",
+        "Only at the start, before you design the slides.",
+        "Only for the key finding slide, because it matters most.",
+        "It is not needed if the charts were inserted directly from Google Sheets."
+      ],
+      "answer_index": 0,
+      "explanation": "Every edit to a title, chart or note is a new chance for an error, so the full check comes last. The most tempting wrong option is that linked charts need no check. The chart values may be correct, but titles, labels and notes are typed by hand and can still disagree with the data."
+    }
+  ]
+}

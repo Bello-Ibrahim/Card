@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-13",
+  "module_id": "M1",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L01",
+      "objective": "O1",
+      "question": "A team has a table of 5,000 customers with 15 well-understood numeric columns and wants to predict churn. A second team wants to detect cracks in photos of concrete. Which plan is most sensible?",
+      "options": [
+        "Use a deep neural network for both, because deep learning is more accurate on all data types.",
+        "Try a tree-based model first for the table, and use a neural network (ideally pretrained) for the photos.",
+        "Use a tree-based model for both, because neural networks cannot handle images without hand-made features.",
+        "Use a neural network for the table and a tree-based model for the photos, because images are smaller than tables."
+      ],
+      "answer_index": 1,
+      "explanation": "Small tabular data with meaningful columns is often handled as well, and more cheaply, by classical models, while raw pixels need learned features. The most tempting wrong option is using deep learning for both: it is not always more accurate, and on small tables it usually costs more time, compute and explanation effort for little gain."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L02",
+      "objective": "O3",
+      "question": "An image library returns a batch with shape (32, 64, 64, 3). Which line correctly produces the (N, C, H, W) layout that PyTorch convolution layers expect?",
+      "options": [
+        "x = x.reshape(32, 3, 64, 64)",
+        "x = x.view(32, 3, 64, 64)",
+        "x = x.unsqueeze(1)",
+        "x = x.permute(0, 3, 1, 2)"
+      ],
+      "answer_index": 3,
+      "explanation": "permute reorders the dimensions and keeps each pixel's colour values together. The most tempting wrong option is reshape: it gives the right shape with no error, but it reinterprets the numbers in memory order, so the image content is mixed up and the model learns badly."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L03",
+      "objective": "O1",
+      "question": "A model is nn.Sequential(nn.Linear(100, 50), nn.Linear(50, 10)) with no activation between the layers. What is true about it?",
+      "options": [
+        "It can only represent a linear function of its inputs, the same family as one linear layer.",
+        "It is more powerful than a network with a ReLU between the layers, because it keeps negative values.",
+        "It has 100 × 50 + 50 × 10 = 5,500 parameters in total.",
+        "It will raise an error, because nn.Sequential requires an activation after every layer."
+      ],
+      "answer_index": 0,
+      "explanation": "A linear function of a linear function is still linear, so without an activation the extra layer adds no expressive power. The most tempting wrong option is the parameter count: it forgets the biases, so the true count is 100 × 50 + 50 + 50 × 10 + 10 = 5,560."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L04",
+      "objective": "O2",
+      "question": "A learner's training loss falls for a few steps, then jumps sharply and becomes NaN. Their loop calls loss.backward() and optimizer.step() but never calls optimizer.zero_grad(). What is the most likely explanation?",
+      "options": [
+        "The learning rate is too small, so the model cannot escape a flat region.",
+        "CrossEntropyLoss was given logits instead of probabilities.",
+        "Gradients accumulate across steps, so each update uses a growing sum of old gradients and the steps become too large.",
+        "Autograd cannot compute gradients for more than one batch without a new model."
+      ],
+      "answer_index": 2,
+      "explanation": "backward() adds to .grad, so without zeroing, each step is based on the sum of all previous gradients and grows until training diverges. The most tempting wrong option is the learning rate, because the symptom looks like a learning rate that is too high; but here the cause is the missing reset, and lowering the learning rate would only delay the problem."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L05",
+      "objective": "O3",
+      "question": "Which validation code is correct for a model that contains dropout layers?",
+      "options": [
+        "Call model.eval() and run the forward passes inside torch.no_grad(), then call model.train() before the next training epoch.",
+        "Run the forward passes inside torch.no_grad() only; this also switches dropout off.",
+        "Call model.eval() only; this also stops autograd from recording operations.",
+        "Keep model.train() so that validation matches the conditions of training."
+      ],
+      "answer_index": 0,
+      "explanation": "model.eval() changes how dropout and batch normalisation behave, and torch.no_grad() stops gradient tracking, so validation needs both, followed by model.train() for the next epoch. The most tempting wrong option is using torch.no_grad() alone: it saves memory but does not switch dropout off, so validation scores are noisy and too low."
+    }
+  ]
+}

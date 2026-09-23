@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-08",
+  "module_id": "M2",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L06",
+      "objective": "O4",
+      "question": "Which prompt is most likely to give an answer you can check?",
+      "options": [
+        "Give me the most interesting insights from this file.",
+        "This file has one row per order for January to March 2026. Using Revenue (column G) and Region (column C), show total Revenue per Region as a table, then say how many rows you used and how you calculated it.",
+        "Analyse this data like an expert and tell me what to do next.",
+        "What are the trends? Please be detailed and include as many conclusions as possible."
+      ],
+      "answer_index": 1,
+      "explanation": "It describes the dataset, names the columns, states a measurable question and asks for a table and the method. The most tempting wrong option is asking for \"interesting insights\": it sounds open and useful, but it lets the AI choose the measure and period without telling you, so the answer is hard to check."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L07",
+      "objective": "O2",
+      "question": "The South region has 3 orders worth 240, 180 and 1,800. The average order is 740. What is the best way to report this?",
+      "options": [
+        "Report only the average of 740, because it is mathematically correct.",
+        "Remove the 1,800 order and report an average of 210 as the true figure.",
+        "Report the average with the count (3 orders), and note that one large order of 1,800 raises it.",
+        "Report the total only, because averages are never useful."
+      ],
+      "answer_index": 2,
+      "explanation": "The average is correct but hides that two of the three orders were small, so the count and the unusual order should be shown with it. The most tempting wrong option is reporting only the average because it is correct. A correct number can still give a misleading picture when one value is much larger than the others."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L08",
+      "objective": "O2",
+      "question": "In a hypothetical town, ice-cream sales and sunburn cases rise and fall together over the year. What is the best explanation?",
+      "options": [
+        "A third factor, hot sunny weather, increases both, so this is correlation, not causation.",
+        "Eating ice cream causes sunburn.",
+        "Sunburn causes people to buy ice cream to feel better.",
+        "The two numbers are not related at all, because they come from different sources."
+      ],
+      "answer_index": 0,
+      "explanation": "Both numbers follow the weather, which explains why they move together. The most tempting wrong option is the reversed cause (sunburn leads to ice-cream buying). It sounds possible, but the data only shows that the numbers move together; it gives no evidence that either one causes the other."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L09",
+      "objective": "O4",
+      "question": "You want to show how monthly revenue changed from January to June. Which chart and title are best?",
+      "options": [
+        "A 3D pie chart with six slices, titled \"Revenue\".",
+        "A bar chart of revenue by region, titled \"Revenue by region\".",
+        "A scatter chart of units against revenue, titled \"Sales data\".",
+        "A line chart with months on the horizontal axis, titled with the finding, such as \"Revenue rose from January to April, then fell in May and June\"."
+      ],
+      "answer_index": 3,
+      "explanation": "Line charts show change over time, and a title that states the finding gives the message at once. The most tempting wrong option is the pie chart, because each month is a part of the total. But a pie chart cannot show the order of time, and 3D effects distort the slice sizes."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L10",
+      "objective": "O4",
+      "question": "You have built a Looker Studio dashboard from your orders sheet and want your manager to see it. What is the safest way to share it?",
+      "options": [
+        "Share it with your manager with edit access, so they can fix anything they do not like.",
+        "Share it with your manager as a Viewer, after checking the data is safe to show and each number matches your pivot tables.",
+        "Post the link publicly, so anyone in the company can find it.",
+        "Download the dashboard as images and upload them to an AI tool for a summary."
+      ],
+      "answer_index": 1,
+      "explanation": "View-only access to named people protects the dashboard and the data, and checking the numbers first protects your credibility. The most tempting wrong option is edit access. It seems helpful, but it lets others change charts or data connections by accident, and it is more access than they need."
+    }
+  ]
+}

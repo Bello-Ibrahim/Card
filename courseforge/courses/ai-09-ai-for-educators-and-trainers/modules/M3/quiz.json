@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-09",
+  "module_id": "M3",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L09",
+      "objective": "O5",
+      "question": "The outcome of a unit is \"Learners can calculate straight-line depreciation.\" An AI-generated quiz has 10 questions, and 9 of them ask learners to recall definitions. What is the main problem?",
+      "options": [
+        "The quiz has too many questions for Google Forms.",
+        "The quiz does not really measure the outcome, because it needs application questions where learners calculate.",
+        "Recall questions are always wrong in a quiz.",
+        "The questions need longer correct answers so learners can find them."
+      ],
+      "answer_index": 1,
+      "explanation": "A quiz should measure the outcome, and this outcome asks learners to calculate. The most tempting wrong option is that recall questions are always wrong. Recall questions are useful, but a quiz made almost only of recall cannot show whether learners can apply the skill."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L09",
+      "objective": "O5",
+      "question": "While reviewing an AI quiz item, a lecturer notices that two of the four options are partly correct. What should she do?",
+      "options": [
+        "Keep it, because the answer key already marks one option as correct.",
+        "Turn on shuffle option order in Google Forms to solve the problem.",
+        "Add a fifth option to make the question harder.",
+        "Rewrite the options so that exactly one is correct and the wrong options are believable but clearly wrong."
+      ],
+      "answer_index": 3,
+      "explanation": "Every question must have exactly one correct answer, or learners who choose the other defensible option are marked unfairly. The most tempting wrong option is keeping it because the answer key is set. The form will mark consistently, but it will consistently mark a defensible answer as wrong."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L10",
+      "objective": "O5",
+      "question": "A trainer tests an AI-drafted rubric on a sample and cannot decide between the levels \"good answer\" and \"very good answer\". What is the best action?",
+      "options": [
+        "Rewrite the levels with specific, observable differences, for example whether the trainee checks that the customer is satisfied.",
+        "Choose the higher level to be kind to learners.",
+        "Ask the AI to mark all real learner work with the rubric instead.",
+        "Remove the levels and give a single mark out of 10."
+      ],
+      "answer_index": 0,
+      "explanation": "Testing a rubric is meant to find vague levels so they can be made observable. The most tempting wrong option is asking AI to do the marking. That shares learner work, hands over a professional judgement, and does not fix the unclear wording."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L11",
+      "objective": "O7",
+      "question": "In a unit plan's alignment table, one outcome is taught in Lesson 3 but does not appear in the quiz or the rubric. What does this show?",
+      "options": [
+        "The unit is fine, because the outcome is taught.",
+        "The outcome should be removed from Lesson 3.",
+        "There is an alignment gap: the outcome is taught but not assessed, so the educator should add it to the quiz or the rubric.",
+        "The educator should add another lesson on a new outcome."
+      ],
+      "answer_index": 2,
+      "explanation": "An aligned unit teaches and assesses every outcome. The most tempting wrong option is that the unit is fine because the outcome is taught. Without assessment, neither the educator nor the learners know whether the outcome was reached."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L12",
+      "objective": "O6",
+      "question": "During the final review of her unit pack, a teacher finds that her infographic shows \"good\" practice in green and \"bad\" practice in red, with no other signal. What should she do?",
+      "options": [
+        "Change the colours to blue and orange.",
+        "Add a symbol or word, such as a tick and a cross, because colour alone does not work for every learner.",
+        "Keep it, because most learners can see red and green.",
+        "Remove the infographic from the unit pack."
+      ],
+      "answer_index": 1,
+      "explanation": "Accessible materials never use colour alone to show meaning. The most tempting wrong option is changing to different colours. Different colours may help some learners, but meaning still depends only on colour, so the problem remains."
+    }
+  ]
+}

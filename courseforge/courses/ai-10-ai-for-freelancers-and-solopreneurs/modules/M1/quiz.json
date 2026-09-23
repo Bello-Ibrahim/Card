@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-10",
+  "module_id": "M1",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L01",
+      "objective": "O1",
+      "question": "A freelance illustrator wants to start using AI in her business. Which task is the best first candidate?",
+      "options": [
+        "Creating the final artwork that clients pay for, without checking it.",
+        "Drafting the welcome email she sends, with small changes, to every new client.",
+        "Deciding which clients to accept and which to refuse.",
+        "Signing contracts on her behalf when she is busy."
+      ],
+      "answer_index": 1,
+      "explanation": "The welcome email is repeated, text-heavy and low-risk if the first draft is imperfect, so it is a good first task. The most tempting wrong option is the final artwork. That is the core expert work the client pays for, and sending it unchecked means AI mistakes reach the client directly."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L02",
+      "objective": "O3",
+      "question": "What is the most effective way to use AI to write a clear one-sentence offer for your service?",
+      "options": [
+        "Ask the AI to 'write a professional offer for a freelancer' and use the result.",
+        "Ask the AI to make your current description longer and add impressive words.",
+        "Copy the offer of a successful competitor and ask the AI to reword it.",
+        "Ask the AI to interview you with questions, then draft offers from your answers and edit them."
+      ],
+      "answer_index": 3,
+      "explanation": "The interview gives the AI your real information about clients, problems and results, so the drafts can be specific. The most tempting wrong option is asking for a 'professional offer' directly. Without your information, the AI writes general text that could describe any freelancer and gives clients no reason to choose you."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L03",
+      "objective": "O3",
+      "question": "An AI tool drafts an outreach message that begins 'I love your brand and I hope this finds you well.' What is the best edit before sending?",
+      "options": [
+        "Replace the general praise with one specific, true detail about the client that only you could add.",
+        "Keep it, because polite general openings work for every client.",
+        "Make the message longer so it explains all your services in detail.",
+        "Send the same message to as many contacts as possible to increase replies."
+      ],
+      "answer_index": 0,
+      "explanation": "A specific, true detail shows you researched the client and makes the message personal. The most tempting wrong option is keeping the polite opening. Polite general text is exactly what readers recognise as mass-produced, so it lowers trust instead of building it."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L03",
+      "objective": "O2",
+      "question": "A designer plans to send outreach messages to 40 small businesses in two countries. What should she do first?",
+      "options": [
+        "Upload her full contact list to an AI tool so it can personalise every message.",
+        "Assume that business emails are never covered by any rules.",
+        "Check the official rules on unsolicited marketing messages and contact data in her country and the clients' country.",
+        "Ask the AI tool to confirm that her plan is legal and follow its answer."
+      ],
+      "answer_index": 2,
+      "explanation": "Rules on marketing messages and contact data differ by country, so she must check the official local guidance. The most tempting wrong option is asking the AI whether her plan is legal. AI answers can be wrong or out of date, and they are not legal advice, so she still needs the official source."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L04",
+      "objective": "O3",
+      "question": "An AI-drafted proposal includes 'unlimited revisions', which the freelancer never discussed with the client. What should the freelancer do?",
+      "options": [
+        "Leave it, because clients like generous offers and it will help win the work.",
+        "Change it to a clear limit that matches the freelancer's usual process, such as 2 rounds of changes.",
+        "Remove the whole deliverables section to avoid making any promises.",
+        "Ask the AI to rewrite the proposal in a more formal tone."
+      ],
+      "answer_index": 1,
+      "explanation": "Every line in a proposal becomes a promise, so invented terms must be corrected to what the freelancer can really deliver. The most tempting wrong option is leaving it because it looks generous. 'Unlimited revisions' can make a fixed-price project impossible to finish profitably."
+    }
+  ]
+}

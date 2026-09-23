@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-09",
+  "module_id": "M2",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L05",
+      "objective": "O3",
+      "question": "Which learning outcome is best for starting a backward-design lesson plan?",
+      "options": [
+        "Participants will understand good customer service.",
+        "Participants will enjoy a workshop on complaints.",
+        "Participants will know about the four-step response model.",
+        "Participants can respond to a complaining customer using the four-step response model."
+      ],
+      "answer_index": 3,
+      "explanation": "This outcome uses an observable action (respond), so the trainer can plan evidence such as a role-play. The most tempting wrong option is \"will know about the four-step model\". It sounds specific, but \"know\" cannot be observed directly, so it does not tell you what evidence to collect."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L05",
+      "objective": "O3",
+      "question": "An AI lesson plan for a spoken-conversation outcome includes a 20-minute poster-design activity. What should the educator do?",
+      "options": [
+        "Remove or replace the activity, because it does not help learners produce the planned evidence.",
+        "Keep it, because creative activities always improve learning.",
+        "Keep it, because the AI suggested it and the timing adds up.",
+        "Make the poster activity longer so learners have more time."
+      ],
+      "answer_index": 0,
+      "explanation": "In backward design, every activity must move learners towards the outcome and its evidence. The most tempting wrong option is keeping it because the timing adds up. A plan can fill the time perfectly and still not lead to the outcome."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L06",
+      "objective": "O4",
+      "question": "A teacher's AI-made support version of a text is shorter and easier, but it no longer mentions one of the four key points. What is the main problem?",
+      "options": [
+        "The support version is too short and should be made longer.",
+        "The support version should use more difficult vocabulary.",
+        "The support version changed the content, not only the route, so those learners will learn less.",
+        "There is no problem, because support learners only need the main idea."
+      ],
+      "answer_index": 2,
+      "explanation": "Differentiation keeps the same key content and outcome for every version. The most tempting wrong option is that support learners only need the main idea. Removing key points means those learners fall further behind, so the teacher should add the point back in simpler language."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L07",
+      "objective": "O4",
+      "question": "Which alternative text is best for a worksheet image showing a worker lifting a box correctly?",
+      "options": [
+        "\"image1.png\"",
+        "\"Worker lifting a box with bent knees and a straight back, keeping the box close to the body.\"",
+        "\"Picture of a person.\"",
+        "\"A photograph with a blue background, a grey floor, a brown box, a worker in a yellow vest, black boots and gloves.\""
+      ],
+      "answer_index": 1,
+      "explanation": "Good alt text describes what the image means for the lesson: the safe lifting position. The most tempting wrong option is the long description with every colour. It is detailed, but it misses the point of the image and is tiring to hear on a screen reader."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L08",
+      "objective": "O6",
+      "question": "A trainer asked the AI for \"diverse examples\" in a case study. In the result, all the managers are men and all the assistants are women. What should the trainer conclude?",
+      "options": [
+        "The prompt asked for diversity, so the material is fair.",
+        "Only factual errors matter in training materials, so no change is needed.",
+        "The AI will fix it automatically next time.",
+        "A good prompt does not guarantee a fair result; the trainer should review for representation and change the roles."
+      ],
+      "answer_index": 3,
+      "explanation": "The output repeats a gender stereotype, so it needs correcting after a representation check. The most tempting wrong option is that the prompt asked for diversity, so the material is fair. The educator must always check the output itself, not only the request."
+    }
+  ]
+}
