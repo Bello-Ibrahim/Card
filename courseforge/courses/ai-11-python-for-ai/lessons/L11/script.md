@@ -1,12 +1,12 @@
 # L11 Meet pandas: Series and DataFrames | Presenter Script
 
-Course: AI-11 · Video: 5 min · Words: 680
+Course: AI-11 · Video: 5 min · Words: 682
 
 ## Hook
 A spreadsheet with fifty rows is easy to read by eye. A table with fifty thousand rows is not. pandas lets you ask questions of a large table in one line of code, and repeat the same steps on next month's data in seconds.
 
 ## Explain
-Welcome to week three. Until now, we worked with single values, lists and files. Now we work with whole tables. pandas is the most widely used Python library for tables of data, and it has two main objects.
+We are now in week three. Until now, we worked with single values, lists and files. Now we work with whole tables. pandas is the most widely used Python library for tables of data, and it has two main objects.
 
 A DataFrame is a whole table, with rows and named columns. A Series is one column of that table, for example the life expectancy column. Each row also has an index label on the left, starting at zero.
 

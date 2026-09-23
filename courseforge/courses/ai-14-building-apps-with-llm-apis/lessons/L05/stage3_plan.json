@@ -1,0 +1,153 @@
+{
+  "title": "Structured Outputs with JSON Schemas",
+  "thumbnail": {
+    "headline": "Data Your Code Trusts",
+    "image": "Navy background, a messy paper invoice turning into a clean JSON card with four labelled fields, headline in teal Inter Bold.",
+    "slide": {
+      "layout": "title",
+      "title": "Data Your Code Trusts",
+      "body": "Left: a crumpled invoice icon. Arrow. Right: a clean card with four fields: supplier, date, total, currency. Small tag: Building Apps with LLM APIs · Lesson 5."
+    }
+  },
+  "production_notes": [
+    "[VERSION] Structured-output parameters (output_config, output_format), the messages.parse() helper and parsed_output must be checked against the current SDK and docs before recording. If names have changed, update the on-screen code; the voiceover describes the feature without naming parameters.",
+    "[VERSION] Confirm that the tool-based alternative (a tool whose input_schema is the schema) is still supported as described.",
+    "The example outputs (the Mexican invoice JSON and the first German result 1.2345) are illustrative: label them 'example output' on screen.",
+    "Priya, the Bengaluru accounting tool and the supplier 'Papelería del Centro' are invented; all invoices on screen are invented text with no real personal data."
+  ],
+  "sections": {
+    "Hook": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Your code asks the model for an invoice total. The model replies, sure, the total appears to be around four thousand five hundred rupees. But your code needs a number and a currency code. A friendly sentence is useless to a database.",
+        "on_screen_text": "Friendly text breaks code"
+      }
+    ],
+    "Explain": [
+      {
+        "visual_type": "slide",
+        "voiceover": "In the last lesson, you learned to measure what each call costs. Now let's make the output useful to code. Free text is good for people and bad for programs. When another part of your program reads the result, you need structured output. That means data with fixed fields and types that your code can trust.",
+        "slide": {
+          "layout": "comparison",
+          "title": "Free text vs structured output",
+          "body": "Left: 'Sure! The total appears to be around 4,500 rupees.' (red cross for code). Right: {total: 4500, currency: \"INR\"} (green tick)."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "There are three steps. Step one, define a schema. It lists the fields, their types, and which ones are required. In Python, the usual tool is Pydantic. You write a small class, and Pydantic turns it into a JSON schema and checks data against it. In TypeScript, Zod does the same job.",
+        "slide": {
+          "layout": "code",
+          "title": "Step 1: define a schema",
+          "body": "class Invoice(BaseModel):\n    supplier: str\n    invoice_date: str   # YYYY-MM-DD\n    total: float\n    currency: str       # ISO 4217, e.g. \"EUR\""
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Step two, ask the API for output that matches the schema. The Claude API has a structured-output feature. The Python SDK has a helper that takes your Pydantic class and gives you back a parsed object. Names of these settings change between versions, so check the current docs.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Step 2: ask for the schema",
+          "body": "Invoice class → SDK parse helper → API with structured output → parsed Invoice object. Small note: check the current docs for parameter names."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "There is also an older, widely used option. You define a tool whose input schema is your schema, and read the tool's input. Lesson nine explains tools.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Alternative: a tool schema",
+          "body": "Tool definition with input_schema = Invoice schema → model calls the tool → read the tool input as a parsed dictionary. Note: tools in L09."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Step three, still validate in your code. The schema controls the shape, not the truth. The model can read the wrong number from a blurred invoice. So add business checks. Is the total positive? Is the date not in the future? And say clearly what to do with missing values, for example use null, and make that field optional.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Step 3: still validate",
+          "body": "Schema = shape, not truth · Total > 0? · Date not in the future? · Currency in allowed list? · Missing value → null, field optional"
+        }
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "Asking for free text is like asking a colleague to tell you about an invoice by phone. Structured output is like handing them a printed form with labelled boxes. It is easy to file, but you still check the numbers in the boxes.",
+        "stock_query": "person filling in paper form at desk",
+        "on_screen_text": "A form with labelled boxes"
+      }
+    ],
+    "Demonstrate": [
+      {
+        "visual_type": "stock",
+        "voiceover": "Priya works on an accounting tool in Bengaluru, India. It reads supplier invoices from India, Mexico and Germany, each with a different layout and date format.",
+        "stock_query": "accountant reviewing invoices at office desk",
+        "on_screen_text": "Priya · accounting tool · Bengaluru"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "She opens her extractor. At the top is the Invoice class. The system prompt tells the model to convert all dates to one standard format, and to use standard currency codes. The invoice text goes inside tags, as you learned in lesson three.",
+        "screen_steps": [
+          "Open extract.py in VS Code",
+          "Highlight the Invoice Pydantic class",
+          "Highlight the system prompt: 'Extract invoice fields. Convert all dates to YYYY-MM-DD. Use the ISO 4217 currency code.'",
+          "Highlight the user content wrapped in <invoice> tags"
+        ],
+        "on_screen_text": "Schema, rules, and tags"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "The call uses the parse helper, with the Invoice class as the output format. The result is an Invoice object, not a string. She runs it on the Mexican invoice. You'll see something like the supplier name, the date in standard format, the total as a number, and the Mexican peso code.",
+        "screen_steps": [
+          "Highlight client.messages.parse(...) with output_format=Invoice and max_tokens=500",
+          "Highlight response.parsed_output",
+          "Run python extract.py invoices/mexico.txt",
+          "Show the parsed object: supplier 'Papelería del Centro', invoice_date 2026-03-12, total 18450.0, currency MXN (labelled 'example output')"
+        ],
+        "on_screen_text": "A typed object, not a string"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "She saves the object straight to the database. No string searching, and no regular expressions. Then she tests a German invoice, where the total uses a comma for decimals. The first result is wrong. The schema was valid, but the value was not.",
+        "screen_steps": [
+          "Show the line that saves the Invoice object to the database",
+          "Run the extractor on invoices/germany.txt with the total '1.234,50 EUR'",
+          "Show the result total 1.2345 and circle it in red (example output)"
+        ],
+        "on_screen_text": "Valid shape, wrong value"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "So she adds a rule to the system prompt about comma decimals, and a business check that flags very small totals for human review. She runs it again, and the total is now correct.",
+        "screen_steps": [
+          "Add to the system prompt: 'Numbers may use a comma as the decimal separator.'",
+          "Add a business check that prints REVIEW for totals below 5",
+          "Run the German invoice again and show total 1234.5"
+        ],
+        "on_screen_text": "Add a rule and a check"
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "A common mistake is to write reply only with JSON in the prompt, parse the text, and hope. Usually it works. Sometimes there is extra text or a missing field, and the app crashes. Use the structured-output feature, and never pull out fields with string matching.",
+        "on_screen_text": "Don't just ask for JSON and hope"
+      }
+    ],
+    "Recap": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, define your output as a schema, with Pydantic in Python or Zod in TypeScript, so your code receives fixed fields and types. Second, use the API's structured-output feature, or a tool with an input schema, and parse the result into an object. Third, a valid schema does not mean correct values, so add business checks and a clear rule for missing data.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. Output as a schema: Pydantic or Zod. 2. Structured-output feature or a tool schema → parsed object. 3. Valid shape ≠ correct values: business checks, rule for missing data."
+        }
+      }
+    ],
+    "CTA": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Now it is your turn. In the exercise, you will build an invoice extractor that returns validated objects for five invented invoices in different formats, with two business checks. You will reuse this schema idea in your capstone. In the next lesson, Validation, Errors and Retries, you will make it survive real failures. See you there.",
+        "on_screen_text": "Next: Validation, Errors and Retries"
+      }
+    ]
+  }
+}

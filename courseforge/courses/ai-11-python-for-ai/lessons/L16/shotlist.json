@@ -1,0 +1,194 @@
+{
+  "course_id": "AI-11",
+  "lesson_id": "L16",
+  "duration_s": 293.9,
+  "thumbnail": {
+    "headline": "Clean It, Log It",
+    "slide": {
+      "layout": "title",
+      "title": "Clean It, Log It",
+      "body": "Arrow from an 11-row messy table to an 8-row clean table; below, a log card with Problem · Action · Rows · Why. Small tag: Python for AI · Lesson 16."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 19.7,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Every choice changes the model",
+      "voiceover": "You found the problems. Now you must decide what to do about each one. There is rarely a single correct answer, and every choice changes what a future model will learn. That is why a good analyst writes down each decision, and the reason for it."
+    },
+    {
+      "scene": 2,
+      "start": 19.7,
+      "end": 45.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Removing rows",
+        "body": "df.drop_duplicates()\ndf.dropna(subset=[\"order_date\"])\ndf[df[\"quantity\"] > 0]   # remove impossible values"
+      },
+      "voiceover": "We are now in week four. In lesson fourteen, we audited a messy order file. Today, we clean it. Drop duplicates removes rows that copy an earlier row. Dropna removes rows with missing values. Always give it a subset, the column you care about. Without one, it removes rows with any missing value, which can be far more than you expect."
+    },
+    {
+      "scene": 3,
+      "start": 45.8,
+      "end": 67.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Filling and converting",
+        "body": "fillna: mean · median (extreme values) · most common value · \"unknown\". pd.to_numeric(col, errors=\"coerce\") · pd.to_datetime(col)"
+      },
+      "voiceover": "Fillna fills missing values instead. Use the mean for number columns without extreme values, the median when there are extreme values, the most common value for categories, or a label such as unknown. To fix types, to numeric converts text to numbers, and to datetime converts text to real dates."
+    },
+    {
+      "scene": 4,
+      "start": 67.2,
+      "end": 86.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Every choice has a cost",
+        "body": "Drop: loses information, can remove one group. Fill: keeps rows, but a filled value is a guess."
+      },
+      "voiceover": "Every choice has a cost. Dropping rows loses information. If most missing values come from one city, dropping them removes that city's customers. Filling keeps the rows, but invents numbers, and hides the fact that data was missing. A filled value is a guess."
+    },
+    {
+      "scene": 5,
+      "start": 86.1,
+      "end": 111.0,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "restorer repairing old building wall",
+      "on_screen_text": "A cleaning log is your record",
+      "voiceover": "Cleaning data is like restoring an old building. The restorer decides, room by room, whether to repair, replace or remove. Each decision is photographed and written in a record, so future owners know which walls are original. Your record is a cleaning log. For each problem, it lists the action, the rows affected, and a one-line reason."
+    },
+    {
+      "scene": 6,
+      "start": 111.0,
+      "end": 123.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Two rules",
+        "body": "Work on a copy; never overwrite the raw file · Every step is code, so it can run again"
+      },
+      "voiceover": "Two more rules. Work on a copy, and never overwrite the raw file. And write every cleaning step as code, so it can run again on new data."
+    },
+    {
+      "scene": 7,
+      "start": 123.0,
+      "end": 135.4,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "young data analyst working on laptop",
+      "on_screen_text": "Linh, junior analyst · synthetic data",
+      "voiceover": "Let's clean it. Linh is a junior data analyst at the same marketplace, with shops in Lagos, Hanoi and Lima. She uses the synthetic order data from lesson fourteen."
+    },
+    {
+      "scene": 8,
+      "start": 135.4,
+      "end": 153.4,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run the L14 data cell so orders exists",
+        "Add a new code cell",
+        "Type: clean = orders.drop_duplicates()",
+        "Type: clean = clean[clean[\"quantity\"] > 0]",
+        "Type: clean = clean.dropna(subset=[\"order_date\"]).copy()"
+      ],
+      "voiceover": "We make a new table called clean. First, we drop the duplicate. Then we keep only rows with a quantity above zero. Then we drop the row with no order date, and make a copy, so later changes don't affect the original."
+    },
+    {
+      "scene": 9,
+      "start": 153.4,
+      "end": 170.1,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Type: clean[\"unit_price\"] = pd.to_numeric(clean[\"unit_price\"], errors=\"coerce\")",
+        "Type: clean[\"unit_price\"] = clean[\"unit_price\"].fillna(clean[\"unit_price\"].median())",
+        "Type: clean[\"order_date\"] = pd.to_datetime(clean[\"order_date\"])",
+        "Type: print(clean.shape, clean.isna().sum().sum())"
+      ],
+      "voiceover": "Next, the price. We convert it to numbers, so unknown becomes missing, and fill it with the median price. Then we convert the dates to real dates. Finally, we print the shape and the total count of missing values."
+    },
+    {
+      "scene": 10,
+      "start": 170.1,
+      "end": 184.7,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Press Shift + Enter",
+        "Output: (8, 8) 0"
+      ],
+      "on_screen_text": "11 rows became 8, none missing",
+      "voiceover": "Run it. Eight rows and eight columns, and zero missing values. The table went from eleven rows to eight. The price is now a number column, and the order date is a date column."
+    },
+    {
+      "scene": 11,
+      "start": 184.7,
+      "end": 212.1,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Add a text cell",
+        "Type the cleaning log table from content.md: Problem · Action · Rows · Justification",
+        "Rows: duplicate 1003 dropped; quantity -2 (1004) dropped; missing date (1007) dropped; price 'unknown' (1005) filled with median 4.50; dates converted with to_datetime; quantity 500 (1006) kept and flagged"
+      ],
+      "voiceover": "Now Linh writes her cleaning log in a text cell. The duplicate was counted twice by mistake. Minus two is impossible. A missing date cannot be guessed. The unknown price is filled with the median, because prices vary widely. Dates become real dates for the next lesson. And the five hundred unit order is kept and flagged, while she waits for the Lima shop."
+    },
+    {
+      "scene": 12,
+      "start": 212.1,
+      "end": 226.2,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Add a line under the log: Risk: dropping 1007 removes one of only two returned orders"
+      ],
+      "on_screen_text": "Record the risk, too",
+      "voiceover": "She also notes one cost. Order ten oh seven was one of only two returned orders. So dropping it removes half of the returns. She adds this to the log as a risk."
+    },
+    {
+      "scene": 13,
+      "start": 226.2,
+      "end": 244.6,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Check the shape after each step",
+      "voiceover": "A common mistake is running dropna with no subset, to be safe. In a real dataset, almost every row has an empty cell somewhere, so this can delete most of your data without any message. Check the shape before and after each step."
+    },
+    {
+      "scene": 14,
+      "start": 244.6,
+      "end": 268.6,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. drop_duplicates · dropna(subset=...) · fillna · to_numeric · to_datetime · filters. 2. Drop loses; fill invents: weigh the cost. 3. Log every decision; check shape each step."
+      },
+      "voiceover": "Let's recap. First, use drop duplicates, dropna with a subset, fillna, to numeric, to datetime and filters to fix the problems from your audit. Second, dropping loses information and filling invents values, so choose based on the column and the cost. Third, record every decision in a cleaning log, and check the shape after each step."
+    },
+    {
+      "scene": 15,
+      "start": 268.6,
+      "end": 293.9,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Shaping Features",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will clean the messy order file, and write a one-line reason for each decision in your cleaning log. It takes about thirty minutes, and it is great practice for your capstone. In the next lesson, we shape features from text, categories and dates. See you there."
+    }
+  ]
+}

@@ -21,7 +21,7 @@
     ],
     "Explain": [
       {"visual_type": "slide",
-       "voiceover": "Welcome to week three. Until now, we worked with single values, lists and files. Now we work with whole tables. pandas is the most widely used Python library for tables of data, and it has two main objects.",
+       "voiceover": "We are now in week three. Until now, we worked with single values, lists and files. Now we work with whole tables. pandas is the most widely used Python library for tables of data, and it has two main objects.",
        "slide": {"layout": "title", "title": "Week 3: Working with tables", "body": "pandas · the library for tables of data"}},
       {"visual_type": "slide",
        "voiceover": "A DataFrame is a whole table, with rows and named columns. A Series is one column of that table, for example the life expectancy column. Each row also has an index label on the left, starting at zero.",

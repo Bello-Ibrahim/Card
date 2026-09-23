@@ -1,0 +1,83 @@
+{
+  "title": "From Scripts to Agents",
+  "thumbnail": {
+    "headline": "Recipe or Chef?",
+    "image": "Navy background, a split card: a printed recipe card on the left and a chef's hat above an open fridge on the right, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Recipe or Chef?", "body": "Left half: icon of a printed recipe card with numbered steps. Right half: icon of a chef's hat next to an open fridge. Small tag: AI Agents and Automation Workflows · Lesson 1."}
+  },
+  "production_notes": [
+    "No facts to verify: the lesson is conceptual and uses hypothetical examples (content.md Review Flags: None).",
+    "Tomás Herrera and his Montevideo logistics company are fictional; do not show a real company name or logo in stock footage.",
+    "The eight exercise tasks are shown on the lesson page, not read aloud in the video."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Two teams want to use AI agents. One needs to copy invoice totals into a spreadsheet every morning. The other needs to answer unusual customer questions that nobody can predict. Only one of them needs an agent. Let's find out which one, and why.",
+       "on_screen_text": "Which team needs an agent?"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Hi, and welcome to AI Agents and Automation Workflows. In this first lesson, we look at a simple idea. Automation is not one thing. It is a spectrum, with three main points.",
+       "slide": {"layout": "title", "title": "From Scripts to Agents", "body": "AI Agents and Automation Workflows · Lesson 1 of 16"}},
+      {"visual_type": "slide",
+       "voiceover": "The first point is a fixed workflow, with rules only. Something starts a run, and the same steps follow every time. It is fast, cheap and easy to test. But it fails when the input does not match what the rules expect.",
+       "slide": {"layout": "diagram", "title": "1. Fixed workflow", "body": "Straight line of three boxes: New row → Copy column B to accounts sheet → Send confirmation. Label under the line: same path every run. Small tags: fast · cheap · easy to test."}},
+      {"visual_type": "slide",
+       "voiceover": "The second point is a workflow with an AI step. The path is still fixed, but one step asks a language model to do something that rules do badly, such as summarise a message, classify it, or pull out details from free text. The model does not decide what happens next. Your workflow does.",
+       "slide": {"layout": "diagram", "title": "2. Workflow with an AI step", "body": "Same straight line of boxes, but the middle box is teal and labelled 'AI step: summarise / classify / extract'. The arrows after it are still fixed. Caption: the workflow decides what happens next."}},
+      {"visual_type": "slide",
+       "voiceover": "The third point is an agent. The model gets a goal, a set of tools and some instructions. It chooses its own next step, uses a tool, looks at the result, and decides again, until it reaches the goal or a stop condition. Nobody writes the path in advance.",
+       "slide": {"layout": "diagram", "title": "3. Agent", "body": "A circle of arrows around a 'Model' box: decide → use tool → look at result → decide again. A small flag labelled 'Goal or stop condition' where the loop exits."}},
+      {"visual_type": "slide",
+       "voiceover": "As you move from one to three, you gain flexibility. But you also pay more, because an agent may call the model many times for one task. Results are harder to predict. And risk grows, because the system can take actions you did not plan for.",
+       "slide": {"layout": "comparison", "title": "More freedom, more trade-offs", "body": "Horizontal arrow from 'Fixed workflow' to 'AI step' to 'Agent'. Above the arrow, rising: flexibility. Below the arrow, also rising: cost · unpredictability · risk."}},
+      {"visual_type": "stock",
+       "voiceover": "Here is a simple way to picture it. A fixed workflow is a recipe that a cook follows exactly. Same ingredients, same order, same result.",
+       "stock_query": "cook following written recipe in kitchen",
+       "on_screen_text": "Fixed workflow = the recipe"},
+      {"visual_type": "stock",
+       "voiceover": "An agent is a chef who opens the fridge, sees what is there, and decides what to cook. The chef can handle surprises. But you cannot be sure what will arrive on the plate, and the chef may use expensive ingredients.",
+       "stock_query": "chef looking inside open fridge",
+       "on_screen_text": "Agent = the chef"},
+      {"visual_type": "stock",
+       "voiceover": "For a school canteen that serves the same meal to five hundred children, you want the recipe.",
+       "stock_query": "school canteen serving lunch to children",
+       "on_screen_text": "Same meal for 500? Use the recipe."},
+      {"visual_type": "slide",
+       "voiceover": "In this course, you will use five building blocks. A trigger starts a run. A node is one step, like reading a sheet or checking a condition. A tool is an action an agent may choose. Memory is what the agent keeps between steps. And the agent loop is the repeated cycle of decide, act and check.",
+       "slide": {"layout": "bullets", "title": "Five building blocks", "body": "Trigger: what starts a run · Node: one step in a workflow · Tool: an action an agent may choose · Memory: what the agent keeps between steps · Agent loop: decide, act, check (Lesson 2)"}}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's use this on a real list. Tomás Herrera manages operations at a logistics company in Montevideo, Uruguay. He has three tasks to automate.",
+       "stock_query": "delivery vans at logistics warehouse",
+       "on_screen_text": "Tomás · logistics · Montevideo"},
+      {"visual_type": "slide",
+       "voiceover": "Task one. Every night, copy the delivery counts from a scanner export into a report sheet. The format never changes. So this is a fixed workflow. Rules are cheaper, and always correct.",
+       "slide": {"layout": "comparison", "title": "Task 1: nightly delivery counts", "body": "Left: scanner export → report sheet. Right: verdict tag 'Fixed workflow' with reason 'format never changes'."}},
+      {"visual_type": "slide",
+       "voiceover": "Task two. Read driver notes, such as gate locked, left with neighbour, and tag each one as delivered, failed, or needs follow-up. The notes are free text, so a model helps. But the next step for each tag is known. That is a workflow with an AI step.",
+       "slide": {"layout": "comparison", "title": "Task 2: driver notes", "body": "Left: note card 'gate locked, left with neighbour' → AI step → tags: delivered · failed · needs follow-up. Right: verdict tag 'Workflow with an AI step'."}},
+      {"visual_type": "slide",
+       "voiceover": "Task three. A customer writes: my parcel is late, can I change the address, and why was I charged twice? The steps depend on the message. Check tracking, check billing, maybe draft an address change. This is where an agent makes sense.",
+       "slide": {"layout": "comparison", "title": "Task 3: a mixed customer message", "body": "Left: message bubble with three questions: late parcel · change address · charged twice. Right: verdict tag 'Agent, with limits' and three possible steps: check tracking · check billing · draft address change."}},
+      {"visual_type": "slide",
+       "voiceover": "But notice the limits. Tomás does not let the agent issue refunds or change addresses on its own. It may look up data and draft replies, but a person approves any change. That keeps the flexibility, and limits the risk.",
+       "slide": {"layout": "diagram", "title": "Agent, with limits", "body": "Agent box with two green arrows: look up data · draft reply. A red gate between the agent and 'Refund / change address', labelled 'A person approves'."}},
+      {"visual_type": "text",
+       "voiceover": "One common mistake is to start with an agent because it sounds more advanced. Teams then find it is slower, costs more per task, and sometimes takes a different path for the same input.",
+       "on_screen_text": "Start simple. Add freedom only where needed."}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, automation is a spectrum: fixed workflow, workflow with an AI step, and agent. Each step to the right adds flexibility, cost and risk. Second, an agent chooses its own next step, while a workflow follows your path. Third, choose the least freedom that solves the problem, and limit what an agent may do alone.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Fixed workflow → AI step → agent: more flexibility, cost and risk. 2. An agent chooses its next step; a workflow follows your path. 3. Choose the least freedom that solves the problem."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "So, which team needed an agent? The one with unpredictable customer questions. Now it is your turn. In the exercise below this video, you will sort eight business tasks into the three types, and justify two of your choices. It takes about fifteen minutes. In the next lesson, we look inside the agent loop. See you there.",
+       "on_screen_text": "Next: How an Agent Works"}
+    ]
+  }
+}

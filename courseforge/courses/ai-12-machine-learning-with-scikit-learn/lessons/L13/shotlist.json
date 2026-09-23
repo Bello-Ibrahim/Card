@@ -1,0 +1,200 @@
+{
+  "course_id": "AI-12",
+  "lesson_id": "L13",
+  "duration_s": 322.8,
+  "thumbnail": {
+    "headline": "One Column Halves Error",
+    "slide": {
+      "layout": "title",
+      "title": "One Column Halves Error",
+      "body": "A timestamp icon splits into 'hour', 'weekday', 'is_weekend'. Beside it, a bar shrinks from 122.6 to 57.2. Tag: Machine Learning with scikit-learn · Lesson 13."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 19.7,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Same model. Better inputs.",
+      "voiceover": "In the last lesson, we changed the model and saved about sixty bikes per hour of error. Today we keep the model the same, and change only what it sees. One new column, made from a timestamp we already had, will cut the error in half."
+    },
+    {
+      "scene": 2,
+      "start": 19.7,
+      "end": 42.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Date and time parts",
+        "body": "Timestamp '2025-03-14 08:00' → hour 8 · weekday Friday · month March · is_weekend 0 · is_holiday 0."
+      },
+      "voiceover": "Feature engineering means creating new input columns from the data you already have, so the pattern becomes easier to learn. Date and time parts are a classic example: hour, day of the week, month, or is it a weekend. A raw timestamp means little to a model, but its parts often carry the pattern."
+    },
+    {
+      "scene": 3,
+      "start": 42.8,
+      "end": 61.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "More feature types",
+        "body": "Ratios: debt ÷ income, spend per visit · Interactions: hot × weekend · Bins: age bands (KBinsDiscretizer, inside a pipeline)"
+      },
+      "voiceover": "Other useful types are ratios, such as debt divided by income, or spend per visit. Interactions, where two features together behave differently, such as hot and weekend. And bins, such as age bands, which help linear models follow patterns that are not straight lines."
+    },
+    {
+      "scene": 4,
+      "start": 61.7,
+      "end": 80.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Rule 1: measure every feature",
+        "body": "Add one feature → cross-validate → keep only if the gain is larger than the spread · Useless features add noise, time and confusion"
+      },
+      "voiceover": "Two rules keep feature engineering honest. First, test every new feature with cross-validation. Keep it only if it helps by more than the normal spread. More columns are not automatically better. Useless features add noise, and make models slower and harder to explain."
+    },
+    {
+      "scene": 5,
+      "start": 80.6,
+      "end": 98.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Rule 2: no future information",
+        "body": "Red cross: 'average rentals for the whole day' (uses future hours). Green tick: 'rentals at the same hour yesterday' (already known)."
+      },
+      "voiceover": "Second, never use future information. Average rentals for the whole day uses hours that have not happened yet at eight in the morning, so it leaks the answer. Rentals at the same hour yesterday is fine, because it is already known."
+    },
+    {
+      "scene": 6,
+      "start": 98.2,
+      "end": 117.1,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Forecasting? Split by time",
+      "voiceover": "One more note. For simplicity, today's demo uses a random split. For real forecasting, use a time-ordered split, which always trains on earlier hours and tests on later ones. A random split can make scores look a little better than they will be."
+    },
+    {
+      "scene": 7,
+      "start": 117.1,
+      "end": 133.4,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "chef chopping fresh vegetables kitchen",
+      "on_screen_text": "Prepare ingredients, not tomorrow's",
+      "voiceover": "Feature engineering is like preparing ingredients before cooking. The same oven gives a much better result when the vegetables are washed and cut to the right size. But you cannot use an ingredient that will only arrive tomorrow."
+    },
+    {
+      "scene": 8,
+      "start": 133.4,
+      "end": 152.3,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "cyclists shared bikes city square Europe",
+      "on_screen_text": "Sofia · bike-sharing analyst · Sofia",
+      "voiceover": "Sofia Petrova is a data analyst for a bike-sharing scheme in Sofia, Bulgaria. Her boosting model from the last lesson has an RMSE of about one hundred and twenty-three bikes per hour. She suspects it misses the difference between workdays and weekends."
+    },
+    {
+      "scene": 9,
+      "start": 152.3,
+      "end": 175.0,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Scroll past the L11 and L12 cells, already executed.",
+        "Type this exact code cell from content.md and run it with Shift+Enter:\nfeats = bikes[[\"temp\", \"humidity\"]].assign(\n    hour=bikes[\"timestamp\"].dt.hour,\n    weekday=bikes[\"timestamp\"].dt.dayofweek,\n    is_weekend=(bikes[\"timestamp\"].dt.dayofweek >= 5).astype(int),\n    temp_x_humidity=bikes[\"temp\"] * bikes[\"humidity\"],\n)\ntrain_idx = X_train.index            # same rows as the L11 split\nmodel = HistGradientBoostingRegressor(random_state=0)\n\ndef cv_rmse(cols):\n    scores = cross_val_score(model, feats.loc[train_idx, cols], y_train, cv=cv,\n                             scoring=\"neg_root_mean_squared_error\")\n    return round(-scores.mean(), 1)\n\nbase = [\"temp\", \"humidity\", \"hour\"]\nprint(\"base\", cv_rmse(base))\nfor extra in [\"weekday\", \"is_weekend\", \"temp_x_humidity\"]:\n    print(\"+\", extra, cv_rmse(base + [extra]))"
+      ],
+      "on_screen_text": "Add one feature at a time",
+      "voiceover": "We continue in the bike notebook. This cell builds a table of candidate features from the timestamp: the hour, the day of the week, a weekend flag, and temperature times humidity. It uses the same training rows as before, and a small helper cross-validates the boosting model on any list of columns."
+    },
+    {
+      "scene": 10,
+      "start": 175.0,
+      "end": 196.4,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Highlight the output lines base 122.6 and + weekday 57.2.",
+        "Add the overlay: error cut by more than half."
+      ],
+      "on_screen_text": "122.6 → 57.2 with weekday",
+      "voiceover": "The base set of temperature, humidity and hour gives a cross-validated RMSE of one hundred and twenty-two point six. Adding the day of the week cuts it to fifty-seven point two bikes per hour. The model can now separate weekday rush hours from the weekend afternoon pattern."
+    },
+    {
+      "scene": 11,
+      "start": 196.4,
+      "end": 209.3,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Highlight the output line + is_weekend 57.1."
+      ],
+      "on_screen_text": "Weekend flag: 57.1, same information",
+      "voiceover": "The weekend flag gives almost the same gain, fifty-seven point one. It carries the same information in a simpler form, so Sofia keeps one of the two, not both."
+    },
+    {
+      "scene": 12,
+      "start": 209.3,
+      "end": 225.2,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Highlight the output line + temp_x_humidity 122.8.",
+        "Strike it through and label it 'drop'."
+      ],
+      "on_screen_text": "Interaction: no gain, drop it",
+      "voiceover": "Temperature times humidity makes no real difference: one hundred and twenty-two point eight, against one hundred and twenty-two point six. So she drops it. A tree ensemble can already combine those two features by itself."
+    },
+    {
+      "scene": 13,
+      "start": 225.2,
+      "end": 246.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Scroll up to the L11 setup cell and highlight rng.normal(0, 60, len(ts)).",
+        "Add a text cell: Noise std 60, so RMSE near 57 is close to the limit."
+      ],
+      "on_screen_text": "Noise sets the limit",
+      "voiceover": "Sofia notes one more thing. In this synthetic data, the random noise has a standard deviation of sixty, so an error near fifty-seven is close to the best any model can do. With real data, she would not know that limit, which is why every step must be measured."
+    },
+    {
+      "scene": 14,
+      "start": 246.6,
+      "end": 270.6,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Learned features go inside the pipeline",
+      "voiceover": "A common mistake is to build features from the whole dataset using the target or future rows, such as average rentals per hour over the whole year, test rows included. That is leakage. Features that use only the row's own values are safe before the split. Anything that learns from other rows belongs inside the pipeline."
+    },
+    {
+      "scene": 15,
+      "start": 270.6,
+      "end": 296.7,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Good features can beat a new algorithm. 2. Keep a feature only if the gain beats the spread. 3. Known at prediction time, or it leaks."
+      },
+      "voiceover": "Let's recap. First, good features, such as time parts, ratios and interactions, can improve a model more than a change of algorithm. Second, keep a new feature only if it improves the cross-validated score by more than the normal spread. Third, every feature must be known at prediction time, because statistics that use the target or future rows leak information."
+    },
+    {
+      "scene": 16,
+      "start": 296.7,
+      "end": 322.8,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Hyperparameter Tuning",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will add three new features to the bike data, measure each one with cross-validation, and keep only those that help. It takes about thirty minutes. In the next lesson, Hyperparameter Tuning with Grid and Random Search, you will let scikit-learn search for better settings. See you there."
+    }
+  ]
+}

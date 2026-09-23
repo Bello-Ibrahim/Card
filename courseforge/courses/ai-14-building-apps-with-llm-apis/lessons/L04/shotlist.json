@@ -1,0 +1,196 @@
+{
+  "course_id": "AI-14",
+  "lesson_id": "L04",
+  "duration_s": 293.2,
+  "thumbnail": {
+    "headline": "Where Your Tokens Go",
+    "slide": {
+      "layout": "title",
+      "title": "Where Your Tokens Go",
+      "body": "A meter icon and a stacked bar: large system prompt and history sections, a tiny user question section. Small tag: Building Apps with LLM APIs · Lesson 4."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.7,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Same model, ten times the cost",
+      "voiceover": "Two apps use the same model and answer the same number of questions each day. One costs ten times more than the other. The difference is not the model. It is how many tokens each app sends and receives."
+    },
+    {
+      "scene": 2,
+      "start": 16.7,
+      "end": 34.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "The usage object",
+        "body": "usage.input_tokens: system prompt + messages + tool definitions · usage.output_tokens: what the model wrote · Later (L13): cache fields"
+      },
+      "voiceover": "In lesson two, you printed token counts. Now let's turn them into money. Every response includes a usage object. Input tokens are everything you sent, including the system prompt, the messages and any tool definitions. Output tokens are what the model wrote."
+    },
+    {
+      "scene": 3,
+      "start": 34.7,
+      "end": 60.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Cost of one call",
+        "body": "cost = (input_tokens × input price + output_tokens × output price) ÷ 1,000,000\nPrices: from the live pricing page, kept in one place in your code."
+      },
+      "voiceover": "Prices are listed per million tokens, and output tokens usually cost more than input tokens. So the cost of one call is input tokens times the input price, plus output tokens times the output price, divided by one million. Prices differ by model and change, so check the current pricing page, and keep them in one place in your code."
+    },
+    {
+      "scene": 4,
+      "start": 60.4,
+      "end": 83.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Count before you send",
+        "body": "count = client.messages.count_tokens(model=MODEL, system=SYSTEM, messages=messages)\nprint(count.input_tokens)\nNote: check the docs for limits."
+      },
+      "voiceover": "You can also count tokens before you send. The API has a token-counting endpoint. You pass the same model, system prompt and messages, and it returns the input token count without writing a reply. Use it to check that a long document fits, or to warn a user before an expensive request."
+    },
+    {
+      "scene": 5,
+      "start": 83.1,
+      "end": 103.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Longer context = more cost",
+        "body": "Send only the parts that matter · Keep the last few turns of a long chat · Keep max_tokens realistic"
+      },
+      "voiceover": "Longer context costs more, and is usually slower. In a chat app, the history grows with every turn. So send only the parts of a document that matter, keep the last few turns of a long chat, and keep max tokens close to what you really need."
+    },
+    {
+      "scene": 6,
+      "start": 103.2,
+      "end": 122.5,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "taxi meter inside car at night",
+      "on_screen_text": "Tokens are the taxi meter",
+      "voiceover": "Think of a taxi meter that counts words instead of kilometres. It runs while you speak, and faster while the driver speaks. If you read a long letter aloud at the start of every ride, every ride is expensive, even when your question is short."
+    },
+    {
+      "scene": 7,
+      "start": 122.5,
+      "end": 139.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Measure your languages",
+        "body": "Same question in two languages → token counter → two counts side by side, with a question mark between them. Caption: measure, don't guess."
+      },
+      "voiceover": "Languages matter too. A tokenizer splits text into pieces it saw often in training. So do not assume the same meaning costs the same in every language or script. Measure it for your own languages with the token counter."
+    },
+    {
+      "scene": 8,
+      "start": 139.2,
+      "end": 152.5,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "student studying with phone app Cairo",
+      "on_screen_text": "Farida · language app · Cairo",
+      "voiceover": "Farida runs a language-learning app in Cairo, Egypt. Learners ask grammar questions in English or Arabic. She wants to know what each call costs, and how the two languages compare."
+    },
+    {
+      "scene": 9,
+      "start": 152.5,
+      "end": 173.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open log_helper.py in VS Code",
+        "Highlight PRICE_IN and PRICE_OUT with the comment to copy them from the pricing page (values left as 0.0 placeholders)",
+        "Highlight the cost line inside log_call()",
+        "Highlight the csv.writer row: time, feature, model, input tokens, output tokens, cost"
+      ],
+      "on_screen_text": "Log every call",
+      "voiceover": "She writes a small helper. At the top are two price constants, copied from the pricing page. The helper reads the usage from each response, calculates the cost, and adds one row to a CSV file with the time, the feature, the model, both token counts and the cost."
+    },
+    {
+      "scene": 10,
+      "start": 173.5,
+      "end": 183.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open compare_languages.py",
+        "Show the English and Arabic versions of the same invented grammar question",
+        "Run count_tokens for both and show the two input token counts in the terminal"
+      ],
+      "on_screen_text": "Count first, then send",
+      "voiceover": "Before sending, she counts the input tokens for the same grammar question, once in English and once in Arabic, with the same system prompt."
+    },
+    {
+      "scene": 11,
+      "start": 183.8,
+      "end": 208.7,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run the script to send both requests and call log_call() after each",
+        "Open usage_log.csv and show the two rows, labelled 'example numbers'",
+        "Highlight the input and output token columns for both rows"
+      ],
+      "on_screen_text": "Two languages, two costs",
+      "voiceover": "Then she sends both requests with the same max tokens, and logs them. You'll see something like two rows in the CSV file. She compares the token counts in the two rows. But one test is not enough, so she will measure a sample of real questions in each language before she sets prices for her premium plan."
+    },
+    {
+      "scene": 12,
+      "start": 208.7,
+      "end": 222.0,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open the system prompt file and show its token count from count_tokens",
+        "Add a TODO comment in the code: try prompt caching (L13)"
+      ],
+      "on_screen_text": "The hidden cost: the system prompt",
+      "voiceover": "She also notices something bigger. Her system prompt is six hundred tokens long, and it is sent with every call. She makes a note to try prompt caching in lesson thirteen."
+    },
+    {
+      "scene": 13,
+      "start": 222.0,
+      "end": 240.9,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Log real usage, don't guess",
+      "voiceover": "A common mistake is to estimate cost from the user's question only. In a real app, most input tokens often come from things the user never sees. The system prompt, examples, the chat history and documents. Always log real usage, and calculate from that."
+    },
+    {
+      "scene": 14,
+      "start": 240.9,
+      "end": 266.6,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Cost = input tokens × input price + output tokens × output price (per million, live prices). 2. Longer context = more cost, slower replies. 3. Measure your languages with the token counter."
+      },
+      "voiceover": "Let's recap. First, the cost of a call is input tokens times the input price, plus output tokens times the output price, using prices per million tokens from the live pricing page. Second, longer context means higher cost and slower replies, so send only what the model needs. Third, measure token counts for your own languages with the token counter."
+    },
+    {
+      "scene": 15,
+      "start": 266.6,
+      "end": 293.2,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Structured Outputs with JSON Schemas",
+      "voiceover": "Now it is your turn. In the exercise, you will write a helper that logs tokens and estimated cost for every call, then compare the same request in English and one other language. This logging will grow into your capstone cost dashboard. In the next lesson, Structured Outputs with JSON Schemas, your code will get data it can trust. See you there."
+    }
+  ]
+}

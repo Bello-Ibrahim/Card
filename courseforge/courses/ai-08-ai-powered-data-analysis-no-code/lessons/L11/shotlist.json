@@ -1,0 +1,214 @@
+{
+  "course_id": "AI-08",
+  "lesson_id": "L11",
+  "duration_s": 296.5,
+  "thumbnail": {
+    "headline": "Would You Spot It?",
+    "slide": {
+      "layout": "title",
+      "title": "Would You Spot It?",
+      "body": "Chat answer with four lines; three underlined in amber; teal magnifying glass. Small tag: AI-Powered Data Analysis · Lesson 11."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 12.4,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Would you notice?",
+      "voiceover": "The AI's answer is well written, uses exact numbers, and sounds certain. But three of its four sentences are wrong or misleading. Would you notice before your manager did?"
+    },
+    {
+      "scene": 2,
+      "start": 12.4,
+      "end": 21.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Checking AI Insights for Errors",
+        "body": "AI-Powered Data Analysis (No Code) · Lesson 11 of 14 · Week 3"
+      },
+      "voiceover": "Welcome to week three. Last time, you built a dashboard. Now we learn to check AI insights before you share them."
+    },
+    {
+      "scene": 3,
+      "start": 21.4,
+      "end": 47.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Five common AI errors",
+        "body": "Wrong column (units instead of revenue) · Ignored rows (counts and averages change) · Totals and averages mixed up (wrong count) · two more dimmed"
+      },
+      "voiceover": "AI analysis errors follow a few common patterns. The first is the wrong column, for example it reports units when you asked about revenue. The second is ignored rows. It skips blank or badly formatted rows, so counts and averages change. The third is mixing up totals and averages. It calls a total an average, or divides by the wrong count."
+    },
+    {
+      "scene": 4,
+      "start": 47.5,
+      "end": 65.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Five common AI errors",
+        "body": "Invented cause (not in the data) · Trend from too little data (three months, or one large value)"
+      },
+      "voiceover": "The fourth is an invented cause. The AI explains why something happened, with information that is not in the data. And the fifth is a trend from too little data. It sees strong growth in three months, or in one large value."
+    },
+    {
+      "scene": 5,
+      "start": 65.5,
+      "end": 87.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "The 5-point checking routine",
+        "body": "Five numbered checkpoints on a path, first three lit: 1. Recalculate one number · 2. Check row counts (=COUNTA) · 3. Look at the chart · 4. Compared with what? · 5. Other explanations?"
+      },
+      "voiceover": "A short, five-point checking routine catches most of these. One, recalculate one number yourself, with a formula or a pivot table. Two, check row counts. Ask how many rows the AI used, and compare with your sheet. Three, look at the chart, and see whether one value drives the pattern."
+    },
+    {
+      "scene": 6,
+      "start": 87.4,
+      "end": 106.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "The 5-point checking routine",
+        "body": "Same path, checkpoints 4 and 5 now lit: 4. Compared with what? (previous period, another group) · 5. Other explanations? (cause in the data? third factor? one unusual event?)"
+      },
+      "voiceover": "Four, ask, compared with what? Is there a fair comparison, such as a previous period or another group? Five, look for other explanations. Is the cause in the data, or did the AI add it? Could a third factor or one unusual event explain it?"
+    },
+    {
+      "scene": 7,
+      "start": 106.7,
+      "end": 117.8,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Every claim you share must survive",
+      "voiceover": "You do not need to check every sentence to the last decimal. But every number and claim you pass on to others should survive this routine."
+    },
+    {
+      "scene": 8,
+      "start": 117.8,
+      "end": 131.9,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "person checking restaurant bill at table",
+      "on_screen_text": "Check the bill before you pay",
+      "voiceover": "It is like checking a restaurant bill before you pay. You do not redo every sum. But you check the total, count the dishes, and ask about any item you did not order."
+    },
+    {
+      "scene": 9,
+      "start": 131.9,
+      "end": 140.9,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "hotel reception desk with guests",
+      "on_screen_text": "Ingrid · hotel · Bergen",
+      "voiceover": "Ingrid works in revenue management at a hotel in Bergen, Norway. She uploads a fictional, anonymised file of two hundred bookings."
+    },
+    {
+      "scene": 10,
+      "start": 140.9,
+      "end": 150.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "The AI's answer",
+        "body": "'The average stay is 3.5 nights. Guests from Germany stay longest, so the hotel should advertise in Germany.'"
+      },
+      "voiceover": "The AI says, the average stay is three point five nights. Guests from Germany stay longest, so the hotel should advertise in Germany."
+    },
+    {
+      "scene": 11,
+      "start": 150.8,
+      "end": 171.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Check: row count",
+        "body": "AI: 188 rows → 3.5 nights | File: 200 rows → 3.8 nights (=AVERAGE). 12 long company-contract stays had blank Nationality and were dropped."
+      },
+      "voiceover": "She applies the routine. First, row count. The AI used only one hundred and eighty-eight rows. Twelve bookings, all long stays for a company contract, had a blank nationality cell, and the AI dropped them. Her own average over all two hundred rows gives three point eight nights."
+    },
+    {
+      "scene": 12,
+      "start": 171.8,
+      "end": 181.2,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Check: compared with what?",
+        "body": "'Germany stays longest' → based on 4 bookings (4 small icons) → too few for a decision"
+      },
+      "voiceover": "Next, compared with what? The German result is based on only four bookings. That is too few to support an advertising decision."
+    },
+    {
+      "scene": 13,
+      "start": 181.2,
+      "end": 202.2,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Ingrid's corrected report",
+        "body": "Average stay: 3.8 nights (all 200 bookings) ✓ · Germany: 'needs more data' · Advertising advice: removed, not in the data"
+      },
+      "voiceover": "Then, other explanations. The data has no information about advertising. So the recommendation is the AI's idea, not a finding. Ingrid reports the corrected average, and marks the Germany point, needs more data. Notice that each check found a different problem. One check alone would not have been enough."
+    },
+    {
+      "scene": 14,
+      "start": 202.2,
+      "end": 223.2,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Your turn: four AI insights (fictional)",
+        "body": "1. Total revenue for January to March 2026 was 3,450 dollars, and the average order was worth 383 dollars. 2. North is the strongest region, with total sales of 57. 3. Revenue grew strongly every month (470, 820 and 2,160 dollars). Demand is rising because more businesses are returning to their offices, so April will be even higher. 4. Office chairs brought in 2,640 dollars, about 77% of total revenue. Footer: Some contain planted errors. Find them."
+      },
+      "voiceover": "In your exercise, you will check an AI answer about the orders sheet. It has four insights. Total revenue and the average order. The strongest region. Monthly growth with a forecast. And the share from office chairs. Some of them contain planted errors. Your job is to find them."
+    },
+    {
+      "scene": 15,
+      "start": 223.2,
+      "end": 242.1,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Check the reasoning, not just the arithmetic",
+      "voiceover": "A common mistake is to check only whether the numbers are correct. But a sentence can use correct numbers and still mislead, through a missing comparison, a trend built on one value, or an invented cause. Check the reasoning as well as the arithmetic."
+    },
+    {
+      "scene": 16,
+      "start": 242.1,
+      "end": 269.1,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Wrong column · ignored rows · totals vs averages · invented cause · too little data. 2. The 5-point routine. 3. Correct numbers can still mislead: check the reasoning."
+      },
+      "voiceover": "Let's recap. First, common AI errors are the wrong column, ignored rows, totals mixed with averages, invented causes, and trends from too little data. Second, use the five-point routine. Recalculate one number, check row counts, look at the chart, ask compared with what, and look for other explanations. Third, correct numbers can still support a misleading conclusion, so check the reasoning too."
+    },
+    {
+      "scene": 17,
+      "start": 269.1,
+      "end": 296.5,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Capstone: Explore Your Dataset",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will review those four AI insights, and use the five-point routine to find and correct the planted errors. It takes about twenty-five minutes. This routine will also guide your capstone, a five-slide business insight report. You start it in the next lesson, Capstone, Explore Your Dataset. See you there."
+    }
+  ]
+}

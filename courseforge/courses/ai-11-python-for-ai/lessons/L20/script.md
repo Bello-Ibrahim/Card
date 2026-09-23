@@ -1,0 +1,47 @@
+# L20 Capstone Step 2: Clean, Explore and Document | Presenter Script
+
+Course: AI-11 · Video: 5 min · Words: 704
+
+## Hook
+A notebook that only works on your screen, in the order you happened to run the cells, is not finished. A finished notebook runs from top to bottom for anyone, and explains every decision. Today, you get your capstone to that point.
+
+## Explain
+In the last lesson, you chose a dataset, wrote a question and ran an audit. Now you complete the notebook in four parts. Part one is cleaning. Work through your audit list, print the shape after each step, and add a row to your cleaning log for every decision. Then run your audit function again, to show the problems are gone.
+
+Part two is exploring, with three or more charts. A histogram, a bar chart and a scatter plot, each with a title, axis labels with units, and one sentence of insight. Describe patterns, but don't claim causes. Part three is the ML-ready table, following lesson eighteen.
+
+Part four is checking reproducibility. A notebook is reproducible when it gives the same results every time it runs from a fresh start. Hidden problems appear only after a restart. For example, a variable from a cell you later deleted. So restart the session, run all cells, and fix every error, until it completes cleanly.
+
+It is like testing a recipe by giving it to a friend, and watching them cook it in their own kitchen. If they need to ask which pan, the recipe is not finished. Restart and run all is your notebook cooking in a clean kitchen, with nobody to ask.
+
+Simple assert checks help too. An assert does nothing if its condition is true, and stops with your message if it is false. When you are ready, share a Colab link, or save a copy to GitHub. But first, check for passwords, keys or personal data, and check that the licence allows sharing.
+
+## Demonstrate
+Let's look at a finished notebook. Camila is a secondary school teacher in Asunción, Paraguay. For her capstone, she uses an example dataset of daily air quality readings. Her audit found missing readings, dates stored as text, and a few negative pollution values.
+
+First, her final checks. To keep the demo short, we run them on the order table from lesson eighteen. One assert checks that no values are missing. Another checks that every column is numeric. Both pass, and we see eight rows and eleven columns.
+
+Now her notebook's structure. It starts with the question and the source, with the licence and download date. Then loading and the audit, ending with a problem list. Then cleaning, one decision per cell, and the log. For example, negative readings were removed, because pollution cannot be below zero.
+
+Next, three labelled charts, each with a sentence of insight. Then the ML-ready table, with the removed columns and their reasons, and the saved file. And finally, a short Limits section. For example, one station is missing a full month, so that month's pattern is uncertain.
+
+Last, we restart the session and run all cells. Then we scroll from top to bottom. Every cell has run, and there are no errors. The notebook is ready to share.
+
+The most common problem is a notebook that only works on its author's computer. It reads a file from a local folder, or a file uploaded in an earlier session. After a restart, the file is gone. Load from a stable web address where the licence allows, or explain how to get the file. Then test with restart and run all.
+
+## Recap
+Let's recap. First, a complete capstone has a question, a source, an audit, a justified cleaning log, three or more labelled charts, an ML-ready table and a note on limits. Second, restart and run all cells to prove your notebook is reproducible, and use assert to check key conditions. Third, share it only after checking for private data and licence terms.
+
+## CTA
+Congratulations. Four weeks ago, you wrote your first line of Python. Today, you can clean and explore a real dataset. Now finish your capstone. Run it from top to bottom, check it against the rubric, and submit your shared link. It takes about an hour. When you are ready, Machine Learning with scikit-learn is your next step. Well done.
+
+## Thumbnail
+Headline: Finish Your Capstone
+Image: Navy background, a notebook outline with every section ticked in teal and a 'Run all' arrow down the side, headline in teal Inter Bold.
+
+## Production Notes
+- [VERSION] The Colab menu option that restarts the session and runs all cells, the Share button options, and the File menu option to save a copy to GitHub must be checked against the live interface before recording.
+- Camila's air-quality dataset and findings are hypothetical. The notebook walkthrough scene shows a mock notebook built by the team with the template headings and the example log line from content.md, labelled on screen 'Example notebook, hypothetical data'. No real station or city data is shown.
+- The assert demo runs on the synthetic order table ml from L18. Printed output must match content.md: 'Checks passed: (8, 11)'.
+- Last lesson: the CTA congratulates learners and points to the capstone submission and rubric.
+- Before the demo, run the L14, L16, L17 and L18 cells on screen (or show them already run) so ml exists.

@@ -1,0 +1,80 @@
+{
+  "title": "Capstone: Explore Your Dataset",
+  "thumbnail": {
+    "headline": "Your Capstone Starts Here",
+    "image": "Navy background, a findings-log table with ticks and one 'rejected' row, next to a stack of five slide outlines, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Your Capstone Starts Here", "body": "Findings log with teal 'Confirmed' ticks and one amber 'Rejected' row; beside it five small slide outlines numbered 1–5. Small tag: AI-Powered Data Analysis · Lesson 12."}
+  },
+  "production_notes": [
+    "[VERIFY] [REGION] content.md names possible public dataset sources (UCI Machine Learning Repository including 'Online Retail', World Bank Open Data, Our World in Data, Kaggle, national government open-data portals). Their availability and licence terms are unverified, so the narration and slides say only 'a public sample dataset from an open-data source'. After checking, the source names may be added to the scene 5 slide, never to the narration without re-recording review.",
+    "[REGION] Rules on using work data differ by country and employer; the narration tells learners to check with their employer.",
+    "[VERSION] File size limits and file-analysis features in Claude and ChatGPT must be checked against the live tools; the narration only says 'check the current file size limit'.",
+    "Rahel, the Addis Ababa electronics chain and her findings are fictional. Spoken numbers match content.md: 3 shops, one year of sales, 6 findings, 5 confirmed, 1 rejected.",
+    "Scene 7 and 13 slides show the findings-log columns exactly as in content.md: No. | Question | Finding | How found | How checked | Result."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "So far, you have practised on a small, clean, fictional dataset. Now you choose real business data, with real questions and real mess. This week, you will produce something you could show to a manager. A five-slide insight report, built on findings you have checked yourself.",
+       "on_screen_text": "Real data. Real questions."}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "This is the capstone for the course. Here is the brief. Analyse a real business dataset with AI tools, and present a five-slide insight report with charts, a clear recommendation, and the limits of the analysis.",
+       "slide": {"layout": "title", "title": "Capstone: Five-Slide Business Insight Report", "body": "Analyse a real business dataset with AI tools · five slides · charts · a clear recommendation · the limits of the analysis. Lesson 12 of 14"}},
+      {"visual_type": "slide",
+       "voiceover": "You build it in three steps. Step one is this lesson. Choose and clean a dataset, write three business questions, and record at least five checked findings in a findings log. Step two, in the next lesson, you choose your main finding and plan a five-slide storyline. Step three, in the last lesson, you build the slides and check every number.",
+       "slide": {"layout": "diagram", "title": "Three capstone steps", "body": "Step 1 (L12, highlighted): dataset · clean · 3 questions · 5 checked findings → Step 2 (L13): main finding · five-slide storyline → Step 3 (L14): build slides · check every number"}},
+      {"visual_type": "slide",
+       "voiceover": "The rubric gives points for your questions and data preparation, your analysis, how you checked the AI, your charts, and your story and recommendation. Read the full rubric on the course page before you start.",
+       "slide": {"layout": "bullets", "title": "How the rubric scores you", "body": "Questions and data preparation · Analysis with AI and spreadsheets · Checking AI outputs · Charts · Story, recommendation and limits. Footer: full rubric on the course page"}},
+      {"visual_type": "slide",
+       "voiceover": "You have two options for your data. Option one is your own work data, anonymised as in lesson two. Check that your employer allows you to use it for training, and to upload it to an AI tool. If you are unsure, use option two, a public sample dataset from an open-data source. Licences differ, so read the licence, and note it in your report.",
+       "slide": {"layout": "comparison", "title": "Choosing your dataset", "body": "Option 1: your own work data, anonymised (L02) + employer permission | Option 2: a public sample dataset from an open-data source · read and note the licence"}},
+      {"visual_type": "slide",
+       "voiceover": "A good capstone dataset has a few hundred to a few thousand rows. It has a date column, at least one number to measure, like sales, visits or costs, and at least one group column, like product, region or channel. Also check the current file size limit of your AI tool.",
+       "slide": {"layout": "bullets", "title": "A good capstone dataset", "body": "A few hundred to a few thousand rows · A date column · A number to measure (sales, visits, costs) · A group column (product, region, channel) · Within your AI tool's file size limit"}},
+      {"visual_type": "slide",
+       "voiceover": "As you work, keep a findings log. This is a simple table in Google Sheets. For every finding, you record the question, the finding, how you found it, how you checked it, and the result. The how checked column uses the five-point routine from lesson eleven.",
+       "slide": {"layout": "diagram", "title": "The findings log", "body": "Table header: No. | Question | Finding | How found | How checked | Result. Example row: 1 | Q1 | … | AI prompt / pivot table | Recalculated with SUMIFS | Confirmed"}},
+      {"visual_type": "text",
+       "voiceover": "A finding that fails the check stays in the log, marked rejected, with the reason. That record shows your judgement.",
+       "on_screen_text": "Rejected findings stay in the log"},
+      {"visual_type": "stock",
+       "voiceover": "A findings log is like a scientist's lab notebook. Each entry records what was tried, what was seen, and how it was checked. So anyone can follow the work later, including you.",
+       "stock_query": "scientist writing in lab notebook",
+       "on_screen_text": "Your lab notebook"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Rahel is a sales supervisor for a fictional chain of three electronics shops in Addis Ababa, Ethiopia. She exports one year of sales, removes customer names and phone numbers, and checks with her manager that she may use the anonymised data.",
+       "stock_query": "electronics shop supervisor with tablet",
+       "on_screen_text": "Rahel · electronics shops · Addis Ababa"},
+      {"visual_type": "slide",
+       "voiceover": "Her business question is, where should we focus next quarter? She breaks it into three data questions. Revenue by shop per month, compared with the previous month. Revenue by product category, this year's second half compared with the first half. And average basket value by weekday.",
+       "slide": {"layout": "diagram", "title": "Rahel's three data questions", "body": "Business question: 'Where should we focus next quarter?' → 1. Revenue by shop per month vs previous month · 2. Revenue by product category, second half vs first half · 3. Average basket value by weekday"}},
+      {"visual_type": "slide",
+       "voiceover": "She cleans the file. There are two date formats, a duplicated week, and category names in two languages. She logs each fix. Then she asks the AI her first question, with the four-part prompt from lesson six.",
+       "slide": {"layout": "bullets", "title": "Clean, log, then ask", "body": "Fixed: two date formats · a duplicated week · category names in two languages → cleaning log → four-part prompt (L06)"}},
+      {"visual_type": "slide",
+       "voiceover": "After one session, her log has six findings. Five are confirmed with pivot tables. One is rejected. The AI said Saturday sales are highest because of payday. But the file has no payday information, and the Saturday total includes one large business order.",
+       "slide": {"layout": "diagram", "title": "Rahel's findings log", "body": "Six rows: rows 1–5 Result 'Confirmed' (checked with pivot tables, green); row 6 finding 'Saturday sales are highest because of payday' in amber."}},
+      {"visual_type": "slide",
+       "voiceover": "So in the result column, she writes, rejected, invented cause, one-order effect.",
+       "slide": {"layout": "diagram", "title": "A rejected finding", "body": "Row 6 Result cell zooms in: 'Rejected: invented cause, one-order effect'"}},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is to choose a very large or complex dataset because it looks impressive, and then spend all week cleaning it. Choose a dataset you can understand in fifteen minutes. A simple dataset analysed carefully earns more than a complex one explored quickly.",
+       "on_screen_text": "Simple and careful beats big and quick"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, choose anonymised work data you are allowed to use, or a public dataset whose licence you have read. Second, write three measurable business questions before you start the analysis. Third, record every finding in a findings log, including how you checked it, and any finding you rejected.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Permitted, anonymised data or a licensed public dataset. 2. Three measurable questions first. 3. Log every finding, check and rejection."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. This is capstone step one. Choose your dataset, clean it, write three business questions, and record at least five checked findings in your findings log. It takes about sixty minutes. In the next lesson, Turning Findings into a Story, you choose your main finding and plan your five slides. See you there.",
+       "on_screen_text": "Next: Turning Findings into a Story"}
+    ]
+  }
+}

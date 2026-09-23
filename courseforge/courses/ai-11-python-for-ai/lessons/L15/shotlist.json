@@ -1,0 +1,189 @@
+{
+  "course_id": "AI-11",
+  "lesson_id": "L15",
+  "duration_s": 284.4,
+  "thumbnail": {
+    "headline": "See the Pattern",
+    "slide": {
+      "layout": "title",
+      "title": "See the Pattern",
+      "body": "Three small charts: histogram, bar chart, scatter plot, each with a one-word label: distribution, comparison, relationship. Small tag: Python for AI · Lesson 15."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 19.7,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Charts help you explore",
+      "voiceover": "A table of one thousand seven hundred numbers hides its patterns. A chart can show a gap, a cluster or a strange point in a few seconds. Charts are not only for final reports. They are one of the fastest ways to explore and check data."
+    },
+    {
+      "scene": 2,
+      "start": 19.7,
+      "end": 37.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Charts from a DataFrame",
+        "body": "df[\"lifeExp\"].plot(kind=\"hist\")\n(uses matplotlib underneath)"
+      },
+      "voiceover": "Last time, we audited data with code. Today, we look at it. pandas can draw charts straight from a DataFrame with the plot method. It uses a library called matplotlib underneath, which Colab already has. Three chart types cover most exploration."
+    },
+    {
+      "scene": 3,
+      "start": 37.3,
+      "end": 64.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Pick the chart by the question",
+        "body": "Distribution → histogram. Comparison → bar chart. Relationship → scatter plot."
+      },
+      "voiceover": "A histogram shows the distribution of one number column. Which values are common, which are rare, and where the gaps are. A bar chart compares a number across categories, such as countries. And a scatter plot shows the relationship between two number columns. Each dot is one row. If the dots rise from left to right, the two values tend to rise together."
+    },
+    {
+      "scene": 4,
+      "start": 64.3,
+      "end": 85.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Reading a chart",
+        "body": "Pattern · Clusters · Gaps · Outliers. Moving together ≠ one causes the other."
+      },
+      "voiceover": "When you read a chart, look for four things. The general pattern, clusters, gaps and outliers. Then ask whether a pattern could come from the way the data was collected. And remember, a chart shows that two things move together. It does not show that one causes the other."
+    },
+    {
+      "scene": 5,
+      "start": 85.3,
+      "end": 106.3,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "mountain landscape seen from above",
+      "on_screen_text": "A chart shows the mountain",
+      "voiceover": "Exploring a table without charts is like reading the heights of one thousand points on a map. The numbers are all there, but you will not see the mountain. A chart is the map drawn from those numbers. The shape appears at once, and you know where to look."
+    },
+    {
+      "scene": 6,
+      "start": 106.3,
+      "end": 127.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Every chart needs",
+        "body": "Title · Axis labels with units · Data source · Wide range? Log scale: 1,000 · 10,000 · 100,000 evenly spaced"
+      },
+      "voiceover": "Every chart needs a title, axis labels with units, and a note of the data source. When values cover a very wide range, such as income, use a log scale. It spaces one thousand, ten thousand and one hundred thousand evenly, so small values are not squeezed into a corner."
+    },
+    {
+      "scene": 7,
+      "start": 127.7,
+      "end": 137.1,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "teacher training workshop classroom",
+      "on_screen_text": "Rafael's teacher session · Lisbon",
+      "voiceover": "Let's draw all three. Rafael is preparing a session for secondary school teachers in Lisbon, Portugal. He uses the invented practice sample."
+    },
+    {
+      "scene": 8,
+      "start": 137.1,
+      "end": 166.2,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run the L11 sample cell so df exists",
+        "Add a new code cell",
+        "Type: import matplotlib.pyplot as plt",
+        "Type: ax = df[\"lifeExp\"].plot(kind=\"hist\", bins=6, title=\"Life expectancy (practice sample)\")",
+        "Type: ax.set_xlabel(\"Life expectancy (years)\") and plt.show()",
+        "Press Shift + Enter; the histogram appears",
+        "Point at the two groups of bars"
+      ],
+      "on_screen_text": "Two groups, a gap between",
+      "voiceover": "First, a histogram of life expectancy. The bins setting asks for six bars, and we add a title and a label on the horizontal axis. It shows two groups. Several values between about fifty-five and sixty-four, several between about sixty-eight and seventy-nine, and few in between. With a different number of bars, the picture can change, so it is worth trying two or three."
+    },
+    {
+      "scene": 9,
+      "start": 166.2,
+      "end": 182.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Add a new code cell",
+        "Type: latest = df[df[\"year\"] == 2007]",
+        "Type: ax = latest.plot(kind=\"bar\", x=\"country\", y=\"gdpPercap\", legend=False, title=\"GDP per person, 2007 (practice sample)\")",
+        "Type: ax.set_ylabel(\"GDP per person (US$)\") and plt.show()",
+        "Press Shift + Enter; the bar chart appears"
+      ],
+      "voiceover": "Next, a bar chart. We keep only two thousand and seven, and plot income per person by country, with a title and a label on the vertical axis, in US dollars. Chile stands far above the other five countries."
+    },
+    {
+      "scene": 10,
+      "start": 182.9,
+      "end": 200.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Add a new code cell",
+        "Type: ax = df.plot(kind=\"scatter\", x=\"gdpPercap\", y=\"lifeExp\", logx=True, title=\"Richer countries, longer lives?\")",
+        "Type: ax.set_xlabel(\"GDP per person (log scale)\") and ax.set_ylabel(\"Life expectancy (years)\")",
+        "Type: plt.show()",
+        "Press Shift + Enter; the scatter plot appears",
+        "Circle the three Vietnam points high on the left"
+      ],
+      "on_screen_text": "A question, not a conclusion",
+      "voiceover": "Finally, a scatter plot of income against life expectancy, with a log scale for income. The dots generally rise from left to right. But three points sit high on the left. Vietnam has life expectancy above seventy with low income per person."
+    },
+    {
+      "scene": 11,
+      "start": 200.9,
+      "end": 213.3,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Add a text cell under the scatter plot",
+        "Type: Question: why is Vietnam high on the left? Practice data only, not a conclusion."
+      ],
+      "voiceover": "Rafael notes this as a question for further reading, not a conclusion. He also reminds the teachers that these are invented practice numbers. Real statements need the full dataset."
+    },
+    {
+      "scene": 12,
+      "start": 213.3,
+      "end": 233.0,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Choose the chart by the question",
+      "voiceover": "A common mistake is choosing a chart because it looks attractive. A line connecting countries in alphabetical order suggests a trend that does not exist. Pick the chart by the question. And don't leave the default labels with no units, which forces the reader to guess."
+    },
+    {
+      "scene": 13,
+      "start": 233.0,
+      "end": 258.3,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Histogram = distribution; bar = comparison; scatter = relationship. 2. Look for pattern, clusters, gaps, outliers; not cause. 3. Title, axis labels with units, source."
+      },
+      "voiceover": "Let's recap. First, use a histogram for a distribution, a bar chart for comparing categories, and a scatter plot for a relationship between two numbers. Second, read each chart for patterns, clusters, gaps and outliers, and remember that moving together does not prove cause. Third, give every chart a clear title, axis labels with units, and the data source."
+    },
+    {
+      "scene": 14,
+      "start": 258.3,
+      "end": 284.4,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Cleaning Data",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will make three labelled charts from the data, and write one sentence of insight under each one. It takes about twenty-five minutes. Next week, we start cleaning data, and your capstone project comes closer. In the next lesson, we handle missing values, duplicates and types. See you there."
+    }
+  ]
+}

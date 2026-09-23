@@ -1,0 +1,184 @@
+{
+  "course_id": "AI-15",
+  "lesson_id": "L04",
+  "duration_s": 293.6,
+  "thumbnail": {
+    "headline": "Clean Data, Clean Answers",
+    "slide": {
+      "layout": "title",
+      "title": "Clean Data, Clean Answers",
+      "body": "Left: messy pages with repeated headers and footers. Right: tidy record cards with doc_id, page, date, url. Small tag: RAG Systems · Lesson 4."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.4,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Noise in, noise out",
+      "voiceover": "Your first pipeline used one clean text file. Real collections are not clean. PDFs repeat the same header on every page, and web pages include menus and cookie notices. If this noise goes into your index, it comes back out in your answers."
+    },
+    {
+      "scene": 2,
+      "start": 18.4,
+      "end": 29.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Loading and Preparing a Collection",
+        "body": "RAG Systems · Lesson 4 of 16 · Stage 1: Loading"
+      },
+      "voiceover": "In the last lesson, we built a pipeline over one file. Today we prepare a whole collection, so that every later stage gets clean input."
+    },
+    {
+      "scene": 3,
+      "start": 29.1,
+      "end": 50.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "One record",
+        "body": "{\"doc_id\": \"wb-2023-017\", \"title\": \"...\", \"page\": 12, \"date\": \"2023-06\", \"url\": \"https://...\", \"doc_type\": \"report\", \"language\": \"en\", \"text\": \"...\"}"
+      },
+      "voiceover": "Loading has one goal. Turn every source file into a record, with clean text and useful metadata: a document ID, a title, a page, a date, a link, a document type and a language. For PDFs, keep one record per page, so each citation can point to a page."
+    },
+    {
+      "scene": 4,
+      "start": 50.1,
+      "end": 75.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Parse by format",
+        "body": "PDF: pypdf, page by page; scanned = no text; tables break. HTML: BeautifulSoup; remove nav, header, footer, script. Markdown: read as text; keep headings for L05."
+      },
+      "voiceover": "Each format needs its own tool. For PDFs, a library such as pypdf extracts text page by page, but scanned PDFs contain images, not text. For HTML, BeautifulSoup can remove menus, headers, footers and scripts. For Markdown, keep the headings, because they help with chunking later. Tables often come out as broken lines, so note which documents rely on them."
+    },
+    {
+      "scene": 5,
+      "start": 75.8,
+      "end": 97.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Metadata and licence",
+        "body": "Metadata → citations (title, page, link) · filters (year, type, language) · collect at load time. Licence → check and record before indexing."
+      },
+      "voiceover": "Metadata does two jobs. It lets an answer cite the title and page with a link, and it lets retrieval filter by year, type or language. Collect it at load time, because it is hard to recover later. And before you index anything, check and record the licence of the collection."
+    },
+    {
+      "scene": 6,
+      "start": 97.7,
+      "end": 114.8,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "chef washing and labelling vegetables kitchen",
+      "on_screen_text": "Prepare before you cook",
+      "voiceover": "Think of a kitchen preparing ingredients before cooking. You wash the vegetables, remove the parts you cannot eat, and label each container with its contents and date. If you skip this step, every dish that follows has the same problem."
+    },
+    {
+      "scene": 7,
+      "start": 114.8,
+      "end": 134.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Show the drop_repeated_lines function in a notebook cell: Counter over the unique lines of each page, limit = min_share * len(pages), then remove repeated lines.",
+        "Highlight the default min_share=0.6."
+      ],
+      "voiceover": "First, a simple and reliable cleaning rule. A line that appears on most pages of the same document is probably a header or footer. This small function counts each line across the pages, and removes any line that appears on at least sixty percent of them."
+    },
+    {
+      "scene": 8,
+      "start": 134.5,
+      "end": 156.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Show the pages list: 'Annual Review' header, one sentence, 'Page 1' / 'Page 2' / 'Page 3'.",
+        "Run print(drop_repeated_lines(pages)) and show the exact output: ['Water access rose.\\nPage 1', 'Schools reopened.\\nPage 2', 'Budget was stable.\\nPage 3'].",
+        "Show the page-number regular expression ^Page \\d+$ removing the last line."
+      ],
+      "on_screen_text": "Header gone, page numbers next",
+      "voiceover": "We test it on three short pages. Each one starts with the same header, Annual Review, then one sentence, then a page number. When we run it, the header is gone from all three pages. The page numbers remain, because each one is different, so we remove them with a small pattern."
+    },
+    {
+      "scene": 9,
+      "start": 156.8,
+      "end": 178.7,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Show the folder data/raw/ with 25 PDF files.",
+        "Open the CSV file with columns for file name, source URL and licence."
+      ],
+      "on_screen_text": "Tanvir · research NGO · Dhaka",
+      "voiceover": "Now a full collection. Tanvir is a developer at a development research organisation in Dhaka, Bangladesh. His team wants to ask questions across twenty-five public World Bank reports about education and climate. He downloads the PDFs, and writes the source link and licence of each one into a spreadsheet file."
+    },
+    {
+      "scene": 10,
+      "start": 178.7,
+      "end": 201.0,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run the loop that reads each PDF page by page with pypdf.",
+        "Apply drop_repeated_lines and the page-number pattern to each document.",
+        "Build records with doc_id, title, page, date and url from the CSV.",
+        "Write data/records.jsonl and show its first lines."
+      ],
+      "voiceover": "He loops over the files and extracts text page by page. He cleans each document with the function we just tested, removes page numbers, and builds one record per page, with the ID, title, page, date and link from the spreadsheet. Then he saves everything as JSON Lines, one record per line."
+    },
+    {
+      "scene": 11,
+      "start": 201.0,
+      "end": 219.0,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Print 3 random records and read them on screen.",
+        "Print a count of empty or very short pages per document.",
+        "Show the skipped list with two scanned reports and the reason 'scanned, no text'."
+      ],
+      "on_screen_text": "Always read a sample",
+      "voiceover": "Finally, he prints three random records and reads them. This check finds a problem. Two reports are scanned documents, and their text is empty. He does not index empty pages. He logs the two files in a skipped list, with the reason."
+    },
+    {
+      "scene": 12,
+      "start": 219.0,
+      "end": 243.0,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Read your records before indexing",
+      "voiceover": "A common mistake is to index raw parser output without looking at it. Then answers contain footer text, and citations cannot point to a page. Always read a sample, and count empty pages. And keep a list of skipped files, with the reason for each one. This list helps you later, when an answer looks strange."
+    },
+    {
+      "scene": 13,
+      "start": 243.0,
+      "end": 266.6,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Records = clean text + metadata; one per PDF page. 2. Right parser per format; remove headers, footers, page numbers; read samples. 3. Check and record the licence first."
+      },
+      "voiceover": "Let's recap. First, turn every source file into records with clean text and metadata, and keep one record per page for PDFs. Second, use a parser that fits each format, remove repeated headers, footers and page numbers, and check samples by eye. Third, check and record the licence of every collection before you index it."
+    },
+    {
+      "scene": 14,
+      "start": 266.6,
+      "end": 293.6,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Chunking Strategies",
+      "voiceover": "Now it is your turn. In the exercise below, load twenty or more documents from a public collection into clean records with metadata, save them, and keep a short log of any skipped files. Then print three random records and read them, just like Tanvir did. In the next lesson, Chunking Strategies, we cut these records into pieces that retrieval can use well."
+    }
+  ]
+}

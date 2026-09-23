@@ -1,0 +1,140 @@
+{
+  "title": "Chunking Strategies",
+  "thumbnail": {
+    "headline": "Cut It Right",
+    "image": "Navy background, a long document being cut into neat index cards, each card with a small teal title strip at the top, headline in teal Inter Bold.",
+    "slide": {
+      "layout": "title",
+      "title": "Cut It Right",
+      "body": "A document strip cut into three index cards with overlapping edges; each card has a title bar 'Returns > Online'. Small tag: RAG Systems · Lesson 5."
+    }
+  },
+  "production_notes": [
+    "[VERSION] chromadb and sentence-transformers APIs used in the exercise and the demo.",
+    "The chunk_sentences output and the hit_at_k result are tested plain Python: the screen must show exactly the three lines in content.md ('Returns > Online: Orders ship in 2 days. Returns are free.' / 'Returns > Online: Returns are free. Refunds take 10 days.' / 'Returns > Online: Refunds take 10 days. Gift cards cannot be refunded.') and the value 0.5.",
+    "Mei-Lin's results (6, 9 and 7 of 10) are hypothetical and illustrate the method only; the voiceover calls them example results. Show a 'hypothetical results' label on the table slide.",
+    "Mei-Lin and the Hsinchu equipment maker are hypothetical; do not show a real company's manuals."
+  ],
+  "sections": {
+    "Hook": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "In lesson three, one answer failed because a chunk cut a table in half. Chunking looks like a small detail, but it decides what retrieval can find. Too small, and a chunk loses its meaning. Too large, and the answer hides among other topics.",
+        "on_screen_text": "Too small or too large?"
+      }
+    ],
+    "Explain": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Welcome to week two. We start with chunking. A chunk is the unit you embed, retrieve and cite, so its size and shape matter at every later stage.",
+        "slide": {
+          "layout": "title",
+          "title": "Chunking Strategies",
+          "body": "RAG Systems · Lesson 5 of 16 · Week 2: Chunking, Indexing and Retrieval"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "There are three common strategies. Fixed-size chunks cut every so many characters, with a small overlap. They are simple, but they can cut sentences and tables. Sentence-based chunks collect whole sentences up to a size limit. Structure-based chunks split by headings, so each chunk stays inside one topic. Short, factual FAQs often work well with small chunks. Long technical explanations often need larger ones.",
+        "slide": {
+          "layout": "comparison",
+          "title": "Three strategies",
+          "body": "Fixed-size + overlap: simple; can cut sentences and tables. Sentence-based: ends at natural boundaries. Structure-based: split by headings; one topic per chunk."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "One simple improvement helps all three. Add the document and section title to each chunk. A chunk that says only, the limit is thirty days, becomes, refund policy, online orders, the limit is thirty days. Now a question about refunds can find it.",
+        "slide": {
+          "layout": "comparison",
+          "title": "Add the title",
+          "body": "Before: 'The limit is 30 days.' After: 'Refund policy > Online orders: The limit is 30 days.'"
+        }
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "Think of cutting a book into index cards for a study group. If each card holds half a sentence, nobody understands it. If each card holds a whole chapter, you cannot find the fact you need. Good cards hold one idea each, with the chapter title written at the top.",
+        "stock_query": "student writing notes on index cards",
+        "on_screen_text": "One idea per card"
+      }
+    ],
+    "Demonstrate": [
+      {
+        "visual_type": "screen",
+        "voiceover": "Here is a sentence-based chunker in plain Python. It splits the text into sentences, collects them until the next one would pass the size limit, and then starts a new chunk. It carries the last sentence into the next chunk as overlap, and puts the title at the front.",
+        "screen_steps": [
+          "Show the chunk_sentences function in a notebook cell.",
+          "Highlight the sentence split, the max_chars check, the overlap line cur = cur[-overlap:] and the title prefix."
+        ]
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "We run it on four short sentences about orders, returns and refunds, with the title Returns, Online, and a limit of sixty characters. We get three chunks. Each starts with the title, and each shares one sentence with its neighbour. So a fact near a boundary appears in two chunks, and is less likely to be lost.",
+        "screen_steps": [
+          "Show the four-sentence text and run the loop with title 'Returns > Online' and max_chars=60.",
+          "Show the exact three printed chunks from content.md.",
+          "Highlight the repeated sentences 'Returns are free.' and 'Refunds take 10 days.'"
+        ],
+        "on_screen_text": "Overlap protects boundary facts"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "But which size is best? There is no answer for every collection, so measure, do not guess. The simplest measure is hit at five: for each question, is a correct chunk in the top five results? In this tiny test, one of two questions finds its chunk, so the score is zero point five.",
+        "screen_steps": [
+          "Show the hit_at_k function.",
+          "Show the results and expected dictionaries for q1 and q2.",
+          "Run print(hit_at_k(results, expected)) and show the output 0.5."
+        ],
+        "on_screen_text": "hit@5: answer in the top five?"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Now a real comparison. Mei-Lin maintains technical manuals for an equipment maker in Hsinchu, Taiwan. Engineers ask things like, what torque does the M4 bolt on the cooling plate need? She builds three Chroma collections, with chunks of three hundred, eight hundred and fifteen hundred characters, each with overlap and the section title.",
+        "screen_steps": [
+          "Show the loop that creates three collections: chunks_300, chunks_800 and chunks_1500."
+        ],
+        "on_screen_text": "Mei-Lin · technical manuals · Hsinchu"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Chunk IDs change when the size changes, so she labels each expected answer by document and a short phrase instead. Then, for ten test questions, she checks the top five chunks in each collection.",
+        "screen_steps": [
+          "Show the test questions file: each question with an expected doc_id and a short answer phrase.",
+          "For each collection, retrieve the top 5 for the 10 questions and mark a hit if a chunk comes from the expected document and contains the phrase."
+        ]
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Here are her example results. The small chunks find six of ten, because they lost the name of the part, which was in the previous sentence. The large chunks find seven of ten, because they mixed several procedures. The middle size finds nine of ten. She chooses eight hundred, and writes down why, with the numbers.",
+        "slide": {
+          "layout": "diagram",
+          "title": "hit@5 by chunk size (hypothetical)",
+          "body": "Bar chart: 300 chars → 6/10 (lost part name) · 800 chars → 9/10 (chosen, teal) · 1,500 chars → 7/10 (mixed procedures)"
+        }
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "A common mistake is to copy a chunk size from a tutorial and never test it. A size that works for news may fail for contracts. And measure retrieval directly, because a good prompt cannot fix a missing chunk.",
+        "on_screen_text": "Test your chunk size. Don't copy it."
+      }
+    ],
+    "Recap": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, fixed-size, sentence-based and structure-based chunking each have trade-offs, and overlap protects facts near chunk boundaries. Second, adding the document and section title gives short chunks the context they need to be found. Third, choose chunk size by measuring a retrieval metric, such as hit at five, on your own test questions.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. Three strategies; overlap protects boundary facts. 2. Add document and section titles. 3. Pick chunk size by measuring hit@5."
+        }
+      }
+    ],
+    "CTA": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Now it is your turn. In the exercise below, index your collection with three chunk sizes, and check ten test questions against each one. Make a small table of size, number of chunks and hit at five, and choose a size based on your numbers. In the next lesson, Vector Databases: Chroma and pgvector, we look closely at where these chunks live.",
+        "on_screen_text": "Next: Vector Databases: Chroma and pgvector"
+      }
+    ]
+  }
+}

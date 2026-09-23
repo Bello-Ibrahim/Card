@@ -1,0 +1,201 @@
+{
+  "course_id": "AI-16",
+  "lesson_id": "L05",
+  "duration_s": 269.6,
+  "thumbnail": {
+    "headline": "Add Claude to n8n",
+    "slide": {
+      "layout": "title",
+      "title": "Add Claude to n8n",
+      "body": "Three connected node boxes: Sheet → HTTP Request (speech-bubble icon) → Sheet with a 'summary' column. Small tag: AI Agents and Automation Workflows · Lesson 5."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 13.3,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "One node adds language skills",
+      "voiceover": "Your workflow can already read and write a sheet. Now it gets a new ability: understanding language. One extra node lets it summarise, classify, or pull out information from every row."
+    },
+    {
+      "scene": 2,
+      "start": 13.3,
+      "end": 26.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "An API request in 20 seconds",
+        "body": "Left: request card with Method · Address · Headers · Body. Arrow to a server icon. Arrow back: response card labelled JSON."
+      },
+      "voiceover": "A quick reminder. An API request is a message to a server, with a method, an address, some headers and a body. The server sends back a response, usually in JSON."
+    },
+    {
+      "scene": 3,
+      "start": 26.6,
+      "end": 39.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "The request",
+        "body": "POST https://api.anthropic.com/v1/messages · Headers: x-api-key (secret) · anthropic-version (from the docs) · content-type: application/json"
+      },
+      "voiceover": "To call Claude, you send a POST request to the Messages address. It has three headers: your secret API key, the API version from the documentation, and the content type."
+    },
+    {
+      "scene": 4,
+      "start": 39.5,
+      "end": 56.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "The body",
+        "body": "Show the JSON body from content.md: model \"MODEL\", max_tokens 150, system 'You summarise customer reviews in one neutral sentence.', messages with the review. Callout on MODEL: fill from the current models page."
+      },
+      "voiceover": "The body names the model, sets a limit on output length, adds an optional system prompt, and holds the messages. For the model, check the current models page in the Claude documentation. Smaller, faster models are often enough for summaries."
+    },
+    {
+      "scene": 5,
+      "start": 56.6,
+      "end": 67.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "The response",
+        "body": "Response card with three highlighted parts: content (the text) · stop_reason · usage (input_tokens, output_tokens). Coin icon next to usage."
+      },
+      "voiceover": "The response gives you the text, the reason it stopped, and a usage section with input and output tokens. Tokens are what you pay for."
+    },
+    {
+      "scene": 6,
+      "start": 67.3,
+      "end": 90.4,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "person posting envelope at post office",
+      "on_screen_text": "Address, stamps, form, invoice",
+      "voiceover": "Here is a picture. Calling the API is like posting a form to a translation office. The envelope has an address, and stamps that prove who you are and which form version you use. Inside is the form itself. The office sends back the translation, with an invoice for how much work it did."
+    },
+    {
+      "scene": 7,
+      "start": 90.4,
+      "end": 113.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Cost and safety first",
+        "body": "Paid, usage-based: set a spending limit · Test with a few rows · Always set max_tokens · Key in an n8n credential, never in a node · Sample data only"
+      },
+      "voiceover": "The Claude API is a paid, usage-based service. So before you start, set a spending limit in the Claude Console. Keep test runs to a few rows, and always limit output length. Store your key in an n8n credential, never in a node. And use sample data, not personal or confidential data."
+    },
+    {
+      "scene": 8,
+      "start": 113.1,
+      "end": 130.7,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Show the 'reviews' sheet: review_id, review, summary, tokens, with 5 invented reviews",
+        "Open the Claude Console and create an API key (blurred)",
+        "Set a monthly spending limit"
+      ],
+      "on_screen_text": "Mei-Lin · tea shop · Taipei",
+      "voiceover": "Let's build it. Mei-Lin Chen runs a tea shop in Taipei. Her reviews sheet has five invented reviews, with empty summary and tokens columns. First, she creates an API key in the Claude Console, and sets a monthly spending limit."
+    },
+    {
+      "scene": 9,
+      "start": 130.7,
+      "end": 144.0,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Credentials → new Header Auth credential named 'Claude API'",
+        "Name: x-api-key, Value: the key (blurred)",
+        "New workflow: Manual Trigger → Google Sheets (get rows from 'reviews')"
+      ],
+      "voiceover": "In n8n, she creates a header credential called Claude API, with the key as its value. Then she builds a manual trigger, and a Sheets node that gets rows from reviews."
+    },
+    {
+      "scene": 10,
+      "start": 144.0,
+      "end": 158.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Add an HTTP Request node",
+        "Method POST, URL https://api.anthropic.com/v1/messages",
+        "Authentication: the 'Claude API' Header Auth credential",
+        "Add headers anthropic-version and content-type",
+        "Paste the JSON body from content.md with the review expression"
+      ],
+      "voiceover": "Next, an HTTP Request node. She sets the method to POST, pastes the Messages address, and picks her Claude API credential. She adds the other two headers, and the body with her system prompt."
+    },
+    {
+      "scene": 11,
+      "start": 158.6,
+      "end": 171.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Limit the run to one item",
+        "Execute the HTTP Request node",
+        "Open the output and point to content[0].text (example output)",
+        "Point to usage: input_tokens and output_tokens"
+      ],
+      "on_screen_text": "Test one row first",
+      "voiceover": "She runs it with a single row first. In the output, you'll see something like: the customer liked the oolong, but found the delivery slow. You also see the token usage."
+    },
+    {
+      "scene": 12,
+      "start": 171.9,
+      "end": 193.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Add Edit Fields (Set): summary = {{ $json.content[0].text }}, tokens = input + output tokens, keep review_id",
+        "Add Google Sheets (update row, match on review_id)",
+        "Remove the one-item limit and run all 5",
+        "Show the sheet with 5 summaries and token counts"
+      ],
+      "voiceover": "Then she adds a Set node. It takes the summary text, adds the input and output tokens together, and keeps the review ID. Finally, a Sheets node updates the rows, matching on review ID. She runs all five. Her sheet now has five summaries, and a token count for each row."
+    },
+    {
+      "scene": 13,
+      "start": 193.8,
+      "end": 210.9,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "One row first. Then the rest.",
+      "voiceover": "A common mistake is to test on the whole sheet first. If the prompt has an error, every row gets the wrong prompt, and you pay for every call. Test with one item, check it, then run the full set."
+    },
+    {
+      "scene": 14,
+      "start": 210.9,
+      "end": 243.9,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. POST to /v1/messages: 3 headers + model, max_tokens, system, messages. 2. Key in a credential; model from the current docs; read usage. 3. Paid per use: spending limit, max_tokens, one row first."
+      },
+      "voiceover": "Let's recap. First, a Claude API call is a POST request to the Messages address, with three headers and a body that holds the model, the output limit, the system prompt and the messages. Second, store the key in an n8n credential, take the model from the current models page, and read the usage from the response. Third, the API is paid per use. Set a spending limit, limit output length, and test with one row first."
+    },
+    {
+      "scene": 15,
+      "start": 243.9,
+      "end": 269.6,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Structured Output",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will send five customer reviews to the Claude API, write a one-sentence summary of each back to your sheet, and record the tokens the run used. It takes about forty minutes. In the next lesson, we cover Structured Output: Getting JSON You Can Trust. See you there."
+    }
+  ]
+}

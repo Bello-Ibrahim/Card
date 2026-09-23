@@ -1,0 +1,195 @@
+{
+  "course_id": "AI-11",
+  "lesson_id": "L19",
+  "duration_s": 279.8,
+  "thumbnail": {
+    "headline": "Choose Your Real Dataset",
+    "slide": {
+      "layout": "title",
+      "title": "Choose Your Real Dataset",
+      "body": "Magnifying glass over a data table; a small tag labelled 'Licence ✓' and a clipboard labelled 'Audit'. Small tag: Python for AI · Lesson 19 · Capstone."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.3,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Your data, your question",
+      "voiceover": "Until now, you have worked with small practice tables. Real public datasets are bigger, messier, and more interesting. In this lesson, you choose one, ask your own question about it, and find out what condition it is in."
+    },
+    {
+      "scene": 2,
+      "start": 16.3,
+      "end": 38.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Your capstone",
+        "body": "Two steps: L19 Choose · Load · Audit → L20 Clean · Explore · Document → ML-ready table."
+      },
+      "voiceover": "Last time, we built an ML-ready table. Now it is time for your capstone. It is a notebook that takes a real public dataset from raw file to an ML-ready table. It has two steps. Today, you choose, load and audit. In the next lesson, you clean, explore and document."
+    },
+    {
+      "scene": 3,
+      "start": 38.6,
+      "end": 62.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "A good first dataset",
+        "body": "Clear question · A few hundred to a few hundred thousand rows, 5 to 30 columns · Table format, one row per example · Clear licence and source · Some imperfections"
+      },
+      "voiceover": "A good first dataset has a clear question you care about, and a manageable size, from a few hundred to a few hundred thousand rows. It comes as a table, with one row per example. It has a clear licence and a named source. And it has some imperfections, or there is nothing to audit."
+    },
+    {
+      "scene": 4,
+      "start": 62.2,
+      "end": 80.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Where to look",
+        "body": "World Bank Open Data · Our World in Data · UCI Machine Learning Repository · Kaggle (free account). Read each dataset's licence and record it."
+      },
+      "voiceover": "Good places to browse include World Bank Open Data, Our World in Data, the UCI Machine Learning Repository, and Kaggle. Licences differ between sites and between datasets, so always read the licence on the dataset's own page, and write it in your notebook."
+    },
+    {
+      "scene": 5,
+      "start": 80.6,
+      "end": 96.9,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "No personal or confidential data",
+      "voiceover": "Also check that the data contains no personal information about people who can be identified. If it does, choose another dataset. And never upload personal or confidential data from your job into Colab, or into any AI tool."
+    },
+    {
+      "scene": 6,
+      "start": 96.9,
+      "end": 121.3,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "person inspecting used car engine",
+      "on_screen_text": "Check the papers, then the engine",
+      "voiceover": "Choosing a dataset is like choosing a used car. You check the papers first, the licence and the source. Then you look under the bonnet, which is the audit, before you drive anywhere. A few scratches are fine, if you know where they are. But a car with no papers is a risk, however good it looks."
+    },
+    {
+      "scene": 7,
+      "start": 121.3,
+      "end": 136.7,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "farmer and advisor in green field",
+      "on_screen_text": "Yusuf's question · Kampala · example only",
+      "voiceover": "Let's set up a capstone notebook. Yusuf is an agricultural extension officer in Kampala, Uganda. His question, which is just an example, is this. In countries with similar rainfall, is fertiliser use linked to cereal yield?"
+    },
+    {
+      "scene": 8,
+      "start": 136.7,
+      "end": 155.1,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Create a new Colab notebook named: Capstone - cereal yield",
+        "Add five text cells with the headings: 1 Question · 2 Source · 3 Load · 4 Audit · 5 Cleaning log",
+        "Under Source, type placeholders: Name · Web address · Download date · Licence"
+      ],
+      "on_screen_text": "Five headings, in order",
+      "voiceover": "He creates a new notebook and adds five text headings, in order. Question, Source, Load, Audit, and Cleaning log. The cleaning log stays empty until the next lesson. Under Source, he records the name, the web address, the download date and the licence."
+    },
+    {
+      "scene": 9,
+      "start": 155.1,
+      "end": 165.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open the Colab file panel and upload the downloaded CSV",
+        "Under Load, type: df = pd.read_csv(\"file_name.csv\")",
+        "Type: df.head() and df.info() in separate cells"
+      ],
+      "voiceover": "Then he uploads the downloaded file with the Colab file panel, loads it with read csv, and takes a first look with head and info."
+    },
+    {
+      "scene": 10,
+      "start": 165.8,
+      "end": 183.4,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Under Audit, add a code cell",
+        "Type: def audit(df):",
+        "Type (indented): \"\"\"Print a short data-quality report for a DataFrame.\"\"\"",
+        "Type (indented): print(\"Shape:\", df.shape) / print(\"Duplicate rows:\", df.duplicated().sum())",
+        "Type (indented): print(\"Missing values:\") / print(df.isna().sum()[lambda s: s > 0])",
+        "Type (indented): print(\"Text columns:\", df.select_dtypes(exclude=\"number\").columns.tolist())"
+      ],
+      "on_screen_text": "Write the audit once, reuse it",
+      "voiceover": "Next, he writes a reusable audit function, so he can run the same checks again after cleaning. It prints the shape, the number of duplicate rows, the missing values in each column that has some, and the list of text columns."
+    },
+    {
+      "scene": 11,
+      "start": 183.4,
+      "end": 198.4,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run the L14 data cell",
+        "Type: audit(orders)",
+        "Press Shift + Enter",
+        "Output: Shape: (11, 8) / Duplicate rows: 1 / Missing values: order_date 1, payment 1 / Text columns: ['city', 'order_date', 'unit_price', 'payment', 'returned']"
+      ],
+      "voiceover": "To show that it works, we test it on the synthetic order data from lesson fourteen. Eleven rows, one duplicate, a missing date and payment, and five text columns. Exactly what we found by hand."
+    },
+    {
+      "scene": 12,
+      "start": 198.4,
+      "end": 213.4,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Type: audit(df), then df.describe()",
+        "Type: df[\"category_column\"].unique() for each category column",
+        "Plot a histogram of the main number column",
+        "In the Audit text cell, list each problem marked 'error' or 'needs a decision'"
+      ],
+      "voiceover": "On his real data, Yusuf runs the audit, then describe, unique on the category columns, and a quick histogram. He writes each problem in the Audit section, marked as an error or needing a decision."
+    },
+    {
+      "scene": 13,
+      "start": 213.4,
+      "end": 234.8,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Is there a target column?",
+      "voiceover": "A common mistake is choosing a dataset that is too large or complex, and spending the whole week on loading problems. Before you commit, ask one question. Does this table have a column I can use as a target, and columns that could explain it? If not, choose again now."
+    },
+    {
+      "scene": 14,
+      "start": 234.8,
+      "end": 256.2,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Clear question, manageable size, table format, usable licence. 2. Record source, date and licence first. 3. Reusable audit code; list every problem."
+      },
+      "voiceover": "Let's recap. First, choose a public dataset with a clear question, a manageable size, a table format, and a licence that allows your use. Second, record the source, download date and licence before any analysis. Third, audit the data with reusable code, and list every problem before you start cleaning."
+    },
+    {
+      "scene": 15,
+      "start": 256.2,
+      "end": 279.8,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Capstone Step 2",
+      "voiceover": "Now it is your turn. This exercise is step one of your capstone. Choose a dataset, write your question, load the data, and complete a full audit in your notebook. Give yourself about forty-five minutes. In the next and final lesson, Capstone Step Two, you clean, explore and document your notebook. See you there."
+    }
+  ]
+}

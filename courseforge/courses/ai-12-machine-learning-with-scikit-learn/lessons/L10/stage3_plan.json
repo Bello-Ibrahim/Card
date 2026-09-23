@@ -1,0 +1,144 @@
+{
+  "title": "Cross-Validation for Reliable Scores",
+  "thumbnail": {
+    "headline": "Five Exams, Not One",
+    "image": "Navy background, a data bar split into five coloured folds with one fold highlighted in turn, headline in teal Inter Bold.",
+    "slide": {
+      "layout": "title",
+      "title": "Five Exams, Not One",
+      "body": "Five stacked bars, each with a different fold highlighted as 'score'. Tag: Machine Learning with scikit-learn · Lesson 10."
+    }
+  },
+  "production_notes": [
+    "Setup before recording: in a fresh Colab runtime, run the L05 setup cell (content.md L05 Worked Example, first code block: synthetic bank data and the stratified split) and then the L05 pipeline cell (second code block: prep, pipe, pipe.fit). The first L10 cell uses prep, Pipeline and LogisticRegression from those cells; the second L10 cell uses cv from the first, so run them in order. Run them off camera or show them already executed at the top of the notebook; do not run the L03 or L11 cells in the same runtime, because they reuse the names X_train and y_train.",
+    "[VERSION] cross_validate result keys (such as test_roc_auc) and scoring names depend on the installed version. Outputs were recorded with scikit-learn 1.9.1 and Python 3.11 on synthetic data; re-run before recording and update every spoken mean, spread and fold score if they differ.",
+    "Screen scenes 8 to 10 use the first L10 cell; scenes 11 and 12 use the second cell. Both are copied exactly from the content.md Worked Example.",
+    "Speak 'mean' and 'standard deviation' in words; the screen shows mean= and std=.",
+    "Lars Eriksson and the Swedish energy company are fictional; the data is synthetic."
+  ],
+  "sections": {
+    "Hook": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "In lesson three, you changed only the random seed of the split, and the test score moved. If one split can be lucky or unlucky, how can you trust a comparison between two models that differ by one hundredth?",
+        "on_screen_text": "Lucky split, or better model?"
+      }
+    ],
+    "Explain": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Cross-validation gives you a score, and a measure of how much it moves. In k-fold cross-validation, the training data is split into k equal parts, called folds. The model is trained k times. Each time, one fold is held out for scoring, and the others are used for training.",
+        "slide": {
+          "layout": "diagram",
+          "title": "5-fold cross-validation",
+          "body": "Five rows, each showing the training data in 5 blocks; in row 1 block 1 is 'score', in row 2 block 2, and so on. Result: 5 scores."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "You get k scores, one per fold, and every row is used for scoring exactly once. For classification, use stratified folds, which keep the class balance the same in every fold. This is important when one class is rare.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Stratified folds",
+          "body": "k scores, every row scored once · StratifiedKFold(n_splits=5, shuffle=True, random_state=42) keeps the class balance in each fold"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Always report two numbers: the mean score, and the standard deviation, which shows the spread. If model A scores zero point seven seven, and model B scores zero point seven six, both with a spread of zero point zero five, the difference is smaller than the normal variation. You cannot say A is better.",
+        "slide": {
+          "layout": "comparison",
+          "title": "Mean and spread",
+          "body": "Model A: 0.77 ± 0.05. Model B: 0.76 ± 0.05. Overlapping bars. Verdict: difference smaller than the spread, so no winner."
+        }
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "Cross-validation runs on the training set only. The test set is still kept for one final check. And because you pass a whole pipeline, the preprocessing is refitted inside every fold, which keeps each fold free of leakage.",
+        "on_screen_text": "Training set only. Whole pipeline."
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "Judging a student by one exam can be unfair. The questions may happen to suit them, or not. Five short exams on different topics give a better picture, and the gap between the best and worst exam shows how consistent the student is.",
+        "stock_query": "student taking several short tests",
+        "on_screen_text": "Five exams give a fairer picture"
+      }
+    ],
+    "Demonstrate": [
+      {
+        "visual_type": "stock",
+        "voiceover": "Lars Eriksson is an analyst at an energy company in Sweden. He is testing a workflow for predicting which customers will accept a new contract. He practises on the term-deposit data from lesson five.",
+        "stock_query": "energy company office analyst Scandinavia",
+        "on_screen_text": "Lars · energy analyst · Sweden"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "This cell sets up five stratified folds. Then it builds three pipelines with the same preprocessing and a different model each: logistic regression, a decision tree, and k-nearest neighbours. For each one, it prints the mean ROC AUC across the folds, and the spread.",
+        "screen_steps": [
+          "Scroll past the L05 setup and pipeline cells, already executed.",
+          "Type this exact code cell from content.md and run it with Shift+Enter:\nfrom sklearn.model_selection import StratifiedKFold, cross_val_score\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.neighbors import KNeighborsClassifier\n\ncv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)\nmodels = {\"logistic\": LogisticRegression(max_iter=1000),\n          \"tree\": DecisionTreeClassifier(max_depth=4, random_state=42),\n          \"knn\": KNeighborsClassifier(n_neighbors=25)}\n\nfor name, model in models.items():\n    candidate = Pipeline([(\"prep\", prep), (\"model\", model)])\n    scores = cross_val_score(candidate, X_train, y_train, cv=cv, scoring=\"roc_auc\")\n    print(f\"{name:9} mean={scores.mean():.3f} std={scores.std():.3f}\")"
+        ],
+        "on_screen_text": "Three models, same folds"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Logistic regression has the highest mean, zero point seven seven four, with a spread of zero point zero four eight. The tree scores zero point six eight two, with a spread of zero point zero three four. Its lead over the tree, about zero point zero nine, is larger than the spread. That is a real difference.",
+        "screen_steps": [
+          "Highlight logistic mean=0.774 std=0.048.",
+          "Highlight tree mean=0.682 std=0.034.",
+          "Show the overlay: gap about 0.09 > spread."
+        ],
+        "on_screen_text": "Logistic 0.774 vs tree 0.682"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "k-nearest neighbours scores zero point seven three three, with a spread of zero point zero four seven. The lead of logistic regression here is about zero point zero four, smaller than one standard deviation. So Lars writes, probably better, not certain.",
+        "screen_steps": [
+          "Highlight knn mean=0.733 std=0.047.",
+          "Add a text cell: Logistic vs KNN: probably better, not certain."
+        ],
+        "on_screen_text": "Probably better, not certain"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Next, this cell shows the individual fold scores for the logistic pipeline, for two metrics at once: ROC AUC and recall.",
+        "screen_steps": [
+          "Type this exact code cell from content.md and run it with Shift+Enter:\nfrom sklearn.model_selection import cross_validate\nres = cross_validate(pipe, X_train, y_train, cv=cv, scoring=[\"roc_auc\", \"recall\"])\nprint(res[\"test_roc_auc\"].round(3), res[\"test_recall\"].round(3))"
+        ],
+        "on_screen_text": "Fold by fold"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "ROC AUC ranges from zero point seven one eight to zero point eight four three across the folds. A single split could have reported either end. And recall at the default threshold is low in every fold, between zero point zero two seven and zero point one zero eight, which matches lesson eight.",
+        "screen_steps": [
+          "Highlight the first array [0.775 0.81 0.725 0.718 0.843] and mark the lowest 0.718 and highest 0.843.",
+          "Highlight the second array [0.056 0.056 0.028 0.027 0.108]."
+        ],
+        "on_screen_text": "ROC AUC from 0.718 to 0.843"
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "A common mistake is to cross-validate on the full dataset, including the test rows, and then report a test score on those same rows. Another is to preprocess first, and cross-validate only the model. Split off the test set first, and cross-validate the whole pipeline on the training set.",
+        "on_screen_text": "Split first, then cross-validate the pipeline"
+      }
+    ],
+    "Recap": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, k-fold cross-validation trains and scores a model k times, so every training row is scored once, and you should use stratified folds for classification. Second, report the mean and the standard deviation, because differences smaller than the spread are not reliable. Third, cross-validate the whole pipeline on the training set only, and keep the test set for the final check.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. k folds, every row scored once; stratify for classification. 2. Report mean ± std; small gaps are not reliable. 3. Whole pipeline, training set only."
+        }
+      }
+    ],
+    "CTA": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Now it is your turn. In the exercise below this video, you will cross-validate three classifiers, put the mean and spread of each in a small table, and decide which model to carry forward. It takes about twenty-five minutes. In the next lesson, Regression Models and Metrics, we move from yes or no to predicting numbers. See you there.",
+        "on_screen_text": "Next: Regression Models and Metrics"
+      }
+    ]
+  }
+}

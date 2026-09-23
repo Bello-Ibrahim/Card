@@ -1,0 +1,143 @@
+{
+  "title": "Streaming Responses",
+  "thumbnail": {
+    "headline": "Feels Faster, Costs Same",
+    "image": "Navy background, a spinner on the left and text flowing word by word on the right, headline in teal Inter Bold.",
+    "slide": {
+      "layout": "title",
+      "title": "Feels Faster, Costs Same",
+      "body": "Left: a loading spinner with a clock. Right: a chat bubble filling with words. Small tag: Building Apps with LLM APIs · Lesson 7."
+    }
+  },
+  "production_notes": [
+    "[VERSION] The messages.stream() helper, text_stream, get_final_message() and the names of streaming events must be checked against the current SDK docs before recording.",
+    "The timing numbers in the hook (twelve seconds, about one second) and in Kenji's output (TTFT 0.9s, total 11.4s, 610 output tokens) are illustrative, not measured. The voiceover uses 'something like'; label the on-screen output 'example'.",
+    "Speed up the terminal recording only after the first words appear, so the short time to first token stays visible in real time.",
+    "Kenji Watanabe and the Osaka law firm are fictional. Use an invented contract question; no client documents on screen."
+  ],
+  "sections": {
+    "Hook": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Two apps take exactly twelve seconds to write the same answer. In the first, the user stares at a spinner for twelve seconds. In the second, words start to appear after about one second. The second app feels faster, although it is not.",
+        "on_screen_text": "Same answer, very different feeling"
+      }
+    ],
+    "Explain": [
+      {
+        "visual_type": "slide",
+        "voiceover": "In the last lesson, you made your extractor survive failures. Now let's make your app feel fast. Without streaming, the API waits until the whole reply is finished, and sends it in one piece. With streaming, the server sends small pieces while the model writes. Your app can show each piece immediately.",
+        "slide": {
+          "layout": "comparison",
+          "title": "Without and with streaming",
+          "body": "Top timeline: long empty wait → whole reply at the end. Bottom timeline: small pieces arriving from early on until the end."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Two times matter to users. Time to first token is how long until the first text appears. Streaming makes this short. Total time is how long until the reply is complete. Streaming does not change that. And it does not change the cost either. You pay for the same tokens.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Two times, one cost",
+          "body": "Time to first token (TTFT): much shorter with streaming · Total time: unchanged · Cost: unchanged, same tokens"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "The Python SDK has a streaming helper that handles the low-level events for you. You open a stream, and loop over the text pieces as they arrive. After the loop, you ask for the final message. It looks like a normal response, with content, a stop reason and usage.",
+        "slide": {
+          "layout": "code",
+          "title": "The streaming helper",
+          "body": "with client.messages.stream(model=MODEL, max_tokens=1000, messages=...) as stream:\n    for text in stream.text_stream:\n        print(text, end=\"\", flush=True)\n    final = stream.get_final_message()"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Under the helper, the API sends a series of named events. The message starts, text arrives in small deltas, and the message stops with the final usage. You only need these events for advanced cases, and they are listed in the streaming docs.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Under the helper",
+          "body": "Event timeline: message start → content block start → text delta, text delta, text delta → content block stop → message stop (final usage)."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "So when should you stream? Stream anything a person reads while waiting, such as chat replies, drafts and summaries. Streaming also helps with very long outputs, which can hit timeouts otherwise. For short background jobs, like extracting fields from a batch of invoices, a normal request is simpler.",
+        "slide": {
+          "layout": "comparison",
+          "title": "When to stream",
+          "body": "Stream: chat replies · drafts · summaries · long outputs. Normal request: short background jobs such as batch invoice extraction."
+        }
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "Streaming is like live radio commentary of a football match, compared with a report in tomorrow's newspaper. The match lasts the same time either way. With the radio, you follow it as it happens. With the newspaper, you wait, and then you get everything at once.",
+        "stock_query": "person listening to radio sports commentary",
+        "on_screen_text": "Live commentary, not tomorrow's report"
+      }
+    ],
+    "Demonstrate": [
+      {
+        "visual_type": "stock",
+        "voiceover": "Kenji Watanabe builds a legal research helper for a small law firm in Osaka, Japan. Lawyers ask for plain-language explanations of contract terms, and replies are often four to six hundred words long. Without streaming, they said the tool freezes.",
+        "stock_query": "lawyer reading documents at desk office",
+        "on_screen_text": "Kenji · legal helper · Osaka"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "He adds timing to the streaming loop. He notes the start time. When the first piece of text arrives, he records the time to first token. After the loop, he gets the final message and records the total time. Nothing else in his code changes. Same model, same system prompt, same messages.",
+        "screen_steps": [
+          "Open stream_timing.py in VS Code",
+          "Highlight start = time.perf_counter()",
+          "Highlight the check that records first when the first text piece arrives",
+          "Highlight final = stream.get_final_message() and total = time.perf_counter() - start",
+          "Highlight the final print with TTFT, total and output tokens"
+        ],
+        "on_screen_text": "Measure first token and total"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "He runs it with a long contract question. Watch the terminal. Text starts almost at once, and keeps flowing. At the end, you'll see something like a time to first token under one second, a total of about eleven seconds, and the output token count.",
+        "screen_steps": [
+          "Run python stream_timing.py with an invented question about a contract term",
+          "Show the text appearing piece by piece in the terminal",
+          "Show the final line: TTFT 0.9s, total 11.4s, output tokens 610 (labelled 'example')"
+        ],
+        "on_screen_text": "Reading starts in under a second"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "The total time is still long, but lawyers start reading almost at once. Kenji also passes the final message to his logging helper from lesson four, so every streamed call has its tokens, cost, and both times in the log. Later, he can see if a model or prompt change makes the tool feel slower.",
+        "screen_steps": [
+          "Add log_call(final, \"legal_explain\") after the loop",
+          "Add two columns for TTFT and total time to the log row",
+          "Run once more and open usage_log.csv to show the new row"
+        ],
+        "on_screen_text": "Log streamed calls too"
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "A common mistake is to stream to the screen and forget the end of the stream. Without the final message, you have no stop reason and no usage. Your cost log is empty, and cut-off replies look complete. Always get the final message, check it, and log it.",
+        "on_screen_text": "Always read the final message"
+      }
+    ],
+    "Recap": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, streaming shows text as it is generated. It shortens the time to first token, but not the total time or the cost. Second, use the SDK's streaming helper, and loop over the text pieces. Third, after the loop, get the final message to check the stop reason, log usage, and save the reply to the history.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. Streaming: shorter time to first token; same total time and cost. 2. Use the streaming helper and loop over text pieces. 3. Final message: stop reason, usage, history."
+        }
+      }
+    ],
+    "CTA": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Now it is your turn. In the exercise, you will stream a long answer to the terminal, record the time to first token and the total time, then compare it with a normal request. In the next lesson, A Web Front End with Streamlit or Next.js, you will put this streaming chat on the web. See you there.",
+        "on_screen_text": "Next: A Web Front End"
+      }
+    ]
+  }
+}

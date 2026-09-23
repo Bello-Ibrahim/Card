@@ -1,0 +1,198 @@
+{
+  "course_id": "AI-11",
+  "lesson_id": "L18",
+  "duration_s": 281.5,
+  "thumbnail": {
+    "headline": "No Answers in Features",
+    "slide": {
+      "layout": "title",
+      "title": "No Answers in Features",
+      "body": "Table with feature columns in white, target column 'returned' in teal, and columns order_id and refund crossed out in orange. Small tag: Python for AI · Lesson 18."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.7,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "A column that hides the answer",
+      "voiceover": "Imagine a model that predicts returned orders perfectly in testing, and then fails completely with real customers. One common reason is a column that secretly contained the answer. Today, you build a table a model can learn from honestly."
+    },
+    {
+      "scene": 2,
+      "start": 16.7,
+      "end": 38.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "An ML-ready table",
+        "body": "Table: each row = one order. One column highlighted teal = target (returned: 1 or 0). All other columns = numeric features, no missing values."
+      },
+      "voiceover": "Last time, we turned text, categories and dates into numbers. Now we put it all together. An ML-ready table has a simple shape. One row per example, such as one order. One target column, the value you want to predict. And feature columns, all numeric, with no missing values."
+    },
+    {
+      "scene": 3,
+      "start": 38.1,
+      "end": 59.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Remove before training",
+        "body": "Identifiers: order_id, customer name · Raw columns already converted: order_date, text city · Leaky columns (next)"
+      },
+      "voiceover": "Some columns must be removed before training. First, identifiers, such as an order number or a customer name. They are unique labels, not information. A model could memorise them, and that memory would be useless for new orders. Also remove raw columns you have already converted, like the original date."
+    },
+    {
+      "scene": 4,
+      "start": 59.5,
+      "end": 77.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Data leakage",
+        "body": "Timeline: order placed → prediction moment → order returned → refund created. Refund sits after the prediction moment: leak."
+      },
+      "voiceover": "Second, leaky columns. Data leakage happens when a feature contains information you would not have at the moment of prediction, often because it is created after the outcome. A refund exists only because an order was returned. So it reveals the answer."
+    },
+    {
+      "scene": 5,
+      "start": 77.5,
+      "end": 95.5,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "student writing exam in classroom",
+      "on_screen_text": "Full marks, nothing learned",
+      "voiceover": "Leakage is like an exam with the answers printed faintly on the back of the question paper. A student who notices them gets full marks, but learns nothing, and fails the next exam. A model with a leaky column is that student."
+    },
+    {
+      "scene": 6,
+      "start": 95.5,
+      "end": 108.8,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Would I know this value yet?",
+      "voiceover": "To test any column for leakage, ask one question. At the moment I want to make the prediction, would I already know this value? If the answer is no, remove it."
+    },
+    {
+      "scene": 7,
+      "start": 108.8,
+      "end": 124.7,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "data analyst working at desk India",
+      "on_screen_text": "Anjali, analyst · Pune",
+      "voiceover": "Let's build one. Anjali is a data analyst in Pune, India. The marketplace asks her to prepare a table for a future model that predicts whether an order will be returned. She starts from Hamza's encoded table."
+    },
+    {
+      "scene": 8,
+      "start": 124.7,
+      "end": 137.1,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run the L14, L16 and L17 cells so encoded exists",
+        "Add a new code cell",
+        "Type: print(encoded[[\"returned\", \"refund\"]].head(3))",
+        "Press Shift + Enter",
+        "Output: no 0.0 / yes 12.0 / no 0.0",
+        "Highlight the yes / 12.0 row"
+      ],
+      "on_screen_text": "Refund appears only after a return",
+      "voiceover": "First, she looks at the returned and refund columns side by side. See the pattern? The refund is above zero only when the order was returned. That is leakage."
+    },
+    {
+      "scene": 9,
+      "start": 137.1,
+      "end": 162.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Add a new code cell",
+        "Type: ml = encoded.copy()",
+        "Type: ml[\"returned\"] = (ml[\"returned\"] == \"yes\").astype(int)",
+        "Type: ml = ml.drop(columns=[\"order_id\", \"refund\", \"order_date\"])",
+        "Type: print(ml.shape) and print(ml.columns.tolist())"
+      ],
+      "voiceover": "Next, she makes a copy called ml. The target, returned, becomes one for yes and zero for no. The comparison with yes gives True or False, and as type int turns that into one or zero. Then she drops three columns. The order number, which is an identifier. The refund, which leaks. And the order date, which is already converted."
+    },
+    {
+      "scene": 10,
+      "start": 162.8,
+      "end": 171.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Press Shift + Enter",
+        "Output: (8, 11)",
+        "Output: ['quantity', 'unit_price', 'returned', 'month', 'weekday', 'city_hanoi', 'city_lagos', 'city_lima', 'payment_card', 'payment_cash', 'payment_other']"
+      ],
+      "voiceover": "Run it. Eight rows and eleven columns. The target, plus quantity, price, month, weekday, three city columns and three payment columns."
+    },
+    {
+      "scene": 11,
+      "start": 171.8,
+      "end": 186.4,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Add a new code cell",
+        "Type: print(ml.select_dtypes(\"number\").shape[1] == ml.shape[1])",
+        "Type: ml.to_csv(\"orders_ml_ready.csv\", index=False)",
+        "Press Shift + Enter",
+        "Output: True",
+        "Open the Colab file panel and show orders_ml_ready.csv"
+      ],
+      "on_screen_text": "Save with index=False",
+      "voiceover": "She checks that every column is numeric. The answer is True. Then she saves the table as a CSV file. Index equals False stops pandas from writing the row labels as an extra column."
+    },
+    {
+      "scene": 12,
+      "start": 186.4,
+      "end": 203.5,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "Anjali's note",
+        "body": "\"Only 1 returned order out of 8. Enough to practise, far too few for a real model.\""
+      },
+      "voiceover": "Finally, Anjali adds a warning to her notes. Only one order out of eight was returned. That is enough to practise the steps, but far too few for a real model. A real project needs many examples of each outcome."
+    },
+    {
+      "scene": 13,
+      "start": 203.5,
+      "end": 228.8,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "More columns is not always better",
+      "voiceover": "A common mistake is keeping every column, because more data seems better. Identifiers and leaky columns make a model look better in testing, and worse in real use. The opposite mistake also happens, removing useful features because they look similar to the target. Ask the timing question for each column, and write down why you kept or removed it."
+    },
+    {
+      "scene": 14,
+      "start": 228.8,
+      "end": 252.4,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. One row per example, one target, numeric features, no missing values. 2. Remove identifiers, leaky and already-converted columns. 3. to_csv(..., index=False); note the limits."
+      },
+      "voiceover": "Let's recap. First, an ML-ready table has one row per example, one target column, and only numeric features with no missing values. Second, remove identifiers, leaky columns and raw columns you have already converted. Third, save the result with index equals False, and note any limits, such as too few examples of one outcome."
+    },
+    {
+      "scene": 15,
+      "start": 252.4,
+      "end": 281.5,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Capstone Step 1",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will choose a target and five features, explain why you removed two columns, and save an ML-ready CSV. It takes about twenty-five minutes. Training models comes in the next course, Machine Learning with scikit-learn. But first, your capstone. In the next lesson, you choose, load and audit a public dataset. See you there."
+    }
+  ]
+}

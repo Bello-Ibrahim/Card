@@ -1,0 +1,160 @@
+{
+  "title": "Turning Text into Numbers: Tokens and Embeddings",
+  "thumbnail": {
+    "headline": "Same Sentence, Different Tokens",
+    "image": "Navy background, one short sentence shown in four scripts, each broken into coloured token blocks of different counts, headline in teal Inter Bold.",
+    "slide": {
+      "layout": "title",
+      "title": "Same Sentence, Different Tokens",
+      "body": "Four rows (EN, FR, PT, AR), each a row of small coloured token blocks of slightly different lengths. Small tag: Deep Learning and Neural Networks · Lesson 11."
+    }
+  },
+  "production_notes": [
+    "[VERSION] Check the Hugging Face tokenizer API (AutoTokenizer, padding, return_tensors, convert_ids_to_tokens) against the installed transformers version at recording time.",
+    "[VERIFY] Licence of the xlm-roberta-base checkpoint must be confirmed on its Hub page before recording; show the model card briefly on screen.",
+    "[VERIFY] The French, Portuguese and Arabic example sentences must be checked by a native speaker before recording (Arabic native-speaker check stays a human review item, see DECISIONS.md). Arabic captions use Noto Sans Arabic.",
+    "Token counts are not stated in the voiceover; content.md only says they are similar but not equal. Show the real printed output.",
+    "Layla and the Amman support company are hypothetical; use public example sentences only, never real customer messages."
+  ],
+  "sections": {
+    "Hook": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Write one sentence about a morning train in English, French, Portuguese and Arabic. You see four sentences of similar length. A tokenizer may see quite different numbers of pieces, and that affects cost, speed and sometimes accuracy.",
+        "on_screen_text": "Four languages, four token counts"
+      }
+    ],
+    "Explain": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Welcome to module three, where we work with text. A network needs numbers, so text goes through two steps. The first is tokenisation. It splits text into tokens, and maps each token to a whole-number ID from a fixed vocabulary.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Step 1: Tokenisation",
+          "body": "Text 'The train leaves' → tokens [The] [train] [leaves] → one integer ID per token, looked up in a fixed vocabulary."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Modern models use sub-word tokenisers. Common words stay whole. Rare or long words are split into pieces, such as un, believ and able. This keeps the vocabulary to tens of thousands of entries, while still handling any word, including names and spelling mistakes.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Sub-word tokens",
+          "body": "'unbelievable' → [un] [believ] [able]. Common word 'train' → [train]. Vocabulary: tens of thousands of entries. Methods: BPE · WordPiece · SentencePiece"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "A Hugging Face tokenizer also adds the special tokens the model expects, at the start and the end. In a batch, it pads short texts and cuts long ones, and returns an attention mask. One for real tokens, zero for padding. Every model has its own tokenizer, so always load them together.",
+        "slide": {
+          "layout": "bullets",
+          "title": "What the tokenizer adds",
+          "body": "Special tokens at start and end · padding and truncation in a batch · attention mask: 1 = real token, 0 = padding · load tokenizer and model from the same checkpoint name"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Why do counts differ by language? A tokenizer learns its vocabulary from its training text. Languages and scripts that were common there get more whole-word tokens. Others are split into more pieces. More tokens mean more compute, and the text fills the model's maximum length sooner.",
+        "slide": {
+          "layout": "comparison",
+          "title": "Why counts differ",
+          "body": "Common in training text → more whole-word tokens → fewer pieces. Less common → more pieces → more compute, maximum length reached sooner."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "The second step is embeddings. An embedding layer is a lookup table. Row i is a learned vector for token i. It is trained with the rest of the network, so tokens used in similar contexts end up with similar vectors. You measure closeness with cosine similarity.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Step 2: Embeddings",
+          "body": "Token ID i → row i of a table → a vector of numbers. 2D sketch: 'train', 'bus', 'station' close together; 'banana' far away. nn.Embedding(vocab_size, dim) · cosine similarity"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "slide": {
+          "layout": "diagram",
+          "title": "Context changes the vector",
+          "body": "The word bank in two sentences (river bank / bank loan): same starting embedding → transformer layers (L12) → two different vectors."
+        },
+        "voiceover": "In a transformer, which we meet next, these vectors are then updated by context, so one word can get different vectors in different sentences."
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "Think of a library. Tokenisation gives every book a shelf code, and splits a very long encyclopedia into several volumes. Embeddings arrange the shelves so that books on similar subjects stand near each other. The codes are arbitrary. The positions carry the meaning.",
+        "stock_query": "library shelves with rows of books",
+        "on_screen_text": "Codes are arbitrary. Positions carry meaning."
+      }
+    ],
+    "Demonstrate": [
+      {
+        "visual_type": "stock",
+        "voiceover": "Layla is an NLP engineer at a customer-support company in Amman, Jordan, that answers messages in several languages. Before choosing a model, she checks how a multilingual tokenizer handles one sentence in four languages.",
+        "stock_query": "support team working on headsets office",
+        "on_screen_text": "Layla · customer support · Amman"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "In Colab, she loads the tokenizer for XLM-RoBERTa base, a multilingual model. She checks the licence on its Hub page first. Then she writes the train sentence in English, French, Portuguese and Arabic.",
+        "screen_steps": [
+          "Show the xlm-roberta-base model card on the Hugging Face Hub (licence section)",
+          "Run: from transformers import AutoTokenizer; tok = AutoTokenizer.from_pretrained(\"xlm-roberta-base\")",
+          "Run the sentences dictionary cell from content.md with keys en, fr, pt, ar"
+        ],
+        "on_screen_text": "Check the licence first"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "For each language, she prints the number of tokens and the tokens themselves. You should see something like sub-word pieces, with special tokens at the start and end, and counts that are similar, but not equal. She notes which words were split into several pieces.",
+        "screen_steps": [
+          "Run: for lang, text in sentences.items(): ids = tok(text)[\"input_ids\"]; print(lang, len(ids), tok.convert_ids_to_tokens(ids))",
+          "Point to the special tokens at the start and end of each row",
+          "Highlight one word split into several pieces (expected output: similar but unequal counts)"
+        ],
+        "on_screen_text": "Similar, but not equal"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Then she tokenises all four sentences as one padded batch. Every row now has the same length, and the attention mask shows where the padding starts. She also decodes the IDs back to text, to confirm nothing was lost. This is exactly what the model will receive.",
+        "screen_steps": [
+          "Run: batch = tok(list(sentences.values()), padding=True, return_tensors=\"pt\"); print(batch[\"input_ids\"].shape, batch[\"attention_mask\"][0])",
+          "Point to where the mask changes from 1 to 0 in a shorter row",
+          "Run: tok.decode(ids) for one sentence and compare with the original"
+        ],
+        "on_screen_text": "Attention mask: 1 real, 0 padding"
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Layla uses public example sentences only. She never pastes real customer messages into a notebook or an online tool.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Privacy",
+          "body": "Use public or invented sentences · never paste real customer messages into a notebook or online tool"
+        }
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "A common mistake is loading the tokenizer from one checkpoint and the model from another, for example a multilingual tokenizer with an English-only model. The code runs, because IDs are just numbers, but each ID now points to the wrong embedding row. Always use the same checkpoint name. And count tokens, not words, when you check length limits.",
+        "on_screen_text": "One checkpoint for tokenizer and model"
+      }
+    ],
+    "Recap": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, tokenisers split text into sub-word tokens with IDs, add special tokens, and pad or truncate batches with an attention mask. Second, the same sentence can produce different token counts in different languages, which affects compute and maximum length. Third, an embedding layer is a learned lookup table from token IDs to vectors, where tokens used in similar contexts end up close together.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. Sub-word tokens, IDs, special tokens, padding and attention mask. 2. Token counts differ by language. 3. Embeddings: learned lookup table; similar contexts, close vectors."
+        }
+      }
+    ],
+    "CTA": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Now it is your turn. In the exercise below this video, you will tokenise your own neutral sentence in English, French, Portuguese and Arabic, and compare the tokens and counts. It takes about twenty-five minutes. In the next lesson, we go from sequences to transformers. See you there.",
+        "on_screen_text": "Next: From Sequences to Transformers"
+      }
+    ]
+  }
+}

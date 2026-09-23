@@ -1,0 +1,192 @@
+{
+  "course_id": "AI-12",
+  "lesson_id": "L11",
+  "duration_s": 306.4,
+  "thumbnail": {
+    "headline": "Errors Measured in Bikes",
+    "slide": {
+      "layout": "title",
+      "title": "Errors Measured in Bikes",
+      "body": "Line of hourly bike rentals with morning and evening peaks; a caption 'MAE ≈ 90 bikes/hour'. Tag: Machine Learning with scikit-learn · Lesson 11."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.1,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "How many bikes at 8 a.m.?",
+      "voiceover": "A bike-sharing manager does not ask, will people rent bikes? She asks, how many bikes will we need at eight tomorrow morning? When the answer is a number, you need regression, and you need metrics that speak in bikes."
+    },
+    {
+      "scene": 2,
+      "start": 17.1,
+      "end": 30.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Regression: predicting a number",
+        "body": "Same workflow: create → fit → predict."
+      },
+      "voiceover": "So far, our models answered yes or no questions. Regression models predict a number. The workflow is exactly the same: create, fit, predict. Two model families are a good start."
+    },
+    {
+      "scene": 3,
+      "start": 30.0,
+      "end": 54.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Two model families",
+        "body": "LinearRegression: weighted sum, straight lines, easy to explain. DecisionTreeRegressor: leaves predict averages, follows peaks, overfits if too deep."
+      },
+      "voiceover": "Linear regression fits a weighted sum of the features. It is fast and easy to explain, but it can only draw straight-line relationships. A decision tree for regression splits the data, and each leaf predicts the average of its training rows. It can follow curves and peaks, but it overfits if it grows too deep."
+    },
+    {
+      "scene": 4,
+      "start": 54.0,
+      "end": 77.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "MAE and RMSE",
+        "body": "MAE: average size of the error, in target units ('90 bikes away on average') · RMSE: also in target units, punishes big misses more · RMSE much larger than MAE → some big misses"
+      },
+      "voiceover": "Now three metrics, in words. MAE, the mean absolute error, is the average size of the error, in the target's own units. For example, on average our prediction is ninety bikes away from the real number. RMSE, the root mean squared error, is also in the target's units, but it punishes large errors more."
+    },
+    {
+      "scene": 5,
+      "start": 77.1,
+      "end": 101.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "R squared",
+        "body": "Share of variation explained, compared with always predicting the average · 1.0 = perfect · 0 = no better than the average · can be negative · no units"
+      },
+      "voiceover": "If RMSE is much larger than MAE, the model makes some big misses. R squared shows how much of the variation in the target the model explains, compared with always predicting the average. One is perfect, and zero is no better than the average. It has no units, so it is harder to use with a manager."
+    },
+    {
+      "scene": 6,
+      "start": 101.5,
+      "end": 121.2,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "passengers waiting at city bus stop",
+      "on_screen_text": "RMSE remembers the very late bus",
+      "voiceover": "MAE is like the average number of minutes a bus is late. RMSE is the same idea, but a bus that is forty minutes late counts much more than four buses that are ten minutes late. Passengers remember the very late bus, and RMSE does too."
+    },
+    {
+      "scene": 7,
+      "start": 121.2,
+      "end": 137.9,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "bike sharing station city street morning",
+      "on_screen_text": "Park Ji-woo · bike-sharing analyst",
+      "voiceover": "Park Ji-woo is an analyst for a city bike-sharing scheme. The exercise uses a public bike-sharing dataset, but the demo uses a synthetic year of hourly data with a similar shape, so the results are repeatable."
+    },
+    {
+      "scene": 8,
+      "start": 137.9,
+      "end": 158.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Start a fresh Colab runtime and add a text cell: Setup cell, shared by L11 to L13.",
+        "Type this exact code cell from content.md and run it with Shift+Enter:\nimport numpy as np, pandas as pd\n\nrng = np.random.default_rng(7)\nts = pd.date_range(\"2025-01-01\", periods=24 * 365, freq=\"h\")\nhour, workday = np.asarray(ts.hour), np.asarray(ts.dayofweek < 5)\nseason = np.sin(2 * np.pi * (np.asarray(ts.dayofyear) - 110) / 365)\nrush = np.exp(-(hour - 8) ** 2 / 3) + np.exp(-(hour - 18) ** 2 / 3)\nbikes = pd.DataFrame({\"timestamp\": ts,\n                      \"temp\": 12 + 10 * season + rng.normal(0, 3, len(ts)),\n                      \"humidity\": rng.uniform(20, 95, len(ts))})\nbikes[\"rentals\"] = np.clip(\n    40 + 15 * bikes[\"temp\"] - 2 * bikes[\"humidity\"] + 600 * rush * workday\n    + 200 * ~workday * ((hour > 10) & (hour < 19)) + rng.normal(0, 60, len(ts)),\n    0, None).round()",
+        "In a scratch cell, run bikes.shape and bikes['rentals'].mean() to show 8,760 rows and about 243, then delete the scratch cell."
+      ],
+      "on_screen_text": "8,760 hours · about 243 rentals per hour",
+      "voiceover": "In a fresh notebook, we run the setup cell. It creates one year of hourly data, with temperature, humidity, and a morning and evening rush on workdays. That is eight thousand, seven hundred and sixty hours, with an average of about two hundred and forty-three rentals per hour."
+    },
+    {
+      "scene": 9,
+      "start": 158.9,
+      "end": 178.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Type this exact code cell from content.md and run it with Shift+Enter:\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.linear_model import LinearRegression\nfrom sklearn.tree import DecisionTreeRegressor\nfrom sklearn.metrics import mean_absolute_error, root_mean_squared_error, r2_score\n\nX = bikes[[\"temp\", \"humidity\"]].assign(hour=bikes[\"timestamp\"].dt.hour)\ny = bikes[\"rentals\"]\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)\n\nfor model in [LinearRegression(), DecisionTreeRegressor(max_depth=8, random_state=0)]:\n    pred = model.fit(X_train, y_train).predict(X_test)\n    print(type(model).__name__, round(mean_absolute_error(y_test, pred), 1),\n          round(root_mean_squared_error(y_test, pred), 1), round(r2_score(y_test, pred), 3))"
+      ],
+      "on_screen_text": "Linear vs tree, three metrics",
+      "voiceover": "The model cell uses three features: temperature, humidity, and the hour of the day. It keeps twenty percent of the hours for testing. Then it trains a linear model and a tree with a depth of eight, and prints MAE, RMSE and R squared for each."
+    },
+    {
+      "scene": 10,
+      "start": 178.6,
+      "end": 200.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Highlight the output line LinearRegression 141.7 186.4 0.268.",
+        "Add the caption: about 142 bikes per hour off."
+      ],
+      "on_screen_text": "Linear: about 142 bikes off",
+      "voiceover": "The linear model has an MAE of one hundred and forty-one point seven, an RMSE of one hundred and eighty-six point four, and R squared of zero point two six eight. In business terms, it is wrong by about one hundred and forty-two bikes per hour, on average."
+    },
+    {
+      "scene": 11,
+      "start": 200.5,
+      "end": 225.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Highlight the output line DecisionTreeRegressor 89.5 124.0 0.676.",
+        "Add the caption: about 90 bikes per hour off."
+      ],
+      "on_screen_text": "Tree: about 90 bikes off",
+      "voiceover": "The tree has an MAE of eighty-nine point five, an RMSE of one hundred and twenty-four point zero, and R squared of zero point six seven six. It is wrong by about ninety bikes per hour. The linear model treats the hour as a straight line, so it cannot capture the rush-hour peaks. The tree can."
+    },
+    {
+      "scene": 12,
+      "start": 225.8,
+      "end": 235.7,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "In a new cell, type and run: import matplotlib.pyplot as plt; plt.scatter(y_test, pred, s=3); plt.plot([0, y_test.max()], [0, y_test.max()]); plt.show()",
+        "Circle a few points far from the diagonal."
+      ],
+      "on_screen_text": "Far from the line = big miss",
+      "voiceover": "Finally, we plot the tree's predictions against the real values, with a diagonal line. Points far from the line are the big misses."
+    },
+    {
+      "scene": 13,
+      "start": 235.7,
+      "end": 256.7,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Speak in bikes, not R²",
+      "voiceover": "A common mistake is to report R squared alone. A manager cannot plan bikes with R squared. Report MAE or RMSE in business units, and compare them with the size of the target. An error of ninety bikes is large when the average is two hundred and forty-three."
+    },
+    {
+      "scene": 14,
+      "start": 256.7,
+      "end": 282.4,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Same fit/predict; linear = straight lines, trees follow peaks. 2. MAE and RMSE in target units; RMSE punishes big misses. 3. Report errors in business units, not only R²."
+      },
+      "voiceover": "Let's recap. First, regression uses the same fit and predict workflow. Linear models draw straight lines, while trees can follow peaks. Second, MAE and RMSE are in the target's units, and RMSE is larger when the model makes some big misses. Third, R squared shows the share of variation explained, but report MAE or RMSE in business units to stakeholders."
+    },
+    {
+      "scene": 15,
+      "start": 282.4,
+      "end": 306.4,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Ensembles",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will predict hourly bike rentals, report your errors in bikes per hour, and plot predicted against actual values. It takes about thirty minutes. In the next lesson, Ensembles: Random Forests and Gradient Boosting, we combine many trees into one stronger model. See you there."
+    }
+  ]
+}

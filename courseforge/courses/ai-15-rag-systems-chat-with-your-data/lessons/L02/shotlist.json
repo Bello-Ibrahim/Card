@@ -1,0 +1,209 @@
+{
+  "course_id": "AI-15",
+  "lesson_id": "L02",
+  "duration_s": 294.8,
+  "thumbnail": {
+    "headline": "Meaning as Numbers",
+    "slide": {
+      "layout": "title",
+      "title": "Meaning as Numbers",
+      "body": "A 2D map of dots: English, French and Arabic dots for 'reset password' clustered together, an 'invoice' dot far away. Small tag: RAG Systems · Lesson 2."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.1,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Same question, different words",
+      "voiceover": "How do I reset my password? I can't log in, I forgot my passcode. These two sentences share almost no words. A keyword search would not match them. Yet a good retrieval system must treat them as the same question."
+    },
+    {
+      "scene": 2,
+      "start": 17.1,
+      "end": 26.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Embeddings: Meaning as Numbers",
+        "body": "RAG Systems · Lesson 2 of 16 · Stage 3 of 6 highlighted on the pipeline strip"
+      },
+      "voiceover": "In the last lesson, we saw the six stages of RAG. Today we look at the stage that makes meaning searchable: embeddings."
+    },
+    {
+      "scene": 3,
+      "start": 26.5,
+      "end": 43.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Text in, vector out",
+        "body": "'How do I reset my password?' → Embedding model box → [0.12, -0.40, 0.07, … ] with label 'a few hundred numbers'"
+      },
+      "voiceover": "An embedding model takes a piece of text and returns a vector, a fixed-length list of numbers, often a few hundred long. The model is trained so that texts with similar meanings get vectors that point in similar directions."
+    },
+    {
+      "scene": 4,
+      "start": 43.6,
+      "end": 58.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Direction carries meaning",
+        "body": "Two password sentences as arrows pointing the same way; an 'invoice' sentence arrow pointing elsewhere."
+      },
+      "voiceover": "Similar meaning means similar direction. Different meaning means a different direction. That is the whole idea, and it is why embeddings can match two questions that share almost no words, like our password example."
+    },
+    {
+      "scene": 5,
+      "start": 58.2,
+      "end": 74.1,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "librarian arranging books on library shelves",
+      "on_screen_text": "A map of meaning",
+      "voiceover": "Think of a large library where the librarian places each book on a map by topic, not by title. Books about river pollution end up near books about water treatment, even if their titles share no words."
+    },
+    {
+      "scene": 6,
+      "start": 74.1,
+      "end": 97.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Cosine similarity",
+        "body": "Two arrows from the origin with a small angle: 'similar meaning, close to 1'. Two arrows at a right angle: 'unrelated, near 0'. Footer: normalised vectors → dot product."
+      },
+      "voiceover": "An embedding places each text at a point on a map of meaning. We measure how close two points are with cosine similarity. It is close to one for very similar meaning, and near zero for unrelated text. If the vectors are normalised, it is simply the dot product. And it can even be negative."
+    },
+    {
+      "scene": 7,
+      "start": 97.7,
+      "end": 117.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Three rules for RAG",
+        "body": "1. Same model for chunks and questions. 2. Multilingual models match across languages. 3. Check the model card for query and passage prefixes."
+      },
+      "voiceover": "Three practical points matter for RAG. Embed chunks and questions with the same model, because different models make different maps. Multilingual models place the same meaning in different languages close together. And some models expect a short prefix for queries and passages, so read the model card."
+    },
+    {
+      "scene": 8,
+      "start": 117.8,
+      "end": 134.1,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open a new notebook cell and show the import of SentenceTransformer from sentence_transformers.",
+        "Set EMBED_MODEL to the chosen multilingual model name and run model = SentenceTransformer(EMBED_MODEL).",
+        "Briefly show the model card page in the browser: vector size, prefixes, licence."
+      ],
+      "on_screen_text": "Open-source, runs locally",
+      "voiceover": "Let's try it in a notebook. We use the free, open-source sentence-transformers library, which runs locally. First we load a multilingual model that we chose on the model hub, after checking its card and its licence."
+    },
+    {
+      "scene": 9,
+      "start": 134.1,
+      "end": 150.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Type the sentences list: 'How do I reset my password?', 'Comment réinitialiser mon mot de passe ?', 'The invoice is due in 30 days.'",
+        "Run vecs = model.encode(sentences, normalize_embeddings=True).",
+        "Run sims = vecs @ vecs.T, then print(vecs.shape) and print(sims.round(2))."
+      ],
+      "voiceover": "Next we write three sentences. The password question in English, the same question in French, and an unrelated sentence about an invoice. We encode them with normalised vectors, and multiply the matrix by itself to get every pairwise similarity."
+    },
+    {
+      "scene": 10,
+      "start": 150.8,
+      "end": 167.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Show the printed shape and the 3 by 3 similarity matrix from the real run.",
+        "Highlight the high English–French cell and the two low invoice cells."
+      ],
+      "on_screen_text": "High across languages, low off-topic",
+      "voiceover": "You'll see something like this. The shape shows three vectors, each a few hundred numbers long, depending on the model. The English and French password sentences score high with each other, and both score low with the invoice sentence."
+    },
+    {
+      "scene": 11,
+      "start": 167.5,
+      "end": 188.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Show a cell with three French policy passages: cancellation, luggage, airport transfer.",
+        "Show three guest questions: English 'Can I cancel my tour?', an Arabic luggage question, a French airport shuttle question.",
+        "Encode all six with normalize_embeddings=True and print the 6 by 6 similarity matrix."
+      ],
+      "on_screen_text": "Farid · tour operator · Marrakesh",
+      "voiceover": "Now a real case. Farid builds a help assistant for a tour operator in Marrakesh. Guests write in Arabic, French and English, but the booking policies are only in French. He embeds three policy passages and three guest questions, one in each language, and prints a six by six matrix."
+    },
+    {
+      "scene": 12,
+      "start": 188.9,
+      "end": 209.0,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Highlight the highest score in each question row, including the Arabic row.",
+        "Add the English question 'bags on the bus' and show its two close scores for luggage and transfer."
+      ],
+      "voiceover": "Each question scores highest with the matching French policy, even the Arabic one. But one pair surprises him. A question about bags on the bus scores almost as high with the transfer passage as with the luggage passage, because both mention the bus. Close topics can compete."
+    },
+    {
+      "scene": 13,
+      "start": 209.0,
+      "end": 226.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Farid's notes for later",
+        "body": "Close topics compete (luggage vs transfer). Fix 1: add section title to each chunk (L05). Fix 2: rerank top results (L07)."
+      },
+      "voiceover": "Farid learns that embeddings capture topic and meaning, but close topics can compete. He writes two notes for later. Add the section title to each chunk, which we cover in lesson five, and consider reranking, which we cover in lesson seven."
+    },
+    {
+      "scene": 14,
+      "start": 226.6,
+      "end": 245.0,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Scores rank. They don't prove.",
+      "voiceover": "A common mistake is to treat a score as a fixed measure of truth, like anything above zero point seven is relevant. Scores are not comparable between models. Use them to rank results, and never mix vectors from two models in one index."
+    },
+    {
+      "scene": 15,
+      "start": 245.0,
+      "end": 269.9,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Embeddings: similar meaning → close vectors (cosine similarity). 2. Same model for chunks and questions; multilingual models cross languages. 3. Scores rank; test any threshold on your data."
+      },
+      "voiceover": "Let's recap. First, an embedding model turns text into a vector, so that texts with similar meanings are close together, measured with cosine similarity. Second, chunks and questions must use the same model, and multilingual models can match across languages. Third, use similarity to rank passages, and choose any cut-off only by testing on your own data."
+    },
+    {
+      "scene": 16,
+      "start": 269.9,
+      "end": 294.8,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Your First RAG Pipeline",
+      "voiceover": "Now it is your turn. In the exercise below, embed twelve sentences on four topics in English, French and Arabic, and plot a similarity heatmap. Look for the four bright blocks, and write a short, honest note on any weak matches. In the next lesson, Your First RAG Pipeline, we connect everything and get our first cited answer."
+    }
+  ]
+}

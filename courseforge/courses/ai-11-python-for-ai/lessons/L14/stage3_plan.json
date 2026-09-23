@@ -1,0 +1,76 @@
+{
+  "title": "Finding Data Quality Problems",
+  "thumbnail": {
+    "headline": "Audit Before You Clean",
+    "image": "Navy background, a clipboard checklist next to a data table with several cells circled in orange, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Audit Before You Clean", "body": "Clipboard with five ticks (missing, duplicates, types, spellings, extremes) beside a small table with orange circles on problem cells. Small tag: Python for AI · Lesson 14."}
+  },
+  "production_notes": [
+    "The order data is synthetic, created for this course; label it on screen as 'Synthetic data, made up for this course'. Prices are in US dollars. Oluwaseun and the marketplace are fictional.",
+    "[VERSION] Text column dtype names (str in pandas 3, object in earlier versions) and printed output formats differ between pandas versions. content.md outputs were produced with Python 3.11 and pandas 3.0.6. The voiceover says 'text' and does not name the dtype.",
+    "Curriculum [VERIFY] flag for Gapminder does not apply: this lesson uses only the synthetic order data.",
+    "Printed outputs on screen must match content.md: 'order_date 1 / payment 1 / dtype: int64', '1', \"['Lagos', 'lagos ', 'Hanoi', 'Lima', 'LIMA', 'Ha Noi']\", the order 1005 'unknown' row, and 'min -2.0 / 50% 2.0 / max 500.0'.",
+    "Stock footage of market or delivery scenes must show no readable shop names or logos."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "A machine learning model learns whatever is in its data, including the mistakes. If a quantity of minus two, or a copied row, goes into training, the model treats it as truth. So before you clean anything, you need to find the problems.",
+       "on_screen_text": "Models learn the mistakes too"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Last time, we summarised clean practice data. Real data is rarely clean. A data audit is a systematic check of a dataset for problems, done before cleaning. You don't fix anything yet. You make a list.",
+       "slide": {"layout": "title", "title": "A data audit", "body": "Find and list every problem. Fix nothing yet."}},
+      {"visual_type": "stock",
+       "voiceover": "Think of a mechanic's inspection before a repair. The mechanic walks around the car with a checklist. Tyres, lights, brakes, oil. They write down every problem first, and only then decide what to fix, and in what order. If you start repairs too early, you fix the first thing you notice, and miss the dangerous one.",
+       "stock_query": "mechanic inspecting car with checklist",
+       "on_screen_text": "Inspect first, repair later"},
+      {"visual_type": "slide",
+       "voiceover": "Five checks find most problems. First, missing values. Is na, followed by sum, counts the empty cells in each column. Second, duplicates, which are rows that copy an earlier row exactly. Third, wrong types. A price column stored as text means at least one value could not be read as a number.",
+       "slide": {"layout": "bullets", "title": "Five checks (1 to 3)", "body": "1. Missing values: df.isna().sum() · 2. Duplicates: df.duplicated().sum() · 3. Wrong types: df.dtypes, pd.to_numeric(col, errors=\"coerce\")"}},
+      {"visual_type": "slide",
+       "voiceover": "Fourth, inconsistent categories. Unique lists every different spelling, and to a computer, Lima in capitals is a different value. Fifth, impossible values and outliers. An impossible value cannot be true, like a negative quantity. An outlier is possible but unusual. Outliers need a human decision, not automatic deletion.",
+       "slide": {"layout": "bullets", "title": "Five checks (4 and 5)", "body": "4. Inconsistent categories: df[\"city\"].unique() · 5. Extremes: describe() min and max. Impossible = error. Outlier = ask a person."}},
+      {"visual_type": "slide",
+       "voiceover": "For each problem, write down what you found, where, and the code that found it. This list becomes your cleaning plan in lesson sixteen.",
+       "slide": {"layout": "comparison", "title": "Record every problem", "body": "Columns of an audit table: What · Where (column, order ID) · Code that found it → becomes the cleaning plan (L16)."}}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's audit a real-looking file. Oluwaseun is an operations analyst for an online marketplace with shops in Lagos, Hanoi and Lima. He receives an export of recent orders. The data is synthetic, made up for this course.",
+       "stock_query": "operations analyst reviewing orders on laptop",
+       "on_screen_text": "Synthetic data, made up for this course"},
+      {"visual_type": "screen",
+       "voiceover": "We paste one cell that holds eleven orders as CSV text, and read it into a DataFrame called orders. We use this same file for the next three lessons.",
+       "screen_steps": ["Add a new code cell", "Paste the data cell from content.md: import io, import pandas as pd, the raw text (order_id,city,order_date,quantity,unit_price,payment,returned,refund and 11 rows), then orders = pd.read_csv(io.StringIO(raw))", "Press Shift + Enter"]},
+      {"visual_type": "screen",
+       "voiceover": "Now three checks. First, missing values. A short extra step keeps only the columns that have at least one. One order date and one payment method are missing. Second, duplicates. There is one copied row. Third, the city spellings. Six different spellings, for only three cities.",
+       "screen_steps": ["Add a new code cell", "Type: print(orders.isna().sum()[lambda s: s > 0])", "Type: print(orders.duplicated().sum())", "Type: print(orders[\"city\"].unique().tolist())", "Press Shift + Enter", "Output: order_date 1 / payment 1 / dtype: int64 / 1 / ['Lagos', 'lagos ', 'Hanoi', 'Lima', 'LIMA', 'Ha Noi']"],
+       "on_screen_text": "6 spellings for 3 cities"},
+      {"visual_type": "screen",
+       "voiceover": "Dtypes shows that the price and the date are both stored as text. To find the bad price, we try to convert the column to numbers. Any value that fails becomes missing, and we show those rows. It is order ten oh five, with the price unknown.",
+       "screen_steps": ["Add a new code cell", "Type: print(orders.dtypes) and point at unit_price and order_date shown as text", "Type: bad_price = pd.to_numeric(orders[\"unit_price\"], errors=\"coerce\").isna()", "Type: print(orders.loc[bad_price, [\"order_id\", \"unit_price\"]])", "Press Shift + Enter", "Output: 1005 unknown (index 4)"]},
+      {"visual_type": "screen",
+       "voiceover": "Finally, the quantity. The minimum is minus two, which is impossible. The median is two. And the maximum is five hundred. That is possible, but very unusual.",
+       "screen_steps": ["Type: print(orders[\"quantity\"].describe()[[\"min\", \"50%\", \"max\"]])", "Press Shift + Enter", "Output: min -2.0 / 50% 2.0 / max 500.0"],
+       "on_screen_text": "-2 is impossible. 500 is unusual."},
+      {"visual_type": "slide",
+       "voiceover": "Here is Oluwaseun's audit list. One duplicate row. A missing date and a missing payment method. A price stored as text. Dates stored as text. Six spellings for three cities. An impossible quantity of minus two. And a possible outlier of five hundred units, to confirm with the Lima shop. Each item has the order number and the code that found it.",
+       "slide": {"layout": "bullets", "title": "Audit list", "body": "Duplicate (1003) · Missing date (1007) · Missing payment (1004) · Price as text (1005) · Dates as text · 6 spellings, 3 cities · Quantity -2 (1004) · 500 units? Ask Lima (1006)"}},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is fixing the first problem you see, like deleting the five hundred unit order. It may be a real bulk order from a genuine customer. Complete the audit first. And look at the minimum, median and maximum, not only the mean. Here, one outlier pulls the mean quantity up to forty-seven, which describes no real order.",
+       "on_screen_text": "Complete the audit first"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, audit before you clean. List every problem, and the code that found it. Second, use five checks for missing values, copies, wrong types, spellings and extreme values. Third, impossible values are errors, but outliers are questions that need a human decision.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Audit before cleaning: problem + code that found it. 2. isna, duplicated, dtypes, unique, describe. 3. Impossible = error; outlier = human decision."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below this video, you will audit the messy order file, and list every problem you find, with the code that found it. Mark each one as an error, or as a question for a person. It takes about twenty-five minutes. In the next lesson, we explore data with charts. See you there.",
+       "on_screen_text": "Next: Exploring Data with Charts"}
+    ]
+  }
+}

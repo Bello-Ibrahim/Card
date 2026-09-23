@@ -1,0 +1,240 @@
+{
+  "course_id": "AI-16",
+  "lesson_id": "L02",
+  "duration_s": 316.4,
+  "thumbnail": {
+    "headline": "Inside the Agent Loop",
+    "slide": {
+      "layout": "title",
+      "title": "Inside the Agent Loop",
+      "body": "Centre: circular arrow with four icons: eye (observe), lightbulb (decide), wrench (act), tick (check). Small tag: AI Agents and Automation Workflows · Lesson 2."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 19.7,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Text in, text out. So how?",
+      "voiceover": "A language model on its own can only produce text. It cannot open a file, check a database, or send a message. So how does an agent finish a task with several steps? The answer is a simple loop that your software runs around the model."
+    },
+    {
+      "scene": 2,
+      "start": 19.7,
+      "end": 30.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "How an Agent Works: The Agent Loop",
+        "body": "AI Agents and Automation Workflows · Lesson 2 of 16"
+      },
+      "voiceover": "Last time, you saw that an agent chooses its own next step. Today, we see how. An agent repeats four actions until it has to stop."
+    },
+    {
+      "scene": 3,
+      "start": 30.8,
+      "end": 48.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Observe and decide",
+        "body": "Circle of four boxes, first two highlighted: Observe (task, conversation, earlier results) → Decide (model returns a final answer OR a tool request). Act and Check greyed out."
+      },
+      "voiceover": "First, observe. Collect the current situation: the task, the conversation so far, and the results of earlier steps. Second, decide. Send all of this to the model. The model replies with either a final answer, or a request to use a tool."
+    },
+    {
+      "scene": 4,
+      "start": 48.8,
+      "end": 60.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Act and check",
+        "body": "Same circle, now Act (your software runs the tool) and Check (add result, loop back) highlighted. Arrow from Check back to Observe."
+      },
+      "voiceover": "Third, act. Your software, not the model, runs the tool and gets a result. Fourth, check. Add that result to the situation, and go back to the start."
+    },
+    {
+      "scene": 5,
+      "start": 60.8,
+      "end": 76.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "When the loop stops",
+        "body": "The loop with two exits: 'Final answer' (green) and 'Limit reached: steps, time or cost' (amber). Warning note: always set a maximum."
+      },
+      "voiceover": "The loop stops when the model gives a final answer, or when it reaches a limit on steps, time or cost. Always set a maximum. Without one, a confused agent can call tools again and again."
+    },
+    {
+      "scene": 6,
+      "start": 76.2,
+      "end": 100.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Four parts of an agent",
+        "body": "Model: makes the decisions · Tools: name, description, inputs · Memory: earlier steps and results · Instructions: goal, rules, tone, when to stop or ask a person"
+      },
+      "voiceover": "Every agent has four parts. The model makes the decisions. The tools are the actions it may request, each with a name, a description and the inputs it expects. The memory is what it can see from earlier steps. And the instructions describe the goal, the rules, the tone, and when to stop or ask a person."
+    },
+    {
+      "scene": 7,
+      "start": 100.6,
+      "end": 108.3,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "The tool list is your safety control",
+      "voiceover": "The agent can only do what its tools allow. So the tool list is your main safety control."
+    },
+    {
+      "scene": 8,
+      "start": 108.3,
+      "end": 125.0,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "detective reviewing case files on desk",
+      "on_screen_text": "Observe, decide, act, check",
+      "voiceover": "Here is a way to picture it. Think of a detective on a case. The detective looks at the evidence, decides which witness to interview next, goes to the interview, and adds the new facts to the case file."
+    },
+    {
+      "scene": 9,
+      "start": 125.0,
+      "end": 143.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "The detective and the agent",
+        "body": "Two columns. Detective → Model. Interviews → Tools. Case file → Memory. Manager's brief → Instructions. 'Out of time' → Stop limit."
+      },
+      "voiceover": "The detective repeats this until the case is solved, or the manager says, stop, we are out of time. The detective is the model. The interviews are the tools. The case file is the memory. And the manager's brief is the instructions."
+    },
+    {
+      "scene": 10,
+      "start": 143.0,
+      "end": 163.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "The loop in pseudocode",
+        "body": "Show the pseudocode from content.md: steps = 0; while steps < MAX_STEPS: reply = model.decide(instructions, memory, tools); if reply.is_final_answer: break; result = run_tool(reply.tool_name, reply.tool_input); memory.append(reply, result); steps += 1. Label: pseudocode, not a real library."
+      },
+      "voiceover": "In code, the loop is short. On screen is some pseudocode. While the step count is under the maximum, ask the model to decide. If it gives a final answer, stop. If not, run the tool it asked for, save the result, and count one more step."
+    },
+    {
+      "scene": 11,
+      "start": 163.1,
+      "end": 173.8,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "finance professional checking receipts at desk",
+      "on_screen_text": "Priya · finance · Chennai",
+      "voiceover": "Let's follow one run. Priya Raman works in finance at a consultancy in Chennai, India. She designs an expense-checking agent, using sample data only."
+    },
+    {
+      "scene": 12,
+      "start": 173.8,
+      "end": 195.2,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Priya's expense agent",
+        "body": "Instructions: check claims against travel policy; flag problems with a reason; never approve or reject. Tools: read_receipt · lookup_policy · flag_claim. Stop: final summary or 6 tool calls."
+      },
+      "voiceover": "Her instructions say: check each claim against the travel policy, flag any problem with a reason, and never approve or reject a claim yourself. The agent has three tools. One reads a receipt. One looks up the policy. One flags a claim. It may use at most six tool calls."
+    },
+    {
+      "scene": 13,
+      "start": 195.2,
+      "end": 208.5,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Step 1: read the receipt",
+        "body": "Loop diagram with 'Act: read_receipt(104)' highlighted. Result card: category meal · 3 people · amount above usual level."
+      },
+      "voiceover": "The task is: check claim one hundred and four. The agent decides to read the receipt. The result is a meal for three people, with an amount above the usual level."
+    },
+    {
+      "scene": 14,
+      "start": 208.5,
+      "end": 220.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Step 2: look up the policy",
+        "body": "Loop diagram with 'Act: lookup_policy(meals)' highlighted. Result card: per-person limit · client meals need the client name."
+      },
+      "voiceover": "Next, it decides to look up the policy for meals. The result is a limit per person, and a rule that client meals need the client name."
+    },
+    {
+      "scene": 15,
+      "start": 220.1,
+      "end": 238.5,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Step 3: flag and stop",
+        "body": "Loop diagram with 'Act: flag_claim(104, over meal limit; client name missing)' highlighted, then green exit 'Final answer: flagged, two issues'."
+      },
+      "voiceover": "The amount per person is over the limit, and no client name is given. So it flags the claim with both reasons. Then it gives its final answer: claim one hundred and four is flagged for review, with two issues. The loop stops."
+    },
+    {
+      "scene": 16,
+      "start": 238.5,
+      "end": 247.9,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "The agent flags. A person decides.",
+      "voiceover": "Notice what the agent did not do. It did not reject the claim. A person makes that decision, using the agent's reasons."
+    },
+    {
+      "scene": 17,
+      "start": 247.9,
+      "end": 268.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "The model only asks",
+        "body": "Model box sends a speech bubble 'please run lookup_policy' to a 'Your software' box with a checkpoint gate. Only after the gate: tool runs, result goes back."
+      },
+      "voiceover": "A common mistake is to think the model runs the tools itself, or has access to the database. It does not. The model only asks for a tool. Your software decides whether to run it. That is good news, because you control exactly which actions are possible."
+    },
+    {
+      "scene": 18,
+      "start": 268.0,
+      "end": 291.1,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Observe → decide → act → check, until an answer or a limit. 2. Model · tools · memory · instructions. 3. The model requests; your software runs the tools."
+      },
+      "voiceover": "Let's recap. First, an agent repeats observe, decide, act and check, until it gives a final answer or reaches a limit. Second, its four parts are the model, the tools, the memory and the instructions. Third, the model only requests tools. Your software runs them, which makes the tool list your main safety control."
+    },
+    {
+      "scene": 19,
+      "start": 291.1,
+      "end": 316.4,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Setting Up n8n (Self-Hosted)",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will draw the agent loop for a customer-support agent at an online bookshop. Label its tools, write its stop condition, and add a path to a person. It takes about twenty minutes. In the next lesson, we start building, with Setting Up n8n. See you there."
+    }
+  ]
+}

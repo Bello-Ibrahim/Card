@@ -1,0 +1,154 @@
+{
+  "title": "Validation, Errors and Retries",
+  "thumbnail": {
+    "headline": "Expect Failure, Handle It",
+    "image": "Navy background, three coloured parcels with labels retry, stop and repack, headline in teal Inter Bold.",
+    "slide": {
+      "layout": "title",
+      "title": "Expect Failure, Handle It",
+      "body": "Three parcel icons: a clock (try again later), a red stop sign (do not retry), a tape roll (repack once). Small tag: Building Apps with LLM APIs · Lesson 6."
+    }
+  },
+  "production_notes": [
+    "[VERSION] SDK error class names (AuthenticationError, BadRequestError, RateLimitError, APIStatusError, APIConnectionError), the default max_retries value, which status codes are retried automatically, and the output_config structured-output parameter must be checked against the current SDK docs before recording. The voiceover names no default retry count.",
+    "The three test results in the demo are hypothetical; record them live and adjust the voiceover only if the behaviour differs.",
+    "For the invalid-key test, set a clearly fake value in one terminal only; never show the real key. Restore it off camera.",
+    "Sofia Petrova and the Sofia logistics company are fictional; invoices are invented text."
+  ],
+  "sections": {
+    "Hook": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Your extractor worked perfectly on five test invoices. On its first real day, it met a forty-page invoice, a network timeout and an expired key. Code that talks to an API must expect failure, and handle each kind in the right way.",
+        "on_screen_text": "Real days bring real failures"
+      }
+    ],
+    "Explain": [
+      {
+        "visual_type": "slide",
+        "voiceover": "In the last lesson, you built an invoice extractor. Now let's make it robust. Failures come from three places. The response is incomplete, the request fails, or the output does not pass your checks.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Three places things fail",
+          "body": "Three boxes: Response incomplete (stop reason) · Request fails (API errors) · Output fails checks (validation)."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "First, check the stop reason before you read anything. A successful response can still be unusable. End turn means the model finished. Max tokens means the output was cut off, so structured data may be incomplete. Refusal means the model declined. Show a clear message, and do not retry the same input again and again.",
+        "slide": {
+          "layout": "bullets",
+          "title": "1. Check the stop reason first",
+          "body": "end_turn → finished · max_tokens → cut off: raise the limit or shorten the task · refusal → declined: clear message, no repeated retries"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Second, handle API errors by type. The Python SDK raises a different exception for each kind of error. Catch the specific ones first and the general ones last. An invalid key or a bad request needs a fix, not a retry. A rate limit, a server error or a network problem is temporary.",
+        "slide": {
+          "layout": "comparison",
+          "title": "2. Errors by type",
+          "body": "Fix, don't retry: AuthenticationError (invalid key) · BadRequestError. Temporary, retry later: RateLimitError · server errors (5xx) · APIConnectionError."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Third, let the SDK retry temporary errors for you. It already retries rate limits, server errors and connection problems a few times, with growing waits. You can change this with a client setting. Check the current default in the docs. Fourth, if the output fails your checks, send one more request that includes the error message, then give the item to a human.",
+        "slide": {
+          "layout": "bullets",
+          "title": "3 and 4. Retries",
+          "body": "SDK retries temporary errors automatically (max_retries setting, check the docs) · Validation failed → retry once or twice with the error message → then human review"
+        }
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "Think of a courier's rules for failed deliveries. Nobody home? Try again tomorrow. Wrong address? Do not try again, ask for the right one. Parcel damaged? Repack it once, send again, then report it.",
+        "stock_query": "courier knocking on apartment door with parcel",
+        "on_screen_text": "Retry, stop, or repack once"
+      }
+    ],
+    "Demonstrate": [
+      {
+        "visual_type": "stock",
+        "voiceover": "Sofia Petrova runs the invoice extractor for a logistics company in Sofia, Bulgaria. Hundreds of invoices pass through it every week, so failures are normal. She wraps the call in one function.",
+        "stock_query": "logistics office worker at computer warehouse",
+        "on_screen_text": "Sofia · logistics company · Sofia"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Look at the order of the checks. After the call, the function checks the stop reason first. Only then does it read the text and validate it against the schema and her business rules. If a check fails, it adds the error to the request and tries once more. After two attempts, it returns nothing, so the item goes to human review.",
+        "screen_steps": [
+          "Open extract.py and scroll to the extract() function",
+          "Highlight the stop_reason checks for max_tokens and refusal",
+          "Highlight Invoice.model_validate_json(raw) and check_business_rules(inv)",
+          "Highlight the line that appends 'Your last answer failed a check' to the content",
+          "Highlight return None with the comment 'send to human review'"
+        ],
+        "on_screen_text": "Stop reason, then validate, then retry"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Around the call, the error handler catches each class separately, from the most specific to the most general. Each handler prints a clear message that says what to do next, such as check the key, fix the request, or try again later. Now she tests three failures on screen.",
+        "screen_steps": [
+          "Highlight the try block around messages.create",
+          "Highlight each except clause in order: AuthenticationError, BadRequestError, RateLimitError, APIStatusError, APIConnectionError"
+        ],
+        "on_screen_text": "Catch errors by class"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Test one. She sets max tokens to ten. The stop reason is max tokens, and the function stops with a clear message, instead of saving half a record.",
+        "screen_steps": [
+          "Change max_tokens to 10",
+          "Run the extractor on one invoice",
+          "Show the message 'Output cut off. Raise max_tokens.'"
+        ],
+        "on_screen_text": "Test 1: output cut off"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Test two. In one terminal only, she sets the key variable to a wrong value. The SDK raises an authentication error, and her handler prints a clear key message. There are no retries.",
+        "screen_steps": [
+          "In a new terminal, set ANTHROPIC_API_KEY to an obviously fake value",
+          "Run the extractor",
+          "Show 'Invalid API key. Check ANTHROPIC_API_KEY.' and no retry messages",
+          "Close that terminal"
+        ],
+        "on_screen_text": "Test 2: invalid key, no retry"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "A common mistake is to catch every exception and retry three times. That hides the real problem. It retries invalid keys, saves cut-off output, and sends refusals again and again. Check the stop reason, catch by class, let the SDK retry temporary errors, and send permanent failures to a person.",
+        "screen_steps": [
+          "Run the extractor on a text file with a shopping list",
+          "Show the first validation failure and the retry",
+          "Show the result None and the 'sent to review' message"
+        ],
+        "on_screen_text": "Test 3: bad input goes to review"
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "A common mistake is to catch every exception and retry three times. That retries invalid keys, saves cut-off output, and sends refusals again and again. Check the stop reason, catch by class, and send permanent failures to a person.",
+        "on_screen_text": "Don't catch everything and retry"
+      }
+    ],
+    "Recap": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, always check the stop reason before reading content. Max tokens means cut-off output, and refusal means the request was declined. Second, catch API errors by class. Let the SDK retry temporary errors, and never retry invalid keys or bad requests. Third, if validation fails, retry once or twice with the error message, then send the item to human review.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. Check stop_reason first: max_tokens = cut off, refusal = declined. 2. Catch errors by class; SDK retries temporary errors only. 3. Validation retry with the error, then human review."
+        }
+      }
+    ],
+    "CTA": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Now it is your turn. In the exercise, you will add error handling to your extractor and test it with a tiny max tokens value, an invalid key and a malformed input. Record each result in a short table. In the next lesson, Streaming Responses, you will make your app feel much faster. See you there.",
+        "on_screen_text": "Next: Streaming Responses"
+      }
+    ]
+  }
+}

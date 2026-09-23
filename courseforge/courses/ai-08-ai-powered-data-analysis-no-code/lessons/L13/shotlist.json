@@ -1,0 +1,227 @@
+{
+  "course_id": "AI-08",
+  "lesson_id": "L13",
+  "duration_s": 315.7,
+  "thumbnail": {
+    "headline": "One Message, Not Twelve",
+    "slide": {
+      "layout": "title",
+      "title": "One Message, Not Twelve",
+      "body": "Twelve small grey finding cards → funnel → one large teal message card. Small tag: AI-Powered Data Analysis · Lesson 13."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.6,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "One clear message",
+      "voiceover": "You have a findings log with twelve checked findings. You put all twelve on slides, and your audience remembers none of them. People do not remember lists of numbers. They remember one clear message, and the reason to act on it."
+    },
+    {
+      "scene": 2,
+      "start": 17.6,
+      "end": 24.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Turning Findings into a Story",
+        "body": "AI-Powered Data Analysis (No Code) · Lesson 13 of 14 · Capstone step 2"
+      },
+      "voiceover": "Last time, you explored your data and logged your findings. Now we turn them into a story."
+    },
+    {
+      "scene": 3,
+      "start": 24.9,
+      "end": 44.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Three parts of a data story",
+        "body": "Pyramid: top 'One main finding' · middle 'Two or three supporting findings, each with a chart' · base 'Recommended action + how to measure it'"
+      },
+      "voiceover": "A data story has three parts. One main finding, the single most important thing the audience should remember. Then supporting evidence, two or three findings, each with a chart. And a recommended action, what the audience should do next, and how to measure whether it worked."
+    },
+    {
+      "scene": 4,
+      "start": 44.6,
+      "end": 66.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Choosing the main finding",
+        "body": "Matters most for the business question? · Well checked? · Leads to an action? · Surprising but no decision → notes, not the story"
+      },
+      "voiceover": "To choose the main finding, look at your log and ask three things. Does it matter most for the business question? Is it well checked? Does it lead to an action? A surprising finding is interesting, but if it does not lead to a decision, it belongs in the notes."
+    },
+    {
+      "scene": 5,
+      "start": 66.0,
+      "end": 86.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "The 'so what?' test",
+        "body": "'So we should change the reminder system' → keep (teal tick) | 'It is interesting' → remove or appendix (grey)"
+      },
+      "voiceover": "Then apply the so what test to every chart. Read the chart, and ask, so what? If the answer is, so we should change the reminder system, the chart supports the story. If the answer is, it is interesting, remove it or move it to an appendix."
+    },
+    {
+      "scene": 6,
+      "start": 86.1,
+      "end": 108.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "The five-slide storyline",
+        "body": "Five slide outlines in a row: 1. Question · 2. Key finding · 3. Evidence · 4. Recommendation · 5. Limits. Under each, a line: 'one full sentence'."
+      },
+      "voiceover": "For this capstone, the storyline has five slides, with one message each. The question. The key finding. The evidence. The recommendation. And the limits, what the data cannot tell you. Write each message as a full sentence before you design anything. If the five sentences make sense read aloud, the structure is right."
+    },
+    {
+      "scene": 7,
+      "start": 108.8,
+      "end": 125.5,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "journalist writing news story at desk",
+      "on_screen_text": "Headline first, then evidence",
+      "voiceover": "A data story is like a news report. The headline gives the main point. The next paragraphs give the evidence. The end says what happens next. A reporter who reads out every note does not have a story yet."
+    },
+    {
+      "scene": 8,
+      "start": 125.5,
+      "end": 143.5,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "outpatient clinic reception with staff",
+      "on_screen_text": "Ananya · clinic · Chennai",
+      "voiceover": "Ananya manages an outpatient clinic in Chennai, India. Her question is, why do so many patients miss appointments, and what can we do? Her fictional, anonymised data covers one thousand appointments, with one hundred and eighty no-shows. That is eighteen percent."
+    },
+    {
+      "scene": 9,
+      "start": 143.5,
+      "end": 157.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Twelve findings, one test",
+        "body": "Twelve finding cards; one card 'Most appointments are general check-ups' crossed out: 'So what? No action.'"
+      },
+      "voiceover": "Her findings log has twelve confirmed findings. She applies the so what test. Most appointments are for general check-ups. That is true, but it leads to no action, so she removes it."
+    },
+    {
+      "scene": 10,
+      "start": 157.6,
+      "end": 164.9,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "Main finding",
+        "body": "'Patients booked more than three weeks ahead miss appointments much more often.'"
+      },
+      "voiceover": "Her main finding is this. Patients booked more than three weeks ahead miss appointments much more often."
+    },
+    {
+      "scene": 11,
+      "start": 164.9,
+      "end": 183.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Support 1: booking time",
+        "body": "Bar chart: More than 3 weeks ahead: 124 of 400 (31%) | Within 3 weeks: 56 of 600 (about 9%)"
+      },
+      "voiceover": "Support one. Booked more than three weeks ahead, one hundred and twenty-four no-shows out of four hundred. That is thirty-one percent. Booked within three weeks, fifty-six out of six hundred, about nine percent. A bar chart compares the two groups."
+    },
+    {
+      "scene": 12,
+      "start": 183.8,
+      "end": 200.9,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Supports 2 and 3",
+        "body": "Bar chart: SMS reminder 50 of 500 (10%) | No reminder 130 of 500 (26%). Small bar chart by weekday and time: Monday morning highest."
+      },
+      "voiceover": "Support two. Patients who got an SMS reminder missed fifty of five hundred appointments, ten percent. Those without a reminder missed one hundred and thirty of five hundred, twenty-six percent. Support three. No-shows are highest on Monday mornings."
+    },
+    {
+      "scene": 13,
+      "start": 200.9,
+      "end": 221.9,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Ananya's five messages",
+        "body": "1. We wanted to know why 18% of appointments are missed, using 1,000 appointments from the last six months. 2. Patients booked more than three weeks ahead miss 31% of appointments. 3. The gap is large, and reminders appear to help. (three charts)"
+      },
+      "voiceover": "Her five slide messages. One, we wanted to know why eighteen percent of appointments are missed, using one thousand appointments from the last six months. Two, patients booked more than three weeks ahead miss thirty-one percent of appointments. Three, the gap is large, and reminders appear to help."
+    },
+    {
+      "scene": 14,
+      "start": 221.9,
+      "end": 241.2,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Ananya's five messages",
+        "body": "4. Send an SMS reminder to every patient two days before the visit, and compare the no-show rate after three months. 5. The data shows patterns, not proof: patients who got reminders may differ in other ways, and we do not know patients' reasons."
+      },
+      "voiceover": "Four, send an SMS reminder to every patient two days before the visit, and compare the no-show rate after three months. Five, the data shows patterns, not proof. Patients who got reminders may differ in other ways, and we do not know patients' reasons."
+    },
+    {
+      "scene": 15,
+      "start": 241.2,
+      "end": 249.3,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Patterns, not proof",
+      "voiceover": "Slide five is honest. The reminder finding is a correlation, and a trial is needed to test the cause."
+    },
+    {
+      "scene": 16,
+      "start": 249.3,
+      "end": 267.3,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Main finding first",
+      "voiceover": "A common mistake is to present findings in the order you found them. That is the order of your work, not the order your audience needs. Start with the main finding. And make the recommendation specific and measurable, not just improve communication."
+    },
+    {
+      "scene": 17,
+      "start": 267.3,
+      "end": 291.7,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. One main finding · 2–3 supports · one specific action. 2. 'So what?' for every chart. 3. Five slides, one sentence each, before design."
+      },
+      "voiceover": "Let's recap. First, a data story has one main finding, two or three supporting findings, and a specific recommended action. Second, apply the so what test to every chart, and remove charts that do not support the message. Third, plan five slides with one message each, and write each message as a sentence before you design anything."
+    },
+    {
+      "scene": 18,
+      "start": 291.7,
+      "end": 315.7,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Building and Reviewing Your Report",
+      "voiceover": "Now it is your turn. This is capstone step two. Choose your main finding and three supporting findings, and sketch a five-slide storyline with one message per slide. It takes about forty minutes. In the last lesson, Building and Reviewing Your Five-Slide Report, you build your slides and check every number. See you there."
+    }
+  ]
+}

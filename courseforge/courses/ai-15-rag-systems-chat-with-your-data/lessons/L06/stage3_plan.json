@@ -1,0 +1,76 @@
+{
+  "title": "Vector Databases: Chroma and pgvector",
+  "thumbnail": {
+    "headline": "Meaning Plus Filters",
+    "image": "Navy background, clusters of glowing dots on shelves with a teal aisle sign reading 'year ≥ 2024', headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Meaning Plus Filters", "body": "Dots grouped by meaning on shelves; one aisle sign 'year ≥ 2024' highlights one shelf. Small tag: RAG Systems · Lesson 6."}
+  },
+  "production_notes": [
+    "[VERSION] Chroma API: query with where filters, operators such as $and and $gte, the result format and the default index type.",
+    "[VERSION] pgvector: vector(n) type, the <=> operator, HNSW and IVFFlat index syntax and operator classes, and free plans of hosted PostgreSQL services. The voiceover does not name any hosted provider or plan.",
+    "The vector size 384 in the SQL is an example; it must match the embedding model used in the recording.",
+    "Search results, titles and distances in the demo are from a real run; the voiceover says 'you'll see something like' and gives no exact distances.",
+    "Oluwaseun and the Lagos payments start-up are hypothetical; the 1,200 policy chunks are synthetic teaching data."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "A user asks what the twenty twenty-three reports said about water prices. Your index returns a perfect passage from a twenty fifteen report. The meaning matches, but the year does not. Today we fix that by combining meaning with simple rules.",
+       "on_screen_text": "Right meaning, wrong year"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "In the last lesson, we cut our records into chunks. Now we look at where they live: the vector database.",
+       "slide": {"layout": "title", "title": "Vector Databases: Chroma and pgvector", "body": "RAG Systems · Lesson 6 of 16 · Stage 4: Indexing"}},
+      {"visual_type": "slide",
+       "voiceover": "A vector database stores vectors with their text and metadata, and answers one question: which stored vectors are closest to this one? Four ideas matter. A collection is a named group of chunks that share one embedding model. Each item you add has an ID, the text, a vector and metadata. Similarity search returns the nearest items. And metadata filters limit the search, for example by year.",
+       "slide": {"layout": "bullets", "title": "Four ideas", "body": "Collection: one embedding model · Add: ID + text + vector + metadata · Similarity search: k nearest · Metadata filters: year, type, language"}},
+      {"visual_type": "stock",
+       "voiceover": "Think of a large music shop where records are shelved by sound, not by artist name. Similar sounds sit together, so you walk to the right shelf quickly. Metadata filters are the signs on each aisle, like released after twenty twenty, that stop you from searching shelves you do not need.",
+       "stock_query": "customer browsing vinyl records in music shop",
+       "on_screen_text": "Shelved by sound, filtered by signs"},
+      {"visual_type": "slide",
+       "voiceover": "Chroma is our default. It is free, open source, and runs inside your Python program with a local folder for storage. pgvector is an extension for PostgreSQL. Choose it when your data and user permissions already live there, because you can join chunks with other tables using normal SQL.",
+       "slide": {"layout": "comparison", "title": "Chroma or pgvector?", "body": "Chroma: free, local, in your Python process; course default. pgvector: PostgreSQL extension; join with existing tables and permissions; needs a PostgreSQL server (optional path)."}},
+      {"visual_type": "slide",
+       "voiceover": "Comparing a question with every stored vector is exact, but slow for millions of chunks. Approximate nearest-neighbour indexes, such as HNSW, a layered graph of neighbours, check only a small part of the data. They are much faster, and usually return almost the same results. But combined with filters, they can sometimes return fewer results than you asked for.",
+       "slide": {"layout": "diagram", "title": "Approximate search (HNSW)", "body": "Layered graph: sparse top layer, denser lower layers; a path hops from node to node toward the query. Labels: much faster · almost the same results · with filters: may return fewer than k."}}
+    ],
+    "Demonstrate": [
+      {"visual_type": "screen",
+       "voiceover": "Let's compare them. Oluwaseun is a backend developer at a payments start-up in Lagos, Nigeria. Support staff ask about internal policies, and the company already runs PostgreSQL. His team lead asks: Chroma or pgvector? First, he loads twelve hundred chunks into a Chroma collection, with year and document type as metadata.",
+       "screen_steps": ["Show the add step: ids, documents and metadatas with year as an integer and doc_type.", "Run col.count() and show 1,200."],
+       "on_screen_text": "Oluwaseun · payments start-up · Lagos"},
+      {"visual_type": "screen",
+       "voiceover": "He searches for chargeback time limit, with no filter. You'll see something like this: a list of chunk IDs, titles, years and distances, where a smaller distance means a closer match. But the top result is from a twenty nineteen policy that was replaced.",
+       "screen_steps": ["Run col.query(query_texts=['chargeback time limit'], n_results=5) without a where argument.", "Print id, title, year and rounded distance for each result.", "Highlight the top result with year 2019."]},
+      {"visual_type": "screen",
+       "voiceover": "Now he adds a filter: year greater than or equal to twenty twenty-four. The current policy comes first. One detail matters here. Store numbers like the year as integers, not text, or range filters will not work as expected.",
+       "screen_steps": ["Add where={'year': {'$gte': 2024}} to the same query and run it.", "Show the current policy as the top result.", "Show briefly the $and example combining year and doc_type from content.md."],
+       "on_screen_text": "Store years as integers"},
+      {"visual_type": "screen",
+       "voiceover": "Next, pgvector. In a local Docker container, he enables the extension, and creates a chunks table with a vector column that matches his model's vector size. He adds an HNSW index for cosine distance. With pgvector, he computes the question's vector himself in Python, and passes it to the query.",
+       "screen_steps": ["Show the terminal with a local PostgreSQL Docker container running.", "Run the SQL: CREATE EXTENSION vector, CREATE TABLE chunks with embedding vector(n), CREATE INDEX using hnsw with vector_cosine_ops.", "In Python, encode the question and pass the vector as the query parameter."]},
+      {"visual_type": "screen",
+       "voiceover": "He runs the same search, ordered by cosine distance, with the same year filter in a normal where clause. Both databases return the same top three chunks. So the choice is not about search quality here. It is about where your data already lives.",
+       "screen_steps": ["Run the SELECT with ORDER BY embedding <=> query vector, WHERE year >= 2024, LIMIT 5.", "Place the Chroma top 3 and the pgvector top 3 side by side and show that they match."],
+       "on_screen_text": "Same top three in both"},
+      {"visual_type": "slide",
+       "voiceover": "His decision: Chroma for fast local development and teaching. pgvector for production, because permissions, audit logs and document tables already live in PostgreSQL, and one database is easier to back up.",
+       "slide": {"layout": "comparison", "title": "Oluwaseun's decision", "body": "Development and teaching → Chroma. Production → pgvector: permissions, audit logs and documents already in PostgreSQL; one database to back up."}},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is to store all metadata as text, or to forget it. Then you cannot filter, and you must rebuild the index. Decide your fields before ingestion, and keep one embedding model per collection.",
+       "on_screen_text": "Plan metadata before ingestion"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, a vector database stores vectors, text and metadata, and returns the nearest chunks, optionally limited by filters. Second, Chroma is the free, local default, and pgvector suits teams whose data already lives in PostgreSQL. Third, approximate indexes like HNSW trade a little accuracy for a lot of speed, so test your filters with them.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Vectors + text + metadata → nearest chunks, with filters. 2. Chroma = local default; pgvector = data already in PostgreSQL. 3. HNSW: faster, slightly approximate; test filters."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below, store your chunks with typed metadata, write five questions where the year or document type matters, and compare results with and without a filter. In the next lesson, Hybrid Search and Reranking, we find the exact names and codes that embeddings can miss.",
+       "on_screen_text": "Next: Hybrid Search and Reranking"}
+    ]
+  }
+}

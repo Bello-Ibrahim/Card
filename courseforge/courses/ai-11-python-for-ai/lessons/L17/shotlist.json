@@ -1,0 +1,204 @@
+{
+  "course_id": "AI-11",
+  "lesson_id": "L17",
+  "duration_s": 287.5,
+  "thumbnail": {
+    "headline": "Turn Words into Features",
+    "slide": {
+      "layout": "title",
+      "title": "Turn Words into Features",
+      "body": "Three spellings of Lima → one clean value → tick-box columns city_hanoi, city_lagos, city_lima with 0 and 1. Small tag: Python for AI · Lesson 17."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.6,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Models need numbers",
+      "voiceover": "To a person, Lima in capitals, Lima with a space, and Lima written normally are the same city. To a computer, they are three different values. And a machine learning model cannot use the word Lima at all. It needs numbers."
+    },
+    {
+      "scene": 2,
+      "start": 17.6,
+      "end": 37.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "From columns to features",
+        "body": "Four steps in a row: 1 Clean text → 2 Group rare categories → 3 One-hot encode → 4 Extract date parts."
+      },
+      "voiceover": "Last time, we cleaned the order data. Now we shape it for a model. A feature is a column that a model uses to make a prediction. Most models only work with numbers, so text and dates must be converted. We usually do this in four steps."
+    },
+    {
+      "scene": 3,
+      "start": 37.7,
+      "end": 55.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "1. Clean text",
+        "body": "df[\"city\"].str.strip().str.lower().str.replace(\"ha noi\", \"hanoi\")"
+      },
+      "voiceover": "Step one, clean the text. The str methods work on a whole column at once. Strip removes spaces at the start and end. Lower makes all letters lowercase. And replace swaps one spelling for another. You can chain them, one after another."
+    },
+    {
+      "scene": 4,
+      "start": 55.7,
+      "end": 73.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "2. Group rare categories",
+        "body": "Fewer than 2 rows? → \"other\". Record the threshold in the cleaning log."
+      },
+      "voiceover": "Step two, group rare categories. A category that appears only once or twice gives a model very little to learn from. So replace rare values with a shared label, such as other. Choose the threshold, and record it in your cleaning log."
+    },
+    {
+      "scene": 5,
+      "start": 73.7,
+      "end": 96.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "3. One-hot encode",
+        "body": "Numbering: Lagos = 2, Lima = 3 (Lima is 'more'? No meaning). One-hot: city_hanoi · city_lagos · city_lima, each 0 or 1. Use dtype=int."
+      },
+      "voiceover": "Step three, one-hot encoding. Get dummies creates one new column for each category, with one where the row has that category, and zero elsewhere. Why not just number the cities one, two and three? Because a model would think Lima, number three, is more than Lagos, number two. That has no meaning."
+    },
+    {
+      "scene": 6,
+      "start": 96.4,
+      "end": 116.1,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "person ticking boxes on paper form",
+      "on_screen_text": "Each tick box becomes a column",
+      "voiceover": "Think of a form with tick boxes, instead of a blank line. A blank line invites many spellings. Tick boxes give every answer the same shape, and a computer can count ticks easily. Each box becomes one column, with one for ticked and zero for empty."
+    },
+    {
+      "scene": 7,
+      "start": 116.1,
+      "end": 142.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "4. Date parts",
+        "body": "df[\"order_date\"].dt.month\ndf[\"order_date\"].dt.dayofweek   # 0 = Monday, 6 = Sunday\ndf[\"order_date\"].dt.day_name()"
+      },
+      "voiceover": "The default output of get dummies depends on your pandas version, so add dtype equals int to always get zeros and ones. Step four, extract date parts. A full date is hard for a model to use, but its parts often matter. The dt tools give you the year, the month, and the day of the week, where zero is Monday."
+    },
+    {
+      "scene": 8,
+      "start": 142.2,
+      "end": 156.3,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "data analyst working in bright office",
+      "on_screen_text": "Hamza, analyst · Rabat",
+      "voiceover": "Let's shape the data. Hamza is a data analyst in Rabat, Morocco, helping the same marketplace. He starts from the clean table from the last lesson, with eight orders and no missing values."
+    },
+    {
+      "scene": 9,
+      "start": 156.3,
+      "end": 171.3,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run the L14 and L16 cells so clean exists",
+        "Add a new code cell",
+        "Type: df = clean.copy()",
+        "Type: df[\"city\"] = df[\"city\"].str.strip().str.lower().str.replace(\"ha noi\", \"hanoi\")",
+        "Type: print(df[\"city\"].value_counts())",
+        "Press Shift + Enter",
+        "Output: lagos 3 / lima 3 / hanoi 2"
+      ],
+      "on_screen_text": "6 spellings became 3 cities",
+      "voiceover": "First, the city column. We strip the spaces, make it lowercase, and replace the spelling with a space in Hanoi. Value counts shows Lagos three, Lima three, and Hanoi two. Six spellings became three cities."
+    },
+    {
+      "scene": 10,
+      "start": 171.3,
+      "end": 183.3,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Add a new code cell",
+        "Type: df[\"month\"] = df[\"order_date\"].dt.month",
+        "Type: df[\"weekday\"] = df[\"order_date\"].dt.dayofweek",
+        "Type: print(df[[\"order_date\", \"month\", \"weekday\"]].head(3))",
+        "Press Shift + Enter",
+        "Output: 2026-03-02 3 0 / 2026-03-02 3 0 / 2026-03-03 3 1"
+      ],
+      "voiceover": "Next, the date parts. We add a month column and a weekday column. The second of March, twenty twenty-six, is a Monday, so its weekday is zero."
+    },
+    {
+      "scene": 11,
+      "start": 183.3,
+      "end": 198.3,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Add a new code cell",
+        "Type: counts = df[\"payment\"].value_counts()",
+        "Type: rare = counts[counts < 2].index",
+        "Type: df[\"payment\"] = df[\"payment\"].replace(list(rare), \"other\")",
+        "Type: encoded = pd.get_dummies(df, columns=[\"city\", \"payment\"], dtype=int)",
+        "Type: print(encoded.filter(like=\"city_\").head(3))"
+      ],
+      "voiceover": "Then Hamza counts the payment methods, and finds those with fewer than two rows. After cleaning, mobile appeared only once, so it becomes other. Finally, get dummies encodes city and payment, with dtype equals int."
+    },
+    {
+      "scene": 12,
+      "start": 198.3,
+      "end": 212.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Press Shift + Enter",
+        "Output: city_hanoi city_lagos city_lima / 0 1 0 / 0 1 0 / 1 0 0",
+        "Scroll to show payment_card, payment_cash and payment_other in encoded.columns"
+      ],
+      "on_screen_text": "One 1 per row",
+      "voiceover": "Run it. Filter shows only the new city columns. Each row has a single one, in the column for its city. The table also has three new payment columns, for card, cash and other."
+    },
+    {
+      "scene": 13,
+      "start": 212.9,
+      "end": 237.8,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Clean first, then encode",
+      "voiceover": "A common mistake is encoding before cleaning the text. Then two spellings of Lima become two separate columns, and the model sees two different cities. Standardise first, check with value counts, and only then encode. And never encode columns like names or order numbers, which create hundreds of useless columns. Group rare values, or leave such columns out."
+    },
+    {
+      "scene": 14,
+      "start": 237.8,
+      "end": 261.8,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. .str.strip() · .str.lower() · .str.replace(); check with value_counts(). 2. Group rare values, then pd.get_dummies(..., dtype=int). 3. .dt.month · .dt.dayofweek for date parts."
+      },
+      "voiceover": "Let's recap. First, clean text with strip, lower and replace, and check the result with value counts. Second, group rare categories, then one-hot encode with get dummies and dtype int, so each category becomes a column of zeros and ones. Third, extract useful parts of dates, such as month and weekday, with the dt tools."
+    },
+    {
+      "scene": 15,
+      "start": 261.8,
+      "end": 287.5,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Building an ML-Ready Table",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will standardise a city column, one-hot encode it, and add weekday and month columns from the order date. It takes about twenty-five minutes, and you will use the same steps in your capstone. In the next lesson, we build an ML-ready table. See you there."
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "title": "From Sequences to Transformers",
+  "thumbnail": {
+    "headline": "Everyone Hears Everyone",
+    "image": "Navy background, a sentence of word blocks with teal arcs connecting every word to every other word, one bold arc from 'it' to 'loan', headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Everyone Hears Everyone", "body": "The sentence 'The bank refused the loan because it was too risky' as word blocks, with attention arcs; the arc from 'it' to 'loan' is thickest. Small tag: Deep Learning and Neural Networks · Lesson 12."}
+  },
+  "production_notes": [
+    "L12 is not a screen-demo lesson: concepts are taught with diagrams, and Kenji's code is shown as short code slides only.",
+    "[VERIFY] Licence and intended use of the sentence-transformers/all-MiniLM-L6-v2 checkpoint must be confirmed on its Hub page. The voiceover says only 'a small pretrained sentence encoder'.",
+    "[VERSION] Hugging Face AutoModel output field names (such as last_hidden_state) must be checked against the installed transformers version before the code slide is finalised.",
+    "The similarity result is said as 'you should see something like' (content.md: expected output); no scores are stated.",
+    "Kenji and the Osaka legal-services firm are hypothetical; use invented questions only, never real client messages."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "The bank refused the loan because it was too risky. What does it refer to? You knew at once, because you saw the whole sentence together. Older networks read one word at a time. Transformers look at everything together.",
+       "on_screen_text": "What does 'it' refer to?"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "After the last lesson, a sentence is a sequence of token vectors, and order matters. The question is how to combine them into one meaning. Recurrent networks read the tokens one at a time. At each step, they update a hidden state, a summary of everything read so far.",
+       "slide": {"layout": "diagram", "title": "Recurrent networks", "body": "Tokens in a row: The → bank → refused → ... Each passes into a box that updates a hidden state h1 → h2 → h3 → ... RNN · LSTM · GRU"}},
+      {"visual_type": "slide",
+       "voiceover": "This has two problems. It is slow, because step fifty cannot start until step forty-nine is finished, so a GPU's parallel units sit idle. And it is forgetful. Early information must pass through every later step, and over long texts it fades. LSTMs reduce this problem, but do not remove it.",
+       "slide": {"layout": "comparison", "title": "Two problems", "body": "Slow: step 50 waits for step 49; no parallel work. Forgetful: early tokens fade over long texts; gradients can vanish (L15). LSTMs reduce this but do not remove it."}},
+      {"visual_type": "stock",
+       "voiceover": "An RNN is like passing a message down a line of people by whispering. It is slow, and details from the start are lost. Attention is like a meeting where everyone can hear everyone else at once, and each person decides who is worth listening to.",
+       "stock_query": "team meeting around table everyone talking",
+       "on_screen_text": "Whisper line versus open meeting"},
+      {"visual_type": "slide",
+       "voiceover": "Here is attention in simple terms. Each token makes three vectors. A query, which is what it is looking for. A key, which is what it offers. And a value, the information it passes on. All three are learned from its embedding.",
+       "slide": {"layout": "diagram", "title": "Query, key, value", "body": "One token vector → three arrows → Query (what I am looking for) · Key (what I offer) · Value (what I pass on). All learned linear projections."}},
+      {"visual_type": "slide",
+       "voiceover": "Then one token's query is compared with the keys of all tokens. Similar pairs get high scores. A softmax turns the scores into weights that add up to one. The token's new vector is the weighted average of all the values. For the word it, a trained model can give a high weight to loan.",
+       "slide": {"layout": "diagram", "title": "Attention in three steps", "body": "1. Query of 'it' compared with every key → scores. 2. Softmax → weights that sum to 1 (loan: highest bar). 3. New vector for 'it' = weighted average of the values."}},
+      {"visual_type": "slide",
+       "voiceover": "Every token does this at the same time, so the work is parallel. Multi-head attention runs several of these side by side, so different heads can follow different relationships. Position information is added, because attention itself ignores order. A transformer block is attention plus a small feed-forward network, with residual connections and layer normalisation that help deep stacks train. Models stack many blocks.",
+       "slide": {"layout": "diagram", "title": "A transformer block", "body": "Token embeddings + position information → [Multi-head attention → Add & norm → Feed-forward → Add & norm] × many blocks."}},
+      {"visual_type": "slide",
+       "voiceover": "An encoder lets every token see every other token. That is ideal for understanding tasks such as classification and similarity. A decoder only looks at earlier tokens, and generates text, which is covered in the LLM apps course.",
+       "slide": {"layout": "comparison", "title": "Encoder or decoder", "body": "Encoder: every token sees all tokens → classification, similarity (this course). Decoder: sees only earlier tokens → text generation (AI-14)."}}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Kenji is an engineer at a legal-services firm in Osaka, Japan. The firm has hundreds of FAQ answers, and clients ask the same questions in different words. He wants the closest FAQ for each new question.",
+       "stock_query": "office worker reading documents Osaka city",
+       "on_screen_text": "Kenji · legal services · Osaka"},
+      {"visual_type": "slide",
+       "voiceover": "Keyword search fails here. How do I end my rental contract, and what is the process for terminating a lease, share almost no words. But an encoder gives each sentence a vector that reflects meaning.",
+       "slide": {"layout": "comparison", "title": "Words or meaning?", "body": "'How do I end my rental contract?' vs 'What is the process for terminating a lease?' Keyword overlap: almost none. Meaning: the same."}},
+      {"visual_type": "slide",
+       "voiceover": "His steps are short. Tokenise each sentence, run a small pretrained sentence encoder, and average the token vectors, using the attention mask so padding is ignored. That gives one vector per sentence.",
+       "slide": {"layout": "code", "title": "Mean pooling with the mask", "body": "b = tok(texts, padding=True, truncation=True, return_tensors=\"pt\")\nh = enc(**b).last_hidden_state        # (N, tokens, dim)\nm = b[\"attention_mask\"].unsqueeze(-1).float()\nvec = normalize((h * m).sum(1) / m.sum(1))"}},
+      {"visual_type": "slide",
+       "voiceover": "Then he compares the vectors with cosine similarity. You should see something like a clearly higher score for the paraphrase than for an unrelated question about office hours. Kenji tests only with invented questions, never real client messages.",
+       "slide": {"layout": "diagram", "title": "Paraphrase wins", "body": "Bar chart sketch: 'terminating a lease' → tall bar; 'What time does the office open?' → short bar. Caption: invented questions only."}},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is treating attention weights as a full explanation of a decision. They show where information flowed in one layer and one head. Use them as a rough hint, not proof. Another mistake is averaging token vectors without the attention mask. Padding then mixes into the sentence vector, and the result changes with the batch.",
+       "on_screen_text": "Attention is a hint, not proof"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, recurrent networks read one token at a time, which is slow and tends to lose early information. Second, attention lets every token weigh every other token in parallel, using queries, keys and values. Transformers stack attention and feed-forward layers. Third, encoders see the whole text at once, and suit classification and similarity.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. RNNs: one token at a time, slow and forgetful. 2. Attention: queries, keys, values, in parallel. 3. Encoders see everything; pool tokens into one sentence vector."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below this video, you will get sentence embeddings from a pretrained encoder, and compare five pairs of paraphrases with five unrelated pairs. It takes about twenty-five minutes. In the next lesson, we fine-tune a transformer for text classification. See you there.",
+       "on_screen_text": "Next: Fine-Tuning a Transformer"}
+    ]
+  }
+}

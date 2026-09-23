@@ -1,7 +1,7 @@
 {
   "course_id": "AI-11",
   "lesson_id": "L11",
-  "duration_s": 291.4,
+  "duration_s": 292.2,
   "thumbnail": {
     "headline": "Meet pandas",
     "slide": {
@@ -23,7 +23,7 @@
     {
       "scene": 2,
       "start": 18.9,
-      "end": 35.2,
+      "end": 36.0,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -31,12 +31,12 @@
         "title": "Week 3: Working with tables",
         "body": "pandas · the library for tables of data"
       },
-      "voiceover": "Welcome to week three. Until now, we worked with single values, lists and files. Now we work with whole tables. pandas is the most widely used Python library for tables of data, and it has two main objects."
+      "voiceover": "We are now in week three. Until now, we worked with single values, lists and files. Now we work with whole tables. pandas is the most widely used Python library for tables of data, and it has two main objects."
     },
     {
       "scene": 3,
-      "start": 35.2,
-      "end": 51.5,
+      "start": 36.0,
+      "end": 52.3,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -48,8 +48,8 @@
     },
     {
       "scene": 4,
-      "start": 51.5,
-      "end": 70.8,
+      "start": 52.3,
+      "end": 71.6,
       "section": "Explain",
       "visual_type": "stock",
       "stock_query": "person reviewing spreadsheet data on laptop",
@@ -58,8 +58,8 @@
     },
     {
       "scene": 5,
-      "start": 70.8,
-      "end": 99.9,
+      "start": 71.6,
+      "end": 100.7,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -71,8 +71,8 @@
     },
     {
       "scene": 6,
-      "start": 99.9,
-      "end": 123.5,
+      "start": 100.7,
+      "end": 124.3,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -84,8 +84,8 @@
     },
     {
       "scene": 7,
-      "start": 123.5,
-      "end": 133.8,
+      "start": 124.3,
+      "end": 134.6,
       "section": "Demonstrate",
       "visual_type": "stock",
       "stock_query": "journalist working at newsroom desk",
@@ -94,8 +94,8 @@
     },
     {
       "scene": 8,
-      "start": 133.8,
-      "end": 162.5,
+      "start": 134.6,
+      "end": 163.3,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -108,8 +108,8 @@
     },
     {
       "scene": 9,
-      "start": 162.5,
-      "end": 179.6,
+      "start": 163.3,
+      "end": 180.4,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -125,8 +125,8 @@
     },
     {
       "scene": 10,
-      "start": 179.6,
-      "end": 204.9,
+      "start": 180.4,
+      "end": 205.7,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -139,8 +139,8 @@
     },
     {
       "scene": 11,
-      "start": 204.9,
-      "end": 220.3,
+      "start": 205.7,
+      "end": 221.1,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -153,8 +153,8 @@
     },
     {
       "scene": 12,
-      "start": 220.3,
-      "end": 246.0,
+      "start": 221.1,
+      "end": 246.8,
       "section": "Demonstrate",
       "visual_type": "text",
       "on_screen_text": "describe() skips text columns",
@@ -162,8 +162,8 @@
     },
     {
       "scene": 13,
-      "start": 246.0,
-      "end": 268.7,
+      "start": 246.8,
+      "end": 269.5,
       "section": "Recap",
       "visual_type": "slide",
       "slide": {
@@ -175,8 +175,8 @@
     },
     {
       "scene": 14,
-      "start": 268.7,
-      "end": 291.4,
+      "start": 269.5,
+      "end": 292.2,
       "section": "CTA",
       "visual_type": "presenter_full",
       "on_screen_text": "Next: Selecting and Filtering",

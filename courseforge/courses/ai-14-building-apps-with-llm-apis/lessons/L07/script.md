@@ -1,0 +1,46 @@
+# L07 Streaming Responses | Presenter Script
+
+Course: AI-14 · Video: 5 min · Words: 692
+
+## Hook
+Two apps take exactly twelve seconds to write the same answer. In the first, the user stares at a spinner for twelve seconds. In the second, words start to appear after about one second. The second app feels faster, although it is not.
+
+## Explain
+In the last lesson, you made your extractor survive failures. Now let's make your app feel fast. Without streaming, the API waits until the whole reply is finished, and sends it in one piece. With streaming, the server sends small pieces while the model writes. Your app can show each piece immediately.
+
+Two times matter to users. Time to first token is how long until the first text appears. Streaming makes this short. Total time is how long until the reply is complete. Streaming does not change that. And it does not change the cost either. You pay for the same tokens.
+
+The Python SDK has a streaming helper that handles the low-level events for you. You open a stream, and loop over the text pieces as they arrive. After the loop, you ask for the final message. It looks like a normal response, with content, a stop reason and usage.
+
+Under the helper, the API sends a series of named events. The message starts, text arrives in small deltas, and the message stops with the final usage. You only need these events for advanced cases, and they are listed in the streaming docs.
+
+So when should you stream? Stream anything a person reads while waiting, such as chat replies, drafts and summaries. Streaming also helps with very long outputs, which can hit timeouts otherwise. For short background jobs, like extracting fields from a batch of invoices, a normal request is simpler.
+
+Streaming is like live radio commentary of a football match, compared with a report in tomorrow's newspaper. The match lasts the same time either way. With the radio, you follow it as it happens. With the newspaper, you wait, and then you get everything at once.
+
+## Demonstrate
+Kenji Watanabe builds a legal research helper for a small law firm in Osaka, Japan. Lawyers ask for plain-language explanations of contract terms, and replies are often four to six hundred words long. Without streaming, they said the tool freezes.
+
+He adds timing to the streaming loop. He notes the start time. When the first piece of text arrives, he records the time to first token. After the loop, he gets the final message and records the total time. Nothing else in his code changes. Same model, same system prompt, same messages.
+
+He runs it with a long contract question. Watch the terminal. Text starts almost at once, and keeps flowing. At the end, you'll see something like a time to first token under one second, a total of about eleven seconds, and the output token count.
+
+The total time is still long, but lawyers start reading almost at once. Kenji also passes the final message to his logging helper from lesson four, so every streamed call has its tokens, cost, and both times in the log. Later, he can see if a model or prompt change makes the tool feel slower.
+
+A common mistake is to stream to the screen and forget the end of the stream. Without the final message, you have no stop reason and no usage. Your cost log is empty, and cut-off replies look complete. Always get the final message, check it, and log it.
+
+## Recap
+Let's recap. First, streaming shows text as it is generated. It shortens the time to first token, but not the total time or the cost. Second, use the SDK's streaming helper, and loop over the text pieces. Third, after the loop, get the final message to check the stop reason, log usage, and save the reply to the history.
+
+## CTA
+Now it is your turn. In the exercise, you will stream a long answer to the terminal, record the time to first token and the total time, then compare it with a normal request. In the next lesson, A Web Front End with Streamlit or Next.js, you will put this streaming chat on the web. See you there.
+
+## Thumbnail
+Headline: Feels Faster, Costs Same
+Image: Navy background, a spinner on the left and text flowing word by word on the right, headline in teal Inter Bold.
+
+## Production Notes
+- [VERSION] The messages.stream() helper, text_stream, get_final_message() and the names of streaming events must be checked against the current SDK docs before recording.
+- The timing numbers in the hook (twelve seconds, about one second) and in Kenji's output (TTFT 0.9s, total 11.4s, 610 output tokens) are illustrative, not measured. The voiceover uses 'something like'; label the on-screen output 'example'.
+- Speed up the terminal recording only after the first words appear, so the short time to first token stays visible in real time.
+- Kenji Watanabe and the Osaka law firm are fictional. Use an invented contract question; no client documents on screen.

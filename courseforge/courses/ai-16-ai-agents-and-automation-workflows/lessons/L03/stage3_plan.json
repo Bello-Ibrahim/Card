@@ -1,0 +1,78 @@
+{
+  "title": "Setting Up n8n (Self-Hosted)",
+  "thumbnail": {
+    "headline": "n8n on Your Laptop",
+    "image": "Navy background, a laptop showing a simple canvas of two connected node boxes, a small house icon for self-hosting, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "n8n on Your Laptop", "body": "Centre: laptop outline with two connected node boxes on screen (trigger → date and time). Small house icon for 'self-hosted'. Small tag: AI Agents and Automation Workflows · Lesson 3."}
+  },
+  "production_notes": [
+    "[VERSION] n8n installation commands (Docker image name, volume path, npx n8n), the supported Node.js version, and editor labels (create workflow, Manual Trigger, Date & Time, Edit Fields (Set), Test/Execute workflow, Executions) must be checked against the current n8n release before recording. Copy commands from the official n8n documentation on recording day.",
+    "[VERIFY] n8n's fair-code licence: the voiceover says only that learners can run it for learning at no cost and must check the licence before using it at work. Do not add a claim that internal business use is allowed until this is confirmed.",
+    "[VERIFY] Docker Desktop licence terms for personal, education and business use. The voiceover does not state them.",
+    "Screen recording: use a fresh local n8n with a demo owner account; blur the password field. The terminal shows the Docker commands from content.md; the voiceover does not read them.",
+    "Ingrid Solberg and her Bergen ferry company are fictional; no company data appears on screen."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "In ten minutes, you can have a full automation platform running on your own laptop. No subscription, and no data leaving your machine unless you send it. Today, you install n8n and run your first workflow.",
+       "on_screen_text": "Your own automation platform"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Last time, we looked inside the agent loop. Now it is time to build. n8n is a workflow tool with a visual editor. You connect nodes on a canvas, and each node does one job: start the workflow, read data, call an API, or check a condition. It also has built-in AI nodes, which we use later in the course.",
+       "slide": {"layout": "diagram", "title": "What is n8n?", "body": "A canvas with four connected node boxes: Start → Read data → Call an API → Check a condition. Caption: each node does one job."}},
+      {"visual_type": "slide",
+       "voiceover": "We self-host n8n in this course, for three reasons. Cost: you can run it for learning at no cost, but check the current licence terms before you use it at work. Data: your workflows, keys and run history stay on your computer. And learning: you see every setting and every log.",
+       "slide": {"layout": "bullets", "title": "Why self-host?", "body": "Cost: free for learning (check the licence before work use) · Data: workflows, credentials and runs stay on your computer · Learning: you see every setting and log"}},
+      {"visual_type": "slide",
+       "voiceover": "There are two common ways to install it. Option A is Docker, which we recommend. Option B is Node.js. Commands change between releases, so always copy them from the official n8n documentation on the day you install.",
+       "slide": {"layout": "comparison", "title": "Two ways to install", "body": "Left: Option A, Docker (recommended) with a persistent volume. Right: Option B, Node.js with npx. Footer note: copy current commands from the official n8n docs."}},
+      {"visual_type": "slide",
+       "voiceover": "Here is a picture to keep in mind. n8n is like a workshop with a pegboard of tools. Each node is one tool on the board, and a workflow is the order in which you pick them up.",
+       "slide": {"layout": "diagram", "title": "A workshop pegboard", "body": "Pegboard with tool shapes, each labelled as a node: trigger, sheet, API call, condition. A numbered path shows the order they are used: the workflow."}},
+      {"visual_type": "stock",
+       "voiceover": "The executions list is the workshop logbook. It records every job. So when something goes wrong, you can see exactly which tool was used, and what happened.",
+       "stock_query": "craftsperson writing in workshop logbook",
+       "on_screen_text": "Executions = the workshop logbook"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "screen",
+       "voiceover": "Let's watch it happen. Ingrid Solberg is an operations analyst at a ferry company in Bergen, Norway. She wants to test n8n before she asks her IT team for a server. First, she opens a terminal and runs the two Docker commands. One creates a storage volume. The other starts n8n.",
+       "screen_steps": ["Open a terminal", "Run: docker volume create n8n_data", "Run the docker run command from content.md with -p 5678:5678 and -v n8n_data:/home/node/.n8n", "Show the log line saying the editor is available on port 5678"],
+       "on_screen_text": "Ingrid · ferry company · Bergen"},
+      {"visual_type": "screen",
+       "voiceover": "When the log says the editor is ready, she opens the local address in her browser, and creates the owner account with a strong password. This account exists only on her machine.",
+       "screen_steps": ["Open http://localhost:5678 in the browser", "Fill in the owner account form with a demo email and a strong password (blur the password)", "Arrive at the empty workflows list"]},
+      {"visual_type": "screen",
+       "voiceover": "Now a quick tour. The workflows list shows all her workflows. The canvas is where she adds and connects nodes. Credentials hold logins and API keys, so she never pastes a key into a node. And the executions list shows every run. When she double-clicks a node, its panel opens, with input on the left, settings in the middle, and output on the right.",
+       "screen_steps": ["Point to the Workflows list and its active switch", "Open a new canvas", "Double-click a node to show the panel: input left, settings middle, output right", "Hover over Credentials in the side menu", "Hover over Executions in the side menu"]},
+      {"visual_type": "screen",
+       "voiceover": "She creates a new workflow, and names it Hello timestamp. The first node is always a trigger, so she adds a manual trigger. Then she clicks the plus sign, and adds a date and time node that puts the current time into a new field called run at.",
+       "screen_steps": ["Click to create a new workflow and name it 'Hello timestamp'", "Add a Manual Trigger node ('Trigger manually')", "Click the plus sign after the trigger", "Add a Date & Time node that adds the current date and time to a new field run_at (alternative shown in caption: Edit Fields (Set) with {{ $now.toISO() }})"]},
+      {"visual_type": "screen",
+       "voiceover": "She clicks the button to test the workflow. Both nodes turn green. In the output of the second node, you'll see something like one item, with a run at field and today's date and time.",
+       "screen_steps": ["Click Test workflow (or Execute workflow)", "Both nodes show a green success mark", "Open the output panel of the Date & Time node", "Show one item with a run_at timestamp"],
+       "on_screen_text": "Both nodes green = success"},
+      {"visual_type": "screen",
+       "voiceover": "Finally, she saves the workflow and opens the executions list. There is her run, with the data that passed through each node. She knows the tool works, and no company data went anywhere.",
+       "screen_steps": ["Click Save", "Open the Executions list", "Click the latest run", "Click each node to show the data that passed through it"]},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is to run Docker without the storage volume. You build several workflows, restart the container, and everything has gone. Always use a named volume from the first run, and export important workflows as backup files.",
+       "on_screen_text": "No volume? Your workflows disappear."},
+      {"visual_type": "slide",
+       "voiceover": "One more safety point. Keep n8n on your own computer during the course. Do not open it to the internet without a login and a secure connection.",
+       "slide": {"layout": "bullets", "title": "Keep it local", "body": "Run n8n on your own computer during the course · Do not open port 5678 to the internet without authentication and HTTPS"}}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, self-hosted n8n runs on your own computer and keeps your data local. Confirm the licence terms before you use it at work. Second, install it with Docker and a storage volume, or with Node.js, using the current official commands. Third, the core parts of the editor are the canvas, nodes, triggers, credentials, and the executions list.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Self-hosted: local data, free for learning; check the licence for work. 2. Docker + volume, or Node.js; use current official commands. 3. Canvas · nodes · triggers · credentials · executions."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below this video, you will install n8n, build the same two-node timestamp workflow, and open the execution log. Then restart n8n, and check that your workflow is still there. It takes about thirty minutes. In the next lesson, we build Your First Workflow: Sheets In, Sheets Out. See you there.",
+       "on_screen_text": "Next: Sheets In, Sheets Out"}
+    ]
+  }
+}

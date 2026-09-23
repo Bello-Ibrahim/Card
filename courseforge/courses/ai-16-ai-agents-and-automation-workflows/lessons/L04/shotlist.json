@@ -1,0 +1,203 @@
+{
+  "course_id": "AI-16",
+  "lesson_id": "L04",
+  "duration_s": 293.2,
+  "thumbnail": {
+    "headline": "Sheets In, Sheets Out",
+    "slide": {
+      "layout": "title",
+      "title": "Sheets In, Sheets Out",
+      "body": "Left: spreadsheet icon. Centre: three connected node boxes (read → change → write). Right: the same spreadsheet with a new teal column of 'check' and 'ok' flags. Small tag: AI Agents and Automation Workflows · Lesson 4."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 14.6,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Real automation, no AI yet",
+      "voiceover": "Many small businesses already run on a spreadsheet. If your automation can read a sheet, change the data, and write it back, you can automate real work before you add any AI at all."
+    },
+    {
+      "scene": 2,
+      "start": 14.6,
+      "end": 27.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Your First Workflow: Sheets In, Sheets Out",
+        "body": "AI Agents and Automation Workflows · Lesson 4 of 16"
+      },
+      "voiceover": "Last time, you installed n8n. Now let's connect it to real data. In this course, Google Sheets is our simple database, and a workflow that uses it has three parts."
+    },
+    {
+      "scene": 3,
+      "start": 27.5,
+      "end": 49.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Read, change, write",
+        "body": "Three boxes: Read (Google Sheets: each row = one item) → Change (Edit Fields (Set), IF or Code) → Write (Google Sheets: update or add rows)."
+      },
+      "voiceover": "First, read. A Google Sheets node reads rows, and each row becomes one item in n8n, with the column headers as field names. Second, change. A Set, IF or Code node adds or changes fields on each item. Third, write. A second Sheets node updates the rows, or adds new ones."
+    },
+    {
+      "scene": 4,
+      "start": 49.4,
+      "end": 60.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Items flow through nodes",
+        "body": "Fifteen small row cards entering a node box and fifteen cards leaving it, each with a new field added."
+      },
+      "voiceover": "Most nodes handle items one by one. If fifteen rows come in, fifteen items go out, and each node runs its settings for every item."
+    },
+    {
+      "scene": 5,
+      "start": 60.1,
+      "end": 85.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Credentials first",
+        "body": "Create a Google credential in n8n · Usually: Google Cloud project + OAuth client + Sheets API (and Drive API) · Follow the current n8n docs · Use a test account and test sheets only"
+      },
+      "voiceover": "Before any of this, n8n needs permission to use your Google account. You create a credential. In the self-hosted version, this usually means setting up a Google Cloud project and turning on the Sheets API. The steps change often, so follow the current n8n guide. And use a test account, with access only to the sheets you need."
+    },
+    {
+      "scene": 6,
+      "start": 85.4,
+      "end": 105.5,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "clerk with clipboard checking paper ledger",
+      "on_screen_text": "Match each row by its ID",
+      "voiceover": "Here is a way to picture it. The workflow is like a clerk with a clipboard. The clerk copies rows from the ledger, writes a note next to each one, then copies the notes back into the right lines of the ledger, by checking the order number."
+    },
+    {
+      "scene": 7,
+      "start": 105.5,
+      "end": 117.9,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "No ID column, no safe update",
+      "voiceover": "If the order numbers are missing, the clerk cannot find the right line. That is why updates need a column that identifies each row, such as an order ID."
+    },
+    {
+      "scene": 8,
+      "start": 117.9,
+      "end": 137.2,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open Google Sheets in a test account",
+        "Create a sheet named 'orders' with columns order_id, customer, item, amount, flag",
+        "Show 15 rows of invented sample orders (no phone numbers)"
+      ],
+      "on_screen_text": "Wanjiru · bakery · Nairobi",
+      "voiceover": "Let's build it. Wanjiru Kamau runs a bakery in Nairobi, Kenya. She wants to phone every customer who orders more than five thousand Kenyan shillings, to confirm before baking. She uses sample data only. First, she creates a sheet called orders, with fifteen invented rows."
+    },
+    {
+      "scene": 9,
+      "start": 137.2,
+      "end": 155.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open Credentials and create a Google Sheets credential following the current n8n OAuth steps (blur client ID and secret)",
+        "Click to test the connection",
+        "New workflow: add a Manual Trigger",
+        "Add a Google Sheets node, operation get rows, select the 'orders' document and sheet",
+        "Run the node: output shows 15 items"
+      ],
+      "voiceover": "In n8n, she creates a Google Sheets credential using the current steps, and tests that it connects. Then she adds a manual trigger, and a Sheets node that gets rows from the orders sheet. When she runs it, the output shows fifteen items."
+    },
+    {
+      "scene": 10,
+      "start": 155.6,
+      "end": 184.3,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Add a Code node after the Sheets node",
+        "Paste the JavaScript from content.md (LIMIT = 5000; flag = 'check' or 'ok')",
+        "Run the node",
+        "Show the output: flag 'check' on 4 items, 'ok' on the rest"
+      ],
+      "on_screen_text": "Change the limit in one place",
+      "voiceover": "Next, she adds a Code node. For a simple rule like this, a few lines of code are short and clear. The code sets a limit of five thousand at the top. Then, for every item, it sets the flag to check if the amount is above the limit, and to ok if not. You'll see something like four items marked check, and the rest marked ok."
+    },
+    {
+      "scene": 11,
+      "start": 184.3,
+      "end": 202.7,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Add a second Google Sheets node, operation update row",
+        "Set 'column to match on' to order_id",
+        "Map the flag field",
+        "Run the whole workflow",
+        "Switch to the sheet: the flag column is filled"
+      ],
+      "voiceover": "To write back, she adds a second Sheets node, with the update operation. She sets the column to match on to the order ID, and maps the flag field. She runs the whole workflow, opens the sheet, and the flag column is filled."
+    },
+    {
+      "scene": 12,
+      "start": 202.7,
+      "end": 220.7,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Point to the row where amount is '6,200' as text and the flag is wrong",
+        "Edit the Code node to clean the value: Number(String(item.json.amount).replace(/,/g, ''))",
+        "Run again: that row is now flagged 'check'"
+      ],
+      "on_screen_text": "Real data is messy",
+      "voiceover": "Then she notices a problem. One amount was typed as text, with a comma, so the comparison failed. She adds a small step to remove the comma and turn it into a number. Real data is always less tidy than you expect."
+    },
+    {
+      "scene": 13,
+      "start": 220.7,
+      "end": 245.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Append or update?",
+        "body": "Left: Append → 15 new duplicate rows at the bottom (red cross). Right: Update, match on order_id → flag column filled in place (green tick)."
+      },
+      "voiceover": "A common mistake is to use append when you mean update. The workflow runs without an error, but it adds fifteen new rows at the bottom, instead of filling the flag column. So before you write, ask: am I adding new records, or changing existing ones? For changes, use update, with a unique ID column to match on."
+    },
+    {
+      "scene": 14,
+      "start": 245.6,
+      "end": 269.6,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Read rows as items → change → write back. 2. Update needs a unique ID column; append adds rows. 3. Current credential guide; test data only."
+      },
+      "voiceover": "Let's recap. First, a Sheets workflow reads rows as items, changes them with Set, IF or Code nodes, and writes them back. Second, updating rows needs a unique ID column to match on. Appending adds new rows instead. Third, set up the Google credential with the current guide, and give it access to test data only."
+    },
+    {
+      "scene": 15,
+      "start": 269.6,
+      "end": 293.2,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Calling the Claude API",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will build the same orders workflow with your own threshold, then add one messy row and make the workflow handle it. It takes about forty minutes. In the next lesson, we add AI, with Calling the Claude API from n8n. See you there."
+    }
+  ]
+}
