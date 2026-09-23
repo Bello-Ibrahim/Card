@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-11",
+  "module_id": "M2",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L06",
+      "objective": "O2",
+      "question": "What does this code print?\n\ndef add_tax(price, rate=0.1):\n    return price + price * rate\n\nprint(add_tax(50), add_tax(50, 0.2))",
+      "options": [
+        "50 50",
+        "55.0 55.0",
+        "55.0 60.0",
+        "An error, because rate was not given in the first call"
+      ],
+      "answer_index": 2,
+      "explanation": "The first call uses the default rate of 0.1, giving 55.0, and the second call gives 0.2, giving 60.0. The most tempting wrong option is the error. A parameter with a default value is optional, so leaving it out is allowed."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L07",
+      "objective": "O3",
+      "question": "Which change makes this line cleaner without changing what the program does?\n\nt = p * q  # multiply p by q",
+      "options": [
+        "total_cost = unit_price * quantity, with the comment removed",
+        "T = P * Q  # MULTIPLY P BY Q",
+        "t = p * q  # this line multiplies the variable p by the variable q and stores it in t",
+        "t=p*q"
+      ],
+      "answer_index": 0,
+      "explanation": "Descriptive names make the line explain itself, so the comment that only repeats the code is no longer needed. The most tempting wrong option is the longer comment. It adds reading time but still does not tell the reader what p, q and t mean."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L08",
+      "objective": "O3",
+      "question": "The last line of a traceback says: KeyError: 'Lagos'. What is the most likely cause?",
+      "options": [
+        "A list has fewer than 'Lagos' items.",
+        "The variable called Lagos was never created.",
+        "The indentation after a colon is missing.",
+        "The code looked up the key 'Lagos' in a dictionary that does not contain it, perhaps because of a different spelling."
+      ],
+      "answer_index": 3,
+      "explanation": "A KeyError means a dictionary lookup used a key that is not there; check the spelling and capital letters. The most tempting wrong option is that the variable was never created. That would be a NameError, and the message would say name 'Lagos' is not defined."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L09",
+      "objective": "O1",
+      "question": "In a Colab notebook, import some_library gives ModuleNotFoundError. What is the best next step?",
+      "options": [
+        "Rewrite the library's code yourself.",
+        "Check the spelling, then install it once with %pip install and run the import again.",
+        "Wrap the import in try and a bare except so the error disappears.",
+        "Restart the computer."
+      ],
+      "answer_index": 1,
+      "explanation": "ModuleNotFoundError means the package is not installed in this session, so install it once and import it again. The most tempting wrong option is the bare except. It hides the message, but the library is still missing and every later line that uses it will fail."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L10",
+      "objective": "O3",
+      "question": "Why is with open(\"data.csv\", encoding=\"utf-8\") as f: the recommended way to read a file?",
+      "options": [
+        "It makes the file load faster than any other method.",
+        "It automatically converts the file into a pandas DataFrame.",
+        "It closes the file automatically when the block ends, and reads accented and non-Latin characters correctly.",
+        "It creates a backup copy of the file before reading it."
+      ],
+      "answer_index": 2,
+      "explanation": "The with statement closes the file when the indented block ends, even after an error, and utf-8 handles international text. The most tempting wrong option is the DataFrame conversion. open() only gives you the text of the file; pandas read_csv, from L11, is what creates a DataFrame."
+    }
+  ]
+}

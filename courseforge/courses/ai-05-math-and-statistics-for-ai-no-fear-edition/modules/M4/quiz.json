@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-05",
+  "module_id": "M4",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L15",
+      "objective": "O5",
+      "question": "A hypothetical fraud detector is tested on 10,000 transactions, 100 of which are fraud. It has TP = 20, FP = 20, FN = 80 and TN = 9,880. What are its precision and recall?",
+      "options": [
+        "Precision 0.2, recall 0.5",
+        "Precision 0.5, recall 0.2",
+        "Precision 0.99, recall 0.99",
+        "Precision 0.5, recall 0.99"
+      ],
+      "answer_index": 1,
+      "explanation": "Precision = TP ÷ (TP + FP) = 20 ÷ 40 = 0.5, and recall = TP ÷ (TP + FN) = 20 ÷ 100 = 0.2. The most tempting wrong option swaps the two. Precision divides by everything the model predicted as fraud; recall divides by everything that really was fraud."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L15",
+      "objective": "O1",
+      "question": "In a confusion matrix for a spam filter, where 'spam' is the positive class, what is a false negative?",
+      "options": [
+        "A normal email that the filter marked as spam.",
+        "A spam email that the filter marked as spam.",
+        "A normal email that the filter let through.",
+        "A spam email that the filter let through as normal."
+      ],
+      "answer_index": 3,
+      "explanation": "A false negative is a real positive (spam) that the model predicted as negative, so it is a miss. The most tempting wrong option is a normal email marked as spam. That is a false positive, a false alarm, not a miss."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L16",
+      "objective": "O6",
+      "question": "A hypothetical model has a training MSE of 0.0 and a test MSE of 30.9. A straight line has a training MSE of 1.9 and a test MSE of 4.2. The baseline test MSE is 76.0. Which model should you choose, and why?",
+      "options": [
+        "The straight line, because it has the lowest test error and clearly beats the baseline.",
+        "The first model, because a training error of 0 means it is perfect.",
+        "The baseline, because it is the simplest.",
+        "Neither, because both models have some training error."
+      ],
+      "answer_index": 0,
+      "explanation": "Models are judged on test data, and the straight line has the lowest test MSE, far below the baseline. The most tempting wrong option is the first model. A training error of 0 with a much higher test error is a typical sign of overfitting."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L17",
+      "objective": "O4",
+      "question": "In the capstone, X_tr has shape (10, 3) and err has 10 values. Which line correctly calculates the MSE gradient for all 3 weights?",
+      "options": [
+        "grad = 2 / len(y_tr) * X_tr @ err",
+        "grad = 2 / len(y_tr) * err @ w",
+        "grad = 2 / len(y_tr) * X_tr.T @ err",
+        "grad = np.mean(err ** 2)"
+      ],
+      "answer_index": 2,
+      "explanation": "X_tr.T has shape (3, 10), so X_tr.T @ err gives 3 values, one gradient per weight. The most tempting wrong option leaves out the transpose. X_tr @ err would need err to have 3 values, so it gives a shape error. The last option is the loss itself, not its gradient."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L18",
+      "objective": "O7",
+      "question": "Your linear regression gives a weight of about 3.75 for 'hours of sunshine' when predicting drinks sold, with foot traffic also in the model. Which interpretation is best?",
+      "options": [
+        "Sunshine causes about 3.75 extra drinks to be sold per hour, so the kiosk should open only on sunny days.",
+        "With the same foot traffic, each extra hour of sunshine is linked to about 3.75 more drinks sold in this data.",
+        "The model is 3.75 times better than the baseline.",
+        "About 3.75% of drinks are sold because of sunshine."
+      ],
+      "answer_index": 1,
+      "explanation": "A weight is the change in prediction for one extra unit of its feature, with the other features fixed. The most tempting wrong option describes it as a cause. A regression weight shows a link in the data; it does not prove that sunshine causes the extra sales."
+    }
+  ]
+}

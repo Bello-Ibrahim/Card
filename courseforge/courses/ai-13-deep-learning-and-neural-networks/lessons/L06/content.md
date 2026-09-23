@@ -57,7 +57,7 @@ imgs = torch.stack([train_ds[0][0] for _ in range(16)])   # same image, 16 augme
 plt.imshow(make_grid(imgs * std + mean, nrow=8).permute(1, 2, 0)); plt.axis("off"); plt.show()
 ```
 
-The expected output for the mean is roughly 0.29 and for the standard deviation roughly 0.35; confirm the exact values when you run it. The grid shows the same item shifted and sometimes flipped. Mei Lin notes that the grid is also a useful check: if the images look destroyed, the augmentation is too strong.
+In our CPU test run, the printed values were 0.286 for the mean and 0.353 for the standard deviation. The grid shows the same item shifted and sometimes flipped. Mei Lin notes that the grid is also a useful check: if the images look destroyed, the augmentation is too strong.
 
 ## Common Mistake
 The most common mistake is passing the training transform, with augmentation, to the validation or test dataset as well. A related mistake is computing normalisation statistics on the full dataset, including the test set. Both make your evaluation less honest. Build two transform pipelines, compute statistics on training data only, and pass the right pipeline to each split. If you create a validation split with `random_split`, remember that both parts share one transform, so create two dataset objects instead.

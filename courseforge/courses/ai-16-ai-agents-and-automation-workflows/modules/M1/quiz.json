@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-16",
+  "module_id": "M1",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L01",
+      "objective": "O2",
+      "question": "A supplier sends invoices that always use the same template, and a team wants the totals copied into an accounts sheet each day. Which design is the best fit?",
+      "options": [
+        "An agent that decides for each invoice which steps to take",
+        "A fixed workflow that reads the known fields and writes them to the sheet",
+        "A workflow with an AI step that summarises each invoice before copying it",
+        "An agent with memory so it can learn the template over time"
+      ],
+      "answer_index": 1,
+      "explanation": "The format never changes, so fixed rules are cheaper, faster and fully predictable. The most tempting wrong option is the workflow with an AI step. It would work, but it adds cost and a small chance of error for a task that rules already solve correctly."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L02",
+      "objective": "O1",
+      "question": "In an agent that checks expense claims, the model replies with a request to call lookup_policy(\"meals\"). What happens next?",
+      "options": [
+        "The model connects to the policy database and reads the result itself.",
+        "The loop stops, because a tool request is the final answer.",
+        "A person must type the policy into the chat before the agent continues.",
+        "The software around the model runs the tool and adds the result to the agent's memory for the next decision."
+      ],
+      "answer_index": 3,
+      "explanation": "The model only requests tools; your software runs them and returns the result, and the loop continues. The most tempting wrong option is that the model reads the database itself. It cannot: it only produces text, which is why the tool list is your main safety control."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L02",
+      "objective": "O1",
+      "question": "Why should every agent loop have a maximum number of steps?",
+      "options": [
+        "To stop a confused agent from calling tools again and again, which wastes cost and time",
+        "Because the model can only read a fixed number of tools",
+        "Because n8n cannot run more than one tool per workflow",
+        "To make sure the agent always uses every tool at least once"
+      ],
+      "answer_index": 0,
+      "explanation": "A step limit is a stop condition that protects cost and time when the agent does not reach a final answer. The most tempting wrong option is about the number of tools. The step limit controls how many times the loop runs, not how many tools are defined."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L03",
+      "objective": "O3",
+      "question": "A learner runs n8n in Docker, builds three workflows, restarts the container and finds that the workflows have gone. What is the most likely cause?",
+      "options": [
+        "The workflows were not set to active.",
+        "The learner used the Node.js installation instead of Docker.",
+        "The container was started without a persistent volume, so its data was deleted when it stopped.",
+        "The owner account expires each time n8n restarts."
+      ],
+      "answer_index": 2,
+      "explanation": "Without a volume, n8n stores data inside the container, which is removed when it stops. The most tempting wrong option is that the workflows were not active. Active only controls whether triggers run automatically; saved inactive workflows are still stored."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L04",
+      "objective": "O3",
+      "question": "A workflow should write a 'check' or 'ok' flag into existing rows of an orders sheet. After a run, the sheet has 15 new rows at the bottom. What should the learner change?",
+      "options": [
+        "Add a Wait node before the Google Sheets node",
+        "Use the update operation and match rows on a unique column such as order_id",
+        "Move the Code node after the Google Sheets write node",
+        "Create a new Google credential"
+      ],
+      "answer_index": 1,
+      "explanation": "Append adds new rows; update changes existing rows and needs a unique ID column to find the right row. The most tempting wrong option is a new credential. The credential clearly works, because rows were written; the problem is the operation that was chosen."
+    }
+  ]
+}
