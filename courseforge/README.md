@@ -81,5 +81,3 @@ token counts.
 4. Approve the curriculum (Stage 1) and the first lesson's script (Stage 3).
    Then work through the packs and upload the files to `/incoming/` using the
    exact filenames given.
-
-Replace `[PLATFORM NAME]` in `system_prompt.md` before first use.
