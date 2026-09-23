@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-07",
+  "module_id": "M1",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L01",
+      "objective": "O1",
+      "question": "A marketer needs to add automatic captions to a short product video. Which type of AI tool is the best fit for this job?",
+      "options": [
+        "A chat assistant such as Claude or ChatGPT",
+        "A video editor such as CapCut",
+        "An image generator",
+        "A design tool's brand kit"
+      ],
+      "answer_index": 1,
+      "explanation": "Automatic captions are a video editing task, so a video editor is the right tool type. The most tempting wrong option is a chat assistant. It can draft a script, but it does not edit your video file or place captions on it."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L02",
+      "objective": "O4",
+      "question": "A brand's voice guide says only: \"Friendly, professional, fun.\" The AI still writes generic posts. What is the most useful addition to the guide?",
+      "options": [
+        "More adjectives, such as \"exciting\" and \"modern\"",
+        "A request to \"sound more human\"",
+        "A longer description of the company's history",
+        "Specific words to use and avoid, plus two or three real example posts"
+      ],
+      "answer_index": 3,
+      "explanation": "Specific word lists and real example posts give the AI something concrete to copy in style. The most tempting wrong option is adding more adjectives. Almost every brand could use them, so they do not make the text more specific."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L03",
+      "objective": "O3",
+      "question": "An AI persona says your typical customer is \"55, avoids social media and only reads print\". Your customer messages show many people in their fifties contacting you through a messaging app. How should you label this detail?",
+      "options": [
+        "Probably a stereotype, and rewrite the persona from the evidence",
+        "Confirmed by real data, because the AI gave an exact age",
+        "Correct, because AI personas are based on large amounts of research",
+        "Plausible, so keep it and check next year"
+      ],
+      "answer_index": 0,
+      "explanation": "Your real data contradicts the detail, and it is a simple assumption about an age group, so it is probably a stereotype. The most tempting wrong option is \"confirmed\" because of the exact age. Precise details make a guess look real, but they are not evidence about your customers."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L04",
+      "objective": "O3",
+      "question": "A marketer scores AI content ideas on three criteria. Which set of criteria does this course recommend?",
+      "options": [
+        "Number of words, number of hashtags, number of emojis",
+        "Personal taste, trendiness, cost",
+        "Fits the brand, useful to the audience, possible to produce",
+        "How fast the AI produced it, originality, length"
+      ],
+      "answer_index": 2,
+      "explanation": "The three criteria check that an idea suits the brand, helps the audience and can actually be made. The most tempting wrong option is personal taste, trendiness and cost. Taste matters, but it is hard to explain to others and does not check whether the idea helps the audience."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L05",
+      "objective": "O2",
+      "question": "You want to use an image from a free AI image generator in a paid advertisement. What should you do first?",
+      "options": [
+        "Nothing, because AI-generated images are free to use for anything",
+        "Read the tool's current terms for commercial use on your plan, and record what they say and the date",
+        "Ask the AI chatbot if the image is allowed",
+        "Add a copyright symbol to the image"
+      ],
+      "answer_index": 1,
+      "explanation": "Commercial-use terms differ between tools and plans and change over time, so you check the current official terms and keep a record. The most tempting wrong option is assuming AI images are free for any use. That is not safe, because licence terms, platform rules and national laws may all apply."
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-03",
+  "module_id": "M3",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L11",
+      "objective": "O5",
+      "question": "An AI-written briefing says: \"According to the 2022 Regional Retail Survey, 70% of shoppers prefer self-checkout.\" You did not give the tool this figure. What should you do?",
+      "options": [
+        "Keep it, because a named survey and an exact figure show it is reliable.",
+        "Keep the figure but remove the name of the survey.",
+        "Ask the AI tool whether the survey is real and accept its answer.",
+        "Find the survey yourself; if you cannot confirm it says this, remove the claim."
+      ],
+      "answer_index": 3,
+      "explanation": "Figures and sources you did not provide must be checked in a reliable source, because AI tools can produce references that look real but do not exist. The most tempting wrong option is asking the AI whether the survey is real. The tool may confirm its own invented source, so its answer is not proof."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L12",
+      "objective": "O5",
+      "question": "You want to compare how Claude, ChatGPT and Gemini handle your meeting-summary prompt. Which method gives a fair test?",
+      "options": [
+        "Improve the prompt a little in each tool so each one gets the best chance.",
+        "Use the same prompt and input in a new chat in each tool, score accuracy, format and tone, and record the date.",
+        "Run the prompt in the chat where you have already been working, so the tool has more context.",
+        "Run it once in one tool and assume the others will give the same result."
+      ],
+      "answer_index": 1,
+      "explanation": "A fair test keeps the prompt, the input and the starting conditions the same, and records the date because tools change. The most tempting wrong option is improving the prompt in each tool. If the prompt changes, you cannot tell whether a difference comes from the tool or from your changes."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L13",
+      "objective": "O6",
+      "question": "Which is the best template made from a tested prompt for weekly team updates?",
+      "options": [
+        "\"You are an experienced [JOB ROLE]. Write a weekly update for [AUDIENCE] about [TOPICS]. Friendly tone, 5 bullet points, under [WORD LIMIT] words. Do not add facts that are not in my notes. Notes: [PASTE NOTES - no personal data]\"",
+        "\"Write [OUTPUT] for [AUDIENCE] in [FORMAT].\"",
+        "\"Write a weekly update for the sales team about the new price list from 1 May, 5 bullet points.\"",
+        "\"Write a good weekly update.\""
+      ],
+      "answer_index": 0,
+      "explanation": "A good template uses placeholders only for the parts that change, and keeps the role, format, constraints and safety reminder fixed. The most tempting wrong option is \"Write [OUTPUT] for [AUDIENCE] in [FORMAT]\". It uses placeholders, but it has removed everything that made the original prompt work."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L14",
+      "objective": "O5",
+      "question": "Tomasz tests his customer-apology template twice, with two routine delivery delays. Both outputs score 5. What is the main problem with his testing?",
+      "options": [
+        "He should have tested only once to save time.",
+        "He should have used real customer names to make the tests realistic.",
+        "Both tests are similar, so a weakness with a harder case, such as a damaged product or an angry customer, may stay hidden.",
+        "Scores of 5 are not allowed in the scoring system."
+      ],
+      "answer_index": 2,
+      "explanation": "Testing with a typical case and a harder case shows whether a template is reliable in different situations. The most tempting wrong option is using real customer names. Tests must use invented or non-confidential input, and real names would not show any weakness in the template anyway."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L15",
+      "objective": "O6",
+      "question": "Why should a prompt card keep the test notes and the tool and date of the last test?",
+      "options": [
+        "Because the rubric requires long cards, and more text gets more points.",
+        "Because AI tools never change, so the date proves the prompt will always work.",
+        "Because it lets the card be shared without an introduction.",
+        "Because they explain why the template looks the way it does and show when it should be retested as tools change."
+      ],
+      "answer_index": 3,
+      "explanation": "Test notes explain the purpose of each constraint, and the tool and date show when the evidence was collected, which matters because tools change. The most tempting wrong option is that tools never change. The opposite is true, which is exactly why the date and regular retesting are needed."
+    }
+  ]
+}

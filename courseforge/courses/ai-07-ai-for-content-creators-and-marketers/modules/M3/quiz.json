@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-07",
+  "module_id": "M3",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L11",
+      "objective": "O5",
+      "question": "You turn a long blog post into a short-video script, an email section and a professional network post. What makes this repurposing rather than copying?",
+      "options": [
+        "Each piece keeps exactly the same text",
+        "Each piece is only shorter than the original",
+        "Each piece is posted on the same day",
+        "Each piece changes format, length and angle for its channel's audience"
+      ],
+      "answer_index": 3,
+      "explanation": "Repurposing adapts the core idea to each channel's audience and format. The most tempting wrong option is making each piece shorter. Changing only the length still leaves text written for the wrong audience."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L12",
+      "objective": "O7",
+      "question": "When you plan a 30-day campaign calendar with AI, which decisions should you make yourself before asking the AI for a draft?",
+      "options": [
+        "The exact wording of every caption",
+        "The goal, audience, channels and key dates",
+        "Nothing, because the AI will choose the best plan",
+        "Only the colours of the visuals"
+      ],
+      "answer_index": 1,
+      "explanation": "The goal, audience, channels and key dates connect the plan to your real business, and AI can then fill in the structure. The most tempting wrong option is letting the AI choose everything. The result looks complete but is not connected to your business or capacity."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L13",
+      "objective": "O4",
+      "question": "During batch production, why do you fill in the asset log as you create each item?",
+      "options": [
+        "Because the platforms require an asset log before posting",
+        "To make the batch session longer",
+        "So you have an accurate record of tools, prompts, licence checks and disclosure decisions",
+        "So the AI can learn from your log"
+      ],
+      "answer_index": 2,
+      "explanation": "Recording as you work gives an accurate record for licence and disclosure checks later. The most tempting wrong option is that platforms require it. The log is a good practice for your own review and for clients, not a general platform rule."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L14",
+      "objective": "O5",
+      "question": "After one week, a short video has the highest reach but brought only 1 sign-up, and your goal is sign-ups. An AI suggests \"post more short videos\". What is the best response?",
+      "options": [
+        "Change the idea: keep videos for awareness, add a clear sign-up call to action, and review again with more data",
+        "Accept it, because reach is the most important measure",
+        "Reject all video content immediately",
+        "Ask the AI again until it agrees with you"
+      ],
+      "answer_index": 0,
+      "explanation": "The goal is sign-ups and one week is little data, so you adapt the idea and keep measuring. The most tempting wrong option is accepting it because reach is high. Reach is a helpful sign, but it did not move people toward the goal."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L15",
+      "objective": "O6",
+      "question": "In the final review, you find a realistic AI-generated image of an office interior with no label, and your disclosure rule says realistic AI scenes must be labelled. What should you do?",
+      "options": [
+        "Keep it, because the image looks professional",
+        "Delete the asset log row so the image is not questioned",
+        "Leave it for the client to find",
+        "Label it according to your rule, or replace it with a real photo if it could be mistaken for the real place"
+      ],
+      "answer_index": 3,
+      "explanation": "Your disclosure rule must be applied, and an image that could mislead people about the real place should be replaced. The most tempting wrong option is keeping it because it looks professional. Quality does not remove the risk of misleading customers."
+    }
+  ]
+}

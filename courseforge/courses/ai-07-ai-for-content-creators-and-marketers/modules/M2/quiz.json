@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-07",
+  "module_id": "M2",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L06",
+      "objective": "O4",
+      "question": "You ask AI for an Instagram caption and the first answer is acceptable. What does this course recommend next?",
+      "options": [
+        "Post it immediately to save time",
+        "Use the same caption on every platform",
+        "Ask for several variations, choose or combine, and add at least one sentence of your own",
+        "Ask the AI to add more hashtags"
+      ],
+      "answer_index": 2,
+      "explanation": "Comparing variations usually produces a better post, and your own sentence adds real detail and a human voice. The most tempting wrong option is posting the first acceptable answer. The first answer is often the most generic, and it has not been adapted or checked."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L07",
+      "objective": "O6",
+      "question": "An AI draft of your newsletter says: \"Studies show 68% of travellers prefer quiet destinations.\" You cannot find the study. What should you do?",
+      "options": [
+        "Remove the claim, or rewrite it as your own opinion without the number",
+        "Keep it, because precise numbers make content more believable",
+        "Change the number to a rounder one, such as 70%",
+        "Add \"according to studies\" in brackets"
+      ],
+      "answer_index": 0,
+      "explanation": "AI can invent statistics, so a claim you cannot source must be removed or rewritten. The most tempting wrong option is keeping it because it sounds precise. A precise number looks more believable, which is exactly why an invented one is dangerous."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L08",
+      "objective": "O2",
+      "question": "Which image prompt follows the safety guidance in this course?",
+      "options": [
+        "\"A poster in the style of [a named living illustrator]\"",
+        "\"A photo of [a famous actor] holding our product\"",
+        "\"Our product next to [a well-known cartoon character]\"",
+        "\"A ceramic mug on a light wooden table, soft morning light, deep blue and teal accents, empty space on the left\""
+      ],
+      "answer_index": 3,
+      "explanation": "It describes subject, style, colours and composition without real people, logos, copyrighted characters or a named artist's style. The most tempting wrong option may be the named illustrator's style, but the course tells learners never to imitate a named living artist."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L09",
+      "objective": "O4",
+      "question": "You add auto-captions to a 30-second video in CapCut. What should you do before publishing?",
+      "options": [
+        "Nothing, because auto-captions are always correct",
+        "Read and correct every caption word by word, especially names and product words",
+        "Remove the captions, because most viewers use sound",
+        "Make the captions smaller so they do not cover the video"
+      ],
+      "answer_index": 1,
+      "explanation": "Auto-captions make mistakes, often with names, product words and accents, so each word must be checked. The most tempting wrong option is trusting them because they are automatic. One wrong word can change the meaning or embarrass the brand."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L10",
+      "objective": "O6",
+      "question": "A post says: \"In today's fast-paced world, our café is the best in the city!\" Which checklist points does it clearly fail?",
+      "options": [
+        "Original and accurate: the opening is generic and \"the best in the city\" has no evidence",
+        "Inclusive only",
+        "None, because the grammar is correct",
+        "Legally safe only, because it mentions a city"
+      ],
+      "answer_index": 0,
+      "explanation": "The generic opening fails originality, and the unsupported claim fails accuracy and may also be a misleading claim. The most tempting wrong option is \"none, because the grammar is correct\". Correct grammar is not the problem with most AI text; generic language and unsupported claims are."
+    }
+  ]
+}
