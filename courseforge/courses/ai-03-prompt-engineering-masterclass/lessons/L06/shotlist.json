@@ -1,0 +1,192 @@
+{
+  "course_id": "AI-03",
+  "lesson_id": "L06",
+  "duration_s": 288.5,
+  "thumbnail": {
+    "headline": "Rewrite Without Changing Meaning",
+    "slide": {
+      "layout": "title",
+      "title": "Rewrite Without Changing Meaning",
+      "body": "Original message on the left, rewritten message on the right; matching points linked by teal lines; one extra phrase circled in red. Small tag: Prompt Engineering Masterclass · Lesson 6."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.9,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "A draft that says what you mean",
+      "voiceover": "Most of us spend a large part of our working week writing emails, updates and short reports. An AI tool can produce a first draft in seconds. The real skill is getting a draft that sounds like you, and says exactly what you mean."
+    },
+    {
+      "scene": 2,
+      "start": 18.9,
+      "end": 33.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Writing and Rewriting",
+        "body": "Lesson 6 · Week 2: Prompts for Everyday Work"
+      },
+      "voiceover": "Welcome to week two. Last week, you learned the six parts of a strong prompt. Now we use them for everyday work, starting with writing and rewriting. Four prompt patterns cover most needs."
+    },
+    {
+      "scene": 3,
+      "start": 33.0,
+      "end": 57.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Patterns 1 and 2",
+        "body": "1. Draft from notes: your facts, AI wording. 2. Shorten: 'Under 80 words. Keep the deadline and the price.'"
+      },
+      "voiceover": "Pattern one is draft from notes. You give your rough notes and ask for a finished message. Your notes keep the facts correct, and the AI handles the wording. Pattern two is shorten. You paste a text and give a clear limit, such as under eighty words, and say what must stay, like the deadline and the price."
+    },
+    {
+      "scene": 4,
+      "start": 57.9,
+      "end": 81.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Patterns 3 and 4",
+        "body": "3. Change the tone: formal · warmer · more direct; say what stays. 4. Adapt for a reader or culture: clear structure, no idioms or local references."
+      },
+      "voiceover": "Pattern three is change the tone: more formal, warmer, or more direct. Again, name what must stay the same. Pattern four is adapt for a different reader or culture. A partner in another country may need clearer structure and fewer local expressions. Tell the AI who the reader is, and ask it to avoid idioms."
+    },
+    {
+      "scene": 5,
+      "start": 81.5,
+      "end": 102.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "Two lines that often help",
+        "body": "\"Do not add new facts.\"  \"Keep these points: dates, amounts, decisions.\""
+      },
+      "voiceover": "Two instructions often help with every pattern. First, do not add new facts. When rewriting, AI tools sometimes add promises, figures or details that were not in your text. Second, keep these points, followed by a list of the facts that must survive, such as dates, amounts and decisions."
+    },
+    {
+      "scene": 6,
+      "start": 102.5,
+      "end": 115.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Compare the meaning",
+        "body": "Original | Rewrite. Checklist below: every key point still there? Anything new appeared?"
+      },
+      "voiceover": "After any rewrite, compare the meaning. Put your original and the new version side by side. Check that every key point is still there, and that nothing new has appeared."
+    },
+    {
+      "scene": 7,
+      "start": 115.4,
+      "end": 129.5,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "business meeting with interpreter international partners",
+      "on_screen_text": "Check for promises you never made",
+      "voiceover": "Rewriting with AI is like using a translator in a business meeting. A good translator makes you sound natural. But you still check that they did not promise a discount you never offered."
+    },
+    {
+      "scene": 8,
+      "start": 129.5,
+      "end": 151.4,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "sales manager writing at laptop sunny office",
+      "on_screen_text": "Sofia · sales manager, Madrid",
+      "voiceover": "Let's see this in practice. Sofia is a sales manager at a solar-panel company in Madrid. She has a formal proposal summary for a partner company in Singapore. Her text is long, and it uses expressions that are common in Spanish business writing, but may be unclear to her partner."
+    },
+    {
+      "scene": 9,
+      "start": 151.4,
+      "end": 175.4,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Sofia's rewrite prompt",
+        "body": "Show the full prompt from content.md, with the reader line, the 'Keep these points exactly' line and the 'Do not add any new facts' line highlighted in teal."
+      },
+      "voiceover": "Her prompt names the reader, a procurement manager who reads English well, but not as a first language. It asks for clear, formal but friendly English, short paragraphs and a bullet list, and no idioms. It lists four points to keep exactly, says do not add new facts, and sets a limit of two hundred words."
+    },
+    {
+      "scene": 10,
+      "start": 175.4,
+      "end": 195.5,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Point-by-point check",
+        "body": "Four ticks: 18-month pilot · 3 sites · price valid until [DATE] · installation team. One red flag: 'with full technical support at no extra cost' (not in the original)."
+      },
+      "voiceover": "The new version is clearer and better organised. Sofia compares it with her original, point by point. The eighteen-month pilot, the three sites, the price date and the installation team are all there. But she notices one new phrase: full technical support at no extra cost."
+    },
+    {
+      "scene": 11,
+      "start": 195.5,
+      "end": 214.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Fix the draft and the prompt",
+        "body": "Red phrase deleted → new prompt line added: 'Do not describe support terms.' Clock icon: 2 minutes."
+      },
+      "voiceover": "Her original offer did not include free support. She deletes the phrase, and adds a line to her prompt for next time: do not describe support terms. Her check took two minutes. Without it, she might have sent a promise her company could not keep."
+    },
+    {
+      "scene": 12,
+      "start": 214.8,
+      "end": 224.2,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Good grammar is not correct content",
+      "voiceover": "A common mistake is to accept the first draft because it reads well. Good grammar is not the same as correct content."
+    },
+    {
+      "scene": 13,
+      "start": 224.2,
+      "end": 238.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Watch for",
+        "body": "Added facts · Lost details · Tone too enthusiastic ('thrilled', 'delighted' about a problem)."
+      },
+      "voiceover": "The most common problems are added facts, lost details, and a tone that is too enthusiastic, such as thrilled or delighted in a message about a problem. Read the output as your reader will."
+    },
+    {
+      "scene": 14,
+      "start": 238.8,
+      "end": 261.5,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Draft · Shorten · Change tone · Adapt. 2. Say what stays and what not to add. 3. Compare meaning before you send."
+      },
+      "voiceover": "Let's recap. First, four patterns cover most everyday writing: draft from notes, shorten, change the tone, and adapt for a different reader or culture. Second, tell the AI what must stay the same, and what it must not add. Third, always compare the rewritten text with your original meaning before you send it."
+    },
+    {
+      "scene": 15,
+      "start": 261.5,
+      "end": 288.5,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Summarising and Extracting Information",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will draft one real, non-confidential work message with AI, then ask for a shorter and a more formal version. You will choose the best one and give a one-line reason. It takes about twenty minutes. In the next lesson, we look at summarising and extracting information. See you there."
+    }
+  ]
+}

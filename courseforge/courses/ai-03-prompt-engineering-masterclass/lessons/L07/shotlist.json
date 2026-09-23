@@ -1,0 +1,179 @@
+{
+  "course_id": "AI-03",
+  "lesson_id": "L07",
+  "duration_s": 267.4,
+  "thumbnail": {
+    "headline": "Correct, Missing or Invented?",
+    "slide": {
+      "layout": "title",
+      "title": "Correct, Missing or Invented?",
+      "body": "A five-row table with a Check column: green 'Correct', amber 'Missing', red 'Invented'. Small tag: Prompt Engineering Masterclass · Lesson 7."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.6,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Both look equally professional",
+      "voiceover": "An AI tool can turn two pages of meeting notes into a neat table in seconds. It can also, in the same few seconds, leave out a deadline, or invent an owner who was never named. Both results look equally professional."
+    },
+    {
+      "scene": 2,
+      "start": 17.6,
+      "end": 35.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Summarising and Extracting Information",
+        "body": "Lesson 7 · Shorter, and in a fixed shape"
+      },
+      "voiceover": "In the last lesson, you rewrote messages without changing their meaning. Now we make long texts shorter, and pull out the details that matter. These are two of the most useful work tasks for AI tools, and they need slightly different prompts."
+    },
+    {
+      "scene": 3,
+      "start": 35.6,
+      "end": 55.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "A good summary prompt",
+        "body": "Purpose: 'so my manager can decide on the budget'. Length and format: '5 bullet points'. Focus: 'risks and costs; ignore technical details'."
+      },
+      "voiceover": "Summarising means making a text shorter while keeping what matters. A good summary prompt states three things. The purpose, for example, so my manager can decide on the budget. The length and format, such as five bullet points. And the focus, such as risks and costs."
+    },
+    {
+      "scene": 4,
+      "start": 55.3,
+      "end": 78.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "An extraction prompt",
+        "body": "Show the extraction prompt from content.md exactly; highlight the last two lines ('If the owner or deadline is not stated, write \"not stated\". Do not guess. Use only information from the notes.')."
+      },
+      "voiceover": "Extracting means pulling specific items out of a text into a fixed shape, and a table works well. The prompt asks for every decision and action item, with columns for item, type, owner and deadline. Then two important lines: if the owner or deadline is not stated, write not stated. Do not guess."
+    },
+    {
+      "scene": 5,
+      "start": 78.0,
+      "end": 89.1,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Make the gaps visible",
+      "voiceover": "Why does this matter? When information is missing, AI tools sometimes fill the gap with a likely-sounding answer. Writing not stated makes the gaps visible."
+    },
+    {
+      "scene": 6,
+      "start": 89.1,
+      "end": 108.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Check every item",
+        "body": "Correct: matches the notes. Missing: important item left out. Invented: not in the notes. Reminder: roles or placeholders, not names."
+      },
+      "voiceover": "Then, always check the output against the source. Mark each item as correct, missing or invented. Only you can do this, because only you have the original and know what matters. And remember lesson three: replace names with roles or placeholders before you paste notes."
+    },
+    {
+      "scene": 7,
+      "start": 108.4,
+      "end": 123.4,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "colleague sharing handwritten meeting notes",
+      "on_screen_text": "Check the deadline at the source",
+      "voiceover": "An AI summary is like a colleague's quick notes from a meeting you missed. Very useful. But before you act on a deadline in those notes, you check it with the person who set it."
+    },
+    {
+      "scene": 8,
+      "start": 123.4,
+      "end": 140.5,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "city cycle lane urban street",
+      "on_screen_text": "Aroha · project officer, Wellington",
+      "voiceover": "Let's see it at work. Aroha is a project officer at a city council in Wellington. She has notes from a meeting about a new cycle lane. She replaces names with roles, and pastes the notes into the extraction prompt."
+    },
+    {
+      "scene": 9,
+      "start": 140.5,
+      "end": 158.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Aroha's notes",
+        "body": "Show the 'Meeting notes: Cycle lane, Stage 2' block from content.md exactly."
+      },
+      "voiceover": "The notes have five lines. The drawings are almost done, the consultation will run for four weeks, the comms lead will prepare a web page, finance will confirm a lighting cost, and there will be no work during the market weekend."
+    },
+    {
+      "scene": 10,
+      "start": 158.1,
+      "end": 180.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Aroha's check",
+        "body": "Show the five-row check table from content.md: Final drawings ✓ Correct · Consultation 4 weeks ✓ Correct · Web page, deadline 2 weeks ✗ Invented · Lighting cost ✓ Correct · Market weekend ✗ Missing."
+      },
+      "voiceover": "The tool returns a table with five rows, and Aroha checks each one against her notes. Three rows are correct. But the tool gave the web page a deadline of two weeks, which nobody set. That is invented. And the market weekend decision is not in the table at all. That is missing."
+    },
+    {
+      "scene": 11,
+      "start": 180.8,
+      "end": 192.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "One new line",
+        "body": "List every line that starts with 'Agreed' as a decision."
+      },
+      "voiceover": "Aroha fixes both in the table. Then she improves her prompt for next time, with one new line: list every line that starts with agreed as a decision."
+    },
+    {
+      "scene": 12,
+      "start": 192.8,
+      "end": 217.7,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Check in both directions",
+        "body": "Two boxes, Source and Output, with two arrows: Source → Output labelled 'finds missing'; Output → Source labelled 'finds invented'."
+      },
+      "voiceover": "A common mistake is to check only whether a summary sounds right. Invented details are dangerous because they sound right. So check in both directions. Go through the source and tick each point in the output. Then go through the output and find each point in the source. One direction finds missing items. The other finds invented ones."
+    },
+    {
+      "scene": 13,
+      "start": 217.7,
+      "end": 242.1,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Purpose · Length and format · Focus. 2. Named columns + 'not stated'. 3. Check both ways: correct, missing, invented."
+      },
+      "voiceover": "Let's recap. First, a good summary prompt states the purpose, the length and format, and the focus. Second, for extraction, use a table with named columns, and tell the tool to write not stated instead of guessing. Third, always check the output against the source in both directions, and mark each item as correct, missing or invented."
+    },
+    {
+      "scene": 14,
+      "start": 242.1,
+      "end": 267.4,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Thinking Tasks",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will turn a set of meeting notes into a table of decisions, owners and deadlines. Then you will mark every item as correct, missing or invented. It takes about twenty minutes. In the next lesson, we look at thinking tasks: analysis, planning and decisions. See you there."
+    }
+  ]
+}
