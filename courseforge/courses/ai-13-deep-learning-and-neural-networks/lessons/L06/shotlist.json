@@ -1,7 +1,7 @@
 {
   "course_id": "AI-13",
   "lesson_id": "L06",
-  "duration_s": 269.3,
+  "duration_s": 288.2,
   "thumbnail": {
     "headline": "Augment Training Data Only",
     "slide": {
@@ -23,7 +23,7 @@
     {
       "scene": 2,
       "start": 17.6,
-      "end": 39.9,
+      "end": 46.3,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -31,12 +31,12 @@
         "title": "Images as tensors",
         "body": "Colour: (3, H, W), three stacked grids R, G, B. Greyscale: (1, H, W). Pixel values 0–255 → floats 0–1. A batch adds N: (N, C, H, W)."
       },
-      "voiceover": "Welcome to module two, where we work with images. A colour image is a tensor with three channels, then height and width. A greyscale image has one channel. Pixels usually arrive as whole numbers from zero to two hundred and fifty-five, and we turn them into decimals from zero to one."
+      "voiceover": "Welcome to module two, where we work with images. A colour image is a tensor with three channels, then height and width. A greyscale image has one channel. A batch adds one more dimension at the front, as you saw in lesson two. Pixels usually arrive as whole numbers from zero to two hundred and fifty-five, and we turn them into decimals from zero to one."
     },
     {
       "scene": 3,
-      "start": 39.9,
-      "end": 61.3,
+      "start": 46.3,
+      "end": 67.7,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -48,8 +48,8 @@
     },
     {
       "scene": 4,
-      "start": 61.3,
-      "end": 78.0,
+      "start": 67.7,
+      "end": 88.3,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -57,12 +57,12 @@
         "title": "Transforms",
         "body": "transforms.Compose([\n  transforms.ToTensor(),\n  transforms.Normalize(mean, std)   # from training set only\n])"
       },
-      "voiceover": "Transforms are functions applied to each image as it loads. You chain them together. The first converts the image to a float tensor. The next normalises it, using a mean and a standard deviation from the training set only."
+      "voiceover": "Transforms are functions applied to each image as it loads. You chain them together. The first converts the image to a float tensor. The next normalises it, using a mean and a standard deviation from the training set only. This centres the inputs near zero, which helps optimisation."
     },
     {
       "scene": 5,
-      "start": 78.0,
-      "end": 92.6,
+      "start": 88.3,
+      "end": 102.9,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -74,8 +74,8 @@
     },
     {
       "scene": 6,
-      "start": 92.6,
-      "end": 107.2,
+      "start": 102.9,
+      "end": 117.5,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -87,8 +87,8 @@
     },
     {
       "scene": 7,
-      "start": 107.2,
-      "end": 126.1,
+      "start": 117.5,
+      "end": 136.4,
       "section": "Explain",
       "visual_type": "stock",
       "stock_query": "students writing exam in quiet classroom",
@@ -97,8 +97,8 @@
     },
     {
       "scene": 8,
-      "start": 126.1,
-      "end": 135.5,
+      "start": 136.4,
+      "end": 154.4,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -106,12 +106,12 @@
         "title": "Two pipelines",
         "body": "Training: augmentations + ToTensor + Normalize. Validation and test: ToTensor + Normalize only, nothing random."
       },
-      "voiceover": "That is the rule. Validation and test images get the same fixed steps, such as conversion, normalisation and resizing, but nothing random."
+      "voiceover": "That is the rule. Validation and test images get the same fixed steps, such as conversion, normalisation and resizing, but nothing random. Otherwise your validation score changes from run to run, and no longer measures how the model does on real images."
     },
     {
       "scene": 9,
-      "start": 135.5,
-      "end": 148.4,
+      "start": 154.4,
+      "end": 167.3,
       "section": "Demonstrate",
       "visual_type": "stock",
       "stock_query": "folded clothes photographed for online shop",
@@ -120,8 +120,8 @@
     },
     {
       "scene": 10,
-      "start": 148.4,
-      "end": 164.3,
+      "start": 167.3,
+      "end": 183.2,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -134,8 +134,8 @@
     },
     {
       "scene": 11,
-      "start": 164.3,
-      "end": 175.9,
+      "start": 183.2,
+      "end": 194.8,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -148,8 +148,8 @@
     },
     {
       "scene": 12,
-      "start": 175.9,
-      "end": 185.3,
+      "start": 194.8,
+      "end": 204.2,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -160,8 +160,8 @@
     },
     {
       "scene": 13,
-      "start": 185.3,
-      "end": 202.9,
+      "start": 204.2,
+      "end": 221.8,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -174,8 +174,8 @@
     },
     {
       "scene": 14,
-      "start": 202.9,
-      "end": 223.5,
+      "start": 221.8,
+      "end": 242.4,
       "section": "Demonstrate",
       "visual_type": "text",
       "on_screen_text": "No augmentation in validation or test",
@@ -183,8 +183,8 @@
     },
     {
       "scene": 15,
-      "start": 223.5,
-      "end": 249.2,
+      "start": 242.4,
+      "end": 268.1,
       "section": "Recap",
       "visual_type": "slide",
       "slide": {
@@ -196,8 +196,8 @@
     },
     {
       "scene": 16,
-      "start": 249.2,
-      "end": 269.3,
+      "start": 268.1,
+      "end": 288.2,
       "section": "CTA",
       "visual_type": "presenter_full",
       "on_screen_text": "Next: Convolutional Neural Networks",

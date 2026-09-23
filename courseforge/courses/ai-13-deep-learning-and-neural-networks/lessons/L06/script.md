@@ -1,16 +1,16 @@
 # L06 Image Data and Transforms | Presenter Script
 
-Course: AI-13 · Video: 5 min · Words: 628
+Course: AI-13 · Video: 5 min · Words: 672
 
 ## Hook
 Flip a photo of a shirt from left to right, and it is still a shirt. Your network does not know that until you show it. Data augmentation teaches it, but in the wrong place, it makes your validation scores meaningless.
 
 ## Explain
-Welcome to module two, where we work with images. A colour image is a tensor with three channels, then height and width. A greyscale image has one channel. Pixels usually arrive as whole numbers from zero to two hundred and fifty-five, and we turn them into decimals from zero to one.
+Welcome to module two, where we work with images. A colour image is a tensor with three channels, then height and width. A greyscale image has one channel. A batch adds one more dimension at the front, as you saw in lesson two. Pixels usually arrive as whole numbers from zero to two hundred and fifty-five, and we turn them into decimals from zero to one.
 
 The torchvision library downloads common datasets with one line. In this module, we use Fashion-MNIST. Small greyscale images, twenty-eight pixels square, of clothing items in ten classes, with a standard training and test split. As with any dataset, check its licence before you reuse it outside the course.
 
-Transforms are functions applied to each image as it loads. You chain them together. The first converts the image to a float tensor. The next normalises it, using a mean and a standard deviation from the training set only.
+Transforms are functions applied to each image as it loads. You chain them together. The first converts the image to a float tensor. The next normalises it, using a mean and a standard deviation from the training set only. This centres the inputs near zero, which helps optimisation.
 
 Augmentations create random changes each time an image loads. Flips, crops with padding, small rotations, or colour changes. The model sees a slightly different version of each image in every epoch, which reduces overfitting.
 
@@ -18,7 +18,7 @@ Choose changes that keep the label true. A left-right flip is fine for clothing.
 
 Think of a teacher who writes the same maths problem with different numbers each time. The student learns the method, not the page. But the final exam must be a fixed paper. If every student got random questions, the marks would not be comparable.
 
-That is the rule. Validation and test images get the same fixed steps, such as conversion, normalisation and resizing, but nothing random.
+That is the rule. Validation and test images get the same fixed steps, such as conversion, normalisation and resizing, but nothing random. Otherwise your validation score changes from run to run, and no longer measures how the model does on real images.
 
 ## Demonstrate
 Mei Lin is an engineer at an online clothing retailer in Penang, Malaysia. She wants to prototype a product-type classifier with Fashion-MNIST before using her company's own photos.

@@ -19,13 +19,13 @@
     ],
     "Explain": [
       {"visual_type": "slide",
-       "voiceover": "Welcome to module two, where we work with images. A colour image is a tensor with three channels, then height and width. A greyscale image has one channel. Pixels usually arrive as whole numbers from zero to two hundred and fifty-five, and we turn them into decimals from zero to one.",
+       "voiceover": "Welcome to module two, where we work with images. A colour image is a tensor with three channels, then height and width. A greyscale image has one channel. A batch adds one more dimension at the front, as you saw in lesson two. Pixels usually arrive as whole numbers from zero to two hundred and fifty-five, and we turn them into decimals from zero to one.",
        "slide": {"layout": "diagram", "title": "Images as tensors", "body": "Colour: (3, H, W), three stacked grids R, G, B. Greyscale: (1, H, W). Pixel values 0–255 → floats 0–1. A batch adds N: (N, C, H, W)."}},
       {"visual_type": "slide",
        "voiceover": "The torchvision library downloads common datasets with one line. In this module, we use Fashion-MNIST. Small greyscale images, twenty-eight pixels square, of clothing items in ten classes, with a standard training and test split. As with any dataset, check its licence before you reuse it outside the course.",
        "slide": {"layout": "bullets", "title": "Fashion-MNIST", "body": "28×28 greyscale clothing images · 10 classes · standard train and test split · check the licence before reuse"}},
       {"visual_type": "slide",
-       "voiceover": "Transforms are functions applied to each image as it loads. You chain them together. The first converts the image to a float tensor. The next normalises it, using a mean and a standard deviation from the training set only.",
+       "voiceover": "Transforms are functions applied to each image as it loads. You chain them together. The first converts the image to a float tensor. The next normalises it, using a mean and a standard deviation from the training set only. This centres the inputs near zero, which helps optimisation.",
        "slide": {"layout": "code", "title": "Transforms", "body": "transforms.Compose([\n  transforms.ToTensor(),\n  transforms.Normalize(mean, std)   # from training set only\n])"}},
       {"visual_type": "slide",
        "voiceover": "Augmentations create random changes each time an image loads. Flips, crops with padding, small rotations, or colour changes. The model sees a slightly different version of each image in every epoch, which reduces overfitting.",
@@ -38,7 +38,7 @@
        "stock_query": "students writing exam in quiet classroom",
        "on_screen_text": "Practice varies. The exam stays fixed."},
       {"visual_type": "slide",
-       "voiceover": "That is the rule. Validation and test images get the same fixed steps, such as conversion, normalisation and resizing, but nothing random.",
+       "voiceover": "That is the rule. Validation and test images get the same fixed steps, such as conversion, normalisation and resizing, but nothing random. Otherwise your validation score changes from run to run, and no longer measures how the model does on real images.",
        "slide": {"layout": "comparison", "title": "Two pipelines", "body": "Training: augmentations + ToTensor + Normalize. Validation and test: ToTensor + Normalize only, nothing random."}}
     ],
     "Demonstrate": [

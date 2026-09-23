@@ -31,7 +31,9 @@ Her diagnosis is overfitting after epoch six, made more likely by the small trai
 
 She makes one change first. She adds augmentation to the training transform, keeps the old curve, trains again, and compares. Note what she does not do. She does not touch the learning rate, because nothing in the curves pointed to it.
 
-A common mistake is looking only at the final accuracy, or only at training loss. The final epoch is often not the best one, and a falling training loss says nothing about new data. Another mistake is reading one noisy epoch as a trend. Look at the direction over several epochs. And never draw learning curves on the test set. Every decision you make from it uses up its value as a fair check.
+A common mistake is looking only at the final accuracy, or only at training loss. The final epoch is often not the best one, and a falling training loss says nothing about new data. Another mistake is reading one noisy epoch as a trend. Look at the direction over several epochs.
+
+And never draw learning curves on the test set. Every decision you make from it uses up its value as a fair check.
 
 ## Recap
 Let's recap. First, plot training and validation loss per epoch on one chart. Second, separating curves mean overfitting, two high curves mean underfitting, and jumping or growing loss usually means the learning rate is too high. Third, diagnose first, then change one thing at a time after each diagnosis, and keep the old curve for comparison.

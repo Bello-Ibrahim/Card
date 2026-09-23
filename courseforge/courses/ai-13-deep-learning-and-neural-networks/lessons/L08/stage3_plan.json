@@ -3,7 +3,11 @@
   "thumbnail": {
     "headline": "Read the Curve First",
     "image": "Navy background, two loss curves on one chart, a teal training line falling and a white validation line rising after an early low point marked with a dashed line, headline in teal Inter Bold.",
-    "slide": {"layout": "title", "title": "Read the Curve First", "body": "A loss chart: training line falls steadily; validation line falls, then rises after a dashed vertical marker. Small tag: Deep Learning and Neural Networks · Lesson 8."}
+    "slide": {
+      "layout": "title",
+      "title": "Read the Curve First",
+      "body": "A loss chart: training line falls steadily; validation line falls, then rises after a dashed vertical marker. Small tag: Deep Learning and Neural Networks · Lesson 8."
+    }
   },
   "production_notes": [
     "Review flags: none. Use the course team's images assets/L08_curve_A.png to assets/L08_curve_D.png for the four patterns, matching the exercise answer key: A overfitting, B underfitting, C learning rate too high, D healthy.",
@@ -13,67 +17,149 @@
   ],
   "sections": {
     "Hook": [
-      {"visual_type": "presenter_full",
-       "voiceover": "Your model finished training, and you do not like the score. You could change ten settings at random. Or you could look at one chart for thirty seconds, and know which setting to change first. That chart is the learning curve.",
-       "on_screen_text": "One chart, thirty seconds"}
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Your model finished training, and you do not like the score. You could change ten settings at random. Or you could look at one chart for thirty seconds, and know which setting to change first. That chart is the learning curve.",
+        "on_screen_text": "One chart, thirty seconds"
+      }
     ],
     "Explain": [
-      {"visual_type": "slide",
-       "voiceover": "In the scikit-learn course, your learning curves had training-set size on the x-axis. Here, the x-axis is epochs. A learning curve plots the training loss and the validation loss after every epoch, on the same axes. Plot loss before accuracy, because loss changes smoothly and shows problems earlier.",
-       "slide": {"layout": "diagram", "title": "The learning curve", "body": "x-axis: epoch · y-axis: loss. Two lines with a legend: train and validation. Note: plot loss first, then accuracy."}},
-      {"visual_type": "slide",
-       "voiceover": "Four patterns cover most cases. In a healthy run, both losses fall and then flatten, with a small gap. More epochs will not help much. A larger model or better data might.",
-       "slide": {"layout": "diagram", "title": "Healthy", "body": "Show image assets/L08_curve_D.png: both losses fall and flatten with a small gap."}},
-      {"visual_type": "slide",
-       "voiceover": "In overfitting, training loss keeps falling, but validation loss reaches a low point and then rises. The curves separate, because the model is memorising the training set. Fixes include more data or augmentation, regularisation, a smaller model, or stopping earlier.",
-       "slide": {"layout": "diagram", "title": "Overfitting", "body": "Show image assets/L08_curve_A.png: validation loss rises after an early minimum while training loss keeps falling. Fixes: more data or augmentation · regularisation (L09) · smaller model · stop earlier"}},
-      {"visual_type": "slide",
-       "voiceover": "In underfitting, both losses stay high and close together. The model cannot fit even the training data. Try a larger model, more epochs, a higher learning rate, or better inputs.",
-       "slide": {"layout": "diagram", "title": "Underfitting", "body": "Show image assets/L08_curve_B.png: both losses flat and high. Fixes: larger model · more epochs · higher learning rate · better inputs"}},
-      {"visual_type": "slide",
-       "voiceover": "When the learning rate is too high, the loss jumps up and down, grows, or becomes not a number. Lower the learning rate, often by three to ten times.",
-       "slide": {"layout": "diagram", "title": "Learning rate too high", "body": "Show image assets/L08_curve_C.png: loss jumps, then grows. Fix: lower the learning rate by 3 to 10 times (L15, L16)"}},
-      {"visual_type": "slide",
-       "voiceover": "Two more signals. If the training loss is flat from the start, check the loop itself. Is zero grad there? Does the optimiser have the right parameters? Is the model frozen? And if validation loss is lower than training loss, that is often normal when dropout or strong augmentation runs during training only.",
-       "slide": {"layout": "bullets", "title": "Two more signals", "body": "Flat from the start → check zero_grad, the optimiser's parameter list, a frozen model · Validation below training → often normal with dropout or strong augmentation"}},
-      {"visual_type": "stock",
-       "voiceover": "Learning curves are like a patient's temperature chart. One reading tells you little. The shape over several days tells the doctor whether the treatment is working, whether the patient is getting worse, or whether the thermometer is broken.",
-       "stock_query": "doctor reviewing patient chart in hospital",
-       "on_screen_text": "The shape matters, not one reading"}
+      {
+        "visual_type": "slide",
+        "voiceover": "In the scikit-learn course, your learning curves had training-set size on the x-axis. Here, the x-axis is epochs. A learning curve plots the training loss and the validation loss after every epoch, on the same axes. Plot loss before accuracy, because loss changes smoothly and shows problems earlier.",
+        "slide": {
+          "layout": "diagram",
+          "title": "The learning curve",
+          "body": "x-axis: epoch · y-axis: loss. Two lines with a legend: train and validation. Note: plot loss first, then accuracy."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Four patterns cover most cases. In a healthy run, both losses fall and then flatten, with a small gap. More epochs will not help much. A larger model or better data might.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Healthy",
+          "body": "Show image assets/L08_curve_D.png: both losses fall and flatten with a small gap."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "In overfitting, training loss keeps falling, but validation loss reaches a low point and then rises. The curves separate, because the model is memorising the training set. Fixes include more data or augmentation, regularisation, a smaller model, or stopping earlier.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Overfitting",
+          "body": "Show image assets/L08_curve_A.png: validation loss rises after an early minimum while training loss keeps falling. Fixes: more data or augmentation · regularisation (L09) · smaller model · stop earlier"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "In underfitting, both losses stay high and close together. The model cannot fit even the training data. Try a larger model, more epochs, a higher learning rate, or better inputs.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Underfitting",
+          "body": "Show image assets/L08_curve_B.png: both losses flat and high. Fixes: larger model · more epochs · higher learning rate · better inputs"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "When the learning rate is too high, the loss jumps up and down, grows, or becomes not a number. Lower the learning rate, often by three to ten times.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Learning rate too high",
+          "body": "Show image assets/L08_curve_C.png: loss jumps, then grows. Fix: lower the learning rate by 3 to 10 times (L15, L16)"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Two more signals. If the training loss is flat from the start, check the loop itself. Is zero grad there? Does the optimiser have the right parameters? Is the model frozen? And if validation loss is lower than training loss, that is often normal when dropout or strong augmentation runs during training only.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Two more signals",
+          "body": "Flat from the start → check zero_grad, the optimiser's parameter list, a frozen model · Validation below training → often normal with dropout or strong augmentation"
+        }
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "Learning curves are like a patient's temperature chart. One reading tells you little. The shape over several days tells the doctor whether the treatment is working, whether the patient is getting worse, or whether the thermometer is broken.",
+        "stock_query": "doctor reviewing patient chart in hospital",
+        "on_screen_text": "The shape matters, not one reading"
+      }
     ],
     "Demonstrate": [
-      {"visual_type": "stock",
-       "voiceover": "Svetlana is an engineer at an agricultural insurer in Almaty, Kazakhstan. She trained the CNN from lesson seven on ten thousand Fashion-MNIST images for twenty epochs, and saved the losses from each epoch in two lists.",
-       "stock_query": "wheat fields under wide blue sky",
-       "on_screen_text": "Svetlana · insurer · Almaty"},
-      {"visual_type": "screen",
-       "voiceover": "In Colab, she writes a small plotting function. It draws both losses with a legend, finds the epoch with the lowest validation loss, and marks it with a dashed grey line.",
-       "screen_steps": ["Run the plot_curves cell from content.md: plot train_loss and val_loss against epochs, best = epoch with lowest val_loss, plt.axvline(best + 1, linestyle=\"--\", color=\"grey\"), legend, return best + 1", "Highlight the axvline line"]},
-      {"visual_type": "screen",
-       "voiceover": "She calls it with her saved history. The training loss falls steadily to a low value. The validation loss falls until about epoch six, then rises slowly, while validation accuracy stays almost flat.",
-       "screen_steps": ["Run: best_epoch = plot_curves(history[\"train_loss\"], history[\"val_loss\"], \"CNN, 10k images\")", "Point to the training line falling, the validation minimum near epoch 6 and the dashed marker"],
-       "on_screen_text": "Best epoch: about six"},
-      {"visual_type": "screen",
-       "voiceover": "Her diagnosis is overfitting after epoch six, made more likely by the small training set. The model at epoch six is better than the final one, even though its training loss is higher.",
-       "screen_steps": ["Add a text cell under the chart: Diagnosis: overfitting after epoch 6; small subset; epoch-6 model is the best", "Print best_epoch"],
-       "on_screen_text": "Diagnosis: overfitting after epoch six"},
-      {"visual_type": "screen",
-       "voiceover": "She makes one change first. She adds augmentation to the training transform, keeps the old curve, trains again, and compares. Note what she does not do. She does not touch the learning rate, because nothing in the curves pointed to it.",
-       "screen_steps": ["Add RandomHorizontalFlip and RandomCrop(28, padding=2) to the training transform (from L06)", "Retrain and plot the old and new validation curves on one chart"],
-       "on_screen_text": "Change one thing at a time"},
-      {"visual_type": "text",
-       "voiceover": "A common mistake is looking only at the final accuracy, or only at training loss. The final epoch is often not the best one, and a falling training loss says nothing about new data. Another mistake is reading one noisy epoch as a trend. Look at the direction over several epochs. And never draw learning curves on the test set. Every decision you make from it uses up its value as a fair check.",
-       "on_screen_text": "Never draw curves on the test set"}
+      {
+        "visual_type": "stock",
+        "voiceover": "Svetlana is an engineer at an agricultural insurer in Almaty, Kazakhstan. She trained the CNN from lesson seven on ten thousand Fashion-MNIST images for twenty epochs, and saved the losses from each epoch in two lists.",
+        "stock_query": "wheat fields under wide blue sky",
+        "on_screen_text": "Svetlana · insurer · Almaty"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "In Colab, she writes a small plotting function. It draws both losses with a legend, finds the epoch with the lowest validation loss, and marks it with a dashed grey line.",
+        "screen_steps": [
+          "Run the plot_curves cell from content.md: plot train_loss and val_loss against epochs, best = epoch with lowest val_loss, plt.axvline(best + 1, linestyle=\"--\", color=\"grey\"), legend, return best + 1",
+          "Highlight the axvline line"
+        ]
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "She calls it with her saved history. The training loss falls steadily to a low value. The validation loss falls until about epoch six, then rises slowly, while validation accuracy stays almost flat.",
+        "screen_steps": [
+          "Run: best_epoch = plot_curves(history[\"train_loss\"], history[\"val_loss\"], \"CNN, 10k images\")",
+          "Point to the training line falling, the validation minimum near epoch 6 and the dashed marker"
+        ],
+        "on_screen_text": "Best epoch: about six"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Her diagnosis is overfitting after epoch six, made more likely by the small training set. The model at epoch six is better than the final one, even though its training loss is higher.",
+        "screen_steps": [
+          "Add a text cell under the chart: Diagnosis: overfitting after epoch 6; small subset; epoch-6 model is the best",
+          "Print best_epoch"
+        ],
+        "on_screen_text": "Diagnosis: overfitting after epoch six"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "She makes one change first. She adds augmentation to the training transform, keeps the old curve, trains again, and compares. Note what she does not do. She does not touch the learning rate, because nothing in the curves pointed to it.",
+        "screen_steps": [
+          "Add RandomHorizontalFlip and RandomCrop(28, padding=2) to the training transform (from L06)",
+          "Retrain and plot the old and new validation curves on one chart"
+        ],
+        "on_screen_text": "Change one thing at a time"
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "A common mistake is looking only at the final accuracy, or only at training loss. The final epoch is often not the best one, and a falling training loss says nothing about new data. Another mistake is reading one noisy epoch as a trend. Look at the direction over several epochs.",
+        "on_screen_text": "Look at the trend, not one epoch"
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "And never draw learning curves on the test set. Every decision you make from it uses up its value as a fair check.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Keep the test set clean",
+          "body": "Draw curves on training and validation data only · Every decision made from a curve uses up that data's value as a fair check (L14)"
+        },
+        "on_screen_text": "Never draw curves on the test set"
+      }
     ],
     "Recap": [
-      {"visual_type": "slide",
-       "voiceover": "Let's recap. First, plot training and validation loss per epoch on one chart. Second, separating curves mean overfitting, two high curves mean underfitting, and jumping or growing loss usually means the learning rate is too high. Third, diagnose first, then change one thing at a time after each diagnosis, and keep the old curve for comparison.",
-       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Plot train and validation loss per epoch. 2. Separate = overfitting · both high = underfitting · jumping = lr too high. 3. Diagnose, change one thing, compare."}}
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, plot training and validation loss per epoch on one chart. Second, separating curves mean overfitting, two high curves mean underfitting, and jumping or growing loss usually means the learning rate is too high. Third, diagnose first, then change one thing at a time after each diagnosis, and keep the old curve for comparison.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. Plot train and validation loss per epoch. 2. Separate = overfitting · both high = underfitting · jumping = lr too high. 3. Diagnose, change one thing, compare."
+        }
+      }
     ],
     "CTA": [
-      {"visual_type": "presenter_full",
-       "voiceover": "Now it is your turn. In the exercise below this video, you will diagnose four learning curves, labelled A to D, then plot your own CNN's curves and write a one-paragraph diagnosis. It takes about thirty minutes. In the next lesson, we fight overfitting with dropout, weight decay and early stopping. See you there.",
-       "on_screen_text": "Next: Regularisation"}
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Now it is your turn. In the exercise below this video, you will diagnose four learning curves, labelled A to D, then plot your own CNN's curves and write a one-paragraph diagnosis. It takes about thirty minutes. In the next lesson, we fight overfitting with dropout, weight decay and early stopping. See you there.",
+        "on_screen_text": "Next: Regularisation"
+      }
     ]
   }
 }

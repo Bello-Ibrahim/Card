@@ -1,7 +1,7 @@
 {
   "course_id": "AI-13",
   "lesson_id": "L08",
-  "duration_s": 289.3,
+  "duration_s": 289.4,
   "thumbnail": {
     "headline": "Read the Curve First",
     "slide": {
@@ -172,16 +172,30 @@
     {
       "scene": 14,
       "start": 210.0,
-      "end": 241.7,
+      "end": 231.9,
       "section": "Demonstrate",
       "visual_type": "text",
-      "on_screen_text": "Never draw curves on the test set",
-      "voiceover": "A common mistake is looking only at the final accuracy, or only at training loss. The final epoch is often not the best one, and a falling training loss says nothing about new data. Another mistake is reading one noisy epoch as a trend. Look at the direction over several epochs. And never draw learning curves on the test set. Every decision you make from it uses up its value as a fair check."
+      "on_screen_text": "Look at the trend, not one epoch",
+      "voiceover": "A common mistake is looking only at the final accuracy, or only at training loss. The final epoch is often not the best one, and a falling training loss says nothing about new data. Another mistake is reading one noisy epoch as a trend. Look at the direction over several epochs."
     },
     {
       "scene": 15,
-      "start": 241.7,
-      "end": 265.7,
+      "start": 231.9,
+      "end": 241.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Keep the test set clean",
+        "body": "Draw curves on training and validation data only · Every decision made from a curve uses up that data's value as a fair check (L14)"
+      },
+      "on_screen_text": "Never draw curves on the test set",
+      "voiceover": "And never draw learning curves on the test set. Every decision you make from it uses up its value as a fair check."
+    },
+    {
+      "scene": 16,
+      "start": 241.8,
+      "end": 265.8,
       "section": "Recap",
       "visual_type": "slide",
       "slide": {
@@ -192,9 +206,9 @@
       "voiceover": "Let's recap. First, plot training and validation loss per epoch on one chart. Second, separating curves mean overfitting, two high curves mean underfitting, and jumping or growing loss usually means the learning rate is too high. Third, diagnose first, then change one thing at a time after each diagnosis, and keep the old curve for comparison."
     },
     {
-      "scene": 16,
-      "start": 265.7,
-      "end": 289.3,
+      "scene": 17,
+      "start": 265.8,
+      "end": 289.4,
       "section": "CTA",
       "visual_type": "presenter_full",
       "on_screen_text": "Next: Regularisation",
