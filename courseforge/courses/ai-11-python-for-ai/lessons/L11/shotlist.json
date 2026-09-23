@@ -1,0 +1,186 @@
+{
+  "course_id": "AI-11",
+  "lesson_id": "L11",
+  "duration_s": 291.4,
+  "thumbnail": {
+    "headline": "Meet pandas",
+    "slide": {
+      "layout": "title",
+      "title": "Meet pandas",
+      "body": "Table grid of six columns; the lifeExp column is highlighted teal and labelled Series; the whole table labelled DataFrame. Small tag: Python for AI · Lesson 11."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.9,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Big tables, one line of code",
+      "voiceover": "A spreadsheet with fifty rows is easy to read by eye. A table with fifty thousand rows is not. pandas lets you ask questions of a large table in one line of code, and repeat the same steps on next month's data in seconds."
+    },
+    {
+      "scene": 2,
+      "start": 18.9,
+      "end": 35.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Week 3: Working with tables",
+        "body": "pandas · the library for tables of data"
+      },
+      "voiceover": "Welcome to week three. Until now, we worked with single values, lists and files. Now we work with whole tables. pandas is the most widely used Python library for tables of data, and it has two main objects."
+    },
+    {
+      "scene": 3,
+      "start": 35.2,
+      "end": 51.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "DataFrame and Series",
+        "body": "Table with columns country, continent, year, lifeExp, pop, gdpPercap; index 0, 1, 2 on the left. Whole table bracketed 'DataFrame'; lifeExp column highlighted 'Series'."
+      },
+      "voiceover": "A DataFrame is a whole table, with rows and named columns. A Series is one column of that table, for example the life expectancy column. Each row also has an index label on the left, starting at zero."
+    },
+    {
+      "scene": 4,
+      "start": 51.5,
+      "end": 70.8,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "person reviewing spreadsheet data on laptop",
+      "on_screen_text": "A spreadsheet you control with code",
+      "voiceover": "A DataFrame is like a spreadsheet, but instead of clicking and scrolling, you give written instructions. The instructions are saved, so you can check them, share them, and run them again on new data. A Series is like one column cut out on its own."
+    },
+    {
+      "scene": 5,
+      "start": 70.8,
+      "end": 99.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "First look at any table",
+        "body": "pd.read_csv() to load · df.head(): first 5 rows · df.shape: (rows, columns) · df.info(): types + non-missing counts · df.describe(): number summaries"
+      },
+      "voiceover": "You usually load data with read csv. Then you take a first look with four tools. Head shows the first five rows. Shape gives the number of rows and columns. Info lists each column, its data type, and how many values are not missing. And describe summarises every number column. Notice that shape has no brackets after it. It is a property of the table, not a function."
+    },
+    {
+      "scene": 6,
+      "start": 99.9,
+      "end": 123.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "This week's data",
+        "body": "Gapminder format: lifeExp · pop · gdpPercap, by country and year. Check source + licence before publishing. Today: invented practice sample, not real statistics."
+      },
+      "voiceover": "This week, we use Gapminder country data. It has life expectancy, population and income per person, for many countries over time. Check the data source and its licence before you publish any results. To start, we use a small practice sample in the same format. Its numbers are invented, so they are not real statistics."
+    },
+    {
+      "scene": 7,
+      "start": 123.5,
+      "end": 133.8,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "journalist working at newsroom desk",
+      "on_screen_text": "Aroha, data journalist · Wellington",
+      "voiceover": "Let's meet the data. Aroha is a data journalist in Wellington, New Zealand. Before she writes any story, she wants to understand the table."
+    },
+    {
+      "scene": 8,
+      "start": 133.8,
+      "end": 162.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Add a new code cell",
+        "Paste the sample cell from content.md: import io, import pandas as pd, the sample text (country,continent,year,lifeExp,pop,gdpPercap and 18 rows), then df = pd.read_csv(io.StringIO(sample))",
+        "Press Shift + Enter; no output appears"
+      ],
+      "on_screen_text": "Invented practice data, not real statistics",
+      "voiceover": "We paste one cell into Colab. It imports pandas and holds the practice sample as text in CSV format. A small helper from the io module lets read csv treat that text as if it were a file, and the result is a DataFrame called df. With a real file, you would simply give read csv the file name. We use this same sample until lesson fifteen."
+    },
+    {
+      "scene": 9,
+      "start": 162.5,
+      "end": 179.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Add a new code cell",
+        "Type: print(df.shape)",
+        "Type: print(df.columns.tolist())",
+        "Type: print(df[\"year\"].unique())",
+        "Press Shift + Enter",
+        "Output: (18, 6) / ['country', 'continent', 'year', 'lifeExp', 'pop', 'gdpPercap'] / [1997 2002 2007]"
+      ],
+      "on_screen_text": "18 rows, 6 columns, 3 years",
+      "voiceover": "Now a first look. Shape tells us there are eighteen rows and six columns. Next we list the column names. And then the unique years. There are three, nineteen ninety-seven, two thousand and two, and two thousand and seven."
+    },
+    {
+      "scene": 10,
+      "start": 179.6,
+      "end": 204.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Add a new code cell",
+        "Type: df.describe().round(1)",
+        "Press Shift + Enter",
+        "Point at the min and max rows: lifeExp 54.8 to 78.5; pop 15,000,000 to 85,000,000"
+      ],
+      "voiceover": "Next, describe, rounded to one decimal place. Look at the minimum and maximum rows. Life expectancy runs from fifty-four point eight to seventy-eight point five. Population runs from fifteen million to eighty-five million. That is a much wider range. Notice that country and continent are missing from this summary. We will see why in a moment."
+    },
+    {
+      "scene": 11,
+      "start": 204.9,
+      "end": 220.3,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Add a new code cell",
+        "Type: df.info()",
+        "Press Shift + Enter",
+        "Point at the non-null counts (18 in every column) and the dtype column"
+      ],
+      "voiceover": "Finally, info. Every column has eighteen values that are not missing, so nothing is missing. It also shows each column's data type. The text columns may show a different type name, depending on your pandas version."
+    },
+    {
+      "scene": 12,
+      "start": 220.3,
+      "end": 246.0,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "describe() skips text columns",
+      "voiceover": "A common mistake is to think describe covers every column. By default, it only summarises number columns. So if a number column is stored as text, it will not appear at all. That is often the first sign of a data problem. So always check the data types in info as well. We look for these problems in lesson fourteen."
+    },
+    {
+      "scene": 13,
+      "start": 246.0,
+      "end": 268.7,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. DataFrame = table; Series = one column; load with pd.read_csv(). 2. Start with head(), shape, info(), describe(). 3. Sample is invented: check the real data's source and licence."
+      },
+      "voiceover": "Let's recap. First, a DataFrame is a table, and a Series is one of its columns. You load CSV data with read csv. Second, start every dataset with head, shape, info and describe. Third, today's practice sample is invented. For real conclusions, use the full Gapminder data, with its source and licence checked."
+    },
+    {
+      "scene": 14,
+      "start": 268.7,
+      "end": 291.4,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Selecting and Filtering",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will load the data and answer four questions. How many rows, which columns, which years, and which column has the widest range. It takes about twenty minutes. In the next lesson, we select and filter rows and columns. See you there."
+    }
+  ]
+}

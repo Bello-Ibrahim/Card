@@ -1,0 +1,200 @@
+{
+  "course_id": "AI-11",
+  "lesson_id": "L10",
+  "duration_s": 294.9,
+  "thumbnail": {
+    "headline": "Python on Your Computer",
+    "slide": {
+      "layout": "title",
+      "title": "Python on Your Computer",
+      "body": "File icons: guests.csv → summary.py → summary.txt, on a laptop outline. Small tag: Python for AI · Lesson 10."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 19.3,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "From one file to another",
+      "voiceover": "Colab is excellent for learning and exploring. But many real projects run as scripts on a computer or a server, and they read and write files. Today, you set up Python on your own machine and write a script that turns one file into another."
+    },
+    {
+      "scene": 2,
+      "start": 19.3,
+      "end": 39.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Two free tools",
+        "body": "Python (python.org or your system's app store) · VS Code + Python extension (colours, error hints, Run button)"
+      },
+      "voiceover": "Last time, we imported tested tools. Today, we leave the browser. To work locally, you need two free tools. The first is Python itself. The second is VS Code, a free code editor, with its Python extension, which adds colours, error hints and a run button."
+    },
+    {
+      "scene": 3,
+      "start": 39.0,
+      "end": 54.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Installing",
+        "body": "Windows · macOS · Linux: follow the official instructions. Can't install? Use Colab for this lesson."
+      },
+      "voiceover": "Installation steps differ between Windows, Mac and Linux, so follow the current official instructions for your system. If you cannot install software, for example on a work laptop, you can do this lesson in Colab."
+    },
+    {
+      "scene": 4,
+      "start": 54.0,
+      "end": 68.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Running a script",
+        "body": "Terminal:\npython summary.py\n(on some systems: python3 summary.py)"
+      },
+      "voiceover": "A script is a plain text file whose name ends in dot p y. You run it from a terminal, which is a text window for commands. You type python, then the file name."
+    },
+    {
+      "scene": 5,
+      "start": 68.6,
+      "end": 96.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Open files safely",
+        "body": "with open(\"guests.csv\", encoding=\"utf-8\") as f:\n    text = f.read()\n\n\"w\" = write (replaces an existing file) · utf-8 = international text"
+      },
+      "voiceover": "Scripts often read and write files. The safe way is the with statement. Open connects to the file, and with closes it automatically when the indented block ends, even if an error happens. The letter w means write a new file, which replaces any old file with the same name. And UTF eight makes sure names with accents or other alphabets are read correctly."
+    },
+    {
+      "scene": 6,
+      "start": 96.0,
+      "end": 120.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Notebook or script?",
+        "body": "Notebook = whiteboard: explore, try ideas, explain. Script = printed procedure: same steps every time, e.g. a nightly report."
+      },
+      "voiceover": "So when should you use a notebook, and when a script? A notebook is like a whiteboard in a meeting room. It is good for thinking out loud and showing your steps. A script is like a printed procedure on a factory wall. It has fixed steps that anyone can run in exactly the same way, every time."
+    },
+    {
+      "scene": 7,
+      "start": 120.9,
+      "end": 138.9,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "small guesthouse reception desk",
+      "on_screen_text": "Nikolai's guesthouse · Tbilisi",
+      "voiceover": "Let's build one. Nikolai manages a small guesthouse in Tbilisi, Georgia. He has a CSV file of guests and their home cities, and he wants a summary of how many guests came from each city. The names and cities are made up."
+    },
+    {
+      "scene": 8,
+      "start": 138.9,
+      "end": 156.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "In VS Code, choose File > Open Folder and open a new folder named ai11-local",
+        "Create a new file named guests.csv",
+        "Type: name,city / Samira,Casablanca / Diego,Quito / Hana,Busan / Emeka,Casablanca",
+        "Save the file"
+      ],
+      "voiceover": "In VS Code, we open a new folder called a i eleven local. Inside it, we create a file called guests dot csv. The first line has the column names, name and city, followed by four guests from Casablanca, Quito and Busan."
+    },
+    {
+      "scene": 9,
+      "start": 156.9,
+      "end": 176.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Create a new file named summary.py",
+        "Type: import csv",
+        "Type: with open(\"guests.csv\", encoding=\"utf-8\") as f: / rows = list(csv.DictReader(f)) (indented)"
+      ],
+      "voiceover": "Next, a file called summary dot p y. We import the csv module and open the guests file with a with block. The DictReader reads each line as a dictionary, using the first line as keys. So for each row, we can ask for the city."
+    },
+    {
+      "scene": 10,
+      "start": 176.6,
+      "end": 188.2,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Type: cities = {}",
+        "Type: for row in rows: / cities[row[\"city\"]] = cities.get(row[\"city\"], 0) + 1 (indented)"
+      ],
+      "on_screen_text": "Count each city with get()",
+      "voiceover": "Then we count the cities in a dictionary. For each row, get looks up the city's count, starting at zero for a new city, and adds one."
+    },
+    {
+      "scene": 11,
+      "start": 188.2,
+      "end": 207.1,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Type: with open(\"summary.txt\", \"w\", encoding=\"utf-8\") as out:",
+        "Type (indented): out.write(f\"Guests: {len(rows)}\\n\")",
+        "Type (indented): for city, count in cities.items(): / out.write(f\"{city}: {count}\\n\")",
+        "Type (not indented): print(\"Saved summary.txt\")",
+        "Save the file"
+      ],
+      "voiceover": "Finally, we open summary dot t x t for writing. We write the total number of guests, then one line for each city and its count. The backslash n in the text starts a new line. At the end, we print a short message."
+    },
+    {
+      "scene": 12,
+      "start": 207.1,
+      "end": 221.2,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open the terminal in VS Code",
+        "Type: python summary.py and press Enter",
+        "Output: Saved summary.txt",
+        "Open summary.txt: Guests: 4 / Casablanca: 2 / Quito: 1 / Busan: 1"
+      ],
+      "on_screen_text": "One file in, one file out",
+      "voiceover": "Now we open the terminal and run the script. It prints saved summary. When we open the new file, it shows four guests. Two from Casablanca, one from Quito and one from Busan."
+    },
+    {
+      "scene": 13,
+      "start": 221.2,
+      "end": 244.3,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Keep data next to the script",
+      "voiceover": "The most common problem is a FileNotFoundError. The script looks for the data file in the terminal's current folder. So open the whole project folder, keep the data next to the script, and run it from there. And be careful with w, because it empties the file. Keep a copy of your original data."
+    },
+    {
+      "scene": 14,
+      "start": 244.3,
+      "end": 269.6,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Python + VS Code + extension; run with python file.py. 2. with open(...): \"w\" to write, utf-8 for international text. 3. Notebooks explore; scripts repeat."
+      },
+      "voiceover": "Let's recap. First, locally you need Python and VS Code with the Python extension, and you run scripts from the terminal. Second, use with open to read and write files safely, with w to write and UTF eight for international text. Third, notebooks suit exploring and explaining, while scripts suit tasks that must run the same way many times."
+    },
+    {
+      "scene": 15,
+      "start": 269.6,
+      "end": 294.9,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Meet pandas",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will write a script that reads a small CSV of made-up names and cities, and writes a summary text file. If you cannot install software, use Colab. It takes about thirty minutes. In the next lesson, we meet pandas, with Series and DataFrames. See you there."
+    }
+  ]
+}

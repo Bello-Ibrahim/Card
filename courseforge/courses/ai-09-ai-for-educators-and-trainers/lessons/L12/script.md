@@ -27,7 +27,7 @@ Accessibility. Her infographic uses green and red to show good and bad practice.
 
 And alignment. Her outcome on handling a difficult visitor is taught in lesson three, but it is not in the rubric. So she adds a criterion. Her AI-use note then records each part, how AI helped, and what she changed. For example, AI drafted twelve quiz questions, and she removed three and rewrote four wrong options.
 
-A common mistake is to review each part separately, and never look at the pack as a whole. Some problems only appear across the unit, like one kind of person always in the same role, or a policy that marks a task red while a lesson plan tells learners to use AI for it. Read the whole pack in order, as a learner would. And make your AI-use note specific.
+A common mistake is to review each part alone, never looking at the pack as a whole. Some problems appear only across the unit, such as one kind of person always in the same role, or a policy that marks a task red while a lesson plan tells learners to use AI for it. Read the whole pack in order, as a learner would. And make your AI-use note specific.
 
 ## Recap
 Let's recap. First, the unit pack has six parts: the unit plan, differentiated materials, an accessible visual, the quiz, the rubric and a unit AI policy. Second, review the whole pack for accuracy, bias, accessibility and alignment, not only each part alone. Third, a short, specific AI-use note shows where AI helped, and what you checked and changed.

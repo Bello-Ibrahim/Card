@@ -1,0 +1,214 @@
+{
+  "course_id": "AI-08",
+  "lesson_id": "L08",
+  "duration_s": 318.4,
+  "thumbnail": {
+    "headline": "Pattern or Coincidence?",
+    "slide": {
+      "layout": "title",
+      "title": "Pattern or Coincidence?",
+      "body": "Line chart of 12 weeks rising gently, with week 7 spike and week 10 dip circled in amber. Small tag: AI-Powered Data Analysis · Lesson 8."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 14.6,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Growth, or one big order?",
+      "voiceover": "Revenue in March was more than four times revenue in January. Is the business growing fast? Or did one customer place one very large order? The same number can tell two very different stories."
+    },
+    {
+      "scene": 2,
+      "start": 14.6,
+      "end": 24.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Trends, Outliers and Correlation",
+        "body": "AI-Powered Data Analysis (No Code) · Lesson 8 of 14"
+      },
+      "voiceover": "Last time, we built summaries and pivot tables. Now we look for patterns. Three ideas help, and each one has a trap."
+    },
+    {
+      "scene": 3,
+      "start": 24.0,
+      "end": 48.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "1. Trend",
+        "body": "Two mini charts: left, a steady rise over many periods (real trend); right, a flat line with one tall final point (a 'trend' created by one value). Caption: many periods, not two."
+      },
+      "voiceover": "The first idea is a trend. A trend is the general direction of a number over time, up, down or flat. To read a trend, look at many periods, not two. Three months can show a direction, but it is weak evidence. And check whether one unusual period creates a trend that disappears when you look closer."
+    },
+    {
+      "scene": 4,
+      "start": 48.4,
+      "end": 78.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "2. Outlier: three common causes",
+        "body": "Data error: 45 typed instead of 450 · Real but rare event: bulk order, festival, outage · Sign of change: first of many large orders"
+      },
+      "voiceover": "The second idea is an outlier. That is a value far from the others, like one order ten times larger than usual. Outliers have three common causes. A data error, like forty-five typed instead of four hundred and fifty. A real but rare event, like a bulk order or a festival. Or a sign of change, like the first of many large orders from a new type of customer."
+    },
+    {
+      "scene": 5,
+      "start": 78.4,
+      "end": 93.4,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Ask why before you delete",
+      "voiceover": "So never delete an outlier just because it is unusual. Ask why it exists first. Fix it if it is an error. If it is real, keep it, and report results with and without it."
+    },
+    {
+      "scene": 6,
+      "start": 93.4,
+      "end": 118.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "3. Correlation is not causation",
+        "body": "Sun icon 'Hot, sunny weather' at top with arrows down to two boxes: 'Ice-cream sales' and 'Sunburn cases'. Dotted line between the two boxes crossed out: 'does not cause'. Label: hypothetical case."
+      },
+      "voiceover": "The third idea is correlation. Two numbers are correlated when they tend to move together. That does not mean one causes the other. Here is a hypothetical case. In a coastal town, ice-cream sales and sunburn cases rise and fall together over the year. Ice cream does not cause sunburn. Both follow a third factor, hot, sunny weather."
+    },
+    {
+      "scene": 7,
+      "start": 118.7,
+      "end": 137.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "When AI says 'X leads to Y'",
+        "body": "A third factor? · A coincidence in a small dataset? · A reversed direction?"
+      },
+      "voiceover": "So when AI says X leads to Y, ask three questions. Could a third factor explain both? Could it be a coincidence in a small dataset? Could the direction be reversed? AI finds outliers and correlations quickly, but it explains them less carefully."
+    },
+    {
+      "scene": 8,
+      "start": 137.1,
+      "end": 159.8,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "footprints in sand on beach",
+      "on_screen_text": "Read the footprints carefully",
+      "voiceover": "Think of footprints in sand. A long line of steps shows a direction. That is a trend. One very deep print is an outlier, so ask what made it. And two lines of prints side by side do not mean one person followed the other. Both may have walked to the same café."
+    },
+    {
+      "scene": 9,
+      "start": 159.8,
+      "end": 170.1,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "ice cream kiosk by the sea",
+      "on_screen_text": "Fatou · ice-cream kiosks · Dakar",
+      "voiceover": "Fatou runs three ice-cream kiosks in Dakar, Senegal. She asks an AI tool to analyse her fictional weekly sales sheet for twelve weeks."
+    },
+    {
+      "scene": 10,
+      "start": 170.1,
+      "end": 192.4,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Finding 1: a rising trend",
+        "body": "Line chart, weeks 1–12, cups: starts at about 300, ends at about 450, steady rise. Green tick: trend accepted."
+      },
+      "voiceover": "First, the AI reports a rising trend. Weekly sales grew from about three hundred cups in week one, to about four hundred and fifty in week twelve. Fatou checks with a line chart. The rise is steady over many weeks, not caused by one value. So she accepts it as a trend."
+    },
+    {
+      "scene": 11,
+      "start": 192.4,
+      "end": 204.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Finding 2: two outliers",
+        "body": "Same line chart with week 7 spike (900) and week 10 dip (45) circled in amber, each with a question mark: Why?"
+      },
+      "voiceover": "Second, the AI finds two outliers. Nine hundred cups in week seven, and forty-five cups in week ten. She does not delete them. She asks why."
+    },
+    {
+      "scene": 12,
+      "start": 204.0,
+      "end": 224.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Real event or error?",
+        "body": "Week 7: 900 cups → local festival next to one kiosk → keep and note | Week 10: 45 cups → till records say 450 → typing error, correct to 450"
+      },
+      "voiceover": "Week seven was the week of a local festival next to one kiosk. That is a real event, so she keeps it and notes it. Week ten does not match her till records, which show four hundred and fifty. It was a typing error, so she corrects it."
+    },
+    {
+      "scene": 13,
+      "start": 224.6,
+      "end": 237.9,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "Finding 3: a correlation",
+        "body": "AI: 'Higher sales are linked to sunburn.' (two lines rising together: cups sold and clinic sunburn cases, labelled fictional)"
+      },
+      "voiceover": "Third, the AI notes that her sales rise in the same weeks as sunburn cases at a nearby clinic, which is also fictional. It says, higher sales are linked to sunburn."
+    },
+    {
+      "scene": 14,
+      "start": 237.9,
+      "end": 250.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "The third factor",
+        "body": "Hot weather → ice-cream sales and → sunburn cases. Highlight the useful link: temperature → sales (check against weather records)."
+      },
+      "voiceover": "Fatou sees the third factor. Hot weather drives both. The useful finding for her business is the link between temperature and sales, and she can check it against weather records."
+    },
+    {
+      "scene": 15,
+      "start": 250.8,
+      "end": 269.2,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Investigate, then report with and without",
+      "voiceover": "A common mistake is to remove every outlier to make the chart look tidy. That can remove the most important finding. The opposite mistake is to build a whole conclusion on one outlier. Investigate first, then report with and without the unusual value."
+    },
+    {
+      "scene": 16,
+      "start": 269.2,
+      "end": 292.3,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Trends need many periods. 2. Ask why before removing an outlier: fix errors, keep real events. 3. Correlation ≠ causation: third factor, coincidence, reversed direction."
+      },
+      "voiceover": "Let's recap. First, a trend needs many periods, so check whether one unusual value creates or hides it. Second, ask why an outlier exists before you remove it. Fix errors, keep real events, and report their effect. Third, correlation does not prove causation. Look for a third factor, a coincidence, or a reversed direction."
+    },
+    {
+      "scene": 17,
+      "start": 292.3,
+      "end": 318.4,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Choosing and Building the Right Chart",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will use AI to find the three largest outliers and one trend in the orders sheet. For each one, write a possible cause and how you could check it. It takes about twenty-five minutes. In the next lesson, we choose and build the right chart. See you there."
+    }
+  ]
+}
