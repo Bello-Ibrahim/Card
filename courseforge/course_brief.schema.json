@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CourseForge course brief",
+  "type": "object",
+  "required": ["course_title", "level", "target_learner", "duration", "learning_outcome", "languages", "brand", "presenter", "budget_limit_usd", "mode"],
+  "properties": {
+    "course_title": {"type": "string", "minLength": 3},
+    "level": {"enum": ["Beginner", "Intermediate", "Advanced"]},
+    "target_learner": {"type": "string"},
+    "duration": {"type": "string", "description": "Total course length, e.g. '90 minutes' or '4 weeks'."},
+    "learning_outcome": {"type": "string"},
+    "languages": {
+      "type": "array",
+      "items": {"type": "string", "pattern": "^[a-z]{2}(-[A-Z]{2})?$"},
+      "minItems": 1,
+      "contains": {"const": "en"}
+    },
+    "brand": {
+      "type": "object",
+      "required": ["colors", "fonts", "tone"],
+      "properties": {
+        "colors": {"type": "array", "items": {"type": "string", "pattern": "^#[0-9A-Fa-f]{6}$"}, "minItems": 1},
+        "fonts": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+        "tone": {"type": "string"},
+        "logo_url": {"type": "string"}
+      }
+    },
+    "presenter": {
+      "type": "object",
+      "required": ["avatar_id", "voice_id"],
+      "properties": {
+        "avatar_id": {"type": "string"},
+        "voice_id": {"type": "string"},
+        "style": {"type": "string"}
+      }
+    },
+    "budget_limit_usd": {"type": "number", "exclusiveMinimum": 0},
+    "mode": {"enum": ["auto", "manual"]},
+    "technical": {"type": "boolean", "default": false, "description": "Enables Screen Demo Packs (OBS)."},
+    "export_vertical": {"type": "boolean", "default": false, "description": "Also export 9:16."},
+    "burn_translated_captions": {"type": "boolean", "default": false}
+  }
+}

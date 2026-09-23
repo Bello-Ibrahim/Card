@@ -1,0 +1,145 @@
+[
+  {
+    "name": "llm_generate",
+    "description": "Submit a content-generation request to Claude via the Message Batches API. Group all lessons of one module into a single call. Returns a batch_id immediately; results arrive asynchronously (up to 24h) and are delivered back as a tool result keyed by custom_id.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "requests": {
+          "type": "array",
+          "description": "One entry per lesson or artifact.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "custom_id": {"type": "string", "description": "Stable ID, e.g. '{slug}:{lesson_id}:content'."},
+              "prompt": {"type": "string"},
+              "output_format": {"type": "string", "enum": ["markdown", "json", "srt", "text"]}
+            },
+            "required": ["custom_id", "prompt", "output_format"],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": ["requests"],
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "slide_render",
+    "description": "Render a self-contained branded HTML slide to a 1920x1080 PNG. Use for slides, diagrams, lower thirds and thumbnails.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "html": {"type": "string", "description": "Complete HTML document with inline CSS; brand fonts and colours only."},
+        "output_path": {"type": "string"},
+        "width": {"type": "integer", "default": 1920},
+        "height": {"type": "integer", "default": 1080}
+      },
+      "required": ["html", "output_path"],
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "stock_search",
+    "description": "Search Pexels and Pixabay for stock video. Returns candidates with URL, duration, resolution, provider and licence.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "query": {"type": "string"},
+        "orientation": {"type": "string", "enum": ["landscape", "portrait"]},
+        "min_duration_s": {"type": "number"},
+        "max_results": {"type": "integer", "default": 5}
+      },
+      "required": ["query", "orientation"],
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "whisper_caption",
+    "description": "Transcribe an audio or video file locally with Whisper and write an SRT. Returns the SRT path.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "audio_path": {"type": "string"},
+        "language": {"type": "string", "description": "ISO 639-1 code, e.g. 'en'."},
+        "output_path": {"type": "string"}
+      },
+      "required": ["audio_path", "language"],
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ffmpeg_assemble",
+    "description": "Assemble a video from a timeline: chroma-key the presenter (#00FF00), overlay on slides/B-roll, add music ducked under voice, overlays and burned captions. Returns the output path.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "timeline_json": {
+          "type": "object",
+          "description": "{output_path, resolution, aspect_ratio, presenter:{path, chroma_key, layout_by_scene}, scenes:[{start, end, source, type, motion?, overlays?}], music:{path, gain_db}, captions?:{srt_path, burn}}"
+        }
+      },
+      "required": ["timeline_json"],
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "media_probe",
+    "description": "Run ffprobe on a media file. Returns duration, resolution, fps, codecs and audio stream info.",
+    "input_schema": {
+      "type": "object",
+      "properties": {"path": {"type": "string"}},
+      "required": ["path"],
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "storage_save",
+    "description": "Save text or JSON content to a path in course storage. Overwrites existing files.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "path": {"type": "string"},
+        "content": {"type": "string"}
+      },
+      "required": ["path", "content"],
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "storage_list",
+    "description": "List files under a path (e.g. /incoming/) with size and modified time. Use to confirm human uploads.",
+    "input_schema": {
+      "type": "object",
+      "properties": {"path": {"type": "string"}},
+      "required": ["path"],
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "notify_human",
+    "description": "Send an approval or upload request to the production team. The run pauses until the human responds or the expected uploads appear.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "stage": {"type": "string"},
+        "summary": {"type": "string"},
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {"type": "string", "enum": ["approval", "upload", "review", "budget"]},
+              "path": {"type": "string"},
+              "note": {"type": "string"}
+            },
+            "required": ["type", "note"],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": ["stage", "summary", "items"],
+      "additionalProperties": false
+    }
+  }
+]

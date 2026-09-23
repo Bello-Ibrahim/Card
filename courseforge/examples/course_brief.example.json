@@ -1,0 +1,23 @@
+{
+  "course_title": "Prompt Engineering for Everyday Work",
+  "level": "Beginner",
+  "target_learner": "Office professionals with no coding background who use AI chat tools at work",
+  "duration": "90 minutes",
+  "learning_outcome": "Write, test and improve prompts that produce reliable results for common work tasks",
+  "languages": ["en", "fr", "es", "pt"],
+  "brand": {
+    "colors": ["#1B1F3B", "#4F7CFF", "#F5F7FA"],
+    "fonts": ["Inter", "Source Serif 4"],
+    "tone": "Warm, practical, confident",
+    "logo_url": "https://example.com/logo.svg"
+  },
+  "presenter": {
+    "avatar_id": "REPLACE_WITH_HEYGEN_STANDARD_AVATAR_ID",
+    "voice_id": "REPLACE_WITH_HEYGEN_VOICE_ID",
+    "style": "Friendly instructor, medium shot"
+  },
+  "budget_limit_usd": 20,
+  "mode": "auto",
+  "technical": false,
+  "export_vertical": false
+}
