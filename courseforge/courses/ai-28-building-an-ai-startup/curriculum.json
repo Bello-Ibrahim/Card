@@ -1,0 +1,280 @@
+{
+  "course_id": "AI-28",
+  "slug": "ai-28-building-an-ai-startup",
+  "course_title": "Building an AI Startup",
+  "level": "Intermediate",
+  "status": "AWAITING_APPROVAL",
+  "screen_demo_lessons": [],
+  "overview": "A three-week course for aspiring founders and early-stage entrepreneurs. No prior business or technical training is needed; every term is explained. Learners start from a real customer problem, test demand before building, and learn what makes an AI business defensible when many companies can use the same models. They build a lean MVP with no-code tools and Claude, work out the running costs of an AI product, compare business models, and review legal, ethical and data risks. Examples come from founders in many regions, including emerging markets. By the end, learners deliver a validated AI startup concept with an MVP demo and a 10-slide pitch deck.",
+  "time_plan": {
+    "video_minutes": 75,
+    "weekly_hours": 3,
+    "per_week": "About 25 minutes of video, 100 minutes of exercises and customer interviews, and 55 minutes of reading, quizzes and reflection. In week 3 most of the exercise time goes to the MVP demo and pitch deck."
+  },
+  "objectives": [
+    {
+      "id": "O1",
+      "bloom": "Remember",
+      "text": "Describe the main types of AI startups (applications, vertical AI, tools and infrastructure) and the key stages and terms of the startup journey."
+    },
+    {
+      "id": "O2",
+      "bloom": "Understand",
+      "text": "Explain what makes an AI business defensible, and why a product that only wraps a public model is easy to copy."
+    },
+    {
+      "id": "O3",
+      "bloom": "Apply",
+      "text": "Validate an AI business idea with customer interviews, a landing page and simple demand tests."
+    },
+    {
+      "id": "O4",
+      "bloom": "Apply",
+      "text": "Build a lean MVP with no-code tools and an AI assistant, including basic quality checks on the AI output."
+    },
+    {
+      "id": "O5",
+      "bloom": "Analyse",
+      "text": "Analyse the unit economics of an AI product, including model costs, and compare business models for it."
+    },
+    {
+      "id": "O6",
+      "bloom": "Evaluate",
+      "text": "Evaluate a startup concept's readiness, risks (legal, ethical and data) and fit with customers and investors."
+    },
+    {
+      "id": "O7",
+      "bloom": "Create",
+      "text": "Deliver a validated AI startup concept with an MVP demo and a 10-slide pitch deck."
+    }
+  ],
+  "modules": [
+    {
+      "module_id": "M1",
+      "week": 1,
+      "title": "From Idea to Validated Problem",
+      "lessons": [
+        {
+          "lesson_id": "L01",
+          "title": "The AI Startup Landscape",
+          "objectives": [
+            "O1"
+          ],
+          "summary": "Four layers of AI startups: applications, vertical AI for one industry, tools for builders, and infrastructure. Where a small team with little money can realistically compete. Hypothetical founders include Amara in Ghana building crop advice in local languages, Diego in Colombia serving small clinics and Mei in Malaysia helping logistics firms.",
+          "exercise": "List 5 AI startup ideas you find interesting and classify each by layer. Mark the ones a two-person team could start with little funding."
+        },
+        {
+          "lesson_id": "L02",
+          "title": "Finding a Problem Worth Solving",
+          "objectives": [
+            "O1",
+            "O3"
+          ],
+          "summary": "Start with the problem, not the technology. A good problem is painful, frequent and important enough that people will pay to solve it. Analogy: a doctor listens to the patient's symptoms before choosing a treatment.",
+          "exercise": "Write 3 problem statements for people you can reach, and score each on pain, frequency and willingness to pay."
+        },
+        {
+          "lesson_id": "L03",
+          "title": "Customer Discovery Interviews",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "How to ask about past behaviour instead of opinions about your idea, so people do not simply say what you want to hear. Good questions: When did this last happen? What did you do? What did it cost you? Worked example: interviewing shop owners in Turkey about stock management.",
+          "exercise": "Interview 3 to 5 potential customers. Remove names from your notes, then use Claude to find common patterns, and check each pattern against the notes."
+        },
+        {
+          "lesson_id": "L04",
+          "title": "Testing Demand Before You Build",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "Cheap tests: a landing page with a waitlist, a 'concierge' service delivered by hand, or a 'Wizard of Oz' test where a person does the AI's job behind the scenes. Decide the success threshold before you run the test. Worked example: a tutoring idea in Pakistan tested with a hand-delivered service before any code.",
+          "exercise": "Build a one-page landing page with a no-code builder or Canva, set a success threshold, and share it with at least 10 people in your target group."
+        },
+        {
+          "lesson_id": "L05",
+          "title": "Is It Defensible? Moats for AI Startups",
+          "objectives": [
+            "O2"
+          ],
+          "summary": "If your product is only a thin layer over a public model, others can copy it quickly and the model supplier may add the same feature. Stronger moats: proprietary data, deep integration into a customer's workflow, distribution, domain expertise and network effects. Analogy: anyone can buy the same oven, but a bakery with loyal customers and a secret recipe is hard to copy.",
+          "exercise": "Complete a moat scorecard for your idea and write one action that would make it harder to copy within a year."
+        }
+      ]
+    },
+    {
+      "module_id": "M2",
+      "week": 2,
+      "title": "Building the Lean MVP",
+      "lessons": [
+        {
+          "lesson_id": "L06",
+          "title": "Scoping the MVP",
+          "objectives": [
+            "O4"
+          ],
+          "summary": "An MVP tests your riskiest assumption with the smallest possible product. Choose one core job, decide what to build, what to do by hand and what to leave out. Worked example: a legal-document helper in Argentina that starts with one document type.",
+          "exercise": "Write a one-page MVP scope: the core job, the assumption you are testing, what is in, what is out, and the success measure."
+        },
+        {
+          "lesson_id": "L07",
+          "title": "Building with No-Code Tools",
+          "objectives": [
+            "O4"
+          ],
+          "summary": "No-code app and website builders can connect forms, databases and AI steps without programming. Instructions to the AI (prompts) become part of the product. Tool features and free-plan limits change often [VERSION].",
+          "exercise": "Build a working prototype of your core flow with a free no-code builder and Claude, so that a user can complete the main task from start to finish."
+        },
+        {
+          "lesson_id": "L08",
+          "title": "Making the AI Part Work: Prompts and Quality Checks",
+          "objectives": [
+            "O4",
+            "O6"
+          ],
+          "summary": "Clear instructions, good examples and a small test set make AI output more reliable. Plan what the product does when the AI is wrong or unsure. Analogy: a new chef follows the recipe card, and the head chef tastes the dish before it leaves the kitchen.",
+          "exercise": "Write 15 test cases for your MVP in a sheet, run them, score the results, and improve your instructions until most cases pass."
+        },
+        {
+          "lesson_id": "L09",
+          "title": "Unit Economics of an AI Product",
+          "objectives": [
+            "O5"
+          ],
+          "summary": "What one customer brings in and what it costs to serve them: model usage, hosting, tools and support. Gross margin in plain language, and why heavy AI usage can make a cheap plan lose money. All model and tool prices are placeholders to check at the time of use [VERSION].",
+          "exercise": "In a free spreadsheet, estimate the monthly cost and revenue per customer for your MVP, then ask Claude to check your formulas and assumptions."
+        },
+        {
+          "lesson_id": "L10",
+          "title": "Choosing a Business Model",
+          "objectives": [
+            "O2",
+            "O5"
+          ],
+          "summary": "Common models: subscription, pay per use, pay per result, freemium, and selling to businesses or to consumers. Local factors matter, such as mobile-money payments and price sensitivity in many emerging markets. Worked example: comparing a subscription and a pay-per-use model for a translation tool in Senegal.",
+          "exercise": "Compare two business models for your idea in a table: price, cost to serve, margin, and the risk of each."
+        }
+      ]
+    },
+    {
+      "module_id": "M3",
+      "week": 3,
+      "title": "Launch, Risk and Pitch",
+      "lessons": [
+        {
+          "lesson_id": "L11",
+          "title": "Legal, Ethical and Data Risks",
+          "objectives": [
+            "O6"
+          ],
+          "summary": "Key areas: data protection, consent, ownership of AI outputs, model supplier terms, and sector rules in areas such as health or finance. Laws differ by country and are named only as examples, marked [REGION] [VERIFY]. This lesson is not legal advice; founders should get local legal advice before launch.",
+          "exercise": "Complete a risk checklist for your startup and mark each item as low, medium or high risk, with one next step for each high risk."
+        },
+        {
+          "lesson_id": "L12",
+          "title": "Funding Options and What Investors Look For",
+          "objectives": [
+            "O1",
+            "O6"
+          ],
+          "summary": "Bootstrapping, grants, accelerators, angel investors and venture capital, and what each expects in return. What investors usually look for: a real problem, evidence of demand, a strong team and a path to a defensible business. Funding programmes differ by region and must be checked [REGION] [VERIFY].",
+          "exercise": "List 3 funding routes that could fit your startup in your region, with what each one requires and expects."
+        },
+        {
+          "lesson_id": "L13",
+          "title": "Finishing Your MVP Demo",
+          "objectives": [
+            "O4",
+            "O7"
+          ],
+          "summary": "The capstone brief and rubric. A short demo shows one user completing the core task, not every feature. Worked example: a two-minute demo structure from problem to result.",
+          "exercise": "Capstone step 1: record a 2-minute demo of your MVP and summarise your validation evidence on one page."
+        },
+        {
+          "lesson_id": "L14",
+          "title": "Building the 10-Slide Pitch Deck",
+          "objectives": [
+            "O7"
+          ],
+          "summary": "A clear 10-slide structure: problem, solution, demo, customer evidence, market, business model, moat, competition, team and the ask. One message per slide, with simple visuals. Canva features and templates may change [VERSION].",
+          "exercise": "Capstone step 2: build your 10-slide pitch deck in Canva using your validation evidence and unit economics."
+        },
+        {
+          "lesson_id": "L15",
+          "title": "Pitching to Customers and Investors",
+          "objectives": [
+            "O6",
+            "O7"
+          ],
+          "summary": "Customers care about their problem; investors care about the size and defensibility of the business. How to adapt the same story for each audience and answer hard questions honestly. Practising with Claude playing a sceptical investor.",
+          "exercise": "Capstone step 3: practise your pitch with Claude as a sceptical investor, improve the deck based on its questions, and submit the final concept, demo and deck."
+        }
+      ]
+    }
+  ],
+  "capstone": {
+    "title": "Validated AI Startup Concept, MVP Demo and Pitch Deck",
+    "brief": "Deliver a validated AI startup concept with an MVP demo and a 10-slide pitch deck.",
+    "built_in": [
+      "L13",
+      "L14",
+      "L15"
+    ],
+    "assesses": [
+      "O3",
+      "O4",
+      "O5",
+      "O6",
+      "O7"
+    ]
+  },
+  "coverage_check": {
+    "O1": [
+      "L01",
+      "L02",
+      "L12"
+    ],
+    "O2": [
+      "L05",
+      "L10"
+    ],
+    "O3": [
+      "L02",
+      "L03",
+      "L04"
+    ],
+    "O4": [
+      "L06",
+      "L07",
+      "L08",
+      "L13"
+    ],
+    "O5": [
+      "L09",
+      "L10"
+    ],
+    "O6": [
+      "L08",
+      "L11",
+      "L12",
+      "L15"
+    ],
+    "O7": [
+      "L13",
+      "L14",
+      "L15"
+    ]
+  },
+  "flags": [
+    "PROPOSED: screen demo for L07 (learners build a working prototype in a no-code builder; the steps are interface-heavy and hard to follow from slides). Needs approval.",
+    "PROPOSED: screen demo for L14 (building a pitch deck in Canva is best shown in the live tool). Needs approval.",
+    "[VERSION]: the brief says 'no-code builders' without naming one; a reviewer should choose one or two with a usable free tier before Stage 2 (L04, L07).",
+    "[VERSION]: Canva free-plan features and templates (L04, L14); Claude free-plan limits and data-use terms.",
+    "L09 [VERSION]: model API and tool prices are placeholders only; any real price in Stage 2 must be checked on the day of scripting.",
+    "L11 [REGION] [VERIFY]: any data protection laws or AI rules named as examples (for example GDPR and the EU AI Act); the lesson states it is not legal advice.",
+    "L12 [REGION] [VERIFY]: any named grant, accelerator or funding programme.",
+    "Judgement call: no statistics on startup success or failure rates or on funding volumes; any figure added later needs [VERIFY].",
+    "Judgement call: all founders and companies are hypothetical; prerequisite is 'none', so business terms (MVP, gross margin, moat) are explained from zero.",
+    "Judgement call: O3 and O4 are both Apply-level, because validation and MVP building are separate practical skills in the learning outcome."
+  ]
+}
