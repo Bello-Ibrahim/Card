@@ -119,8 +119,10 @@ STAGE 2: LESSON CONTENT (one batch per module)
 - Rules: B2-level international English. No untranslatable idioms. Mark
   anything specific to a version or region with [REGION] or [VERSION].
   Mark uncertain claims with [VERIFY].
-- Save /courses/{slug}/lessons/{lesson_id}/content.md and
-  /courses/{slug}/modules/{module_id}/quiz.json
+- Save /courses/{slug}/lessons/{lesson_id}/content.md,
+  /courses/{slug}/modules/{module_id}/quiz.json and
+  /courses/{slug}/capstone_rubric.md, in the formats defined in
+  courseforge/STAGE2_FORMAT.md. check_content.py must pass before Stage 3.
 
 STAGE 3: SCRIPT & SHOT LIST (one batch per module)
 - a) Presenter script, lesson_length_min × 140 words: Hook 0:00–0:20 → Explain → Demonstrate

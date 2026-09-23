@@ -12,6 +12,8 @@ cheap stack can't automate go to a human as ready-to-paste packs.
 | `examples/course_brief.example.json` | Example brief |
 | `briefs/certifai_catalog.json` | The CertifAI 30-course catalog |
 | `validate_briefs.py` | Validates a brief or catalog and estimates Claude spend |
+| `check_curriculum.py`, `stage1_review.py` | Stage 1 checks and the one-page review (`courses/STAGE1_REVIEW.md`) |
+| `STAGE2_FORMAT.md`, `check_content.py` | Stage 2 formats (lesson content, quizzes, capstone rubric) and their checker |
 | `courses/{slug}/` | Stage output (curriculum, state) for courses in progress |
 
 ## Changes from the original draft

@@ -1,10 +1,15 @@
 {
   "course_id": "AI-01",
   "stage": 2,
-  "stage_status": "READY",
-  "checkpoint": "Stage 1 curriculum approved 2026-09-23; next: Stage 2 lesson content",
+  "stage_status": "IN_PROGRESS",
+  "checkpoint": "Stage 2 lesson content: L01 written as reference; L02-L12, quizzes and capstone rubric in progress",
   "modules": {},
-  "lessons": {},
+  "lessons": {
+    "L01": {
+      "stage": 2,
+      "status": "CONTENT_DONE"
+    }
+  },
   "spend_usd": 0.0,
   "spend_note": "Stage 1 was written in an interactive Claude Code session, not through the Batch API, so no API spend was recorded.",
   "packs_sent": [],
