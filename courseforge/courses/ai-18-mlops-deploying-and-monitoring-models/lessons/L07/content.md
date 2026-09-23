@@ -62,7 +62,7 @@ Chidi Okafor maintains a hypothetical price-prediction API for a farm marketplac
 6. Add `"email": "a@b.c"`. The response is 422 with "Extra inputs are not permitted".
 7. Send a valid request, then open `predictions.jsonl` and show the new line.
 
-These messages are the real Pydantic 2.13 responses. A logged line looked like this (shortened):
+These messages are the real Pydantic 2.13 responses. A logged line looked like this (shortened, with `MODEL_VERSION` set to 1):
 
 ```json
 {"event": "prediction", "model_version": "1", "features": {"alcohol": 12.5, "volatile_acidity": 0.3, "sulphates": 0.8, "citric_acid": 0.4}, "probability": 0.9318, "latency_ms": 18.83}

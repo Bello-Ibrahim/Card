@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-26",
+  "module_id": "M2",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L05",
+      "objective": "O4",
+      "question": "An AI triage tool receives a message that does not clearly fit any category. What is the best design choice?",
+      "options": [
+        "Label it \"Needs review\" so that a person sorts it.",
+        "Put it in the category with the most tickets, because that is usually right.",
+        "Delete it, because unclear messages are usually spam.",
+        "Label it \"low urgency\" so that it does not block other tickets."
+      ],
+      "answer_index": 0,
+      "explanation": "A \"Needs review\" option lets a person sort unclear tickets instead of accepting a confident wrong label. The most tempting wrong option is choosing the biggest category. It may often be right, but when it is wrong, an urgent case such as fraud can wait in the wrong queue."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L06",
+      "objective": "O4",
+      "question": "In a refund workflow, which step is the best candidate for \"automate\"?",
+      "options": [
+        "Deciding whether to approve a refund above the company's limit.",
+        "Replying to a customer who disputes a refused refund.",
+        "Checking whether the order date is inside the return period.",
+        "Handling a customer who says the product caught fire."
+      ],
+      "answer_index": 2,
+      "explanation": "Checking a date against a fixed rule is low risk, low emotion and low complexity, so it can be automated. The most tempting wrong option is the refund above the limit, because it also follows a rule. But it involves money and possible exceptions, so the risk is high and a person should decide."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L07",
+      "objective": "O4",
+      "question": "A customer types \"talk to a person\" in the chat. The chatbot believes it can answer the question. What should happen?",
+      "options": [
+        "The chatbot should try to answer first and offer a person only if the answer fails twice.",
+        "The chatbot should ask the customer to explain why they want a person.",
+        "The chatbot should end the chat and show the email address of the support team.",
+        "The chatbot should hand off to a person, pass a short summary, and tell the customer what happens next."
+      ],
+      "answer_index": 3,
+      "explanation": "A request for a person is always a hand-off trigger, and the summary means the customer does not repeat the story. The most tempting wrong option is trying to answer first. It may seem efficient, but it ignores the customer's clear request and often makes them more frustrated."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L07",
+      "objective": "O5",
+      "question": "Why is a very low hand-off rate not automatically a sign of a good support chatbot?",
+      "options": [
+        "Because hand-offs are always cheaper than chatbot answers.",
+        "Because customers may be giving up or finding it hard to reach a person, not getting their problem solved.",
+        "Because a good chatbot should hand off every conversation.",
+        "Because hand-off rates cannot be measured in chatbot tools."
+      ],
+      "answer_index": 1,
+      "explanation": "A low hand-off rate can hide customers who could not reach a person and left without help. The most tempting wrong option is that a good chatbot should hand off every conversation. That would remove the benefit of the chatbot; the aim is to hand off the right conversations, not all of them."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L08",
+      "objective": "O3",
+      "question": "In an automation where a new form message is labelled by AI and added to a spreadsheet, what are the three parts?",
+      "options": [
+        "Trigger: a new row in the spreadsheet. AI step: the label. Action: a new form message.",
+        "Trigger: the AI model. AI step: the spreadsheet. Action: the customer's reply.",
+        "Trigger: a new form response. AI step: choose one label. Action: create a spreadsheet row.",
+        "Trigger: the support manager. AI step: the form. Action: an email to the customer."
+      ],
+      "answer_index": 2,
+      "explanation": "The form response starts the automation, the AI adds a label, and the action logs the result in the sheet. The most tempting wrong option reverses the order, starting with the spreadsheet row. The row is the result of the automation, not the event that starts it."
+    }
+  ]
+}
