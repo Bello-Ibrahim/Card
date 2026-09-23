@@ -21,7 +21,7 @@ Task design is often more useful than detection. Tasks are harder to hand to AI 
 - include a short conversation or presentation about the work;
 - ask for personal reflection on a real experience.
 
-**3. Fairness.** Not all learners have the same access to devices, internet or paid AI tools. If a task needs AI, make sure every learner can do it in class or with a free option. AI outputs can also contain bias, which L08 covers in detail.
+**3. Fairness.** Learners do not all have the same access to devices, internet or paid AI tools. If a task needs AI, make sure every learner can do it in class or with a free option. AI outputs can also contain bias (L08).
 
 **Analogy:** A public AI tool is like a busy shared office photocopier. It is useful, but you would not leave confidential learner files on it. You remove private pages first, or use a secure machine your institution provides.
 
@@ -30,7 +30,7 @@ Ali is a lecturer in business studies at a university in Lahore, Pakistan. He wa
 
 His first idea is to paste all 45 answers, with names and ID numbers, into a free chatbot. He changes his plan. He reads the answers himself and writes short notes, such as "good use of the case, no clear recommendation". Then he asks the AI: "Turn these notes into two polite, specific feedback sentences each, for university students." No names or answers leave his computer, and the grade is his decision.
 
-Later, a colleague shows Ali a detector report saying one essay is "90% AI". Ali does not treat this as proof. He asks the learner to talk through how they wrote the essay and to show their notes. The learner explains the argument clearly and shows early drafts, so Ali closes the matter.
+Later, a detector report says one essay is "90% AI". Ali does not treat this as proof. He asks the learner to explain how they wrote it and to show their notes. The learner explains the argument clearly and shows early drafts, so Ali closes the matter.
 
 ## Common Mistake
 Many educators think that removing the learner's name is enough. Other details can still identify a person: an ID number, a rare medical condition, a small class, or a personal story. Remove anything that could point to one individual. The second common mistake is to trust a detection score as proof. Treat it at most as one signal that starts a fair conversation.

@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-05",
+  "module_id": "M2",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L06",
+      "objective": "O3",
+      "question": "Five hypothetical monthly incomes are 4, 5, 5, 6 and 30. What are the mean and the median?",
+      "options": [
+        "Mean 5, median 10",
+        "Mean 10, median 10",
+        "Mean 10, median 5",
+        "Mean 5, median 5"
+      ],
+      "answer_index": 2,
+      "explanation": "The total is 50, and 50 ÷ 5 = 10, so the mean is 10. The middle sorted value is 5, so the median is 5. The most tempting wrong option swaps them. The outlier 30 pulls the mean up, but it does not change the middle position, so the median stays at 5."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L07",
+      "objective": "O3",
+      "question": "In a hypothetical sample of 1,000 emails, 80 contain the word 'prize'. Of those 80, 60 are spam. There are 200 spam emails in total. What is P(spam | prize)?",
+      "options": [
+        "0.75",
+        "0.3",
+        "0.06",
+        "0.2"
+      ],
+      "answer_index": 0,
+      "explanation": "Look only inside the group of 80 'prize' emails: 60 ÷ 80 = 0.75. The most tempting wrong option is 0.3, which is 60 ÷ 200. That is P(prize | spam), because it looks inside the spam group instead of the 'prize' group."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L08",
+      "objective": "O5",
+      "question": "In a hypothetical group of 10,000 people, 100 have a condition. A test is positive for 90 of them and for 495 of the 9,900 people without the condition. Approximately what fraction of positive results belong to people who have the condition?",
+      "options": [
+        "90%",
+        "95%",
+        "1%",
+        "15%"
+      ],
+      "answer_index": 3,
+      "explanation": "There are 90 + 495 = 585 positive results, and 90 ÷ 585 ≈ 0.15, about 15%. The most tempting wrong option is 90%. That is P(positive | condition), the detection rate. Because the condition is rare, false alarms outnumber true positives."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L09",
+      "objective": "O3",
+      "question": "A hypothetical model is correct 80% of the time. You simulate many tests of 20 examples each with rng.binomial(n=20, p=0.8, size=1000). What should you expect?",
+      "options": [
+        "Every test gives exactly 16 correct answers.",
+        "The results vary from test to test, with an average close to 16.",
+        "The results follow a bell shape centred on 80.",
+        "The average is close to 0.8, because p = 0.8."
+      ],
+      "answer_index": 1,
+      "explanation": "The binomial average is n × p = 20 × 0.8 = 16, but each simulated test varies around it. The most tempting wrong option is 'exactly 16 every time'. Random variation means individual tests can give 14, 18 or other values even when the model's success rate stays the same."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L10",
+      "objective": "O6",
+      "question": "A new model scores 87% and the old one 85% on the same test set of 100 examples. Simulation shows the measured accuracy varies by about 3.5 points by chance at this size. What is the best conclusion?",
+      "options": [
+        "The new model is clearly better, because 87 is larger than 85.",
+        "The old model is better, because the difference is small.",
+        "The 2-point difference is within normal variation, so a larger test set is needed before deciding.",
+        "Accuracy cannot be measured on 100 examples, so the test is useless."
+      ],
+      "answer_index": 2,
+      "explanation": "A difference is only convincing when it is clearly larger than the random variation, and 2 points is smaller than 3.5. The most tempting wrong option is that the new model is clearly better. A higher number on a small sample can easily appear by chance."
+    }
+  ]
+}

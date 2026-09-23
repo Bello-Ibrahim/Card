@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-05",
+  "module_id": "M1",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L01",
+      "objective": "O1",
+      "question": "In this course, which area of maths is mainly responsible for how a model learns, by showing which way to change its numbers so that errors become smaller?",
+      "options": [
+        "Linear algebra (vectors and matrices)",
+        "Calculus (derivatives and gradients)",
+        "Probability and statistics",
+        "Metrics such as accuracy"
+      ],
+      "answer_index": 1,
+      "explanation": "Derivatives and gradients tell the model in which direction to change its weights so that the loss falls. The most tempting wrong option is linear algebra. Vectors and matrices store the data and make the predictions, but they do not say how to improve the weights."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L02",
+      "objective": "O2",
+      "question": "What is [3, 1] + [1, 2], and what is the length of the vector [3, 4]?",
+      "options": [
+        "[3, 2] and 7",
+        "[4, 3] and 7",
+        "[3, 2] and 5",
+        "[4, 3] and 5"
+      ],
+      "answer_index": 3,
+      "explanation": "Vectors are added component by component: 3 + 1 = 4 and 1 + 2 = 3. The length is the square root of 3² + 4² = 25, which is 5. The most tempting wrong option is [4, 3] and 7. Adding the components (3 + 4) does not give the length; you must square them, add, and take the square root."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L03",
+      "objective": "O2",
+      "question": "A hypothetical model predicts delivery time as 2 minutes per kilometre plus 5 minutes per stop. A trip is 8 km with 3 stops. Which NumPy expression gives the predicted time as one number?",
+      "options": [
+        "np.dot([2, 5], [8, 3]), which gives 31",
+        "np.array([2, 5]) * np.array([8, 3]), which gives 31",
+        "np.array([2, 5]) + np.array([8, 3]), which gives [10, 8]",
+        "np.dot([2, 8], [5, 3]), which gives 25"
+      ],
+      "answer_index": 0,
+      "explanation": "The dot product multiplies matching components (2 × 8 and 5 × 3) and adds them: 16 + 15 = 31. The most tempting wrong option uses *, but * only multiplies matching components and returns the vector [16, 15]; it does not add them into one number."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L04",
+      "objective": "O2",
+      "question": "X is a NumPy data matrix with 4 rows (days) and 3 columns (temperature, rain, bikes rented). Which statement is correct?",
+      "options": [
+        "X.shape is (3, 4) and X[:, 2] is the rain column.",
+        "X.shape is (4, 3) and X[1, 2] is the rain value on the first day.",
+        "X.shape is (4, 3) and X[:, 2] is the bikes rented column.",
+        "X.T.shape is (4, 3) and X[1] is the first day."
+      ],
+      "answer_index": 2,
+      "explanation": "Shape is rows × columns, so (4, 3), and NumPy counts from 0, so column 2 is the third column, bikes rented. The most tempting wrong option says X[1, 2] is on the first day. Row 1 is the second row, because the first row is row 0."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L05",
+      "objective": "O2",
+      "question": "X has shape (3, 2) and w has 2 numbers. What does X @ w produce?",
+      "options": [
+        "A shape error, because 3 and 2 are different.",
+        "3 predictions, one dot product for each row of X.",
+        "2 predictions, one for each column of X.",
+        "One single number, the sum of all values in X times w."
+      ],
+      "answer_index": 1,
+      "explanation": "The inner sizes (2 and 2) match, and the outer size 3 gives one result per row, so there are 3 predictions. The most tempting wrong option is the shape error. The rule compares the inner sizes, the columns of X and the length of w, not the rows of X."
+    }
+  ]
+}
