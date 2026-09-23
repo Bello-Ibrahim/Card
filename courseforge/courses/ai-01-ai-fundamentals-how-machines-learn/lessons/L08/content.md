@@ -6,9 +6,7 @@ Course: AI-01 · Module: M2 · Objectives: O6 · Video: 5 min
 A company tells you its new AI tool is "99% accurate". That sounds excellent. But accurate on what? And compared with what? By the end of this lesson, you will know the two questions to ask before you trust a number like that.
 
 ## Explanation
-In L04 you learned that a model is first trained and then used. Between those stages comes **testing**.
-
-To test a model fairly, we keep some examples aside before training. The model never sees them while it learns. This group is the **test set**; the examples used for learning are the **training set**. After training, we compare the model's predictions for the test examples with the real labels. We do not test on training examples, because the model has already seen them, and a good score on familiar examples says little about new cases.
+In L04 you learned that a model is first trained and then used. Between those stages comes **testing**. To test a model fairly, we keep some examples aside before training. The model never sees them while it learns. This group is the **test set**; the examples used for learning are the **training set**. After training, we compare the model's predictions for the test examples with the real labels. We do not test on training examples, because the model has already seen them, and a good score on familiar examples says little about new cases.
 
 **Accuracy** is the simplest result of a test. It is the share of test examples the model got right. If a model labels 90 out of 100 test photos correctly, its accuracy is 90%.
 
