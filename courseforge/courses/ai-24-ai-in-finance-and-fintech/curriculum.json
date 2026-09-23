@@ -3,8 +3,11 @@
   "slug": "ai-24-ai-in-finance-and-fintech",
   "course_title": "AI in Finance and Fintech",
   "level": "Intermediate",
-  "status": "AWAITING_APPROVAL",
-  "screen_demo_lessons": [],
+  "status": "APPROVED",
+  "approved_on": "2026-09-23",
+  "screen_demo_lessons": [
+    "L07"
+  ],
   "overview": "A three-week course for finance professionals, fintech teams and banking staff who already understand basic finance. Learners see where AI fits across a financial institution, from payments and lending to customer service and reporting, and learn how fraud and credit models turn data into risk scores. Fairness in credit decisions is a core theme: learners measure approval and error rates across customer groups and practise writing clear decline reasons. The course teaches regulatory principles that apply in most countries, not the rules of one country, and never gives investment advice. All data is synthetic. By the end, learners write an AI use case proposal for a financial institution with a full risk and compliance assessment.",
   "time_plan": {
     "video_minutes": 70,
@@ -244,7 +247,7 @@
     ]
   },
   "flags": [
-    "PROPOSED: screen demo for L07 (learners run a ready-made Google Colab notebook; most learners have a finance, not coding, background, so a live walkthrough reduces setup errors). Needs approval.",
+    "RESOLVED 2026-09-23: approved. PROPOSED: screen demo for L07 (learners run a ready-made Google Colab notebook; most learners have a finance, not coding, background, so a live walkthrough reduces setup errors). Needs approval.",
     "L11 [REGION] [VERIFY]: EU AI Act treatment of creditworthiness assessment as high-risk, and its application dates.",
     "L11 [REGION] [VERIFY]: US adverse action notice requirements (Equal Credit Opportunity Act / Regulation B).",
     "L11 [REGION] [VERIFY]: names and scope of the example data protection laws (GDPR in the EU, LGPD in Brazil, NDPA in Nigeria, POPIA in South Africa).",

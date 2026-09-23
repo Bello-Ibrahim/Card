@@ -3,8 +3,13 @@
   "slug": "ai-08-ai-powered-data-analysis-no-code",
   "course_title": "AI-Powered Data Analysis (No Code)",
   "level": "Beginner",
-  "status": "AWAITING_APPROVAL",
-  "screen_demo_lessons": [],
+  "status": "APPROVED",
+  "approved_on": "2026-09-23",
+  "screen_demo_lessons": [
+    "L05",
+    "L07",
+    "L10"
+  ],
   "overview": "A three-week course for analysts, small business owners and professionals who already use spreadsheets. Learners use Google Sheets, AI assistants with file analysis (Claude or ChatGPT) and Looker Studio to clean messy data, ask clear questions, find patterns, build charts and dashboards, and explain what the numbers mean. There is no coding. A strong theme runs through the course: AI can calculate wrongly or draw misleading conclusions, so every insight is checked against the source data. Learners also practise safe data handling before uploading any file. In the final week they analyse a real business dataset and present a five-slide insight report with charts.",
   "time_plan": {
     "video_minutes": 70,
@@ -255,9 +260,9 @@
     ]
   },
   "flags": [
-    "PROPOSED: screen demo for L05 (writing and testing AI-suggested formulas in Google Sheets needs to be shown cell by cell). Needs approval.",
-    "PROPOSED: screen demo for L07 (building a pivot table in Google Sheets and comparing it with an AI file-analysis answer). Needs approval.",
-    "PROPOSED: screen demo for L10 (connecting a Google Sheet to Looker Studio and building a dashboard is hard to follow without seeing the interface). Needs approval.",
+    "RESOLVED 2026-09-23: approved. PROPOSED: screen demo for L05 (writing and testing AI-suggested formulas in Google Sheets needs to be shown cell by cell). Needs approval.",
+    "RESOLVED 2026-09-23: approved. PROPOSED: screen demo for L07 (building a pivot table in Google Sheets and comparing it with an AI file-analysis answer). Needs approval.",
+    "RESOLVED 2026-09-23: approved. PROPOSED: screen demo for L10 (connecting a Google Sheet to Looker Studio and building a dashboard is hard to follow without seeing the interface). Needs approval.",
     "L01 [VERSION]: file-analysis features, supported file types, size limits and plan availability in Claude and ChatGPT must be checked against the live tools before scripting.",
     "L02 [REGION]: data protection rules differ by country and employer; the lesson gives general safe-use principles and points learners to their organisation's rules.",
     "L05 [VERSION] [REGION]: formula names (for example XLOOKUP) and argument separators can differ between tools and locale settings (comma or semicolon); check for the fr, pt and ar versions.",

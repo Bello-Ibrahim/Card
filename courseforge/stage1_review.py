@@ -12,6 +12,8 @@ PROPOSED = re.compile(r"PROPOSED:? screen demos? for ((?:L\d{2}[, ]*(?:and )?)+)
 def proposed_demos(flags):
     found = []
     for f in flags:
+        if f.startswith("RESOLVED"):
+            continue
         if m := PROPOSED.search(f):
             found += re.findall(r"L\d{2}", m.group(1))
     return sorted(set(found))

@@ -3,8 +3,12 @@
   "slug": "ai-09-ai-for-educators-and-trainers",
   "course_title": "AI for Educators and Trainers",
   "level": "Beginner",
-  "status": "AWAITING_APPROVAL",
-  "screen_demo_lessons": [],
+  "status": "APPROVED",
+  "approved_on": "2026-09-23",
+  "screen_demo_lessons": [
+    "L07",
+    "L09"
+  ],
   "overview": "A three-week, practical course for teachers, lecturers, corporate trainers and learning and development teams who already know how to teach. Learners use free AI tools (Claude or ChatGPT, Canva and Google Forms) to plan lessons, create differentiated and accessible materials, and build quizzes and rubrics, while keeping professional judgement at the centre. The course gives equal weight to responsibility: protecting learner data, checking AI materials for errors and bias, and writing a fair, clear policy on how learners may use AI. In the final week, learners build a complete AI-assisted unit of study with lesson plans, materials and an assessment rubric.",
   "time_plan": {
     "video_minutes": 60,
@@ -235,8 +239,8 @@
     ]
   },
   "flags": [
-    "PROPOSED: screen demo for L07 (Canva accessibility features and alternative text are easier to learn by seeing them). Needs approval.",
-    "PROPOSED: screen demo for L09 (building a self-marking quiz in Google Forms is a step-by-step tool task). Needs approval.",
+    "RESOLVED 2026-09-23: approved. PROPOSED: screen demo for L07 (Canva accessibility features and alternative text are easier to learn by seeing them). Needs approval.",
+    "RESOLVED 2026-09-23: approved. PROPOSED: screen demo for L09 (building a self-marking quiz in Google Forms is a step-by-step tool task). Needs approval.",
     "L03 [VERIFY]: the claim that AI detection tools are unreliable and should not be the only evidence of misconduct must be checked against current sources before scripting.",
     "L03 [REGION]: learner-data protection and rules on AI use by minors differ by country and institution; the lesson points to local and institutional rules instead of stating laws.",
     "L03 [VERSION]: age requirements and education terms of Claude and ChatGPT must be checked before any exercise suggests learners use them directly.",

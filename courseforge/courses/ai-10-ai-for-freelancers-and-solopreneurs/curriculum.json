@@ -3,8 +3,12 @@
   "slug": "ai-10-ai-for-freelancers-and-solopreneurs",
   "course_title": "AI for Freelancers and Solopreneurs",
   "level": "Beginner",
-  "status": "AWAITING_APPROVAL",
-  "screen_demo_lessons": [],
+  "status": "APPROVED",
+  "approved_on": "2026-09-23",
+  "screen_demo_lessons": [
+    "L02",
+    "L10"
+  ],
   "overview": "A three-week, practical course for freelancers, consultants and one-person businesses who already offer, or plan to offer, a service. Learners use Claude or ChatGPT, Canva and the free tier of Zapier or n8n to sharpen their offer, find and contact potential clients, write proposals, deliver work faster and automate repeated admin. The course is honest about limits: AI output must be checked before a client sees it, client data must stay confidential, and AI drafts of contracts or tax documents are not professional advice. In the final week, learners build an AI-assisted client workflow, from proposal to invoice, for their own service.",
   "time_plan": {
     "video_minutes": 60,
@@ -234,8 +238,8 @@
     ]
   },
   "flags": [
-    "PROPOSED: screen demo for L10 (building a trigger-and-action automation in Zapier or n8n is hard to follow without seeing the interface). Needs approval.",
-    "PROPOSED: screen demo for L02 (designing a one-page service sheet in Canva). Needs approval; lower priority than L10.",
+    "RESOLVED 2026-09-23: approved. PROPOSED: screen demo for L10 (building a trigger-and-action automation in Zapier or n8n is hard to follow without seeing the interface). Needs approval.",
+    "RESOLVED 2026-09-23: approved. PROPOSED: screen demo for L02 (designing a one-page service sheet in Canva). Needs approval; lower priority than L10.",
     "L03 [REGION]: rules on unsolicited marketing messages and use of contact data differ by country; the lesson gives principles and points learners to local rules.",
     "L07 [VERSION]: data-use and training settings for Claude and ChatGPT plans must be checked against current terms before scripting.",
     "L08 [REGION]: contract, tax and invoicing rules differ by country; the lesson states clearly that AI drafts are not legal or tax advice.",

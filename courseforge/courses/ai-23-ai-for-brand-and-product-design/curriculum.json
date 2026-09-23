@@ -3,8 +3,13 @@
   "slug": "ai-23-ai-for-brand-and-product-design",
   "course_title": "AI for Brand and Product Design",
   "level": "Intermediate",
-  "status": "AWAITING_APPROVAL",
-  "screen_demo_lessons": [],
+  "status": "APPROVED",
+  "approved_on": "2026-09-23",
+  "screen_demo_lessons": [
+    "L07",
+    "L11",
+    "L12"
+  ],
   "overview": "A three-week, intermediate course for brand, UI/UX and product designers who want to use AI across their workflow without losing craft or control. It assumes design fundamentals and working familiarity with Figma, so those are not retaught. Learners use Claude to synthesise research and sharpen a design brief, explore names, moodboards, logo directions and colour and type with Claude and free image generators, and generate and refine UI drafts and prototypes in Figma. They learn to critique AI output for originality, accessibility and usability, and to judge trademark, copyright and tool-licence risk before an asset reaches a client or product. By the end, learners design a brand identity and a key app screen flow with an AI-assisted process, documented as a case study.",
   "time_plan": {
     "video_minutes": 70,
@@ -266,9 +271,9 @@
     ]
   },
   "flags": [
-    "PROPOSED: screen demo for L07 (prompting and comparing directions in a free image generator is easiest to show live). Needs approval.",
-    "PROPOSED: screen demo for L11 (Figma AI features and plugins for drafting UI change often and must be shown on screen). Needs approval.",
-    "PROPOSED: screen demo for L12 (connecting screens, states and microcopy into a prototype is a hands-on Figma workflow). Needs approval.",
+    "RESOLVED 2026-09-23: approved. PROPOSED: screen demo for L07 (prompting and comparing directions in a free image generator is easiest to show live). Needs approval.",
+    "RESOLVED 2026-09-23: approved. PROPOSED: screen demo for L11 (Figma AI features and plugins for drafting UI change often and must be shown on screen). Needs approval.",
+    "RESOLVED 2026-09-23: approved. PROPOSED: screen demo for L12 (connecting screens, states and microcopy into a prototype is a hands-on Figma workflow). Needs approval.",
     "L05, L07, L11, L12 [VERSION]: Figma AI features and plugins, Claude plans and data settings, and free image generators' limits must be checked against the live tools before scripting.",
     "L05 [VERIFY] [REGION]: data-protection rules and each tool's data-use and training settings differ by country and plan; the lesson teaches principles only.",
     "L06 [VERIFY] [REGION]: trademark and name-clearance processes differ by country; the lesson states that AI cannot clear a name and gives no legal conclusion.",

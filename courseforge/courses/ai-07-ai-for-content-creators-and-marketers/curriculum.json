@@ -3,8 +3,12 @@
   "slug": "ai-07-ai-for-content-creators-and-marketers",
   "course_title": "AI for Content Creators and Marketers",
   "level": "Beginner",
-  "status": "AWAITING_APPROVAL",
-  "screen_demo_lessons": [],
+  "status": "APPROVED",
+  "approved_on": "2026-09-23",
+  "screen_demo_lessons": [
+    "L08",
+    "L09"
+  ],
   "overview": "A three-week, practical course for marketers, social media managers and content creators who already know the basics of marketing. Learners use free AI tools to research audiences, generate ideas, write posts and newsletters, design visuals in Canva and free image generators, and edit short videos in CapCut. The course keeps two rules at the centre: the brand keeps a human voice, and every claim is checked before it is published. Learners also cover copyright, disclosure and inclusive content. In the final week they plan and produce a complete 30-day, multi-channel campaign for a real or sample brand.",
   "time_plan": {
     "video_minutes": 75,
@@ -269,8 +273,8 @@
     ]
   },
   "flags": [
-    "PROPOSED: screen demo for L08 (Canva's AI features and branded design steps are much easier to follow on screen). Needs approval.",
-    "PROPOSED: screen demo for L09 (CapCut editing and auto-captions are a visual, step-by-step process). Needs approval.",
+    "RESOLVED 2026-09-23: approved. PROPOSED: screen demo for L08 (Canva's AI features and branded design steps are much easier to follow on screen). Needs approval.",
+    "RESOLVED 2026-09-23: approved. PROPOSED: screen demo for L09 (CapCut editing and auto-captions are a visual, step-by-step process). Needs approval.",
     "L05 [REGION] [VERIFY]: copyright ownership of AI-generated content and AI-disclosure rules differ by country and platform and are still changing; the script must describe principles, not state legal rules, unless a reviewer confirms them.",
     "L05 [VERSION]: commercial-use terms for Claude, ChatGPT, Canva, CapCut and free image generators must be checked against current terms before scripting.",
     "L08 [VERSION]: Canva AI feature names, free image generator limits and licence terms must be checked against the live tools before scripting.",

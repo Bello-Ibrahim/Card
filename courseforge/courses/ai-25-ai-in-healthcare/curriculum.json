@@ -3,8 +3,11 @@
   "slug": "ai-25-ai-in-healthcare",
   "course_title": "AI in Healthcare",
   "level": "Intermediate",
-  "status": "AWAITING_APPROVAL",
-  "screen_demo_lessons": [],
+  "status": "APPROVED",
+  "approved_on": "2026-09-23",
+  "screen_demo_lessons": [
+    "L06"
+  ],
   "overview": "A three-week course for health workers, health-tech teams and public health researchers who already have a healthcare or health-tech background. Learners explore AI for diagnostic support, hospital operations and patient engagement, always as decision support under clinician oversight and never as a replacement for clinical judgement. They learn to read performance claims, judge the strength of evidence, and find bias, dataset shift and safety risks across patient groups and care settings. The course teaches ethical and regulatory principles, not the rules of one country, and uses only public or synthetic data. It gives no clinical advice. By the end, learners write an evaluation of an AI health tool covering clinical value, risks and a safe implementation plan.",
   "time_plan": {
     "video_minutes": 70,
@@ -249,7 +252,7 @@
     ]
   },
   "flags": [
-    "PROPOSED: screen demo for L06 (learners run a ready-made Google Colab notebook on synthetic appointment data; many learners have a clinical, not coding, background). Needs approval.",
+    "RESOLVED 2026-09-23: approved. PROPOSED: screen demo for L06 (learners run a ready-made Google Colab notebook on synthetic appointment data; many learners have a clinical, not coding, background). Needs approval.",
     "Clinical review needed: a reviewer with clinical experience should check L03, L04, L07, L08 and L10 before Stage 2, to confirm there is no clinical advice and that AI is framed as decision support under clinician oversight.",
     "L02 [VERIFY] [VERSION]: which public health datasets Stage 2 names (for example the WHO Global Health Observatory), and their access and licence terms.",
     "L04 [VERIFY]: any real diagnostic performance figure for a named tool; the lesson is designed to use synthetic numbers only.",

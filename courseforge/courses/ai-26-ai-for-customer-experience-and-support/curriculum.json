@@ -3,8 +3,13 @@
   "slug": "ai-26-ai-for-customer-experience-and-support",
   "course_title": "AI for Customer Experience and Support",
   "level": "Beginner",
-  "status": "AWAITING_APPROVAL",
-  "screen_demo_lessons": [],
+  "status": "APPROVED",
+  "approved_on": "2026-09-23",
+  "screen_demo_lessons": [
+    "L08",
+    "L09",
+    "L10"
+  ],
   "overview": "A three-week course for customer support, CX and operations teams who already work with customers. Learners see where AI helps in support, how AI assistants answer questions from a knowledge base, and why they sometimes give wrong answers. They design workflows that decide what AI should automate, what it should assist with, and what must stay with a person, with a clear hand-off to a human. No coding is needed: exercises use a free AI assistant, a free automation tool and a free chatbot builder. By the end, learners build a working support assistant prototype with a hand-off-to-human flow and a plan to measure it.",
   "time_plan": {
     "video_minutes": 60,
@@ -228,9 +233,9 @@
     ]
   },
   "flags": [
-    "PROPOSED: screen demo for L08 (learners build their first automation in n8n or Zapier; a beginner audience needs to see each step in the live tool). Needs approval.",
-    "PROPOSED: screen demo for L09 (setting up an assistant in a chatbot builder is a step-by-step interface task). Needs approval.",
-    "PROPOSED: screen demo for L10 (connecting the hand-off to an email or ticket channel is hard to follow without a live walkthrough). Needs approval.",
+    "RESOLVED 2026-09-23: approved. PROPOSED: screen demo for L08 (learners build their first automation in n8n or Zapier; a beginner audience needs to see each step in the live tool). Needs approval.",
+    "RESOLVED 2026-09-23: approved. PROPOSED: screen demo for L09 (setting up an assistant in a chatbot builder is a step-by-step interface task). Needs approval.",
+    "RESOLVED 2026-09-23: approved. PROPOSED: screen demo for L10 (connecting the hand-off to an email or ticket channel is hard to follow without a live walkthrough). Needs approval.",
     "[VERSION]: n8n and Zapier free-tier limits, AI steps and interfaces (L08, L10).",
     "[VERSION]: the brief says 'free chatbot builders' without naming one; a reviewer should choose one or two builders with a usable free tier before Stage 2 (L09, L10).",
     "[VERSION]: free-plan access and data-use terms of Claude and ChatGPT.",

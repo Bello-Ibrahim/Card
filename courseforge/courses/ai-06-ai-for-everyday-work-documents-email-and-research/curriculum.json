@@ -3,8 +3,12 @@
   "slug": "ai-06-ai-for-everyday-work-documents-email-and-research",
   "course_title": "AI for Everyday Work: Documents, Email and Research",
   "level": "Beginner",
-  "status": "AWAITING_APPROVAL",
-  "screen_demo_lessons": [],
+  "status": "APPROVED",
+  "approved_on": "2026-09-23",
+  "screen_demo_lessons": [
+    "L02",
+    "L07"
+  ],
   "overview": "A three-week, hands-on course for office workers, administrators and other knowledge workers in any industry. Learners use free AI assistants to draft emails and documents, summarise long texts and meetings, research topics and organise their week. Safe use runs through every lesson: what data never to paste into a chatbot, how to check AI output, and when a task needs human judgement. No technical background is needed beyond basic computer skills. In the final week, learners redesign three of their own weekly tasks with AI and measure the time they actually save.",
   "time_plan": {
     "video_minutes": 60,
@@ -235,8 +239,8 @@
     ]
   },
   "flags": [
-    "PROPOSED: screen demo for L02 (showing a vague prompt and an improved prompt side by side in a free AI assistant makes the difference clear). Needs approval.",
-    "PROPOSED: screen demo for L07 (summarising a document inside Microsoft Copilot or Gemini in Workspace compared with a chatbot is hard to explain without showing the interface). Needs approval.",
+    "RESOLVED 2026-09-23: approved. PROPOSED: screen demo for L02 (showing a vague prompt and an improved prompt side by side in a free AI assistant makes the difference clear). Needs approval.",
+    "RESOLVED 2026-09-23: approved. PROPOSED: screen demo for L07 (summarising a document inside Microsoft Copilot or Gemini in Workspace compared with a chatbot is hard to explain without showing the interface). Needs approval.",
     "L03 [REGION]: data protection laws and workplace AI rules differ by country and organisation; the lesson points learners to their own employer policy rather than stating legal requirements.",
     "L03 [VERSION]: data-use and model-training settings for free and paid plans of Claude, ChatGPT, Copilot and Gemini must be checked against current terms before scripting.",
     "L07 [VERSION]: built-in summary features, file upload limits and plan availability in Microsoft Copilot and Gemini in Workspace must be checked against the live tools before scripting.",

@@ -3,8 +3,11 @@
   "slug": "ai-27-ai-product-management",
   "course_title": "AI Product Management",
   "level": "Intermediate",
-  "status": "AWAITING_APPROVAL",
-  "screen_demo_lessons": [],
+  "status": "APPROVED",
+  "approved_on": "2026-09-23",
+  "screen_demo_lessons": [
+    "L09"
+  ],
   "overview": "A three-week course for product managers, founders and aspiring PMs who already know the basics of product or project management. Learners find out what changes when a product feature depends on AI: outputs are probabilistic, quality depends on data, and evaluation never stops. They learn to find and score AI opportunities, work out data needs and build-or-buy options, design evaluation metrics and test sets, and plan a responsible launch with guardrails and monitoring. Core product skills such as writing user stories or prioritising a backlog are not retaught. By the end, learners write a complete PRD and evaluation plan for an AI product feature.",
   "time_plan": {
     "video_minutes": 75,
@@ -258,7 +261,7 @@
     ]
   },
   "flags": [
-    "PROPOSED: screen demo for L09 (learners run a 20-case test set through Claude and score it in Google Sheets; seeing the workflow live makes the evaluation process concrete). Needs approval.",
+    "RESOLVED 2026-09-23: approved. PROPOSED: screen demo for L09 (learners run a 20-case test set through Claude and score it in Google Sheets; seeing the workflow live makes the evaluation process concrete). Needs approval.",
     "L07 [VERSION]: model API prices are placeholders only; any real price in Stage 2 must be checked on the day of scripting.",
     "L11 [REGION] [VERIFY]: EU AI Act risk categories and obligations, and any data protection laws named as examples.",
     "[VERSION]: Claude free-plan limits and data-use terms; Figma and FigJam free-plan limits; Google Sheets features used in exercises.",

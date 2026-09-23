@@ -3,8 +3,14 @@
   "slug": "ai-20-ai-image-generation-and-visual-design",
   "course_title": "AI Image Generation and Visual Design",
   "level": "Beginner",
-  "status": "AWAITING_APPROVAL",
-  "screen_demo_lessons": [],
+  "status": "APPROVED",
+  "approved_on": "2026-09-23",
+  "screen_demo_lessons": [
+    "L03",
+    "L06",
+    "L07",
+    "L08"
+  ],
   "overview": "A three-week, hands-on introduction to making images with AI for designers, creators, marketers and small business owners. No design or technical background is needed. Learners find out how image generators turn words into pictures, then practise writing clear prompts, controlling style and composition, and keeping a set of images consistent. They edit and finish images in Adobe Firefly and Canva, learn to spot and fix common flaws, and learn how to think about copyright, licensing and ethics before they publish. Style is always described through visual qualities, never by copying a named living artist. By the end, learners produce a consistent 12-image visual set for a brand campaign, with a short style guide that explains how they made it.",
   "time_plan": {
     "video_minutes": 60,
@@ -237,10 +243,10 @@
     ]
   },
   "flags": [
-    "PROPOSED: screen demo for L03 (first live session in Gemini and Adobe Firefly; settings are easier to show than to describe). Needs approval.",
-    "PROPOSED: screen demo for L06 (reference-image and style settings are located in tool menus that learners must find). Needs approval.",
-    "PROPOSED: screen demo for L07 (generative fill and expand need a live selection-and-edit walkthrough in Adobe Firefly). Needs approval.",
-    "PROPOSED: screen demo for L08 (Canva layout, background removal and resize steps are best shown live). Needs approval.",
+    "RESOLVED 2026-09-23: approved. PROPOSED: screen demo for L03 (first live session in Gemini and Adobe Firefly; settings are easier to show than to describe). Needs approval.",
+    "RESOLVED 2026-09-23: approved. PROPOSED: screen demo for L06 (reference-image and style settings are located in tool menus that learners must find). Needs approval.",
+    "RESOLVED 2026-09-23: approved. PROPOSED: screen demo for L07 (generative fill and expand need a live selection-and-edit walkthrough in Adobe Firefly). Needs approval.",
+    "RESOLVED 2026-09-23: approved. PROPOSED: screen demo for L08 (Canva layout, background removal and resize steps are best shown live). Needs approval.",
     "L03, L06, L07, L08 [VERSION]: interfaces, model names, free-tier limits and credits for Gemini / Google AI Studio, Adobe Firefly and Canva must be checked against the live tools before scripting.",
     "L10 [VERIFY] [REGION]: copyright protection and ownership of AI-generated images differ by country and are changing; the lesson teaches principles only and states no legal conclusion as settled.",
     "L10 [VERIFY] [VERSION]: commercial-use terms of each tool (Gemini, Firefly, Canva) and any claims about how a model was trained must be checked against current official terms.",

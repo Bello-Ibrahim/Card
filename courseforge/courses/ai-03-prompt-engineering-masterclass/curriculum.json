@@ -3,8 +3,12 @@
   "slug": "ai-03-prompt-engineering-masterclass",
   "course_title": "Prompt Engineering Masterclass",
   "level": "Beginner",
-  "status": "AWAITING_APPROVAL",
-  "screen_demo_lessons": [],
+  "status": "APPROVED",
+  "approved_on": "2026-09-23",
+  "screen_demo_lessons": [
+    "L09",
+    "L12"
+  ],
   "overview": "A three-week practical course for working professionals with no technical background. Learners discover why AI chat tools respond the way they do, and learn a clear structure for prompts: role, task, context, format, constraints and examples. They apply it to everyday work such as emails, reports, summaries, analysis and planning, and learn to diagnose and fix weak outputs. The course also covers checking outputs for accuracy, bias and confidentiality. By the end, each learner has built, tested and documented a personal library of 15 reusable prompts for their own job role.",
   "time_plan": {
     "video_minutes": 75,
@@ -260,8 +264,8 @@
     ]
   },
   "flags": [
-    "PROPOSED: screen demo for L09 (shows where saved or custom instructions are set in the free tools, which is hard to explain in words). Needs approval.",
-    "PROPOSED: screen demo for L12 (running the same prompt side by side in Claude, ChatGPT and Gemini). Needs approval.",
+    "RESOLVED 2026-09-23: approved. PROPOSED: screen demo for L09 (shows where saved or custom instructions are set in the free tools, which is hard to explain in words). Needs approval.",
+    "RESOLVED 2026-09-23: approved. PROPOSED: screen demo for L12 (running the same prompt side by side in Claude, ChatGPT and Gemini). Needs approval.",
     "L09 [VERSION]: names, availability and limits of custom instructions, projects and similar features on free plans of Claude, ChatGPT and Gemini must be checked before scripting.",
     "L12, L14 [VERSION]: free-tier usage limits of Claude, ChatGPT and Gemini may restrict how many tests learners can run in one day.",
     "L11 [REGION]: data protection and workplace AI rules differ by country; the lesson points learners to their own organisation's policy instead of naming laws.",

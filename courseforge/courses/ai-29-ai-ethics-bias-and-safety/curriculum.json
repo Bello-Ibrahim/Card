@@ -3,8 +3,11 @@
   "slug": "ai-29-ai-ethics-bias-and-safety",
   "course_title": "AI Ethics, Bias and Safety",
   "level": "Beginner",
-  "status": "AWAITING_APPROVAL",
-  "screen_demo_lessons": [],
+  "status": "APPROVED",
+  "approved_on": "2026-09-23",
+  "screen_demo_lessons": [
+    "L08"
+  ],
   "overview": "A two-week introduction for anyone who builds, buys or uses AI. No technical background is needed. Learners find out how bias gets into AI systems, why chatbots can produce confident but false answers, what happens to the data they share, and how unsafe outputs can cause real harm. Each risk is taught through everyday analogies and hypothetical cases from many countries and industries. Learners then use simple, practical frameworks to test an AI tool, rate the risks they find and decide what to do about them. By the end, learners audit a real AI tool for bias and safety risks and write clear recommendations.",
   "time_plan": {
     "video_minutes": 50,
@@ -207,7 +210,7 @@
     ]
   },
   "flags": [
-    "PROPOSED: screen demo for L08 (a live walkthrough of running and recording paired prompts in a chatbot is much clearer on screen than on slides). Needs approval.",
+    "RESOLVED 2026-09-23: approved. PROPOSED: screen demo for L08 (a live walkthrough of running and recording paired prompts in a chatbot is much clearer on screen than on slides). Needs approval.",
     "L05 [VERSION]: data-use, chat-history and training settings in Claude and ChatGPT differ between free and paid plans and change often. Check the live tools before scripting.",
     "L08 [VERSION]: chatbot outputs change between model versions, so any example outputs in the demo must be recorded from the live tool, not written in advance.",
     "L07 [VERIFY]: the names, dates and exact wording of any named framework (OECD AI Principles, UNESCO Recommendation on the Ethics of AI) must be checked against the official sources.",

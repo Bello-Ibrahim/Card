@@ -3,8 +3,14 @@
   "slug": "ai-21-ai-video-production-and-motion",
   "course_title": "AI Video Production and Motion",
   "level": "Beginner",
-  "status": "AWAITING_APPROVAL",
-  "screen_demo_lessons": [],
+  "status": "APPROVED",
+  "approved_on": "2026-09-23",
+  "screen_demo_lessons": [
+    "L06",
+    "L07",
+    "L09",
+    "L11"
+  ],
   "overview": "A three-week, hands-on course for filmmakers, marketers, motion designers and content creators who want to make short-form video with AI. It builds on AI Image Generation and Visual Design: prompting basics are recapped briefly, not retaught. Learners plan a video with a script and shot list, generate clips from text and images in Google Flow (Veo) and Kling, create an avatar presenter in HeyGen with proper consent, and edit everything together with sound and captions in CapCut. They learn to spot and fix continuity problems and artifacts, and to check disclosure, consent and rights before publishing. By the end, learners produce a 60 to 90 second AI-assisted brand or explainer video.",
   "time_plan": {
     "video_minutes": 70,
@@ -258,10 +264,10 @@
     ]
   },
   "flags": [
-    "PROPOSED: screen demo for L06 (first live generation session in Google Flow; prompt and settings workflow must be shown on screen). Needs approval.",
-    "PROPOSED: screen demo for L07 (uploading a keyframe and setting motion controls in Kling is easiest to follow live). Needs approval.",
-    "PROPOSED: screen demo for L09 (HeyGen script-to-avatar steps and the stock-avatar selection need a live walkthrough). Needs approval.",
-    "PROPOSED: screen demo for L11 (timeline editing and caption correction in CapCut are hard to teach without a screen recording). Needs approval.",
+    "RESOLVED 2026-09-23: approved. PROPOSED: screen demo for L06 (first live generation session in Google Flow; prompt and settings workflow must be shown on screen). Needs approval.",
+    "RESOLVED 2026-09-23: approved. PROPOSED: screen demo for L07 (uploading a keyframe and setting motion controls in Kling is easiest to follow live). Needs approval.",
+    "RESOLVED 2026-09-23: approved. PROPOSED: screen demo for L09 (HeyGen script-to-avatar steps and the stock-avatar selection need a live walkthrough). Needs approval.",
+    "RESOLVED 2026-09-23: approved. PROPOSED: screen demo for L11 (timeline editing and caption correction in CapCut are hard to teach without a screen recording). Needs approval.",
     "L06, L07, L09, L11 [VERSION]: interfaces, model versions, free credits, watermarks and export options of Google Flow (Veo), Kling, HeyGen and CapCut must be checked against the live tools before scripting.",
     "L06, L11 [REGION]: Google Flow and CapCut availability differs by country; a fallback tool may be needed for some learners.",
     "L09, L13 [VERIFY] [REGION]: consent rules for using a real person's face or voice differ by country; the lessons teach 'clear, recorded consent' as a principle and state no legal conclusion as settled.",

@@ -3,8 +3,14 @@
   "slug": "ai-02-generative-ai-explained-llms-diffusion-and-multimodal-models",
   "course_title": "Generative AI Explained: LLMs, Diffusion and Multimodal Models",
   "level": "Beginner",
-  "status": "AWAITING_APPROVAL",
-  "screen_demo_lessons": [],
+  "status": "APPROVED",
+  "approved_on": "2026-09-23",
+  "screen_demo_lessons": [
+    "L02",
+    "L06",
+    "L07",
+    "L11"
+  ],
   "overview": "A three-week course for people who already use AI tools and now want to understand how they work. Learners see how large language models write text one token at a time, how diffusion models turn random noise into images, and how multimodal models combine text, images and audio. Each idea is explained with everyday analogies and tried out in free tools, without maths or code. By the end, learners can choose the right type of model for a task and they produce a fair, documented comparison of three generative AI tools on a real task from their own work or studies.",
   "time_plan": {
     "video_minutes": 60,
@@ -237,10 +243,10 @@
     ]
   },
   "flags": [
-    "PROPOSED: screen demo for L02 (shows the temperature setting in Google AI Studio and runs the same prompt several times). Needs approval.",
-    "PROPOSED: screen demo for L06 (live refinement of an image prompt in a free image generator). Needs approval.",
-    "PROPOSED: screen demo for L07 (uploading a photo to a multimodal tool and checking the extracted table). Needs approval.",
-    "PROPOSED: screen demo for L11 (running one task across three tools and recording the outputs). Needs approval.",
+    "RESOLVED 2026-09-23: approved. PROPOSED: screen demo for L02 (shows the temperature setting in Google AI Studio and runs the same prompt several times). Needs approval.",
+    "RESOLVED 2026-09-23: approved. PROPOSED: screen demo for L06 (live refinement of an image prompt in a free image generator). Needs approval.",
+    "RESOLVED 2026-09-23: approved. PROPOSED: screen demo for L07 (uploading a photo to a multimodal tool and checking the extracted table). Needs approval.",
+    "RESOLVED 2026-09-23: approved. PROPOSED: screen demo for L11 (running one task across three tools and recording the outputs). Needs approval.",
     "L02 [VERSION]: check that Google AI Studio still shows a temperature control in the free interface, and its current name and range.",
     "L03 [VERIFY]: the three-stage training description (pre-training, fine-tuning, human feedback) is simplified; confirm the wording is accurate enough and not tied to one provider.",
     "L05 [VERIFY]: confirm the wording that not all image generators use diffusion, and that the darkroom analogy is not misleading.",
