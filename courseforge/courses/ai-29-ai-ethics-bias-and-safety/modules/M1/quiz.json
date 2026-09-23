@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-29",
+  "module_id": "M1",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L01",
+      "objective": "O1",
+      "question": "A company's AI tool wrongly rejects a customer's insurance claim, and nobody in the company can say who is responsible for checking or fixing the tool. Which key term does this problem describe best?",
+      "options": [
+        "Transparency",
+        "Hallucination",
+        "Accountability",
+        "Privacy"
+      ],
+      "answer_index": 2,
+      "explanation": "Accountability means a named person or team is responsible for the system's results and for fixing problems. The most tempting wrong option is transparency, which is about people knowing that AI is used and how it reaches results. The main gap here is that no one is responsible, not that the process is hidden."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L02",
+      "objective": "O2",
+      "question": "A hiring tool does not see applicants' gender, but it gives lower scores to CVs that mention a career gap for childcare. What is the best explanation?",
+      "options": [
+        "The career gap acts as a proxy, so the tool can still learn a gender pattern.",
+        "The tool cannot be biased, because gender was removed from the data.",
+        "The problem is caused only by how recruiters use the tool, not by its data or design.",
+        "The tool is hallucinating information about the applicants."
+      ],
+      "answer_index": 0,
+      "explanation": "Other details, such as a career gap for childcare, can stand in for gender, so bias can remain after gender is removed. The most tempting wrong option is that the tool cannot be biased without gender. L02 shows that removing sensitive details is not enough, and the results must still be tested."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L03",
+      "objective": "O5",
+      "question": "A vendor says its medical risk tool is 92% accurate overall. What is the most useful next question to check whether it is fair?",
+      "options": [
+        "Which programming language was the tool written in?",
+        "Can the accuracy be raised to 99% overall?",
+        "How many patients used the tool last year?",
+        "What are the missed-case and error rates for each relevant group of patients?"
+      ],
+      "answer_index": 3,
+      "explanation": "Comparing results between groups shows whether one group gets much worse results, which an overall number can hide. The most tempting wrong option is raising overall accuracy to 99%. A higher overall number can still hide poor results for a small group, so it does not answer the fairness question."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L04",
+      "objective": "O3",
+      "question": "A chatbot answers your question and names a study, with an author, year and journal, to support its answer. What should you do before you use the claim in a report?",
+      "options": [
+        "Use it, because a named study with an author and a year is a reliable source.",
+        "Find and open the study yourself and check that it exists and really says what the chatbot claims.",
+        "Ask the chatbot if it is sure, and use the claim if it says yes.",
+        "Use it only if the answer is written in a confident, detailed way."
+      ],
+      "answer_index": 1,
+      "explanation": "Chatbots can invent sources that look real, or cite real sources that do not support the claim, so a source only counts after you open it. The most tempting wrong option is asking the chatbot if it is sure. It predicts likely text and can confidently repeat the same false claim."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L05",
+      "objective": "O4",
+      "question": "A staff member wants a chatbot to help write a reply to a customer complaint. Which prompt follows good privacy practice?",
+      "options": [
+        "The full complaint, with the customer's name removed but their address, order number and phone number kept.",
+        "The full complaint with all details, because the chat can be deleted afterwards.",
+        "A general description: \"A customer is unhappy that an order arrived late and damaged. Draft a polite reply that apologises and offers a replacement.\"",
+        "The full complaint with all details, but only when using the free version of the tool."
+      ],
+      "answer_index": 2,
+      "explanation": "The general description gives the AI what it needs for the task and shares no personal data. The most tempting wrong option is removing only the name. The address, order number and phone number can still identify the customer, so removing names alone is often not enough."
+    }
+  ]
+}

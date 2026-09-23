@@ -39,7 +39,7 @@ Linh builds a comparison table for her team:
 The table changes the conversation. The engineering lead had estimated the summary as "two weeks, like any other feature". After the table, the team adds work that a filter never needed: a set of test hotels to measure summary quality, a report button and a weekly review of samples. Linh also notices that some hotels have reviews in Vietnamese, English and Korean, so she adds "summary quality for each language" as a question for the team.
 
 ## Common Mistake
-Many PMs treat the AI part as a black box that engineering will "make work", and they write acceptance criteria such as "the summary is accurate". That cannot be tested as a single yes-or-no. Instead, write criteria as rates on a defined test set, such as "at least 9 of 10 summaries in our test set contain no invented claims", and design what happens for the rest.
+Many PMs treat the AI part as something that engineering will simply "make work", and they write acceptance criteria such as "the summary is accurate". That cannot be tested as a single yes-or-no. Instead, write criteria as rates on a defined test set, such as "at least 9 of 10 summaries in our test set contain no invented claims", and design what happens for the rest.
 
 ## Key Takeaways
 1. AI features are probabilistic: they give likely answers, and some answers are wrong while looking confident.

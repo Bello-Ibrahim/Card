@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-27",
+  "module_id": "M3",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L11",
+      "objective": "O5",
+      "question": "A risk table lists \"Output check removes personal data from summaries\" as a guardrail, but the owner column is empty. Why is this a problem?",
+      "options": [
+        "It is not a problem, because the model will remove personal data on its own.",
+        "Without a named owner, nobody is responsible for keeping the guardrail working, so it is often forgotten or switched off.",
+        "Guardrails are only needed for high-risk features, so the row should be deleted.",
+        "The owner must always be the legal team, so the row is automatically assigned."
+      ],
+      "answer_index": 1,
+      "explanation": "Every guardrail needs an owner who makes sure it works over time. The most tempting wrong option is that the legal team is automatically the owner. Legal advises on requirements, but an output check is usually built and maintained by engineering, so the owner must be named explicitly."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L12",
+      "objective": "O5",
+      "question": "Which stop criterion is the most useful for a staged rollout?",
+      "options": [
+        "\"We will stop if quality drops significantly.\"",
+        "\"We will decide whether to stop after we see the pilot results.\"",
+        "\"We will stop if the complaint re-open rate is above the baseline for 2 weeks in a row.\"",
+        "\"We will never stop once the pilot has started.\""
+      ],
+      "answer_index": 2,
+      "explanation": "A good stop criterion is numeric, compared with a baseline and agreed before launch. The most tempting wrong option is \"if quality drops significantly\". It sounds responsible, but nobody agrees what \"significantly\" means when results arrive, so the rollout usually continues."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L13",
+      "objective": "O6",
+      "question": "Which line belongs in a model behaviour spec because it is specific enough to test?",
+      "options": [
+        "\"The assistant will be helpful and accurate.\"",
+        "\"The assistant will use the best available model.\"",
+        "\"The assistant will be safe for all users.\"",
+        "\"The assistant never gives a torque value that is not in the retrieved manual section.\""
+      ],
+      "answer_index": 3,
+      "explanation": "A behaviour spec rule must be specific enough that a tester can write a test case for it. The most tempting wrong option is \"helpful and accurate\", because it describes the goal. It cannot be tested as written, so it gives engineers and testers nothing to check."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L14",
+      "objective": "O5",
+      "question": "A support-reply feature has an 82% overall pass rate, above the 80% target, but only 60% in informal Indonesian, below that group's fail threshold of 65%. What does the evaluation plan say should happen?",
+      "options": [
+        "The feature fails the pre-launch gate, because a group-level fail threshold is not met.",
+        "Launch, because the overall pass rate meets the target.",
+        "Lower the informal-language threshold to 60% so the feature passes.",
+        "Remove the informal-language cases from the test set."
+      ],
+      "answer_index": 0,
+      "explanation": "Thresholds for each user group exist so that a weak group cannot hide inside a good average. The most tempting wrong option is launching because the overall rate passes. That ignores the group threshold and would give informal-language customers a much worse feature."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L15",
+      "objective": "O6",
+      "question": "When presenting an AI PRD to a director, which approach best follows this course's advice?",
+      "options": [
+        "Show only the benefits, so the director approves quickly.",
+        "Say what it will and will not do, name the option you did not choose, state what is still unknown, and ask for a specific decision.",
+        "Present Claude's review questions as the final judgement on the feature.",
+        "Avoid mentioning evaluation until after launch."
+      ],
+      "answer_index": 1,
+      "explanation": "Honest trade-offs, known unknowns and a specific request help stakeholders make a real decision and keep trust. The most tempting wrong option is showing only benefits. It may win approval faster, but when the hidden limits appear later, trust is lost."
+    }
+  ]
+}
