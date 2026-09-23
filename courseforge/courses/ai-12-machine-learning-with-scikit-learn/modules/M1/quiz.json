@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-12",
+  "module_id": "M1",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L01",
+      "objective": "O1",
+      "question": "A logistics team wants to predict each morning whether a delivery will be late. Which column should NOT be used as a feature?",
+      "options": [
+        "Route distance in kilometres",
+        "Number of stops on the route",
+        "The reason for the delay, entered by the driver after the delivery",
+        "The weather forecast for the day"
+      ],
+      "answer_index": 2,
+      "explanation": "A feature must be known at the moment of prediction, and the delay reason is written after the delivery, so it leaks the answer. The most tempting wrong option is the weather forecast, because weather feels uncertain. But the forecast is available in the morning, so it is a valid feature."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L02",
+      "objective": "O1",
+      "question": "In scikit-learn, what happens when you call model.fit(X, y) on a DecisionTreeClassifier?",
+      "options": [
+        "The model learns patterns from the features X and the target y.",
+        "The model predicts a class for every row in X.",
+        "The model rescales X so that every column has a mean of 0.",
+        "The model splits X and y into a training set and a test set."
+      ],
+      "answer_index": 0,
+      "explanation": "fit is the step where learning happens: the estimator uses X and y to set its internal values, such as the splits of a tree. The most tempting wrong option is predicting a class for every row. That is what predict does, and it can only be called after fit."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L03",
+      "objective": "O2",
+      "question": "A decision tree scores 1.00 accuracy on the training set and 0.73 on the test set. A shallower tree scores 0.85 and 0.81. What is the best conclusion?",
+      "options": [
+        "The deep tree is better because its training score is perfect.",
+        "Both trees are underfitting because neither test score is 1.00.",
+        "The test set must be too small, so the scores should be ignored.",
+        "The deep tree is overfitting; the shallow tree generalises better to unseen data."
+      ],
+      "answer_index": 3,
+      "explanation": "A large gap between a perfect training score and a much lower test score means the deep tree memorised the training rows. The most tempting wrong option is choosing the deep tree for its perfect training score, but a training score says nothing about performance on new data."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L04",
+      "objective": "O3",
+      "question": "You need to scale numeric columns with StandardScaler. Which order is correct?",
+      "options": [
+        "Fit the scaler on all rows, then split into training and test sets.",
+        "Split the data, fit the scaler on the training set, then transform both the training and test sets.",
+        "Split the data, then fit a separate scaler on the test set and another on the training set.",
+        "Fit the scaler on the test set, because it represents new data."
+      ],
+      "answer_index": 1,
+      "explanation": "Preprocessing settings, such as the mean and standard deviation, must be learned from training data only and then applied to the test set. The most tempting wrong option is fitting on all rows before splitting. The code runs normally, but the scaler has already used test information, which is a form of leakage."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L05",
+      "objective": "O2",
+      "question": "Why does putting SimpleImputer, StandardScaler and OneHotEncoder inside a Pipeline help prevent data leakage?",
+      "options": [
+        "Because a Pipeline automatically removes features that are recorded after the event.",
+        "Because a Pipeline makes the model more accurate on the training set.",
+        "Because every step is fitted only on the data passed to fit, so test rows never influence the learned settings.",
+        "Because a Pipeline stops the model from overfitting."
+      ],
+      "answer_index": 2,
+      "explanation": "When you call pipe.fit on training data, each step learns only from that data, and at prediction time the steps only transform. The most tempting wrong option is that a Pipeline removes after-the-event features. It cannot know what a column means, so you must remove leaking features such as call duration yourself."
+    }
+  ]
+}

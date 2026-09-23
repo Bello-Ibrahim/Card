@@ -69,10 +69,10 @@ Input tokens: 17
 Output tokens: 142
 ```
 
-Notice that the key does not appear anywhere in the file. Mei Lin can share this file with her team safely.
+The key does not appear anywhere in the file, so she can share it safely.
 
 ## Common Mistake
-Many beginners paste the key directly into the code "just to test", for example `anthropic.Anthropic(api_key="sk-ant-...")`, and then commit the file. Automated bots scan public repositories for keys. Always use an environment variable, check `git status` before each commit, and replace any key that has been exposed.
+Many beginners paste the key directly into the code "just to test", for example `anthropic.Anthropic(api_key="sk-ant-...")`, and then commit the file. Always use an environment variable, check `git status` before each commit, and replace any key that has been exposed.
 
 ## Key Takeaways
 1. The Claude API is paid: set a monthly spend limit before you make your first call.

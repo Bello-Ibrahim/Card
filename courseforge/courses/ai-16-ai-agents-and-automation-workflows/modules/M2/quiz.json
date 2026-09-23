@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-16",
+  "module_id": "M2",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L05",
+      "objective": "O3",
+      "question": "You call the Claude API from an n8n HTTP Request node. Where should the API key go?",
+      "options": [
+        "In the JSON body, next to the model field",
+        "In the system prompt, so the model knows who is calling",
+        "In an n8n credential that sends it as the x-api-key header",
+        "In a column of the Google Sheet that the workflow reads"
+      ],
+      "answer_index": 2,
+      "explanation": "The key belongs in the x-api-key header, stored in an n8n credential so it is never visible in the workflow. The most tempting wrong option is the JSON body. The API does not read the key from the body, and a key in the body would be exposed whenever the workflow is shared or exported."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L06",
+      "objective": "O3",
+      "question": "The model sometimes adds the words 'Here is the JSON:' before its answer. What is the best way to handle this in the workflow?",
+      "options": [
+        "Parse the reply inside try/catch in a Code node, mark it invalid, retry once and then send it to a 'needs review' tab",
+        "Increase max_tokens so the model has room for the full JSON",
+        "Remove the validation step, because the next node will fail and show the problem",
+        "Retry the request until the model returns valid JSON, however many tries it takes"
+      ],
+      "answer_index": 0,
+      "explanation": "Safe parsing, one retry and a review path keep one bad item from stopping the batch. The most tempting wrong option is retrying without a limit. It can waste many paid calls on an item that a person should look at after the second failure."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L07",
+      "objective": "O2",
+      "question": "Messages that contain a claim number in the format CL-123456 and the word 'status' always need the same automatic status reply. How should the workflow handle them?",
+      "options": [
+        "Send them to the model with a special category for status questions",
+        "Send them to the review tab so a person can check each one",
+        "Ask the model for a confidence score and route on it",
+        "Use an IF rule before the model call to route them directly, with no AI step"
+      ],
+      "answer_index": 3,
+      "explanation": "When a simple rule can decide, it is cheaper, faster and fully predictable. The most tempting wrong option is a special model category. It would usually work, but it adds cost and a small chance of error for a decision that a rule makes correctly every time."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L07",
+      "objective": "O3",
+      "question": "What should the fallback output of a Switch node that routes on the model's category be connected to?",
+      "options": [
+        "Nothing, because the model only returns allowed values",
+        "A review tab that a person checks",
+        "The same path as the most common category",
+        "A second Switch node with the same rules"
+      ],
+      "answer_index": 1,
+      "explanation": "The fallback catches anything that matches no rule, so it should go to a person and no item is lost. The most tempting wrong option is leaving it unconnected. Even with validation, unexpected values can appear, and unconnected items disappear from the process without anyone noticing."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L08",
+      "objective": "O5",
+      "question": "A test on 20 representative rows used about 440 tokens per row on average, including output. What is the best estimate for a run of 500 rows?",
+      "options": [
+        "About 440 tokens, because the prompt is the same for every row",
+        "The number of tokens in the longest test row multiplied by 20",
+        "About 220,000 tokens, plus a margin for longer rows and retries",
+        "It cannot be estimated until the full run has finished"
+      ],
+      "answer_index": 2,
+      "explanation": "Expected usage is rows multiplied by the average tokens per row, with a margin added. The most tempting wrong option is that it cannot be estimated in advance. A representative sample gives a useful estimate, which you should check against your spending limit before you start."
+    }
+  ]
+}

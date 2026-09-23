@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-14",
+  "module_id": "M1",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L01",
+      "objective": "O1",
+      "question": "A user sends a second message in your chat app, but the model does not know what was said in the first message. What is the most likely cause?",
+      "options": [
+        "The API key was different for the second request.",
+        "The app sent only the new message instead of the full conversation history.",
+        "The system prompt was too short.",
+        "The model's context window was full after one message."
+      ],
+      "answer_index": 1,
+      "explanation": "The API is stateless, so the app must send the whole messages list every time. The most tempting wrong option is the API key: the key identifies your account for billing and does not create any memory between requests."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L01",
+      "objective": "O1",
+      "question": "A response has stop_reason set to \"max_tokens\". What does this tell you?",
+      "options": [
+        "The model finished its answer normally.",
+        "The model wants to call a tool.",
+        "The reply was cut off because it reached the length limit in the request.",
+        "The request used more tokens than the model's context window allows."
+      ],
+      "answer_index": 2,
+      "explanation": "max_tokens means the output hit the limit you set, so the reply may be incomplete. The most tempting wrong option is the context window: that limit covers the whole request, and a request that is too long is rejected with an error instead of returning a cut-off reply."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L02",
+      "objective": "O6",
+      "question": "You are starting development on a paid LLM API. Which setup keeps both risk and cost lowest?",
+      "options": [
+        "Store the key in an environment variable, set a monthly spend limit, use a smaller model and a low max_tokens.",
+        "Put the key in the code so it cannot be lost, and use the largest model to get the best results.",
+        "Store the key in a .env file that is committed to Git, so teammates can use it.",
+        "Use a high max_tokens so that replies are never cut off, and check the bill at the end of the month."
+      ],
+      "answer_index": 0,
+      "explanation": "An environment variable keeps the key out of code, and the spend limit, smaller model and low max_tokens keep costs small while testing. The most tempting wrong option is a committed .env file: once a key is in Git history, anyone with access to the repository can use it, so it must be replaced."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L03",
+      "objective": "O2",
+      "question": "Your support app puts customer messages inside <customer_message> tags and the system prompt says the tags contain data. What is the main benefit?",
+      "options": [
+        "It makes the model reply faster.",
+        "It reduces the price per token.",
+        "It removes the need for a system prompt.",
+        "It helps the model tell your instructions apart from the user's text."
+      ],
+      "answer_index": 3,
+      "explanation": "Tags separate instructions from data, which improves reliability and makes injected instructions less effective. The most tempting wrong option is removing the need for a system prompt: the tags only work because the system prompt explains what they contain."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L04",
+      "objective": "O6",
+      "question": "A chat app sends a 2,000-token system prompt and the full history with every request. Users complain about cost and speed. Which change best addresses both?",
+      "options": [
+        "Raise max_tokens so that answers are more complete.",
+        "Send only the parts of the history and context the model needs, and keep max_tokens realistic.",
+        "Switch the conversation to a language that looks shorter on screen.",
+        "Remove the usage logging to save time."
+      ],
+      "answer_index": 1,
+      "explanation": "Fewer input tokens and a realistic output limit reduce both cost and latency. The most tempting wrong option is changing language: text that looks shorter does not always use fewer tokens, and the change would harm users; you must measure tokens with the token counter."
+    }
+  ]
+}

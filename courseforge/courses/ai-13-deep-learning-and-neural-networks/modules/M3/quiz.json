@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-13",
+  "module_id": "M3",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L11",
+      "objective": "O1",
+      "question": "A learner tokenises text with a multilingual tokenizer and passes the IDs to an English-only pretrained model. The code runs without errors, but predictions are poor. What is the most likely cause?",
+      "options": [
+        "The attention mask was not returned, so the model ignored all tokens.",
+        "Embedding layers cannot process IDs from more than one language.",
+        "The model needs more epochs because multilingual text is harder.",
+        "The token IDs come from a different vocabulary, so each ID selects the wrong embedding row in the model."
+      ],
+      "answer_index": 3,
+      "explanation": "Token IDs are only meaningful for the vocabulary they came from, so the tokenizer and model must be loaded from the same checkpoint. The most tempting wrong option is more epochs: extra training cannot fix inputs that point to the wrong embeddings, and the mismatch gives no error because IDs are just integers."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L12",
+      "objective": "O2",
+      "question": "Which statement best explains why transformers replaced recurrent networks for most text tasks?",
+      "options": [
+        "Attention lets every token weigh every other token at the same time, so computation is parallel and distant words are linked directly.",
+        "Transformers do not need token embeddings, so they are smaller.",
+        "Recurrent networks cannot be trained with backpropagation.",
+        "Transformers read text strictly one word at a time, which makes them more accurate."
+      ],
+      "answer_index": 0,
+      "explanation": "Attention connects all positions in one step and runs in parallel on a GPU, avoiding the slow, forgetful step-by-step reading of RNNs. The most tempting wrong option is that RNNs cannot use backpropagation: they can, through time, but the long chain of steps makes gradients fade, which is a weakness, not an impossibility."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L13",
+      "objective": "O4",
+      "question": "A learner fine-tunes a model with the Trainer, passes the test split as eval_dataset, and sets load_best_model_at_end=True. Then they report the test score. What is wrong?",
+      "options": [
+        "Nothing; the Trainer keeps the test set separate automatically.",
+        "The Trainer cannot compute F1 on a test split.",
+        "The checkpoint was chosen using the test set, so the reported test score is too optimistic; a separate validation split should be used for evaluation during training.",
+        "load_best_model_at_end only works when the model has been frozen."
+      ],
+      "answer_index": 2,
+      "explanation": "Selecting the best checkpoint on the test set turns it into a validation set, so it no longer gives an unbiased final estimate. The most tempting wrong option is that the Trainer keeps the test set separate: it does not know which split is which and will use whatever you pass as eval_dataset."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L14",
+      "objective": "O6",
+      "question": "Setting A scored macro F1 of 0.86, 0.83 and 0.88 over three seeds. Setting B scored 0.87, 0.84 and 0.86. What is the most justified conclusion?",
+      "options": [
+        "B is better because its mean is slightly higher.",
+        "The results overlap heavily, so these runs do not show that either setting is better; choose on other grounds or run more seeds.",
+        "A is better because it reached the highest single score.",
+        "Both settings should be evaluated on the test set to decide."
+      ],
+      "answer_index": 1,
+      "explanation": "The means are almost the same and the ranges overlap, so the difference is within normal seed variation. The most tempting wrong option is picking B for its slightly higher mean; a difference this small compared with the spread is not evidence. Using the test set to decide would also break the rule that it is used once, for the final choice."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L15",
+      "objective": "O5",
+      "question": "A training run's GPU memory use grows every step until it fails with an out-of-memory error. The loop contains losses.append(loss). What is the best first fix?",
+      "options": [
+        "Increase the batch size so that fewer steps are needed.",
+        "Add gradient clipping with clip_grad_norm_.",
+        "Switch the activation functions from ReLU to sigmoid.",
+        "Store loss.item() instead of the loss tensor, so that each step's computation graph can be freed."
+      ],
+      "answer_index": 3,
+      "explanation": "Keeping the loss tensor keeps its whole computation graph alive, so memory grows with every step; storing a Python number frees it. The most tempting wrong option is gradient clipping, which fixes exploding gradients, not memory; it would not stop the graphs from accumulating."
+    }
+  ]
+}

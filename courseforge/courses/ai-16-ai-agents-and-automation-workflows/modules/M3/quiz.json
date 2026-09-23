@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-16",
+  "module_id": "M3",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L09",
+      "objective": "O1",
+      "question": "A Claude API response has stop_reason equal to \"tool_use\". What should your code do next?",
+      "options": [
+        "Show the response to the user as the final answer",
+        "Send the same request again, because the model did not finish",
+        "Ask the model to run the tool itself in the next request",
+        "Run each requested tool and send back tool_result blocks with the matching tool_use_id"
+      ],
+      "answer_index": 3,
+      "explanation": "The loop continues while stop_reason is tool_use: your code runs the tools and returns the results so the model can continue. The most tempting wrong option is sending the same request again. Without the tool results, the model has no new information and will usually ask for the same tool."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L09",
+      "objective": "O4",
+      "question": "An agent keeps using check_stock when staff ask about prices. What is the best first fix?",
+      "options": [
+        "Improve the tool descriptions, for example add 'Do not use for prices' to check_stock and describe the price tool clearly",
+        "Merge all tools into one tool called manage_inventory",
+        "Remove the input schema so the model has more freedom",
+        "Raise max_tokens so the model can think longer"
+      ],
+      "answer_index": 0,
+      "explanation": "The model chooses tools mainly from their descriptions, so clearer descriptions, including when not to use a tool, fix most wrong choices. The most tempting wrong option is merging tools. One large tool makes the choice vaguer and makes it harder to control what the agent can change."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L10",
+      "objective": "O4",
+      "question": "Your n8n agent must give exact totals for quantities and unit prices. What is the best design?",
+      "options": [
+        "Tell the model in the system message to be careful with arithmetic",
+        "Connect every available tool so the agent can choose the best one",
+        "Connect a Calculator tool and tell the agent to always use it for totals",
+        "Store all previous totals in memory so the agent can copy them"
+      ],
+      "answer_index": 2,
+      "explanation": "A calculator tool gives exact results, and the execution log shows the calculation so it can be checked. The most tempting wrong option is an instruction to be careful. Instructions can help, but they do not guarantee correct arithmetic from a language model."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L11",
+      "objective": "O2",
+      "question": "A team sets the agent's conversation memory to a very large window 'to be safe'. What is the main disadvantage?",
+      "options": [
+        "The agent will stop using its tools",
+        "Every request sends more history, which raises cost, can confuse the model and may keep personal data longer than needed",
+        "The session key will stop working",
+        "The model will permanently learn each customer's details"
+      ],
+      "answer_index": 1,
+      "explanation": "Memory is history that is sent again with each request, so a large window means more tokens, more room for confusion and more stored data. The most tempting wrong option is that the model learns permanently. The model does not change between calls; it only sees what your system sends."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L12",
+      "objective": "O5",
+      "question": "A refund agent drafts replies into an 'approvals' sheet. A scheduled workflow sends the replies. Which filter makes sure each approved reply is sent exactly once?",
+      "options": [
+        "Read all rows and send any row that has a draft reply",
+        "Read rows where status is 'pending' and send them after a Wait node",
+        "Read rows where the refund amount is below a limit",
+        "Read rows where status is 'approved' and sent_at is empty, then write sent_at straight after sending"
+      ],
+      "answer_index": 3,
+      "explanation": "Filtering on approved and unsent rows, and marking them as sent, prevents both unapproved and duplicate sending. The most tempting wrong option is sending rows below a refund limit. An amount limit may be a useful extra rule, but it removes the human approval step and does not stop duplicates."
+    }
+  ]
+}

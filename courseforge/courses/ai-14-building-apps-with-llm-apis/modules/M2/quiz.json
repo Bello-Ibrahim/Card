@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-14",
+  "module_id": "M2",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L05",
+      "objective": "O3",
+      "question": "Your code needs supplier, date, total and currency from invoices. Which approach is the most reliable?",
+      "options": [
+        "Ask for \"only JSON\" in the prompt and search the reply for the word \"total\".",
+        "Define a Pydantic schema, use the API's structured-output feature, parse the result into an object and add business checks.",
+        "Ask for a friendly summary and use regular expressions to find the numbers.",
+        "Use a schema, and skip business checks because valid JSON is always correct."
+      ],
+      "answer_index": 1,
+      "explanation": "A schema with the structured-output feature gives fields and types your code can trust, and business checks catch wrong values. The most tempting wrong option is skipping business checks: a schema controls the shape of the output, not whether the model read the correct number."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L06",
+      "objective": "O5",
+      "question": "Your app receives an AuthenticationError from the SDK. What should the code do?",
+      "options": [
+        "Retry the same request five times with longer waits.",
+        "Retry with a larger max_tokens value.",
+        "Stop, show a clear message about the key, and not retry.",
+        "Send the request again with the validation error included."
+      ],
+      "answer_index": 2,
+      "explanation": "An invalid key will fail every time, so retrying only wastes time. The most tempting wrong option is retrying with waits: that is right for rate limits and server errors, which are temporary, but not for an authentication problem."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L06",
+      "objective": "O3",
+      "question": "A structured-output response has stop_reason \"max_tokens\". What is the safest action?",
+      "options": [
+        "Save the object, because the schema guarantees it is complete.",
+        "Remove the fields that are missing and save the rest.",
+        "Ignore the stop reason, because only HTTP errors matter.",
+        "Treat the output as incomplete: do not save it, and raise max_tokens or shorten the task."
+      ],
+      "answer_index": 3,
+      "explanation": "A cut-off output may be missing fields or data, so it must not be stored as if complete. The most tempting wrong option is trusting the schema: the schema describes the expected shape, but a reply cut off at max_tokens can end before the object is finished."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L07",
+      "objective": "O3",
+      "question": "After you add streaming to a chat feature, what changes for the user?",
+      "options": [
+        "Text appears sooner, but the total time and the cost stay about the same.",
+        "The total time and the cost both fall by about half.",
+        "The model writes shorter answers.",
+        "The model no longer needs max_tokens."
+      ],
+      "answer_index": 0,
+      "explanation": "Streaming shortens the time to the first token; the model still generates the same tokens, so total time and cost are similar. The most tempting wrong option is lower total time: the answer feels faster because reading starts earlier, but generation does not speed up."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L08",
+      "objective": "O3",
+      "question": "In your Streamlit chat app, the assistant forgets the conversation after every message. The history is stored in a normal list at the top of the script. Why?",
+      "options": [
+        "The API key in st.secrets expires after each message.",
+        "st.write_stream deletes earlier messages.",
+        "Streamlit reruns the whole script on every user action, so the list is reset; the history should be in st.session_state.",
+        "Streamlit Community Cloud does not allow chat apps."
+      ],
+      "answer_index": 2,
+      "explanation": "Each interaction reruns the script, and only st.session_state keeps data between runs. The most tempting wrong option blames st.write_stream: it only displays streamed text and returns the full reply; it does not remove anything from your history."
+    }
+  ]
+}

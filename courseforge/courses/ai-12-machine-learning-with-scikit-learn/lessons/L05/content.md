@@ -93,4 +93,4 @@ Learners often build a good pipeline and then run `SimpleImputer` or `StandardSc
 
 ## Review Flags
 - [VERIFY] Availability, description and licence of the UCI Bank Marketing dataset, including its column names (`campaign`, `duration`, target `y`) and the dataset notes about `duration`.
-- [VERSION] `set_output(transform="pandas")` and `OneHotEncoder(sparse_output=...)` depend on the installed scikit-learn version. Outputs were recorded with scikit-learn 1.9.1, pandas 3.0.6 and Python 3.11.
+- [VERSION] `set_output(transform="pandas")`, `OneHotEncoder(sparse_output=...)` and the pipeline diagram display in Colab depend on the installed scikit-learn version. Outputs were recorded with scikit-learn 1.9.1, pandas 3.0.6 and Python 3.11.

@@ -6,14 +6,14 @@ Course: AI-14 · Module: M1 · Objectives: O1 · Video: 5 min
 You chat with an AI assistant for ten minutes, and it remembers everything you said. Then you call the same model through its API, ask a follow-up question, and it has no idea what you are talking about. Nothing is broken. This lesson explains why, and what your app must do about it.
 
 ## Explanation
-A large language model (LLM) API works like most web APIs you already know: your code sends an HTTP request, and the server sends back a response. What makes it different is the shape of the request and the response.
+An LLM API works like other web APIs: your code sends an HTTP request and gets a response. What is new is the shape of the request and the response.
 
 **The request.** The main part of a request is a list of **messages**. Each message has a **role** and some **content**:
 
 - `user`: text from the person using your app (or text your app writes on their behalf).
 - `assistant`: earlier replies from the model.
 
-The list must start with a `user` message, and the roles normally take turns. Next to the messages you can send a **system prompt**. This is a separate field, not a message. It sets the model's role, rules and style for the whole conversation, for example "You are a polite support assistant for a bike shop. Answer in two sentences or fewer."
+The list must start with a `user` message, and the roles normally take turns. You can also send a **system prompt**. This is a separate field, not a message. It sets the model's role, rules and style for the whole conversation.
 
 You also send settings. The two you will use in every call are the **model** (which model to run) and **max_tokens** (the maximum length of the reply).
 
@@ -27,9 +27,9 @@ You also send settings. The two you will use in every call are the **model** (wh
 - **stop_reason**: why the model stopped. `end_turn` means it finished normally. `max_tokens` means it hit your length limit and the reply is cut off. You will meet other values, such as `tool_use`, later in the course.
 - **usage**: how many input tokens you sent and how many output tokens the model wrote. This is what you pay for.
 
-**Stateless.** The API does not remember earlier requests. Each call starts from nothing. If you want a conversation, your app must store the history and send the whole list again every time, with the new user message added at the end. The chat apps you use in a browser do exactly this for you.
+**Stateless.** The API does not remember earlier requests. Each call starts from nothing. If you want a conversation, your app must store the history and send the whole list again every time, with the new user message added at the end.
 
-**Analogy:** Imagine a very knowledgeable assistant who answers the phone but forgets every call as soon as it ends. To continue yesterday's discussion, you must first read your notes aloud: "Yesterday I asked X, and you said Y. Now my question is Z." The notes are your messages list. The longer the notes, the longer each call takes, and the more it costs.
+**Analogy:** Imagine a very knowledgeable assistant who answers the phone but forgets every call as soon as it ends. To continue yesterday's discussion, you must first read your notes aloud: "Yesterday I asked X, and you said Y. Now my question is Z." The notes are your messages list. Longer notes mean longer, more expensive calls.
 
 ## Worked Example
 Tomás builds a help chat for a chain of bakeries in Montevideo, Uruguay. A customer writes: "Do you have gluten-free bread?" His app sends this request:
@@ -43,7 +43,7 @@ messages = [
 
 The model replies (example output): "Yes, we bake gluten-free loaves every morning." The response shows `stop_reason` = `end_turn` and usage of 31 input tokens and 12 output tokens (example numbers).
 
-The customer then asks: "Which shops have it?" Tomás's first version sent only this new question. The model answered with a general question: "Which product do you mean?" It had never seen the first exchange.
+The customer then asks: "Which shops have it?" Tomás's first version sent only this question, and the model asked: "Which product do you mean?"
 
 In the fixed version, his app appends the model's reply and the new question, then sends the full list:
 
@@ -58,7 +58,7 @@ messages = [
 Now the model understands "it". Tomás also notices that input tokens grow with every turn, because the whole history is sent again each time.
 
 ## Common Mistake
-Many developers put the system prompt inside the messages list, or they assume the API "remembers" the user because they send the same API key each time. The API key identifies your account for billing. It does not create a memory. Keep the system prompt in its own field, and keep the conversation history in your app (in memory, a session or a database) and send it with every request.
+Many developers assume the API "remembers" the user because they send the same API key each time. The API key identifies your account for billing. It does not create a memory. Keep the system prompt in its own field, and keep the conversation history in your app (in memory, a session or a database) and send it with every request.
 
 ## Key Takeaways
 1. A request contains a list of messages with `user` and `assistant` roles, an optional system prompt in its own field, a model and a max_tokens limit.

@@ -6,14 +6,14 @@ Course: AI-15 · Module: M1 · Objectives: O1, O3, O4 · Video: 5 min (screen de
 You now know the six stages of RAG and how embeddings work. In this lesson you connect them. In about 40 lines of Python you will ask a question about a real report and get an answer that cites the passages it used.
 
 ## Explanation
-The goal today is a pipeline that works end to end, not a perfect one. Every later lesson improves one stage. Here is the plan:
+The goal is a pipeline that works end to end, not a perfect one. Later lessons each improve one stage.
 
 1. **Load and chunk:** read one text file and cut it into fixed-size pieces with a small overlap.
 2. **Embed and index:** store the chunks in a local Chroma collection. Chroma calls a sentence-transformers model for us through an embedding function.
 3. **Retrieve:** send the question to Chroma and get the top-k closest chunks with their IDs.
 4. **Generate:** send the numbered chunks and the question to the Claude API with a system prompt that asks for a grounded answer with citations.
 
-You set up the Anthropic SDK and your API key in AI-14. The Claude API is paid, so use a smaller model during development and keep test runs short. Never hard-code a model ID: read it from an environment variable that you set after checking the current models page. [VERSION]
+You set up the Anthropic SDK and API key in AI-14. The Claude API is paid, so use a smaller model for development and keep runs short. Read the model ID from an environment variable, set after checking the current models page. [VERSION]
 
 ```python
 import os
@@ -51,7 +51,7 @@ def ask(question, k=4):
     return msg.content[0].text, res["ids"][0]
 ```
 
-Note three details. First, `query` returns lists of lists, one list per question, so we take index `[0]`. Second, the chunk IDs travel with the text, which lets the model cite them. Third, `PersistentClient` saves the index to disk, so later runs can skip ingestion. If you re-run the `add` line with the same IDs, delete the folder first or use `upsert` instead. [VERSION]
+Note: `query` returns one list per question, so we take `[0]`; chunk IDs travel with the text so the model can cite them; and `PersistentClient` saves the index to disk. If you re-run the `add` line with the same IDs, delete the folder first or use `upsert` instead. [VERSION]
 
 **Analogy:** This first pipeline is like a bicycle built from basic parts: it has wheels, brakes and pedals, and it moves. It is not fast or comfortable yet, but you can ride it, and you can see which part to upgrade next.
 
@@ -73,10 +73,10 @@ and says progress is reviewed every two years [c42].
 Retrieved: ['c41', 'c42', 'c7', 'c88']
 ```
 
-Lucía opens chunks c41 and c42 and confirms the claims are there. Then she asks about a topic the report does not cover, electric vehicle sales, and the model replies "I don't know." Finally, she asks a question whose answer sits in a table. The answer is incomplete, because the fixed-size chunk cut the table in half. She writes this down for L05.
+Lucía opens chunks c41 and c42 and confirms the claims. A question on a topic the report does not cover gets "I don't know." A question whose answer sits in a table gets an incomplete answer, because a fixed-size chunk cut the table in half. She notes this for L05.
 
 ## Common Mistake
-Many learners judge the pipeline only by reading the final answers. When an answer is wrong, they change the prompt. Often the real problem is retrieval: the right chunk was never in the top-k list. Always print the retrieved IDs and open them. If the answer is not in the retrieved chunks, fix retrieval; if it is there and the answer is still wrong, fix generation.
+Many learners judge the pipeline only by its final answers, and change the prompt when one is wrong. Often the real problem is retrieval: the right chunk was never in the top-k list. Always print the retrieved IDs and open them. If the answer is not in the retrieved chunks, fix retrieval; if it is there and the answer is still wrong, fix generation.
 
 ## Key Takeaways
 1. A minimal RAG pipeline is chunk, embed and store in Chroma, retrieve the top-k chunks, then send numbered chunks and the question to the Claude API.
@@ -97,7 +97,7 @@ Many learners judge the pipeline only by reading the final answers. When an answ
 **Time:** about 40 minutes
 
 ## Review Flags
-- [VERSION] Claude API: model choice is read from an environment variable; the current models page must be checked at recording time. The Claude API is paid; confirm current pricing guidance for learners. [VERIFY] realistic cost per learner (course-level flag).
-- [VERSION] Chroma client API: `PersistentClient`, `get_or_create_collection`, `add`, `upsert`, `query` return format and `SentenceTransformerEmbeddingFunction`; the API changed between major versions.
+- [VERSION] Claude API model choice (read from an environment variable; check the models page at recording time). [VERIFY] realistic cost per learner, as the API is paid.
+- [VERSION] Chroma client API (`PersistentClient`, `get_or_create_collection`, `add`, `upsert`, `query` format, `SentenceTransformerEmbeddingFunction`); it changed between major versions.
 - [VERSION] Embedding model name; [VERIFY] its licence and the licence of the example report.
 - The example output is illustrative and must be replaced by a real run.

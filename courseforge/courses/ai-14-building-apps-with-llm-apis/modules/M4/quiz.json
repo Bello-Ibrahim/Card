@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-14",
+  "module_id": "M4",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L13",
+      "objective": "O6",
+      "question": "Your app sends the same long system prompt with every request, but cache_read_input_tokens is always 0 after you add caching. What is the most likely cause?",
+      "options": [
+        "The current date and time are at the start of the system prompt, so the prefix changes every time.",
+        "Caching only works with streaming.",
+        "max_tokens is too low for caching.",
+        "The user's question is at the end of the request."
+      ],
+      "answer_index": 0,
+      "explanation": "Caching needs an exact match from the start of the request, so changing content at the start stops cache reads. The most tempting wrong option is the user's question at the end: that is the correct place for changing content, because it comes after the cached part."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L13",
+      "objective": "O2",
+      "question": "A company must summarise 5,000 support tickets every night, and results are needed by the next morning. Which option fits best?",
+      "options": [
+        "Stream each summary to a web page as it is written.",
+        "Use the largest model with a high max_tokens so no summary is cut off.",
+        "Send all 5,000 tickets in one request.",
+        "Use the Batch API for the nightly job, and check quality with the eval set."
+      ],
+      "answer_index": 3,
+      "explanation": "Work that can wait suits batch processing, which costs about half the normal price. The most tempting wrong option is the largest model with high max_tokens: it may not improve quality for summaries and would raise cost, which you should check with your eval set first."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L14",
+      "objective": "O7",
+      "question": "You are starting your capstone. What should you do before writing any code?",
+      "options": [
+        "Build the dashboard first, so you can see costs from the start.",
+        "Write a one-page spec with user, input and output schema, prompt plan, optional tool, limits and success measure.",
+        "Add as many tools as possible so the app can do more.",
+        "Deploy an empty app to check the hosting."
+      ],
+      "answer_index": 1,
+      "explanation": "A short spec keeps the feature small and clear and makes each layer testable. The most tempting wrong option is starting with the dashboard: without a working core feature there are no real calls to measure, and it mixes two layers at once."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L15",
+      "objective": "O6",
+      "question": "Your dashboard always shows an error rate of 0%, but users report failures. What is the likely problem?",
+      "options": [
+        "The price constants are wrong.",
+        "The dashboard chart shows cost per day instead of per request.",
+        "The log line runs only after a successful API call, so failed calls are never recorded.",
+        "SQLite cannot store error messages."
+      ],
+      "answer_index": 2,
+      "explanation": "If logging comes after the call, an exception skips it; logging in a finally block records every call. The most tempting wrong option is wrong price constants: they would change the cost numbers, but they cannot hide failed calls from the error rate."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L16",
+      "objective": "O5",
+      "question": "Which README best supports a reviewer's trust in your deployed app?",
+      "options": [
+        "One that describes the features and says there are no known limits.",
+        "One with architecture, measured cost per request, eval pass rate and date, and honest known limits.",
+        "One that includes the API key so reviewers can run it quickly.",
+        "One that lists every prompt version but no test results."
+      ],
+      "answer_index": 1,
+      "explanation": "Measured numbers and honest limits show that the app was tested and that its author understands where it fails. The most tempting wrong option is \"no known limits\": every real app has limits, and claiming none suggests the app was not tested carefully."
+    }
+  ]
+}

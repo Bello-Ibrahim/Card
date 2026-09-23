@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-12",
+  "module_id": "M2",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L06",
+      "objective": "O3",
+      "question": "A logistic regression model gives a customer a probability of 0.42 of subscribing. With default settings, what does model.predict return for this customer, and why?",
+      "options": [
+        "1, because any probability above 0 means the customer might subscribe.",
+        "0.42, because predict returns the probability.",
+        "1, because logistic regression always predicts the rarer class when unsure.",
+        "0, because the default threshold is 0.5 and 0.42 is below it."
+      ],
+      "answer_index": 3,
+      "explanation": "predict applies a 0.5 threshold to the probability of the positive class, so 0.42 becomes 0. The most tempting wrong option is that predict returns 0.42. Probabilities come from predict_proba; predict always returns a class label."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L07",
+      "objective": "O2",
+      "question": "As you increase a decision tree's max_depth from 1 to 20, training accuracy rises to 1.0, while test accuracy peaks at depth 4 and then falls. What is happening after depth 4?",
+      "options": [
+        "The tree is overfitting: it learns details and noise of the training rows that do not generalise.",
+        "The tree is underfitting because it has too few questions.",
+        "The test set is leaking into training.",
+        "The tree needs feature scaling to use the extra depth."
+      ],
+      "answer_index": 0,
+      "explanation": "Rising training accuracy with falling test accuracy is the typical sign of overfitting. The most tempting wrong option is scaling. Decision trees split on one feature at a time, so scaling does not change their results; it matters for distance-based models such as KNN."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L08",
+      "objective": "O4",
+      "question": "A model's confusion matrix on 500 customers shows TN = 435, FP = 5, FN = 53, TP = 7. What is its recall for the positive class?",
+      "options": [
+        "About 0.58, because 7 of its 12 positive predictions were correct.",
+        "About 0.12, because it found 7 of the 60 real positive cases.",
+        "About 0.88, because 442 of 500 predictions were correct.",
+        "About 0.99, because it correctly handled 435 of 440 negatives."
+      ],
+      "answer_index": 1,
+      "explanation": "Recall is the share of real positives the model found: 7 / (7 + 53) = 0.117. The most tempting wrong option is 0.58, which is precision: the share of positive predictions that were correct, 7 / (7 + 5)."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L09",
+      "objective": "O5",
+      "question": "A clinic's screening model has ROC AUC 0.75. Missing a patient who needs care costs much more than an extra phone call. What should the team do first?",
+      "options": [
+        "Keep the default 0.5 threshold, because it is the most neutral choice.",
+        "Choose the threshold on the test set that gives the highest accuracy.",
+        "Lower the threshold, choosing it from the costs of each mistake with cross-validated predictions on training data.",
+        "Raise the threshold so that every call is almost certainly needed."
+      ],
+      "answer_index": 2,
+      "explanation": "When missed cases are expensive, a lower threshold raises recall, and the exact value should come from the costs, chosen without touching the test set. The most tempting wrong option is tuning on the test set for accuracy: it uses the test set as training information and optimises a metric that ignores the costs."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L10",
+      "objective": "O4",
+      "question": "With 5-fold cross-validation, model A scores ROC AUC 0.774 (std 0.048) and model B scores 0.733 (std 0.047). What is the most honest conclusion?",
+      "options": [
+        "A is certainly better, because its mean is higher.",
+        "The models are identical, because their standard deviations are the same.",
+        "B is better, because it has a lower standard deviation.",
+        "A is probably better, but the difference is smaller than the spread between folds, so it is not certain."
+      ],
+      "answer_index": 3,
+      "explanation": "The difference of about 0.04 is smaller than one standard deviation, so normal variation between folds could explain it. The most tempting wrong option is that A is certainly better. A higher mean alone does not show a reliable difference when the spread is this large."
+    }
+  ]
+}

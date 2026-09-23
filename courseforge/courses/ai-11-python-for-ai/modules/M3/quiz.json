@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-11",
+  "module_id": "M3",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L11",
+      "objective": "O4",
+      "question": "You load a new CSV into a DataFrame called df. Which command tells you, for every column, its data type and how many values are not missing?",
+      "options": [
+        "df.shape",
+        "df.info()",
+        "df.head()",
+        "df.describe()"
+      ],
+      "answer_index": 1,
+      "explanation": "info() lists each column with its dtype and its count of non-missing values. The most tempting wrong option is describe(). It gives counts and statistics, but by default only for number columns, so a price column stored as text would not appear at all."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L12",
+      "objective": "O4",
+      "question": "Which line keeps only the rows from 2007 where life expectancy is above 70?",
+      "options": [
+        "df[df[\"year\"] == 2007 and df[\"lifeExp\"] > 70]",
+        "df[df[\"year\"] == 2007 & df[\"lifeExp\"] > 70]",
+        "df[\"year\" == 2007, \"lifeExp\" > 70]",
+        "df[(df[\"year\"] == 2007) & (df[\"lifeExp\"] > 70)]"
+      ],
+      "answer_index": 3,
+      "explanation": "pandas combines conditions with &, and each condition needs its own round brackets. The most tempting wrong option is the version with & but no brackets. Without brackets, & is applied before the comparisons, so the code raises an error instead of filtering."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L13",
+      "objective": "O4",
+      "question": "What does df.groupby(\"continent\")[\"gdpPercap\"].median() return?",
+      "options": [
+        "One median GDP per person value for each continent",
+        "The median GDP per person of the whole table, repeated on every row",
+        "The rows sorted by continent and then by GDP per person",
+        "The number of countries in each continent"
+      ],
+      "answer_index": 0,
+      "explanation": "groupby splits the rows by continent, applies median to gdpPercap in each group and combines the results into one value per continent. The most tempting wrong option is the sorted rows. groupby summarises groups; sorting is done with sort_values."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L14",
+      "objective": "O5",
+      "question": "In an order file, one order has quantity -3 and another has quantity 400, while most orders are between 1 and 5. What is the best audit note?",
+      "options": [
+        "Delete both rows, because they are both outliers.",
+        "Both values are fine, because pandas read them as numbers.",
+        "-3 is an impossible value (an error); 400 is an unusual value that needs checking with someone who knows the business.",
+        "Replace both values with the mean quantity."
+      ],
+      "answer_index": 2,
+      "explanation": "A negative quantity cannot be true, but a large order may be a real bulk purchase, so it needs a human decision. The most tempting wrong option is deleting both. Deleting the 400-unit order could remove a genuine customer, and an audit lists problems before any cleaning is done."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L15",
+      "objective": "O5",
+      "question": "You want to see whether countries with higher GDP per person tend to have higher life expectancy. Which chart fits best?",
+      "options": [
+        "A histogram of life expectancy",
+        "A scatter plot with GDP per person on one axis and life expectancy on the other",
+        "A bar chart of population by country",
+        "A histogram of GDP per person"
+      ],
+      "answer_index": 1,
+      "explanation": "A scatter plot shows the relationship between two number columns, with one dot per row. The most tempting wrong option is a histogram of life expectancy. A histogram shows the distribution of one column only, so it cannot show how two columns move together."
+    }
+  ]
+}
