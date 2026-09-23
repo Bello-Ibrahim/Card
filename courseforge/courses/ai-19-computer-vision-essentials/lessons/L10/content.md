@@ -17,7 +17,7 @@ The key setting is the **confidence threshold** (`conf`): detections with a lowe
 **Analogy:** The confidence threshold works like the sensitivity setting on a metal detector at the beach. Set it high and it beeps for every coin and every bottle cap. Set it low and it ignores bottle caps, but also misses small coins buried deep.
 
 ## Worked Example
-Lars Eriksson plans lorry traffic at a container port in Gothenburg, Sweden. He wants to know if a pre-trained model can detect trucks and cars in photos from a public road camera near the port, with no people in close view.
+Lars Eriksson plans lorry traffic at a container port in Gothenburg, Sweden. He tests whether a pre-trained model detects trucks and cars in photos from a public road camera, with no people in close view.
 
 First, in a Colab cell, he installs the package: `!pip install ultralytics`. [VERSION]
 
@@ -40,7 +40,6 @@ Example output:
 
 ```text
 truck 0.88 [412, 190, 640, 355]
-car 0.74 [120, 230, 215, 290]
 conf=0.1: 11 detections
 conf=0.25: 6 detections
 conf=0.5: 4 detections
@@ -48,16 +47,7 @@ conf=0.5: 4 detections
 
 At 0.1 Lars finds two false alarms: a container stack called "truck" and a road sign called "stop sign". At 0.5 one distant car is missed. He chooses 0.25 for now and notes that he must test it on more images.
 
-For video, he streams the results frame by frame so the notebook does not run out of memory:
-
-```python
-counts = []
-for r in model.predict("port_road.mp4", conf=0.25, stream=True, save=True):
-    counts.append(len(r.boxes))
-print("frames:", len(counts), "max objects in one frame:", max(counts))
-```
-
-`save=True` writes an annotated video into a `runs/detect/` folder. [VERSION]
+For video, he loops over `model.predict("port_road.mp4", conf=0.25, stream=True, save=True)`. `stream=True` returns one result per frame, so memory stays low, and `save=True` writes an annotated video into a `runs/detect/` folder. [VERSION]
 
 **On screen (presenter steps):**
 1. In a new Colab notebook, run `!pip install ultralytics` and wait for it to finish.
@@ -86,6 +76,6 @@ Many learners pick a threshold on one image and use it everywhere. A value that 
 **Time:** about 35 minutes
 
 ## Review Flags
-- [VERIFY] Curriculum flag: Ultralytics licence terms. The lesson states AGPL-3.0 with a separate paid enterprise licence for closed commercial use; a reviewer must confirm current terms before scripting L10, L11, L14 and the capstone. The lesson gives general guidance, not legal advice.
+- [VERIFY] Curriculum flag: Ultralytics licence. The lesson states AGPL-3.0 with a separate paid enterprise licence for closed commercial use; confirm current terms before scripting L10, L11, L14 and the capstone. General guidance, not legal advice.
 - [VERIFY] Confirm that the default pre-trained detection models are trained on COCO with 80 classes, including the class names used in the example.
 - [VERSION] `ultralytics` package interface (`YOLO()`, `predict`, `stream`, `save`, `Results.save(filename=...)`, `boxes.xyxy`), the model name `yolo11n.pt`, and the `runs/detect/` output folder change between releases. Code was checked for syntax only; detections are example output.
