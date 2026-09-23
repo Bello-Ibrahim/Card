@@ -1,0 +1,269 @@
+{
+  "course_id": "AI-27",
+  "slug": "ai-27-ai-product-management",
+  "course_title": "AI Product Management",
+  "level": "Intermediate",
+  "status": "AWAITING_APPROVAL",
+  "screen_demo_lessons": [],
+  "overview": "A three-week course for product managers, founders and aspiring PMs who already know the basics of product or project management. Learners find out what changes when a product feature depends on AI: outputs are probabilistic, quality depends on data, and evaluation never stops. They learn to find and score AI opportunities, work out data needs and build-or-buy options, design evaluation metrics and test sets, and plan a responsible launch with guardrails and monitoring. Core product skills such as writing user stories or prioritising a backlog are not retaught. By the end, learners write a complete PRD and evaluation plan for an AI product feature.",
+  "time_plan": {
+    "video_minutes": 75,
+    "weekly_hours": 3,
+    "per_week": "About 25 minutes of video, 95 minutes of exercises in Claude, Figma or FigJam and Google Sheets, and 60 minutes of reading, quizzes and reflection. In week 3 most of the exercise time goes to the capstone PRD."
+  },
+  "objectives": [
+    {
+      "id": "O1",
+      "bloom": "Remember",
+      "text": "Describe the main AI capability types (prediction, classification, generation, retrieval, recommendation and agents) and typical product uses of each."
+    },
+    {
+      "id": "O2",
+      "bloom": "Understand",
+      "text": "Explain how probabilistic outputs, data dependence and model limits change product discovery, design and delivery."
+    },
+    {
+      "id": "O3",
+      "bloom": "Apply",
+      "text": "Identify and scope AI feature opportunities using a value, feasibility and risk framework."
+    },
+    {
+      "id": "O4",
+      "bloom": "Analyse",
+      "text": "Analyse the data needs, build-or-buy options and running costs of an AI feature."
+    },
+    {
+      "id": "O5",
+      "bloom": "Evaluate",
+      "text": "Design evaluation metrics and test sets to judge AI feature quality, and plan a responsible launch with guardrails and monitoring."
+    },
+    {
+      "id": "O6",
+      "bloom": "Create",
+      "text": "Write a complete PRD and evaluation plan for an AI product feature."
+    }
+  ],
+  "modules": [
+    {
+      "module_id": "M1",
+      "week": 1,
+      "title": "Finding the Right AI Problem",
+      "lessons": [
+        {
+          "lesson_id": "L01",
+          "title": "What Changes When the Product Is AI",
+          "objectives": [
+            "O1",
+            "O2"
+          ],
+          "summary": "Traditional features give the same output for the same input; AI features give likely answers that are sometimes wrong. Analogy: a calculator compared with a talented new colleague who needs clear instructions and checking. What this means for design, testing and user trust.",
+          "exercise": "Compare a search filter with an AI-generated summary in a table: list how each can fail, how users would notice, and what the product should do."
+        },
+        {
+          "lesson_id": "L02",
+          "title": "The AI Capability Menu",
+          "objectives": [
+            "O1"
+          ],
+          "summary": "Six capability types: prediction, classification, generation, retrieval, recommendation and agents. Hypothetical examples include crop-price prediction for farmers in India, delivery-time estimates in Nigeria and product recommendations for an online shop in Poland. Choosing the simplest capability that solves the problem.",
+          "exercise": "On a FigJam board, sort 12 product ideas by capability type and mark the ones that do not need AI at all."
+        },
+        {
+          "lesson_id": "L03",
+          "title": "Finding AI Opportunities in Your Product",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "Good opportunities combine a real user pain, a repeated judgement task and available data. The common trap: adding AI because it is popular, not because users need it. Worked example: a language-learning app in Brazil looking for AI opportunities in its user journey.",
+          "exercise": "Use Claude to generate 10 AI opportunities for a product you know, then remove any that do not start from a real user problem."
+        },
+        {
+          "lesson_id": "L04",
+          "title": "Scoring Opportunities: Value, Feasibility and Risk",
+          "objectives": [
+            "O3",
+            "O4"
+          ],
+          "summary": "A simple scoring matrix: user and business value, data and technical feasibility, and the cost of errors. Analogy: an investment committee that asks what could go wrong before approving a project. Why a high-value idea with a high error cost may need a narrower scope.",
+          "exercise": "Score your opportunities from L03 in a Google Sheets matrix and choose the top 3, with one sentence of reasoning each."
+        },
+        {
+          "lesson_id": "L05",
+          "title": "Scoping an MVP AI Feature",
+          "objectives": [
+            "O2",
+            "O3"
+          ],
+          "summary": "Start narrow: one user, one task, a human in the loop and a clear fallback when the AI is unsure. Design the experience for errors as carefully as for success. Worked example: an AI reply-suggestion feature for a marketplace in Egypt.",
+          "exercise": "Sketch the happy path and the failure path for your chosen feature in Figma or FigJam, including what the user sees when the AI is wrong or unsure."
+        }
+      ]
+    },
+    {
+      "module_id": "M2",
+      "week": 2,
+      "title": "Data, Models and Evaluation",
+      "lessons": [
+        {
+          "lesson_id": "L06",
+          "title": "Data Needs: What Your Feature Learns From",
+          "objectives": [
+            "O4"
+          ],
+          "summary": "Data sources, labels, quality, coverage of different users and languages, consent and privacy. The cold-start problem when a new product has no data yet. Analogy: a recipe is only as good as its ingredients.",
+          "exercise": "Complete a data requirements table for your feature: sources, owner, quality risks, privacy questions and how you would fill any gaps."
+        },
+        {
+          "lesson_id": "L07",
+          "title": "Build, Buy or Use an API?",
+          "objectives": [
+            "O4"
+          ],
+          "summary": "Options: a foundation model API, a vendor product, fine-tuning, or an in-house model. Trade-offs in cost per request, speed, quality, data terms and dependence on one supplier. All prices are placeholders and must be checked at the time of use [VERSION].",
+          "exercise": "In Google Sheets, estimate the monthly running cost of your feature for 10,000 users using the provided placeholder prices, then test how the cost changes if usage doubles."
+        },
+        {
+          "lesson_id": "L08",
+          "title": "Designing Evaluation: Metrics That Matter",
+          "objectives": [
+            "O5"
+          ],
+          "summary": "Three layers of metrics: offline quality (such as accuracy or rubric scores), online product results (task success, adoption, retention) and guardrail metrics (harmful outputs, cost, response time). Worked example: a metric tree for a document-summary feature at a law firm in South Africa. Why one number is never enough.",
+          "exercise": "Build a metric tree for your feature with at least one metric in each layer and a target for each."
+        },
+        {
+          "lesson_id": "L09",
+          "title": "Building a Test Set and Running Evaluations",
+          "objectives": [
+            "O5"
+          ],
+          "summary": "A good test set includes common cases, edge cases, different user groups and languages, and inputs that should be refused. Human rating with a clear rubric, and using an AI model as a judge only with human spot checks. Analogy: a driving test that includes night driving and bad weather.",
+          "exercise": "Write a 20-case test set in Google Sheets, run each case through Claude, and score the outputs with a 3-point rubric."
+        },
+        {
+          "lesson_id": "L10",
+          "title": "Working with Data Scientists and Engineers",
+          "objectives": [
+            "O2",
+            "O4"
+          ],
+          "summary": "Shared vocabulary, experiment cycles and why AI timelines are less predictable than traditional features. What a PM should ask for: assumptions, evaluation results, known limits and model documentation. Worked example: a PM in Kenya agreeing on a two-week experiment instead of a fixed launch date.",
+          "exercise": "Write a one-page brief for your technical team with the feature goal, your assumptions and 5 open questions."
+        }
+      ]
+    },
+    {
+      "module_id": "M3",
+      "week": 3,
+      "title": "Responsible Launch and Your PRD",
+      "lessons": [
+        {
+          "lesson_id": "L11",
+          "title": "Responsible AI Risks and Guardrails",
+          "objectives": [
+            "O5"
+          ],
+          "summary": "Main risks: unfair outcomes, privacy, misuse, harmful or false outputs and lack of transparency. Guardrails include input and output checks, human review, usage limits and clear user messages. Legal requirements differ by country and are marked [REGION] [VERIFY], such as the EU AI Act risk categories and data protection laws.",
+          "exercise": "Complete a risk and guardrail table for your feature, with an owner for each guardrail."
+        },
+        {
+          "lesson_id": "L12",
+          "title": "Launch Strategy: Pilots, Rollouts and Monitoring",
+          "objectives": [
+            "O5"
+          ],
+          "summary": "Staged rollouts, A/B tests, user feedback loops, monitoring for quality changes over time, and a way to switch the feature off quickly. Analogy: opening a new restaurant with a soft launch for friends before the public opening. Deciding in advance what result would stop the rollout.",
+          "exercise": "Write a rollout plan with 3 stages, the metric that allows each next stage, and the stop criteria."
+        },
+        {
+          "lesson_id": "L13",
+          "title": "Writing the AI PRD: Structure and Scope",
+          "objectives": [
+            "O6"
+          ],
+          "summary": "The capstone brief and the AI PRD template: problem, users, capability, data, experience for errors, success metrics, risks and open questions. What an AI PRD adds to a standard PRD. The capstone rubric.",
+          "exercise": "Capstone step 1: write the problem, users, scope and experience sections of your PRD, with a FigJam flow for the happy and failure paths."
+        },
+        {
+          "lesson_id": "L14",
+          "title": "Writing the Evaluation Plan",
+          "objectives": [
+            "O5",
+            "O6"
+          ],
+          "summary": "Turning the metric tree and test set into a plan: what is measured before launch, during the pilot and after launch, and who reviews the results. Clear pass and fail thresholds. Worked example: an evaluation plan for a support-reply feature at a telecom company in Indonesia.",
+          "exercise": "Capstone step 2: write the evaluation plan, including the test set design, metrics, thresholds and review schedule."
+        },
+        {
+          "lesson_id": "L15",
+          "title": "Reviewing and Presenting Your PRD",
+          "objectives": [
+            "O5",
+            "O6"
+          ],
+          "summary": "A peer review checklist for AI PRDs: Is the problem real? Is the data available? Are failure paths designed? Are the metrics and guardrails clear? How to present trade-offs honestly to stakeholders.",
+          "exercise": "Capstone step 3: review your PRD with the checklist, ask Claude to act as a critical engineering lead and list its questions, then finalise the PRD and evaluation plan."
+        }
+      ]
+    }
+  ],
+  "capstone": {
+    "title": "AI Feature PRD and Evaluation Plan",
+    "brief": "Write a complete PRD and evaluation plan for an AI product feature.",
+    "built_in": [
+      "L13",
+      "L14",
+      "L15"
+    ],
+    "assesses": [
+      "O3",
+      "O4",
+      "O5",
+      "O6"
+    ]
+  },
+  "coverage_check": {
+    "O1": [
+      "L01",
+      "L02"
+    ],
+    "O2": [
+      "L01",
+      "L05",
+      "L10"
+    ],
+    "O3": [
+      "L03",
+      "L04",
+      "L05"
+    ],
+    "O4": [
+      "L04",
+      "L06",
+      "L07",
+      "L10"
+    ],
+    "O5": [
+      "L08",
+      "L09",
+      "L11",
+      "L12",
+      "L14",
+      "L15"
+    ],
+    "O6": [
+      "L13",
+      "L14",
+      "L15"
+    ]
+  },
+  "flags": [
+    "PROPOSED: screen demo for L09 (learners run a 20-case test set through Claude and score it in Google Sheets; seeing the workflow live makes the evaluation process concrete). Needs approval.",
+    "L07 [VERSION]: model API prices are placeholders only; any real price in Stage 2 must be checked on the day of scripting.",
+    "L11 [REGION] [VERIFY]: EU AI Act risk categories and obligations, and any data protection laws named as examples.",
+    "[VERSION]: Claude free-plan limits and data-use terms; Figma and FigJam free-plan limits; Google Sheets features used in exercises.",
+    "L09: using an AI model as a judge is taught as a technique with limits and human spot checks, not as a replacement for human rating.",
+    "Judgement call: basic product skills (user stories, backlog prioritisation, standard PRD sections) are not retaught, per the prerequisite; lessons cover only what AI adds.",
+    "Judgement call: all company examples are hypothetical; no statistics about AI product success or failure rates are used."
+  ]
+}

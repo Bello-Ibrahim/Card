@@ -1,0 +1,349 @@
+{
+  "course_id": "AI-18",
+  "slug": "ai-18-mlops-deploying-and-monitoring-models",
+  "course_title": "MLOps: Deploying and Monitoring Models",
+  "level": "Advanced",
+  "status": "AWAITING_APPROVAL",
+  "screen_demo_lessons": [
+    "L03",
+    "L04",
+    "L05",
+    "L06",
+    "L07",
+    "L08",
+    "L09",
+    "L11",
+    "L12",
+    "L13",
+    "L14",
+    "L15",
+    "L16",
+    "L17",
+    "L18"
+  ],
+  "overview": "A four-week, advanced course for ML engineers, DevOps engineers and data scientists who can already train models with scikit-learn and use Docker and Git at a basic level. Learners take a model out of the notebook and turn it into a reliable production service. They track experiments and version models with MLflow, serve predictions through a FastAPI service in a Docker container, and automate testing, image builds and model promotion with GitHub Actions. The final week covers monitoring: service health, prediction logging and data drift detection, and when to retrain or roll back. By the end, learners deploy a model as an API with automated testing, versioning and monitoring.",
+  "time_plan": {
+    "video_minutes": 90,
+    "weekly_hours": 4,
+    "per_week": "About 22 minutes of video, 150 minutes of hands-on work with the tools, and about 70 minutes of reading, design and reflection. In week 4 most of the hands-on time goes to the capstone."
+  },
+  "objectives": [
+    {
+      "id": "O1",
+      "bloom": "Remember",
+      "text": "Describe the stages of the production ML lifecycle and the key MLOps terms: artefact, model registry, CI/CD, serving, drift and rollback."
+    },
+    {
+      "id": "O2",
+      "bloom": "Understand",
+      "text": "Explain why models degrade after deployment and how versioning code, data and models makes results reproducible."
+    },
+    {
+      "id": "O3",
+      "bloom": "Apply",
+      "text": "Track experiments and register, version and promote models with MLflow."
+    },
+    {
+      "id": "O4",
+      "bloom": "Apply",
+      "text": "Package a trained model as a FastAPI service in a Docker container, and automate its testing and image build with GitHub Actions."
+    },
+    {
+      "id": "O5",
+      "bloom": "Analyse",
+      "text": "Analyse service metrics, prediction logs and feature distributions to detect data drift, prediction drift and performance problems."
+    },
+    {
+      "id": "O6",
+      "bloom": "Evaluate",
+      "text": "Evaluate serving and release strategies (batch or online, canary, shadow, rollback) and decide when to retrain, promote or roll back a model."
+    },
+    {
+      "id": "O7",
+      "bloom": "Create",
+      "text": "Deploy a model as an API with automated testing, versioning and monitoring."
+    }
+  ],
+  "modules": [
+    {
+      "module_id": "M1",
+      "week": 1,
+      "title": "From Notebook to Reproducible Project",
+      "lessons": [
+        {
+          "lesson_id": "L01",
+          "title": "Why Models Fail After the Notebook",
+          "objectives": [
+            "O1",
+            "O2"
+          ],
+          "summary": "A model that works in a notebook often fails in production because of missing dependencies, different data, silent errors and nobody watching it. Analogy: a recipe that works in a home kitchen needs written steps, exact measures and quality checks before a food factory can make it every day.",
+          "exercise": "Review a sample notebook and list at least 6 problems that would stop it from running reliably in production, such as unpinned libraries, hard-coded paths and missing random seeds."
+        },
+        {
+          "lesson_id": "L02",
+          "title": "The MLOps Lifecycle and Maturity Levels",
+          "objectives": [
+            "O1",
+            "O6"
+          ],
+          "summary": "The lifecycle: data, training, evaluation, registration, deployment, monitoring and retraining, connected in a loop. Maturity levels run from manual steps to fully automated pipelines, and not every team needs full automation. Worked example: comparing a two-person start-up in Nairobi with a large bank's data science team in Singapore.",
+          "exercise": "Read three short team descriptions and place each team on a maturity level. For one team, recommend the next single improvement and explain why."
+        },
+        {
+          "lesson_id": "L03",
+          "title": "Structuring an ML Project for Production",
+          "objectives": [
+            "O2",
+            "O4"
+          ],
+          "summary": "Move from a notebook to a project: a training script, configuration files, pinned dependencies, fixed random seeds and a clear folder layout, all under Git. A quick recap of Git basics only, since they are a prerequisite.",
+          "exercise": "Refactor a scikit-learn notebook into a train.py script with a configuration file and a pinned requirements file. Run it twice and confirm that the results are identical."
+        },
+        {
+          "lesson_id": "L04",
+          "title": "Experiment Tracking with MLflow",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "Run MLflow locally and log parameters, metrics and artefacts for each training run, then compare runs in the MLflow interface. Worked example: the public Wine Quality dataset from Portugal, with three model settings compared side by side. [VERSION] MLflow's interface and API change between releases.",
+          "exercise": "Log at least 3 training runs with different settings to MLflow, compare them in the interface, and write down which run you would choose and why."
+        },
+        {
+          "lesson_id": "L05",
+          "title": "Model Registry and Data Versioning",
+          "objectives": [
+            "O2",
+            "O3"
+          ],
+          "summary": "Register the chosen model, give it versions, and mark which version is in production. Record which data and code produced each version, for example with a data hash and a Git commit ID. [VERSION] MLflow's way of marking production models has changed over time; check the current method.",
+          "exercise": "Register your best model in the MLflow registry, add a second version, mark one as the production version, and record the data hash and Git commit for each."
+        }
+      ]
+    },
+    {
+      "module_id": "M2",
+      "week": 2,
+      "title": "Serving Models as APIs",
+      "lessons": [
+        {
+          "lesson_id": "L06",
+          "title": "Designing a Prediction API with FastAPI",
+          "objectives": [
+            "O4"
+          ],
+          "summary": "Build a FastAPI service with a /predict endpoint, a /health endpoint, and request and response schemas. Load the model once when the service starts, not on every request. [VERSION] FastAPI and Pydantic syntax changes between major versions.",
+          "exercise": "Build a FastAPI service that loads your registered model and returns predictions for a JSON input. Test it through the automatic documentation page."
+        },
+        {
+          "lesson_id": "L07",
+          "title": "Input Validation, Errors and Logging",
+          "objectives": [
+            "O4",
+            "O5"
+          ],
+          "summary": "Reject bad inputs early with clear error messages: missing fields, wrong types, values outside the training range. Log every request and prediction in a structured format so that monitoring is possible later. Avoid logging personal data.",
+          "exercise": "Add validation rules for 3 kinds of bad input, return clear error responses, and write each prediction to a structured log file. Send 10 test requests and inspect the log."
+        },
+        {
+          "lesson_id": "L08",
+          "title": "Containerising the Model Service",
+          "objectives": [
+            "O4"
+          ],
+          "summary": "Go beyond basic Docker: a small base image, a multi-stage build, a non-root user, and a clear choice between copying the model into the image or loading it from the registry at start-up. Image size and start-up time matter when services scale.",
+          "exercise": "Write a Dockerfile for your service, build the image, run it locally, and reduce the image size by at least one technique. Record the size before and after."
+        },
+        {
+          "lesson_id": "L09",
+          "title": "Batch vs Online Serving and Performance",
+          "objectives": [
+            "O4",
+            "O6"
+          ],
+          "summary": "Online serving answers one request at a time, quickly; batch serving scores many rows on a schedule. Measure latency (median and 95th percentile) and throughput with a simple load test. Worked example: a delivery-time model for an online shop in Poland that needs fast answers, compared with a monthly churn score that does not.",
+          "exercise": "Load-test your container with a free tool such as Locust, record median and 95th percentile latency at two load levels, and write a batch scoring script for the same model."
+        },
+        {
+          "lesson_id": "L10",
+          "title": "Deployment Targets and Release Strategies",
+          "objectives": [
+            "O6"
+          ],
+          "summary": "Where models run: a single server, a container platform or a managed service. How new versions are released: blue-green, canary and shadow deployments, and a tested rollback plan. Worked example: choosing strategies for a hospital triage tool in Kenya and a product recommender in Brazil. [VERSION] Free hosting tiers change often.",
+          "exercise": "For 3 scenarios, choose a release strategy and a rollback trigger, and justify each choice in two sentences."
+        }
+      ]
+    },
+    {
+      "module_id": "M3",
+      "week": 3,
+      "title": "CI/CD for Machine Learning",
+      "lessons": [
+        {
+          "lesson_id": "L11",
+          "title": "Testing ML Code and Models",
+          "objectives": [
+            "O4",
+            "O6"
+          ],
+          "summary": "Four kinds of test: unit tests for code, data tests for inputs, model quality gates such as a minimum score on a fixed test set, and API tests with pytest and FastAPI's test client. A model that passes its code tests can still be a worse model.",
+          "exercise": "Write at least 5 pytest tests: 2 unit tests, 1 data test, 1 model quality gate and 1 API test. Make one fail on purpose to check that it catches the problem."
+        },
+        {
+          "lesson_id": "L12",
+          "title": "GitHub Actions: CI for an ML Service",
+          "objectives": [
+            "O4"
+          ],
+          "summary": "Write a GitHub Actions workflow that installs dependencies and runs all tests on every push and pull request. Use caching to keep runs fast and protect the main branch so that failing code cannot be merged. [VERSION] Free minutes and runner options depend on the account and repository type.",
+          "exercise": "Add a CI workflow to your repository, open a pull request with a failing test, confirm that it is blocked, then fix it and merge."
+        },
+        {
+          "lesson_id": "L13",
+          "title": "Building and Publishing Images Automatically",
+          "objectives": [
+            "O3",
+            "O4"
+          ],
+          "summary": "Extend the pipeline to build the Docker image and push it to a container registry, tagged with the Git commit and the model version. Store credentials as encrypted secrets, never in the code. [VERSION] Registry options and permissions change.",
+          "exercise": "Extend your workflow to build and push the image to GitHub Container Registry on every merge to main, tagged with the commit ID and model version."
+        },
+        {
+          "lesson_id": "L14",
+          "title": "Automating Retraining and Promotion",
+          "objectives": [
+            "O3",
+            "O6"
+          ],
+          "summary": "A scheduled workflow retrains the model, compares the new 'challenger' with the current 'champion' on the same test data, and promotes it only if it is better. A person approves the final promotion. [VERSION] Scheduled workflows and approval features depend on the plan.",
+          "exercise": "Build a scheduled workflow that retrains, compares challenger and champion, and updates the registry only when the challenger wins. Add a manual approval step before promotion."
+        }
+      ]
+    },
+    {
+      "module_id": "M4",
+      "week": 4,
+      "title": "Monitoring in Production: Capstone",
+      "lessons": [
+        {
+          "lesson_id": "L15",
+          "title": "Monitoring Model Services",
+          "objectives": [
+            "O5"
+          ],
+          "summary": "Watch two layers: service health (latency, error rate, traffic) and model behaviour (prediction distribution, input values, and accuracy when true labels arrive later). Build a simple dashboard from your structured logs, and set alert thresholds.",
+          "exercise": "Build a simple monitoring notebook or dashboard from your prediction logs that shows requests per hour, error rate, latency and the distribution of predictions."
+        },
+        {
+          "lesson_id": "L16",
+          "title": "Detecting Data and Prediction Drift",
+          "objectives": [
+            "O5",
+            "O6"
+          ],
+          "summary": "Drift means production data no longer looks like training data. Compare distributions with statistical tests such as the Kolmogorov-Smirnov test or the population stability index, and decide whether to retrain, investigate or ignore. Worked example: a credit model whose applicants change after a new marketing campaign.",
+          "exercise": "Simulate drift by changing one feature in a new batch of requests. Detect it with a statistical test, and write a short decision: retrain, investigate or ignore."
+        },
+        {
+          "lesson_id": "L17",
+          "title": "Capstone Part 1: Build and Automate",
+          "objectives": [
+            "O3",
+            "O4",
+            "O7"
+          ],
+          "summary": "Choose a public dataset and a prediction problem, then bring together the parts of weeks 1 to 3: tracked training, a registered model, a FastAPI service in Docker, and a CI pipeline with tests. The capstone brief and rubric are explained.",
+          "exercise": "Capstone step 1: build a repository where every push runs tests, and every merge builds and publishes an image of your model API, with the model version tracked in MLflow."
+        },
+        {
+          "lesson_id": "L18",
+          "title": "Capstone Part 2: Monitor, Document and Present",
+          "objectives": [
+            "O5",
+            "O6",
+            "O7"
+          ],
+          "summary": "Add prediction logging, a monitoring view and a drift check, then write a short runbook: how to deploy, how to roll back, and what each alert means. Finish with a demo.",
+          "exercise": "Capstone step 2: add monitoring and a drift check to your service, write a one-page runbook, and record a 4-minute demo that includes a rollback to the previous model version."
+        }
+      ]
+    }
+  ],
+  "capstone": {
+    "title": "Deploy and Monitor a Model API",
+    "brief": "Deploy a model as a FastAPI service in Docker with automated tests and image builds in GitHub Actions, model versioning in MLflow, and monitoring with drift detection and a rollback plan.",
+    "built_in": [
+      "L17",
+      "L18"
+    ],
+    "assesses": [
+      "O3",
+      "O4",
+      "O5",
+      "O6",
+      "O7"
+    ]
+  },
+  "coverage_check": {
+    "O1": [
+      "L01",
+      "L02"
+    ],
+    "O2": [
+      "L01",
+      "L03",
+      "L05"
+    ],
+    "O3": [
+      "L04",
+      "L05",
+      "L13",
+      "L14",
+      "L17"
+    ],
+    "O4": [
+      "L03",
+      "L06",
+      "L07",
+      "L08",
+      "L09",
+      "L11",
+      "L12",
+      "L13",
+      "L17"
+    ],
+    "O5": [
+      "L07",
+      "L15",
+      "L16",
+      "L18"
+    ],
+    "O6": [
+      "L02",
+      "L09",
+      "L10",
+      "L11",
+      "L14",
+      "L16",
+      "L18"
+    ],
+    "O7": [
+      "L17",
+      "L18"
+    ]
+  },
+  "flags": [
+    "Screen demos proposed for 15 of 18 lessons (L03-L09, L11-L18). L01, L02 and L10 are concept and decision lessons with slides and diagrams.",
+    "MLflow [VERSION]: interface, tracking server set-up and the method for marking the production model (older 'stages' versus newer 'aliases') must be checked against the current release (L04, L05, L14).",
+    "FastAPI and Pydantic [VERSION]: schema and validation syntax changed between major Pydantic versions (L06, L07).",
+    "Docker [VERSION]: base image names and build features (L08).",
+    "GitHub Actions [VERSION]: free minutes, runner types, environment approval features and GitHub Container Registry permissions depend on the plan and repository type (L12-L14).",
+    "L09 [VERSION]: Locust is used as a free load-testing tool although it is not in the brief's tool list; check the current interface.",
+    "L10 [VERSION]: free hosting tiers for deployment targets change often; Stage 2 must not name specific free limits without checking.",
+    "L04 [VERIFY]: confirm the licence and current location of the Wine Quality dataset (UCI Machine Learning Repository).",
+    "L16 [VERIFY]: the credit-model drift example is hypothetical; the PSI thresholds commonly quoted are rules of thumb, not standards, and must be presented that way.",
+    "Judgement call: scikit-learn, Docker and Git basics are prerequisites, so L03 and L08 recap them briefly and focus on production practice.",
+    "Judgement call: monitoring uses structured logs and a simple dashboard rather than a full Prometheus/Grafana stack, to keep set-up within the 4-hour weekly budget."
+  ]
+}

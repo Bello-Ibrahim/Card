@@ -1,0 +1,350 @@
+{
+  "course_id": "AI-17",
+  "slug": "ai-17-data-engineering-for-ai",
+  "course_title": "Data Engineering for AI",
+  "level": "Intermediate",
+  "status": "AWAITING_APPROVAL",
+  "screen_demo_lessons": [
+    "L03",
+    "L05",
+    "L06",
+    "L07",
+    "L08",
+    "L09",
+    "L10",
+    "L11",
+    "L12",
+    "L13",
+    "L14",
+    "L15",
+    "L16",
+    "L17",
+    "L18"
+  ],
+  "overview": "A four-week, hands-on course for data analysts, backend developers and aspiring data engineers who already know Python and basic SQL. Learners find out how data travels from raw sources to datasets that analytics and AI systems can trust. They load raw data into PostgreSQL and DuckDB, transform it in layers with dbt Core, test its quality, and schedule the whole pipeline with Apache Airflow. Every step uses free, open-source tools and public datasets. By the end, learners build a working ELT pipeline that turns raw data into a tested, documented, AI-ready dataset.",
+  "time_plan": {
+    "video_minutes": 90,
+    "weekly_hours": 3,
+    "per_week": "About 22 minutes of video, 100 minutes of hands-on work with the tools, and about 60 minutes of reading, design and reflection. In week 4 most of the hands-on time goes to the capstone."
+  },
+  "objectives": [
+    {
+      "id": "O1",
+      "bloom": "Remember",
+      "text": "Define the core terms of data engineering: source, pipeline, ETL, ELT, data warehouse, data lake, batch and streaming."
+    },
+    {
+      "id": "O2",
+      "bloom": "Understand",
+      "text": "Explain how data moves from raw sources to AI-ready datasets, and why layered models (staging, intermediate, marts) make pipelines easier to maintain."
+    },
+    {
+      "id": "O3",
+      "bloom": "Apply",
+      "text": "Load and query raw data with PostgreSQL and DuckDB, and transform it into clean tables with dbt Core models."
+    },
+    {
+      "id": "O4",
+      "bloom": "Apply",
+      "text": "Orchestrate pipeline tasks with Apache Airflow, including schedules, dependencies, retries and backfills."
+    },
+    {
+      "id": "O5",
+      "bloom": "Analyse",
+      "text": "Analyse a dataset for quality problems such as missing values, duplicates, invalid values, schema changes and data leakage, and write tests that catch them."
+    },
+    {
+      "id": "O6",
+      "bloom": "Evaluate",
+      "text": "Evaluate data design choices (schema, incremental loads, storage format, dataset splits) for reliability, cost and fitness for an AI use case."
+    },
+    {
+      "id": "O7",
+      "bloom": "Create",
+      "text": "Build a working ELT pipeline from raw data to an AI-ready dataset with quality tests."
+    }
+  ],
+  "modules": [
+    {
+      "module_id": "M1",
+      "week": 1,
+      "title": "Data Pipelines and Storage Foundations",
+      "lessons": [
+        {
+          "lesson_id": "L01",
+          "title": "What Data Engineers Do for AI",
+          "objectives": [
+            "O1",
+            "O2"
+          ],
+          "summary": "Most of the work in an AI project happens before a model is trained: collecting, cleaning, joining and delivering data. Analogy: a water treatment plant that takes river water and delivers safe tap water, every day, without anyone noticing. The roles of sources, pipelines, storage and consumers.",
+          "exercise": "Map the data flow of a ride-hailing app in Jakarta: list 4 data sources, where the data is stored, and 3 teams or systems that use it."
+        },
+        {
+          "lesson_id": "L02",
+          "title": "ETL, ELT, Batch and Streaming",
+          "objectives": [
+            "O1",
+            "O2"
+          ],
+          "summary": "ETL transforms data before loading it; ELT loads raw data first and transforms it inside the warehouse, which is the pattern this course uses. Batch pipelines run on a schedule; streaming pipelines process events as they arrive. Warehouses, lakes and when each fits.",
+          "exercise": "Classify 6 scenarios (for example nightly sales reports for a supermarket chain in Kenya, card fraud alerts for a bank in Brazil) as batch or streaming, and explain one choice in a sentence."
+        },
+        {
+          "lesson_id": "L03",
+          "title": "Setting Up PostgreSQL and Loading Raw Data",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "Run PostgreSQL locally with Docker or a native installer, create a 'raw' schema, and load a public CSV dataset without changing it. Why raw data is kept exactly as it arrived. [VERSION] Installation steps differ by operating system and release.",
+          "exercise": "Load a public CSV dataset (for example World Bank development indicators) into a raw table in PostgreSQL, then count the rows and check each column's data type."
+        },
+        {
+          "lesson_id": "L04",
+          "title": "Data Modelling: Tables, Keys and Star Schemas",
+          "objectives": [
+            "O2",
+            "O6"
+          ],
+          "summary": "Primary keys, foreign keys, and the star schema: fact tables hold events such as sales, and dimension tables describe them, such as products, stores and dates. Worked example: sales for a grocery chain with shops in Ghana and Nigeria. Choosing the grain, meaning what one row represents, is the most important decision.",
+          "exercise": "Design a star schema for an online bookshop: name the fact table and its grain, 3 dimension tables, and the keys that join them. Draw it on paper or in draw.io."
+        },
+        {
+          "lesson_id": "L05",
+          "title": "DuckDB: Fast Analytics on Your Laptop",
+          "objectives": [
+            "O3",
+            "O6"
+          ],
+          "summary": "DuckDB is an in-process analytical database that can query CSV and Parquet files directly from Python or its command line. Why column storage and the Parquet format make analytical queries faster and files smaller. When to choose DuckDB and when to choose a server database such as PostgreSQL.",
+          "exercise": "Query the same dataset as CSV and as Parquet with DuckDB from Python. Compare the file sizes and query times, and write two sentences on what you found."
+        }
+      ]
+    },
+    {
+      "module_id": "M2",
+      "week": 2,
+      "title": "Transforming Data with dbt",
+      "lessons": [
+        {
+          "lesson_id": "L06",
+          "title": "dbt Core: Project Setup and First Model",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "dbt Core turns SELECT statements into tables and views, in the right order, with version control. Install dbt Core with a database adapter, connect it to your database with a profile, and run a first model. [VERSION] Package and adapter names and installation steps change between releases.",
+          "exercise": "Install dbt Core with a PostgreSQL or DuckDB adapter, create a new project, write one model that selects from your raw table, and run it successfully."
+        },
+        {
+          "lesson_id": "L07",
+          "title": "Sources, Staging Models and ref()",
+          "objectives": [
+            "O2",
+            "O3"
+          ],
+          "summary": "Declare raw tables as sources, then build one staging model per source that renames, casts and cleans columns without changing the meaning. Using ref() between models lets dbt work out the build order. Analogy: preparing ingredients (washing, cutting) before cooking the meal.",
+          "exercise": "Declare your raw table as a source and build a staging model that renames columns to a consistent style, fixes data types and removes obvious test rows."
+        },
+        {
+          "lesson_id": "L08",
+          "title": "Building Marts and Feature Tables for AI",
+          "objectives": [
+            "O3",
+            "O6"
+          ],
+          "summary": "Marts join and aggregate staging models into tables that answer business questions. A feature table has one row per entity, for example one row per customer, ready for a model. Worked example: churn features for a mobile network in Brazil, built only from data available before the prediction date, to avoid leakage.",
+          "exercise": "Build a mart that aggregates your data to one row per entity with at least 4 useful feature columns, and write down the date each feature is based on."
+        },
+        {
+          "lesson_id": "L09",
+          "title": "Incremental Models and Changing Data",
+          "objectives": [
+            "O3",
+            "O6"
+          ],
+          "summary": "Rebuilding a large table every day is slow and expensive. Incremental models process only new or changed rows, and snapshots keep the history of records that change over time, such as a customer's address. The trade-off is added complexity and new ways to fail.",
+          "exercise": "Convert one model to incremental, add new rows to the raw table, and run it twice. Check that only the new rows were processed and that no rows are duplicated."
+        },
+        {
+          "lesson_id": "L10",
+          "title": "Documentation and Lineage",
+          "objectives": [
+            "O2"
+          ],
+          "summary": "Add descriptions to models and columns, then generate dbt's documentation site with its lineage graph. Lineage shows where every column comes from, which helps when a number looks wrong or a source changes.",
+          "exercise": "Document 3 models and their key columns, generate the documentation site, and use the lineage graph to explain in 3 sentences where one feature column comes from."
+        }
+      ]
+    },
+    {
+      "module_id": "M3",
+      "week": 3,
+      "title": "Data Quality and Orchestration",
+      "lessons": [
+        {
+          "lesson_id": "L11",
+          "title": "What Makes Data Bad?",
+          "objectives": [
+            "O5"
+          ],
+          "summary": "Six dimensions of data quality: completeness, uniqueness, validity, consistency, timeliness and accuracy. Bad data does not crash a model; it quietly teaches the model the wrong thing. Worked example: duplicated patient visits in a clinic dataset that make a disease look twice as common.",
+          "exercise": "Profile a messy public dataset with DuckDB: count missing values, duplicates and out-of-range values per column, and list your 5 most serious issues."
+        },
+        {
+          "lesson_id": "L12",
+          "title": "Testing Data with dbt",
+          "objectives": [
+            "O5",
+            "O3"
+          ],
+          "summary": "Add generic tests (unique, not null, accepted values, relationships) in YAML, and write custom SQL tests for business rules. Choose which failures stop the pipeline and which only warn. [VERSION] Test syntax and add-on packages change between releases.",
+          "exercise": "Add at least 6 tests to your project, including one custom test for a business rule. Break the data on purpose so that one test fails, then fix it."
+        },
+        {
+          "lesson_id": "L13",
+          "title": "Orchestrating with Apache Airflow",
+          "objectives": [
+            "O4"
+          ],
+          "summary": "Airflow runs pipelines as DAGs: tasks, their dependencies and a schedule. Run Airflow locally, write a DAG in Python that loads data and then runs dbt, and follow the run in the web interface. [VERSION] Local installation, DAG syntax and the interface differ between major versions.",
+          "exercise": "Write a DAG with 3 tasks (load raw data, run dbt models, run dbt tests) that runs daily, trigger it manually, and check that the tasks run in the right order."
+        },
+        {
+          "lesson_id": "L14",
+          "title": "Retries, Backfills and Alerts",
+          "objectives": [
+            "O4",
+            "O6"
+          ],
+          "summary": "Pipelines fail, so design for it: retries with a delay, idempotent tasks that give the same result when run twice, backfills for missed dates, and alerts when a task fails. Analogy: a postal service that tries to deliver a parcel again tomorrow, not twice to the same door today.",
+          "exercise": "Make one task fail on purpose, watch the retries in Airflow, then fix it and run a backfill for 3 past dates. Check that no rows are duplicated."
+        }
+      ]
+    },
+    {
+      "module_id": "M4",
+      "week": 4,
+      "title": "From Pipeline to AI-Ready Dataset: Capstone",
+      "lessons": [
+        {
+          "lesson_id": "L15",
+          "title": "Preparing Datasets for Machine Learning",
+          "objectives": [
+            "O5",
+            "O6"
+          ],
+          "summary": "An AI-ready dataset is clean, documented, versioned and split correctly: by time when the future is predicted, and without leakage between training and test data. Remove or protect personal data, and write a short datasheet describing the source, the limits and the intended use. [REGION] Rules on personal data differ by country.",
+          "exercise": "Create a time-based train and test split of your feature table in DuckDB, export both as Parquet files, and write a half-page datasheet for the dataset."
+        },
+        {
+          "lesson_id": "L16",
+          "title": "Capstone Part 1: Design and Ingest",
+          "objectives": [
+            "O6",
+            "O7"
+          ],
+          "summary": "Choose a public dataset and an AI use case, for example predicting demand for a bike-sharing scheme or late deliveries for a logistics company. Write a one-page pipeline design (sources, layers, tests, schedule, output), then load the raw data. The capstone brief and rubric are explained.",
+          "exercise": "Capstone step 1: write your pipeline design and load the raw data into PostgreSQL or DuckDB, recording the row counts and any problems you found."
+        },
+        {
+          "lesson_id": "L17",
+          "title": "Capstone Part 2: Transform and Test",
+          "objectives": [
+            "O3",
+            "O5",
+            "O7"
+          ],
+          "summary": "Build the dbt layers from staging to a final feature table, and add tests at each layer. Use the checklist from week 3 to decide which quality problems must stop the pipeline.",
+          "exercise": "Capstone step 2: build staging, intermediate and mart models for your dataset, with at least 8 tests, and make every test pass."
+        },
+        {
+          "lesson_id": "L18",
+          "title": "Capstone Part 3: Orchestrate, Document and Present",
+          "objectives": [
+            "O4",
+            "O7"
+          ],
+          "summary": "Schedule the full pipeline in Airflow, generate the documentation and lineage, and export the AI-ready dataset with its datasheet. Finish with a short walkthrough for a colleague.",
+          "exercise": "Capstone step 3: run the full pipeline from an Airflow DAG, export the final dataset and datasheet, and record a 3-minute walkthrough of the lineage and the tests."
+        }
+      ]
+    }
+  ],
+  "capstone": {
+    "title": "Build an ELT Pipeline to an AI-Ready Dataset",
+    "brief": "Build a working ELT pipeline that loads a public raw dataset, transforms it with dbt Core, tests its quality, runs on a schedule in Apache Airflow, and delivers a documented, AI-ready dataset.",
+    "built_in": [
+      "L16",
+      "L17",
+      "L18"
+    ],
+    "assesses": [
+      "O3",
+      "O4",
+      "O5",
+      "O6",
+      "O7"
+    ]
+  },
+  "coverage_check": {
+    "O1": [
+      "L01",
+      "L02"
+    ],
+    "O2": [
+      "L01",
+      "L02",
+      "L04",
+      "L07",
+      "L10"
+    ],
+    "O3": [
+      "L03",
+      "L05",
+      "L06",
+      "L07",
+      "L08",
+      "L09",
+      "L12",
+      "L17"
+    ],
+    "O4": [
+      "L13",
+      "L14",
+      "L18"
+    ],
+    "O5": [
+      "L11",
+      "L12",
+      "L15",
+      "L17"
+    ],
+    "O6": [
+      "L04",
+      "L05",
+      "L08",
+      "L09",
+      "L14",
+      "L15",
+      "L16"
+    ],
+    "O7": [
+      "L16",
+      "L17",
+      "L18"
+    ]
+  },
+  "flags": [
+    "Screen demos proposed for 15 of 18 lessons (L03, L05-L18). L01, L02 and L04 are concept and design lessons with slides and diagrams.",
+    "PostgreSQL [VERSION]: installation steps (Docker image, native installers) and default settings differ by operating system and release (L03).",
+    "dbt Core [VERSION]: package and adapter names (dbt-postgres, dbt-duckdb), project setup, test syntax and add-on packages must be checked against the current release (L06-L12). [VERIFY] dbt Core's open-source licence terms.",
+    "Apache Airflow [VERSION]: the local installation method, DAG syntax and web interface changed between major versions; scripts must follow the current release. Running Airflow on Windows usually needs Docker or WSL (L13, L14, L18).",
+    "Airflow hardware [VERIFY]: the Docker Compose setup needs a certain amount of free memory; confirm the current recommended minimum and state it in L13.",
+    "DuckDB [VERSION]: Python package interface and file-format support (L05, L11, L15).",
+    "Public datasets [VERIFY]: confirm the licence and current download location of every dataset named in Stage 2 (for example World Bank indicators in L03).",
+    "L11 [VERIFY]: the clinic duplicate-visit example is hypothetical and must stay presented as hypothetical.",
+    "L15 [REGION]: rules on personal data in training datasets differ by country; the lesson gives general guidance, not legal advice.",
+    "Judgement call: streaming is covered only at concept level (L02); all hands-on work is batch, to fit 4 weeks with free local tools.",
+    "Judgement call: Airflow calls dbt through simple shell commands rather than an integration package, to limit the number of tools learners install."
+  ]
+}

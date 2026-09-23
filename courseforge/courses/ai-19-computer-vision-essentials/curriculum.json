@@ -1,0 +1,323 @@
+{
+  "course_id": "AI-19",
+  "slug": "ai-19-computer-vision-essentials",
+  "course_title": "Computer Vision Essentials",
+  "level": "Intermediate",
+  "status": "AWAITING_APPROVAL",
+  "screen_demo_lessons": [
+    "L02",
+    "L03",
+    "L04",
+    "L05",
+    "L06",
+    "L07",
+    "L08",
+    "L10",
+    "L11",
+    "L12",
+    "L13",
+    "L14",
+    "L15",
+    "L16"
+  ],
+  "overview": "A four-week, hands-on course for developers who know Python and want to build image and video AI. Learners find out how computers represent images, process them with OpenCV, and use pre-trained models from Hugging Face and YOLO for image classification, object detection and text recognition (OCR). All work runs in free Google Colab notebooks. Learners also measure how good a model really is, fine-tune models on small custom datasets, and consider privacy, bias and licence terms before they deploy. By the end, they build an object detection app for a real-world use case such as counting stock on shelves or counting vehicles in traffic.",
+  "time_plan": {
+    "video_minutes": 80,
+    "weekly_hours": 3,
+    "per_week": "About 20 minutes of video, 110 minutes of hands-on work in Colab notebooks, and 50 minutes of reading and reflection. In week 4 most of the hands-on time goes to the capstone."
+  },
+  "objectives": [
+    {
+      "id": "O1",
+      "bloom": "Remember",
+      "text": "Describe how computers represent images and video, and name the main computer vision tasks: classification, object detection, segmentation and OCR."
+    },
+    {
+      "id": "O2",
+      "bloom": "Understand",
+      "text": "Explain how convolutional neural networks learn visual features, and why transfer learning from pre-trained models needs much less data."
+    },
+    {
+      "id": "O3",
+      "bloom": "Apply",
+      "text": "Process images and video with OpenCV, and run pre-trained classification, detection and OCR models in Google Colab."
+    },
+    {
+      "id": "O4",
+      "bloom": "Apply",
+      "text": "Fine-tune a pre-trained classification or detection model on a small custom dataset."
+    },
+    {
+      "id": "O5",
+      "bloom": "Analyse",
+      "text": "Analyse model results with precision, recall, IoU and mAP, and find failure cases caused by lighting, angle, image quality or unbalanced data."
+    },
+    {
+      "id": "O6",
+      "bloom": "Evaluate",
+      "text": "Evaluate whether a vision model is fit for a real use case, considering accuracy, speed, privacy and licence terms."
+    },
+    {
+      "id": "O7",
+      "bloom": "Create",
+      "text": "Build an object detection app for a real-world use case such as inventory or traffic counting."
+    }
+  ],
+  "modules": [
+    {
+      "module_id": "M1",
+      "week": 1,
+      "title": "How Computers See",
+      "lessons": [
+        {
+          "lesson_id": "L01",
+          "title": "What Is Computer Vision?",
+          "objectives": [
+            "O1"
+          ],
+          "summary": "Computer vision lets software extract information from images and video. The main tasks: classification (what is in the image), detection (what and where), segmentation (exactly which pixels) and OCR (which text). Examples: crop disease detection for farmers in India, parcel sorting in Germany and traffic monitoring in Nairobi.",
+          "exercise": "Match 8 real applications to the correct task: classification, detection, segmentation or OCR. For two of them, explain why the other tasks would not be enough."
+        },
+        {
+          "lesson_id": "L02",
+          "title": "Images as Numbers: Pixels, Channels and Colour",
+          "objectives": [
+            "O1",
+            "O3"
+          ],
+          "summary": "An image is a grid of numbers: height, width and colour channels, each value usually from 0 to 255. Open an image in Google Colab with OpenCV, check its shape, and see why OpenCV uses BGR order while most other libraries use RGB. [VERSION] Colab's interface and free resources change.",
+          "exercise": "In a Colab notebook, load a photo with OpenCV, print its shape, change a block of pixels to red, and display it correctly in RGB order."
+        },
+        {
+          "lesson_id": "L03",
+          "title": "Image Processing with OpenCV",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "Core operations: resize, crop, convert to greyscale, blur, threshold and detect edges. These steps clean images before a model sees them and can solve simple problems without any model. Worked example: finding the outline of a document photographed on a desk.",
+          "exercise": "Build a small pipeline that turns a phone photo of a document into a clean black-and-white image: greyscale, blur, threshold and crop."
+        },
+        {
+          "lesson_id": "L04",
+          "title": "Working with Video Frames",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "A video is a sequence of images, called frames, shown many times per second. Read a video file frame by frame with OpenCV, process each frame, and save the result as a new video. Colab has no direct webcam stream, so the course uses recorded video files.",
+          "exercise": "Read a short public video clip frame by frame, draw the frame number on each frame, convert it to greyscale, and save the output video."
+        }
+      ]
+    },
+    {
+      "module_id": "M2",
+      "week": 2,
+      "title": "Image Classification with Pre-Trained Models",
+      "lessons": [
+        {
+          "lesson_id": "L05",
+          "title": "How CNNs Learn Visual Features",
+          "objectives": [
+            "O2"
+          ],
+          "summary": "A convolutional neural network slides small filters over an image to detect patterns: edges first, then shapes, then object parts. Analogy: a set of stencils that each light up when they match part of the picture. Filters are learned from data, not designed by hand.",
+          "exercise": "Apply 3 hand-made filters (edge, blur, sharpen) to an image with OpenCV and describe what each one detects. Then compare them with the filters a CNN learns in its first layer."
+        },
+        {
+          "lesson_id": "L06",
+          "title": "Classifying Images with Hugging Face Models",
+          "objectives": [
+            "O2",
+            "O3"
+          ],
+          "summary": "Load a pre-trained image classification model from the Hugging Face Hub and run it on your own images in a few lines of code. Read the model card to learn what data it was trained on and what labels it knows. [VERSION] Library interfaces and model availability change.",
+          "exercise": "Classify 10 of your own photos with a pre-trained model, record the top 3 labels and scores for each, and note 2 cases where the model was wrong and a likely reason."
+        },
+        {
+          "lesson_id": "L07",
+          "title": "Transfer Learning: Fine-Tuning on Your Own Images",
+          "objectives": [
+            "O2",
+            "O4"
+          ],
+          "summary": "Transfer learning reuses what a model learned from millions of images and trains only the last layers on your task. Worked example: a public dataset of bean leaf diseases collected in Uganda, fine-tuned in a free Colab session. [VERIFY] Dataset licence and Colab GPU availability.",
+          "exercise": "Fine-tune a small pre-trained model on a public dataset of 3 to 5 classes in Colab, and compare its accuracy on test images with the model before fine-tuning."
+        },
+        {
+          "lesson_id": "L08",
+          "title": "Measuring Classification Quality",
+          "objectives": [
+            "O5"
+          ],
+          "summary": "Accuracy can hide problems when classes are unbalanced. Use precision, recall and a confusion matrix to see which classes the model mixes up, then look at the wrong images to find patterns such as poor lighting or unusual angles.",
+          "exercise": "Build a confusion matrix for your fine-tuned model, calculate precision and recall per class, and write 3 sentences on the most common mistake and how you could fix it."
+        }
+      ]
+    },
+    {
+      "module_id": "M3",
+      "week": 3,
+      "title": "Object Detection and OCR",
+      "lessons": [
+        {
+          "lesson_id": "L09",
+          "title": "Object Detection: Boxes, Classes and IoU",
+          "objectives": [
+            "O1",
+            "O5"
+          ],
+          "summary": "A detector returns a box, a class and a confidence score for each object. Intersection over Union (IoU) measures how well a predicted box overlaps the true box, and mAP summarises detection quality across classes. Worked example: calculating IoU by hand for two boxes around a car.",
+          "exercise": "Calculate IoU by hand for 3 pairs of boxes, then check your answers with a short Python function."
+        },
+        {
+          "lesson_id": "L10",
+          "title": "Running YOLO on Images and Video",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "Install an open-source YOLO package in Colab, run a pre-trained model on images and video, and change the confidence threshold to see its effect. Pre-trained models already know common objects such as people, cars and bottles. [VERSION] Package interface and model names change. [VERIFY] Licence terms for commercial use.",
+          "exercise": "Run a pre-trained YOLO model on 5 images and one short video, try 3 confidence thresholds, and record how the number of detections and false alarms changes."
+        },
+        {
+          "lesson_id": "L11",
+          "title": "Training YOLO on a Custom Dataset",
+          "objectives": [
+            "O4",
+            "O5"
+          ],
+          "summary": "Label your own images with a free annotation tool, export them in YOLO format, and fine-tune a small detector. Read the training results, including mAP, and look at the images where detection fails. [VERSION] Annotation tool features and export formats change.",
+          "exercise": "Label about 50 images of one or two custom objects (for example products on a shop shelf), fine-tune a small YOLO model in Colab, and report its mAP and 3 failure cases."
+        },
+        {
+          "lesson_id": "L12",
+          "title": "Reading Text in Images with OCR",
+          "objectives": [
+            "O3",
+            "O5"
+          ],
+          "summary": "OCR turns text in images into editable text. Clean images first with OpenCV, then run an open-source OCR engine, and check how results change across languages and scripts, such as French, Portuguese and Arabic. [VERSION] OCR engine language support and installation steps change.",
+          "exercise": "Run OCR on 5 receipt or sign images in at least 2 languages, before and after OpenCV preprocessing, and compare the character errors."
+        }
+      ]
+    },
+    {
+      "module_id": "M4",
+      "week": 4,
+      "title": "Building a Vision App: Capstone",
+      "lessons": [
+        {
+          "lesson_id": "L13",
+          "title": "Counting and Tracking Objects in Video",
+          "objectives": [
+            "O3",
+            "O5"
+          ],
+          "summary": "Detection finds objects in each frame; tracking gives each object an ID across frames, so you can count objects that cross a line without counting them twice. Worked example: counting buses and cars at a junction in Bogotá.",
+          "exercise": "Add tracking and a counting line to your YOLO video pipeline, count vehicles or people in a short public clip, and compare the result with a manual count."
+        },
+        {
+          "lesson_id": "L14",
+          "title": "Responsible Vision: Privacy, Bias and Licences",
+          "objectives": [
+            "O6"
+          ],
+          "summary": "Cameras record people, so plan for consent, data storage limits and face blurring. Models trained on unbalanced data can work worse for some groups, places or lighting conditions. Check the licence of every model and dataset before commercial use. [REGION] Privacy laws for cameras and images differ by country.",
+          "exercise": "Add a step that blurs faces or people in your video output with OpenCV, then write a half-page fitness check for your use case: accuracy, speed, privacy and licence."
+        },
+        {
+          "lesson_id": "L15",
+          "title": "Capstone Part 1: Build Your Detection App",
+          "objectives": [
+            "O3",
+            "O4",
+            "O7"
+          ],
+          "summary": "Choose a use case, for example counting stock on shop shelves in Casablanca or counting vehicles on a road in Manila. Collect or choose a dataset, fine-tune or configure a detector, and wrap it in a simple web interface that runs in Colab or on a free Hugging Face Space. The capstone brief and rubric are explained. [VERSION] Hugging Face Spaces free hardware changes.",
+          "exercise": "Capstone step 1: build a working app that takes an image or short video, detects and counts the target objects, and shows the result with boxes and a total."
+        },
+        {
+          "lesson_id": "L16",
+          "title": "Capstone Part 2: Evaluate, Improve and Present",
+          "objectives": [
+            "O5",
+            "O6",
+            "O7"
+          ],
+          "summary": "Test the app on new images and videos, measure its errors, and make one improvement, such as more training images, a better threshold or preprocessing. Present what it does well, where it fails and whether it is fit for real use.",
+          "exercise": "Capstone step 2: evaluate your app on at least 20 new test images or clips, make one improvement, and record a 3-minute demo with your fitness check."
+        }
+      ]
+    }
+  ],
+  "capstone": {
+    "title": "Build an Object Detection and Counting App",
+    "brief": "Build an object detection app for a real-world use case, such as inventory or traffic counting, using pre-trained models in Google Colab, then evaluate it and judge whether it is fit for real use.",
+    "built_in": [
+      "L15",
+      "L16"
+    ],
+    "assesses": [
+      "O3",
+      "O4",
+      "O5",
+      "O6",
+      "O7"
+    ]
+  },
+  "coverage_check": {
+    "O1": [
+      "L01",
+      "L02",
+      "L09"
+    ],
+    "O2": [
+      "L05",
+      "L06",
+      "L07"
+    ],
+    "O3": [
+      "L02",
+      "L03",
+      "L04",
+      "L06",
+      "L10",
+      "L12",
+      "L13",
+      "L15"
+    ],
+    "O4": [
+      "L07",
+      "L11",
+      "L15"
+    ],
+    "O5": [
+      "L08",
+      "L09",
+      "L11",
+      "L12",
+      "L13",
+      "L16"
+    ],
+    "O6": [
+      "L14",
+      "L16"
+    ],
+    "O7": [
+      "L15",
+      "L16"
+    ]
+  },
+  "flags": [
+    "Screen demos proposed for 14 of 16 lessons (L02-L08, L10-L16). L01 and L09 are concept lessons with slides and diagrams.",
+    "YOLO licence [VERIFY]: the widely used open-source YOLO packages are released under a copyleft licence (AGPL-3.0 for Ultralytics at the time of writing) with a separate paid licence for closed commercial use. A reviewer must confirm current terms before L10, L11, L14 and the capstone are scripted.",
+    "YOLO [VERSION]: package name, model names and training interface change between releases (L10, L11, L13, L15).",
+    "Google Colab [VERSION]: free GPU availability, session limits and interface change and are not guaranteed (L02, L07, L11, L15).",
+    "Hugging Face [VERSION]: library interfaces, model availability and Spaces free hardware (L06, L07, L15).",
+    "OpenCV [VERSION]: function names and bundled face detection models (L02-L05, L14).",
+    "L07 [VERIFY]: confirm the licence and current location of the bean leaf disease dataset.",
+    "L11 [VERSION]: free annotation tools (for example Label Studio or CVAT) and their export formats; the tool is not in the brief's list.",
+    "L12 [VERSION] [VERIFY]: OCR engine choice and quality of Arabic support must be checked; the lesson covers French, Portuguese and Arabic because they are course languages.",
+    "L14 [REGION]: laws on cameras, face data and consent differ by country; the lesson gives general guidance, not legal advice.",
+    "Judgement call: segmentation is named in L01 only; there is no hands-on segmentation lesson, to leave time for detection and the capstone.",
+    "Judgement call: L15 uses a simple web interface (for example Gradio on Hugging Face Spaces), which is not in the brief's tool list."
+  ]
+}

@@ -1,0 +1,317 @@
+{
+  "course_id": "AI-16",
+  "slug": "ai-16-ai-agents-and-automation-workflows",
+  "course_title": "AI Agents and Automation Workflows",
+  "level": "Intermediate",
+  "status": "AWAITING_APPROVAL",
+  "screen_demo_lessons": [
+    "L03",
+    "L04",
+    "L05",
+    "L06",
+    "L07",
+    "L08",
+    "L10",
+    "L11",
+    "L12",
+    "L13",
+    "L14",
+    "L15",
+    "L16"
+  ],
+  "overview": "A four-week, hands-on course for developers, operations teams and technical no-coders who already know prompt engineering and the basics of calling an API. Learners start with the difference between a fixed workflow and an agent that chooses its own steps. They then build real automations in self-hosted n8n that read and write Google Sheets data and call the Claude API for decisions and structured output. In weeks 3 and 4 they give an agent tools and memory, add human approval before risky actions, and make the whole system reliable with error handling, logging and test cases. The course ends with a multi-step agent that automates a real business process end to end.",
+  "time_plan": {
+    "video_minutes": 80,
+    "weekly_hours": 3,
+    "per_week": "About 20 minutes of video, 100 minutes of building in n8n, and 60 minutes of testing, reading and reflection. In week 4 most of the building time goes to the capstone."
+  },
+  "objectives": [
+    {
+      "id": "O1",
+      "bloom": "Remember",
+      "text": "Describe the building blocks of automation workflows and AI agents: triggers, nodes, tools, memory, and the agent loop."
+    },
+    {
+      "id": "O2",
+      "bloom": "Understand",
+      "text": "Explain when a fixed workflow is the better choice and when an agent that makes its own decisions is justified, in terms of cost, reliability and risk."
+    },
+    {
+      "id": "O3",
+      "bloom": "Apply",
+      "text": "Build n8n workflows that read and write Google Sheets data, call the Claude API, and return validated structured output."
+    },
+    {
+      "id": "O4",
+      "bloom": "Apply",
+      "text": "Give an agent clearly described tools and memory so that it can choose the right action to complete a task."
+    },
+    {
+      "id": "O5",
+      "bloom": "Analyse",
+      "text": "Analyse a workflow for failure points and add retries, error paths, logging and human approval steps where they are needed."
+    },
+    {
+      "id": "O6",
+      "bloom": "Evaluate",
+      "text": "Evaluate an agent's reliability, cost and safety with a test set, and decide whether it is ready for real use."
+    },
+    {
+      "id": "O7",
+      "bloom": "Create",
+      "text": "Design and build a multi-step AI agent that automates a real business process end to end."
+    }
+  ],
+  "modules": [
+    {
+      "module_id": "M1",
+      "week": 1,
+      "title": "Workflows and Agents: The Foundations",
+      "lessons": [
+        {
+          "lesson_id": "L01",
+          "title": "From Scripts to Agents",
+          "objectives": [
+            "O1",
+            "O2"
+          ],
+          "summary": "The automation spectrum: fixed rules, a workflow with one AI step, and an agent that chooses its own next step. Analogy: a recipe that a cook follows exactly, compared with a chef who decides what to cook from what is in the fridge. More freedom brings more flexibility, but also more cost and more risk.",
+          "exercise": "Sort 8 business tasks (for example invoice entry for a supplier in Lagos, email triage for a shop in São Paulo) into 'fixed workflow', 'workflow with an AI step' or 'agent', and justify two of your choices in one sentence each."
+        },
+        {
+          "lesson_id": "L02",
+          "title": "How an Agent Works: The Agent Loop",
+          "objectives": [
+            "O1"
+          ],
+          "summary": "An agent repeats a loop: observe the situation, decide the next step, act with a tool, then check the result, until a stop condition is met. The four parts are the model, the tools, the memory and the instructions. Worked example: an expense-checking agent that reads a receipt, looks up the policy and flags a problem.",
+          "exercise": "Draw the agent loop for a customer-support agent on paper or in a free diagram tool such as draw.io. Label the tools it needs and the condition that makes it stop."
+        },
+        {
+          "lesson_id": "L03",
+          "title": "Setting Up n8n (Self-Hosted)",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "Install n8n on your own computer with Docker or Node.js, then take a tour of the editor: workflows, nodes, triggers, credentials and the executions list. Why self-hosting keeps the course free and keeps your data on your machine. [VERSION] Installation commands and editor layout change between releases.",
+          "exercise": "Install n8n locally and build a two-node workflow: a manual trigger followed by a node that adds the current date and time. Run it and open the execution log."
+        },
+        {
+          "lesson_id": "L04",
+          "title": "Your First Workflow: Sheets In, Sheets Out",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "Connect n8n to Google Sheets with a credential, read rows, change them with a Set or Code node, and write the results back. Worked example: a small bakery in Nairobi that flags every order above a set amount for a phone call. [VERSION] Google credential setup steps change often.",
+          "exercise": "Create an 'orders' sheet with 15 rows of sample data. Build a workflow that reads it, marks orders above a threshold as 'check', and writes the flag to a new column."
+        }
+      ]
+    },
+    {
+      "module_id": "M2",
+      "week": 2,
+      "title": "Adding AI to Workflows",
+      "lessons": [
+        {
+          "lesson_id": "L05",
+          "title": "Calling the Claude API from n8n",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "A 20-second recap of API requests, then how to call the Claude API from n8n with a stored API key: system prompt, user message, and a limit on output length. The Claude API is a paid, usage-based service, so learners set a spending limit and keep test runs small. [VERSION] n8n node names and API console steps change.",
+          "exercise": "Send 5 customer reviews from a sheet to the Claude API, ask for a one-sentence summary of each, and write the summaries back to the sheet. Record how many tokens the run used."
+        },
+        {
+          "lesson_id": "L06",
+          "title": "Structured Output: Getting JSON You Can Trust",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "Ask the model for JSON that follows a fixed shape, then check it in a Code node before any other step uses it. What to do when the output is not valid: retry once, then send the item to a 'needs review' list. Worked example: sorting hotel guest emails in Lisbon by category, urgency and language.",
+          "exercise": "Build a workflow that classifies 10 sample emails into category, urgency and language as JSON, validates each result, and sends any invalid result to a separate sheet tab."
+        },
+        {
+          "lesson_id": "L07",
+          "title": "Routing and Decisions",
+          "objectives": [
+            "O2",
+            "O3"
+          ],
+          "summary": "Use IF and Switch nodes to send items down different paths based on the model's output. Use a simple rule instead of the model when a rule is enough, and use a confidence field or a 'not sure' category to send hard cases to a person. Worked example: routing insurance claim messages in Manila to the right team.",
+          "exercise": "Extend your email workflow so that urgent complaints go to one sheet, simple questions get a drafted reply, and 'not sure' items go to a review tab. Write down which decisions a rule could make without AI."
+        },
+        {
+          "lesson_id": "L08",
+          "title": "Batches, Loops and Rate Limits",
+          "objectives": [
+            "O3",
+            "O5"
+          ],
+          "summary": "Process many rows safely: loop over items in batches, add short waits, and respect API rate limits. Estimate the cost of a run before you start it. Worked example: 500 rows multiplied by the average tokens per row gives the expected usage of one run. [VERSION] Rate limits depend on the API account.",
+          "exercise": "Process 50 rows in batches of 10 with a wait between batches. Record the total run time and token usage, then estimate the usage for 5,000 rows."
+        }
+      ]
+    },
+    {
+      "module_id": "M3",
+      "week": 3,
+      "title": "Agents That Use Tools",
+      "lessons": [
+        {
+          "lesson_id": "L09",
+          "title": "Tool Use: Letting the Model Call Functions",
+          "objectives": [
+            "O1",
+            "O4"
+          ],
+          "summary": "With tool use, you describe each tool with a name, a clear description and an input schema. The model replies with a request to use a tool, your system runs it, and the result goes back to the model. Analogy: a manager who cannot leave the office but can ask an assistant to make phone calls and report back. [VERSION] The exact request format is checked against the current API documentation.",
+          "exercise": "Write 3 tool definitions (name, description, inputs) for a stock-check agent at a pharmacy in Karachi: look up a product, check the quantity in stock, and create a reorder request."
+        },
+        {
+          "lesson_id": "L10",
+          "title": "Building an Agent in n8n",
+          "objectives": [
+            "O4"
+          ],
+          "summary": "Use n8n's AI Agent node with the Claude API as the chat model, and connect tools: a Google Sheets lookup, a calculator and an HTTP request. Watch the agent choose tools step by step in the execution log. [VERSION] Agent node options change between n8n releases.",
+          "exercise": "Build an agent that answers 'Is product X in stock, and what is the total price for N units?' from a product sheet. Test it with 5 questions and note which tools it used each time."
+        },
+        {
+          "lesson_id": "L11",
+          "title": "Memory and Context",
+          "objectives": [
+            "O2",
+            "O4"
+          ],
+          "summary": "Short-term memory keeps recent messages in a conversation. Longer-term context comes from records that the agent looks up when it needs them. More context costs more and can confuse the model, and personal data should not be stored without a clear reason. [REGION] Data protection rules differ by country.",
+          "exercise": "Add conversation memory to your agent, hold a 6-turn conversation, and note the point where it forgets earlier details. Change the memory size and compare."
+        },
+        {
+          "lesson_id": "L12",
+          "title": "Human-in-the-Loop Approval",
+          "objectives": [
+            "O5"
+          ],
+          "summary": "Some actions cannot be undone: sending an email, issuing a refund, deleting a record. Put a human approval step before them, for example a Wait node that continues only when a person approves in a form or marks a sheet row as 'approved'. Worked example: a refund agent for an online shop in Mexico City that drafts each refund but never sends it alone. [VERSION] Approval options in n8n change between releases.",
+          "exercise": "Add an approval step to your agent: it drafts a customer reply into a sheet, and the workflow sends the reply only after a person sets the row to 'approved'."
+        }
+      ]
+    },
+    {
+      "module_id": "M4",
+      "week": 4,
+      "title": "Reliable Agents in Production: Capstone",
+      "lessons": [
+        {
+          "lesson_id": "L13",
+          "title": "Error Handling, Retries and Logging",
+          "objectives": [
+            "O5"
+          ],
+          "summary": "Plan for failure: retry settings on nodes, an error workflow that runs when anything fails, fallback paths, and a log sheet with one row per run. Analogy: a pilot's checklist for when something goes wrong, written before the flight and not during it.",
+          "exercise": "Break your workflow on purpose by using a wrong API key. Confirm that the error workflow logs the failure to a sheet and sends you a notification, then fix the key."
+        },
+        {
+          "lesson_id": "L14",
+          "title": "Testing and Evaluating Agents",
+          "objectives": [
+            "O6"
+          ],
+          "summary": "Build a test set of 20 realistic inputs with the expected result for each, then measure the pass rate, cost per run and time per run. Include tricky cases, such as instructions hidden inside customer messages (prompt injection), and check that the agent ignores them.",
+          "exercise": "Create a test sheet with 20 cases, including 3 prompt-injection attempts. Run your agent on all of them, score each result, and write a 3-line verdict: ready, ready with limits, or not ready."
+        },
+        {
+          "lesson_id": "L15",
+          "title": "Capstone Build: Design and Build Your Agent",
+          "objectives": [
+            "O3",
+            "O4",
+            "O7"
+          ],
+          "summary": "Choose a real business process, such as supplier invoice intake, event registration or customer enquiry triage. Write a one-page design (trigger, steps, tools, approval points, failure modes), then build the first working version. Decisions about people, such as hiring or credit, always keep a human in charge.",
+          "exercise": "Capstone step 1: write the design page and build a working version of your agent in n8n that runs end to end on 5 test inputs using Google Sheets and the Claude API."
+        },
+        {
+          "lesson_id": "L16",
+          "title": "Capstone: Test, Harden and Present",
+          "objectives": [
+            "O5",
+            "O6",
+            "O7"
+          ],
+          "summary": "Make the agent reliable: add error handling, logging and approval steps, then run your test set and fix the weakest point. Finish with a short runbook and a demo. The capstone brief and rubric are explained.",
+          "exercise": "Capstone step 2: run your 20-case test set, add the missing safety steps, write a one-page runbook (what it does, how it fails, who approves), and record a 3-minute demo."
+        }
+      ]
+    }
+  ],
+  "capstone": {
+    "title": "Automate a Business Process with an AI Agent",
+    "brief": "Design, build and test a multi-step AI agent in n8n that uses the Claude API and Google Sheets to automate a real business process end to end, with human approval, error handling and a test set.",
+    "built_in": [
+      "L15",
+      "L16"
+    ],
+    "assesses": [
+      "O3",
+      "O4",
+      "O5",
+      "O6",
+      "O7"
+    ]
+  },
+  "coverage_check": {
+    "O1": [
+      "L01",
+      "L02",
+      "L09"
+    ],
+    "O2": [
+      "L01",
+      "L07",
+      "L11"
+    ],
+    "O3": [
+      "L03",
+      "L04",
+      "L05",
+      "L06",
+      "L07",
+      "L08",
+      "L15"
+    ],
+    "O4": [
+      "L09",
+      "L10",
+      "L11",
+      "L15"
+    ],
+    "O5": [
+      "L08",
+      "L12",
+      "L13",
+      "L16"
+    ],
+    "O6": [
+      "L14",
+      "L16"
+    ],
+    "O7": [
+      "L15",
+      "L16"
+    ]
+  },
+  "flags": [
+    "Screen demos proposed for 13 of 16 lessons (L03-L08, L10-L16): the course is hands-on in n8n. L01, L02 and L09 are concept lessons with slides and diagrams.",
+    "n8n [VERSION]: installation commands (Docker, Node.js), editor layout and node names (AI Agent node, Anthropic chat model node, Wait node, Error Trigger) must be checked against the current release before scripting (L03-L16).",
+    "n8n licence [VERIFY]: n8n is distributed under its own fair-code licence, not a standard open-source licence. Confirm that self-hosted use for internal business automation is allowed for learners.",
+    "Claude API [VERSION]: paid and usage-based, with no free tier assumed. No model IDs or prices are named; lessons describe capabilities generically and tell learners to set a spending limit. Check the current console steps for API keys and limits (L05).",
+    "Claude API tool use and structured output [VERSION]: the request and response format for tools (L09) and JSON output (L06) must be checked against the current API documentation.",
+    "Google Sheets [VERSION]: the Google Cloud OAuth credential setup and the n8n Google Sheets node options change often (L04).",
+    "L08 [VERSION]: API rate limits depend on the account and change over time; the lesson teaches batching and waits without stating specific limits.",
+    "L11, L15 [REGION]: storing personal data in Google Sheets and sending it to an external API may be restricted by local data protection law. Lessons recommend sample or anonymised data.",
+    "Judgement call: prompt engineering and API basics are prerequisites, so L05 gives only a 20-second recap.",
+    "Judgement call: capstone examples avoid fully automated decisions about people (hiring, credit); L15 requires a human approval step for them.",
+    "Judgement call: L14 includes prompt injection because agents read untrusted input from sheets and emails."
+  ]
+}
