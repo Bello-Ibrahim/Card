@@ -1,0 +1,76 @@
+{
+  "title": "ETL, ELT, Batch and Streaming",
+  "thumbnail": {
+    "headline": "Transform First or Later?",
+    "image": "Navy background, two pipeline arrows: one with a gear before the warehouse, one with the gear inside it, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Transform First or Later?", "body": "Top arrow: Extract → Transform → Load. Bottom arrow: Extract → Load → Transform, with the gear inside a warehouse icon. Small tag: Data Engineering for AI · Lesson 2."}
+  },
+  "production_notes": [
+    "No facts to verify: content.md Review Flags are None and all examples are hypothetical.",
+    "Streaming is a concept only in this course, as agreed in the curriculum: do not show streaming tools or code on screen.",
+    "Aigerim and the logistics company in Almaty, Kazakhstan are fictional; stock footage must show no real company names or logos."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Two pipelines deliver the same sales data. One transforms it before it reaches the warehouse. The other loads it first and transforms it later. Both work. So why does most modern analytics work, including this course, choose the second one?",
+       "on_screen_text": "Transform first, or load first?"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "In the last lesson, we mapped sources, pipelines, storage and consumers. Today we look at two choices every pipeline makes: when to transform the data, and how often to move it.",
+       "slide": {"layout": "title", "title": "ETL, ELT, Batch and Streaming", "body": "Data Engineering for AI · Lesson 2 of 18"}},
+      {"visual_type": "slide",
+       "voiceover": "ETL means extract, transform, load. Data is taken from a source, cleaned and reshaped on a separate server, and only the finished result is loaded into the warehouse. ETL was common when warehouse storage and computing were expensive, so teams stored only what they needed.",
+       "slide": {"layout": "diagram", "title": "ETL: Extract, Transform, Load", "body": "Source → Extract → separate server with gear icon (Transform) → Load → warehouse holding only finished tables"}},
+      {"visual_type": "slide",
+       "voiceover": "ELT means extract, load, transform. Raw data is loaded into the warehouse first, exactly as it arrived, and then transformed there with SQL.",
+       "slide": {"layout": "diagram", "title": "ELT: Extract, Load, Transform", "body": "Source → Extract → Load → warehouse with two areas: raw tables, then a gear icon (Transform with SQL) → clean tables"}},
+      {"visual_type": "slide",
+       "voiceover": "ELT has three advantages for AI work. You keep the raw data, so you can rebuild any table when a rule changes. Transformations are SQL that people can read, review and test. And a new feature for a model can be built from data that is already loaded. This course uses ELT, with PostgreSQL or DuckDB for loading, and dbt Core for transforming.",
+       "slide": {"layout": "bullets", "title": "Why ELT suits AI", "body": "Raw data kept → rebuild any table · SQL transforms → readable, reviewable, testable · New features from data already loaded. Footer: this course = ELT (load: PostgreSQL/DuckDB, transform: dbt Core)"}},
+      {"visual_type": "slide",
+       "voiceover": "The second choice is timing. A batch pipeline processes a group of records on a schedule, for example every night at two in the morning. A streaming pipeline processes each event within seconds of its arrival.",
+       "slide": {"layout": "comparison", "title": "Batch or streaming?", "body": "Left: Batch, groups of records on a schedule (every night at 02:00, every hour). Right: Streaming, each event within seconds, continuous flow of messages."}},
+      {"visual_type": "slide",
+       "voiceover": "Streaming is useful when a late answer has no value, such as blocking a fraudulent card payment. But it needs more infrastructure and is harder to test. Most AI training data is prepared in batches, because a model retrained every day or week does not need second by second updates. In this course, all hands-on work is batch, and streaming is a concept only.",
+       "slide": {"layout": "comparison", "title": "When streaming is worth it", "body": "Streaming: late answer = no value (block a fraudulent payment); more infrastructure, harder to test. Batch: model retrained daily or weekly. Footer: this course = batch hands-on, streaming as concept"}},
+      {"visual_type": "slide",
+       "voiceover": "Finally, where does the data live? A data warehouse stores structured tables for SQL analytics. A data lake stores files of any type, such as CSV, Parquet, JSON, images or logs, in cheap storage. Many teams use both: raw files land in a lake, and cleaned tables live in a warehouse.",
+       "slide": {"layout": "comparison", "title": "Warehouse and lake", "body": "Warehouse: structured tables, SQL analytics (PostgreSQL small, DuckDB on a laptop). Lake: any file type (CSV, Parquet, JSON, images, logs), cheap, needs extra tools. Arrow from lake to warehouse: many teams use both."}},
+      {"visual_type": "stock",
+       "voiceover": "Here is a picture to remember. ETL is a central kitchen that delivers only finished plates. If a customer wants a change, the kitchen starts again. ELT delivers fresh ingredients to a kitchen in each restaurant, where cooks can prepare new dishes whenever they need them.",
+       "stock_query": "chefs preparing fresh ingredients restaurant kitchen",
+       "on_screen_text": "ETL: finished plates. ELT: fresh ingredients."},
+      {"visual_type": "stock",
+       "voiceover": "And batch is the daily delivery truck, while streaming is a conveyor belt that never stops.",
+       "stock_query": "delivery truck and moving conveyor belt",
+       "on_screen_text": "Batch: the truck. Streaming: the belt."}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's apply this. Aigerim is a data analyst at a logistics company in Almaty, Kazakhstan. She reviews three data needs.",
+       "stock_query": "parcels sorting depot warehouse workers",
+       "on_screen_text": "Aigerim · logistics · Almaty"},
+      {"visual_type": "slide",
+       "voiceover": "First, a weekly model that predicts parcel volume per depot. The model retrains once a week, so she chooses batch and ELT. Second, an alert when a refrigerated truck goes above eight degrees. A warning two hours late could mean spoiled goods, so that one is streaming. Third, a monthly on-time delivery report. Batch and ELT are enough.",
+       "slide": {"layout": "comparison", "title": "Three needs, three choices", "body": "Table: Weekly parcel-volume model → Batch, ELT · Refrigerated truck above 8 °C alert → Streaming · Monthly on-time report → Batch, ELT"}},
+      {"visual_type": "slide",
+       "voiceover": "For the parcel volume model, ELT really helps. Last month, the team changed the rule for delivered, to exclude parcels left with a neighbour. Because the raw scan data was already in the warehouse, Aigerim changed one SQL model and rebuilt two years of history in one run. With ETL, she would have needed a new extract from the source system.",
+       "slide": {"layout": "diagram", "title": "A rule changes, history rebuilds", "body": "Raw scans (2 years, already loaded) → one SQL model with the new 'delivered' rule → rebuilt history in one run. Greyed-out alternative: ETL → request a new extract from the source."}},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is to believe streaming is always better, because real time sounds faster. Speed has a cost: more parts, harder testing and harder recovery. Ask one question first. If this answer arrives one hour later, does anyone lose value? If not, choose batch.",
+       "on_screen_text": "Does an hour's delay lose value?"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, ETL transforms data before loading it, while ELT loads raw data first and transforms it inside the warehouse, which keeps raw data for rebuilds. Second, batch runs on a schedule, and streaming processes events as they arrive, which is only worth it when minutes matter. Third, warehouses hold structured tables, lakes hold raw files, and many teams use both.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. ETL: transform then load. ELT: load raw, transform inside. 2. Batch on a schedule; streaming only when minutes matter. 3. Warehouse = tables, lake = files; often both."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now try it yourself. In the exercise below this video, you will label six scenarios as batch or streaming, from nightly sales reports in Kenya to card fraud alerts in Brazil, and explain one choice. It takes about fifteen minutes. Next, we get hands-on: Setting Up PostgreSQL and Loading Raw Data.",
+       "on_screen_text": "Next: Setting Up PostgreSQL"}
+    ]
+  }
+}

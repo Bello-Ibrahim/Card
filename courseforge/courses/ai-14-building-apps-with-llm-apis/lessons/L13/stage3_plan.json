@@ -1,0 +1,147 @@
+{
+  "title": "Cost Control in Practice",
+  "thumbnail": {
+    "headline": "Stop Paying Twice",
+    "image": "Navy background, a long system prompt block stamped with a teal cache icon and a falling cost line, headline in teal Inter Bold.",
+    "slide": {
+      "layout": "title",
+      "title": "Stop Paying Twice",
+      "body": "A long prompt block with a cache icon, and a small line chart where cost per call drops after the first call. Small tag: Building Apps with LLM APIs · Lesson 13."
+    }
+  },
+  "production_notes": [
+    "[VERSION] Prompt caching syntax (cache_control), minimum cacheable length, cache lifetime, cache write and read prices, the usage field names (cache_creation_input_tokens, cache_read_input_tokens), and the Batch API discount (about 50% in content.md) and rules must be checked against the current docs. The voiceover states no discount percentage and no prices; it says 'check the current pricing page'.",
+    "The token numbers in Aroha's usage table (3620, 3500 and so on) are illustrative: label them 'example output' on screen. Show costs as formulas or placeholders, not real prices.",
+    "Aroha Ngata and the Wellington tutoring company are fictional."
+  ],
+  "sections": {
+    "Hook": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Your app sends the same three-thousand-token system prompt with every question. A thousand questions a day means paying to send the same instructions a thousand times. Cost control starts with noticing what you pay for again and again.",
+        "on_screen_text": "Paying for the same words"
+      }
+    ],
+    "Explain": [
+      {
+        "visual_type": "slide",
+        "voiceover": "In the last lesson, you built an evaluation set. Now you will use it to cut costs safely. There are five main levers. Your usage log from lesson four shows which one matters most for your app.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Five cost levers",
+          "body": "1. Prompt caching · 2. Batch processing · 3. Smaller model for easy tasks · 4. Output limits · 5. Per-user quotas"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "The first lever is prompt caching. If the start of your request is the same every time, such as the tools, the system prompt or a long document, you can mark it for caching. The first request writes it to a cache. Later requests, within a short time, read it from the cache at a much lower price.",
+        "slide": {
+          "layout": "diagram",
+          "title": "1. Prompt caching",
+          "body": "Request 1: [stable prefix → cache write] + question. Request 2: [stable prefix → cache read, cheaper] + new question. Label: stable content first, changing content last."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "The cached part must match exactly, from the start of the request. So put stable content first, and the user's question last. There is a minimum length, a limited cache lifetime, and a small extra charge for writing. Check the current rules on the pricing page.",
+        "slide": {
+          "layout": "code",
+          "title": "Marking the cache",
+          "body": "system=[{\"type\": \"text\", \"text\": LONG_SYSTEM_PROMPT,\n         \"cache_control\": {\"type\": \"ephemeral\"}}]\nNotes: exact prefix match · minimum length · limited lifetime · check the docs"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Second, batch processing for jobs that can wait. The batch API takes many requests at once and returns results later, at a discount. It suits nightly reports and bulk extraction, not live chat. Third, send easy tasks, like classification or routing, to a smaller model. Fourth, set output limits per feature. Fifth, set per-user quotas, so one user or a bot cannot spend your whole budget.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Levers 2 to 5",
+          "body": "2. Batch API: jobs that can wait, results later, discounted · 3. Smaller model: classification, routing, short extraction · 4. max_tokens per feature · 5. Daily quotas per user"
+        }
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "Think of a restaurant kitchen. You prepare the base sauce once in the morning, instead of for every plate. That is caching. You give simple dishes to the junior cook, and you serve sensible portions. And you still taste every dish before it goes out.",
+        "stock_query": "chef preparing sauce in restaurant kitchen",
+        "on_screen_text": "Make the base sauce once"
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "That last part matters. A cheaper setup that fails more cases is not really cheaper. Run your evaluation set after every change, and compare pass rate and cost together.",
+        "on_screen_text": "Measure quality before and after"
+      }
+    ],
+    "Demonstrate": [
+      {
+        "visual_type": "stock",
+        "voiceover": "Aroha Ngata builds a study helper for a tutoring company in Wellington, New Zealand. Every request includes a long system prompt with course rules and examples. Hundreds of students use it every day, so that prompt is sent again and again. Her usage log shows that it is most of her input tokens.",
+        "stock_query": "student studying with tutor laptop New Zealand",
+        "on_screen_text": "Aroha · study helper · Wellington"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "First, she sends the same question twice without caching, and logs the usage. Both calls send the full system prompt as normal input tokens.",
+        "screen_steps": [
+          "Open cache_test.py in VS Code with caching turned off",
+          "Run it twice with the same question",
+          "Show the usage lines: input about 3,600 tokens, cache write 0, cache read 0 (example output)"
+        ],
+        "on_screen_text": "No cache: full price every time"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Then she adds the cache marker to the system prompt block, and sends two different questions within a minute. You'll see something like this. The first call writes the system prompt to the cache. The second call reads it from the cache, and only the new question counts as normal input.",
+        "screen_steps": [
+          "Change system to a list with one text block and cache_control {\"type\": \"ephemeral\"}",
+          "Highlight the print of input_tokens, cache_creation_input_tokens and cache_read_input_tokens",
+          "Run with two different questions within a minute",
+          "Show call 1: cache write about 3,500; call 2: cache read about 3,500 (example output)"
+        ],
+        "on_screen_text": "Write once, then read"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "She adds the current prices for cache writes and cache reads to her cost helper, and compares the cost of each call. Then she runs her evaluation set with caching on. The pass rate is unchanged, because caching does not change what the model sees.",
+        "screen_steps": [
+          "Open log_helper.py and add constants for cache write and cache read prices, left as placeholders with a comment to copy them from the pricing page",
+          "Extend the cost formula with the two cache fields",
+          "Run run_eval.py with caching on and show the unchanged pass rate (example output)"
+        ],
+        "on_screen_text": "Same quality, lower cost"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "She also moves her nightly summary report to the batch API, and sends simple topic classification to a smaller model, after checking it on twenty cases.",
+        "screen_steps": [
+          "Show the nightly report script switched to a message batch with custom_id per request",
+          "Show the MODEL constant for topic classification changed to a smaller model placeholder",
+          "Show a 20-case eval result for the classification step (example output)"
+        ],
+        "on_screen_text": "Batch the report, downsize easy tasks"
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "A common mistake is to put something that changes, like the current time or the user's name, at the start of the system prompt. Then every call writes to the cache and never reads from it. Check that cache reads are above zero on repeated calls.",
+        "on_screen_text": "Stable content first, check cache reads"
+      }
+    ],
+    "Recap": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, use prompt caching for long, stable context at the start of the request, and confirm cache reads in the usage fields. Second, use batch processing for work that can wait, a smaller model for easy tasks, and output limits and per-user quotas everywhere. Third, measure quality with your evaluation set before and after each change.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. Cache long, stable context first; confirm cache reads. 2. Batch what can wait; smaller model for easy tasks; limits and quotas. 3. Evals before and after every cost change."
+        }
+      }
+    ],
+    "CTA": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Now it is your turn. In the exercise, you will apply prompt caching to a request with a long system prompt, and compare the cached and uncached usage and cost over six calls. Your capstone starts next. In the next lesson, Capstone Step 1: Build the Core Feature, you will choose your use case and build it. See you there.",
+        "on_screen_text": "Next: Capstone Step 1"
+      }
+    ]
+  }
+}

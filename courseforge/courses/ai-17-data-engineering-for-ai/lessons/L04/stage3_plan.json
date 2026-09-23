@@ -1,0 +1,79 @@
+{
+  "title": "Data Modelling: Tables, Keys and Star Schemas",
+  "thumbnail": {
+    "headline": "What Is One Row?",
+    "image": "Navy background, a star schema with a teal fact table in the centre and four dimension tables around it, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "What Is One Row?", "body": "Star diagram: central fact table in teal, four dimension boxes (store, product, date, customer) connected by lines. Small tag: Data Engineering for AI · Lesson 4."}
+  },
+  "production_notes": [
+    "No facts to verify: content.md Review Flags are None; the grocery chain and its figures are hypothetical and the SQL was tested in DuckDB on invented sample data.",
+    "Show the revenue query on the code slide exactly as in content.md; the voiceover describes it and does not read it.",
+    "Sample output rows must match content.md: four rows, for example Ghana | GHS | Staples | 190.00 and Nigeria | NGN | Staples | 21100.00.",
+    "Efua and the grocery chain in Accra and Lagos are fictional; stock footage must show no real store names or logos."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Two analysts ask the same question. How much did we sell last week? They get two different answers from the same database. Often the reason is not a bug in the SQL. It is that nobody agreed what one row means.",
+       "on_screen_text": "Same question, two answers"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Last time, you loaded raw data into PostgreSQL. Before we transform it, we need a design. Data modelling is the work that decides which tables exist, and how they connect.",
+       "slide": {"layout": "title", "title": "Data Modelling: Tables, Keys and Star Schemas", "body": "Data Engineering for AI · Lesson 4 of 18"}},
+      {"visual_type": "slide",
+       "voiceover": "Two terms first. A primary key is a column that identifies each row uniquely, such as a store key in a store table. A foreign key is a column that points to a primary key in another table, such as the same store key inside a sales table.",
+       "slide": {"layout": "diagram", "title": "Primary and foreign keys", "body": "dim_store with store_key marked PK → line → fact_sales with store_key marked FK"}},
+      {"visual_type": "slide",
+       "voiceover": "Analytical warehouses often use a star schema. In the centre is a fact table, which records events, such as sales, trips or payments. Around it are dimension tables, which describe the who, what, where and when of each event: products, stores, customers and dates.",
+       "slide": {"layout": "diagram", "title": "The star schema", "body": "Central fact table (events: sales, trips, payments) with four dimension tables around it: product, store, customer, date. Lines form a star."}},
+      {"visual_type": "slide",
+       "voiceover": "Facts are long and narrow: many rows, mostly keys and numbers. Dimensions are short and wide: fewer rows, with many descriptive columns, such as a name, a category or a city.",
+       "slide": {"layout": "comparison", "title": "Facts and dimensions", "body": "Left: Fact table, tall narrow shape, many rows, keys and numbers (quantity, price). Right: Dimension table, short wide shape, fewer rows, descriptive columns (name, category, city)."}},
+      {"visual_type": "slide",
+       "voiceover": "The most important decision is the grain: what exactly one row of the fact table represents. One row per product per receipt is a clear grain. Sales data is not. When the grain is clear, everyone gets the same total. When it is unclear, people count things twice.",
+       "slide": {"layout": "comparison", "title": "Choose the grain", "body": "Green tick: 'One row per product per receipt'. Red cross: 'Sales data'. Caption: clear grain = same total for everyone"}},
+      {"visual_type": "slide",
+       "voiceover": "This matters for AI too. A feature table, which we build later in the course, comes from facts and dimensions. If the grain is wrong, a feature such as number of purchases is wrong, and the model learns from false counts.",
+       "slide": {"layout": "diagram", "title": "Wrong grain, wrong features", "body": "Fact table with mixed rows (receipts and receipt lines) → feature 'number of purchases' doubled → model learns false counts"}},
+      {"visual_type": "stock",
+       "voiceover": "Think of a library. The fact table is the loan register: one line for each book lent, with a borrower number, a book number and a date. The dimensions are the catalogue of books and the list of members.",
+       "stock_query": "library shelves books loan desk",
+       "on_screen_text": "Loan register = fact. Catalogue = dimension."}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's design one. Efua is a data analyst at a grocery chain with shops in Accra, Ghana, and Lagos, Nigeria. She designs a star schema for sales.",
+       "stock_query": "grocery store shelves West Africa shoppers",
+       "on_screen_text": "Efua · grocery chain · Accra and Lagos"},
+      {"visual_type": "slide",
+       "voiceover": "Her fact table is fact sales, and she writes its grain first: one row per product line on one receipt. It holds the receipt, the line number, keys for the date, store and product, and two measures, the quantity and the unit price.",
+       "slide": {"layout": "diagram", "title": "fact_sales", "body": "Grain banner: one row per product line on one receipt. Columns: receipt_id, line_no, date_key, store_key, product_key, quantity, unit_price"}},
+      {"visual_type": "slide",
+       "voiceover": "Around it are three dimensions. The store dimension holds the name, city, country and currency. The product dimension holds the name and category. And the date dimension holds the week, the month and a public holiday flag.",
+       "slide": {"layout": "diagram", "title": "Three dimensions", "body": "fact_sales in the centre, joined to: dim_store (store_key, store_name, city, country, currency) · dim_product (product_key, product_name, category) · dim_date (date_key, date, week, month, is_public_holiday)"}},
+      {"visual_type": "slide",
+       "voiceover": "The shops use two currencies, cedi and naira. So Efua's revenue query joins the fact table to stores and products, multiplies quantity by unit price, and groups by country, currency and category. It never adds the two currencies together.",
+       "slide": {"layout": "code", "title": "Revenue by country, currency, category", "body": "SELECT s.country, s.currency, p.category, sum(f.quantity * f.unit_price) AS revenue FROM fact_sales AS f JOIN dim_store AS s ON f.store_key = s.store_key JOIN dim_product AS p ON f.product_key = p.product_key GROUP BY s.country, s.currency, p.category ORDER BY s.country, p.category;"}},
+      {"visual_type": "slide",
+       "voiceover": "On five invented sample lines, the query returns four rows. For example, staples in Ghana come to one hundred and ninety cedi, and staples in Nigeria to twenty-one thousand one hundred naira. A total across both countries would be meaningless without a documented exchange rate.",
+       "slide": {"layout": "code", "title": "Result: four rows", "body": "Ghana | GHS | Staples | 190.00 … Nigeria | NGN | Staples | 21100.00 (two example rows of four). Caption: never add GHS and NGN"}},
+      {"visual_type": "slide",
+       "voiceover": "Efua also considers one wide table, with every store and product column repeated on every line. It is simpler to query, but a store name change would need millions of updates. She chooses the star schema.",
+       "slide": {"layout": "comparison", "title": "Wide table or star?", "body": "Left: one wide table, simple queries, but a name change = millions of updates. Right: star schema, change once in the dimension (chosen, green tick)."}},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is to start with the report columns, and only later ask what a row means. Before you add any column, finish this sentence: one row in this table is one what? If you cannot finish it, the design is not ready.",
+       "on_screen_text": "One row in this table is one…"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, primary keys identify rows, and foreign keys connect a fact table to its dimensions. Second, in a star schema, fact tables hold events and numbers, and dimension tables describe them. Third, the grain is the most important modelling decision, because every count and every feature depends on it.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Primary keys identify; foreign keys connect. 2. Facts = events and numbers; dimensions describe them. 3. Grain first: every count and feature depends on it."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise, you will design a star schema for an online bookshop: a fact table with a one sentence grain, three dimensions, and the keys that join them. It takes about twenty-five minutes. Next lesson: DuckDB, fast analytics on your laptop.",
+       "on_screen_text": "Next: DuckDB on Your Laptop"}
+    ]
+  }
+}

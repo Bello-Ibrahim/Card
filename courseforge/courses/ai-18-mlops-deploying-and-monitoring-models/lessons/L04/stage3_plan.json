@@ -1,0 +1,75 @@
+{
+  "title": "Experiment Tracking with MLflow",
+  "thumbnail": {
+    "headline": "Track Every Run",
+    "image": "Navy background, a clean table of three runs with one row highlighted in teal and a small lab-notebook icon, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Track Every Run", "body": "Stylised run table: logreg-C-1.0 0.557 (highlighted teal), logreg-C-0.1 0.538, logreg-C-0.01 0.461. Small lab-notebook icon. Small tag: MLOps · Lesson 4."}
+  },
+  "production_notes": [
+    "[VERIFY] Wine Quality dataset: confirm the licence, current location on the UCI Machine Learning Repository, and the description of its origin (Portuguese vinho verde). The voiceover does not state these; it only says the demo uses the offline synthetic data.",
+    "[VERSION] MLflow interface labels (experiment list, Compare, Artifacts tab), the mlflow ui command and its default port 5000, the name= versus artifact_path= argument, and the skops default serialisation were checked against MLflow 3.16.1 only. Re-check before recording and update screen_steps if labels moved.",
+    "F1 values 0.557, 0.538 and 0.461 are real results on the synthetic fallback data, not the real dataset; they must match on screen.",
+    "Beatriz Carvalho and the wine cooperative are hypothetical.",
+    "The tracking store is a local SQLite file; do not show any shared tracking server address or credentials on screen."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Last week you tried twelve model settings. Which one gave the best score, with which data, and where is that model file now? If the answer lives in a spreadsheet, or only in your memory, you need experiment tracking.",
+       "on_screen_text": "Which run was the best?"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "In the last lesson, we made training reproducible. Now we record it. Experiment tracking saves every training run automatically. It stores the parameters, meaning settings such as C. It stores the metrics, such as F1. And it stores the artefacts, such as the trained model file.",
+       "slide": {"layout": "diagram", "title": "What a run records", "body": "One run card with three labelled compartments: Parameters (C = 1.0) · Metrics (F1) · Artefacts (model folder)"}},
+      {"visual_type": "slide",
+       "voiceover": "MLflow is a free, open-source tool for this. Its tracking part has three ideas. An experiment groups related runs, such as wine quality. A run is one execution of your training code. And the tracking store is where runs are saved. For this course, a local database file is enough. Teams usually share a tracking server.",
+       "slide": {"layout": "diagram", "title": "MLflow tracking in three ideas", "body": "Experiment folder 'wine-quality' containing three run cards → all saved into a cylinder labelled 'Tracking store: mlflow.db (local)'. Side note: teams share a tracking server"}},
+      {"visual_type": "slide",
+       "voiceover": "You add only a few lines to the training code. You point MLflow at the store and name the experiment. Then, for each value of C, you start a run, train the pipeline, and log the parameter, the F1 score and the model. You also give an input example, so MLflow records the expected input columns.",
+       "slide": {"layout": "code", "title": "Adding tracking", "body": "Short snippet: mlflow.set_tracking_uri(\"sqlite:///mlflow.db\") · mlflow.set_experiment(\"wine-quality\") · for C in [0.01, 0.1, 1.0]: with mlflow.start_run(...): fit · log_param(\"C\") · log_metric(\"f1\") · mlflow.sklearn.log_model(model, name=\"model\", input_example=...)"}},
+      {"visual_type": "stock",
+       "voiceover": "Think of it as a laboratory notebook that writes itself. Every experiment gets a page, with the date, the exact settings and the results. And a sample is kept in the fridge, so you can repeat or check it later.",
+       "stock_query": "scientist writing notes in laboratory notebook",
+       "on_screen_text": "A lab notebook that writes itself"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's meet Beatriz Carvalho. She works for a hypothetical wine cooperative in Portugal, and she wants to predict which red wines tasters will rate as good. In our demo, we use the offline synthetic data from lesson three, so you can follow without a download.",
+       "stock_query": "vineyard rows at sunset with wine barrels",
+       "on_screen_text": "Beatriz · wine cooperative · Portugal"},
+      {"visual_type": "screen",
+       "voiceover": "In a terminal in the project folder, she installs MLflow. She creates a small tracking script with the loop you just saw, and runs it. Three runs are logged, one for each value of C.",
+       "screen_steps": ["Open a terminal in the wine-api folder with the virtual environment active", "Run: pip install mlflow", "Show track.py in the editor, scrolling past the loop over C values", "Run: python track.py and let it finish"],
+       "on_screen_text": "Three runs, three values of C"},
+      {"visual_type": "screen",
+       "voiceover": "Next, she starts the MLflow interface, pointing it at the same database file. She opens the local address that it prints, and clicks the wine quality experiment. The table shows all three runs, with their names.",
+       "screen_steps": ["Run: mlflow ui --backend-store-uri sqlite:///mlflow.db", "Open the printed local address, usually http://127.0.0.1:5000, in the browser", "Click the wine-quality experiment", "Show the runs table with logreg-C-1.0, logreg-C-0.1 and logreg-C-0.01"],
+       "on_screen_text": "The MLflow interface"},
+      {"visual_type": "screen",
+       "voiceover": "She selects all three runs and clicks Compare. Now the parameter C and the F1 score sit side by side. With C of one, F1 is zero point five five seven. With C of zero point one, it is zero point five three eight. With C of zero point zero one, it drops to zero point four six one.",
+       "screen_steps": ["Tick the checkboxes of all three runs", "Click Compare", "Show the comparison view with the parameter C and the metric f1 side by side", "Highlight the values 0.557, 0.538 and 0.461"],
+       "on_screen_text": "0.557 · 0.538 · 0.461"},
+      {"visual_type": "screen",
+       "voiceover": "Beatriz chooses C of one. The strongest regularisation clearly underfits. She opens the best run and shows the Artifacts tab, where the saved model folder waits. Her scores on the real dataset will be different.",
+       "screen_steps": ["Go back to the runs table and open logreg-C-1.0", "Click the Artifacts tab", "Expand the model folder to show the saved model files"],
+       "on_screen_text": "Choose C = 1.0"},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is to log only the best run. The poor runs matter too, because they show what you already tried and why you rejected it. So log every run, and never delete a run because it looks bad. And never log secrets or personal data. Anyone who can open the tracking server can read them.",
+       "on_screen_text": "Log every run. Never log secrets."}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, experiment tracking records the parameters, metrics and artefacts of every training run. Second, in MLflow, experiments group runs, and the interface lets you compare runs and open their saved models. Third, log every run, including poor ones, and choose a model with a metric that fits your problem.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Track parameters, metrics and artefacts. 2. Experiments group runs; compare in the interface. 3. Log every run; choose with a fitting metric."}}
+    ],
+    "CTA": [
+      {"visual_type": "slide",
+       "voiceover": "In the exercise below this video, you will log at least three runs with different settings, compare them in the interface, and write down which run you would choose, and why. It takes about thirty-five minutes. You will need this tracking for your capstone.",
+       "slide": {"layout": "bullets", "title": "Exercise: log and compare", "body": "3 or more named runs · compare screenshot · open the best run's artefacts · 3 to 5 sentences on your choice · about 35 minutes"}},
+      {"visual_type": "presenter_full",
+       "voiceover": "In the next lesson, we keep only the models that matter, and version them properly, in Model Registry and Data Versioning. See you there.",
+       "on_screen_text": "Next: Model Registry and Data Versioning"}
+    ]
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "course_id": "AI-16",
+  "lesson_id": "L09",
+  "duration_s": 301.7,
+  "thumbnail": {
+    "headline": "Words That Choose Tools",
+    "slide": {
+      "layout": "title",
+      "title": "Words That Choose Tools",
+      "body": "A model icon hands a note to a toolbox with three drawers: find_product · check_stock · create_reorder_request. Small tag: AI Agents and Automation Workflows · Lesson 9."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.0,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "The model asks. Your code acts.",
+      "voiceover": "In lesson two, you saw that the model does not run tools itself. It only asks for them. Today, you see exactly how that request looks, and why the words in a tool description decide whether the agent picks the right action."
+    },
+    {
+      "scene": 2,
+      "start": 18.0,
+      "end": 42.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Three parts of a tool",
+        "body": "name: short and clear, e.g. check_stock · description: what it does, when to use it, when not to · input_schema: inputs, types, required fields"
+      },
+      "voiceover": "With tool use, you send the model a list of tools, together with the messages. Each tool has three parts. A short, clear name. A description in plain language, saying what the tool does, when to use it, and when not to. And an input schema, which lists the inputs, their types, and which ones are required."
+    },
+    {
+      "scene": 3,
+      "start": 42.4,
+      "end": 48.8,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "The description is an instruction",
+      "voiceover": "The model chooses tools mainly from the descriptions. So the description is really an instruction."
+    },
+    {
+      "scene": 4,
+      "start": 48.8,
+      "end": 75.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "The tool use exchange",
+        "body": "Four steps in a loop: 1 You send messages + tools → 2 Model replies stop_reason 'tool_use' with name, input, id → 3 Your code runs the tool, returns tool_result with the same tool_use_id → 4 Model continues: another tool, or final answer (end_turn)."
+      },
+      "voiceover": "Here is the exchange. You send the messages and the tools. If the model wants a tool, its reply says it stopped for tool use, and names the tool and the input. Your code runs the tool, and sends back the result, marked with the same ID. Then the model continues. It may ask for another tool, or give a final answer."
+    },
+    {
+      "scene": 5,
+      "start": 75.4,
+      "end": 97.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "The loop in real code",
+        "body": "Show the Python loop from content.md (anthropic SDK, model=\"MODEL\", max_tokens=500, tools=tools; break when stop_reason != 'tool_use'; collect every tool_use block into tool_result items). Callout: MODEL = check the current models page."
+      },
+      "voiceover": "On screen is the loop from lesson two, in real code with the official software kit. While the model keeps asking for tools, the code runs each one, and adds the results to the conversation. A reply can hold more than one tool request, so the code collects all of them."
+    },
+    {
+      "scene": 6,
+      "start": 97.3,
+      "end": 114.0,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "manager handing note to office assistant",
+      "on_screen_text": "The manager writes the note",
+      "voiceover": "Here is a picture. The model is a manager who cannot leave the office, but can ask an assistant to make phone calls. The manager writes a note: call the warehouse, and ask about item four four seven one."
+    },
+    {
+      "scene": 7,
+      "start": 114.0,
+      "end": 130.3,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "office assistant making phone call notes",
+      "on_screen_text": "Your code makes the call",
+      "voiceover": "The assistant, which is your code, makes the call, and reports back, quoting the note number. The manager can only ask for calls on the approved list. And the assistant can refuse a call that breaks the rules."
+    },
+    {
+      "scene": 8,
+      "start": 130.3,
+      "end": 154.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Writing good tools",
+        "body": "One job per tool · Say when NOT to use it · Strict inputs: types, enums, required · Short results, clear errors ('product not found') · Separate read tools from write tools; writes need checks and often approval (Lesson 12)"
+      },
+      "voiceover": "So, how do you write good tools? Give each tool one clear job. Say when not to use it. Use strict inputs. Return short, clear results, including errors the model can understand, like product not found. And keep reading separate from writing. Tools that create, send or delete need extra checks, and often a person's approval."
+    },
+    {
+      "scene": 9,
+      "start": 154.3,
+      "end": 162.4,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "pharmacist checking shelves of medicine boxes",
+      "on_screen_text": "Ayesha · pharmacy · Karachi",
+      "voiceover": "Let's look at one tool. Ayesha Siddiqui manages a pharmacy in Karachi, Pakistan. She sketches a stock-check agent."
+    },
+    {
+      "scene": 10,
+      "start": 162.4,
+      "end": 185.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "check_stock",
+        "body": "Show the check_stock JSON from content.md, with callouts on: the description ('Use after find_product… Do not use for prices.') and required: product_id."
+      },
+      "voiceover": "Here is her check stock tool. The description says it returns the quantity in stock for one product ID. It says to use it after the find product tool has returned an ID. And it says, do not use it for prices. The only input is the product ID, and it is required."
+    },
+    {
+      "scene": 11,
+      "start": 185.1,
+      "end": 204.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "One tool call",
+        "body": "Question bubble: 'Enough of P-0412 for 30 packs?' → tool_use: check_stock, product_id P-0412 (example output) → tool_result: '18 packs in stock'."
+      },
+      "voiceover": "A staff member asks: do we have enough of product P zero four one two for thirty packs? You'll see something like this. The model asks for check stock, with that product ID. Her code reads the sheet, and returns eighteen packs in stock."
+    },
+    {
+      "scene": 12,
+      "start": 204.0,
+      "end": 224.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Answer, then a safe next step",
+        "body": "Answer bubble: 'No, 18 in stock, 12 short. Prepare a reorder request?' (example output). Next: create_reorder_request → row in a sheet → pharmacist approves. Red cross on 'order from supplier'."
+      },
+      "voiceover": "The model answers: no, eighteen packs are in stock, twelve short. Do you want me to prepare a reorder request? And notice the limit. The reorder tool only creates a request in a sheet, for a pharmacist to approve. It never places an order with a supplier."
+    },
+    {
+      "scene": 13,
+      "start": 224.1,
+      "end": 249.4,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Vague or clear?",
+        "body": "Left: 'stock tool' / 'gets data' → wrong tool, invented inputs, guesses (red). Right: what it does · input needed · what it returns · when not to use it (green)."
+      },
+      "voiceover": "A common mistake is to write vague descriptions, such as stock tool, or gets data. The model then uses the wrong tool, invents inputs, or skips the tool and guesses. Write each description as if you were explaining the tool to a new colleague: what it does, what it needs, what it returns, and when not to use it."
+    },
+    {
+      "scene": 14,
+      "start": 249.4,
+      "end": 277.3,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Name, description, input schema; descriptions drive the choice. 2. While stop_reason is tool_use: run the tool, return tool_result with the same ID. 3. One job, strict inputs, clear results; control write tools."
+      },
+      "voiceover": "Let's recap. First, each tool has a name, a description and an input schema, and the model chooses mainly from the descriptions. Second, the loop continues while the model asks for tools. Your code runs each one, and returns the result with the matching ID. Third, give each tool one job, strict inputs and clear results, and keep tools that change data separate and controlled."
+    },
+    {
+      "scene": 15,
+      "start": 277.3,
+      "end": 301.7,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Building an Agent in n8n",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will write three tool definitions for Ayesha's pharmacy agent: find a product, check the stock, and create a reorder request that a pharmacist must approve. It takes about twenty-five minutes. In the next lesson, we are Building an Agent in n8n. See you there."
+    }
+  ]
+}

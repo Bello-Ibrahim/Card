@@ -1,0 +1,201 @@
+{
+  "course_id": "AI-18",
+  "lesson_id": "L01",
+  "duration_s": 314.9,
+  "thumbnail": {
+    "headline": "It Worked on My Machine",
+    "slide": {
+      "layout": "title",
+      "title": "It Worked on My Machine",
+      "body": "Left: laptop icon with a rising chart and a green tick. Right: server icon with a red warning sign. A broken dashed line joins them. Small tag: MLOps · Lesson 1."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.3,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Nothing changed. So what broke?",
+      "voiceover": "Your model scored well in the notebook last month. Today a colleague runs the same notebook on a new laptop. First the score is different, then there is an error. Nothing about the model changed. So what broke?"
+    },
+    {
+      "scene": 2,
+      "start": 16.3,
+      "end": 30.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Why Models Fail After the Notebook",
+        "body": "MLOps: Deploying and Monitoring Models · Lesson 1 of 18"
+      },
+      "voiceover": "Hi, and welcome to MLOps: Deploying and Monitoring Models. In this first lesson, we look at the gap between it works on my machine, and it works every day for real users."
+    },
+    {
+      "scene": 3,
+      "start": 30.0,
+      "end": 49.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "The problem is around the model",
+        "body": "Small central box 'Algorithm' with a green tick, surrounded by four larger boxes: Dependencies · Data · Silent errors · Nobody watching"
+      },
+      "voiceover": "A notebook is an excellent place to explore. It is a poor place to run a production system. Most production failures of machine learning models are not caused by the algorithm. They come from everything around it. Four groups of problems appear again and again."
+    },
+    {
+      "scene": 4,
+      "start": 49.3,
+      "end": 69.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Failure groups 1 and 2",
+        "body": "1. Dependencies: no fixed versions, a new release changes a default. 2. Different data: new categories, missing values, different units."
+      },
+      "voiceover": "The first group is missing or changing dependencies. The notebook imports libraries without fixed versions, and a new release changes a default value. The second group is different data. Training used a file on one laptop, but live data brings new categories, missing values or different units."
+    },
+    {
+      "scene": 5,
+      "start": 69.4,
+      "end": 95.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Failure groups 3 and 4",
+        "body": "3. Silent errors: cells out of order, no seed, preprocessing only in the notebook. 4. Nobody watching: accuracy falls slowly = drift (measured in L16)."
+      },
+      "voiceover": "The third group is silent errors. A cell ran out of order, a random seed was never set, or a preprocessing step lives only in the notebook. The model still answers, but the answer is wrong, and nothing raises an error. The fourth group is nobody watching. The world changes, and the model slowly becomes less accurate. We call this drift."
+    },
+    {
+      "scene": 6,
+      "start": 95.5,
+      "end": 122.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key MLOps terms",
+        "body": "Artefact: any file the pipeline produces (model, metrics, Docker image) · Model registry: model versions + which one is in production · CI/CD: every change tested and built automatically"
+      },
+      "voiceover": "MLOps, short for machine learning operations, is the set of practices that closes this gap. You will meet six key terms. An artefact is any file the pipeline produces, such as a model or a Docker image. A model registry stores each model version and marks which one is in production. CI and CD mean every change is tested and built automatically."
+    },
+    {
+      "scene": 7,
+      "start": 122.1,
+      "end": 145.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key MLOps terms (continued)",
+        "body": "Serving: model available through an API · Drift: production data no longer looks like training data · Rollback: back to the last working version. Banner: Reproducibility = version code + data + model"
+      },
+      "voiceover": "Serving means making a model available to other systems, for example through an API. Drift means production data no longer looks like training data. And rollback means returning quickly to the last working version. The central idea is reproducibility. Version the code, the data and the model together, and anyone can rebuild the same model."
+    },
+    {
+      "scene": 8,
+      "start": 145.7,
+      "end": 166.3,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "food factory production line quality check",
+      "on_screen_text": "Home recipe vs factory recipe",
+      "voiceover": "Here is a simple picture. A recipe that works in your home kitchen is not ready for a food factory. The factory needs written steps, exact measures, known suppliers and quality checks on every batch. A notebook is the home recipe. An MLOps project is the factory version."
+    },
+    {
+      "scene": 9,
+      "start": 166.3,
+      "end": 184.7,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "data scientist working on laptop in office",
+      "on_screen_text": "Valentina · claim fraud model · Chile",
+      "voiceover": "Valentina Rojas is a data scientist at a car insurance company in Chile. The company is hypothetical. She trained a claim fraud classifier in a notebook, and it looked good. Her team deployed it by copying the notebook code into a web service."
+    },
+    {
+      "scene": 10,
+      "start": 184.7,
+      "end": 195.4,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Why are almost no claims flagged?",
+      "voiceover": "Three weeks later, the operations team asked a question. Why does the model flag almost no claims? Valentina investigated, and she found four separate causes."
+    },
+    {
+      "scene": 11,
+      "start": 195.4,
+      "end": 222.4,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Four causes",
+        "body": "1. Scaling in notebook, raw amounts in service. 2. Newer library, changed default. 3. New claim type never seen in training. 4. Nobody checked the flag rate for weeks."
+      },
+      "voiceover": "First, the notebook scaled the claim amount before training, but the service sent raw amounts. Second, the server installed a newer library version, and one default setting had changed. Third, a new claim type appeared in the live data, and the model had never seen it. Fourth, nobody had checked the share of flagged claims since launch, so the problem ran for weeks."
+    },
+    {
+      "scene": 12,
+      "start": 222.4,
+      "end": 238.7,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Every cause has a process fix",
+        "body": "Left column, causes: scaling mismatch · library update · new claim type · no one watching. Right column, fixes: preprocessing inside the model pipeline · pinned versions · input checks against training data · monitor the prediction rate"
+      },
+      "voiceover": "None of these problems was about choosing a better algorithm. Each one had a process fix. Keep preprocessing inside the saved model pipeline. Pin library versions. Check live inputs against the training data. And monitor the prediction rate."
+    },
+    {
+      "scene": 13,
+      "start": 238.7,
+      "end": 261.8,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "A test score is not the finish line",
+      "voiceover": "One common mistake is to believe that a high test score means the model is ready. A test score tells you how the model did on one dataset, on one machine, on one day. It says nothing about whether someone else can rebuild it. Treat it as an entry requirement, not the finish line."
+    },
+    {
+      "scene": 14,
+      "start": 261.8,
+      "end": 281.9,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Failures come from dependencies, data, silent errors and no monitoring. 2. Terms: artefact, registry, CI/CD, serving, drift, rollback. 3. Version code + data + model = reproducible."
+      },
+      "voiceover": "Let's recap. First, most production failures come from dependencies, data differences, silent errors and missing monitoring, not from the algorithm. Second, the key terms are artefact, model registry, CI and CD, serving, drift and rollback. Third, versioning code, data and model together makes results reproducible and explainable."
+    },
+    {
+      "scene": 15,
+      "start": 281.9,
+      "end": 300.8,
+      "section": "CTA",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Exercise: find 6 problems",
+        "body": "Short blurred preview of the L01 sample notebook (hard-coded path, no seed, pickle.dump) with the caption: Find at least 6 production problems · about 20 minutes"
+      },
+      "voiceover": "Now it is your turn. In the exercise below this video, you will review a sample notebook from a teammate. You will find at least six problems that would break it in production, and write a fix for each. It takes about twenty minutes."
+    },
+    {
+      "scene": 16,
+      "start": 300.8,
+      "end": 314.9,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: The MLOps Lifecycle",
+      "voiceover": "Everything in this course leads to the capstone, where you deploy and monitor your own model API. In the next lesson, we look at the MLOps lifecycle and maturity levels. See you there."
+    }
+  ]
+}

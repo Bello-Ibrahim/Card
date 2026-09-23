@@ -1,0 +1,177 @@
+{
+ "title": "Structuring an ML Project for Production",
+ "thumbnail": {
+  "headline": "Same Score, Every Time",
+  "image": "Navy background, two identical terminal windows side by side both showing F1 = 0.5568 with a teal equals sign between them, headline in teal Inter Bold.",
+  "slide": {
+   "layout": "title",
+   "title": "Same Score, Every Time",
+   "body": "Two terminal windows, both printing 'F1 = 0.5568', joined by a large teal equals sign. Small tag: MLOps · Lesson 3."
+  }
+ },
+ "production_notes": [
+  "[VERSION] The pinned versions in requirements.txt (scikit-learn 1.9.1, pandas 3.0.6) were the versions used to test the code; check and update them before recording. The voiceover does not say version numbers.",
+  "[VERIFY] The Wine Quality dataset licence and location are checked in L04. The demo uses the offline synthetic fallback from data.py, so the voiceover makes no claim about the dataset itself.",
+  "F1 = 0.5568 is a real output from two runs on the synthetic fallback data; it must match on screen. If the recording gives a different value, update the voiceover before release.",
+  "Screen recording: use a clean terminal and editor with a large font. No personal folder names, usernames or tokens visible in the prompt or paths.",
+  "Aarav Mehta and the Pune grocery chain are hypothetical. Git basics are a prerequisite, so the lesson gives a one-line recap only (curriculum judgement call)."
+ ],
+ "sections": {
+  "Hook": [
+   {
+    "visual_type": "presenter_full",
+    "voiceover": "If you deleted your laptop today, could a teammate rebuild your model tomorrow, and get exactly the same score? If the honest answer is probably not, this lesson is for you.",
+    "on_screen_text": "Could a teammate rebuild your model?"
+   }
+  ],
+  "Explain": [
+   {
+    "visual_type": "slide",
+    "voiceover": "Last time, we mapped the MLOps lifecycle. Now we build its first piece. You already know scikit-learn and Git, so we focus only on what changes for production. A production project has five features that a notebook usually lacks.",
+    "slide": {
+     "layout": "title",
+     "title": "Structuring an ML Project for Production",
+     "body": "MLOps: Deploying and Monitoring Models · Lesson 3 of 18"
+    }
+   },
+   {
+    "visual_type": "slide",
+    "voiceover": "First, a training script that runs from start to finish with one command. Second, a configuration file for settings such as the random seed, the test size and model parameters. Third, pinned dependencies, so every machine installs the same library versions.",
+    "slide": {
+     "layout": "bullets",
+     "title": "Five features of a production project",
+     "body": "1. train.py: one command, start to finish. 2. config.yaml: seed, test size, model parameters. 3. requirements.txt: exact pinned versions."
+    }
+   },
+   {
+    "visual_type": "slide",
+    "voiceover": "Fourth, fixed random seeds, everywhere randomness appears. Fifth, a clear folder layout under Git. The Git rule in one line: commit code and configuration, but not data files, model files or secrets.",
+    "slide": {
+     "layout": "code",
+     "title": "Project layout",
+     "body": "wine-api/ · data.py (load_data: real CSV or offline fallback) · train.py · config.yaml · requirements.txt · tests/ · .gitignore (model.joblib, mlflow.db, data/*.csv). Caption: 4. fixed seeds · 5. clear layout under Git"
+    }
+   },
+   {
+    "visual_type": "slide",
+    "voiceover": "Our running example predicts whether a red wine is good, meaning a quality score of seven or higher, from four features. If the real data file is missing, the loader builds a synthetic practice dataset with a fixed seed, so the course works offline.",
+    "slide": {
+     "layout": "diagram",
+     "title": "Running example: good wine?",
+     "body": "Four feature chips: alcohol · volatile acidity · sulphates · citric acid → pipeline box [StandardScaler → LogisticRegression] → 'good' (quality 7 or higher). Side note: synthetic fallback data, fixed seed, practice only"
+    }
+   },
+   {
+    "visual_type": "slide",
+    "slide": {
+     "layout": "diagram",
+     "title": "Preprocessing inside the model",
+     "body": "One box labelled model.joblib containing two stacked steps: StandardScaler → LogisticRegression. Arrow from train.py into it, arrow out to the future API. Caption: no training-serving mismatch (see L01)"
+    },
+    "voiceover": "The model is a scikit-learn pipeline, a scaler plus logistic regression. So preprocessing is saved inside the model file. This avoids the mismatch we saw in the last lesson, where the service skipped a scaling step."
+   },
+   {
+    "visual_type": "stock",
+    "voiceover": "Think of it this way. A notebook is like cooking from memory. A production project is like a printed recipe card, with exact amounts, oven temperature and cooking time. Anyone with the card and the same ingredients gets the same dish.",
+    "stock_query": "handwritten recipe card on kitchen table",
+    "on_screen_text": "Recipe card, not memory"
+   }
+  ],
+  "Demonstrate": [
+   {
+    "visual_type": "screen",
+    "voiceover": "Let's watch Aarav Mehta, an ML engineer at a hypothetical grocery chain in Pune, refactor the wine notebook. In a terminal, he creates the project folder and starts Git. Then he creates a virtual environment and installs four packages.",
+    "screen_steps": [
+     "Open a clean terminal",
+     "Run: mkdir wine-api && cd wine-api && git init",
+     "Run: python -m venv .venv, then activate the environment",
+     "Run: pip install scikit-learn pandas pyyaml joblib and let it finish"
+    ],
+    "on_screen_text": "Aarav · Pune · new project"
+   },
+   {
+    "visual_type": "screen",
+    "voiceover": "Next, the configuration file. It holds the seed, the test size and the model settings. When he wants to try a new setting, he changes this file, not the code. And because the seed lives here, every function that uses randomness gets the same value.",
+    "screen_steps": [
+     "In the code editor, create config.yaml",
+     "Show its contents: seed 42, test_size 0.2, model C 1.0, max_iter 1000",
+     "Highlight the seed line"
+    ],
+    "on_screen_text": "Settings live in config.yaml"
+   },
+   {
+    "visual_type": "screen",
+    "voiceover": "Now the training script. It reads the configuration, loads the data, and splits it using the seed from the file. It builds the pipeline, trains it, and measures the F1 score. Then it saves the model and writes the score to a small metrics file. Notice that the scaler is inside the pipeline, so the saved file carries its own preprocessing.",
+    "screen_steps": [
+     "Create train.py in the editor and show the full script",
+     "Highlight the line that reads config.yaml",
+     "Highlight train_test_split with random_state from the config and stratify=y",
+     "Highlight make_pipeline(StandardScaler(), LogisticRegression(...))",
+     "Highlight joblib.dump to model.joblib and json.dump to metrics.json"
+    ],
+    "on_screen_text": "train.py: one command"
+   },
+   {
+    "visual_type": "screen",
+    "voiceover": "He pins the exact versions he tested with, using pip freeze. The file now lists every library with an exact version number. Your versions may differ from ours. What matters is that you pin the ones you actually tested.",
+    "screen_steps": [
+     "Run: pip freeze > requirements.txt",
+     "Open requirements.txt and scroll to the scikit-learn and pandas lines with exact versions"
+    ],
+    "on_screen_text": "Pin the versions you tested"
+   },
+   {
+    "visual_type": "screen",
+    "voiceover": "Now the real test. He runs the script twice. On our synthetic data, both runs print an F1 of zero point five five six eight. The score is modest, because the practice data is deliberately noisy. The point is that it is identical.",
+    "screen_steps": [
+     "Run: python train.py and show the output F1 = 0.5568",
+     "Run: python train.py again and show the same output F1 = 0.5568",
+     "Place the two outputs side by side"
+    ],
+    "on_screen_text": "F1 = 0.5568, twice"
+   },
+   {
+    "visual_type": "screen",
+    "voiceover": "Finally, he adds the model file, the metrics file and the data folder to the ignore file, and commits. Git status shows no model or data files.",
+    "screen_steps": [
+     "Open .gitignore and add model.joblib, metrics.json and data/*.csv",
+     "Run: git add . and git commit -m \"Reproducible training project\"",
+     "Run: git status and show a clean working tree"
+    ],
+    "on_screen_text": "Commit code, not artefacts"
+   },
+   {
+    "visual_type": "text",
+    "voiceover": "A common mistake is to set the seed in the model but forget the data split, or the reverse. The score then moves a little on every run, and you cannot tell if your change caused it. Set the seed in one place, and pass it everywhere.",
+    "on_screen_text": "One seed, passed everywhere"
+   }
+  ],
+  "Recap": [
+   {
+    "visual_type": "slide",
+    "voiceover": "Let's recap. First, a production project has a training script, a configuration file, pinned dependencies, fixed seeds and a clear layout under Git. Second, keep preprocessing inside the saved pipeline, so training and serving use the same steps. Third, test reproducibility directly: run training twice and compare.",
+    "slide": {
+     "layout": "bullets",
+     "title": "Key takeaways",
+     "body": "1. Script + config + pinned deps + seeds + Git layout. 2. Preprocessing inside the saved pipeline. 3. Run twice, compare the results."
+    }
+   }
+  ],
+  "CTA": [
+   {
+    "visual_type": "slide",
+    "voiceover": "In the exercise below this video, you will refactor a notebook into this structure, run it twice, and prove the results are identical. It takes about forty minutes. Check that git status shows no data or model files. Keep this project safe, because it becomes the base of your capstone at the end of the course.",
+    "slide": {
+     "layout": "bullets",
+     "title": "Exercise: make it reproducible",
+     "body": "train.py + config.yaml + requirements.txt · run twice · identical metrics · clean git status · about 40 minutes"
+    }
+   },
+   {
+    "visual_type": "presenter_full",
+    "voiceover": "In the next lesson, we record every training run automatically, in Experiment Tracking with MLflow. See you there.",
+    "on_screen_text": "Next: Experiment Tracking with MLflow"
+   }
+  ]
+ }
+}

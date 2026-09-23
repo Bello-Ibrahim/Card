@@ -1,0 +1,155 @@
+{
+  "title": "Capstone Step 1: Build the Core Feature",
+  "thumbnail": {
+    "headline": "Spec First, Then Build",
+    "image": "Navy background, a one-page spec sheet beside a stack of four building blocks labelled schema, streaming, page, tool, headline in teal Inter Bold.",
+    "slide": {
+      "layout": "title",
+      "title": "Spec First, Then Build",
+      "body": "A one-page spec icon and four stacked blocks: schema, streaming, page, tool (dashed). Small tag: Building Apps with LLM APIs · Capstone Step 1."
+    }
+  },
+  "production_notes": [
+    "[VERSION] The structured-output helper (messages.parse, output_format, parsed_output) and Streamlit functions (st.json, st.write_stream) must be checked against the current docs before recording.",
+    "The result for the advert with no salary (empty salary_min, 'no salary given' in red_flags) is example output; label it on screen.",
+    "Agnieszka Nowak, the Kraków recruitment agency and all job adverts are invented. The Polish advert should be checked by a Polish speaker for natural wording before recording.",
+    "Scope: retrieval over documents is AI-15 and multi-step agents are AI-16; the voiceover mentions both once."
+  ],
+  "sections": {
+    "Hook": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "You now know every part. Prompts, structured outputs, streaming, tools and guardrails. In the next three lessons, you put them together into one small app that works, that others can use, and that shows what it costs.",
+        "on_screen_text": "Time to put it together"
+      }
+    ],
+    "Explain": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Welcome to the capstone. You will build a deployed web app with validated structured outputs, streaming, optional tool use, usage logging and a cost dashboard. This lesson is step one. Choose a use case, write a spec, and build the core feature.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Capstone in three steps",
+          "body": "Step 1 (this lesson): use case, spec, core feature → Step 2: usage logging and cost dashboard → Step 3: test, deploy, present."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Choose something small and useful. A good feature takes one kind of input, and returns structured data that the app then uses. For example, a job-advert analyser for a recruitment agency, a meal planner for a grocery app, or a tool that sorts support tickets. Avoid search over many documents, which is course AI-15, and long multi-step agents, which is AI-16.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Choose a small use case",
+          "body": "Job-advert analyser: role, skills, salary, red flags · Meal planner: weekly plan and shopping list · Ticket triage: category, urgency, draft reply · Avoid: document search (AI-15), multi-step agents (AI-16)"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Before any code, write a one-page spec. Who is the user, and what is the problem? What goes in, and what is the output schema? What is your prompt plan? Is there one tool that adds real data? What are your limits, such as model, max tokens and spend limit? And how will you know it works?",
+        "slide": {
+          "layout": "bullets",
+          "title": "One-page spec",
+          "body": "1. User and problem · 2. Input and output schema · 3. Prompt plan · 4. Optional tool · 5. Limits: model, max_tokens, spend limit, excluded personal data · 6. Success"
+        }
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "A spec is like a floor plan for a small house. It takes an hour, but it stops you from building a kitchen with no door. It also gives your reviewers a clear picture of what you planned.",
+        "stock_query": "architect drawing floor plan on paper",
+        "on_screen_text": "Draw the floor plan first"
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Then build in layers. First the schema and a structured call, tested in the terminal. Then streaming for any free-text part. Then the Streamlit page. Then the tool, if you have one. Test each layer before you add the next, and commit each working layer to Git, so you can always go back.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Build in layers",
+          "body": "Stacked layers, bottom to top: 1 Schema + structured call (terminal) → 2 Streaming text → 3 Streamlit page → 4 Optional tool. Tick after each layer."
+        }
+      }
+    ],
+    "Demonstrate": [
+      {
+        "visual_type": "stock",
+        "voiceover": "Agnieszka Nowak builds a job-advert analyser for a recruitment agency in Kraków, Poland. Recruiters paste an advert, and get structured data plus a short streamed comment for the candidate.",
+        "stock_query": "recruiter reading job advert on computer",
+        "on_screen_text": "Agnieszka · job adverts · Kraków"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Before any code, she writes her one-page spec. The users are recruiters. The input is one advert, and the output is a schema. Her limits are a small model, a low max tokens value and a spend limit, and she excludes any personal data. Success means five test adverts give correct fields.",
+        "screen_steps": [
+          "Open spec.md in VS Code",
+          "Scroll through the six headings: User and problem, Input and output, Prompt plan, Tool (optional), Limits, Success",
+          "Highlight the Limits section: small model placeholder, low max_tokens, spend limit set, no personal data",
+          "Highlight the Success line: 5 invented test adverts return correct fields"
+        ],
+        "on_screen_text": "The spec comes first"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Her schema has the job title, the seniority level, a list of required skills, an optional salary range and currency, and a list of red flags, such as no salary given.",
+        "screen_steps": [
+          "Open schema.py in VS Code",
+          "Highlight the JobAnalysis Pydantic class",
+          "Point to the optional salary_min, salary_max and currency fields",
+          "Point to red_flags with the comment e.g. 'no salary given'"
+        ],
+        "on_screen_text": "Layer 1: the schema"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Her core function sends the advert inside tags with the structured-output helper. It checks the stop reason, and returns a validated object. She tests it in the terminal first, before any page exists.",
+        "screen_steps": [
+          "Open core.py and highlight analyse()",
+          "Highlight the <advert> tags and output_format=JobAnalysis",
+          "Highlight the stop_reason check that raises 'Stopped early'",
+          "Run python core.py adverts/advert_01.txt and show the printed object"
+        ],
+        "on_screen_text": "Test in the terminal first"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Then the page. The Streamlit app shows the structured fields, and then streams a short, plain-language comment built from that object, just like in lesson eight.",
+        "screen_steps": [
+          "Open app.py and highlight st.json(analysis.model_dump())",
+          "Highlight st.write_stream() for the comment",
+          "Run streamlit run app.py, paste an invented advert and show the fields, then the streamed comment"
+        ],
+        "on_screen_text": "Layers 2 and 3: stream and page"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "She tests five invented adverts, including one in Polish and one with no salary. For that one, you'll see something like an empty salary field, and no salary given in the red flags. A salary lookup tool stays optional. She adds it only after these tests pass, read-only, with the loop limits from lesson ten.",
+        "screen_steps": [
+          "Paste the Polish advert and show the parsed fields",
+          "Paste the advert with no salary and show salary_min empty and 'no salary given' in red_flags (example output)",
+          "Show the spec line: 'Tool (optional): read-only salary table, after core tests pass'"
+        ],
+        "on_screen_text": "Five tests, then the optional tool"
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "A common mistake is to start big, and build the page, the tool and the dashboard all at once. When something fails, you cannot tell which part broke. Keep it small, write the spec first, and test one layer at a time.",
+        "on_screen_text": "Small, spec first, one layer at a time"
+      }
+    ],
+    "Recap": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, choose a small use case that takes one kind of input and returns structured data your app uses. Second, write a one-page spec before coding, from the user and schema to limits and success. Third, build in layers. A validated structured call, then streaming, then the web page, then an optional tool with guardrails.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. Small use case, structured output your app uses. 2. One-page spec before code. 3. Build in layers: structured call → streaming → page → optional tool."
+        }
+      }
+    ],
+    "CTA": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Now it is your turn. This is capstone step one. Write your spec, and build the core feature with a validated schema and streaming output, then commit it to Git with no keys. In the next lesson, Capstone Step 2: Usage Logging and a Cost Dashboard, you will show what your app costs. See you there.",
+        "on_screen_text": "Next: Capstone Step 2"
+      }
+    ]
+  }
+}

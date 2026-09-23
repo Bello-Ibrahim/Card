@@ -1,0 +1,173 @@
+{
+  "course_id": "AI-16",
+  "lesson_id": "L08",
+  "duration_s": 291.1,
+  "thumbnail": {
+    "headline": "Ready for 5,000 Rows?",
+    "slide": {
+      "layout": "title",
+      "title": "Ready for 5,000 Rows?",
+      "body": "A tall stack of rows divided into groups of ten, with a small pause icon between groups and a gauge icon for the rate limit. Small tag: AI Agents and Automation Workflows · Lesson 8."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.6,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Ten rows works. Five thousand?",
+      "voiceover": "Your workflow works on ten rows. Then someone asks you to run it on five thousand. Will it finish? Will the API refuse some requests? And how much will it cost? You should know the answers before you press the button."
+    },
+    {
+      "scene": 2,
+      "start": 17.6,
+      "end": 47.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Rate limits",
+        "body": "A gauge labelled 'requests and tokens per minute'. Below the line: answers return. Above the line: error instead of an answer. Note: limits depend on your account; check the Claude Console."
+      },
+      "voiceover": "Last time, we routed each message to the right place. Now we scale up. The Claude API limits how many requests and tokens you can use per minute. The limits depend on your account and change over time, so check them in the Claude Console. If you go over a limit, the API returns an error instead of an answer. It can also return temporary errors when it is busy."
+    },
+    {
+      "scene": 3,
+      "start": 47.6,
+      "end": 71.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Three tools",
+        "body": "Batching: Loop Over Items, e.g. 10 at a time · Waiting: a Wait node after each batch · Retrying: Retry On Fail in node settings (error workflows in Lesson 13)"
+      },
+      "voiceover": "n8n sends requests quickly when many items arrive at once, so a large sheet can hit a limit in seconds. Three tools help. Batching passes items on in small groups, for example ten at a time. Waiting pauses for a few seconds after each batch. And retrying tries a failed request again, after a short wait."
+    },
+    {
+      "scene": 4,
+      "start": 71.6,
+      "end": 90.9,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "people waiting in orderly queue bank",
+      "on_screen_text": "Groups of ten, short pauses",
+      "voiceover": "Here is a picture. Think of a bank with one counter and a long queue. If everyone rushes in at once, the guard closes the door. If people come in groups of ten, with a short pause, the queue moves steadily and everyone is served."
+    },
+    {
+      "scene": 5,
+      "start": 90.9,
+      "end": 115.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Estimate before you run",
+        "body": "Sample 10–20 rows → average tokens per row → × number of rows → + safety margin → compare with the current price list (look it up)."
+      },
+      "voiceover": "Next, estimate before you run. Cost depends on tokens. Run ten to twenty typical rows, and record the tokens per row. Take the average. Then multiply by the number of rows, and add a safety margin for longer rows and retries. Compare that with the current price list for your model. Prices change, so always look them up."
+    },
+    {
+      "scene": 6,
+      "start": 115.8,
+      "end": 132.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Estimate time too",
+        "body": "Time = time per batch × number of batches · Long run? Schedule trigger + a 'processed' column · A stopped run continues, not restarts"
+      },
+      "voiceover": "Also estimate time: time per batch, multiplied by the number of batches. If a run will take hours, use a schedule trigger, and a processed column, so a stopped run can continue where it ended, instead of starting again."
+    },
+    {
+      "scene": 7,
+      "start": 132.5,
+      "end": 155.2,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run the classification workflow on 20 rows",
+        "Open the HTTP Request output and point to usage.input_tokens and usage.output_tokens",
+        "Show the averages in a sheet: about 400 input and 40 output tokens per row (example output)"
+      ],
+      "on_screen_text": "Omar · electronics shop · Amman",
+      "voiceover": "Let's see it. Omar Haddad runs data operations for an online electronics shop in Amman, Jordan. He must classify five hundred product reviews. He does not start with five hundred. He runs twenty rows, and reads the usage fields. You'll see something like four hundred input tokens and forty output tokens per row."
+    },
+    {
+      "scene": 8,
+      "start": 155.2,
+      "end": 177.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Omar's estimate",
+        "body": "500 rows × 440 tokens = 220,000 · + 20% margin ≈ 264,000 tokens · × current price (look it up) · < spending limit? ✓"
+      },
+      "voiceover": "He calculates. Five hundred rows times four hundred and forty tokens is two hundred and twenty thousand tokens. He adds a twenty percent margin, so about two hundred and sixty-four thousand. He looks up the current price for his model, and checks that the cost is below his spending limit."
+    },
+    {
+      "scene": 9,
+      "start": 177.1,
+      "end": 199.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Add Loop Over Items after Google Sheets (get rows), batch size 10",
+        "Inside the loop: HTTP Request to Claude → Settings → Retry On Fail on, a few tries with a wait",
+        "Validation Code node → Google Sheets update",
+        "Wait node, a few seconds → connect back to Loop Over Items"
+      ],
+      "voiceover": "Now he adds a Loop Over Items node, with a batch size of ten, after the Sheets read node. Inside the loop, the call to Claude has retry on fail turned on. Then come the validation node, the sheet update, and a Wait node of a few seconds, connected back to the loop."
+    },
+    {
+      "scene": 10,
+      "start": 199.8,
+      "end": 216.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Add a 'processed' column to the sheet",
+        "Filter the Google Sheets read to rows where processed is empty",
+        "Set processed to 'yes' in the update node",
+        "Run 50 rows and show the start and end time in the Executions list"
+      ],
+      "on_screen_text": "Measure first, then scale",
+      "voiceover": "He adds a processed column, and filters on it at the start, so only unprocessed rows are read. Then he runs fifty rows, notes the run time, and multiplies by ten to estimate the time for all five hundred."
+    },
+    {
+      "scene": 11,
+      "start": 216.5,
+      "end": 241.8,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Sample, margin, limit, date",
+      "voiceover": "A common mistake is to estimate from one short test row, or to forget output tokens and retries. The real run is then much larger than expected. Measure a typical sample, add a margin, and keep a spending limit as a final safety net. And when you share an estimate, include the date of the price list you used."
+    },
+    {
+      "scene": 12,
+      "start": 241.8,
+      "end": 263.7,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Batches, waits and retries keep you within rate limits. 2. Estimate: rows × average tokens + margin. 3. A 'processed' column lets long runs resume safely."
+      },
+      "voiceover": "Let's recap. First, rate limits depend on your account. Batches, waits and retries keep a large run within them. Second, estimate usage before a big run, from a real sample, plus a margin. Third, use a processed column, so a long run can stop and continue safely, without repeating paid work."
+    },
+    {
+      "scene": 13,
+      "start": 263.7,
+      "end": 291.1,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Tool Use",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will process fifty rows in batches of ten, with a wait between batches. Record the run time and token usage, then estimate the usage for five thousand rows. It takes about forty minutes. In the next lesson, we move to agents, with Tool Use: Letting the Model Call Functions. See you there."
+    }
+  ]
+}

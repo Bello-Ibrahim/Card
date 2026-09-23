@@ -1,0 +1,151 @@
+{
+  "title": "Testing Prompts with a Small Evaluation Set",
+  "thumbnail": {
+    "headline": "Test Every Prompt Change",
+    "image": "Navy background, a checklist of twenty small ticks with one red cross marked regression, headline in teal Inter Bold.",
+    "slide": {
+      "layout": "title",
+      "title": "Test Every Prompt Change",
+      "body": "A grid of 20 small test boxes, 19 green ticks and one red cross labelled 'regression'. Small tag: Building Apps with LLM APIs · Lesson 12."
+    }
+  },
+  "production_notes": [
+    "content.md Review Flags: none. All cases are invented and all outputs are example output.",
+    "The eval results (v1 18 of 20, v2 19 of 20 with the mx-02 regression) are example output; label them on screen. Costs on screen stay as 0.0xx placeholders; do not show real prices.",
+    "Johan Lindqvist and the Gothenburg accounting firm are fictional; test invoices are invented text."
+  ],
+  "sections": {
+    "Hook": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "You change one line in your prompt to fix a bad answer. It works. A week later, a user reports that dates are wrong again, and the bug came from your fix. Without tests, every prompt change is a gamble.",
+        "on_screen_text": "Every untested change is a gamble"
+      }
+    ],
+    "Explain": [
+      {
+        "visual_type": "slide",
+        "voiceover": "In the last lesson, you tested attacks by hand. Now let's make testing a habit. An evaluation set is a fixed list of test inputs, with the properties you expect in the output. It is the prompt version of unit tests. You run it every time you change the prompt, the model or the code.",
+        "slide": {
+          "layout": "diagram",
+          "title": "An evaluation set",
+          "body": "Fixed list of cases (input + expected properties) → run on prompt v1 and v2 → compare. Caption: unit tests for prompts."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "For a small feature, twenty to thirty cases are enough to start. Include normal cases from everyday use, and hard cases, like unusual formats or other languages. Add bad inputs, such as empty text or injection attempts. And every time a user reports a real bug, add that case too.",
+        "slide": {
+          "layout": "bullets",
+          "title": "20 to 30 cases",
+          "body": "Normal cases · Hard cases: unusual formats, long inputs, other languages, missing fields · Bad inputs: empty text, wrong document, injection attempts · Every real bug"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Check expected properties, not exact text, because the wording changes between runs. Automatic checks are cheap and objective. Did the output pass the schema? Are the required fields present, with the expected values? Is the length right? Did the app call the right tool?",
+        "slide": {
+          "layout": "bullets",
+          "title": "Automatic checks",
+          "body": "Schema valid? · Required fields with expected values (e.g. total = 18450.0) · Length and language · Right tool called, no change without confirmation"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "For qualities like tone, you can ask a model to act as a judge, with a short, specific rubric. For example, does the reply avoid promising a refund? Answer pass or fail with one reason. Keep the rubric narrow, check some grades by hand, and remember that each judgement is another paid call.",
+        "slide": {
+          "layout": "quote",
+          "title": "Model as a judge",
+          "body": "\"Does the reply avoid promising a refund? Answer PASS or FAIL with one reason.\" Notes: narrow rubric · check a sample by hand · each judgement costs a call."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Then compare versions. Run each prompt version on the same set, and record the pass rate, the cost from your logger, and the speed if it matters. A new version is better only if it passes at least as many cases, without an unacceptable rise in cost. A case that passed before and fails now is a regression. Fix it before you ship.",
+        "slide": {
+          "layout": "comparison",
+          "title": "Compare versions",
+          "body": "v1 vs v2 on the same set: pass rate · cost · latency. A case that passed before and fails now = regression (red). Rule: fix regressions before shipping."
+        }
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "An eval set is like the fixed practice route at a driving school. Every student drives the same streets, with the same difficult roundabout. Because the route never changes, the instructor sees real progress, not a lucky day.",
+        "stock_query": "learner driver car on city roundabout",
+        "on_screen_text": "Same route, real progress"
+      }
+    ],
+    "Demonstrate": [
+      {
+        "visual_type": "stock",
+        "voiceover": "Johan Lindqvist maintains an invoice extractor for an accounting firm in Gothenburg, Sweden. He keeps twenty invented test invoices, each with expected values.",
+        "stock_query": "accountant working at desk Scandinavian office",
+        "on_screen_text": "Johan · accounting firm · Gothenburg"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Here is one case in his cases file. It has an ID, the invoice file, and the expected currency, total and date. His set mixes normal Swedish invoices, hard formats from other countries, and a few bad inputs.",
+        "screen_steps": [
+          "Open evals/cases.json in VS Code",
+          "Highlight case se-07 with its file path and expected currency SEK, total 12500.0 and invoice_date 2026-02-28"
+        ],
+        "on_screen_text": "One case, expected values"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "His runner loads every case and calls the extractor with a chosen prompt version. It checks that each expected field matches, adds up the cost from his logger, and prints any failing case. At the end, it prints the pass rate and total cost.",
+        "screen_steps": [
+          "Open run_eval.py",
+          "Highlight the loop over cases and the call extract(text, prompt_version)",
+          "Highlight the all(...) check that compares each expected field",
+          "Highlight cost += call_cost and the FAIL print",
+          "Highlight the final summary print"
+        ],
+        "on_screen_text": "Pass rate and cost per version"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "He runs version one and version two. You'll see something like this. Version one passes eighteen of twenty. Version two passes nineteen. It looks better. But look closer. Version two fixed two cases, and broke one that passed before, a Mexican invoice. That is a regression.",
+        "screen_steps": [
+          "Run python run_eval.py v1 and show 'v1: 18/20 passed' with FAIL se-07 and FAIL de-03",
+          "Run python run_eval.py v2 and show 'v2: 19/20 passed' with FAIL mx-02",
+          "Circle mx-02 in red and add the label 'regression' (example output)"
+        ],
+        "on_screen_text": "Higher score, but a regression"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "So Johan does not ship version two. He finds that his new rule about decimal commas confused Mexican number formats. He fixes the rule in version three, and ships only when it passes every case that version one passed.",
+        "screen_steps": [
+          "Open prompts/extract_v2.txt and highlight the decimal-comma rule",
+          "Save an edited copy as prompts/extract_v3.txt",
+          "Run python run_eval.py v3 and show no regressions against v1 (example output)"
+        ],
+        "on_screen_text": "Fix the regression, then ship"
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "A common mistake is to test a new prompt on two or three easy examples, see good answers, and ship it. Keep a fixed set, run it on every change, and look at regressions first, not just the total score.",
+        "on_screen_text": "Look at regressions first"
+      }
+    ],
+    "Recap": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, an evaluation set of twenty to thirty fixed cases, with expected properties, is the unit test for your prompts. Second, use automatic checks wherever you can, and use a model as a judge only with a narrow rubric and some checking by hand. Third, compare versions on the same set by pass rate and cost, and treat any regression as a bug to fix before shipping.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. 20–30 fixed cases with expected properties. 2. Automatic checks first; model judge with a narrow rubric. 3. Compare pass rate and cost; fix regressions before shipping."
+        }
+      }
+    ],
+    "CTA": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Now it is your turn. In the exercise, you will build a twenty-case test set for your extractor, run two prompt versions, and report the pass rate and cost of each, with a clear recommendation. You will run this set again before your capstone launch. In the next lesson, Cost Control in Practice, you will cut your costs. See you there.",
+        "on_screen_text": "Next: Cost Control in Practice"
+      }
+    ]
+  }
+}

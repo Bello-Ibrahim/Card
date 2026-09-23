@@ -1,0 +1,198 @@
+{
+  "course_id": "AI-12",
+  "lesson_id": "L16",
+  "duration_s": 299.2,
+  "thumbnail": {
+    "headline": "Averages Hide Groups",
+    "slide": {
+      "layout": "title",
+      "title": "Averages Hide Groups",
+      "body": "Three bars by age band (18–30, 31–50, 51–79) with the middle one in amber; a dashed line for the overall average. Tag: Machine Learning with scikit-learn · Lesson 16."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.7,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "An average can hide a group",
+      "voiceover": "Your model finds sixty-seven percent of subscribers overall. That sounds acceptable. But what if it finds ninety percent in one age group, and thirty percent in another? An average can hide a group for which the model fails."
+    },
+    {
+      "scene": 2,
+      "start": 16.7,
+      "end": 36.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Three kinds of risk",
+        "body": "1. Subgroup performance · 2. Data risks · 3. Impact risk"
+      },
+      "voiceover": "In the last lesson, you asked which features drive a model. Now we ask who it serves less well. A single overall score describes the average customer, but real decisions affect individual people and groups. Before a model is used, check three kinds of risk."
+    },
+    {
+      "scene": 3,
+      "start": 36.0,
+      "end": 54.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "1. Subgroup performance",
+        "body": "Split test results by region, age band, product or channel · Key metric per group · Always show group sizes: 5 positives = very uncertain"
+      },
+      "voiceover": "First, subgroup performance. Split the test results by meaningful groups, such as region, age band or channel, and calculate the key metric for each group. Also count the positive cases in each group. A recall based on five people is very uncertain."
+    },
+    {
+      "scene": 4,
+      "start": 54.0,
+      "end": 67.3,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Sensitive data: check law and policy",
+      "voiceover": "Some attributes, such as gender or ethnicity, may be sensitive or legally protected. Whether you may collect and use them, even for checking fairness, depends on local law and company policy."
+    },
+    {
+      "scene": 5,
+      "start": 67.3,
+      "end": 92.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "2. Data risks",
+        "body": "Class imbalance → low recall (threshold, class_weight=\"balanced\") · Data that changes over time (drift, see AI-18) · Unrepresentative data: rare groups"
+      },
+      "voiceover": "Second, data risks. A rare positive class leads to low recall, unless you adjust the threshold or the class weights. Customer behaviour and prices change over time, so a model trained on last year's data can slowly become less accurate. And if some groups are rare in the training data, the model has less to learn from for them."
+    },
+    {
+      "scene": 6,
+      "start": 92.6,
+      "end": 115.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "3. Impact risk",
+        "body": "Small cost: an unneeded marketing call. Serious: a wrongly refused loan, a missed health check. Higher impact → more human review. Risk note: risk · evidence · mitigation."
+      },
+      "voiceover": "Third, impact risk. For each type of mistake, ask who is affected, and how badly. An unneeded marketing call is a small cost. A wrongly refused loan, or a missed health check, is serious. The higher the impact, the more human review the model needs. Write all this down in a short risk note."
+    },
+    {
+      "scene": 7,
+      "start": 115.7,
+      "end": 130.7,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "head teacher reviewing class results",
+      "on_screen_text": "Look class by class",
+      "voiceover": "A school's average exam result can look good while one class is failing badly. A careful head teacher looks at each class, not only the school average. Subgroup checks are that class-by-class view."
+    },
+    {
+      "scene": 8,
+      "start": 130.7,
+      "end": 149.6,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "financial analyst office South Africa",
+      "on_screen_text": "Nomvula · bank analyst · Durban",
+      "voiceover": "Nomvula Dlamini is a data analyst at a bank in Durban, South Africa. Her team plans to use the term-deposit model with the threshold of zero point one five chosen in lesson nine. She checks recall by age band on the test set."
+    },
+    {
+      "scene": 9,
+      "start": 149.6,
+      "end": 171.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Scroll past the L05 setup and pipeline cells, already executed.",
+        "Type this exact code cell from content.md and run it with Shift+Enter:\nimport pandas as pd\n\nthreshold = 0.15                      # chosen in L09\nresults = pd.DataFrame({\n    \"age_band\": pd.cut(X_test[\"age\"], bins=[17, 30, 50, 80],\n                       labels=[\"18-30\", \"31-50\", \"51-79\"]),\n    \"actual\": y_test,\n    \"pred\": (pipe.predict_proba(X_test)[:, 1] >= threshold).astype(int),\n})\nbuyers = results[results[\"actual\"] == 1]\nsummary = buyers.groupby(\"age_band\", observed=True).agg(\n    positives=(\"actual\", \"size\"), recall=(\"pred\", \"mean\"))\nprint(summary.round(2))"
+      ],
+      "on_screen_text": "Recall by age band",
+      "voiceover": "We continue in the bank notebook. This cell groups test customers into three age bands, and applies the threshold of zero point one five. Then it keeps only the real subscribers, and for each band, counts them and calculates the share the model found. Among real subscribers, that share is the recall."
+    },
+    {
+      "scene": 10,
+      "start": 171.9,
+      "end": 183.0,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Highlight the row 51-79: positives 40, recall 0.72."
+      ],
+      "on_screen_text": "Ages 51–79: 40 subscribers, recall 0.72",
+      "voiceover": "For customers aged fifty-one to seventy-nine, there are forty subscribers, and the model finds zero point seven two, or seventy-two percent of them."
+    },
+    {
+      "scene": 11,
+      "start": 183.0,
+      "end": 194.1,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Highlight the row 31-50: positives 15, recall 0.53, in amber."
+      ],
+      "on_screen_text": "Ages 31–50: recall 0.53",
+      "voiceover": "For ages thirty-one to fifty, there are fifteen subscribers, and recall is only zero point five three. Fifty-three percent. That is the weakest group."
+    },
+    {
+      "scene": 12,
+      "start": 194.1,
+      "end": 208.7,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Highlight the row 18-30: positives 5, recall 0.60.",
+        "Add the label 'too small to judge'."
+      ],
+      "on_screen_text": "Ages 18–30: only 5 subscribers",
+      "voiceover": "The youngest group, eighteen to thirty, has a recall of zero point six zero. But it has only five subscribers in the test set, so that number could easily change with a different sample."
+    },
+    {
+      "scene": 13,
+      "start": 208.7,
+      "end": 230.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Add a text cell with the three-row risk note from content.md: risk and mitigation for each."
+      ],
+      "on_screen_text": "Risk note: three risks, three mitigations",
+      "voiceover": "Nomvula writes her risk note. Lower recall for ages thirty-one to fifty: review a lower threshold or better features. Too few young subscribers to judge: collect more data. Behaviour may change when interest rates change: check recall by group every month, and retrain when it falls below an agreed level."
+    },
+    {
+      "scene": 14,
+      "start": 230.6,
+      "end": 249.5,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Right metric, with group sizes",
+      "voiceover": "A common mistake is to check subgroups with accuracy. With a rare positive class, a group can have high accuracy simply because few of its members subscribe. Use recall or precision for the positive class, and always show group sizes next to the scores."
+    },
+    {
+      "scene": 15,
+      "start": 249.5,
+      "end": 274.8,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Check the key metric per subgroup, with sizes. 2. Imbalance, drift, unrepresentative data. 3. Risk note: one mitigation per risk."
+      },
+      "voiceover": "Let's recap. First, overall scores can hide groups where the model fails, so check the key metric for each meaningful subgroup, with group sizes. Second, class imbalance, data that changes over time, and unrepresentative data are common model risks. Third, ask what happens when the model is wrong, and write a risk note with one mitigation for each risk."
+    },
+    {
+      "scene": 16,
+      "start": 274.8,
+      "end": 299.2,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Capstone Step 1",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will compare recall across three subgroups and write a short risk note. You will reuse it in your capstone. It takes about thirty minutes. In the next lesson, Capstone Step 1: Build an End-to-End Model, you put every piece together. See you there."
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "course_id": "AI-17",
+  "lesson_id": "L03",
+  "duration_s": 291.3,
+  "thumbnail": {
+    "headline": "Load It. Don't Fix It.",
+    "slide": {
+      "layout": "title",
+      "title": "Load It. Don't Fix It.",
+      "body": "A CSV file icon with a small warning mark flows into a database cylinder labelled 'raw'. Small tag: Data Engineering for AI · Lesson 3."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.3,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "When data arrives, do not fix it",
+      "voiceover": "The first rule of an ELT pipeline sounds strange. When data arrives, do not fix it. Load it exactly as it came, errors included. Today you will set up PostgreSQL, and learn why that rule saves you later."
+    },
+    {
+      "scene": 2,
+      "start": 16.3,
+      "end": 32.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Setting Up PostgreSQL and Loading Raw Data",
+        "body": "Data Engineering for AI · Lesson 3 of 18"
+      },
+      "voiceover": "In the last lesson, we chose ELT: load first, transform later. Now we build the load step. PostgreSQL is a free, open-source relational database, and in this course it plays the role of a small warehouse."
+    },
+    {
+      "scene": 3,
+      "start": 32.2,
+      "end": 53.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Two ways to run PostgreSQL",
+        "body": "Left: Docker, one command, same on Windows, macOS and Linux, easy to delete. Right: Native installer, no Docker needed, steps differ by system and release."
+      },
+      "voiceover": "You can run it in two ways. With Docker, one command starts PostgreSQL in a container. It works the same on Windows, macOS and Linux, and is easy to delete later. Or you can use a native installer, which needs no Docker, but the steps differ by system and release."
+    },
+    {
+      "scene": 4,
+      "start": 53.6,
+      "end": 68.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Schemas are folders",
+        "body": "Database cylinder containing three folders: raw (source tables, unchanged, highlighted), staging (later), marts (later)"
+      },
+      "voiceover": "Inside the database, a schema is a named folder for tables. We create a schema called raw, and put every source table there, unchanged. Later layers, such as staging and marts, go in other schemas."
+    },
+    {
+      "scene": 5,
+      "start": 68.6,
+      "end": 91.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Why keep raw data unchanged",
+        "body": "Rebuilds: fix the rule, run again, no new copy from the source · Evidence: source problem or pipeline problem?"
+      },
+      "voiceover": "Why keep raw data exactly as it arrived? First, rebuilds. If a cleaning rule is wrong, you fix the rule and run it again. You never need a new copy from the source. Second, evidence. When a number looks wrong, you can prove whether the problem was in the source or in your pipeline."
+    },
+    {
+      "scene": 6,
+      "start": 91.7,
+      "end": 105.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Safety: load everything as text",
+        "body": "A value like '..' (no data) cannot break a text column. Conversion happens later, in staging (Lesson 7)."
+      },
+      "voiceover": "Third, safety. If every column is loaded as text, a strange value, such as two dots meaning no data, never makes the load fail. You deal with it later, in the staging layer."
+    },
+    {
+      "scene": 7,
+      "start": 105.8,
+      "end": 120.8,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "accountant sorting paper receipts at desk",
+      "on_screen_text": "Raw data = the original receipts",
+      "voiceover": "Think of an accountant who keeps the original receipts in a box. She makes clean spreadsheets from them, but never writes on the receipts. If a total is wrong, the receipts show what really happened."
+    },
+    {
+      "scene": 8,
+      "start": 120.8,
+      "end": 141.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "indicators.csv (invented values)",
+        "body": "country_code,indicator,year,value / PER,access_electricity_pct,2022,95.1 / PER,access_electricity_pct,2023, / BOL,access_electricity_pct,2022,93.4 / BOL,access_electricity_pct,2023,.. / ECU,access_electricity_pct,2022,98.7. Highlight the empty value and the '..'"
+      },
+      "on_screen_text": "Mariana · charity · Cusco",
+      "voiceover": "Let's load some data. Mariana is a data analyst at a rural development charity in Cusco, Peru. She has a small file of development indicators for Andean countries, with five rows. Notice two of them: one value is empty, and one is two dots, a placeholder for no data."
+    },
+    {
+      "scene": 9,
+      "start": 141.8,
+      "end": 152.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open a terminal in the folder that holds indicators.csv",
+        "Run: docker run --name pg-course -e POSTGRES_PASSWORD=course_pw -p 5432:5432 -d postgres:17",
+        "Run docker ps to show the pg-course container is up"
+      ],
+      "voiceover": "First, in a terminal, she starts PostgreSQL in Docker with one command. It gives the container a name, sets a password and opens the usual port."
+    },
+    {
+      "scene": 10,
+      "start": 152.9,
+      "end": 158.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run: docker cp indicators.csv pg-course:/tmp/indicators.csv",
+        "Run: docker exec -it pg-course psql -U postgres",
+        "Show the postgres=# prompt"
+      ],
+      "voiceover": "Next, she copies the file into the container, and opens the SQL shell."
+    },
+    {
+      "scene": 11,
+      "start": 158.5,
+      "end": 184.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Type: CREATE SCHEMA IF NOT EXISTS raw;",
+        "Type: CREATE TABLE raw.indicators (country_code TEXT, indicator TEXT, year TEXT, value TEXT);",
+        "Type: \\copy raw.indicators FROM '/tmp/indicators.csv' WITH (FORMAT csv, HEADER true)",
+        "Show the COPY 5 confirmation"
+      ],
+      "voiceover": "Now she creates the raw schema, and a raw table with four columns. Every column is text, even the year and the value. That is on purpose. A numeric column would reject the two dots, and the whole load would stop. Then she loads the file with the copy command, telling it that the file is CSV with a header row."
+    },
+    {
+      "scene": 12,
+      "start": 184.6,
+      "end": 199.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run: SELECT count(*) FROM raw.indicators;  (result: 5)",
+        "Run: SELECT column_name, data_type FROM information_schema.columns WHERE table_schema = 'raw' AND table_name = 'indicators';",
+        "Show four rows, each with data_type text"
+      ],
+      "on_screen_text": "5 rows · every column text",
+      "voiceover": "After every load, check two things. She counts the rows, and gets five, the same number as in the file. Then she asks the information schema for each column's data type. Every column shows text."
+    },
+    {
+      "scene": 13,
+      "start": 199.6,
+      "end": 215.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run: SELECT * FROM raw.indicators;",
+        "Highlight the empty value (shown as null) for PER 2023 and the '..' for BOL 2023",
+        "Cut to a notes file listing: 1. empty value PER 2023, 2. '..' placeholder BOL 2023"
+      ],
+      "voiceover": "Mariana writes both problems in her notes: the empty value, which PostgreSQL stores as null, and the two dots. She does not change them in the raw table. A staging model will convert the dots to null later."
+    },
+    {
+      "scene": 14,
+      "start": 215.9,
+      "end": 238.6,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Type fixes belong in staging",
+      "voiceover": "A common mistake is to set strict types in the raw table, such as a numeric value column, or to clean the file in a spreadsheet first. Then the load fails on the dots, or the spreadsheet silently changes dates and leading zeros. Type conversion is a transformation, and it belongs in staging."
+    },
+    {
+      "scene": 15,
+      "start": 238.6,
+      "end": 263.0,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Docker or installer; a raw schema holds data as it arrived. 2. Raw columns as text: loads never fail. 3. After every load: count rows, check types, note problems."
+      },
+      "voiceover": "Let's recap. First, PostgreSQL can run in Docker or from a native installer, and a raw schema holds source data exactly as it arrived. Second, loading every raw column as text means strange values never stop the load. Third, after every load, check the row count and the column types, and write down any problems you see."
+    },
+    {
+      "scene": 16,
+      "start": 263.0,
+      "end": 291.3,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Tables, Keys and Star Schemas",
+      "voiceover": "Now it is your turn. In the exercise, you will load the course orders file into a raw table, expect nine rows, and list at least four problems without changing anything. Look for an empty amount, a duplicated order, a test row and a capital letter where it should not be. It takes about thirty minutes. Next lesson: Data Modelling, with tables, keys and star schemas."
+    }
+  ]
+}

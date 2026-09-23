@@ -1,0 +1,197 @@
+{
+  "course_id": "AI-16",
+  "lesson_id": "L11",
+  "duration_s": 289.4,
+  "thumbnail": {
+    "headline": "How Much Should It Remember?",
+    "slide": {
+      "layout": "title",
+      "title": "How Much Should It Remember?",
+      "body": "Left: a notepad (short-term memory). Right: a filing cabinet with one open drawer (longer-term context). Above: a slider for window size. Small tag: AI Agents and Automation Workflows · Lesson 11."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 19.3,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Not too little. Not too much.",
+      "voiceover": "Ask your agent, what does product P zero four one two cost? And then, how many are in stock? Without memory, the second question makes no sense to it. With too much memory, it becomes slow, expensive and confused. Today, you find the right amount."
+    },
+    {
+      "scene": 2,
+      "start": 19.3,
+      "end": 36.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Memory is what you send again",
+        "body": "Three separate API calls side by side, each with its own envelope. Inside each envelope: the recent messages copied again. Caption: the model itself remembers nothing."
+      },
+      "voiceover": "Here is the key fact. A model has no memory between API calls. Each request must contain everything the model should know. So memory in an agent is simply the information your system chooses to send again. There are two kinds."
+    },
+    {
+      "scene": 3,
+      "start": 36.9,
+      "end": 62.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Short-term memory",
+        "body": "Simple Memory node connected to the AI Agent · Session key: one per user or chat, or conversations mix · Context window length: how many recent exchanges are kept"
+      },
+      "voiceover": "Short-term memory is the recent conversation. In n8n, you connect a memory node, such as Simple Memory, to the agent. Two settings matter. The session key says which conversation the memory belongs to. Each user needs their own key, or conversations will mix. And the window length says how many recent exchanges to keep. Older ones are dropped."
+    },
+    {
+      "scene": 4,
+      "start": 62.2,
+      "end": 82.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Longer-term context",
+        "body": "Agent with a tool arrow to three sources: order history sheet · policy document · earlier case notes. Caption: fetch when needed, do not carry everything."
+      },
+      "voiceover": "Longer-term context is information the agent looks up only when it needs it. For example, a customer's order history, a policy document, or notes from an earlier case. You give the agent a tool to fetch it. This is usually better than putting everything into memory."
+    },
+    {
+      "scene": 5,
+      "start": 82.3,
+      "end": 106.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "More is not always better",
+        "body": "Cost: tokens grow with every turn · Confusion: old or unrelated details · Privacy: store only what the task needs; sample data only in this course"
+      },
+      "voiceover": "More memory is not always better. Cost: every remembered message is sent again with each request. Confusion: long, mixed histories can lead the model to use old details. And privacy: anything stored may include personal data. Rules on this differ by country. So store only what the task needs, and use sample data in this course."
+    },
+    {
+      "scene": 6,
+      "start": 106.3,
+      "end": 121.3,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "receptionist writing notes at front desk",
+      "on_screen_text": "Notepad and filing cabinet",
+      "voiceover": "Picture a receptionist. Short-term memory is the notepad on the desk: the last few things the visitor said. Longer-term context is the filing cabinet. The receptionist opens the right file only when needed."
+    },
+    {
+      "scene": 7,
+      "start": 121.3,
+      "end": 132.9,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Keep the notepad short and private",
+      "voiceover": "A receptionist who copies every old file onto the notepad cannot find anything. And a notepad left on the desk may be read by the wrong person."
+    },
+    {
+      "scene": 8,
+      "start": 132.9,
+      "end": 148.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open the agent workflow: Chat Trigger → AI Agent → Anthropic Chat Model + Google Sheets tool for 'tours'",
+        "Show the 'tours' sheet with invented packages"
+      ],
+      "on_screen_text": "Elena · travel agency · Bucharest",
+      "voiceover": "Let's test it. Elena Popescu runs a travel agency in Bucharest, Romania. Her agent answers questions about invented tour packages from a sheet. It is built like the agent from the last lesson, with no memory yet."
+    },
+    {
+      "scene": 9,
+      "start": 148.8,
+      "end": 163.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Chat: 'What is the price of the Danube Delta tour?'",
+        "Chat: 'Is it available in May?'",
+        "Show the reply 'Which tour do you mean?' (example output)"
+      ],
+      "voiceover": "She asks: what is the price of the Danube Delta tour? Then: is it available in May? You'll see something like: which tour do you mean? Without memory, the second question has lost its subject."
+    },
+    {
+      "scene": 10,
+      "start": 163.8,
+      "end": 185.7,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Connect a Simple Memory sub-node to the AI Agent",
+        "Session key from the Chat Trigger; context window length 2",
+        "Hold the 6-turn conversation from content.md"
+      ],
+      "voiceover": "She connects a Simple Memory node, with the session key from the chat, and a window of two. Then she holds a six-turn conversation: the tour, the price, May, a group of eight, a second tour, and finally, so for the first tour, what is the total for my group?"
+    },
+    {
+      "scene": 11,
+      "start": 185.7,
+      "end": 195.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Show the turn-6 reply asking which tour (example output)",
+        "Open the memory node output to show only the last 2 exchanges"
+      ],
+      "on_screen_text": "Window of two: it forgot",
+      "voiceover": "At turn six, the agent asks which tour she means. The first tour and the group size have dropped out of the window."
+    },
+    {
+      "scene": 12,
+      "start": 195.6,
+      "end": 218.7,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Change context window length to 6 and repeat the conversation",
+        "Show the correct turn-6 answer",
+        "Open the execution log and compare input tokens across turns",
+        "Set the window to 4 and add the system message rule from content.md"
+      ],
+      "on_screen_text": "Bigger window, more tokens",
+      "voiceover": "She changes the window to six, and repeats. Now the answer is correct. But the execution log shows more input tokens on each later turn. So she settles on a window of four, and adds a rule to the system message: when a question refers to details you do not have, ask for them."
+    },
+    {
+      "scene": 13,
+      "start": 218.7,
+      "end": 240.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Two memory mistakes",
+        "body": "Left: 'It remembers me from yesterday' → new session, details gone. Right: huge window + personal details 'to be safe' → cost and privacy risk. Fix: decide what is needed; fetch records with tools."
+      },
+      "voiceover": "A common mistake is to think the agent remembers a customer because it answered well yesterday. In a new session, the details are gone. Another is to set a huge window and store full personal details, to be safe. Decide what the agent really needs, and fetch records with tools."
+    },
+    {
+      "scene": 14,
+      "start": 240.1,
+      "end": 264.1,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. The model remembers nothing; memory is what you resend. 2. Short window + fetch records with tools. 3. More memory = more cost, confusion and privacy risk."
+      },
+      "voiceover": "Let's recap. First, the model itself remembers nothing. Memory is the history your system sends again with each request. Second, keep a short window of recent messages, and fetch longer-term records with tools. Third, more memory costs more tokens, can confuse the model, and may store personal data, so keep only what the task needs."
+    },
+    {
+      "scene": 15,
+      "start": 264.1,
+      "end": 289.4,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Human-in-the-Loop Approval",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will add memory to your agent, hold a six-turn conversation, and note where it forgets. Then change the window size, compare the tokens, and justify your choice. It takes about thirty minutes. In the next lesson, we add Human-in-the-Loop Approval. See you there."
+    }
+  ]
+}

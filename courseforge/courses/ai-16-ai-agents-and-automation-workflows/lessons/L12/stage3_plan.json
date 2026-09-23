@@ -1,0 +1,71 @@
+{
+  "title": "Human-in-the-Loop Approval",
+  "thumbnail": {
+    "headline": "A Person Says Yes",
+    "image": "Navy background, a drafted message card waiting behind a teal gate with a person icon holding an approve button, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "A Person Says Yes", "body": "A draft reply card stops at a gate; a person icon beside the gate with approve and reject buttons. Small tag: AI Agents and Automation Workflows · Lesson 12."}
+  },
+  "production_notes": [
+    "[VERSION] n8n approval options: Wait node resume modes (form, webhook, time limit), 'send and wait for response' operations in email and chat nodes, Schedule Trigger and Google Sheets filter options must be checked against the current release.",
+    "Screen recording: the reply is sent only to Diego's own test address; blur the email address. The refund itself is never processed on screen; it stays manual in the shop's payment system.",
+    "The draft reply, refund amount and reason are example outputs.",
+    "Diego Ramírez and his Mexico City clothing shop are fictional; the order sheet and requests are invented."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "An agent that drafts a wrong reply costs you a minute. An agent that sends a wrong reply, issues the wrong refund, or deletes a customer record can cost you a customer. The difference is one step: a person saying yes before the action runs.",
+       "on_screen_text": "Draft freely. Act with approval."}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Last time, we gave the agent memory. Now we give it a safety step. Start by sorting the actions in your workflow into two groups. Reversible or internal actions, like reading data, drafting text, or calculating. The agent may do these alone. And irreversible or external actions, like sending a message, issuing a refund, or deleting records. These need a person's approval first.",
+       "slide": {"layout": "comparison", "title": "Two kinds of action", "body": "Left (green): reversible or internal: read data · draft text · write to a review tab · calculate → agent may act alone. Right (amber): irreversible or external: send a message · refund or payment · delete or overwrite · change an account → human approval first."}},
+      {"visual_type": "text",
+       "voiceover": "And decisions about people, such as hiring, credit, insurance claims or closing an account, always keep a person in charge. The agent may collect information and suggest. A person decides, and is accountable.",
+       "on_screen_text": "Decisions about people: a person decides"},
+      {"visual_type": "slide",
+       "voiceover": "There are two common ways to add approval in n8n. The first is to pause and wait. A Wait node stops the run until something happens, such as a form being submitted. Some email and chat nodes can also send an approve or decline message, and wait for a click. Always set a time limit. If nobody answers, nothing is sent, and the item goes to review.",
+       "slide": {"layout": "diagram", "title": "Option 1: pause and wait", "body": "Draft → Wait node (form or approve/decline message) → Approved: action runs · Declined: stop · Time limit reached: nothing sent, item to review."}},
+      {"visual_type": "slide",
+       "voiceover": "The second way uses a sheet and two workflows. The first workflow writes each draft to an approvals tab, marked pending. A person changes it to approved or rejected. A second workflow runs on a schedule, finds approved rows that have not been sent yet, performs the action, and records the time it was sent. It is simple, and easy to audit.",
+       "slide": {"layout": "diagram", "title": "Option 2: approve in a sheet", "body": "Workflow 1: draft → approvals tab (status: pending). Person icon: sets approved / rejected. Workflow 2 (Schedule Trigger): status approved AND sent_at empty → act → write sent_at."}},
+      {"visual_type": "slide",
+       "voiceover": "What the approver sees matters. Show the original request, the draft, the reason, and the exact action that will run. An approver who only sees the word approve, with a question mark, will soon approve everything without reading.",
+       "slide": {"layout": "bullets", "title": "What the approver sees", "body": "The original request · The agent's draft · The reason for its choice · The exact action that will run. Not just 'Approve?'"}},
+      {"visual_type": "stock",
+       "voiceover": "Think of the two-signature rule for company payments. A clerk prepares the payment, but it only leaves the bank when a second person signs. The clerk does most of the work. The signature is the control.",
+       "stock_query": "manager signing payment document at desk",
+       "on_screen_text": "The signature is the control"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "screen",
+       "voiceover": "Let's build it. Diego Ramírez runs customer service for an online clothing shop in Mexico City. His refund agent reads a request, checks the order sheet and the refund policy, and drafts a decision. It never refunds alone. The first workflow ends by adding each draft to an approvals tab, as pending.",
+       "screen_steps": ["Show workflow 1: trigger → AI Agent with read-only tools for orders and policy", "Add Google Sheets: append to 'approvals' with order_id, request, draft_reply, refund_amount, reason, status = pending"],
+       "on_screen_text": "Diego · clothing shop · Mexico City"},
+      {"visual_type": "screen",
+       "voiceover": "He runs it with a sample request: my jacket arrived torn, I want my money back. In the new row, you'll see something like a draft reply, a refund amount, and the reason: damaged on arrival, within the return period.",
+       "screen_steps": ["Run with the sample request 'My jacket arrived torn, I want my money back.'", "Open the 'approvals' tab and show the new row: draft_reply, refund_amount, reason, status pending (example output)"]},
+      {"visual_type": "screen",
+       "voiceover": "The second workflow starts on a schedule, every few minutes. It reads rows that are approved and not yet sent. It sends the reply, for the course only to his own test address, and then writes the sent time.",
+       "screen_steps": ["Workflow 2: Schedule Trigger every few minutes", "Google Sheets: get rows where status = approved AND sent_at is empty", "Send the reply to his own test address (blurred)", "Google Sheets: update sent_at"]},
+      {"visual_type": "screen",
+       "voiceover": "He sets the row to approved, and waits for the schedule. The test email arrives, and the sent time is filled. Then he adds a second request, and rejects it. Nothing is sent. The refund itself stays manual. The agent saves time on reading and drafting. People keep control of money.",
+       "screen_steps": ["Change the row's status to 'approved'", "Wait for the schedule: show the test email arriving and sent_at filled", "Add a second request and set it to 'rejected'", "Run the schedule: nothing is sent"],
+       "on_screen_text": "People keep control of money"},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is to let the sending workflow read all rows. Then the same email is sent twice, or a pending row goes out by mistake. Filter on approved and not yet sent, write the sent time straight after the action, and test the rejected and pending cases too.",
+       "on_screen_text": "Approved AND not sent. Exactly once."}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, irreversible or external actions, and all decisions about people, need a person's approval before they run. Second, in n8n, pause with a Wait node, or use a sheet with a status column and a second scheduled workflow. Third, show approvers the request, the draft and the reason, and make sure each approved action runs exactly once.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Irreversible actions and decisions about people need approval. 2. Wait node, or a status sheet + scheduled workflow. 3. Show request, draft and reason; run each approval exactly once."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below this video, your agent drafts customer replies into a sheet, and a second workflow sends a reply only after a person sets the row to approved. Test an approved, a rejected and a pending row. It takes about forty minutes. In the next lesson, we cover Error Handling, Retries and Logging. See you there.",
+       "on_screen_text": "Next: Error Handling and Logging"}
+    ]
+  }
+}

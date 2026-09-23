@@ -1,0 +1,214 @@
+{
+  "course_id": "AI-17",
+  "lesson_id": "L01",
+  "duration_s": 316.2,
+  "thumbnail": {
+    "headline": "Before the Model: Data",
+    "slide": {
+      "layout": "title",
+      "title": "Before the Model: Data",
+      "body": "Left: icons of raw sources (database, sensor, CSV file). Centre: teal pipeline arrow with filter stages. Right: small model icon. Small tag: Data Engineering for AI · Lesson 1."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.4,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Two days to train, two months of data",
+      "voiceover": "A team spends two days training a model, and two months getting the data ready for it. That is not bad planning. In most AI projects, preparing the data is the biggest part of the work. And that part belongs to data engineers."
+    },
+    {
+      "scene": 2,
+      "start": 18.4,
+      "end": 30.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "What Data Engineers Do for AI",
+        "body": "Data Engineering for AI · Lesson 1 of 18"
+      },
+      "voiceover": "Hi, and welcome to Data Engineering for AI. In this first lesson, we look at what data engineers actually do, and why AI depends on their work."
+    },
+    {
+      "scene": 3,
+      "start": 30.0,
+      "end": 43.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "Data engineering",
+        "body": "Moving data from where it is created to where it is used, in a form people and systems can trust."
+      },
+      "voiceover": "Data engineering is the work of moving data from the places where it is created to the places where it is used, in a form that people and systems can trust."
+    },
+    {
+      "scene": 4,
+      "start": 43.3,
+      "end": 72.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Four roles in every data system",
+        "body": "Four boxes left to right, revealed one by one: Sources (app database, payments, sensor, public CSV) → Pipelines (copy, clean, join, reshape) → Storage (warehouse or lake, compared in L02) → Consumers (dashboard, report, data scientist, ML model)"
+      },
+      "voiceover": "Every data system has four roles. Sources are where data is created, such as an app database, a payment service or a sensor. Pipelines are the automated steps that copy, clean, join and reshape the data. Storage is where data lives between steps, in a data warehouse or a data lake, which we compare next time. And consumers are the people and systems that use the result."
+    },
+    {
+      "scene": 5,
+      "start": 72.0,
+      "end": 98.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Models learn the mistakes too",
+        "body": "Duplicated rows → events look twice as common. Future information in training data → great test score, fails in real use."
+      },
+      "voiceover": "When the consumer is an AI model, the stakes are higher. A model learns whatever patterns the data contains, including mistakes. If a pipeline sends duplicated rows, the model learns that some events happen twice as often as they really do. If future information slips into the training data, the model looks excellent in testing, and then fails in real use."
+    },
+    {
+      "scene": 6,
+      "start": 98.1,
+      "end": 122.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "A good pipeline for AI is",
+        "body": "Reliable: runs on time, failures are noticed · Repeatable: same result every run · Tested: automatic checks catch bad values · Documented: every column's origin is clear"
+      },
+      "voiceover": "So a good pipeline for AI has four qualities. It is reliable: it runs on time, and when it fails, someone knows. It is repeatable: running it again gives the same result. It is tested: automatic checks catch bad values before anyone sees them. And it is documented: anyone can see where each column comes from."
+    },
+    {
+      "scene": 7,
+      "start": 122.1,
+      "end": 133.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Your free toolkit",
+        "body": "Three groups: Storage: PostgreSQL, DuckDB · Transform and test: dbt Core · Schedule: Apache Airflow"
+      },
+      "voiceover": "In this course, you build all four with free tools. PostgreSQL and DuckDB for storage, dbt Core for transformations and tests, and Apache Airflow for scheduling."
+    },
+    {
+      "scene": 8,
+      "start": 133.2,
+      "end": 152.9,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "water treatment plant filtration tanks aerial",
+      "on_screen_text": "Raw water in, safe water out",
+      "voiceover": "Here is a simple way to picture it. A data pipeline is like a water treatment plant. River water arrives full of mud and leaves. The plant filters it, treats it and tests it in fixed stages, then sends safe water to every tap, every day."
+    },
+    {
+      "scene": 9,
+      "start": 152.9,
+      "end": 162.8,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "clean water running from kitchen tap",
+      "voiceover": "When the plant works well, nobody notices it. When it fails, everybody downstream notices at once. Good data engineering works the same way."
+    },
+    {
+      "scene": 10,
+      "start": 162.8,
+      "end": 183.4,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "dry farmland crops drought field",
+      "on_screen_text": "Tomás · crop insurance · Córdoba",
+      "voiceover": "Let's see this in practice. Tomás is a backend developer at a crop insurance start-up in Córdoba, Argentina. The data science team wants a model that predicts which farms will make a drought claim next season. They ask him for a table of farms with their history."
+    },
+    {
+      "scene": 11,
+      "start": 183.4,
+      "end": 201.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Tomás maps the flow",
+        "body": "Sources column: policy database, claims system, daily rainfall files, field-visit notes → Pipeline box: nightly copy, clean, join by farm and date"
+      },
+      "voiceover": "Before writing any code, Tomás maps the flow. His sources are the policy database, the claims system, daily rainfall files from a weather provider, and field visit notes typed by agents. A nightly pipeline copies, cleans and joins them by farm and date."
+    },
+    {
+      "scene": 12,
+      "start": 201.8,
+      "end": 217.7,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Storage and consumers",
+        "body": "Storage: raw copies (unchanged) → clean tables → final table 'one row per farm per season' → Consumers: data science (model training), finance (claims report), regional managers' dashboard"
+      },
+      "voiceover": "Raw copies are kept unchanged, and the cleaned tables feed a final table with one row per farm per season. Three consumers use it: the data science team, the finance team, and a dashboard for regional managers."
+    },
+    {
+      "scene": 13,
+      "start": 217.7,
+      "end": 231.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Risk 1: keys that do not match",
+        "body": "Rainfall file keyed by station code, farm table keyed by farm ID, with a lookup table in between: farm → nearest station"
+      },
+      "voiceover": "The map shows two risks early. First, the rainfall files use weather station codes, not farm IDs. So Tomás needs a lookup table that links each farm to its nearest station."
+    },
+    {
+      "scene": 14,
+      "start": 231.0,
+      "end": 251.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Risk 2: the future leaks in",
+        "body": "Timeline: season start → claim paid → field-visit note written. Red warning on the note: written after the answer. Caption: agree the date for every column"
+      },
+      "voiceover": "Second, field visit notes are sometimes written after a claim is paid. If those notes enter the training data, the model will see the answer. So Tomás writes both risks next to the map, and agrees with the data scientists which date each column is based on."
+    },
+    {
+      "scene": 15,
+      "start": 251.1,
+      "end": 269.5,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Not a one-off script. A system.",
+      "voiceover": "A common mistake is to treat data engineering as a one-time job. In practice, new rows arrive every day, the model is retrained, and sources change their format without warning. Treat every data flow as a system that runs again and again."
+    },
+    {
+      "scene": 16,
+      "start": 269.5,
+      "end": 292.6,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Map sources, pipelines, storage, consumers first. 2. Models learn duplicates, gaps and future data too. 3. Reliable, repeatable, tested, documented."
+      },
+      "voiceover": "Let's recap. First, every data system has sources, pipelines, storage and consumers, and mapping them is your first step. Second, AI models learn from whatever the data contains, so duplicated, missing or future information quietly makes a worse model. Third, a good pipeline for AI is reliable, repeatable, tested and documented, not only fast."
+    },
+    {
+      "scene": 17,
+      "start": 292.6,
+      "end": 316.2,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: ETL, ELT, Batch and Streaming",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will map the data flow of a ride-hailing app in Jakarta, with four sources, its storage, three consumers and one data risk. It takes about twenty minutes. In the next lesson, we look at ETL, ELT, batch and streaming. See you there."
+    }
+  ]
+}

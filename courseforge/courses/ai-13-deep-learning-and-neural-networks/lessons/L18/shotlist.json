@@ -1,0 +1,207 @@
+{
+  "course_id": "AI-13",
+  "lesson_id": "L18",
+  "duration_s": 295.3,
+  "thumbnail": {
+    "headline": "Start With a Baseline",
+    "slide": {
+      "layout": "title",
+      "title": "Start With a Baseline",
+      "body": "A stopwatch icon, a short solid bar labelled 'baseline' and a taller dashed bar with a question mark. Small tag: Deep Learning and Neural Networks · Lesson 18 · Capstone step 1."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.1,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Fix three problems before training",
+      "voiceover": "The most common reason capstone projects fail is not a bad model. It is a dataset you cannot use, a task with no clear measure of success, or no simple result to compare with. This week, you fix all three."
+    },
+    {
+      "scene": 2,
+      "start": 17.1,
+      "end": 28.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "The capstone in three steps",
+        "body": "Step 1 (L18): choose a task, build a baseline, plan experiments → Step 2 (L19): experiment and choose → Step 3 (L20): document. Today highlighted."
+      },
+      "voiceover": "Your capstone has three steps. Choose and baseline, today. Experiment and choose, in the next lesson. And document, in the final lesson. Today's step has four parts."
+    },
+    {
+      "scene": 3,
+      "start": 28.7,
+      "end": 48.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "1. Choose a task",
+        "body": "Image or text classification with clear labels: plant diseases · product categories · ticket topics · review sentiment. A few thousand examples is plenty; subsets are fine."
+      },
+      "voiceover": "First, choose a task. It must be image or text classification, with a clear set of labels. Plant diseases, product categories, support-ticket topics or review sentiment. Keep it small enough for free GPU time. A few thousand examples is plenty, and you can use a subset."
+    },
+    {
+      "scene": 4,
+      "start": 48.8,
+      "end": 72.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "2. Check the dataset card",
+        "body": "Licence allows your use? · Source and how labels were made · No personal data: faces, names, health records, private messages · No validation split? Create one with a fixed seed"
+      },
+      "voiceover": "Second, choose a public dataset with a clear licence. Read the dataset card. Check the licence and whether it allows your use, the source, and how the labels were made. Avoid personal data, such as faces, names, health records or private messages. And if there is no validation split, create one with a fixed seed."
+    },
+    {
+      "scene": 5,
+      "start": 72.4,
+      "end": 95.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "3. Build a baseline",
+        "body": "Text: TF-IDF + logistic regression (AI-12). Images: small CNN (L07) or frozen backbone + new head (L10). Log it with its config (L17)."
+      },
+      "voiceover": "Third, build a baseline. That is the simplest reasonable model, trained quickly, that gives you a score to beat. For text, TF-IDF with logistic regression from the scikit-learn course is strong. For images, a small CNN, or a frozen pretrained backbone with a new head. Log it in your results table."
+    },
+    {
+      "scene": 6,
+      "start": 95.1,
+      "end": 114.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "4. Write an experiment plan",
+        "body": "Hypothesis: If I fine-tune the last block, validation F1 will improve, because the classes differ in fine texture.\nOne change: unfreeze layer4\nMetric: validation macro F1"
+      },
+      "voiceover": "Fourth, write an experiment plan with at least three experiments. Each has a hypothesis, the one change you will make, and the metric that decides. Use macro F1 when classes are unbalanced, and accuracy when they are balanced and all errors cost the same."
+    },
+    {
+      "scene": 7,
+      "start": 114.0,
+      "end": 129.9,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "runner checking stopwatch after morning run",
+      "on_screen_text": "Record day one first",
+      "voiceover": "A baseline is like the time a runner records on the first day of training. Without it, a later time of fifty-two minutes means nothing. With it, the runner knows whether the new plan actually helped."
+    },
+    {
+      "scene": 8,
+      "start": 129.9,
+      "end": 144.0,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "woman data scientist working laptop Dakar",
+      "on_screen_text": "Fatima · telecoms · Dakar",
+      "voiceover": "Fatima is a data scientist at a telecoms company in Dakar, Senegal. For her capstone, she chooses public English customer reviews with three sentiment labels. She does not use her employer's customer messages."
+    },
+    {
+      "scene": 9,
+      "start": 144.0,
+      "end": 157.3,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open the chosen dataset's card on the Hugging Face Hub; scroll to the licence and the label description",
+        "Add a text cell: dataset name, licence, source, label meanings"
+      ],
+      "on_screen_text": "Licence first, code second",
+      "voiceover": "She starts on the dataset card. She reads the licence, which allows educational use, and the label description, and writes both into a text cell in her notebook, before any code."
+    },
+    {
+      "scene": 10,
+      "start": 157.3,
+      "end": 171.0,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run: ds = load_dataset(\"<chosen dataset ID>\"); split = ds[\"train\"].train_test_split(test_size=0.2, seed=0); train, val = split[\"train\"], split[\"test\"]",
+        "Run: print(train.features[\"label\"], train.to_pandas()[\"label\"].value_counts())",
+        "Point to the class counts"
+      ],
+      "voiceover": "Then she loads the data, and splits off twenty percent of the training set for validation, with a fixed seed. She prints the label names and counts to check the class balance."
+    },
+    {
+      "scene": 11,
+      "start": 171.0,
+      "end": 187.7,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run: vec = TfidfVectorizer(ngram_range=(1, 2), min_df=2); clf = LogisticRegression(max_iter=1000, class_weight=\"balanced\")",
+        "Run: clf.fit(vec.fit_transform(train[\"text\"]), train[\"label\"]); preds = clf.predict(vec.transform(val[\"text\"]))",
+        "Run: print(\"baseline macro F1:\", f1_score(val[\"label\"], preds, average=\"macro\"))"
+      ],
+      "on_screen_text": "Baseline in seconds, on CPU",
+      "voiceover": "Now the baseline. A TF-IDF vectoriser with single words and word pairs, and a balanced logistic regression. She fits it on the training text, and scores macro F1 on the validation split. It takes seconds on a CPU."
+    },
+    {
+      "scene": 12,
+      "start": 187.7,
+      "end": 212.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Append the baseline row to results.csv with its config (L17 code)",
+        "Add a text cell 'Experiment plan' with 3 numbered experiments, each with a hypothesis, one change and the metric validation macro F1"
+      ],
+      "on_screen_text": "Three experiments, three hypotheses",
+      "voiceover": "She adds the baseline row to her results table, with its config. Then she writes her plan. One, fine-tune a small pretrained encoder with default settings. Two, the same with a learning-rate sweep and warm-up. Three, the best setting with a longer maximum length, because some reviews are long. The test split is not touched."
+    },
+    {
+      "scene": 13,
+      "start": 212.6,
+      "end": 232.7,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "The baseline may surprise you",
+      "voiceover": "A common mistake is skipping the baseline, because it will obviously lose. Sometimes it does not. On short texts, TF-IDF can come close to a transformer, at a tiny fraction of the cost. Without a baseline, you cannot show that your deep model is worth it."
+    },
+    {
+      "scene": 14,
+      "start": 232.7,
+      "end": 242.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Licence first",
+        "body": "Wrong order: dataset → code → licence check (expensive to change). Right order: licence check → dataset → code."
+      },
+      "on_screen_text": "Check the licence before any code",
+      "voiceover": "Another mistake is choosing a dataset first, and checking the licence later, when changing is expensive. Check it before you write any code."
+    },
+    {
+      "scene": 15,
+      "start": 242.6,
+      "end": 269.2,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Classification task + checked, licensed dataset, no personal data. 2. Fast baseline, logged. 3. Plan: 3+ experiments, each with hypothesis, one change, metric."
+      },
+      "voiceover": "Let's recap. First, choose an image or text classification task, with a public dataset whose licence, source and content you have checked, and no personal data. Second, build a fast baseline and log it. It is the score every later experiment must beat. Third, write a plan with at least three experiments, each with a hypothesis, one change and a decision metric."
+    },
+    {
+      "scene": 16,
+      "start": 269.2,
+      "end": 295.3,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Capstone Step 2",
+      "voiceover": "Now it is your turn. This is capstone step one. In the exercise below this video, you will choose your dataset, train a baseline, and write an experiment plan with at least three experiments. The capstone rubric is on the course page. It takes about an hour. In the next lesson, capstone step two, fine-tune and compare. See you there."
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "title": "DuckDB: Fast Analytics on Your Laptop",
+  "thumbnail": {
+    "headline": "CSV or Parquet?",
+    "image": "Navy background, a laptop with two file icons side by side, a large CSV and a much smaller teal Parquet file, headline in teal Inter Bold.",
+    "slide": {
+      "layout": "title",
+      "title": "CSV or Parquet?",
+      "body": "Two file icons: a large grey CSV (28.8 MB) and a small teal Parquet (5.9 MB) on a laptop screen. Small tag: Data Engineering for AI · Lesson 5."
+    }
+  },
+  "production_notes": [
+    "[VERSION] DuckDB's Python package interface (duckdb.connect, con.sql, COPY ... (FORMAT parquet)) and file-format support must be checked against the current release; the script was tested with DuckDB 1.5.5 and Python 3.",
+    "[VERIFY] Any public CSV dataset suggested for the exercise: the voiceover names none; confirm licence and download location before showing one on screen.",
+    "Screen output must match content.md exactly: readings.csv 28.8 MB 0.121 s and readings.parquet 5.9 MB 0.009 s. Sizes and timings are machine-specific; the voiceover says 'on our machine'. If a re-recording gives different timings, show the content.md output as a still or re-test and update content.md first.",
+    "Hiroshi and the electricity retailer in Osaka are fictional; the data is generated, so no customer data appears on screen."
+  ],
+  "sections": {
+    "Hook": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "What if you could run warehouse-style SQL on a file of millions of rows, on your laptop, with no server to install? DuckDB does exactly that. And it often finishes before you look away from the screen.",
+        "on_screen_text": "Millions of rows, no server"
+      }
+    ],
+    "Explain": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Last time, we designed tables with keys and a clear grain. Today we meet the second database in this course. DuckDB is a free, open-source, in-process analytical database.",
+        "slide": {
+          "layout": "title",
+          "title": "DuckDB: Fast Analytics on Your Laptop",
+          "body": "Data Engineering for AI · Lesson 5 of 18"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "In-process means it runs inside your Python program, or its own command-line tool. There is no server, no user accounts and no network connection. You install it with one pip command, and query CSV and Parquet files directly, as if they were tables.",
+        "slide": {
+          "layout": "diagram",
+          "title": "In-process",
+          "body": "A Python program box containing a small DuckDB engine, with arrows reading CSV and Parquet files directly. Crossed-out icons: server, user accounts, network."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Two ideas explain why it is fast. The first is column storage. A normal row database stores each row together, which is great for updating one customer at a time. But a query such as average energy per meter needs only two columns, and a row store must still read every column. DuckDB works column by column, so it reads only what the query needs.",
+        "slide": {
+          "layout": "comparison",
+          "title": "Row storage and column storage",
+          "body": "Left: row store, whole rows highlighted to answer one question. Right: column store, only meter_id and kwh columns highlighted."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "The second idea is Parquet, an open, column-based file format. It stores data types, compresses each column and keeps summary statistics. So it is usually much smaller than the same data as CSV, and faster to read. CSV is plain text, so every query must read every character again.",
+        "slide": {
+          "layout": "comparison",
+          "title": "CSV and Parquet",
+          "body": "CSV: plain text, parsed again on every query. Parquet: column-based, stores types, compressed columns, summary statistics."
+        }
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "Picture a long shopping receipt. To find the total spent on fruit, you must read every item. A Parquet file is like a spreadsheet already sorted into columns, with a subtotal at the bottom of each one. You jump straight to the column you need.",
+        "stock_query": "long paper shopping receipt close up",
+        "on_screen_text": "CSV reads everything. Parquet jumps to columns."
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "So when should you choose each database? Choose DuckDB when one person or one pipeline analyses files locally, and when you build datasets, such as Parquet files for machine learning. Choose PostgreSQL when many users read and write at the same time, and you need a server that is always running. In this course, the capstone can use either one.",
+        "slide": {
+          "layout": "comparison",
+          "title": "DuckDB or PostgreSQL?",
+          "body": "DuckDB: one person or pipeline, local files, fast aggregations, building datasets for ML. PostgreSQL: many users reading and writing, always-on server, permissions, many small updates. Footer: capstone can use either"
+        }
+      }
+    ],
+    "Demonstrate": [
+      {
+        "visual_type": "stock",
+        "voiceover": "Let's measure the difference. Hiroshi is a backend developer at an electricity retailer in Osaka, Japan. He wants the average use per smart meter. He uses generated data, so no customer data appears.",
+        "stock_query": "smart electricity meter on apartment wall",
+        "on_screen_text": "Hiroshi · electricity retailer · Osaka"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "In a terminal, he installs DuckDB, and opens a new Python file called compare.",
+        "screen_steps": [
+          "In a terminal, run: pip install duckdb",
+          "Open a new file compare.py in the editor"
+        ]
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "First, the script connects to DuckDB, and generates two million meter readings for five thousand meters. It writes them to a CSV file, then copies the same data into a Parquet file.",
+        "screen_steps": [
+          "Type the first part of compare.py from content.md: import duckdb, os, time; con = duckdb.connect()",
+          "Type the COPY statement that selects meter_id, slot and kwh from range(2000000) TO 'readings.csv' (HEADER)",
+          "Type: COPY (SELECT * FROM 'readings.csv') TO 'readings.parquet' (FORMAT parquet)"
+        ]
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Then, for each file, it runs the same query, the average reading per meter, and prints the file size in megabytes and the time the query took.",
+        "screen_steps": [
+          "Type the for loop over readings.csv and readings.parquet from content.md",
+          "Highlight the query: SELECT meter_id, avg(kwh) FROM the file GROUP BY meter_id",
+          "Highlight the print line with file size in MB and seconds"
+        ]
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "He runs the script. On our four-core test machine, the CSV file is twenty-eight point eight megabytes, and the query takes about a tenth of a second. The Parquet file is only five point nine megabytes, and the query takes nine thousandths of a second.",
+        "screen_steps": [
+          "Run: python compare.py",
+          "Show the output exactly as in content.md: readings.csv 28.8 MB 0.121 s / readings.parquet 5.9 MB 0.009 s"
+        ],
+        "on_screen_text": "On our machine · results will vary"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Same two million rows, about five times smaller, and more than ten times faster. Your exact numbers will differ with your hardware and DuckDB version. Hiroshi stores monthly exports as Parquet, and keeps PostgreSQL for the customer portal.",
+        "screen_steps": [
+          "Highlight the two size values side by side: 28.8 MB and 5.9 MB",
+          "Highlight the two times: 0.121 s and 0.009 s"
+        ],
+        "on_screen_text": "About 5 times smaller, 10 times faster"
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "Two common mistakes. DuckDB is not a replacement for every database. It is not built for a web app where hundreds of users write small updates. And do not trust a single timing run. Run each query two or three times, and compare the typical result.",
+        "on_screen_text": "Not for every job. Time it three times."
+      }
+    ],
+    "Recap": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, DuckDB is an in-process analytical database that queries CSV and Parquet files directly. Second, column storage and Parquet make analytical queries faster and files smaller. Third, choose DuckDB for local analysis and building datasets, and a server database such as PostgreSQL for shared, always-on work.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. DuckDB: in-process, queries CSV and Parquet directly. 2. Column storage + Parquet = faster, smaller. 3. DuckDB for local analysis; PostgreSQL for shared, always-on work."
+        }
+      }
+    ],
+    "CTA": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Now it is your turn. In the exercise, you will run this comparison yourself three times, try a different column, and write two sentences on file size and query time. You can use the script from this video, or the orders file from lesson three. It takes about twenty-five minutes. Next week we start transforming data, with dbt Core: Project Setup and First Model.",
+        "on_screen_text": "Next: dbt Core, Your First Model"
+      }
+    ]
+  }
+}

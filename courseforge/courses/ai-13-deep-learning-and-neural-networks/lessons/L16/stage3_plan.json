@@ -1,0 +1,76 @@
+{
+  "title": "Tuning Hyperparameters and Learning-Rate Schedules",
+  "thumbnail": {
+    "headline": "Tune the Learning Rate First",
+    "image": "Navy background, a teal learning-rate curve that ramps up briefly then falls along a smooth cosine, beside a small dial labelled lr, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Tune the Learning Rate First", "body": "A learning-rate plot: short straight ramp up (warm-up), then a smooth cosine curve down to near zero. A dial icon beside it. Small tag: Deep Learning and Neural Networks · Lesson 16."}
+  },
+  "production_notes": [
+    "[VERSION] Hugging Face TrainingArguments scheduler and warm-up option names (for example, warmup_ratio is not accepted in some newer versions, while warmup_steps is) must be checked at recording time. The voiceover says only that the names differ between versions.",
+    "[VERSION] Colab free GPU usage limits and session length change; the voiceover says only that sessions can end and limits change.",
+    "run(lr, use_schedule, epochs, seed) is Lars's own helper built from the L10 loop; define it in a cell above the demo before recording and pre-run the 8 runs. No accuracy values are stated (content.md gives none); show the real table.",
+    "Lars and the Bergen salmon-farming company are hypothetical; stock footage must not show a real company name or logo."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "A deep network has dozens of settings you could tune, and your free GPU time is limited. If you can afford only eight training runs, which settings deserve them? For most networks, the answer starts with one number. The learning rate.",
+       "on_screen_text": "Eight runs. Which settings?"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Welcome to the last module, where we tune, track and build the capstone. In practice, there is a rough order of importance. First, the learning rate, because it decides whether training works at all. Search it on a log scale, such as one times ten to the minus four, then three times, then ten times, not in equal steps.",
+       "slide": {"layout": "bullets", "title": "What matters most", "body": "1. Learning rate: search on a log scale, 1e-4 · 3e-4 · 1e-3 · 3e-3 2. Batch size and epochs 3. Regularisation strength 4. Model size"}},
+      {"visual_type": "slide",
+       "voiceover": "Second, batch size and epochs. Batch size is often set by GPU memory, and if you change it a lot, re-check the learning rate. Choose epochs with early stopping, rather than tuning them. Third, regularisation strength. Fourth, model size. Change one group at a time, starting from a known good recipe, such as your run from lesson ten or thirteen.",
+       "slide": {"layout": "comparison", "title": "One group at a time", "body": "Batch size: set by GPU memory; re-check lr if it changes. Epochs: early stopping (L09). Then weight decay, dropout, augmentation. Then width, depth, bigger checkpoint. Start from a known good recipe (L10, L13)."}},
+      {"visual_type": "slide",
+       "voiceover": "A learning-rate schedule changes the rate during training. Large steps early make fast progress, and small steps late settle into a good minimum. Step decay divides the rate by ten at fixed epochs. Cosine decay lowers it smoothly to near zero. And warm-up starts small and increases it over the first few percent of steps.",
+       "slide": {"layout": "diagram", "title": "Learning-rate schedules", "body": "Three small plots of lr against steps: step decay (staircase down) · cosine decay (smooth curve down) · warm-up + cosine (short ramp up, then smooth curve down)."}},
+      {"visual_type": "slide",
+       "voiceover": "Warm-up avoids large, unstable updates while the new layers are still random, and it is standard when fine-tuning transformers. Most schedulers step once per batch, or once per epoch, depending on how you set their length. Be consistent. The Trainer has its own scheduler settings, and their names differ between versions.",
+       "slide": {"layout": "bullets", "title": "Two rules for schedules", "body": "Warm-up: standard for fine-tuning transformers · step the scheduler per batch or per epoch, matching how its length was set · Trainer: lr_scheduler_type and a warm-up option (names vary by version)"}},
+      {"visual_type": "stock",
+       "voiceover": "Tuning is like adjusting a new bicycle. First, the saddle height, because nothing else matters if it is wrong. Then the handlebars and gears. A schedule is like changing gear. A strong gear on the flat road at the start, and a gentle one on the steep final hill.",
+       "stock_query": "cyclist adjusting bicycle saddle height",
+       "on_screen_text": "Saddle height first"},
+      {"visual_type": "slide",
+       "voiceover": "Free sessions can end, and usage limits change. So plan small. Use a data subset and fewer epochs for the sweep, then retrain only the best setting on the full data. And save results after every run.",
+       "slide": {"layout": "bullets", "title": "Plan within free GPU time", "body": "Sweep on a subset with fewer epochs · retrain only the best setting on full data · save results after every run (L17)"}}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Lars is an engineer at a salmon-farming company in Bergen, Norway. He classifies fish-health images with the ResNet from lesson ten, and has time for eight short runs.",
+       "stock_query": "fish farm pens in Norwegian fjord",
+       "on_screen_text": "Lars · salmon farming · Bergen"},
+      {"visual_type": "screen",
+       "voiceover": "In Colab, he writes a function that builds a warm-up plus cosine schedule. Warm-up takes the first ten percent of all steps, starting at one tenth of the rate. Cosine decay takes the rest. The scheduler steps after every batch, right after the optimiser.",
+       "screen_steps": ["Run the make_scheduler cell from content.md: SequentialLR(opt, [LinearLR(opt, start_factor=0.1, total_iters=warm), CosineAnnealingLR(opt, T_max=steps - warm)], milestones=[warm])", "Show the loop line after opt.step(): if sched: sched.step()"],
+       "on_screen_text": "Warm-up ten percent, then cosine"},
+      {"visual_type": "screen",
+       "voiceover": "Then the sweep. Four learning rates, each with and without the schedule. That is eight runs, each for five epochs on a subset, with the same seed. Each run returns its best validation accuracy.",
+       "screen_steps": ["Run the sweep cell: for lr in [1e-4, 3e-4, 1e-3, 3e-3]: for use_schedule in [False, True]: acc = run(lr=lr, use_schedule=use_schedule, epochs=5, seed=0); results.append(...)", "Show the progress as each of the 8 runs finishes"],
+       "on_screen_text": "4 rates × 2 = 8 runs"},
+      {"visual_type": "screen",
+       "voiceover": "He prints the results as a table, sorted by validation accuracy. Then he plots the learning rate at every step for one scheduled run, to check that the warm-up and the decay look right.",
+       "screen_steps": ["Run: pd.DataFrame(results).sort_values(\"val_acc\", ascending=False)", "Plot the learning rate per step for one scheduled run; point to the ramp up and the cosine decay"],
+       "on_screen_text": "Plot the rate you actually used"},
+      {"visual_type": "screen",
+       "voiceover": "He picks the best setting on validation accuracy. But a difference smaller than the seed variation he measured in lesson fourteen is not a real difference. So he runs the best two settings with two more seeds before he decides.",
+       "screen_steps": ["Highlight the top two rows of the table", "Run the top two settings with seeds 1 and 2 and add the rows to the table"]},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is a huge grid that runs out of GPU time halfway. Another is stepping a scheduler once per epoch when its length was set in batches. The rate hardly changes, and the schedule does nothing. One plot catches it.",
+       "on_screen_text": "Small sweeps, consistent scheduler steps"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, tune the learning rate first, on a log scale. Then batch size and epochs with early stopping, then regularisation and model size. Second, schedules such as warm-up plus cosine use large steps early and small steps late. Step them consistently, and plot the result. Third, plan small sweeps on subsets, and treat differences smaller than seed variation as ties.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Learning rate first, on a log scale. 2. Warm-up + cosine; step consistently; plot it. 3. Small sweeps on subsets; seed-sized differences are ties."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below this video, you will run a small learning-rate sweep with and without a scheduler, and choose the best setting from validation scores. It takes about forty-five minutes. You will use this in your capstone soon. In the next lesson, we track experiments and make them reproducible. See you there.",
+       "on_screen_text": "Next: Tracking Experiments"}
+    ]
+  }
+}

@@ -3,7 +3,11 @@
   "thumbnail": {
     "headline": "The Model Asks, You Run",
     "image": "Navy background, a chat bubble passing a small request card to a code function box that returns a result, headline in teal Inter Bold.",
-    "slide": {"layout": "title", "title": "The Model Asks, You Run", "body": "A chat bubble → request card 'get_shipment_status' → function box → result card back to the bubble. Small tag: Building Apps with LLM APIs · Lesson 9."}
+    "slide": {
+      "layout": "title",
+      "title": "The Model Asks, You Run",
+      "body": "A chat bubble → request card 'get_shipment_status' → function box → result card back to the bubble. Small tag: Building Apps with LLM APIs · Lesson 9."
+    }
   },
   "production_notes": [
     "[VERSION] Tool-definition options (strict mode, tool choice and other fields) and the exact response block format (tool_use, tool_result, tool_use_id) must be checked against the current tool-use docs before recording.",
@@ -12,62 +16,138 @@
   ],
   "sections": {
     "Hook": [
-      {"visual_type": "presenter_full",
-       "voiceover": "A customer asks your assistant, where is my parcel? The model has never seen your shipping database, so any answer it writes alone is a guess. With tool use, the model can ask your code to look it up, and then answer with real data.",
-       "on_screen_text": "No more guessing about parcels"}
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "A customer asks your assistant, where is my parcel? The model has never seen your shipping database, so any answer it writes alone is a guess. With tool use, the model can ask your code to look it up, and then answer with real data.",
+        "on_screen_text": "No more guessing about parcels"
+      }
     ],
     "Explain": [
-      {"visual_type": "slide",
-       "voiceover": "In the last lesson, you put a chat app on the web. Now let's give it real data. Tool use, also called function calling, lets the model request that your code runs a function. The model never runs anything itself. It only asks, and your code decides what to do.",
-       "slide": {"layout": "quote", "title": "Tool use", "body": "\"The model only asks. Your code runs the function and decides what is allowed.\""}},
-      {"visual_type": "slide",
-       "voiceover": "A tool has three parts. A name, a description, and an input schema, like the schemas from lesson five. The model reads the description to decide when to use the tool, so write it carefully. You send the list of tools with your request. Other options exist, such as strict schema checking, so check the current docs.",
-       "slide": {"layout": "code", "title": "A tool definition", "body": "name: \"get_shipment_status\"\ndescription: \"Look up the current status of a shipment by its tracking code, for example VN-4471.\"\ninput_schema: {tracking_code: string, required}"}},
-      {"visual_type": "slide",
-       "voiceover": "Here is the cycle. If the model wants a tool, the stop reason is tool use, and the reply contains a tool use block with an ID, the tool name and its input. Your code runs the function. You add the model's full reply to the messages, then a user message with a tool result that carries the same ID. Then you call the API again, and the model writes its answer.",
-       "slide": {"layout": "diagram", "title": "The tool-use cycle", "body": "1 Request with tools → 2 Response: stop_reason tool_use + tool_use block (id, name, input) → 3 Your code runs the function → 4 Append assistant reply + user tool_result (same id) → 5 Call again → final answer. Loop back while stop_reason is tool_use."}},
-      {"visual_type": "stock",
-       "voiceover": "Picture a shop manager on the phone with a customer who asks if a jacket is in stock. The manager does not guess. They ask an assistant to check the stock system, and then answer.",
-       "stock_query": "shop manager on phone in clothing store",
-       "on_screen_text": "The manager asks, the assistant checks"},
-      {"visual_type": "slide",
-       "voiceover": "The model is the manager. Your function is the assistant. And the manager never touches the stock system directly.",
-       "slide": {"layout": "comparison", "title": "Who does what", "body": "Manager = the model (asks) · Assistant = your function (checks) · Stock system = your data (only your code touches it)"}}
+      {
+        "visual_type": "slide",
+        "voiceover": "In the last lesson, you put a chat app on the web. Now let's give it real data. Tool use, also called function calling, lets the model request that your code runs a function. The model never runs anything itself. It only asks, and your code decides what to do.",
+        "slide": {
+          "layout": "quote",
+          "title": "Tool use",
+          "body": "\"The model only asks. Your code runs the function and decides what is allowed.\""
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "A tool has three parts. A name, a description, and an input schema, like the schemas from lesson five. The model reads the description to decide when to use the tool, so write it carefully. You send the list of tools with your request. Other options exist, such as strict schema checking, so check the current docs.",
+        "slide": {
+          "layout": "code",
+          "title": "A tool definition",
+          "body": "name: \"get_shipment_status\"\ndescription: \"Look up the current status of a shipment by its tracking code, for example VN-4471.\"\ninput_schema: {tracking_code: string, required}"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Here is the cycle. If the model wants a tool, the stop reason is tool use, and the reply contains a tool use block with an ID, the tool name and its input. The SDK gives you the input as a parsed dictionary, so read fields by key, never with string matching.",
+        "slide": {
+          "layout": "diagram",
+          "title": "The model asks for a tool",
+          "body": "Request with tools → Response: stop_reason tool_use + tool_use block: id · name · input (parsed dict). Note: read input by key."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Your code runs the function. You add the model's full reply to the messages, then a user message with a tool result that carries the same ID. Then you call the API again, and the model writes its answer. You repeat this while the stop reason is tool use.",
+        "slide": {
+          "layout": "diagram",
+          "title": "You run it and reply",
+          "body": "Your code runs the function → append assistant reply (full content) → append user message with tool_result (same id) → call again → final answer. Loop while stop_reason is tool_use."
+        }
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "Picture a shop manager on the phone with a customer who asks if a jacket is in stock. The manager does not guess. They ask an assistant to check the stock system, and then answer.",
+        "stock_query": "shop manager on phone in clothing store",
+        "on_screen_text": "The manager asks, the assistant checks"
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "The model is the manager. Your function is the assistant. And the manager never touches the stock system directly.",
+        "slide": {
+          "layout": "comparison",
+          "title": "Who does what",
+          "body": "Manager = the model (asks) · Assistant = your function (checks) · Stock system = your data (only your code touches it)"
+        }
+      }
     ],
     "Demonstrate": [
-      {"visual_type": "stock",
-       "voiceover": "Nguyen Thi Lan builds a support assistant for a courier company in Ho Chi Minh City, Vietnam. She starts with a mock tracking function and a small local dictionary, not the real system.",
-       "stock_query": "courier scooter delivering parcels Vietnam street",
-       "on_screen_text": "Lan · courier support · Ho Chi Minh City"},
-      {"visual_type": "screen",
-       "voiceover": "At the top of her file is the dictionary with two invented shipments. Then the tool definition, with a clear description and a schema that requires a tracking code. The function itself just looks up the code.",
-       "screen_steps": ["Open tracking.py in VS Code", "Highlight the SHIPMENTS dictionary with VN-4471 and VN-5820", "Highlight the tools list: name, description and input_schema with tracking_code required", "Highlight the get_shipment_status function"],
-       "on_screen_text": "A mock tool with local data"},
-      {"visual_type": "screen",
-       "voiceover": "She sends the question with the tools list, and prints the reply content. On screen, you can see the tool use block, with its ID, the tool name and the input, a parsed dictionary with the tracking code.",
-       "screen_steps": ["Highlight messages.create with tools=tools", "Add print(response.content) after the first call and run the script", "Show the tool_use block and point to its id, name and input {\"tracking_code\": \"VN-4471\"}", "Show stop_reason: tool_use"],
-       "on_screen_text": "stop_reason: tool_use"},
-      {"visual_type": "screen",
-       "voiceover": "Now the loop. While the stop reason is tool use, she appends the full reply as the assistant turn. For each tool use block, she runs the function, reading the input by key, and builds a tool result with the same ID. She sends the results back and calls the API again.",
-       "screen_steps": ["Highlight while response.stop_reason == \"tool_use\"", "Highlight messages.append with role assistant and response.content", "Highlight block.input[\"tracking_code\"] and the tool_result with tool_use_id=block.id", "Highlight the second messages.create call"],
-       "on_screen_text": "Same ID in the tool result"},
-      {"visual_type": "screen",
-       "voiceover": "She runs it. You'll see something like, your parcel is out for delivery in Da Nang and should reach you soon. Then she asks about opening hours. The model answers without calling the tool, because the description says it is for tracking codes.",
-       "screen_steps": ["Run the full script and show the final answer (labelled 'example output')", "Change the question to 'What are your opening hours?' and run again", "Show that no tool_use block appears and the model answers directly"],
-       "on_screen_text": "The description decides when"},
-      {"visual_type": "text",
-       "voiceover": "A common mistake is to send the tool result without the model's previous reply, or with a different ID. The API rejects that request. Always add the full reply as the assistant turn first, then the results in the next user turn.",
-       "on_screen_text": "Reply first, then matching results"}
+      {
+        "visual_type": "stock",
+        "voiceover": "Nguyen Thi Lan builds a support assistant for a courier company in Ho Chi Minh City, Vietnam. She starts with a mock tracking function and a small local dictionary, not the real system.",
+        "stock_query": "courier scooter delivering parcels Vietnam street",
+        "on_screen_text": "Lan · courier support · Ho Chi Minh City"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "At the top of her file is the dictionary with two invented shipments. Then the tool definition, with a clear description and a schema that requires a tracking code. The function itself just looks up the code.",
+        "screen_steps": [
+          "Open tracking.py in VS Code",
+          "Highlight the SHIPMENTS dictionary with VN-4471 and VN-5820",
+          "Highlight the tools list: name, description and input_schema with tracking_code required",
+          "Highlight the get_shipment_status function"
+        ],
+        "on_screen_text": "A mock tool with local data"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "She sends the question with the tools list, and prints the reply content. On screen, you can see the tool use block, with its ID, the tool name and the input, a parsed dictionary with the tracking code.",
+        "screen_steps": [
+          "Highlight messages.create with tools=tools",
+          "Add print(response.content) after the first call and run the script",
+          "Show the tool_use block and point to its id, name and input {\"tracking_code\": \"VN-4471\"}",
+          "Show stop_reason: tool_use"
+        ],
+        "on_screen_text": "stop_reason: tool_use"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Now the loop. While the stop reason is tool use, she appends the full reply as the assistant turn. For each tool use block, she runs the function, reading the input by key, and builds a tool result with the same ID. She sends the results back and calls the API again.",
+        "screen_steps": [
+          "Highlight while response.stop_reason == \"tool_use\"",
+          "Highlight messages.append with role assistant and response.content",
+          "Highlight block.input[\"tracking_code\"] and the tool_result with tool_use_id=block.id",
+          "Highlight the second messages.create call"
+        ],
+        "on_screen_text": "Same ID in the tool result"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "She runs it. You'll see something like, your parcel is out for delivery in Da Nang and should reach you soon. Then she asks about opening hours. The model answers without calling the tool, because the description says it is for tracking codes.",
+        "screen_steps": [
+          "Run the full script and show the final answer (labelled 'example output')",
+          "Change the question to 'What are your opening hours?' and run again",
+          "Show that no tool_use block appears and the model answers directly"
+        ],
+        "on_screen_text": "The description decides when"
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "A common mistake is to send the tool result without the model's previous reply, or with a different ID. The API rejects that request. Always add the full reply as the assistant turn first, then the results in the next user turn.",
+        "on_screen_text": "Reply first, then matching results"
+      }
     ],
     "Recap": [
-      {"visual_type": "slide",
-       "voiceover": "Let's recap. First, a tool has a name, a description and an input schema, and the description tells the model when to use it. Second, when the stop reason is tool use, your code runs the function and returns a tool result with the matching ID in a user message. Third, the model only requests tools. Your code runs them, reads the input as a parsed object, and decides what is allowed.",
-       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Tool = name + description + input schema. 2. stop_reason tool_use → run it → tool_result with matching id. 3. The model asks; your code runs and decides."}}
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, a tool has a name, a description and an input schema, and the description tells the model when to use it. Second, when the stop reason is tool use, your code runs the function and returns a tool result with the matching ID. Third, the model only requests tools. Your code runs them, reads the input as a parsed object, and decides what is allowed.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. Tool = name + description + input schema. 2. stop_reason tool_use → run it → tool_result with matching id. 3. The model asks; your code runs and decides."
+        }
+      }
     ],
     "CTA": [
-      {"visual_type": "presenter_full",
-       "voiceover": "Now it is your turn. In the exercise, you will add a tool that looks up an order status in a local dictionary, and test it with five customer questions, including an unknown number and an unrelated question. In the next lesson, Tool Loops and Guardrails, you will make tools safe. See you there.",
-       "on_screen_text": "Next: Tool Loops and Guardrails"}
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Now it is your turn. In the exercise, you will add a tool that looks up an order status in a local dictionary, and test it with five customer questions, including an unknown number and an unrelated question. In the next lesson, Tool Loops and Guardrails, you will make tools safe. See you there.",
+        "on_screen_text": "Next: Tool Loops and Guardrails"
+      }
     ]
   }
 }

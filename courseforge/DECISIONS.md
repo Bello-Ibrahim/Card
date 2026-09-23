@@ -30,4 +30,5 @@ Every item is [VERSION]: before recording, check the free plan, the interface an
 | Native-speaker checks (isiZulu/Yoruba in AI-23; Arabic in AI-13, AI-24, AI-26) | These stay as human review items. A machine check does not replace a native speaker. The flags remain in STAGE2_REVIEW.md. |
 | Legal (AI-30) and clinical (AI-25) sign-off | These stay as release blockers. Scripting can go ahead, but release cannot. |
 | HeyGen avatar and voice IDs | **Still needed from the owner** before Stage 4. Recommendation: one HeyGen standard (non-premium) avatar for the whole catalogue, in a professional style with a neutral, easy-to-follow English voice. Standard avatars use no credits on paid plans [VERIFY]. |
+| AI-13 L18: three example datasets for learners | Reuse the three datasets the course already teaches with: **Fashion-MNIST** (images), **beans** (plant images) and **AG News** (text). Learners already know them, and one licence check covers both the lessons and L18 [VERIFY licences before recording]. |
 | Arabic caption font | Noto Sans Arabic (SIL Open Font License), as set in the system prompt. |

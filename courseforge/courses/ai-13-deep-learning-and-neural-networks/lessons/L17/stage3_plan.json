@@ -1,0 +1,76 @@
+{
+  "title": "Tracking Experiments and Reproducibility",
+  "thumbnail": {
+    "headline": "Never Lose a Model Again",
+    "image": "Navy background, a results table with rows of runs, a checkpoint file icon and a cloud drive icon joined by a teal arrow, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Never Lose a Model Again", "body": "A small results table (run, lr, seed, val_acc), a file icon labelled .pt, and a cloud folder icon, joined by arrows. Small tag: Deep Learning and Neural Networks · Lesson 17."}
+  },
+  "production_notes": [
+    "[VERSION] Check at recording time: Google Colab Drive mounting (google.colab.drive), Google Drive free storage limits, TensorBoard integration, the Trainer report_to option, and the features and free plans of hosted experiment-tracking tools. The voiceover names no hosted tracking service.",
+    "Screen recording: use a clean Google account; the Drive authorisation pop-up must not show personal account details. The folder is MyDrive/ai13.",
+    "best_val_acc and the trained model come from Zanele's own training cell; pre-run it. The reloaded score must match the table row on screen.",
+    "Zanele and the Stellenbosch wine producer are hypothetical; stock footage must not show a real winery name or logo."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Two weeks ago, you had a great validation score. Today, you cannot remember the learning rate, the notebook has changed, and the Colab session has ended. The model is gone. Let's make sure that never happens to your capstone.",
+       "on_screen_text": "Where did my best model go?"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "An experiment is only useful if you can find it, compare it and repeat it. Four habits cover most of this. The first is to fix the seeds, for Python, NumPy and PyTorch, at the start of every run. Some GPU operations are not fully deterministic, so tiny differences can remain. And you still run several seeds to measure variation.",
+       "slide": {"layout": "bullets", "title": "Habit 1: Fix the seeds", "body": "Find it · compare it · repeat it. Seed Python, NumPy and PyTorch at the start of every run. Tiny GPU differences can remain. Still run several seeds (L14)."}},
+      {"visual_type": "slide",
+       "voiceover": "The second habit is to put every setting in one config dictionary. Learning rate, batch size, epochs, model name, data subset, dropout, weight decay and seed. The training code reads only from the config, so the config is a complete description of the run.",
+       "slide": {"layout": "code", "title": "Habit 2: One config", "body": "config = {\"run\": \"cnn_dropout03\", \"lr\": 1e-3, \"batch_size\": 64,\n          \"epochs\": 10, \"dropout\": 0.3, \"weight_decay\": 1e-2, \"seed\": 0}"}},
+      {"visual_type": "slide",
+       "voiceover": "The third habit is to log every run to a results table. One row per run, with the run name, all config values, the best validation score, the best epoch and the date. A CSV file is enough. Log failed and poor runs too. They are evidence for your report.",
+       "slide": {"layout": "bullets", "title": "Habit 3: A results table", "body": "One row per run: name · config values · best validation score · best epoch · date. A CSV file is enough. Log poor and failed runs too."}},
+      {"visual_type": "slide",
+       "voiceover": "The fourth habit is to save checkpoints outside the session. Colab's local disk is deleted when the session ends. Mount Google Drive, and save the best checkpoint there with its config. Check the file size first, because free storage is limited.",
+       "slide": {"layout": "diagram", "title": "Habit 4: Save outside the session", "body": "Colab session disk (deleted when session ends, red cross) → arrow → Google Drive folder ai13 (checkpoint .pt + config, green tick). Note: free storage is limited."}},
+      {"visual_type": "slide",
+       "voiceover": "Tools like TensorBoard can plot curves for many runs side by side, and hosted tracking services exist too. Check their free plans before you depend on them. For this course, a CSV table and saved plots are enough. And never log personal data or secret keys.",
+       "slide": {"layout": "bullets", "title": "Optional tools", "body": "TensorBoard: SummaryWriter, Trainer report_to · hosted trackers: check free plans · this course: CSV + saved plots · never log personal data or secret keys"}},
+      {"visual_type": "stock",
+       "voiceover": "A results table is like a chemist's laboratory notebook. Every attempt is written down, with quantities, temperature and time, including the failures, so anyone can repeat the result. A saved checkpoint is the labelled sample in the fridge.",
+       "stock_query": "chemist writing notes in laboratory",
+       "on_screen_text": "Write down every attempt"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Zanele is a data scientist at a wine producer in Stellenbosch, South Africa. She classifies grape-leaf photos, and she keeps losing work when her Colab session ends. So she adds tracking to her notebook.",
+       "stock_query": "vineyard rows with mountains in background",
+       "on_screen_text": "Zanele · wine producer · Stellenbosch"},
+      {"visual_type": "screen",
+       "voiceover": "First, she mounts Google Drive, approves access, and creates a project folder called ai thirteen. Then she defines a seed function that seeds Python, NumPy and PyTorch, including the GPU.",
+       "screen_steps": ["Run: from google.colab import drive; drive.mount(\"/content/drive\") and approve access", "Run: out_dir = \"/content/drive/MyDrive/ai13\"; os.makedirs(out_dir, exist_ok=True)", "Run the set_seed cell: random.seed, np.random.seed, torch.manual_seed, torch.cuda.manual_seed_all"]},
+      {"visual_type": "screen",
+       "voiceover": "Next, the config dictionary, with the run name, learning rate, batch size, epochs, dropout, weight decay and seed. She sets the seed from the config, and trains using only values from the config.",
+       "screen_steps": ["Run the config cell: config = {\"run\": \"cnn_dropout03\", \"lr\": 1e-3, \"batch_size\": 64, \"epochs\": 10, \"dropout\": 0.3, \"weight_decay\": 1e-2, \"seed\": 0}; set_seed(config[\"seed\"])", "Run the training cell that reads only from config"],
+       "on_screen_text": "Train only from the config"},
+      {"visual_type": "screen",
+       "voiceover": "After training, she saves the model's weights and the config together in one checkpoint file on Drive. Then she appends one row to the results table, with the config and the best validation accuracy. The file only gets a header the first time, so each new run simply adds a row.",
+       "screen_steps": ["Run: torch.save({\"model\": model.state_dict(), \"config\": config}, ckpt)", "Run: pd.DataFrame([{**config, \"val_acc\": best_val_acc}]).to_csv(table, mode=\"a\", header=not os.path.exists(table), index=False)", "Open results.csv in the Drive folder and show the new row"],
+       "on_screen_text": "Weights and config, saved together"},
+      {"visual_type": "screen",
+       "voiceover": "Now the real test. She restarts the runtime, loads the checkpoint back into the model, and evaluates it on the validation split. The score matches the table. This proves the checkpoint, the preprocessing and the code still fit together.",
+       "screen_steps": ["Runtime > Restart session", "Re-run imports, drive mount and model definition; run: state = torch.load(ckpt, map_location=\"cpu\"); model.load_state_dict(state[\"model\"])", "Evaluate on the validation split and compare with val_acc in results.csv"],
+       "on_screen_text": "Restart, reload, check the score"},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is saving only the weights. Without the config, you do not know which transforms, class order or tokenizer the model expects. Save the config, including the class names and preprocessing, with the weights, and test reloading in a fresh session before you trust it. And save only the best checkpoint, or you will fill your storage.",
+       "on_screen_text": "No config, no usable checkpoint"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, fix seeds, and keep every setting in one config dictionary, so each run is fully described and repeatable. Second, log every run, including poor ones, to a results table with its config, best score and best epoch. Third, save the best checkpoint with its config to Google Drive, and test reloading it in a fresh session.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Fixed seeds + one config dictionary. 2. Every run in a results table. 3. Best checkpoint + config on Drive; test the reload."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below this video, you will log three runs to a results table, save the best checkpoint to Drive, and reload it in a fresh session. It takes about thirty minutes. These habits are the base of your capstone, which starts in the next lesson. Capstone step one, choose a task and build a baseline. See you there.",
+       "on_screen_text": "Next: Capstone Step 1"}
+    ]
+  }
+}

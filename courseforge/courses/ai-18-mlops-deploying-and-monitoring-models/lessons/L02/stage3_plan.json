@@ -1,0 +1,72 @@
+{
+  "title": "The MLOps Lifecycle and Maturity Levels",
+  "thumbnail": {
+    "headline": "How Mature Is Your MLOps?",
+    "image": "Navy background, a teal circular loop of seven small icons with a three-step staircase beside it, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "How Mature Is Your MLOps?", "body": "A circular loop of seven small stage icons (data, train, evaluate, register, deploy, monitor, retrain) next to a staircase labelled Level 0, 1, 2. Small tag: MLOps · Lesson 2."}
+  },
+  "production_notes": [
+    "No facts to verify: content.md Review Flags are None. The maturity levels are a practical summary, not an official standard; the voiceover says so and the slides must not name any published framework.",
+    "The Nairobi start-up (Kamau Njoroge, Wairimu Kariuki) and the Singapore bank team (Tan Wei Ling) are hypothetical. Stock footage must not show a real bank name or logo."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Two teams both say, we do MLOps. One has a single script and a checklist. The other has pipelines that retrain and redeploy models without anyone touching a keyboard. Are both teams right?",
+       "on_screen_text": "Are both teams doing MLOps?"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "In the last lesson, we saw why models fail after the notebook. Today you get a map of the whole production lifecycle, and a way to decide what your own team should build next.",
+       "slide": {"layout": "title", "title": "The MLOps Lifecycle and Maturity Levels", "body": "MLOps: Deploying and Monitoring Models · Lesson 2 of 18"}},
+      {"visual_type": "slide",
+       "voiceover": "The production lifecycle has seven stages, connected in a loop. First, data: collect, clean and version it. Then training, with a reproducible script. Then evaluation on a fixed test set, compared with the current model. Then registration, where the approved model becomes a new version in a registry.",
+       "slide": {"layout": "diagram", "title": "The lifecycle loop", "body": "Circle of seven stages, revealed one by one: Data → Training → Evaluation → Registration → (Deployment → Monitoring → Retraining greyed out for now), arrows back to Data"}},
+      {"visual_type": "slide",
+       "voiceover": "Next comes deployment, for example as an API in a container. Then monitoring of service health, inputs and predictions. And when monitoring shows drift or lower quality, retraining starts the loop again. The loop is the important part. A deployed model is not the end of a project. It is the start of a cycle.",
+       "slide": {"layout": "diagram", "title": "The loop never ends", "body": "Same circle, now all seven stages lit: Deployment → Monitoring → Retraining highlighted in teal, with a bold arrow from Retraining back to Data"}},
+      {"visual_type": "slide",
+       "voiceover": "Teams automate this loop to different degrees. We describe this with maturity levels. Several public frameworks use different names and numbers, so treat this as a practical summary, not an official standard. At level zero, everything is manual. A person trains in a notebook, copies a file to a server, and there is little monitoring.",
+       "slide": {"layout": "bullets", "title": "Maturity levels (a practical summary)", "body": "Level 0, manual: notebook training, copy a file by hand, little or no monitoring"}},
+      {"visual_type": "slide",
+       "voiceover": "At level one, training, evaluation and registration run as a repeatable pipeline. Deployment may still be manual, but every model version is traceable. At level two, code changes are tested and built automatically, models are promoted by rules plus human approval, and monitoring can trigger retraining.",
+       "slide": {"layout": "bullets", "title": "Maturity levels (a practical summary)", "body": "Level 0, manual · Level 1, automated training pipeline: every version traceable · Level 2, automated CI/CD: tests, rule-based promotion with human approval, monitoring triggers retraining"}},
+      {"visual_type": "stock",
+       "voiceover": "Higher is not always better. Think of how a bakery grows. A home baker works by hand and tastes each batch. A small shop writes down recipes and uses timers. A factory uses machines and sensors. The home baker does not need a factory. They need the next improvement that stops bad batches.",
+       "stock_query": "baker checking bread in small bakery",
+       "on_screen_text": "The next step, not the factory"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's compare two hypothetical teams. Team A is a two-person start-up in Nairobi, run by Kamau Njoroge and Wairimu Kariuki. Their one model predicts which small shops will reorder stock. Kamau trains it monthly in a notebook and uploads a file to their server.",
+       "stock_query": "two young founders working together small office",
+       "on_screen_text": "Team A · start-up · Nairobi"},
+      {"visual_type": "slide",
+       "voiceover": "Nobody records which data produced which file, and nobody checks predictions after release. That is level zero. Their biggest risk is not knowing which model is live, or how to go back. The next single step is to move training into a script, log each run to MLflow, and register each version. It costs a few days, and it makes rollback possible.",
+       "slide": {"layout": "comparison", "title": "Team A: Level 0", "body": "Risk: which model is live? No way back. Next step: training script + MLflow tracking (L04) + registry versions (L05). Cost: a few days. Gain: rollback becomes possible."}},
+      {"visual_type": "stock",
+       "voiceover": "Team B is a data science team of twenty people at a large bank in Singapore, led by Tan Wei Ling. They run more than fifty models, and some affect lending decisions. They already have automated training pipelines and a registry. That is level one.",
+       "stock_query": "data science team meeting modern city office",
+       "on_screen_text": "Team B · bank · Singapore"},
+      {"visual_type": "slide",
+       "voiceover": "Their biggest risk is slow, inconsistent releases, because each team deploys in its own way. Their next single step is a shared CI and CD pipeline, with automatic tests, quality gates and a required human approval before promotion. Full automatic retraining can wait until releases are stable.",
+       "slide": {"layout": "comparison", "title": "Team B: Level 1", "body": "Risk: every team releases differently. Next step: shared CI/CD with tests, quality gates and human approval (L11 to L14). Not yet: fully automatic retraining."}},
+      {"visual_type": "text",
+       "voiceover": "The same framework gives very different advice, because the risks are different. And here is a common mistake. Automating an unstable process only makes the problems happen faster. If you cannot reproduce one training run, automatic retraining will not help you. Build reproducibility first, then automate.",
+       "on_screen_text": "Reproduce first, then automate"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, the production lifecycle is a loop: data, training, evaluation, registration, deployment, monitoring and retraining. Second, maturity levels describe how much of that loop is automated, from manual work to full CI and CD with monitoring. Third, choose the next single improvement that removes your biggest risk.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. The lifecycle is a loop of seven stages. 2. Maturity levels = how much of the loop is automated. 3. Pick the next step that removes your biggest risk."}}
+    ],
+    "CTA": [
+      {"visual_type": "slide",
+       "voiceover": "In the exercise below this video, you will read about three teams, in Egypt, Vietnam and Germany. You will place each one on a maturity level, then recommend the next single improvement for one of them. It takes about twenty minutes.",
+       "slide": {"layout": "bullets", "title": "Exercise: place three teams", "body": "Logistics company · Egypt | Research group · Vietnam | Online retailer · Germany. Assign Level 0, 1 or 2 and recommend one next step · about 20 minutes"}},
+      {"visual_type": "presenter_full",
+       "voiceover": "In the next lesson, we start building. We turn a notebook into a real project, in Structuring an ML Project for Production. See you there.",
+       "on_screen_text": "Next: Structuring an ML Project"}
+    ]
+  }
+}

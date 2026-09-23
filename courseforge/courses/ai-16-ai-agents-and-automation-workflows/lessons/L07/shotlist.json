@@ -1,0 +1,197 @@
+{
+  "course_id": "AI-16",
+  "lesson_id": "L07",
+  "duration_s": 293.5,
+  "thumbnail": {
+    "headline": "Who Handles This Message?",
+    "slide": {
+      "layout": "title",
+      "title": "Who Handles This Message?",
+      "body": "One message icon on the left branching into four labelled paths: urgent complaints · drafts · review (person icon) · auto status reply. Small tag: AI Agents and Automation Workflows · Lesson 7."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.4,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "A label needs a next step",
+      "voiceover": "Your workflow can now label every message. But a label is only useful if something happens next. Who sees the urgent complaint? Who answers the simple question? And what happens when the model is not sure?"
+    },
+    {
+      "scene": 2,
+      "start": 15.4,
+      "end": 30.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Routing and Decisions",
+        "body": "AI Agents and Automation Workflows · Lesson 7 of 16"
+      },
+      "voiceover": "Last time, we made the model return fields we can trust. Now we use them. Routing means sending each item down a different path, based on its data. n8n has two main nodes for this."
+    },
+    {
+      "scene": 3,
+      "start": 30.4,
+      "end": 46.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "IF and Switch",
+        "body": "Left: IF node: one condition → true / false. Right: Switch node: complaint · question · booking · fallback (anything else)."
+      },
+      "voiceover": "The IF node checks one condition, and has two outputs, true and false. The Switch node has several rules, and several outputs. For example, one output each for complaint, question and booking, plus a fallback for anything else."
+    },
+    {
+      "scene": 4,
+      "start": 46.7,
+      "end": 57.8,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "The model labels. The workflow decides.",
+      "voiceover": "Remember the key idea from lesson one. The model produces the label. Your workflow makes the decision. That keeps the path predictable, and easy to test."
+    },
+    {
+      "scene": 5,
+      "start": 57.8,
+      "end": 87.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Use a rule when a rule is enough",
+        "body": "Known internal sender → route by sender · Policy number in a fixed format → pattern match · Amount above a limit → compare numbers. Rules first; the model gets only the rest."
+      },
+      "voiceover": "Before you ask the model, ask yourself: can a simple rule decide this? An email from a known internal address can be routed by sender. A policy number in a fixed format can be found with a pattern. An amount above a limit is just a comparison. Rules are free, instant, and always give the same answer. So put them first, and send only the rest to the model."
+    },
+    {
+      "scene": 6,
+      "start": 87.4,
+      "end": 108.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Plan for uncertainty",
+        "body": "Add a 'not_sure' category · Or a confidence field: high / medium / low · Route 'not sure' and 'low' to a review tab · Confidence is a rough signal: check it against tests"
+      },
+      "voiceover": "Next, plan for uncertainty. Give the model a way to say it is not sure. Add a not sure category, or a confidence field, and route low confidence to a person. But a model's own confidence is only a rough signal, so check it against your test results."
+    },
+    {
+      "scene": 7,
+      "start": 108.0,
+      "end": 127.7,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "hospital triage nurse at reception desk",
+      "on_screen_text": "Routing = the triage desk",
+      "voiceover": "Think of the triage desk in a hospital. Clear cases go straight to the right team. A patient who cannot be assessed quickly is not sent to a random ward. A senior nurse sees them. And some checks follow a fixed rule, and need no discussion."
+    },
+    {
+      "scene": 8,
+      "start": 127.7,
+      "end": 144.0,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open the L06 classification workflow (duplicated and renamed)",
+        "Show the sheet with 20 invented claim messages in English and Filipino"
+      ],
+      "on_screen_text": "Andrea · insurance · Manila",
+      "voiceover": "Let's build it. Andrea Santos leads customer care at an insurance company in Manila, the Philippines. Claim messages arrive in English and Filipino. She uses twenty invented messages, and starts from the classification workflow from the last lesson."
+    },
+    {
+      "scene": 9,
+      "start": 144.0,
+      "end": 160.3,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Add an IF node before the HTTP Request to Claude",
+        "Condition 1: text matches the regular expression CL-\\d{6}",
+        "Condition 2: text contains 'status'",
+        "True branch → 'auto status reply' path; false branch → Claude"
+      ],
+      "voiceover": "First, a rule. Before the model call, she adds an IF node. If a message has a claim number in the standard format and the word status, it goes to an automatic status reply. No AI is needed."
+    },
+    {
+      "scene": 10,
+      "start": 160.3,
+      "end": 177.4,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Update the system prompt: categories claim_new, claim_status, complaint, document_question, not_sure; plus urgency",
+        "Update the validation Code node with the new allowed values",
+        "Add a Switch node on category, one output per value, fallback output turned on"
+      ],
+      "voiceover": "The other messages go to Claude, with five categories: new claim, claim status, complaint, document question, and not sure, plus an urgency field. Then she adds a Switch node on the category, with one output per value, and a fallback."
+    },
+    {
+      "scene": 11,
+      "start": 177.4,
+      "end": 195.4,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "complaint + urgency high → Google Sheets append to 'urgent_complaints'",
+        "document_question → second HTTP Request that drafts a reply → append to 'drafts' (not sent)",
+        "not_sure and fallback → append to 'review'"
+      ],
+      "on_screen_text": "Drafts are stored, never sent",
+      "voiceover": "She connects the outputs. High-urgency complaints go to an urgent complaints tab. Document questions go to a second Claude call that drafts a reply into a drafts tab. Nothing is sent. Not sure items and the fallback both go to review."
+    },
+    {
+      "scene": 12,
+      "start": 195.4,
+      "end": 216.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run the workflow on all 20 messages",
+        "Open each tab and show the item counts",
+        "Open 'review' and point to the mixed car accident and cancellation message with category not_sure (example output)"
+      ],
+      "voiceover": "She runs all twenty, and checks the count in each tab. One message says: my car was hit, the other driver's insurer says you pay, and I also want to cancel my policy. You'll see something like not sure, so it goes to review. Andrea agrees. It needs a person."
+    },
+    {
+      "scene": 13,
+      "start": 216.8,
+      "end": 239.9,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "No item left behind",
+        "body": "Left: free-text label 'Complaint (urgent)' → matches no rule → item lost (red). Right: closed list value + fallback output → review tab (green)."
+      },
+      "voiceover": "A common mistake is to route on a free-text label, like complaint, urgent, in brackets. A small change in wording breaks the rules, and items fall into no path at all. Route only on values from a closed list, and always connect the fallback to a review tab, so no item is lost."
+    },
+    {
+      "scene": 14,
+      "start": 239.9,
+      "end": 263.5,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. IF for one condition, Switch for several; the workflow decides. 2. Rules before the model when a rule can decide. 3. 'Not sure' and fallback items go to a person."
+      },
+      "voiceover": "Let's recap. First, use IF for one condition and Switch for several. The model labels the item, and the workflow decides the path. Second, use a plain rule before the model whenever a rule can decide. Third, give the model a not sure option, and send those items, plus any fallback items, to a person."
+    },
+    {
+      "scene": 15,
+      "start": 263.5,
+      "end": 293.5,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Batches, Loops and Rate Limits",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will extend your email workflow so that urgent complaints, simple questions and unclear messages each go to the right place. Then list the decisions a rule could make without AI, and move one of them before the model. It takes about forty-five minutes. In the next lesson, we cover Batches, Loops and Rate Limits. See you there."
+    }
+  ]
+}

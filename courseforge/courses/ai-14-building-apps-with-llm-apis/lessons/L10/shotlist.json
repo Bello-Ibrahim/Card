@@ -1,0 +1,186 @@
+{
+  "course_id": "AI-14",
+  "lesson_id": "L10",
+  "duration_s": 295.8,
+  "thumbnail": {
+    "headline": "Your Code Sets Limits",
+    "slide": {
+      "layout": "title",
+      "title": "Your Code Sets Limits",
+      "body": "A loop arrow with a step counter showing 5 max, a shield, and a 'yes / no' confirmation card. Small tag: Building Apps with LLM APIs · Lesson 10."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 19.7,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Your code sets the limits",
+      "voiceover": "A tool that reads data can give a wrong answer. A tool that changes data can send a parcel to the wrong city. Once your model can call functions that act in the real world, your code must set the limits, because the model will not."
+    },
+    {
+      "scene": 2,
+      "start": 19.7,
+      "end": 43.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "1. Several calls in one turn",
+        "body": "One assistant reply with two tool_use blocks → your code runs both → one user message with two tool_result blocks."
+      },
+      "voiceover": "The loop from the last lesson works for one read-only tool. Real apps need five guardrails. First, handle several tool calls in one turn. One reply can ask for more than one tool, for example two tracking codes in one question. Run each one, and return all the results together in a single user message."
+    },
+    {
+      "scene": 3,
+      "start": 43.7,
+      "end": 61.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "2. Cap the loop",
+        "body": "MAX_STEPS = 5 · Reached the limit → stop with a clear message · A person follows up"
+      },
+      "voiceover": "Second, cap the number of steps. A loop that runs while the model asks for tools could, in rare cases, keep going and spend money. Set a maximum, such as five steps, and stop with a clear message when it is reached."
+    },
+    {
+      "scene": 4,
+      "start": 61.7,
+      "end": 84.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "3. Check inputs strictly",
+        "body": "Validate types, formats, allowed values (e.g. Pydantic) · Optional strict schema checking in the tool definition (check docs) · Invalid input or unknown tool → tool_result with is_error and a short message"
+      },
+      "voiceover": "Third, check tool inputs strictly. The input is already parsed, but treat it like any user input, and validate types, formats and allowed values in your code. If an input fails, return an error result with a short message, so the model can correct itself. Do the same for an unknown tool name."
+    },
+    {
+      "scene": 5,
+      "start": 84.4,
+      "end": 112.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "4 and 5. Confirm and limit",
+        "body": "Read tools: run freely. Write tools: show the planned change, wait for 'yes' in code. Smallest permissions: only this field, only this customer's orders. Never: 'run any SQL' or 'call any URL'."
+      },
+      "voiceover": "Fourth, ask a human before any action that changes data. Reading a status is safe. Changing an address or cancelling an order is not. Your code, not the model, shows the planned action and waits for a clear yes. Fifth, give each tool the smallest permissions it needs. Never give the model a general tool that can run any database query or call any web address."
+    },
+    {
+      "scene": 6,
+      "start": 112.7,
+      "end": 133.3,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "bank clerk at counter checking documents",
+      "on_screen_text": "Transfers need a second signature",
+      "voiceover": "Think of a new bank clerk. They can look up balances freely, but every transfer needs a second signature and has a daily limit. The rules exist because mistakes that move money are expensive and hard to undo. Longer multi-step agents are covered in course AI-16."
+    },
+    {
+      "scene": 7,
+      "start": 133.3,
+      "end": 144.9,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "furniture delivery team loading sofa truck",
+      "on_screen_text": "Carlos · furniture shop · Medellín",
+      "voiceover": "Carlos Mendoza runs support for an online furniture shop in Medellín, Colombia. Next to the status tool, he adds a second tool that changes a delivery address."
+    },
+    {
+      "scene": 8,
+      "start": 144.9,
+      "end": 174.0,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open support_loop.py in VS Code",
+        "Highlight MAX_STEPS = 5 and WRITE_TOOLS = {\"change_delivery_address\"}",
+        "Highlight the unknown-tool check that returns 'Unknown tool' with err True",
+        "Highlight the confirm() check for write tools",
+        "Highlight the tool_result with is_error, then the else branch: 'Stopped: too many tool steps.'"
+      ],
+      "on_screen_text": "Five steps, confirm, then run",
+      "voiceover": "Here is the core of his loop. It runs for at most five steps. For each tool request, it first checks that the tool exists. If it is a tool that writes data, it asks the customer to confirm. Only then does it run the handler. Every result carries an error flag, and if the loop reaches the limit, it stops and says a person will follow up."
+    },
+    {
+      "scene": 9,
+      "start": 174.0,
+      "end": 193.7,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open the change_delivery_address handler",
+        "Highlight the check that the order belongs to the current customer",
+        "Highlight the not-shipped check and the empty-address check"
+      ],
+      "on_screen_text": "Every handler validates its input",
+      "voiceover": "Each handler validates its input first. The address handler checks that the order belongs to the customer who is logged in, that it has not shipped yet, and that the address is not empty. It changes only the address field, through the shop's normal business rules."
+    },
+    {
+      "scene": 10,
+      "start": 193.7,
+      "end": 210.4,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run the script and type 'Send my order CO-778 to my office instead'",
+        "Show the confirm prompt: 'Change the address of order CO-778 to Calle 10 #43-12, Medellín? (yes/no)'",
+        "Type no",
+        "Show the model's reply (labelled 'example output')"
+      ],
+      "on_screen_text": "No yes, no change",
+      "voiceover": "Now he tests it. He writes, send my order to my office instead. His code shows the planned change and asks yes or no. He answers no. You'll see something like, no problem, I have not changed the address."
+    },
+    {
+      "scene": 11,
+      "start": 210.4,
+      "end": 223.7,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Ask for the status of four orders in one message",
+        "Print the user message and show four tool_result blocks together",
+        "Change MAX_STEPS to 1, run again, and show 'Stopped: too many tool steps.'"
+      ],
+      "on_screen_text": "Four results, one message",
+      "voiceover": "Then he asks about four orders at once. The loop returns four results in one message. Finally, he sets the step limit to one, and checks that the stop message appears."
+    },
+    {
+      "scene": 12,
+      "start": 223.7,
+      "end": 243.0,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "A prompt is a request, not a control",
+      "voiceover": "A common mistake is to put the safety rule only in the system prompt. A prompt is a request, not a control. A confusing message or an injected instruction can make the model skip it. Put confirmations, permission checks and step limits in your code."
+    },
+    {
+      "scene": 13,
+      "start": 243.0,
+      "end": 270.9,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. All results in one message; cap the loop. 2. Validate inputs; error results for bad input or unknown tools. 3. Confirm writes in code; smallest permissions."
+      },
+      "voiceover": "Let's recap. First, return all tool results from one turn in a single user message, and cap the loop at a fixed number of steps. Second, validate every tool input in your code, and return an error result for invalid inputs or unknown tools. Third, require human confirmation in code before any action that changes data, and give each tool the smallest permissions it needs."
+    },
+    {
+      "scene": 14,
+      "start": 270.9,
+      "end": 295.8,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Prompt Injection and Privacy",
+      "voiceover": "Now it is your turn. In the exercise, you will add a tool that changes a delivery address, require confirmation before it runs, and cap your loop at five steps. Then test a refusal and an invalid order number. In the next lesson, Security: Prompt Injection and Data Privacy, you will attack your own app. See you there."
+    }
+  ]
+}

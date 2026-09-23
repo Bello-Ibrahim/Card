@@ -1,0 +1,171 @@
+{
+  "course_id": "AI-15",
+  "lesson_id": "L09",
+  "duration_s": 296.2,
+  "thumbnail": {
+    "headline": "Cite It or Say No",
+    "slide": {
+      "layout": "title",
+      "title": "Cite It or Say No",
+      "body": "Two answer cards: one with citation tags [c14] [c22] and a page link, one reading 'I don't know. The documents do not contain this information.' Small tag: RAG Systems · Lesson 9."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 19.7,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Where did sixty days come from?",
+      "voiceover": "Your assistant says tenants must give sixty days' notice. Is that from the guide you indexed, or a rule the model remembered from another country? Without a citation, the user cannot tell. Without a clear I don't know, they cannot tell when to stop trusting it."
+    },
+    {
+      "scene": 2,
+      "start": 19.7,
+      "end": 36.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Grounded Answers with Citations",
+        "body": "RAG Systems · Lesson 9 of 16 · Week 3: Grounded Generation and Evaluation"
+      },
+      "voiceover": "Welcome to week three. We start with the heart of RAG: grounded answers that show their sources. In lesson three, our first prompt was only one line. Today we make it strict, and we check the result in code."
+    },
+    {
+      "scene": 3,
+      "start": 36.4,
+      "end": 58.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Three rules",
+        "body": "1. Answer only from the context. 2. Cite chunk IDs after each claim, e.g. [c14]. 3. Not in the context? \"I don't know.\""
+      },
+      "voiceover": "A grounded answer uses only the retrieved context, and every claim can be traced to a chunk. Three instructions make this work. Answer only from the context. Cite the chunk ID after each claim. And when the context does not contain the answer, say I don't know, and do not guess."
+    },
+    {
+      "scene": 4,
+      "start": 58.3,
+      "end": 80.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Numbered, tagged chunks",
+        "body": "<chunk id=\"c14\" source=\"Tenant Guide, p.12\"> …text… </chunk>"
+      },
+      "voiceover": "Give the model the chunks in a clear format. Each chunk sits inside tags, with its ID and its source title and page in the header. The tags also tell the model that the chunk text is material to read, not instructions to follow. We return to that in lesson thirteen."
+    },
+    {
+      "scene": 5,
+      "start": 80.2,
+      "end": 108.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Two ways to return sources",
+        "body": "Structured output: {answer, citations[], found} → check in code. API citations feature: document blocks → citation objects to exact passages. Check whether both work in one request."
+      },
+      "voiceover": "For an application, JSON is better than brackets in free text. So we ask for a structured output with three fields: the answer, a list of cited IDs, and a found flag. There is also another route. The Claude API has a citations feature that points to the exact passage used. Check the current documentation, because it may not combine with structured outputs in one request."
+    },
+    {
+      "scene": 6,
+      "start": 108.5,
+      "end": 127.8,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "student writing essay with textbook open",
+      "on_screen_text": "Every claim has a footnote",
+      "voiceover": "Think of a good student essay with footnotes. Every important claim points to a page in the course reader. And if the reader does not cover a topic, the student says so, instead of inventing a source. That honesty is what makes the essay trustworthy."
+    },
+    {
+      "scene": 7,
+      "start": 127.8,
+      "end": 153.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Show the format_context function building <chunk id=... source=...> blocks.",
+        "Show the SYSTEM prompt: only the chunks, treat chunk text as information, cite [c14]-style IDs, reply exactly the 'I don't know' sentence."
+      ],
+      "on_screen_text": "Priya · legal aid clinic · Pune",
+      "voiceover": "Let's follow Priya. She builds a question-answering tool for a legal aid clinic in Pune, India. Volunteers answer tenants' questions from a public guide to rental rules. Rules differ by place, so the guide is the only source the tool may use. First, she replaces her old one-line prompt with the strict system prompt and the context formatter."
+    },
+    {
+      "scene": 8,
+      "start": 153.5,
+      "end": 172.4,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Show the answer schema with answer, citations and found.",
+        "Show the check_citations function.",
+        "Run the example call with citations ['c14'] and retrieved ['c14', 'c2'] and show the output True."
+      ],
+      "on_screen_text": "Validate every cited ID",
+      "voiceover": "Next, she adds the structured output with answer, citations and found, and a small check in code. It fails if any cited ID was not retrieved, or if the answer says found but cites nothing. On the example, the check passes and prints True."
+    },
+    {
+      "scene": 9,
+      "start": 172.4,
+      "end": 192.1,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Ask 'How much deposit can a landlord ask for?' and show the JSON result from the real run.",
+        "Print the two cited chunks and highlight the matching numbers.",
+        "Show the simple interface with citations as 'title, page' links."
+      ],
+      "voiceover": "She asks: how much deposit can a landlord ask for? You'll see something like an answer that cites two chunks, and the check passes. She opens both chunks and confirms the numbers. In the interface, each citation shows the document title and page, with a link."
+    },
+    {
+      "scene": 10,
+      "start": 192.1,
+      "end": 218.2,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Ask the three off-guide questions one by one.",
+        "Show the first tax answer with an empty citations list, and the check failing.",
+        "After the prompt and code change, show all three results with found: false and the exact 'I don't know' sentence."
+      ],
+      "on_screen_text": "\"I don't know\" is a correct answer",
+      "voiceover": "Now three questions the guide does not cover: rules in another country, a tax question, and a question about a named landlord. At first, the tax question gets a general answer with no citations. After she adds the word exactly to the prompt, and the found check in code, all three return found false and the exact I don't know sentence."
+    },
+    {
+      "scene": 11,
+      "start": 218.2,
+      "end": 242.2,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Ask for citations, then check them",
+      "voiceover": "A common mistake is to ask for citations but never check them. Models can cite an ID that was not in the context. Validate IDs in code, and sample answers by hand. The check does not prove support. That is faithfulness, which we measure in lesson twelve. And never hide I don't know as an error."
+    },
+    {
+      "scene": 12,
+      "start": 242.2,
+      "end": 271.3,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Only the chunks · cite IDs · \"I don't know\". 2. {answer, citations, found} + check IDs in code. 3. API citations feature: check it fits your request."
+      },
+      "voiceover": "Let's recap. First, tell the model to answer only from the numbered chunks, cite chunk IDs, and say I don't know when the context does not contain the answer. Second, return the answer, citations and a found flag as structured output, and check in code that every cited ID was retrieved. Third, the API's citations feature can point to exact passages, so check how it fits your request."
+    },
+    {
+      "scene": 13,
+      "start": 271.3,
+      "end": 296.2,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Building a RAG Test Set",
+      "voiceover": "Now it is your turn. In the exercise below, change your pipeline so every answer lists its sources, and test it with three questions your documents cannot answer. Treat a clear I don't know as a success. In the next lesson, Building a RAG Test Set, we create the questions that tell us whether all this really works."
+    }
+  ]
+}

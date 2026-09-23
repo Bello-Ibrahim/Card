@@ -1,0 +1,195 @@
+{
+  "course_id": "AI-16",
+  "lesson_id": "L10",
+  "duration_s": 293.0,
+  "thumbnail": {
+    "headline": "Watch Your Agent Choose",
+    "slide": {
+      "layout": "title",
+      "title": "Watch Your Agent Choose",
+      "body": "Centre: an 'AI Agent' node box with three connected sub-nodes below it: Chat Model · Sheets tool · Calculator. Small tag: AI Agents and Automation Workflows · Lesson 10."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 19.7,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Build it. Watch it decide.",
+      "voiceover": "In the last lesson, you saw the agent loop in code. n8n can run the same loop for you, and it shows every decision in the execution log. Today, you build an agent that looks things up and calculates, and you watch it choose its tools."
+    },
+    {
+      "scene": 2,
+      "start": 19.7,
+      "end": 47.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "The AI Agent node",
+        "body": "AI Agent node in the centre. Below it, three connection points: Chat Model (Anthropic Chat Model + credential) · Memory (optional, Lesson 11) · Tools (Google Sheets tool · Calculator · HTTP Request tool)."
+      },
+      "voiceover": "In n8n, the AI Agent node runs the agent loop. You connect other nodes to it. A chat model makes the decisions. We use the Anthropic chat model node, with your Claude API credential. Memory is optional, and comes in the next lesson. And tools are the nodes the agent may call, such as a Google Sheets tool, a calculator, or an HTTP request."
+    },
+    {
+      "scene": 3,
+      "start": 47.1,
+      "end": 65.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Talk to it and guide it",
+        "body": "Chat Trigger: a chat panel inside the editor · System message: goal, rules, limits · Max iterations: a step limit"
+      },
+      "voiceover": "A chat trigger lets you talk to the agent in a chat panel inside the editor. In the agent node, you write a system message, with the goal, the rules and the limits. You can also set a maximum number of steps."
+    },
+    {
+      "scene": 4,
+      "start": 65.1,
+      "end": 86.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "Tool descriptions still matter",
+        "body": "'Returns all products with ID, name, unit price and quantity in stock. Use it to find a product and its price.'"
+      },
+      "voiceover": "Each tool node has a description field. As in the last lesson, this text tells the model what the tool does, and when to use it. So write it carefully. n8n can also let the model fill some tool settings itself, such as the product name to search for."
+    },
+    {
+      "scene": 5,
+      "start": 86.1,
+      "end": 97.2,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Maths goes to the calculator",
+      "voiceover": "Why a calculator? Language models can make mistakes with arithmetic. A calculator gives exact results, and the log shows the calculation, so you can check it."
+    },
+    {
+      "scene": 6,
+      "start": 97.2,
+      "end": 115.6,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "coordinator at desk on telephone call",
+      "on_screen_text": "The log is the call record",
+      "voiceover": "Here is a picture. The agent node is like a project coordinator at a desk with a telephone. The chat model is the coordinator's judgement. The tools are the numbers on the speed-dial list. And the execution log is the call record."
+    },
+    {
+      "scene": 7,
+      "start": 115.6,
+      "end": 129.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Read-only for now",
+        "body": "Sheets tool: read rows only · Cannot change or delete data · Write and send tools come later, with human approval (Lesson 12)"
+      },
+      "voiceover": "One safety rule for this lesson. Give the agent read-only tools. A Sheets tool that only reads rows cannot damage your data. Tools that write or send come later, with approval steps."
+    },
+    {
+      "scene": 8,
+      "start": 129.7,
+      "end": 148.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Show the 'products' sheet: product_id, name, unit_price, in_stock (invented)",
+        "Create a new workflow",
+        "Add a Chat Trigger",
+        "Add an AI Agent node and connect the trigger to it"
+      ],
+      "on_screen_text": "Kofi · hardware shop · Accra",
+      "voiceover": "Let's build it. Kofi Mensah owns a hardware shop in Accra, Ghana. His products sheet has an ID, a name, a unit price and a stock count, all invented. He creates a new workflow, adds a chat trigger, and connects an AI Agent node."
+    },
+    {
+      "scene": 9,
+      "start": 148.6,
+      "end": 172.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Connect an Anthropic Chat Model sub-node",
+        "Select the Claude credential (blurred) and a MODEL from the current models page",
+        "Open the AI Agent node and type the system message from content.md"
+      ],
+      "voiceover": "He connects an Anthropic chat model, picks his Claude credential, and chooses a model from the current list. Then he writes the system message. Answer stock and price questions for staff. Always look up products in the sheet. Always use the calculator for totals. If a product is not found, say so. Do not guess prices."
+    },
+    {
+      "scene": 10,
+      "start": 172.6,
+      "end": 182.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Connect a Google Sheets tool: read rows from 'products'",
+        "Fill the tool description: 'Returns all products with ID, name, unit price and quantity in stock. Use it to find a product and its price.'",
+        "Connect a Calculator tool"
+      ],
+      "voiceover": "He connects a Google Sheets tool that only reads the products sheet, and gives it a clear description. Then he connects a calculator tool."
+    },
+    {
+      "scene": 11,
+      "start": 182.9,
+      "end": 206.0,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open the chat panel",
+        "Type: 'Is the 10 mm drill bit in stock, and what is the total for 12 units?'",
+        "Open the execution log: Sheets tool call → Calculator with 12 * 3.75 → final answer (example output)"
+      ],
+      "on_screen_text": "Sheets tool, then calculator",
+      "voiceover": "He opens the chat and asks: is the ten millimetre drill bit in stock, and what is the total for twelve units? In the log, you'll see something like this. The agent calls the Sheets tool, then the calculator, and then answers: yes, forty are in stock, and twelve units cost forty-five cedis."
+    },
+    {
+      "scene": 12,
+      "start": 206.0,
+      "end": 223.1,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Type a question about a product that is not in the sheet",
+        "Open the log: one Sheets tool call",
+        "Show the answer 'I could not find that product.' (example output)"
+      ],
+      "on_screen_text": "Not found is a good answer",
+      "voiceover": "Then he asks about a product that does not exist. The log shows one Sheets call, and the answer: I could not find that product. That is the correct behaviour. The agent did not invent a product or a price."
+    },
+    {
+      "scene": 13,
+      "start": 223.1,
+      "end": 244.5,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Fewer tools, better choices",
+      "voiceover": "A common mistake is to connect many tools, just in case. The agent then has more choices, makes more wrong ones, and uses more tokens, because every tool description is sent with every request. Connect only what the task needs. If it picks the wrong tool, improve the descriptions first."
+    },
+    {
+      "scene": 14,
+      "start": 244.5,
+      "end": 266.4,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. AI Agent node = chat model + optional memory + tools. 2. Descriptions and system message guide choices; the log shows them. 3. Few read-only tools; a calculator for maths."
+      },
+      "voiceover": "Let's recap. First, the AI Agent node runs the loop, with a chat model, optional memory and connected tools. Second, the tool descriptions and system message guide which tool it picks, and the log shows every choice. Third, start with a few read-only tools, and use a calculator for arithmetic."
+    },
+    {
+      "scene": 15,
+      "start": 266.4,
+      "end": 293.0,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Memory and Context",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will build a stock and price agent from your own products sheet. Test it with five questions, including a missing product and a spelling mistake, and note which tools it used each time. It takes about forty minutes. In the next lesson, we add Memory and Context. See you there."
+    }
+  ]
+}

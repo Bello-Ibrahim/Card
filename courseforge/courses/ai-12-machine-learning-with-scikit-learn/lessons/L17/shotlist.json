@@ -1,0 +1,200 @@
+{
+  "course_id": "AI-12",
+  "lesson_id": "L17",
+  "duration_s": 301.5,
+  "thumbnail": {
+    "headline": "Frame, Build, Test, Save",
+    "slide": {
+      "layout": "title",
+      "title": "Frame, Build, Test, Save",
+      "body": "Eight numbered steps on a path: frame · split · baseline · pipeline · compare · tune · test once · save. Tag: Machine Learning with scikit-learn · Lesson 17 · Capstone."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.1,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Every piece, in the right order",
+      "voiceover": "You now have every piece. In this lesson, you put them together in the right order, on a dataset you choose, and finish with a tested model saved to a file. This is the first step of your capstone project."
+    },
+    {
+      "scene": 2,
+      "start": 17.1,
+      "end": 40.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Choose your dataset",
+        "body": "Public business dataset · Clear target · A few thousand rows or more · Read and cite the licence · No personal or confidential employer data"
+      },
+      "voiceover": "First, choose a public business dataset with a clear target and at least a few thousand rows. UCI and Kaggle are good places to look. Read the licence of the dataset you choose, and cite it. And do not use personal or confidential data from your employer, in Colab or in any AI tool."
+    },
+    {
+      "scene": 3,
+      "start": 40.2,
+      "end": 62.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "The workflow, part 1",
+        "body": "1. Frame (L01) → 2. Split once (L03) → 3. Dummy baseline (L08) → 4. Pipeline, simple model first (L05)."
+      },
+      "voiceover": "Then follow one order in one notebook. Frame the problem, including the cost of each mistake. Split once, with a fixed random state, and do not look at the test set again until the end. Build a dummy baseline that every model must beat. Then a pipeline, with a simple model first."
+    },
+    {
+      "scene": 4,
+      "start": 62.5,
+      "end": 83.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "The workflow, part 2",
+        "body": "5. Compare and improve (L10–L13) → 6. Tune + threshold (L14, L09) → 7. Test once → 8. Save with joblib + record versions."
+      },
+      "voiceover": "Next, cross-validate two or three models, and test new features. Tune the best candidate with a random search, and for classification, choose a threshold from costs. Only then, score the chosen pipeline once on the test set. Finally, save the fitted pipeline, and record the library versions."
+    },
+    {
+      "scene": 5,
+      "start": 83.1,
+      "end": 99.8,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Never load untrusted model files",
+      "voiceover": "A saved model only loads reliably with compatible library versions, so write the versions next to the file. And never load a model file from an untrusted source. Loading such a file can run any code hidden inside it."
+    },
+    {
+      "scene": 6,
+      "start": 99.8,
+      "end": 122.1,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "chef serving plated dish to guests",
+      "on_screen_text": "Taste once, when the guests arrive",
+      "voiceover": "An end-to-end project is like following a recipe from shopping to serving. Each step depends on the one before. And you taste the dish at the end only once, when the guests arrive. If you keep tasting and changing it in front of them, their opinion is no longer independent."
+    },
+    {
+      "scene": 7,
+      "start": 122.1,
+      "end": 142.2,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "young data scientist working laptop office",
+      "on_screen_text": "Elena · junior data scientist · Cluj-Napoca",
+      "voiceover": "Elena Popescu is a junior data scientist at a bank in Cluj-Napoca, Romania. She has framed her problem, which customers to call for a term deposit. She has split the data and built the pipeline from lesson five. Here is the last part of her notebook."
+    },
+    {
+      "scene": 8,
+      "start": 142.2,
+      "end": 159.3,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Scroll past the L05 setup and pipeline cells, already executed.",
+        "Type this exact code cell from content.md and run it with Shift+Enter:\nimport joblib, sklearn\nfrom sklearn.dummy import DummyClassifier\nfrom sklearn.model_selection import cross_val_score\nfrom sklearn.metrics import roc_auc_score\n\nbaseline = Pipeline([(\"prep\", prep), (\"model\", DummyClassifier(strategy=\"prior\"))])\nprint(\"baseline CV AUC:\", cross_val_score(baseline, X_train, y_train, cv=5,\n                                          scoring=\"roc_auc\").mean().round(3))\nprint(\"model CV AUC:\", cross_val_score(pipe, X_train, y_train, cv=5,\n                                       scoring=\"roc_auc\").mean().round(3))\n\nfinal = pipe.fit(X_train, y_train)          # after all tuning is finished\nprint(\"test AUC:\", round(roc_auc_score(y_test, final.predict_proba(X_test)[:, 1]), 3))\n\njoblib.dump(final, \"term_deposit_model.joblib\")\nprint(\"saved with scikit-learn\", sklearn.__version__)\nloaded = joblib.load(\"term_deposit_model.joblib\")   # only files you created yourself\nprint(loaded.predict(X_test.head(3)))"
+      ],
+      "on_screen_text": "Baseline, model, test, save, reload",
+      "voiceover": "This cell cross-validates a dummy baseline and the real pipeline. Then it fits the final pipeline, scores it once on the test set, saves it to a file with the library version, loads it back, and predicts three customers."
+    },
+    {
+      "scene": 9,
+      "start": 159.3,
+      "end": 178.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Highlight the line baseline = Pipeline([(\"prep\", prep), (\"model\", DummyClassifier(strategy=\"prior\"))]).",
+        "Highlight cv=5 in both cross_val_score calls."
+      ],
+      "on_screen_text": "Same pipeline, same folds",
+      "voiceover": "Notice that the baseline sits inside the same pipeline, with the same preprocessing and five folds as the real model. So the comparison is fair. The only difference is the model at the end, and the baseline simply predicts the share of subscribers for everyone."
+    },
+    {
+      "scene": 10,
+      "start": 178.6,
+      "end": 189.7,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Highlight baseline CV AUC: 0.5 and model CV AUC: 0.778."
+      ],
+      "on_screen_text": "Baseline 0.5 · model 0.778",
+      "voiceover": "The baseline scores zero point five, which is random ranking. The model scores zero point seven seven eight in cross-validation, so it clearly learns something."
+    },
+    {
+      "scene": 11,
+      "start": 189.7,
+      "end": 205.1,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Highlight test AUC: 0.752.",
+        "Add the caption: final number, scored once."
+      ],
+      "on_screen_text": "Final test ROC AUC: 0.752",
+      "voiceover": "The single test score is zero point seven five two. It is a little lower than the cross-validation mean, but within the spread you saw in lesson ten. Elena reports it as her final number."
+    },
+    {
+      "scene": 12,
+      "start": 205.1,
+      "end": 218.4,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Highlight saved with scikit-learn 1.9.1.",
+        "Highlight the loaded model's prediction [0 0 0]."
+      ],
+      "on_screen_text": "Whole pipeline saved and reloaded",
+      "voiceover": "The whole pipeline, including preprocessing, is saved to one file, with scikit-learn version one point nine point one. Loading it back and predicting three customers confirms that the file works."
+    },
+    {
+      "scene": 13,
+      "start": 218.4,
+      "end": 234.3,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open the Colab Files panel, right-click term_deposit_model.joblib and choose Download.",
+        "Add a text cell: scikit-learn 1.9.1 · threshold 0.15 (L09) · date."
+      ],
+      "on_screen_text": "Download it: Colab storage is temporary",
+      "voiceover": "Colab storage is temporary, so we download the file from the Files panel. Elena also adds a text cell with the library version, her chosen threshold of zero point one five from lesson nine, and the date."
+    },
+    {
+      "scene": 14,
+      "start": 234.3,
+      "end": 252.3,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Save the whole pipeline",
+      "voiceover": "A common mistake is to save only the model step, without the preprocessing. When the file is loaded later, raw data cannot be passed to it, and people rebuild the preprocessing by hand, often with small differences. Save the whole fitted pipeline."
+    },
+    {
+      "scene": 15,
+      "start": 252.3,
+      "end": 275.4,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Frame → split → baseline → pipeline → compare → tune → test once → save. 2. Beat the Dummy baseline; test once. 3. Save the whole pipeline, record versions, trust only your own files."
+      },
+      "voiceover": "Let's recap. First, follow one order: frame, split once, baseline, pipeline, compare, tune, test once, and save. Second, every model must beat a dummy baseline, and the test set is scored once, at the very end. Third, save the whole fitted pipeline, record the library versions, and never load model files from untrusted sources."
+    },
+    {
+      "scene": 16,
+      "start": 275.4,
+      "end": 301.5,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Capstone Step 2",
+      "voiceover": "Now it is your turn. This is capstone step one. In the exercise below this video, you will complete your modelling notebook, from framing to a tuned, tested and saved model, with a subgroup check. Plan about two hours, spread over the week. In the next lesson, Capstone Step 2: Report to Stakeholders, you will explain your results. See you there."
+    }
+  ]
+}

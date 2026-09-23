@@ -1,0 +1,181 @@
+{
+  "course_id": "AI-15",
+  "lesson_id": "L10",
+  "duration_s": 292.0,
+  "thumbnail": {
+    "headline": "From Feeling to Numbers",
+    "slide": {
+      "layout": "title",
+      "title": "From Feeling to Numbers",
+      "body": "A checklist of questions: most with a teal tick and a source tag, some marked 'unanswerable'. Small tag: RAG Systems · Lesson 10."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.6,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Better, or does it just feel better?",
+      "voiceover": "You changed the chunk size, added hybrid search and rewrote the prompt. Is the system better now? If your answer is, it feels better, you do not know. A small, careful test set turns that feeling into numbers you can compare."
+    },
+    {
+      "scene": 2,
+      "start": 17.6,
+      "end": 29.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Building a RAG Test Set",
+        "body": "RAG Systems · Lesson 10 of 16 · The ruler for every later change"
+      },
+      "voiceover": "In the last lesson, we made answers cite their sources. Before we can measure anything in the next two lessons, we need the questions to measure with."
+    },
+    {
+      "scene": 3,
+      "start": 29.2,
+      "end": 50.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Right size",
+        "body": "30–50 questions · check by hand · cheap to run · shows real differences"
+      },
+      "voiceover": "A RAG test set is a list of questions, each with what you need to judge retrieval and the answer. For a course project, thirty to fifty questions is a good size. Small enough to check by hand and cheap to run, but large enough to show real differences."
+    },
+    {
+      "scene": 4,
+      "start": 50.2,
+      "end": 73.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "One test item",
+        "body": "{\"id\": \"t07\", \"question\": \"Which regions had the largest fall in school enrolment?\", \"expected_answer\": \"The northern and coastal regions.\", \"source\": \"rep-12#p4\", \"evidence\": \"largest decline in the northern and coastal\", \"answerable\": true, \"type\": \"comparison\", \"language\": \"en\"}"
+      },
+      "voiceover": "Each item has the question in a real user's words, a short expected answer, and the source document. It also has an evidence phrase, a few exact words from the source, so you can find the right chunk whatever the chunk size. And it records whether the question is answerable, its type and its language."
+    },
+    {
+      "scene": 5,
+      "start": 73.8,
+      "end": 94.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Coverage",
+        "body": "Document types and languages · facts, numbers, codes, two-source questions · a few vague questions · 5+ unanswerable (about 15%)"
+      },
+      "voiceover": "Cover real use, and the hard cases. Different document types and languages. Facts, numbers, codes, and questions that need two sources. A few vague questions, because real users write them. And at least five unanswerable questions on nearby topics, to test whether the system says I don't know."
+    },
+    {
+      "scene": 6,
+      "start": 94.4,
+      "end": 115.0,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "chef tasting dishes in restaurant kitchen",
+      "on_screen_text": "Same dishes, before and after",
+      "voiceover": "Think of a restaurant that tests a new recipe. The chef tastes the same dishes before and after the change, including a few difficult orders, so the comparison is fair. A different random dish each time tells you nothing. Your test set is that fixed set of dishes."
+    },
+    {
+      "scene": 7,
+      "start": 115.0,
+      "end": 140.3,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Show the drafting cell: loop over 25 selected chunks, one API call per chunk asking for 2 questions with answer and evidence.",
+        "Open drafts.jsonl and show that it holds 50 drafts."
+      ],
+      "on_screen_text": "Thandiwe · university library · Cape Town",
+      "voiceover": "Let's follow Thandiwe. She runs a research library service at a university in Cape Town, South Africa. Her assistant covers sixty public policy reports in English, and a few summaries in isiZulu and Afrikaans. She gives the model one chunk at a time, and asks it to draft two questions, a short answer and an evidence phrase for each."
+    },
+    {
+      "scene": 8,
+      "start": 140.3,
+      "end": 162.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open the drafts in a spreadsheet.",
+        "Highlight a draft that copies a sentence from its chunk and delete it.",
+        "Rewrite a draft into a student's words: 'what did that report say about youth jobs?'"
+      ],
+      "voiceover": "You'll see something like fifty drafts. Many copy the chunk's exact words, which makes retrieval look better than it is. So she reviews every one in a spreadsheet. She deletes fourteen that simply repeat a sentence, and rewrites ten to sound like students, like: what did that report say about youth jobs?"
+    },
+    {
+      "scene": 9,
+      "start": 162.6,
+      "end": 185.3,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Add six rows with answerable set to false and no source.",
+        "Add four rows with language 'zu' and 'af', marked 'checked by colleague'."
+      ],
+      "on_screen_text": "Write unanswerable questions yourself",
+      "voiceover": "Then she writes six unanswerable questions herself, on topics close to the collection but not in it. She adds four questions in isiZulu and Afrikaans, checked by colleagues who speak those languages. A machine check does not replace a native speaker. These questions show whether the multilingual model really works for her users."
+    },
+    {
+      "scene": 10,
+      "start": 185.3,
+      "end": 202.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Show the check_testset function: duplicate id check, source and evidence check, Counter of types and languages.",
+        "Run check_testset('testset.jsonl') and show: 40 items, unanswerable: 6, four types, three languages."
+      ],
+      "voiceover": "Before using the file, she validates it with a short script. It checks for duplicate IDs, makes sure every answerable item has a source and evidence, and counts the mix. The result: forty items, six unanswerable, four types and three languages."
+    },
+    {
+      "scene": 11,
+      "start": 202.9,
+      "end": 221.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Commit testset.jsonl and tag it v1 in the terminal.",
+        "Show a short team note: 'Freeze the test set before comparing.'"
+      ],
+      "on_screen_text": "Freeze it before you compare",
+      "voiceover": "Finally, she saves the file in version control, and agrees a rule with her team. Nobody tunes the system and edits the test set at the same time. Otherwise, the before and after scores are measured on different questions, and the comparison means nothing."
+    },
+    {
+      "scene": 12,
+      "start": 221.8,
+      "end": 241.9,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Drafts are a start, not a test set",
+      "voiceover": "A common mistake is to use drafted questions without checking them. They are often too easy, sometimes wrong, and rarely unanswerable. So check and edit every single item by hand. And never send confidential or personal documents to any API for drafting, unless your organisation allows it."
+    },
+    {
+      "scene": 13,
+      "start": 241.9,
+      "end": 267.6,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. 30–50 items with source and evidence. 2. Hard cases + 5 unanswerable. 3. Drafts checked by a person; freeze before comparing."
+      },
+      "voiceover": "Let's recap. First, a RAG test set of thirty to fifty items records the question, expected answer, source, evidence phrase, answerability, type and language. Second, include different document types, languages, hard cases and at least five unanswerable questions. Third, a model can draft candidates, but a person must check every item, and the set must be frozen before you compare."
+    },
+    {
+      "scene": 14,
+      "start": 267.6,
+      "end": 292.0,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Measuring Retrieval Quality",
+      "voiceover": "Now it is your turn. In the exercise below, build a thirty-question test set for your collection, with at least five unanswerable questions, validate it, and tag it as version one. You will use it for the rest of the course, including the capstone. In the next lesson, Measuring Retrieval Quality, we put it to work."
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "course_id": "AI-15",
+  "lesson_id": "L11",
+  "duration_s": 292.2,
+  "thumbnail": {
+    "headline": "Did Retrieval Find It?",
+    "slide": {
+      "layout": "title",
+      "title": "Did Retrieval Find It?",
+      "body": "A ranked list of 5 chunks, the relevant one in teal at rank 2; three small gauges labelled hit@5, recall@5, MRR. Small tag: RAG Systems · Lesson 11."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.1,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Measure retrieval first",
+      "voiceover": "If the right chunk never reaches the model, the answer cannot be both correct and grounded. So before you judge answers, measure retrieval. It is fast, it needs no model calls, and it shows exactly where your pipeline loses information."
+    },
+    {
+      "scene": 2,
+      "start": 17.1,
+      "end": 34.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Measuring Retrieval Quality",
+        "body": "RAG Systems · Lesson 11 of 16 · Relevant chunks vs ranked list"
+      },
+      "voiceover": "In the last lesson, we built a test set. For each answerable question, we know which chunks are relevant: the ones from the expected source that contain the evidence phrase. Retrieval returns a ranked list. Three metrics compare the two."
+    },
+    {
+      "scene": 3,
+      "start": 34.2,
+      "end": 59.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Did it find it?",
+        "body": "Hit rate@k: at least one relevant chunk in top k? · Recall@k: share of relevant chunks in top k (matters for comparisons)"
+      },
+      "voiceover": "Hit rate at k is the share of questions where at least one relevant chunk is in the top k. It asks: does the model get a chance to see the answer? Recall at k is the share of each question's relevant chunks found in the top k. It matters when an answer needs several chunks, such as a comparison."
+    },
+    {
+      "scene": 4,
+      "start": 59.9,
+      "end": 83.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "How high is it?",
+        "body": "Rank 1 → 1 · Rank 2 → 0.5 · Rank 4 → 0.25 · not found → 0 · MRR = average over questions"
+      },
+      "voiceover": "Mean reciprocal rank, or MRR, shows how high the first relevant chunk is. Rank one scores one. Rank two scores a half. Rank four scores a quarter. Nothing found scores zero. This matters when you pass only a few chunks to the model. Skip unanswerable questions here. We test those with answer metrics next time."
+    },
+    {
+      "scene": 5,
+      "start": 83.5,
+      "end": 103.2,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "doctor checking patient blood pressure clinic",
+      "on_screen_text": "Numbers say what. Examination says why.",
+      "voiceover": "Think of a doctor's basic measurements: temperature, pulse and blood pressure. They quickly tell you that something is wrong, and how serious it is. But to treat the patient, the doctor still has to examine them and find the cause. Retrieval metrics work the same way."
+    },
+    {
+      "scene": 6,
+      "start": 103.2,
+      "end": 128.1,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Show the retrieval_metrics function.",
+        "Show the three example runs.",
+        "Run the print line with k=3 and show the exact output {'hit@k': 0.667, 'recall@k': 0.5, 'mrr': 0.444}."
+      ],
+      "on_screen_text": "Test the metric code first",
+      "voiceover": "Here is the metrics function in plain Python. We test it on three questions. The first finds its chunk at rank one. The second finds one of its two relevant chunks, at rank three. The third finds nothing. The result: hit rate zero point six six seven, recall zero point five, and MRR zero point four four four."
+    },
+    {
+      "scene": 7,
+      "start": 128.1,
+      "end": 151.7,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Show the two pipeline versions: A vector only, B hybrid with RRF, both with 800-character chunks.",
+        "Run both over the test set and save runs_A.json and runs_B.json with the top 10 IDs per question."
+      ],
+      "on_screen_text": "Hana · claims assistant · Prague",
+      "voiceover": "Now a real comparison. Hana is an engineer at an insurance company in Prague, Czech Republic. Her assistant answers questions about claims procedures. Version A uses vector search only. Version B uses the same chunks, with hybrid search. She runs both over thirty-two answerable test questions, and saves the top ten IDs for each."
+    },
+    {
+      "scene": 8,
+      "start": 151.7,
+      "end": 174.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "A vs B at k = 5 (hypothetical)",
+        "body": "Version A, vector only: hit@5 0.72 · MRR 0.51. Version B, hybrid: hit@5 0.84 · MRR 0.63 (teal)."
+      },
+      "voiceover": "She computes the metrics at five, because her pipeline passes five chunks to the model. Here are her example results. Version A has a hit rate of zero point seven two, and an MRR of zero point five one. Version B reaches zero point eight four and zero point six three. B is better."
+    },
+    {
+      "scene": 9,
+      "start": 174.8,
+      "end": 198.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Print the five failed questions from version B.",
+        "For each, show the retrieved chunks next to the relevant chunk.",
+        "Fill a small table: chunking ×2 (split table), embeddings ×1 (Czech legal term), vague question ×1 ('what about the form?'), parsing ×1 (scanned appendix)."
+      ],
+      "voiceover": "But numbers do not say why. So she lists the five questions that B still fails, and opens the retrieved chunks and the relevant chunk for each one. Two are chunking problems, where a table was split. One is embeddings, with a Czech legal term. One is a vague question. One is parsing, a scanned appendix."
+    },
+    {
+      "scene": 10,
+      "start": 198.8,
+      "end": 216.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Failure causes → fixes",
+        "body": "Chunking → better splitting (fix first: 2 of 5) · Embeddings → model or reranker · Missing keywords → hybrid search · Vague question → rewriting · Parsing → re-extract"
+      },
+      "voiceover": "The failure analysis gives her a clear next step. Fix table chunking first, because it causes the most failures. Other common causes are missing keywords, where hybrid search helps, and vague questions, where rewriting helps. Parsing problems need the text extracted again."
+    },
+    {
+      "scene": 11,
+      "start": 216.8,
+      "end": 239.5,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Measure at the k you use",
+      "voiceover": "A common mistake is to report hit at ten, when you only pass five chunks to the model. Report metrics at the k you actually use, add MRR, and always read the failures. And after re-chunking, do not match relevant chunks by their old IDs. Match by source and evidence phrase instead."
+    },
+    {
+      "scene": 12,
+      "start": 239.5,
+      "end": 263.1,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Hit rate, recall@k, MRR. 2. Measure at your real k, on a frozen test set. 3. Classify failures to choose the next fix."
+      },
+      "voiceover": "Let's recap. First, hit rate and recall at k show whether relevant chunks reach the model, and MRR shows how high the first one is ranked. Second, measure at the k your pipeline really uses, on answerable questions from a frozen test set. Third, classify each failure by cause, to decide what to fix next."
+    },
+    {
+      "scene": 13,
+      "start": 263.1,
+      "end": 292.2,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Measuring Answer Quality",
+      "voiceover": "Now it is your turn. In the exercise below, compute hit rate, recall at five and MRR for two versions of your pipeline, and classify the causes of five failures. Then write one sentence on what you would fix first, and why. It needs no model calls, so it costs nothing to run. In the next lesson, Measuring Answer Quality: Faithfulness and Relevance, we check the answers themselves."
+    }
+  ]
+}

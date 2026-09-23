@@ -1,0 +1,181 @@
+{
+  "course_id": "AI-15",
+  "lesson_id": "L08",
+  "duration_s": 295.9,
+  "thumbnail": {
+    "headline": "And for Drivers?",
+    "slide": {
+      "layout": "title",
+      "title": "And for Drivers?",
+      "body": "Chat bubble 'And for drivers?' → arrow → search box 'travel allowance for drivers travelling to Astana'. Small tag: RAG Systems · Lesson 8."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.6,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "And for contractors?",
+      "voiceover": "A user asks how many days of parental leave employees get. Your assistant answers well. Then the user asks: and for contractors? Search for those three words alone, and you get random passages. The question only makes sense inside the conversation."
+    },
+    {
+      "scene": 2,
+      "start": 17.6,
+      "end": 27.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Query Rewriting and Conversational Retrieval",
+        "body": "RAG Systems · Lesson 8 of 16 · Before retrieval"
+      },
+      "voiceover": "In the last lesson, we improved retrieval with hybrid search and reranking. Today we fix the question itself, before it ever reaches retrieval."
+    },
+    {
+      "scene": 3,
+      "start": 27.5,
+      "end": 51.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Follow-up → standalone",
+        "body": "'And for contractors?' → 'How many days of parental leave do contractors get?'"
+      },
+      "voiceover": "Retrieval works one query at a time, and it has no memory. In a chat, many questions depend on earlier turns. And in twenty twenty-two? What about the second option? These are follow-up questions. Before retrieval, we rewrite them into standalone queries, such as: how many days of parental leave do contractors get?"
+    },
+    {
+      "scene": 4,
+      "start": 51.1,
+      "end": 79.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Rewrite schema",
+        "body": "{ \"standalone\": string, \"variants\": [string, …] } · passed as a JSON Schema in the request"
+      },
+      "voiceover": "The language model is good at this. From the previous course, you know how to ask for a structured output that your code can trust. Here, the request includes a small schema with two fields: one standalone query, and a list of up to three other phrasings. A schema in the request is the safest way to get this, because the reply must match it."
+    },
+    {
+      "scene": 5,
+      "start": 79.0,
+      "end": 100.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Rewrite, then multi-query",
+        "body": "Last 6 messages + new question → rewrite → standalone + 2–3 variants → search each → RRF → top chunks"
+      },
+      "voiceover": "This gives us two techniques. Standalone rewriting resolves words like that, it, and and for, using only the last few turns. Multi-query retrieval searches with every phrasing, then fuses the lists with rank fusion from the last lesson. Different words reach different chunks. This improves recall when users write vaguely."
+    },
+    {
+      "scene": 6,
+      "start": 100.9,
+      "end": 121.5,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "receptionist writing phone message at desk",
+      "on_screen_text": "The note must stand alone",
+      "voiceover": "Think of a good receptionist taking a phone message. The caller says: tell her it's about the same thing as yesterday. The receptionist writes a note that names the person, the invoice and the order. The reader was not on the call, so the note must stand alone."
+    },
+    {
+      "scene": 7,
+      "start": 121.5,
+      "end": 138.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open the chat notebook with the pipeline from earlier lessons.",
+        "Ask 'What is the travel allowance for Astana?' and show the answer with a citation to the travel policy chunk."
+      ],
+      "on_screen_text": "Aigerim · HR assistant · Almaty",
+      "voiceover": "Let's follow Aigerim. She builds an HR policy assistant for a logistics company in Almaty, Kazakhstan. Policies are in Russian and English. First question: what is the travel allowance for Astana? Retrieval works, and the answer cites the travel policy."
+    },
+    {
+      "scene": 8,
+      "start": 138.6,
+      "end": 159.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Ask 'And for drivers?' with no rewriting.",
+        "Print the top 5 retrieved chunks and highlight the vehicle maintenance titles."
+      ],
+      "voiceover": "Second question: and for drivers? Without rewriting, the top chunks are about vehicle maintenance for drivers. The answer is wrong, and it is easy to see why when we print the retrieved chunks. The search engine saw only the word drivers, so it found drivers, but the wrong topic."
+    },
+    {
+      "scene": 9,
+      "start": 159.6,
+      "end": 180.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Show the rewrite function: history[-6:], output_config with REWRITE_SCHEMA, json.loads of the text block.",
+        "Run rewrite(history, 'And for drivers?') and show the JSON from the real run."
+      ],
+      "on_screen_text": "Search with a complete query",
+      "voiceover": "Now she adds the rewrite function. It sends the last six messages and the new question, with the schema, and reads back the JSON. You'll see something like a standalone query about the travel allowance for drivers going to Astana, plus a short variant about a driver's daily allowance."
+    },
+    {
+      "scene": 10,
+      "start": 180.6,
+      "end": 200.7,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Retrieve with the standalone query and each variant, then fuse the lists with rrf.",
+        "Show the drivers' section of the travel policy as the top chunk.",
+        "Show the debug panel line 'Searched for: …' under the answer."
+      ],
+      "voiceover": "She searches with all three queries, fuses them, and the drivers' section of the travel policy is now the top chunk. She also shows the rewritten query in a debug panel, so testers can see exactly what was searched. That makes problems much easier to find later."
+    },
+    {
+      "scene": 11,
+      "start": 200.7,
+      "end": 218.3,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run rewrite on a complete first question and compare it with the original.",
+        "Show the answer call using the original question, not the rewritten one."
+      ],
+      "on_screen_text": "Rewrite for search. Answer the user.",
+      "voiceover": "Two rules keep this safe. First, a complete question should come back almost unchanged, so she tests one, and gets only small word changes. Second, the rewrite is for search only. The final answer step still receives the user's original words."
+    },
+    {
+      "scene": 12,
+      "start": 218.3,
+      "end": 242.3,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "One focused query, not the whole chat",
+      "voiceover": "A common mistake is to send the whole chat history to the embedding model as the query. Long histories mix topics, so retrieval becomes vague. Rewrite into one focused query instead. And remember, rewriting adds one model call per turn, so you can skip it for the first message, and use a smaller model for it."
+    },
+    {
+      "scene": 13,
+      "start": 242.3,
+      "end": 267.6,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Rewrite follow-ups into standalone queries. 2. Structured output → query + variants → multi-query. 3. Rewrite for search; answer the original question."
+      },
+      "voiceover": "Let's recap. First, follow-up questions depend on earlier turns, so rewrite them into standalone queries before retrieval. Second, a structured output gives your code a reliable standalone query, plus extra phrasings for multi-query retrieval. Third, use the rewrite only for search, keep the user's original question for the answer, and test that complete questions stay the same."
+    },
+    {
+      "scene": 14,
+      "start": 267.6,
+      "end": 295.9,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Grounded Answers with Citations",
+      "voiceover": "Now it is your turn. In the exercise below, write five short conversations with follow-up questions, add rewriting, and compare retrieval with and without it. For each follow-up, mark whether the expected chunk is in the top five. Note any rewrite that changed the meaning. That completes week two. In the next lesson, Grounded Answers with Citations, we make every answer show its sources."
+    }
+  ]
+}
