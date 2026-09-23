@@ -1,0 +1,253 @@
+{
+  "course_id": "AI-02",
+  "slug": "ai-02-generative-ai-explained-llms-diffusion-and-multimodal-models",
+  "course_title": "Generative AI Explained: LLMs, Diffusion and Multimodal Models",
+  "level": "Beginner",
+  "status": "AWAITING_APPROVAL",
+  "screen_demo_lessons": [],
+  "overview": "A three-week course for people who already use AI tools and now want to understand how they work. Learners see how large language models write text one token at a time, how diffusion models turn random noise into images, and how multimodal models combine text, images and audio. Each idea is explained with everyday analogies and tried out in free tools, without maths or code. By the end, learners can choose the right type of model for a task and they produce a fair, documented comparison of three generative AI tools on a real task from their own work or studies.",
+  "time_plan": {
+    "video_minutes": 60,
+    "weekly_hours": 2,
+    "per_week": "About 20 minutes of video, 60 minutes of hands-on exercises and quizzes, and 40 minutes of reading and reflection. In week 3 most of the exercise and reflection time goes to the capstone comparison report."
+  },
+  "objectives": [
+    {
+      "id": "O1",
+      "bloom": "Remember",
+      "text": "Name the main families of generative AI models (large language models, diffusion models and multimodal models) and the type of output each one produces."
+    },
+    {
+      "id": "O2",
+      "bloom": "Understand",
+      "text": "Explain how a large language model generates text, using the terms token, next-token prediction, pre-training, fine-tuning and context window."
+    },
+    {
+      "id": "O3",
+      "bloom": "Understand",
+      "text": "Explain how a diffusion model creates an image by starting from random noise and removing it step by step, guided by a text prompt."
+    },
+    {
+      "id": "O4",
+      "bloom": "Apply",
+      "text": "Use free text, image and multimodal tools to complete a task, adjusting the prompt, the context and the available settings."
+    },
+    {
+      "id": "O5",
+      "bloom": "Analyse",
+      "text": "Analyse the typical strengths and failure modes of each model type, such as hallucinations, knowledge cut-offs, visual errors and misread inputs."
+    },
+    {
+      "id": "O6",
+      "bloom": "Evaluate",
+      "text": "Choose the most suitable model type and tool for a given task, and justify the choice with criteria such as quality, cost, privacy and risk."
+    },
+    {
+      "id": "O7",
+      "bloom": "Create",
+      "text": "Produce a comparison report that tests three generative AI tools on the same real-world task and makes a justified recommendation."
+    }
+  ],
+  "modules": [
+    {
+      "module_id": "M1",
+      "week": 1,
+      "title": "How Language Models Write",
+      "lessons": [
+        {
+          "lesson_id": "L01",
+          "title": "From Predicting to Generating",
+          "objectives": [
+            "O1"
+          ],
+          "summary": "A short recap of AI Fundamentals: most models predict a label or a number, while generative models produce new text, images, audio or video. The lesson introduces a simple map of the three families this course covers: language models, diffusion models and multimodal models.",
+          "exercise": "Sort 10 example outputs (a product description, a logo idea, a voice message, a chart summary and others) by the model family that most likely produced them, then check the answer key."
+        },
+        {
+          "lesson_id": "L02",
+          "title": "Tokens and Next-Token Prediction",
+          "objectives": [
+            "O2"
+          ],
+          "summary": "A language model splits text into small pieces called tokens and repeatedly predicts which token is most likely to come next. Analogy: the word suggestions on a phone keyboard, but trained on far more text and able to consider the whole conversation. The lesson also shows how a 'temperature' setting makes answers more predictable or more varied.",
+          "exercise": "In Google AI Studio, run the same prompt three times at a low temperature and three times at a high temperature, and describe the difference in two sentences. [VERSION] Check that the temperature setting is still visible in the free interface."
+        },
+        {
+          "lesson_id": "L03",
+          "title": "How a Language Model Is Trained",
+          "objectives": [
+            "O2"
+          ],
+          "summary": "Training happens in stages: pre-training on a very large collection of text, then fine-tuning on examples of helpful answers, then further adjustment based on human ratings of answers. Analogy: a trainee chef who first reads thousands of recipes, then practises under a head chef, then improves from customer feedback. [VERIFY] The three-stage description is a simplification; providers use different methods.",
+          "exercise": "Ask Claude or ChatGPT (free tier) what it cannot know or do because of how it was trained, then link each point in its answer to one of the three training stages."
+        },
+        {
+          "lesson_id": "L04",
+          "title": "Context Windows, Knowledge Cut-offs and Hallucinations",
+          "objectives": [
+            "O2",
+            "O5"
+          ],
+          "summary": "The context window is the amount of text a model can consider at one time, like the space on a desk: when the desk is full, older papers fall off. A knowledge cut-off means the model has not learned about recent events unless a tool gives it search results. Because the model predicts likely text rather than looking up facts, it can produce confident but wrong answers, called hallucinations.",
+          "exercise": "Give a free chatbot a two-page hypothetical company policy, ask five questions about it (including one that the policy does not answer), and record which answers were correct, invented or honestly uncertain."
+        }
+      ]
+    },
+    {
+      "module_id": "M2",
+      "week": 2,
+      "title": "Images, Audio and Multimodal Models",
+      "lessons": [
+        {
+          "lesson_id": "L05",
+          "title": "How Diffusion Models Create Images",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "During training, a diffusion model learns to remove noise from millions of images that were gradually covered with noise. To generate, it starts from pure noise and removes it step by step, with the text prompt steering each step. Analogy: a photo slowly coming into focus in a darkroom, where the prompt decides what the photo shows. [VERIFY] Not every image generator uses diffusion; some use other methods.",
+          "exercise": "Using a free image generator, create the same prompt four times and describe what stays the same and what changes between the four images. [VERSION] Free generators and their daily limits change often."
+        },
+        {
+          "lesson_id": "L06",
+          "title": "Guiding Image Generators",
+          "objectives": [
+            "O3",
+            "O4"
+          ],
+          "summary": "The lesson shows how to describe subject, setting, style, composition, lighting and aspect ratio, and why a clear description gives the model better guidance. Worked example: Wanjiru, who runs a small bakery in Nairobi, refines a vague request into a prompt for a poster image of fresh bread on a market stall.",
+          "exercise": "Write a first, second and third version of an image prompt for a hypothetical business of your choice, generate each one with a free image generator, and note what each change improved."
+        },
+        {
+          "lesson_id": "L07",
+          "title": "Multimodal Models: Text, Images and Audio Together",
+          "objectives": [
+            "O1",
+            "O4"
+          ],
+          "summary": "Multimodal models can take in and produce more than one type of data, for example reading a photo and answering in text, or turning speech into text. Worked example: Diego, a shop owner in Lima, photographs a handwritten price list and asks for a clean table he can paste into a spreadsheet.",
+          "exercise": "Upload a photo of a receipt, a timetable or a chart to Google AI Studio, Claude or ChatGPT, ask for the content as a table, then check every value against the original. [VERSION] File upload options differ between free plans."
+        },
+        {
+          "lesson_id": "L08",
+          "title": "Where Each Model Type Fails",
+          "objectives": [
+            "O5"
+          ],
+          "summary": "Each model family has typical weaknesses: language models invent facts and sources, image models can struggle with hands, text inside images and exact counts, and multimodal models can misread small or unclear details. All of them can repeat bias from their training data. The lesson also explains why realistic generated audio and video increase the risk of deception, using hypothetical cases.",
+          "exercise": "Collect one failure example from a text tool, one from an image tool and one from a multimodal tool, and for each write one sentence about the likely cause."
+        }
+      ]
+    },
+    {
+      "module_id": "M3",
+      "week": 3,
+      "title": "Choosing and Comparing Tools",
+      "lessons": [
+        {
+          "lesson_id": "L09",
+          "title": "Matching the Task to the Model",
+          "objectives": [
+            "O6"
+          ],
+          "summary": "A simple decision guide: What type of output do you need? How accurate must it be? Is the input private or confidential? What will it cost, and who checks the result? Worked examples include a translator in Cairo, a teacher in Manila and a marketing team in São Paulo, each choosing a different model type for their task.",
+          "exercise": "Complete a decision table for six workplace tasks: choose the model type, name one suitable free tool and write one risk to watch."
+        },
+        {
+          "lesson_id": "L10",
+          "title": "Designing a Fair Comparison",
+          "objectives": [
+            "O6",
+            "O7"
+          ],
+          "summary": "A fair test gives every tool the same task, the same input and the same prompt, and judges the results with criteria decided in advance. The lesson shows how to build a simple scoring rubric (for example accuracy, usefulness, clarity, speed and effort to fix) and why you must record the tool version and the date of each test.",
+          "exercise": "Capstone step 1: choose one real task from your work or studies, write the exact prompt and input you will use, and create a scoring rubric with 4–6 criteria."
+        },
+        {
+          "lesson_id": "L11",
+          "title": "Running the Comparison",
+          "objectives": [
+            "O4",
+            "O7"
+          ],
+          "summary": "A walkthrough of running the same task in three tools, for example Claude or ChatGPT, Google AI Studio and a free image generator where the task needs images. Learners save every output, note any settings they changed and score each result against their rubric straight away, before comparing.",
+          "exercise": "Capstone step 2: run your task in three generative AI tools, save the outputs with the date and tool version, and score each one with your rubric."
+        },
+        {
+          "lesson_id": "L12",
+          "title": "Writing the Comparison Report",
+          "objectives": [
+            "O5",
+            "O6",
+            "O7"
+          ],
+          "summary": "A short report structure: the task, the method, a results table, observed strengths and failures, a recommendation, and the limits of the test. The lesson explains how to link each failure to what you learned about how the model works, and then presents the capstone brief and rubric.",
+          "exercise": "Capstone step 3: write a 2–3 page comparison report with a results table and a justified recommendation for which tool to use for this task."
+        }
+      ]
+    }
+  ],
+  "capstone": {
+    "title": "Three-Tool Comparison Report",
+    "brief": "Produce a comparison report testing three generative AI tools on the same real-world task, explaining the results with what you learned about how each type of model works.",
+    "built_in": [
+      "L10",
+      "L11",
+      "L12"
+    ],
+    "assesses": [
+      "O4",
+      "O5",
+      "O6",
+      "O7"
+    ]
+  },
+  "coverage_check": {
+    "O1": [
+      "L01",
+      "L07"
+    ],
+    "O2": [
+      "L02",
+      "L03",
+      "L04"
+    ],
+    "O3": [
+      "L05",
+      "L06"
+    ],
+    "O4": [
+      "L06",
+      "L07",
+      "L11"
+    ],
+    "O5": [
+      "L04",
+      "L08",
+      "L12"
+    ],
+    "O6": [
+      "L09",
+      "L10",
+      "L12"
+    ],
+    "O7": [
+      "L10",
+      "L11",
+      "L12"
+    ]
+  },
+  "flags": [
+    "PROPOSED: screen demo for L02 (shows the temperature setting in Google AI Studio and runs the same prompt several times). Needs approval.",
+    "PROPOSED: screen demo for L06 (live refinement of an image prompt in a free image generator). Needs approval.",
+    "PROPOSED: screen demo for L07 (uploading a photo to a multimodal tool and checking the extracted table). Needs approval.",
+    "PROPOSED: screen demo for L11 (running one task across three tools and recording the outputs). Needs approval.",
+    "L02 [VERSION]: check that Google AI Studio still shows a temperature control in the free interface, and its current name and range.",
+    "L03 [VERIFY]: the three-stage training description (pre-training, fine-tuning, human feedback) is simplified; confirm the wording is accurate enough and not tied to one provider.",
+    "L05 [VERIFY]: confirm the wording that not all image generators use diffusion, and that the darkroom analogy is not misleading.",
+    "L05, L06, L11 [VERSION]: 'free image generators' is not named in the brief; a reviewer should choose specific free tools and check their current free limits and licence terms for generated images.",
+    "L07 [VERSION]: file and image upload availability on free plans of Google AI Studio, Claude and ChatGPT must be checked before scripting.",
+    "L04: no context window sizes or cut-off dates are given on purpose, because they change with each model version.",
+    "L08 uses hypothetical deception and bias cases on purpose, to avoid unverified claims about real companies or people.",
+    "L01 gives only a short recap of AI Fundamentals content (prerequisite) and does not reteach how models learn."
+  ]
+}

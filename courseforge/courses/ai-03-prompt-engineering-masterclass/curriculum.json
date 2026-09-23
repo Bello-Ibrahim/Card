@@ -1,0 +1,272 @@
+{
+  "course_id": "AI-03",
+  "slug": "ai-03-prompt-engineering-masterclass",
+  "course_title": "Prompt Engineering Masterclass",
+  "level": "Beginner",
+  "status": "AWAITING_APPROVAL",
+  "screen_demo_lessons": [],
+  "overview": "A three-week practical course for working professionals with no technical background. Learners discover why AI chat tools respond the way they do, and learn a clear structure for prompts: role, task, context, format, constraints and examples. They apply it to everyday work such as emails, reports, summaries, analysis and planning, and learn to diagnose and fix weak outputs. The course also covers checking outputs for accuracy, bias and confidentiality. By the end, each learner has built, tested and documented a personal library of 15 reusable prompts for their own job role.",
+  "time_plan": {
+    "video_minutes": 75,
+    "weekly_hours": 2,
+    "per_week": "About 25 minutes of video, 55 minutes of hands-on prompt practice and quizzes, and 40 minutes of reading and reflection. In week 3 most of the practice and reflection time goes to building the prompt library."
+  },
+  "objectives": [
+    {
+      "id": "O1",
+      "bloom": "Remember",
+      "text": "Recall the six parts of a structured prompt: role, task, context, format, constraints and examples."
+    },
+    {
+      "id": "O2",
+      "bloom": "Understand",
+      "text": "Explain why AI chat tools can give different or generic answers to the same request, and how clear context and instructions make outputs more reliable."
+    },
+    {
+      "id": "O3",
+      "bloom": "Apply",
+      "text": "Write structured prompts that produce professional-quality outputs for common work tasks such as emails, summaries, reports, analysis and planning."
+    },
+    {
+      "id": "O4",
+      "bloom": "Analyse",
+      "text": "Diagnose why an output is weak and improve the prompt through iteration, examples and step-by-step instructions."
+    },
+    {
+      "id": "O5",
+      "bloom": "Evaluate",
+      "text": "Test prompts across tools and judge outputs for accuracy, tone, bias and confidentiality before using them at work."
+    },
+    {
+      "id": "O6",
+      "bloom": "Create",
+      "text": "Build a documented library of 15 tested, reusable prompts for your own job role."
+    }
+  ],
+  "modules": [
+    {
+      "module_id": "M1",
+      "week": 1,
+      "title": "Prompt Foundations",
+      "lessons": [
+        {
+          "lesson_id": "L01",
+          "title": "How AI Chat Tools Respond to You",
+          "objectives": [
+            "O2"
+          ],
+          "summary": "AI chat tools predict a likely answer based on your words and their training, so a vague request produces a generic answer. Analogy: briefing a capable new colleague on their first day, who knows a lot in general but nothing about your team, your client or your goal.",
+          "exercise": "Ask Claude (free tier) to 'write an email to a client', then ask again with who the client is, what happened and what you want. Compare the two answers in three bullet points."
+        },
+        {
+          "lesson_id": "L02",
+          "title": "The Anatomy of a Strong Prompt",
+          "objectives": [
+            "O1"
+          ],
+          "summary": "The six parts of a structured prompt: role, task, context, format, constraints and examples, and when each part is worth including. Worked example: Amara, an HR officer in Lagos, turns 'write a job advert' into a structured prompt for a hypothetical logistics coordinator role.",
+          "exercise": "Rewrite three weak prompts using the six parts, run one of them in Claude or ChatGPT (free tier), and label each part in your final version."
+        },
+        {
+          "lesson_id": "L03",
+          "title": "Giving Context That Matters",
+          "objectives": [
+            "O1",
+            "O2"
+          ],
+          "summary": "Useful context answers four questions: who the audience is, what the purpose is, what background the AI needs, and what material you already have. The lesson also shows what not to share: confidential client data, personal data and internal secrets, and how to replace them with placeholders.",
+          "exercise": "Take a real work task, write the context in four short lines, and replace any names or confidential details with neutral placeholders such as [CLIENT] or [PRODUCT]."
+        },
+        {
+          "lesson_id": "L04",
+          "title": "Controlling Format, Length and Tone",
+          "objectives": [
+            "O1",
+            "O3"
+          ],
+          "summary": "You can ask for a specific format (table, bullet list, email, slide outline), a length limit, a reading level and a tone. Worked example: Kenji, a project manager in Osaka, turns the same project update into a one-line message for his director, a table for his team and a short email for a supplier.",
+          "exercise": "Ask for the same content in three formats with a length limit for each, in Claude, ChatGPT or Gemini, and note which instruction the tool followed least well."
+        },
+        {
+          "lesson_id": "L05",
+          "title": "Showing Examples: Few-Shot Prompting",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "Giving two or three examples of the output you want is often clearer than describing it. Analogy: showing a tailor a shirt you already like instead of explaining the fit in words. Worked example: sorting customer comments for a hotel in Marrakesh into 'praise', 'complaint' or 'question'.",
+          "exercise": "Write a prompt with three labelled example comments, then use it to sort ten new hypothetical customer comments, and check every label yourself."
+        }
+      ]
+    },
+    {
+      "module_id": "M2",
+      "week": 2,
+      "title": "Prompts for Everyday Work",
+      "lessons": [
+        {
+          "lesson_id": "L06",
+          "title": "Writing and Rewriting: Emails, Reports and Messages",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "Prompts for drafting, shortening, changing tone and adapting a message for a different reader or culture. Worked example: Sofia, a sales manager in Madrid, adapts a formal proposal summary for a partner company in Singapore, and checks that the meaning did not change.",
+          "exercise": "Draft one real (non-confidential) work message with AI, then ask for a shorter and a more formal version, and choose the best one with a one-line reason."
+        },
+        {
+          "lesson_id": "L07",
+          "title": "Summarising and Extracting Information",
+          "objectives": [
+            "O3",
+            "O5"
+          ],
+          "summary": "How to ask for summaries with a clear purpose and length, and how to extract decisions, dates and action items into a table. The lesson explains why you must always check a summary against the source, because AI tools can leave out or invent details.",
+          "exercise": "Summarise a set of hypothetical meeting notes into a table of decisions, owners and deadlines, then mark every item against the original notes as correct, missing or invented."
+        },
+        {
+          "lesson_id": "L08",
+          "title": "Thinking Tasks: Analysis, Planning and Decisions",
+          "objectives": [
+            "O3",
+            "O4"
+          ],
+          "summary": "For analysis and planning, ask the AI to work step by step, to list its assumptions, to compare options against named criteria, or to ask you questions before it answers. Worked example: Ravi, who runs a small café in Chennai, compares three hypothetical delivery partners.",
+          "exercise": "Use a step-by-step prompt to compare two or three options for a real decision at work, then ask the AI to list the weakest assumption in its own analysis."
+        },
+        {
+          "lesson_id": "L09",
+          "title": "Roles and Multi-Turn Conversations",
+          "objectives": [
+            "O3",
+            "O4"
+          ],
+          "summary": "A role gives the AI a point of view, for example 'act as a strict editor' or 'act as a first-time customer'. Longer conversations let you build a result in steps, and saved instructions let you avoid repeating the same context. [VERSION] Features such as custom instructions and projects have different names and limits in each tool.",
+          "exercise": "Ask the AI to interview you with five questions about a task before it writes anything, then compare the result with a single-message prompt."
+        },
+        {
+          "lesson_id": "L10",
+          "title": "Fixing Weak Outputs",
+          "objectives": [
+            "O4"
+          ],
+          "summary": "A four-point diagnosis for weak outputs: Was the task unclear? Was context missing? Was the format specified? Did instructions conflict? The lesson shows how to fix each cause with a small, targeted change instead of starting again.",
+          "exercise": "Diagnose three weak AI outputs (provided), name the cause of each, and write an improved prompt that fixes it."
+        }
+      ]
+    },
+    {
+      "module_id": "M3",
+      "week": 3,
+      "title": "Reliable Prompts and Your Prompt Library",
+      "lessons": [
+        {
+          "lesson_id": "L11",
+          "title": "Checking Outputs: Accuracy, Bias and Confidentiality",
+          "objectives": [
+            "O5"
+          ],
+          "summary": "A practical checklist before using any AI output at work: check facts and figures, check sources, look for one-sided or biased wording, and confirm that no confidential data was shared. [REGION] Rules on personal data and workplace AI use differ between countries and employers, so learners are told to check their own organisation's policy.",
+          "exercise": "Check a provided AI-written briefing with the checklist, mark every issue you find, and rewrite the prompt so the next output is easier to verify."
+        },
+        {
+          "lesson_id": "L12",
+          "title": "Testing a Prompt Across Tools",
+          "objectives": [
+            "O5"
+          ],
+          "summary": "The same prompt can give different results in Claude, ChatGPT and Gemini. The lesson shows how to run a short test: same prompt, same input, a simple score for accuracy, format and tone, and a note of the date and tool used.",
+          "exercise": "Run one of your prompts in Claude, ChatGPT and Gemini (free tiers), score each output from 1 to 5 on three criteria, and record which tool you would use for this task."
+        },
+        {
+          "lesson_id": "L13",
+          "title": "Turning Prompts into Reusable Templates",
+          "objectives": [
+            "O4",
+            "O6"
+          ],
+          "summary": "A good prompt becomes a template when the parts that change are replaced with clear placeholders, such as [AUDIENCE] or [DOCUMENT]. The lesson then introduces the capstone: a library of 15 prompts for your own role, and how to choose tasks that save the most time.",
+          "exercise": "Capstone step 1: list 15 recurring tasks from your job, choose the prompt pattern for each, and turn your first three prompts into templates with placeholders."
+        },
+        {
+          "lesson_id": "L14",
+          "title": "Building and Testing Your Library",
+          "objectives": [
+            "O5",
+            "O6"
+          ],
+          "summary": "Each prompt in the library is tested at least twice with different inputs, and every output is checked with the accuracy checklist. Worked example: Leila, a school administrator in Amman, tests a parent-letter template with two different hypothetical situations.",
+          "exercise": "Capstone step 2: write all 15 prompts, test each one at least twice, and record the result and any change you made."
+        },
+        {
+          "lesson_id": "L15",
+          "title": "Documenting and Sharing Your Library",
+          "objectives": [
+            "O6"
+          ],
+          "summary": "A simple format for each library entry: name, purpose, template, example input, example output, test notes, the tool and the date of the last test. The lesson ends with how to keep the library up to date as tools change, and presents the capstone rubric.",
+          "exercise": "Capstone step 3: document all 15 prompts in the library format in a shared document or spreadsheet, and write a short introduction for a colleague who will use it."
+        }
+      ]
+    }
+  ],
+  "capstone": {
+    "title": "Personal Prompt Library",
+    "brief": "Build a documented library of 15 tested prompts for your own job role, with templates, example outputs and test notes.",
+    "built_in": [
+      "L13",
+      "L14",
+      "L15"
+    ],
+    "assesses": [
+      "O3",
+      "O4",
+      "O5",
+      "O6"
+    ]
+  },
+  "coverage_check": {
+    "O1": [
+      "L02",
+      "L03",
+      "L04"
+    ],
+    "O2": [
+      "L01",
+      "L03"
+    ],
+    "O3": [
+      "L04",
+      "L05",
+      "L06",
+      "L07",
+      "L08",
+      "L09"
+    ],
+    "O4": [
+      "L08",
+      "L09",
+      "L10",
+      "L13"
+    ],
+    "O5": [
+      "L07",
+      "L11",
+      "L12",
+      "L14"
+    ],
+    "O6": [
+      "L13",
+      "L14",
+      "L15"
+    ]
+  },
+  "flags": [
+    "PROPOSED: screen demo for L09 (shows where saved or custom instructions are set in the free tools, which is hard to explain in words). Needs approval.",
+    "PROPOSED: screen demo for L12 (running the same prompt side by side in Claude, ChatGPT and Gemini). Needs approval.",
+    "L09 [VERSION]: names, availability and limits of custom instructions, projects and similar features on free plans of Claude, ChatGPT and Gemini must be checked before scripting.",
+    "L12, L14 [VERSION]: free-tier usage limits of Claude, ChatGPT and Gemini may restrict how many tests learners can run in one day.",
+    "L11 [REGION]: data protection and workplace AI rules differ by country; the lesson points learners to their own organisation's policy instead of naming laws.",
+    "L08 [VERIFY]: the claim that asking for step-by-step reasoning improves results varies between models; the script should present it as 'often helps', not as a guarantee.",
+    "Judgement call: the prerequisite is only basic computer literacy, so L01 briefly explains what an AI chat tool does before any prompting technique.",
+    "Judgement call: all worked examples use hypothetical people and businesses to avoid unverified claims."
+  ]
+}

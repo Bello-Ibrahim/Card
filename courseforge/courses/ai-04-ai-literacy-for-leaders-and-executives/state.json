@@ -1,0 +1,15 @@
+{
+  "course_id": "AI-04",
+  "stage": 1,
+  "stage_status": "AWAITING_APPROVAL",
+  "checkpoint": "curriculum.json sent for human approval",
+  "modules": {},
+  "lessons": {},
+  "spend_usd": 0.0,
+  "spend_note": "Stage 1 was written in an interactive Claude Code session, not through the Batch API, so no API spend was recorded.",
+  "packs_sent": [],
+  "blockers": [
+    "presenter.avatar_id and presenter.voice_id are empty: needed before the Stage 4 HeyGen Batch Pack"
+  ],
+  "updated_at": "2026-09-23"
+}

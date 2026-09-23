@@ -1,0 +1,205 @@
+{
+  "course_id": "AI-04",
+  "slug": "ai-04-ai-literacy-for-leaders-and-executives",
+  "course_title": "AI Literacy for Leaders and Executives",
+  "level": "Beginner",
+  "status": "AWAITING_APPROVAL",
+  "screen_demo_lessons": [],
+  "overview": "A two-week course for managers, founders, directors and other senior decision-makers. Leaders learn the AI concepts they need to make good decisions, where AI creates real value in an organisation, and what it costs in data, people and process. They practise finding and prioritising use cases, managing risks such as accuracy, bias, privacy and security, and asking vendors the right questions. The course uses hypothetical organisations from many regions and industries. By the end, each leader writes a practical 90-day AI adoption roadmap for their own team or organisation.",
+  "time_plan": {
+    "video_minutes": 50,
+    "weekly_hours": 2,
+    "per_week": "About 25 minutes of video, 55 minutes of exercises and quizzes, and 40 minutes of reading and reflection. In week 2 most of the exercise and reflection time goes to the 90-day roadmap."
+  },
+  "objectives": [
+    {
+      "id": "O1",
+      "bloom": "Remember",
+      "text": "Describe the core AI concepts leaders need, including machine learning, generative AI, models, training data and automation, and how they differ."
+    },
+    {
+      "id": "O2",
+      "bloom": "Understand",
+      "text": "Explain how AI creates value in an organisation and what it requires in data, skills, processes, change management and cost."
+    },
+    {
+      "id": "O3",
+      "bloom": "Apply",
+      "text": "Use a value-and-feasibility scoring method to identify and prioritise AI use cases for a team or organisation."
+    },
+    {
+      "id": "O4",
+      "bloom": "Analyse",
+      "text": "Analyse the main AI risks for an organisation (accuracy, bias, privacy, security, legal and reputational) and match each risk with a control."
+    },
+    {
+      "id": "O5",
+      "bloom": "Evaluate",
+      "text": "Evaluate AI vendors and products with structured due-diligence questions and a measurable pilot plan."
+    },
+    {
+      "id": "O6",
+      "bloom": "Create",
+      "text": "Write a 90-day AI adoption roadmap for your own team or organisation."
+    }
+  ],
+  "modules": [
+    {
+      "module_id": "M1",
+      "week": 1,
+      "title": "Finding AI Opportunities",
+      "lessons": [
+        {
+          "lesson_id": "L01",
+          "title": "AI for Leaders: What You Need to Know",
+          "objectives": [
+            "O1"
+          ],
+          "summary": "A short, non-technical overview of machine learning, generative AI, models, training data and automation, and why the difference matters for decisions. Analogy: a leader does not need to repair an engine, but needs to know what fuel it uses, what it can carry and when it can break down.",
+          "exercise": "Ask Claude or ChatGPT to explain five AI terms using examples from your own industry, then correct or simplify any explanation you would not use with your board."
+        },
+        {
+          "lesson_id": "L02",
+          "title": "Where AI Creates Value",
+          "objectives": [
+            "O2"
+          ],
+          "summary": "AI usually creates value in three ways: automating routine tasks, supporting people's decisions and enabling new products or services. Worked examples use hypothetical organisations: a logistics firm in Poland, a hospital administration team in Kenya and a retail bank in Brazil.",
+          "exercise": "List ten tasks your team does every week and label each one 'automate', 'support' or 'not suitable for AI', with a one-line reason."
+        },
+        {
+          "lesson_id": "L03",
+          "title": "The Real Costs: Data, People and Process",
+          "objectives": [
+            "O2"
+          ],
+          "summary": "The licence or subscription is often only a small part of the total cost. Analogy: buying a gym membership does not make you fit; results come from routine, coaching and time. The lesson covers data preparation, training staff, changing workflows, checking outputs and ongoing monitoring.",
+          "exercise": "For one AI idea in your organisation, list the hidden costs under four headings: data, people, process and oversight, and estimate which is the largest."
+        },
+        {
+          "lesson_id": "L04",
+          "title": "Finding and Prioritising Use Cases",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "A simple two-by-two matrix scores each use case on business value and feasibility (data available, risk, effort, skills). Worked example: Mei Ling, operations director of a hypothetical hotel group in Malaysia, scores six ideas and chooses two quick wins and one longer-term project.",
+          "exercise": "Score at least five AI use cases for your organisation on value and feasibility using a free AI readiness or prioritisation template, and choose your top two."
+        },
+        {
+          "lesson_id": "L05",
+          "title": "Assessing Your AI Readiness",
+          "objectives": [
+            "O2",
+            "O3"
+          ],
+          "summary": "Readiness has five parts: data, skills, culture, leadership support and governance. The lesson shows how to rate each part honestly and how weak areas change which use cases you should start with.",
+          "exercise": "Complete a free AI readiness template for your team, rate each of the five areas from 1 to 5, and write one action for the lowest-rated area. [VERIFY] Reviewer to choose a specific free template and check its licence."
+        }
+      ]
+    },
+    {
+      "module_id": "M2",
+      "week": 2,
+      "title": "Managing Risk and Leading Adoption",
+      "lessons": [
+        {
+          "lesson_id": "L06",
+          "title": "AI Risks Every Leader Must Manage",
+          "objectives": [
+            "O4"
+          ],
+          "summary": "The main risk categories: wrong or invented outputs, bias and unfair treatment, privacy and data leaks, security, legal and contractual exposure, and damage to reputation. Each is illustrated with a hypothetical case, for example a recruitment screening tool at a hypothetical company in Canada, and matched with a practical control.",
+          "exercise": "Build a risk register for one AI use case: list at least five risks, rate likelihood and impact, and name one control and one owner for each."
+        },
+        {
+          "lesson_id": "L07",
+          "title": "Governance, Policy and Regulation",
+          "objectives": [
+            "O4"
+          ],
+          "summary": "Good governance means clear rules for staff use of AI tools, human oversight for important decisions and a named owner for each AI system. [REGION] AI and data protection laws differ between countries and are changing, so leaders learn which questions to ask their legal team rather than a list of laws.",
+          "exercise": "Use Claude or ChatGPT to help draft a one-page acceptable-use policy for AI tools in your team, then edit it so every rule fits your organisation."
+        },
+        {
+          "lesson_id": "L08",
+          "title": "Asking Vendors the Right Questions",
+          "objectives": [
+            "O5"
+          ],
+          "summary": "A due-diligence checklist for AI vendors: How is our data stored and used, and is it used to train their models? What evidence of accuracy can they show on data like ours? What security and compliance standards do they meet? How does pricing grow with use, and how can we leave? [VERSION] Vendor pricing models and data terms change often.",
+          "exercise": "Ask Claude or ChatGPT to play a vendor pitching an AI product to you, question it with the checklist, and note which answers you would need in writing."
+        },
+        {
+          "lesson_id": "L09",
+          "title": "Running a Pilot and Measuring Results",
+          "objectives": [
+            "O5",
+            "O6"
+          ],
+          "summary": "A good pilot is small, time-limited and measured against a baseline taken before the pilot starts. Worked example: Carlos, head of customer service at a hypothetical insurer in Mexico, defines success measures, a go or no-go decision date and a plan for staff feedback. The capstone brief is introduced.",
+          "exercise": "Capstone step 1: choose one or two priority use cases and write a pilot plan with a baseline, three success measures, a duration and a decision date."
+        },
+        {
+          "lesson_id": "L10",
+          "title": "Your 90-Day AI Adoption Roadmap",
+          "objectives": [
+            "O4",
+            "O6"
+          ],
+          "summary": "A roadmap in three 30-day phases: prepare (people, policy, data), pilot (run and measure), and decide and scale (review, communicate, plan next steps). The lesson covers how to bring staff with you, how to communicate the plan, and presents the capstone rubric.",
+          "exercise": "Capstone step 2: write your 90-day AI adoption roadmap, including goals, use cases, risks and controls, owners, measures and a communication plan."
+        }
+      ]
+    }
+  ],
+  "capstone": {
+    "title": "90-Day AI Adoption Roadmap",
+    "brief": "Write a 90-day AI adoption roadmap for your own team or organisation, based on prioritised use cases, a risk register and a pilot plan.",
+    "built_in": [
+      "L09",
+      "L10"
+    ],
+    "assesses": [
+      "O3",
+      "O4",
+      "O5",
+      "O6"
+    ]
+  },
+  "coverage_check": {
+    "O1": [
+      "L01"
+    ],
+    "O2": [
+      "L02",
+      "L03",
+      "L05"
+    ],
+    "O3": [
+      "L04",
+      "L05"
+    ],
+    "O4": [
+      "L06",
+      "L07",
+      "L10"
+    ],
+    "O5": [
+      "L08",
+      "L09"
+    ],
+    "O6": [
+      "L09",
+      "L10"
+    ]
+  },
+  "flags": [
+    "No screen demos are proposed: every lesson is conceptual or template-based, and exercises use general chat tools that do not need a walkthrough.",
+    "L04, L05 [VERIFY]: 'Free AI readiness templates' in the brief are not named; a reviewer must choose specific templates and confirm their licence allows use in a paid course. CertifAI could also provide its own template.",
+    "L06, L07 [REGION]: AI regulation and data protection rules differ by country and change often; the lessons avoid naming specific laws. A reviewer may add sourced regional notes after [VERIFY].",
+    "L08 [VERSION]: vendor pricing models and data-use terms, including whether customer data is used for training, change often and differ between free and business plans.",
+    "L01, L07, L08 [VERSION]: remind learners that free plans of Claude and ChatGPT may have different data terms from business plans; they should not paste confidential company data.",
+    "L06 uses hypothetical risk cases on purpose, to avoid unverified claims about real companies.",
+    "Judgement call: the prerequisite is management experience, not AI knowledge, so L01 teaches basic AI concepts briefly at leader level."
+  ]
+}

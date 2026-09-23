@@ -1,0 +1,333 @@
+{
+  "course_id": "AI-05",
+  "slug": "ai-05-math-and-statistics-for-ai-no-fear-edition",
+  "course_title": "Math and Statistics for AI (No-Fear Edition)",
+  "level": "Intermediate",
+  "status": "AWAITING_APPROVAL",
+  "screen_demo_lessons": [],
+  "overview": "A four-week course for aspiring machine learning engineers and analysts who feel rusty or anxious about maths. It builds on high-school maths and basic spreadsheet skills, and introduces only the linear algebra, probability, statistics and calculus that machine learning actually uses. Every idea starts with a picture or an everyday example, then a small calculation by hand, then the same calculation in Python with NumPy in Google Colab, with Desmos for visual intuition. By the end, learners implement linear regression from scratch in a notebook, explain every calculation, and interpret model metrics with confidence.",
+  "time_plan": {
+    "video_minutes": 90,
+    "weekly_hours": 3,
+    "per_week": "About 22–23 minutes of video, 1 hour 45 minutes of notebook and pen-and-paper exercises and quizzes, and 50 minutes of reading and reflection. In week 4 most of the exercise time goes to the capstone notebook."
+  },
+  "objectives": [
+    {
+      "id": "O1",
+      "bloom": "Remember",
+      "text": "Recall the notation and vocabulary of vectors, matrices, probability, derivatives and common model metrics."
+    },
+    {
+      "id": "O2",
+      "bloom": "Understand",
+      "text": "Explain how vectors, matrices, dot products and matrix multiplication represent data and model predictions."
+    },
+    {
+      "id": "O3",
+      "bloom": "Apply",
+      "text": "Calculate descriptive statistics, probabilities and conditional probabilities for small datasets, by hand and with NumPy."
+    },
+    {
+      "id": "O4",
+      "bloom": "Apply",
+      "text": "Use derivatives, gradients and gradient descent to minimise a loss function in code."
+    },
+    {
+      "id": "O5",
+      "bloom": "Analyse",
+      "text": "Interpret model metrics such as mean squared error, accuracy, precision, recall and the confusion matrix, and analyse what each one reveals and hides."
+    },
+    {
+      "id": "O6",
+      "bloom": "Evaluate",
+      "text": "Judge whether a result or model improvement is meaningful by considering sample size, variation, overfitting and a simple baseline."
+    },
+    {
+      "id": "O7",
+      "bloom": "Create",
+      "text": "Implement linear regression from scratch in a notebook and explain every calculation."
+    }
+  ],
+  "modules": [
+    {
+      "module_id": "M1",
+      "week": 1,
+      "title": "Vectors and Matrices",
+      "lessons": [
+        {
+          "lesson_id": "L01",
+          "title": "Maths for AI Without Fear",
+          "objectives": [
+            "O1"
+          ],
+          "summary": "A map of the four areas of maths in this course and where each one appears inside a machine learning model. Learners set up Google Colab and run their first NumPy cell, and learn a three-step routine used in every lesson: picture, small hand calculation, then code.",
+          "exercise": "Open a new Google Colab notebook, import NumPy, create an array of five numbers and print its sum and mean. [VERSION] Check Colab's current sign-in and free usage limits."
+        },
+        {
+          "lesson_id": "L02",
+          "title": "Vectors: Data as Lists of Numbers",
+          "objectives": [
+            "O1",
+            "O2"
+          ],
+          "summary": "A vector is an ordered list of numbers that describes one thing, for example a flat in Lisbon described as [size, rooms, age]. The lesson covers adding vectors, multiplying by a number and the length of a vector, shown as arrows in Desmos.",
+          "exercise": "Draw two 2D vectors in Desmos, add them, and check your answer with NumPy; then describe three items from your own work as vectors."
+        },
+        {
+          "lesson_id": "L03",
+          "title": "The Dot Product: Weighted Sums and Similarity",
+          "objectives": [
+            "O2"
+          ],
+          "summary": "The dot product multiplies matching numbers and adds the results. Worked example: predicting a delivery time in Jakarta as 2 minutes per kilometre plus 5 minutes per stop, which is a dot product of weights and features. The same operation also measures how similar two vectors are.",
+          "exercise": "Calculate three dot products by hand, repeat them with np.dot, and use one to make a price prediction for a hypothetical product."
+        },
+        {
+          "lesson_id": "L04",
+          "title": "Matrices: A Whole Dataset at Once",
+          "objectives": [
+            "O2"
+          ],
+          "summary": "A matrix stores a dataset as rows (examples) and columns (features), and its shape tells you how many of each. The lesson covers indexing, selecting columns and transposing, and how a spreadsheet table maps directly to a matrix.",
+          "exercise": "Build a 6 × 3 NumPy matrix from a small hypothetical sales table, print its shape, select one column and one row, and transpose it."
+        },
+        {
+          "lesson_id": "L05",
+          "title": "Matrix Multiplication as Many Predictions",
+          "objectives": [
+            "O2"
+          ],
+          "summary": "Multiplying a data matrix by a weight vector performs one dot product per row, so it makes a prediction for every example at once. The lesson explains the shape rule (inner sizes must match) with a 3 × 2 by 2 × 1 worked example.",
+          "exercise": "Multiply a 3 × 2 matrix by a 2 × 1 vector by hand, check it with the @ operator in NumPy, and explain one shape error on purpose."
+        }
+      ]
+    },
+    {
+      "module_id": "M2",
+      "week": 2,
+      "title": "Probability and Statistics",
+      "lessons": [
+        {
+          "lesson_id": "L06",
+          "title": "Describing Data: Mean, Median and Spread",
+          "objectives": [
+            "O1",
+            "O3"
+          ],
+          "summary": "Mean, median, variance and standard deviation describe the centre and spread of data. Worked example: monthly incomes in a hypothetical team in Accra, where one very high value moves the mean far more than the median.",
+          "exercise": "Calculate the mean, median and standard deviation of a 10-value dataset by hand or in a spreadsheet, then check the results with NumPy."
+        },
+        {
+          "lesson_id": "L07",
+          "title": "Probability and Conditional Probability",
+          "objectives": [
+            "O1",
+            "O3"
+          ],
+          "summary": "Probability measures how likely an event is, from 0 to 1; conditional probability asks how likely it is given that something else is true. Worked example: in a hypothetical inbox of 1,000 emails, the chance that an email is spam given that it contains the word 'prize'.",
+          "exercise": "Fill in a two-way frequency table for a hypothetical dataset and calculate three probabilities and two conditional probabilities."
+        },
+        {
+          "lesson_id": "L08",
+          "title": "Bayes' Theorem with Frequency Tables",
+          "objectives": [
+            "O3",
+            "O5"
+          ],
+          "summary": "Bayes' theorem updates a belief when new evidence arrives. Using a hypothetical screening test and a table of 10,000 people, the lesson shows why a positive result can still mean a low chance of having the condition when the condition is rare, which prepares learners to read precision later.",
+          "exercise": "Use a frequency table to answer a Bayes question about a hypothetical fraud alert, then check the result with a short NumPy calculation."
+        },
+        {
+          "lesson_id": "L09",
+          "title": "Distributions: Normal and Binomial",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "A distribution shows how often each value appears. The normal distribution describes many measurements that cluster around an average, and the binomial distribution counts successes, such as the number of correct predictions out of 20. Learners simulate both in NumPy and plot histograms.",
+          "exercise": "Simulate 1,000 coin-flip experiments and 1,000 normal values in Colab, plot histograms, and change one parameter to see how the shape changes."
+        },
+        {
+          "lesson_id": "L10",
+          "title": "Samples, Uncertainty and Meaningful Differences",
+          "objectives": [
+            "O6"
+          ],
+          "summary": "A test set is only a sample, so any score has uncertainty. The lesson shows, by simulation, why a 2-point accuracy difference on 100 test examples can be random variation, while the same difference on 10,000 examples is much more convincing.",
+          "exercise": "Simulate a model with a fixed true accuracy tested on 100 and on 10,000 examples many times, and compare how much the measured accuracy varies."
+        }
+      ]
+    },
+    {
+      "module_id": "M3",
+      "week": 3,
+      "title": "Calculus for Learning",
+      "lessons": [
+        {
+          "lesson_id": "L11",
+          "title": "Functions, Slopes and Derivatives",
+          "objectives": [
+            "O1",
+            "O4"
+          ],
+          "summary": "A derivative is the slope of a function at one point: how fast the output changes when the input changes a little. Learners explore tangent lines in Desmos and learn the few derivative rules needed later, without formal proofs.",
+          "exercise": "In Desmos, plot y = x² and a tangent line at three points, estimate each slope, and compare with the derivative 2x."
+        },
+        {
+          "lesson_id": "L12",
+          "title": "Loss Functions: How Wrong Is the Model?",
+          "objectives": [
+            "O4",
+            "O5"
+          ],
+          "summary": "A loss function turns prediction errors into one number that training tries to make smaller. Worked example: mean squared error for five hypothetical taxi fare predictions in Istanbul, and why squaring punishes big errors more than small ones.",
+          "exercise": "Calculate the mean squared error for five predictions by hand, then write a NumPy function mse(y_true, y_pred) and test it."
+        },
+        {
+          "lesson_id": "L13",
+          "title": "Gradients and the Chain Rule, Intuitively",
+          "objectives": [
+            "O4"
+          ],
+          "summary": "A gradient collects the slopes for every weight and points in the direction where the loss increases fastest. The chain rule explains how a small change passes through several steps, like connected gears where turning one turns the next.",
+          "exercise": "Calculate by hand the gradient of a simple two-weight loss at one point, then check it numerically in NumPy by nudging each weight a little."
+        },
+        {
+          "lesson_id": "L14",
+          "title": "Gradient Descent Step by Step",
+          "objectives": [
+            "O4"
+          ],
+          "summary": "Gradient descent repeatedly takes a small step against the gradient to reduce the loss. Analogy: walking downhill in fog by feeling the slope under your feet. The learning rate sets the step size: too small is slow, too large overshoots.",
+          "exercise": "Write a loop in Colab that minimises (w − 3)² with gradient descent, then try three learning rates and plot the loss over time for each."
+        }
+      ]
+    },
+    {
+      "module_id": "M4",
+      "week": 4,
+      "title": "Metrics and the Capstone",
+      "lessons": [
+        {
+          "lesson_id": "L15",
+          "title": "Classification Metrics: Confusion Matrix, Precision and Recall",
+          "objectives": [
+            "O1",
+            "O5"
+          ],
+          "summary": "A confusion matrix counts correct and incorrect predictions of each type. Worked example: a hypothetical fraud detector for a mobile payments company in Bangladesh, where 99% accuracy can hide a model that misses most fraud because fraud is rare.",
+          "exercise": "Build a confusion matrix from 20 hypothetical predictions, calculate accuracy, precision and recall with NumPy, and explain which metric matters most for this case."
+        },
+        {
+          "lesson_id": "L16",
+          "title": "Overfitting, Train/Test Splits and Baselines",
+          "objectives": [
+            "O5",
+            "O6"
+          ],
+          "summary": "A model can fit its training data very well and still fail on new data. The lesson shows how to split data, compare training and test error, and compare every model with a simple baseline such as always predicting the average.",
+          "exercise": "Split a small dataset in NumPy, compare a baseline with a simple model on the test set, and decide whether the model is a real improvement."
+        },
+        {
+          "lesson_id": "L17",
+          "title": "Capstone Build: Linear Regression from Scratch",
+          "objectives": [
+            "O2",
+            "O4",
+            "O7"
+          ],
+          "summary": "The course comes together: data as a matrix, predictions with matrix multiplication, mean squared error as the loss, gradients for each weight and a gradient descent loop. The lesson walks through the notebook structure and the capstone brief.",
+          "exercise": "Capstone step 1: in Colab, implement linear regression with NumPy only on a provided hypothetical dataset, and plot the loss falling during training."
+        },
+        {
+          "lesson_id": "L18",
+          "title": "Capstone Explain: Check, Interpret and Document",
+          "objectives": [
+            "O5",
+            "O6",
+            "O7"
+          ],
+          "summary": "Learners check their weights against NumPy's built-in least-squares solution, interpret each weight in plain language, compare test error with a baseline, and write a text cell explaining every calculation. The lesson presents the capstone rubric.",
+          "exercise": "Capstone step 2: verify your result with np.linalg.lstsq, report training and test error against a baseline, and add a plain-language explanation for every step of the notebook."
+        }
+      ]
+    }
+  ],
+  "capstone": {
+    "title": "Linear Regression from Scratch",
+    "brief": "Implement linear regression from scratch in a notebook with NumPy and explain every calculation, from the data matrix to the final metrics.",
+    "built_in": [
+      "L17",
+      "L18"
+    ],
+    "assesses": [
+      "O2",
+      "O4",
+      "O5",
+      "O6",
+      "O7"
+    ]
+  },
+  "coverage_check": {
+    "O1": [
+      "L01",
+      "L02",
+      "L06",
+      "L07",
+      "L11",
+      "L15"
+    ],
+    "O2": [
+      "L02",
+      "L03",
+      "L04",
+      "L05",
+      "L17"
+    ],
+    "O3": [
+      "L06",
+      "L07",
+      "L08",
+      "L09"
+    ],
+    "O4": [
+      "L11",
+      "L12",
+      "L13",
+      "L14",
+      "L17"
+    ],
+    "O5": [
+      "L08",
+      "L12",
+      "L15",
+      "L16",
+      "L18"
+    ],
+    "O6": [
+      "L10",
+      "L16",
+      "L18"
+    ],
+    "O7": [
+      "L17",
+      "L18"
+    ]
+  },
+  "flags": [
+    "PROPOSED: screen demo for L01 (setting up Google Colab and running the first NumPy cell). Needs approval.",
+    "PROPOSED: screen demo for L02 (drawing and adding vectors in Desmos). Needs approval.",
+    "PROPOSED: screen demo for L05 (matrix multiplication and shape errors live in NumPy). Needs approval.",
+    "PROPOSED: screen demo for L09 (simulating distributions and plotting histograms in Colab). Needs approval.",
+    "PROPOSED: screen demo for L11 (tangent lines in Desmos). Needs approval.",
+    "PROPOSED: screen demo for L14 (live gradient descent loop and learning-rate comparison). Needs approval.",
+    "PROPOSED: screen demo for L17 (building linear regression in a notebook). Needs approval.",
+    "PROPOSED: screen demo for L18 (checking results with np.linalg.lstsq and documenting the notebook). Needs approval.",
+    "Judgement call: the brief's track is 'Foundations', but this course is code-heavy (Colab and NumPy in most lessons). Consider setting technical: true in the brief so that screen demos become standard.",
+    "L01, L09, L17 [VERSION]: check Google Colab's current sign-in requirements, free usage limits and interface before scripting.",
+    "L02, L11 [VERSION]: check Desmos interface steps against the live tool.",
+    "L03, L05, L18 [VERSION]: NumPy function names (np.dot, the @ operator, np.linalg.lstsq) are stable, but confirm behaviour and warnings against the current NumPy version.",
+    "L08, L15: all probabilities and rates (screening test, fraud alert, fraud detector) are hypothetical numbers on purpose; they must not be presented as real statistics.",
+    "Judgement call: L10 teaches uncertainty through simulation and does not cover formal hypothesis tests or p-values, to keep the course accessible; a reviewer may want a short mention.",
+    "Judgement call: objectives O3 and O4 are both at 'Apply', because calculation practice is central to this course; the levels still climb from Remember to Create."
+  ]
+}
