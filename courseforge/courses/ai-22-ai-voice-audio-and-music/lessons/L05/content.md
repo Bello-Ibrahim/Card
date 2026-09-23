@@ -3,7 +3,7 @@
 Course: AI-22 · Module: M1 · Objectives: O2, O6 · Video: 5 min
 
 ## Hook
-Your voice is part of who you are. Friends recognise it on the phone before you say your name. Now imagine hearing "your" voice in an advert you never recorded, saying things you never said. Voice cloning makes this possible, which is why this lesson starts with people, not tools.
+Your voice is part of who you are. Imagine hearing "your" voice in an advert you never recorded, saying things you never said. Voice cloning makes this possible, which is why this lesson starts with people, not tools.
 
 ## Explanation
 **Voice cloning** means training or adapting a voice model so that it sounds like one specific real person. Some tools need only a short sample of speech to do this [VERIFY]. The result can then read any text in that person's voice.

@@ -6,7 +6,7 @@ Course: AI-22 · Module: M2 · Objectives: O3, O5 · Video: 5 min (screen demo)
 The first ten seconds of a podcast or video set the mood. A calm piano says "relax and learn". A fast drum beat says "something exciting is coming". Finding the right music used to mean searching libraries for hours. Now you can describe the music you want and hear several options in minutes.
 
 ## Explanation
-An AI music tool creates new music from a text description, often called a **prompt**. In this course we use "a free AI music tool of your choice" [VERSION]. Free tiers usually limit the number of tracks per day or month, the length of each track and how you may use the result [VERSION]. Check these before you start, and note them for your rights log in L08.
+An AI music tool creates new music from a text description, often called a **prompt**. We use "a free AI music tool of your choice" [VERSION]. Free tiers usually limit the number and length of tracks and how you may use them [VERSION]. Note these for your rights log in L08.
 
 For podcasts and narrated videos, we usually need a **music bed**: music that sits quietly under a voice. A good music bed is simple, steady and does not compete with speech. It usually has no singing, because lyrics fight with the spoken words.
 
@@ -42,7 +42,7 @@ Valentina produces an education podcast in Medellín, Colombia, about science fo
 6. She chooses Option B. She writes the prompt, the tool, the plan and the date in her project notes.
 
 ## Common Mistake
-Many beginners choose the track they like best when they listen to it alone. Then, under the voice, the melody fights with the words and the listener cannot follow. Always judge a music bed with your voiceover playing. A second mistake is writing a vague prompt such as "nice music". Vague prompts give random results. Name the mood, genre, tempo, instruments and length.
+Many beginners choose the track they like best when they listen to it alone. Then, under the voice, the melody fights with the words and the listener cannot follow. Always judge a music bed with your voiceover playing. A second mistake is a vague prompt such as "nice music", which gives random results.
 
 ## Key Takeaways
 1. Describe music by mood, genre, tempo, instruments and length, and never by the name of a living artist or a specific song.
@@ -64,7 +64,6 @@ Many beginners choose the track they like best when they listen to it alone. The
 **Time:** about 30 minutes
 
 ## Review Flags
-- [VERSION] A reviewer must choose the free AI music tool to demonstrate and check its interface, prompt options, track length limits, number of generations, download formats and free-tier licence terms against the live tool before scripting.
-- [VERSION] Audacity multi-track import and track volume controls must be checked against the current release.
+- [VERSION] A reviewer must choose the free AI music tool, then check its interface, prompt options, track limits, download formats and free-tier terms against the live tool. Check Audacity multi-track import and track volume controls against the current release.
 - [VERIFY] Confirm the general statement that many AI music tools block or forbid prompts that name real artists; do not name any specific tool's policy without checking.
 - Curriculum flags carried: L07 [VERSION] free AI music tiers and limits change often; music is described by mood, genre and instruments only, and prompts never name living artists to imitate.

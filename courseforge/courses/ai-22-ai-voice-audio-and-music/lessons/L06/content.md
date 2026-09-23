@@ -12,15 +12,15 @@ You recorded a great interview, but when you play it back you hear a fan humming
 
 **Step 2: Remove background noise.** Audacity's Noise Reduction effect works in two passes. First you select a quiet section and let it learn the noise profile. Then you select the whole recording and apply the effect [VERSION]. Use gentle settings. Too much noise reduction makes a voice sound thin, metallic or "underwater".
 
-**Step 3: Cut mistakes and long silences.** Select and delete false starts, coughs and repeated sentences. For long pauses, you can delete them by hand or use an effect that shortens silences automatically, such as Truncate Silence [VERSION]. Keep short, natural pauses; speech with no pauses at all sounds rushed.
+**Step 3: Cut mistakes and long silences.** Delete false starts, coughs and repeated sentences. Shorten long pauses by hand or with Truncate Silence [VERSION]. Keep short, natural pauses; speech with none sounds rushed.
 
-**Step 4: Even out the levels.** Some words are loud and others are quiet. A **compressor** reduces the difference between the loudest and quietest parts. Then **Normalize** or **Loudness Normalization** raises the whole recording to a consistent level without distortion [VERSION]. You will set the final loudness for your platform in L09.
+**Step 4: Even out the levels.** A **compressor** reduces the difference between loud and quiet words. Then **Normalize** or **Loudness Normalization** raises the whole recording to a consistent level [VERSION]. You set the final loudness in L09.
 
 **Step 5: Reduce harsh sounds.** Strong "s" and "sh" sounds, or a sharp tone in the voice, can be tiring on headphones. An equaliser (EQ), such as Audacity's Filter Curve EQ, can gently lower the harsh high frequencies [VERSION]. Make small changes only.
 
 **Step 6: Compare and export.** Listen to the original and the cleaned version one after the other. Then export as WAV for further editing, or MP3 for sharing [VERSION].
 
-Some versions of Audacity can use optional AI plugins, for example for noise suppression or separating voice from music [VERSION]. They can help with difficult recordings, but the basic chain above is enough for this course. Always keep a copy of the original file.
+Audacity can also use optional AI plugins, for example for noise suppression [VERSION]. The basic chain above is enough for this course.
 
 **Analogy:** Cleaning audio is like editing a photo. You fix the light and remove dust first, and only then add filters. If you add a filter to a dark, dusty photo, the problems become stronger. In audio, you remove noise and fix levels before any creative effects.
 
@@ -39,7 +39,7 @@ Hina records a poetry podcast at home in Lahore, Pakistan. Her 1-minute test rec
 Her notes: "Noise reduction removed the fan. Truncate Silence made the pace tighter. Compressor and Normalize made quiet lines easier to hear. EQ made the 's' sounds softer."
 
 ## Common Mistake
-The most common mistake is using too much noise reduction. Beginners push the settings high to remove every trace of noise, and the voice starts to sound robotic and strange. A little background noise is much less distracting than a damaged voice. Use gentle settings, preview, and compare with the original. The second common mistake is working on the only copy of a file. Always keep the original.
+The most common mistake is using too much noise reduction. Beginners push the settings high to remove every trace of noise, and the voice starts to sound robotic and strange. A little background noise is much less distracting than a damaged voice. Use gentle settings, preview, and compare with the original.
 
 ## Key Takeaways
 1. Use a fixed clean-up chain: listen, remove noise, cut mistakes and silences, even out levels, reduce harsh sounds, then compare and export.
@@ -62,6 +62,5 @@ The most common mistake is using too much noise reduction. Beginners push the se
 **Time:** about 30 minutes
 
 ## Review Flags
-- [VERSION] Audacity platform support, menu paths and effect names (Effect > Noise Removal and Repair > Noise Reduction, Get Noise Profile, Preview, Truncate Silence, Compressor, Normalize, Loudness Normalization, Filter Curve EQ, File > Export Audio), keyboard shortcuts and export formats must be checked against the current Audacity release before scripting.
-- [VERSION] Availability and names of optional AI plugins for Audacity (noise suppression, voice and music separation) must be checked before any mention in the script.
+- [VERSION] Check Audacity platform support, menu paths, effect names (Noise Reduction, Get Noise Profile, Truncate Silence, Compressor, Normalize, Loudness Normalization, Filter Curve EQ, Export Audio), shortcuts, export formats and optional AI plugins against the current release before scripting.
 - Curriculum flag carried: L06 [VERSION] Audacity menus and optional AI plugins may change. Production note: a noisy practice recording for learners must be provided on the course page.
