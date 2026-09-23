@@ -3,12 +3,12 @@
 Course: AI-19 · Module: M3 · Objectives: O3, O5 · Video: 5 min (screen demo)
 
 ## Hook
-A photo of a receipt contains the date, the shop and the total, but a program cannot search or add up a photo. OCR turns the picture of text into real text. On a clean scan it can work very well. On a creased receipt photographed in a dim café, the same engine can fail badly, and your preprocessing makes much of the difference.
+A program cannot search or add up a photo of a receipt. OCR turns the picture of text into real text. On a clean scan it can work well. On a creased receipt photographed in a dim café it can fail badly, and preprocessing makes much of the difference.
 
 ## Explanation
-**Optical character recognition (OCR)** usually works in two steps. **Text detection** finds the areas of the image that contain text. **Text recognition** reads the characters in each area. Some engines do both steps; others expect a clean image of text and do very little detection.
+**Optical character recognition (OCR)** usually has two steps: **text detection** finds areas that contain text, and **text recognition** reads the characters in each area.
 
-In this course we use **Tesseract**, a free, open-source OCR engine, through the `pytesseract` Python wrapper. In Colab you install the engine and one language pack per language, then the wrapper. [VERSION] Language codes are `fra` for French, `por` for Portuguese and `ara` for Arabic. You can combine them, for example `lang="fra+ara"`. Other open-source engines, such as EasyOCR and PaddleOCR, use deep learning models for detection and recognition and may handle photos better; compare them if Tesseract fails on your images. [VERSION]
+In this course we use **Tesseract**, a free, open-source OCR engine, through the `pytesseract` Python wrapper. In Colab you install the engine and one language pack per language, then the wrapper. [VERSION] Language codes are `fra` for French, `por` for Portuguese and `ara` for Arabic. You can combine them, for example `lang="fra+ara"`. Other open-source engines, such as EasyOCR and PaddleOCR, may handle photos better; compare them if Tesseract fails. [VERSION]
 
 Quality depends strongly on the image. Useful preprocessing steps from L03:
 
@@ -23,7 +23,7 @@ To measure OCR, type the true text by hand and compare. The **character error ra
 
 Receipts and signs can contain personal data, such as names, card numbers or addresses. Use your own receipts or public signs, and do not upload other people's documents to online OCR services.
 
-**Analogy:** OCR is like a person reading a handwritten note through a dirty window. They may know the language perfectly, but if the glass is dirty and the note is crumpled, they will misread letters. Cleaning the window (preprocessing) often helps more than finding a better reader.
+**Analogy:** OCR is like a person reading a handwritten note through a dirty window. They may know the language well, but they will still misread letters. Cleaning the window (preprocessing) often helps more than finding a better reader.
 
 ## Worked Example
 Amira Ben Salem manages expenses for a design studio in Tunis, Tunisia. Receipts come in French and Arabic. She tests OCR on one receipt photo before and after preprocessing, using her own receipts with card numbers covered.
@@ -31,9 +31,8 @@ Amira Ben Salem manages expenses for a design studio in Tunis, Tunisia. Receipts
 **On screen (presenter steps):**
 1. In a Colab cell, run `!apt-get install -y tesseract-ocr tesseract-ocr-fra tesseract-ocr-ara tesseract-ocr-por` and `!pip install pytesseract`. [VERSION]
 2. Upload `receipt.jpg` and run the cell below.
-3. Show the raw and the cleaned image side by side.
-4. Show both OCR outputs and point to the differences in the total line.
-5. Type the true total line by hand and calculate the CER for both outputs.
+3. Show the raw and cleaned images and both OCR outputs side by side.
+4. Type the true total line and calculate the CER for both outputs.
 
 ```python
 import cv2

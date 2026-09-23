@@ -3,12 +3,12 @@
 Course: AI-19 · Module: M3 · Objectives: O4, O5 · Video: 5 min (screen demo)
 
 ## Hook
-The pre-trained model knows "bottle", but it does not know your brand of mango juice or the difference between two sizes of rice bag. To detect your own objects, you draw boxes on your own images and fine-tune a detector. About 50 labelled images can be enough to start.
+The pre-trained model knows "bottle", but not your brand of mango juice. To detect your own objects, you draw boxes on your own images and fine-tune a detector. About 50 labelled images can be enough to start.
 
 ## Explanation
 Training a custom detector has four stages.
 
-**1. Collect images.** Take photos in the real conditions of your use case: the same shelves, the same lighting, the same camera height. Include variety: full and half-empty shelves, different angles, some blur. Avoid customers and staff in the photos, or ask for their consent. [REGION]
+**1. Collect images.** Take photos in the real conditions of your use case, with variety: full and half-empty shelves, different angles, some blur. Avoid customers and staff in the photos, or ask for their consent. [REGION]
 
 **2. Label (annotate) them.** Use a free annotation tool, such as Label Studio or CVAT, to draw a tight box around every visible object of each class. [VERSION] Label *every* object, including partly hidden ones. An object you leave unlabelled teaches the model that it is background.
 
@@ -31,11 +31,11 @@ names:
 
 Split the images so that about 80% are for training and 20% for validation, and never put the same photo in both.
 
-**4. Fine-tune and read the results.** Training starts from a pre-trained model, as in L07, so it already knows general features. The results folder contains training curves, a confusion matrix and validation images with predicted boxes. [VERSION] Focus on **mAP50** and **mAP50-95** from L09, and on precision and recall for each class. Then look at the validation images where boxes are missing or wrong.
+**4. Fine-tune and read the results.** Training starts from a pre-trained model, as in L07. The results folder contains training curves, a confusion matrix and validation images with boxes. [VERSION] Read **mAP50** and **mAP50-95** from L09 and per-class precision and recall, then look at validation images where boxes are missing or wrong.
 
 Colab's free GPUs are not guaranteed, and sessions end after a limit. [VERSION] Save your trained weights to Google Drive when training ends. The same licence rules as in L10 apply to models you train with the `ultralytics` package. [VERIFY]
 
-**Analogy:** Labelling is like preparing an answer key for an exam. If the key is missing answers, or has boxes drawn carelessly, the student learns the wrong lessons, no matter how intelligent the student is.
+**Analogy:** Labelling is like preparing an answer key for an exam. If the key is missing answers or is careless, even an intelligent student learns the wrong things.
 
 ## Worked Example
 Mei Ling Chen runs a small chain of convenience shops in Kuala Lumpur, Malaysia. She wants to know when two products run low: juice cartons and rice bags. She photographs 60 shelf images, with no customers in view, and labels them in Label Studio.
@@ -45,8 +45,7 @@ Mei Ling Chen runs a small chain of convenience shops in Kuala Lumpur, Malaysia.
 2. Import the images and draw boxes on one image, including a carton that is half hidden.
 3. Export in YOLO format and download the zip file. [VERSION]
 4. In Colab, upload and unzip it into `/content/shelf` with `images/` and `labels/` folders split into `train` and `val`, and create `shelf.yaml`.
-5. Run the training cell below and show the progress lines.
-6. Open `results.png`, the confusion matrix and one validation image from the results folder.
+5. Run the training cell below, then open `results.png` and one validation image.
 
 ```python
 from ultralytics import YOLO
@@ -64,7 +63,7 @@ Example output: `mAP50: 0.81` and `mAP50-95: 0.52`. These values come from Mei L
 She looks at the failures. Three stand out: rice bags on the bottom shelf, photographed from above, are missed; two juice cartons placed side by side get one large box; and a carton behind a price label is not found. Her next step is to add 20 bottom-shelf photos and check that neighbouring cartons have separate boxes in her labels.
 
 ## Common Mistake
-Many learners trust a high mAP from a very small validation set, or from validation images taken seconds after the training images. Near-identical photos in both splits make the model look much better than it is. Split by shooting session or by shelf, not by random photo, and test later on completely new photos. Also check your labels before training: missing or loose boxes are the most common cause of poor results.
+Many learners trust a high mAP from validation images taken seconds after the training images. Near-identical photos in both splits make the model look much better than it is. Split by shooting session or by shelf, not by random photo. Also check your labels before training: missing or loose boxes often cause poor results.
 
 ## Key Takeaways
 1. A custom detector needs images from real conditions, tight boxes around every object, a YOLO-format export and a YAML file with the class names.
@@ -77,7 +76,7 @@ Many learners trust a high mAP from a very small validation set, or from validat
 **Steps:**
 1. Photograph about 50 images of one or two object types in varied positions and lighting.
 2. Create an annotation project, label every visible object and export in YOLO format.
-3. Open 3 label files and check that the lines match the objects in the images.
+3. Check 3 label files against their images.
 4. Split the images by photo session into train (about 80%) and val (about 20%), and write the YAML file.
 5. Fine-tune `yolo11n.pt` for 50 epochs and record mAP50 and mAP50-95.
 6. Open the validation images and describe 3 failure cases with a likely cause for each.

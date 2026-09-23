@@ -3,7 +3,7 @@
 Course: AI-19 · Module: M3 · Objectives: O1, O5 · Video: 5 min
 
 ## Hook
-A detector draws a box around a car, but the box cuts off the back of the car. Is that a correct detection or a mistake? You need a clear rule, or two people will score the same model differently. That rule is called IoU.
+A detector draws a box around a car, but cuts off the back of the car. Is that correct or a mistake? Without a clear rule, two people will score the same model differently. That rule is IoU.
 
 ## Explanation
 An object detector returns a list of detections. Each detection has three parts:
@@ -12,7 +12,7 @@ An object detector returns a list of detections. Each detection has three parts:
 - A **class**, such as "car" or "bus".
 - A **confidence score** from 0 to 1.
 
-Detectors often produce several overlapping boxes for the same object. A step called **non-maximum suppression (NMS)** keeps the box with the highest score and removes other boxes that overlap it strongly. Most detection libraries run NMS for you.
+Detectors often produce several overlapping boxes for one object. **Non-maximum suppression (NMS)** keeps the highest-scoring box and removes boxes that overlap it strongly. Libraries usually run it for you.
 
 **Intersection over Union (IoU)** measures how well a predicted box matches the true box (the **ground truth**) that a person drew:
 

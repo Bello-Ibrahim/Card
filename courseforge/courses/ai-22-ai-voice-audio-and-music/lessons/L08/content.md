@@ -26,11 +26,11 @@ A simple rights log has these columns:
 **Analogy:** A licence is like the rules for a rented flat. You live there, but the contract says whether you can run a business from it, whether you can sublet it and whether you must put your name on the door. A rights log is like keeping a signed copy of the contract, so you can prove what was agreed if anyone asks.
 
 ## Worked Example
-Aroha is a video creator in Wellington, New Zealand. She makes travel videos and has just signed her first paid project for a local tourism business. Her video uses a TTS voiceover and an AI music bed, both made on free plans.
+Aroha is a video creator in Wellington, New Zealand. She has just signed her first paid project for a local tourism business. Her video uses a TTS voiceover and an AI music bed, both made on free plans.
 
 She checks each asset:
 
-- **Voiceover:** She opens the TTS tool's terms page for the free plan. She finds that the free plan does not allow commercial use in her case, so she cannot use this voiceover in paid client work. She notes this, then either upgrades to a plan that allows commercial use or records her own voice.
+- **Voiceover:** The TTS tool's free plan does not allow commercial use, so she cannot use this voiceover for a client. She records her own voice instead.
 - **Music bed:** The music tool's free plan allows use in online videos but requires a credit in the description. She adds the credit line.
 - **Platform:** She checks the video platform's current rules on AI content labels and adds the label that applies.
 
@@ -61,7 +61,6 @@ Many people think "free to use" means "free for any use". It usually means free 
 **Time:** about 25 minutes
 
 ## Review Flags
-- [VERIFY] [VERSION] Licence terms for each TTS and music tool, including differences between free and paid plans, commercial use, attribution and ownership, must be checked against current official terms. The worked example terms are hypothetical and must not describe a real tool.
-- [VERIFY] [VERSION] Platform rules on labelling AI-generated content and automated music copyright detection must be checked against current platform policies.
-- [VERIFY] [REGION] Whether AI-generated music can be protected by copyright is unsettled and differs by country; the lesson states no legal conclusion. A reviewer should confirm the wording gives no legal advice.
-- Curriculum flag carried (L08, all three tags): check licence terms and AI music copyright status against current official sources.
+- [VERIFY] [VERSION] Check each TTS and music tool's licence terms (free vs paid plans, commercial use, attribution, ownership) against current official terms. The worked example terms are hypothetical.
+- [VERIFY] [VERSION] Check platform rules on AI content labels and automated music copyright detection against current policies.
+- [VERIFY] [REGION] Copyright status of AI-generated music is unsettled and differs by country; the lesson states no legal conclusion and gives no legal advice. (Carries the curriculum's L08 flag.)

@@ -3,23 +3,18 @@
 Course: AI-19 · Module: M3 · Objectives: O3 · Video: 5 min (screen demo)
 
 ## Hook
-With one install command and a few lines of Python, you can find cars, buses, people and bottles in any photo or video. The code is short. The important decisions are which confidence threshold to use and which licence applies to your project.
+With one install command and a few lines of Python, you can find cars, buses and bottles in any photo or video. The code is short. The real decisions are the confidence threshold and the licence.
 
 ## Explanation
-**YOLO** ("You Only Look Once") is a family of fast object detectors. They look at the whole image in one pass and predict all boxes, classes and scores together. This makes them popular for video. In this course we use the open-source `ultralytics` Python package, which runs several YOLO versions with the same simple interface. [VERSION]
+**YOLO** ("You Only Look Once") is a family of fast object detectors. They predict all boxes, classes and scores in one pass over the image, which makes them popular for video. In this course we use the open-source `ultralytics` Python package, which runs several YOLO versions with the same simple interface. [VERSION]
 
-The pre-trained detection models are trained on the COCO dataset, which has 80 common object classes, such as person, car, bus, truck, bicycle, bottle and chair. [VERIFY] Model files come in sizes: "n" (nano) is the smallest and fastest, and larger sizes are slower but usually more accurate. Model names such as `yolo11n.pt` change with each new release. [VERSION]
+The pre-trained detection models are trained on the COCO dataset, which has 80 common object classes, such as person, car, bus, truck, bicycle, bottle and chair. [VERIFY] Model files come in sizes: "n" (nano) is the smallest and fastest. Model names such as `yolo11n.pt` change with each new release. [VERSION]
 
-The key setting is the **confidence threshold** (`conf`). The model drops every detection with a lower score.
+The key setting is the **confidence threshold** (`conf`): detections with a lower score are dropped. A **low** threshold (such as 0.1) keeps more real objects but adds false alarms. A **high** threshold (such as 0.7) gives fewer false alarms but misses small, distant or hidden objects. In L08 terms, lowering it usually raises recall and lowers precision. Choose it by testing on your own images.
 
-- A **low** threshold (for example 0.1) keeps more real objects, but adds false alarms: shadows called "car", signs called "person".
-- A **high** threshold (for example 0.7) gives fewer false alarms but misses small, distant or partly hidden objects.
+**Licence.** The `ultralytics` package and its models are released under the AGPL-3.0 licence, with a separate paid enterprise licence from Ultralytics for closed-source commercial use. [VERIFY] AGPL-3.0 is a copyleft licence: if you use the code in a product, including one that people use over a network, you may have to publish your own source code under the same licence. Check the current terms, or ask a legal adviser, before any commercial use.
 
-In L08 terms, lowering the threshold usually raises recall and lowers precision. There is no universal best value; you choose it by testing on your own images.
-
-**Licence.** The `ultralytics` package and its models are released under the AGPL-3.0 licence, with a separate paid enterprise licence from Ultralytics for closed-source commercial use. [VERIFY] AGPL-3.0 is a copyleft licence: if you use the code in a product, including one that people use over a network, you may have to publish your own source code under the same licence. Learning and open projects are usually fine, but check the current terms, or ask a legal adviser, before any commercial use.
-
-**Analogy:** The confidence threshold works like the sensitivity setting on a metal detector at the beach. Turn it up and it beeps for every coin, and also for every bottle cap. Turn it down and it stays quiet for bottle caps, but it also misses small coins buried deep. You adjust it for what you are searching for.
+**Analogy:** The confidence threshold works like the sensitivity setting on a metal detector at the beach. Set it high and it beeps for every coin and every bottle cap. Set it low and it ignores bottle caps, but also misses small coins buried deep.
 
 ## Worked Example
 Lars Eriksson plans lorry traffic at a container port in Gothenburg, Sweden. He wants to know if a pre-trained model can detect trucks and cars in photos from a public road camera near the port, with no people in close view.
@@ -66,13 +61,12 @@ print("frames:", len(counts), "max objects in one frame:", max(counts))
 
 **On screen (presenter steps):**
 1. In a new Colab notebook, run `!pip install ultralytics` and wait for it to finish.
-2. Upload `port_road.jpg` and run the first cell. Show the printed detections.
-3. Open `port_road_boxes.jpg` from the file panel and point to each box and its label.
-4. Show the three threshold counts, and display the 0.1 result to point out false alarms.
-5. Run the video cell and open the saved video from the `runs/detect/` folder.
+2. Upload `port_road.jpg`, run the first cell and open `port_road_boxes.jpg`.
+3. Show the three threshold counts and point out the false alarms at 0.1.
+4. Run the video cell and open the saved video from `runs/detect/`.
 
 ## Common Mistake
-Many learners pick one threshold on one image and use it everywhere. A threshold that works on a clear daytime photo may miss most objects at night or in rain. Test thresholds on a varied set of images and record false alarms and missed objects for each one. A second mistake is ignoring the licence because the package installs for free. "Free to download" does not mean "free for any commercial use".
+Many learners pick a threshold on one image and use it everywhere. A value that works on a clear daytime photo may miss most objects at night or in rain. Test on varied images. A second mistake is ignoring the licence: "free to download" does not mean "free for any commercial use".
 
 ## Key Takeaways
 1. The `ultralytics` package runs pre-trained YOLO models on images and video in a few lines, and returns boxes, classes and scores.
@@ -87,8 +81,7 @@ Many learners pick one threshold on one image and use it everywhere. A threshold
 2. Run the model on each image at `conf` 0.1, 0.25 and 0.5 and save the annotated images.
 3. For each image and threshold, count the detections, the false alarms and the missed objects you can see.
 4. Run the model on the video at your preferred threshold with `stream=True` and `save=True`.
-5. Watch the saved video and note two moments where the model fails.
-6. Record in a table which threshold you would choose and why.
+5. Watch the saved video, note two failures, and state which threshold you would choose and why.
 **What good looks like:** A table with 15 rows (5 images × 3 thresholds) showing detections, false alarms and misses, an annotated video, and a short justification for one threshold that mentions the trade-off.
 **Time:** about 35 minutes
 
