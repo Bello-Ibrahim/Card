@@ -19,12 +19,12 @@ Three safety rules for your first automation:
 2. **Start small**: one trigger and two actions. You can add more later.
 3. **Check the result every time** in the first weeks. Automations can fail silently, for example when you rename a spreadsheet column.
 
-Also think about data. An automation copies client information between services. Only connect accounts you trust, and collect only the information you need.
+An automation copies client data between services, so connect only accounts you trust and collect only what you need.
 
 **Analogy:** An automation is like a row of dominoes. The trigger is your finger pushing the first domino; each action is the next domino falling. If one domino is in the wrong place, the chain stops, which is why you test the whole row before a client ever touches it.
 
 ## Worked Example
-Sipho is a freelance video editor in Durban, South Africa. His workflow map from L09 shows that every enquiry arrives through a form, and he copies each one into a spreadsheet and sends a thank-you email by hand. He builds: **new form entry → add spreadsheet row → send welcome email.**
+Sipho is a freelance video editor in Durban, South Africa. His L09 map shows he copies every form enquiry into a spreadsheet and sends a thank-you email by hand. He builds: **new form entry → add spreadsheet row → send welcome email.**
 
 He prepares three things first: a free online form with fields for name, email and project type; a spreadsheet with matching column headings; and a short welcome email with a placeholder for the name.
 
@@ -43,7 +43,7 @@ He prepares three things first: a free online form with fields for name, email a
 On the third test, Sipho finds the email says "Dear ," because he left the name field empty. He makes the name field required in his form.
 
 ## Common Mistake
-Many beginners test once, see it work, turn it on and never check again. Then a changed column name or a disconnected account stops the automation, and enquiries are lost without any warning. Test three times with different example data, including an incomplete entry, and check the results regularly in the first weeks.
+Many beginners test once, turn it on and never check again. Then a changed column name or a disconnected account stops it, and enquiries are lost without warning. Test three times with different example data, including an incomplete entry, and check the results regularly in the first weeks.
 
 ## Key Takeaways
 1. An automation is a trigger followed by one or more actions, such as "new form entry, then add a row and send an email".

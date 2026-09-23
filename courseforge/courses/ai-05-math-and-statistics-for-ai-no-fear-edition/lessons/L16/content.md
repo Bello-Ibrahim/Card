@@ -78,8 +78,8 @@ The most common mistake is choosing the model with the lowest **training** error
 4. Fit a straight line with `np.polyfit(..., 1)` on the training data, and calculate training and test MSE.
 5. Repeat with degree 6 and compare.
 6. Write three sentences: is the straight line a real improvement, and how confident are you with only 3 test examples?
-**What good looks like:** The straight line's test MSE is far below the baseline's. Your notebook reports training and test MSE side by side, and your conclusion mentions the small test set.
+**What good looks like:** With this seed, the baseline test MSE is 159.0, the straight line gives about 0.92 (training) and 0.29 (test), and degree 6 gives a test MSE in the thousands. Your notebook shows these side by side, and your conclusion mentions the small test set.
 **Time:** about 30 minutes
 
 ## Review Flags
-- [VERSION] NumPy: confirm that `np.polyfit` and `np.polyval` behave as shown and give no warning for the degree-6 fit in the current NumPy version. Outputs were checked with NumPy 2.4 with warnings treated as errors.
+- [VERSION] NumPy: confirm that `np.polyfit` and `np.polyval` behave as shown and give no warning for the degree-6 fits in the current NumPy version, and that `default_rng(1).permutation(10)` still gives the same order. Outputs were checked with NumPy 2.4 with warnings treated as errors.
