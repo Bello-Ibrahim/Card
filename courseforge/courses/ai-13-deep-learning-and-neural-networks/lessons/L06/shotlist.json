@@ -1,0 +1,207 @@
+{
+  "course_id": "AI-13",
+  "lesson_id": "L06",
+  "duration_s": 269.3,
+  "thumbnail": {
+    "headline": "Augment Training Data Only",
+    "slide": {
+      "layout": "title",
+      "title": "Augment Training Data Only",
+      "body": "Left: 2×4 grid of one shirt image, flipped and shifted (label: training). Right: one unchanged shirt image (label: validation). Small tag: Deep Learning and Neural Networks · Lesson 6."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.6,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Still a shirt when flipped?",
+      "voiceover": "Flip a photo of a shirt from left to right, and it is still a shirt. Your network does not know that until you show it. Data augmentation teaches it, but in the wrong place, it makes your validation scores meaningless."
+    },
+    {
+      "scene": 2,
+      "start": 17.6,
+      "end": 39.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Images as tensors",
+        "body": "Colour: (3, H, W), three stacked grids R, G, B. Greyscale: (1, H, W). Pixel values 0–255 → floats 0–1. A batch adds N: (N, C, H, W)."
+      },
+      "voiceover": "Welcome to module two, where we work with images. A colour image is a tensor with three channels, then height and width. A greyscale image has one channel. Pixels usually arrive as whole numbers from zero to two hundred and fifty-five, and we turn them into decimals from zero to one."
+    },
+    {
+      "scene": 3,
+      "start": 39.9,
+      "end": 61.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Fashion-MNIST",
+        "body": "28×28 greyscale clothing images · 10 classes · standard train and test split · check the licence before reuse"
+      },
+      "voiceover": "The torchvision library downloads common datasets with one line. In this module, we use Fashion-MNIST. Small greyscale images, twenty-eight pixels square, of clothing items in ten classes, with a standard training and test split. As with any dataset, check its licence before you reuse it outside the course."
+    },
+    {
+      "scene": 4,
+      "start": 61.3,
+      "end": 78.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Transforms",
+        "body": "transforms.Compose([\n  transforms.ToTensor(),\n  transforms.Normalize(mean, std)   # from training set only\n])"
+      },
+      "voiceover": "Transforms are functions applied to each image as it loads. You chain them together. The first converts the image to a float tensor. The next normalises it, using a mean and a standard deviation from the training set only."
+    },
+    {
+      "scene": 5,
+      "start": 78.0,
+      "end": 92.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Augmentations",
+        "body": "RandomHorizontalFlip · RandomCrop with padding · RandomRotation · ColorJitter. A new variation every epoch → less overfitting (L09)."
+      },
+      "voiceover": "Augmentations create random changes each time an image loads. Flips, crops with padding, small rotations, or colour changes. The model sees a slightly different version of each image in every epoch, which reduces overfitting."
+    },
+    {
+      "scene": 6,
+      "start": 92.6,
+      "end": 107.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Keep the label true",
+        "body": "OK: horizontal flip of a shirt (green tick). Not OK: vertical flip of a shoe · flipped digit 2 (red cross)."
+      },
+      "voiceover": "Choose changes that keep the label true. A left-right flip is fine for clothing. An upside-down shoe is not a realistic input. And for digits, a flipped two is not a two."
+    },
+    {
+      "scene": 7,
+      "start": 107.2,
+      "end": 126.1,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "students writing exam in quiet classroom",
+      "on_screen_text": "Practice varies. The exam stays fixed.",
+      "voiceover": "Think of a teacher who writes the same maths problem with different numbers each time. The student learns the method, not the page. But the final exam must be a fixed paper. If every student got random questions, the marks would not be comparable."
+    },
+    {
+      "scene": 8,
+      "start": 126.1,
+      "end": 135.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Two pipelines",
+        "body": "Training: augmentations + ToTensor + Normalize. Validation and test: ToTensor + Normalize only, nothing random."
+      },
+      "voiceover": "That is the rule. Validation and test images get the same fixed steps, such as conversion, normalisation and resizing, but nothing random."
+    },
+    {
+      "scene": 9,
+      "start": 135.5,
+      "end": 148.4,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "folded clothes photographed for online shop",
+      "on_screen_text": "Mei Lin · online retailer · Penang",
+      "voiceover": "Mei Lin is an engineer at an online clothing retailer in Penang, Malaysia. She wants to prototype a product-type classifier with Fashion-MNIST before using her company's own photos."
+    },
+    {
+      "scene": 10,
+      "start": 148.4,
+      "end": 164.3,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run: raw = datasets.FashionMNIST(\"data\", train=True, download=True)",
+        "Run: pixels = raw.data.float() / 255; mean, std = pixels.mean().item(), pixels.std().item(); print(round(mean, 3), round(std, 3))",
+        "Expected output: something like 0.286 0.353"
+      ],
+      "on_screen_text": "Statistics from training data only",
+      "voiceover": "First, she downloads the training set with no transforms, turns the pixels into decimals, and computes the mean and standard deviation. You should see something like zero point two eight six and zero point three five three."
+    },
+    {
+      "scene": 11,
+      "start": 164.3,
+      "end": 175.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run the train_tf cell: RandomHorizontalFlip(), RandomCrop(28, padding=2), ToTensor(), Normalize((mean,), (std,))",
+        "Run the eval_tf cell: ToTensor(), Normalize((mean,), (std,))",
+        "Show both side by side and highlight the two random steps"
+      ],
+      "on_screen_text": "train_tf and eval_tf",
+      "voiceover": "Next, two pipelines. The training transform adds a random flip and a random crop with padding, then converts and normalises. The evaluation transform only converts and normalises."
+    },
+    {
+      "scene": 12,
+      "start": 175.9,
+      "end": 185.3,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run: train_ds = datasets.FashionMNIST(\"data\", train=True, transform=train_tf)",
+        "Run: test_ds = datasets.FashionMNIST(\"data\", train=False, transform=eval_tf)"
+      ],
+      "voiceover": "She passes the right pipeline to each split. The training set gets the training transform. The test set gets the evaluation transform."
+    },
+    {
+      "scene": 13,
+      "start": 185.3,
+      "end": 202.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run: imgs = torch.stack([train_ds[0][0] for _ in range(16)])",
+        "Run: plt.imshow(make_grid(imgs * std + mean, nrow=8).permute(1, 2, 0)); plt.axis(\"off\"); plt.show()",
+        "Point to shifted and flipped copies in the 2×8 grid"
+      ],
+      "on_screen_text": "Same image, sixteen augmentations",
+      "voiceover": "Finally, she loads the same image sixteen times and shows them in a grid. Each copy is shifted a little, and some are flipped. The grid is also a useful check. If the images look destroyed, the augmentation is too strong."
+    },
+    {
+      "scene": 14,
+      "start": 202.9,
+      "end": 223.5,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "No augmentation in validation or test",
+      "voiceover": "The most common mistake is giving the augmented training transform to the validation or test set, or computing normalisation statistics on all the data. Both make your evaluation less honest. And if you split with random split, both parts share one transform, so create two dataset objects instead."
+    },
+    {
+      "scene": 15,
+      "start": 223.5,
+      "end": 249.2,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Images are (C, H, W); normalise with training statistics. 2. Augment with label-preserving changes. 3. Training only; validation and test get fixed preprocessing."
+      },
+      "voiceover": "Let's recap. First, images are tensors of channels, height and width. Convert them to floats, and normalise with the training set's mean and standard deviation. Second, augmentation creates random variations of training images to reduce overfitting. Choose changes that keep the label true. Third, augment training data only. Validation and test data get the same fixed steps, and nothing random."
+    },
+    {
+      "scene": 16,
+      "start": 249.2,
+      "end": 269.3,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Convolutional Neural Networks",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will load Fashion-MNIST, compute the mean and standard deviation, and show a grid of augmented samples. It takes about twenty-five minutes. In the next lesson, we build convolutional neural networks. See you there."
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # L08 Trends, Outliers and Correlation | Presenter Script
 
-Course: AI-08 · Video: 5 min · Words: 743
+Course: AI-08 · Video: 5 min · Words: 735
 
 ## Hook
 Revenue in March was more than four times revenue in January. Is the business growing fast? Or did one customer place one very large order? The same number can tell two very different stories.
@@ -10,7 +10,7 @@ Last time, we built summaries and pivot tables. Now we look for patterns. Three 
 
 The first idea is a trend. A trend is the general direction of a number over time, up, down or flat. To read a trend, look at many periods, not two. Three months can show a direction, but it is weak evidence. And check whether one unusual period creates a trend that disappears when you look closer.
 
-The second idea is an outlier. That is a value far from the others, like one order ten times larger than usual. Outliers have three common causes. A data error, like forty-five typed instead of four hundred and fifty. A real but rare event, like a bulk order or a festival. Or a sign of change, like the first of many large orders from a new type of customer.
+The second idea is an outlier. That is a value far from the others. Outliers have three common causes. A data error, like forty-five typed instead of four hundred and fifty. A real but rare event, like a bulk order or a festival. Or a sign of change, like the first of many large orders from a new type of customer.
 
 So never delete an outlier just because it is unusual. Ask why it exists first. Fix it if it is an error. If it is real, keep it, and report results with and without it.
 

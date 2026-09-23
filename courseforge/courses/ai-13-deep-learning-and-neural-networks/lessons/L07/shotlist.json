@@ -1,0 +1,178 @@
+{
+  "course_id": "AI-13",
+  "lesson_id": "L07",
+  "duration_s": 274.3,
+  "thumbnail": {
+    "headline": "Small Filters, Big Results",
+    "slide": {
+      "layout": "title",
+      "title": "Small Filters, Big Results",
+      "body": "A 3×3 filter window sliding over a 28×28 image, leaving a bright feature map behind. Small tag: Deep Learning and Neural Networks · Lesson 7."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.1,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "150 million weights or 2,000?",
+      "voiceover": "A fully connected layer that reads a small colour photo and outputs one thousand features needs about one hundred and fifty million weights. A convolutional layer that finds sixty-four patterns in the same photo needs under two thousand. How?"
+    },
+    {
+      "scene": 2,
+      "start": 17.1,
+      "end": 33.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "The problem with flattening",
+        "body": "A 28×28 image unrolled into one long row of 784 numbers; two neighbouring pixels end up far apart. The same pattern in two corners = two separate sets of weights."
+      },
+      "voiceover": "A fully connected network flattens the image into one long row. It ignores the fact that nearby pixels belong together. And a pattern it learns in the top-left corner must be learned again for every other position."
+    },
+    {
+      "scene": 3,
+      "start": 33.4,
+      "end": 54.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "A filter slides across the image",
+        "body": "3×3 filter moves step by step over the image; each position gives one number in the output feature map, bright where the pattern (an edge) appears."
+      },
+      "voiceover": "A convolution fixes both problems. A filter is a small grid of weights, for example three by three. It slides across the image, and at each position it computes a weighted sum of the pixels under it. The result is a feature map that is high wherever the pattern appears."
+    },
+    {
+      "scene": 4,
+      "start": 54.8,
+      "end": 69.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Why it is efficient",
+        "body": "Local connections: each output sees a small patch · Weight sharing: one filter, every position · nn.Conv2d(in, out, kernel_size, padding): out filters of in × k × k weights + bias"
+      },
+      "voiceover": "Two ideas make this efficient. Local connections, because each output looks only at a small patch. And weight sharing, because the same filter is used everywhere, so a pattern learned once is found anywhere."
+    },
+    {
+      "scene": 5,
+      "start": 69.4,
+      "end": 88.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Conv → ReLU → Pool",
+        "body": "1×28×28 → [conv, ReLU, pool] → 32×14×14 → [conv, ReLU, pool] → 64×7×7 → Flatten → Linear → 10 classes. Labels under blocks: edges → shapes."
+      },
+      "voiceover": "Pooling keeps the largest value in each two by two block, which halves the height and width. A small CNN repeats convolution, ReLU and pooling a few times. The image gets smaller while the channels grow. Early layers learn edges, and later layers learn shapes."
+    },
+    {
+      "scene": 6,
+      "start": 88.7,
+      "end": 111.4,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "person studying large paper map with magnifier",
+      "on_screen_text": "One window, used everywhere",
+      "voiceover": "Picture a small window that you move across a large map, looking for one symbol, such as a bridge. You use the same window everywhere, so you learn once what a bridge looks like. Then a second person scans your list of bridges, rivers and roads, and finds bigger patterns, like a town."
+    },
+    {
+      "scene": 7,
+      "start": 111.4,
+      "end": 126.0,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "online shop warehouse packing clothes",
+      "on_screen_text": "Rafael · e-commerce · Recife",
+      "voiceover": "Rafael is an engineer at an e-commerce company in Recife, Brazil. He compares a CNN with the fully connected network from lesson three, on Fashion-MNIST, using the transforms from the last lesson."
+    },
+    {
+      "scene": 8,
+      "start": 126.0,
+      "end": 142.7,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run the model cell from content.md: cnn = nn.Sequential(nn.Conv2d(1, 32, 3, padding=1), nn.ReLU(), nn.MaxPool2d(2), nn.Conv2d(32, 64, 3, padding=1), nn.ReLU(), nn.MaxPool2d(2), nn.Flatten(), nn.Linear(64 * 7 * 7, 10))",
+        "Same cell: mlp = nn.Sequential(nn.Flatten(), nn.Linear(784, 256), nn.ReLU(), nn.Linear(256, 128), nn.ReLU(), nn.Linear(128, 10))"
+      ],
+      "voiceover": "In Colab, he defines the CNN. Two blocks of convolution, ReLU and pooling, with thirty-two and then sixty-four filters. Then flatten, and one linear layer to ten classes. He also defines the fully connected network for comparison."
+    },
+    {
+      "scene": 9,
+      "start": 142.7,
+      "end": 159.4,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run: count = lambda m: sum(p.numel() for p in m.parameters()); print(count(cnn), count(mlp))",
+        "Output: 50186 235146"
+      ],
+      "on_screen_text": "50,186 vs 235,146 parameters",
+      "voiceover": "He counts the parameters. Fifty thousand, one hundred and eighty-six for the CNN, and two hundred and thirty-five thousand, one hundred and forty-six for the other network. The CNN has about one fifth of the parameters."
+    },
+    {
+      "scene": 10,
+      "start": 159.4,
+      "end": 179.1,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run: x = torch.randn(8, 1, 28, 28); for layer in cnn: x = layer(x); print(type(layer).__name__, tuple(x.shape))",
+        "Point to (8, 32, 14, 14), then (8, 64, 7, 7), then Flatten (8, 3136), then Linear (8, 10)"
+      ],
+      "on_screen_text": "Print shapes with a dummy batch",
+      "voiceover": "Next, the most useful debugging tool in this lesson. He passes a dummy batch through the CNN, one layer at a time, and prints the shape after each. He can see the image shrink and the channels grow, and the exact size the linear layer needs."
+    },
+    {
+      "scene": 11,
+      "start": 179.1,
+      "end": 198.0,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run the L05 training loop for cnn, 5 epochs; then for mlp with the same optimiser and lr (on CPU: 10,000-image subset)",
+        "Show the final validation accuracy of each model side by side (expected output: CNN higher)"
+      ],
+      "on_screen_text": "Same loop, same settings, fair test",
+      "voiceover": "He trains both models for five epochs with the loop from lesson five, the same optimiser and the same learning rate. You should see something like the CNN reaching a higher validation accuracy. Rafael reports his own measured numbers rather than assuming a result."
+    },
+    {
+      "scene": 12,
+      "start": 198.0,
+      "end": 222.0,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Let the shapes tell you the size",
+      "voiceover": "A common mistake is calculating the linear layer's input size by hand, and getting it wrong after changing padding or pooling. The error message shows the real size. Print the shapes, or use a lazy linear layer, which works out its size on the first pass. And greyscale images still need a channel dimension of one."
+    },
+    {
+      "scene": 13,
+      "start": 222.0,
+      "end": 249.9,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Shared filters find patterns anywhere with few weights. 2. Conv → ReLU → pool: smaller image, more channels. 3. Print shapes; compare parameters and accuracy."
+      },
+      "voiceover": "Let's recap. First, a convolution slides a small shared filter across the image, so it finds a pattern anywhere with very few weights. Second, stacks of convolution, ReLU and pooling shrink the image and grow the channels, moving from edges to shapes to objects. Third, print shapes with a dummy batch to size the final layer, and compare models on parameters as well as accuracy."
+    },
+    {
+      "scene": 14,
+      "start": 249.9,
+      "end": 274.3,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Reading Learning Curves",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will train a small CNN on Fashion-MNIST and compare its accuracy and parameter count with a fully connected network. It takes about forty minutes. In the next lesson, we learn to read learning curves, so you know what to change next. See you there."
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # L12 Capstone: Completing and Reviewing Your Unit | Presenter Script
 
-Course: AI-09 · Video: 5 min · Words: 687
+Course: AI-09 · Video: 5 min · Words: 685
 
 ## Hook
 Your unit now has a plan, a quiz and a rubric. The last step is the one that makes it safe and fair to use with real learners. You put all the pieces together, and review them as a whole, with the eyes of a careful colleague.
@@ -27,7 +27,7 @@ Accessibility. Her infographic uses green and red to show good and bad practice.
 
 And alignment. Her outcome on handling a difficult visitor is taught in lesson three, but it is not in the rubric. So she adds a criterion. Her AI-use note then records each part, how AI helped, and what she changed. For example, AI drafted twelve quiz questions, and she removed three and rewrote four wrong options.
 
-A common mistake is to review each part alone, never looking at the pack as a whole. Some problems appear only across the unit, such as one kind of person always in the same role, or a policy that marks a task red while a lesson plan tells learners to use AI for it. Read the whole pack in order, as a learner would. And make your AI-use note specific.
+A common mistake is to review each part alone, never looking at the pack as a whole. Some problems appear only across the unit, such as one kind of person always in the same role, or a policy that marks a task red while a lesson plan tells learners to use AI for it. Read the whole pack as a learner would. And make your AI-use note specific.
 
 ## Recap
 Let's recap. First, the unit pack has six parts: the unit plan, differentiated materials, an accessible visual, the quiz, the rubric and a unit AI policy. Second, review the whole pack for accuracy, bias, accessibility and alignment, not only each part alone. Third, a short, specific AI-use note shows where AI helped, and what you checked and changed.

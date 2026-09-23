@@ -1,0 +1,199 @@
+{
+  "course_id": "AI-12",
+  "lesson_id": "L06",
+  "duration_s": 304.5,
+  "thumbnail": {
+    "headline": "How Likely Is Yes?",
+    "slide": {
+      "layout": "title",
+      "title": "How Likely Is Yes?",
+      "body": "A dial from 0 to 1 with a 0.5 threshold line; a phone icon. Tag: Machine Learning with scikit-learn · Lesson 6."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.6,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Not just yes or no: how likely?",
+      "voiceover": "Will this customer subscribe? Yes or no. But a bank calling thousands of people wants more than yes or no. It wants to know how likely each person is to say yes, so it can call the most promising customers first."
+    },
+    {
+      "scene": 2,
+      "start": 17.6,
+      "end": 32.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Logistic regression is a classifier",
+        "body": "Despite the name, it answers yes/no questions. Two stages, shown next."
+      },
+      "voiceover": "In the last lesson, you built a pipeline with logistic regression at the end. Today we look inside it. Despite its name, logistic regression is a classification model, and it works in two stages."
+    },
+    {
+      "scene": 3,
+      "start": 32.2,
+      "end": 49.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Two stages",
+        "body": "Features × coefficients + intercept → one score → S-shaped curve → probability between 0 and 1."
+      },
+      "voiceover": "First, it combines the features into one score. Each feature is multiplied by a weight, called a coefficient, and the results are added up with a starting value. Second, it squeezes that score into a probability between zero and one."
+    },
+    {
+      "scene": 4,
+      "start": 49.3,
+      "end": 71.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Probability or decision",
+        "body": "predict_proba → probability of 'yes' (column 1). predict → yes if probability ≥ 0.5, otherwise no. Note: the threshold is a business choice (L09)."
+      },
+      "voiceover": "The model can give you these probabilities directly. Its normal prediction applies a threshold of zero point five. A probability of zero point five or more becomes yes, and anything lower becomes no. The threshold is a business choice, not a law of nature, and in lesson nine you will move it."
+    },
+    {
+      "scene": 5,
+      "start": 71.6,
+      "end": 93.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Reading coefficients",
+        "body": "Positive → pushes 'yes' up · Negative → pushes 'yes' down · Size = strength, only after scaling · One-hot column: compares that category with the others"
+      },
+      "voiceover": "A positive coefficient pushes the probability of yes up as the feature increases. A negative one pushes it down. The size shows the strength, but only if features are on comparable scales. That is why we scale numbers first. For one-hot columns, the coefficient compares that category with the others."
+    },
+    {
+      "scene": 6,
+      "start": 93.5,
+      "end": 108.1,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Coefficients show links, not causes",
+      "voiceover": "Two cautions. Coefficients describe what the model learned from this data. They do not prove cause and effect. And when features are strongly related, the model can share weight between them in unstable ways."
+    },
+    {
+      "scene": 7,
+      "start": 108.1,
+      "end": 127.4,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "panel of judges holding score cards",
+      "on_screen_text": "Each feature is a judge",
+      "voiceover": "Think of a panel of judges giving points. Each feature is a judge who adds or removes points, and some judges have a stronger voice. The total becomes a percentage, and the bank decides how high it must be before it picks up the phone."
+    },
+    {
+      "scene": 8,
+      "start": 127.4,
+      "end": 145.8,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "marketing analyst office India laptop",
+      "on_screen_text": "Priya · marketing analyst · Kochi",
+      "voiceover": "Priya Nair is a marketing analyst at a bank in Kochi, India. She wants to know which customer groups respond to term-deposit calls. She continues in the course notebook, where the setup cell and the pipeline from lesson five have already run."
+    },
+    {
+      "scene": 9,
+      "start": 145.8,
+      "end": 163.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Scroll past the L05 setup and pipeline cells, already executed.",
+        "Type this exact code cell from content.md and run it with Shift+Enter:\nimport pandas as pd\n\nnames = pipe.named_steps[\"prep\"].get_feature_names_out()\ncoefs = pd.Series(pipe.named_steps[\"model\"].coef_[0], index=names)\nprint(coefs.sort_values().round(2))\n\nprint(pipe.predict_proba(X_test.head(3))[:, 1].round(2))\nprint(pipe.predict(X_test.head(3)))"
+      ],
+      "on_screen_text": "Names + coefficients, sorted",
+      "voiceover": "This cell takes the readable feature names from the preprocessing step, pairs them with the model's coefficients, and sorts them. Then it prints the probability of yes for the first three test customers, and the model's yes or no decision for each."
+    },
+    {
+      "scene": 10,
+      "start": 163.8,
+      "end": 181.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Highlight the last three rows: num__balance 0.42, num__age 0.58, cat__job_retired 0.82."
+      ],
+      "on_screen_text": "Pushes yes up: retired, age, balance",
+      "voiceover": "At the bottom of the list are the largest positive coefficients. Being retired has the strongest push, zero point eight two. Then older age, zero point five eight, and a higher balance, zero point four two. These raise the probability of subscribing."
+    },
+    {
+      "scene": 11,
+      "start": 181.8,
+      "end": 197.7,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Highlight the first three rows: num__calls -0.69, cat__contact_telephone -0.36, cat__job_technician -0.34."
+      ],
+      "on_screen_text": "Pushes yes down: calls, telephone, technician",
+      "voiceover": "At the top are the largest negative ones. More calls in this campaign, minus zero point six nine. Telephone contact, minus zero point three six. And technician jobs, minus zero point three four. These lower the probability."
+    },
+    {
+      "scene": 12,
+      "start": 197.7,
+      "end": 217.0,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Highlight the output [0.03 0.02 0.17].",
+        "Highlight the output [0 0 0].",
+        "Point to the num__ and cat__ prefixes in the coefficient list."
+      ],
+      "on_screen_text": "3%, 2%, 17% → all predicted no",
+      "voiceover": "Now the first three test customers. Their probabilities of yes are three percent, two percent and seventeen percent. All are below zero point five, so all three are predicted no. The prefixes num and cat simply come from the step names in the column transformer."
+    },
+    {
+      "scene": 13,
+      "start": 217.0,
+      "end": 231.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Add a text cell: More calls is linked with fewer subscriptions. Cause unknown."
+      ],
+      "on_screen_text": "Linked with, not caused by",
+      "voiceover": "Priya notes one thing. More calls lowers the probability. That could mean repeated calls annoy people. Or it could mean the bank keeps calling people who were never interested. The model cannot tell which."
+    },
+    {
+      "scene": 14,
+      "start": 231.6,
+      "end": 250.9,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Scale first, then compare",
+      "voiceover": "A common mistake is to compare coefficients of features that were not scaled. A weight per unit of income cannot be compared with a weight per year of age. Always read coefficients from a pipeline that scales numbers, and describe them as associations, not causes."
+    },
+    {
+      "scene": 15,
+      "start": 250.9,
+      "end": 277.5,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. A classifier that outputs a probability; 0.5 threshold by default. 2. Positive pushes 'yes' up, negative pushes it down; compare after scaling. 3. Learned links, not causes."
+      },
+      "voiceover": "Let's recap. First, logistic regression is a classifier that outputs a probability, and by default it turns that into yes or no at zero point five. Second, positive coefficients push the probability of yes up, and negative ones push it down, but compare sizes only after scaling. Third, coefficients show what the model learned from this data, not what causes the outcome."
+    },
+    {
+      "scene": 16,
+      "start": 277.5,
+      "end": 304.5,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Decision Trees and KNN",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will list the three largest positive and negative coefficients in your own pipeline, and describe each one in plain words, using is linked with rather than causes. It takes about twenty-five minutes. In the next lesson, Decision Trees and k-Nearest Neighbours, we meet two new models. See you there."
+    }
+  ]
+}
