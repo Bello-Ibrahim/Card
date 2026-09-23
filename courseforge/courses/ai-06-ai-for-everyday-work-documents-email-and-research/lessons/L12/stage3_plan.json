@@ -7,10 +7,10 @@
   },
   "production_notes": [
     "No general time-saving claims: the voiceover never states how many hours or minutes AI saves. The course brief's 'saving several hours each week' is deliberately not used (curriculum judgement call).",
-    "Lucía's times are hypothetical examples, not measured results. They appear only on the scene 10 slide, which must carry the label 'Hypothetical example'; the presenter does not read the numbers aloud.",
+    "Lucía's times are hypothetical examples, not measured results. They appear only on the scene 9 slide, which must carry the label 'Hypothetical example'; the presenter does not read the numbers aloud.",
     "[REGION] Employer AI policies and approved tools differ by organisation and country; learners follow and report their own policy.",
     "Lucía and her Santiago accounting firm are hypothetical; no real firm name or logo in stock footage. The tax guidance page in her table is a generic public page, not a named one.",
-    "The capstone rubric on the course page is the reference for scene 13; the slide lists the four deliverables only, not the points."
+    "The capstone rubric on the course page is the reference for scene 11; the slide lists the four deliverables only, not the points."
   ],
   "sections": {
     "Hook": [
@@ -20,7 +20,7 @@
     ],
     "Explain": [
       {"visual_type": "slide",
-       "voiceover": "In the last lesson, you built reusable prompts. In this final lesson, you measure the results. Real time savings differ from person to person and from task to task. A task with many facts may need so much checking that AI saves no time at all. That is why this course makes no general claims.",
+       "voiceover": "In the last lesson, you built reusable prompts. In this final lesson, you measure the results. Real time savings differ from person to person and from task to task. A fast writer may save little on emails, but a lot on summaries. A task with many facts may need so much checking that AI saves no time at all. That is why this course makes no general claims.",
        "slide": {"layout": "quote", "title": "Measure your own", "body": "\"Savings differ by person and by task. This course makes no general claims.\""}},
       {"visual_type": "slide",
        "voiceover": "Here is how to measure honestly. Your before time is how long the task took the usual way. You recorded it in lesson ten. Your after time is how long it takes with AI. Include all of it: writing the prompt, waiting, reading, checking, editing and correcting.",
@@ -45,13 +45,13 @@
        "stock_query": "office administrator working laptop Latin America",
        "on_screen_text": "Lucía · office administrator · Santiago"},
       {"visual_type": "slide",
-       "voiceover": "Here is her results table. For the team update and the summary, her after times were shorter, even with checking included. The checklist still found a wrong date in one, and a changed condition in the other. But her client replies were slightly slower with AI.",
+       "voiceover": "Here is her results table. For the team update and the summary, her after times were shorter, even with checking included. The checklist still found a wrong date in one, and a changed condition in the other. But her client replies were slightly slower with AI. So she looks closer at why.",
        "slide": {"layout": "comparison", "title": "Lucía's results (hypothetical example)", "body": "Table: Task · Before · After (incl. checking) · Saved · Checks found. Weekly team update: 40 · 22 · 18 min · 1 wrong date. Public tax guidance summary: 50 · 35 · 15 min · 1 changed condition. Routine client replies: 30 · 32 · −2 min (amber) · tone too formal. Label: Hypothetical example."}},
       {"visual_type": "slide",
        "voiceover": "Each reply needed a lot of editing to sound personal. So she decides to write those replies herself, and to use AI only to check them for clarity. She also notes her safety rules. Client names and figures were never pasted, and she used her firm's approved tool for internal notes.",
        "slide": {"layout": "bullets", "title": "Lucía's decisions", "body": "Team update: keep · Summary: keep · Client replies: change (write herself, AI checks clarity). Safety: no client names or figures pasted · approved tool for internal notes."}},
       {"visual_type": "slide",
-       "voiceover": "Now, your capstone. It brings together lessons ten, eleven and twelve. You submit your task maps with before times, your three reusable prompts with first and improved versions, a results table like Lucía's, and a one-page summary. For each task, decide: keep, change, or stop using AI.",
+       "voiceover": "Now, your capstone. It brings together lessons ten, eleven and twelve. You submit your task maps with before times, your three reusable prompts with first and improved versions, a results table like Lucía's, and a one-page summary. For each task, decide: keep, change, or stop using AI. The capstone rubric on the course page shows how each part is assessed.",
        "slide": {"layout": "bullets", "title": "Your capstone", "body": "1. Task maps with before times (L10) · 2. Three reusable prompts, first and improved (L11) · 3. Results table: times, quality, checklist findings · 4. One-page summary: keep, change or stop, with reasons"}},
       {"visual_type": "text",
        "voiceover": "A common mistake is to time only the moment the AI writes the answer. That makes AI look faster than it really is. Time the whole task, and report every result honestly, including zero or negative savings.",
@@ -64,7 +64,7 @@
     ],
     "CTA": [
       {"visual_type": "presenter_full",
-       "voiceover": "Congratulations. You have finished AI for Everyday Work. Now complete capstone step three. Do your three tasks with AI, time them, check every output, and write your one-page summary. Keep confidential data out, and follow your employer's policy. Then submit your capstone on the course page. Well done, and good luck.",
+       "voiceover": "Congratulations. You have finished AI for Everyday Work. You have learned to prompt clearly, work safely, and check everything. Now complete capstone step three. Do your three tasks with AI, time them, check every output, and write your one-page summary. Keep confidential data out, and follow your employer's policy. Then submit your capstone on the course page. Well done, and good luck.",
        "on_screen_text": "Submit your capstone"}
     ]
   }

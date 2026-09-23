@@ -6,7 +6,7 @@ Course: AI-06 · Video: 5 min · Words: 686
 It is Monday morning. You have fifteen things to do, some urgent, some large, and some you have avoided for weeks. An AI assistant can turn that list into a neat plan in seconds. But only you know which task really cannot be late.
 
 ## Explain
-Welcome to week three, where we redesign your work week. In this lesson, AI helps you organise your work in three ways. First, it can turn a messy list into a plan. It can group similar tasks, suggest an order, and spread the work across the days.
+This is week three, where we redesign your work week. In this lesson, AI helps you organise your work in three ways. First, it can turn a messy list into a plan. It can group similar tasks, suggest an order, and spread the work across the days.
 
 Second, it can suggest checklists for tasks with many small steps, such as preparing a meeting or welcoming a new team member. You add the steps it missed and remove the ones that do not apply.
 

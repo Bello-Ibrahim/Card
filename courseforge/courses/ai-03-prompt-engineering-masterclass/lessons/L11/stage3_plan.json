@@ -15,7 +15,7 @@
   "sections": {
     "Hook": [
       {"visual_type": "presenter_full",
-       "voiceover": "When you send a document written with AI help, your name is on it, not the tool's. A two-minute check before you use an output protects you, your colleagues and your organisation.",
+       "voiceover": "When you send a document written with AI help, your name is on it, not the tool's. A two-minute check before you use an output protects you, your colleagues and your organisation. Today, you will learn a simple checklist.",
        "on_screen_text": "Your name is on it"}
     ],
     "Explain": [
@@ -41,7 +41,7 @@
     ],
     "Demonstrate": [
       {"visual_type": "stock",
-       "voiceover": "Let's use the checklist. Kwame is a policy analyst at a farmers' cooperative in Kumasi. He asked an AI tool for a short briefing on drip irrigation for the cooperative's board.",
+       "voiceover": "Let's use the checklist. Kwame is a policy analyst at a farmers' cooperative in Kumasi. He asked an AI tool for a short briefing on drip irrigation for the cooperative's board. He is busy, and the draft looks ready to send.",
        "stock_query": "drip irrigation on farm field Africa",
        "on_screen_text": "Kwame · policy analyst, Kumasi"},
       {"visual_type": "slide",
@@ -62,12 +62,12 @@
     ],
     "Recap": [
       {"visual_type": "slide",
-       "voiceover": "Let's recap. First, before using any AI output, check facts and figures, check sources, look for bias, and confirm confidentiality. Second, prompts can make checking easier, but they do not replace your own check. Third, rules on data and AI use differ between countries and employers, so always follow your own organisation's policy.",
+       "voiceover": "Let's recap. First, before using any AI output, check facts and figures, check sources, look for bias, and confirm confidentiality. Second, prompts can make checking easier, but they do not replace your own check. Third, rules on data and AI use differ between countries and employers, so always follow your own organisation's policy. Soon, you will use this checklist on every prompt in your capstone library.",
        "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Facts · Sources · Bias · Confidentiality. 2. Checking prompts help, but you still check. 3. Follow your organisation's policy."}}
     ],
     "CTA": [
       {"visual_type": "presenter_full",
-       "voiceover": "Now it is your turn. In the exercise below this video, you will check a short AI-written briefing with the checklist, mark every issue you find, and rewrite the prompt so the next output is easier to check. It takes about twenty minutes. Soon, you will use this checklist on every prompt in your capstone library. In the next lesson, we look at testing a prompt across tools. See you there.",
+       "voiceover": "Now it is your turn. In the exercise below this video, you will check a short AI-written briefing with the checklist, mark every issue you find, and rewrite the prompt so the next output is easier to check. It takes about twenty minutes. In the next lesson, we look at testing a prompt across tools. See you there.",
        "on_screen_text": "Next: Testing a Prompt Across Tools"}
     ]
   }

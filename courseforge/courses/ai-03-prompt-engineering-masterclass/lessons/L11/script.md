@@ -1,9 +1,9 @@
 # L11 Checking Outputs: Accuracy, Bias and Confidentiality | Presenter Script
 
-Course: AI-03 · Video: 5 min · Words: 668
+Course: AI-03 · Video: 5 min · Words: 685
 
 ## Hook
-When you send a document written with AI help, your name is on it, not the tool's. A two-minute check before you use an output protects you, your colleagues and your organisation.
+When you send a document written with AI help, your name is on it, not the tool's. A two-minute check before you use an output protects you, your colleagues and your organisation. Today, you will learn a simple checklist.
 
 ## Explain
 Welcome to week three. This week is about reliable prompts, and about your own prompt library. We start with a four-part checklist to use before any AI output goes into your work.
@@ -19,7 +19,7 @@ You can also write prompts that make checking easier. For example, ask the tool 
 Checking an AI output is like checking a restaurant bill before you pay. Most of the time, it is correct. But it is your payment, so you look at each line, and you do not pay for a dish you never ordered.
 
 ## Demonstrate
-Let's use the checklist. Kwame is a policy analyst at a farmers' cooperative in Kumasi. He asked an AI tool for a short briefing on drip irrigation for the cooperative's board.
+Let's use the checklist. Kwame is a policy analyst at a farmers' cooperative in Kumasi. He asked an AI tool for a short briefing on drip irrigation for the cooperative's board. He is busy, and the draft looks ready to send.
 
 Here is part of the output. It reads well. But look closely. It gives one exact water saving for every farm, cites a named report, says every modern farmer has already switched, and names two cooperative members with their plot numbers.
 
@@ -32,10 +32,10 @@ His improved prompt adds four short lines. Use only the figures in my notes. Mar
 A common mistake is to check only the parts that look wrong. The most dangerous errors look correct: a realistic figure, a believable report title, a confident sentence. So go through the whole checklist every time.
 
 ## Recap
-Let's recap. First, before using any AI output, check facts and figures, check sources, look for bias, and confirm confidentiality. Second, prompts can make checking easier, but they do not replace your own check. Third, rules on data and AI use differ between countries and employers, so always follow your own organisation's policy.
+Let's recap. First, before using any AI output, check facts and figures, check sources, look for bias, and confirm confidentiality. Second, prompts can make checking easier, but they do not replace your own check. Third, rules on data and AI use differ between countries and employers, so always follow your own organisation's policy. Soon, you will use this checklist on every prompt in your capstone library.
 
 ## CTA
-Now it is your turn. In the exercise below this video, you will check a short AI-written briefing with the checklist, mark every issue you find, and rewrite the prompt so the next output is easier to check. It takes about twenty minutes. Soon, you will use this checklist on every prompt in your capstone library. In the next lesson, we look at testing a prompt across tools. See you there.
+Now it is your turn. In the exercise below this video, you will check a short AI-written briefing with the checklist, mark every issue you find, and rewrite the prompt so the next output is easier to check. It takes about twenty minutes. In the next lesson, we look at testing a prompt across tools. See you there.
 
 ## Thumbnail
 Headline: Check Before You Send

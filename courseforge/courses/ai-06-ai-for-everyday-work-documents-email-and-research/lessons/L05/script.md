@@ -6,7 +6,7 @@ Course: AI-06 · Video: 5 min · Words: 696
 Some emails take two minutes to write. Others take much longer: the reminder to a late supplier, or the reply where every word matters. AI can help you start those difficult emails, as long as the final version still sounds like you.
 
 ## Explain
-Welcome to week two. We now put the prompt and checking skills from week one to work, starting with email. AI assistants can help with three common email jobs.
+This is week two. We now put the prompt and checking skills from week one to work, starting with email. AI assistants can help with three common email jobs.
 
 The first job is drafting a new email from notes. Write your main points as short bullets, and let the assistant turn them into full sentences. Your bullets hold the facts, so the AI does not need to guess them.
 
