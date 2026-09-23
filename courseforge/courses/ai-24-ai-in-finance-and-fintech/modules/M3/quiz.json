@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-24",
+  "module_id": "M3",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L11",
+      "objective": "O5",
+      "question": "A fintech's AI credit product follows all the rules in its home country. It now wants to launch in two more countries. What is the best approach?",
+      "options": [
+        "Launch immediately, because regulatory principles are the same everywhere.",
+        "Copy the article numbers from the home country's law into the new product documents.",
+        "Ask an AI assistant which laws apply and treat its answer as confirmed.",
+        "Use the shared principles to prepare a list of specific questions, then confirm the local rules with compliance or legal experts."
+      ],
+      "answer_index": 3,
+      "explanation": "Principles travel well, but details such as consent, notices and data transfers differ, so local rules must be confirmed. The most tempting wrong option is launching immediately because principles are shared. Shared principles help you prepare, but they do not replace checking each country's rules."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L12",
+      "objective": "O5",
+      "question": "In the three lines of defence, which team independently validates a credit model and challenges the model owner?",
+      "options": [
+        "The business team that built and uses the model.",
+        "The independent risk and compliance function (second line).",
+        "Internal audit (third line), which builds the model.",
+        "The model vendor, because it knows the model best."
+      ],
+      "answer_index": 1,
+      "explanation": "The second line sets standards, validates models and challenges the first line. The most tempting wrong option is internal audit. Internal audit is the third line: it checks that the whole system works, and it does not build or routinely validate individual models."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L13",
+      "objective": "O6",
+      "question": "Which scope statement is the strongest start for an AI use case proposal?",
+      "options": [
+        "Support loan officers by summarising visit notes for first-time small-business loans, with supervisors making every lending decision.",
+        "Use the latest large language model across the whole institution.",
+        "Use AI for all lending to reduce costs.",
+        "Replace credit committees with an automated decision system."
+      ],
+      "answer_index": 0,
+      "explanation": "A strong scope names a specific problem, user and human decision point. The most tempting wrong option is 'use AI for all lending to reduce costs', because it mentions value. But it is too broad to define the data, risks or success measures."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L14",
+      "objective": "O5",
+      "question": "A risk in a register has likelihood 3 (high) and impact 2 (medium) on a 1 to 3 scale. What is its score, and which control is best written?",
+      "options": [
+        "5; 'Monitor the model carefully.'",
+        "6; 'Be careful when using outputs.'",
+        "6; 'Branch supervisor checks a random 10% of summaries each week and escalates if errors exceed the agreed limit.'",
+        "1.5; 'The vendor is responsible.'"
+      ],
+      "answer_index": 2,
+      "explanation": "The score is likelihood times impact, 3 × 2 = 6, and a good control says who does what, how often and what happens at a limit. The most tempting wrong option has the right score but the control 'be careful', which is too vague to test or enforce."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L14",
+      "objective": "O6",
+      "question": "A proposal shows real value, but its fairness risk cannot be measured without real use. Which recommendation is most appropriate?",
+      "options": [
+        "Go: launch everywhere and fix problems later.",
+        "No-go: never use AI when any risk is uncertain.",
+        "Go, but remove the fairness risk from the register because it cannot be measured.",
+        "Pilot: small scale, a set end date, clear measures, a stop rule and a named decision-maker."
+      ],
+      "answer_index": 3,
+      "explanation": "A pilot tests uncertain risks safely when the value looks real. The most tempting wrong option is no-go. Uncertainty alone does not require a no-go when a controlled pilot with a stop rule can produce the missing evidence."
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-27",
+  "module_id": "M2",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L06",
+      "objective": "O4",
+      "question": "A grocery service opens a new store with almost no substitution history. What is the most sensible way to handle this cold-start problem?",
+      "options": [
+        "Wait until the store has several years of data before offering any substitution help.",
+        "Copy customer dietary preferences from other stores without asking for consent.",
+        "Use the model trained on the largest store and assume the quality is the same.",
+        "Start with a simpler rule-based version and use picker confirmations as new labels."
+      ],
+      "answer_index": 3,
+      "explanation": "A rule-based or human-in-the-loop version gives users value now and creates labelled data for later. The most tempting wrong option is reusing the model from the largest store. It may work, but coverage differs between stores, so assuming equal quality without testing is exactly the gap the data table is meant to catch."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L07",
+      "objective": "O4",
+      "question": "A feature has 200,000 requests per month, each with 1,500 input tokens. The placeholder input price is 1.50 dollars per million input tokens. What is the monthly input cost?",
+      "options": [
+        "300 dollars",
+        "450 dollars",
+        "2,250 dollars",
+        "45 dollars"
+      ],
+      "answer_index": 1,
+      "explanation": "200,000 × 1,500 = 300 million tokens, and 300 × 1.50 = 450 dollars. The most tempting wrong option is 300 dollars, which is the number of millions of tokens, not the cost. You must still multiply by the price per million."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L08",
+      "objective": "O5",
+      "question": "A summary feature has high offline rubric scores, but few eligible users open it and complaints are rising. What does this show?",
+      "options": [
+        "The offline test set is the only metric that matters, so the feature is successful.",
+        "The team should stop measuring complaints, because they conflict with the offline score.",
+        "One layer of metrics is not enough; online results and guardrails show problems that offline quality misses.",
+        "The model must be replaced immediately with a larger one."
+      ],
+      "answer_index": 2,
+      "explanation": "Offline quality, online results and guardrails answer different questions, and here the online layer shows a product problem. The most tempting wrong option is to replace the model. The offline scores are already high, so the cause may be the problem choice, the design or the test set, and a new model may not fix it."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L09",
+      "objective": "O5",
+      "question": "On a 20-case test set, an AI judge agrees with human ratings on 15 cases, and it gave a pass to a wrong answer in a less common language. What should the team do?",
+      "options": [
+        "Keep human ratings as the reference, review every disagreement, and add human review for judge scores in the weak language.",
+        "Replace human rating with the judge, because 75% agreement is high enough.",
+        "Report the judge's pass rate as the official result, because it is higher.",
+        "Remove the language cases from the test set so the scores agree."
+      ],
+      "answer_index": 0,
+      "explanation": "LLM-as-judge is useful only with human spot checks, and this judge has a clear blind spot. The most tempting wrong option is replacing human rating because agreement seems high. The disagreements show that the judge is too generous in exactly the cases that matter, so a judge-only score would overstate quality."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L10",
+      "objective": "O2",
+      "question": "Leadership asks for a fixed launch date for an AI message-routing feature. The data scientist is not sure the quality target can be reached. What is the best response from the PM?",
+      "options": [
+        "Give the leadership date to the team and treat a missed quality target as a delivery failure.",
+        "Refuse to give leadership any plan until the model is finished.",
+        "Launch on the date whatever the quality, and fix problems after launch.",
+        "Agree a time-boxed experiment with a quality target and a decision rule, and share it with leadership."
+      ],
+      "answer_index": 3,
+      "explanation": "AI quality is not known in advance, so a time-boxed experiment with a decision rule gives leadership a clear plan without pretending to know the outcome. The most tempting wrong option is passing the date to the team. It looks like good planning, but it pushes the team to launch below the quality bar."
+    }
+  ]
+}

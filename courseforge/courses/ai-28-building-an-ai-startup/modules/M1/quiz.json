@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-28",
+  "module_id": "M1",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L01",
+      "objective": "O1",
+      "question": "A two-person team builds a tool that helps veterinary clinics write treatment summaries, using a model from a model supplier. Which layer of the AI startup landscape is this?",
+      "options": [
+        "Infrastructure, because it uses an AI model.",
+        "Vertical AI, because it serves one industry in depth.",
+        "Tools for builders, because clinics are its customers.",
+        "A general application, because anyone could write summaries."
+      ],
+      "answer_index": 1,
+      "explanation": "The product is built for one industry, veterinary clinics, so it is vertical AI. The most tempting wrong option is infrastructure. Using a model does not make a company infrastructure; infrastructure companies build the models, chips or data centres themselves."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L02",
+      "objective": "O3",
+      "question": "A founder is scoring \"willingness to pay\" for a problem. Which piece of evidence is the strongest?",
+      "options": [
+        "Several friends said they would definitely pay for a solution.",
+        "The founder personally finds the problem very annoying.",
+        "Many articles online say AI could solve this kind of problem.",
+        "The target customers already pay a junior employee to handle the problem by hand."
+      ],
+      "answer_index": 3,
+      "explanation": "Money or staff time that people already spend on a problem is evidence of real willingness to pay. The most tempting wrong option is friends saying they would pay. Friends often say yes to be kind, and a statement about the future is much weaker than what people already do."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L03",
+      "objective": "O3",
+      "question": "Which interview question follows the rule of asking about past behaviour instead of opinions?",
+      "options": [
+        "When did you last run out of stock, and what did you do about it?",
+        "Would you use an AI app that predicts what to order?",
+        "How much would you pay for a tool like mine?",
+        "Do you think my idea is a good one?"
+      ],
+      "answer_index": 0,
+      "explanation": "Asking about the last time something happened and what the person did produces facts that are hard to invent. The most tempting wrong option is asking how much they would pay. It sounds practical, but it asks for a guess about the future, and people often give a polite or unrealistic number."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L04",
+      "objective": "O3",
+      "question": "A founder plans a landing page test. When should the success threshold be set?",
+      "options": [
+        "After the first day, once the founder sees how many people visit.",
+        "At the end of the test, by comparing the result with similar startups.",
+        "Before the test starts, and written down so it cannot be changed later.",
+        "It is not needed if the page receives at least some sign-ups."
+      ],
+      "answer_index": 2,
+      "explanation": "Setting the threshold before the test prevents the founder from turning a weak result into a \"promising start\". The most tempting wrong option is setting it after the first day. By then the founder has seen some data and will be tempted to choose a number the test can easily meet."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L05",
+      "objective": "O2",
+      "question": "A startup's product is a simple screen and a set of instructions around a public model. Which step would do most to make it harder to copy within a year?",
+      "options": [
+        "Switch to the newest and most capable public model.",
+        "Keep the instructions to the model secret.",
+        "Add more colours and animations to the screens.",
+        "Integrate the product into customers' accounting software and build a set of corrected examples that it has permission to use."
+      ],
+      "answer_index": 3,
+      "explanation": "Workflow integration and proprietary data are moats that competitors cannot easily buy or rewrite. The most tempting wrong option is switching to the newest model. Competitors can buy the same model, often on the same day, so the model itself is not a moat."
+    }
+  ]
+}

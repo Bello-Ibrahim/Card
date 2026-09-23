@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-25",
+  "module_id": "M2",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L06",
+      "objective": "O3",
+      "question": "In synthetic appointment data, patients who live more than 30 km away miss many more appointments. Which action is the fairest use of this finding?",
+      "options": [
+        "Overbook their appointment slots, because many of them will not arrive.",
+        "Offer reminders, phone or video follow-up and transport support, then check missed-visit rates by distance.",
+        "Stop booking appointments for patients who live far away.",
+        "Conclude that distance causes missed appointments and take no further action."
+      ],
+      "answer_index": 1,
+      "explanation": "Using the prediction to offer support reduces barriers, and measuring results by distance checks that it helps. The most tempting wrong option is overbooking, which may seem efficient but shifts the cost onto patients who already face barriers, so they wait longer or are turned away."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L07",
+      "objective": "O3",
+      "question": "An AI assistant drafts an education SMS from a clinician-approved source. The Arabic version adds a helpful-sounding tip that is not in the source. What should happen?",
+      "options": [
+        "Keep it, because it sounds medically reasonable.",
+        "Keep it only in the Arabic version, because the French version is shorter.",
+        "Ask the assistant whether the tip is correct and keep it if it says yes.",
+        "Remove it, or send it to the clinician for approval, because any added fact is unapproved clinical content."
+      ],
+      "answer_index": 3,
+      "explanation": "Patient messages must contain only approved content, so an added fact is treated as an error until a clinician approves it. The most tempting wrong option is asking the assistant to confirm the tip. The assistant cannot approve clinical content, and it may confidently confirm its own mistake."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L08",
+      "objective": "O4",
+      "question": "What is the most reliable way to check an AI-generated summary of a (synthetic) discharge note?",
+      "options": [
+        "Compare it with the source note fact by fact, including checking for facts that are missing.",
+        "Read the summary once and check that it sounds clinically correct.",
+        "Ask a second AI assistant to check the first summary.",
+        "Check that the summary is shorter than the original note."
+      ],
+      "answer_index": 0,
+      "explanation": "Only a fact-by-fact comparison with the source finds omissions, inventions and distortions. The most tempting wrong option is reading the summary for sense. Fluent text almost always sounds right, and you cannot see an omitted fact by reading the summary alone."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L09",
+      "objective": "O4",
+      "question": "A supplier reports 80% overall sensitivity. In a synthetic breakdown, sensitivity is 90% for one skin type band at a city hospital and 65% for another band at a rural clinic. What is the most important conclusion?",
+      "options": [
+        "The overall figure is enough, because it is the average of all groups.",
+        "The tool is biased only because of the city hospital data, so the rural result can be ignored.",
+        "The overall figure hides lower performance in some groups and settings, so results must be reviewed by group and site.",
+        "Removing skin type from the model's inputs would fix the difference."
+      ],
+      "answer_index": 2,
+      "explanation": "A single overall figure can hide large differences between patient groups and sites, so breakdowns with group sizes are needed. The most tempting wrong option is removing skin type from the inputs. The difference may come from image quality, devices or training data, and fairness must be measured in results, not assumed from the inputs."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L10",
+      "objective": "O5",
+      "question": "After a system update, a deterioration alert tool keeps showing a normal screen, but no new vital signs are reaching it. Which failure mode is this, and what is the best protection?",
+      "options": [
+        "Alert fatigue; reduce the number of alerts.",
+        "Automation bias; retrain staff to trust the tool less.",
+        "Workflow gap; send alerts to a shared inbox.",
+        "Silent failure; add an automatic check that data has arrived recently, with a named owner and stop criteria."
+      ],
+      "answer_index": 3,
+      "explanation": "The tool fails without any visible sign, which is silent failure, and an automatic data check with a named owner detects it. The most tempting wrong option is automation bias. Staff trust may make the harm worse, but training alone will not reveal that the data feed has stopped."
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-18",
+  "module_id": "M2",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L06",
+      "objective": "O4",
+      "question": "A FastAPI prediction service is fast in a single test but slow under real traffic. The code calls mlflow.sklearn.load_model() inside the /predict function. What is the best fix?",
+      "options": [
+        "Load the model once in the lifespan start-up function and keep it in memory.",
+        "Add more fields to the request schema.",
+        "Remove the /health endpoint to reduce load.",
+        "Switch the response schema from Pydantic to a plain dictionary."
+      ],
+      "answer_index": 0,
+      "explanation": "Loading the model on every request repeats slow disk or registry reads. Loading once at start-up removes that cost. The most tempting wrong option is removing /health, but the health endpoint is cheap and platforms need it; it is not the cause of the slowdown."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L07",
+      "objective": "O4",
+      "question": "A client sends alcohol = 40, but the training data only had values from 8 to 15. With Field(ge=8, le=15) in the Pydantic v2 schema, what happens?",
+      "options": [
+        "The model returns a prediction and the value is logged as a warning.",
+        "FastAPI returns status 500 because the model fails.",
+        "FastAPI returns status 422 with a clear message, and the model is never called.",
+        "The value is automatically changed to 15 and a prediction is returned."
+      ],
+      "answer_index": 2,
+      "explanation": "Pydantic rejects the value during validation, so FastAPI returns 422 before the prediction code runs. The most tempting wrong option is the silent prediction with a warning. Without validation, that is what the model would do, which is exactly the problem validation prevents."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L08",
+      "objective": "O4",
+      "question": "Which Dockerfile practice is most likely to leak a secret?",
+      "options": [
+        "Using a multi-stage build.",
+        "Running the service as a non-root user.",
+        "Copying only app.py and the model folder into the image.",
+        "Using COPY . . without a .dockerignore file in a folder that contains a .env file."
+      ],
+      "answer_index": 3,
+      "explanation": "COPY . . adds every file in the folder, including a .env file with passwords, and anyone who pulls the image can read it. The most tempting wrong option is the multi-stage build, but it reduces what enters the final image; it does not add secrets."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L09",
+      "objective": "O6",
+      "question": "A marketing team needs a churn score for every customer once a month. Which serving approach fits best?",
+      "options": [
+        "Online serving with a p95 latency target of 50 ms.",
+        "Batch serving: a scheduled job scores all customers and writes the results to a table.",
+        "Shadow deployment of an online API.",
+        "Loading the model inside each marketing report."
+      ],
+      "answer_index": 1,
+      "explanation": "The inputs are known in advance and nobody waits for a single answer, so a scheduled batch job is simpler and cheaper. The most tempting wrong option is online serving. It would work, but it adds an always-on service and latency targets that this use case does not need."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L10",
+      "objective": "O6",
+      "question": "A team wants to compare a new triage model with the current one on real cases, without the new model affecting any patient. Which release strategy fits?",
+      "options": [
+        "Canary release to 5% of patients.",
+        "Blue-green switch of all traffic at once.",
+        "Shadow deployment: the new model scores copies of real requests, but only the old model's output is shown.",
+        "Deleting the old model so that only the new one runs."
+      ],
+      "answer_index": 2,
+      "explanation": "Shadow deployment tests on real traffic while users only see the current model, so there is no risk to patients. The most tempting wrong option is a canary. A canary still shows the new model's output to some real users, which the team wants to avoid."
+    }
+  ]
+}

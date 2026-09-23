@@ -3,7 +3,7 @@
 Course: AI-28 · Module: M1 · Objectives: O1 · Video: 5 min
 
 ## Hook
-Every week, new AI companies appear. Some build giant models that cost a fortune to train. Others build a simple app for one type of shop in one city. Both are called "AI startups". So where could you, perhaps with one partner and very little money, realistically begin?
+New AI companies appear all the time. Some build giant models that are very expensive to train. Others build a simple app for one type of shop in one city. Both are called "AI startups". So where could you, perhaps with one partner and very little money, realistically begin?
 
 ## Explanation
 A **startup** is a young company that is still searching for a product that many customers want and a way to earn money from it that can grow. A **founder** is a person who starts the company. In this course you will follow the main stages of the **startup journey**:
@@ -25,7 +25,7 @@ Most applications and vertical AI products do not train their own model. They us
 
 **Analogy:** Think of a city's food business. A few large companies grow wheat and run flour mills. That is infrastructure. Others sell ovens and baking equipment. Those are tools. A bakery that makes bread only for hospitals, with the right ingredients for patients, is vertical. A café that sells bread to anyone who walks in is an application. You do not need to own a flour mill to open a successful bakery.
 
-For a small team with little money, the realistic places to start are usually vertical AI and applications. Of the two, vertical AI is often the better choice. General applications compete with large technology companies and with the model suppliers themselves, who can add the same feature to their own products. A vertical product wins by knowing one industry better than anyone else: its language, its rules, its daily problems and the people in it.
+For a small team with little money, the realistic places to start are usually vertical AI and applications. Vertical AI is often the better choice, because general applications compete with large technology companies and with the model suppliers themselves. A vertical product wins by knowing one industry better than anyone else: its language, its rules, its daily problems and the people in it.
 
 ## Worked Example
 Three hypothetical founders show the difference.
@@ -36,7 +36,7 @@ Three hypothetical founders show the difference.
 
 **Mei** lives in Malaysia. Logistics companies ask her for help to read delivery documents that arrive in many formats. She first builds a document-reading service for them. Later she notices that other software developers want the same function inside their own products, so she considers selling it as a **tool for builders**.
 
-None of the three trains a large model. All three use existing models and add knowledge, data and relationships that a general product does not have.
+None of the three trains a large model. All three add knowledge, data and relationships to existing models.
 
 ## Common Mistake
 Many new founders think that a "real" AI startup must build its own model. So they either give up, or spend their first months and money on technology that customers never asked for. Training a large model belongs to the infrastructure layer, where a small team cannot usually compete. For most founders, the valuable work is understanding a customer's problem deeply and using existing models to solve it well.

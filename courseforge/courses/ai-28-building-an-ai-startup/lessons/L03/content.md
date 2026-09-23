@@ -18,7 +18,7 @@ Good questions sound like this:
 - What have you tried to solve it? What did you like or dislike about that?
 - Who else is involved when this happens?
 
-Weaker questions sound like this: "Do you think this is a good idea?", "Would you use an AI tool for this?" or "How much would you pay?" They invite kindness, not facts.
+Weak questions, such as "Would you use an AI tool for this?", invite kindness, not facts.
 
 **A validation-interview script (about 20 minutes)**
 
@@ -30,7 +30,7 @@ Weaker questions sound like this: "Do you think this is a good idea?", "Would yo
 6. **Current solutions (4 min):** "What have you tried? What do you pay for it today, in money or staff time?"
 7. **Close (2 min):** "Is there anything I should have asked? Who else should I talk to? May I contact you again when I have something to show?"
 
-Listen more than you talk. When you hear something important, ask "Can you tell me more?" and wait.
+Listen more than you talk. When you hear something important, ask "Can you tell me more?"
 
 After the interviews, remove names and identifying details from your notes. Then you can use Claude to look for **patterns**: problems, costs or workarounds that appear in several interviews. But AI tools can invent patterns or exaggerate weak ones. So check every pattern against your notes and count how many interviews really support it.
 
@@ -48,7 +48,7 @@ She interviews five owners: two grocery shops, a stationery shop, a pharmacy and
 - Elif: "How do you decide what to order now?"
 - Grocer: "I look at the shelves and write a list in a notebook."
 
-After five interviews, Elif writes notes labelled Shop A to Shop E, with no names. She asks Claude to list common patterns with the number of shops that support each. Claude suggests three:
+After five interviews, Elif labels her notes Shop A to Shop E, with no names, and asks Claude to list common patterns with the number of shops that support each. Claude suggests three:
 
 1. Ordering is done from memory or a notebook (supported by 4 of 5).
 2. Stock problems cluster before holidays (3 of 5).

@@ -8,11 +8,11 @@ A customer asks a chatbot, "Can I get a refund after 45 days?" The chatbot repli
 ## Explanation
 An AI support assistant has two main parts.
 
-**The language model.** This is the part that reads and writes text, such as the model behind Claude or ChatGPT. It learned from a very large amount of public text, so it is good at language: understanding questions, writing clear sentences and changing tone. But it does not know your company. It has never seen your refund policy, your prices or your delivery times.
+**The language model.** This is the part that reads and writes text, such as the model behind Claude or ChatGPT. It learned from a very large amount of text, so it is good at language. But it does not know your company. It has never seen your refund policy, your prices or your delivery times.
 
 **Your own content.** This is your knowledge base: help articles, policies, product guides and approved answers. When a customer asks a question, a well-built assistant first searches your content for the most relevant parts. Then it gives those parts to the language model with an instruction such as: "Answer the customer's question using only this text." The model writes the answer from your content.
 
-This combination is sometimes called "retrieval" or "grounding", because the answer is grounded in (based on) your own documents.
+This is often called "grounding": the answer is based on your own documents.
 
 Problems happen when this process fails:
 
@@ -21,12 +21,12 @@ Problems happen when this process fails:
 - **The search finds the wrong article.** If two articles have similar titles, the assistant may use the one for another country or another product.
 - **The instructions are weak.** If the assistant is not told to say "I don't know" or to pass the question to a person, it may try to answer anyway.
 
-**Analogy:** Imagine a new support agent on their first day. They write well and are very polite. If you give them a well-organised, correct handbook, they give good answers. If the handbook is old, they give old answers. If the page they need is missing, a nervous new agent may guess rather than admit they do not know. An AI assistant behaves in a similar way: its answers are only as good as the handbook it has, and it needs clear permission to say "I will ask a colleague".
+**Analogy:** Imagine a new support agent on their first day. They write well and are very polite. With a correct handbook, they give good answers. With an old handbook, they give old answers. If the page they need is missing, a nervous new agent may guess rather than admit they do not know. An AI assistant behaves in a similar way: its answers are only as good as the handbook it has, and it needs clear permission to say "I will ask a colleague".
 
 ## Worked Example
 Ingrid works in customer support for a hypothetical furniture retailer in Norway. She is testing an AI assistant before it goes live.
 
-She asks: "Do you deliver to the islands in the north?" The assistant answers: "Yes, we deliver everywhere in Norway within 5 working days at no extra cost." It sounds helpful. But the company's delivery article only covers mainland cities. The assistant filled the gap with a likely-sounding answer, including a delivery time and a free-delivery promise that nobody approved.
+She asks: "Do you deliver to the islands in the north?" The assistant answers: "Yes, we deliver everywhere in Norway within 5 working days at no extra cost." But the delivery article only covers mainland cities. The assistant invented a delivery time and a free-delivery promise that nobody approved.
 
 Ingrid makes two changes. First, she asks the delivery team for the correct island delivery rules and adds a short article. Second, she adds an instruction: "If the answer is not in the knowledge base, say you are not sure and offer to connect the customer with a person." She tests again. For island delivery, the assistant now gives the approved answer. For a question about delivery to Sweden, which is still not covered, it says it is not sure and offers a person.
 
