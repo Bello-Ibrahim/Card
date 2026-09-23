@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-28",
+  "module_id": "M3",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L11",
+      "objective": "O6",
+      "question": "A founder's AI tool reads job applications for small companies. Which next step best reduces a high risk identified in the risk checklist?",
+      "options": [
+        "Copy the privacy page of a large technology company and publish it unchanged.",
+        "Let the AI rank candidates automatically so employers save more time.",
+        "Wait until the company is bigger before thinking about legal questions.",
+        "Remove names, photos and ages before AI review, and make sure a person makes every final decision."
+      ],
+      "answer_index": 3,
+      "explanation": "Removing identifying details reduces bias and data risk, and human decisions provide oversight in a sensitive area such as hiring. The most tempting wrong option is copying a large company's privacy page. It looks professional, but that company's business, data and country may be very different, so the page may not fit or protect the founder."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L12",
+      "objective": "O1",
+      "question": "A founder owns 100% of her company and sells 10% to an angel investor. What is this reduction in her ownership called, and what does she own afterwards?",
+      "options": [
+        "Dilution; she now owns 90%.",
+        "Bootstrapping; she still owns 100%.",
+        "A grant; she now owns 90% and must repay the money.",
+        "Gross margin; she now owns 110%."
+      ],
+      "answer_index": 0,
+      "explanation": "Selling equity makes the founder's share smaller, which is called dilution, so 100% minus 10% leaves 90%. The most tempting wrong option is the grant. Grants usually do not take a share of the company and are usually not repaid, so neither part of that option matches an angel investment."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L13",
+      "objective": "O7",
+      "question": "What should a 2-minute MVP demo focus on?",
+      "options": [
+        "A tour of every feature and settings page, to show how much was built.",
+        "One user completing the core job from problem to result, with a brief quality check.",
+        "A live demo with real customer data, so it looks authentic.",
+        "The founder's technical choices and the model used."
+      ],
+      "answer_index": 1,
+      "explanation": "A short demo works best when it shows one user solving one real problem, like a film trailer. The most tempting wrong option is the full feature tour. It shows effort, but it makes the demo long and confusing, and the audience forgets the core value."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L14",
+      "objective": "O7",
+      "question": "A founder's moat slide says \"We use the latest AI model.\" What is the best improvement?",
+      "options": [
+        "Add the model's name in a larger font.",
+        "Delete the moat slide, because early startups do not need one.",
+        "Name what will be hard to copy, such as consented customer data, workflow integration or a distribution partnership.",
+        "Add a large market-size number from the internet to make the slide stronger."
+      ],
+      "answer_index": 2,
+      "explanation": "Competitors can use the same model, so the moat slide should show data, workflow, distribution or trust that others cannot easily copy. The most tempting wrong option is deleting the slide. Early startups rarely have a strong moat yet, but investors still expect an honest plan to build one."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L15",
+      "objective": "O6",
+      "question": "An investor asks: \"How do you know strangers will pay, when your pilot customers know you personally?\" The founder has no evidence yet. What is the best answer?",
+      "options": [
+        "\"Everyone who has seen it loves it, so strangers will too.\"",
+        "\"We have not tested that yet. Next month we will run a test with 20 traders who do not know us, and we will share the result.\"",
+        "\"Our market is very large, so some strangers will certainly pay.\"",
+        "Change the subject to the product's newest feature."
+      ],
+      "answer_index": 1,
+      "explanation": "Admitting the gap and naming a specific test builds trust and shows a clear plan. The most tempting wrong option is pointing to a large market. A large market does not show that people who do not know the founder will actually pay."
+    }
+  ]
+}

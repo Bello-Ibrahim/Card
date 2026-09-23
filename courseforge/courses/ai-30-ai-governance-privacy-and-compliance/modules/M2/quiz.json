@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-30",
+  "module_id": "M2",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L06",
+      "objective": "O2",
+      "question": "A team removes names from a training dataset and replaces them with codes that the company can link back to each customer. How should this data be treated?",
+      "options": [
+        "As anonymous data, outside data protection law.",
+        "As personal data, because it can still be linked back to individuals.",
+        "As special category data, because codes are sensitive.",
+        "As public data, because the names have been removed."
+      ],
+      "answer_index": 1,
+      "explanation": "Pseudonymised data remains personal data when it can be linked back to a person. The most tempting wrong option is 'anonymous'. Removing names is a useful security control, but true anonymisation means nobody can reasonably identify the person again."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L07",
+      "objective": "O3",
+      "question": "A retailer relies on legitimate interests to train a recommendation model. What must it document?",
+      "options": [
+        "Only that customers accepted the terms and conditions.",
+        "Only the commercial benefit of the model to the business.",
+        "Customers' consent to each product recommendation.",
+        "A legitimate purpose, why the processing is necessary, and a balancing test with controls that protect customers."
+      ],
+      "answer_index": 3,
+      "explanation": "Legitimate interests needs a three-part test: purpose, necessity and balancing. The most tempting wrong option is the commercial benefit. A business interest can be legitimate, but it must also be necessary and not overridden by customers' interests and rights."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L08",
+      "objective": "O1",
+      "question": "A company already complies with the GDPR and starts processing data of customers in Nigeria. What is the best approach to the NDPA?",
+      "options": [
+        "Treat the NDPA separately, because local duties such as registration, transfer grounds and regulator guidance can differ.",
+        "Do nothing, because GDPR compliance automatically covers the NDPA.",
+        "Apply only the NDPA principles, because Nigeria has no regulator.",
+        "Wait until the Nigerian regulator contacts the company."
+      ],
+      "answer_index": 0,
+      "explanation": "The NDPA is similar in structure to the GDPR but has its own regulator and local duties. The most tempting wrong option is that GDPR compliance covers the NDPA. Overlapping principles help, but they do not cover local duties such as classification-based registration or transfer grounds."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L09",
+      "objective": "O3",
+      "question": "A lender adds a human reviewer to its AI loan decisions. The reviewer approves every AI output in a few seconds and cannot change outcomes. Why is this a problem?",
+      "options": [
+        "It is not a problem, because a human is now involved.",
+        "Because only a court can review automated decisions.",
+        "Because the review is not meaningful, so the decision may still be treated as solely automated.",
+        "Because human reviewers are not allowed to see personal data."
+      ],
+      "answer_index": 2,
+      "explanation": "Meaningful review needs authority to change the outcome, relevant information and time. The most tempting wrong option is that any human involvement is enough, but a reviewer who only confirms the AI output does not provide real human intervention."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L10",
+      "objective": "O5",
+      "question": "When is the best time to start a DPIA for a new AI system?",
+      "options": [
+        "After launch, once real data shows what the risks are.",
+        "At the design stage, when the findings can still change the system.",
+        "Only after a regulator asks for it.",
+        "On the day the system goes live, as the final approval step."
+      ],
+      "answer_index": 1,
+      "explanation": "A DPIA is most useful when its findings can still change the design. The most tempting wrong option is the go-live day. A DPIA done then can only describe risks, not prevent them, and it may be too late to meet the duty to assess before high-risk processing starts."
+    }
+  ]
+}

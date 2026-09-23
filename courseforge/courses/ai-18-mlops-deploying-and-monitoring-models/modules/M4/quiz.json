@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-18",
+  "module_id": "M4",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L15",
+      "objective": "O5",
+      "question": "For a week, a model API has had normal traffic, a 0.1% error rate and stable latency. Which statement is correct?",
+      "options": [
+        "The model is working well, because service health is normal.",
+        "Service health is normal, but you still need model-behaviour signals, such as the prediction distribution, to know whether predictions are still good.",
+        "The model must be retrained, because the error rate is above zero.",
+        "Latency is the only signal that shows model quality."
+      ],
+      "answer_index": 1,
+      "explanation": "Service health and model behaviour are separate layers, and a healthy service can still return worse predictions. The most tempting wrong option is that normal health means the model works; that is exactly the gap that model-behaviour monitoring closes."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L16",
+      "objective": "O5",
+      "question": "You compare 5,000 training rows with 5,000 recent rows. For one feature, PSI = 0.02 and the KS p-value = 0.001. What is the best interpretation?",
+      "options": [
+        "The KS test proves a large, important drift, so retrain immediately.",
+        "The PSI is invalid because the KS test disagrees.",
+        "Both tests show no difference at all.",
+        "The shift is statistically detectable but small; with large samples, KS flags tiny differences, so check the size of the shift and its effect before acting."
+      ],
+      "answer_index": 3,
+      "explanation": "PSI measures the size of the shift, and 0.02 is small by common rules of thumb, while KS with many rows reports even tiny differences as significant. The most tempting wrong option is retraining because of the low p-value, which confuses statistical significance with practical importance."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L16",
+      "objective": "O6",
+      "question": "After a data pipeline update, PSI for 'alcohol' jumps to 0.9. The values are now all between 0.08 and 0.15 instead of 8 to 15. What should you do first?",
+      "options": [
+        "Investigate the pipeline, because a unit change is the likely cause, and fix it rather than retraining.",
+        "Retrain immediately on the new values.",
+        "Ignore it, because only one feature changed.",
+        "Lower the PSI alert threshold."
+      ],
+      "answer_index": 0,
+      "explanation": "Values that are exactly one hundred times smaller point to a unit or pipeline bug, not a real-world change. The most tempting wrong option is retraining, but retraining on the broken values would teach the model the bug."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L17",
+      "objective": "O7",
+      "question": "In Capstone Part 1, which approach gives the lowest risk of integration problems?",
+      "options": [
+        "Perfect each part separately and connect them on the last day.",
+        "Skip the tests until the Docker image works.",
+        "Connect a simple end-to-end pipeline early, then improve each part.",
+        "Build the image by hand and add CI only if time remains."
+      ],
+      "answer_index": 2,
+      "explanation": "A thin working pipeline reveals connection problems, such as a missing model in CI, while there is still time to fix them. The most tempting wrong option is perfecting each part first, which feels productive but leaves all integration problems for the end."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L18",
+      "objective": "O6",
+      "question": "Which rollback section in a runbook is most useful at 2 a.m. for a colleague who does not know the code?",
+      "options": [
+        "\"Roll back to the previous version if needed.\"",
+        "A detailed diagram of the system architecture.",
+        "A list of all model versions ever trained.",
+        "Numbered steps with the exact commands, the previous image and model tags, a health check and who may run them."
+      ],
+      "answer_index": 3,
+      "explanation": "Exact, tested commands let someone act correctly under pressure without asking the author. The most tempting wrong option is the architecture diagram, which helps understanding but does not tell the colleague what to type or which version to return to."
+    }
+  ]
+}

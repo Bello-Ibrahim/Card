@@ -22,7 +22,7 @@ Five areas matter for most AI startups:
 
 There are also **ethical risks** that may not be illegal but can still harm people and your reputation: biased results against some groups, overconfident answers, and replacing human judgement where it is needed.
 
-**Analogy:** Opening a food stall is not only about cooking well. You also need to know the hygiene rules, label allergens, and store food at the right temperature. A great recipe does not protect you if customers become ill. Legal and data risks are the hygiene rules of an AI startup.
+**Analogy:** Opening a food stall is not only about cooking well. You also need to follow hygiene rules and label allergens. A great recipe does not protect you if customers become ill. Legal and data risks are the hygiene rules of an AI startup.
 
 ## Worked Example
 Zofia is a hypothetical founder in Kraków, Poland. Her MVP reads job applications for small companies and suggests which candidates to interview. Because she works in the EU, she uses the GDPR and the EU AI Act as her examples [REGION] [VERIFY]. She fills in a risk checklist:
@@ -38,7 +38,7 @@ Zofia is a hypothetical founder in Kraków, Poland. Her MVP reads job applicatio
 Zofia decides to change her product: instead of **ranking** candidates, it will **summarise** each application against the employer's criteria, and a person will make every decision. This reduces risk and keeps her product useful.
 
 ## Common Mistake
-Many founders think legal questions only matter "later, when we are bigger". But some choices are hard to change later, such as what data you collect and what you promise customers. Another mistake is copying terms and privacy pages from another company. Their business, data and country may be very different from yours. Use them only to learn which topics to cover, and get local advice.
+Many founders think legal questions only matter "later, when we are bigger". But some choices, such as what data you collect and what you promise customers, are hard to change later. Another mistake is copying another company's terms and privacy pages; their business, data and country may be very different from yours.
 
 ## Key Takeaways
 1. Check five areas early: data protection, consent, ownership of AI outputs, model supplier terms and sector rules.
@@ -62,4 +62,4 @@ Many founders think legal questions only matter "later, when we are bigger". But
 - [REGION] [VERIFY] GDPR and the EU AI Act are named only as examples. The descriptions of GDPR principles, the EU AI Act's risk levels, and the treatment of job-applicant screening as a higher-risk use with duties such as human oversight must be checked by a qualified reviewer before recording.
 - [REGION] [VERIFY] The statement that ownership and copyright of AI outputs is unclear in many countries must be checked.
 - [VERSION] Model supplier terms and data-use settings differ by plan and change over time.
-- The lesson states it is not legal advice; this statement must stay in the script.
+- The "not legal advice" statement must stay in the script.
