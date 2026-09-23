@@ -20,9 +20,9 @@ Never delete an outlier just because it is unusual. **Ask why it exists first.**
 
 **Correlation versus causation.** Two numbers are **correlated** when they tend to move together. That does not mean one **causes** the other. Here is a hypothetical case: in a coastal town, ice-cream sales and sunburn cases rise and fall together over the year. Ice cream does not cause sunburn. Both follow a third factor: hot, sunny weather. When AI says "X leads to Y", ask: could a third factor explain both? Could it be a coincidence in a small dataset? Could the direction be reversed?
 
-AI tools are good at finding outliers and correlations quickly. They are less careful about explaining them. They may call a normal value an outlier, or describe a correlation as a cause. Your job is to ask "why?" and "how could I check?"
+AI tools find outliers and correlations quickly but explain them less carefully. They may call a normal value an outlier, or describe a correlation as a cause. Your job is to ask "why?" and "how could I check?"
 
-**Analogy:** Reading data is like reading footprints in sand. A long line of steps shows a direction: that is a trend. One very deep print is an outlier; maybe someone jumped, or maybe a heavy box was dropped. And two lines of prints side by side do not mean one person was following the other. They may both have walked to the same café.
+**Analogy:** Reading data is like reading footprints in sand. A long line of steps shows a direction: a trend. One very deep print is an outlier; ask what made it. Two lines of prints side by side do not mean one person followed the other. Both may have walked to the same café.
 
 ## Worked Example
 Fatou runs three ice-cream kiosks in Dakar, Senegal. She asks an AI tool to analyse her fictional weekly sales sheet for 12 weeks.
@@ -34,7 +34,7 @@ The AI reports:
 3. **A correlation:** the AI notes that her sales rise in the same weeks as sunburn cases reported by a nearby clinic (also fictional), and says "higher sales are linked to sunburn". Fatou recognises the third factor: hot weather drives both. The useful finding for her business is the link between temperature and sales, which she can check against weather records.
 
 ## Common Mistake
-Many learners treat every outlier as "bad data" and remove it to make the chart look tidy. This can remove the most important finding in the dataset. The opposite mistake is to build a whole conclusion on one outlier. Investigate first, then report with and without the unusual value.
+Many learners remove every outlier to make the chart look tidy. This can remove the most important finding. The opposite mistake is to build a whole conclusion on one outlier. Investigate first, then report with and without the unusual value.
 
 ## Key Takeaways
 1. A trend needs many periods; check whether one unusual value creates or hides it.

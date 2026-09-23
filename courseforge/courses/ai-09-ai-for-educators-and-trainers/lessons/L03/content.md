@@ -3,14 +3,12 @@
 Course: AI-09 · Module: M1 · Objectives: O2 · Video: 5 min
 
 ## Hook
-It is late, and you have 60 reports to mark. Pasting them into a chatbot and asking for grades would save hours. Before you do that, ask two questions: whose information is in those reports, and where does it go when you paste it?
+You have 60 reports to mark. Pasting them into a chatbot for grades would save hours. First, ask two questions: whose information is in those reports, and where does it go when you paste it?
 
 ## Explanation
-This lesson covers three connected issues: learner privacy, academic integrity and fairness.
-
 **1. Learner privacy.** When you type or paste something into an AI tool, it leaves your device and is processed by the company that runs the tool. Depending on the tool and your settings, it may be stored or used to improve the product. [VERSION] So the basic rule is simple: **never paste learners' names, grades, health information, contact details, photos or other personal data into a public AI tool.** This includes essays and reports that contain names or personal stories.
 
-If you want AI help with learner work, remove everything that could identify a person first, or use only your own notes ("the argument is clear but the evidence is weak"). Some institutions provide an approved AI tool with extra data protection. Use that if it exists, and follow its rules.
+If you want AI help with learner work, remove everything that could identify a person, or use only your own notes. If your institution provides an approved AI tool with extra data protection, use it and follow its rules.
 
 Rules on learner data, and on whether minors may use AI tools at all, differ between countries, regions and institutions. [REGION] AI companies also set their own minimum ages and terms for education use, and these change. [VERSION] Before you ask learners to use any AI tool directly, check your institution's policy, the local rules that apply to you, and the tool's current terms.
 
@@ -25,12 +23,12 @@ Task design is often more useful than detection. Tasks are harder to hand to AI 
 
 **3. Fairness.** Not all learners have the same access to devices, internet or paid AI tools. If a task needs AI, make sure every learner can do it in class or with a free option. AI outputs can also contain bias, which L08 covers in detail.
 
-**Analogy:** A public AI tool is like a busy shared office photocopier. It is useful, but you would not leave confidential learner files lying on it. You remove private pages before you copy, or you use a secure machine your institution provides.
+**Analogy:** A public AI tool is like a busy shared office photocopier. It is useful, but you would not leave confidential learner files on it. You remove private pages first, or use a secure machine your institution provides.
 
 ## Worked Example
 Ali is a lecturer in business studies at a university in Lahore, Pakistan. He wants help with feedback on 45 short case-study answers.
 
-His first idea is to paste all 45 answers, with learner names and ID numbers, into a free chatbot. He stops and changes his plan. He reads the answers himself and writes short notes, such as "good use of the case, no clear recommendation". Then he asks the AI: "Turn these notes into two polite, specific feedback sentences each, for university students." No names or answers leave his computer, and the grade is his decision.
+His first idea is to paste all 45 answers, with names and ID numbers, into a free chatbot. He changes his plan. He reads the answers himself and writes short notes, such as "good use of the case, no clear recommendation". Then he asks the AI: "Turn these notes into two polite, specific feedback sentences each, for university students." No names or answers leave his computer, and the grade is his decision.
 
 Later, a colleague shows Ali a detector report saying one essay is "90% AI". Ali does not treat this as proof. He asks the learner to talk through how they wrote the essay and to show their notes. The learner explains the argument clearly and shows early drafts, so Ali closes the matter.
 
