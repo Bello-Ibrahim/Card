@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-01",
+  "module_id": "M1",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L01",
+      "objective": "O1",
+      "question": "Which statement best describes how AI, machine learning, deep learning and generative AI relate to each other?",
+      "options": [
+        "They are four different names for the same technology.",
+        "Machine learning is the broadest term, and AI is one type of machine learning.",
+        "They fit inside each other: AI contains machine learning, which contains deep learning, which contains generative AI.",
+        "Generative AI is the broadest term, because chatbots can do every AI task."
+      ],
+      "answer_index": 2,
+      "explanation": "AI is the largest circle, and each term inside it is more specific. The most tempting wrong option is that machine learning is the broadest term. It is not, because AI also includes systems that follow hand-written rules and do not learn from examples."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L02",
+      "objective": "O5",
+      "question": "A map app tells you your trip will take 25 minutes. What is it predicting, and what data did it most probably learn from?",
+      "options": [
+        "It predicts travel time, and it probably learned from past and current trips by many people on the same roads.",
+        "It predicts the shortest distance, and it learned from a printed road map.",
+        "It predicts the weather, and it learned from traffic lights on a timer.",
+        "It predicts nothing; it follows one fixed rule that divides the distance by a speed limit."
+      ],
+      "answer_index": 0,
+      "explanation": "The app is guessing travel time, which changes with traffic, so it needs examples of real trips. The most tempting wrong option is the fixed rule based on distance and speed limit. That rule would give the same time at every hour of the day and could not react to traffic."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L03",
+      "objective": "O2",
+      "question": "A team trains a system to spot faulty fabric. Workers mark each photo as \"good\" or \"faulty\". In this example, what are \"good\" and \"faulty\"?",
+      "options": [
+        "Features",
+        "Data",
+        "Predictions made during training",
+        "Labels"
+      ],
+      "answer_index": 3,
+      "explanation": "Labels are the correct answers that people attach to each example. The most tempting wrong option is \"features\". Features are the details the system looks at, such as holes or uneven colour, not the answer it is trying to predict."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L03",
+      "objective": "O2",
+      "question": "A fruit-sorting system was trained only on photos of red apples. It now often fails on green apples. What is the best way to improve it?",
+      "options": [
+        "Add many more photos of red apples.",
+        "Add labelled photos of apples in many colours, including green.",
+        "Remove the label \"apple\" from the system.",
+        "Use the system more often so it can learn from its mistakes."
+      ],
+      "answer_index": 1,
+      "explanation": "The problem is missing variety, so the fix is examples that cover the missing cases. The most tempting wrong option is adding more red apple photos. More of the same examples increases quantity but not variety, so the system still has not seen a green apple."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L04",
+      "objective": "O2",
+      "question": "A farmer uses a phone app to check a photo of a leaf the app has never seen before. What is the app doing at that moment?",
+      "options": [
+        "Training, because it is learning from the new photo.",
+        "Searching a stored list for the same photo and copying its answer.",
+        "Inference: using patterns learned earlier to make a prediction about a new example.",
+        "Collecting labels from the farmer to build a new model."
+      ],
+      "answer_index": 2,
+      "explanation": "Using a finished model on a new example is inference, also called prediction. The most tempting wrong option is training. The model normally does not change while people use it; it only improves when a team collects new data and trains it again."
+    }
+  ]
+}
