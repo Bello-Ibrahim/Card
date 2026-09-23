@@ -44,7 +44,7 @@ Headline: Whose Data Is This?
 Image: Navy background, a stack of learner reports with a padlock resting on top, headline in teal Inter Bold.
 
 ## Production Notes
-- [VERIFY] Scenes 11 and 14 say that detection tools can give false results and should never be the only evidence of misconduct. Check this against current sources before recording; the wording is kept cautious on purpose.
+- [VERIFY] Scenes 8, 13 and 15 say that detection tools can give false results and should never be the only evidence of misconduct. Check this against current sources before recording; the wording is kept cautious on purpose.
 - Left out of the voiceover: the content.md claim that second-language writers may be at particular risk of false detection results [VERIFY]. Add it only if current research confirms it.
 - [REGION] Rules on learner data and on AI use by minors differ by country, region and institution. The voiceover points to local rules and institutional policy and names no law; keep it that way in every language version.
 - [VERSION] Whether a tool stores or trains on what users paste, and the minimum ages and education terms of Claude and ChatGPT, change over time. The voiceover says only 'depending on the tool and your settings' and 'the tool's current terms'.

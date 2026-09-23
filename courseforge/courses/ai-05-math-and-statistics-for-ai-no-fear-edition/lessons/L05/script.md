@@ -40,6 +40,6 @@ Headline: Many Predictions, One Line
 Image: Navy background, a 3 × 2 matrix times a 2 × 1 vector producing a column 23, 42, 56, headline in teal Inter Bold.
 
 ## Production Notes
-- [VERSION] NumPy: the @ operator is stable, but confirm the exact wording of the shape-mismatch ValueError against the current NumPy version before recording scene 13. The message in content.md ('mismatch in its core dimension', 'size 3 is different from 2') was checked with NumPy 2.4; the voiceover paraphrases it so it survives small wording changes.
+- [VERSION] NumPy: the @ operator is stable, but confirm the exact wording of the shape-mismatch ValueError against the current NumPy version before recording scene 11. The message in content.md ('mismatch in its core dimension', 'size 3 is different from 2') was checked with NumPy 2.4; the voiceover paraphrases it so it survives small wording changes.
 - [VERSION] Google Colab: confirm the interface before recording the screen scenes.
 - Linh, the Hanoi clothing shop and the prices (shirt 10, socks 3) are hypothetical. No real brand names or logos in stock footage.

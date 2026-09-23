@@ -46,7 +46,7 @@ Headline: Maths Without Fear
 Image: Navy background, five teal bars of different heights with a dotted level line through them, headline in teal Inter Bold.
 
 ## Production Notes
-- [VERSION] Google Colab: confirm current sign-in requirements, free usage limits, how to create a new notebook, and the run button and Shift + Enter shortcut against the live tool before recording the screen demo (scenes 10 to 13).
+- [VERSION] Google Colab: confirm current sign-in requirements, free usage limits, how to create a new notebook, and the run button and Shift + Enter shortcut against the live tool before recording the screen demo (scenes 11 to 14).
 - [VERSION] Colab AI assistant: the voiceover does not mention it. If the editor adds the privacy reminder from exercise step 8, confirm first that an AI assistant is currently offered inside Colab.
 - Mariana, her Bogotá bakery and the sales figures 12, 15, 9, 20 and 14 are hypothetical. Do not show a real bakery name or logo in stock footage.
 - The screen recording should use a clean browser profile with no personal bookmarks, emails or account names visible.
