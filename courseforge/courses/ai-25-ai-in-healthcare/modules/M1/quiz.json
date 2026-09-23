@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-25",
+  "module_id": "M1",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L01",
+      "objective": "O1",
+      "question": "A clinic uses a model that predicts which booked patients may miss their appointment, and staff send those patients extra reminders. Which area of AI in healthcare is this, and who is accountable for how the predictions are used?",
+      "options": [
+        "Diagnostic support; the model supplier is accountable.",
+        "Operations; the clinic manager is accountable.",
+        "Public health; the national ministry of health is accountable.",
+        "Patient engagement; the model itself is accountable because it made the prediction."
+      ],
+      "answer_index": 1,
+      "explanation": "Predicting missed appointments supports how the clinic runs, so it is operations, and a named manager decides what to do with the predictions. The most tempting wrong option is patient engagement, because reminders reach patients. But the model's task is an operational prediction, and accountability can never sit with software."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L02",
+      "objective": "O4",
+      "question": "A synthetic dataset has names and ID numbers removed. It still contains exact age, village and a rare diagnosis. What is the main privacy concern if similar data were real?",
+      "options": [
+        "There is no concern, because data without names is anonymous.",
+        "The data is too small to be useful for AI.",
+        "Coding systems may differ between villages.",
+        "A person could be identified from the combination of age, village and a rare diagnosis."
+      ],
+      "answer_index": 3,
+      "explanation": "Combinations of details can point to one person, especially in small communities, so the data is still sensitive. The most tempting wrong option is that removing names makes data anonymous. In health data this is often false, which is why de-identified data must still be protected."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L03",
+      "objective": "O2",
+      "question": "A team plans to label ECGs using the automatic interpretation printed by the ECG machine, then train a model on these labels. What is the main problem?",
+      "options": [
+        "The model will learn to copy the machine, including its mistakes, because the reference standard is weak.",
+        "ECG data cannot be used to train AI models.",
+        "The dataset will be too large to train on.",
+        "Automatic labels are always more accurate than specialist labels, so there is no problem."
+      ],
+      "answer_index": 0,
+      "explanation": "Labels set the upper limit on model quality, so a weak reference standard produces a model that repeats its errors. The most tempting wrong option is that automatic labels are more accurate. They may be fast and consistent, but specialist labelling with a method to resolve disagreements gives a stronger reference standard."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L04",
+      "objective": "O2",
+      "question": "In a synthetic example, a tool with 90% sensitivity and 90% specificity is used on 1,000 people where only 10 have the condition. It gives 9 true positives and 99 false positives. What is the positive predictive value?",
+      "options": [
+        "90.0%",
+        "50.0%",
+        "8.3%",
+        "99.9%"
+      ],
+      "answer_index": 2,
+      "explanation": "PPV = TP / (TP + FP) = 9 / 108 = 8.3%. The most tempting wrong option is 90.0%, which is the sensitivity. Sensitivity tells you how many true cases the tool finds, not how often a positive result is correct, and PPV falls when the condition is rare."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L05",
+      "objective": "O5",
+      "question": "Which type of evidence best shows that using an AI tool improves outcomes for patients compared with current practice?",
+      "options": [
+        "A retrospective study on one million past images from one hospital.",
+        "External validation on past data from four hospitals.",
+        "A randomised or comparative study of care with and without the tool.",
+        "A supplier brochure that reports high accuracy."
+      ],
+      "answer_index": 2,
+      "explanation": "Only a comparative study of care with and without the tool can show an effect on patient outcomes. The most tempting wrong option is the very large retrospective study. Its size does not change its design: it shows the model can find a pattern in past data, not that it improves care."
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-27",
+  "module_id": "M1",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L01",
+      "objective": "O2",
+      "question": "A PM writes this acceptance criterion for an AI review summary: \"The summary is accurate.\" What is the best way to improve it?",
+      "options": [
+        "Keep it, because engineering will make the model accurate before launch.",
+        "Change it to \"The summary is always accurate for every hotel.\"",
+        "Remove it, because AI quality cannot be measured.",
+        "Change it to a rate on a defined test set, such as \"at least 9 of 10 test summaries contain no invented claims\", and design what happens for the rest."
+      ],
+      "answer_index": 3,
+      "explanation": "AI outputs are probabilistic, so quality is a rate measured on test data, and the remaining errors need a designed experience. The most tempting wrong option is \"always accurate for every hotel\". It sounds stricter, but no probabilistic feature can promise that, so the criterion can never be tested or met."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L02",
+      "objective": "O1",
+      "question": "A delivery company wants to show customers when their parcel will arrive, based on past trips, time of day and route. Which capability type fits best?",
+      "options": [
+        "Prediction",
+        "Generation",
+        "Agent",
+        "Recommendation"
+      ],
+      "answer_index": 0,
+      "explanation": "The user needs a number (an arrival time) estimated from past data, which is prediction. The most tempting wrong option is generation, because a chatbot could write a message about the delivery. The value, however, comes from the time estimate, and a text generator does not produce a reliable estimate from trip data."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L03",
+      "objective": "O3",
+      "question": "Which idea is the strongest AI opportunity?",
+      "options": [
+        "An AI mascot that chats with users, because a competitor launched one.",
+        "Explaining each wrong answer to learners, where tickets show confusion, it happens many times a day, and lesson content and answer data exist.",
+        "AI-written release notes, because leadership asked for more AI features.",
+        "An AI calculator for fixed subscription prices."
+      ],
+      "answer_index": 1,
+      "explanation": "It combines a real user pain with evidence, a repeated judgement task and available data. The most tempting wrong option is the mascot, because it copies a visible competitor feature. It has no evidence of user pain, so its success cannot be defined or measured."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L04",
+      "objective": "O3",
+      "question": "An idea scores Value 5, Feasibility 3 and Error cost 5 (Total = V + F + (6 − E) = 9). What should the team do next?",
+      "options": [
+        "Build it first, because it has the highest value.",
+        "Drop it permanently, because the error cost is high.",
+        "Score a narrower version, such as a suggestion that a human confirms, and compare it with the other ideas.",
+        "Change the error cost score to 1 so it reaches the top of the list."
+      ],
+      "answer_index": 2,
+      "explanation": "A high-value, high-risk idea often keeps most of its value in a narrower scope with lower error cost. The most tempting wrong option is to drop it permanently. That loses the value, and a narrow version with human review can also create the labelled data needed for a wider version later."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L05",
+      "objective": "O2",
+      "question": "An AI reply-suggestion feature for sellers has a human in the loop: sellers must tap and send each suggestion. Why should the team still design the \"wrong suggestion\" path carefully?",
+      "options": [
+        "Busy users often stop checking carefully when suggestions are usually right, so errors must be easy to see and hard to make.",
+        "Because a human in the loop is not allowed by most app stores.",
+        "Because the model will learn to stop making errors if the path is designed.",
+        "It does not need to be designed, because the seller will always check the text."
+      ],
+      "answer_index": 0,
+      "explanation": "Human review lowers the error cost but depends on attention, which drops when the AI is usually right. The most tempting wrong option is that the seller will always check. That assumption is exactly why teams skip failure design, and it fails in daily use."
+    }
+  ]
+}

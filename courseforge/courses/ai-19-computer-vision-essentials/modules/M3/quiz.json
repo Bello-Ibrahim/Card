@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-19",
+  "module_id": "M3",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L09",
+      "objective": "O5",
+      "question": "A ground-truth box has an area of 10,000 pixels. A predicted box has an area of 8,000 pixels, and the two boxes overlap by 6,000 pixels. What is the IoU, and is it a match at a threshold of 0.5?",
+      "options": [
+        "0.75, a match, because 6,000 ÷ 8,000 = 0.75.",
+        "0.60, a match, because 6,000 ÷ 10,000 = 0.60.",
+        "0.33, not a match, because 6,000 ÷ 18,000 ≈ 0.33.",
+        "0.50, a match, because the union is 12,000 and 6,000 ÷ 12,000 = 0.50."
+      ],
+      "answer_index": 3,
+      "explanation": "The union is 10,000 + 8,000 − 6,000 = 12,000, so IoU = 6,000 ÷ 12,000 = 0.50, which meets a threshold of 0.5. The most tempting wrong option divides by 18,000, the sum of the two areas. That counts the overlap twice; the union must subtract it once."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L10",
+      "objective": "O3",
+      "question": "You lower the YOLO confidence threshold from 0.5 to 0.1 on a street video. What change should you expect?",
+      "options": [
+        "Fewer detections, but each one is more accurate.",
+        "More detections, including more real objects and more false alarms.",
+        "The same detections, but the boxes become tighter.",
+        "The model runs faster because it checks fewer objects."
+      ],
+      "answer_index": 1,
+      "explanation": "A lower threshold keeps detections with lower scores, so recall usually rises and precision usually falls. The most tempting wrong option is \"fewer, more accurate detections\". That describes raising the threshold, not lowering it."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L10",
+      "objective": "O3",
+      "question": "A start-up wants to build a closed-source paid product using the ultralytics YOLO package. According to the course, what should the team do first?",
+      "options": [
+        "Check the current licence terms: the package is AGPL-3.0, and closed commercial use may need a separate commercial licence.",
+        "Nothing, because the package installs for free with pip.",
+        "Remove the licence file from the package before using it.",
+        "Rename the model file so it is not recognised as YOLO."
+      ],
+      "answer_index": 0,
+      "explanation": "AGPL-3.0 is a copyleft licence and can require you to publish your own source code; Ultralytics offers a separate commercial licence, and terms can change. The most tempting wrong option is that free installation means free commercial use. Being free to download does not decide what a licence allows."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L11",
+      "objective": "O4",
+      "question": "After training a custom shelf detector, mAP is very high on validation, but the model performs poorly on photos taken the next week. What is the most likely cause?",
+      "options": [
+        "The confidence threshold was set too low during training.",
+        "The model was too small, so it needs the largest model size.",
+        "Validation photos were taken at the same time as training photos, so the two splits were almost identical.",
+        "The YAML file listed the class names in alphabetical order."
+      ],
+      "answer_index": 2,
+      "explanation": "Near-identical photos in training and validation make results look much better than they will be on new data; split by shooting session instead. The most tempting wrong option is a larger model. A larger model can remember the training photos even better, so it does not fix a validation set that is too similar."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L12",
+      "objective": "O5",
+      "question": "The true text is \"TOTAL 45.00\" (11 characters). OCR returns \"T0TAL 45,0\". What is the character error rate, and which step is most likely to reduce it?",
+      "options": [
+        "About 0.09; switch to a different language code.",
+        "About 0.18; nothing can be done because OCR errors are random.",
+        "About 0.36; the model must be retrained from zero.",
+        "About 0.27; preprocess the image (resize, threshold, crop) and run OCR again."
+      ],
+      "answer_index": 3,
+      "explanation": "There are 3 edits: O→0, . → , and a missing 0, so CER = 3 ÷ 11 ≈ 0.27. Preprocessing often reduces such errors. The most tempting wrong option is 0.18, which counts only the two substitutions and forgets the deleted character; CER counts insertions, deletions and substitutions."
+    }
+  ]
+}

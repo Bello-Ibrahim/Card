@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-18",
+  "module_id": "M1",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L01",
+      "objective": "O2",
+      "question": "A fraud model scores well in a notebook but flags almost no claims after deployment. The notebook scaled one feature before training, but the service sends raw values. What kind of problem is this?",
+      "options": [
+        "The algorithm is too simple and needs to be replaced.",
+        "A silent training-serving mismatch: preprocessing exists in the notebook but not in the serving code.",
+        "Data drift caused by a change in customer behaviour.",
+        "The test set was too small to measure performance."
+      ],
+      "answer_index": 1,
+      "explanation": "The model receives inputs prepared differently from its training data, and no error is raised. The fix is to keep preprocessing inside the saved pipeline. The most tempting wrong option is data drift, but drift means the real world changed; here the world is the same and only the code path differs."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L02",
+      "objective": "O6",
+      "question": "A two-person start-up trains one model monthly in a notebook and copies the file to a server by hand. It has no record of which file is live. What is the best next single improvement?",
+      "options": [
+        "Build fully automatic retraining triggered by drift alerts.",
+        "Move to a managed platform with canary releases for every model.",
+        "Hire a dedicated MLOps team before making any changes.",
+        "Move training into a script, track runs and register each model version so they can roll back."
+      ],
+      "answer_index": 3,
+      "explanation": "The team's biggest risk is not knowing which model is live or how to return to the previous one, and a script plus a registry fixes that cheaply. The most tempting wrong option is automatic retraining, but automating a process that is not yet reproducible only makes problems happen faster."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L03",
+      "objective": "O2",
+      "question": "You run train.py twice with no code changes and get F1 scores of 0.551 and 0.563. What is the most likely cause?",
+      "options": [
+        "A random seed is missing from the data split, the model or both.",
+        "The requirements file pins exact library versions.",
+        "The configuration file stores the test size.",
+        "The model pipeline includes a scaler."
+      ],
+      "answer_index": 0,
+      "explanation": "Different results from the same code and data usually mean uncontrolled randomness. Set one seed in the configuration and pass it everywhere. The most tempting wrong option is the pinned requirements file, but pinning versions makes results more stable, not less."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L04",
+      "objective": "O3",
+      "question": "In MLflow, what does a single run record?",
+      "options": [
+        "Only the final model file that you decide to deploy.",
+        "Only the metrics, because parameters are stored in Git.",
+        "The parameters, metrics and artefacts of one execution of the training code.",
+        "The production status of a model version."
+      ],
+      "answer_index": 2,
+      "explanation": "A run is one training execution, with its settings, results and output files. The most tempting wrong option is the production status of a model version. That belongs to the model registry and its aliases, which you use after choosing a run."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L05",
+      "objective": "O3",
+      "question": "Version 5 of your registered model is causing problems, and version 4 was fine. Serving code loads models:/wine-quality-clf@champion. What is the fastest correct rollback?",
+      "options": [
+        "Delete version 5 from the registry and retrain version 4.",
+        "Edit the serving code to load version 4 by number and redeploy.",
+        "Rename version 4 to 'final' in its description.",
+        "Move the champion alias from version 5 back to version 4 and restart or reload the service."
+      ],
+      "answer_index": 3,
+      "explanation": "The alias is a movable pointer, so moving it changes which version the service loads without changing code. The most tempting wrong option is editing the serving code to use a version number. It works, but it is slower, needs a new release and removes the benefit of aliases."
+    }
+  ]
+}

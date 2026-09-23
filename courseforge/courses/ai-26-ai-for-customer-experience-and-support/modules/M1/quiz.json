@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-26",
+  "module_id": "M1",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L01",
+      "objective": "O1",
+      "question": "An AI tool reads every incoming email, adds labels for topic, language and urgency, and sends each email to the right team. Which use of AI in support is this?",
+      "options": [
+        "A chatbot",
+        "Ticket triage",
+        "Support analytics",
+        "A knowledge base"
+      ],
+      "answer_index": 1,
+      "explanation": "Labelling and routing incoming messages is ticket triage. The most tempting wrong option is support analytics. Analytics also reads many tickets, but its purpose is to find themes and trends for managers, not to sort and route each new ticket."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L02",
+      "objective": "O2",
+      "question": "A support chatbot tells a customer that returns are free for 60 days. The company's policy says 30 days, and there is no article with the number 60. What is the most likely explanation?",
+      "options": [
+        "The chatbot found a secret policy that the support team does not know about.",
+        "The customer asked the question in a rude way, so the chatbot answered badly.",
+        "The chatbot's search worked correctly, so the policy must really be 60 days.",
+        "The relevant content was missing or not found, so the language model produced a likely-sounding answer."
+      ],
+      "answer_index": 3,
+      "explanation": "When the assistant cannot find the right content, the language model may invent a fluent, confident answer (a hallucination). The most tempting wrong option is that the search worked, so the policy must be 60 days. A confident answer is not proof of a correct source; the number does not appear in any article."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L03",
+      "objective": "O3",
+      "question": "Which knowledge base article is easiest for both customers and an AI assistant to use?",
+      "options": [
+        "\"How do I change my delivery address?\" with short numbered steps, a review date and an owner.",
+        "\"Delivery information\", one long page covering prices, tracking, damage and returns.",
+        "\"Address modification procedure v3\", written for internal staff only.",
+        "A copy of the original internal email from the logistics manager."
+      ],
+      "answer_index": 0,
+      "explanation": "One topic, a title in the customer's words, short steps, a review date and an owner make an article easy to find and use. The most tempting wrong option is the single long \"Delivery information\" page. It holds a lot of content, but mixed topics make it hard for search to find the exact answer."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L03",
+      "objective": "O3",
+      "question": "You ask an AI assistant to turn an internal note into a help article. The draft is well written. What should you do before publishing it?",
+      "options": [
+        "Publish it at once, because AI tools copy facts exactly.",
+        "Ask the AI assistant whether its own draft is correct.",
+        "Check every fact in the draft against the original note and correct any changes.",
+        "Make it longer so that it covers more topics in one article."
+      ],
+      "answer_index": 2,
+      "explanation": "AI can add, drop or change facts, so a person must check the draft against the source. The most tempting wrong option is asking the AI whether its draft is correct. The same tool can confirm its own mistakes with confidence, so it cannot replace a check against the original note."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L04",
+      "objective": "O3",
+      "question": "An AI draft reply to an angry customer sounds very professional but offers a full refund that the policy does not allow. What is the best action?",
+      "options": [
+        "Send it, because a generous reply will make the customer happy.",
+        "Edit the draft to remove the refund promise, keep the empathy, and follow the policy before sending.",
+        "Delete the draft and send the customer the full policy document instead.",
+        "Ask the AI to make the reply more formal and then send it."
+      ],
+      "answer_index": 1,
+      "explanation": "Accuracy comes first: the agent removes promises that are not in the policy and keeps a warm, clear tone. The most tempting wrong option is making the reply more formal. That changes the tone but leaves the wrong refund promise in the message."
+    }
+  ]
+}

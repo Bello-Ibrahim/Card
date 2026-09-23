@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-23",
+  "module_id": "M2",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L06",
+      "objective": "O6",
+      "question": "Claude generates a strong brand name and says it found no conflicts. What should the designer tell the client?",
+      "options": [
+        "The name is safe to register, because Claude found no conflicts.",
+        "The name is safe in the designer's own country but should be checked abroad.",
+        "The name should be replaced, because AI-generated names can never be registered.",
+        "The name has passed meaning and domain checks, but it is not cleared; official trademark searches are needed in each market."
+      ],
+      "answer_index": 3,
+      "explanation": "AI cannot reliably search trademark registers or give a legal opinion, so the name stays 'not yet cleared'. The most tempting wrong option is that the name is safe because Claude found no conflicts. Claude's answer is not an official search, and trademark rules differ by country."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L07",
+      "objective": "O3",
+      "question": "Which image generator prompt is best for a moodboard direction?",
+      "options": [
+        "Ceramic tableware in the style of a famous living photographer.",
+        "Tableware that looks like a well-known furniture brand's catalogue.",
+        "Handmade ceramic bowls on pale oak, soft morning window light, muted terracotta and cream, a lot of empty space, close-up.",
+        "Beautiful modern ceramics, high quality, trending."
+      ],
+      "answer_index": 2,
+      "explanation": "Describing materials, light, colour and composition gives control and a direction that is your own. The most tempting wrong option is the vague 'beautiful modern ceramics' prompt, because it names no artist or brand. But it describes no visual qualities, so the results are generic and hard to steer."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L08",
+      "objective": "O6",
+      "question": "A designer redraws an AI logo concept by hand as a clean vector in Figma. What does this achieve?",
+      "options": [
+        "It improves quality and shows human authorship, but trademark checks and ownership advice are still needed.",
+        "It guarantees that the client owns the copyright in every country.",
+        "It removes any similarity to existing logos.",
+        "It is unnecessary, because AI logos are already vectors."
+      ],
+      "answer_index": 0,
+      "explanation": "Redrawing is good design practice that adds real human decisions, but it is not a legal guarantee. The most tempting wrong option is that it guarantees copyright ownership. Copyright for AI-assisted work is unsettled and differs by country, and redrawing does not check for similar marks."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L09",
+      "objective": "O5",
+      "question": "Claude says a palette 'has good contrast'. A contrast checker shows the grey helper text on cream is 2.8:1. What should you do?",
+      "options": [
+        "Keep it, because Claude's judgement covers the whole palette.",
+        "Darken the grey until the pair meets the WCAG ratio for its text size, and keep the lighter grey for decoration only.",
+        "Make the helper text bold and keep the same colour.",
+        "Remove all helper text from the design."
+      ],
+      "answer_index": 1,
+      "explanation": "The measured ratio is below the AA guidance for body text (4.5:1), so the colour must change until it passes. The most tempting wrong option is making the text bold. Bold alone does not change the ratio, and small bold text usually still counts as normal text for contrast guidance."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L10",
+      "objective": "O4",
+      "question": "Why should brand colours and type in a Figma guidelines page be set up as styles or variables, not only drawn as swatches?",
+      "options": [
+        "Because Figma does not allow rectangles on guidelines pages.",
+        "Because styles make the file smaller than any other method.",
+        "Because variables automatically check colour contrast.",
+        "Because example applications then use the real values and update together when a value changes."
+      ],
+      "answer_index": 3,
+      "explanation": "Styles and variables connect every use of a colour or text setting, so the system stays consistent. The most tempting wrong option is that variables check contrast automatically. They store values; contrast still has to be tested with a checker."
+    }
+  ]
+}

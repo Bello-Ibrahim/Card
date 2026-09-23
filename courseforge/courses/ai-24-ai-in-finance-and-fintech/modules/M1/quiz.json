@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-24",
+  "module_id": "M1",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L01",
+      "objective": "O1",
+      "question": "An insurer wants an AI tool that summarises long claim files for its claim handlers. Which use case family does this belong to, and what data does it mainly depend on?",
+      "options": [
+        "Payments and fraud detection; card transaction history.",
+        "Back-office analysis and compliance; claim documents and case notes.",
+        "Lending and credit scoring; credit bureau records.",
+        "Onboarding and identity; ID images and selfies."
+      ],
+      "answer_index": 1,
+      "explanation": "Summarising internal files for staff is back-office analysis, and it depends on the documents being summarised. The most tempting wrong option is fraud detection, because insurers also look for fraud in claims. But a summary tool helps handlers read files; it does not score transactions for fraud risk."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L02",
+      "objective": "O2",
+      "question": "A synthetic card dataset has a column called chargeback_date, which is filled in only after a fraud dispute is completed. How should an analyst treat this column when building a fraud model?",
+      "options": [
+        "Use it as the label, because it shows which payments were fraud.",
+        "Use it as the most important feature, because it is strongly linked to fraud.",
+        "Fill the blank cells with today's date so the column is complete.",
+        "Exclude it as leakage, because it is not known at the moment of the payment."
+      ],
+      "answer_index": 3,
+      "explanation": "A feature must be available when the decision is made, and a chargeback date only exists after fraud is confirmed, so it leaks the answer. The most tempting wrong option is using it as the best feature: it would look excellent in testing but cannot be used on a live payment."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L03",
+      "objective": "O2",
+      "question": "Why do fraud models need new labelled data and regular retraining?",
+      "options": [
+        "Because criminals change their methods, so patterns learned from old fraud slowly become less accurate.",
+        "Because a model forgets what it learned if it is not retrained every week.",
+        "Because retraining removes the need for any fixed rules.",
+        "Because regulators in every country require daily retraining."
+      ],
+      "answer_index": 0,
+      "explanation": "Fraud patterns change over time, which causes drift, so the model needs examples of new fraud. The most tempting wrong option is that retraining removes the need for rules. Rules remain useful as a fast response to a new attack while the model catches up."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L04",
+      "objective": "O2",
+      "question": "A team moves its fraud threshold from strict to relaxed. What happens, assuming the model itself does not change?",
+      "options": [
+        "Both false alarms and missed fraud go down.",
+        "Both false alarms and missed fraud go up.",
+        "False alarms go down, and missed fraud goes up.",
+        "Nothing changes, because the threshold does not affect errors."
+      ],
+      "answer_index": 2,
+      "explanation": "A relaxed threshold flags fewer payments, so it blocks fewer genuine customers but lets more fraud through. The most tempting wrong option is that both errors go down. Only a better model or better data can reduce both errors; moving the threshold only trades one for the other."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L05",
+      "objective": "O2",
+      "question": "A lender uses mobile-wallet data to score thin-file applicants. Which statement is the most accurate?",
+      "options": [
+        "Alternative data always makes credit decisions fairer, so no extra checks are needed.",
+        "Alternative data can help assess people without a credit history, but it needs consent where required, relevance and fairness checks.",
+        "Alternative data can only be used by scorecards, not by machine learning models.",
+        "A score based on alternative data is a fact about the person, not an estimate."
+      ],
+      "answer_index": 1,
+      "explanation": "Alternative data can give evidence about thin-file customers, but it brings consent, proxy and fairness risks. The most tempting wrong option is that it always makes decisions fairer. Some alternative data, such as phone type, can act as a proxy for protected characteristics and create unfair results."
+    }
+  ]
+}

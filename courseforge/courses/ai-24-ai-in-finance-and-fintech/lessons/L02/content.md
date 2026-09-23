@@ -55,7 +55,7 @@ Many learners believe that a model with more columns is always better. Adding co
 **Steps:**
 1. Open the synthetic transaction file in Google Sheets. It contains no real customer data.
 2. Add a row above the headers and label each column "feature", "label", "identifier" or "leakage".
-3. Use Data > Create a filter to look for blank cells in each column.
+3. Turn on a filter for the header row and look for blank cells in each column.
 4. Sort by transaction ID and look for duplicate rows.
 5. Check the amount and currency columns for mixed currencies or impossible values.
 6. Write down 3 data quality problems, where you found them, and how you would fix each one.

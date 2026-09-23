@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-23",
+  "module_id": "M3",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L11",
+      "objective": "O4",
+      "question": "Figma's AI features give you a good draft of an onboarding screen. What is the best next step?",
+      "options": [
+        "Recolour the draft's layers and change its fonts to match the brand, one by one.",
+        "Send the draft to developers, because AI drafts follow platform rules.",
+        "Review its structure, then rebuild the screen with your own components, styles and variables.",
+        "Generate more drafts until one matches the brand exactly."
+      ],
+      "answer_index": 2,
+      "explanation": "Drafts are starting points; rebuilding with your components keeps the screen connected to the design system. The most tempting wrong option is recolouring the draft layer by layer. It can look correct, but the layers are still not linked to your system, so later changes break consistency."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L12",
+      "objective": "O4",
+      "question": "Your prototype works well on the happy path. Which addition makes it most useful for a task-based test?",
+      "options": [
+        "At least one error state and one empty state, with clear microcopy.",
+        "More animations between the happy-path screens.",
+        "A longer welcome message on the first screen.",
+        "A second copy of the flow in dark mode."
+      ],
+      "answer_index": 0,
+      "explanation": "Error and empty states show how the design handles real situations that users meet. The most tempting wrong option is adding animations, because they make the demo feel finished. But they do not help you find out whether users can recover when something goes wrong."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L13",
+      "objective": "O5",
+      "question": "You ask Claude to review three screenshots against your checklist. It lists six problems. What should you do?",
+      "options": [
+        "Fix all six, because a second reviewer is always right.",
+        "Ignore the list, because AI cannot review design.",
+        "Ask Claude if it is sure, and fix only the problems it confirms.",
+        "Check each point yourself, mark it real, wrong or not relevant, and then decide which to fix."
+      ],
+      "answer_index": 3,
+      "explanation": "Claude's review is a list of things to check; the designer keeps the final judgement. The most tempting wrong option is fixing all six. Claude can misread colours from an image or flag something that already meets your design system, so each point needs verification."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L13",
+      "objective": "O6",
+      "question": "An illustration from an image generator looks very similar to an existing brand's packaging. What status should it get in your asset log?",
+      "options": [
+        "Clear, because it was generated, not copied by you.",
+        "Do not use, and replace it with original work.",
+        "Needs check, and use it in the deliverable in the meantime.",
+        "Clear, if you change its colours slightly."
+      ],
+      "answer_index": 1,
+      "explanation": "A close similarity to an existing brand is an originality and rights risk, so the asset should not be delivered. The most tempting wrong option is 'needs check' while still using it. That puts a known risk into the client's product before the check is done."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L14",
+      "objective": "O7",
+      "question": "Which sentence is the best example for the AI use log in a case study?",
+      "options": [
+        "Claude grouped 10 anonymised interview notes into themes; I verified every quote and removed one theme with a changed quote.",
+        "This project was fully AI-powered.",
+        "I used several AI tools to speed up the work.",
+        "AI created the brand, and the trademark is cleared."
+      ],
+      "answer_index": 0,
+      "explanation": "A good log entry names the tool, the task, what was kept and where the designer overruled AI. The most tempting wrong option is 'I used several AI tools to speed up the work', because it is honest. But it is too vague to show your judgement or which risks you checked."
+    }
+  ]
+}
