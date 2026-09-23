@@ -1,0 +1,188 @@
+{
+  "course_id": "AI-10",
+  "lesson_id": "L12",
+  "duration_s": 289.8,
+  "thumbnail": {
+    "headline": "From Proposal to Invoice",
+    "slide": {
+      "layout": "title",
+      "title": "From Proposal to Invoice",
+      "body": "An arc of seven small linked cards (map, proposal, onboarding, prompts, policy, automation, invoice) ending in a teal check mark. Small tag: AI for Freelancers · Lesson 12."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.9,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Separate tools, one system",
+      "voiceover": "Over three weeks, you have built a proposal template, an onboarding pack, prompt templates, a policy, an invoice template and an automation. Separately, they are useful tools. Together, in one documented workflow, they become a system for taking on more work without longer hours."
+    },
+    {
+      "scene": 2,
+      "start": 18.9,
+      "end": 27.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Your Complete Proposal-to-Invoice Workflow",
+        "body": "AI for Freelancers and Solopreneurs · Lesson 12 of 12 · Capstone step 4"
+      },
+      "voiceover": "Last time, you judged every step in your workflow. In this final lesson, you bring everything together, and prepare your capstone."
+    },
+    {
+      "scene": 3,
+      "start": 27.9,
+      "end": 49.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Seven parts, one document",
+        "body": "Overview page in the centre linking to seven cards: 1 Workflow map (L09, L11) · 2 Proposal template (L04) · 3 Onboarding pack (L05) · 4 Prompt templates (L06) · 5 Quality checks and policy (L07) · 6 Automation (L10) · 7 Invoice and reminder (L08)"
+      },
+      "voiceover": "Your capstone is one workflow document with seven parts, and each part links to something you already made. Your workflow map. Your proposal template. Your onboarding pack. Your delivery prompt templates. Your quality checks and AI-use policy. Your automation, with test results. And your invoice template and payment reminder."
+    },
+    {
+      "scene": 4,
+      "start": 49.3,
+      "end": 63.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "One folder, one overview",
+        "body": "Folder icon containing an overview page; the workflow map rows each show a small tag naming its template, prompt or automation."
+      },
+      "voiceover": "Start with one folder and one overview page. On your map, name the template, prompt or automation that each step uses. That way, anyone reading it can follow your process from start to finish."
+    },
+    {
+      "scene": 5,
+      "start": 63.9,
+      "end": 85.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Run one test client",
+        "body": "Horizontal track: Proposal → Onboarding → Delivery → Invoice. Under each stop a small log card: What I did · Time · What went wrong."
+      },
+      "voiceover": "Then you run one test client through the whole workflow, from proposal to invoice. Use a real client only if they agree, or a realistic example. For every step, record what you did, how long it took and what went wrong. A workflow only proves itself when it is used."
+    },
+    {
+      "scene": 6,
+      "start": 85.3,
+      "end": 99.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Evaluate with evidence",
+        "body": "What worked? · What failed? · What will you change? → Keep · Change · Remove, based on the test run"
+      },
+      "voiceover": "Finally, you evaluate. Which steps worked well, which need changing, and what would you do differently? This is the same keep, change or remove thinking from the last lesson, now based on real evidence."
+    },
+    {
+      "scene": 7,
+      "start": 99.9,
+      "end": 118.3,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Confidential. Not legal advice. Check settings.",
+      "voiceover": "Three final reminders. Keep confidential client information out of AI tools during the test. AI drafts of contracts, invoices and tax material are not legal or tax advice. And check your tool plans and settings before you rely on them, because they change."
+    },
+    {
+      "scene": 8,
+      "start": 118.3,
+      "end": 137.2,
+      "section": "Explain",
+      "visual_type": "hero_broll",
+      "broll_tool": "FLOW",
+      "broll_prompt": "An older South Asian woman and her adult daughter stand side by side in a warm home kitchen; the mother cooks while the daughter writes in a paper notebook, both smiling; slow dolly-in from medium shot to close-up of the notebook and hands; soft warm afternoon window light; cinematic, natural colours, shallow depth of field; 7 seconds; no readable text in the notebook, no labels, no logos.",
+      "voiceover": "Documenting your workflow is like writing down a family recipe you have cooked from memory for years. Once it is on paper, you can repeat it every time, notice where it can be better, and even hand it to a helper in the future."
+    },
+    {
+      "scene": 9,
+      "start": 137.2,
+      "end": 156.1,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "woman writing at laptop bright apartment",
+      "on_screen_text": "Yuki · UX writer · Osaka",
+      "voiceover": "Let's see a test run. Yuki is a freelance UX writer in Osaka, Japan. She writes app and website text for small software companies. She builds her workflow in one shared folder, and runs an example client through it, a small language-learning app."
+    },
+    {
+      "scene": 10,
+      "start": 156.1,
+      "end": 177.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Proposal and onboarding",
+        "body": "Proposal: 'copy for all app screens' struck through → 'up to 20 screens'. Onboarding: form entry → spreadsheet row → welcome email sent."
+      },
+      "voiceover": "For the proposal, her template and an AI draft from example call notes take twenty-five minutes. Her promise check replaces copy for all app screens with up to twenty screens. At onboarding, the enquiry form triggers her automation, which adds a spreadsheet row and sends her welcome email."
+    },
+    {
+      "scene": 11,
+      "start": 177.1,
+      "end": 195.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Delivery and invoice",
+        "body": "Delivery: prompt template → draft from anonymised notes → Yuki rewrites key messages → quality checklist ticked. Invoice: template filled → tax points marked 'confirmed with official source'."
+      },
+      "voiceover": "For delivery, her prompt template produces first drafts from anonymised notes, and she rewrites the key messages herself and runs her quality checklist. For the invoice, she fills her template, and notes which tax points she has confirmed with an official source."
+    },
+    {
+      "scene": 12,
+      "start": 195.1,
+      "end": 218.2,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "The test found a gap",
+        "body": "Before, red: form entry → full welcome email to every enquiry. After, green: form entry → short thank-you ('I will reply personally within one working day') → full welcome after the discovery call."
+      },
+      "voiceover": "Her evaluation finds one problem. The automation sent the full welcome email before she had read the enquiry, so a poor-fit enquiry got a warm welcome. She changes the action to a short thank-you, saying she will reply personally within one working day. The full welcome now comes after the discovery call."
+    },
+    {
+      "scene": 13,
+      "start": 218.2,
+      "end": 237.1,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Test it. Record it. Improve it.",
+      "voiceover": "A common mistake is to submit a folder of separate templates and call it a workflow. Without the map that links them, and a real test run, there is no evidence the parts work together. Record the problems honestly, and show what you changed."
+    },
+    {
+      "scene": 14,
+      "start": 237.1,
+      "end": 261.1,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. One document, seven linked parts. 2. One test client, proposal to invoice. 3. Evaluate with evidence; data stays confidential; legal and tax go to qualified hands."
+      },
+      "voiceover": "Let's recap. First, your workflow document links seven parts, from the map to the invoice. Second, running one test client from proposal to invoice proves the workflow works, and shows you what to fix. Third, evaluate each step with evidence, keep confidential data out of AI tools, and keep legal and tax decisions in qualified hands."
+    },
+    {
+      "scene": 15,
+      "start": 261.1,
+      "end": 289.8,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Submit your capstone workflow",
+      "voiceover": "Congratulations. You have finished AI for Freelancers and Solopreneurs. You started with a list of tasks from one week. Now you have a tested system. Now complete capstone step four. Build your folder and overview page, run your test client from proposal to invoice, and write your evaluation. Check your work against the rubric and the submission checklist, then submit your capstone. Well done, and good luck."
+    }
+  ]
+}

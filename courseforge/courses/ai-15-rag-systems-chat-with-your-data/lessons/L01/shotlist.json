@@ -1,0 +1,188 @@
+{
+  "course_id": "AI-15",
+  "lesson_id": "L01",
+  "duration_s": 293.6,
+  "thumbnail": {
+    "headline": "Open-Book Answers",
+    "slide": {
+      "layout": "title",
+      "title": "Open-Book Answers",
+      "body": "Icon of an open book with one highlighted passage, a teal arrow to a chat bubble with a small citation tag. Small tag: RAG Systems · Lesson 1."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.4,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Where did that answer come from?",
+      "voiceover": "Ask a language model about your company's travel policy, and it may give you a confident, well-written answer. But the model has never seen your travel policy. So where did that answer come from? Let's find out, and see how RAG helps."
+    },
+    {
+      "scene": 2,
+      "start": 18.4,
+      "end": 33.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Why RAG?",
+        "body": "RAG Systems: Chat with Your Data · Lesson 1 of 16"
+      },
+      "voiceover": "Hi, and welcome to RAG Systems: Chat with Your Data. In this first lesson, we look at why models need help with your documents, and what retrieval-augmented generation, or RAG, does about it."
+    },
+    {
+      "scene": 3,
+      "start": 33.0,
+      "end": 50.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "What the model never saw",
+        "body": "Timeline with a 'training stops' marker. Right of the marker: 'after training'. Separate locked box: 'never public: manuals, contracts, tickets'."
+      },
+      "voiceover": "A large language model learns from training data that stops at a fixed point in time. So two kinds of knowledge are missing. Anything that happened after training, and anything that was never public, like internal manuals, contracts or support tickets."
+    },
+    {
+      "scene": 4,
+      "start": 50.6,
+      "end": 70.7,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Sounds right. Has no source.",
+      "voiceover": "When you ask about these things, the model still writes fluent text, because that is what it was trained to do. The result can be a hallucination: an answer that sounds right, but has no source. And because it is well written, it is easy to believe."
+    },
+    {
+      "scene": 5,
+      "start": 70.7,
+      "end": 87.4,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "student reading textbook during exam",
+      "on_screen_text": "Closed book versus open book",
+      "voiceover": "Here is a simple way to picture the fix. A closed-book exam tests what a student remembers, and a nervous student may invent an answer. An open-book exam lets the student look up the right page first."
+    },
+    {
+      "scene": 6,
+      "start": 87.4,
+      "end": 111.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "RAG: search, then answer",
+        "body": "Question → 'Search your documents' → top passages → LLM → answer with citation tags like [doc 4, p. 12]"
+      },
+      "voiceover": "RAG turns the model's closed-book exam into an open-book exam. Before the model answers, the system finds the most relevant passages in your documents and puts them into the prompt. The model's job changes from remembering the answer to reading these passages and reporting what they say, with citations that show which page it used."
+    },
+    {
+      "scene": 7,
+      "start": 111.8,
+      "end": 125.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Six stages of RAG",
+        "body": "Two rows. Ingestion: Loading → Chunking → Embedding → Indexing (Chroma or pgvector). Query: Retrieval (top-k) → Generation (grounded, cited answer)."
+      },
+      "voiceover": "A RAG system has six stages, and you will build each one in this course. Loading, chunking, embedding and indexing run when you add documents. Retrieval and generation run for every question."
+    },
+    {
+      "scene": 8,
+      "start": 125.5,
+      "end": 146.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Three ways to use your data",
+        "body": "Long context: a few documents; costly at scale. Fine-tuning: style and format; poor for facts, no citations. RAG: large, changing collections; cites sources; update without retraining."
+      },
+      "voiceover": "RAG is not the only option. Long context means pasting whole documents into the prompt, which is fine for a few documents, but slow and costly for hundreds. Fine-tuning is good for style or format, but poor for storing facts. RAG suits large, changing collections that need citations."
+    },
+    {
+      "scene": 9,
+      "start": 146.5,
+      "end": 162.4,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "harbour with ships in winter",
+      "on_screen_text": "Ingrid · marine insurance · Bergen",
+      "voiceover": "Let's see this choice in a real situation. Ingrid is a developer at a marine insurance company in Bergen, Norway. Claims handlers want to ask questions like: does policy type C cover damage from ice in port?"
+    },
+    {
+      "scene": 10,
+      "start": 162.4,
+      "end": 178.7,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Long context?",
+        "body": "About 400 policy documents, updated every quarter → too big for one prompt, costly per question (red cross)"
+      },
+      "voiceover": "The answers are in about four hundred internal policy documents, and they change every quarter. Long context fails, because the documents do not fit in one prompt, and sending most of them with every question would be costly."
+    },
+    {
+      "scene": 11,
+      "start": 178.7,
+      "end": 198.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Fine-tuning or RAG?",
+        "body": "Fine-tuning: retrain every quarter, no exact clause (red cross). RAG: retrieve clauses, answer with document and section (green tick)."
+      },
+      "voiceover": "Fine-tuning fails too. Policies change every quarter, and handlers need the exact clause, not a remembered summary. RAG fits. It retrieves the most relevant clauses, the model answers from them, and each answer shows the document and section, so a handler can check it."
+    },
+    {
+      "scene": 12,
+      "start": 198.0,
+      "end": 216.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "A risk to test",
+        "body": "Question 'Type C vs Type D?' → needs clause from Policy C AND clause from Policy D → note: add to test set"
+      },
+      "voiceover": "Ingrid also notes one risk. Questions that compare two policy types need clauses from both documents. She adds these to her future test questions, because retrieval has to find both. If it finds only one, the answer will be only half right."
+    },
+    {
+      "scene": 13,
+      "start": 216.0,
+      "end": 237.9,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "No right chunk? Say \"I don't know\".",
+      "voiceover": "One common mistake is to think that RAG makes the model know your documents, so every answer is now safe. The model only knows what retrieval gives it for that question. If the right chunk is missing, it should say I don't know. When an answer is wrong, check retrieval first."
+    },
+    {
+      "scene": 14,
+      "start": 237.9,
+      "end": 265.3,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Training data has a cut-off and no private documents. 2. Six stages: load, chunk, embed, index, retrieve, generate, with citations. 3. RAG for large, changing collections; long context for a few; fine-tuning for style."
+      },
+      "voiceover": "Let's recap. First, a model's training data has a cut-off date and never includes your private documents, so it may give fluent but unsupported answers. Second, RAG has six stages, and the model answers from retrieved passages and cites them. Third, choose RAG for large, changing collections that need citations, long context for a few documents, and fine-tuning for style, not facts."
+    },
+    {
+      "scene": 15,
+      "start": 265.3,
+      "end": 293.6,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Embeddings: Meaning as Numbers",
+      "voiceover": "Now it is your turn. In the exercise below this video, choose a public document collection and write five questions that a model alone cannot answer reliably, with a reason for each. Include one question that needs two documents. Keep the list, because you will use it again. In the next lesson, Embeddings: Meaning as Numbers, we see how a computer measures meaning. See you there."
+    }
+  ]
+}

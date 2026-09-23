@@ -1,0 +1,148 @@
+{
+  "title": "Decision Trees and k-Nearest Neighbours",
+  "thumbnail": {
+    "headline": "Too Simple, Too Flexible",
+    "image": "Navy background, a validation curve with a teal training line rising to 1.0 and an amber test line peaking then falling, headline in teal Inter Bold.",
+    "slide": {
+      "layout": "title",
+      "title": "Too Simple, Too Flexible",
+      "body": "Line chart: train line rising to 1.0, test line peaking at depth 4 then falling. Tag: Machine Learning with scikit-learn · Lesson 7."
+    }
+  },
+  "production_notes": [
+    "Setup before recording: in a fresh Colab runtime, run the L03 cell first (content.md L03 Worked Example: make_classification, the stratified split with random_state=42, and the imports of train_test_split and DecisionTreeClassifier). The first L07 cell uses that X_train and X_test. Do not run the L05 bank setup cell in the same runtime, because it overwrites X_train and y_train.",
+    "[VERSION] Outputs were recorded with scikit-learn 1.9.1, matplotlib 3.11 and Python 3.11. Tree results and the wine split can change between versions; re-run before recording and update the spoken scores (depth table and 0.722 / 0.963) if they differ.",
+    "Screen scenes 8 to 10 use the first L07 cell (depth loop and plot); scenes 11 and 12 use the second cell (KNN on wine), both copied exactly from content.md. The depth table values come from the train_acc and test_acc lists; show them as a small overlay table on the plot, as content.md lists them.",
+    "Mateo Fernández and the Argentine farming cooperative are fictional; the data is synthetic and the wine data ships with scikit-learn."
+  ],
+  "sections": {
+    "Hook": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Two models, two very different ideas. One asks a series of yes or no questions. The other asks, which past cases look most like this one? Both are easy to understand, and both show clearly how a model can be too simple, or too flexible.",
+        "on_screen_text": "Questions, or neighbours?"
+      }
+    ],
+    "Explain": [
+      {
+        "visual_type": "slide",
+        "voiceover": "In lesson three, you saw a deep tree memorise its training data. Let's look at trees more closely. A decision tree is a flowchart. At each point, it asks a question about one feature, such as, is age above forty-five? It sends the row left or right, and at the end a leaf gives the prediction.",
+        "slide": {
+          "layout": "diagram",
+          "title": "A decision tree is a flowchart",
+          "body": "Root: 'Age > 45?' → yes / no branches → second questions → leaves with predictions."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "The most important setting is the maximum depth, the number of questions in a row. A shallow tree asks too few questions and misses real patterns. That is underfitting. A very deep tree keeps splitting until each leaf holds only a handful of training rows. It memorises noise. That is overfitting.",
+        "slide": {
+          "layout": "comparison",
+          "title": "max_depth",
+          "body": "Shallow (depth 1–2): too few questions → underfitting. Very deep: tiny leaves, memorises noise → overfitting. Also limits detail: min_samples_leaf."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "k-nearest neighbours does not build rules. To predict, it finds the k training rows closest to the new row, and takes a vote. It measures closeness as a distance across all features, so scaling matters. A small k follows single noisy points, and a very large k smooths away real differences.",
+        "slide": {
+          "layout": "diagram",
+          "title": "k-nearest neighbours",
+          "body": "Scatter of coloured points; a new point with a circle around its 5 nearest neighbours; vote 3 to 2. Notes: distance → scale first · small k overfits · very large k underfits."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "The best way to see this is a validation curve. You plot the training and test scores while you change one setting. Where the training score keeps rising, but the test score stops rising or falls, the model has started to overfit.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Validation curve",
+          "body": "x-axis: one setting; y-axis: score. Train line keeps rising; test line peaks, then falls. Shaded left zone 'underfitting', right zone 'overfitting'."
+        }
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "A tree is like the game Twenty Questions. A few good questions find the answer. But with a thousand very specific questions, you are describing one person, not learning about people. And k-nearest neighbours is like asking your closest neighbours for advice. Useful, but only if you measure close fairly.",
+        "stock_query": "friends playing guessing game at table",
+        "on_screen_text": "Twenty Questions, and good neighbours"
+      }
+    ],
+    "Demonstrate": [
+      {
+        "visual_type": "stock",
+        "voiceover": "Mateo Fernández works for a farming cooperative in Argentina. He wants to understand model flexibility before he predicts crop problems. He uses the same synthetic data and split as lesson three.",
+        "stock_query": "farm fields Argentina farmer tablet",
+        "on_screen_text": "Mateo · farming cooperative · Argentina"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "This cell trains twenty trees, with depths from one to twenty. For each tree, it records the training score and the test score. Then it plots both lines, so we can see the whole story at once.",
+        "screen_steps": [
+          "Scroll past the L03 cell, already executed.",
+          "Type this exact code cell from content.md and run it with Shift+Enter:\nimport matplotlib.pyplot as plt\n\ndepths, train_acc, test_acc = range(1, 21), [], []\nfor d in depths:\n    tree = DecisionTreeClassifier(max_depth=d, random_state=42).fit(X_train, y_train)\n    train_acc.append(tree.score(X_train, y_train))\n    test_acc.append(tree.score(X_test, y_test))\n\nplt.plot(depths, train_acc, label=\"train\")\nplt.plot(depths, test_acc, label=\"test\")\nplt.xlabel(\"max_depth\"); plt.ylabel(\"accuracy\"); plt.legend(); plt.show()"
+        ],
+        "on_screen_text": "Depth 1 to 20: train vs test"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "At depth one, the tree scores zero point six eight nine on training data and zero point six four eight on test data. Too simple. At depth four, the test score is at its highest, zero point eight two eight, with training at zero point eight six five.",
+        "screen_steps": [
+          "Show the overlay table from content.md next to the plot.",
+          "Point to depth 1 on the plot: 0.689 / 0.648.",
+          "Point to depth 4: 0.865 / 0.828 and add a vertical marker."
+        ],
+        "on_screen_text": "Best test score at depth 4: 0.828"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "After that, training keeps rising. At depth eight, it is zero point nine four seven, but test has fallen to zero point seven nine two. From depth thirteen to twenty, training is a perfect one, and test drops to zero point seven two eight. That is overfitting.",
+        "screen_steps": [
+          "Point to depth 8: 0.947 / 0.792.",
+          "Point to depths 13 to 20: 1.000 / 0.728.",
+          "Shade the area right of depth 4 and label it 'overfitting'."
+        ],
+        "on_screen_text": "Depth 13+: train 1.000 · test 0.728"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Next, k-nearest neighbours on the wine data. This cell trains the same model twice. Once on the raw measurements, and once inside a small pipeline that scales the features first. Then it prints both test scores.",
+        "screen_steps": [
+          "Type this exact code cell from content.md and run it with Shift+Enter:\nfrom sklearn.datasets import load_wine\nfrom sklearn.neighbors import KNeighborsClassifier\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\nXw, yw = load_wine(return_X_y=True)\nXw_tr, Xw_te, yw_tr, yw_te = train_test_split(\n    Xw, yw, test_size=0.3, stratify=yw, random_state=0)\nraw = KNeighborsClassifier(n_neighbors=5).fit(Xw_tr, yw_tr)\nscaled = make_pipeline(StandardScaler(), KNeighborsClassifier(n_neighbors=5))\nscaled.fit(Xw_tr, yw_tr)\nprint(round(raw.score(Xw_te, yw_te), 3), round(scaled.score(Xw_te, yw_te), 3))"
+        ],
+        "on_screen_text": "KNN: raw vs scaled"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Without scaling, the test accuracy is zero point seven two two. With scaling, it jumps to zero point nine six three. One wine feature has values in the hundreds or thousands, so without scaling, it decides the distance almost alone.",
+        "screen_steps": [
+          "Highlight the output 0.722 0.963.",
+          "Label 0.722 'raw' and 0.963 'scaled'."
+        ],
+        "on_screen_text": "Raw 0.722 → scaled 0.963"
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "A common mistake is to choose the depth or k with the highest training score. For trees, that is always the deepest tree. For k-nearest neighbours, it is k equals one, because each training row is its own nearest neighbour. Both choices overfit. Choose settings using held-out data, and later with cross-validation and tuning.",
+        "on_screen_text": "Never choose by training score"
+      }
+    ],
+    "Recap": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, a decision tree asks yes or no questions, so limit its depth or leaf size to stop it memorising the training data. Second, k-nearest neighbours predicts from the most similar training rows, so always scale features first. Third, a plot of training and test scores against one setting shows where underfitting ends and overfitting begins.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. Trees: limit max_depth or min_samples_leaf. 2. KNN: always scale first. 3. A validation curve shows where overfitting begins."
+        }
+      }
+    ],
+    "CTA": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Now it is your turn. In the exercise below this video, you will vary the depth from one to twenty, plot both scores, and mark where your model starts to overfit. Then you will do the same for k-nearest neighbours. It takes about thirty minutes. In the next lesson, Accuracy Is Not Enough: The Confusion Matrix, we look at better ways to measure. See you there.",
+        "on_screen_text": "Next: The Confusion Matrix"
+      }
+    ]
+  }
+}

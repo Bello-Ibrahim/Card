@@ -1,0 +1,213 @@
+{
+  "course_id": "AI-12",
+  "lesson_id": "L08",
+  "duration_s": 313.3,
+  "thumbnail": {
+    "headline": "99% Accurate, 0% Useful",
+    "slide": {
+      "layout": "title",
+      "title": "99% Accurate, 0% Useful",
+      "body": "A 2×2 grid (TN, FP, FN, TP) with the FN cell glowing amber. Tag: Machine Learning with scikit-learn · Lesson 8."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.4,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "99% accurate. Zero fraud caught.",
+      "voiceover": "Here is a fraud model that is ninety-nine percent accurate, and needs one line of code. It always says not fraud. It never catches a single fraud case. If accuracy can praise a model like that, we need better ways to measure."
+    },
+    {
+      "scene": 2,
+      "start": 18.4,
+      "end": 39.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "When accuracy fails",
+        "body": "Accuracy = share of correct predictions · Fine when classes are balanced and mistakes cost the same · Fails with rare classes: fraud, churn, loan default, buyers"
+      },
+      "voiceover": "Accuracy is the share of all predictions that are correct. It works well when the classes are roughly balanced, and both kinds of mistake cost about the same. It fails when one class is rare, which is common in business: fraud, churn, loan default, or customers who buy."
+    },
+    {
+      "scene": 3,
+      "start": 39.0,
+      "end": 54.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "The confusion matrix",
+        "body": "2×2 grid. Rows: actual no / actual yes. Columns: predicted no / predicted yes. Cells: TN, FP (top row); FN, TP (bottom row)."
+      },
+      "voiceover": "The confusion matrix shows where the model is right and wrong. The rows are the actual classes, and the columns are the predicted classes. So we get true negatives, false positives, false negatives and true positives."
+    },
+    {
+      "scene": 4,
+      "start": 54.4,
+      "end": 75.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Precision and recall",
+        "body": "Precision: of the cases flagged 'yes', what share were really 'yes'? (few false alarms). Recall: of the real 'yes' cases, what share did we find? (few missed cases)."
+      },
+      "voiceover": "From these four counts come three key metrics. Precision asks, of all the cases the model flagged as yes, how many really were yes? High precision means few false alarms. Recall asks, of all the real yes cases, how many did the model find? High recall means few missed cases."
+    },
+    {
+      "scene": 5,
+      "start": 75.8,
+      "end": 94.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "F1 and the trade-off",
+        "body": "F1 = balance of precision and recall. A seesaw: 'flag more' raises recall and lowers precision."
+      },
+      "voiceover": "F one is one number that balances precision and recall. It is high only when both are reasonably high. Precision and recall usually pull against each other. Flag more cases, and you find more real ones, but you also raise more false alarms."
+    },
+    {
+      "scene": 6,
+      "start": 94.2,
+      "end": 110.1,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Always compare with a baseline",
+      "voiceover": "Which one matters more depends on the cost of each mistake, which you wrote down in lesson one. And a useful habit is to compare every model with a baseline that always predicts the most common class."
+    },
+    {
+      "scene": 7,
+      "start": 110.1,
+      "end": 132.8,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "smoke alarm on kitchen ceiling",
+      "on_screen_text": "Did it ring? Was there a fire?",
+      "voiceover": "Think of a smoke alarm that never rings. It is correct on almost every day of the year, because most days have no fire. But it fails on the one day that matters. Recall asks, did it ring when there was a fire? Precision asks, when it rang, was there really a fire?"
+    },
+    {
+      "scene": 8,
+      "start": 132.8,
+      "end": 147.4,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "card payment terminal shop counter",
+      "on_screen_text": "Aigerim · payments analyst · Almaty",
+      "voiceover": "Aigerim Bekova is a data analyst at a payment company in Almaty, Kazakhstan. In her synthetic data, about one in a hundred card payments is fraud. First, she shows her team the lazy baseline."
+    },
+    {
+      "scene": 9,
+      "start": 147.4,
+      "end": 160.3,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Type this exact code cell from content.md and run it with Shift+Enter:\nfrom sklearn.datasets import make_classification\nfrom sklearn.dummy import DummyClassifier\nfrom sklearn.metrics import accuracy_score, recall_score\n\nXf, yf = make_classification(n_samples=10000, weights=[0.99], flip_y=0,\n                             random_state=1)\nlazy = DummyClassifier(strategy=\"most_frequent\").fit(Xf, yf)\npred = lazy.predict(Xf)\nprint(round(accuracy_score(yf, pred), 3), recall_score(yf, pred))"
+      ],
+      "on_screen_text": "The lazy baseline",
+      "voiceover": "This cell creates ten thousand synthetic payments, with only one percent fraud. It fits a baseline that always predicts the most common class, then prints its accuracy and its recall."
+    },
+    {
+      "scene": 10,
+      "start": 160.3,
+      "end": 168.4,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Highlight the output 0.99 0.0.",
+        "Label 0.99 'accuracy' and 0.0 'recall'."
+      ],
+      "on_screen_text": "Accuracy 0.99 · recall 0.0",
+      "voiceover": "Accuracy is zero point nine nine. Recall is zero. The model found none of the one hundred fraud cases."
+    },
+    {
+      "scene": 11,
+      "start": 168.4,
+      "end": 183.4,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Scroll up to show the L05 setup and pipeline cells, already executed.",
+        "Type this exact code cell from content.md and run it with Shift+Enter:\nfrom sklearn.metrics import confusion_matrix, classification_report\n\ny_pred = pipe.predict(X_test)\nprint(confusion_matrix(y_test, y_pred))\nprint(classification_report(y_test, y_pred, digits=3))"
+      ],
+      "on_screen_text": "Back to the term-deposit model",
+      "voiceover": "Now back to the term-deposit pipeline from lesson five, where about twelve percent of customers subscribe. This cell predicts the test set, then prints the confusion matrix and a full report of the metrics."
+    },
+    {
+      "scene": 12,
+      "start": 183.4,
+      "end": 201.4,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Highlight the matrix [[435 5] [53 7]].",
+        "Label the cells TN 435, FP 5, FN 53, TP 7."
+      ],
+      "on_screen_text": "Found 7 · missed 53 · 5 false alarms",
+      "voiceover": "Read the matrix. Of sixty real subscribers, the model found seven, and missed fifty-three. It raised twelve flags, and seven of them were correct. The other four hundred and thirty-five customers were correctly left alone, and five were false alarms."
+    },
+    {
+      "scene": 13,
+      "start": 201.4,
+      "end": 215.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Zoom in on the report row for class 1: 0.583, 0.117, 0.194, support 60.",
+        "Show the overlay calculation 7 / (7 + 5) and 7 / (7 + 53)."
+      ],
+      "on_screen_text": "Precision 0.583 · recall 0.117",
+      "voiceover": "So precision is seven out of twelve, zero point five eight three. Recall is seven out of sixty, zero point one one seven. And F one is only zero point one nine four."
+    },
+    {
+      "scene": 14,
+      "start": 215.5,
+      "end": 236.1,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Highlight the accuracy row: 0.884, 500.",
+        "Show the overlay 440 / 500 = 0.88 next to it."
+      ],
+      "on_screen_text": "0.884 vs always no: 0.88",
+      "voiceover": "The accuracy is zero point eight eight four, as in lesson five. But always saying no would score four hundred and forty out of five hundred, which is zero point eight eight. For a bank that wants to find subscribers, this model is weak at the default setting."
+    },
+    {
+      "scene": 15,
+      "start": 236.1,
+      "end": 261.4,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Read the row for class 1",
+      "voiceover": "A common mistake is to report accuracy alone, or to read the wrong row of the report. The row for class one describes the positive class, usually the one the business cares about. And if your target is text, such as yes and no, tell the metric which label is positive, or convert the target to one and zero."
+    },
+    {
+      "scene": 16,
+      "start": 261.4,
+      "end": 286.7,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. High accuracy can be useless: compare with DummyClassifier. 2. Confusion matrix: precision = false alarms, recall = missed cases. 3. F1 balances both; business cost decides."
+      },
+      "voiceover": "Let's recap. First, with rare classes, a model can have high accuracy and still be useless, so always compare with a baseline. Second, the confusion matrix shows true and false positives and negatives. Precision measures false alarms, and recall measures missed cases. Third, F one balances the two, but the business cost of each mistake decides which matters most."
+    },
+    {
+      "scene": 17,
+      "start": 286.7,
+      "end": 313.3,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Thresholds and ROC Curves",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will build a confusion matrix for your own model, calculate precision, recall and F one by hand, and check them with scikit-learn. It takes about twenty-five minutes. In the next lesson, Probabilities, Thresholds and ROC Curves, you will find more subscribers without a new model. See you there."
+    }
+  ]
+}

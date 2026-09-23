@@ -1,0 +1,69 @@
+{
+  "title": "Sorting, Grouping and Summarising",
+  "thumbnail": {
+    "headline": "Split, Apply, Combine",
+    "image": "Navy background, rows splitting into three coloured piles, each with a summary note on top, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Split, Apply, Combine", "body": "Rows split into three piles (Africa, Americas, Asia), each topped with one number, then combined into a small table. Small tag: Python for AI · Lesson 13."}
+  },
+  "production_notes": [
+    "[VERIFY] Gapminder data source, access method and licence (carried from L11). The practice sample values are invented; label the table on screen as 'Invented practice data'.",
+    "[VERSION] Printed output formats (for example the 'Name: count' line under value_counts()) differ between pandas versions. Outputs were produced with Python 3.11 and pandas 3.0.6.",
+    "Printed outputs on screen must match content.md: the unstacked median table (Africa 1230.0 / 1235.0 / 1405.0; Americas 7980.0 / 8345.0 / 10290.0; Asia 1200.0 / 1410.0 / 1765.0) and the Chile 2007 13170 / 2002 10780 / 1997 10120 sort.",
+    "Soo-ah (Seoul) is fictional. Stock footage of receipts must show no readable shop names or logos."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Which continent had the biggest change? You cannot answer that by looking at single rows. You need to put rows into groups, and summarise each group. In pandas, this takes one line.",
+       "on_screen_text": "Groups, not single rows"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Last time, we filtered rows. Now we sort and summarise them. Sort values puts rows in order, from smallest to largest. Add ascending equals False to put the largest first. You can also sort by several columns, for example by continent and then by year. And value counts counts how many rows have each value. It is the quickest way to spot rare or misspelled categories.",
+       "slide": {"layout": "code", "title": "Sorting and counting", "body": "df.sort_values(\"gdpPercap\", ascending=False)\ndf[\"continent\"].value_counts()"}},
+      {"visual_type": "slide",
+       "voiceover": "Group by works in three steps, often called split, apply, combine. First, split the rows into groups, for example by continent. Then apply a summary to each group, such as the mean, the median or a count. Finally, combine the results into a new, smaller table.",
+       "slide": {"layout": "diagram", "title": "Split, apply, combine", "body": "Table → split into Africa / Americas / Asia piles → apply mean() to each → combine into a 3-row summary table."}},
+      {"visual_type": "stock",
+       "voiceover": "Think of a shoebox of receipts. You sort them into piles by month, and then add up each pile. You don't change the receipts. You only organise them, and write one total on a note on top of each pile. The notes together are your summary table.",
+       "stock_query": "sorting paper receipts into piles on desk",
+       "on_screen_text": "Piles, then one total each"},
+      {"visual_type": "slide",
+       "voiceover": "In code, you group by continent, take the life expectancy column, and calculate the mean. To get several summaries at once, use agg, and give each result a name. Here, n unique counts different values, so each country counts once, even though it appears in three years.",
+       "slide": {"layout": "code", "title": "groupby and agg", "body": "df.groupby(\"continent\")[\"lifeExp\"].mean()\n\ndf.groupby(\"continent\").agg(mean_life=(\"lifeExp\", \"mean\"),\n                            countries=(\"country\", \"nunique\"))"}},
+      {"visual_type": "slide",
+       "voiceover": "You can also add a calculated column, such as total income from population times income per person. pandas calculates it for every row at once, with no loop. And one choice to make carefully. The mean is pulled by a few very large or small values. The median is the middle value, so it is more stable when a group has extreme values, as income data often does.",
+       "slide": {"layout": "comparison", "title": "Mean or median?", "body": "New column, no loop: df[\"gdp_total_bn\"] = df[\"pop\"] * df[\"gdpPercap\"] / 1e9. Mean: pulled by extremes. Median: the middle value, more stable."}}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's try it. Soo-ah is an analyst at a development charity in Seoul, South Korea. She wants the median income per person for each continent, in each year. She uses the invented practice sample.",
+       "stock_query": "analyst reviewing charts in modern office",
+       "on_screen_text": "Soo-ah, analyst · Seoul"},
+      {"visual_type": "screen",
+       "voiceover": "We group by two columns, continent and year, take the income column, and calculate the median. Then unstack turns the years into columns, so the table is easy to read across. Grouping by two columns gives one value for each pair of continent and year.",
+       "screen_steps": ["Run the L11 sample cell so df exists", "Add a new code cell", "Type: summary = df.groupby([\"continent\", \"year\"])[\"gdpPercap\"].median()", "Type: print(summary.unstack())"]},
+      {"visual_type": "screen",
+       "voiceover": "Run it. We get one row per continent, and one column per year. In this sample, the Americas have much higher values than the other two groups. And all three groups increase from two thousand and two to two thousand and seven.",
+       "screen_steps": ["Press Shift + Enter", "Output: table with columns 1997, 2002, 2007: Africa 1230.0 / 1235.0 / 1405.0; Americas 7980.0 / 8345.0 / 10290.0; Asia 1200.0 / 1410.0 / 1765.0", "Point along the Americas row, then down the 2007 column"],
+       "on_screen_text": "One row per continent"},
+      {"visual_type": "screen",
+       "voiceover": "But with only two countries per continent, these are practice numbers only. Real conclusions need the full dataset. So which rows drive the high Americas values? A quick sort, largest first, showing the top three rows. All three are Chile. So one country pulls the Americas group up. This is a good habit. When a summary surprises you, look at the rows behind it.",
+       "screen_steps": ["Add a new code cell", "Type: print(df.sort_values(\"gdpPercap\", ascending=False).head(3)[[\"country\", \"year\", \"gdpPercap\"]])", "Press Shift + Enter", "Output: Chile 2007 13170 / Chile 2002 10780 / Chile 1997 10120"],
+       "on_screen_text": "Sort to see what drives a result"},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is averaging values that should not be averaged directly. The mean of country values gives each country the same weight, so a small country counts as much as a very large one. That can be the right choice, but say clearly what your summary means. Also, group by leaves out rows where the group column is missing, so check for missing values first.",
+       "on_screen_text": "Say what your summary means"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, sort values orders rows, and value counts counts the rows for each category. Second, group by splits rows into groups, applies a summary such as mean, median or count, and combines the results. Agg names several summaries at once. Third, add calculated columns without a loop, and prefer the median when groups contain extreme values.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. sort_values orders; value_counts counts categories. 2. groupby: split, apply, combine; agg names several summaries. 3. Calculated columns need no loop; median for extreme values."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below this video, you will make a table of average life expectancy by continent for three different years, and write two sentences on what changed. It takes about twenty-five minutes. In the next lesson, we learn how to find data quality problems. See you there.",
+       "on_screen_text": "Next: Finding Data Quality Problems"}
+    ]
+  }
+}

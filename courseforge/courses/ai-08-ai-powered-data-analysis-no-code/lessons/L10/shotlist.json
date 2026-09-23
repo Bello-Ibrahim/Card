@@ -1,0 +1,240 @@
+{
+  "course_id": "AI-08",
+  "lesson_id": "L10",
+  "duration_s": 302.3,
+  "thumbnail": {
+    "headline": "One Page, Live Numbers",
+    "slide": {
+      "layout": "title",
+      "title": "One Page, Live Numbers",
+      "body": "Dashboard mock-up: scorecards 3,450 · 10 · 345 across the top; line chart and sorted bar chart below; date control top right. Small tag: AI-Powered Data Analysis · Lesson 10."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.9,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "One page, always up to date",
+      "voiceover": "Every Monday, your manager asks for the latest numbers, and you copy charts into an email. A dashboard is one page, connected to your sheet, that people can open whenever they need it. Today, you build one."
+    },
+    {
+      "scene": 2,
+      "start": 15.9,
+      "end": 23.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "A Simple Dashboard in Looker Studio",
+        "body": "AI-Powered Data Analysis (No Code) · Lesson 10 of 14"
+      },
+      "voiceover": "Last time, we built clear charts in Google Sheets. Now we bring them together on one page."
+    },
+    {
+      "scene": 3,
+      "start": 23.2,
+      "end": 42.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "How Looker Studio works",
+        "body": "Google Sheet → connector arrow → Looker Studio page with scorecards, charts, table. Circular arrow: sheet changes → dashboard updates."
+      },
+      "voiceover": "Looker Studio is a free Google tool for building dashboards and reports. It connects to a data source, such as a Google Sheet, and shows the data as charts, scorecards and tables on a page. When the sheet changes, the dashboard shows the new data."
+    },
+    {
+      "scene": 4,
+      "start": 42.5,
+      "end": 67.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Four parts of a simple dashboard",
+        "body": "Wireframe: title bar across the top · date range control top right · row of scorecards · line chart (left) and bar chart (right) below. Each part labelled."
+      },
+      "voiceover": "A simple one-page dashboard has four parts. Scorecards, which are single large numbers, like total revenue. Charts, a line chart for change over time and a bar chart for comparisons. A filter control, like a date range, so viewers can choose the period. And a clear title with short labels, so the page makes sense without you."
+    },
+    {
+      "scene": 5,
+      "start": 67.4,
+      "end": 85.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Where AI helps",
+        "body": "Calculated fields: e.g. average order value · Layout ideas: scorecards on top, charts below"
+      },
+      "voiceover": "A calculated field is a new field that Looker Studio calculates from existing ones, for example average order value. AI can help you write the formula. AI can also suggest a layout, such as scorecards across the top and charts below."
+    },
+    {
+      "scene": 6,
+      "start": 85.0,
+      "end": 99.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Share safely",
+        "body": "View-only access for named people · Check data source settings · Anonymised or approved data only (L02)"
+      },
+      "voiceover": "Share safely. Give view-only access to named people, not edit access. Check the data source settings before you share, and only connect anonymised or approved data, as you learned in lesson two."
+    },
+    {
+      "scene": 7,
+      "start": 99.1,
+      "end": 113.7,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "car instrument panel speed and fuel",
+      "on_screen_text": "A few clear numbers",
+      "voiceover": "A dashboard is like the instrument panel of a car. The driver does not need to see the engine. Only a few clear numbers, such as speed and fuel, always in the same place."
+    },
+    {
+      "scene": 8,
+      "start": 113.7,
+      "end": 131.3,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Omar's data source (fictional)",
+        "body": "Clean 10-row orders table from content.md (Order ID 1001–1010, Order Date 2026-01-08 to 2026-03-25, Region, Product, Units, Unit Price, Revenue). Checklist beside it: one header row ✓ · no merged cells ✓ · real dates ✓. Caption: Omar · Amman"
+      },
+      "voiceover": "Omar is a small business adviser in Amman, Jordan. He builds a dashboard for the fictional orders sheet, so the shop owner can check sales without opening the spreadsheet. The sheet has one header row, no merged cells, and real dates."
+    },
+    {
+      "scene": 9,
+      "start": 131.3,
+      "end": 144.2,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open Looker Studio and choose Create > Report",
+        "In Add data to report, choose the Google Sheets connector",
+        "Select the orders spreadsheet and its worksheet",
+        "Keep 'Use first row as headers' ticked; click Add"
+      ],
+      "voiceover": "He opens Looker Studio and creates a new report. He chooses the Google Sheets connector, selects the spreadsheet and the worksheet, keeps the first row as headers, and adds it."
+    },
+    {
+      "scene": 10,
+      "start": 144.2,
+      "end": 159.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open the data source fields; confirm Order Date is Date type and Revenue is Number (change if needed)",
+        "Add a scorecard with Revenue (SUM): 3,450",
+        "Add a second scorecard with Record Count: 10"
+      ],
+      "voiceover": "He checks the fields. Order date must be a date, and revenue must be a number. Then he adds two scorecards. Revenue shows three thousand four hundred and fifty, and the record count shows ten orders."
+    },
+    {
+      "scene": 11,
+      "start": 159.6,
+      "end": 186.2,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "In Claude or ChatGPT type: 'Write a Looker Studio calculated field for average revenue per order, from fields Revenue and Order ID.'",
+        "Show the reply: SUM(Revenue) / COUNT(Order ID)",
+        "In Looker Studio, add a calculated field with this formula",
+        "Add a third scorecard with the new field: 345",
+        "Overlay the hand check: 3,450 ÷ 10 = 345 ✓"
+      ],
+      "voiceover": "Next, he asks the AI for a Looker Studio calculated field for average revenue per order. It suggests the sum of revenue divided by the count of order IDs. He adds it as a third scorecard, which shows three hundred and forty-five. He checks by hand. Three thousand four hundred and fifty divided by ten is three hundred and forty-five."
+    },
+    {
+      "scene": 12,
+      "start": 186.2,
+      "end": 201.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Add a time series chart",
+        "Set the dimension to Order Date, granularity Month",
+        "Set the metric to Revenue",
+        "Hover each point: 470, 820, 2,160"
+      ],
+      "voiceover": "Now the charts. First, a time series chart, with order date set to month, and revenue as the metric. It shows four hundred and seventy, eight hundred and twenty, and two thousand one hundred and sixty."
+    },
+    {
+      "scene": 13,
+      "start": 201.6,
+      "end": 214.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Add a bar chart",
+        "Dimension: Region; metric: Revenue; sort descending",
+        "Hover each bar: South 2,220, North 680, West 550"
+      ],
+      "voiceover": "Then a bar chart with region and revenue, sorted from largest. South is two thousand two hundred and twenty, North six hundred and eighty, and West five hundred and fifty."
+    },
+    {
+      "scene": 14,
+      "start": 214.5,
+      "end": 226.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Add a date range control and drag it to the top right",
+        "Switch to View mode",
+        "Set the range to 1–28 February 2026",
+        "Zoom on the Revenue scorecard: 820"
+      ],
+      "voiceover": "He adds a date range control in the top right, and tests it. He chooses February twenty twenty-six only, and total revenue changes to eight hundred and twenty."
+    },
+    {
+      "scene": 15,
+      "start": 226.9,
+      "end": 237.2,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Add a text box at the top: 'Orders dashboard, January to March 2026'",
+        "Click Share",
+        "Enter the placeholder address owner@example.com",
+        "Set the role to Viewer and send"
+      ],
+      "voiceover": "Finally, he types the title, orders dashboard, January to March twenty twenty-six. He clicks share, adds the owner's email address, and chooses viewer."
+    },
+    {
+      "scene": 16,
+      "start": 237.2,
+      "end": 254.8,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Three to five numbers, not twelve charts",
+      "voiceover": "A common mistake is to fill the page with every chart you can make. Twelve charts show nothing clearly. Choose the three to five numbers people really need, check each one against your pivot tables, and share with view-only access."
+    },
+    {
+      "scene": 17,
+      "start": 254.8,
+      "end": 277.9,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Sheet → scorecards, charts, filters that update. 2. Keep it simple; check every number. 3. AI for layout and calculated fields; share view-only, safe data only."
+      },
+      "voiceover": "Let's recap. First, Looker Studio connects to a Google Sheet, and shows scorecards, charts and filters on a page that updates with the data. Second, keep it simple, and check every number against your sheet. Third, ask AI for layout ideas and calculated fields, and share with view-only access and only safe data."
+    },
+    {
+      "scene": 18,
+      "start": 277.9,
+      "end": 302.3,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Checking AI Insights for Errors",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will build a one-page Looker Studio dashboard from the orders sheet, with at least two charts, two scorecards and one filter. It takes about thirty-five minutes. In the next lesson, we start week three by checking AI insights for errors. See you there."
+    }
+  ]
+}

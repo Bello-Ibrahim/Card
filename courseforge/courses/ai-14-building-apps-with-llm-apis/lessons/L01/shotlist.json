@@ -1,0 +1,205 @@
+{
+  "course_id": "AI-14",
+  "lesson_id": "L01",
+  "duration_s": 316.7,
+  "thumbnail": {
+    "headline": "Why the API Forgets",
+    "slide": {
+      "layout": "title",
+      "title": "Why the API Forgets",
+      "body": "Left: a short stack of message cards labelled user, assistant, user. Right: simple icon of a phone handset with an empty thought bubble. Small tag: Building Apps with LLM APIs · Lesson 1."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.4,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Why does the API forget?",
+      "voiceover": "You chat with an AI assistant for ten minutes, and it remembers everything you said. Then you call the same model through its API, ask a follow-up question, and it has no idea what you mean. Nothing is broken. Let's see why."
+    },
+    {
+      "scene": 2,
+      "start": 18.4,
+      "end": 36.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "How LLM APIs Work",
+        "body": "Building Apps with LLM APIs · Lesson 1 of 16"
+      },
+      "voiceover": "Hi, and welcome to Building Apps with LLM APIs. Over four weeks, you will build real features on a large language model API, using the Claude API as our main example. We start with the basics of a request and a response."
+    },
+    {
+      "scene": 3,
+      "start": 36.4,
+      "end": 55.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Request and response",
+        "body": "Your app box → arrow labelled HTTP request → API box → arrow labelled response → back to your app. Inside the request: a list of message cards, each with 'role' and 'content'."
+      },
+      "voiceover": "An LLM API works like other web APIs. Your code sends an HTTP request and gets a response back. What is new is the shape of that request. Its main part is a list of messages. Each message has a role and some content."
+    },
+    {
+      "scene": 4,
+      "start": 55.3,
+      "end": 76.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Messages and the system prompt",
+        "body": "Separate box on top: system prompt (role, rules, style). Below: message list with alternating cards: user → assistant → user. Note: list starts with user."
+      },
+      "voiceover": "The user role is text from the person using your app. The assistant role holds earlier replies from the model. The list starts with a user message, and the roles take turns. The system prompt is a separate field, not a message. It sets the model's role, rules and style."
+    },
+    {
+      "scene": 5,
+      "start": 76.7,
+      "end": 100.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Settings and tokens",
+        "body": "model: which model to run · max_tokens: the longest reply allowed · Token: a small piece of text. Visual: the sentence 'Gluten-free bread' split into coloured token chunks."
+      },
+      "voiceover": "You also send settings. The two you will use in every call are the model, which chooses the model to run, and max tokens, the longest reply you allow. And what is a token? Models do not read words. They read tokens, small pieces of text, often a short word or part of a longer one."
+    },
+    {
+      "scene": 6,
+      "start": 100.7,
+      "end": 123.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "The context window",
+        "body": "One long bar, filled in sections: system prompt | messages | reply. A bracket over the whole bar labelled 'context window'. Small note: size depends on the model, see the models page."
+      },
+      "voiceover": "Everything is measured in tokens. Input length, reply length, price and limits. Each model can read only a limited number of tokens in one request. This limit is the context window. It includes the system prompt, every message and the reply. The size depends on the model, so check the current models page."
+    },
+    {
+      "scene": 7,
+      "start": 123.4,
+      "end": 146.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "The response",
+        "body": "content: list of blocks, read the text block · stop_reason: end_turn = finished, max_tokens = cut off · usage: input tokens and output tokens = what you pay for"
+      },
+      "voiceover": "The response gives you three things. First, content, a list of blocks. For now, you only need the text block. Second, the stop reason. End turn means the model finished normally. Max tokens means it hit your limit, and the reply is cut off. Third, usage, the input and output tokens you pay for."
+    },
+    {
+      "scene": 8,
+      "start": 146.5,
+      "end": 160.6,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "office worker answering desk phone",
+      "on_screen_text": "Stateless: every call starts from nothing",
+      "voiceover": "Now the most important idea. The API is stateless. It does not remember earlier requests. Picture a very knowledgeable assistant who answers the phone, but forgets every call as soon as it ends."
+    },
+    {
+      "scene": 9,
+      "start": 160.6,
+      "end": 176.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "Read the notes back",
+        "body": "\"Yesterday I asked X, and you said Y. Now my question is Z.\" Caption underneath: Your notes = your messages list."
+      },
+      "voiceover": "To continue yesterday's discussion, you must read your notes aloud first. Yesterday I asked this, you said that, and now my question is this. The notes are your messages list. And longer notes mean longer, more expensive calls."
+    },
+    {
+      "scene": 10,
+      "start": 176.9,
+      "end": 188.5,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "fresh bread loaves on bakery shelves",
+      "on_screen_text": "Tomás · bakery chain · Montevideo",
+      "voiceover": "Let's see this in practice. Tomás builds a help chat for a chain of bakeries in Montevideo, Uruguay. A customer writes, do you have gluten-free bread?"
+    },
+    {
+      "scene": 11,
+      "start": 188.5,
+      "end": 209.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "First request",
+        "body": "system = \"You are the assistant for a bakery chain. Be brief and friendly.\"\nmessages = [ {role: user, content: \"Do you have gluten-free bread?\"} ]\nReply (example): \"Yes, we bake gluten-free loaves every morning.\" · stop_reason: end_turn · usage (example): 31 in, 12 out"
+      },
+      "voiceover": "His app sends a short system prompt that says be brief and friendly, and one user message with the question. You'll see something like this. Yes, we bake gluten-free loaves every morning. The stop reason is end turn, and usage shows a few input and output tokens."
+    },
+    {
+      "scene": 12,
+      "start": 209.1,
+      "end": 225.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Version 1: only the new question",
+        "body": "Sent: [user: \"Which shops have it?\"] → Reply: \"Which product do you mean?\" (red cross). Missing: the earlier question and answer."
+      },
+      "voiceover": "Then the customer asks, which shops have it? Tomás's first version sent only this new question. The model replied, which product do you mean? It had no idea what it referred to, because nobody sent the history."
+    },
+    {
+      "scene": 13,
+      "start": 225.0,
+      "end": 246.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Version 2: send the full history",
+        "body": "messages = [\n  user: \"Do you have gluten-free bread?\",\n  assistant: \"Yes, we bake gluten-free loaves every morning.\",\n  user: \"Which shops have it?\"\n]\nSide note with rising bar: input tokens grow each turn."
+      },
+      "voiceover": "In the fixed version, his app adds the model's earlier reply and the new question to the list, and sends the full list. Now the model understands what it means. Tomás also notices something. Input tokens grow with every turn, because the whole history is sent again each time."
+    },
+    {
+      "scene": 14,
+      "start": 246.0,
+      "end": 265.7,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "The API key is not a memory",
+      "voiceover": "A common mistake is to think the API remembers the user because you send the same API key each time. The key only identifies your account for billing. Your app must keep the history, in memory, a session or a database, and send it every time."
+    },
+    {
+      "scene": 15,
+      "start": 265.7,
+      "end": 291.8,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Request = messages (user/assistant) + system prompt + model + max_tokens. 2. Response = content blocks + stop reason + usage. 3. Stateless: send the full history; cost grows with the conversation."
+      },
+      "voiceover": "Let's recap. First, a request has a list of messages with user and assistant roles, a system prompt in its own field, a model and a max tokens limit. Second, a response has content blocks, a stop reason and token usage. Third, the API is stateless. Your app sends the full history every time, so cost grows as the conversation grows."
+    },
+    {
+      "scene": 16,
+      "start": 291.8,
+      "end": 316.7,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Setup, keys and a budget",
+      "voiceover": "Now it is your turn. In the exercise, you will turn a four-turn chat into a messages list on paper, and mark every part that is sent again. No API account is needed yet. In the next lesson, Setup: API Keys, SDKs and a Low-Cost Budget, you will make your first real call. See you there."
+    }
+  ]
+}
