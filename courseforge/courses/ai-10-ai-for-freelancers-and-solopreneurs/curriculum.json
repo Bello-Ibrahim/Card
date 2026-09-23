@@ -1,0 +1,246 @@
+{
+  "course_id": "AI-10",
+  "slug": "ai-10-ai-for-freelancers-and-solopreneurs",
+  "course_title": "AI for Freelancers and Solopreneurs",
+  "level": "Beginner",
+  "status": "AWAITING_APPROVAL",
+  "screen_demo_lessons": [],
+  "overview": "A three-week, practical course for freelancers, consultants and one-person businesses who already offer, or plan to offer, a service. Learners use Claude or ChatGPT, Canva and the free tier of Zapier or n8n to sharpen their offer, find and contact potential clients, write proposals, deliver work faster and automate repeated admin. The course is honest about limits: AI output must be checked before a client sees it, client data must stay confidential, and AI drafts of contracts or tax documents are not professional advice. In the final week, learners build an AI-assisted client workflow, from proposal to invoice, for their own service.",
+  "time_plan": {
+    "video_minutes": 60,
+    "weekly_hours": 2,
+    "per_week": "About 20 minutes of video, 60 minutes of hands-on work on your own business, and 40 minutes of reading and planning. In week 3 most of the hands-on time goes to the capstone workflow."
+  },
+  "objectives": [
+    {
+      "id": "O1",
+      "bloom": "Remember",
+      "text": "Identify tasks across a freelance business (marketing, sales, delivery and admin) where AI can save time."
+    },
+    {
+      "id": "O2",
+      "bloom": "Understand",
+      "text": "Explain the risks of using AI in client work, including confidentiality, accuracy, contracts and disclosure, and how to manage them."
+    },
+    {
+      "id": "O3",
+      "bloom": "Apply",
+      "text": "Use AI to define your offer, find potential clients, and write personalised outreach messages and proposals."
+    },
+    {
+      "id": "O4",
+      "bloom": "Apply",
+      "text": "Use AI to deliver client work and handle admin faster with reusable prompts, templates and quality checks."
+    },
+    {
+      "id": "O5",
+      "bloom": "Analyse",
+      "text": "Map your client workflow and identify repeated steps that can be automated with Zapier or n8n."
+    },
+    {
+      "id": "O6",
+      "bloom": "Evaluate",
+      "text": "Judge which tasks to automate and which to keep human, and whether an AI tool is worth its cost and risk."
+    },
+    {
+      "id": "O7",
+      "bloom": "Create",
+      "text": "Build an AI-assisted client workflow from proposal to invoice for your own service."
+    }
+  ],
+  "modules": [
+    {
+      "module_id": "M1",
+      "week": 1,
+      "title": "Win Clients with AI",
+      "lessons": [
+        {
+          "lesson_id": "L01",
+          "title": "Your AI-Assisted Freelance Business",
+          "objectives": [
+            "O1"
+          ],
+          "summary": "A tour of the freelance cycle (find, win, onboard, deliver, invoice, follow up) and where AI can help at each stage. AI saves time on drafting and organising, but your expertise and client relationships are what clients pay for. Analogy: AI as a very fast assistant who works for you, not in place of you.",
+          "exercise": "Write down every task you did for your business last week (or would do, if you are just starting) and mark the 5 that take the most time and could get AI help."
+        },
+        {
+          "lesson_id": "L02",
+          "title": "Sharpen Your Offer and Profile",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "Using AI to clarify who you help, what problem you solve and what result you deliver, then turning that into a short profile and a simple one-page service sheet in Canva. Worked example: Joon-ho, a freelance translator in Busan, moves from 'I translate documents' to a clear offer for small export companies.",
+          "exercise": "Ask Claude or ChatGPT to interview you with 8 questions about your service, then write a one-sentence offer and a short profile. Design a one-page service sheet in Canva."
+        },
+        {
+          "lesson_id": "L03",
+          "title": "Finding Clients and Writing Outreach",
+          "objectives": [
+            "O3",
+            "O2"
+          ],
+          "summary": "Using AI to list types of ideal clients, research a company from public information, and draft short, personal outreach messages. Why mass-produced, generic messages damage your reputation, and why you must follow the spam and data rules in your market. [REGION]",
+          "exercise": "Choose 3 real or example potential clients. Use AI to draft a personalised outreach message for each, then edit each message so it includes one specific detail that only you could add."
+        },
+        {
+          "lesson_id": "L04",
+          "title": "Proposals and Quotes That Win Work",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "A proposal structure: the client's problem, your approach, deliverables, timeline, price and next step. Using AI to turn discovery-call notes into a first draft, then checking scope, prices and promises yourself. Worked example: Aisha, a web designer in Dubai, turns her call notes into a clear 2-page proposal.",
+          "exercise": "Write notes from a real or example client call and use AI to draft a proposal from them. Check every deliverable, date and price, and remove anything you cannot promise."
+        }
+      ]
+    },
+    {
+      "module_id": "M2",
+      "week": 2,
+      "title": "Deliver Work and Protect Your Business",
+      "lessons": [
+        {
+          "lesson_id": "L05",
+          "title": "Onboarding Clients Smoothly",
+          "objectives": [
+            "O4"
+          ],
+          "summary": "Using AI to create a welcome email, an onboarding questionnaire and a project checklist that you can reuse with every client. A clear start reduces misunderstandings later. Analogy: giving a guest clear directions before they arrive.",
+          "exercise": "Create a reusable onboarding pack with AI: a welcome email, a questionnaire of 8 to 10 questions and a project checklist. Adapt all three to your own service."
+        },
+        {
+          "lesson_id": "L06",
+          "title": "Delivering Work Faster with Prompt Templates",
+          "objectives": [
+            "O4"
+          ],
+          "summary": "Building a small library of prompt templates for your most common deliverables (for example first drafts, research notes, design briefs or reports). Using AI for the first 60 to 80 percent of routine work while you keep the expert decisions. Worked example: Mateus, a social media consultant in Porto Alegre, creates monthly client reports faster with a saved template.",
+          "exercise": "Write and test 3 prompt templates for your most common deliverables. Record how long each task takes with and without the template."
+        },
+        {
+          "lesson_id": "L07",
+          "title": "Quality Checks and Client Confidentiality",
+          "objectives": [
+            "O2",
+            "O6"
+          ],
+          "summary": "Never paste client secrets, personal data or unpublished work into a tool unless the client agrees and the tool's data settings are suitable. Check every AI-assisted deliverable for accuracy and originality before it reaches the client. Decide your rule for telling clients when you use AI. [VERSION] Data-use settings of AI tools differ by plan and change often.",
+          "exercise": "Write your personal AI-use policy for client work: what you will and will not paste into AI tools, how you check work, and what you tell clients. Keep it to one page."
+        },
+        {
+          "lesson_id": "L08",
+          "title": "Contracts, Invoices and Admin Help",
+          "objectives": [
+            "O2",
+            "O4"
+          ],
+          "summary": "Using AI to draft contract checklists, payment reminders, invoice text and short client updates. AI drafts are not legal or tax advice: contract terms, tax and invoice rules differ by country, so check them with a qualified professional or official source. [REGION]",
+          "exercise": "Use AI to draft a polite payment reminder and an invoice template for your service. List 3 points in your contract or invoice that you need to check with an official source in your country."
+        }
+      ]
+    },
+    {
+      "module_id": "M3",
+      "week": 3,
+      "title": "Automate and Build Your Workflow",
+      "lessons": [
+        {
+          "lesson_id": "L09",
+          "title": "Mapping Your Client Workflow",
+          "objectives": [
+            "O5"
+          ],
+          "summary": "Drawing your workflow from first contact to final invoice, step by step, and marking each step as 'AI draft', 'automation', or 'human only'. Good automation candidates are repeated, rule-based steps, such as moving form answers into a spreadsheet or sending a reminder.",
+          "exercise": "Capstone step 1: map your full client workflow from proposal to invoice. Mark each step and choose 2 repeated steps to automate."
+        },
+        {
+          "lesson_id": "L10",
+          "title": "Your First Automation with Zapier or n8n",
+          "objectives": [
+            "O5",
+            "O4"
+          ],
+          "summary": "How automations work: a trigger (a new form entry), then actions (add a row, send an email, create a task). Building a simple 2-step automation with the free tier of Zapier or n8n, and testing it with example data before using it with real clients. [VERSION] Free-tier task limits, available apps and interfaces change often.",
+          "exercise": "Capstone step 2: build and test one automation for your workflow, for example 'new enquiry form entry, then add to a spreadsheet and send a welcome email'. Test it 3 times with example data."
+        },
+        {
+          "lesson_id": "L11",
+          "title": "What to Automate and What to Keep Human",
+          "objectives": [
+            "O6"
+          ],
+          "summary": "A decision checklist: How often does the task happen? What happens if it goes wrong? Does the client expect a personal touch? What does the tool cost in money and time? Worked example: Chidi, an accountant in Enugu, automates appointment reminders but keeps all advice messages personal.",
+          "exercise": "Capstone step 3: use the checklist to judge each AI or automation step in your workflow. Keep, change or remove each step and write a reason."
+        },
+        {
+          "lesson_id": "L12",
+          "title": "Your Complete Proposal-to-Invoice Workflow",
+          "objectives": [
+            "O6",
+            "O7"
+          ],
+          "summary": "Putting it all together: the proposal template, onboarding pack, delivery prompts, quality checks, automation and invoice template, in one documented workflow. Then the capstone brief and rubric.",
+          "exercise": "Capstone step 4: document your full AI-assisted workflow with templates, prompts, the automation and your AI-use policy, then run one test client (real or example) through it from proposal to invoice."
+        }
+      ]
+    }
+  ],
+  "capstone": {
+    "title": "AI-Assisted Client Workflow from Proposal to Invoice",
+    "brief": "Build and test an AI-assisted client workflow for your own service, from proposal to invoice, with templates, prompts, at least one automation and a personal AI-use policy.",
+    "built_in": [
+      "L09",
+      "L10",
+      "L11",
+      "L12"
+    ],
+    "assesses": [
+      "O4",
+      "O5",
+      "O6",
+      "O7"
+    ]
+  },
+  "coverage_check": {
+    "O1": [
+      "L01"
+    ],
+    "O2": [
+      "L03",
+      "L07",
+      "L08"
+    ],
+    "O3": [
+      "L02",
+      "L03",
+      "L04"
+    ],
+    "O4": [
+      "L05",
+      "L06",
+      "L08",
+      "L10"
+    ],
+    "O5": [
+      "L09",
+      "L10"
+    ],
+    "O6": [
+      "L07",
+      "L11",
+      "L12"
+    ],
+    "O7": [
+      "L12"
+    ]
+  },
+  "flags": [
+    "PROPOSED: screen demo for L10 (building a trigger-and-action automation in Zapier or n8n is hard to follow without seeing the interface). Needs approval.",
+    "PROPOSED: screen demo for L02 (designing a one-page service sheet in Canva). Needs approval; lower priority than L10.",
+    "L03 [REGION]: rules on unsolicited marketing messages and use of contact data differ by country; the lesson gives principles and points learners to local rules.",
+    "L07 [VERSION]: data-use and training settings for Claude and ChatGPT plans must be checked against current terms before scripting.",
+    "L08 [REGION]: contract, tax and invoicing rules differ by country; the lesson states clearly that AI drafts are not legal or tax advice.",
+    "L10 [VERSION]: Zapier and n8n free-tier limits, available app connections and interfaces must be checked against the live tools before scripting; n8n may need self-hosting or a trial for free use [VERIFY].",
+    "L06 '60 to 80 percent' is a teaching illustration, not a statistic; reword or remove in Stage 2 if it reads as a factual claim.",
+    "Judgement call: learners without current clients use example clients and data throughout, so the course also works for people with a planned service (per the prerequisite)."
+  ]
+}
