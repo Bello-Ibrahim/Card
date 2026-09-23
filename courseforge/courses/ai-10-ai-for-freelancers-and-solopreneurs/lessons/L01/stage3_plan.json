@@ -1,0 +1,72 @@
+{
+  "title": "Your AI-Assisted Freelance Business",
+  "thumbnail": {
+    "headline": "Your Fast New Assistant",
+    "image": "Navy background, a simple circle of six stage icons around a freelancer at a laptop, one small teal spark on each stage, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Your Fast New Assistant", "body": "Centre: simple icon of one person at a laptop. Around it, a circle of six small stage icons (find, win, onboard, deliver, invoice, follow up) with a small teal spark on each. Small tag: AI for Freelancers · Lesson 1."}
+  },
+  "production_notes": [
+    "No facts to verify: the lesson makes no claims about specific tools, prices or laws (content.md Review Flags: None).",
+    "Leila and her Casablanca clients are fictional; stock footage must not show a real shop name, logo or readable client documents.",
+    "The time figures in Leila's table are her own estimates for one week, not a statistic about AI savings. Do not add any 'percent saved' caption; learners measure their own time."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "When you work alone, you are the salesperson, the expert, the project manager and the accounts department. The client work is often not the hard part. The hard part is everything around it. What if some of that work could start from a draft?",
+       "on_screen_text": "You are the whole team"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Hi, and welcome to AI for Freelancers and Solopreneurs. In this first lesson, we look at your whole business, and find the places where AI can really help.",
+       "slide": {"layout": "title", "title": "Your AI-Assisted Freelance Business", "body": "AI for Freelancers and Solopreneurs · Lesson 1 of 12"}},
+      {"visual_type": "slide",
+       "voiceover": "Every freelance business, whatever the trade, moves through the same cycle. You find clients. You win the work with a proposal and a price. You onboard the client. You deliver the work. You send the invoice. And you follow up for feedback or the next project.",
+       "slide": {"layout": "diagram", "title": "The freelance cycle", "body": "Circle of six stages with arrows, revealed one by one: Find → Win → Onboard → Deliver → Invoice → Follow up → back to Find"}},
+      {"visual_type": "slide",
+       "voiceover": "AI chat tools, such as Claude or ChatGPT, can help at every stage. But mostly they help with two kinds of work. Drafting, which means first versions of messages, proposals and templates. And organising, which means turning messy notes into lists, tables and summaries. Later in the course, you will also meet automation tools that move information between apps for you.",
+       "slide": {"layout": "comparison", "title": "Where AI helps most", "body": "Left: Drafting (first versions of messages, proposals, reports, templates). Right: Organising (messy notes → lists, tables, checklists, summaries). Footer: Module 3 adds automation with Zapier or n8n."}},
+      {"visual_type": "stock",
+       "voiceover": "What AI does not replace is the reason clients hire you. Your expertise, your judgement and your relationship with them. A client pays a translator for correct meaning, a designer for good taste, and a bookkeeper for accurate numbers.",
+       "stock_query": "freelancer talking with client in cafe",
+       "on_screen_text": "Clients pay for your expertise"},
+      {"visual_type": "slide",
+       "voiceover": "Here is a simple way to picture it. Think of AI as a very fast assistant who has just joined your business. The assistant writes a first draft in seconds and never gets tired. But the assistant does not know your clients, sometimes makes things up, and must never send work without your approval. The assistant works for you, not in place of you.",
+       "slide": {"layout": "comparison", "title": "A very fast new assistant", "body": "Left, green ticks: drafts in seconds · never tired. Right, red crosses: does not know your clients · sometimes makes things up · never sends without your approval. Footer: Works for you, not in place of you."}},
+      {"visual_type": "slide",
+       "voiceover": "So how do you find good tasks for AI? Look for tasks that are repeated, mostly text, and low risk if the first draft is not perfect. Writing the fifth welcome email of the month is a good candidate. Deciding a client's tax question is not.",
+       "slide": {"layout": "bullets", "title": "A good first AI task is", "body": "Repeated · Mostly text · Low risk if the first draft is imperfect. Example yes: the fifth welcome email this month. Example no: a client's tax question."}},
+      {"visual_type": "text",
+       "voiceover": "And one safety rule applies for the whole course. Do not paste client secrets, personal data or confidential documents into an AI tool. Use example data, or remove names and details first.",
+       "on_screen_text": "Never paste confidential client data"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's see this in practice. Leila is a freelance bookkeeper in Casablanca, Morocco. She works with eight small shops and cafés. Last week, she wrote down every task she did, and how long each one took.",
+       "stock_query": "woman bookkeeper working laptop small office",
+       "on_screen_text": "Leila · bookkeeper · Casablanca"},
+      {"visual_type": "slide",
+       "voiceover": "Her list has replies to new enquiries, a quote for a bakery, reminders about missing receipts, monthly summary notes, invoices, and posts on a professional network. The biggest task is entering and checking figures, at about twelve hours.",
+       "slide": {"layout": "diagram", "title": "Leila's week", "body": "Simple table, columns Task · Stage · Time: Enquiry replies · Win · 1.5 h | Bakery quote · Win · 1 h | Receipt reminders · Onboard · 2 h | Entering and checking figures · Deliver · 12 h | Summary notes · Deliver · 3 h | Invoices and reminders · Invoice · 1.5 h | Network posts · Find · 1 h"}},
+      {"visual_type": "slide",
+       "voiceover": "For each task, she asks the three questions. Is it repeated? Is it mostly text? Is a first draft low risk? Her five best candidates are the summary notes, the receipt reminders, the enquiry replies, the invoice reminders and the quote. Together, they take about nine hours a week.",
+       "slide": {"layout": "diagram", "title": "Five AI candidates", "body": "Same table; five rows highlighted in teal with a tick: summary notes, receipt reminders, enquiry replies, invoice reminders, bakery quote. The 'Entering and checking figures' row is grey with the label: Limited, she checks every number."}},
+      {"visual_type": "slide",
+       "voiceover": "Notice what she expects. She does not expect AI to remove all nine hours. She expects to start each task from a good draft and check it, instead of starting from nothing. And her core work, checking the figures, stays with her.",
+       "slide": {"layout": "comparison", "title": "Draft, then check", "body": "Left: Before — blank page for every email and note. Right: After — AI first draft → Leila checks and edits → sent. Footer: Checking figures stays with Leila."}},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is to start with the most impressive task, like letting AI do the client work itself. That usually fails, because the core work needs the expertise the client pays for. Start with the small, repeated tasks around the work. Emails, templates, summaries and checklists. The risk is low, and you learn fast.",
+       "on_screen_text": "Start small, around the work"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, a freelance business has six stages, and AI can help with drafting and organising in each one. Second, the best first tasks for AI are repeated, mostly text and low risk. Your expertise and client relationships stay human. Third, AI is a fast assistant that works for you. You check everything before a client sees it, and you never paste confidential client data into it.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Six stages: find, win, onboard, deliver, invoice, follow up; AI drafts and organises. 2. First AI tasks: repeated, text-heavy, low-risk. 3. AI works for you: check everything, keep client data out."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below this video, you will list every task from your last week, or from one typical project if you are just starting. Then you will mark the five that take the most time and could get AI help. Keep your list for later in the course. In the next lesson, we will sharpen your offer and profile. See you there.",
+       "on_screen_text": "Next: Sharpen Your Offer and Profile"}
+    ]
+  }
+}

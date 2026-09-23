@@ -1,0 +1,71 @@
+{
+  "title": "Long-Form Content: Blogs and Newsletters",
+  "thumbnail": {
+    "headline": "Your Outline, AI's Draft",
+    "image": "Navy background, a handwritten outline on the left feeding into a typed draft on the right, with one number highlighted in amber, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Your Outline, AI's Draft", "body": "Left: handwritten outline with four headings. Arrow. Right: typed draft page with one line highlighted in amber and a small magnifying glass. Small tag: AI for Content Creators · Lesson 7."}
+  },
+  "production_notes": [
+    "[VERIFY] The worked example mentions checking a rainfall claim against a national weather service. No rainfall figure is given in the voiceover or on screen, and none may be added.",
+    "The '40%' visitor statistic is an example of an invented number. Show it only struck through, never as a fact.",
+    "[VERSION] Free-tier limits of Claude and ChatGPT for long drafts must be checked before recording; the voiceover makes no claim about limits.",
+    "Anh and the travel agency in Hanoi are fictional. Stock footage must show no real agency name or logo."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "An AI assistant can write a six-hundred-word blog post in less than a minute. It will be correct and well organised, and very often forgettable. It may also contain a statistic that does not exist. Long-form content needs a different way of working.",
+       "on_screen_text": "Correct, organised, and forgettable"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "In the last lesson, we wrote short social posts. Now we go longer. Blog posts and newsletters build trust over time. Readers come back because the writing is useful, and because they can hear a real person behind it. If you simply ask AI to write a blog post about a topic, you usually get general text that repeats other articles.",
+       "slide": {"layout": "title", "title": "Long-Form Content: Blogs and Newsletters", "body": "AI for Content Creators and Marketers · Lesson 7 of 15"}},
+      {"visual_type": "slide",
+       "voiceover": "So build the piece step by step, with you in control. First, write your own outline: the title, the main point and three or four headings. Second, add your key points under each heading: examples, opinions, customer stories and facts you know are true.",
+       "slide": {"layout": "diagram", "title": "Four steps, you in control", "body": "Four boxes left to right: 1 Your outline (highlighted) → 2 Your key points (highlighted) → 3 AI draft → 4 Human editing."}},
+      {"visual_type": "slide",
+       "voiceover": "Third, give the assistant your outline, notes and voice guide, and ask it to draft one section at a time. Fourth, edit it yourself. Rewrite the opening, cut repeated sentences, and add the experience, examples and opinions that only you have. That is what makes the piece original.",
+       "slide": {"layout": "diagram", "title": "Four steps, you in control", "body": "Same four boxes; now 3 AI draft (one section at a time) and 4 Human editing (rewrite opening · cut repeats · add your experience) are highlighted. Label under step 4: Originality."}},
+      {"visual_type": "slide",
+       "voiceover": "Then check every factual claim. AI assistants can invent statistics, quotes, studies and links that look real but are not. This is sometimes called hallucination. Highlight every number, name, date, quote and source. Find a source you can link to for each one. If you cannot, remove the claim, or rewrite it as your own opinion.",
+       "slide": {"layout": "bullets", "title": "Check every claim", "body": "Highlight: numbers · names · dates · quotes · sources → link a real source, or remove, or rewrite as your opinion. Small label: 'Hallucination' = invented but real-looking."}},
+      {"visual_type": "stock",
+       "voiceover": "Writing with AI is like building a house with a fast construction team. You give them the plan, and they put up the walls quickly. But you decide where the windows go, you add the furniture that makes it a home, and you inspect every wall before anyone moves in.",
+       "stock_query": "construction team building house walls",
+       "on_screen_text": "You own the plan and inspection"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's watch this in action. Anh writes a monthly newsletter for a sample small travel agency in Hanoi, Vietnam. This month, the topic is travelling in the rainy season.",
+       "stock_query": "rainy street in Hanoi Vietnam",
+       "on_screen_text": "Sample travel agency · Hanoi"},
+      {"visual_type": "slide",
+       "voiceover": "First she writes her outline. The title is, why we love the rainy season, and how to plan for it. The four sections cover what the season is really like, three trips that are better in the rain, what to pack, and how the team changes plans when the weather turns.",
+       "slide": {"layout": "bullets", "title": "Anh's outline", "body": "Title: Why we love the rainy season (and how to plan for it) · 1 What the rainy season is really like in northern Vietnam · 2 Three trips that are better in the rain · 3 What to pack · 4 How we change plans when the weather turns"}},
+      {"visual_type": "hero_broll",
+       "voiceover": "Under each heading she adds notes. One is a story about a group who saw a waterfall at its fullest. Another is her team's rule: always keep one free afternoon in every rainy-season trip.",
+       "broll_tool": "KLING",
+       "broll_prompt": "A small group of Southeast Asian and European travellers in rain jackets stand on a wet stone path, smiling as they look at a powerful waterfall in green mountains; slow crane shot rising from the group to reveal the waterfall; soft grey overcast light with light rain; cinematic, natural colours, gentle mist; 7 seconds; no readable text, no signs, no logos."},
+      {"visual_type": "slide",
+       "voiceover": "She asks the AI to draft each section. The draft is clear. But section one says that, according to tourism data, visitor numbers fall by forty percent in the rainy season. Anh cannot find any source for this number. So she deletes it, and writes: many of our clients avoid these months, so popular places are often quieter.",
+       "slide": {"layout": "comparison", "title": "An invented statistic", "body": "Red, struck through: \"According to tourism data, visitor numbers fall by 40% in the rainy season.\" Label: No source found. Green replacement: \"Many of our clients avoid these months, so popular places are often quieter.\""}},
+      {"visual_type": "slide",
+       "voiceover": "She also highlights a claim about average rainfall. She checks it against a national weather service, and links the source. Finally, she rewrites the opening with her own memory of her first rainy-season trip as a guide.",
+       "slide": {"layout": "bullets", "title": "Checked and made hers", "body": "Rainfall claim → checked with a national weather service, source linked (no figure shown) · Opening → rewritten with her first rainy-season trip as a guide"}},
+      {"visual_type": "text",
+       "voiceover": "The most serious mistake is to trust numbers because they look precise. A made-up statistic with a decimal point looks more believable, not less. And if the outline is not yours, the piece will probably say nothing new.",
+       "on_screen_text": "Precise does not mean true"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, build long-form content step by step: your outline, your key points, an AI draft, then human editing. Second, add your own experience, examples and opinions to make it original and useful. Third, highlight every factual claim and check it against a source you can link to, because AI can invent statistics, quotes and sources.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Outline → key points → AI draft → human edit. 2. Add your experience and opinions. 3. Highlight and source every claim."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below, draft a six-hundred-word blog post or newsletter with AI help, starting from your own outline. Highlight every factual claim, and link each one to a source or remove it. It takes about thirty-five minutes. In the next lesson, Designing Visuals with Canva and Free Image Generators, we move from words to pictures. See you there.",
+       "on_screen_text": "Next: Designing Visuals with Canva"}
+    ]
+  }
+}

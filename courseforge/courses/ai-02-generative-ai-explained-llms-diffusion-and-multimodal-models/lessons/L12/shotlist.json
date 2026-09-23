@@ -1,7 +1,7 @@
 {
   "course_id": "AI-02",
   "lesson_id": "L12",
-  "duration_s": 270.0,
+  "duration_s": 295.4,
   "thumbnail": {
     "headline": "Which Tool, and Why?",
     "slide": {
@@ -98,7 +98,20 @@
     {
       "scene": 8,
       "start": 138.8,
-      "end": 152.1,
+      "end": 154.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Length and appendix",
+        "body": "2 to 3 pages, table included · Short paragraphs, clear headings · Appendix: prompt, input (no personal data), outputs"
+      },
+      "voiceover": "Keep the whole report to two or three pages, including the table. Use short paragraphs and clear headings. Then attach your prompt, your input and your outputs as an appendix, so a reader can check your work."
+    },
+    {
+      "scene": 9,
+      "start": 154.7,
+      "end": 168.0,
       "section": "Demonstrate",
       "visual_type": "stock",
       "stock_query": "community volunteers meeting around table notes",
@@ -106,9 +119,9 @@
       "voiceover": "Let's look at an example. Amara is a coordinator at a non-profit organisation in Kigali. She tested three free chatbots on turning volunteer meeting notes into a short action list."
     },
     {
-      "scene": 9,
-      "start": 152.1,
-      "end": 163.2,
+      "scene": 10,
+      "start": 168.0,
+      "end": 186.9,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -116,12 +129,12 @@
         "title": "Amara's results",
         "body": "Table: Tool | Accuracy (x2) | Clarity | Structure | Effort to fix | Total /25. Tool A 5 4 5 4 = 23 (highlighted). Tool B 3 5 5 3 = 19. Tool C 4 3 3 3 = 17."
       },
-      "voiceover": "Her results table shows tool A with twenty-three points out of twenty-five, tool B with nineteen, and tool C with seventeen. Accuracy counts double."
+      "voiceover": "Her results table shows tool A with twenty-three points out of twenty-five, tool B with nineteen, and tool C with seventeen. Accuracy counts double. Tool A is ahead. But the numbers alone are not the report. The words around them matter more."
     },
     {
-      "scene": 10,
-      "start": 163.2,
-      "end": 181.2,
+      "scene": 11,
+      "start": 186.9,
+      "end": 204.9,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -132,9 +145,9 @@
       "voiceover": "In strengths and failures, she writes that tool B had the clearest wording, but gave a volunteer a deadline that was not in the notes. She explains why. It is a typical hallucination. The model filled a gap with a likely detail."
     },
     {
-      "scene": 11,
-      "start": 181.2,
-      "end": 203.1,
+      "scene": 12,
+      "start": 204.9,
+      "end": 226.8,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -145,18 +158,18 @@
       "voiceover": "Her recommendation is to use tool A for this task, because it was the most accurate and needed the least editing. A coordinator must still check every name and date, and personal phone numbers are removed before pasting. Her limits section says she tested one set of notes on one day."
     },
     {
-      "scene": 12,
-      "start": 203.1,
-      "end": 223.7,
+      "scene": 13,
+      "start": 226.8,
+      "end": 247.4,
       "section": "Demonstrate",
       "visual_type": "text",
       "on_screen_text": "Best for this task, not overall.",
       "voiceover": "A common mistake is to write, tool A is the best AI. That is too broad. Your test shows which tool worked best for one task, with one prompt, on one date. So limit your claim. For this task, under these conditions, tool A is the best choice."
     },
     {
-      "scene": 13,
-      "start": 223.7,
-      "end": 245.6,
+      "scene": 14,
+      "start": 247.4,
+      "end": 269.3,
       "section": "Recap",
       "visual_type": "slide",
       "slide": {
@@ -167,13 +180,13 @@
       "voiceover": "Let's recap. First, a strong report has six parts. Task, method, results table, strengths and failures, recommendation, and limits. Second, explain each failure with its likely cause, using how that type of model works. Third, make a specific recommendation for this task, justify it, and state the limits of your test."
     },
     {
-      "scene": 14,
-      "start": 245.6,
-      "end": 270.0,
+      "scene": 15,
+      "start": 269.3,
+      "end": 295.4,
       "section": "CTA",
       "visual_type": "presenter_full",
       "on_screen_text": "Submit your capstone report",
-      "voiceover": "Congratulations. You have finished Generative AI Explained. You now know how language, diffusion and multimodal models work, where they fail, and how to choose between them. Your last step is the capstone. Write your two to three page report, check it against the capstone rubric, and submit it on the course page. Well done, and good luck."
+      "voiceover": "Congratulations. You have finished Generative AI Explained. You now know how language, diffusion and multimodal models work, where they fail, and how to choose between them. Your last step is the capstone. Write your two to three page report, check it against the capstone rubric and the submission checklist, and submit it on the course page. Well done, and good luck."
     }
   ]
 }

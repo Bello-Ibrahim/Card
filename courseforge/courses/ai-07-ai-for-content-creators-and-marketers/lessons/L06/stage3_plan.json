@@ -1,0 +1,69 @@
+{
+  "title": "Writing Social Posts and Captions",
+  "thumbnail": {
+    "headline": "One Post, Three Styles",
+    "image": "Navy background, three phone screens fanned out, each showing a different caption shape (story, list, question), with a bar of soap icon, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "One Post, Three Styles", "body": "Three phone outlines side by side labelled Story · List · Question, with a small soap bar icon in the centre. Small tag: AI for Content Creators · Lesson 6."}
+  },
+  "production_notes": [
+    "[VERSION] Platform character limits, visible text before 'more', and current hashtag practices change often. The voiceover gives no numbers for limits; check before recording and keep the slides generic.",
+    "Wanjiru and the handmade-soap brand in Nairobi are fictional. Stock footage must show no real soap brand, packaging text or logo.",
+    "Do not show 'calms the skin' as an acceptable claim anywhere on screen; it appears only struck through on the scene 12 slide."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "A caption that works well on one platform can fail on another. One place rewards a long story. Another rewards a single sharp line. So why do so many people ask AI for a post, and then use the same text everywhere?",
+       "on_screen_text": "Same text everywhere?"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Welcome to week two, where we start creating. A good social post has four parts, and each one changes by platform. The first is length. Some platforms reward short text, and others allow longer stories. So check the current limits, and how much text shows before the reader taps more.",
+       "slide": {"layout": "diagram", "title": "Four parts of a post", "body": "A phone screen with a post, four labels pointing to it: Length · Hook (first line) · Call to action · Hashtags. 'Length' is highlighted first."}},
+      {"visual_type": "slide",
+       "voiceover": "The second part is the hook, the first line, which decides whether people stop scrolling. It can be a question, a surprising detail or a clear benefit. The third is the call to action, what you want people to do next, such as comment with your favourite scent. The fourth is hashtags. Use a few relevant ones, never a long list of unrelated tags.",
+       "slide": {"layout": "bullets", "title": "Hook, action, hashtags", "body": "Hook: question · surprising detail · clear benefit · Call to action: 'Comment your favourite scent' · Hashtags: a few relevant ones, no long lists"}},
+      {"visual_type": "slide",
+       "voiceover": "Put all of this in your prompt: the platform, the length, the type of hook, the call to action, the hashtag rule, and your voice guide. For example, an Instagram caption of about eighty words for a new lemongrass soap, with a sensory hook, a link in the profile, and three hashtags.",
+       "slide": {"layout": "code", "title": "A complete post prompt", "body": "Using the voice guide above, write an Instagram caption of about 80 words for our new lemongrass soap. Start with a sensory hook. End with a CTA to order via the link in our profile. Add 3 relevant hashtags."}},
+      {"visual_type": "slide",
+       "voiceover": "Then ask for several variations, such as a story, a list and a question. The first answer is rarely the best. Finally, make the post yours. Edit each one so that at least one sentence is fully your own, a real detail or an opinion that only your brand could share.",
+       "slide": {"layout": "bullets", "title": "Variations, then your own words", "body": "Ask for 3 styles: story · list · question → compare and combine → add at least one sentence that is fully yours"}},
+      {"visual_type": "stock",
+       "voiceover": "Asking for variations is like a photographer taking many shots of the same scene. Nobody expects the first photo to be the best. You take several, compare them and choose, and sometimes you combine the best parts.",
+       "stock_query": "photographer taking many photos outdoors",
+       "on_screen_text": "Nobody keeps only the first shot"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's meet Wanjiru. She runs a sample handmade soap brand in Nairobi, Kenya, and she is launching a lemongrass and honey soap. Her voice guide says warm, local and honest. Use handmade in Nairobi, and ingredient names. Avoid miracle, cures and chemical-free.",
+       "stock_query": "handmade soap bars on wooden table",
+       "on_screen_text": "Sample soap brand · Nairobi"},
+      {"visual_type": "slide",
+       "voiceover": "She asks for three Instagram captions in three styles. The story style says: every Saturday, the lemongrass arrives from a small farm outside the city. By Monday, it is soap. The list style gives three things to know: fresh lemongrass, local honey, and small batches.",
+       "slide": {"layout": "comparison", "title": "Story and list", "body": "Card 1 Story: \"Every Saturday, the lemongrass arrives from a small farm outside the city. By Monday, it is soap…\" Card 2 List: \"3 things to know about our new bar: 1. Fresh lemongrass. 2. Local honey. 3. Handmade in Nairobi, in small batches.\""}},
+      {"visual_type": "slide",
+       "voiceover": "The question style begins: what does your morning smell like? Ours smells like lemongrass and honey. It ends by asking followers to share their favourite scent in the comments. Three styles give her real choices to compare.",
+       "slide": {"layout": "quote", "title": "Question style", "body": "Card 3: \"What does your morning smell like? Ours smells like lemongrass and honey. Our new bar is handmade in Nairobi. Tell us your favourite scent in the comments.\""}},
+      {"visual_type": "slide",
+       "voiceover": "Now Wanjiru checks the facts. The lemongrass does come from a farm outside the city, but it arrives on Fridays, not Saturdays. So she corrects it. One version also said the soap calms the skin. That is a health claim she cannot prove, so she removes it.",
+       "slide": {"layout": "comparison", "title": "Check the facts", "body": "'Every Saturday' struck through → 'Every Friday' (green). 'Calms the skin' struck through in red: health claim, no proof → removed."}},
+      {"visual_type": "slide",
+       "voiceover": "She chooses the story style for Instagram, and the list style for a short post on another platform. Then she adds her own sentence. My grandmother made lemongrass tea every morning, and this bar is for her. It is a real detail that keeps her human voice. No AI could have written that line.",
+       "slide": {"layout": "quote", "title": "Her own sentence", "body": "Highlighted in teal: \"My grandmother made lemongrass tea every morning, and this bar is for her.\" Small labels: Story → Instagram · List → second platform."}},
+      {"visual_type": "text",
+       "voiceover": "The common mistake is accepting the first answer and posting the same text on every platform. Another is letting the AI add words like natural, healing or best in the city without evidence. Always ask for variations, adapt to each platform, and remove claims you cannot support.",
+       "on_screen_text": "Variations. Adapt. Remove unproven claims."}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, good posts are shaped for each platform: length, hook, call to action and hashtags. Second, ask for several variations and choose or combine, instead of accepting the first answer. Third, add at least one sentence that is fully your own, and remove any claim you cannot prove.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Shape each post: length, hook, CTA, hashtags. 2. Ask for variations; choose or combine. 3. Add your own sentence; remove unproven claims."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below, write five social posts for one product or service, using Claude or ChatGPT and your voice guide. In each post, write at least one sentence yourself and highlight it. Then check every fact before you post. It takes about twenty-five minutes. In the next lesson, Long-Form Content: Blogs and Newsletters, we go deeper. See you there.",
+       "on_screen_text": "Next: Blogs and Newsletters"}
+    ]
+  }
+}

@@ -1,0 +1,192 @@
+{
+  "course_id": "AI-03",
+  "lesson_id": "L15",
+  "duration_s": 300.3,
+  "thumbnail": {
+    "headline": "A Library Others Trust",
+    "slide": {
+      "layout": "title",
+      "title": "A Library Others Trust",
+      "body": "A stack of 15 prompt cards, the top one showing fields Name, Version, Purpose, Pattern, Template, Inputs, Examples, Test notes, Tool and date. Small tag: Prompt Engineering Masterclass · Lesson 15 · Capstone step 3."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.4,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "A tool others can trust",
+      "voiceover": "Six months from now, will you remember why a template says do not make promises? Will a new colleague know which placeholder to fill? Good documentation turns your prompts into a tool other people can trust."
+    },
+    {
+      "scene": 2,
+      "start": 15.4,
+      "end": 31.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Documenting and Sharing Your Library",
+        "body": "Lesson 15 · Capstone step 3"
+      },
+      "voiceover": "In the last lesson, you tested all fifteen templates. In this final lesson, you document them, so that you and your colleagues can use them with confidence. You will also see how your capstone will be assessed."
+    },
+    {
+      "scene": 3,
+      "start": 31.3,
+      "end": 49.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "The prompt card, part 1",
+        "body": "Name · Version (v1, v2, v3) · Purpose (one line) · Pattern · Prompt template"
+      },
+      "voiceover": "Each prompt gets one prompt card, with the same fields. A short, clear name, such as supplier delay reply. A version number, which you raise every time you change the template. A one-line purpose. The pattern. And the full template, with placeholders."
+    },
+    {
+      "scene": 4,
+      "start": 49.7,
+      "end": 73.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "The prompt card, part 2",
+        "body": "Inputs (and what never goes in) · Example input · Example output · Test notes · Tool and date of last test. One shared document or spreadsheet."
+      },
+      "voiceover": "Then, the inputs: what goes in each placeholder, and what must never go in. A short, non-confidential example input and output. Your test notes. And the tool and the date of the last test. Keep all the cards in one shared place your team already uses, such as a shared document or a spreadsheet."
+    },
+    {
+      "scene": 5,
+      "start": 73.3,
+      "end": 96.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Keep it up to date",
+        "body": "1. Retest regularly (for example every 3 months, or after a major update). 2. Update date and version. 3. Remove prompts nobody uses."
+      },
+      "voiceover": "AI tools change their features, limits and behaviour, so a template that works this month may give different results later. Three habits help. Retest important prompts regularly, for example every three months. Update the date and version after every test or change. And remove prompts that nobody uses, or that no longer work well."
+    },
+    {
+      "scene": 6,
+      "start": 96.4,
+      "end": 117.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Three safety rules",
+        "body": "1. Never paste personal or confidential data. 2. Check every output with the four-part checklist. 3. Follow your organisation's AI policy."
+      },
+      "voiceover": "At the top of the library, write a short introduction for colleagues. Say what the library is for, how to use a card, and give three safety rules. Never paste personal or confidential data. Check every output with the four-part checklist. And follow your organisation's AI policy."
+    },
+    {
+      "scene": 7,
+      "start": 117.0,
+      "end": 136.7,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "chef reading recipe book in kitchen",
+      "on_screen_text": "A new cook can make it",
+      "voiceover": "A documented library is like a well-kept recipe book in a restaurant kitchen. Each recipe has the method, a photo of the dish and the chef's notes. A new cook can make the same dish. And the chef updates the recipe when a supplier changes."
+    },
+    {
+      "scene": 8,
+      "start": 136.7,
+      "end": 155.1,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "finance analyst reviewing spreadsheet office",
+      "on_screen_text": "Min-jun · finance analyst, Seoul",
+      "voiceover": "Let's look at a finished card. Min-jun is a finance analyst at a manufacturing company in Seoul. His card is called monthly variance summary, and it is on version three. Its purpose is to explain the main budget differences to department heads."
+    },
+    {
+      "scene": 9,
+      "start": 155.1,
+      "end": 175.2,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Min-jun's prompt card",
+        "body": "Show the full card from content.md; highlight the Version line, the [CHECK] instruction and 'no salaries or personal data'."
+      },
+      "voiceover": "The template asks for the three largest differences between budget and actual, in a table, followed by three plain sentences for a non-finance reader. It marks any figure the tool calculated, so he can check it. And the figures placeholder says no salaries or personal data."
+    },
+    {
+      "scene": 10,
+      "start": 175.2,
+      "end": 197.5,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Why each line is there",
+        "body": "Timeline: v1 finance words → v2 'non-finance reader' added → v3 [CHECK] added after a wrong subtraction. Scores 5/5/4."
+      },
+      "voiceover": "Now look at his test notes. Version one used too many finance words. Version two added a non-finance reader. Version three added the check mark, after one wrong subtraction. Anyone who reads the card knows why each line is there. His scores in the last test were five, five and four."
+    },
+    {
+      "scene": 11,
+      "start": 197.5,
+      "end": 208.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Min-jun's introduction",
+        "body": "Five sentences: what the library is for · how to use a card · three safety rules (no personal or confidential data · four-part check · follow the AI policy)."
+      },
+      "voiceover": "His introduction for colleagues is only five sentences long, and it ends with the three safety rules. Short is fine, as long as it is clear."
+    },
+    {
+      "scene": 12,
+      "start": 208.6,
+      "end": 227.5,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Keep the test notes",
+      "voiceover": "A common mistake is to keep only the final prompt, and delete the test notes. Without test notes, nobody knows why the prompt looks the way it does. Then a colleague might remove an important line. Keep the test notes short, but keep them."
+    },
+    {
+      "scene": 13,
+      "start": 227.5,
+      "end": 245.9,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Capstone rubric",
+        "body": "Prompt quality · Diagnosis and improvement · Testing and checking · Safety and confidentiality · Documentation and reusability. Full rubric on the course page."
+      },
+      "voiceover": "Your library will be assessed on the quality of your prompts, how you improved them, how you tested and checked them, how safely you handled data, and how well they are documented. Read the full rubric on the course page before you submit."
+    },
+    {
+      "scene": 14,
+      "start": 245.9,
+      "end": 268.2,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Same fields on every card. 2. Retest, update version and date. 3. Introduction with three safety rules."
+      },
+      "voiceover": "Let's recap. First, every prompt card has the same fields, from name and version to test notes and the date of the last test. Second, retest important prompts regularly, and update the version and date, because tools change. Third, a short introduction with clear safety rules helps colleagues use the library correctly."
+    },
+    {
+      "scene": 15,
+      "start": 268.2,
+      "end": 300.3,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Submit your Personal Prompt Library",
+      "voiceover": "Congratulations. You have completed the Prompt Engineering Masterclass. Your last exercise is capstone step three. Document all fifteen prompts in one shared place, write a short introduction, and ask a colleague to try one card. Then submit your Personal Prompt Library for assessment. Before you submit, go through the checklist on the course page. This is a real tool you can use at work every week. Thank you for learning with us, and good luck."
+    }
+  ]
+}

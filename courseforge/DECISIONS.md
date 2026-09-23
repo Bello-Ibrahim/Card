@@ -16,6 +16,7 @@ Every item is [VERSION]: before recording, check the free plan, the interface an
 | AI music | AI-22 | **Suno** (free plan) | **Udio** (free plan) | Suno is the most widely used and is simple to demonstrate with mood, genre and instrument prompts. Free-plan songs may be for non-commercial use only [VERIFY]. The lesson already teaches how to check licences. |
 | Chatbot builder | AI-26 | **Botpress** (free plan) | **Tidio** (free plan) | Botpress has a visual flow builder, knowledge-base answers and built-in hand-off to a human, which is the centre of the AI-26 capstone. Tidio is simpler and has live chat. |
 | No-code app builder | AI-28 | **Glide** (free plan) | **Lovable** (AI app builder, free credits) | Glide builds working apps from a spreadsheet with no code and has built-in AI features. It is stable and suits a first MVP [VERIFY that the free plan includes AI]. Lovable builds an app from a prompt, which shows an "AI-native" path. |
+| Three-tool comparison demo | AI-02 L11 (also AI-03 L12) | **Claude, ChatGPT and Google Gemini** (free tiers) | Google AI Studio instead of the Gemini app | These are the three tools named across the briefs; they are widely available and each has a free tier [VERSION]. |
 | AI readiness templates | AI-04 | **CertifAI's own templates** (already written into L04, L05, L08 and L10) | none | CertifAI owns the content outright, with no third-party licence. |
 | Bias audit case studies | AI-29 | **CertifAI's own hypothetical case** (already in L08) | none | No unchecked claims about real companies. |
 

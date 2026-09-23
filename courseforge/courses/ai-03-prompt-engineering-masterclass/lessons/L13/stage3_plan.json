@@ -14,15 +14,15 @@
   "sections": {
     "Hook": [
       {"visual_type": "presenter_full",
-       "voiceover": "If you write a good prompt once and never use it again, you lose most of its value. A template lets you, and your colleagues, get the same quality every time, in a few seconds.",
+       "voiceover": "If you write a good prompt once and never use it again, you lose most of its value. A template lets you, and your colleagues, get the same quality every time, in a few seconds. Today, you will learn how to build one.",
        "on_screen_text": "Same quality, every time"}
     ],
     "Explain": [
       {"visual_type": "slide",
-       "voiceover": "In the last lesson, you tested one prompt across three tools. Now we make good prompts reusable. This lesson also starts your capstone project.",
+       "voiceover": "In the last lesson, you tested one prompt across three tools. Now we make good prompts reusable. This lesson also starts your capstone project. It is the first of three steps.",
        "slide": {"layout": "title", "title": "Turning Prompts into Reusable Templates", "body": "Lesson 13 · Capstone step 1"}},
       {"visual_type": "slide",
-       "voiceover": "A prompt template is a prompt where the parts that change are replaced with clear placeholders. You used placeholders in lesson three to protect confidential data. In a template, they also show what the user must fill in.",
+       "voiceover": "A prompt template is a prompt where the parts that change are replaced with clear placeholders. You used placeholders in lesson three to protect confidential data. In a template, they also show what the user must fill in. So a placeholder does two jobs: it keeps data safe, and it makes the prompt easy to reuse.",
        "slide": {"layout": "comparison", "title": "Prompt vs template", "body": "Prompt: 'Write an update for pharmacy assistants about opening hours.' Template: 'Write an update for [AUDIENCE] about [TOPICS].'"}},
       {"visual_type": "slide",
        "voiceover": "Here is how to make one. Start from a prompt that worked, one you have tested and improved. Find the parts that change each time, such as the audience, the document or the date. Replace them with placeholders in capital letters and square brackets. Keep the parts that make it work: the role, the format, the constraints and the checking instructions.",
@@ -47,13 +47,13 @@
        "voiceover": "Look at the last line. The notes placeholder includes a reminder: no personal or patient data. Because it is part of the template, every future user will see it. Ana tests the template with a different topic, stock changes, and the result has the same quality.",
        "slide": {"layout": "code", "title": "A built-in reminder", "body": "Notes: [PASTE NOTES - no personal or patient data]"}},
       {"visual_type": "slide",
-       "voiceover": "A common mistake is to replace too much. A template like write output for audience in format is too empty to help anyone. Keep fixed everything that made the original prompt work, and use placeholders only for what really changes.",
+       "voiceover": "A common mistake is to replace too much. A template like write output for audience in format is too empty to help anyone. Keep fixed everything that made the original prompt work, and use placeholders only for what really changes. The quality comes from the fixed parts.",
        "slide": {"layout": "comparison", "title": "Not too empty", "body": "Too empty: 'Write [OUTPUT] for [AUDIENCE] in [FORMAT].' Useful: role, format and constraints fixed; only audience, topic and limits as placeholders."}},
       {"visual_type": "slide",
        "voiceover": "Now, your capstone. Over the next three lessons, you will build a personal prompt library: fifteen tested, documented templates for your own job role. To choose the fifteen tasks, look for tasks that are frequent, time-consuming, and safe to do with AI, which means they need no personal or confidential data. Those tasks usually save the most time.",
        "slide": {"layout": "bullets", "title": "Capstone: Personal Prompt Library", "body": "15 tested, documented templates for your role. Choose tasks that are: Frequent (weekly or more) · Time-consuming · Safe (no personal or confidential data)."}},
       {"visual_type": "slide",
-       "voiceover": "Ana does this too. She lists her fifteen recurring tasks, such as a reply to a supplier delay, a rota change message, or sorting customer feedback, and she writes the pattern next to each one.",
+       "voiceover": "Ana does this too. She lists her fifteen recurring tasks, such as a reply to a supplier delay, a rota change message, or sorting customer feedback, and she writes the pattern next to each one. This list becomes the plan for her whole library.",
        "slide": {"layout": "diagram", "title": "Ana's task list", "body": "A short table: Task | Pattern. 'Reply to supplier delay' → Draft · 'Summarise head-office circular' → Summarise · 'Rota change message' → Draft · 'Classify customer feedback' → Classify · ... up to 15."}}
     ],
     "Recap": [
@@ -63,7 +63,7 @@
     ],
     "CTA": [
       {"visual_type": "presenter_full",
-       "voiceover": "Now it is your turn. This exercise is capstone step one. You will list fifteen recurring tasks from your job, choose a pattern for each, and turn your first three prompts into templates on a prompt card. It takes about forty minutes. In the next lesson, we look at building and testing your library. See you there.",
+       "voiceover": "Now it is your turn. This exercise is capstone step one. You will list fifteen recurring tasks from your job, choose a pattern for each, and turn your first three prompts into templates on a prompt card. Use only invented or non-confidential material. It takes about forty minutes. In the next lesson, we look at building and testing your library. See you there.",
        "on_screen_text": "Next: Building and Testing Your Library"}
     ]
   }

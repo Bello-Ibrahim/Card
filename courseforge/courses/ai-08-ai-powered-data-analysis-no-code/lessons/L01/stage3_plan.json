@@ -1,0 +1,177 @@
+{
+  "title": "What AI Can Do with Your Spreadsheets",
+  "thumbnail": {
+    "headline": "Can You Trust AI's Numbers?",
+    "image": "Navy background, a spreadsheet grid on the left with one cell circled in teal, a chat bubble with a number on the right, headline in teal Inter Bold.",
+    "slide": {
+      "layout": "title",
+      "title": "Can You Trust AI's Numbers?",
+      "body": "Left: simple spreadsheet grid with one revenue cell circled in teal. Right: chat bubble showing a number and a small question mark. Small tag: AI-Powered Data Analysis · Lesson 1."
+    }
+  },
+  "production_notes": [
+    "[VERSION] File-analysis features in Claude and ChatGPT (feature names, supported file types, size limits, whether the hidden calculation is shown, and which free or paid plans include uploads) must be checked against the live tools before recording. The script avoids naming limits or plans for this reason.",
+    "[VERSION] The exercise uses Google Sheets File > Download > Comma-separated values; check the menu path in the current interface (not spoken in the video).",
+    "Hiroshi, his Osaka shop and all figures are fictional. Every spoken number matches content.md: Online 1,490, Market 890, about 63%; soap bars 420 units / 1,260 revenue, candles 140 units / 1,120 revenue.",
+    "Scene 10 slide shows the full eight-row sample table from content.md exactly as written; scene 12 shows the formula =SUMIF(C2:C9, \"Online\", E2:E9) on screen, not read aloud.",
+    "Stock footage for Hiroshi's shop must show no real shop names or logos."
+  ],
+  "sections": {
+    "Hook": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "You upload a spreadsheet and type, which product sold best? Ten seconds later, you get a neat answer with a chart. It feels like magic. But how does the AI get that number? And how do you know it is right?",
+        "on_screen_text": "How do you know it is right?"
+      }
+    ],
+    "Explain": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Hi, and welcome to AI-Powered Data Analysis, No Code. In this first lesson, we look at what AI can do with your spreadsheets, and where it goes wrong.",
+        "slide": {
+          "layout": "title",
+          "title": "What AI Can Do with Your Spreadsheets",
+          "body": "AI-Powered Data Analysis (No Code) · Lesson 1 of 14"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Some AI assistants, such as Claude and ChatGPT, can analyse files that you upload. When you upload a spreadsheet, a typical tool does three things. First, it reads the data. It looks at the column names and the first rows to understand what each column contains.",
+        "slide": {
+          "layout": "diagram",
+          "title": "What happens when you upload",
+          "body": "Three steps in a row, revealed one by one: 1. Reads the data (icon: column headers + first rows highlighted) → 2. Calculates → 3. Describes in words. Only step 1 is lit in this scene."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Second, it calculates. Many tools write and run a small hidden program to sort, filter, add up or count the data. Third, it describes the result in words, and sometimes in a chart.",
+        "slide": {
+          "layout": "diagram",
+          "title": "What happens when you upload",
+          "body": "Same three-step diagram, steps 2 and 3 now lit: 2. Calculates (small grey 'hidden program' box: sort · filter · add up · count) → 3. Describes in words (speech bubble + mini bar chart)."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "This makes AI useful for three kinds of work. Fast summaries, like totals, averages and counts by group, in seconds. Formula ideas, when you describe what you need in plain words. And chart suggestions that fit your question.",
+        "slide": {
+          "layout": "bullets",
+          "title": "What AI does well",
+          "body": "Fast summaries: totals, averages, counts by group · Formula ideas from plain words · Chart suggestions for your question (teal ticks)"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "But it also fails in predictable ways. It can use the wrong column, for example adding up units when you asked about revenue. It can round too early, or skip rows with blank cells without telling you. And it can state a cause or a trend that the data does not support, in a very sure tone.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Where AI goes wrong",
+          "body": "Wrong column (Units instead of Revenue) · Early rounding and skipped blank rows · Confident but wrong conclusions (amber warning icons)"
+        }
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "Anything you upload leaves your computer. So never upload personal or confidential data unless your organisation has approved the tool for that data. You will learn how to prepare a safe file in the next lesson.",
+        "stock_query": "person uploading file on laptop office",
+        "on_screen_text": "Uploads leave your computer"
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "Think of it this way. Imagine a very fast junior analyst in their first week. They produce a summary in minutes, and it is often good. But they do not yet know your business, they sometimes pick the wrong column, and they never say, I am not sure.",
+        "stock_query": "young analyst working quickly at laptop",
+        "on_screen_text": "A fast junior analyst"
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "You would always review their work before you send it to your manager. Treat AI answers in the same way.",
+        "on_screen_text": "Always review the work"
+      }
+    ],
+    "Demonstrate": [
+      {
+        "visual_type": "stock",
+        "voiceover": "Hiroshi runs a small shop in Osaka that sells handmade soap and candles, online and at a weekend market. He uploads a fictional sales sheet to an AI assistant.",
+        "stock_query": "handmade soap and candles market stall",
+        "on_screen_text": "Hiroshi's soap and candle shop · Osaka"
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "The sheet has eight rows. Two months, January and February. Two products, soap bars and candles. Two channels, online and market. And for each row, the units sold and the revenue.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Hiroshi's sales sheet (fictional)",
+          "body": "Table, columns Month | Product | Channel | Units | Revenue: Jan Soap bar Online 120 360 · Jan Soap bar Market 80 240 · Jan Candle Online 40 320 · Jan Candle Market 25 200 · Feb Soap bar Online 150 450 · Feb Soap bar Market 70 210 · Feb Candle Online 45 360 · Feb Candle Market 30 240"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "He asks, what was total revenue by channel? The AI answers. Online, one thousand four hundred and ninety. Market, eight hundred and ninety. So online brought in about sixty-three percent of revenue.",
+        "slide": {
+          "layout": "comparison",
+          "title": "Revenue by channel (AI answer)",
+          "body": "Chat bubble: 'What was total revenue by channel?' → Online 1,490 | Market 890 · 'about 63% online'"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Hiroshi checks one number in Google Sheets. He uses a formula that adds up the revenue column, but only for rows where the channel is online. The result is one thousand four hundred and ninety. The answer matches.",
+        "slide": {
+          "layout": "code",
+          "title": "Check one number by hand",
+          "body": "=SUMIF(C2:C9, \"Online\", E2:E9) → 1,490 ✓ (green tick: matches the AI)"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Then he asks, which product is more popular? The AI says soap bars are much more popular, with four hundred and twenty units against one hundred and forty candles. That is true for units.",
+        "slide": {
+          "layout": "comparison",
+          "title": "Which product is more popular?",
+          "body": "By units (what the AI used): Soap bars 420 | Candles 140. Right side empty, labelled 'By revenue?'"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "But look at revenue. Soap bars brought in one thousand two hundred and sixty, and candles one thousand one hundred and twenty. The two products are close. Popular was a vague word, and the AI chose units without saying so. Hiroshi learns to name the column he means.",
+        "slide": {
+          "layout": "comparison",
+          "title": "Units or revenue?",
+          "body": "Left, by units: Soap bars 420 | Candles 140. Right, by revenue: Soap bars 1,260 | Candles 1,120. Caption: Name the column you mean."
+        }
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "A common mistake is to think that because the AI runs code, its numbers must be correct. But the AI may have understood a different question. So always check at least one number by hand, and always ask which columns the AI used.",
+        "on_screen_text": "Check one number. Ask which columns."
+      }
+    ],
+    "Recap": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, AI file-analysis tools read your data, run hidden calculations, and describe the results in words and charts. Second, they are fast at summaries, formula ideas and chart suggestions, but they can use the wrong column, skip rows, and sound sure when they are wrong.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. AI reads data, runs hidden calculations, describes results. 2. Fast at summaries, formulas, charts, but can pick the wrong column, skip rows, be confidently wrong. (Point 3 appears in the next scene.)"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Third, treat the AI like a fast junior analyst. Check at least one number by hand, and never upload personal or confidential data to a tool your organisation has not approved.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "Points 1 and 2 stay; point 3 added: 3. Check one number by hand; never upload personal data to unapproved tools."
+        }
+      }
+    ],
+    "CTA": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Now it is your turn. In the exercise below this video, you will upload the same sample sales sheet to Claude or ChatGPT, ask three questions, and check one answer by hand in Google Sheets. It takes about twenty minutes. In the next lesson, we look at safe data handling before you upload. See you there.",
+        "on_screen_text": "Next: Safe Data Handling Before You Upload"
+      }
+    ]
+  }
+}

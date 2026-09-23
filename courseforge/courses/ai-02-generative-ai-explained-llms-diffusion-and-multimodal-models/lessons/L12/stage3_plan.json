@@ -74,6 +74,15 @@
         "voiceover": "Think of a doctor's summary after tests. It says what was tested, shows the key results, explains what they mean, and gives a clear recommendation. The patient does not need every measurement, but they need to trust the method.",
         "stock_query": "doctor explaining results to patient in clinic",
         "on_screen_text": "Trust comes from the method"
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Keep the whole report to two or three pages, including the table. Use short paragraphs and clear headings. Then attach your prompt, your input and your outputs as an appendix, so a reader can check your work.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Length and appendix",
+          "body": "2 to 3 pages, table included · Short paragraphs, clear headings · Appendix: prompt, input (no personal data), outputs"
+        }
       }
     ],
     "Demonstrate": [
@@ -85,7 +94,7 @@
       },
       {
         "visual_type": "slide",
-        "voiceover": "Her results table shows tool A with twenty-three points out of twenty-five, tool B with nineteen, and tool C with seventeen. Accuracy counts double.",
+        "voiceover": "Her results table shows tool A with twenty-three points out of twenty-five, tool B with nineteen, and tool C with seventeen. Accuracy counts double. Tool A is ahead. But the numbers alone are not the report. The words around them matter more.",
         "slide": {
           "layout": "diagram",
           "title": "Amara's results",
@@ -130,7 +139,7 @@
     "CTA": [
       {
         "visual_type": "presenter_full",
-        "voiceover": "Congratulations. You have finished Generative AI Explained. You now know how language, diffusion and multimodal models work, where they fail, and how to choose between them. Your last step is the capstone. Write your two to three page report, check it against the capstone rubric, and submit it on the course page. Well done, and good luck.",
+        "voiceover": "Congratulations. You have finished Generative AI Explained. You now know how language, diffusion and multimodal models work, where they fail, and how to choose between them. Your last step is the capstone. Write your two to three page report, check it against the capstone rubric and the submission checklist, and submit it on the course page. Well done, and good luck.",
         "on_screen_text": "Submit your capstone report"
       }
     ]

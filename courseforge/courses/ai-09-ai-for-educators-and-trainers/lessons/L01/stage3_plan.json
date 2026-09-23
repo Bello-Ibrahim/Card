@@ -1,0 +1,76 @@
+{
+  "title": "How AI Can Support Educators and Trainers",
+  "thumbnail": {
+    "headline": "Your Fast New Assistant",
+    "image": "Navy background, a teacher's desk with a stack of worksheets on one side and a glowing chat bubble on the other, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Your Fast New Assistant", "body": "Left: icon of a stack of worksheets and a red pen. Right: icon of a chat bubble with sparkles. Small tag: AI for Educators and Trainers · Lesson 1."}
+  },
+  "production_notes": [
+    "No facts to verify: content.md Review Flags say None. Uses and limits are general, and the example is hypothetical.",
+    "Mariana and her school in Curitiba are fictional; stock footage must show no real school name, uniform crest or logo.",
+    "Claude and ChatGPT are named only as the course tools from the brief; do not show either interface in this lesson."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Think about last week. How many hours did you spend writing examples, adapting a text, making questions, or typing the same feedback over again? Some of that work can now start with an AI assistant. The question is which parts, and which parts must stay with you.",
+       "on_screen_text": "Which parts can AI help with?"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Hi, and welcome to AI for Educators and Trainers. Whether you teach in a school, lecture at a university or run training at work, this course is for you. In this first lesson, we look at where AI really helps in teaching work, and where it does not.",
+       "slide": {"layout": "title", "title": "How AI Can Support Educators and Trainers", "body": "AI for Educators and Trainers · Lesson 1 of 12. Three small icons: school, university, workplace."}},
+      {"visual_type": "slide",
+       "voiceover": "An AI assistant, such as Claude or ChatGPT, is a tool that produces text in answer to your instructions. It has learned patterns from a very large amount of writing, so it can draft many kinds of teaching material in seconds. But it does not know your learners, your timetable or your institution.",
+       "slide": {"layout": "diagram", "title": "What an AI assistant is", "body": "Your instructions → chat bubble 'AI assistant (learned patterns from lots of writing)' → draft in seconds. Greyed-out items it cannot see: your learners · your timetable · your institution."}},
+      {"visual_type": "slide",
+       "voiceover": "AI assistants are usually helpful for five kinds of work. Planning, such as suggesting activities or timings for a workshop. Creating examples, like word problems or role-play situations. Adapting texts to a simpler or harder level. Writing first drafts of questions. And drafting feedback, by turning your short notes into clear, polite comments.",
+       "slide": {"layout": "bullets", "title": "Where AI helps", "body": "Planning: activities, sequence, timings · Creating examples: word problems, case studies, role-plays · Adapting texts: simpler or harder versions · Writing questions: quiz, discussion, reflection · Drafting feedback: notes → clear comments"}},
+      {"visual_type": "slide",
+       "voiceover": "They also have clear limits. First, exact facts. An AI assistant can state a wrong date or definition in a confident voice. Second, your specific learners. It does not know who needs extra support. Third, local details, like your national syllabus or your company's procedures. It may invent them. And fourth, fairness, because its examples can repeat stereotypes.",
+       "slide": {"layout": "bullets", "title": "Where AI is weak", "body": "Exact facts: wrong dates, numbers, definitions · Your specific learners: who needs support · Local curriculum and company procedures: may be invented · Fairness: stereotypes, one culture (see L08)"}},
+      {"visual_type": "stock",
+       "voiceover": "Here is a simple way to picture it. An AI assistant is like a teaching assistant who works very fast but has never met your class. You can ask for ten example problems before lunch, and they will deliver.",
+       "stock_query": "teaching assistant preparing worksheets at desk",
+       "on_screen_text": "Very fast, but never met your class"},
+      {"visual_type": "stock",
+       "voiceover": "But they do not know that half your group struggles with fractions, or that your company changed its refund policy last month. You give the direction, and you check the work before it reaches learners.",
+       "stock_query": "trainer reviewing printed handouts with pen",
+       "on_screen_text": "You direct. You check."},
+      {"visual_type": "slide",
+       "voiceover": "A simple way to decide what to give the AI is to sort your tasks into three groups. AI can draft, where the AI makes a first version and you edit it. AI can help me check, where you do the work and ask the AI to look for gaps. And keep fully human, for tasks that need your judgement, your knowledge of the learners, or personal data.",
+       "slide": {"layout": "diagram", "title": "Three groups", "body": "Three columns with icons: 'AI can draft' (e.g. ten practice questions) · 'AI can help me check' (e.g. are my instructions clear?) · 'Keep fully human' (e.g. final grade, a difficult conversation)"}}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's see this in practice. Mariana teaches history at a secondary school in Curitiba, in Brazil. On Sunday evening, she lists her tasks for the coming week and sorts them into the three groups.",
+       "stock_query": "teacher planning week at kitchen table evening",
+       "on_screen_text": "Mariana · history teacher · Curitiba"},
+      {"visual_type": "slide",
+       "voiceover": "A starter activity about the causes of a historical event? AI can draft. She will ask for five options and choose one. A timeline worksheet? AI can draft too, but she will check every date against the textbook, because dates are exact facts.",
+       "slide": {"layout": "comparison", "title": "AI can draft", "body": "Starter activity → ask for 5 options, choose 1. Timeline worksheet → draft, then check every date against the textbook (tick icon)."}},
+      {"visual_type": "slide",
+       "voiceover": "Instructions for a group project? AI can help her check. She writes them herself, then asks the AI which steps might confuse a fourteen-year-old.",
+       "slide": {"layout": "bullets", "title": "AI can help me check", "body": "Group project instructions: Mariana writes them → asks AI: 'Which steps might confuse a 14-year-old?'"}},
+      {"visual_type": "slide",
+       "voiceover": "Marking thirty essays? Keep fully human. The essays contain learners' names and personal writing, and the grade is her professional judgement. A reply to a parent about a learner's progress? Also fully human, because it involves personal information and a relationship.",
+       "slide": {"layout": "bullets", "title": "Keep fully human", "body": "Mark 30 essays: names, personal writing, professional judgement · Reply to a parent: personal information, a relationship. Lock icon."}},
+      {"visual_type": "slide",
+       "voiceover": "Mariana notices a pattern. The draft tasks are the repetitive ones that take time but not much judgement. The fully human tasks are the ones where her knowledge of each learner matters most.",
+       "slide": {"layout": "comparison", "title": "The pattern", "body": "Left: AI can draft = repetitive, time-consuming, little judgement. Right: Keep fully human = knowledge of each learner matters most."}},
+      {"visual_type": "text",
+       "voiceover": "One common mistake is to believe that if AI writes something quickly and fluently, it is probably correct. Fluent language is not the same as accurate content. A well-written worksheet can still have a wrong definition, or a question with two correct answers. So treat every output as a first draft.",
+       "on_screen_text": "Fluent is not the same as correct"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, AI assistants can help with planning, examples, adapting texts, writing questions and drafting feedback. Second, their main limits are exact facts, knowledge of your learners and local details, so you always check and adapt their work. Third, sort your tasks into three groups, and keep anything with personal data or final judgement fully human.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. AI helps with planning, examples, adapting texts, questions, feedback. 2. Limits: facts, your learners, local details, so check and adapt. 3. Draft · Check · Keep fully human: personal data and grades stay human."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below this video, list ten tasks from your own teaching or training week, and sort them into the three groups. Then explain one choice. It takes about fifteen minutes. In the next lesson, we look at prompting for teaching tasks. See you there.",
+       "on_screen_text": "Next: Prompting for Teaching Tasks"}
+    ]
+  }
+}

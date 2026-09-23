@@ -1,0 +1,179 @@
+{
+  "course_id": "AI-03",
+  "lesson_id": "L14",
+  "duration_s": 293.8,
+  "thumbnail": {
+    "headline": "Test It Twice",
+    "slide": {
+      "layout": "title",
+      "title": "Test It Twice",
+      "body": "A prompt card with two test strips: 'Typical case' (green scores 5/5/5) and 'Harder case' (amber scores 2/5/2), and a tag 'v1 → v2'. Small tag: Prompt Engineering Masterclass · Lesson 14 · Capstone step 2."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.0,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Once might be luck",
+      "voiceover": "A template that worked once might have worked by luck. Before you trust it, and before a colleague uses it, test it with different inputs. Today, you will learn how to test your templates, and what to do when a test fails."
+    },
+    {
+      "scene": 2,
+      "start": 18.0,
+      "end": 29.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Building and Testing Your Library",
+        "body": "Lesson 14 · Capstone step 2"
+      },
+      "voiceover": "In the last lesson, you turned your first prompts into templates and chose fifteen tasks for your capstone. Now you build and test the whole library."
+    },
+    {
+      "scene": 3,
+      "start": 29.1,
+      "end": 51.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Two different tests",
+        "body": "Typical case: a normal weekly update. Harder case: a sensitive topic · very short notes · an unusual request."
+      },
+      "voiceover": "Test each template at least twice, with inputs that are really different. One typical case, such as a normal weekly update. And one harder case, such as a sensitive topic, very short notes, or an unusual request. One test shows that a template can work. Two or more show whether it works reliably."
+    },
+    {
+      "scene": 4,
+      "start": 51.8,
+      "end": 76.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "One test, five steps",
+        "body": "Fill placeholders → Run in a new chat → Four-part check (L11) → Score 1–5 (L12) → Record on the prompt card."
+      },
+      "voiceover": "For each test, use the method you already know. Fill the placeholders with realistic, non-confidential input. Run the template in a new chat. Check the output for facts, sources, bias and confidentiality. Score it from one to five on accuracy, format and tone. Then record the input, the scores and any problems on the prompt card."
+    },
+    {
+      "scene": 5,
+      "start": 76.2,
+      "end": 97.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "When a test fails",
+        "body": "Diagnose (L10): task · context · format · conflict. One change → v1 to v2 → test again. Tip: spread tests over several days, for example 5 templates a day."
+      },
+      "voiceover": "When a test shows a weakness, use the diagnosis from lesson ten. Make one targeted change, raise the version number, for example from version one to version two, and test again. Free plans may limit how many messages you can send each day, so plan your tests across several days."
+    },
+    {
+      "scene": 6,
+      "start": 97.6,
+      "end": 115.6,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "engineers inspecting bridge construction site",
+      "on_screen_text": "Test with a heavy load too",
+      "voiceover": "Testing a template is like testing a new bridge. One light car crossing safely does not prove much. Engineers test with a typical load, and a heavy load, before the bridge opens to the public. Your harder case is the heavy load."
+    },
+    {
+      "scene": 7,
+      "start": 115.6,
+      "end": 140.9,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "school administrator working in school office",
+      "on_screen_text": "Leila · school administrator, Amman",
+      "voiceover": "Let's watch a test. Leila is a school administrator at a private school in Amman. Her template writes letters to parents. It names the year group, the situation and a deadline, asks for a warm and clear tone under one hundred and eighty words, in simple English, and says do not add facts that are not in my notes."
+    },
+    {
+      "scene": 8,
+      "start": 140.9,
+      "end": 158.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Test 1: Typical case",
+        "body": "School trip to a museum, consent form by [DATE]. 160 words, deadline included. Accuracy 5 · Format 5 · Tone 5 (green)."
+      },
+      "voiceover": "Test one is a typical case: a school trip to a museum, with a consent form due on a date. The letter is clear, one hundred and sixty words, and includes the deadline. She scores it five, five and five."
+    },
+    {
+      "scene": 9,
+      "start": 158.0,
+      "end": 187.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Test 2: Harder case",
+        "body": "Illness after school lunch; new catering company. Red highlight: 'there is no risk to any student' (not in notes). Tone too cheerful. Accuracy 2 · Format 5 · Tone 2."
+      },
+      "voiceover": "Test two is a harder case. Several students had a stomach illness after a school lunch, and the school has changed its catering company. The letter is the right length. But it says there is no risk to any student. That is not in her notes, and she cannot promise it. The tone is also too cheerful for a health topic. She scores it two, five and two."
+    },
+    {
+      "scene": 10,
+      "start": 187.1,
+      "end": 205.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Leila's change",
+        "body": "... Match the tone to the situation: serious and calm for health or safety topics. Do not make promises or reassurances that are not in my notes. ..."
+      },
+      "voiceover": "Leila names the cause: missing context, and a gap in the constraints. She adds two lines. Match the tone to the situation, serious and calm for health or safety. And do not make promises or reassurances that are not in my notes."
+    },
+    {
+      "scene": 11,
+      "start": 205.1,
+      "end": 223.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Version 2",
+        "body": "v1 → v2. Test 1: still green. Test 2: now green (calm, factual, no promises). Prompt card updated: versions, inputs, scores, change."
+      },
+      "voiceover": "She saves it as version two and repeats both tests. The trip letter is still good. The illness letter is now calm and factual, and makes no new promises. Her prompt card records both versions, the inputs, the scores and the change."
+    },
+    {
+      "scene": 12,
+      "start": 223.1,
+      "end": 240.2,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Always include a harder case",
+      "voiceover": "A common mistake is to test with two very similar inputs. Both pass, and the weakness stays hidden until a difficult situation arrives. So always make one test a harder case: a sensitive topic, missing information, or an unusual audience."
+    },
+    {
+      "scene": 13,
+      "start": 240.2,
+      "end": 265.5,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Two tests: typical + harder. 2. Check, score, record on the card. 3. One change, new version, test again."
+      },
+      "voiceover": "Let's recap. First, test every template at least twice with different inputs: one typical case and one harder case. Second, check each output with the four-part checklist, score it, and record the input, the scores and the changes on the prompt card. Third, when a test fails, make one targeted change, raise the version number, and test again."
+    },
+    {
+      "scene": 14,
+      "start": 265.5,
+      "end": 293.8,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Documenting and Sharing Your Library",
+      "voiceover": "Now it is your turn. This exercise is capstone step two. You will write all fifteen templates, test each one at least twice, including a harder case, and record the results and any changes. It takes about an hour, so split it over more than one session if you need to. In the final lesson, we look at documenting and sharing your library. See you there."
+    }
+  ]
+}
