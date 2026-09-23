@@ -41,7 +41,7 @@ Image: Navy background, an open toolbox with three labelled tools (math, datetim
 
 ## Production Notes
 - [VERSION] Check the Colab install command (%pip vs !pip), the libraries pre-installed in Colab, the pandas version printed, and how long installed packages last in a Colab session against the live tool before recording.
-- The random.seed(42) output 'Tariq' was produced with Python 3.11; confirm it in the Colab runtime before recording. The voiceover does not name the winner, so it stays correct either way; the screen must show whatever the runtime prints, which should be Tariq.
+- Verified with Python 3.11 on 2026-09-23: random.seed(42) then random.choice picks Tariq.
 - The pandas version number on screen depends on the Colab runtime; the voiceover does not say it.
 - Judgement call (curriculum): NumPy is named only; its maths use is covered in AI-05.
 - Printed outputs on screen must match content.md: '9.0 5' and '73 days to go'. Valentina, the Bogotá book fair, the date and the names are made up.

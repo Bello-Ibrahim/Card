@@ -1,0 +1,74 @@
+{
+  "title": "Structured Output: Getting JSON You Can Trust",
+  "thumbnail": {
+    "headline": "JSON You Can Trust",
+    "image": "Navy background, a curly-brace data card passing through a teal checkpoint gate, one card continuing and one card diverted to a 'review' shelf, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "JSON You Can Trust", "body": "A data card with curly braces passes a teal checkpoint: green arrow to 'classified', amber arrow to 'needs review'. Small tag: AI Agents and Automation Workflows · Lesson 6."}
+  },
+  "production_notes": [
+    "[VERSION] Claude API structured output: the recommended method for JSON output (prompting, tool input schemas or a dedicated structured output option) and the response path content[0].text must be checked against current documentation. The voiceover says only that stronger options exist and learners should check the documentation.",
+    "[VERSION] n8n HTTP Request, Code ($input.all()) and IF node options must be checked against the current release.",
+    "Screen recording: the validation JavaScript and the JSON shape come from content.md and are shown on screen; the voiceover describes them and does not read them. The JSON result for email E07 is an example output.",
+    "Beatriz Carvalho and her Lisbon hotel are fictional; all 10 emails are invented, with no real guest names."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "A summary is nice to read, but a workflow cannot make decisions from a paragraph. It needs fields: category, urgency, language. Today, you make the model return data the next node can use, and you check it before anything depends on it.",
+       "on_screen_text": "Fields, not paragraphs"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Last time, the model gave us one sentence per review. Now we want structured output. That means asking the model for a fixed shape, usually JSON, instead of free text. You describe the shape in the system prompt, and give one example.",
+       "slide": {"layout": "code", "title": "Ask for a fixed shape", "body": "Show the prompt from content.md: Return only JSON with this shape, and no other text: category: booking | complaint | question | other; urgency: high | normal | low; language: two-letter code, e.g. pt"}},
+      {"visual_type": "slide",
+       "voiceover": "Three habits help. Use a short, closed list of allowed values for each field. Include an other or not sure value, so the model is not forced to guess. And ask for JSON only, with no explanation around it. The Claude API also offers stronger methods, so check the current documentation for the recommended one.",
+       "slide": {"layout": "bullets", "title": "Good practice", "body": "Closed lists of allowed values · An 'other' or 'not sure' option · JSON only, no extra text · Check the docs for stronger structured-output options"}},
+      {"visual_type": "text",
+       "voiceover": "But even with a good prompt, never trust the output without checking it.",
+       "on_screen_text": "Never trust output unchecked"},
+      {"visual_type": "slide",
+       "voiceover": "The model can add text before the JSON, use a value outside your list, or leave out a field. So you add a validation step in a Code node, before any other node uses the result. It tries to read the JSON safely. It checks each field against your allowed values. And it marks the item as valid or not valid.",
+       "slide": {"layout": "code", "title": "Validate in a Code node", "body": "Show the validation JavaScript from content.md, with three callouts: 1 parse safely inside try/catch · 2 check each field against ALLOWED · 3 set valid: true or false."}},
+      {"visual_type": "slide",
+       "voiceover": "Then an IF node sends valid items forward, and invalid items to a needs review tab. A simple rule for invalid output: retry once, then send it to review. Do not retry many times. Each retry costs money, and if the model fails twice on the same email, a person should look at it.",
+       "slide": {"layout": "diagram", "title": "Retry once, then review", "body": "Code check → IF valid? Yes → next step. No → retry once → check again → still invalid → 'needs review' tab with a person icon."}},
+      {"visual_type": "stock",
+       "voiceover": "Think of the receiving desk in a warehouse. Every delivery is checked against the order form. A box that does not match goes to a separate shelf, for a person to inspect. It never goes straight onto the shop floor.",
+       "stock_query": "warehouse worker checking delivery boxes clipboard",
+       "on_screen_text": "Validation = the receiving desk"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "screen",
+       "voiceover": "Let's build it. Beatriz Carvalho manages guest services at a hotel in Lisbon, Portugal. Guests write in Portuguese, English, French and Spanish. She wants each email sorted by category, urgency and language, so the right person sees it first. She uses ten invented emails. Her sheet has three tabs: emails, classified, and needs review.",
+       "screen_steps": ["Show the Google Sheet with tabs 'emails' (email_id, text), 'classified' and 'needs_review'", "Scroll through 10 invented emails in four languages"],
+       "on_screen_text": "Beatriz · hotel · Lisbon"},
+      {"visual_type": "screen",
+       "voiceover": "In n8n, she builds a manual trigger, a Sheets node that reads the emails, and an HTTP Request to Claude, with the system prompt and a small output limit.",
+       "screen_steps": ["Manual Trigger → Google Sheets (get rows from 'emails')", "HTTP Request to the Claude Messages endpoint with the JSON-shape system prompt", "Set max_tokens to a small value"]},
+      {"visual_type": "screen",
+       "voiceover": "Next, she adds the validation Code node. For one email, you'll see something like: category complaint, urgency high, language French, and valid set to true.",
+       "screen_steps": ["Add a Code node and paste the validation script from content.md", "Run on one email", "Show output for E07: category complaint, urgency high, language fr, valid true (example output)"],
+       "on_screen_text": "Checked before it is used"},
+      {"visual_type": "screen",
+       "voiceover": "She adds an IF node on valid. Valid items go to the classified tab. Invalid items get one retry, with a note that says the last answer was not valid JSON. If the second check fails too, the item goes to needs review, with its original text.",
+       "screen_steps": ["Add an IF node: valid is true", "True branch: Google Sheets (append to 'classified')", "False branch: second HTTP Request with the extra line 'Your previous answer was not valid JSON. Return only the JSON.'", "Second Code check, then Google Sheets (append to 'needs_review' with the original text)"]},
+      {"visual_type": "screen",
+       "voiceover": "Now she tests the edges. An email that says only question marks comes back as category other, which is valid. A very long email that mixes three languages lands in needs review, which is exactly where it should go.",
+       "screen_steps": ["Run with the email '????': result category 'other', valid true", "Run with the long three-language email: item lands in 'needs_review'", "Open both tabs to show where each item ended up"]},
+      {"visual_type": "slide",
+       "voiceover": "A common mistake is to read the JSON in the next node with no error handling. Then, when the model adds a line like here is the JSON, the whole workflow stops, and the other items are never processed. Always read the JSON safely, mark the item as invalid, and route it. One bad item should never stop the batch.",
+       "slide": {"layout": "comparison", "title": "One bad item, two outcomes", "body": "Left: no try/catch → 'Here is the JSON:' → whole workflow stops (red). Right: safe parse → item marked invalid → routed to review, batch continues (green)."}}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, ask for a fixed JSON shape, with closed lists of allowed values and an other or not sure option. Second, validate every result in a Code node before other nodes use it. Third, for invalid output, retry once, then send the item to a needs review list for a person.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Fixed JSON shape, closed value lists, a 'not sure' option. 2. Validate every result before use. 3. Invalid? Retry once, then 'needs review'."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below this video, you will classify ten sample emails as JSON, validate each one, and send invalid results to a separate tab. You will also break the prompt on purpose, and check that the workflow keeps running. It takes about forty-five minutes. In the next lesson, we look at Routing and Decisions. See you there.",
+       "on_screen_text": "Next: Routing and Decisions"}
+    ]
+  }
+}

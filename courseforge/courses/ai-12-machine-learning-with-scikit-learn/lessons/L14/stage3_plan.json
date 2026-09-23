@@ -12,8 +12,8 @@
   "production_notes": [
     "Setup before recording: in a fresh Colab runtime, run the L05 setup cell (content.md L05 Worked Example, first code block: synthetic bank data and the stratified split) and then the L05 pipeline cell (second code block: prep, pipe, pipe.fit). The L14 cell uses prep, Pipeline, X_train, y_train, X_test and y_test from those cells. Run them off camera or show them already executed at the top of the notebook; do not run the L03 or L11 cells in the same runtime, because they reuse the names X_train and y_train.",
     "[VERSION] GridSearchCV and RandomizedSearchCV arguments, the order of keys in best_params_, and search run time in Colab depend on the installed version and hardware. Outputs were recorded with scikit-learn 1.9.1 and Python 3.11 on synthetic data; re-run before recording and update the spoken settings and scores if they differ.",
-    "Screen scenes 9 to 13 use one cell copied exactly from the content.md Worked Example. The search takes about half a minute; cut the wait in editing.",
-    "Scene 12 compares with the logistic pipeline's test ROC AUC of 0.752 from L09; show it as an overlay, since it is not printed by this cell.",
+    "Screen scenes 8 to 12 use one cell copied exactly from the content.md Worked Example. The search takes about half a minute; cut the wait in editing.",
+    "Scene 11 compares with the logistic pipeline's test ROC AUC of 0.752 from L09; show it as an overlay, since it is not printed by this cell.",
     "Youssef Haddad and the Beirut bank are fictional; the data is synthetic."
   ],
   "sections": {
@@ -104,7 +104,7 @@
           "Highlight the output lines untuned 0.701 and tuned 0.737.",
           "Show the overlay: logistic (L09) 0.752."
         ],
-        "on_screen_text": "Untuned 0.701 · tuned 0.737 · logistic 0.752"
+        "on_screen_text": "Tuned forest 0.737 · logistic 0.752"
       },
       {
         "visual_type": "screen",

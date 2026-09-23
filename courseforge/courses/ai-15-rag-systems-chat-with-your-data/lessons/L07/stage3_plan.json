@@ -1,0 +1,144 @@
+{
+  "title": "Hybrid Search and Reranking",
+  "thumbnail": {
+    "headline": "Find the Exact Code",
+    "image": "Navy background, a part code 'BR-7732' in a search box, two result lists merging into one with a teal arrow, headline in teal Inter Bold.",
+    "slide": {
+      "layout": "title",
+      "title": "Find the Exact Code",
+      "body": "Two ranked lists labelled 'Keywords' and 'Meaning' merging into one short list, top item highlighted in teal. Small tag: RAG Systems · Lesson 7."
+    }
+  },
+  "production_notes": [
+    "[VERSION] rank_bm25 (BM25Okapi, get_scores), the sentence-transformers CrossEncoder API, full-text search options in Chroma and PostgreSQL, and current reranker model names. Do not say a reranker model name in the voiceover.",
+    "[VERIFY] Licence of the cross-encoder reranker model used in the demo.",
+    "The rrf output is tested plain Python: the screen must show exactly ['c12', 'c90', 'c7', 'c33', 'c5', 'c2'].",
+    "Rafael's results (4, 8, 9 and 9 of 10) are hypothetical; the voiceover calls them example results and the slide carries a 'hypothetical results' label.",
+    "Part codes BR-7732, E-4107 and PX-220 are invented; Rafael and the Porto car-parts distributor are hypothetical."
+  ],
+  "sections": {
+    "Hook": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "A technician types: error E 4107 on pump PX 220. Your vector search returns general passages about pump errors, but not the one page that lists that exact code. Embeddings are good at meaning, and weaker at exact strings. Let's add the missing piece.",
+        "on_screen_text": "Error E-4107 on pump PX-220"
+      }
+    ],
+    "Explain": [
+      {
+        "visual_type": "slide",
+        "voiceover": "In the last lesson, we stored chunks in a vector database. Today we add keyword search, and then a second opinion called reranking.",
+        "slide": {
+          "layout": "title",
+          "title": "Hybrid Search and Reranking",
+          "body": "RAG Systems · Lesson 7 of 16 · Stage 5: Retrieval"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Keyword search ranks chunks by the words they share with the question. The standard method is called BM25. It gives a high score when a rare word, like a product code, appears in a chunk. It is fast, needs no model, and is very good at names, codes and numbers. But it does not understand synonyms or other languages.",
+        "slide": {
+          "layout": "comparison",
+          "title": "Keywords vs meaning",
+          "body": "BM25 keyword search: exact names, codes, numbers; fast; no model; no synonyms. Vector search: meaning, paraphrase, other languages; weaker at exact codes."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Hybrid search runs both and combines the two ranked lists. The scores are on different scales, so we do not add them. Reciprocal rank fusion uses only the positions. Each chunk gets one divided by sixty plus its rank from each list, and the totals are summed.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Reciprocal rank fusion",
+          "body": "Vector list and BM25 list → each chunk scores 1 / (60 + rank) per list → sum → one fused list"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Then comes reranking. A cross-encoder reads the question and one chunk together, so it judges relevance more precisely. But it is too slow for the whole collection. So we retrieve about twenty to thirty candidates with hybrid search, rerank them, and keep the top five for the model.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Retrieve wide, rerank narrow",
+          "body": "Collection → hybrid search → 20–30 candidates → cross-encoder reranker → top 5 → LLM"
+        }
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "Think of hiring. One recruiter searches CVs for exact job titles. Another looks for similar experience described in other words. You combine both shortlists, and an experienced manager interviews only the top twenty, carefully, and chooses five. The interviews are slow, so you only do them for the shortlist.",
+        "stock_query": "hiring manager interviewing job candidate office",
+        "on_screen_text": "Two shortlists, one careful interview"
+      }
+    ],
+    "Demonstrate": [
+      {
+        "visual_type": "screen",
+        "voiceover": "Let's see fusion in plain Python. We have a vector list with four chunk IDs and a BM25 list with three. After fusion, c twelve comes first, because it is high in both lists. Chunk c ninety was found only by BM25, but its first place there puts it second overall.",
+        "screen_steps": [
+          "Show the rrf function with k=60.",
+          "Show vector_ids = ['c12', 'c7', 'c33', 'c2'] and bm25_ids = ['c90', 'c12', 'c5'].",
+          "Run print(rrf([vector_ids, bm25_ids])) and show the exact output ['c12', 'c90', 'c7', 'c33', 'c5', 'c2']."
+        ],
+        "on_screen_text": "High in both lists wins"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Now a real catalogue. Rafael is a developer at a car-parts distributor in Porto, Portugal. Sales staff search eight thousand product sheets with questions like: is BR 7732 compatible with the twenty nineteen van model? He builds a BM25 index over the same chunks he stored in Chroma.",
+        "screen_steps": [
+          "Show the product sheet chunks and a sample sheet with code BR-7732.",
+          "Build the BM25 index: lower-case, split into words, BM25Okapi(tokenised).",
+          "Run bm25.get_scores for a code question and show the top chunk IDs."
+        ],
+        "on_screen_text": "Rafael · car parts · Porto"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Next he adds the reranker. For each question, he fuses the top twenty from both searches, sends twenty-five candidates to a cross-encoder with the question, and keeps the five with the highest scores. You'll see something like a new order, with the exact product sheet moving up.",
+        "screen_steps": [
+          "Show the CrossEncoder cell with RERANK_MODEL read from a variable.",
+          "Build question and chunk pairs for 25 fused candidates and run reranker.predict.",
+          "Print the top 5 IDs before and after reranking side by side."
+        ]
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Here are his example results on ten code questions. Vector search alone finds the right sheet in the top five for four. BM25 alone finds eight, but fails when staff type the code without the dash. Hybrid finds nine. With reranking, still nine, but the right sheet reaches first place more often.",
+        "slide": {
+          "layout": "diagram",
+          "title": "hit@5 on 10 code questions (hypothetical)",
+          "body": "Bars: Vector only 4/10 · BM25 only 8/10 · Hybrid RRF 9/10 · Hybrid + rerank 9/10 (more rank-1 hits)"
+        }
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "To fix the last failure, Rafael normalises the codes, removing dashes and spaces in both the chunks and the questions before BM25. He also records the extra reranking time per question, for the cost lesson later. Now the code question typed without a dash finds the right sheet too.",
+        "screen_steps": [
+          "Show a small normalise function that removes dashes and spaces from codes.",
+          "Re-run the failed question typed as BR7732 and show the right sheet now retrieved.",
+          "Print the average reranking time per question."
+        ]
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "A common mistake is to think a reranker fixes everything. It only reorders the candidates it receives. If the right chunk is not there, reranking cannot find it. Check the candidate list first. And never add raw BM25 and cosine scores together. Use rank fusion instead.",
+        "on_screen_text": "Rerankers reorder. They can't recover."
+      }
+    ],
+    "Recap": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, BM25 keyword search finds exact names, codes and numbers that embeddings can miss, and vector search finds paraphrases and other languages. Second, reciprocal rank fusion combines ranked lists by position, so you never add scores on different scales. Third, a cross-encoder reranker improves the order of the candidates, but cannot recover chunks that retrieval missed.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. BM25 for exact codes; vectors for meaning. 2. Fuse by rank position (RRF), not raw scores. 3. Rerankers improve order, not recall."
+        }
+      }
+    ],
+    "CTA": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Now it is your turn. In the exercise below, write eight questions with exact names or codes, add BM25 and a reranker, and compare four setups with hit at five. Measure the extra time the reranker adds, and write a short recommendation. In the next lesson, Query Rewriting and Conversational Retrieval, we handle follow-up questions like, and for last year?",
+        "on_screen_text": "Next: Query Rewriting"
+      }
+    ]
+  }
+}

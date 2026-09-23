@@ -136,7 +136,7 @@
         "Highlight the output lines untuned 0.701 and tuned 0.737.",
         "Show the overlay: logistic (L09) 0.752."
       ],
-      "on_screen_text": "Untuned 0.701 · tuned 0.737 · logistic 0.752",
+      "on_screen_text": "Tuned forest 0.737 · logistic 0.752",
       "voiceover": "On the test set, ROC AUC rose from zero point seven zero one to zero point seven three seven. But the logistic regression pipeline from lesson nine scored zero point seven five two on the same test set. Tuning improved the forest, yet the simpler model is still slightly ahead."
     },
     {

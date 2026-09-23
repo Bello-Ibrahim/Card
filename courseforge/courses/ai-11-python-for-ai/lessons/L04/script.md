@@ -44,5 +44,5 @@ Image: Navy background, a road that splits into three lanes labelled 3 km, 10 km
 ## Production Notes
 - No facts to verify (content.md Review Flags: None). Dewi, the Jakarta delivery app, the price bands and the rupiah amounts are made up.
 - Printed outputs on screen must match content.md exactly: '7.5 km costs 15000 rupiah' and 'No extra fee'.
-- Content.md asks the presenter to change distance_km to 2 and then 12 and ask learners to predict; the expected outputs (8000 and 25000 rupiah) follow from the code but are not printed in content.md, so check them in Colab while recording.
+- Verified with Python 3.11 on 2026-09-23: 2 km prints 8000 rupiah and 12 km prints 25000 rupiah.
 - Trace scene: show the trace as an overlay (7.5 <= 3? No. 7.5 <= 10? Yes.) before running the cell.
