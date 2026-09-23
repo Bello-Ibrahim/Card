@@ -62,7 +62,7 @@ Many learners remove every outlier to make the chart look tidy. This can remove 
 
 2. Upload it and ask: "Which 3 orders are the most unusual, and why? Show the values you compared." Then ask: "What is the trend in total Revenue by month? Show the monthly totals."
 3. For each outlier, write: is it really unusual, a possible cause, and one way to check the cause.
-4. Calculate the monthly totals with and without order 1008 using `=SUMIFS(G2:G11, H2:H11, "2026-03")` and a hand subtraction.
+4. Calculate the monthly totals with and without order 1008, using your Month column (H) from L05, for example `=SUMIFS(G2:G11, H2:H11, "2026-03")` and a hand subtraction.
 5. Write one sentence about the trend that you would be comfortable sharing with a manager.
 **What good looks like:** Order 1008 (15 chairs, 1,800) is the clear outlier, perhaps a bulk order for a new office; check with the sales team. Orders 1005 (40 units) and 1010 (30 units) are large by units but small by revenue, so they are not real revenue outliers. Monthly revenue is 470, 820 and 2,160, but March without 1008 is only 360, and three months is too little data. A good trend sentence: "Revenue rose from January to March, but most of March came from one large order."
 **Time:** about 25 minutes

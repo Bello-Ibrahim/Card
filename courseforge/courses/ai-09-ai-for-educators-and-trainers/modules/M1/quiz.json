@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-09",
+  "module_id": "M1",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L01",
+      "objective": "O1",
+      "question": "A trainer asks an AI assistant for a worksheet on the company's new expenses procedure. The worksheet is well written and looks professional. What is the most important limit to keep in mind?",
+      "options": [
+        "AI assistants cannot produce worksheets, only short answers.",
+        "The AI may not know the company's specific procedure and may invent details, so the trainer must check every step.",
+        "Well-written AI output is usually accurate, so only the layout needs checking.",
+        "AI assistants refuse to write about workplace procedures."
+      ],
+      "answer_index": 1,
+      "explanation": "AI assistants do not know local or company-specific details and can invent them in a confident voice. The most tempting wrong option is that well-written output is usually accurate. Fluent language is not the same as correct content, so the facts still need checking."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L02",
+      "objective": "O3",
+      "question": "Which prompt is most likely to give a lecturer a useful activity for tomorrow's class?",
+      "options": [
+        "\"Give me a fun activity about supply and demand.\"",
+        "\"Here is my class list with each student's last grade. Make an activity about supply and demand.\"",
+        "\"Write everything you know about supply and demand.\"",
+        "\"First-year economics students, mixed level. Outcome: explain how a price change affects demand. 30 minutes. Give a timed plan in a table with 3 check questions.\""
+      ],
+      "answer_index": 3,
+      "explanation": "This prompt gives all four parts: learners, outcome, time and format. The most tempting wrong option is the one with the class list and grades, because it adds detail. But that detail is personal data, which must never go into a public AI tool, and it does not describe the outcome, time or format."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L03",
+      "objective": "O2",
+      "question": "A detection tool reports that a learner's essay is \"85% AI-generated\". What is the fairest next step?",
+      "options": [
+        "Give the essay a zero, because the score is high.",
+        "Run the essay through a second detector and use the average score as proof.",
+        "Treat the score as, at most, one signal: talk with the learner, look at drafts or notes, and follow the institution's process.",
+        "Ignore the report and all other evidence completely."
+      ],
+      "answer_index": 2,
+      "explanation": "Detection tools can give false results, so a score should never be the only evidence of misconduct. The most tempting wrong option is using a second detector, because it seems more careful. Two uncertain tools do not create proof; a conversation and evidence of the learner's process are more reliable."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L03",
+      "objective": "O2",
+      "question": "A teacher wants AI help writing feedback on learner reports. Which approach protects learner privacy best?",
+      "options": [
+        "Write short notes on each report herself and ask the AI to turn the notes into clear feedback sentences, with no names or learner work included.",
+        "Paste the reports with names removed but keep ID numbers so she can match the feedback later.",
+        "Paste the full reports, because the AI company is a large organisation.",
+        "Ask learners to paste their own reports into the AI and send her the feedback."
+      ],
+      "answer_index": 0,
+      "explanation": "Using only her own notes means no learner data leaves her computer. The most tempting wrong option is removing names but keeping ID numbers. ID numbers, personal stories or rare details can still identify a person, so this is not enough."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L04",
+      "objective": "O6",
+      "question": "In a traffic-light AI policy, a trainer marks a take-home report as \"green: AI allowed freely\", but some learners have no internet at home and the course offers no free option in class. What is the main problem?",
+      "options": [
+        "Green tasks should always be changed to red.",
+        "The policy is unfair, because learners without access cannot use AI as the rule allows; the trainer should offer class time or a free option.",
+        "The policy is too clear and should use fewer examples.",
+        "There is no problem, because learners can choose not to use AI."
+      ],
+      "answer_index": 1,
+      "explanation": "A fair policy makes sure every learner can complete the task on equal terms, for example with class time or a free tool. The most tempting wrong option is that learners can simply choose not to use AI. That choice is not equal if other learners gain an advantage that some cannot access."
+    }
+  ]
+}
