@@ -1,7 +1,7 @@
 {
   "course_id": "AI-15",
   "lesson_id": "L12",
-  "duration_s": 253.6,
+  "duration_s": 302.6,
   "thumbnail": {
     "headline": "Is Every Claim Supported?",
     "slide": {
@@ -14,16 +14,16 @@
     {
       "scene": 1,
       "start": 0.0,
-      "end": 15.4,
+      "end": 17.6,
       "section": "Hook",
       "visual_type": "presenter_full",
       "on_screen_text": "One sentence the chunk never said",
-      "voiceover": "Retrieval found the right chunk. The model wrote a fluent answer with two citations. But one sentence says something the chunk never said. Retrieval metrics cannot see this problem. You need to check the answer itself."
+      "voiceover": "Retrieval found the right chunk. The model wrote a fluent answer with two citations. But one sentence says something the chunk never said. The citations look fine. But retrieval metrics cannot see this problem. You need to check the answer itself."
     },
     {
       "scene": 2,
-      "start": 15.4,
-      "end": 24.0,
+      "start": 17.6,
+      "end": 30.5,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -31,12 +31,12 @@
         "title": "Measuring Answer Quality",
         "body": "RAG Systems · Lesson 12 of 16 · Faithfulness and relevance"
       },
-      "voiceover": "In the last lesson, we measured retrieval. Today we measure the answers, with two metrics that matter most in RAG."
+      "voiceover": "In the last lesson, we measured retrieval. Today we measure the answers, with two metrics that matter most in RAG. Both need care, because the judge is also a model."
     },
     {
       "scene": 3,
-      "start": 24.0,
-      "end": 48.0,
+      "start": 30.5,
+      "end": 54.5,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -48,8 +48,8 @@
     },
     {
       "scene": 4,
-      "start": 48.0,
-      "end": 73.7,
+      "start": 54.5,
+      "end": 80.2,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -61,8 +61,21 @@
     },
     {
       "scene": 5,
-      "start": 73.7,
-      "end": 94.7,
+      "start": 80.2,
+      "end": 100.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Judge rules",
+        "body": "Different prompt, ideally a different or stronger model · Faithfulness = against the chunks, not the expected answer"
+      },
+      "voiceover": "Two rules for the judge. Use a different prompt, and if possible a different or stronger model, than the one that wrote the answer. And score faithfulness against the chunks only. Comparing with the expected answer measures correctness, which is useful, but it is a different question."
+    },
+    {
+      "scene": 6,
+      "start": 100.3,
+      "end": 121.3,
       "section": "Explain",
       "visual_type": "stock",
       "stock_query": "teacher marking exam papers at desk",
@@ -70,9 +83,9 @@
       "voiceover": "Think of a new teaching assistant who marks exam papers with a marking guide. The assistant is fast. But before you trust their marks, the lead teacher marks a sample of the same papers. If they mostly agree, and the differences make sense, the assistant can mark the rest."
     },
     {
-      "scene": 6,
-      "start": 94.7,
-      "end": 116.1,
+      "scene": 7,
+      "start": 121.3,
+      "end": 142.7,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -84,9 +97,9 @@
       "voiceover": "So a judge must be checked. This small function compares the judge's labels with yours. In the example with five answers, agreement is zero point eight, and there is one difference, on the second answer. The judge said yes, and the human said partly. Read every disagreement like this one."
     },
     {
-      "scene": 7,
-      "start": 116.1,
-      "end": 135.8,
+      "scene": 8,
+      "start": 142.7,
+      "end": 162.4,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -97,9 +110,9 @@
       "voiceover": "Now a real evaluation. Kwame is a developer for an agricultural advice service in Kumasi, Ghana. Extension officers ask about crop guidance. He runs twenty-five test questions, twenty answerable and five unanswerable, and saves the question, chunks and answer for each one to a file."
     },
     {
-      "scene": 8,
-      "start": 135.8,
-      "end": 154.2,
+      "scene": 9,
+      "start": 162.4,
+      "end": 180.8,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -110,9 +123,9 @@
       "voiceover": "For the twenty answerable ones, he calls the judge with his rubric, and saves the verdicts. You'll see something like a list of verdicts, each with a faithfulness label and any unsupported claims. Before he opens that file, he labels ten answers himself."
     },
     {
-      "scene": 9,
-      "start": 154.2,
-      "end": 174.3,
+      "scene": 10,
+      "start": 180.8,
+      "end": 200.9,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -123,9 +136,9 @@
       "voiceover": "Agreement is eight of ten. In both differences, the judge said yes, but the answer added a planting month that was not in the chunks. He changes the rubric: list every claim first, then check each one. He judges again, and agreement rises to nine of ten."
     },
     {
-      "scene": 10,
-      "start": 174.3,
-      "end": 192.3,
+      "scene": 11,
+      "start": 200.9,
+      "end": 218.9,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -136,18 +149,27 @@
       "voiceover": "His example results: sixteen of twenty faithful, three partly and one not faithful, and four of five correct refusals. The unfaithful answers share a pattern. The model filled gaps with general farming knowledge, so he strengthens the only from the chunks instruction."
     },
     {
-      "scene": 11,
-      "start": 192.3,
-      "end": 206.4,
+      "scene": 12,
+      "start": 218.9,
+      "end": 233.5,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "A judge's score is not the truth",
+      "voiceover": "A common mistake is to report a judge's score as if it were the truth. Without a human check on a sample, you do not know if the judge is strict, generous or random."
+    },
+    {
+      "scene": 13,
+      "start": 233.5,
+      "end": 255.4,
       "section": "Demonstrate",
       "visual_type": "text",
       "on_screen_text": "Small sets, saved outputs, batches",
-      "voiceover": "The model API is paid, so keep evaluation small. Use your test set, not thousands of questions. Save answers so you can judge again without generating again. For larger runs, consider batch processing."
+      "voiceover": "The model API is paid, so keep evaluation small. Use your test set, not thousands of questions. Save answers so you can judge again without generating again. For larger runs, consider batch processing. And if you use an open-source evaluation library, read how it defines each metric, because definitions differ."
     },
     {
-      "scene": 12,
-      "start": 206.4,
-      "end": 231.7,
+      "scene": 14,
+      "start": 255.4,
+      "end": 280.7,
       "section": "Recap",
       "visual_type": "slide",
       "slide": {
@@ -158,9 +180,9 @@
       "voiceover": "Let's recap. First, faithfulness checks that every claim is supported by the retrieved chunks, answer relevance checks that the answer addresses the question, and refusals are scored separately. Second, a model judge needs a clear rubric and a structured output, and must be checked against your own labels. Third, keep evaluation cheap with small sets, saved outputs and batches."
     },
     {
-      "scene": 13,
-      "start": 231.7,
-      "end": 253.6,
+      "scene": 15,
+      "start": 280.7,
+      "end": 302.6,
       "section": "CTA",
       "visual_type": "presenter_full",
       "on_screen_text": "Next: Access Control, Freshness and Security",

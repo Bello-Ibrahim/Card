@@ -1,16 +1,18 @@
 # L12 Measuring Answer Quality: Faithfulness and Relevance | Presenter Script
 
-Course: AI-15 · Video: 5 min · Words: 592
+Course: AI-15 · Video: 5 min · Words: 706
 
 ## Hook
-Retrieval found the right chunk. The model wrote a fluent answer with two citations. But one sentence says something the chunk never said. Retrieval metrics cannot see this problem. You need to check the answer itself.
+Retrieval found the right chunk. The model wrote a fluent answer with two citations. But one sentence says something the chunk never said. The citations look fine. But retrieval metrics cannot see this problem. You need to check the answer itself.
 
 ## Explain
-In the last lesson, we measured retrieval. Today we measure the answers, with two metrics that matter most in RAG.
+In the last lesson, we measured retrieval. Today we measure the answers, with two metrics that matter most in RAG. Both need care, because the judge is also a model.
 
 Faithfulness means every claim in the answer is supported by the retrieved chunks. An answer can be true in the real world, and still be unfaithful, if it adds facts the context does not contain. Answer relevance means the answer addresses the question that was asked, completely. And for unanswerable questions, we score correct refusals separately.
 
 Checking every answer by hand is slow, so we ask a model to act as a judge. It gets the question, the chunks and the answer, plus a clear rubric, and returns a structured verdict: faithful yes, partly or no, a list of unsupported claims, and a relevance score from one to three. The judge never sees the expected answer.
+
+Two rules for the judge. Use a different prompt, and if possible a different or stronger model, than the one that wrote the answer. And score faithfulness against the chunks only. Comparing with the expected answer measures correctness, which is useful, but it is a different question.
 
 Think of a new teaching assistant who marks exam papers with a marking guide. The assistant is fast. But before you trust their marks, the lead teacher marks a sample of the same papers. If they mostly agree, and the differences make sense, the assistant can mark the rest.
 
@@ -25,7 +27,9 @@ Agreement is eight of ten. In both differences, the judge said yes, but the answ
 
 His example results: sixteen of twenty faithful, three partly and one not faithful, and four of five correct refusals. The unfaithful answers share a pattern. The model filled gaps with general farming knowledge, so he strengthens the only from the chunks instruction.
 
-The model API is paid, so keep evaluation small. Use your test set, not thousands of questions. Save answers so you can judge again without generating again. For larger runs, consider batch processing.
+A common mistake is to report a judge's score as if it were the truth. Without a human check on a sample, you do not know if the judge is strict, generous or random.
+
+The model API is paid, so keep evaluation small. Use your test set, not thousands of questions. Save answers so you can judge again without generating again. For larger runs, consider batch processing. And if you use an open-source evaluation library, read how it defines each metric, because definitions differ.
 
 ## Recap
 Let's recap. First, faithfulness checks that every claim is supported by the retrieved chunks, answer relevance checks that the answer addresses the question, and refusals are scored separately. Second, a model judge needs a clear rubric and a structured output, and must be checked against your own labels. Third, keep evaluation cheap with small sets, saved outputs and batches.
