@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-22",
+  "module_id": "M1",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L01",
+      "objective": "O1",
+      "question": "A podcaster uploads an interview recording and receives a written version of everything that was said. Which family of audio AI did the work, and what is the result called?",
+      "options": [
+        "Text-to-speech; the result is a voice model.",
+        "Speech-to-text; the result is a transcript.",
+        "Audio generation; the result is a music bed.",
+        "Text-to-speech; the result is a transcript."
+      ],
+      "answer_index": 1,
+      "explanation": "Audio went in and text came out, so this is speech-to-text, and the written result is a transcript. The most tempting wrong option is text-to-speech with a transcript, because both terms sound familiar. Text-to-speech works in the opposite direction: it turns written text into spoken audio."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L02",
+      "objective": "O3",
+      "question": "Which version of a sentence is best for a spoken script?",
+      "options": [
+        "The festival (est. 2009) attracts c. 12,400 visitors annually.",
+        "The festival, which was first held in 2009 and has grown every year since, now attracts approximately 12,400 visitors annually.",
+        "The festival attracts 12,400 visitors each year; see the table below for details.",
+        "The festival started in two thousand and nine. Today, about twelve thousand people visit every year."
+      ],
+      "answer_index": 3,
+      "explanation": "It uses short sentences, one idea in each, and numbers written the way they are spoken. The most tempting wrong option is the long sentence without abbreviations, because it looks clear on paper. A listener still has to hold the \"which\" clause in memory and hear an exact figure that is hard to take in by ear."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L03",
+      "objective": "O5",
+      "question": "A TTS voiceover says a town name wrongly and rushes the last few sentences. What should you do first?",
+      "options": [
+        "Type a phonetic spelling of the name, add pauses or slow the speed slightly, then listen to the whole file again.",
+        "Export the file now, because listeners will not notice small problems.",
+        "Choose a completely different tool, because the voice is broken.",
+        "Make the whole voiceover much faster so the rushed part matches the rest."
+      ],
+      "answer_index": 0,
+      "explanation": "Phonetic spelling fixes pronunciation, and pauses or a small speed change fix rushed pace; then you listen to the full file to check for new problems. The most tempting wrong option is changing tools. That is rarely needed, because most TTS problems come from the script and settings, and a new tool will have its own problems to fix."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L04",
+      "objective": "O4",
+      "question": "You have transcribed a lecture with Whisper and most of the text looks correct. Where should you focus your checking?",
+      "options": [
+        "Only on the first and last minute, because errors happen at the edges.",
+        "On punctuation only, because Whisper does not make word errors.",
+        "On names, numbers, technical terms and any repeated or added sentences, while listening to the audio.",
+        "Nowhere; if most of the text is correct, the SRT file is ready to use."
+      ],
+      "answer_index": 2,
+      "explanation": "Whisper's typical errors are in names, numbers and specialist terms, and it can sometimes repeat or add words, so you check these while listening. The most tempting wrong option is to trust the file because most of it is right. The few errors are often in the most important words, and one wrong number can change the meaning."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L05",
+      "objective": "O6",
+      "question": "A co-host agreed in writing that a clone of her voice may read episode introductions for three months. Can you now use the clone to read an advert for a sponsor?",
+      "options": [
+        "Yes, because she has already agreed to a voice clone.",
+        "No, because adverts were not part of the agreed use; you need her new, informed consent first.",
+        "Yes, as long as the advert is published within the three months.",
+        "Yes, if you add a disclosure line saying the voice is AI-generated."
+      ],
+      "answer_index": 1,
+      "explanation": "Consent is limited to the purpose and uses that were agreed, so a new use needs new consent. The most tempting wrong option is adding a disclosure line. Disclosure tells the audience the truth, but it does not replace the voice owner's permission for a use she never agreed to."
+    }
+  ]
+}

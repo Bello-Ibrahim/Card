@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-21",
+  "module_id": "M1",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L01",
+      "objective": "O1",
+      "question": "A creator already has a good product photo and wants the product to turn slowly on screen while its look stays the same. Which kind of tool fits this job best?",
+      "options": [
+        "Text-to-video",
+        "Avatar video",
+        "Image-to-video",
+        "Automatic captions in an editor"
+      ],
+      "answer_index": 2,
+      "explanation": "Image-to-video starts from the existing photo, so the look is already fixed and only motion is added. The most tempting wrong option is text-to-video. It could create a turning product, but it would invent the product's look from words, so it would not match the creator's real photo."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L02",
+      "objective": "O2",
+      "question": "Using a typical pace of about 140 words per minute, which script is the best starting point for a 60-second video?",
+      "options": [
+        "About 60 words, to leave time for music",
+        "About 140 words, then timed by reading it aloud",
+        "About 300 words, read quickly",
+        "Any length, because the editor can speed up the voice"
+      ],
+      "answer_index": 1,
+      "explanation": "At about 140 words per minute, roughly 130 to 150 words fits 60 seconds, and a timed read-aloud confirms it. The most tempting wrong option is 300 words read quickly. Speaking fast to fit more ideas makes the video feel rushed and harder to remember; the fix is to cut ideas, not to speed up."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L03",
+      "objective": "O2",
+      "question": "Which shot-list row is the most useful for writing a video prompt later?",
+      "options": [
+        "Shot 4, 5 s: nice coffee shot",
+        "Shot 4, 5 s: happy people enjoying the brand",
+        "Shot 4, 5 s: the logo and website address written by the video model",
+        "Shot 4, 5 s, close-up: coffee pours into a clay cup on a wooden table in morning light"
+      ],
+      "answer_index": 3,
+      "explanation": "The last row names a shot type, subject, action and setting, so it can become a prompt directly. The most tempting wrong option is the logo row, because it is specific. But text generated inside video is often unreadable, so logos and web addresses belong in the editor."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L04",
+      "objective": "O2",
+      "question": "A 5-second prompt says: 'The camera orbits the dancer while zooming in and panning to the window.' What is the best improvement?",
+      "options": [
+        "Choose one camera movement, such as a slow orbit, and remove the others.",
+        "Add a fourth movement so the clip feels more energetic.",
+        "Remove all lighting and style words to make room for the movements.",
+        "Make the clip 1 second long so the movements happen faster."
+      ],
+      "answer_index": 0,
+      "explanation": "Several movements in a short clip often produce confused, unnatural results, so one clear movement is best. The most tempting wrong option is removing lighting and style words. Those parts of the formula still matter; the problem is too many movements, not too many words."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L05",
+      "objective": "O3",
+      "question": "A creator's three keyframes have different colours and light, even though they are for the same video. What is the most likely cause?",
+      "options": [
+        "The keyframes were generated in the final aspect ratio.",
+        "The same character description was reused word for word.",
+        "The style words were changed slightly in each prompt instead of pasting one fixed style block.",
+        "The creator generated several versions and chose the best one."
+      ],
+      "answer_index": 2,
+      "explanation": "Small changes in style words, such as 'warm light' and then 'sunset glow', move the look each time. A fixed style block pasted unchanged prevents this. The most tempting wrong option is generating several versions, but choosing the best of several is good practice and does not by itself change the style."
+    }
+  ]
+}

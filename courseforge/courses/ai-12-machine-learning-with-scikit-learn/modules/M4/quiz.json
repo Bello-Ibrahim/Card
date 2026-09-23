@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-12",
+  "module_id": "M4",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L15",
+      "objective": "O6",
+      "question": "Permutation importance shows that 'number of calls in this campaign' is the most important feature, and customers with more calls subscribe less. What is the most accurate statement for a sales manager?",
+      "options": [
+        "If we call customers less often, more of them will subscribe.",
+        "The number of calls has no real effect, because importance only measures the model.",
+        "Customers who were called many times subscribed less in past data; this is a pattern, not proof that fewer calls would cause more subscriptions.",
+        "Calls are the only feature that matters, so the other features can be removed."
+      ],
+      "answer_index": 2,
+      "explanation": "Importance shows what the model relies on, not what causes the outcome; the bank may simply keep calling people who were never interested. The most tempting wrong option is that calling less will raise subscriptions. That is a causal claim the model cannot support without an experiment."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L16",
+      "objective": "O6",
+      "question": "A model's recall is 0.72 for customers aged 51 to 79 (40 subscribers in the test set) and 0.60 for customers aged 18 to 30 (5 subscribers). What is the best conclusion?",
+      "options": [
+        "The model is unfair to young customers and must not be used.",
+        "The 18 to 30 result is based on too few subscribers to judge; more data is needed before drawing a conclusion.",
+        "The model is fair, because the overall recall is acceptable.",
+        "Accuracy should be used instead, because recall is unstable."
+      ],
+      "answer_index": 1,
+      "explanation": "With only 5 positive cases, the recall of 0.60 could change greatly with a different sample, so the group is too small to judge. The most tempting wrong option is to declare the model unfair. That may turn out to be true, but the evidence is too thin to decide either way."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L17",
+      "objective": "O7",
+      "question": "A colleague sends you a .joblib model file downloaded from an unknown website and says it is 'much more accurate'. What should you do?",
+      "options": [
+        "Do not load it: loading joblib or pickle files can run hidden code, so only load files from trusted sources.",
+        "Load it in Colab, because Colab is a safe environment for any file.",
+        "Load it, but only after checking that its scikit-learn version matches yours.",
+        "Load it and test it on your test set to see whether it is really more accurate."
+      ],
+      "answer_index": 0,
+      "explanation": "Loading a joblib or pickle file can execute any code it contains, so an untrusted file is a security risk. The most tempting wrong option is checking the version first. Matching versions help a trusted file load correctly, but they do nothing to make an untrusted file safe."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L17",
+      "objective": "O5",
+      "question": "In an end-to-end project, which order of steps is correct?",
+      "options": [
+        "Tune on all data, split, save the model, then test.",
+        "Split once, build a baseline and pipelines, compare and tune with cross-validation, test once, then save the pipeline.",
+        "Build the model, check the test score after each change, then save the best version.",
+        "Save the untuned model, split the data, then tune on the test set."
+      ],
+      "answer_index": 1,
+      "explanation": "The test set is set aside first and scored only once after all choices are made, and the whole fitted pipeline is saved. The most tempting wrong option is checking the test score after each change. It feels careful, but it turns the test set into tuning data and makes the final score too optimistic."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L18",
+      "objective": "O6",
+      "question": "Which sentence best reports model precision to a non-technical sales director?",
+      "options": [
+        "The model achieved a precision of 0.292 at a threshold of 0.15.",
+        "The logistic regression pipeline has a ROC AUC of 0.75.",
+        "The model is 88% accurate.",
+        "Of every 100 customers the model tells us to call, about 29 subscribe, compared with about 12 when we call at random."
+      ],
+      "answer_index": 3,
+      "explanation": "It turns precision into counts the director can picture and compares them with a baseline. The most tempting wrong option is '88% accurate', which sounds simple but is misleading: always predicting 'no' would score almost the same on this data."
+    }
+  ]
+}

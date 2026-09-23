@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-17",
+  "module_id": "M2",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L06",
+      "objective": "O3",
+      "question": "You install dbt-core and write a model, but dbt cannot connect to your DuckDB file. What does dbt use to know how to connect?",
+      "options": [
+        "The first line of each model's SQL file",
+        "The models/ folder name",
+        "A profile, usually in ~/.dbt/profiles.yml, used together with an adapter such as dbt-duckdb",
+        "The Git repository settings"
+      ],
+      "answer_index": 2,
+      "explanation": "The profile holds the connection details, and the adapter package lets dbt talk to that type of database. The most tempting wrong option is the first line of the model's SQL, because a model can name a table. A model only contains a SELECT statement; it never contains connection settings or passwords."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L07",
+      "objective": "O2",
+      "question": "Which change belongs in a staging model such as stg_orders?",
+      "options": [
+        "Cast order_date from text to DATE and rename 'amt' to amount_usd",
+        "Join orders to customers and keep only delivered orders",
+        "Calculate each customer's total spend per month",
+        "Remove every order that has a missing amount"
+      ],
+      "answer_index": 0,
+      "explanation": "Staging renames, casts and cleans one source without changing its meaning. The most tempting wrong option is removing orders with a missing amount, because it looks like cleaning. Those orders are real, so staging keeps them and a test reports the missing values; joins, filters and totals belong in marts."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L08",
+      "objective": "O6",
+      "question": "A churn feature table uses a feature date of 1 March. Which feature causes data leakage?",
+      "options": [
+        "Number of recharges in the 90 days before 1 March",
+        "Days between the last recharge before 1 March and 1 March",
+        "Average recharge amount in January and February",
+        "Total recharges in March, counted for the same customers"
+      ],
+      "answer_index": 3,
+      "explanation": "Recharges in March happen after the feature date, so the model would learn from information it cannot have when it makes a prediction. The most tempting wrong option is 'days since the last recharge', because it involves the feature date. It is safe, because it only uses recharges before 1 March."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L09",
+      "objective": "O6",
+      "question": "When is it most sensible to convert a dbt model to incremental?",
+      "options": [
+        "Always, from the first day, because incremental models are always faster",
+        "When a large table that mostly grows with new rows has become slow to rebuild",
+        "When the table has fewer than 1,000 rows",
+        "When you want to change the model's logic for all historical rows"
+      ],
+      "answer_index": 1,
+      "explanation": "Incremental models save time on large, growing tables, at the cost of added complexity. The most tempting wrong option is 'always, from the first day'. On small tables there is little to save, and incremental filters add risks such as missed late rows and duplicates."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L10",
+      "objective": "O2",
+      "question": "A value in a mart looks wrong. How does dbt's lineage graph help most?",
+      "options": [
+        "It fixes the value automatically.",
+        "It shows the SQL error message from the last run.",
+        "It lets you follow the arrows upstream to the staging models and sources the value was built from.",
+        "It lists every user who has queried the mart."
+      ],
+      "answer_index": 2,
+      "explanation": "The lineage graph is built from source() and ref() and shows where each model's data comes from. The most tempting wrong option is the SQL error message, but a wrong value usually comes from a model that ran without errors; lineage shows which upstream models to check."
+    }
+  ]
+}

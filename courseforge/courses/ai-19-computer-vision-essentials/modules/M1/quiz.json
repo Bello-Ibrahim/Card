@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-19",
+  "module_id": "M1",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L01",
+      "objective": "O1",
+      "question": "A port authority wants to know how many ships are waiting in a harbour photo each morning. Which computer vision task fits best?",
+      "options": [
+        "Image classification, because it can label the photo as \"ships present\".",
+        "Object detection, because it gives one box per ship, so the ships can be counted.",
+        "OCR, because ships have names painted on them.",
+        "Segmentation, because counting always needs the exact pixels of each object."
+      ],
+      "answer_index": 1,
+      "explanation": "Counting needs a separate result for each object, and detection returns one box per object. The most tempting wrong option is classification: it can say that ships are in the photo, but it gives one label for the whole image and cannot say how many there are."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L02",
+      "objective": "O1",
+      "question": "You load a photo with cv2.imread and print img.shape. The result is (720, 1280, 3). What do these numbers mean?",
+      "options": [
+        "Width 720, height 1280, 3 colour channels.",
+        "720 frames, 1280 pixels per frame, 3 seconds of video.",
+        "Height 1280, width 720, 3 bytes per pixel value.",
+        "Height 720, width 1280, 3 colour channels."
+      ],
+      "answer_index": 3,
+      "explanation": "NumPy arrays are rows first, so the shape is (height, width, channels). The most tempting wrong option is width 720 and height 1280, because screen sizes are usually said as width × height. The array order is the opposite."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L02",
+      "objective": "O3",
+      "question": "You draw a red square with OpenCV and show the image with Matplotlib. The square appears blue. What is the correct fix?",
+      "options": [
+        "Convert the image with cv2.cvtColor(img, cv2.COLOR_BGR2RGB) before displaying it.",
+        "Draw the square with the values (255, 0, 0) instead of (0, 0, 255) in OpenCV.",
+        "Convert the image to greyscale before displaying it.",
+        "Save the image as PNG instead of JPEG."
+      ],
+      "answer_index": 0,
+      "explanation": "OpenCV stores colour as BGR, and Matplotlib expects RGB, so you convert before display. The most tempting wrong option is changing the drawing values. That makes the display look right, but the array is then wrong for OpenCV and for every other OpenCV step, so the problem moves instead of being solved."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L03",
+      "objective": "O3",
+      "question": "A document pipeline works well on photos taken at a desk with a lamp, but fails on photos where half the page is in shadow. Which change is most likely to help?",
+      "options": [
+        "Use a larger Gaussian blur kernel, such as (51, 51).",
+        "Remove the greyscale step and threshold the colour image.",
+        "Replace the single global threshold with cv2.adaptiveThreshold.",
+        "Resize the image to twice its size before thresholding."
+      ],
+      "answer_index": 2,
+      "explanation": "Adaptive thresholding chooses a separate cut-off for each small area, so it can handle uneven lighting. The most tempting wrong option is a larger blur. Blur removes small noise, but it does not change the brightness difference between the shaded and the lit half, and a very large blur can also remove the text."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L04",
+      "objective": "O3",
+      "question": "Your loop reads 300 frames, but the saved video will not play and the file is almost empty. The frames are 640 pixels wide and 360 high. Which writer setting is the most likely cause?",
+      "options": [
+        "The FPS value was set to 30 instead of 25.",
+        "The writer size was given as (360, 640) instead of (640, 360).",
+        "The frames were processed with GaussianBlur before writing.",
+        "cap.release() was called after the loop instead of before it."
+      ],
+      "answer_index": 1,
+      "explanation": "VideoWriter expects the size as (width, height), and frames with a different size are skipped without an exception. The most tempting wrong option is the FPS value. A wrong FPS changes the playback speed, but the frames are still written and the file still plays."
+    }
+  ]
+}
