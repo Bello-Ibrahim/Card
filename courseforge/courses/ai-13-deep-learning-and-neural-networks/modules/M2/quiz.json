@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-13",
+  "module_id": "M2",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L06",
+      "objective": "O3",
+      "question": "A learner builds one transform with RandomHorizontalFlip, RandomCrop, ToTensor and Normalize, and passes it to the training, validation and test datasets. What is the main problem?",
+      "options": [
+        "Normalize must always come before ToTensor.",
+        "Validation and test images are randomly changed, so their scores vary between runs and no longer measure performance on real images.",
+        "Random augmentation makes training slower, so it should be used only on the test set.",
+        "RandomCrop cannot be used on greyscale images."
+      ],
+      "answer_index": 1,
+      "explanation": "Augmentation belongs to the training data only; evaluation data needs the same fixed preprocessing and nothing random. The most tempting wrong option is the order of Normalize and ToTensor: the order given is actually correct, because Normalize works on the tensor that ToTensor produces."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L07",
+      "objective": "O2",
+      "question": "Why does a convolutional layer need far fewer parameters than a fully connected layer on the same image?",
+      "options": [
+        "Because it converts the image to greyscale before processing it.",
+        "Because pooling removes most of the weights after training.",
+        "Because it only works on small images such as 28 × 28 pixels.",
+        "Because each small filter looks at a local patch and the same weights are shared across every position in the image."
+      ],
+      "answer_index": 3,
+      "explanation": "Local connections and weight sharing mean a filter's few weights are reused everywhere, so the count does not grow with image size. The most tempting wrong option is pooling: pooling reduces the spatial size of feature maps and later computation, but it has no weights of its own and does not remove weights from the convolution."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L08",
+      "objective": "O5",
+      "question": "After 20 epochs, the training loss has fallen steadily, while the validation loss reached its lowest value at epoch 5 and has risen slowly since. What is the best diagnosis and first action?",
+      "options": [
+        "Underfitting; make the model larger and train for more epochs.",
+        "The learning rate is too high; divide it by 10.",
+        "Overfitting; keep the epoch-5 checkpoint and add regularisation or augmentation.",
+        "The training is healthy; report the epoch-20 model."
+      ],
+      "answer_index": 2,
+      "explanation": "Separating curves, with validation loss rising after an early minimum, are the sign of overfitting. The most tempting wrong option is the high learning rate, but that pattern shows a loss that jumps or grows for the training data too, while here the training loss falls smoothly."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L09",
+      "objective": "O6",
+      "question": "A learner's early-stopping code saves the best model with best_state = model.state_dict() and reloads it after training stops. The reloaded model always behaves like the last epoch. Why?",
+      "options": [
+        "state_dict() returns references to the live weight tensors, so best_state keeps changing as training continues; a deep copy or torch.save is needed.",
+        "Early stopping only works when dropout is removed from the model.",
+        "load_state_dict() can only load weights saved by the optimiser.",
+        "The patience value was too small, so training never stopped early."
+      ],
+      "answer_index": 0,
+      "explanation": "Without copy.deepcopy or torch.save, the stored dictionary points at the same tensors that the optimiser keeps updating. The most tempting wrong option is the patience value: patience decides when training stops, but it cannot explain why the saved 'best' weights are identical to the final ones."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L10",
+      "objective": "O4",
+      "question": "A learner loads a pretrained ResNet, freezes all layers, replaces model.fc, and trains the head. Later they set requires_grad = True on layer4 but keep the old optimiser, which was built with model.fc.parameters(). What happens?",
+      "options": [
+        "layer4 is fine-tuned with the head's learning rate.",
+        "Training raises an error because frozen layers cannot be unfrozen.",
+        "layer4 receives gradients but is never updated, because the optimiser does not know about its parameters.",
+        "The whole network is retrained from random weights."
+      ],
+      "answer_index": 2,
+      "explanation": "An optimiser only updates the parameters it was given, so the optimiser must be rebuilt after changing what is trainable, ideally with a lower learning rate for layer4. The most tempting wrong option is that layer4 is fine-tuned with the head's rate; this would only be true if the optimiser had been rebuilt to include layer4."
+    }
+  ]
+}
