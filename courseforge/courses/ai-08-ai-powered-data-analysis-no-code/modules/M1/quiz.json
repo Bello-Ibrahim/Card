@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-08",
+  "module_id": "M1",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L01",
+      "objective": "O1",
+      "question": "You ask an AI file-analysis tool \"Which product is most popular?\" and it answers with units sold. Revenue gives a different picture. What is the best lesson from this?",
+      "options": [
+        "The AI's calculation was wrong, so file-analysis tools cannot be used for sales data.",
+        "Revenue is always the correct measure of popularity, so the AI should have known.",
+        "Upload the file again, because a second upload usually gives a better answer.",
+        "Name the exact column you mean and ask which columns the AI used, because vague words let it choose for you."
+      ],
+      "answer_index": 3,
+      "explanation": "The AI answered a vague question by choosing a column without saying so. The most tempting wrong option is that the calculation was wrong. The sum of units may be perfectly correct; the problem is that the question did not say which measure to use."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L02",
+      "objective": "O1",
+      "question": "Before uploading a customer file for spending analysis, you delete the Name column. Which other change is most important to make the copy safer?",
+      "options": [
+        "Sort the rows by spending so the file looks more organised.",
+        "Replace the internal Customer ID with new codes and turn exact dates of birth into age bands.",
+        "Rename the file so it does not contain the word \"customers\".",
+        "Delete the original file so only the anonymised copy exists."
+      ],
+      "answer_index": 1,
+      "explanation": "IDs and exact dates of birth can still point to one person, so they must be replaced or made less exact. The most tempting wrong option is deleting the original. You should always keep an untouched original in a safe place and work on a copy."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L03",
+      "objective": "O5",
+      "question": "Which of these is a measurable data question?",
+      "options": [
+        "How is the café doing these days?",
+        "Look at sales trends and tell me what is interesting.",
+        "What was pastry profit (Revenue minus Ingredient cost) in April, compared with January?",
+        "Why are customers less happy with the pastries?"
+      ],
+      "answer_index": 2,
+      "explanation": "It names the measure, the group, the time period and the comparison, so two people would get the same number. The most tempting wrong option is \"Look at sales trends\". It sounds like analysis, but it does not say which measure, which period or compared with what."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L04",
+      "objective": "O3",
+      "question": "Your Region column contains \"South\", \"south\", \"Sth\" and \"South \" (with a space at the end). What is the best approach?",
+      "options": [
+        "Upload the file and ask the AI to return a cleaned version, then use it directly.",
+        "Leave it, because AI tools understand that these all mean South.",
+        "Delete every row where the region is not spelled exactly \"South\".",
+        "Ask the AI for step-by-step fixes, apply TRIM and Find and replace yourself in Google Sheets, and log each change."
+      ],
+      "answer_index": 3,
+      "explanation": "You stay in control and every change is visible and logged. The most tempting wrong option is asking the AI for a cleaned file. You cannot see what it changed, deleted or guessed, so you cannot check the result."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L05",
+      "objective": "O6",
+      "question": "An AI gives you =SUMIFS(C2:C11, G2:G11, \"South\"), where C is Region and G is Revenue. The result is 0, with no error message. What is wrong?",
+      "options": [
+        "The ranges are swapped: the range to add (G2:G11) must come first.",
+        "SUMIFS does not work in Google Sheets, so you need SUM instead.",
+        "The word \"South\" must be written without quotation marks.",
+        "Nothing is wrong: the South region had no sales."
+      ],
+      "answer_index": 0,
+      "explanation": "In SUMIFS the sum range comes first, then each criteria range and criterion. The most tempting wrong option is that South had no sales. A result of 0 looks believable, which is why you must check a few rows by hand: the South rows add up to 2,220."
+    }
+  ]
+}

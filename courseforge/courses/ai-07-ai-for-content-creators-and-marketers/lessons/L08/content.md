@@ -10,7 +10,7 @@ There are two ways to use AI for visuals in this course.
 
 **Canva** gives you templates and a brand setup. You can save your brand colours, fonts and logo, then apply them to any template. Canva also includes AI features that can create images from text, suggest designs or remove backgrounds. Feature names, limits and which plan includes them change often, so check the current version. [VERSION]
 
-**Free image generators** create original images from a written prompt. Several free options exist, inside design tools and as separate websites and chat assistants. Their free limits and licence terms differ and change, so this course refers to them in general terms. Choose one, and check its current terms before using its images for business. [VERSION]
+**Free image generators** create original images from a written prompt. Their free limits and licence terms differ and change, so this course refers to them in general terms. Choose one, and check its current terms before using its images for business. [VERSION]
 
 A good image prompt has four parts:
 
@@ -23,7 +23,7 @@ Keep your brand consistent: use the same colours, fonts and layout style across 
 
 Some safety rules. Do not generate images of real people, real logos or copyrighted characters. Do not ask for images "in the style of" a named living artist. Do not upload photos of people without their consent. And record the tool and prompt for every AI image, so you can check licences and disclosure later (L05).
 
-**Analogy:** A brand kit is like a school uniform. Each student is different, but the uniform shows at once which school they belong to. Your visuals can show many different things, but the same colours and fonts show that they all belong to your brand.
+**Analogy:** A brand kit is like a school uniform. Each student is different, but the uniform shows at once which school they belong to. Consistent colours and fonts do the same for your visuals.
 
 ## Worked Example
 Fatou designs visuals for a sample textile shop in Dakar, Senegal, that sells hand-dyed fabric. This is the on-screen sequence. Menu names may differ in the current version. [VERSION]

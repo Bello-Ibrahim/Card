@@ -3,36 +3,36 @@
 Course: AI-07 · Module: M1 · Objectives: O2 · Video: 5 min
 
 ## Hook
-You made a beautiful campaign image with AI in two minutes. Before you publish it, can you answer four questions: Who owns it? Are you allowed to use it for business? Do you need to say it was made with AI? And is everything in the post true?
+You made a campaign image with AI in two minutes. Before you publish it, can you answer four questions: Who owns it? Are you allowed to use it for business? Do you need to say it was made with AI? And is everything in the post true?
 
 ## Explanation
 This lesson teaches **principles and questions**, not legal rules. The law on AI and copyright is still developing, and it differs from country to country. [REGION] [VERIFY] When the stakes are high, such as a large paid campaign, ask your manager, your client or a legal adviser.
 
 Ask these four questions before you publish any AI-assisted content.
 
-**1. Who owns it?** In many places, copyright protects work made by people. Whether content made mainly by AI can be protected, and who would own it, is an open question in several countries. [REGION] [VERIFY] A practical principle: the more of your own creative work you add, such as writing, editing, selecting and arranging, the stronger your position is likely to be. Also consider the input: if you upload someone else's photo or text, you need the right to use it.
+**1. Who owns it?** In many places, copyright protects work made by people. Whether content made mainly by AI can be protected, and who would own it, is an open question in several countries. [REGION] [VERIFY] A practical principle: the more of your own creative work you add, such as writing, editing, selecting and arranging, the stronger your position is likely to be. If you upload someone else's photo or text, you need the right to use it.
 
-**2. Does the tool's licence allow commercial use?** Every AI tool has terms of use. They say what you may do with the outputs, and they can differ between free and paid plans. [VERSION] Some tools may limit commercial use on a free plan, and some licences include conditions or attribution requirements. Read the current terms yourself. Do not rely on a blog post, and do not assume the terms are the same next month. [VERSION]
+**2. Does the tool's licence allow commercial use?** Every AI tool has terms of use. They say what you may do with the outputs, and they can differ between free and paid plans. [VERSION] Some tools may limit commercial use on a free plan, and some licences include conditions or attribution requirements. Read the current terms yourself. Terms change, so record the date you checked. [VERSION]
 
 **3. Should you label it as AI-generated?** Some social platforms ask creators to label realistic AI-generated images, audio or video, and some countries have rules or proposals about AI disclosure, including in advertising. [REGION] [VERIFY] [VERSION] Even where there is no rule, honesty protects trust. Many brands write a simple **disclosure rule**, such as "We label any image or video that is fully AI-generated and shows a realistic scene."
 
 **4. Is every fact and claim checked?** AI can invent statistics, quotes, sources and product details. In marketing, a false claim can mislead customers and may break advertising rules. [REGION] Check every number, name, quote and product claim against a source you trust.
 
-Two further principles. Do not generate content that imitates a named living artist, writer or existing brand, or that uses real people, logos or copyrighted characters without permission. And do not paste confidential or personal data into AI tools.
+Also: never imitate a named living artist, writer or existing brand, never use real people, logos or copyrighted characters without permission, and never paste confidential or personal data into AI tools.
 
-**Analogy:** Publishing is like driving across a border. The basic habits are the same everywhere: check your vehicle, carry your documents, follow the signs. But the exact rules change by country, and they are updated over time. A careful driver checks the local rules before each trip.
+**Analogy:** Publishing is like driving across a border. The basic habits are the same everywhere, but the exact rules change by country and over time. A careful driver checks the local rules before each trip.
 
 ## Worked Example
-Tomás runs marketing for a sample language school in Buenos Aires, Argentina. He plans to use three AI tools: a chat assistant for captions, a design tool for graphics, and a free image generator for illustrations.
+Tomás runs marketing for a sample language school in Buenos Aires, Argentina. He plans to use a chat assistant, a design tool and a free image generator.
 
-He opens the current terms of each tool and writes notes in a small table: tool, plan, "commercial use allowed?", conditions, and the date he checked. [VERSION] For one image generator, he cannot find a clear answer about commercial use on the free plan. He decides not to use it for paid advertisements until he confirms the terms.
+He reads the current terms of each tool and notes the plan, whether commercial use is allowed, any conditions and the date. [VERSION] For one image generator, he cannot find a clear answer about commercial use on the free plan. He decides not to use it for paid advertisements until he confirms the terms.
 
 He then writes his school's disclosure rule: "Any realistic image or video that is fully generated by AI is labelled 'Created with AI'. Text drafted with AI and edited by our team does not need a label, unless a platform or local rule requires one." He adds a note to review this rule every three months. [REGION] [VERIFY]
 
 Finally, he checks a caption the AI wrote: "Students learn Spanish twice as fast with our method." The school has no evidence for this number, so he removes it.
 
 ## Common Mistake
-Many creators believe "If the AI made it, it is free to use for anything." This is not safe. Licence terms, platform rules and national laws all apply, and they differ. The opposite mistake is to avoid AI completely out of fear. The practical approach is to check the current terms, keep a record, add your own creative work, label where needed and check every claim.
+Many creators believe "If the AI made it, it is free to use for anything." This is not safe. Licence terms, platform rules and national laws all apply, and they differ. The opposite mistake is to avoid AI completely out of fear. The practical approach: check current terms, keep a record, add your own work, label where needed and check every claim.
 
 ## Key Takeaways
 1. Before publishing, ask four questions: who owns it, does the licence allow commercial use, should it be labelled, and is every claim checked.
@@ -52,8 +52,6 @@ Many creators believe "If the AI made it, it is free to use for anything." This 
 **Time:** about 25 minutes
 
 ## Review Flags
-- [REGION] Copyright ownership of AI-generated content differs by country and is still changing; the script must describe principles only, not state legal rules, unless a reviewer confirms them.
-- [VERIFY] Statements that copyright generally protects human-made work, and that AI-output ownership is open in several countries, must be checked by a reviewer before scripting.
+- [REGION] [VERIFY] Copyright ownership of AI-generated content differs by country and is still changing; the statements that copyright generally protects human-made work and that AI-output ownership is open in several countries must be confirmed. The script must describe principles only, not legal rules.
 - [REGION] [VERIFY] AI-disclosure expectations (platform labels for realistic AI media, national rules or proposals, advertising rules on misleading claims) differ by country and platform; confirm wording for the target markets (en, fr, pt, ar).
 - [VERSION] Commercial-use terms for Claude, ChatGPT, Canva, CapCut and free image generators, and differences between free and paid plans, must be checked against current terms before scripting.
-- [VERSION] Platform labelling features for AI-generated content change often.

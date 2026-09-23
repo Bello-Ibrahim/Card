@@ -3,7 +3,7 @@
 Course: AI-08 · Module: M1 · Objectives: O3 · Video: 5 min
 
 ## Hook
-You ask AI for sales by region, and it reports five regions. Your company has three. The maths was right, but the data was messy, and messy data gives wrong answers, however clever the tool.
+You ask AI for sales by region, and it reports six regions. Your company has three. The maths was right, but the data was messy, and messy data gives wrong answers, however clever the tool.
 
 ## Explanation
 Real spreadsheets are rarely clean. Five problems appear again and again:

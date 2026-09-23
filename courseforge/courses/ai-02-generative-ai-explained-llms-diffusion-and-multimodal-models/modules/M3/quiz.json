@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-02",
+  "module_id": "M3",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L09",
+      "objective": "O6",
+      "question": "Rosa, an office manager, wants to use AI to analyse a spreadsheet of customer complaints that includes names and phone numbers. What should she do first?",
+      "options": [
+        "Paste it into the free chatbot she uses most, because it is the fastest option.",
+        "Use an image generator, because the spreadsheet contains a lot of data.",
+        "Choose a high temperature so the analysis is more creative.",
+        "Remove the personal data or use an approved tool, after checking the privacy rules."
+      ],
+      "answer_index": 3,
+      "explanation": "Privacy is one of the key questions in the decision guide, and personal data should not go into a free public tool without checks. The most tempting wrong option is using the familiar chatbot because it is fast. Choosing the tool first and ignoring privacy is exactly the mistake the decision guide is designed to prevent."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L10",
+      "objective": "O7",
+      "question": "Which plan gives the fairest comparison of three generative AI tools?",
+      "options": [
+        "Use a slightly better prompt for each tool, based on what the previous tool did wrong.",
+        "Give every tool the same task, input and prompt, and decide the scoring criteria before testing.",
+        "Test each tool on a different task that shows its strengths.",
+        "Choose the scoring criteria after reading the outputs, so they match what you see."
+      ],
+      "answer_index": 1,
+      "explanation": "A fair test keeps the task, input and prompt the same and fixes the criteria in advance. The most tempting wrong option is improving the prompt between tools. It seems helpful, but then you are testing different prompts, not different tools, and the later tools get an advantage."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L10",
+      "objective": "O6",
+      "question": "Why should you record the tool version and the date of each test?",
+      "options": [
+        "Because generative AI tools change often, so results may differ later.",
+        "Because the rubric requires the newest version to win.",
+        "Because older versions always give more accurate answers.",
+        "Because free tools only work on certain dates."
+      ],
+      "answer_index": 0,
+      "explanation": "The model behind a tool can be updated without notice, so a reader needs to know exactly what was tested and when. The most tempting wrong option is that the newest version must win. The version is recorded to make the test repeatable and honest, not to decide the winner in advance."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L11",
+      "objective": "O4",
+      "question": "While running the comparison, when should you score each output against your rubric?",
+      "options": [
+        "At the end of the week, after thinking about all three tools.",
+        "After placing all three outputs side by side, to see which is best.",
+        "Straight away after each tool, before opening the next one.",
+        "Only for the tool you plan to recommend."
+      ],
+      "answer_index": 2,
+      "explanation": "Scoring straight away against the rubric keeps each judgement tied to your criteria and to fresh details. The most tempting wrong option is scoring side by side. It feels fair, but it makes you judge outputs against each other instead of against the criteria, and a good output can look worse next to the best one."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L12",
+      "objective": "O5",
+      "question": "In Joaquín's report, one chatbot added a meeting deadline that was not in the source notes. Which explanation best links this failure to how the model works?",
+      "options": [
+        "The context window was too large, so the model had too much space.",
+        "The model predicts likely text, so it filled a gap with a detail that sounded right: a hallucination.",
+        "The model had a knowledge cut-off, so it did not know the date of the meeting.",
+        "The model used diffusion, so random noise created the deadline."
+      ],
+      "answer_index": 1,
+      "explanation": "The invented deadline is a hallucination: a language model generates likely text, not checked facts, and can fill gaps confidently. The most tempting wrong option is the knowledge cut-off. The notes were given to the model, so missing training data is not the cause; the model added a detail that was not in the source."
+    }
+  ]
+}

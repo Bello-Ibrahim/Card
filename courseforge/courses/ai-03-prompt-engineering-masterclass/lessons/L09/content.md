@@ -12,7 +12,7 @@ You do not have to get everything right in one message. Some of the best results
 - "Act as a first-time customer who has never used our service." helps you find confusing steps.
 - "Act as an experienced trainer for adult learners." shapes the tone and structure of a training plan.
 
-A role does not give the tool real expertise or access to new information. It changes the angle, not the knowledge. Use roles that describe a point of view, and still check the facts.
+A role changes the angle, not the knowledge, so still check the facts.
 
 **Multi-turn conversations.** In a chat, the tool can use the earlier messages in the same conversation. This lets you build a result in steps:
 
@@ -21,8 +21,7 @@ A role does not give the tool real expertise or access to new information. It ch
 3. Ask for the full draft.
 4. Ask for changes to one section.
 
-A very useful pattern is the **interview**: "Before you write anything, ask me five questions about this task, one at a time." The tool asks for the context it needs, and you answer. This is helpful when you are not sure what to include.
-
+A very useful pattern is the **interview**: "Before you write anything, ask me five questions about this task, one at a time." The tool asks for the context it needs, and you answer. 
 Long conversations have limits. The tool may give less attention to instructions from much earlier, and a very long chat may reach a length limit. [VERSION] If results start to drift, start a new chat and paste a short summary of what you agreed.
 
 **Saved instructions.** Many tools let you save instructions that apply to every chat or to a group of chats, so you do not repeat the same context. These features have different names, such as custom instructions or projects, and their availability and limits differ between tools and plans. [VERSION] Do not put confidential information in saved instructions.
@@ -45,17 +44,17 @@ about what you need to know.
 ```
 
 3. Show the first question on screen, for example "What type of site is this?" Type a short answer: "A 6-storey residential building, concrete frame."
-4. Answer the other four questions in the same way (audience, main risks, rules already in place, format). Point out that each answer adds context Mateo would probably have forgotten.
+4. Answer the other four questions in the same way. Point out that each answer adds context Mateo might have forgotten.
 5. After the five answers, the tool writes the briefing. Scroll through it on screen.
 6. Type a follow-up: "Now act as a strict editor. List the three least clear sentences for a worker who reads slowly." Show the feedback.
 7. Type: "Rewrite those three sentences in simpler words." Show the improved briefing.
 8. Open the tool's settings area and show where saved or custom instructions are entered. [VERSION] Type an example such as "I work in construction training. Write in plain language for adult learners." Explain that it will apply to future chats.
 9. Briefly show where a similar feature is found in ChatGPT and Gemini, if available on free plans. [VERSION]
 
-For comparison, Mateo's earlier single-message prompt, "Write a safety briefing for new construction workers", gave a long, general text. The interview version was shorter, specific to his site and ready for review by the site manager.
+Mateo's earlier single-message prompt gave a long, general text. The interview version was specific to his site and ready for the site manager to review.
 
 ## Common Mistake
-Many learners think a role like "You are a world-class lawyer" makes the answer legally reliable. It does not. The tool has the same knowledge with or without the role. Roles change the point of view and style. For expert topics, such as law, health, safety or finance, a qualified person must still check the content.
+Many learners think a role like "You are a world-class lawyer" makes the answer legally reliable. It does not. Roles change the point of view and style, not the knowledge. For expert topics, such as law, health, safety or finance, a qualified person must still check the content.
 
 ## Key Takeaways
 1. A role gives the AI a point of view, such as a strict editor or a first-time customer. It changes the angle, not the knowledge.
