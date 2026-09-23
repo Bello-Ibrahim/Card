@@ -1,0 +1,149 @@
+{
+  "course_id": "AI-01",
+  "slug": "ai-01-ai-fundamentals-how-machines-learn",
+  "course_title": "AI Fundamentals: How Machines Learn",
+  "level": "Beginner",
+  "status": "AWAITING_APPROVAL",
+  "overview": "A three-week introduction for people with no technical background. Learners find out what AI is, how machines learn patterns from examples instead of following hand-written rules, and where AI already shapes the products they use every day. There is no maths and no code. Every idea is taught through everyday analogies and a free, browser-based tool. By the end, learners train their own image classifier and can judge, with a simple checklist, when to trust an AI system and when to question it.",
+  "time_plan": {
+    "video_minutes": 60,
+    "weekly_hours": 2,
+    "per_week": "About 20 minutes of video, 60 minutes of exercises and quizzes, and 40 minutes of reading and reflection. In week 3 that last block goes to the capstone."
+  },
+  "objectives": [
+    {"id": "O1", "bloom": "Remember", "text": "Define artificial intelligence, machine learning, deep learning and generative AI, and describe how they relate to each other."},
+    {"id": "O2", "bloom": "Understand", "text": "Explain in plain language how a model learns from labelled examples, using the terms data, features, labels, training and prediction."},
+    {"id": "O3", "bloom": "Understand", "text": "Compare supervised, unsupervised and reinforcement learning using everyday examples."},
+    {"id": "O4", "bloom": "Apply", "text": "Train and test a simple image classifier in Google Teachable Machine."},
+    {"id": "O5", "bloom": "Analyse", "text": "Identify AI features in everyday products and infer what data each one probably learns from."},
+    {"id": "O6", "bloom": "Evaluate", "text": "Judge how reliable an AI output or use case is by considering test results, overfitting, bias and hallucination."},
+    {"id": "O7", "bloom": "Create", "text": "Write a one-page explanation of how a self-trained classifier learned, where it fails, and why."}
+  ],
+  "modules": [
+    {
+      "module_id": "M1",
+      "week": 1,
+      "title": "What AI Is and Where You Meet It",
+      "lessons": [
+        {
+          "lesson_id": "L01",
+          "title": "What Is AI, Really?",
+          "objectives": ["O1"],
+          "summary": "AI as systems that perform tasks we link with human intelligence. The difference between following rules and learning from examples. AI, machine learning, deep learning and generative AI shown as nested circles.",
+          "exercise": "Sort 8 everyday systems into 'follows fixed rules' or 'learns from examples', then compare with the answer key."
+        },
+        {
+          "lesson_id": "L02",
+          "title": "AI in Your Day",
+          "objectives": ["O5"],
+          "summary": "A day-in-the-life tour: spam filters, video and music recommendations, map travel times, phone face unlock, translation and voice assistants. For each one: what it predicts, and what data it probably learned from.",
+          "exercise": "Keep an 'AI diary' for one day: list 5 AI features you used and guess what each one predicts."
+        },
+        {
+          "lesson_id": "L03",
+          "title": "Learning from Examples: Data, Features and Labels",
+          "objectives": ["O2"],
+          "summary": "Analogy: a child learning to tell cats from dogs by seeing many labelled pictures. Data, features and labels. Why the quantity, variety and quality of examples matter.",
+          "exercise": "Choose features and labels for a fruit-sorting machine, then list 3 examples that could confuse it."
+        },
+        {
+          "lesson_id": "L04",
+          "title": "Training vs. Using a Model",
+          "objectives": ["O2"],
+          "summary": "The two phases: training (finding patterns) and prediction, also called inference (applying them to new examples). Analogy: studying for an exam vs. sitting the exam. Models do not 'look up' answers.",
+          "exercise": "Ask a free AI chatbot (ChatGPT or Claude) to explain training vs. inference to a 10-year-old, then mark one thing it got right and one thing it simplified."
+        }
+      ]
+    },
+    {
+      "module_id": "M2",
+      "week": 2,
+      "title": "How Machines Learn",
+      "lessons": [
+        {
+          "lesson_id": "L05",
+          "title": "Supervised Learning: Classification and Regression",
+          "objectives": ["O3"],
+          "summary": "Learning with an answer key. Classification predicts a category (spam or not spam). Regression predicts a number (a delivery time). Worked examples from several countries and industries.",
+          "exercise": "Label 10 business questions as classification or regression."
+        },
+        {
+          "lesson_id": "L06",
+          "title": "Unsupervised and Reinforcement Learning",
+          "objectives": ["O3"],
+          "summary": "Unsupervised learning finds groups without labels (customer segments). Reinforcement learning learns from rewards through trial and error (game-playing agents). When to use each of the three types.",
+          "exercise": "Match 6 scenarios to supervised, unsupervised or reinforcement learning, and justify one choice in a sentence."
+        },
+        {
+          "lesson_id": "L07",
+          "title": "Neural Networks Without the Maths",
+          "objectives": ["O1", "O2"],
+          "summary": "A neural network as layers of adjustable 'dials' (weights). Learning means nudging the dials to reduce mistakes, repeated many times. Why 'deep' means many layers. No equations.",
+          "exercise": "Guess-and-adjust game: tune two sliders on a worksheet to hit a target, then write down how this resembles training."
+        },
+        {
+          "lesson_id": "L08",
+          "title": "Testing a Model: Accuracy and Overfitting",
+          "objectives": ["O6"],
+          "summary": "Why a model is tested on examples it never saw. What accuracy means and what it hides. Overfitting explained as a student who memorised the practice exam.",
+          "exercise": "Read two short model 'report cards' and decide which model you would trust, and why."
+        }
+      ]
+    },
+    {
+      "module_id": "M3",
+      "week": 3,
+      "title": "What AI Can and Cannot Do",
+      "lessons": [
+        {
+          "lesson_id": "L09",
+          "title": "Generative AI and Chatbots",
+          "objectives": ["O1", "O6"],
+          "summary": "Large language models learn to predict the next piece of text. That explains both their fluency and their confident mistakes (hallucinations). What 'generating' means for images too, at a high level.",
+          "exercise": "Ask a chatbot 3 factual questions you can check, verify each answer, and record any errors."
+        },
+        {
+          "lesson_id": "L10",
+          "title": "Bias, Data and the Limits of AI",
+          "objectives": ["O6"],
+          "summary": "Biased or unrepresentative data leads to unfair outputs. Other limits: privacy, lack of real-world understanding, and changing conditions. Illustrated with hypothetical cases rather than named incidents.",
+          "exercise": "For a hypothetical hiring or loan model, list 3 ways the training data could be unrepresentative."
+        },
+        {
+          "lesson_id": "L11",
+          "title": "Build Your Own Image Classifier",
+          "objectives": ["O4", "O2"],
+          "summary": "A walkthrough of Google Teachable Machine: create 2–3 classes, capture example images, train, then test with new images. Connects each step back to data, labels, training and testing. [VERSION] Interface steps may change.",
+          "exercise": "Capstone step 1: train a classifier with at least 2 classes and 20+ images per class, then test it on 10 new images and record the results."
+        },
+        {
+          "lesson_id": "L12",
+          "title": "Should I Trust This AI? A Practical Checklist",
+          "objectives": ["O6", "O7"],
+          "summary": "A 5-question checklist: What data did it learn from? How was it tested? Who could it fail? Can I verify the output? What happens if it is wrong? Then the capstone brief and rubric.",
+          "exercise": "Capstone step 2: write a one-page explanation of how your classifier learned, where it failed, and why."
+        }
+      ]
+    }
+  ],
+  "capstone": {
+    "title": "Train and Explain an Image Classifier",
+    "brief": "Train a simple image classifier with Google Teachable Machine and write a one-page explanation of how it learned.",
+    "built_in": ["L11", "L12"],
+    "assesses": ["O2", "O4", "O6", "O7"]
+  },
+  "coverage_check": {
+    "O1": ["L01", "L07", "L09"],
+    "O2": ["L03", "L04", "L07", "L11"],
+    "O3": ["L05", "L06"],
+    "O4": ["L11"],
+    "O5": ["L02"],
+    "O6": ["L08", "L09", "L10", "L12"],
+    "O7": ["L12"]
+  },
+  "flags": [
+    "L11 is a live tool walkthrough, but track 'Foundations' makes this a non-technical course, so no Screen Demo Pack is produced by default. Option A: allow one screen demo for L11 (recommended). Option B: use screenshot slides.",
+    "L11 [VERSION]: Teachable Machine interface steps and export options must be checked against the live tool before scripting.",
+    "L10 uses hypothetical bias cases on purpose, to avoid unverified claims about real companies. Real, sourced cases can be added after [VERIFY] review."
+  ]
+}

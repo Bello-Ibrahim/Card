@@ -10,6 +10,9 @@ cheap stack can't automate go to a human as ready-to-paste packs.
 | `tools.json` | Tool definitions in Claude API format (`name` / `description` / `input_schema`) for the n8n agent node |
 | `course_brief.schema.json` | JSON Schema for validating a brief before a run |
 | `examples/course_brief.example.json` | Example brief |
+| `briefs/certifai_catalog.json` | The CertifAI 30-course catalog |
+| `validate_briefs.py` | Validates a brief or catalog and estimates Claude spend |
+| `courses/{slug}/` | Stage output (curriculum, state) for courses in progress |
 
 ## Changes from the original draft
 
@@ -61,17 +64,19 @@ check them on the vendors' pricing pages. The claim that standard-avatar video
 is unlimited and uses no credits is disputed by reviewers. Test standard-avatar
 quality and your real monthly output in the first month before committing.
 
-**Rough Claude cost per lesson:** about 10k input and 8k output tokens across
+**Rough Claude cost per lesson:** about 8k input and 8k output tokens across
 content, script, shot list and slide HTML comes to about $0.05 per lesson at
-batch rates. Translating captions adds about $0.01 per language per lesson. A
-20-lesson course in 4 languages should cost well under $5 in variable spend.
-These are estimates. The agent recalculates them before each stage from real
-token counts.
+batch rates. Translating a 5-minute lesson's SRT adds about $0.02 per language.
+`validate_briefs.py` applies these figures, plus 50% headroom for retries, to
+each brief. For the 30-course CertifAI catalog (434 lessons, 3 extra languages)
+it estimates about $80 in total, $1.85–$3.69 per course, which is under 80% of
+every course budget. The agent recalculates before each stage from real token
+counts.
 
 ## Running a course
 
-1. Validate the brief:
-   `python -c "import json,jsonschema; jsonschema.validate(json.load(open('brief.json')), json.load(open('courseforge/course_brief.schema.json')))"`
+1. Validate the brief or catalog (needs `pip install jsonschema`):
+   `python courseforge/validate_briefs.py courseforge/briefs/certifai_catalog.json`
 2. In n8n, create an AI Agent node. Set its system prompt to
    `system_prompt.md` and its tools to `tools.json`. Give it the brief as the
    first user message.
