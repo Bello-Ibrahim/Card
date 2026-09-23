@@ -3,10 +3,10 @@
 Course: AI-01 · Module: M3 · Objectives: O6, O7 · Video: 5 min
 
 ## Hook
-An app says a photo of your plant shows a disease. A chatbot gives you a clear summary of a new law. A website says an AI chose these products "just for you". Should you act on any of them? You do not need to be an engineer to decide. You need five good questions.
+An app says a photo of your plant shows a disease. A chatbot gives you a clear summary of a new law. Should you act on either? You do not need to be an engineer to decide. You need five good questions.
 
 ## Explanation
-In this course you have learned how models learn from data (L03), how they are trained and used (L04), how they are tested (L08), why chatbots hallucinate (L09) and how biased data leads to unfair results (L10). You also trained your own model (L11). This lesson brings all of that together into a checklist you can use with any AI system.
+You have learned how models learn from data (L03), how they are tested (L08), why chatbots hallucinate (L09) and how biased data causes unfair results (L10). You also trained your own model (L11). This lesson turns that into a checklist for any AI system.
 
 **The 5-question trust checklist**
 
@@ -16,9 +16,9 @@ In this course you have learned how models learn from data (L03), how they are t
 4. **Can I verify the output?** Can you check the answer against a reliable source, a second opinion or your own knowledge? A fluent answer is not a verified answer.
 5. **What happens if it is wrong?** A wrong song recommendation costs you a few minutes. A wrong medical, legal or financial answer can cause real harm. The higher the cost of a mistake, the more checking and human review you need.
 
-You rarely get a perfect answer to every question. The aim is not to reject AI. The aim is to match your level of trust to the evidence and to the risk.
+The aim is not to reject AI. It is to match your trust to the evidence and to the risk.
 
-**Analogy:** Think of using the checklist like checking a used car before you buy it. You ask where it has been driven, whether it passed an inspection, what problems it is known for, whether you can take it for a test drive, and what it would cost you if it broke down on a long journey. You would not refuse to buy every used car. You would simply decide carefully, based on what you found out.
+**Analogy:** Think of using the checklist like checking a used car before you buy it. You ask where it has been driven, whether it passed an inspection, what problems it is known for, whether you can test-drive it, and what a breakdown would cost you. You would not refuse every used car. You would simply decide carefully, based on what you found out.
 
 ## Worked Example
 Sofía works for a farming cooperative in Mendoza, Argentina. Members want to use a free phone app that identifies grape-leaf diseases from a photo. She uses the checklist:
@@ -32,7 +32,7 @@ Sofía works for a farming cooperative in Mendoza, Argentina. Members want to us
 Her decision: members may use the app as a first check, but any "healthy" result on a leaf that looks unusual must still be shown to the expert.
 
 ## Common Mistake
-Many people think trust is a yes-or-no decision: either "AI is reliable" or "AI cannot be trusted". In practice, the same system can be trustworthy for one task and not for another. The correction is to use the checklist for each specific use, and to decide *how* to use the output (as a draft, a first check, or a final decision) rather than simply whether to use it.
+Many people think trust is a yes-or-no decision: either "AI is reliable" or "AI cannot be trusted". The same system can be trustworthy for one task and not for another. The correction is to use the checklist for each specific use, and to decide *how* to use the output (as a draft, a first check, or a final decision) rather than simply whether to use it.
 
 ## Key Takeaways
 1. Ask five questions: What data did it learn from? How was it tested? Who could it fail? Can I verify the output? What happens if it is wrong?

@@ -3,10 +3,10 @@
 Course: AI-01 · Module: M3 · Objectives: O6 · Video: 5 min
 
 ## Hook
-Imagine a job-application system that has never met a single candidate, yet it rejects people from one region more often than people from another. Nobody told it to do that. So where did the unfairness come from? In most cases, it came from the examples it learned from.
+Imagine a job-application system that rejects people from one region more often than people from another. Nobody told it to do that. So where did the unfairness come from? Usually, from the examples it learned from.
 
 ## Explanation
-In L03 you learned that a model learns from data, features and labels, and that the quantity, variety and quality of examples matter. This lesson looks at what happens when the examples are not a fair picture of the real world.
+In L03 you learned that the quantity, variety and quality of examples matter. This lesson looks at what happens when the examples are not a fair picture of the world.
 
 **Bias** in AI means that a system's outputs are systematically unfair or less accurate for some groups of people or some situations. The most common cause is **unrepresentative data**. This can happen in several ways:
 
@@ -18,25 +18,25 @@ A model does not know what is fair. It only finds patterns that help it match th
 
 Bias is not the only limit. Three others are important:
 
-- **Privacy.** Training data often contains information about real people. Collecting and using it without clear permission can harm those people, and personal details can sometimes appear in a model's outputs.
-- **No real-world understanding.** As you saw in L01 and L09, a model finds patterns. It does not understand causes, context or common sense. It cannot notice that a situation is unusual in the way a person can.
-- **Changing conditions.** A model learns from the past. When the world changes, such as new customer habits, new products or a new season, the old patterns can stop working. The model does not warn you about this. Its accuracy just quietly falls.
+- **Privacy.** Training data often contains information about real people. Using it without clear permission can harm them, and personal details can sometimes appear in outputs.
+- **No real-world understanding.** As you saw in L01 and L09, a model finds patterns. It does not understand causes, context or common sense.
+- **Changing conditions.** A model learns from the past. When the world changes, such as new customer habits, new products or a new season, the old patterns can stop working. The model does not warn you. Its accuracy just quietly falls.
 
-**Analogy:** Think of a cook who learned every recipe in one small village. The cook is excellent with the local ingredients. But give them spices they have never seen, or guests with different tastes, and the results are poor. The cook is not careless. Their experience simply did not include those cases. A model trained on narrow data is the same: skilled inside its experience, and unreliable outside it.
+**Analogy:** Think of a cook who learned every recipe in one small village. Give them spices they have never seen, or guests with different tastes, and the results are poor. A model trained on narrow data is the same: skilled inside its experience, and unreliable outside it.
 
 ## Worked Example
 This is a hypothetical case. A mid-sized bank in Malaysia wants to speed up small-business loan decisions. Its data team, led by Nurul, trains a model on ten years of past loan applications. Each example has features such as business type, years open, monthly income and location. The label is "approved" or "rejected", taken from past decisions by loan officers.
 
-In testing, the model scores well overall. Then Nurul looks at the results by group. She finds three problems:
+The model scores well overall, but results by group show three problems:
 
 1. **Missing groups.** Few past applicants ran online-only businesses, so the model often rejects them, even when their income is strong.
 2. **Unfair past decisions.** In some rural branches, officers in the past approved fewer loans for reasons that had little to do with risk. The model copied that pattern.
 3. **Proxy features.** The "location" feature lets the model treat whole districts as higher risk, which affects applicants who are individually reliable.
 
-Nurul's team does not throw the model away. They collect more examples of online-only businesses, review the old labels with experienced officers, test the model separately for each group, and keep a human officer in charge of every rejection.
+Nurul's team keeps the model but collects more online-only examples, reviews the old labels, tests each group separately, and keeps a human officer in charge of every rejection.
 
 ## Common Mistake
-Many people think that because a computer makes the decision, the decision must be neutral. A model is not neutral just because it uses numbers. It reflects the data and labels people chose to give it. The correction is to ask "Whose examples did it learn from, and who is missing?" and to check accuracy for each group, not only overall. A high overall score, as you saw in L08, can hide poor results for a smaller group.
+Many people think that because a computer makes the decision, the decision must be neutral. A model reflects the data and labels people chose to give it. The correction is to ask "Whose examples did it learn from, and who is missing?" and to check accuracy for each group, not only overall. A high overall score, as you saw in L08, can hide poor results for a smaller group.
 
 ## Key Takeaways
 1. Bias usually comes from unrepresentative data: missing groups, unfair past decisions used as labels, or features that act as proxies for sensitive information.

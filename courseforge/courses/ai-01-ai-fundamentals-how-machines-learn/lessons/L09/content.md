@@ -3,35 +3,35 @@
 Course: AI-01 · Module: M3 · Objectives: O1, O6 · Video: 5 min
 
 ## Hook
-Ask a chatbot to write a birthday poem, and it writes one in seconds. Ask it for the source of a quotation, and it may give you a book title that does not exist, written in the same calm and confident voice. How can one system be so helpful and so wrong at the same time? The answer is in how it learned.
+A chatbot writes a birthday poem in seconds. Ask it for the source of a quotation, and it may give a book title that does not exist, in the same confident voice. How can one system be so helpful and so wrong at the same time? The answer is in how it learned.
 
 ## Explanation
-In L01 you saw generative AI as the smallest circle inside deep learning. Generative AI means systems that create new content, such as text, images or sound, instead of only choosing a label like "spam" or "not spam".
+In L01 you saw generative AI as the smallest circle. It means systems that create new content, such as text, images or sound, instead of only choosing a label like "spam".
 
-A chatbot is built on a **language model**. During training, the model reads a very large amount of text. Its job is simple to describe: look at the words so far and predict the **next word**. For example, after "The sun rises in the", the word "east" is a very likely next word. Every time the model guesses badly, its internal dials (the weights from L07) are nudged a little, so the next guess is better. This happens again and again, over a huge amount of text.
+A chatbot is built on a **language model**. During training, the model reads a very large amount of text. Its job is simple: look at the words so far and predict the **next word**. After "The sun rises in the", "east" is very likely. Each time it guesses badly, its dials (the weights from L07) are nudged a little. This repeats over a huge amount of text.
 
-When you use the chatbot, the model repeats the same step. It predicts a likely next word, adds it to the answer, then predicts the next one, and continues until the answer is complete. It is not searching a library or a database for the answer. As you learned in L04, a trained model does not "look up" answers. It uses the patterns it learned during training.
+When you use the chatbot, the model predicts a likely next word, adds it to the answer, then predicts the next one, until the answer is complete. As you learned in L04, it does not "look up" answers. It uses learned patterns.
 
 This one idea explains two things:
 
-- **Fluency.** The model has seen so much text that its predictions follow the patterns of good writing. The grammar is correct, the tone fits the question, and the answer sounds natural.
-- **Hallucination.** A hallucination is an answer that sounds correct but is false or invented. The model is trained to produce text that is *likely*, not text that is *true*. If a false sentence looks like the kind of sentence that usually appears in that place, the model can produce it. It has no built-in sense of "I do not know". It also has no inner voice that warns it when it is guessing.
+- **Fluency.** The model has seen so much text that its predictions follow the patterns of good writing, so the answer sounds natural.
+- **Hallucination.** A hallucination is an answer that sounds correct but is false or invented. The model is trained to produce text that is *likely*, not text that is *true*. If a false sentence looks like the kind of sentence that usually appears there, the model can produce it. It has no built-in sense of "I do not know".
 
-**Analogy:** Imagine a person who has listened to thousands of university lectures but never checked any facts. Ask them a question, and they can give an answer that sounds exactly like a professor: the right words, the right structure, the right confidence. Sometimes the answer is correct, because they remember the pattern well. Sometimes they fill a gap with something that only *sounds* right. From their voice alone, you cannot tell which is which.
+**Analogy:** Imagine a person who has listened to many university lectures but never checked any facts. Ask them a question, and they answer like a professor: the right words and the right confidence. Sometimes the answer is correct, because they remember the pattern well. Sometimes they fill a gap with something that only *sounds* right. From their voice alone, you cannot tell which is which.
 
-Image generators work in a similar spirit. They learn patterns from very many images and their text descriptions. When you type a description, the system builds a new image that fits the patterns it learned for those words. It does not copy one stored picture, and it can also produce errors, such as a hand with the wrong number of fingers or text on a sign that makes no sense.
+Image generators work in a similar way. They learn patterns from many images and their descriptions, then build a new image that fits your words. They do not copy one stored picture, and they also make errors, such as a hand with the wrong number of fingers.
 
 ## Worked Example
 Rafael is a secondary-school history teacher in Porto, Portugal. He uses a chatbot to prepare a lesson about ocean trade routes.
 
-First he asks it to "write a short, simple introduction to trade routes for 13-year-olds." The result is clear and well organised. This is a task where the chatbot is strong: it needs fluent, general writing, and Rafael can easily check it by reading.
+First he asks it to "write a short, simple introduction to trade routes for 13-year-olds." The result is clear and well organised. This task needs fluent, general writing, and Rafael can check it by reading.
 
-Next he asks for "three books about Portuguese sea trade, with authors and page numbers for key quotations." The chatbot gives three titles, three authors and exact page numbers. The list looks professional. Rafael searches his school library catalogue and an online bookshop. One book is real. One real author is listed with a book title that does not exist. The third book cannot be found anywhere.
+Next he asks for "three books about Portuguese sea trade, with authors and page numbers for key quotations." The chatbot gives three titles, three authors and exact page numbers. Rafael checks his school library catalogue and an online bookshop. One book is real. One real author is listed with a book title that does not exist. The third book cannot be found anywhere.
 
-Rafael now understands the pattern. A list of books with authors and page numbers is a very common *shape* of text, so the model produced that shape. It did not check that each item was real. He keeps the introduction, removes the reading list, and builds his own list from the library catalogue.
+A list of books with authors and page numbers is a common *shape* of text, so the model produced that shape without checking that each item was real. He keeps the introduction, removes the reading list, and builds his own list from the library catalogue.
 
 ## Common Mistake
-Many learners think a chatbot is a smarter search engine that finds answers on the internet. A basic chatbot generates text from learned patterns. Some chatbots can also search the web or read files you give them, but the final answer is still generated by the model, so it can still contain mistakes. A confident tone is not evidence. Treat any fact, number, name or source from a chatbot as a claim to check, not as a finished answer.
+Many learners think a chatbot is a smarter search engine. It generates text from learned patterns. Some chatbots can also search the web or read your files, but the final answer is still generated, so it can still contain mistakes. A confident tone is not evidence. Treat any fact, number, name or source from a chatbot as a claim to check, not as a finished answer.
 
 ## Key Takeaways
 1. A language model is trained to predict the next word, and a chatbot builds its answer one predicted word at a time.

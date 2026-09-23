@@ -28,7 +28,7 @@
         "The groups must be deleted and the model trained with labels instead"
       ],
       "answer_index": 0,
-      "explanation": "In unsupervised learning, the model only notices that some customers behave in similar ways. A person has to interpret each group and judge whether it is meaningful. The tempting option is that the model already knows what each group is, but the model does not understand the groups. It cannot tell you that one group is 'weekend family shoppers'."
+      "explanation": "In unsupervised learning, the model only notices that some customers behave in similar ways. A person has to interpret each group and judge whether it is meaningful. The tempting option is that the model already knows what each group is, but the model does not understand the groups. It cannot tell you that one group is 'wedding shoppers'."
     },
     {
       "id": "Q3",
