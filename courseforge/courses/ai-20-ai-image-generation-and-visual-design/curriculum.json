@@ -1,0 +1,252 @@
+{
+  "course_id": "AI-20",
+  "slug": "ai-20-ai-image-generation-and-visual-design",
+  "course_title": "AI Image Generation and Visual Design",
+  "level": "Beginner",
+  "status": "AWAITING_APPROVAL",
+  "screen_demo_lessons": [],
+  "overview": "A three-week, hands-on introduction to making images with AI for designers, creators, marketers and small business owners. No design or technical background is needed. Learners find out how image generators turn words into pictures, then practise writing clear prompts, controlling style and composition, and keeping a set of images consistent. They edit and finish images in Adobe Firefly and Canva, learn to spot and fix common flaws, and learn how to think about copyright, licensing and ethics before they publish. Style is always described through visual qualities, never by copying a named living artist. By the end, learners produce a consistent 12-image visual set for a brand campaign, with a short style guide that explains how they made it.",
+  "time_plan": {
+    "video_minutes": 60,
+    "weekly_hours": 2,
+    "per_week": "About 20 minutes of video, 60 minutes of hands-on generation and editing exercises and quizzes, and 40 minutes of reading and reflection. In week 3 most of the exercise and reflection time goes to the capstone."
+  },
+  "objectives": [
+    {
+      "id": "O1",
+      "bloom": "Remember",
+      "text": "Describe in plain language how an AI image generator turns a text prompt into an image, and define the key terms prompt, seed, aspect ratio, reference image and inpainting."
+    },
+    {
+      "id": "O2",
+      "bloom": "Understand",
+      "text": "Explain how the parts of a prompt (subject, setting, style, composition, lighting and colour) change the image that is generated."
+    },
+    {
+      "id": "O3",
+      "bloom": "Apply",
+      "text": "Write and refine prompts in Gemini (or Google AI Studio) and Adobe Firefly to produce images that match a creative brief."
+    },
+    {
+      "id": "O4",
+      "bloom": "Apply",
+      "text": "Edit and finish AI images with generative fill, expand, background removal and resizing in Adobe Firefly and Canva."
+    },
+    {
+      "id": "O5",
+      "bloom": "Analyse",
+      "text": "Diagnose flaws and inconsistencies in a set of AI images, such as distorted hands, broken text and style drift, and trace each one to its likely cause."
+    },
+    {
+      "id": "O6",
+      "bloom": "Evaluate",
+      "text": "Judge whether an AI image is ready and appropriate to publish by considering copyright, tool licence terms, people's likeness, bias and disclosure."
+    },
+    {
+      "id": "O7",
+      "bloom": "Create",
+      "text": "Produce a consistent 12-image visual set for a brand campaign, together with a short style guide that documents the prompts and settings used."
+    }
+  ],
+  "modules": [
+    {
+      "module_id": "M1",
+      "week": 1,
+      "title": "How AI Images Are Made and Prompted",
+      "lessons": [
+        {
+          "lesson_id": "L01",
+          "title": "How AI Image Generators Work",
+          "objectives": [
+            "O1"
+          ],
+          "summary": "Image generators learn from very large collections of images and their descriptions, then build a new image step by step from random noise. Analogy: a photograph slowly appearing in a darkroom tray, guided by your words. Key terms: prompt, seed, aspect ratio and model.",
+          "exercise": "Generate the same simple prompt 3 times in Gemini, then write down what changed between the results and what stayed the same."
+        },
+        {
+          "lesson_id": "L02",
+          "title": "The Anatomy of a Strong Prompt",
+          "objectives": [
+            "O2",
+            "O3"
+          ],
+          "summary": "A simple prompt formula: subject, action, setting, style, composition, lighting and colour. Worked example: 'a coffee cup' becomes a detailed product shot for a café in Lisbon. Why specific words beat long lists of adjectives.",
+          "exercise": "Rewrite 3 weak prompts with the formula, generate both versions in Gemini, and compare them side by side."
+        },
+        {
+          "lesson_id": "L03",
+          "title": "Your First Images in Gemini and Firefly",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "A guided first session in Gemini (or Google AI Studio) and the Adobe Firefly free tier: writing a prompt, choosing aspect ratio and style settings, and downloading results. How the two tools differ in controls and output. [VERSION] Interfaces, free-tier limits and available models change often.",
+          "exercise": "Create one image for a small bakery in Accra in both tools from the same prompt, and note 2 differences in the results."
+        },
+        {
+          "lesson_id": "L04",
+          "title": "Composition, Lighting and Colour Words",
+          "objectives": [
+            "O2",
+            "O3"
+          ],
+          "summary": "Borrowing words from photography and design: close-up, wide shot, eye level, top-down, soft window light, golden hour, high contrast, a limited colour palette. Worked example: one travel-agency scene in Kyoto lit 3 different ways. Using brand colours in a prompt.",
+          "exercise": "Generate one scene in 3 variations that change only camera angle, lighting or colour, and label what each word changed."
+        }
+      ]
+    },
+    {
+      "module_id": "M2",
+      "week": 2,
+      "title": "Style Control, Consistency and Editing",
+      "lessons": [
+        {
+          "lesson_id": "L05",
+          "title": "Describing a Style Without Copying Artists",
+          "objectives": [
+            "O2",
+            "O6"
+          ],
+          "summary": "Style described through medium, texture, era, colour and mood, not through the names of living artists. Why imitating a named living artist's style raises ethical and legal questions. Analogy: describing a dish by its ingredients and flavours instead of naming a famous chef.",
+          "exercise": "Write a 5-attribute style description for a fictional sportswear brand from Brazil, and test it on 2 different subjects."
+        },
+        {
+          "lesson_id": "L06",
+          "title": "Keeping Images Consistent",
+          "objectives": [
+            "O3",
+            "O5"
+          ],
+          "summary": "Consistency tools: a fixed style block in every prompt, reference images, style or structure reference settings, and seeds where a tool offers them. Worked example: 4 product images for a skincare start-up in Seoul that look like one set. [VERSION] Which controls each tool offers changes often.",
+          "exercise": "Build a reusable 'style block' and use it to generate 4 images of different subjects that look like one set."
+        },
+        {
+          "lesson_id": "L07",
+          "title": "Editing with Generative Fill and Expand",
+          "objectives": [
+            "O4"
+          ],
+          "summary": "Changing part of an image without starting again: selecting an area, adding or removing objects, and expanding the canvas for a new format. Worked example: turning a square shop photo into a wide website banner. [VERSION] Feature names and free-tier credits in Adobe Firefly may change.",
+          "exercise": "In Adobe Firefly, remove one unwanted object from an image and expand it from square to 16:9."
+        },
+        {
+          "lesson_id": "L08",
+          "title": "Finishing in Canva: Layouts, Resizing and Text",
+          "objectives": [
+            "O4"
+          ],
+          "summary": "Why AI images need finishing: adding real text and logos in a design tool, not in the generator. Placing images in templates, removing backgrounds and resizing one design for several platforms. [VERSION] Canva's AI features and which of them are free change often.",
+          "exercise": "Place one of your images in a Canva social post with a headline in your brand colours, then resize it for a story format and a banner."
+        }
+      ]
+    },
+    {
+      "module_id": "M3",
+      "week": 3,
+      "title": "Responsible Publishing and the Brand Campaign Capstone",
+      "lessons": [
+        {
+          "lesson_id": "L09",
+          "title": "Spotting and Fixing Common Flaws",
+          "objectives": [
+            "O5"
+          ],
+          "summary": "A quality checklist: hands and faces, text and logos, reflections and shadows, repeated patterns, and style drift across a set. For each flaw: regenerate, edit the area, or crop it out. Worked example: a restaurant menu image with warped lettering.",
+          "exercise": "Review a set of 6 sample images with the checklist, name each flaw and its likely cause, and choose a fix."
+        },
+        {
+          "lesson_id": "L10",
+          "title": "Copyright, Licences and Ethics",
+          "objectives": [
+            "O6"
+          ],
+          "summary": "Principles, not legal advice: who may own an AI image and whether it can be protected by copyright differ by country [VERIFY] [REGION]. Each tool has its own terms for commercial use [VERSION] [VERIFY]. Real people's likeness, trademarks, bias in who is shown, and labelling AI images, including content credentials and watermarks that some tools add [VERIFY].",
+          "exercise": "Find and read the commercial-use section of the terms for one tool you use, then write 3 questions you would ask a legal adviser before a client campaign."
+        },
+        {
+          "lesson_id": "L11",
+          "title": "Capstone: Planning Your Brand Visual Set",
+          "objectives": [
+            "O3",
+            "O7"
+          ],
+          "summary": "The capstone brief and rubric: a 12-image set for a real or fictional brand campaign. Planning with a moodboard, a style block, brand colours and a shot list of 12 images across formats. Worked example: a plan for a fictional tea brand from Kenya.",
+          "exercise": "Capstone step 1: write a one-page campaign plan with a style block, colour palette and a 12-image shot list, then generate 3 test images."
+        },
+        {
+          "lesson_id": "L12",
+          "title": "Capstone: Producing and Reviewing the Set",
+          "objectives": [
+            "O5",
+            "O6",
+            "O7"
+          ],
+          "summary": "Producing the full set in batches, checking each image against the flaw checklist, and finishing images in Canva. Final review: consistency, brand fit, rights and disclosure. How to present the set with a short style guide.",
+          "exercise": "Capstone step 2: produce and finish all 12 images, then write a one-page style guide listing prompts, settings, edits and the tool terms you checked."
+        }
+      ]
+    }
+  ],
+  "capstone": {
+    "title": "Brand Campaign Visual Set",
+    "brief": "Produce a consistent 12-image visual set for a brand campaign, with a one-page style guide that documents the prompts, settings, edits and tool terms checked.",
+    "built_in": [
+      "L11",
+      "L12"
+    ],
+    "assesses": [
+      "O3",
+      "O4",
+      "O5",
+      "O6",
+      "O7"
+    ]
+  },
+  "coverage_check": {
+    "O1": [
+      "L01"
+    ],
+    "O2": [
+      "L02",
+      "L04",
+      "L05"
+    ],
+    "O3": [
+      "L02",
+      "L03",
+      "L04",
+      "L06",
+      "L11"
+    ],
+    "O4": [
+      "L07",
+      "L08"
+    ],
+    "O5": [
+      "L06",
+      "L09",
+      "L12"
+    ],
+    "O6": [
+      "L05",
+      "L10",
+      "L12"
+    ],
+    "O7": [
+      "L11",
+      "L12"
+    ]
+  },
+  "flags": [
+    "PROPOSED: screen demo for L03 (first live session in Gemini and Adobe Firefly; settings are easier to show than to describe). Needs approval.",
+    "PROPOSED: screen demo for L06 (reference-image and style settings are located in tool menus that learners must find). Needs approval.",
+    "PROPOSED: screen demo for L07 (generative fill and expand need a live selection-and-edit walkthrough in Adobe Firefly). Needs approval.",
+    "PROPOSED: screen demo for L08 (Canva layout, background removal and resize steps are best shown live). Needs approval.",
+    "L03, L06, L07, L08 [VERSION]: interfaces, model names, free-tier limits and credits for Gemini / Google AI Studio, Adobe Firefly and Canva must be checked against the live tools before scripting.",
+    "L10 [VERIFY] [REGION]: copyright protection and ownership of AI-generated images differ by country and are changing; the lesson teaches principles only and states no legal conclusion as settled.",
+    "L10 [VERIFY] [VERSION]: commercial-use terms of each tool (Gemini, Firefly, Canva) and any claims about how a model was trained must be checked against current official terms.",
+    "L10 [VERIFY]: whether and how each tool adds watermarks or content credentials (for example SynthID or C2PA) must be confirmed for each tool.",
+    "L05: judgement call. Style is taught through visual attributes only; the course never names living artists to imitate.",
+    "L10 uses hypothetical cases instead of named legal disputes, to avoid unverified claims. Sourced cases can be added after [VERIFY] review.",
+    "Judgement call: the brief lists 'Google AI Studio or Gemini'; lessons use Gemini as the main example and mention Google AI Studio as an alternative."
+  ]
+}

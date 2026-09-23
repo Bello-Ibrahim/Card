@@ -1,0 +1,274 @@
+{
+  "course_id": "AI-21",
+  "slug": "ai-21-ai-video-production-and-motion",
+  "course_title": "AI Video Production and Motion",
+  "level": "Beginner",
+  "status": "AWAITING_APPROVAL",
+  "screen_demo_lessons": [],
+  "overview": "A three-week, hands-on course for filmmakers, marketers, motion designers and content creators who want to make short-form video with AI. It builds on AI Image Generation and Visual Design: prompting basics are recapped briefly, not retaught. Learners plan a video with a script and shot list, generate clips from text and images in Google Flow (Veo) and Kling, create an avatar presenter in HeyGen with proper consent, and edit everything together with sound and captions in CapCut. They learn to spot and fix continuity problems and artifacts, and to check disclosure, consent and rights before publishing. By the end, learners produce a 60 to 90 second AI-assisted brand or explainer video.",
+  "time_plan": {
+    "video_minutes": 70,
+    "weekly_hours": 2,
+    "per_week": "About 20 to 25 minutes of video, 60 minutes of planning, generation and editing exercises and quizzes, and 35 minutes of reading and reflection. Free tiers can have queues and daily limits [VERSION], so start generating clips early in the week. In week 3 most of the exercise time goes to the capstone."
+  },
+  "objectives": [
+    {
+      "id": "O1",
+      "bloom": "Remember",
+      "text": "Describe the main types of AI video tools (text-to-video, image-to-video, avatar video and AI-assisted editing) and the stages of a short-form video workflow."
+    },
+    {
+      "id": "O2",
+      "bloom": "Understand",
+      "text": "Explain how script, shot type, camera movement, clip length and pacing work together, and how to express them in a video prompt."
+    },
+    {
+      "id": "O3",
+      "bloom": "Apply",
+      "text": "Generate video clips from text and from still images in Google Flow (Veo) and Kling that match a planned shot list."
+    },
+    {
+      "id": "O4",
+      "bloom": "Apply",
+      "text": "Create an avatar presenter segment in HeyGen and assemble clips, voice, music and captions into an edited sequence in CapCut."
+    },
+    {
+      "id": "O5",
+      "bloom": "Analyse",
+      "text": "Diagnose continuity problems and visual artifacts across generated clips, and decide whether to regenerate, edit or replace each one."
+    },
+    {
+      "id": "O6",
+      "bloom": "Evaluate",
+      "text": "Assess a finished video for disclosure, consent, copyright and platform-policy risks before it is published."
+    },
+    {
+      "id": "O7",
+      "bloom": "Create",
+      "text": "Produce a 60 to 90 second AI-assisted brand or explainer video, from script to final export."
+    }
+  ],
+  "modules": [
+    {
+      "module_id": "M1",
+      "week": 1,
+      "title": "From Idea to Script and Shot List",
+      "lessons": [
+        {
+          "lesson_id": "L01",
+          "title": "The AI Video Toolkit and Workflow",
+          "objectives": [
+            "O1"
+          ],
+          "summary": "Four kinds of tools: text-to-video, image-to-video, avatar presenters and AI-assisted editing. The workflow from idea to script, shot list, generation, edit and export. Analogy: a small film crew where each tool plays one role, and you are the director.",
+          "exercise": "Watch 3 short AI-assisted videos from a list provided, and name which kind of tool probably made each part."
+        },
+        {
+          "lesson_id": "L02",
+          "title": "Writing a Short-Form Script",
+          "objectives": [
+            "O2"
+          ],
+          "summary": "Structure for 60 to 90 seconds: a hook in the first seconds, one clear message, and a call to action. Writing for the ear and for the screen at the same time. Worked example: an explainer for a mobile payment app in Nigeria, drafted with a free chatbot and then edited by hand.",
+          "exercise": "Write a 60-second script for a real or fictional product, then read it aloud with a timer and cut it to length."
+        },
+        {
+          "lesson_id": "L03",
+          "title": "Storyboards and Shot Lists",
+          "objectives": [
+            "O2"
+          ],
+          "summary": "Turning a script into scenes: what the viewer sees, how long each shot lasts, and what the narration says at the same time. A simple shot-list table. Worked example: 8 shots for a Mexican coffee brand, each 4 to 8 seconds long.",
+          "exercise": "Turn your script into a shot list of 8 to 12 shots with duration, shot type and a one-line description for each."
+        },
+        {
+          "lesson_id": "L04",
+          "title": "Speaking the Language of the Camera",
+          "objectives": [
+            "O2",
+            "O3"
+          ],
+          "summary": "Shot types (wide, medium, close-up), camera movements (pan, tilt, dolly, orbit, handheld) and pacing words that video models respond to. A video prompt formula: subject, action, setting, camera, lighting, style and duration. Short recap of image-prompt basics from the previous course.",
+          "exercise": "Rewrite 4 shots from your shot list as full video prompts, using the formula."
+        },
+        {
+          "lesson_id": "L05",
+          "title": "Keyframes: From Still Image to Motion",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "Why many creators start from a still image: it fixes the look before motion is added. Creating keyframes with an image generator and a consistent style block. Worked example: a hotel in Marrakech shown in 3 keyframes that share one look.",
+          "exercise": "Generate 3 keyframe images for your shot list that share the same style, colour palette and characters."
+        }
+      ]
+    },
+    {
+      "module_id": "M2",
+      "week": 2,
+      "title": "Generating Clips and Avatar Presenters",
+      "lessons": [
+        {
+          "lesson_id": "L06",
+          "title": "Text-to-Video in Google Flow (Veo)",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "A walkthrough of Google Flow: writing a prompt, choosing clip settings, generating and reviewing results, and extending a scene. How to change one element at a time between attempts. [VERSION] Model versions, features, credits and regional availability change often [REGION].",
+          "exercise": "Generate 2 shots from your shot list in Google Flow and record which prompt changes improved the result."
+        },
+        {
+          "lesson_id": "L07",
+          "title": "Image-to-Video and Motion Control in Kling",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "Animating a keyframe: uploading an image, describing only the motion, and controlling camera movement and strength. Worked example: a still of a market stall in Bangkok becomes a slow dolly-in shot. [VERSION] Kling's free credits, settings and export options change often.",
+          "exercise": "Animate 2 of your keyframes in Kling, one with a camera movement and one with subject movement only."
+        },
+        {
+          "lesson_id": "L08",
+          "title": "Keeping Characters and Scenes Consistent",
+          "objectives": [
+            "O3",
+            "O5"
+          ],
+          "summary": "Why generated clips drift: faces, clothes, colours and props change between shots. Techniques: reusing keyframes, a fixed character description, reference features where tools offer them [VERSION], and editing choices that hide small changes. Analogy: a film's continuity supervisor.",
+          "exercise": "Generate 3 clips of the same character and list every continuity change you notice between them."
+        },
+        {
+          "lesson_id": "L09",
+          "title": "Avatar Presenters in HeyGen",
+          "objectives": [
+            "O4",
+            "O6"
+          ],
+          "summary": "Creating a presenter segment from a script with a stock avatar and a stock voice. When a custom avatar or voice of a real person is used, it must be that person, with their clear and recorded consent; rules differ by country [VERIFY] [REGION]. [VERSION] Free-tier limits, watermarks and features change often.",
+          "exercise": "Create a 20 to 30 second HeyGen segment with a stock avatar that introduces your video, then check lip-sync and pronunciation."
+        },
+        {
+          "lesson_id": "L10",
+          "title": "Diagnosing Artifacts: Regenerate, Edit or Replace?",
+          "objectives": [
+            "O5"
+          ],
+          "summary": "Common problems: warped hands and faces, melting objects, flicker, unreadable text and physics that looks wrong. A decision guide: regenerate with a changed prompt, trim or crop in the edit, or replace with a slide, stock clip or still. Worked example: 6 clips for a solar-energy explainer in India.",
+          "exercise": "Review your generated clips with the checklist and mark each one keep, trim, regenerate or replace, with a reason."
+        }
+      ]
+    },
+    {
+      "module_id": "M3",
+      "week": 3,
+      "title": "Editing, Responsible Publishing and the Capstone",
+      "lessons": [
+        {
+          "lesson_id": "L11",
+          "title": "Editing in CapCut: Assembly, Pacing and Captions",
+          "objectives": [
+            "O4",
+            "O7"
+          ],
+          "summary": "Building the rough cut: placing clips on the timeline against the narration, trimming for pace, adding transitions sparingly, and generating and correcting automatic captions. [VERSION] CapCut features, free options and regional availability change often [REGION].",
+          "exercise": "Capstone step 1: assemble a rough cut of your 60 to 90 second video in CapCut, with captions."
+        },
+        {
+          "lesson_id": "L12",
+          "title": "Sound, Music and Export Settings",
+          "objectives": [
+            "O4"
+          ],
+          "summary": "Balancing voice, music and sound effects so the voice stays clear. Choosing music whose licence allows your use [VERIFY]. Export settings for different platforms: 16:9 for websites, 9:16 for short-form social apps, and a safe area for captions.",
+          "exercise": "Capstone step 2: add music and sound, balance the levels, and export one horizontal and one vertical version."
+        },
+        {
+          "lesson_id": "L13",
+          "title": "Publishing Responsibly: Disclosure, Consent and Rights",
+          "objectives": [
+            "O6"
+          ],
+          "summary": "Principles for a pre-publish review: label AI-generated or altered content where platforms or laws require it [VERIFY] [REGION] [VERSION], have consent for every real person's face or voice, check tool terms for commercial use [VERIFY], and avoid realistic scenes that could mislead. Illustrated with hypothetical cases.",
+          "exercise": "Capstone step 3: complete a pre-publish checklist for your video, covering disclosure, consent, music licence and tool terms."
+        },
+        {
+          "lesson_id": "L14",
+          "title": "Capstone: Finishing and Presenting Your Video",
+          "objectives": [
+            "O5",
+            "O6",
+            "O7"
+          ],
+          "summary": "The capstone brief and rubric. A final quality pass for artifacts, continuity, audio and captions, then the final export. How to present the video with a short production note that lists the tools, prompts and checks used.",
+          "exercise": "Capstone step 4: export your final 60 to 90 second video and write a half-page production note with your tools, key prompts and pre-publish checks."
+        }
+      ]
+    }
+  ],
+  "capstone": {
+    "title": "AI-Assisted Brand or Explainer Video",
+    "brief": "Produce a 60 to 90 second AI-assisted brand or explainer video from script to final export, with a short production note listing the tools, key prompts and pre-publish checks.",
+    "built_in": [
+      "L11",
+      "L12",
+      "L13",
+      "L14"
+    ],
+    "assesses": [
+      "O2",
+      "O3",
+      "O4",
+      "O5",
+      "O6",
+      "O7"
+    ]
+  },
+  "coverage_check": {
+    "O1": [
+      "L01"
+    ],
+    "O2": [
+      "L02",
+      "L03",
+      "L04"
+    ],
+    "O3": [
+      "L04",
+      "L05",
+      "L06",
+      "L07",
+      "L08"
+    ],
+    "O4": [
+      "L09",
+      "L11",
+      "L12"
+    ],
+    "O5": [
+      "L08",
+      "L10",
+      "L14"
+    ],
+    "O6": [
+      "L09",
+      "L13",
+      "L14"
+    ],
+    "O7": [
+      "L11",
+      "L14"
+    ]
+  },
+  "flags": [
+    "PROPOSED: screen demo for L06 (first live generation session in Google Flow; prompt and settings workflow must be shown on screen). Needs approval.",
+    "PROPOSED: screen demo for L07 (uploading a keyframe and setting motion controls in Kling is easiest to follow live). Needs approval.",
+    "PROPOSED: screen demo for L09 (HeyGen script-to-avatar steps and the stock-avatar selection need a live walkthrough). Needs approval.",
+    "PROPOSED: screen demo for L11 (timeline editing and caption correction in CapCut are hard to teach without a screen recording). Needs approval.",
+    "L06, L07, L09, L11 [VERSION]: interfaces, model versions, free credits, watermarks and export options of Google Flow (Veo), Kling, HeyGen and CapCut must be checked against the live tools before scripting.",
+    "L06, L11 [REGION]: Google Flow and CapCut availability differs by country; a fallback tool may be needed for some learners.",
+    "L09, L13 [VERIFY] [REGION]: consent rules for using a real person's face or voice differ by country; the lessons teach 'clear, recorded consent' as a principle and state no legal conclusion as settled.",
+    "L09: judgement call. Demos and exercises use stock avatars and stock voices only; no custom avatar or voice clone is created in the course.",
+    "L12, L13 [VERIFY]: music licensing and each tool's commercial-use terms must be checked against current official terms.",
+    "L13 [VERIFY] [REGION] [VERSION]: AI-content labelling rules of platforms and laws change often; the lesson uses hypothetical cases and names no specific law as settled.",
+    "L04: judgement call. Image-prompting basics from AI-20 are recapped in under 20 seconds, not retaught, because AI-20 is a recommended prerequisite.",
+    "L02: exact word counts for 60 to 90 seconds of narration are given as ranges, based on a typical speaking pace [VERIFY]."
+  ]
+}

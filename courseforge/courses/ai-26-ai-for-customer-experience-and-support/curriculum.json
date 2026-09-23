@@ -1,0 +1,242 @@
+{
+  "course_id": "AI-26",
+  "slug": "ai-26-ai-for-customer-experience-and-support",
+  "course_title": "AI for Customer Experience and Support",
+  "level": "Beginner",
+  "status": "AWAITING_APPROVAL",
+  "screen_demo_lessons": [],
+  "overview": "A three-week course for customer support, CX and operations teams who already work with customers. Learners see where AI helps in support, how AI assistants answer questions from a knowledge base, and why they sometimes give wrong answers. They design workflows that decide what AI should automate, what it should assist with, and what must stay with a person, with a clear hand-off to a human. No coding is needed: exercises use a free AI assistant, a free automation tool and a free chatbot builder. By the end, learners build a working support assistant prototype with a hand-off-to-human flow and a plan to measure it.",
+  "time_plan": {
+    "video_minutes": 60,
+    "weekly_hours": 2,
+    "per_week": "About 20 minutes of video, 60 minutes of hands-on exercises, and 40 minutes of reading, quizzes and reflection. In week 3 the exercise time goes to building the capstone prototype."
+  },
+  "objectives": [
+    {
+      "id": "O1",
+      "bloom": "Remember",
+      "text": "Name the main ways AI is used in customer support: chatbots, ticket triage, agent assistance, knowledge bases and support analytics."
+    },
+    {
+      "id": "O2",
+      "bloom": "Understand",
+      "text": "Explain how an AI assistant uses a knowledge base to answer questions, and why it can give wrong or invented answers."
+    },
+    {
+      "id": "O3",
+      "bloom": "Apply",
+      "text": "Use a free AI assistant and automation tools to write knowledge base articles, draft replies in a consistent brand voice and automate simple support tasks."
+    },
+    {
+      "id": "O4",
+      "bloom": "Analyse",
+      "text": "Map a support workflow to decide which steps AI should automate, which it should assist with, and which must stay with a human, including hand-off triggers."
+    },
+    {
+      "id": "O5",
+      "bloom": "Evaluate",
+      "text": "Evaluate an AI support assistant for accuracy, tone, response time, customer satisfaction, fairness and privacy."
+    },
+    {
+      "id": "O6",
+      "bloom": "Create",
+      "text": "Build a working support assistant prototype with a hand-off-to-human flow."
+    }
+  ],
+  "modules": [
+    {
+      "module_id": "M1",
+      "week": 1,
+      "title": "AI in Support: The Basics",
+      "lessons": [
+        {
+          "lesson_id": "L01",
+          "title": "Where AI Helps in Customer Support",
+          "objectives": [
+            "O1"
+          ],
+          "summary": "Five common uses: chatbots, ticket triage, reply suggestions for agents, knowledge bases and analysis of customer feedback. The aim is faster answers without losing the human touch. Hypothetical examples include a telecom company in Morocco, an online shop in Vietnam and an airline in Mexico.",
+          "exercise": "List the 10 questions your team receives most often and mark each one: AI can answer it, AI can help an agent, or a human must handle it."
+        },
+        {
+          "lesson_id": "L02",
+          "title": "How AI Assistants Answer Questions",
+          "objectives": [
+            "O2"
+          ],
+          "summary": "An AI assistant combines a language model with your own content, such as help articles and policies. Analogy: a new agent with a well-organised handbook gives good answers, but only if the handbook is correct and up to date. Without the right content, the assistant may invent an answer that sounds confident.",
+          "exercise": "Ask Claude or ChatGPT a question about a made-up company's refund policy, first without and then with the policy text pasted in. Compare the two answers and note any invented details."
+        },
+        {
+          "lesson_id": "L03",
+          "title": "Writing a Knowledge Base That AI Can Use",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "Good articles have one topic, a clear title, short steps, a review date and an owner. Content that is clear for customers is also clear for AI. Worked example: turning a long internal email about delivery delays in Nigeria into two short help articles.",
+          "exercise": "Use an AI assistant to turn a messy internal note into 2 clean knowledge base articles. Check every fact against the original note."
+        },
+        {
+          "lesson_id": "L04",
+          "title": "Brand Voice and Reply Drafting",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "A short tone guide helps AI draft replies that sound like your company, in several languages. Empathy, clarity and accuracy matter more than speed. An agent always reviews a draft before it is sent.",
+          "exercise": "Write a 5-line tone guide, then use an AI assistant to draft replies to 3 upset customers. Edit each draft for accuracy and empathy and note what you changed."
+        }
+      ]
+    },
+    {
+      "module_id": "M2",
+      "week": 2,
+      "title": "Designing AI-Assisted Workflows",
+      "lessons": [
+        {
+          "lesson_id": "L05",
+          "title": "Ticket Triage: Sorting and Routing with AI",
+          "objectives": [
+            "O2",
+            "O4"
+          ],
+          "summary": "AI can label tickets by topic, urgency, language and sentiment, and send them to the right team. A wrong label can delay an urgent case, so categories must be clear and results must be checked. Worked example: a bank support team in Poland sorting tickets in three languages.",
+          "exercise": "Define 5 ticket categories, then ask an AI assistant to classify 15 sample tickets. Compare its labels with your own and count the differences."
+        },
+        {
+          "lesson_id": "L06",
+          "title": "Mapping the Workflow: Automate, Assist or Human",
+          "objectives": [
+            "O4"
+          ],
+          "summary": "Four questions decide each step: How risky is a mistake? How emotional is the situation? How complex is the case? Could the customer be vulnerable? Worked example: mapping a refund request from first message to resolution.",
+          "exercise": "Draw the workflow for one support process from your work and mark each step as automate, assist or human, with a reason."
+        },
+        {
+          "lesson_id": "L07",
+          "title": "Designing the Hand-off to a Human",
+          "objectives": [
+            "O4",
+            "O5"
+          ],
+          "summary": "Hand-off triggers: the customer asks for a person, the assistant is unsure, the customer is very upset, the topic is sensitive (such as bereavement, fraud or health), or the same question fails twice. A good hand-off passes a short summary so the customer does not repeat the story. Analogy: a relay race, where the baton must be passed cleanly.",
+          "exercise": "Write 5 hand-off rules and a hand-off summary template, then test the template on 2 sample conversations."
+        },
+        {
+          "lesson_id": "L08",
+          "title": "Automating Simple Tasks with n8n or Zapier",
+          "objectives": [
+            "O3",
+            "O4"
+          ],
+          "summary": "A simple automation has three parts: a trigger, an AI step and an action. Worked example: a new contact-form message is labelled by AI and logged in a spreadsheet for the right team. Free plan limits and interface steps change often [VERSION].",
+          "exercise": "Build a 3-step automation in n8n or Zapier's free tier that labels incoming form messages with AI and logs them in a sheet."
+        }
+      ]
+    },
+    {
+      "module_id": "M3",
+      "week": 3,
+      "title": "Build, Test and Launch Your Assistant",
+      "lessons": [
+        {
+          "lesson_id": "L09",
+          "title": "Build Your Support Assistant",
+          "objectives": [
+            "O3",
+            "O6"
+          ],
+          "summary": "Setting up an assistant in a free chatbot builder: choose its scope, add knowledge base content, write clear instructions and tell customers they are talking to AI. Keep the first version small: a few common topics done well. Interface steps are marked [VERSION].",
+          "exercise": "Capstone step 1: build a support assistant in a free chatbot builder that answers questions on at least 3 topics from your knowledge base."
+        },
+        {
+          "lesson_id": "L10",
+          "title": "Adding the Hand-off Flow",
+          "objectives": [
+            "O4",
+            "O6"
+          ],
+          "summary": "Connecting the hand-off rules from L07 to a real channel, such as an email, a ticket or a message to a team. The customer should know what happens next and when a person will reply. Worked example: an out-of-hours hand-off for a travel company in Kenya.",
+          "exercise": "Capstone step 2: add a hand-off flow that sends the conversation summary to a human channel, using the builder's own feature or n8n or Zapier."
+        },
+        {
+          "lesson_id": "L11",
+          "title": "Testing Your Assistant: Accuracy, Tone and Safety",
+          "objectives": [
+            "O5"
+          ],
+          "summary": "A test set of about 20 questions, including tricky, out-of-scope, emotional and non-English questions. Score each answer for accuracy, tone and correct hand-off. Analogy: a driving test covers difficult roads, not only an empty car park.",
+          "exercise": "Capstone step 3: run your test set, score each answer in a sheet, and fix the 3 biggest problems you find."
+        },
+        {
+          "lesson_id": "L12",
+          "title": "Measuring Success and Keeping the Human Touch",
+          "objectives": [
+            "O5",
+            "O6"
+          ],
+          "summary": "Useful measures: first response time, resolution rate, hand-off rate and customer satisfaction. A high rate of conversations that never reach a human is not always good if customers give up. Privacy and transparency: tell customers when they talk to AI, and follow local data protection and disclosure rules [REGION] [VERIFY].",
+          "exercise": "Capstone step 4: finish your prototype and write a one-page launch note with the measures you will track and the review schedule."
+        }
+      ]
+    }
+  ],
+  "capstone": {
+    "title": "Support Assistant Prototype with Human Hand-off",
+    "brief": "Build a working support assistant prototype with a hand-off-to-human flow.",
+    "built_in": [
+      "L09",
+      "L10",
+      "L11",
+      "L12"
+    ],
+    "assesses": [
+      "O4",
+      "O5",
+      "O6"
+    ]
+  },
+  "coverage_check": {
+    "O1": [
+      "L01"
+    ],
+    "O2": [
+      "L02",
+      "L05"
+    ],
+    "O3": [
+      "L03",
+      "L04",
+      "L08",
+      "L09"
+    ],
+    "O4": [
+      "L05",
+      "L06",
+      "L07",
+      "L08",
+      "L10"
+    ],
+    "O5": [
+      "L07",
+      "L11",
+      "L12"
+    ],
+    "O6": [
+      "L09",
+      "L10",
+      "L12"
+    ]
+  },
+  "flags": [
+    "PROPOSED: screen demo for L08 (learners build their first automation in n8n or Zapier; a beginner audience needs to see each step in the live tool). Needs approval.",
+    "PROPOSED: screen demo for L09 (setting up an assistant in a chatbot builder is a step-by-step interface task). Needs approval.",
+    "PROPOSED: screen demo for L10 (connecting the hand-off to an email or ticket channel is hard to follow without a live walkthrough). Needs approval.",
+    "[VERSION]: n8n and Zapier free-tier limits, AI steps and interfaces (L08, L10).",
+    "[VERSION]: the brief says 'free chatbot builders' without naming one; a reviewer should choose one or two builders with a usable free tier before Stage 2 (L09, L10).",
+    "[VERSION]: free-plan access and data-use terms of Claude and ChatGPT.",
+    "L12 [REGION] [VERIFY]: rules requiring customers to be told they are talking to AI (for example the EU AI Act transparency obligations) and local data protection laws.",
+    "Judgement call: exercises use made-up companies and sample tickets; learners are told not to put real customer personal data into free tools.",
+    "Judgement call: no coding and no self-hosting of n8n, because the course is Beginner level.",
+    "Judgement call: L12 teaches support metrics without industry benchmark figures; any benchmark added later needs [VERIFY]."
+  ]
+}

@@ -1,0 +1,228 @@
+{
+  "course_id": "AI-22",
+  "slug": "ai-22-ai-voice-audio-and-music",
+  "course_title": "AI Voice, Audio and Music",
+  "level": "Beginner",
+  "status": "AWAITING_APPROVAL",
+  "screen_demo_lessons": [],
+  "overview": "A two-week, hands-on course for podcasters, video creators, educators and musicians. No audio or technical background is needed. Learners find out how AI turns text into speech, speech into text, and descriptions into music. They practise writing for the ear, creating a natural voiceover with a free text-to-speech tool, making transcripts and captions with Whisper, cleaning up recordings in Audacity and generating music beds with free AI music tools. Consent for voice cloning and the licensing of AI voices and music are taught as principles, because the rules differ by country and by tool. By the end, learners produce a short podcast episode or narrated video with AI-assisted audio and a simple rights log.",
+  "time_plan": {
+    "video_minutes": 50,
+    "weekly_hours": 2,
+    "per_week": "About 25 minutes of video, 60 minutes of hands-on audio exercises and quizzes, and 35 minutes of reading and reflection. In week 2 most of the exercise and reflection time goes to the capstone."
+  },
+  "objectives": [
+    {
+      "id": "O1",
+      "bloom": "Remember",
+      "text": "Describe at a high level how text-to-speech, speech-to-text, AI audio clean-up and AI music generation work, and define key terms such as voice model, transcript, noise floor and music bed."
+    },
+    {
+      "id": "O2",
+      "bloom": "Understand",
+      "text": "Explain why voice cloning needs informed consent and why licences for AI voices and music differ by tool, use and country."
+    },
+    {
+      "id": "O3",
+      "bloom": "Apply",
+      "text": "Create a natural-sounding voiceover with a free text-to-speech tool and a short music bed with a free AI music tool, using clear descriptions of voice, pace, mood and tempo."
+    },
+    {
+      "id": "O4",
+      "bloom": "Apply",
+      "text": "Clean up and edit a spoken recording in Audacity, and create an accurate transcript and captions with Whisper."
+    },
+    {
+      "id": "O5",
+      "bloom": "Analyse",
+      "text": "Analyse a voice or music track for clarity, background noise, pacing, pronunciation and mood fit, and identify what needs to be fixed."
+    },
+    {
+      "id": "O6",
+      "bloom": "Evaluate",
+      "text": "Judge whether a voice or music asset can be used for a given purpose by checking consent, licence terms and disclosure needs."
+    },
+    {
+      "id": "O7",
+      "bloom": "Create",
+      "text": "Produce a short podcast episode or narrated video with AI-assisted audio, together with a rights log for every voice and music asset."
+    }
+  ],
+  "modules": [
+    {
+      "module_id": "M1",
+      "week": 1,
+      "title": "Voice and Speech with AI",
+      "lessons": [
+        {
+          "lesson_id": "L01",
+          "title": "How AI Hears and Speaks",
+          "objectives": [
+            "O1"
+          ],
+          "summary": "Three families of audio AI: text-to-speech, speech-to-text and audio generation. Each learns patterns from many hours of recorded sound. Analogy: a language learner who has listened to thousands of speakers and can now both understand and imitate natural speech.",
+          "exercise": "Listen to 4 short audio clips and decide for each one whether it is a human recording, AI speech or AI music, then check the answer key."
+        },
+        {
+          "lesson_id": "L02",
+          "title": "Writing for the Ear",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "Scripts that sound natural: short sentences, one idea at a time, spoken numbers and clear signposts. Adding pauses and phonetic spellings for difficult names. Worked example: a museum audio guide in Cairo rewritten from a written text into a spoken script.",
+          "exercise": "Rewrite a 150-word written paragraph as a spoken script, then read it aloud and mark where you need to breathe."
+        },
+        {
+          "lesson_id": "L03",
+          "title": "Making a Voiceover with Free Text-to-Speech",
+          "objectives": [
+            "O3",
+            "O5"
+          ],
+          "summary": "Choosing a voice, language and accent, then adjusting speed, pauses and pronunciation. Listening for robotic rhythm and wrong stress. Worked example: a 60-second training voiceover for a logistics company in Poland. [VERSION] Free TTS tools, voices and limits change often.",
+          "exercise": "Create a 60-second voiceover of your script in a free TTS tool, then fix 3 problems in pace or pronunciation."
+        },
+        {
+          "lesson_id": "L04",
+          "title": "Transcripts and Captions with Whisper",
+          "objectives": [
+            "O4"
+          ],
+          "summary": "Whisper converts speech into text in many languages. Using it through a free app or a simple local setup [VERSION], then checking names, numbers and technical terms by hand. Exporting captions as an SRT file for video.",
+          "exercise": "Transcribe a 2-minute recording with Whisper, correct every error you find, and export an SRT caption file."
+        },
+        {
+          "lesson_id": "L05",
+          "title": "Voice Cloning: Consent Comes First",
+          "objectives": [
+            "O2",
+            "O6"
+          ],
+          "summary": "Voice cloning can copy a real person's voice from a short sample, so it can harm people if misused. Principles: only clone a voice with the person's clear, informed and recorded consent, limit the use to what they agreed, and disclose it. Laws differ by country and change often [VERIFY] [REGION].",
+          "exercise": "Draft a one-page voice consent form for a podcast co-host that states the purpose, duration, allowed uses and how to withdraw consent."
+        }
+      ]
+    },
+    {
+      "module_id": "M2",
+      "week": 2,
+      "title": "Clean Audio, Music and the Capstone",
+      "lessons": [
+        {
+          "lesson_id": "L06",
+          "title": "Cleaning Up Recordings in Audacity",
+          "objectives": [
+            "O4",
+            "O5"
+          ],
+          "summary": "A simple clean-up chain: remove background noise, cut long silences and mistakes, even out levels and remove harsh sounds. Analogy: editing a photo by first fixing the light before adding filters. [VERSION] Audacity menus and optional AI plugins may change.",
+          "exercise": "Clean up a noisy 1-minute voice recording in Audacity and describe what each step changed."
+        },
+        {
+          "lesson_id": "L07",
+          "title": "Generating Music Beds with AI",
+          "objectives": [
+            "O3",
+            "O5"
+          ],
+          "summary": "Describing music by mood, genre, tempo, instruments and length, not by the name of a living artist. Generating several options and choosing one that supports the voice. Worked example: a calm intro bed for an education podcast from Colombia. [VERSION] Free AI music tiers and limits change often.",
+          "exercise": "Generate 3 short music beds for the same intro and choose one, explaining how its mood and tempo fit your voiceover."
+        },
+        {
+          "lesson_id": "L08",
+          "title": "Licences for AI Voices and Music",
+          "objectives": [
+            "O2",
+            "O6"
+          ],
+          "summary": "What a licence tells you: personal or commercial use, attribution, and platform rules. Free tiers often carry different terms from paid plans [VERIFY] [VERSION]. Whether AI music can be protected by copyright is unsettled and differs by country [VERIFY] [REGION]. Keeping a rights log.",
+          "exercise": "Start a rights log for your project that lists each voice and music asset with the tool, plan, licence terms and date checked."
+        },
+        {
+          "lesson_id": "L09",
+          "title": "Mixing Voice and Music",
+          "objectives": [
+            "O4",
+            "O5",
+            "O7"
+          ],
+          "summary": "Putting the parts together: voice on top, music lowered under speech, intro and outro fades, and consistent loudness for the platform [VERIFY]. Worked example: a 3-minute episode for a Filipino small-business podcast. Checking the mix on headphones and on a phone speaker.",
+          "exercise": "Capstone step 1: mix your voiceover or recording with a music bed in Audacity and export a first draft."
+        },
+        {
+          "lesson_id": "L10",
+          "title": "Capstone: Producing and Reviewing Your Episode",
+          "objectives": [
+            "O6",
+            "O7"
+          ],
+          "summary": "The capstone brief and rubric: a 2 to 4 minute podcast episode or narrated video. A final review for clarity, pacing, captions, consent and licences, plus a short disclosure line that states where AI was used.",
+          "exercise": "Capstone step 2: export the final episode or narrated video with captions, and submit it with your completed rights log and disclosure line."
+        }
+      ]
+    }
+  ],
+  "capstone": {
+    "title": "AI-Assisted Podcast Episode or Narrated Video",
+    "brief": "Produce a 2 to 4 minute podcast episode or narrated video with AI-assisted voice, clean-up and music, submitted with captions, a rights log and a disclosure line.",
+    "built_in": [
+      "L09",
+      "L10"
+    ],
+    "assesses": [
+      "O3",
+      "O4",
+      "O5",
+      "O6",
+      "O7"
+    ]
+  },
+  "coverage_check": {
+    "O1": [
+      "L01"
+    ],
+    "O2": [
+      "L05",
+      "L08"
+    ],
+    "O3": [
+      "L02",
+      "L03",
+      "L07"
+    ],
+    "O4": [
+      "L04",
+      "L06",
+      "L09"
+    ],
+    "O5": [
+      "L03",
+      "L06",
+      "L07",
+      "L09"
+    ],
+    "O6": [
+      "L05",
+      "L08",
+      "L10"
+    ],
+    "O7": [
+      "L09",
+      "L10"
+    ]
+  },
+  "flags": [
+    "PROPOSED: screen demo for L03 (choosing voices and adjusting speed, pauses and pronunciation in a TTS tool is best shown live). Needs approval.",
+    "PROPOSED: screen demo for L04 (running Whisper and exporting an SRT file needs a step-by-step walkthrough). Needs approval.",
+    "PROPOSED: screen demo for L06 (the Audacity clean-up chain involves menus and before/after listening that must be shown live). Needs approval.",
+    "PROPOSED: screen demo for L07 (generating and comparing music options in a free AI music tool is easiest to follow on screen). Needs approval.",
+    "L03, L04, L06, L07 [VERSION]: interfaces, free-tier limits and available voices of the chosen free TTS tool, Whisper apps, Audacity and the free AI music tool must be checked against the live tools before scripting.",
+    "Judgement call: the brief names tool categories ('Free TTS tools', 'Free AI music tiers') rather than products; a reviewer should choose the specific tools to demonstrate before Stage 2.",
+    "L04: judgement call. Whisper is shown through a free app or a simple local setup; a command-line install may be too technical for this audience and needs a decision.",
+    "L05 [VERIFY] [REGION]: voice-cloning and likeness laws differ by country and change often; the lesson teaches consent principles and states no legal conclusion as settled.",
+    "L05: judgement call. The course never demonstrates cloning another person's voice; the consent form exercise replaces a cloning demo.",
+    "L08 [VERIFY] [REGION] [VERSION]: licence terms for each TTS and music tool, and copyright status of AI-generated music, must be checked against current official terms and sources.",
+    "L09 [VERIFY]: platform loudness targets are taught as 'follow the platform's current guidance', with any specific values checked before scripting.",
+    "L07: music is described by mood, genre and instruments only; prompts never name living artists to imitate."
+  ]
+}

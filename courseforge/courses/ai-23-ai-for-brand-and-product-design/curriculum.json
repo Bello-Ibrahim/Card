@@ -1,0 +1,282 @@
+{
+  "course_id": "AI-23",
+  "slug": "ai-23-ai-for-brand-and-product-design",
+  "course_title": "AI for Brand and Product Design",
+  "level": "Intermediate",
+  "status": "AWAITING_APPROVAL",
+  "screen_demo_lessons": [],
+  "overview": "A three-week, intermediate course for brand, UI/UX and product designers who want to use AI across their workflow without losing craft or control. It assumes design fundamentals and working familiarity with Figma, so those are not retaught. Learners use Claude to synthesise research and sharpen a design brief, explore names, moodboards, logo directions and colour and type with Claude and free image generators, and generate and refine UI drafts and prototypes in Figma. They learn to critique AI output for originality, accessibility and usability, and to judge trademark, copyright and tool-licence risk before an asset reaches a client or product. By the end, learners design a brand identity and a key app screen flow with an AI-assisted process, documented as a case study.",
+  "time_plan": {
+    "video_minutes": 70,
+    "weekly_hours": 3,
+    "per_week": "About 20 to 25 minutes of video, 100 minutes of design exercises and quizzes, and 55 minutes of reading, critique and reflection. In week 3 most of the exercise and reflection time goes to the capstone."
+  },
+  "objectives": [
+    {
+      "id": "O1",
+      "bloom": "Understand",
+      "text": "Explain where AI adds value and where it adds risk at each stage of the brand and product design process."
+    },
+    {
+      "id": "O2",
+      "bloom": "Apply",
+      "text": "Use Claude to synthesise design research into insights, personas and a design brief, while protecting personal and client data."
+    },
+    {
+      "id": "O3",
+      "bloom": "Apply",
+      "text": "Generate and refine brand directions, including names, moodboards, logo concepts and colour and type options, with Claude and free image generators."
+    },
+    {
+      "id": "O4",
+      "bloom": "Apply",
+      "text": "Use AI features and plugins in Figma to draft UI screens, content and variations, and turn them into a clickable prototype."
+    },
+    {
+      "id": "O5",
+      "bloom": "Analyse",
+      "text": "Critique AI-generated brand and UI output for originality, accessibility, consistency with a design system and usability."
+    },
+    {
+      "id": "O6",
+      "bloom": "Evaluate",
+      "text": "Decide which AI-generated assets can be used in a client or product deliverable by assessing trademark, copyright and tool-licence risk, and document the decision."
+    },
+    {
+      "id": "O7",
+      "bloom": "Create",
+      "text": "Design a brand identity and a key app screen flow with an AI-assisted process, documented as a case study."
+    }
+  ],
+  "modules": [
+    {
+      "module_id": "M1",
+      "week": 1,
+      "title": "AI in the Design Process: Research and Strategy",
+      "lessons": [
+        {
+          "lesson_id": "L01",
+          "title": "Where AI Fits in Brand and Product Design",
+          "objectives": [
+            "O1"
+          ],
+          "summary": "A map of the design process from research to delivery, with the tasks where AI helps (volume, speed, variation) and where it adds risk (originality, accuracy, rights). Analogy: AI as a fast junior assistant whose work always needs a senior review.",
+          "exercise": "Map your own current design process and mark 3 steps where AI could help and 1 step where you would not use it, with reasons."
+        },
+        {
+          "lesson_id": "L02",
+          "title": "Research Synthesis with Claude",
+          "objectives": [
+            "O2"
+          ],
+          "summary": "Giving Claude anonymised interview notes, reviews or survey answers and asking for themes with supporting quotes. Checking every theme against the source, because models can invent or overstate patterns. Worked example: 12 interview notes for a savings app used in Kenya and Ghana.",
+          "exercise": "Give Claude a set of sample interview notes, ask for 5 themes with quotes, and verify each quote against the original text."
+        },
+        {
+          "lesson_id": "L03",
+          "title": "From Insights to Personas and Jobs to Be Done",
+          "objectives": [
+            "O2",
+            "O5"
+          ],
+          "summary": "Turning verified themes into jobs-to-be-done statements and lightweight personas. The risk of 'synthetic users': invented personas that sound real but are not based on data. Worked example: a clinic booking app for patients in Indonesia.",
+          "exercise": "Write 3 jobs-to-be-done statements and one persona with Claude, then mark each claim as 'from research' or 'assumption'."
+        },
+        {
+          "lesson_id": "L04",
+          "title": "Writing a Design Brief with AI as a Sparring Partner",
+          "objectives": [
+            "O2"
+          ],
+          "summary": "Using Claude to question a draft brief: missing constraints, unclear success measures and conflicting goals. The designer keeps the decisions. Worked example: a rebrand brief for a family-owned olive oil company in Tunisia.",
+          "exercise": "Draft a one-page brief for your capstone brand, ask Claude for 5 critical questions, and revise the brief to answer them."
+        },
+        {
+          "lesson_id": "L05",
+          "title": "Protecting Client Data and Confidentiality",
+          "objectives": [
+            "O1",
+            "O6"
+          ],
+          "summary": "What not to paste into AI tools: personal data, unreleased products and client secrets without permission. Checking each tool's data and training settings [VERSION] [VERIFY], anonymising research, and agreeing AI use with clients in writing. Privacy rules differ by country [REGION].",
+          "exercise": "Write a short AI-use statement you could add to a client proposal, covering which tools you use and how you protect their data."
+        }
+      ]
+    },
+    {
+      "module_id": "M2",
+      "week": 2,
+      "title": "AI-Assisted Brand Identity",
+      "lessons": [
+        {
+          "lesson_id": "L06",
+          "title": "Naming and Verbal Identity",
+          "objectives": [
+            "O3",
+            "O6"
+          ],
+          "summary": "Generating name options and tone-of-voice lines with Claude from the brief, then filtering them by meaning, pronunciation across languages and availability. AI cannot confirm that a name is free to use: trademark and domain checks are still needed [VERIFY] [REGION].",
+          "exercise": "Generate 20 names for your capstone brand, shortlist 3, and check each for meaning in 2 other languages and basic domain availability."
+        },
+        {
+          "lesson_id": "L07",
+          "title": "Moodboards and Visual Direction with Image Generators",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "Building moodboards from prompts that describe materials, colour, light and era, never the style of a named living artist. Generating 3 contrasting directions for the same brief. [VERSION] Free image generators, their limits and terms change often.",
+          "exercise": "Create 3 contrasting moodboards of 6 images each for your capstone brand, and write one sentence on the idea behind each."
+        },
+        {
+          "lesson_id": "L08",
+          "title": "Logo Exploration: AI as Sketchbook, Not Final Art",
+          "objectives": [
+            "O3",
+            "O6"
+          ],
+          "summary": "Using image generators for fast logo concepts, then redrawing the chosen direction by hand as clean vectors in Figma. Why raw AI logos are risky: similarity to existing marks, weak scalability and uncertain copyright protection [VERIFY] [REGION].",
+          "exercise": "Generate 10 logo concepts, pick one direction, and redraw it as a vector mark in Figma at 3 sizes."
+        },
+        {
+          "lesson_id": "L09",
+          "title": "Colour, Type and Accessible Brand Systems",
+          "objectives": [
+            "O3",
+            "O5"
+          ],
+          "summary": "Asking Claude for palette and type pairings with reasons, then testing them yourself. Checking colour contrast against WCAG guidance (for example 4.5:1 for normal body text at level AA) and testing type at small sizes and in other scripts, such as Arabic or Devanagari.",
+          "exercise": "Build a palette of 5 colours and a type pairing for your brand, test all text colour pairs for contrast, and fix any that fail."
+        },
+        {
+          "lesson_id": "L10",
+          "title": "Building Brand Guidelines in Figma",
+          "objectives": [
+            "O3",
+            "O4"
+          ],
+          "summary": "Turning brand decisions into a Figma page: logo usage, colour and type as styles or variables, and example applications. Using AI to draft usage notes that the designer then edits. Worked example: a guidelines page for a cycling café brand in the Netherlands.",
+          "exercise": "Capstone step 1: build a one-page brand guidelines frame in Figma with logo, colours, type and 2 example applications."
+        }
+      ]
+    },
+    {
+      "module_id": "M3",
+      "week": 3,
+      "title": "AI for UI, Prototyping and the Case Study",
+      "lessons": [
+        {
+          "lesson_id": "L11",
+          "title": "Generating UI Drafts in Figma",
+          "objectives": [
+            "O4",
+            "O5"
+          ],
+          "summary": "Using Figma's AI features and community plugins to draft screens and realistic content from a prompt [VERSION]. Treating drafts as starting points: applying your own brand styles and design system components. Worked example: an onboarding screen for a language-learning app in Brazil.",
+          "exercise": "Capstone step 2: generate draft screens for your key flow, then rebuild them with your brand styles and components."
+        },
+        {
+          "lesson_id": "L12",
+          "title": "From Draft to Clickable Prototype",
+          "objectives": [
+            "O4",
+            "O7"
+          ],
+          "summary": "Connecting screens into a flow, adding states and variations, and using AI to generate microcopy and edge cases such as errors and empty states. Checking the flow with a quick task-based test.",
+          "exercise": "Capstone step 3: turn your key flow of 4 to 6 screens into a clickable prototype and test it with one person."
+        },
+        {
+          "lesson_id": "L13",
+          "title": "Critiquing AI Output: Usability, Accessibility and Originality",
+          "objectives": [
+            "O5",
+            "O6"
+          ],
+          "summary": "A critique checklist for AI-assisted work: usability, accessibility, consistency with the design system, originality and rights. Using Claude as a second reviewer while keeping the final judgement. Documenting which assets are AI-assisted and which risks were checked.",
+          "exercise": "Capstone step 4: run the checklist on your brand and flow, fix the top 3 issues, and complete an asset log with the source and risk status of each asset."
+        },
+        {
+          "lesson_id": "L14",
+          "title": "Capstone: Writing the AI-Assisted Design Case Study",
+          "objectives": [
+            "O6",
+            "O7"
+          ],
+          "summary": "The capstone brief and rubric. Structuring a case study: problem, process, where AI helped, where you overruled it, final design and lessons learned. Being honest and specific about AI use for clients and employers.",
+          "exercise": "Capstone step 5: write and lay out a case study in Figma covering your brand identity, key screen flow and AI-assisted process."
+        }
+      ]
+    }
+  ],
+  "capstone": {
+    "title": "AI-Assisted Brand Identity and App Flow Case Study",
+    "brief": "Design a brand identity and a key app screen flow with an AI-assisted process, and document it as a case study that shows where AI helped, where it was overruled and which risks were checked.",
+    "built_in": [
+      "L10",
+      "L11",
+      "L12",
+      "L13",
+      "L14"
+    ],
+    "assesses": [
+      "O3",
+      "O4",
+      "O5",
+      "O6",
+      "O7"
+    ]
+  },
+  "coverage_check": {
+    "O1": [
+      "L01",
+      "L05"
+    ],
+    "O2": [
+      "L02",
+      "L03",
+      "L04"
+    ],
+    "O3": [
+      "L06",
+      "L07",
+      "L08",
+      "L09",
+      "L10"
+    ],
+    "O4": [
+      "L10",
+      "L11",
+      "L12"
+    ],
+    "O5": [
+      "L03",
+      "L09",
+      "L11",
+      "L13"
+    ],
+    "O6": [
+      "L05",
+      "L06",
+      "L08",
+      "L13",
+      "L14"
+    ],
+    "O7": [
+      "L12",
+      "L14"
+    ]
+  },
+  "flags": [
+    "PROPOSED: screen demo for L07 (prompting and comparing directions in a free image generator is easiest to show live). Needs approval.",
+    "PROPOSED: screen demo for L11 (Figma AI features and plugins for drafting UI change often and must be shown on screen). Needs approval.",
+    "PROPOSED: screen demo for L12 (connecting screens, states and microcopy into a prototype is a hands-on Figma workflow). Needs approval.",
+    "L05, L07, L11, L12 [VERSION]: Figma AI features and plugins, Claude plans and data settings, and free image generators' limits must be checked against the live tools before scripting.",
+    "L05 [VERIFY] [REGION]: data-protection rules and each tool's data-use and training settings differ by country and plan; the lesson teaches principles only.",
+    "L06 [VERIFY] [REGION]: trademark and name-clearance processes differ by country; the lesson states that AI cannot clear a name and gives no legal conclusion.",
+    "L08 [VERIFY] [REGION]: copyright protection for AI-assisted logos is unsettled and differs by country; the lesson recommends human redrawing as a practice, not as a legal guarantee.",
+    "L09 [VERIFY]: the WCAG contrast figure (4.5:1 for normal text at level AA) should be confirmed against the current WCAG version before scripting.",
+    "Judgement call: the brief says 'Free image generators' without naming one; a reviewer should choose the tool for the L07 and L08 demos.",
+    "Judgement call: objectives start at Understand, not Remember, because this is an intermediate course with design and Figma prerequisites.",
+    "Judgement call: capstone built_in includes L10 (week 2), because the brand guidelines page is the first capstone deliverable; the rest is built in module M3.",
+    "L07, L08: prompts describe visual qualities only; the course never names living artists or existing brands to imitate."
+  ]
+}
