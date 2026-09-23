@@ -13,7 +13,7 @@ A machine learning model is a set of calculations that turns data into a predict
 - **Calculus (derivatives and gradients)** is how a model learns. It tells the model which way to change its numbers so that its errors become smaller. This is Module 3.
 - **Metrics** turn a model's results into numbers you can judge, such as error and accuracy. This is Module 4, together with the capstone, where you build linear regression from scratch.
 
-You already know the high-school maths this course needs: adding, multiplying, fractions, percentages and reading a simple graph. We will not reteach those. We will add new vocabulary slowly and always explain a symbol in words before we use it.
+You already know the high-school maths this course needs, such as fractions, percentages and reading a simple graph. We will add new vocabulary slowly and always explain a symbol in words before we use it.
 
 Every lesson uses the same three-step routine:
 
@@ -48,7 +48,7 @@ print(sales.mean())  # 14.0
 4. Run the cell with the play button next to it, or press Shift + Enter. [VERSION]
 5. Check the output: `70` and `14.0`. It matches the hand calculation.
 
-The first line loads NumPy and gives it the short name `np`. The second line creates a NumPy **array**, which is a list of numbers that NumPy can calculate with quickly. `sales.sum()` adds the numbers and `sales.mean()` finds the average. The result `14.0` has a decimal point because a mean is often not a whole number.
+The first line loads NumPy with the short name `np`. The second line creates a NumPy **array**, a list of numbers that NumPy can calculate with quickly. `sales.sum()` adds the numbers and `sales.mean()` finds the average.
 
 ## Common Mistake
 Many learners believe they must understand every formula perfectly before they are allowed to write code. So they stop at the first difficult symbol and decide they are "not a maths person". In fact, understanding grows in layers. A small example that you calculate yourself teaches more than a page of formulas. If a symbol confuses you, go back to the picture and the tiny numbers, and let the code check your work.

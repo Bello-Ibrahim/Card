@@ -19,7 +19,7 @@ There is a useful pattern: to make the variation 10 times smaller, you need abou
 
 The practical rule for this course: **compare the size of a difference with the size of the random variation.** If a 2-point improvement is smaller than the normal ups and downs of the score, you cannot claim that the new model is better. If it is much larger, the evidence is convincing.
 
-Statisticians have formal tools for this, such as confidence intervals and hypothesis tests. In this course we use simulation instead, because you can see the variation directly and it needs no new formulas.
+Statisticians have formal tools for this, such as confidence intervals and hypothesis tests. In this course we use simulation instead, because you can see the variation directly.
 
 **Analogy:** Judging a model on 100 test examples is like judging a restaurant from one meal. One excellent or poor dinner can happen by chance. After 100 meals, you know much more reliably whether the restaurant is good. The food did not change; your evidence did.
 
@@ -49,7 +49,7 @@ print(np.mean(large >= 0.87))  # 0.0
 **Conclusion:** on 100 examples, a 2-point difference is well inside normal variation, so Ananya cannot say the new model is better. On 10,000 examples, the same 2-point difference would be very convincing. She asks for a larger test set before making a decision.
 
 ## Common Mistake
-Many people report a single score, such as "87%", as if it were exact. Then they compare models by very small differences, sometimes changing the model because of noise. Always ask two questions: "How many test examples was this measured on?" and "How much would the score move by chance?" A quick simulation answers the second question in a few seconds.
+Many people report a single score, such as "87%", as if it were exact, and then compare models by very small differences. Always ask two questions: "How many test examples was this measured on?" and "How much would the score move by chance?" A quick simulation answers the second question in a few seconds.
 
 ## Key Takeaways
 1. A test score is measured on a sample, so it always includes random variation around the true value.

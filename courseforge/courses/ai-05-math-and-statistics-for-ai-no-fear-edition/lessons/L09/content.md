@@ -24,12 +24,12 @@ A useful rule of thumb: in a normal distribution, about 68% of values lie within
 
 The average number of successes is `n × p`. For 20 predictions with p = 0.8, the average is 20 × 0.8 = 16. The actual count changes from one test to the next, and the binomial distribution tells you how much.
 
-You rarely need the formulas for these distributions. With NumPy you can **simulate** them: ask the computer to generate thousands of random values and draw the histogram. This "simulate and look" habit is one of the most useful tools in this course.
+You rarely need the formulas for these distributions. With NumPy you can **simulate** them: generate thousands of random values and draw the histogram.
 
 **Analogy:** A distribution is like the pattern of footprints on a path across a park. Most people walk near the centre of the path, so the grass is most worn there. A few people walk at the edges, and almost nobody walks far away. The pattern of wear shows where people usually go, just as a histogram shows where values usually fall.
 
 ## Worked Example
-Kofi is a hypothetical machine learning engineer at a logistics start-up in Kumasi, Ghana. He wants to understand two things, using invented settings:
+Kofi is a hypothetical machine learning engineer at a logistics start-up in Kumasi, Ghana. He asks two questions, using invented settings:
 
 1. If his model is right 80% of the time, how many correct predictions will it make in a test of 20 examples?
 2. What do delivery times look like if they average 30 minutes with a standard deviation of 5 minutes?
@@ -61,7 +61,7 @@ plt.show()
 In this run, about 67% of the simulated times fell between 25 and 35 minutes, close to the 68% rule. With a different NumPy version or seed your numbers may differ slightly, but the shapes will look the same. [VERSION]
 
 ## Common Mistake
-Learners often expect every result to equal the average. They see 14 correct out of 20 and decide that the model has become worse. The histogram shows that 14 is a normal result for a model with an 80% success rate. Random variation is always present. Before you react to one number, ask what range of results the distribution would produce by chance. L10 builds on exactly this idea.
+Learners often expect every result to equal the average. They see 14 correct out of 20 and decide that the model has become worse. The histogram shows that 14 is a normal result for a model with an 80% success rate. Before you react to one number, ask what range of results the distribution would produce by chance. L10 builds on exactly this idea.
 
 ## Key Takeaways
 1. A distribution shows how often each value appears, and a histogram is its picture.

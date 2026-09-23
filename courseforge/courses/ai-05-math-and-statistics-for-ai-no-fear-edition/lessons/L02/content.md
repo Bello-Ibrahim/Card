@@ -10,7 +10,7 @@ A **vector** is an ordered list of numbers that describes one thing. "Ordered" m
 
 Imagine a flat in Lisbon described by three numbers: size in square metres, number of rooms and age in years. The vector `[75, 3, 20]` means 75 m², 3 rooms and 20 years old. If you swapped the numbers to `[3, 75, 20]`, it would describe a very strange flat. Each position is called a **component**, and each component is one **feature** of the thing we describe. The number of components is the vector's **dimension**. This flat vector has dimension 3.
 
-A vector with two components, such as `[3, 1]`, can be drawn as an **arrow** on a graph. It starts at the origin (0, 0) and ends at the point 3 steps right and 1 step up. Pictures only work in 2 or 3 dimensions, but the rules are the same for vectors with 100 components.
+A vector with two components, such as `[3, 1]`, can be drawn as an **arrow** on a graph. It starts at the origin (0, 0) and ends at the point 3 steps right and 1 step up. Pictures only work in 2 or 3 dimensions, but the rules are the same for 100 components.
 
 There are three operations you need.
 
@@ -47,7 +47,7 @@ print(np.linalg.norm(np.array([3, 4])))  # 5.0
 ```
 
 ## Common Mistake
-Learners often add vectors whose components mean different things, for example a flat `[size, rooms, age]` and another flat stored as `[rooms, size, age]`. NumPy will add them without any warning, because it only sees numbers. The result is nonsense. Always keep the same order of features for every example, and write the order down as a comment in your notebook.
+Learners often add vectors whose components mean different things, for example a flat `[size, rooms, age]` and another flat stored as `[rooms, size, age]`. NumPy will add them without any warning, and the result is nonsense. Always keep the same order of features for every example, and write the order down as a comment in your notebook.
 
 ## Key Takeaways
 1. A vector is an ordered list of numbers that describes one thing; each position is one feature.
