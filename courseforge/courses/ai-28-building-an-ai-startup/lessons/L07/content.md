@@ -3,7 +3,7 @@
 Course: AI-28 · Module: M2 · Objectives: O4 · Video: 5 min (screen demo)
 
 ## Hook
-A few years ago, a working app usually needed a developer. Today, you can connect a form, a small database and an AI step on a screen, without writing code. In this lesson you will watch a prototype being built from start to finish, and then build your own.
+Can you build a working AI product without writing code? In this lesson you will watch a prototype being built from start to finish, and then build your own.
 
 ## Explanation
 A **no-code builder** is a tool where you build apps or websites by choosing and connecting blocks on screen instead of writing code. Most no-code prototypes use four parts:
@@ -13,13 +13,13 @@ A **no-code builder** is a tool where you build apps or websites by choosing and
 - **AI step (processing):** a block that sends the user's input, plus your instructions, to an AI model and receives the answer.
 - **Output page:** where the user sees the result.
 
-The AI step is powered by a **prompt**: the instructions you give the model. In a product, the prompt is not a one-time chat message. It runs every time a user presses the button, so it is part of your product, like a recipe in a restaurant. Write it carefully and save each version.
+The AI step is powered by a **prompt**: the instructions you give the model. In a product, the prompt runs every time a user presses the button, so it is part of your product. Write it carefully and save each version.
 
-Some builders include their own AI step. Others ask you to connect an AI provider, such as Claude, with an **API key**. An API key is a secret password that lets one piece of software use another, and use through an API key may be charged per request. Keep API keys private and never paste them into shared documents. Features and free-plan limits of no-code builders change often, so check them on the day you build [VERSION].
+Some builders include their own AI step. Others ask you to connect an AI provider, such as Claude, with an **API key**. An API key is a secret password that lets one program use another, and its use may be charged per request. Keep API keys private and never paste them into shared documents. Features and free-plan limits of no-code builders change often, so check them on the day you build [VERSION].
 
 If your builder's free plan cannot run an AI step, you can still test the flow: collect inputs with the form, produce the result yourself with Claude, and send it back. This is the Wizard of Oz test from L04.
 
-**Analogy:** A no-code builder is like building with construction toy bricks. You cannot make every shape you might imagine, but you can build a working model of a house very quickly, show it to people, and learn what they think before you pour concrete.
+**Analogy:** A no-code builder is like construction toy bricks. You cannot make every shape, but you can build a working model of a house quickly and show it to people before you pour concrete.
 
 ## Worked Example
 Sipho is a hypothetical founder in Durban, South Africa. His interviews showed that small plumbing businesses lose jobs because they send price quotes too slowly. His core job: "A plumber enters job details and gets a clear, professional quote to send to the customer."
@@ -40,7 +40,7 @@ The presenter follows these on-screen steps. Button and menu names differ betwee
 On his first test, the AI added a "call-out fee" that Sipho never entered. He edited the prompt ("Do not add any fee that is not listed") and saved it as Prompt v2.
 
 ## Common Mistake
-Many founders spend days on colours, logos and extra pages before the core flow works. Others build every screen and never test the AI step with difficult inputs. Build the core flow from start to finish first, even if it looks plain. Then test it with realistic and difficult inputs. A plain prototype that works teaches you more than a beautiful one that breaks.
+Many founders spend days on colours, logos and extra pages before the core flow works, and never test the AI step with difficult inputs. Build the core flow from start to finish first, even if it looks plain, then test it with difficult inputs. A plain prototype that works teaches you more than a beautiful one that breaks.
 
 ## Key Takeaways
 1. A no-code prototype usually connects a form, a database, an AI step and an output page.
@@ -51,14 +51,13 @@ Many founders spend days on colours, logos and extra pages before the core flow 
 **Task:** Build a working prototype of your core flow with a free no-code builder and Claude, so that a user can complete the main task from start to finish.
 **Tools:** A free no-code app builder of your choice [VERSION]; Claude (free plan) to draft and improve your prompt; a document for saving prompt versions.
 **Steps:**
-1. Open your MVP scope from L06 and copy the core job sentence.
-2. Ask Claude to help you write Prompt v1 for your AI step, including what to do when information is missing.
-3. Create a project, a data table and a form with only the fields your core job needs.
-4. Add the AI step (or, if your free plan does not allow it, a manual Wizard of Oz step using Claude) [VERSION].
-5. Show the result on an output page.
-6. Test the flow three times with fake data, including one input with missing information.
-7. Update the prompt after each problem and save each version.
-8. Ask one person from your target group to complete the task while you watch silently. Write down where they get stuck.
+1. Using your core job from L06, ask Claude to help you write Prompt v1, including what to do when information is missing.
+2. Create a project, a data table and a form with only the fields your core job needs.
+3. Add the AI step (or, if your free plan does not allow it, a manual Wizard of Oz step using Claude) [VERSION].
+4. Show the result on an output page.
+5. Test the flow three times with fake data, including one input with missing information.
+6. Update the prompt after each problem and save each version.
+7. Ask one person from your target group to complete the task while you watch silently. Write down where they get stuck.
 **What good looks like:** A user can go from input to result without your help. The prompt is saved with at least two versions, and you have notes from one real user test.
 **Time:** about 60 minutes
 
