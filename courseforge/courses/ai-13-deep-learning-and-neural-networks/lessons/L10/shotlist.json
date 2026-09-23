@@ -1,0 +1,192 @@
+{
+  "course_id": "AI-13",
+  "lesson_id": "L10",
+  "duration_s": 295.7,
+  "thumbnail": {
+    "headline": "Teach Only the Last Step",
+    "slide": {
+      "layout": "title",
+      "title": "Teach Only the Last Step",
+      "body": "A long network drawn in grey with a padlock (frozen backbone), ending in one small teal block (new head) that points to three leaf icons. Small tag: Deep Learning and Neural Networks · Lesson 10."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.9,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "A thousand photos is enough?",
+      "voiceover": "You have about a thousand labelled photos of bean leaves. That is far too few to train a deep CNN from scratch. But what if a network that has already seen a huge number of everyday photos only had to learn the last step?"
+    },
+    {
+      "scene": 2,
+      "start": 18.9,
+      "end": 42.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Transfer learning",
+        "body": "Pretrained network: early layers (edges) → middle layers (textures, shapes) → last layer (1,000 original classes, crossed out) → replaced by a new layer for your classes."
+      },
+      "voiceover": "This is transfer learning. You reuse a network trained on a large dataset, such as ImageNet, for a new task. Its early and middle layers have learned general visual features, like edges, textures and shapes, that are useful for almost any photo. Only the last layer is specific to its original one thousand classes."
+    },
+    {
+      "scene": 3,
+      "start": 42.0,
+      "end": 61.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Stage 1: Feature extraction",
+        "body": "Load pretrained model · freeze the backbone (requires_grad = False) · replace the final layer · train only the new head"
+      },
+      "voiceover": "The recipe has two stages. First, feature extraction. Load the pretrained model, freeze the backbone so its weights do not change, replace the final layer with a new one for your classes, and train only that new layer. It is fast, and it needs little data."
+    },
+    {
+      "scene": 4,
+      "start": 61.7,
+      "end": 76.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Stage 2: Fine-tuning",
+        "body": "Unfreeze the last block or two · train with the new head · smaller learning rate for pretrained layers"
+      },
+      "voiceover": "Second, fine-tuning. Unfreeze the last block or two, and train them together with the new layer, with a smaller learning rate for the pretrained part. You adjust its features gently, instead of destroying them."
+    },
+    {
+      "scene": 5,
+      "start": 76.7,
+      "end": 93.4,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "chef cooking new dish in kitchen",
+      "on_screen_text": "Old skills, new cuisine",
+      "voiceover": "Think of an experienced chef learning a new cuisine. The chef already knows how to cut, season and control heat. Feature extraction is following new recipes with old skills. Fine-tuning is carefully adjusting a few techniques as well."
+    },
+    {
+      "scene": 6,
+      "start": 93.4,
+      "end": 119.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Two easy-to-miss details",
+        "body": "weights = ResNet18_Weights.DEFAULT\nmodel = resnet18(weights=weights)   # not pretrained=True\npreprocess = weights.transforms()\n# check checkpoint and dataset licences"
+      },
+      "voiceover": "Two details are easy to miss. Preprocess images exactly the way the model was trained, and in torchvision, the weights object gives you those transforms. And use the newer weights argument. Older tutorials use a different option that newer versions no longer support. Pretrained checkpoints also have their own licences, so check them before you use a model in a product."
+    },
+    {
+      "scene": 7,
+      "start": 119.5,
+      "end": 138.4,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "green bean plants growing in field",
+      "on_screen_text": "Grace · extension service · Mbale",
+      "voiceover": "Grace is a data scientist at an agricultural extension service in Mbale, Uganda. Farmers send her leaf photos, and she wants to classify them as healthy, angular leaf spot or bean rust. She uses a public bean-leaf dataset from the Hugging Face Hub."
+    },
+    {
+      "scene": 8,
+      "start": 138.4,
+      "end": 156.4,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run: weights = ResNet18_Weights.DEFAULT; model = resnet18(weights=weights)",
+        "Run: for p in model.parameters(): p.requires_grad = False",
+        "Run: model.fc = nn.Linear(model.fc.in_features, 3); preprocess = weights.transforms()"
+      ],
+      "on_screen_text": "Freeze, then replace the head",
+      "voiceover": "In Colab, she loads ResNet eighteen with its default pretrained weights, and freezes every parameter. Then she replaces the final layer with a new one that has three outputs. Only this new head can learn. Everything else keeps what it learned before."
+    },
+    {
+      "scene": 9,
+      "start": 156.4,
+      "end": 171.4,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run: print(sum(p.numel() for p in model.parameters() if p.requires_grad))",
+        "Output: 1539"
+      ],
+      "on_screen_text": "1,539 trainable parameters",
+      "voiceover": "She counts the trainable parameters. Only one thousand five hundred and thirty-nine, which is five hundred and twelve features times three classes, plus three biases. So each epoch is fast, even on a CPU."
+    },
+    {
+      "scene": 10,
+      "start": 171.4,
+      "end": 183.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run: ds = load_dataset(\"AI-Lab-Makerere/beans\") and show the dataset card on the Hub",
+        "Run: define to_tensors with preprocess(img.convert(\"RGB\")); ds = ds.with_transform(to_tensors)",
+        "Run: collate = ...; train_dl = DataLoader(ds[\"train\"], batch_size=32, shuffle=True, collate_fn=collate)"
+      ],
+      "voiceover": "Next, she loads the dataset and applies the pretrained model's own transforms to every image. A small collate function stacks the images and labels into batches of thirty-two."
+    },
+    {
+      "scene": 11,
+      "start": 183.8,
+      "end": 201.4,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run: opt = torch.optim.AdamW(model.fc.parameters(), lr=1e-3); train 3–5 epochs with the L05 loop",
+        "Run: for p in model.layer4.parameters(): p.requires_grad = True",
+        "Run: opt = torch.optim.AdamW([{\"params\": model.layer4.parameters(), \"lr\": 1e-4}, {\"params\": model.fc.parameters(), \"lr\": 1e-3}])"
+      ],
+      "on_screen_text": "Smaller learning rate for pretrained layers",
+      "voiceover": "Stage one trains only the head for a few epochs. For stage two, she unfreezes the last block, and builds a new optimiser with two learning rates. A small one for the pretrained block, and a larger one for the head."
+    },
+    {
+      "scene": 12,
+      "start": 201.4,
+      "end": 219.4,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Show a results table with three rows: CNN from scratch (L07, 3-channel), frozen ResNet + new head, fine-tuned ResNet (expected output: both pretrained runs clearly better)"
+      ],
+      "voiceover": "Grace compares three runs on the validation split. Her CNN trained from scratch, the frozen ResNet, and the fine-tuned ResNet. You should see something like both pretrained runs doing clearly better on this small dataset. She reports her own measured numbers."
+    },
+    {
+      "scene": 13,
+      "start": 219.4,
+      "end": 244.7,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Rebuild the optimiser after unfreezing",
+      "voiceover": "A common mistake is changing what is trainable, but forgetting to rebuild the optimiser. Build the optimiser after you set which layers learn, and print the trainable count. Also, never use your own normalisation values, such as the Fashion-MNIST ones, with a pretrained model. Its features would then receive inputs in a range they never saw during pretraining."
+    },
+    {
+      "scene": 14,
+      "start": 244.7,
+      "end": 272.6,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Freeze the backbone, replace the head, train the head. 2. Fine-tune top layers with a smaller lr; rebuild the optimiser. 3. Use the weights' own transforms; check licences."
+      },
+      "voiceover": "Let's recap. First, transfer learning reuses a pretrained backbone's general features. Freeze it, replace the final layer, and train the new head first. Second, fine-tune a few top layers afterwards with a smaller learning rate, and rebuild the optimiser whenever you change what is trainable. Third, preprocess with the pretrained weights' own transforms, and check the licences of both the checkpoint and the dataset."
+    },
+    {
+      "scene": 15,
+      "start": 272.6,
+      "end": 295.7,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Tokens and Embeddings",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will fine-tune a pretrained ResNet on the bean-leaf dataset, and compare it with your CNN trained from scratch. It takes about forty-five minutes. In the next module, we move to text, starting with tokens and embeddings. See you there."
+    }
+  ]
+}

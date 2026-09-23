@@ -1,0 +1,194 @@
+{
+  "course_id": "AI-14",
+  "lesson_id": "L02",
+  "duration_s": 294.8,
+  "thumbnail": {
+    "headline": "Your First Safe Call",
+    "slide": {
+      "layout": "title",
+      "title": "Your First Safe Call",
+      "body": "A terminal window icon with one reply line, a padlock and key icon, and a small gauge showing a low spend limit. Small tag: Building Apps with LLM APIs · Lesson 2."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 19.3,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Your key is a credit card",
+      "voiceover": "An API key is like a credit card number for your code. If it leaks into a public repository, someone else can spend your money. Today you will make your first call, and you will set it up safely and cheaply from the first minute."
+    },
+    {
+      "scene": 2,
+      "start": 19.3,
+      "end": 42.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Setup: Keys, SDKs and a Budget",
+        "body": "Building Apps with LLM APIs · Lesson 2 · The Claude API is paid: set limits first"
+      },
+      "voiceover": "In the last lesson, you saw what a request and a response look like. Now let's make a real one. First, one important fact. The Claude API is a paid service. You pay for every input and output token. Your costs can stay small, but only if you set limits before you start."
+    },
+    {
+      "scene": 3,
+      "start": 42.0,
+      "end": 65.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Five setup steps",
+        "body": "Five numbered boxes in a row: 1 Account + payment → 2 Monthly spend limit → 3 Create API key → 4 Environment variable → 5 Install the SDK. Small note: check supported countries first."
+      },
+      "voiceover": "Setup has five steps. Create an account in the Claude Console and add a payment method. Set a monthly spend limit. Create an API key and copy it once. Store it in an environment variable, never in your code. Then install the official SDK. Before you sign up, check the current list of supported countries."
+    },
+    {
+      "scene": 4,
+      "start": 65.6,
+      "end": 90.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Keep keys out of Git",
+        "body": "Left (green tick): key in an environment variable, .env listed in .gitignore. Right (red cross): key pasted in code and committed → delete the key, create a new one. Note: Git history keeps old files."
+      },
+      "voiceover": "Keep keys out of Git. If you use a dot env file, add it to your git ignore file before your first commit. And if a key is ever committed, even for one minute, delete it in the Console and create a new one. Removing the file is not enough, because the key stays in the history."
+    },
+    {
+      "scene": 5,
+      "start": 90.0,
+      "end": 113.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Three low-cost habits",
+        "body": "Smaller, cheaper model while developing · Low max_tokens (e.g. 300) · One MODEL constant · Check the live models and pricing pages"
+      },
+      "voiceover": "Three habits keep costs low while you develop. Use a smaller, cheaper model for building and testing. Keep max tokens low, for example three hundred. And keep the model name in one constant, so you can change it in one place. Model names and prices change, so check the current models and pricing pages."
+    },
+    {
+      "scene": 6,
+      "start": 113.1,
+      "end": 134.5,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "teenager paying with card at shop",
+      "on_screen_text": "Spend limit = a prepaid card",
+      "voiceover": "Think of a prepaid travel card that you give a teenager instead of your main bank card. It has a fixed limit, you can cancel it at any time, and a mistake cannot empty your account. The spend limit is that fixed limit. A new key is the replacement card."
+    },
+    {
+      "scene": 7,
+      "start": 134.5,
+      "end": 144.8,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "developer working on laptop in cafe",
+      "on_screen_text": "Mei Lin · travel start-up · Penang",
+      "voiceover": "Let's follow Mei Lin. She is a developer at a small travel start-up in Penang, Malaysia, and she is setting up her laptop."
+    },
+    {
+      "scene": 8,
+      "start": 144.8,
+      "end": 164.1,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open the Claude Console and go to the billing or limits settings",
+        "Set a low monthly spend limit and save it",
+        "Go to API keys and click to create a key",
+        "Name the key meilin-laptop-dev",
+        "Copy the key once (the key is blurred on screen)"
+      ],
+      "on_screen_text": "Set the limit before the key",
+      "voiceover": "In the Console, she opens the billing settings and sets a low monthly limit. Then she creates a key and gives it a clear name, so she always knows where it is used. She copies it once, because the Console will not show it again."
+    },
+    {
+      "scene": 9,
+      "start": 164.1,
+      "end": 176.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "In the terminal (macOS or Linux), run export ANTHROPIC_API_KEY=\"sk-ant-...\" with the value blurred",
+        "Show a caption with the Windows PowerShell form: $env:ANTHROPIC_API_KEY=\"sk-ant-...\"",
+        "Create and activate a virtual environment",
+        "Run pip install anthropic and show it finish"
+      ],
+      "on_screen_text": "Key in an environment variable",
+      "voiceover": "In her terminal, she saves the key in an environment variable. On Windows, the command looks a little different. Then she creates a virtual environment and installs the SDK."
+    },
+    {
+      "scene": 10,
+      "start": 176.5,
+      "end": 197.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open first_call.py in VS Code",
+        "Highlight the MODEL constant with the placeholder your-small-model-id and its comment to check the models page",
+        "Highlight anthropic.Anthropic() with the comment that it reads ANTHROPIC_API_KEY",
+        "Highlight messages.create with max_tokens=300 and the question 'Suggest one day trip from Penang.'",
+        "Highlight the loop that prints text blocks, then the stop_reason and usage prints"
+      ],
+      "on_screen_text": "No key anywhere in the file",
+      "voiceover": "Now she writes a short file for her first call. It sets the model in one constant, creates a client that reads the key automatically, asks for one day trip from Penang, and allows three hundred tokens. Then it prints the reply, the stop reason and the token counts."
+    },
+    {
+      "scene": 11,
+      "start": 197.5,
+      "end": 221.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run python first_call.py in the terminal",
+        "Show the reply text, 'Stop reason: end_turn' and the input and output token counts",
+        "Change max_tokens to 20 and run the script again",
+        "Show the cut-off reply and 'Stop reason: max_tokens'"
+      ],
+      "on_screen_text": "end_turn vs max_tokens",
+      "voiceover": "She runs it. You'll see something like a suggestion for a day trip to Langkawi, then a stop reason of end turn, and a small number of input and output tokens. Then she lowers max tokens to twenty and runs it again. This time the reply is cut off, and the stop reason says max tokens."
+    },
+    {
+      "scene": 12,
+      "start": 221.5,
+      "end": 242.1,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run git status in the terminal",
+        "Show that only first_call.py and .gitignore are listed, with no .env file",
+        "Show a red-cross caption over the pattern api_key=\"sk-ant-...\" inside code"
+      ],
+      "on_screen_text": "Check git status before committing",
+      "voiceover": "Finally, she runs git status to check that no file with her key will be committed. A common mistake is to paste the key straight into the code just to test, and then commit it. Always use the environment variable, and replace any key that has been exposed."
+    },
+    {
+      "scene": 13,
+      "start": 242.1,
+      "end": 269.5,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Paid API: set a monthly spend limit first. 2. Key in an environment variable, never in code or Git; replace leaked keys. 3. Small model, low max_tokens, one MODEL constant; check the live pages."
+      },
+      "voiceover": "Let's recap. First, the Claude API is paid, so set a monthly spend limit before your first call. Second, keep your key in an environment variable, never in code or Git, and replace any key that leaks. Third, while developing, use a smaller model, a low max tokens value and one model constant, and look up model names and prices on the live pages."
+    },
+    {
+      "scene": 14,
+      "start": 269.5,
+      "end": 294.8,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Prompt Design for Applications",
+      "voiceover": "Now it is your turn. In the exercise, you will make your first API call and print the reply, the stop reason and the token counts. Then run it again with a tiny max tokens value and compare. In the next lesson, Prompt Design for Applications, you will learn to write prompts that work every time. See you there."
+    }
+  ]
+}

@@ -64,7 +64,7 @@
     ],
     "Recap": [
       {"visual_type": "slide",
-       "voiceover": "Let's recap. First, dropout switches off random units during training only, and weight decay keeps weights small. Both reduce overfitting, at some cost to the training fit. Second, early stopping keeps the checkpoint with the best validation loss, and stops after a set number of epochs without improvement. Save a real copy of the weights. Third, judge each regulariser by comparing validation curves across runs that change one thing at a time.",
+       "voiceover": "Let's recap. First, dropout switches off random units during training only, and weight decay keeps weights small. Both reduce overfitting, at some cost to the training fit. Second, early stopping keeps the checkpoint with the best validation loss, and stops after a set number of epochs without improvement. Third, judge each regulariser by comparing validation curves across runs that change one thing at a time.",
        "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Dropout (training only) and weight decay reduce overfitting. 2. Early stopping keeps the best checkpoint; deep-copy the weights. 3. Compare validation curves, one change at a time."}}
     ],
     "CTA": [
