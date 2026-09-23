@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-18",
+  "module_id": "M3",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L11",
+      "objective": "O6",
+      "question": "All unit tests and API tests pass, but the new model makes worse predictions than the old one. Which kind of test should have caught this?",
+      "options": [
+        "A model quality gate that checks a metric on a fixed test set against a minimum.",
+        "A unit test that checks the column names returned by load_data().",
+        "An API test that checks the /health endpoint returns status 200.",
+        "A linting check for code style."
+      ],
+      "answer_index": 0,
+      "explanation": "Only a quality gate measures how good the model's predictions are. The most tempting wrong option is the API test, but an API can return valid responses with the correct shape while the predictions inside them are worse."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L11",
+      "objective": "O4",
+      "question": "Why should you make each new test fail on purpose once?",
+      "options": [
+        "To make the CI pipeline slower and more careful.",
+        "Because pytest only records tests that have failed at least once.",
+        "To prove that the test can actually detect the problem it is written for.",
+        "To create an error log for the monitoring dashboard."
+      ],
+      "answer_index": 2,
+      "explanation": "A test that has never failed may be checking nothing, for example because of a wrong threshold or a condition that is always true. The most tempting wrong option is that pytest needs a failure to record a test; pytest runs and records every test, whether it has failed before or not."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L12",
+      "objective": "O4",
+      "question": "Your CI workflow runs on every pull request, but a teammate merged a pull request with a failing test. What is missing?",
+      "options": [
+        "A pip cache in the workflow.",
+        "A branch protection rule on main that requires the test check to pass before merging.",
+        "A schedule trigger in the workflow.",
+        "A second job that runs the same tests again."
+      ],
+      "answer_index": 1,
+      "explanation": "CI reports results but does not block anything by itself; branch protection turns the check into a required gate. The most tempting wrong option is running the tests again in a second job, but a second failing check still would not block the merge without a protection rule."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L13",
+      "objective": "O4",
+      "question": "Which image tagging approach lets you know exactly which code and model are running in production?",
+      "options": [
+        "Tag every image as latest.",
+        "Tag images with the date only.",
+        "Tag images with the name of the person who built them.",
+        "Tag each image with the Git commit ID and the registered model version."
+      ],
+      "answer_index": 3,
+      "explanation": "The commit ID identifies the code and the model version identifies the model, so the tag answers both questions and allows a precise rollback. The most tempting wrong option is latest, which is convenient but moves with every build, so it cannot tell you what is running."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L14",
+      "objective": "O3",
+      "question": "A scheduled workflow retrains a model. The challenger scores F1 = 0.538 and the champion scores F1 = 0.557 on the same fixed test set. What should happen?",
+      "options": [
+        "Promote the challenger, because it uses newer data.",
+        "Promote both models and split traffic equally.",
+        "Keep the champion alias where it is and skip the promotion job.",
+        "Delete the champion so that the challenger becomes the only version."
+      ],
+      "answer_index": 2,
+      "explanation": "The challenger did not beat the champion on the same test set, so the pipeline should not promote it. The most tempting wrong option is promoting because the data is newer. Newer data does not guarantee a better model, and the comparison exists to check that."
+    }
+  ]
+}

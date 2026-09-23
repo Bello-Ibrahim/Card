@@ -37,7 +37,7 @@ The presenter follows these on-screen steps. Button and menu names differ betwee
 9. **Test a missing field:** remove the hourly rate in the prompt input and check that the quote asks for it instead of inventing it.
 10. **Share the preview link** with one test user and watch them complete the task without help.
 
-On his first test, the AI added a "call-out fee" that Sipho never entered. He edited the prompt ("Do not add any fee that is not listed") and saved it as Prompt v2.
+On his first test, the AI added a "call-out fee" that Sipho never entered. He added the rule "Do not add any fee that is not listed" and saved Prompt v2.
 
 ## Common Mistake
 Many founders spend days on colours, logos and extra pages before the core flow works, and never test the AI step with difficult inputs. Build the core flow from start to finish first, even if it looks plain, then test it with difficult inputs. A plain prototype that works teaches you more than a beautiful one that breaks.
@@ -57,11 +57,11 @@ Many founders spend days on colours, logos and extra pages before the core flow 
 4. Show the result on an output page.
 5. Test the flow three times with fake data, including one input with missing information.
 6. Update the prompt after each problem and save each version.
-7. Ask one person from your target group to complete the task while you watch silently. Write down where they get stuck.
+7. Ask one person from your target group to complete the task while you watch silently. Note where they get stuck.
 **What good looks like:** A user can go from input to result without your help. The prompt is saved with at least two versions, and you have notes from one real user test.
 **Time:** about 60 minutes
 
 ## Review Flags
-- [VERSION] The brief does not name a no-code builder. A reviewer must choose one with a usable free plan and confirm the names of its project templates, data tables, forms, AI steps and preview links before recording; steps 2 to 10 must be updated to match.
+- [VERSION] The brief does not name a no-code builder. A reviewer must choose one with a usable free plan and update Worked Example steps 2 to 10 to its real names for templates, tables, forms, AI steps and preview links.
 - [VERSION] Whether the chosen builder's free plan includes an AI step, and whether connecting Claude needs a paid API key, must be checked on the day of recording.
 - [VERSION] Claude free-plan limits and data-use terms should be checked before recording.

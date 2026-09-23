@@ -29,7 +29,7 @@ Sara Lindqvist is a risk analyst at a hypothetical retail group in Sweden. She r
 - **CV-ranking tool** used by HR to shortlist candidates. Employment is a listed area. Likely **high-risk** [VERIFY] [REGION].
 - **Camera system** proposed to infer shoppers' emotions and target offers. Sara flags it for legal review as a **possible prohibited or high-risk use**, depending on the exact purpose and setting [VERIFY] [REGION].
 
-Sara records the tier, the reason and her level of confidence for each. The fourth case goes to external counsel.
+Sara records the tier, reason and confidence for each, and sends the fourth case to external counsel.
 
 ## Common Mistake
 Many learners classify by technology: "it uses a large language model, so it is high-risk" or "it is only a small model, so it is minimal risk". The Act classifies mainly by purpose and context. Always ask what the system is used for, who it affects and what decisions it supports.

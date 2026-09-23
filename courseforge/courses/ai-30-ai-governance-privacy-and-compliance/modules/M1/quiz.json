@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-30",
+  "module_id": "M1",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L01",
+      "objective": "O1",
+      "question": "A company has a well-written AI policy, but nobody keeps a list of the AI systems in use and nobody checks systems after launch. Which statement best describes its AI governance?",
+      "options": [
+        "It is complete, because the policy is the main part of AI governance.",
+        "It is weak, because the policy has no effect without roles, an inventory, risk assessment and monitoring.",
+        "It is complete, as long as the policy has been approved by the board.",
+        "It is not needed, because data protection law already covers every AI system."
+      ],
+      "answer_index": 1,
+      "explanation": "A policy is only one control among the six building blocks. The most tempting wrong option is board approval. Approval shows commitment, but if nobody knows which systems exist or checks them, the policy cannot be applied."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L02",
+      "objective": "O1",
+      "question": "A company based in Nigeria uses an AI model to score loan applicants in Nigeria and in Portugal. Which statement is the best starting point?",
+      "options": [
+        "Only the NDPA applies, because the company is based in Nigeria.",
+        "Only the EU AI Act applies, because the system is AI.",
+        "Only the GDPR applies, because EU law replaces national law.",
+        "The NDPA, the GDPR and the EU AI Act may all apply, each to different aspects, and each scope rule must be checked."
+      ],
+      "answer_index": 3,
+      "explanation": "Each law has its own territorial scope and its own subject, so one system can fall under all three. The most tempting wrong option is 'only the NDPA', but laws such as the GDPR and the AI Act can reach organisations outside the EU in some cases."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L03",
+      "objective": "O2",
+      "question": "Under the EU AI Act's risk-based approach, what mainly decides which tier an AI use falls into?",
+      "options": [
+        "The intended purpose and context of use.",
+        "The size of the model and the amount of training data.",
+        "Whether the system was built inside or outside the EU.",
+        "Whether the system uses generative AI."
+      ],
+      "answer_index": 0,
+      "explanation": "The same technology can be minimal-risk in one use and high-risk in another, so purpose and context decide. The most tempting wrong option is model size. Large general-purpose models do have their own rules, but the risk tier of a specific use still depends on what it is used for."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L04",
+      "objective": "O4",
+      "question": "A hospital buys a high-risk AI tool, puts its own brand on it and substantially changes how it works. What is the most likely effect on the hospital's role?",
+      "options": [
+        "It stays a deployer only, because it bought the tool.",
+        "It becomes a distributor, because it now makes the tool available to staff.",
+        "It may be treated as a provider and take on provider duties.",
+        "It has no duties, because the original vendor remains responsible."
+      ],
+      "answer_index": 2,
+      "explanation": "Rebranding or substantially modifying a high-risk system can make a deployer be treated as a provider. The most tempting wrong option is 'stays a deployer', which is only true while the hospital uses the system as supplied."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L05",
+      "objective": "O4",
+      "question": "In the 5-step classification method, why do you write a classification note with reasons, sources and a review date?",
+      "options": [
+        "Because the tier must be registered with a regulator for every AI system.",
+        "Because the decision must be explainable later and may change when the purpose or features change.",
+        "Because the note replaces the need to check the official text.",
+        "Because only systems with a note are covered by the EU AI Act."
+      ],
+      "answer_index": 1,
+      "explanation": "The note shows how you reached the decision and when to look again. The most tempting wrong option is registration. Some systems may need registration, but the note exists for accountability for every system, not only those that must be registered."
+    }
+  ]
+}

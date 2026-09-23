@@ -12,7 +12,7 @@ This course works with three legal frameworks. They overlap, but each one has a 
 
 **The GDPR** regulates the processing of personal data about people in the EU. It does not care whether processing is done by AI or by a spreadsheet. If an AI system collects, trains on or produces personal data, the GDPR applies to that processing. Its key roles are the **controller**, who decides why and how data is processed, and the **processor**, who processes data on the controller's behalf.
 
-**Nigeria's NDPA** (Nigeria Data Protection Act) also regulates the processing of personal data, with a similar structure of principles, lawful bases, rights and duties for **data controllers** and **data processors**. It has its own regulator, its own rules on cross-border transfers and its own extra duties for some organisations. You will study it in L08.
+**Nigeria's NDPA** (Nigeria Data Protection Act) also regulates the processing of personal data, with a similar structure of principles, lawful bases, rights and duties for **data controllers** and **data processors**. It has its own regulator, transfer rules and extra duties for some organisations. You will study it in L08.
 
 **Analogy:** Think of a lorry that carries food across a border. Vehicle safety rules check the lorry itself. Food hygiene rules check what it carries. Customs rules check where it goes. The EU AI Act is like the vehicle rules for the AI system; the GDPR and the NDPA are like the hygiene rules for the personal data inside it. One journey can meet all three sets of inspectors.
 
@@ -22,7 +22,7 @@ This course works with three legal frameworks. They overlap, but each one has a 
 - The GDPR can apply to organisations established in the EU, and to organisations outside the EU that offer goods or services to people in the EU or monitor their behaviour [VERIFY] [REGION].
 - The NDPA can apply to processing by organisations in Nigeria and, in some cases, to organisations outside Nigeria that process data of people in Nigeria [VERIFY] [REGION].
 
-The exact tests are set out in [the relevant scope articles and sections] [VERIFY] [REGION]. Always check the text itself.
+The exact tests are in [the relevant scope articles and sections] [VERIFY] [REGION].
 
 **Regulators.** Each law has its own supervisory structure: [the EU-level AI body and the national market surveillance authorities] for the AI Act, [the national data protection authorities and the EU-level board] for the GDPR, and [Nigeria's national data protection regulator] for the NDPA [VERIFY] [REGION]. Names and designations can change, so confirm them from official sources.
 
@@ -33,7 +33,7 @@ Adaeze Okonkwo founds a hypothetical lending app in Lagos. It uses an AI model t
 - **GDPR:** by offering loans to people in Portugal, the company may fall within the GDPR's reach even without an EU office [VERIFY] [REGION]. It may also need an EU representative [VERIFY] [REGION].
 - **EU AI Act:** the company developed the scoring model, so it is likely a provider. Credit scoring of individuals is an example of a use that may be high-risk [VERIFY] [REGION]. When it uses the model on EU customers, it is also a deployer.
 
-Adaeze's team now has three sets of questions, not one. Their first task is to record which law applies to which activity, and why.
+Adaeze's first task is to record which law applies to which activity, and why.
 
 ## Common Mistake
 Many people think "we comply with the GDPR, so our AI is covered". The GDPR protects personal data; it does not set the AI Act's product rules on risk management, documentation or human oversight. The opposite is also wrong: meeting AI Act duties does not give you a lawful basis for processing personal data. Map each law separately, then look for overlaps you can handle together.

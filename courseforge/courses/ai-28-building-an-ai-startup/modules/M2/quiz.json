@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-28",
+  "module_id": "M2",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L06",
+      "objective": "O4",
+      "question": "A founder's riskiest assumption is that tenants will find AI summaries of rental contracts clear and accurate. Which MVP plan tests this best?",
+      "options": [
+        "Build user accounts, payments and a mobile app first, then add summaries later.",
+        "Support every type of legal document from the first day.",
+        "Summarise one contract type, have a lawyer check each summary by hand, and measure how many tenants find it useful.",
+        "Spend the first month designing a logo and a brand."
+      ],
+      "answer_index": 2,
+      "explanation": "A narrow MVP that lets users complete the core job, with manual checks where needed, directly tests the riskiest assumption. The most tempting wrong option is supporting every document type. It sounds more useful, but it delays learning and makes quality much harder to check."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L07",
+      "objective": "O4",
+      "question": "In a no-code AI prototype, why should the founder save each version of the prompt?",
+      "options": [
+        "Because the prompt runs for every user and is part of the product, so changes need to be tracked and tested.",
+        "Because no-code builders delete prompts after one use.",
+        "Because saved prompts become a strong moat that competitors cannot copy.",
+        "Because the model supplier requires a copy of every prompt."
+      ],
+      "answer_index": 0,
+      "explanation": "The prompt runs every time a user presses the button, so it works like a recipe that defines the product's behaviour, and versions let you compare results. The most tempting wrong option is that saved prompts are a strong moat. Prompts can be copied or rewritten, so they are not a reliable moat on their own."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L08",
+      "objective": "O6",
+      "question": "A founder changes a prompt to fix one failed test case. What should she do next?",
+      "options": [
+        "Run only the case that failed, and move on if it now passes.",
+        "Run the whole test set again, because the change may have broken other cases.",
+        "Switch to a larger model, because that always fixes failures.",
+        "Delete the failed case from the test set so the pass rate improves."
+      ],
+      "answer_index": 1,
+      "explanation": "A prompt change that fixes one case can break another, so the whole test set must be run again. The most tempting wrong option is running only the failed case. It is faster, but it hides new problems that the change may have created."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L09",
+      "objective": "O5",
+      "question": "A plan costs $20 per month (placeholder price). For an average customer, the cost to serve is $6.50. What is the gross margin?",
+      "options": [
+        "32.5%",
+        "13.5%",
+        "$6.50",
+        "67.5%"
+      ],
+      "answer_index": 3,
+      "explanation": "Gross profit is $20.00 minus $6.50, which is $13.50, and $13.50 divided by $20.00 is 67.5%. The most tempting wrong option is 32.5%. That is the cost to serve as a share of revenue ($6.50 divided by $20.00), not the share the business keeps."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L10",
+      "objective": "O5",
+      "question": "A translation tool has a fixed cost of about $1.20 per customer per month, plus a small cost per page. Under a pay-per-use model with no minimum charge, which customers are most likely to lose the business money?",
+      "options": [
+        "Heavy users, because they translate many pages.",
+        "Very light users, because their small payments may not cover the fixed monthly cost.",
+        "Typical users, because pay per use is always unprofitable.",
+        "No customers, because pay per use always covers costs."
+      ],
+      "answer_index": 1,
+      "explanation": "Under pay per use, revenue rises with usage, so very light users may pay less than the fixed cost of serving them. The most tempting wrong option is heavy users. Heavy users are the risk under a fixed subscription; under pay per use, they pay more as they use more."
+    }
+  ]
+}
