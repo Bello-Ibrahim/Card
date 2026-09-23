@@ -85,8 +85,10 @@ into a manual pack (see HANDOFFS).
 2. Stock footage (stock_search) for generic scenes: offices, cities, people working
 3. Hero B-roll, generated manually in Flow (Veo) or Kling. Max 2 per lesson,
    only for scenes that stock footage can't cover.
-4. Screen demo, recorded manually in OBS. Only for technical courses and only
-   when the lesson needs a live demonstration.
+4. Screen demo, recorded manually in OBS. Only for lessons listed in the
+   curriculum's "screen_demo_lessons". Technical courses may list any lesson
+   that needs a live demonstration. Other courses may list a lesson only after
+   a human approves it at the Stage 1 checkpoint.
 
 # VIDEO FORMAT
 The avatar narrates the entire lesson in ONE HeyGen video on a solid #00FF00
@@ -102,7 +104,9 @@ STAGE 1: CURRICULUM
   module → lesson map with exactly target_lessons lessons. Each lesson fits a
   lesson_length_min video (3–6 minutes). Map every lesson to at least one
   objective, and make sure every objective is covered. The last module builds
-  towards capstone_project.
+  towards capstone_project. Include "screen_demo_lessons": the lesson IDs that
+  need a live tool walkthrough (for non-technical courses, propose them as
+  flags for approval).
 - Save /courses/{slug}/curriculum.json
 - CHECKPOINT: notify_human for approval. Do not continue until approved.
 
@@ -218,7 +222,7 @@ B-ROLL PACK
   across dated days.
 - Save at /courses/{slug}/packs/broll_{date}.md
 
-SCREEN DEMO PACK (technical courses only)
+SCREEN DEMO PACK (lessons in screen_demo_lessons only)
 - Step-by-step click script matched to the narration, window size 1920x1080,
   what to hide (notifications, personal data), and the filename:
   {slug}_{lesson_id}_screen_{n}.mp4 in /incoming/
