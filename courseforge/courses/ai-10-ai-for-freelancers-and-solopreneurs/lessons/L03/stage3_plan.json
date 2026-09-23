@@ -1,0 +1,73 @@
+{
+  "title": "Finding Clients and Writing Outreach",
+  "thumbnail": {
+    "headline": "Fewer Messages, Better Results",
+    "image": "Navy background, a tall grey stack of identical envelopes on the left and one single teal envelope with a small handwritten-style note on the right, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Fewer Messages, Better Results", "body": "Left: a tall stack of identical grey envelopes. Right: one teal envelope with a small note icon and a tick. Small tag: AI for Freelancers · Lesson 3."}
+  },
+  "production_notes": [
+    "[REGION] Rules on unsolicited marketing emails and messages, consent and opt-out requirements differ by country. The script gives principles only and tells learners to check official guidance in their own and their client's country. Do not add any country-specific legal claim in editing.",
+    "[REGION] Whether business contacts are treated differently from private individuals, and rules on collecting and storing contact data, differ by country. The script mentions this only as something to check.",
+    "Tomás and the coffee roaster are fictional. Stock footage of coffee shops must not show a real brand name or logo. The prompt and email lines shown on the Demonstrate slides are invented example text.",
+    "The script says 'ChatGPT' as in content.md; either Claude or ChatGPT is fine for any re-recording."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "With AI, you could write five hundred outreach emails before lunch. That is exactly why so many people now get messages that say nothing about them. In this lesson, you will use AI to write fewer messages that are much better.",
+       "on_screen_text": "Fewer messages, much better"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Last time, you wrote a clear offer. Now let's use it to reach the right people. Good outreach has three steps, and AI can help with each one.",
+       "slide": {"layout": "title", "title": "Finding Clients and Writing Outreach", "body": "AI for Freelancers and Solopreneurs · Lesson 3 of 12"}},
+      {"visual_type": "slide",
+       "voiceover": "Step one. Decide which clients to contact. Start from your offer, and ask AI to list types of organisations that have the problem you solve, and the public signs that show they have it. Then you look for real examples yourself.",
+       "slide": {"layout": "bullets", "title": "Step 1: Decide who to contact", "body": "Start from your offer · Ask AI: which types of business have this problem? · What public signs show it? · You find the real examples yourself"}},
+      {"visual_type": "slide",
+       "voiceover": "Step two. Research one company from public information, such as its own website or recent posts. You can paste a short About us page into AI and ask for a summary. But never ask AI to find private information about people. And remember that AI can invent facts about companies, so check anything important on their own pages.",
+       "slide": {"layout": "comparison", "title": "Step 2: Research the company", "body": "Left, green ticks: company website · recent public posts · short 'About us' text for a summary. Right, red crosses: private information about people · trusting AI facts without checking."}},
+      {"visual_type": "slide",
+       "voiceover": "Step three. Draft a short, personal message. A good first message is under one hundred and twenty words, and has four parts. One specific detail about them. The problem you noticed. One sentence on how you help. And a small, easy next step, like a fifteen-minute call.",
+       "slide": {"layout": "diagram", "title": "Step 3: A four-part message", "body": "Short email outline, under 120 words, with four labelled blocks: 1 Specific detail about them · 2 Problem you noticed · 3 How you help (one sentence) · 4 Small next step"}},
+      {"visual_type": "stock",
+       "voiceover": "Here is a way to picture it. Mass outreach is like handing the same flyer to everyone at a train station. Personal outreach is like knocking on one neighbour's door, because you noticed their gate is broken, and you repair gates. It takes longer, but people listen.",
+       "stock_query": "neighbour knocking on front door smiling",
+       "on_screen_text": "Knock on one door"},
+      {"visual_type": "text",
+       "voiceover": "Generic mass messages damage your reputation, and they can also break the law. Rules on marketing messages and contact data differ from country to country. So check the official guidance in your country and in your client's country before you start.",
+       "on_screen_text": "Check your local marketing rules"},
+      {"visual_type": "slide",
+       "voiceover": "As general good practice, contact a small number of relevant people. Say clearly who you are. Give an easy way to say no thanks, and stop if they ask. And do not upload lists of personal contact details into AI tools. Research companies, not private lives.",
+       "slide": {"layout": "bullets", "title": "Good practice everywhere", "body": "Contact a few relevant people · Say who you are · Offer an easy 'no thanks' · Stop when asked · No contact lists in AI tools"}}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's see it in action. Tomás is a freelance product photographer in Valparaíso, Chile. His offer is, I help small food and drink brands sell online with clear, natural product photos.",
+       "stock_query": "photographer shooting coffee bags studio",
+       "on_screen_text": "Tomás · product photographer · Valparaíso"},
+      {"visual_type": "slide",
+       "voiceover": "He asks ChatGPT for types of ideal clients. The list includes small coffee roasters, craft breweries and jam makers with their own online shops. He finds three example businesses, and reads their websites himself. For one coffee roaster, he notices the shop photos are dark and taken on different backgrounds.",
+       "slide": {"layout": "diagram", "title": "From offer to three prospects", "body": "Offer box → AI list: coffee roasters · craft breweries · jam makers → three example business cards → one card zoomed in with a note: photos dark, mixed backgrounds"}},
+      {"visual_type": "slide",
+       "voiceover": "His prompt asks for a first email under one hundred and twenty words. It mentions their new range, offers one idea for consistent photos, and ends with a question about a short call. He asks for a friendly tone, and no exaggerated claims.",
+       "slide": {"layout": "quote", "title": "Tomás's prompt", "body": "Write a first outreach email under 120 words to the owner of this coffee roaster. Mention that their new single-origin range launched this month. Offer one idea to make product photos consistent. End with a question about a short call. Friendly, not pushy. No exaggerated claims."}},
+      {"visual_type": "slide",
+       "voiceover": "The draft is good, but one line is generic. I love your brand. Tomás replaces it with a detail only he could add. He tried their Andean blend at a market in Viña del Mar, and the bag design stood out. He also adds a last line. If this is not useful, just tell me, and I will not write again.",
+       "slide": {"layout": "comparison", "title": "Add what only you know", "body": "Left, struck through: 'I love your brand.' Right, highlighted: 'I tried your Andean blend at a market in Viña del Mar last month, and the bag design stood out.' Footer, new last line: 'If this is not useful, just tell me and I will not write again.'"}},
+      {"visual_type": "text",
+       "voiceover": "The common mistake is to ask AI for one perfect message, and send it to hundreds of people with only the name changed. People spot these quickly. Do the opposite. A small list, real research, one true detail, and a clear way to say no.",
+       "on_screen_text": "Small list. Real research. True detail."}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, use AI to list types of ideal clients, summarise public company information and draft short messages, but check the facts yourself. Second, a strong message is short, includes one specific true detail, and ends with a small next step. Third, marketing rules differ by country. Check yours, contact few people, and always offer an easy way to say no.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. AI lists client types, summarises public info, drafts; you check facts. 2. Short, one true detail, small next step. 3. Check local rules; contact few; always offer a way to say no."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise, choose three real or example businesses and read their websites yourself. Use AI to draft a message for each, then add one true detail only you could know. Finally, write one line about the rules you need to check. In the next lesson, we write proposals and quotes that win work.",
+       "on_screen_text": "Next: Proposals and Quotes That Win Work"}
+    ]
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "course_id": "AI-08",
+  "lesson_id": "L03",
+  "duration_s": 290.4,
+  "thumbnail": {
+    "headline": "Ask a Better Question",
+    "slide": {
+      "layout": "title",
+      "title": "Ask a Better Question",
+      "body": "Left: fuzzy speech bubble 'How is the shop doing?'. Arrow. Right: three crisp numbered question cards with column tags. Small tag: AI-Powered Data Analysis · Lesson 3."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 20.1,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "The problem is the question",
+      "voiceover": "How is the shop doing? Every owner asks this question. But if you type it into an AI tool with your sales sheet, you get a long, general answer that does not help you decide anything. The problem is not the AI. The problem is the question."
+    },
+    {
+      "scene": 2,
+      "start": 20.1,
+      "end": 30.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "From Business Question to Data Question",
+        "body": "AI-Powered Data Analysis (No Code) · Lesson 3 of 14"
+      },
+      "voiceover": "In the last lesson, we made our files safe to upload. Now we make our questions clear, because good analysis starts with a clear question."
+    },
+    {
+      "scene": 3,
+      "start": 30.8,
+      "end": 46.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Two kinds of question",
+        "body": "Business question (everyday words): 'Are we losing money?' · 'Is the new menu working?' | Data question: answered with a number from your spreadsheet"
+      },
+      "voiceover": "A business question is what you or your manager want to know, in everyday words. Are we losing money? Is the new menu working? A data question is one that your spreadsheet can answer with a number."
+    },
+    {
+      "scene": 4,
+      "start": 46.7,
+      "end": 67.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Four parts of a data question",
+        "body": "Four tiles, first three lit: What to measure (revenue, units, profit, customers) · Which group (product, shop, region) · Which time period (last month, this quarter, Jan–Apr) · Compared with what? (dimmed)"
+      },
+      "voiceover": "To turn a business question into data questions, make each one measurable with four parts. What to measure. Revenue, units, profit, or number of customers? Which group. All products, or one product? All shops, or one region? Which time period. Last month, this quarter, or January to April?"
+    },
+    {
+      "scene": 5,
+      "start": 67.3,
+      "end": 84.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Compared with what?",
+        "body": "Left (grey): 'Revenue was 5,000 in March.' Right (teal): 'Revenue was 5,000 in March, against 6,000 in February.'"
+      },
+      "voiceover": "And the fourth part, compared with what? This is the one people forget most often. Revenue was five thousand in March means little on its own. Revenue was five thousand in March, against six thousand in February, tells you something."
+    },
+    {
+      "scene": 6,
+      "start": 84.4,
+      "end": 105.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Name the columns",
+        "body": "Data question card → arrow → column headers ticked (green) or missing (red cross: 'need more data or a different question'). Footer: Write questions before opening AI."
+      },
+      "voiceover": "Next, check that your data can answer each question. Name the columns you need. If a column does not exist, you need more data or a different question. You find missing data before you start the analysis, not after. And write your data questions before you open any AI tool."
+    },
+    {
+      "scene": 7,
+      "start": 105.8,
+      "end": 125.9,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "passenger talking to taxi driver city",
+      "on_screen_text": "Somewhere nice, or an exact address?",
+      "voiceover": "Here is a way to picture it. A business question is like telling a taxi driver, take me somewhere nice. A data question is like giving the exact address. Both start the journey, but only one gets you to a place you can check you have reached."
+    },
+    {
+      "scene": 8,
+      "start": 125.9,
+      "end": 142.6,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "baker arranging fresh bread in bakery",
+      "on_screen_text": "Kwame's bakery · Accra",
+      "voiceover": "Let's meet Kwame. He runs a bakery in Accra, Ghana, and he is worried. My profits are falling, he says. His fictional sales sheet has five columns. Month, product, units sold, revenue, and ingredient cost, both in Ghanaian cedis."
+    },
+    {
+      "scene": 9,
+      "start": 142.6,
+      "end": 165.7,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Question 1: Is profit really falling?",
+        "body": "Card 1: Profit per month (Revenue − Ingredient cost), January to June, month by month. Column tags: Month · Revenue · Ingredient cost"
+      },
+      "voiceover": "Profits are falling is a feeling, not yet a question. So Kwame breaks it into three data questions. First, is profit really falling, and since when? He looks at profit per month, which is revenue minus ingredient cost, from January to June, month by month. He needs the month, revenue and ingredient cost columns."
+    },
+    {
+      "scene": 10,
+      "start": 165.7,
+      "end": 176.4,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Question 2: All products or some?",
+        "body": "Card 2: Profit per product per month, each product's January vs June. Column tags: Product · Month · Revenue · Ingredient cost"
+      },
+      "voiceover": "Second, is it all products, or only some? He compares each product's profit in January with its profit in June. This adds the product column."
+    },
+    {
+      "scene": 11,
+      "start": 176.4,
+      "end": 188.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Question 3: Fewer sales or higher costs?",
+        "body": "Card 3: Units sold per month vs ingredient cost per unit (Ingredient cost ÷ Units sold). Column tags: Month · Units sold · Ingredient cost"
+      },
+      "voiceover": "Third, is it fewer sales, or higher costs? He compares units sold per month with ingredient cost per unit. That is ingredient cost divided by units sold."
+    },
+    {
+      "scene": 12,
+      "start": 188.0,
+      "end": 208.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "From worry to finding",
+        "body": "Left: 'My profits are falling' (vague). Right: Units stable (flat line) · Cost per loaf of one bread type up since April (rising line) → Action: review price or recipe of one product"
+      },
+      "voiceover": "The answers are clear. Total units are stable. But the ingredient cost per loaf of one bread type has risen since April. The worry, profits are falling, is now a specific finding he can act on. He can review the price or the recipe of one product."
+    },
+    {
+      "scene": 13,
+      "start": 208.1,
+      "end": 218.4,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "No column, no answer",
+      "voiceover": "Notice what Kwame did not ask. Why are customers unhappy? His sheet has no column about customer opinions, so that question needs different data."
+    },
+    {
+      "scene": 14,
+      "start": 218.4,
+      "end": 239.0,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Same question, same number?",
+      "voiceover": "A common mistake is to write data questions that are still vague, like look at sales trends. Ask yourself, could two people answer this question and get the same number? If not, it is not yet measurable. Add the measure, the group, the time period and the comparison."
+    },
+    {
+      "scene": 15,
+      "start": 239.0,
+      "end": 264.7,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Business question = everyday words; data question = a number. 2. Measure · group · time period · compared with what. 3. Name the columns before you start."
+      },
+      "voiceover": "Let's recap. First, a business question is what you want to know in everyday words. A data question can be answered with a number from your data. Second, make each data question measurable. What to measure, which group, which time period, and compared with what. Third, name the columns each question needs, so you discover missing data before you start."
+    },
+    {
+      "scene": 16,
+      "start": 264.7,
+      "end": 290.4,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Cleaning Messy Data with AI Help",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will write one business question from your own work, or use the sample café dataset, and break it into three measurable data questions, with the columns each one needs. It takes about twenty minutes. In the next lesson, we clean messy data with AI help. See you there."
+    }
+  ]
+}

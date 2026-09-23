@@ -1,0 +1,85 @@
+{
+  "title": "Welcome to Python and Google Colab",
+  "thumbnail": {
+    "headline": "Your First Line of Python",
+    "image": "Navy background, a browser window with one Colab-style code cell and a teal play button, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Your First Line of Python", "body": "Simple browser window icon with one code cell and a round play button; the output line 168 appears below it. Small tag: Python for AI · Lesson 1."}
+  },
+  "production_notes": [
+    "[VERSION] Check every Colab step against the live tool before recording: the New notebook option, the default name Untitled0.ipynb, the round play button, the + Text button, File > Save, and the delay on the first connection.",
+    "[VERSION] Free-tier limits and session length change; the voiceover only says they exist and points learners to the Colab website.",
+    "[REGION] Colab may not be available in every country or on every network. The voiceover points to L10 (local Python in VS Code) as the fallback; Jupyter is another option.",
+    "Screen recording: use a clean Google account with no personal files visible in Drive. Zoom the browser so code and output are readable on a phone.",
+    "Printed output on screen must match content.md exactly: 'Habari! Karibu kwenye Python.' and '168'."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Most of the AI tools you hear about were prepared, tested or trained with the same programming language. It is called Python. In the next five minutes, you will write your first line of Python and run it, without installing anything.",
+       "on_screen_text": "Your first Python in five minutes"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Hi, and welcome to Python for AI. This course is for people who have never written code. In this first lesson, we meet Python, and the free tool we will use to write it.",
+       "slide": {"layout": "title", "title": "Welcome to Python and Google Colab", "body": "Python for AI · Lesson 1 of 20"}},
+      {"visual_type": "slide",
+       "voiceover": "A program is a list of instructions that a computer follows exactly, in order. A programming language is a way to write those instructions, so that both people and computers can read them.",
+       "slide": {"layout": "diagram", "title": "What is a program?", "body": "A numbered list of instructions (1, 2, 3) → arrow → a computer follows them in order. Caption: A programming language is written for people and computers."}},
+      {"visual_type": "slide",
+       "voiceover": "Python is the most common language for data and AI work, for two reasons. First, it is readable. Python code often looks close to plain English. A line that says print, followed by the word hello, does exactly what it says. It shows the word on the screen.",
+       "slide": {"layout": "code", "title": "Reason 1: It is readable", "body": "print(\"Hello\")  → output: Hello"}},
+      {"visual_type": "slide",
+       "voiceover": "Second, Python has a very large set of free libraries. A library is a package of ready-made code that other people wrote and shared. There are free libraries for tables of data, charts, maths and machine learning. You will use one of them, called pandas, from week three.",
+       "slide": {"layout": "bullets", "title": "Reason 2: Free libraries", "body": "Ready-made code shared by others: tables of data · charts · maths · machine learning. Highlight: pandas (week 3)"}},
+      {"visual_type": "slide",
+       "voiceover": "We write Python in Google Colab, a free notebook that runs in your web browser. The code runs on a computer owned by Google, so you only need a browser and a Google account.",
+       "slide": {"layout": "diagram", "title": "Google Colab", "body": "Laptop with a browser → cloud icon labelled 'Google computer runs the code' → result back in the browser. Caption: Browser + Google account. Nothing to install."}},
+      {"visual_type": "slide",
+       "voiceover": "A Colab notebook is made of cells, and there are two kinds. Code cells hold Python. When you run one, the result appears right below it. Text cells hold notes, headings and explanations, in plain language.",
+       "slide": {"layout": "comparison", "title": "Two kinds of cell", "body": "Code cell: holds Python, has a play button, output appears below. Text cell: holds notes and headings, does not run."}},
+      {"visual_type": "stock",
+       "voiceover": "Think of a scientist's lab notebook. On one page, the scientist writes what they plan to test, and why. Next to it, they record the result. In Colab, text cells are the notes, and code cells are the experiments. They sit side by side, so anyone can follow the work later.",
+       "stock_query": "scientist writing in lab notebook",
+       "on_screen_text": "Text = notes. Code = experiments."},
+      {"visual_type": "slide",
+       "voiceover": "Your notebook is saved to your Google Drive. The free version has limits that change, so check the Colab website. And if you cannot use Colab where you live, lesson ten shows how to use Python on your own computer.",
+       "slide": {"layout": "bullets", "title": "Good to know", "body": "Saved to Google Drive · Free version has limits (check the Colab website) · No Colab? Lesson 10: Python in VS Code"}}
+    ],
+    "Demonstrate": [
+      {"visual_type": "screen",
+       "voiceover": "Let's try it together. Open the Colab website and sign in with your Google account. Choose New notebook. A notebook opens with one empty code cell. Click the name at the top, and rename it L01 first notebook.",
+       "screen_steps": ["Open colab.research.google.com and sign in with a Google account", "Click New notebook; Untitled0.ipynb opens with one empty code cell", "Click the file name at the top and rename it to: L01 first notebook"],
+       "on_screen_text": "New notebook, then rename it"},
+      {"visual_type": "screen",
+       "voiceover": "Now click inside the code cell and type two short lines. The first line prints a greeting in Swahili. The second line asks Python to multiply seven by twenty-four.",
+       "screen_steps": ["Click inside the code cell", "Type line 1: print(\"Habari! Karibu kwenye Python.\")", "Type line 2: print(7 * 24)"]},
+      {"visual_type": "screen",
+       "voiceover": "To run the cell, press Shift and Enter together, or click the round play button on the left. The first run can take a few seconds while Colab connects. And there is our output, right below the cell.",
+       "screen_steps": ["Press Shift + Enter (or click the round play button left of the cell)", "Wait for Colab to connect on the first run", "Output appears below the cell: Habari! Karibu kwenye Python. / 168"],
+       "on_screen_text": "Run a cell: Shift + Enter"},
+      {"visual_type": "screen",
+       "voiceover": "The greeting is inside quotation marks, so Python shows it exactly as written. The second line has no quotation marks, so Python calculates the answer. One hundred and sixty-eight, the number of hours in a week.",
+       "screen_steps": ["Highlight the quotation marks around the greeting in line 1", "Highlight 7 * 24 in line 2 and the output 168"],
+       "on_screen_text": "Quotes = text. No quotes = calculate."},
+      {"visual_type": "screen",
+       "voiceover": "Next, choose plus Text to add a text cell. Type a heading, such as My first notebook, and one sentence about what the code does. Then open the File menu and choose Save. The notebook is now in your Google Drive.",
+       "screen_steps": ["Click + Text to add a text cell", "Type the heading: My first notebook, and one sentence about what the code does", "Open File > Save; the notebook is saved to Google Drive"]},
+      {"visual_type": "text",
+       "voiceover": "One common mistake. Beginners sometimes type code into a text cell, and nothing happens. Text cells never run code. A code cell has a play button on its left, so check before you type. Forgetting the quotation marks around text also causes an error.",
+       "on_screen_text": "Code cells have a play button"},
+      {"visual_type": "slide",
+       "voiceover": "And one safety note. Colab notebooks are stored in your Google account, and they can be shared. So never type passwords, ID numbers or other private data into a notebook.",
+       "slide": {"layout": "bullets", "title": "Safety note", "body": "Notebooks can be shared. Never type: passwords · ID numbers · private or confidential data"}}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, Python is widely used for AI because it is readable and has many free libraries for data and machine learning. Second, Google Colab runs Python in your browser. Code cells run code, and text cells hold your notes. Third, you run a cell with Shift and Enter, and the result appears directly below it.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Python: readable, with many free libraries for data and ML. 2. Colab runs Python in the browser: code cells run, text cells explain. 3. Shift + Enter runs a cell; output appears below."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below this video, you will create your own notebook, print a greeting in your own language, and add a text cell with your name and one goal for this course. It takes about fifteen minutes. In the next lesson, we look at variables and data types. See you there.",
+       "on_screen_text": "Next: Variables and Data Types"}
+    ]
+  }
+}

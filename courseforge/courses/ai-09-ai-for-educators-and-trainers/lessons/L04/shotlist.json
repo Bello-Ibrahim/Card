@@ -1,0 +1,202 @@
+{
+  "course_id": "AI-09",
+  "lesson_id": "L04",
+  "duration_s": 304.5,
+  "thumbnail": {
+    "headline": "Red, Amber, Green AI",
+    "slide": {
+      "layout": "title",
+      "title": "Red, Amber, Green AI",
+      "body": "Icon of a traffic light next to a one-page document. Small tag: AI for Educators and Trainers · Lesson 4."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 19.7,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Is your AI policy clear?",
+      "voiceover": "One learner uses AI to check their grammar. Another uses it to write the whole essay. A third does not use it at all, because they are not sure it is allowed. If your learners cannot tell which is acceptable, your policy is not clear enough."
+    },
+    {
+      "scene": 2,
+      "start": 19.7,
+      "end": 40.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Writing a Fair Classroom AI Policy",
+        "body": "AI for Educators and Trainers · Lesson 4 of 12. Three learner icons with question marks above their heads."
+      },
+      "voiceover": "In the last lesson, we looked at privacy and integrity. Now we turn that into rules learners can follow. A classroom AI policy tells learners when and how they may use AI in your course. Without one, learners guess, and different learners guess differently. That is unfair to everyone."
+    },
+    {
+      "scene": 3,
+      "start": 40.7,
+      "end": 57.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "The traffic-light model",
+        "body": "Traffic light with the red circle lit. Label: Red = AI not allowed. Example: in-class written test, reflection on own experience."
+      },
+      "voiceover": "A simple structure is the traffic-light model. For each type of task, you choose one of three colours. Red means AI is not allowed, because the task checks what the learner can do alone, like an in-class test."
+    },
+    {
+      "scene": 4,
+      "start": 57.8,
+      "end": 78.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Amber and green",
+        "body": "Amber lit: AI allowed with disclosure (brainstorm, grammar check + short note). Green lit: AI allowed freely (practice questions to revise)."
+      },
+      "voiceover": "Amber means AI is allowed with disclosure. Learners may use it for certain steps, such as brainstorming or checking grammar, and they add a short note on what they asked and what they changed. Green means AI is allowed freely, for example to generate practice questions before a test."
+    },
+    {
+      "scene": 5,
+      "start": 78.8,
+      "end": 90.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "A good policy is clear",
+        "body": "Task type + colour + short reason · Plain language · Examples of allowed and not allowed use"
+      },
+      "voiceover": "A good policy is clear. Each rule names a task type, a colour and a short reason, in plain language, with examples of allowed and not allowed use."
+    },
+    {
+      "scene": 6,
+      "start": 90.8,
+      "end": 117.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "A good policy is fair",
+        "body": "No paid tools required · Same rules, known in advance · Clear disclosure, no penalty for honesty · Not based only on detection tools"
+      },
+      "voiceover": "A good policy is also fair. It never requires paid tools, so every learner can complete green and amber tasks with a free tool or class time. Everyone knows the rules before the task begins. It explains disclosure, so honest learners are not punished for telling the truth. And it does not rely only on detection tools, which can give false results."
+    },
+    {
+      "scene": 7,
+      "start": 117.4,
+      "end": 132.8,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "staff meeting reviewing policy documents together",
+      "on_screen_text": "Fits within your institution's rules",
+      "voiceover": "And a good policy fits your institution. Your school, university or company may already have rules on AI, and local rules may apply too. Your course policy adds detail within those rules, and never contradicts them."
+    },
+    {
+      "scene": 8,
+      "start": 132.8,
+      "end": 148.2,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "traffic light at busy city crossing",
+      "on_screen_text": "A quick, shared signal",
+      "voiceover": "Why traffic lights? Drivers do not read a long legal document at every crossing. Red, amber and green give a quick, shared signal. But the lights only work if they mean the same thing every time."
+    },
+    {
+      "scene": 9,
+      "start": 148.2,
+      "end": 160.2,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "university students writing essays in lecture hall",
+      "on_screen_text": "Aiko · academic English · Osaka",
+      "voiceover": "Let's see an example. Aiko Tanaka teaches academic English to first-year students at a university in Osaka, in Japan. She drafts a policy for her writing course."
+    },
+    {
+      "scene": 10,
+      "start": 160.2,
+      "end": 182.9,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Aiko's draft policy",
+        "body": "Table: Timed in-class essay | Red | own writing skills · Take-home essay | Amber | ideas and grammar + note · Vocabulary practice | Green | practice only · Reflection journal | Red | own experience"
+      },
+      "voiceover": "The timed in-class essay is red, because it checks the student's own writing. The take-home essay is amber. AI may suggest ideas and correct grammar, with a note on how it was used. Vocabulary practice is green. And the reflection journal is red, because it must describe the student's own learning."
+    },
+    {
+      "scene": 11,
+      "start": 182.9,
+      "end": 197.9,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Aiko's check",
+        "body": "Find rules that are unclear or unfair to students with limited access to technology.  (Draft pasted below, no student information.)"
+      },
+      "voiceover": "Then she pastes her draft, with no student information, into an AI assistant, and asks it to find rules that are unclear, or unfair to students with limited access to technology. It gives four suggestions."
+    },
+    {
+      "scene": 12,
+      "start": 197.9,
+      "end": 218.9,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Suggestions she accepts",
+        "body": "Define 'AI' (does a spelling checker count?) → short definition added · What goes in the disclosure note → two-line template · Free option for green tasks → computer-room time"
+      },
+      "voiceover": "Define what counts as AI. Does a spelling checker count? She accepts, and adds a short definition. Say what the disclosure note must include. She accepts, and adds a two-line template. Offer a free option or class time for green tasks. She accepts, and adds computer-room time."
+    },
+    {
+      "scene": 13,
+      "start": 218.9,
+      "end": 239.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "A suggestion she rejects",
+        "body": "AI suggests: take-home essay → Red. Aiko: Rejected. Reason: students learn responsible use; a short conversation about each essay already checks the work."
+      },
+      "voiceover": "But the AI also suggests making the take-home essay red to prevent misuse. She rejects this. She wants students to learn responsible use, and she already includes a short conversation about each essay. Her final policy is still one page, and every decision is her own."
+    },
+    {
+      "scene": 14,
+      "start": 239.0,
+      "end": 253.1,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "One rule does not fit every task",
+      "voiceover": "A common mistake is one rule for the whole course, like AI is not allowed. It does not fit different tasks. Another is to accept every AI suggestion. You make the final judgement."
+    },
+    {
+      "scene": 15,
+      "start": 253.1,
+      "end": 277.5,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Each task type: Red · Amber · Green + reason. 2. Fair: no paid tools, clear disclosure, not only detection. 3. Fits institutional rules; you decide."
+      },
+      "voiceover": "Let's recap. First, a traffic-light policy gives each task type a colour, red, amber or green, with a short reason. Second, a fair policy does not require paid tools, explains disclosure clearly, and does not rely only on detection tools. Third, your policy must fit your institution's rules, and you decide which AI suggestions to accept."
+    },
+    {
+      "scene": 16,
+      "start": 277.5,
+      "end": 304.5,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Planning Lessons with Clear Outcomes",
+      "voiceover": "Now it is your turn. In the exercise below this video, draft a one-page traffic-light policy for a course you teach. Then ask Claude or ChatGPT to find unclear or unfair points, with no learner information, and decide which suggestions to accept. It takes about thirty minutes. In the next lesson, we start planning lessons with clear outcomes. See you there."
+    }
+  ]
+}

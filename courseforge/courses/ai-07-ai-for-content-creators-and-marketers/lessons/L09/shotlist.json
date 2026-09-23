@@ -1,0 +1,187 @@
+{
+  "course_id": "AI-07",
+  "lesson_id": "L09",
+  "duration_s": 295.5,
+  "thumbnail": {
+    "headline": "The First Two Seconds",
+    "slide": {
+      "layout": "title",
+      "title": "The First Two Seconds",
+      "body": "A vertical phone frame showing a small plant being repotted, captions near the middle of the screen, a large '0:02' timer. Small tag: AI for Content Creators · Lesson 9."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.3,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Strong opening. Clear captions.",
+      "voiceover": "Many people watch short videos on a phone, often with the sound off. They decide in the first two seconds whether to keep watching. So two things matter more than expensive equipment: a strong opening, and clear captions."
+    },
+    {
+      "scene": 2,
+      "start": 16.3,
+      "end": 45.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "A 30-second plan",
+        "body": "Timeline bar: Hook 0–2 s (highlighted) → Scene 1: problem → Scene 2: product in use → Scene 3: result → Call to action (on screen and spoken)."
+      },
+      "voiceover": "In the last lesson, we designed branded visuals. Now we make them move. A short video of about thirty seconds needs a simple plan. First, a hook in the first two seconds. Show the result first, ask a question or show movement. Then three scenes, each with one idea, such as problem, product in use, and result. And finally, a call to action, shown on screen and said aloud."
+    },
+    {
+      "scene": 3,
+      "start": 45.9,
+      "end": 67.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Script and shot list",
+        "body": "Sample table with four columns: Time · Camera shows · Words said · On-screen text. Five rows from 0:00 to 0:30."
+      },
+      "voiceover": "Ask Claude or ChatGPT to draft this plan as a script and shot list. That is a table with the time, what the camera shows, what is said, and the on-screen text. Give it your voice guide, the product and the platform. Then change any shot you cannot really film."
+    },
+    {
+      "scene": 4,
+      "start": 67.8,
+      "end": 91.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "CapCut and auto-captions",
+        "body": "Templates · simple effects · auto-captions (speech → text) · Watch for errors: names, product words, accents, noise · Captions help viewers who watch without sound, and deaf or hard-of-hearing viewers"
+      },
+      "voiceover": "CapCut is a video editor for phone and computer. It has templates, simple effects and auto-captions, which turn speech into on-screen text. Auto-captions save time, but they make mistakes, especially with names, product words, accents and noisy places. Captions also make video accessible to people who are deaf or hard of hearing."
+    },
+    {
+      "scene": 5,
+      "start": 91.4,
+      "end": 107.3,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "city bus passing bright shop windows",
+      "on_screen_text": "A shop window from a bus",
+      "voiceover": "A short video is like a shop window seen from a moving bus. You have a few seconds. So the most interesting thing must be at the front, clearly lit, and easy to understand at a glance."
+    },
+    {
+      "scene": 6,
+      "start": 107.3,
+      "end": 128.7,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open Claude or ChatGPT",
+        "Paste the voice guide",
+        "Type: 'Using the voice guide below, write a 30-second video script and shot list for a vertical video showing how to repot a small plant. Include a hook for the first 2 seconds, 3 scenes and a call to action.'",
+        "Show the returned table"
+      ],
+      "on_screen_text": "Sample plant shop · São Paulo",
+      "voiceover": "Let's make one. Mateus runs social media for a sample plant shop in São Paulo, Brazil. He asks an AI assistant for a thirty-second script and shot list for a vertical video on how to repot a small plant, with a hook, three scenes and a call to action."
+    },
+    {
+      "scene": 7,
+      "start": 128.7,
+      "end": 149.3,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "In the shot list table, change the 'garden' shot to 'shop counter'",
+        "Open CapCut and start a new project",
+        "Import the five vertical clips in order"
+      ],
+      "voiceover": "One shot needs an outdoor garden, and the shop has none. So Mateus changes it to the shop counter. He films five short clips on his phone, vertically, near a window for good light. Then he opens CapCut, starts a new project and imports the clips in order."
+    },
+    {
+      "scene": 8,
+      "start": 149.3,
+      "end": 167.7,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Trim clip 1 to start on the roots coming out of the small pot, under 2 seconds",
+        "Trim the other clips to match the script timings",
+        "Delete pauses between actions"
+      ],
+      "on_screen_text": "Hook under two seconds",
+      "voiceover": "He trims the first clip so the video opens on the most striking moment: roots coming out of a pot that is too small. It lasts less than two seconds. Then he trims each scene to match the script, and deletes the pauses."
+    },
+    {
+      "scene": 9,
+      "start": 167.7,
+      "end": 187.4,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open the captions feature and choose auto-captions for the spoken language",
+        "Play the video and pause on each caption",
+        "Highlight the misspelled plant name and correct it",
+        "Highlight 'soul' and correct it to 'soil'"
+      ],
+      "voiceover": "Now the captions. He opens the captions feature and chooses auto-captions for the spoken language. Then he plays the video, and reads every caption. He finds two errors. The plant name is spelled wrong, and soil is written as soul. He corrects both by hand."
+    },
+    {
+      "scene": 10,
+      "start": 187.4,
+      "end": 206.3,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Choose a white caption style with a dark outline",
+        "Drag the captions up from the bottom edge",
+        "Add text on the last scene: 'Visit us for free repotting advice.'"
+      ],
+      "voiceover": "He chooses a high-contrast caption style, white text with a dark outline, and moves the captions up from the bottom edge, where app buttons may cover them. On the last scene he adds the call to action: visit us for free repotting advice."
+    },
+    {
+      "scene": 11,
+      "start": 206.3,
+      "end": 221.3,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open the music library and add a quiet background track",
+        "Open the track's licence information and note it in the asset log",
+        "Export in vertical format",
+        "Play the exported file on a phone with the sound muted"
+      ],
+      "voiceover": "He adds quiet background music from the editor's library, and checks its licence for commercial use. Finally, he exports the video in vertical format, and watches it once on a phone with the sound off."
+    },
+    {
+      "scene": 12,
+      "start": 221.3,
+      "end": 241.0,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Read every caption. Best moment first.",
+      "voiceover": "The most common mistake is to trust auto-captions and publish without reading them. One wrong word can change the meaning. Another mistake is a slow start, such as a logo or a long hello. Put the best moment first, and the logo at the end."
+    },
+    {
+      "scene": 13,
+      "start": 241.0,
+      "end": 267.6,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Hook + 3 scenes + call to action; AI drafts the shot list. 2. First 2 seconds and captions matter on mobile. 3. Check auto-captions word by word."
+      },
+      "voiceover": "Let's recap. First, plan a thirty-second video as a hook, three scenes and a call to action, and use AI to draft the script and shot list. Second, captions and a strong first two seconds matter on mobile, because many people watch without sound and scroll quickly. Third, auto-captions save time but make mistakes, so check them word by word."
+    },
+    {
+      "scene": 14,
+      "start": 267.6,
+      "end": 295.5,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Keeping a Human Voice",
+      "voiceover": "Now it is your turn. In the exercise below, ask Claude or ChatGPT for a thirty-second script and shot list. Film it on your phone, edit it in CapCut with captions, and check every caption word by word. It takes about forty minutes. In the next lesson, Keeping a Human Voice: Editing and Reviewing AI Content, we bring it all together. See you there."
+    }
+  ]
+}
