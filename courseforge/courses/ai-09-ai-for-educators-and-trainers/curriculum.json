@@ -1,0 +1,248 @@
+{
+  "course_id": "AI-09",
+  "slug": "ai-09-ai-for-educators-and-trainers",
+  "course_title": "AI for Educators and Trainers",
+  "level": "Beginner",
+  "status": "AWAITING_APPROVAL",
+  "screen_demo_lessons": [],
+  "overview": "A three-week, practical course for teachers, lecturers, corporate trainers and learning and development teams who already know how to teach. Learners use free AI tools (Claude or ChatGPT, Canva and Google Forms) to plan lessons, create differentiated and accessible materials, and build quizzes and rubrics, while keeping professional judgement at the centre. The course gives equal weight to responsibility: protecting learner data, checking AI materials for errors and bias, and writing a fair, clear policy on how learners may use AI. In the final week, learners build a complete AI-assisted unit of study with lesson plans, materials and an assessment rubric.",
+  "time_plan": {
+    "video_minutes": 60,
+    "weekly_hours": 2,
+    "per_week": "About 20 minutes of video, 60 minutes of hands-on design work with AI tools, and 40 minutes of reading, reflection and peer discussion. In week 3 most of the hands-on time goes to the capstone unit."
+  },
+  "objectives": [
+    {
+      "id": "O1",
+      "bloom": "Remember",
+      "text": "Describe common ways AI assistants can support teaching and training work, and list their main limits."
+    },
+    {
+      "id": "O2",
+      "bloom": "Understand",
+      "text": "Explain the privacy, integrity and fairness issues of AI in education for both educators and learners."
+    },
+    {
+      "id": "O3",
+      "bloom": "Apply",
+      "text": "Plan lessons and learning activities with AI that are aligned to clear learning outcomes."
+    },
+    {
+      "id": "O4",
+      "bloom": "Apply",
+      "text": "Create differentiated and accessible learning materials with AI for learners with different levels and needs."
+    },
+    {
+      "id": "O5",
+      "bloom": "Analyse",
+      "text": "Build quizzes and rubrics with AI, and analyse whether each item really measures the intended outcome."
+    },
+    {
+      "id": "O6",
+      "bloom": "Evaluate",
+      "text": "Evaluate AI-generated materials for accuracy, bias and suitability, and judge whether a classroom AI policy is fair and clear."
+    },
+    {
+      "id": "O7",
+      "bloom": "Create",
+      "text": "Build a complete AI-assisted unit of study with lesson plans, materials and an assessment rubric."
+    }
+  ],
+  "modules": [
+    {
+      "module_id": "M1",
+      "week": 1,
+      "title": "AI in Teaching: Foundations and Fair Use",
+      "lessons": [
+        {
+          "lesson_id": "L01",
+          "title": "How AI Can Support Educators and Trainers",
+          "objectives": [
+            "O1"
+          ],
+          "summary": "Where AI helps in teaching work: planning, creating examples, adapting texts, writing questions and drafting feedback. Where it is weak: exact facts, knowledge of your specific learners, and local curriculum details. Analogy: a teaching assistant who works very fast but has never met your class.",
+          "exercise": "List 10 tasks from your teaching or training week. Mark each as 'AI can draft', 'AI can help me check' or 'keep fully human', and explain one choice."
+        },
+        {
+          "lesson_id": "L02",
+          "title": "Prompting for Teaching Tasks",
+          "objectives": [
+            "O1",
+            "O3"
+          ],
+          "summary": "A teaching prompt includes the learners (age or role, level, language), the learning outcome, the time available and the format you want. Worked example: Ngozi, a secondary science teacher in Abuja, gets a generic activity until she adds her learners' level, the outcome and a 40-minute limit.",
+          "exercise": "Write a 4-part prompt for an activity you will teach soon and test it in Claude or ChatGPT. Improve the prompt once and compare the two results."
+        },
+        {
+          "lesson_id": "L03",
+          "title": "Privacy, Integrity and Ethics",
+          "objectives": [
+            "O2"
+          ],
+          "summary": "Never paste learners' names, grades, health information or other personal data into a public AI tool. Academic integrity in a world with AI: why AI detection tools are unreliable and should not be the only evidence of misconduct [VERIFY], and how task design can reduce misuse. Rules on learner data and on AI use by minors differ by country and institution. [REGION]",
+          "exercise": "Read 5 short scenarios (for example a teacher pasting student essays into a chatbot for marking) and decide for each whether it is acceptable, acceptable with changes, or not acceptable. Give a reason for each."
+        },
+        {
+          "lesson_id": "L04",
+          "title": "Writing a Fair Classroom AI Policy",
+          "objectives": [
+            "O2",
+            "O6"
+          ],
+          "summary": "A clear AI policy tells learners when AI use is allowed, allowed with disclosure, or not allowed, for each type of task. A 'traffic light' model makes this easy to understand. The policy should be fair to learners who have limited access to AI tools and should fit your institution's rules.",
+          "exercise": "Draft a one-page traffic-light AI policy for one course you teach. Ask Claude or ChatGPT to find unclear or unfair points, then decide which suggestions to accept."
+        }
+      ]
+    },
+    {
+      "module_id": "M2",
+      "week": 2,
+      "title": "Designing Lessons and Materials",
+      "lessons": [
+        {
+          "lesson_id": "L05",
+          "title": "Planning Lessons with Clear Outcomes",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "Starting from the learning outcome and working backwards: what learners will do to show they have learned, then activities that prepare them. Using AI to suggest activities, timings and examples, then adapting them to your context. Worked example: Tomás, a corporate trainer in Madrid, plans a 60-minute customer-service workshop.",
+          "exercise": "Use AI to draft a lesson plan for one lesson with a clear outcome, a timed activity sequence and a short check for understanding. Change at least 3 things to fit your learners."
+        },
+        {
+          "lesson_id": "L06",
+          "title": "Differentiating Materials for Different Learners",
+          "objectives": [
+            "O4"
+          ],
+          "summary": "Using AI to create versions of the same text or task at different reading levels, with extra support or extra challenge, and for learners using a second language. Every version must keep the same key content and outcome. Analogy: the same destination, reached by different paths.",
+          "exercise": "Take one short reading or task and ask AI for 3 versions: support, core and challenge. Check that all 3 still teach the same key points, and correct any errors."
+        },
+        {
+          "lesson_id": "L07",
+          "title": "Visual and Accessible Materials with Canva",
+          "objectives": [
+            "O4"
+          ],
+          "summary": "Creating worksheets, slides and infographics in Canva with AI help, and making them accessible: clear fonts, strong colour contrast, alternative text for images, and simple layouts. Using AI to draft alternative text and plain-language instructions. [VERSION] Canva AI features and education plans change often.",
+          "exercise": "Create one worksheet or infographic in Canva for your lesson. Check it against a 5-point accessibility checklist and add alternative text for every image."
+        },
+        {
+          "lesson_id": "L08",
+          "title": "Checking AI Materials for Accuracy and Bias",
+          "objectives": [
+            "O6"
+          ],
+          "summary": "AI materials can contain factual errors, outdated information, cultural stereotypes, or examples that exclude some learners. A review checklist: facts, level, cultural fairness, representation and fit with your curriculum. Worked example: Leila, a primary teacher in Amman, finds that all the example names in an AI-generated story come from one culture and fixes it.",
+          "exercise": "Review an AI-generated reading passage and 5 questions on a topic you know well. Record every error or bias you find and write a corrected version."
+        }
+      ]
+    },
+    {
+      "module_id": "M3",
+      "week": 3,
+      "title": "Assessment and Your Capstone Unit",
+      "lessons": [
+        {
+          "lesson_id": "L09",
+          "title": "Building Quizzes with AI and Google Forms",
+          "objectives": [
+            "O5"
+          ],
+          "summary": "Using AI to draft quiz questions at different levels (recall, understanding, application), with answer keys and explanations, then building the quiz in Google Forms. Analysing each question: does it test the outcome, is there exactly one correct answer, are the wrong options believable? [VERSION] Google Forms quiz features change over time.",
+          "exercise": "Capstone step 1: generate 10 quiz questions for your unit with AI, remove or fix any weak items, and build the final quiz in Google Forms."
+        },
+        {
+          "lesson_id": "L10",
+          "title": "Rubrics and Feedback with AI",
+          "objectives": [
+            "O5",
+            "O6"
+          ],
+          "summary": "Drafting an analytic rubric with AI: criteria linked to outcomes, clear levels, and descriptions that learners understand. Using AI to draft feedback comments from your own notes, without sharing learner work that contains personal data. The final judgement and grade always stay with the educator.",
+          "exercise": "Capstone step 2: draft a rubric for your unit's main assessment task with AI. Test it by marking one sample piece of work (created by you or by AI) and revise any criterion that was hard to apply."
+        },
+        {
+          "lesson_id": "L11",
+          "title": "Capstone: Planning Your Unit",
+          "objectives": [
+            "O3",
+            "O7"
+          ],
+          "summary": "Planning a unit of 3 to 5 lessons: unit outcomes, lesson sequence, key activities and where the assessment happens. Using AI to check that every outcome is taught and assessed. Then the capstone brief and rubric.",
+          "exercise": "Capstone step 3: write your unit plan with outcomes, a lesson sequence and full lesson plans for at least 2 lessons, drafted with AI and edited by you."
+        },
+        {
+          "lesson_id": "L12",
+          "title": "Capstone: Completing and Reviewing Your Unit",
+          "objectives": [
+            "O6",
+            "O7"
+          ],
+          "summary": "Adding the differentiated materials, the quiz, the rubric and your AI policy for the unit. A final review for accuracy, bias, accessibility and alignment between outcomes, activities and assessment.",
+          "exercise": "Capstone step 4: complete your unit pack, review it with the checklists from Lessons 7 and 8, and write a short note explaining where you used AI and what you changed."
+        }
+      ]
+    }
+  ],
+  "capstone": {
+    "title": "AI-Assisted Unit of Study",
+    "brief": "Build a complete AI-assisted unit of study with lesson plans, differentiated materials, a quiz, an assessment rubric and a unit AI policy, reviewed for accuracy, bias and accessibility.",
+    "built_in": [
+      "L09",
+      "L10",
+      "L11",
+      "L12"
+    ],
+    "assesses": [
+      "O3",
+      "O4",
+      "O5",
+      "O6",
+      "O7"
+    ]
+  },
+  "coverage_check": {
+    "O1": [
+      "L01",
+      "L02"
+    ],
+    "O2": [
+      "L03",
+      "L04"
+    ],
+    "O3": [
+      "L02",
+      "L05",
+      "L11"
+    ],
+    "O4": [
+      "L06",
+      "L07"
+    ],
+    "O5": [
+      "L09",
+      "L10"
+    ],
+    "O6": [
+      "L04",
+      "L08",
+      "L10",
+      "L12"
+    ],
+    "O7": [
+      "L11",
+      "L12"
+    ]
+  },
+  "flags": [
+    "PROPOSED: screen demo for L07 (Canva accessibility features and alternative text are easier to learn by seeing them). Needs approval.",
+    "PROPOSED: screen demo for L09 (building a self-marking quiz in Google Forms is a step-by-step tool task). Needs approval.",
+    "L03 [VERIFY]: the claim that AI detection tools are unreliable and should not be the only evidence of misconduct must be checked against current sources before scripting.",
+    "L03 [REGION]: learner-data protection and rules on AI use by minors differ by country and institution; the lesson points to local and institutional rules instead of stating laws.",
+    "L03 [VERSION]: age requirements and education terms of Claude and ChatGPT must be checked before any exercise suggests learners use them directly.",
+    "L07 [VERSION]: Canva AI features and education plan availability must be checked against the live tool before scripting.",
+    "L09 [VERSION]: Google Forms quiz settings (answer keys, auto-marking, feedback) must be checked against the live tool before scripting.",
+    "Judgement call: the capstone is built across the whole last module (L09-L12), because the quiz and rubric are parts of the unit.",
+    "Judgement call: the course serves both school teachers and corporate trainers, so examples alternate between classroom and workplace settings."
+  ]
+}

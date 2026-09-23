@@ -1,0 +1,265 @@
+{
+  "course_id": "AI-25",
+  "slug": "ai-25-ai-in-healthcare",
+  "course_title": "AI in Healthcare",
+  "level": "Intermediate",
+  "status": "AWAITING_APPROVAL",
+  "screen_demo_lessons": [],
+  "overview": "A three-week course for health workers, health-tech teams and public health researchers who already have a healthcare or health-tech background. Learners explore AI for diagnostic support, hospital operations and patient engagement, always as decision support under clinician oversight and never as a replacement for clinical judgement. They learn to read performance claims, judge the strength of evidence, and find bias, dataset shift and safety risks across patient groups and care settings. The course teaches ethical and regulatory principles, not the rules of one country, and uses only public or synthetic data. It gives no clinical advice. By the end, learners write an evaluation of an AI health tool covering clinical value, risks and a safe implementation plan.",
+  "time_plan": {
+    "video_minutes": 70,
+    "weekly_hours": 3,
+    "per_week": "About 25 minutes of video, 90 minutes of exercises with public or synthetic data and a free AI assistant, and 65 minutes of reading, quizzes and reflection. In week 3 most of the exercise time goes to the capstone."
+  },
+  "objectives": [
+    {
+      "id": "O1",
+      "bloom": "Remember",
+      "text": "Describe the main areas of AI in healthcare (diagnostic support, operations, patient engagement and public health) and the types of health data each one uses."
+    },
+    {
+      "id": "O2",
+      "bloom": "Understand",
+      "text": "Explain how a clinical AI model is developed and validated, using sensitivity, specificity, predictive value and levels of evidence."
+    },
+    {
+      "id": "O3",
+      "bloom": "Apply",
+      "text": "Use a free AI assistant and public or synthetic health data to prototype an operational or patient-engagement task, with safety checks and clinician review."
+    },
+    {
+      "id": "O4",
+      "bloom": "Analyse",
+      "text": "Analyse an AI health tool for bias, dataset shift, privacy risks and failure modes across patient groups and care settings."
+    },
+    {
+      "id": "O5",
+      "bloom": "Evaluate",
+      "text": "Evaluate the clinical value, evidence, risks and regulatory position of an AI health tool using established ethical and safety frameworks."
+    },
+    {
+      "id": "O6",
+      "bloom": "Create",
+      "text": "Write an evaluation of an AI health tool covering clinical value, risks and a safe implementation plan."
+    }
+  ],
+  "modules": [
+    {
+      "module_id": "M1",
+      "week": 1,
+      "title": "AI Across the Health System",
+      "lessons": [
+        {
+          "lesson_id": "L01",
+          "title": "The Landscape of AI in Healthcare",
+          "objectives": [
+            "O1"
+          ],
+          "summary": "Four areas where AI is used: diagnostic support, operations, patient engagement and public health. The core principle of the course: AI supports decisions, and a qualified clinician remains responsible for them. Hypothetical examples include a district hospital in Ghana, a clinic network in India and a telehealth service in Chile.",
+          "exercise": "Sort 8 AI health applications into the four areas and, for each one, name the person who is accountable for the final decision."
+        },
+        {
+          "lesson_id": "L02",
+          "title": "Health Data: Types, Quality and Privacy",
+          "objectives": [
+            "O1",
+            "O4"
+          ],
+          "summary": "The main data types: electronic health records, images, laboratory results, wearables, claims and surveys. Why missing values, different coding systems and unrepresentative samples cause problems, and why health data needs extra privacy protection. Analogy: a patient record is like a diary, useful to the right reader and harmful in the wrong hands.",
+          "exercise": "Explore a public health dataset or the course's synthetic patient dataset. List its variables, note where data is missing, and describe one privacy risk if the data were real."
+        },
+        {
+          "lesson_id": "L03",
+          "title": "How Clinical AI Models Are Built",
+          "objectives": [
+            "O2"
+          ],
+          "summary": "The steps from a clinical question to labelled data, training, testing and validation. Analogy: a trainee who studies thousands of annotated images under supervision before anyone relies on their reading. Where clinicians must be involved at each step.",
+          "exercise": "Ask Claude or ChatGPT to outline the development steps for a hypothetical eye-screening support tool. Mark each step where clinician input is needed and correct anything the assistant gets wrong."
+        },
+        {
+          "lesson_id": "L04",
+          "title": "Reading Performance Claims",
+          "objectives": [
+            "O2"
+          ],
+          "summary": "Sensitivity, specificity and positive predictive value explained with a worked example of 1,000 synthetic patients. Why the same tool gives many more false alarms when a condition is rare. Any real performance figure for a named tool must be checked against its published source [VERIFY].",
+          "exercise": "Using the synthetic results table, calculate sensitivity, specificity and positive predictive value at two different disease prevalence levels. Explain the difference in two sentences."
+        },
+        {
+          "lesson_id": "L05",
+          "title": "Levels of Evidence: From Study to Real-World Use",
+          "objectives": [
+            "O2",
+            "O5"
+          ],
+          "summary": "Retrospective studies, external validation, prospective studies and randomised trials, and why accuracy in a study may not carry over to a new hospital. Reporting guidelines for AI studies exist and are named only after checking [VERIFY]. Analogy: a new medicine is not trusted on laboratory results alone.",
+          "exercise": "Rank 4 hypothetical evidence summaries from weakest to strongest and explain what extra evidence each would need before clinical use."
+        }
+      ]
+    },
+    {
+      "module_id": "M2",
+      "week": 2,
+      "title": "Operations, Patients and Risk",
+      "lessons": [
+        {
+          "lesson_id": "L06",
+          "title": "AI for Hospital and Clinic Operations",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "Scheduling, missed-appointment prediction, bed management, supply planning and documentation support that clinicians review. Operational AI can also be unfair, for example if a prediction is used to overbook patients who travel far. Worked example: a clinic in Peru reducing missed appointments with reminders.",
+          "exercise": "Run the ready-made Google Colab notebook on a synthetic appointment dataset to see which factors relate to missed appointments. Propose two fair actions, such as reminders or transport support."
+        },
+        {
+          "lesson_id": "L07",
+          "title": "AI for Patient Engagement",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "Reminders, health education and multilingual information services. Clear limits: these tools do not diagnose, and they pass urgent or complex questions to a human. Worked example: education messages in French and Arabic for a hypothetical service in Morocco, based on a clinician-approved source.",
+          "exercise": "Use Claude or ChatGPT to draft a plain-language appointment reminder and a short education leaflet in two languages from an approved source text. Check both against the source and list the situations that must go to a human."
+        },
+        {
+          "lesson_id": "L08",
+          "title": "Generative AI in Clinical Work: Uses and Limits",
+          "objectives": [
+            "O3",
+            "O4"
+          ],
+          "summary": "Summarising notes, drafting letters and supporting literature searches. Language models can leave out important facts or invent them, so every output needs review by a qualified person. Identifiable patient data must never be pasted into public AI tools.",
+          "exercise": "Summarise a synthetic discharge note with an AI assistant, then audit the summary for errors, missing facts and invented details."
+        },
+        {
+          "lesson_id": "L09",
+          "title": "Bias, Equity and Dataset Shift",
+          "objectives": [
+            "O4"
+          ],
+          "summary": "Performance can differ by sex, age, skin tone, ethnicity, language and care setting, and it can fall when equipment or populations change. Hypothetical case: a model trained in large city hospitals is used in rural clinics with different devices and patients. Published real cases are added only after [VERIFY] review.",
+          "exercise": "Compare sensitivity across 3 patient groups and 2 sites in a synthetic results table. Write 3 questions you would ask the tool's supplier."
+        },
+        {
+          "lesson_id": "L10",
+          "title": "Patient Safety and Failure Modes",
+          "objectives": [
+            "O4",
+            "O5"
+          ],
+          "summary": "Automation bias, alert fatigue, silent failure and gaps in the workflow. Analogy: aircraft autopilot, where pilots are still trained to monitor and take control. How incident reporting and human factors design reduce harm.",
+          "exercise": "Complete a simple failure mode table for the patient-engagement assistant from L07: what can go wrong, the effect, how it is detected and how it is prevented."
+        }
+      ]
+    },
+    {
+      "module_id": "M3",
+      "week": 3,
+      "title": "Evaluate and Implement Safely",
+      "lessons": [
+        {
+          "lesson_id": "L11",
+          "title": "Regulation, Privacy and Ethics Frameworks",
+          "objectives": [
+            "O5"
+          ],
+          "summary": "Common principles: software as a medical device, risk-based classification, data protection, consent, transparency and accountability, as in the WHO guidance on ethics of AI for health [VERIFY]. Named regulators and laws are examples only and are marked [REGION] [VERIFY], such as the US FDA, the EU medical device rules and AI Act, and data protection laws in the EU, US and Kenya. Learners confirm local rules with their regulatory or data protection officer.",
+          "exercise": "For one AI health tool category, write a list of questions for your local regulator or data protection officer, and mark each one as 'to check locally'."
+        },
+        {
+          "lesson_id": "L12",
+          "title": "Choosing a Tool and Assessing Clinical Value",
+          "objectives": [
+            "O5",
+            "O6"
+          ],
+          "summary": "The capstone brief: choose a hypothetical tool, or a real tool described in its public documentation. Write an intended use statement and assess clinical value: which outcome it should improve, for whom, and compared with current practice. The capstone rubric.",
+          "exercise": "Capstone step 1: write the intended use statement and the clinical value section of your evaluation."
+        },
+        {
+          "lesson_id": "L13",
+          "title": "Risk Assessment for an AI Health Tool",
+          "objectives": [
+            "O4",
+            "O5",
+            "O6"
+          ],
+          "summary": "A structured risk review covering clinical safety, bias, privacy, security, workflow and accountability. How to include clinicians, patients and community voices. Worked example: a risk table for a hypothetical triage-support tool in Indonesia.",
+          "exercise": "Capstone step 2: complete the risk section of your evaluation, with at least one mitigation and one owner for each risk."
+        },
+        {
+          "lesson_id": "L14",
+          "title": "A Safe Implementation Plan",
+          "objectives": [
+            "O6"
+          ],
+          "summary": "Silent-mode testing, a small pilot, staff training, a governance group, monitoring measures, feedback channels and clear stop criteria. Analogy: introducing a new medical device on one ward before the whole hospital. How to plan for withdrawal of the tool if needed.",
+          "exercise": "Capstone step 3: write the implementation plan and finish your evaluation with a clear recommendation."
+        }
+      ]
+    }
+  ],
+  "capstone": {
+    "title": "Evaluation of an AI Health Tool",
+    "brief": "Write an evaluation of an AI health tool covering clinical value, risks and a safe implementation plan.",
+    "built_in": [
+      "L12",
+      "L13",
+      "L14"
+    ],
+    "assesses": [
+      "O4",
+      "O5",
+      "O6"
+    ]
+  },
+  "coverage_check": {
+    "O1": [
+      "L01",
+      "L02"
+    ],
+    "O2": [
+      "L03",
+      "L04",
+      "L05"
+    ],
+    "O3": [
+      "L06",
+      "L07",
+      "L08"
+    ],
+    "O4": [
+      "L02",
+      "L08",
+      "L09",
+      "L10",
+      "L13"
+    ],
+    "O5": [
+      "L05",
+      "L10",
+      "L11",
+      "L12",
+      "L13"
+    ],
+    "O6": [
+      "L12",
+      "L13",
+      "L14"
+    ]
+  },
+  "flags": [
+    "PROPOSED: screen demo for L06 (learners run a ready-made Google Colab notebook on synthetic appointment data; many learners have a clinical, not coding, background). Needs approval.",
+    "Clinical review needed: a reviewer with clinical experience should check L03, L04, L07, L08 and L10 before Stage 2, to confirm there is no clinical advice and that AI is framed as decision support under clinician oversight.",
+    "L02 [VERIFY] [VERSION]: which public health datasets Stage 2 names (for example the WHO Global Health Observatory), and their access and licence terms.",
+    "L04 [VERIFY]: any real diagnostic performance figure for a named tool; the lesson is designed to use synthetic numbers only.",
+    "L05 [VERIFY]: names and current versions of AI reporting guidelines (for example TRIPOD+AI, CONSORT-AI, SPIRIT-AI).",
+    "L11 [VERIFY]: WHO guidance on ethics and governance of AI for health (title and year).",
+    "L11 [REGION] [VERIFY]: US FDA oversight of software as a medical device; EU Medical Device Regulation and EU AI Act; HIPAA (US); GDPR (EU); Kenya Data Protection Act.",
+    "L08 [VERSION]: data-use and retention terms of free AI assistant plans; the lesson tells learners never to enter identifiable patient data.",
+    "[VERSION]: Google Colab free tier limits.",
+    "Judgement call: bias and dataset-shift cases (L09) are hypothetical, not named studies or incidents; sourced cases can be added after [VERIFY] review.",
+    "Judgement call: the capstone lets learners evaluate a hypothetical tool, or a real one using only its public documentation, to avoid unverified claims about commercial products.",
+    "Judgement call: all exercises use public or synthetic data only."
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "course_id": "AI-07",
+  "slug": "ai-07-ai-for-content-creators-and-marketers",
+  "course_title": "AI for Content Creators and Marketers",
+  "level": "Beginner",
+  "status": "AWAITING_APPROVAL",
+  "screen_demo_lessons": [],
+  "overview": "A three-week, practical course for marketers, social media managers and content creators who already know the basics of marketing. Learners use free AI tools to research audiences, generate ideas, write posts and newsletters, design visuals in Canva and free image generators, and edit short videos in CapCut. The course keeps two rules at the centre: the brand keeps a human voice, and every claim is checked before it is published. Learners also cover copyright, disclosure and inclusive content. In the final week they plan and produce a complete 30-day, multi-channel campaign for a real or sample brand.",
+  "time_plan": {
+    "video_minutes": 75,
+    "weekly_hours": 2,
+    "per_week": "About 25 minutes of video, 60 minutes of hands-on creation exercises, and 35 minutes of reading and reflection. In week 3 most of the exercise and reflection time goes to the capstone campaign."
+  },
+  "objectives": [
+    {
+      "id": "O1",
+      "bloom": "Remember",
+      "text": "Name the main types of AI tools for content work (text, image, video and design) and describe what each type does well."
+    },
+    {
+      "id": "O2",
+      "bloom": "Understand",
+      "text": "Explain the main risks of AI-assisted content: factual errors, copyright and licensing questions, disclosure expectations, bias, and loss of brand voice."
+    },
+    {
+      "id": "O3",
+      "bloom": "Apply",
+      "text": "Use AI to research an audience, generate and filter content ideas, and plan a content calendar."
+    },
+    {
+      "id": "O4",
+      "bloom": "Apply",
+      "text": "Create on-brand text, images and short videos with Claude or ChatGPT, Canva, CapCut and free image generators."
+    },
+    {
+      "id": "O5",
+      "bloom": "Analyse",
+      "text": "Analyse how audiences and formats differ across channels, and adapt or repurpose content and plans based on simple performance data."
+    },
+    {
+      "id": "O6",
+      "bloom": "Evaluate",
+      "text": "Review AI-assisted content for accuracy, brand voice, originality and inclusivity, and decide whether it is ready to publish."
+    },
+    {
+      "id": "O7",
+      "bloom": "Create",
+      "text": "Produce a complete 30-day, multi-channel content campaign for a real or sample brand."
+    }
+  ],
+  "modules": [
+    {
+      "module_id": "M1",
+      "week": 1,
+      "title": "AI in the Content Workflow",
+      "lessons": [
+        {
+          "lesson_id": "L01",
+          "title": "Where AI Fits in Content Work",
+          "objectives": [
+            "O1"
+          ],
+          "summary": "A tour of the content workflow (research, ideas, creation, editing, publishing, measuring) and the AI tools that can help at each step: chat assistants, design tools, image generators and video editors. Analogy: AI as a kitchen assistant who can chop and prepare quickly, while the chef still decides the recipe and tastes the dish.",
+          "exercise": "Map your current content workflow in 6 steps and write which type of AI tool could help at each step, and which step you want to keep fully human."
+        },
+        {
+          "lesson_id": "L02",
+          "title": "Teaching AI Your Brand Voice",
+          "objectives": [
+            "O4",
+            "O6"
+          ],
+          "summary": "How to write a short brand voice guide (personality, words to use, words to avoid, example posts) and give it to Claude or ChatGPT as context. Worked example: a sample coffee brand from Colombia gets generic text until the voice guide is added, then text that sounds like the brand.",
+          "exercise": "Write a one-page voice guide for a real or sample brand. Ask Claude or ChatGPT for the same post with and without the guide, and list 3 differences."
+        },
+        {
+          "lesson_id": "L03",
+          "title": "Audience Research and Personas with AI",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "Using AI to draft audience personas and list their questions, problems and favourite channels, then testing those guesses against real sources such as customer comments, surveys and your own analytics. AI personas are starting hypotheses, not research results.",
+          "exercise": "Ask a free AI assistant to create 2 personas for your brand. Mark each detail as 'confirmed by real data', 'plausible, needs checking' or 'probably a stereotype', and rewrite one persona."
+        },
+        {
+          "lesson_id": "L04",
+          "title": "Generating and Filtering Content Ideas",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "Getting many ideas quickly with structured prompts (content pillars, formats, questions customers ask), then filtering them with clear criteria: fits the brand, useful to the audience, possible to produce. Worked example: Priya, a marketer for a fitness studio in Pune, turns 40 AI ideas into a shortlist of 8.",
+          "exercise": "Generate 30 content ideas for your brand with Claude or ChatGPT, then score each on 3 criteria and keep your top 8."
+        },
+        {
+          "lesson_id": "L05",
+          "title": "Rules of the Road: Copyright, Disclosure and Accuracy",
+          "objectives": [
+            "O2"
+          ],
+          "summary": "Key questions before publishing AI-assisted content: Who owns it? Does the tool's licence allow commercial use? Does the platform or the law in your market expect you to label AI-generated content? Is every fact and claim checked? The law on AI and copyright is still developing and differs by country. [REGION] [VERIFY] [VERSION]",
+          "exercise": "For 3 AI tools you plan to use, find and note what their current terms say about commercial use of outputs, and write a short disclosure rule for your brand."
+        }
+      ]
+    },
+    {
+      "module_id": "M2",
+      "week": 2,
+      "title": "Creating Content with AI",
+      "lessons": [
+        {
+          "lesson_id": "L06",
+          "title": "Writing Social Posts and Captions",
+          "objectives": [
+            "O4"
+          ],
+          "summary": "Prompting for posts that fit each platform: length, hook, call to action and hashtags. Asking for several variations and choosing, instead of accepting the first answer. Worked example: a sample handmade-soap brand in Nairobi writes captions for a new product in three styles.",
+          "exercise": "Write 5 social posts for one product or service using Claude or ChatGPT and your voice guide. Edit each post so that at least one sentence is fully your own."
+        },
+        {
+          "lesson_id": "L07",
+          "title": "Long-Form Content: Blogs and Newsletters",
+          "objectives": [
+            "O4",
+            "O6"
+          ],
+          "summary": "Building a blog post or newsletter step by step: outline, key points, draft, then human editing. Adding your own experience, examples and opinions so the piece is original and useful. Checking every statistic, quote and source before publishing, because AI can invent them.",
+          "exercise": "Draft a 600-word blog post or newsletter with AI help, starting from your own outline. Highlight every factual claim and check each one against a source you can link to."
+        },
+        {
+          "lesson_id": "L08",
+          "title": "Designing Visuals with Canva and Free Image Generators",
+          "objectives": [
+            "O4",
+            "O2"
+          ],
+          "summary": "Using Canva templates and its AI features for branded graphics, and free image generators for original images. Writing image prompts (subject, style, colours, composition), keeping brand colours and fonts consistent, and avoiding images of real people, logos or copyrighted characters. [VERSION] Canva AI features, free image generator limits and licence terms change often.",
+          "exercise": "Create 3 branded visuals for your brand in Canva, including at least one AI-generated image. Record the tool and prompt used for each image and check the licence terms."
+        },
+        {
+          "lesson_id": "L09",
+          "title": "Short Video with CapCut",
+          "objectives": [
+            "O4"
+          ],
+          "summary": "Planning a 30-second video with AI (hook, 3 scenes, call to action), then editing it in CapCut with auto-captions, templates and simple effects. Why captions and a strong first 2 seconds matter on mobile. [VERSION] CapCut features and availability differ by plan and country. [REGION]",
+          "exercise": "Ask Claude or ChatGPT for a 30-second script and shot list, film it on your phone, and edit it in CapCut with captions. Check that the captions are correct word by word."
+        },
+        {
+          "lesson_id": "L10",
+          "title": "Keeping a Human Voice: Editing and Reviewing AI Content",
+          "objectives": [
+            "O6"
+          ],
+          "summary": "Common signs of unedited AI text: generic openings, repeated phrases, and claims without evidence. A 5-point review checklist: accurate, on-brand, original, inclusive, and legally safe. Analogy: AI gives you clay; your editing shapes it into something people recognise as yours.",
+          "exercise": "Take 3 pieces of AI-assisted content you made this week and review them with the 5-point checklist. Rewrite the weakest piece and explain what you changed."
+        }
+      ]
+    },
+    {
+      "module_id": "M3",
+      "week": 3,
+      "title": "Build Your 30-Day Campaign",
+      "lessons": [
+        {
+          "lesson_id": "L11",
+          "title": "Repurposing One Idea Across Channels",
+          "objectives": [
+            "O5"
+          ],
+          "summary": "Turning one core piece of content (a blog post, a video or a webinar) into posts, short videos, emails and visuals for different channels. How audiences, formats and length differ by channel, and why simply copying the same text everywhere performs poorly. Worked example: Lucas, a creator in Lisbon, turns one tutorial video into 7 pieces of content.",
+          "exercise": "Choose one piece of your content and use AI to repurpose it into at least 4 formats for different channels. For each format, write one sentence explaining the change you made for that audience."
+        },
+        {
+          "lesson_id": "L12",
+          "title": "Planning a 30-Day Campaign Calendar",
+          "objectives": [
+            "O3",
+            "O7"
+          ],
+          "summary": "Setting one campaign goal, choosing 2 to 4 channels, content pillars and a posting rhythm, then using AI to draft a 30-day calendar in a table. You decide the goal and the key dates; AI helps fill in the structure.",
+          "exercise": "Capstone step 1: write your campaign goal and audience, then build a 30-day content calendar with AI help for a real or sample brand, covering at least 3 channels."
+        },
+        {
+          "lesson_id": "L13",
+          "title": "Producing Campaign Assets at Speed",
+          "objectives": [
+            "O4",
+            "O7"
+          ],
+          "summary": "Batch production: creating a week of posts, visuals and one short video in a single working session with your voice guide, templates and saved prompts. Keeping a simple log of which tools produced which assets, for licence and disclosure checks.",
+          "exercise": "Capstone step 2: produce the content for the first 7 days of your campaign using Claude or ChatGPT, Canva and CapCut, and keep an asset log with the tool used for each item."
+        },
+        {
+          "lesson_id": "L14",
+          "title": "Measuring Results and Improving with AI",
+          "objectives": [
+            "O5",
+            "O6"
+          ],
+          "summary": "Choosing a few simple measures (reach, engagement, clicks, sign-ups) that match the campaign goal. Using AI to summarise a small table of results and suggest changes, while checking its reasoning, because a small amount of data can mislead. Hypothetical sample data is provided for learners without live results.",
+          "exercise": "Give an AI assistant the sample results table (or your own) and ask for 3 improvement ideas. Accept, change or reject each idea with a reason, and update your calendar."
+        },
+        {
+          "lesson_id": "L15",
+          "title": "Final Review and Campaign Presentation",
+          "objectives": [
+            "O6",
+            "O7"
+          ],
+          "summary": "Final quality check of the whole campaign against the 5-point checklist, the brand voice guide and your disclosure rule. How to present the campaign clearly to a client or manager. Then the capstone brief and rubric.",
+          "exercise": "Capstone step 3: review and finish your 30-day campaign, then present it as a short document with the goal, calendar, sample assets, asset log and your review notes."
+        }
+      ]
+    }
+  ],
+  "capstone": {
+    "title": "30-Day Multi-Channel Content Campaign",
+    "brief": "Plan and produce a complete 30-day, multi-channel content campaign for a real or sample brand, with a calendar, sample assets from each channel, an asset log and a review against the quality checklist.",
+    "built_in": [
+      "L12",
+      "L13",
+      "L14",
+      "L15"
+    ],
+    "assesses": [
+      "O3",
+      "O4",
+      "O5",
+      "O6",
+      "O7"
+    ]
+  },
+  "coverage_check": {
+    "O1": [
+      "L01"
+    ],
+    "O2": [
+      "L05",
+      "L08"
+    ],
+    "O3": [
+      "L03",
+      "L04",
+      "L12"
+    ],
+    "O4": [
+      "L02",
+      "L06",
+      "L07",
+      "L08",
+      "L09",
+      "L13"
+    ],
+    "O5": [
+      "L11",
+      "L14"
+    ],
+    "O6": [
+      "L02",
+      "L07",
+      "L10",
+      "L14",
+      "L15"
+    ],
+    "O7": [
+      "L12",
+      "L13",
+      "L15"
+    ]
+  },
+  "flags": [
+    "PROPOSED: screen demo for L08 (Canva's AI features and branded design steps are much easier to follow on screen). Needs approval.",
+    "PROPOSED: screen demo for L09 (CapCut editing and auto-captions are a visual, step-by-step process). Needs approval.",
+    "L05 [REGION] [VERIFY]: copyright ownership of AI-generated content and AI-disclosure rules differ by country and platform and are still changing; the script must describe principles, not state legal rules, unless a reviewer confirms them.",
+    "L05 [VERSION]: commercial-use terms for Claude, ChatGPT, Canva, CapCut and free image generators must be checked against current terms before scripting.",
+    "L08 [VERSION]: Canva AI feature names, free image generator limits and licence terms must be checked against the live tools before scripting.",
+    "L09 [VERSION] [REGION]: CapCut features, plan limits and availability differ by country; confirm availability in the course's target markets (en, fr, pt, ar) before scripting.",
+    "L08 safe use: learners are told not to generate images of real people, logos or copyrighted characters.",
+    "L14 uses a hypothetical sample results table so learners without live campaign data can complete the exercise; the table must be created in Stage 2.",
+    "Judgement call: 'Free image generators' is not a single named tool; Stage 2 must pick one or two current free options and mark them [VERSION].",
+    "Judgement call: example brands (a Colombian coffee brand, a handmade-soap brand in Nairobi, a fitness studio in Pune) are unnamed and hypothetical, to avoid matching real companies."
+  ]
+}

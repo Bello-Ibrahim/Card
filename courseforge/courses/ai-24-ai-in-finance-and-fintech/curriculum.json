@@ -1,0 +1,260 @@
+{
+  "course_id": "AI-24",
+  "slug": "ai-24-ai-in-finance-and-fintech",
+  "course_title": "AI in Finance and Fintech",
+  "level": "Intermediate",
+  "status": "AWAITING_APPROVAL",
+  "screen_demo_lessons": [],
+  "overview": "A three-week course for finance professionals, fintech teams and banking staff who already understand basic finance. Learners see where AI fits across a financial institution, from payments and lending to customer service and reporting, and learn how fraud and credit models turn data into risk scores. Fairness in credit decisions is a core theme: learners measure approval and error rates across customer groups and practise writing clear decline reasons. The course teaches regulatory principles that apply in most countries, not the rules of one country, and never gives investment advice. All data is synthetic. By the end, learners write an AI use case proposal for a financial institution with a full risk and compliance assessment.",
+  "time_plan": {
+    "video_minutes": 70,
+    "weekly_hours": 3,
+    "per_week": "About 25 minutes of video, 95 minutes of spreadsheet and AI-assistant exercises, and 60 minutes of reading, quizzes and reflection. In week 3 most of the exercise time goes to the capstone."
+  },
+  "objectives": [
+    {
+      "id": "O1",
+      "bloom": "Remember",
+      "text": "List the main AI use cases in financial services (fraud detection, credit scoring, customer service, financial analysis and compliance) and the data each one depends on."
+    },
+    {
+      "id": "O2",
+      "bloom": "Understand",
+      "text": "Explain how fraud detection and credit scoring models turn transaction and applicant data into risk scores, and what false positives and false negatives cost the institution and the customer."
+    },
+    {
+      "id": "O3",
+      "bloom": "Apply",
+      "text": "Use Google Sheets and a free AI assistant to analyse synthetic financial data and to draft customer-service replies and financial commentary that a human checks before use."
+    },
+    {
+      "id": "O4",
+      "bloom": "Analyse",
+      "text": "Analyse the outcomes of a credit or fraud model across customer groups to find possible unfair treatment, using simple fairness measures."
+    },
+    {
+      "id": "O5",
+      "bloom": "Evaluate",
+      "text": "Evaluate an AI use case against common regulatory principles: fairness, explainability, data protection, model risk management and accountability."
+    },
+    {
+      "id": "O6",
+      "bloom": "Create",
+      "text": "Design an AI use case proposal for a financial institution, including a risk and compliance assessment."
+    }
+  ],
+  "modules": [
+    {
+      "module_id": "M1",
+      "week": 1,
+      "title": "Where AI Fits in Finance",
+      "lessons": [
+        {
+          "lesson_id": "L01",
+          "title": "The AI Map of Financial Services",
+          "objectives": [
+            "O1"
+          ],
+          "summary": "A tour of five families of AI use cases along a financial institution's value chain: onboarding, payments, lending, customer service and back-office analysis. Analogy: AI as an extra pair of eyes at each step of a loan's journey, from application to repayment. Hypothetical examples include a mobile-money provider in Kenya, a digital bank in Brazil and an insurer in Germany.",
+          "exercise": "In Google Sheets, list 8 finance tasks from your own work, assign each to a use case family, and note the data it would need."
+        },
+        {
+          "lesson_id": "L02",
+          "title": "Financial Data: What Models Learn From",
+          "objectives": [
+            "O1",
+            "O2"
+          ],
+          "summary": "The main data types in finance: transactions, credit bureau records, alternative data such as mobile top-ups and utility payments, and text such as complaints. Why labels are hard: a fraud label may arrive weeks later, after a chargeback. Data quality problems and why they matter more than the choice of model.",
+          "exercise": "Open the synthetic transaction dataset in Google Sheets. Mark which columns could be features and which is the label, and list 3 data quality problems you find."
+        },
+        {
+          "lesson_id": "L03",
+          "title": "Fraud Detection: Rules and Models",
+          "objectives": [
+            "O2"
+          ],
+          "summary": "Fixed rules compared with models that learn patterns and give each transaction a risk score in a fraction of a second. Worked example: the same card is used in Lagos and then in Singapore 20 minutes later. Why fraud patterns change and why models need new data.",
+          "exercise": "In Google Sheets, write 3 simple rules that flag suspicious transactions in the synthetic dataset, count how many each rule flags, and compare the flags with the fraud labels."
+        },
+        {
+          "lesson_id": "L04",
+          "title": "False Alarms and Missed Fraud: The Cost Trade-off",
+          "objectives": [
+            "O2"
+          ],
+          "summary": "False positives block genuine customers; false negatives let fraud through. A confusion matrix in plain language, and how moving the score threshold changes both errors. Worked example: the cost of 10,000 card payments under a strict and a relaxed threshold.",
+          "exercise": "Use the confusion-matrix sheet to change the threshold and calculate the total cost per 10,000 transactions under two different cost assumptions. Write one sentence on which threshold you would choose and why."
+        },
+        {
+          "lesson_id": "L05",
+          "title": "Credit Scoring with AI",
+          "objectives": [
+            "O2"
+          ],
+          "summary": "How scorecards and machine learning models estimate the chance that a borrower will not repay. Thin-file customers, such as a market trader in Indonesia with no credit history, and the promise and risks of alternative data for financial inclusion. Any claim about inclusion gains must be sourced [VERIFY].",
+          "exercise": "Give Claude or ChatGPT the table for one synthetic applicant and ask it to explain the main drivers of the score. Check every claim against the data and mark any that are wrong."
+        }
+      ]
+    },
+    {
+      "module_id": "M2",
+      "week": 2,
+      "title": "Fairness, Service and Analysis",
+      "lessons": [
+        {
+          "lesson_id": "L06",
+          "title": "Fairness in Credit Decisions",
+          "objectives": [
+            "O4"
+          ],
+          "summary": "Protected characteristics, proxy variables such as postcode or phone type, and the difference between direct and indirect discrimination. Analogy: a scale that is slightly wrong for one group of customers gives an unfair result every time. Illustrated with a hypothetical lender, not a named company.",
+          "exercise": "In Google Sheets, calculate approval rates by group on a synthetic set of loan decisions and the ratio between the lowest and highest rate. Note what could explain the gap."
+        },
+        {
+          "lesson_id": "L07",
+          "title": "Measuring and Reducing Bias",
+          "objectives": [
+            "O4",
+            "O5"
+          ],
+          "summary": "Simple fairness measures: approval-rate ratio and error rates by group. Why different measures can disagree, and the main options to reduce bias: remove proxies, rebalance data, add human review and monitor results. Any named legal threshold, such as the 'four-fifths' ratio from US employment practice, is marked [REGION] [VERIFY].",
+          "exercise": "Run the ready-made Google Colab notebook to compare false rejection rates by group. Write 3 sentences on which fairness measure you would report to a credit committee and why."
+        },
+        {
+          "lesson_id": "L08",
+          "title": "AI for Customer Service in Banking",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "AI assistants that answer balance questions, block lost cards and guide dispute requests, using only approved policy texts. Clear limits: complaints, vulnerable customers and any request for personal investment advice go to a trained human. Worked example: a bank in the United Arab Emirates serving customers in Arabic and English.",
+          "exercise": "Use Claude or ChatGPT with the provided synthetic policy text to draft replies to 5 customer messages. Check each reply against the policy and mark which messages must go to a human."
+        },
+        {
+          "lesson_id": "L09",
+          "title": "AI for Financial Analysis and Reporting",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "Using AI assistants to summarise reports, explain variances and draft management commentary. Language models can invent or misread numbers, so every figure must be checked against the source. Analogy: a fast junior analyst whose work is always reviewed before it leaves the team.",
+          "exercise": "Give a free AI assistant the synthetic quarterly profit-and-loss sheet and ask for variance commentary. Check every number against the sheet and correct any errors."
+        },
+        {
+          "lesson_id": "L10",
+          "title": "Explainability: Why Was I Declined?",
+          "objectives": [
+            "O4",
+            "O5"
+          ],
+          "summary": "Customers, staff and supervisors need reasons they can understand. Reason codes, feature importance at a high level, and the difference between an accurate explanation and a comforting one. Worked example: turning a model's top three factors into a clear message for an applicant in Egypt.",
+          "exercise": "Write customer-friendly decline reasons for 3 synthetic applicants. Ask an AI assistant to check them for jargon, then confirm that each reason matches the data."
+        }
+      ]
+    },
+    {
+      "module_id": "M3",
+      "week": 3,
+      "title": "Governance and Your Capstone",
+      "lessons": [
+        {
+          "lesson_id": "L11",
+          "title": "Regulatory Principles for AI in Finance",
+          "objectives": [
+            "O5"
+          ],
+          "summary": "Principles that appear in many countries: fair treatment, explainability, data protection, model risk management, accountability and third-party risk. Named examples are given only as illustrations and are marked [REGION] [VERIFY], such as the EU AI Act, adverse action notices in the US, and data protection laws in Brazil, Nigeria and South Africa. Learners always confirm local rules with their compliance team.",
+          "exercise": "Complete a principles table for your own country: for each principle, note what you already know and what you must check with your compliance or legal team."
+        },
+        {
+          "lesson_id": "L12",
+          "title": "Model Risk Management and Monitoring",
+          "objectives": [
+            "O5"
+          ],
+          "summary": "A model inventory, independent validation, performance and drift monitoring, and the 'three lines of defence'. Analogy: a regular vehicle safety inspection, because a model that was safe at launch may not stay safe. Who has the authority to pause a model.",
+          "exercise": "Draft a one-page monitoring plan for the fraud model from L03: what to measure, how often, which limits trigger action, and who acts."
+        },
+        {
+          "lesson_id": "L13",
+          "title": "Scoping Your AI Use Case Proposal",
+          "objectives": [
+            "O3",
+            "O6"
+          ],
+          "summary": "The capstone brief and template: problem, business value, users, data, model approach, human oversight and success measures. How to use an AI assistant as a thinking partner without copying its answers. Worked example: a microfinance institution in the Philippines scoping loan-officer support.",
+          "exercise": "Capstone step 1: fill in the problem, value, data and success-measure sections of the proposal template, using Claude or ChatGPT to test your assumptions."
+        },
+        {
+          "lesson_id": "L14",
+          "title": "Risk and Compliance Assessment",
+          "objectives": [
+            "O5",
+            "O6"
+          ],
+          "summary": "Building a risk register for the use case: fairness, privacy, explainability, security, third-party and operational risks, each with likelihood, impact and controls. How to reach a clear go, no-go or pilot recommendation. The capstone rubric.",
+          "exercise": "Capstone step 2: complete the risk and compliance assessment in Google Sheets and finish the proposal with a recommendation."
+        }
+      ]
+    }
+  ],
+  "capstone": {
+    "title": "AI Use Case Proposal with Risk and Compliance Assessment",
+    "brief": "Design an AI use case proposal for a financial institution, including a risk and compliance assessment.",
+    "built_in": [
+      "L13",
+      "L14"
+    ],
+    "assesses": [
+      "O3",
+      "O5",
+      "O6"
+    ]
+  },
+  "coverage_check": {
+    "O1": [
+      "L01",
+      "L02"
+    ],
+    "O2": [
+      "L02",
+      "L03",
+      "L04",
+      "L05"
+    ],
+    "O3": [
+      "L08",
+      "L09",
+      "L13"
+    ],
+    "O4": [
+      "L06",
+      "L07",
+      "L10"
+    ],
+    "O5": [
+      "L07",
+      "L10",
+      "L11",
+      "L12",
+      "L14"
+    ],
+    "O6": [
+      "L13",
+      "L14"
+    ]
+  },
+  "flags": [
+    "PROPOSED: screen demo for L07 (learners run a ready-made Google Colab notebook; most learners have a finance, not coding, background, so a live walkthrough reduces setup errors). Needs approval.",
+    "L11 [REGION] [VERIFY]: EU AI Act treatment of creditworthiness assessment as high-risk, and its application dates.",
+    "L11 [REGION] [VERIFY]: US adverse action notice requirements (Equal Credit Opportunity Act / Regulation B).",
+    "L11 [REGION] [VERIFY]: names and scope of the example data protection laws (GDPR in the EU, LGPD in Brazil, NDPA in Nigeria, POPIA in South Africa).",
+    "L12 [REGION] [VERIFY]: if Stage 2 names any supervisory model risk guidance (for example US SR 11-7), confirm it is current; the lesson is written to teach the three lines of defence as a general framework.",
+    "L07 [REGION] [VERIFY]: the 'four-fifths' ratio comes from US employment practice and is not a general credit rule; present it only as a heuristic.",
+    "L05 [VERIFY]: any statistic about alternative data and financial inclusion needs a source, or must be removed.",
+    "[VERSION]: Google Colab free tier limits, and the free-plan access and data-use terms of Claude and ChatGPT.",
+    "Judgement call: all datasets (transactions, loan decisions, profit-and-loss) are synthetic; exercises tell learners never to paste real customer data into public AI tools.",
+    "Judgement call: no investment advice anywhere; L08 explicitly routes investment-advice requests to a human, and L09 uses a synthetic company.",
+    "Judgement call: Google Colab is used only through a ready-made notebook (L07), because the prerequisite is basic finance, not coding.",
+    "Judgement call: fairness cases use hypothetical lenders rather than named company incidents; sourced cases can be added after [VERIFY] review."
+  ]
+}

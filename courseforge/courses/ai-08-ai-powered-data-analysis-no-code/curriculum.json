@@ -1,0 +1,269 @@
+{
+  "course_id": "AI-08",
+  "slug": "ai-08-ai-powered-data-analysis-no-code",
+  "course_title": "AI-Powered Data Analysis (No Code)",
+  "level": "Beginner",
+  "status": "AWAITING_APPROVAL",
+  "screen_demo_lessons": [],
+  "overview": "A three-week course for analysts, small business owners and professionals who already use spreadsheets. Learners use Google Sheets, AI assistants with file analysis (Claude or ChatGPT) and Looker Studio to clean messy data, ask clear questions, find patterns, build charts and dashboards, and explain what the numbers mean. There is no coding. A strong theme runs through the course: AI can calculate wrongly or draw misleading conclusions, so every insight is checked against the source data. Learners also practise safe data handling before uploading any file. In the final week they analyse a real business dataset and present a five-slide insight report with charts.",
+  "time_plan": {
+    "video_minutes": 70,
+    "weekly_hours": 2,
+    "per_week": "About 25 minutes of video, 60 minutes of hands-on work in Google Sheets and AI tools, and 35 minutes of reading and practice questions. In week 3 most of the hands-on time goes to the capstone."
+  },
+  "objectives": [
+    {
+      "id": "O1",
+      "bloom": "Remember",
+      "text": "Describe what AI file-analysis tools can do with spreadsheet data, and list their main limits, including calculation errors, file limits and data privacy."
+    },
+    {
+      "id": "O2",
+      "bloom": "Understand",
+      "text": "Explain key analysis ideas (summaries, segments, trends, outliers, and correlation versus causation) in plain language."
+    },
+    {
+      "id": "O3",
+      "bloom": "Apply",
+      "text": "Clean and prepare messy data in Google Sheets using AI-suggested steps and formulas."
+    },
+    {
+      "id": "O4",
+      "bloom": "Apply",
+      "text": "Ask an AI tool clear questions about a dataset to produce summaries, pivot tables, charts and a simple Looker Studio dashboard."
+    },
+    {
+      "id": "O5",
+      "bloom": "Analyse",
+      "text": "Break a business question into measurable parts and find patterns, trends and outliers in the data."
+    },
+    {
+      "id": "O6",
+      "bloom": "Evaluate",
+      "text": "Check AI-generated numbers, formulas and insights against the source data, and identify errors or misleading conclusions."
+    },
+    {
+      "id": "O7",
+      "bloom": "Create",
+      "text": "Produce a five-slide insight report with charts that explains data findings to a business audience."
+    }
+  ],
+  "modules": [
+    {
+      "module_id": "M1",
+      "week": 1,
+      "title": "Preparing Data with AI",
+      "lessons": [
+        {
+          "lesson_id": "L01",
+          "title": "What AI Can Do with Your Spreadsheets",
+          "objectives": [
+            "O1"
+          ],
+          "summary": "What happens when you upload a spreadsheet to an AI assistant with file analysis: it reads the data, often writes and runs hidden calculations, and describes the results in words. What it does well (fast summaries, formula ideas, chart suggestions) and where it fails (wrong columns, rounding, confident but wrong conclusions). Analogy: a fast junior analyst whose work you always review. [VERSION] File types, size limits and which plans include file analysis change often.",
+          "exercise": "Upload a small sample sales dataset (provided) to Claude or ChatGPT and ask 3 questions. Check one answer by hand in Google Sheets and note whether it matched."
+        },
+        {
+          "lesson_id": "L02",
+          "title": "Safe Data Handling Before You Upload",
+          "objectives": [
+            "O1",
+            "O6"
+          ],
+          "summary": "What never to upload: customer names, contact details, ID numbers, salaries and confidential figures, unless your organisation has approved the tool for that data. How to anonymise a file by removing or replacing columns, and why you keep an untouched original copy. Data protection rules differ by country and by employer. [REGION]",
+          "exercise": "Take the provided customer dataset and create an anonymised copy in Google Sheets by removing or replacing 4 types of personal data. List what you changed."
+        },
+        {
+          "lesson_id": "L03",
+          "title": "From Business Question to Data Question",
+          "objectives": [
+            "O5"
+          ],
+          "summary": "Good analysis starts with a clear question. Turning 'How is the shop doing?' into measurable questions: which products, which months, compared with what. Worked example: Kwame, who runs a bakery in Accra, turns a vague worry about falling profits into 3 questions his sales sheet can answer.",
+          "exercise": "Write one business question from your own work (or use the sample café dataset) and break it into 3 measurable data questions, naming the columns needed for each one."
+        },
+        {
+          "lesson_id": "L04",
+          "title": "Cleaning Messy Data with AI Help",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "Common data problems: duplicates, blank cells, inconsistent spellings, mixed date formats and numbers stored as text. Describing the problem to AI and asking for step-by-step fixes in Google Sheets instead of letting it change the data invisibly. Analogy: washing and sorting vegetables before you cook.",
+          "exercise": "Clean the provided messy orders dataset in Google Sheets with AI suggestions. Fix at least 5 types of problem and keep a log of each change."
+        },
+        {
+          "lesson_id": "L05",
+          "title": "AI-Written Formulas in Google Sheets",
+          "objectives": [
+            "O3",
+            "O6"
+          ],
+          "summary": "Asking AI to write formulas (for example SUMIFS, XLOOKUP, IF and date functions) by describing what you need in plain words, then testing each formula on a few rows you can check by hand. Asking AI to explain a formula you do not understand. [VERSION] Function names and availability can differ between spreadsheet tools and language settings. [REGION]",
+          "exercise": "Ask Claude or ChatGPT for 3 formulas for the orders dataset (total by region, a lookup and a date calculation). Test each one on 3 rows by hand and correct any that are wrong."
+        }
+      ]
+    },
+    {
+      "module_id": "M2",
+      "week": 2,
+      "title": "Analysing and Visualising Data",
+      "lessons": [
+        {
+          "lesson_id": "L06",
+          "title": "Asking Good Questions of Your Data",
+          "objectives": [
+            "O4"
+          ],
+          "summary": "How to prompt for analysis: describe the dataset, name the columns, state the question, and ask the AI to show its method and the numbers it used. Asking for a table first and conclusions second. Worked example: Sofia, an operations analyst in Mexico City, gets vague answers until she names the exact columns and time period.",
+          "exercise": "Upload the cleaned orders dataset and ask 3 analysis questions using the prompt structure. For each answer, note whether the AI showed its method."
+        },
+        {
+          "lesson_id": "L07",
+          "title": "Summaries and Pivot Tables",
+          "objectives": [
+            "O4",
+            "O2"
+          ],
+          "summary": "Summaries by group (totals, averages, counts) and why the average can hide important differences. Building pivot tables in Google Sheets with AI guidance, and comparing them with the AI's own summary. Analogy: sorting a pile of receipts into envelopes by month and by shop.",
+          "exercise": "Build 2 pivot tables in Google Sheets (sales by region and by month). Ask the AI for the same summary and compare the numbers. Explain any difference."
+        },
+        {
+          "lesson_id": "L08",
+          "title": "Trends, Outliers and Correlation",
+          "objectives": [
+            "O2",
+            "O5"
+          ],
+          "summary": "Reading a trend over time, spotting outliers and asking why they exist before removing them. Correlation versus causation, explained with a hypothetical case: ice-cream sales and sunburn cases rise together because both follow hot weather, not because one causes the other.",
+          "exercise": "Use AI to find the 3 largest outliers and one trend in the orders dataset. For each one, write a possible cause and how you could check it."
+        },
+        {
+          "lesson_id": "L09",
+          "title": "Choosing and Building the Right Chart",
+          "objectives": [
+            "O4"
+          ],
+          "summary": "Matching the chart to the message: line charts for change over time, bar charts for comparisons, and why pie charts and 3D effects often confuse readers. Asking AI to suggest a chart and then building it in Google Sheets, with a clear title that states the finding.",
+          "exercise": "Build 3 charts in Google Sheets for 3 different questions about the orders dataset. Give each chart a title that states the main finding in one sentence."
+        },
+        {
+          "lesson_id": "L10",
+          "title": "A Simple Dashboard in Looker Studio",
+          "objectives": [
+            "O4"
+          ],
+          "summary": "Connecting a Google Sheet to Looker Studio, adding charts, scorecards and a date filter, and sharing the dashboard safely with view-only access. Asking AI for layout ideas and help with calculated fields. [VERSION] Looker Studio's interface and connectors change often.",
+          "exercise": "Build a one-page Looker Studio dashboard from the orders dataset with at least 2 charts, 2 scorecards and one filter."
+        }
+      ]
+    },
+    {
+      "module_id": "M3",
+      "week": 3,
+      "title": "Checking and Presenting Insights",
+      "lessons": [
+        {
+          "lesson_id": "L11",
+          "title": "Checking AI Insights for Errors",
+          "objectives": [
+            "O6"
+          ],
+          "summary": "Common AI analysis errors: using the wrong column, ignoring blank rows, mixing up totals and averages, inventing a cause, or stating a trend from too little data. A 5-point checking routine: recalculate one number, check row counts, look at the chart, ask 'compared with what?', and look for other explanations.",
+          "exercise": "Review 4 AI-generated insights about the orders dataset (provided, some with planted errors). Use the 5-point routine to find the errors and correct them."
+        },
+        {
+          "lesson_id": "L12",
+          "title": "Capstone: Explore Your Dataset",
+          "objectives": [
+            "O5",
+            "O6"
+          ],
+          "summary": "Choosing a real business dataset (your own anonymised data, or a public sample dataset), writing 3 business questions, and exploring the data with AI while logging each finding and how you checked it. Then the capstone brief and rubric.",
+          "exercise": "Capstone step 1: choose your dataset, clean it, write 3 business questions, and record at least 5 checked findings in a findings log."
+        },
+        {
+          "lesson_id": "L13",
+          "title": "Turning Findings into a Story",
+          "objectives": [
+            "O7"
+          ],
+          "summary": "Moving from numbers to a message: one main finding, supporting evidence, and a recommended action. The 'so what?' test for every chart. Worked example: Ananya, who manages a clinic in Chennai, turns 12 findings about appointment no-shows into one clear story with 3 charts.",
+          "exercise": "Capstone step 2: choose your main finding and 3 supporting findings, and sketch a five-slide storyline with one message per slide."
+        },
+        {
+          "lesson_id": "L14",
+          "title": "Building and Reviewing Your Five-Slide Report",
+          "objectives": [
+            "O6",
+            "O7"
+          ],
+          "summary": "Building the five slides (question, key finding, evidence charts, recommendation, limits of the analysis) in Google Slides or a similar free tool with charts from Sheets or Looker Studio. A final check that every number on the slides matches the source data.",
+          "exercise": "Capstone step 3: build your five-slide insight report, check every number against your data, and add one slide note that explains the limits of your analysis."
+        }
+      ]
+    }
+  ],
+  "capstone": {
+    "title": "Five-Slide Business Insight Report",
+    "brief": "Analyse a real business dataset with AI tools and present a five-slide insight report with charts, a clear recommendation and the limits of the analysis.",
+    "built_in": [
+      "L12",
+      "L13",
+      "L14"
+    ],
+    "assesses": [
+      "O4",
+      "O5",
+      "O6",
+      "O7"
+    ]
+  },
+  "coverage_check": {
+    "O1": [
+      "L01",
+      "L02"
+    ],
+    "O2": [
+      "L07",
+      "L08"
+    ],
+    "O3": [
+      "L04",
+      "L05"
+    ],
+    "O4": [
+      "L06",
+      "L07",
+      "L09",
+      "L10"
+    ],
+    "O5": [
+      "L03",
+      "L08",
+      "L12"
+    ],
+    "O6": [
+      "L02",
+      "L05",
+      "L11",
+      "L12",
+      "L14"
+    ],
+    "O7": [
+      "L13",
+      "L14"
+    ]
+  },
+  "flags": [
+    "PROPOSED: screen demo for L05 (writing and testing AI-suggested formulas in Google Sheets needs to be shown cell by cell). Needs approval.",
+    "PROPOSED: screen demo for L07 (building a pivot table in Google Sheets and comparing it with an AI file-analysis answer). Needs approval.",
+    "PROPOSED: screen demo for L10 (connecting a Google Sheet to Looker Studio and building a dashboard is hard to follow without seeing the interface). Needs approval.",
+    "L01 [VERSION]: file-analysis features, supported file types, size limits and plan availability in Claude and ChatGPT must be checked against the live tools before scripting.",
+    "L02 [REGION]: data protection rules differ by country and employer; the lesson gives general safe-use principles and points learners to their organisation's rules.",
+    "L05 [VERSION] [REGION]: formula names (for example XLOOKUP) and argument separators can differ between tools and locale settings (comma or semicolon); check for the fr, pt and ar versions.",
+    "L10 [VERSION]: Looker Studio interface, connectors and sharing settings must be checked against the live tool before scripting.",
+    "Judgement call: Stage 2 must create the sample datasets (sales, customer, messy orders, café) as fictional data, and the planted-error insights for L11.",
+    "Judgement call: L14 uses Google Slides or a similar free tool for the report, which is not in tools_free_first; charts come from Google Sheets or Looker Studio.",
+    "L12 capstone allows public sample datasets; Stage 2 should suggest a few openly licensed sources and mark them [VERIFY]."
+  ]
+}

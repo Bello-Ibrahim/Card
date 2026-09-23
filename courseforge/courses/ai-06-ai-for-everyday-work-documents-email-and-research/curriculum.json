@@ -1,0 +1,248 @@
+{
+  "course_id": "AI-06",
+  "slug": "ai-06-ai-for-everyday-work-documents-email-and-research",
+  "course_title": "AI for Everyday Work: Documents, Email and Research",
+  "level": "Beginner",
+  "status": "AWAITING_APPROVAL",
+  "screen_demo_lessons": [],
+  "overview": "A three-week, hands-on course for office workers, administrators and other knowledge workers in any industry. Learners use free AI assistants to draft emails and documents, summarise long texts and meetings, research topics and organise their week. Safe use runs through every lesson: what data never to paste into a chatbot, how to check AI output, and when a task needs human judgement. No technical background is needed beyond basic computer skills. In the final week, learners redesign three of their own weekly tasks with AI and measure the time they actually save.",
+  "time_plan": {
+    "video_minutes": 60,
+    "weekly_hours": 2,
+    "per_week": "About 20 minutes of video, 60 minutes of hands-on exercises with a free AI assistant, and 40 minutes of reading and reflection. In week 3 that last block goes to the capstone."
+  },
+  "objectives": [
+    {
+      "id": "O1",
+      "bloom": "Remember",
+      "text": "Describe what AI assistants can and cannot do in everyday office work, and name the four parts of a clear prompt: task, context, format and examples."
+    },
+    {
+      "id": "O2",
+      "bloom": "Understand",
+      "text": "Explain the main risks of using AI at work, including invented facts (hallucinations), data privacy and confidentiality, and the basic rules for safe use."
+    },
+    {
+      "id": "O3",
+      "bloom": "Apply",
+      "text": "Draft, edit and organise emails, documents, plans and templates with an AI assistant, adapting tone and format for different readers."
+    },
+    {
+      "id": "O4",
+      "bloom": "Apply",
+      "text": "Summarise long documents and meetings, and research a work topic with AI, checking key claims against original sources."
+    },
+    {
+      "id": "O5",
+      "bloom": "Analyse",
+      "text": "Break a weekly work task into steps and identify which steps AI can support and which need human judgement."
+    },
+    {
+      "id": "O6",
+      "bloom": "Evaluate",
+      "text": "Judge the accuracy, tone and safety of AI output with a review checklist before using it or sending it to others."
+    },
+    {
+      "id": "O7",
+      "bloom": "Create",
+      "text": "Design AI-assisted versions of three of your own weekly work tasks and measure the time saved."
+    }
+  ],
+  "modules": [
+    {
+      "module_id": "M1",
+      "week": 1,
+      "title": "Getting Started Safely with AI Assistants",
+      "lessons": [
+        {
+          "lesson_id": "L01",
+          "title": "What an AI Assistant Can Do for Your Work",
+          "objectives": [
+            "O1"
+          ],
+          "summary": "What AI assistants such as Claude, ChatGPT, Microsoft Copilot and Gemini are good at (drafting, rewording, summarising, brainstorming) and where they are weak (exact facts, recent events, your private context). Analogy: a fast, well-read new colleague on their first day, who is helpful but does not yet know your company and sometimes guesses.",
+          "exercise": "Open the free tier of Claude or ChatGPT and ask it to help with 3 small tasks from your real week (without any confidential details). Note which answers were useful as they were and which needed changes."
+        },
+        {
+          "lesson_id": "L02",
+          "title": "Writing Clear Prompts: Task, Context, Format, Examples",
+          "objectives": [
+            "O1",
+            "O3"
+          ],
+          "summary": "A clear prompt has four parts: the task, the context, the format you want, and an example if you have one. Worked example: Amara, an office manager in Lagos, turns 'write a notice about the office move' into a prompt with the date, audience, tone and length, and gets a much better first draft.",
+          "exercise": "Take one vague request (for example 'write a notice about the new parking rules') and rewrite it using the four parts. Compare the two answers from a free AI assistant."
+        },
+        {
+          "lesson_id": "L03",
+          "title": "Safe Use at Work: Privacy and Confidential Data",
+          "objectives": [
+            "O2"
+          ],
+          "summary": "What not to paste into a public chatbot: personal data about customers or colleagues, passwords, contracts and unreleased financial figures. The difference between free consumer tools and company-approved tools, and why you should always follow your employer's AI policy first. Data protection laws differ by country and region. [REGION] [VERSION] Data-use and training settings differ between free and paid plans and change often.",
+          "exercise": "Sort 10 example snippets of work text into 'safe to paste', 'safe after removing names and numbers' or 'never paste'. Then find out whether your organisation has an AI policy and note one rule it contains (or note that none exists)."
+        },
+        {
+          "lesson_id": "L04",
+          "title": "When AI Gets It Wrong: Checking Output",
+          "objectives": [
+            "O2",
+            "O6"
+          ],
+          "summary": "AI assistants predict likely text, so they can state wrong facts, invent sources or change the meaning of your notes with full confidence. A 4-step review checklist: check facts and numbers, check names and dates, check tone for the reader, and check nothing confidential was added or lost. Analogy: proofreading a colleague's draft before your name goes on it.",
+          "exercise": "Ask a free AI assistant to write a short email that includes 3 facts you can check (for example public holiday dates in your country). Use the checklist to find and correct any errors."
+        }
+      ]
+    },
+    {
+      "module_id": "M2",
+      "week": 2,
+      "title": "Documents, Email and Research",
+      "lessons": [
+        {
+          "lesson_id": "L05",
+          "title": "Drafting and Replying to Emails",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "Using AI to draft new emails, reply to long threads and change tone: more formal, friendlier, shorter or more direct. Worked example: Carlos, a purchasing assistant in São Paulo, turns rough bullet points into a polite but firm reminder to a late supplier, then edits it so it sounds like him.",
+          "exercise": "Write 3 bullet points for a real email you need to send (with names removed). Ask a free AI assistant for two versions in different tones, then combine the best parts and edit the result in your own words."
+        },
+        {
+          "lesson_id": "L06",
+          "title": "Writing and Editing Documents",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "AI for first drafts of reports, procedures and briefings, and for editing: making text clearer, shorter or easier for non-experts. Build a document step by step (outline, then sections, then edit) instead of asking for everything at once. Analogy: working with a builder from a plan, not asking for a finished house in one sentence.",
+          "exercise": "Ask a free AI assistant for an outline of a one-page procedure you know well (for example how to book a meeting room). Improve the outline yourself, then ask it to draft one section and edit that section for accuracy."
+        },
+        {
+          "lesson_id": "L07",
+          "title": "Summarising Long Documents and Meetings",
+          "objectives": [
+            "O4"
+          ],
+          "summary": "How to ask for summaries with a purpose: key decisions, action items with owners, or a short version for a manager. Summarising in Microsoft Copilot or Gemini in Workspace compared with pasting text into a chatbot. [VERSION] Built-in summary features, file upload limits and which plans include them change often. Always compare the summary with the original for anything important.",
+          "exercise": "Take a long public document (for example a government guidance page or an annual report from any organisation) and ask a free AI assistant for a 5-point summary and a list of action items. Mark one point it got right and one detail it missed or changed."
+        },
+        {
+          "lesson_id": "L08",
+          "title": "Researching a Topic with AI",
+          "objectives": [
+            "O4",
+            "O6"
+          ],
+          "summary": "Using AI to understand a new topic quickly, create a list of questions and find search terms, then confirming facts in original sources. Why AI-generated references and links must always be opened and checked, because some can be invented. Worked example: Mei, an HR officer in Kuala Lumpur, researches options for a hybrid-work policy and checks every claim before she shares her notes.",
+          "exercise": "Research a work-related question with a free AI assistant. Choose 3 key claims from its answer and check each one against an original source. Record whether each claim was correct, partly correct or wrong."
+        }
+      ]
+    },
+    {
+      "module_id": "M3",
+      "week": 3,
+      "title": "Redesign Your Work Week",
+      "lessons": [
+        {
+          "lesson_id": "L09",
+          "title": "Organising Your Work: Plans, Lists and Templates",
+          "objectives": [
+            "O3",
+            "O5"
+          ],
+          "summary": "Using AI to turn a messy list into a prioritised weekly plan, create checklists and build reusable templates for repeated tasks. AI can suggest an order, but you decide the priorities because you know the deadlines and the people. Analogy: a planning partner who arranges the pieces, while you make the final decisions.",
+          "exercise": "Paste a list of your real tasks for next week (with sensitive details removed) into a free AI assistant and ask for a prioritised plan. Change at least 2 of its choices and write down why."
+        },
+        {
+          "lesson_id": "L10",
+          "title": "Map Your Tasks: Where AI Helps and Where It Does Not",
+          "objectives": [
+            "O5"
+          ],
+          "summary": "Choosing good tasks for AI: repeated, text-based and low-risk. Breaking a task into steps and marking each step 'AI can draft', 'AI can check' or 'human only'. Worked example: Fatima, a school administrator in Casablanca, maps her weekly parent newsletter and finds that 3 of its 6 steps are good candidates for AI.",
+          "exercise": "Capstone step 1: choose 3 weekly tasks from your own job. Map each task into steps, mark where AI can help, and time how long each task takes you now."
+        },
+        {
+          "lesson_id": "L11",
+          "title": "Build Reusable Prompts and a Personal Prompt Library",
+          "objectives": [
+            "O3",
+            "O7"
+          ],
+          "summary": "Saving prompts that work so you do not start from zero each week. A simple prompt template with spaces to fill in for the task, the reader and the format. Where to keep your library safely, without confidential data inside it.",
+          "exercise": "Capstone step 2: write and test a reusable prompt for each of your 3 tasks. Improve each prompt at least once based on what the first result got wrong."
+        },
+        {
+          "lesson_id": "L12",
+          "title": "Measure Time Saved and Present Your Redesign",
+          "objectives": [
+            "O6",
+            "O7"
+          ],
+          "summary": "How to measure time saved honestly: time the old way and the new way, and include the time you spend checking and editing AI output. Real savings differ from person to person and task to task, so we measure our own rather than trusting general claims. Then the capstone brief and rubric.",
+          "exercise": "Capstone step 3: do each of your 3 redesigned tasks with AI, time them, review each output with the checklist from Lesson 4, and write a one-page summary of the time saved, the quality of the results and the safety rules you followed."
+        }
+      ]
+    }
+  ],
+  "capstone": {
+    "title": "Redesign Three Weekly Tasks with AI",
+    "brief": "Redesign three of your weekly work tasks with an AI assistant, following safe-use rules, and measure the time saved including time spent checking the output.",
+    "built_in": [
+      "L10",
+      "L11",
+      "L12"
+    ],
+    "assesses": [
+      "O3",
+      "O5",
+      "O6",
+      "O7"
+    ]
+  },
+  "coverage_check": {
+    "O1": [
+      "L01",
+      "L02"
+    ],
+    "O2": [
+      "L03",
+      "L04"
+    ],
+    "O3": [
+      "L02",
+      "L05",
+      "L06",
+      "L09",
+      "L11"
+    ],
+    "O4": [
+      "L07",
+      "L08"
+    ],
+    "O5": [
+      "L09",
+      "L10"
+    ],
+    "O6": [
+      "L04",
+      "L08",
+      "L12"
+    ],
+    "O7": [
+      "L11",
+      "L12"
+    ]
+  },
+  "flags": [
+    "PROPOSED: screen demo for L02 (showing a vague prompt and an improved prompt side by side in a free AI assistant makes the difference clear). Needs approval.",
+    "PROPOSED: screen demo for L07 (summarising a document inside Microsoft Copilot or Gemini in Workspace compared with a chatbot is hard to explain without showing the interface). Needs approval.",
+    "L03 [REGION]: data protection laws and workplace AI rules differ by country and organisation; the lesson points learners to their own employer policy rather than stating legal requirements.",
+    "L03 [VERSION]: data-use and model-training settings for free and paid plans of Claude, ChatGPT, Copilot and Gemini must be checked against current terms before scripting.",
+    "L07 [VERSION]: built-in summary features, file upload limits and plan availability in Microsoft Copilot and Gemini in Workspace must be checked against the live tools before scripting.",
+    "L01 [VERSION]: product names Claude, ChatGPT, Microsoft Copilot and Gemini, and what each free tier includes, must be checked before scripting.",
+    "L04 exercise uses public holiday dates because learners can check them easily in their own country; no specific dates are stated in the course.",
+    "Judgement call: the brief's outcome says 'saving several hours each week'. The course makes no general time-saving claims; learners measure their own savings in the capstone (L12).",
+    "L02, L05, L08, L10 use hypothetical named workers (Amara, Carlos, Mei, Fatima) as worked examples, not real people or companies."
+  ]
+}
