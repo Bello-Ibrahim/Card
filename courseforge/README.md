@@ -14,6 +14,8 @@ cheap stack can't automate go to a human as ready-to-paste packs.
 | `validate_briefs.py` | Validates a brief or catalog and estimates Claude spend |
 | `check_curriculum.py`, `stage1_review.py` | Stage 1 checks and the one-page review (`courses/STAGE1_REVIEW.md`) |
 | `STAGE2_FORMAT.md`, `check_content.py`, `stage2_review.py` | Stage 2 formats, their checker, and the flag review (`courses/STAGE2_REVIEW.md`) |
+| `STAGE3_FORMAT.md`, `build_stage3.py`, `check_script.py` | Stage 3 formats, the plan-to-script/shot-list builder, and its checker |
+| `DECISIONS.md` | Tool and production decisions (demo tools, owned templates, open items) |
 | `courses/{slug}/` | Stage output (curriculum, state) for courses in progress |
 
 ## Changes from the original draft

@@ -1,0 +1,199 @@
+{
+  "course_id": "AI-01",
+  "lesson_id": "L01",
+  "duration_s": 303.7,
+  "thumbnail": {
+    "headline": "Rules or Learning?",
+    "slide": {
+      "layout": "title",
+      "title": "Rules or Learning?",
+      "body": "Left half: simple icon of a printed list of rules. Right half: icon of connected dots learning a pattern. Small tag: AI Fundamentals · Lesson 1."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.6,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "How does the machine know?",
+      "voiceover": "Your phone unlocks when it sees your face. Your email hides spam before you even open it. But nobody wrote a rule for your face, or for every spam message ever sent. So how does the machine know? Let's find out."
+    },
+    {
+      "scene": 2,
+      "start": 17.6,
+      "end": 26.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "What Is AI, Really?",
+        "body": "AI Fundamentals · Lesson 1 of 12"
+      },
+      "voiceover": "Hi, and welcome to AI Fundamentals. In this first lesson, we answer a simple question. What is artificial intelligence, really?"
+    },
+    {
+      "scene": 3,
+      "start": 26.2,
+      "end": 41.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Artificial intelligence",
+        "body": "Systems that do tasks we connect with human intelligence: recognising faces · understanding speech · translating text · recommending songs"
+      },
+      "voiceover": "Artificial intelligence, or AI, is a broad name for computer systems that do tasks we usually connect with human intelligence. For example, recognising faces, understanding speech, translating text, or recommending the next song you might like."
+    },
+    {
+      "scene": 4,
+      "start": 41.6,
+      "end": 60.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Way 1: Rules",
+        "body": "IF message contains \"lottery\" AND sender is unknown → move to Spam"
+      },
+      "voiceover": "There are two main ways to make a computer do a task like this. The first way is rules. A person writes exact instructions. For example: if a message contains the word lottery, and it comes from an unknown sender, move it to spam."
+    },
+    {
+      "scene": 5,
+      "start": 60.5,
+      "end": 76.4,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "person frowning at email inbox laptop",
+      "on_screen_text": "Too many cases for rules",
+      "voiceover": "Rules work well when a task is simple and does not change. But they break down when there are too many cases for a person to describe. Spammers simply change their words, and the rule stops working."
+    },
+    {
+      "scene": 6,
+      "start": 76.4,
+      "end": 97.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Way 2: Learning from examples",
+        "body": "Stack of labelled emails (Spam / Not spam) → arrow → 'Find patterns' box → arrow → new email gets a label. Caption: Machine learning"
+      },
+      "voiceover": "The second way is learning from examples. Instead of writing rules, we show the computer thousands of emails that people have already marked as spam or not spam. The computer finds patterns in those examples, and uses them to decide about new emails. This is called machine learning."
+    },
+    {
+      "scene": 7,
+      "start": 97.0,
+      "end": 112.9,
+      "section": "Explain",
+      "visual_type": "hero_broll",
+      "broll_tool": "FLOW",
+      "broll_prompt": "A young West African woman holds a folded paper map at a busy street corner in an old city with stone buildings, looking unsure as people walk past; slow dolly-in from medium shot to close-up; soft early-morning daylight; cinematic, natural colours, shallow depth of field; 7 seconds; no readable text, no signs with words, no logos.",
+      "voiceover": "Here is a simple way to picture it. Imagine you arrive in a new city. You can follow a printed list of directions: turn left, then right, then straight on. That works, until a road is closed."
+    },
+    {
+      "scene": 8,
+      "start": 112.9,
+      "end": 127.5,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "person walking confidently through city streets",
+      "on_screen_text": "Rules = the list. ML = experience.",
+      "voiceover": "Or you can walk around the city for a few weeks, until you know the streets and find your own way. Rules are the printed list. Machine learning is learning the city by experience."
+    },
+    {
+      "scene": 9,
+      "start": 127.5,
+      "end": 154.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Four circles",
+        "body": "Nested circles, outer to inner, revealed one by one: Artificial intelligence → Machine learning → Deep learning (see L07) → Generative AI (see L09)"
+      },
+      "voiceover": "You will often hear four terms that sound similar. Picture them as circles, one inside the other. Artificial intelligence is the biggest circle. Inside it is machine learning, systems that learn patterns from data. Inside that is deep learning, which uses large neural networks. And inside that is generative AI, which creates new text, images or sound, like the chatbots you may already use."
+    },
+    {
+      "scene": 10,
+      "start": 154.9,
+      "end": 171.6,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "handmade woven baskets market stall",
+      "on_screen_text": "Amina's basket shop · Nairobi",
+      "voiceover": "Let's see this in a real situation. Amina runs a small online shop in Nairobi that sells handmade baskets. Every day, customers send her messages, and she wants them sorted into three groups: order questions, delivery problems, and other."
+    },
+    {
+      "scene": 11,
+      "start": 171.6,
+      "end": 194.3,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Rules miss real messages",
+        "body": "Rule: 'where is my' → Delivery problem. Messages that slip through (red cross): 'Still waiting for my parcel' · 'Has it shipped yet?' · 'The courier never came'"
+      },
+      "voiceover": "First, she tries rules. If a message contains the words where is my, label it delivery problem. It works for some messages. But customers write in many different ways. Still waiting for my parcel. Has it shipped yet? The courier never came. Her list of rules keeps growing, and it still misses messages."
+    },
+    {
+      "scene": 12,
+      "start": 194.3,
+      "end": 216.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Learning from 300 examples",
+        "body": "300 labelled messages (Order / Delivery / Other) → tool learns patterns → new messages sorted into three coloured groups, including the three that the rules missed (green ticks)"
+      },
+      "voiceover": "So she tries a machine learning tool. She labels three hundred old messages by hand, and gives them to the tool as examples. The tool learns which words and phrases usually appear in each group. Now it labels most new messages correctly, even ones Amina never thought to write a rule for."
+    },
+    {
+      "scene": 13,
+      "start": 216.6,
+      "end": 231.2,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Right tool for the job",
+        "body": "Sorting messages → Learning from examples. Delivery fees from a fixed price table → Simple rule."
+      },
+      "voiceover": "But notice this. For calculating delivery fees, Amina keeps a simple rule. Fees follow a fixed price table, so a rule is clearer, cheaper and always correct. Machine learning is not always the answer."
+    },
+    {
+      "scene": 14,
+      "start": 231.2,
+      "end": 254.8,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "AI finds patterns. It does not understand.",
+      "voiceover": "One common mistake is to think that AI means a thinking machine that understands the world like a person. Today's AI does not understand in that way. Amina's tool has learned patterns in words. It does not know what a basket is. So it can be confidently wrong when it sees something unlike its examples."
+    },
+    {
+      "scene": 15,
+      "start": 254.8,
+      "end": 279.7,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. AI = tasks we link with human intelligence; built with rules or learning. 2. Machine learning = finding patterns in examples. 3. AI ⊃ ML ⊃ deep learning ⊃ generative AI"
+      },
+      "voiceover": "Let's recap. First, AI is a broad name for systems that do tasks we connect with human intelligence, built with rules or by learning from examples. Second, machine learning means the computer finds patterns in examples, instead of following rules a person wrote. Third, AI, machine learning, deep learning and generative AI fit inside each other like circles."
+    },
+    {
+      "scene": 16,
+      "start": 279.7,
+      "end": 303.7,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: AI in Your Day",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will sort eight everyday systems, from a calculator to a spam filter, into rules or learning from examples. It takes about fifteen minutes. In the next lesson, we will go on a tour of the AI you already use every day. See you there."
+    }
+  ]
+}

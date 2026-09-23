@@ -130,13 +130,17 @@ STAGE 3: SCRIPT & SHOT LIST (one batch per module)
   HeyGen video.
 - b) Shot list JSON. The timings are anchored to the narration:
   [{scene, start, end, visual_type: presenter_full|slide|stock|hero_broll|screen|text,
-    voiceover, on_screen_text, slide_html?, stock_query?, broll_prompt?, broll_tool?}]
+    voiceover, on_screen_text, slide?, stock_query?, broll_prompt?, broll_tool?,
+    screen_steps?}]
 - c) Hero B-roll prompts (max 2): Subject + Action + Setting + Camera movement
   + Lighting + Style + Duration (5–8s). Show diverse international people and
   settings. No text, logos or real public figures in the footage.
 - d) Thumbnail: headline of max 5 words, rendered as a branded slide
   (slide_render). No generated image is needed.
-- Save script.md and shotlist.json in the lesson folder.
+- Write lessons/{lesson_id}/stage3_plan.json, then run build_stage3.py to
+  generate script.md and shotlist.json from it, so the narration and the scene
+  timings always match. The formats are in STAGE3_FORMAT.md, and
+  check_script.py must pass before Stage 4. Demo tools are listed in DECISIONS.md.
 - CHECKPOINT: for the FIRST lesson of the course only, notify_human to approve
   the script style before producing the rest.
 
