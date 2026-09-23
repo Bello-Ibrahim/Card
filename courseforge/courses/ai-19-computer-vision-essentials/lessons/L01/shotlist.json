@@ -1,0 +1,186 @@
+{
+  "course_id": "AI-19",
+  "lesson_id": "L01",
+  "duration_s": 308.5,
+  "thumbnail": {
+    "headline": "Four Ways Machines See",
+    "slide": {
+      "layout": "title",
+      "title": "Four Ways Machines See",
+      "body": "Four small tiles of the same fruit stall photo: 1 a single label 'fruit stall', 2 boxes around fruit, 3 coloured fruit shapes, 4 highlighted price text. Small tag: Computer Vision Essentials · Lesson 1."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.9,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Pixels into useful information",
+      "voiceover": "A farmer takes a photo of a leaf and learns which disease it has. A machine reads an address and sends a parcel down the right belt. None of these systems see like we do. But all of them turn pixels into useful information."
+    },
+    {
+      "scene": 2,
+      "start": 18.9,
+      "end": 27.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "What Is Computer Vision?",
+        "body": "Computer Vision Essentials · Lesson 1 of 16"
+      },
+      "voiceover": "Hi, and welcome to Computer Vision Essentials. In this first lesson, we answer a simple question. What is computer vision?"
+    },
+    {
+      "scene": 3,
+      "start": 27.5,
+      "end": 44.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Pixels in, information out",
+        "body": "A grid of pixel numbers → arrow → 'Vision model' box → four arrows to: label · boxes · pixel mask · text"
+      },
+      "voiceover": "Computer vision is the part of AI that extracts information from images and video. The input is always a grid of pixel values. The output depends on the question you ask. Most real projects use one of four main tasks."
+    },
+    {
+      "scene": 4,
+      "start": 44.6,
+      "end": 67.7,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "close up of green crop leaf",
+      "on_screen_text": "Classification: what is in the image?",
+      "voiceover": "The first task is image classification. It answers the question, what is in this image? The model returns one label for the whole image, such as healthy leaf, or leaf rust. It does not say where the problem is. Picture an app that helps farmers in India check a photo of a crop leaf."
+    },
+    {
+      "scene": 5,
+      "start": 67.7,
+      "end": 93.0,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "aerial view of busy city junction traffic",
+      "on_screen_text": "Detection: what, and where?",
+      "voiceover": "The second task is object detection. It answers, what is in this image, and where? Each object gets a class, a confidence score and a bounding box, which is a rectangle in pixel coordinates. Because each object has its own box, detection lets you count. Picture a traffic system in Nairobi that counts buses and cars in every frame."
+    },
+    {
+      "scene": 6,
+      "start": 93.0,
+      "end": 113.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Box or exact shape?",
+        "body": "Left: leaf with a rectangle around the damaged part (detection). Right: the same leaf with only the damaged pixels coloured red (segmentation)."
+      },
+      "voiceover": "The third task is segmentation. Instead of a rectangle, the model labels every pixel. This helps when the exact shape or area matters, for example how much of a leaf is damaged. It needs more detailed labels and more computing power, so this course covers it only here."
+    },
+    {
+      "scene": 7,
+      "start": 113.6,
+      "end": 130.3,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "parcels moving on sorting conveyor belt",
+      "on_screen_text": "OCR: which text?",
+      "voiceover": "The fourth task is optical character recognition, or OCR. It answers, which text is in this image? It turns text into characters you can search and edit. Picture a parcel sorting centre in Germany that reads postcodes on labels."
+    },
+    {
+      "scene": 8,
+      "start": 130.3,
+      "end": 157.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Four assistants, one photo",
+        "body": "Photo of a fruit stall in the centre. Four assistants around it, revealed one by one: 1 says 'Fruit stall' (classification) · 2 sticky notes on each mango and orange (detection) · 3 scissors cutting fruit shapes (segmentation) · 4 reading price labels (OCR)"
+      },
+      "voiceover": "Here is a simple way to remember them. Imagine four assistants looking at the same photo of a market stall. The first says, fruit stall. The second puts a sticky note on every mango and every orange. The third cuts out the exact shape of each fruit with scissors. The fourth reads the price labels aloud. Same photo, four questions, four amounts of work."
+    },
+    {
+      "scene": 9,
+      "start": 157.7,
+      "end": 172.7,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "cardboard boxes stacked in small warehouse",
+      "on_screen_text": "Ana Lucía's start-up · Lima",
+      "voiceover": "Let's use this in a real situation. Ana Lucía Ramírez leads a small logistics start-up in Lima, Peru. Her team has four ideas, and for each one they must choose the right vision task."
+    },
+    {
+      "scene": 10,
+      "start": 172.7,
+      "end": 195.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Ideas 1 and 2",
+        "body": "Flag damaged boxes → Classification (one answer per photo). Count pallets → Detection (one box per pallet)."
+      },
+      "voiceover": "The first idea is to flag photos of damaged boxes. One answer per photo is enough, damaged or not damaged, so that is classification. The second idea is to count pallets in a loading bay. Counting needs one box per pallet, so that is detection. A classifier would only say that pallets are present."
+    },
+    {
+      "scene": 11,
+      "start": 195.8,
+      "end": 218.5,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Ideas 3 and 4",
+        "body": "Measure how full a truck is → Segmentation (area, not a rectangle). Read tracking numbers → Detection finds the label, then OCR reads it."
+      },
+      "voiceover": "The third idea is to measure how full a truck is. The team needs the area covered by goods, not a rough rectangle, so that is segmentation. The fourth idea is to read tracking numbers on labels. The output must be text, so that is OCR, usually after detection finds the label first."
+    },
+    {
+      "scene": 12,
+      "start": 218.5,
+      "end": 239.5,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Choosing a task",
+        "body": "Question 1: Only 'what'? → Classification. Question 2: Need boxes → Detection · exact shapes → Segmentation · text → OCR. Tasks can be combined."
+      },
+      "voiceover": "So which idea does Ana Lucía build first? The classification idea, because it needs the least labelling work. She keeps the pallet idea for later. To choose a task, ask two questions. Do I need to know where things are? And do I need boxes, exact shapes or text?"
+    },
+    {
+      "scene": 13,
+      "start": 239.5,
+      "end": 256.6,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Choose the simplest task that works",
+      "voiceover": "A common mistake is to choose the most powerful task because it sounds better. Segmentation needs more detailed labels, more computing and more time. The opposite mistake happens too. A classifier can say cars, but it cannot say seven cars."
+    },
+    {
+      "scene": 14,
+      "start": 256.6,
+      "end": 281.5,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Pixels → label, boxes, mask or text. 2. Classification = what · Detection = what + where · Segmentation = exact pixels · OCR = text. 3. Simplest task for the decision; combine when needed."
+      },
+      "voiceover": "Let's recap. First, computer vision turns pixel values into information: a label, a set of boxes, a pixel mask or text. Second, classification answers what, detection answers what and where, segmentation answers which exact pixels, and OCR answers which text. Third, choose the simplest task that supports the real decision, and combine tasks when one is not enough."
+    },
+    {
+      "scene": 15,
+      "start": 281.5,
+      "end": 308.5,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Images as Numbers",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will match eight real applications to the right task, from counting boats in a harbour to reading an electricity meter. It takes about fifteen minutes. In the next lesson, we open an image in code and look at the numbers inside. Images as Numbers: Pixels, Channels and Colour. See you there."
+    }
+  ]
+}

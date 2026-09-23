@@ -3,100 +3,165 @@
   "thumbnail": {
     "headline": "Your First dbt Model",
     "image": "Navy background, a terminal window with a green success line and a stack of SQL file cards arranged in order, headline in teal Inter Bold.",
-    "slide": {"layout": "title", "title": "Your First dbt Model", "body": "Stack of SQL file cards with arrows showing build order, and a terminal line with a green tick. Small tag: Data Engineering for AI · Lesson 6."}
+    "slide": {
+      "layout": "title",
+      "title": "Your First dbt Model",
+      "body": "Stack of SQL file cards with arrows showing build order, and a terminal line with a green tick. Small tag: Data Engineering for AI · Lesson 6."
+    }
   },
   "production_notes": [
     "[VERIFY] dbt Core's open-source licence terms: the voiceover calls dbt Core a command-line tool and does not describe its licence; confirm before adding 'free and open source' on screen.",
     "[VERSION] dbt Core package and adapter names (dbt-core, dbt-duckdb, dbt-postgres), the dbt init prompts, the profile keys, the default schema for dbt-duckdb (main) and the run log wording must be checked against the current releases before recording.",
-    "The profile path /home/leila/data/riad.duckdb is an example; on screen, blur nothing but make sure no real password or connection string appears. The PostgreSQL profile reads the password from an environment variable.",
+    "The profile path /home/leila/data/riad.duckdb is an example; make sure no real password or connection string appears on screen. The PostgreSQL profile reads the password from an environment variable.",
     "Leila and the guesthouses in Marrakesh, Morocco are fictional; the bookings data is invented."
   ],
   "sections": {
     "Hook": [
-      {"visual_type": "presenter_full",
-       "voiceover": "Imagine forty SQL scripts that must run in a certain order, and only one person knows the order. dbt Core replaces that person's memory with a project. Every transformation is a file, and the tool works out what to run, and when.",
-       "on_screen_text": "Forty scripts, one memory"}
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Imagine forty SQL scripts that must run in a certain order, and only one person knows the order. dbt Core replaces that person's memory with a project. Every transformation is a file, and the tool works out what to run, and when.",
+        "on_screen_text": "Forty scripts, one memory"
+      }
     ],
     "Explain": [
-      {"visual_type": "slide",
-       "voiceover": "Welcome to week two. Your raw data is loaded, and now we transform it. dbt Core is a command-line tool for the T in ELT.",
-       "slide": {"layout": "title", "title": "dbt Core: Project Setup and First Model", "body": "Data Engineering for AI · Lesson 6 of 18 · Week 2"}},
-      {"visual_type": "slide",
-       "voiceover": "You write each transformation as a model. A model is a SQL file that contains one select statement. dbt wraps it in the right create view or create table command, runs the models in the right order, and reports the result. Because models are plain text files, you can keep them in Git, review them and test them.",
-       "slide": {"layout": "diagram", "title": "A model is one SELECT", "body": "A .sql file containing 'select …' → dbt wraps it → CREATE VIEW or CREATE TABLE in the database. Side note: plain text → Git, review, tests"}},
-      {"visual_type": "slide",
-       "voiceover": "dbt Core needs three things. First, an adapter for your database: a separate package for PostgreSQL, and another for DuckDB. Second, a profile, usually in your home folder, that says how to connect. Keep passwords out of the project folder. Third, a project: a folder with a project file and a models folder.",
-       "slide": {"layout": "bullets", "title": "Three things dbt needs", "body": "Adapter: dbt-postgres or dbt-duckdb · Profile: ~/.dbt/profiles.yml (connection, no passwords in the project) · Project: dbt_project.yml + models/"}},
-      {"visual_type": "slide",
-       "voiceover": "You will use four main commands. Debug checks the connection. Run builds the models. Test runs your tests, which we cover in week three. And build runs and tests everything in order. By default, a model becomes a view, and one configuration line turns it into a table.",
-       "slide": {"layout": "code", "title": "Four main commands", "body": "dbt debug → check the connection · dbt run → build models · dbt test → run tests (L12) · dbt build → run and test in order. Footer: default = view; one config line = table"}},
-      {"visual_type": "stock",
-       "voiceover": "Think of dbt as a recipe book with a smart kitchen assistant. You write each recipe on its own card, and say which other recipes it needs. The assistant reads all the cards, decides the cooking order, and tells you if a dish failed.",
-       "stock_query": "handwritten recipe cards on kitchen counter",
-       "on_screen_text": "Models = recipe cards"}
+      {
+        "visual_type": "slide",
+        "voiceover": "Welcome to week two. Your raw data is loaded, and now we transform it. dbt Core is a command-line tool for the T in ELT. In this lesson, you install it, connect it to your database, and run a first model.",
+        "slide": {
+          "layout": "title",
+          "title": "dbt Core: Project Setup and First Model",
+          "body": "Data Engineering for AI · Lesson 6 of 18 · Week 2"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "You write each transformation as a model. A model is a SQL file that contains one select statement. dbt wraps it in the right create view or create table command, runs the models in the right order, and reports the result. Because models are plain text files, you can keep them in Git, review them and test them.",
+        "slide": {
+          "layout": "diagram",
+          "title": "A model is one SELECT",
+          "body": "A .sql file containing 'select …' → dbt wraps it → CREATE VIEW or CREATE TABLE in the database. Side note: plain text → Git, review, tests"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "dbt Core needs three things. First, an adapter for your database: a separate package for PostgreSQL, and another for DuckDB. Second, a profile, usually in your home folder, that says how to connect. Keep passwords out of the project folder. Third, a project: a folder with a project file and a models folder.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Three things dbt needs",
+          "body": "Adapter: dbt-postgres or dbt-duckdb · Profile: ~/.dbt/profiles.yml (connection, no passwords in the project) · Project: dbt_project.yml + models/"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "You will use four main commands. Debug checks the connection. Run builds the models. Test runs your tests, which we cover in week three. And build runs and tests everything in order. By default, a model becomes a view, and one configuration line turns it into a table.",
+        "slide": {
+          "layout": "code",
+          "title": "Four main commands",
+          "body": "dbt debug → check the connection · dbt run → build models · dbt test → run tests (L12) · dbt build → run and test in order. Footer: default = view; one config line = table"
+        }
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "Think of dbt as a recipe book with a smart kitchen assistant. You write each recipe on its own card, and say which other recipes it needs. The assistant reads all the cards, decides the cooking order, and tells you if a dish failed.",
+        "stock_query": "handwritten recipe cards on kitchen counter",
+        "on_screen_text": "Models = recipe cards"
+      }
     ],
     "Demonstrate": [
-      {"visual_type": "stock",
-       "voiceover": "Let's set it up. Leila is a data analyst for a group of guesthouses in Marrakesh, Morocco. Her raw bookings are already in a DuckDB file, in a raw bookings table.",
-       "stock_query": "traditional guesthouse courtyard with fountain",
-       "on_screen_text": "Leila · guesthouses · Marrakesh"},
-      {"visual_type": "screen",
-       "voiceover": "First, she creates and activates a virtual environment. Then she installs dbt Core with the DuckDB adapter. If you use PostgreSQL, you install the PostgreSQL adapter instead.",
-       "screen_steps": [
-         "Run: python -m venv .venv",
-         "Run: source .venv/bin/activate  (on Windows: .venv\\Scripts\\activate)",
-         "Run: pip install dbt-core dbt-duckdb",
-         "Caption: for PostgreSQL, install dbt-postgres instead"
-       ]},
-      {"visual_type": "screen",
-       "voiceover": "Next, she creates a project called riad bookings, and chooses DuckDB when the tool asks for the adapter.",
-       "screen_steps": [
-         "Run: dbt init riad_bookings",
-         "Choose duckdb at the adapter prompt",
-         "Open the new riad_bookings folder and show dbt_project.yml and models/"
-       ]},
-      {"visual_type": "screen",
-       "voiceover": "Now the profile. She opens the profiles file in her home folder, and points the development target to her DuckDB file, with one thread. A PostgreSQL profile would list the host, port, user and database, and read the password from an environment variable.",
-       "screen_steps": [
-         "Open ~/.dbt/profiles.yml",
-         "Show the riad_bookings profile from content.md: target dev, type duckdb, path /home/leila/data/riad.duckdb, threads 1",
-         "Caption: PostgreSQL password via env_var('PG_PASSWORD')"
-       ]},
-      {"visual_type": "screen",
-       "voiceover": "She runs debug, and the connection test passes.",
-       "screen_steps": [
-         "Run: dbt debug",
-         "Highlight the passing connection test line"
-       ],
-       "on_screen_text": "Connection test passes"},
-      {"visual_type": "screen",
-       "voiceover": "Then she deletes the example models, and writes her first model. It simply selects the booking ID, guest country and check-in date from the raw bookings table.",
-       "screen_steps": [
-         "Delete the example models folder created by dbt init",
-         "Create models/bookings_first.sql",
-         "Type the select of booking_id, guest_country, check_in_date from raw.bookings, as in content.md"
-       ]},
-      {"visual_type": "screen",
-       "voiceover": "She runs dbt. The log shows one view model created, and a summary line that reports success. Finally, she counts the rows in the new view, and the count matches the raw table.",
-       "screen_steps": [
-         "Run: dbt run",
-         "Highlight the log line for one view model and the success summary",
-         "In DuckDB run: SELECT count(*) FROM main.bookings_first;",
-         "Show that the count matches SELECT count(*) FROM raw.bookings;"
-       ]},
-      {"visual_type": "text",
-       "voiceover": "A common mistake is to keep the profile, with a real password, inside the project, and push it to a public repository. Keep it in your home folder, read secrets from environment variables, and never paste passwords into an AI chat when you ask for help.",
-       "on_screen_text": "Secrets stay out of the project"}
+      {
+        "visual_type": "stock",
+        "voiceover": "Let's set it up. Leila is a data analyst for a group of guesthouses in Marrakesh, Morocco. Her raw bookings are already in a DuckDB file, in a raw bookings table.",
+        "stock_query": "traditional guesthouse courtyard with fountain",
+        "on_screen_text": "Leila · guesthouses · Marrakesh"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "First, she creates and activates a virtual environment. Then she installs dbt Core with the DuckDB adapter. If you use PostgreSQL, you install the PostgreSQL adapter instead.",
+        "screen_steps": [
+          "Run: python -m venv .venv",
+          "Run: source .venv/bin/activate  (on Windows: .venv\\Scripts\\activate)",
+          "Run: pip install dbt-core dbt-duckdb",
+          "Caption: for PostgreSQL, install dbt-postgres instead"
+        ]
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Next, she creates a project called riad bookings, and chooses DuckDB when the tool asks for the adapter.",
+        "screen_steps": [
+          "Run: dbt init riad_bookings",
+          "Choose duckdb at the adapter prompt",
+          "Open the new riad_bookings folder and show dbt_project.yml and models/"
+        ]
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Now the profile. She opens the profiles file in her home folder, and points the development target to her DuckDB file, with one thread. A PostgreSQL profile would list the host, port, user and database, and read the password from an environment variable.",
+        "screen_steps": [
+          "Open ~/.dbt/profiles.yml",
+          "Show the riad_bookings profile from content.md: target dev, type duckdb, path /home/leila/data/riad.duckdb, threads 1",
+          "Caption: PostgreSQL password via env_var('PG_PASSWORD')"
+        ]
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "She runs debug, and the connection test passes.",
+        "screen_steps": [
+          "Run: dbt debug",
+          "Highlight the passing connection test line"
+        ],
+        "on_screen_text": "Connection test passes"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Then she deletes the example models, and writes her first model. It simply selects the booking ID, guest country and check-in date from the raw bookings table.",
+        "screen_steps": [
+          "Delete the example models folder created by dbt init",
+          "Create models/bookings_first.sql",
+          "Type the select of booking_id, guest_country, check_in_date from raw.bookings, as in content.md"
+        ]
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "She runs dbt. The log shows one view model created, and a summary line that reports success. Finally, she counts the rows in the new view, and the count matches the raw table.",
+        "screen_steps": [
+          "Run: dbt run",
+          "Highlight the log line for one view model and the success summary",
+          "In DuckDB run: SELECT count(*) FROM main.bookings_first;",
+          "Show that the count matches SELECT count(*) FROM raw.bookings;"
+        ]
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Notice one thing. The raw table name is written directly into the SQL of this first model. That works, but dbt does not know where the data comes from. In the next lesson, Leila replaces it with a declared source, so dbt can track it.",
+        "slide": {
+          "layout": "code",
+          "title": "A written table name, for now",
+          "body": "from raw.bookings ← highlighted with a note: written directly. Arrow to L07: from {{ source('raw', 'bookings') }}"
+        }
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "A common mistake is to keep the profile, with a real database password, inside the project folder, and then push it to a public repository. Keep the profile in your home folder, read secrets from environment variables, and add local credential files to the ignore list. And never paste passwords into an AI chat when you ask for help with an error.",
+        "on_screen_text": "Secrets stay out of the project"
+      }
     ],
     "Recap": [
-      {"visual_type": "slide",
-       "voiceover": "Let's recap. First, a dbt model is one select statement in a SQL file, and dbt turns it into a view or a table, in the right order. Second, dbt needs an adapter, a profile and a project folder. Third, use debug to test the connection and run to build models, and keep credentials out of the project.",
-       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Model = one SELECT; dbt builds it in order. 2. Adapter + profile + project. 3. dbt debug, dbt run; credentials stay out."}}
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, a dbt model is one select statement in a SQL file, and dbt turns it into a view or a table, in the right order. Second, dbt needs an adapter, a profile and a project folder. Third, use debug to test the connection and run to build models, and keep credentials out of the project.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. Model = one SELECT; dbt builds it in order. 2. Adapter + profile + project. 3. dbt debug, dbt run; credentials stay out."
+        }
+      }
     ],
     "CTA": [
-      {"visual_type": "presenter_full",
-       "voiceover": "Now it is your turn. In the exercise, you will install dbt with one adapter, create a project, and build a first model from your raw orders table. The new view should have nine rows. It takes about thirty minutes. Next lesson: Sources, Staging Models and the ref function.",
-       "on_screen_text": "Next: Sources, Staging and ref()"}
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Now it is your turn. In the exercise, you will install dbt with one adapter, create a project, and build a first model from your raw orders table. The new view should have nine rows. It takes about thirty-five minutes. Next lesson: Sources, Staging Models and the ref function.",
+        "on_screen_text": "Next: Sources, Staging and ref()"
+      }
     ]
   }
 }

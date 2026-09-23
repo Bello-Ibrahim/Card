@@ -14,7 +14,7 @@ Third, check tool inputs strictly. The input is already parsed, but treat it lik
 
 Fourth, ask a human before any action that changes data. Reading a status is safe. Changing an address or cancelling an order is not. Your code, not the model, shows the planned action and waits for a clear yes. Fifth, give each tool the smallest permissions it needs. Never give the model a general tool that can run any database query or call any web address.
 
-Think of a new bank clerk. They can look up balances freely, but every transfer needs a second signature and has a daily limit. The rules exist because mistakes that move money are expensive and hard to undo. Longer multi-step agents are covered in course AI-16.
+Think of a new bank clerk. They can look up balances freely, but every transfer needs a second signature and has a daily limit. The rules exist because mistakes that move money are expensive and hard to undo. Longer multi-step agents are covered in course AI sixteen.
 
 ## Demonstrate
 Carlos Mendoza runs support for an online furniture shop in Medellín, Colombia. Next to the status tool, he adds a second tool that changes a delivery address.

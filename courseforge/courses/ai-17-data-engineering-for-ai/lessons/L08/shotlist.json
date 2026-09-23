@@ -1,0 +1,204 @@
+{
+  "course_id": "AI-17",
+  "lesson_id": "L08",
+  "duration_s": 293.9,
+  "thumbnail": {
+    "headline": "Don't Leak the Future",
+    "slide": {
+      "layout": "title",
+      "title": "Don't Leak the Future",
+      "body": "Horizontal timeline, vertical teal line marked 'feature date'; dots before it feed a table, dots after it are crossed out. Small tag: Data Engineering for AI · Lesson 8."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 19.3,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Perfect in testing, poor in reality",
+      "voiceover": "A churn model gets an excellent score in testing, and fails in its first month of real use. The data was clean. The code had no bugs. The problem was one column. It quietly used information from after the date it was meant to predict."
+    },
+    {
+      "scene": 2,
+      "start": 19.3,
+      "end": 40.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Building Marts and Feature Tables for AI",
+        "body": "Data Engineering for AI · Lesson 8 of 18"
+      },
+      "voiceover": "Last time, you cleaned raw data in a staging model. Now we build the final layer. Marts join and aggregate staging models into tables that answer a business question, such as revenue per store per month. A mart has a clear grain, and a name that says what it holds."
+    },
+    {
+      "scene": 3,
+      "start": 40.7,
+      "end": 63.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Anatomy of a feature table",
+        "body": "Table header: customer_id · feature columns (purchases_90d, days_since_last_login). Annotation: one row per entity per date."
+      },
+      "voiceover": "A feature table is a special mart for machine learning. It has one row per entity at a given date, such as one row per customer on the first of March. And it has feature columns that describe the entity, such as purchases in the last ninety days, or days since the last login."
+    },
+    {
+      "scene": 4,
+      "start": 63.8,
+      "end": 79.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Feature date and label",
+        "body": "Timeline with a vertical line 'feature date': features computed from the left side, label computed from the right side."
+      },
+      "voiceover": "It also has a feature date, sometimes called a cut-off date. That is the moment the prediction would be made. And it often has a label, the thing to predict, calculated from events after that date."
+    },
+    {
+      "scene": 5,
+      "start": 79.7,
+      "end": 101.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "The golden rule",
+        "body": "Features may only use data from before the feature date. Anything later = data leakage."
+      },
+      "voiceover": "The golden rule is simple. Features may only use data from before the feature date. If a feature uses later events, the model learns from the future. This is called data leakage. Test results look excellent, and real results are poor, because in real use the future is not available."
+    },
+    {
+      "scene": 6,
+      "start": 101.1,
+      "end": 115.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "One feature date, one place",
+        "body": "dbt_project.yml → vars: feature_date: '2026-03-01'. In a model → {{ var('feature_date') }}"
+      },
+      "voiceover": "Keep the feature date in one place, not repeated in every model. dbt variables do this. You define the feature date once in the project file, and read it wherever you need it."
+    },
+    {
+      "scene": 7,
+      "start": 115.2,
+      "end": 133.2,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "student studying for exam at desk",
+      "on_screen_text": "No peeking at the answers",
+      "voiceover": "Think of a student preparing for an exam, using only lessons taught before the exam date. If the practice test includes the real exam answers, the practice score is perfect. But it tells you nothing about how the student will really do."
+    },
+    {
+      "scene": 8,
+      "start": 133.2,
+      "end": 152.9,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "person topping up mobile phone credit",
+      "on_screen_text": "Juliana · mobile network · Recife",
+      "voiceover": "Let's build one. Juliana is a data engineer at a prepaid mobile network in Recife, Brazil. The data science team wants to predict which customers will stop recharging in March. Her staging model has one row per recharge, with the customer, the date and the amount."
+    },
+    {
+      "scene": 9,
+      "start": 152.9,
+      "end": 161.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open dbt_project.yml",
+        "Add: vars: feature_date: '2026-03-01'"
+      ],
+      "voiceover": "First, she adds a variable to the project file. The feature date is the first of March, twenty twenty-six."
+    },
+    {
+      "scene": 10,
+      "start": 161.5,
+      "end": 175.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Create models/marts/fct_customer_features.sql",
+        "Type the select list from content.md: customer_id, feature_date, recharges_90d, spend_90d_brl, last_recharge_date, days_since_last",
+        "Show from {{ ref('stg_recharges') }} and group by customer_id"
+      ],
+      "voiceover": "Next, she creates the feature model in the marts folder. For each customer, it counts recharges, adds up the spend, finds the last recharge date, and works out the days since that recharge."
+    },
+    {
+      "scene": 11,
+      "start": 175.6,
+      "end": 188.0,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Highlight the where clause: recharge_date < feature_date and recharge_date >= feature_date - interval '90 days'",
+        "Highlight each {{ var(\"feature_date\") }} reference"
+      ],
+      "on_screen_text": "Only data from before the feature date",
+      "voiceover": "The most important part is the filter. It keeps only recharges before the feature date, and within the ninety days before it. Both limits come from the same variable."
+    },
+    {
+      "scene": 12,
+      "start": 188.0,
+      "end": 203.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run: dbt run --select fct_customer_features",
+        "Query the table and show the three rows exactly as in content.md",
+        "Highlight the M01 row: 3 | 70.0 | 2026-02-20 | 9"
+      ],
+      "on_screen_text": "3 customers · 3 rows",
+      "voiceover": "She runs the model and queries the table. On eight invented recharges, it returns three rows, one per customer. Customer M one recharged three times, spent seventy reais, and last recharged nine days before the feature date."
+    },
+    {
+      "scene": 13,
+      "start": 203.9,
+      "end": 228.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Show the stg_recharges rows for M01 on 2026-03-05 and M03 on 2026-03-10, greyed out and marked 'after feature date'",
+        "Cut to her notes: feature, formula, 90-day window, based on 2026-03-01"
+      ],
+      "voiceover": "But M one also recharged on the fifth of March, and M three on the tenth. Without the date filter, those recharges would enter the features, and recharged recently would perfectly predict did not churn. That is leakage. Juliana writes the feature date and window next to each column, so the data scientists know what each value means."
+    },
+    {
+      "scene": 14,
+      "start": 228.8,
+      "end": 245.5,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Would I know this on the feature date?",
+      "voiceover": "A common mistake is to build features from the whole table, because more data seems better. For every feature, ask one question. Would I know this value on the feature date? If not, filter the rows by date first."
+    },
+    {
+      "scene": 15,
+      "start": 245.5,
+      "end": 271.2,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Feature table = one row per entity at a feature date. 2. Only data from before that date; otherwise leakage. 3. Feature date as a dbt variable; document every window."
+      },
+      "voiceover": "Let's recap. First, marts join and aggregate staging models, and a feature table is a mart with one row per entity at a feature date. Second, features may only use data from before that date, and using later data is leakage. Third, store the feature date once, as a dbt variable, and document the date and window for every feature."
+    },
+    {
+      "scene": 16,
+      "start": 271.2,
+      "end": 293.9,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Incremental Models",
+      "voiceover": "Now it is your turn. In the exercise, you will build a feature table from your staged orders, with one row per customer and at least four features, and a small table of the date each one is based on. It takes about thirty-five minutes. Next lesson: Incremental Models and Changing Data."
+    }
+  ]
+}

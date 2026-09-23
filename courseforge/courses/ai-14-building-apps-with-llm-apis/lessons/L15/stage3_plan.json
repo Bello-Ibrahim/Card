@@ -3,7 +3,11 @@
   "thumbnail": {
     "headline": "Know What It Costs",
     "image": "Navy background, a dashboard with a cost-per-day line chart, three metric tiles and an amber budget alert, headline in teal Inter Bold.",
-    "slide": {"layout": "title", "title": "Know What It Costs", "body": "A simple dashboard: line chart of cost per day, three metric tiles (cost this month, cost per request, error rate) and an amber 80% budget bar. Small tag: Building Apps with LLM APIs · Capstone Step 2."}
+    "slide": {
+      "layout": "title",
+      "title": "Know What It Costs",
+      "body": "A simple dashboard: line chart of cost per day, three metric tiles (cost this month, cost per request, error rate) and an amber 80% budget bar. Small tag: Building Apps with LLM APIs · Capstone Step 2."
+    }
   },
   "production_notes": [
     "[VERSION] Prices used for estimates, Streamlit functions (st.line_chart, st.metric, st.warning, multipage apps), file persistence on free hosting plans and the Console usage pages must be checked at recording time.",
@@ -12,62 +16,131 @@
   ],
   "sections": {
     "Hook": [
-      {"visual_type": "presenter_full",
-       "voiceover": "Your app works, and people are starting to use it. How much did it cost yesterday? Which feature is the most expensive? How many requests failed? If you cannot answer in ten seconds, you are not ready for production.",
-       "on_screen_text": "Can you answer in ten seconds?"}
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Your app works, and people are starting to use it. How much did it cost yesterday? Which feature is the most expensive? How many requests failed? If you cannot answer in ten seconds, you are not ready for production.",
+        "on_screen_text": "Can you answer in ten seconds?"
+      }
     ],
     "Explain": [
-      {"visual_type": "slide",
-       "voiceover": "In capstone step one, you built your core feature. Step two adds two things. A log of every API call, and a dashboard page that turns the log into numbers you can act on.",
-       "slide": {"layout": "diagram", "title": "Step 2: log and dashboard", "body": "Every API call → one logging function → usage table → dashboard page with charts, metrics and an alert."}},
-      {"visual_type": "slide",
-       "voiceover": "For every call, log the time, the feature name and the model. Log the input, output and cache tokens, and the latency. Add the estimated cost, using your price constants from lesson four. And log the stop reason, and the error type if the call failed. Do not log prompts or outputs with personal data. For cost monitoring, you need numbers, not content.",
-       "slide": {"layout": "bullets", "title": "What to log", "body": "Time (UTC), feature, model · Input, output and cache tokens · Latency (and time to first token) · Estimated cost · Stop reason, error class · Never: prompts or personal data"}},
-      {"visual_type": "slide",
-       "voiceover": "SQLite is a file-based database that comes with Python, so it needs no server. A CSV file also works. On free hosting plans, local files may be lost when the app restarts, so treat the log as short-term, or move to a small hosted database later.",
-       "slide": {"layout": "comparison", "title": "Where to store it", "body": "SQLite: built into Python, no server. CSV: fine for small apps. Note: free hosting may lose local files on restart; check the current plan."}},
-      {"visual_type": "slide",
-       "voiceover": "The dashboard shows cost per day as a chart, the average cost per request, overall and per feature, the request count and the error rate. And it shows an alert when this month's spend passes a share of your budget, for example eighty percent. Remember, this is your own estimate. The Console's usage pages show the real charges, so compare the two now and then.",
-       "slide": {"layout": "bullets", "title": "What to show", "body": "Cost per day (chart) · Average cost per request, overall and per feature · Requests and error rate · Alert at 80% of the monthly budget · Compare with the Console's usage pages"}},
-      {"visual_type": "stock",
-       "voiceover": "A cost dashboard is like the fuel gauge in a car. You could wait for your bank statement at the end of the month, but by then the fuel is gone. The gauge tells you while you can still change how you drive.",
-       "stock_query": "car dashboard fuel gauge while driving",
-       "on_screen_text": "A fuel gauge for your budget"}
+      {
+        "visual_type": "slide",
+        "voiceover": "In capstone step one, you built your core feature. Step two adds two things. A log of every API call, and a dashboard page that turns the log into numbers you can act on.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Step 2: log and dashboard",
+          "body": "Every API call → one logging function → usage table → dashboard page with charts, metrics and an alert."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "For every call, log the time, the feature name and the model. Log the input, output and cache tokens, and the latency. Add the estimated cost, using your price constants from lesson four. And log the stop reason, and the error type if the call failed. Do not log prompts or outputs with personal data. For cost monitoring, you need numbers, not content.",
+        "slide": {
+          "layout": "bullets",
+          "title": "What to log",
+          "body": "Time (UTC), feature, model · Input, output and cache tokens · Latency (and time to first token) · Estimated cost · Stop reason, error class · Never: prompts or personal data"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "SQLite is a file-based database that comes with Python, so it needs no server. A CSV file also works. On free hosting plans, local files may be lost when the app restarts, so treat the log as short-term, or move to a small hosted database later.",
+        "slide": {
+          "layout": "comparison",
+          "title": "Where to store it",
+          "body": "SQLite: built into Python, no server. CSV: fine for small apps. Note: free hosting may lose local files on restart; check the current plan."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "The dashboard shows cost per day as a chart, the average cost per request, overall and per feature, the request count and the error rate. And it shows an alert when this month's spend passes a share of your budget, for example eighty percent. Remember, this is your own estimate. The Console's usage pages show the real charges, so compare the two now and then.",
+        "slide": {
+          "layout": "bullets",
+          "title": "What to show",
+          "body": "Cost per day (chart) · Average cost per request, overall and per feature · Requests and error rate · Alert at 80% of the monthly budget · Compare with the Console's usage pages"
+        }
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "A cost dashboard is like the fuel gauge in a car. You could wait for your bank statement at the end of the month, but by then the fuel is gone. The gauge tells you while you can still change how you drive.",
+        "stock_query": "car dashboard fuel gauge while driving",
+        "on_screen_text": "A fuel gauge for your budget"
+      }
     ],
     "Demonstrate": [
-      {"visual_type": "stock",
-       "voiceover": "Chidi Okafor builds a meal planner for a grocery app in Lagos, Nigeria. Every API call in his app goes through one logging function.",
-       "stock_query": "shopper with phone in grocery market Lagos",
-       "on_screen_text": "Chidi · meal planner · Lagos"},
-      {"visual_type": "screen",
-       "voiceover": "It creates a calls table in SQLite. Then it wraps the API call. On success, it records the model, tokens, estimated cost and stop reason. On failure, it records the error type. The insert happens in a finally block, so every call is saved, whether it succeeds or fails.",
-       "screen_steps": ["Open usage.py in VS Code", "Highlight the CREATE TABLE statement for calls", "Highlight the success row with tokens, estimate_cost and stop_reason", "Highlight the except anthropic.APIError branch that stores type(e).__name__", "Highlight the finally block with the INSERT and commit"],
-       "on_screen_text": "Log in finally, success or failure"},
-      {"visual_type": "screen",
-       "voiceover": "His dashboard is a second Streamlit page. It reads the table, groups it by date, and draws cost per day as a line chart. Three metric boxes show cost this month, average cost per request and error rate. A table shows cost per feature.",
-       "screen_steps": ["Open pages/dashboard.py", "Highlight pandas.read_sql(\"SELECT * FROM calls\", db)", "Highlight the group-by-date and st.line_chart", "Highlight the three st.metric boxes", "Highlight the cost-per-feature table"],
-       "on_screen_text": "One page, four measures"},
-      {"visual_type": "screen",
-       "voiceover": "Then the alert. When the monthly total passes eighty percent of his budget constant, a warning appears. He tests it by setting a very small budget.",
-       "screen_steps": ["Highlight MONTHLY_BUDGET and the st.warning for spend above 80%", "Set MONTHLY_BUDGET to a very small value and reload the page", "Show the warning 'Spend is above 80% of the monthly budget'"],
-       "on_screen_text": "Test the alert on purpose"},
-      {"visual_type": "screen",
-       "voiceover": "After a day of testing, you'll see something like this. A hundred and forty-two requests and three errors. He notices that the weekly plan feature uses about four times more output tokens than the single recipe feature. So he lowers its max tokens, after checking quality on his evaluation set.",
-       "screen_steps": ["Run streamlit run app.py and open the dashboard page", "Show the metrics: 142 requests, 3 errors, 2.1% error rate (example numbers)", "Point to the cost-per-feature table: weekly plan much higher than single recipe", "Lower max_tokens for weekly plan and show the eval run still passing (example output)"],
-       "on_screen_text": "Find the expensive feature"},
-      {"visual_type": "text",
-       "voiceover": "A common mistake is to log only successful calls, because the log line comes after the API call. Then the error rate always looks like zero. Log in a finally block, and log streamed calls from the final message.",
-       "on_screen_text": "Log failures and streamed calls too"}
+      {
+        "visual_type": "stock",
+        "voiceover": "Chidi Okafor builds a meal planner for a grocery app in Lagos, Nigeria. It has two features, a weekly plan and a single recipe. Every API call in his app, including streamed calls and tool loops, goes through one logging function.",
+        "stock_query": "shopper with phone in grocery market Lagos",
+        "on_screen_text": "Chidi · meal planner · Lagos"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "It creates a calls table in SQLite. Then it wraps the API call. On success, it records the model, tokens, estimated cost and stop reason. On failure, it records the error type. The insert happens in a finally block, so every call is saved, whether it succeeds or fails.",
+        "screen_steps": [
+          "Open usage.py in VS Code",
+          "Highlight the CREATE TABLE statement for calls",
+          "Highlight the success row with tokens, estimate_cost and stop_reason",
+          "Highlight the except anthropic.APIError branch that stores type(e).__name__",
+          "Highlight the finally block with the INSERT and commit"
+        ],
+        "on_screen_text": "Log in finally, success or failure"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "His dashboard is a second Streamlit page. It reads the table, groups it by date, and draws cost per day as a line chart. Three metric boxes show cost this month, average cost per request and error rate. A table shows cost per feature.",
+        "screen_steps": [
+          "Open pages/dashboard.py",
+          "Highlight pandas.read_sql(\"SELECT * FROM calls\", db)",
+          "Highlight the group-by-date and st.line_chart",
+          "Highlight the three st.metric boxes",
+          "Highlight the cost-per-feature table"
+        ],
+        "on_screen_text": "One page, four measures"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Then the alert. When the monthly total passes eighty percent of his budget constant, a warning appears at the top of the page. He tests it by setting a very small budget, reloads the page, and the warning is there. Then he sets the real budget back.",
+        "screen_steps": [
+          "Highlight MONTHLY_BUDGET and the st.warning for spend above 80%",
+          "Set MONTHLY_BUDGET to a very small value and reload the page",
+          "Show the warning 'Spend is above 80% of the monthly budget'"
+        ],
+        "on_screen_text": "Test the alert on purpose"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "After a day of testing, you'll see something like this. A hundred and forty-two requests and three errors. He notices that the weekly plan feature uses about four times more output tokens than the single recipe feature. So he lowers its max tokens, after checking quality on his evaluation set.",
+        "screen_steps": [
+          "Run streamlit run app.py and open the dashboard page",
+          "Show the metrics: 142 requests, 3 errors, 2.1% error rate (example numbers)",
+          "Point to the cost-per-feature table: weekly plan much higher than single recipe",
+          "Lower max_tokens for weekly plan and show the eval run still passing (example output)"
+        ],
+        "on_screen_text": "Find the expensive feature"
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "A common mistake is to log only successful calls, because the log line comes after the API call. Then the error rate always looks like zero. Log in a finally block, and log streamed calls from the final message. And remember to compare your total with the real usage in the Console.",
+        "on_screen_text": "Log failures and streamed calls too"
+      }
     ],
     "Recap": [
-      {"visual_type": "slide",
-       "voiceover": "Let's recap. First, log every call, including failures, with the time, feature, model, tokens, latency, estimated cost, stop reason and error. Second, your dashboard shows cost per day, cost per request, error rate and an alert near your budget limit. Third, the dashboard is an estimate, so compare it with the Console's real usage pages, and never log personal data.",
-       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Log every call, including failures. 2. Dashboard: cost per day, cost per request, error rate, budget alert. 3. It's an estimate: compare with the Console; no personal data in logs."}}
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, log every call, including failures, with the time, feature, model, tokens, latency, estimated cost, stop reason and error. Second, your dashboard shows cost per day, cost per request, error rate and an alert near your budget limit. Third, the dashboard is an estimate, so compare it with the Console's real usage pages, and never log personal data.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. Log every call, including failures. 2. Dashboard: cost per day, cost per request, error rate, budget alert. 3. It's an estimate: compare with the Console; no personal data in logs."
+        }
+      }
     ],
     "CTA": [
-      {"visual_type": "presenter_full",
-       "voiceover": "Now it is your turn. This is capstone step two. Add usage logging and a cost dashboard page to your app, make at least twenty test calls, including two that fail on purpose, and test your budget alert. In the next lesson, Capstone Step 3: Test, Deploy and Present, you will ship it. See you there.",
-       "on_screen_text": "Next: Capstone Step 3"}
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Now it is your turn. This is capstone step two. Add usage logging and a cost dashboard page to your app, make at least twenty test calls, including two that fail on purpose, and test your budget alert. In the next lesson, Capstone Step Three: Test, Deploy and Present, you will ship it. See you there.",
+        "on_screen_text": "Next: Capstone Step 3"
+      }
     ]
   }
 }

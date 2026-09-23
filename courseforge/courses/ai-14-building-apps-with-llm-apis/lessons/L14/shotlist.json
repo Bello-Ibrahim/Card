@@ -31,7 +31,7 @@
         "title": "Capstone in three steps",
         "body": "Step 1 (this lesson): use case, spec, core feature → Step 2: usage logging and cost dashboard → Step 3: test, deploy, present."
       },
-      "voiceover": "Welcome to the capstone. You will build a deployed web app with validated structured outputs, streaming, optional tool use, usage logging and a cost dashboard. This lesson is step one. Choose a use case, write a spec, and build the core feature."
+      "voiceover": "Now the capstone begins. You will build a deployed web app with validated structured outputs, streaming, optional tool use, usage logging and a cost dashboard. This lesson is step one. Choose a use case, write a spec, and build the core feature."
     },
     {
       "scene": 3,
@@ -44,7 +44,7 @@
         "title": "Choose a small use case",
         "body": "Job-advert analyser: role, skills, salary, red flags · Meal planner: weekly plan and shopping list · Ticket triage: category, urgency, draft reply · Avoid: document search (AI-15), multi-step agents (AI-16)"
       },
-      "voiceover": "Choose something small and useful. A good feature takes one kind of input, and returns structured data that the app then uses. For example, a job-advert analyser for a recruitment agency, a meal planner for a grocery app, or a tool that sorts support tickets. Avoid search over many documents, which is course AI-15, and long multi-step agents, which is AI-16."
+      "voiceover": "Choose something small and useful. A good feature takes one kind of input, and returns structured data that the app then uses. For example, a job-advert analyser for a recruitment agency, a meal planner for a grocery app, or a tool that sorts support tickets. Avoid search over many documents, which is course AI fifteen, and long multi-step agents, which is AI sixteen."
     },
     {
       "scene": 4,
@@ -194,7 +194,7 @@
       "section": "CTA",
       "visual_type": "presenter_full",
       "on_screen_text": "Next: Capstone Step 2",
-      "voiceover": "Now it is your turn. This is capstone step one. Write your spec, and build the core feature with a validated schema and streaming output, then commit it to Git with no keys. In the next lesson, Capstone Step 2: Usage Logging and a Cost Dashboard, you will show what your app costs. See you there."
+      "voiceover": "Now it is your turn. This is capstone step one. Write your spec, and build the core feature with a validated schema and streaming output, then commit it to Git with no keys. In the next lesson, Capstone Step Two: Usage Logging and a Cost Dashboard, you will show what your app costs. See you there."
     }
   ]
 }

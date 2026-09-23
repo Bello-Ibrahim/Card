@@ -1,7 +1,7 @@
 {
   "course_id": "AI-16",
   "lesson_id": "L13",
-  "duration_s": 269.1,
+  "duration_s": 294.8,
   "thumbnail": {
     "headline": "Find Failures in Minutes",
     "slide": {
@@ -23,7 +23,7 @@
     {
       "scene": 2,
       "start": 17.6,
-      "end": 46.3,
+      "end": 44.6,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -31,12 +31,12 @@
         "title": "Four kinds of failure",
         "body": "Temporary: timeout, busy API, rate limit → retry · Permanent: wrong key, deleted sheet → a person fixes it · Bad data: one unexpected item (Lesson 6) · Wrong results: caught by testing (Lesson 14) and approval (Lesson 12)"
       },
-      "voiceover": "Welcome to the last module. We start by making things reliable. Plan for four kinds of failure. Temporary errors, like a busy API, are usually fixed by trying again. Permanent errors, like a wrong key or a deleted sheet, need a person. Bad data is one item with unexpected content. And wrong results are runs that succeed but give the wrong output. Testing and approval catch those."
+      "voiceover": "Last time, we added human approval. In this final module, we make the whole system reliable. Plan for four kinds of failure. Temporary errors, like a busy API, are usually fixed by trying again. Permanent errors, like a wrong key, need a person. Bad data is one item with unexpected content. And wrong results are runs that succeed, but give the wrong output."
     },
     {
       "scene": 3,
-      "start": 46.3,
-      "end": 62.6,
+      "start": 44.6,
+      "end": 60.9,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -48,8 +48,8 @@
     },
     {
       "scene": 4,
-      "start": 62.6,
-      "end": 79.7,
+      "start": 60.9,
+      "end": 81.9,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -57,35 +57,48 @@
         "title": "Layer 2: error output",
         "body": "Node with two outputs: success → next step; error → 'dead_letter' tab (item ID + error message). Other items keep flowing."
       },
-      "voiceover": "Second, the on error setting. A node can continue and pass a failed item to an error output. That output goes to a dead letter tab, a list of failed items with the error message, while the other items continue."
+      "voiceover": "Second, the on error setting. A node can continue and pass a failed item to an error output. That output goes to a dead letter tab, a list of failed items with the error message, while the other items continue. One bad item should not stop the whole batch."
     },
     {
       "scene": 5,
-      "start": 79.7,
-      "end": 110.6,
+      "start": 81.9,
+      "end": 107.6,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
         "layout": "diagram",
-        "title": "Layers 3 and 4",
-        "body": "Main workflow fails → Error workflow (Error Trigger) → record row in 'errors' + notify a person (no secrets, no personal data). Separate: 'log' sheet, one row per run: time · items · failures · tokens · status."
+        "title": "Layer 3: error workflow",
+        "body": "Main workflow fails → Error workflow (Error Trigger): receives workflow name · failed node · message · link → record a row in 'errors' + notify a person. Warning tag: no secrets, no personal data."
       },
-      "voiceover": "Third, an error workflow. It is a separate workflow that starts with an error trigger. When a run fails, it receives the workflow name, the failed node, the message, and a link. It should record the failure in a sheet, and notify a person, with no personal data and no keys in the message. Fourth, a run log, with one row per run, so you can see trends in failures and cost."
+      "voiceover": "Third, an error workflow. It is a separate workflow that starts with an error trigger, and you select it in each main workflow's settings. When a run fails, it receives the workflow name, the failed node, the message, and a link. It should record the failure in a sheet, and notify a person. Never include personal data or API keys."
     },
     {
       "scene": 6,
-      "start": 110.6,
-      "end": 122.6,
+      "start": 107.6,
+      "end": 126.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Layer 4: run log",
+        "body": "One row per run: time · workflow · items processed · items failed · tokens · status. Shows trends: rising cost, growing failures."
+      },
+      "voiceover": "Fourth, a run log. Add one row per run to a log sheet, with the time, the items processed, the failures, the tokens used and the status. Over time, this shows trends, such as rising cost or growing failures, before they become a problem."
+    },
+    {
+      "scene": 7,
+      "start": 126.5,
+      "end": 143.6,
       "section": "Explain",
       "visual_type": "stock",
       "stock_query": "pilots reviewing checklist in cockpit",
       "on_screen_text": "Prepare before the failure",
-      "voiceover": "Think of a pilot's emergency checklist. It is written calmly before the flight, not invented during a problem. Your retries, error paths and error workflow are that checklist."
+      "voiceover": "Think of a pilot's emergency checklist. When a warning light appears, the crew follows it step by step. It is written calmly before the flight, not invented during a problem. Your retries, error paths and error workflow are that checklist."
     },
     {
-      "scene": 7,
-      "start": 122.6,
-      "end": 143.6,
+      "scene": 8,
+      "start": 143.6,
+      "end": 164.6,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -97,9 +110,9 @@
       "voiceover": "Let's build it. Petra Dvořák automates reports at an accounting firm in Prague, Czechia. Her classification workflow runs every night. First, she creates a new workflow called Error handler, with an error trigger. It adds a row to an errors tab, with the time, workflow, node, message and link."
     },
     {
-      "scene": 8,
-      "start": 143.6,
-      "end": 156.9,
+      "scene": 9,
+      "start": 164.6,
+      "end": 177.9,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -109,9 +122,9 @@
       "voiceover": "Then it sends her a short email: which workflow failed, at which node, the message, and the link. In the main workflow's settings, she selects Error handler as its error workflow."
     },
     {
-      "scene": 9,
-      "start": 156.9,
-      "end": 177.0,
+      "scene": 10,
+      "start": 177.9,
+      "end": 198.0,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -123,9 +136,9 @@
       "voiceover": "On the Claude request node, she turns on retry on fail, with three tries and a wait. She sets on error to continue, using the error output, which goes to a dead letter tab. At the end, she adds a log row with counts and total tokens."
     },
     {
-      "scene": 10,
-      "start": 177.0,
-      "end": 201.4,
+      "scene": 11,
+      "start": 198.0,
+      "end": 227.1,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -136,21 +149,21 @@
         "Restore the correct key and run again"
       ],
       "on_screen_text": "Break it on purpose, then fix",
-      "voiceover": "Now she breaks it on purpose, with a wrong API key, and runs it by hand. The error workflow does not start. She checks the documentation. In her release, error workflows run only for triggered runs. So she tests with the active schedule. The error row appears, and the email arrives. Then she restores the correct key."
+      "voiceover": "Now she breaks it on purpose, with a wrong API key, and runs it by hand. The error workflow does not start. She checks the documentation. In her release, error workflows run only for triggered runs. So she tests with the active schedule. The error row appears, and the email arrives: one clear row, one short email, and no secrets in it. Then she restores the correct key."
     },
     {
-      "scene": 11,
-      "start": 201.4,
-      "end": 222.4,
+      "scene": 12,
+      "start": 227.1,
+      "end": 248.1,
       "section": "Demonstrate",
       "visual_type": "text",
       "on_screen_text": "Green with lost data is worse",
       "voiceover": "A common mistake is to turn on continue on error everywhere, so every run looks green. Then failures disappear silently. Continuing is only safe when the failed item goes somewhere a person checks. A green run with lost data is worse than a red run that sends an alert."
     },
     {
-      "scene": 12,
-      "start": 222.4,
-      "end": 245.5,
+      "scene": 13,
+      "start": 248.1,
+      "end": 271.2,
       "section": "Recap",
       "visual_type": "slide",
       "slide": {
@@ -161,9 +174,9 @@
       "voiceover": "Let's recap. First, use retries for temporary errors, error outputs and a dead letter tab for bad items, and an error workflow for failures that stop a run. Second, the error workflow records the failure and notifies a person, without personal data or secrets. Third, keep a run log with one row per run."
     },
     {
-      "scene": 13,
-      "start": 245.5,
-      "end": 269.1,
+      "scene": 14,
+      "start": 271.2,
+      "end": 294.8,
       "section": "CTA",
       "visual_type": "presenter_full",
       "on_screen_text": "Next: Testing and Evaluating Agents",

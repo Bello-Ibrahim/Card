@@ -1,0 +1,74 @@
+{
+  "title": "Designing a Prediction API with FastAPI",
+  "thumbnail": {
+    "headline": "Your Model, One Door",
+    "image": "Navy background, a service window with three arrows (phone, browser, partner building) pointing into it and a teal JSON response coming out, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Your Model, One Door", "body": "Three icons (mobile phone, web browser, partner building) with arrows into a single door labelled /predict; a teal JSON bubble 'probability: 0.9318' comes out. Small tag: MLOps · Lesson 6."}
+  },
+  "production_notes": [
+    "[VERSION] Code uses Pydantic v2 (model_dump, model_config) and the FastAPI lifespan hook; the older startup event is deprecated. Tested with FastAPI 0.141.1 and Pydantic 2.13.5; check current releases and the look of the /docs page before recording.",
+    "[VERSION] The uvicorn command and MLflow model loading were tested with MLflow 3.16.1.",
+    "The response {\"good_wine\": true, \"probability\": 0.9318} is a real output from the champion model trained on the synthetic fallback data; it must match on screen.",
+    "Screen recording: the MLFLOW_TRACKING_URI shown is a local SQLite file only. Never show a remote tracking server address, password or token in the terminal or editor.",
+    "Mei Nakamura and the Sapporo start-up are hypothetical."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Your model lives in the registry. The mobile team, the web team and a partner company all want predictions, and none of them uses Python. How do you give all of them the same model, safely, through one door?",
+       "on_screen_text": "One model, many clients"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Welcome to week two. Last time, we registered our champion model. Now we serve it. The usual answer is a small web service, an API, that receives JSON and returns a prediction. FastAPI is a free Python framework that suits this well. It uses Python type hints to check the input, and it builds interactive documentation for you.",
+       "slide": {"layout": "diagram", "title": "A prediction API", "body": "Client apps send JSON → FastAPI service box (schema check → model) → JSON prediction back. Side panel: automatic docs at /docs"}},
+      {"visual_type": "slide",
+       "voiceover": "A good prediction API has four parts. First, a predict endpoint that takes one input and returns one prediction. Second, a health endpoint that answers quickly and says whether the service and the model are ready. Container platforms and load balancers call it all the time.",
+       "slide": {"layout": "bullets", "title": "Four parts of a prediction API", "body": "1. POST /predict: one input, one prediction. 2. GET /health: is the service ready? is the model loaded?"}},
+      {"visual_type": "slide",
+       "voiceover": "Third, request and response schemas. They define the exact fields and types, reject bad input, and appear in the documentation. Fourth, load the model once, when the service starts, not on every request. Loading a model can take seconds. Doing it for every request makes the service slow.",
+       "slide": {"layout": "bullets", "title": "Four parts of a prediction API", "body": "3. Schemas: WineIn (four float features) and PredictionOut (good_wine, probability). 4. Load the model once at start-up, in the lifespan function."}},
+      {"visual_type": "slide",
+       "voiceover": "The model location comes from an environment variable, not from the code. So the same code can load the registry alias on your laptop, and a local model folder inside a container later. The same goes for any server address. No address or password ever appears in the code.",
+       "slide": {"layout": "code", "title": "Configuration from the environment", "body": "MODEL_URI = os.getenv(\"MODEL_URI\", \"models:/wine-quality-clf@champion\") · MLflow reads MLFLOW_TRACKING_URI from the environment. Caption: no addresses or passwords in code"}},
+      {"visual_type": "stock",
+       "voiceover": "Picture the service window of a restaurant kitchen. Customers never enter the kitchen. They order from a fixed menu, which is the schema. The kitchen was prepared before opening, which is the model loaded at start-up. And a sign on the window says whether it is open. That is the health check.",
+       "stock_query": "restaurant kitchen service window chef handing plate",
+       "on_screen_text": "Menu, prepared kitchen, open sign"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "screen",
+       "voiceover": "Let's watch Mei Nakamura, a data scientist at a hypothetical agricultural technology start-up in Sapporo, Japan. She installs FastAPI and Uvicorn, the server that runs it, and adds both to the requirements file. Then she opens her app file, which contains the code you just saw.",
+       "screen_steps": ["In the wine-api terminal, run: pip install fastapi uvicorn", "Add fastapi and uvicorn with their versions to requirements.txt", "Open app.py in the editor and scroll through: the WineIn and PredictionOut schemas, the lifespan function, /health and /predict"],
+       "on_screen_text": "Mei · agritech start-up · Sapporo"},
+      {"visual_type": "screen",
+       "voiceover": "She points MLflow at the local database through an environment variable, and starts the service. In the browser, the health page reports status ok, and model loaded, true. If the model had failed to load, this page would say so at once, before any client sent a real request.",
+       "screen_steps": ["Run: export MLFLOW_TRACKING_URI=sqlite:///mlflow.db (show the Windows PowerShell version as a caption)", "Run: uvicorn app:app --reload and wait for the startup message", "Open http://127.0.0.1:8000/health in the browser", "Show the response {\"status\":\"ok\",\"model_loaded\":true}"],
+       "on_screen_text": "Health: ok, model loaded"},
+      {"visual_type": "screen",
+       "voiceover": "Now the best part. She opens the docs page. FastAPI has built it automatically, with both endpoints and the input schema. She expands the predict endpoint, clicks Try it out, and sends one wine, with an alcohol value of twelve point five.",
+       "screen_steps": ["Open http://127.0.0.1:8000/docs", "Show both endpoints and scroll to the WineIn schema", "Expand POST /predict and click Try it out", "Paste the body {\"alcohol\": 12.5, \"volatile_acidity\": 0.3, \"sulphates\": 0.8, \"citric_acid\": 0.4}", "Click Execute"],
+       "on_screen_text": "Automatic docs at /docs"},
+      {"visual_type": "screen",
+       "voiceover": "The response comes back. Good wine, true, with a probability of zero point nine three one eight. That is the real answer from our champion model, trained on the synthetic data. Every client, in any language, can now call the same model in the same way. The mobile team, the web team and the partner company all use one door, and one set of rules.",
+       "screen_steps": ["Scroll to the response body", "Highlight {\"good_wine\": true, \"probability\": 0.9318}", "Point to the 200 status code"],
+       "on_screen_text": "probability 0.9318"},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is to load the model inside the predict function. It works in a quick test, so the problem stays hidden. Under real traffic, every request reads the model again, latency rises sharply, and the registry gets many unnecessary calls. Load once at start-up, and let the health endpoint report whether loading worked.",
+       "on_screen_text": "Load once, not per request"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, a prediction API needs a predict endpoint, a health endpoint and clear request and response schemas. Second, FastAPI uses these schemas to check input and to build interactive documentation. Third, load the model once at start-up, and pass its location and any server address through environment variables, not code.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. /predict + /health + schemas. 2. Schemas check input and build /docs. 3. Load once; config from environment variables."}}
+    ],
+    "CTA": [
+      {"visual_type": "slide",
+       "voiceover": "In the exercise below this video, you will build this service for your own registered model. You will test three inputs through the docs page, and then send one with a missing field to see what happens. It takes about thirty-five minutes, and this service is the heart of your capstone.",
+       "slide": {"layout": "bullets", "title": "Exercise: your first model API", "body": "app.py with schemas · lifespan loads champion · /health and /predict · 3 test inputs in /docs · 1 missing field → note the status code · about 35 minutes"}},
+      {"visual_type": "presenter_full",
+       "voiceover": "That missing field leads straight to the next lesson, Input Validation, Errors and Logging. See you there.",
+       "on_screen_text": "Next: Validation, Errors and Logging"}
+    ]
+  }
+}

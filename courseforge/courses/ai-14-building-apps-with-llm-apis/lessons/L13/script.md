@@ -35,7 +35,7 @@ A common mistake is to put something that changes, like the current time or the 
 Let's recap. First, use prompt caching for long, stable context at the start of the request, and confirm cache reads in the usage fields. Second, use batch processing for work that can wait, a smaller model for easy tasks, and output limits and per-user quotas everywhere. Third, measure quality with your evaluation set before and after each change.
 
 ## CTA
-Now it is your turn. In the exercise, you will apply prompt caching to a request with a long system prompt, and compare the cached and uncached usage and cost over six calls. Your capstone starts next. In the next lesson, Capstone Step 1: Build the Core Feature, you will choose your use case and build it. See you there.
+Now it is your turn. In the exercise, you will apply prompt caching to a request with a long system prompt, and compare the cached and uncached usage and cost over six calls. Your capstone starts next. In the next lesson, Capstone Step One: Build the Core Feature, you will choose your use case and build it. See you there.
 
 ## Thumbnail
 Headline: Stop Paying Twice

@@ -1,0 +1,217 @@
+{
+  "course_id": "AI-18",
+  "lesson_id": "L05",
+  "duration_s": 287.9,
+  "thumbnail": {
+    "headline": "Roll Back in One Line",
+    "slide": {
+      "layout": "title",
+      "title": "Roll Back in One Line",
+      "body": "Three version cards labelled v1, v2, v3 under the name wine-quality-clf. A teal tag 'champion' with a curved arrow moving from v2 back to v1. Small tag: MLOps · Lesson 5."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.1,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Which model made this prediction?",
+      "voiceover": "A customer complains about a prediction made three weeks ago. Which model version made it? What data trained that model, and which commit of your code? If you cannot answer in two minutes, you cannot debug, audit or roll back."
+    },
+    {
+      "scene": 2,
+      "start": 17.1,
+      "end": 32.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Tracking vs registry",
+        "body": "Left: Experiment tracking, every run (many small cards). Right: Model registry, only the models you keep (a few cards with name, version and status)."
+      },
+      "voiceover": "In the last lesson, experiment tracking recorded every run. A model registry is different. It records only the models you decided to keep, and gives each one a clear name, a version number and a status."
+    },
+    {
+      "scene": 3,
+      "start": 32.5,
+      "end": 50.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Registered model and versions",
+        "body": "Name banner 'wine-quality-clf' above three locked cards: Version 1 · Version 2 · Version 3. Padlock icon: versions never change"
+      },
+      "voiceover": "In MLflow, a registered model has a name, such as wine quality classifier. Each time you register a model under that name, MLflow creates a new version: one, two, three, and so on. A version never changes after it is created."
+    },
+    {
+      "scene": 4,
+      "start": 50.1,
+      "end": 73.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Aliases point to versions",
+        "body": "Tags 'champion' → Version 1 and 'challenger' → Version 2. Below: serving code loads models:/wine-quality-clf@champion. Dashed arrow shows champion moving to Version 2."
+      },
+      "voiceover": "To mark which version is in use, current MLflow releases use aliases. An alias is a movable name that points to one version. For example, champion for the production model, and challenger for a candidate. The serving code always loads the champion. To promote or roll back, you simply move the alias. No code changes."
+    },
+    {
+      "scene": 5,
+      "start": 73.7,
+      "end": 84.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Stages or aliases?",
+        "body": "Older: fixed stages (Staging, Production, Archived). This course: movable aliases (champion, challenger). Note: check your server's version"
+      },
+      "voiceover": "Older releases used fixed stages instead, such as staging and production. This course uses aliases. If your team's server is older, check which method it supports."
+    },
+    {
+      "scene": 6,
+      "start": 84.8,
+      "end": 107.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Tag every version with its origin",
+        "body": "data_sha256: fingerprint of the exact training data (one value changes → hash changes) · git_commit: the exact code that trained the model. Note: tools like DVC can come later; a hash needs no extra tool"
+      },
+      "voiceover": "A version is only reproducible if you also know its inputs. So record two tags on every version. First, a data hash. This is a short fingerprint of the exact training data. If one value changes, the hash changes. Second, the Git commit ID, which points to the exact code that trained the model."
+    },
+    {
+      "scene": 7,
+      "start": 107.9,
+      "end": 124.6,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "library shelves with numbered book editions",
+      "on_screen_text": "Fixed editions, a movable label",
+      "voiceover": "Think of a library catalogue. Each edition of a book has a fixed number, and the catalogue records the publisher and the printing. A recommended edition label can move from one edition to another, without anyone reprinting the books."
+    },
+    {
+      "scene": 8,
+      "start": 124.6,
+      "end": 146.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "In the terminal, run: git add . and git commit -m \"Add registration script\"",
+        "Show register.py in the editor, highlighting search_runs ordered by metrics.f1, register_model, the two set_model_version_tag calls and set_registered_model_alias",
+        "Run: python register.py",
+        "Show the printed message that version 1 of wine-quality-clf was created"
+      ],
+      "on_screen_text": "Yusuf · logistics · Izmir",
+      "voiceover": "Let's watch Yusuf Demir, an ML engineer at a hypothetical logistics company in Izmir, Türkiye. First, he commits the current code, so the commit ID means something. Then he runs a registration script. It finds the best run by F1, registers its model, adds the two tags, and sets the champion alias."
+    },
+    {
+      "scene": 9,
+      "start": 146.9,
+      "end": 161.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open the MLflow interface in the browser",
+        "Click Models",
+        "Click wine-quality-clf and open Version 1",
+        "Point to the champion alias",
+        "Point to the tags data_sha256 = bfc250d53981 and git_commit"
+      ],
+      "on_screen_text": "Version 1 is the champion",
+      "voiceover": "In the MLflow interface, he clicks Models, and there is the wine quality classifier with version one. He opens it. The champion alias is there, with the data hash and the Git commit as tags."
+    },
+    {
+      "scene": 10,
+      "start": 161.9,
+      "end": 174.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Edit config.yaml and change model C",
+        "Run the training and tracking script, then run: python register.py again",
+        "Refresh the Models page: Version 2 appears",
+        "Show that the champion alias is still on Version 1"
+      ],
+      "on_screen_text": "Version 2 waits",
+      "voiceover": "Next, he changes C in the configuration file, trains, and registers again. Version two appears. But the champion alias still points to version one, because nothing moves until he decides."
+    },
+    {
+      "scene": 11,
+      "start": 174.8,
+      "end": 193.7,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "In a Python shell, run: client.set_registered_model_alias(NAME, \"champion\", 2)",
+        "Refresh the registry page: champion now on Version 2",
+        "Run: client.set_registered_model_alias(NAME, \"champion\", 1)",
+        "Refresh: champion back on Version 1"
+      ],
+      "on_screen_text": "Promote, then roll back",
+      "voiceover": "Now he promotes it, with one line of Python that moves the alias to version two. He refreshes the page, and champion now points to version two. Then he moves it back to version one. That is a rollback, and it took one line."
+    },
+    {
+      "scene": 12,
+      "start": 193.7,
+      "end": 212.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Same inputs, same tags",
+        "body": "Two version cards side by side, each showing data_sha256 = bfc250d53981 and the same git_commit. Caption: tags describe inputs, not time"
+      },
+      "voiceover": "One more detail. When Yusuf registered twice on the same data and the same commit, both versions had the same data hash, starting with b f c two five zero. This proves the tags describe the inputs, not the time of the run."
+    },
+    {
+      "scene": 13,
+      "start": 212.1,
+      "end": 231.8,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Aliases for status, tags for origin",
+      "voiceover": "A common mistake is to use the registry like a folder, with names like final, final two or new best. The version number already identifies the model. Use aliases for status and tags for origin. And never put credentials or personal data in tags or descriptions."
+    },
+    {
+      "scene": 14,
+      "start": 231.8,
+      "end": 255.8,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Registry = numbered, unchangeable versions. 2. Aliases mark status; move one to promote or roll back. 3. Tag data hash + Git commit on every version."
+      },
+      "voiceover": "Let's recap. First, a model registry stores chosen models as numbered versions that never change. Second, aliases such as champion mark which version is in use, and moving an alias promotes or rolls back without code changes. Third, tag every version with a data hash and a Git commit, so it can be rebuilt and explained."
+    },
+    {
+      "scene": 15,
+      "start": 255.8,
+      "end": 277.2,
+      "section": "CTA",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Exercise: register and tag",
+        "body": "Two versions · data_sha256 + git_commit tags · one champion · load models:/wine-quality-clf@champion · about 35 minutes"
+      },
+      "voiceover": "In the exercise below this video, you will register your best model, add a second version, choose the champion, and tag each version with its data hash and commit. Then you load the champion and make one prediction. It takes about thirty-five minutes, and your capstone needs exactly this."
+    },
+    {
+      "scene": 16,
+      "start": 277.2,
+      "end": 287.9,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: A Prediction API with FastAPI",
+      "voiceover": "That completes week one. In the next lesson, we serve the champion to the world, in Designing a Prediction API with FastAPI. See you there."
+    }
+  ]
+}

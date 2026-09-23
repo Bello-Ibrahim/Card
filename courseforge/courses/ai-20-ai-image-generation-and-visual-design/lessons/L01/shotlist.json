@@ -1,0 +1,205 @@
+{
+  "course_id": "AI-20",
+  "lesson_id": "L01",
+  "duration_s": 297.5,
+  "thumbnail": {
+    "headline": "From Noise to Picture",
+    "slide": {
+      "layout": "title",
+      "title": "From Noise to Picture",
+      "body": "Left: grainy grey noise. Right: the same frame as a clean generated image of a red bicycle leaning on a blue wall. Small tag: AI Image Generation · Lesson 1."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.3,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Where did this picture come from?",
+      "voiceover": "You type a red bicycle leaning against a blue wall. A few seconds later, you see a picture that never existed before. Nobody searched the internet for it, and nobody drew it. So where did it come from?"
+    },
+    {
+      "scene": 2,
+      "start": 16.3,
+      "end": 27.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "How AI Image Generators Work",
+        "body": "AI Image Generation and Visual Design · Lesson 1 of 12. Background: a generated image of a red bicycle against a blue wall."
+      },
+      "voiceover": "Hi, and welcome to AI Image Generation and Visual Design. In this first lesson, we look at what happens between your words and the finished image."
+    },
+    {
+      "scene": 3,
+      "start": 27.4,
+      "end": 44.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Training",
+        "body": "Grid of simple picture tiles, each with a short caption strip underneath ('red wall', 'bicycle', 'window light') → arrow → box labelled 'Model learns patterns'."
+      },
+      "voiceover": "An AI image generator is a computer program that creates a new picture from a written description. First, it goes through training. During training, it studies a very large collection of images, together with short texts that describe them."
+    },
+    {
+      "scene": 4,
+      "start": 44.1,
+      "end": 57.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Patterns, not a photo album",
+        "body": "Left, crossed out: a photo album icon with stored pictures. Right, ticked: three small pattern cards: a red colour swatch, light falling on a wall, the outline shapes of a bicycle."
+      },
+      "voiceover": "It does not store the pictures like a photo album. Instead, it learns patterns. What red usually looks like. How light falls on a wall. What shapes make a bicycle."
+    },
+    {
+      "scene": 5,
+      "start": 57.0,
+      "end": 78.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Step by step from noise",
+        "body": "Five frames in a row, left to right: pure grey static → blurry shapes → rough bicycle and wall → sharper edges → clear red bicycle against a blue wall. Prompt text above the row as a guide arrow."
+      },
+      "voiceover": "When you use the tool, a useful way to picture it is this. The image is built step by step from random noise. Noise looks like the grey, grainy static on an old television. At each step, the system removes a little noise and moves the picture closer to your words."
+    },
+    {
+      "scene": 6,
+      "start": 78.9,
+      "end": 94.3,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "photograph developing in darkroom tray",
+      "on_screen_text": "Your words guide the picture",
+      "voiceover": "Think of a photograph appearing slowly in a darkroom tray. At first the paper is almost blank. Then soft shapes appear, then edges, then details. In an image generator, your words decide what the photograph becomes."
+    },
+    {
+      "scene": 7,
+      "start": 94.3,
+      "end": 122.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Five key terms",
+        "body": "Prompt: the text you write · Model: the trained system that creates the image · Seed: the number that sets the starting noise · Aspect ratio · Reference image (last two greyed out, revealed next)"
+      },
+      "voiceover": "You will meet five key terms in every lesson. The prompt is the text you write. The model is the trained system that creates the image. The seed is a number that sets the starting noise. Because that starting noise is random, the same prompt normally gives a different picture each time. This is not an error. It is how the tool offers you choices."
+    },
+    {
+      "scene": 8,
+      "start": 122.2,
+      "end": 145.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Aspect ratio and reference image",
+        "body": "Three outlined frames side by side: square 1:1, wide 16:9, tall 9:16. Next to them, a small uploaded photo icon with an arrow into a new image, labelled 'Reference image (L06)'."
+      },
+      "voiceover": "The aspect ratio is the shape of the image. One to one is square, sixteen to nine is wide like a screen, and nine to sixteen is tall like a phone story. And a reference image is a picture you upload to guide the style or colours. You will use that in lesson six."
+    },
+    {
+      "scene": 9,
+      "start": 145.3,
+      "end": 161.2,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "small flower shop with tulips",
+      "on_screen_text": "Lucía's flower shop · Montevideo",
+      "voiceover": "Let's see this in action. Lucía runs a small flower shop in Montevideo, Uruguay. She needs a picture for a spring sale poster, so she opens Gemini in her web browser and writes a short, simple prompt."
+    },
+    {
+      "scene": 10,
+      "start": 161.2,
+      "end": 170.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Lucía's prompt",
+        "body": "A bunch of yellow tulips in a glass jar on a wooden table"
+      },
+      "voiceover": "Her prompt asks for a bunch of yellow tulips in a glass jar on a wooden table. She generates it three times."
+    },
+    {
+      "scene": 11,
+      "start": 170.6,
+      "end": 195.9,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Three generations, one prompt",
+        "body": "Three generated images side by side: round jar on white background, tall thin jar on green background, jar on dark background, light from different sides. Labels underneath: 'Stayed: tulips, jar, table' in green; 'Changed: jar shape, background, number, light' in orange."
+      },
+      "voiceover": "Every result shows yellow tulips in a glass jar on a wooden table, because those words are clear. But other things change. In one image the jar is round, in another it is tall and thin. The background is white, then green, then dark. The number of tulips changes, and the light comes from a different side each time."
+    },
+    {
+      "scene": 12,
+      "start": 195.9,
+      "end": 218.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Described vs not described",
+        "body": "Two columns. Left, 'You describe it': tulips, glass jar, wooden table → stays the same. Right, 'You leave it out': background, light, jar shape → the model fills it in, differently each time."
+      },
+      "voiceover": "Lucía understands what happened. The words she wrote were kept. The details she did not describe were filled in by the model, differently each time, because each generation started from different random noise. If she wants a white background and soft morning light every time, she must write those details in the prompt."
+    },
+    {
+      "scene": 13,
+      "start": 218.6,
+      "end": 233.2,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Not a search engine. A new picture.",
+      "voiceover": "A common mistake is to think the generator finds a picture online and changes it a little. It does not work like a search engine. It creates a new picture from patterns it learned."
+    },
+    {
+      "scene": 14,
+      "start": 233.2,
+      "end": 253.3,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "What this means for you",
+        "body": "Odd mistakes happen: extra fingers, letters that are not words · Variation is normal, not an error · Generate several versions, then choose the best"
+      },
+      "voiceover": "That is also why it can make mistakes no photograph would contain, like a hand with six fingers, or letters that are not real words. And a different result does not mean you did something wrong. Variation is normal. Generate several versions and choose the best one."
+    },
+    {
+      "scene": 15,
+      "start": 253.3,
+      "end": 275.6,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Generators learn patterns, then build a new image from noise. 2. Prompt · model · seed · aspect ratio · reference image. 3. Described details stay; missing details change."
+      },
+      "voiceover": "Let's recap. First, an image generator learns patterns from many images and their descriptions, then builds a new image. Second, prompt, model, seed, aspect ratio and reference image are the basic controls in this course. Third, details you describe tend to stay the same, while details you leave out change each time."
+    },
+    {
+      "scene": 16,
+      "start": 275.6,
+      "end": 297.5,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: The Anatomy of a Strong Prompt",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will generate one simple prompt three times in Gemini, then list what changed and what stayed the same. It takes about fifteen minutes. In the next lesson, we look at the anatomy of a strong prompt. See you there."
+    }
+  ]
+}
