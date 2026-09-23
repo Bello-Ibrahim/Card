@@ -1,7 +1,7 @@
 {
   "course_id": "AI-14",
   "lesson_id": "L08",
-  "duration_s": 287.9,
+  "duration_s": 288.8,
   "thumbnail": {
     "headline": "From Script to Link",
     "slide": {
@@ -72,20 +72,33 @@
     {
       "scene": 6,
       "start": 99.8,
-      "end": 131.9,
+      "end": 119.1,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
         "layout": "comparison",
-        "title": "Keys and budget in hosted apps",
-        "body": "Local: environment variable or .streamlit/secrets.toml (in .gitignore). Hosted: the host's secrets settings. Public link → low max_tokens · spend limit · password or message limit."
+        "title": "Keys in hosted apps",
+        "body": "Local: environment variable or .streamlit/secrets.toml (in .gitignore). Hosted: the host's secrets settings. Free hosting: Streamlit Community Cloud (Python) · Vercel (Next.js), check current plans."
       },
-      "voiceover": "On your computer, the key lives in an environment variable or a local secrets file. On a host, it goes into the host's secrets settings, never into the repository. Streamlit Community Cloud and Vercel both have free plans with limits, so check the current rules. And a public link means anyone can use your API credit. So keep max tokens low, keep your spend limit set, and consider a simple password or a message limit."
+      "voiceover": "On your computer, the key lives in an environment variable or a local secrets file. On a host, it goes into the host's secrets settings, never into the repository. Streamlit Community Cloud and Vercel both have free plans with limits, so check the current rules."
     },
     {
       "scene": 7,
-      "start": 131.9,
-      "end": 141.3,
+      "start": 119.1,
+      "end": 132.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Protect your budget",
+        "body": "Public link = anyone can spend your credit · Low max_tokens · Spend limit set · Simple password or per-session message limit"
+      },
+      "voiceover": "And a public link means anyone can use your API credit. So keep max tokens low, keep your spend limit set, and consider a simple password or a per-session message limit."
+    },
+    {
+      "scene": 8,
+      "start": 132.8,
+      "end": 142.2,
       "section": "Demonstrate",
       "visual_type": "stock",
       "stock_query": "tour guide with tourists on Dakar coast",
@@ -93,9 +106,9 @@
       "voiceover": "Amara Diallo runs a small tour company in Dakar, Senegal. She wants a chat assistant that answers visitors' questions about her tours."
     },
     {
-      "scene": 8,
-      "start": 141.3,
-      "end": 161.9,
+      "scene": 9,
+      "start": 142.2,
+      "end": 162.8,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -109,9 +122,9 @@
       "voiceover": "Here is her app file. It sets the model in one constant and a short system prompt. The client reads the key from Streamlit secrets. If there is no history in session state yet, it creates an empty list. Then it shows every earlier message as a bubble."
     },
     {
-      "scene": 9,
-      "start": 161.9,
-      "end": 180.8,
+      "scene": 10,
+      "start": 162.8,
+      "end": 181.7,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -124,9 +137,9 @@
       "voiceover": "When the visitor sends a message, the app adds it to the history and shows it. Then it streams the reply with the full history and a low max tokens value, shows it with write stream, and saves the reply back into the history."
     },
     {
-      "scene": 10,
-      "start": 180.8,
-      "end": 197.5,
+      "scene": 11,
+      "start": 181.7,
+      "end": 198.4,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -140,9 +153,9 @@
       "voiceover": "She puts the key in a local secrets file, and adds the folder to git ignore. She installs Streamlit and runs the app. In the browser, she asks about a tour, then asks a follow-up. The assistant remembers."
     },
     {
-      "scene": 11,
-      "start": 197.5,
-      "end": 220.2,
+      "scene": 12,
+      "start": 198.4,
+      "end": 221.1,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -156,18 +169,18 @@
       "voiceover": "A common mistake is to keep the chat history in a normal list at the top of the script. Streamlit reruns the script on every message, so the list is empty each time, and the assistant forgets everything. A second mistake is committing the secrets file. Always check git status before you push."
     },
     {
-      "scene": 12,
-      "start": 220.2,
-      "end": 236.5,
+      "scene": 13,
+      "start": 221.1,
+      "end": 237.4,
       "section": "Demonstrate",
       "visual_type": "text",
       "on_screen_text": "History in session state, not a list",
       "voiceover": "A common mistake is to keep the chat history in a normal list at the top of the script. Streamlit reruns the script on every message, so the list is empty each time, and the assistant forgets everything."
     },
     {
-      "scene": 13,
-      "start": 236.5,
-      "end": 262.2,
+      "scene": 14,
+      "start": 237.4,
+      "end": 263.1,
       "section": "Recap",
       "visual_type": "slide",
       "slide": {
@@ -178,9 +191,9 @@
       "voiceover": "Let's recap. First, Streamlit reruns the whole script on every user action, so keep the chat history in session state. Second, a chat app needs a chat input, message bubbles, streamed output, and the history sent with each request. Third, keep keys in the host's secrets settings, not in the repository, and protect your budget when the link is public."
     },
     {
-      "scene": 14,
-      "start": 262.2,
-      "end": 287.9,
+      "scene": 15,
+      "start": 263.1,
+      "end": 288.8,
       "section": "CTA",
       "visual_type": "presenter_full",
       "on_screen_text": "Next: Tool Use",

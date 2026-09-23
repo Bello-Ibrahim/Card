@@ -1,0 +1,186 @@
+{
+  "course_id": "AI-12",
+  "lesson_id": "L14",
+  "duration_s": 304.8,
+  "thumbnail": {
+    "headline": "Tuning Helps, No Miracles",
+    "slide": {
+      "layout": "title",
+      "title": "Tuning Helps, No Miracles",
+      "body": "Left: a full grid of dots (grid search). Right: 20 scattered dots, one starred (random search). Tag: Machine Learning with scikit-learn · Lesson 14."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.9,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Let the computer search",
+      "voiceover": "Every model so far used default settings, or settings we picked by hand. Defaults are a reasonable start, not the best choice for your data. Today, scikit-learn searches for better settings, and you will see that tuning helps, but does not work miracles."
+    },
+    {
+      "scene": 2,
+      "start": 18.9,
+      "end": 37.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Hyperparameters and tuning",
+        "body": "Chosen before training: max_depth, min_samples_leaf, n_estimators · Tuning = try combinations, keep the best cross-validated score"
+      },
+      "voiceover": "Hyperparameters are settings you choose before training, such as the maximum depth, the minimum leaf size, or the number of trees. The model does not learn them from data. Tuning means trying many combinations, and keeping the one with the best cross-validated score."
+    },
+    {
+      "scene": 3,
+      "start": 37.8,
+      "end": 60.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Grid vs random search",
+        "body": "GridSearchCV: every combination; 3 × 3 × 3 × 3 = 81 combinations × 5 folds = 405 fits. RandomizedSearchCV: n_iter random combinations; often nearly as good, much faster."
+      },
+      "voiceover": "Grid search tries every combination in a grid. Three values for each of four settings means eighty-one combinations. With five folds, that is four hundred and five fits. Grids grow very quickly. Random search tries a fixed number of random combinations, and often finds settings nearly as good, in much less time."
+    },
+    {
+      "scene": 4,
+      "start": 60.5,
+      "end": 83.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Tuning inside a pipeline",
+        "body": "model__max_depth → the max_depth of the step called 'model'\nAfter the search: best_params_ · best_score_ · best_estimator_"
+      },
+      "voiceover": "Both work on a whole pipeline, so preprocessing is refitted inside every fold. To reach a setting inside a pipeline, you use the step name, then two underscores, then the setting name. After the search, you get the best settings, their mean score, and the best pipeline, refitted on all the training data."
+    },
+    {
+      "scene": 5,
+      "start": 83.2,
+      "end": 98.2,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Test set: untouched until the end",
+      "voiceover": "The rule from lesson three still holds. The test set stays untouched until the very end. The search uses only training data, and you look at the test score once, after all choices are made."
+    },
+    {
+      "scene": 6,
+      "start": 98.2,
+      "end": 120.1,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "tailor adjusting sewing machine workshop",
+      "on_screen_text": "Practise on scrap cloth",
+      "voiceover": "Tuning is like adjusting a new sewing machine: stitch length, thread tension and speed. You could test every combination on a practice cloth, or test twenty random ones and keep the best. Either way, you practise on scrap cloth, not on the customer's dress. The test set is the customer's dress."
+    },
+    {
+      "scene": 7,
+      "start": 120.1,
+      "end": 133.0,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "data scientist office desk laptop Beirut",
+      "on_screen_text": "Youssef · data scientist · Beirut",
+      "voiceover": "Youssef Haddad is a data scientist at a bank in Beirut, Lebanon. His random forest for term-deposit subscriptions uses default settings, and he wants to know whether tuning helps."
+    },
+    {
+      "scene": 8,
+      "start": 133.0,
+      "end": 153.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Scroll past the L05 setup and pipeline cells, already executed.",
+        "Type this exact code cell from content.md and run it with Shift+Enter:\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.model_selection import RandomizedSearchCV\nfrom sklearn.metrics import roc_auc_score\n\nrf_pipe = Pipeline([(\"prep\", prep),\n                    (\"model\", RandomForestClassifier(random_state=42))])\nparams = {\"model__n_estimators\": [100, 200, 400],\n          \"model__max_depth\": [3, 5, 8, 12, None],\n          \"model__min_samples_leaf\": [1, 5, 10, 20, 40],\n          \"model__max_features\": [\"sqrt\", 0.5, 1.0]}\nsearch = RandomizedSearchCV(rf_pipe, params, n_iter=20, cv=5, scoring=\"roc_auc\",\n                            random_state=42, n_jobs=-1)\nsearch.fit(X_train, y_train)\nprint(search.best_params_, round(search.best_score_, 3))\n\nuntuned = rf_pipe.fit(X_train, y_train)\nfor name, m in [(\"untuned\", untuned), (\"tuned\", search.best_estimator_)]:\n    print(name, round(roc_auc_score(y_test, m.predict_proba(X_test)[:, 1]), 3))"
+      ],
+      "on_screen_text": "20 random combinations × 5 folds",
+      "voiceover": "We continue in the bank notebook. This cell puts a random forest into the pipeline, defines ranges for four settings, and runs a random search of twenty combinations with five folds, scored by ROC AUC. Then it scores the untuned and tuned pipelines on the test set, once."
+    },
+    {
+      "scene": 9,
+      "start": 153.6,
+      "end": 169.0,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Highlight the best_params_ output line and the score 0.769."
+      ],
+      "on_screen_text": "Best CV ROC AUC: 0.769",
+      "voiceover": "The search chose two hundred trees, the square-root feature setting, a maximum depth of twelve, and a minimum of forty customers per leaf. Its mean cross-validated ROC AUC is zero point seven six nine."
+    },
+    {
+      "scene": 10,
+      "start": 169.0,
+      "end": 184.4,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Highlight 'model__min_samples_leaf': 40.",
+        "Add the caption: at least 40 customers per leaf."
+      ],
+      "on_screen_text": "At least 40 customers per leaf",
+      "voiceover": "Forty customers per leaf is the key choice. It stops the trees from memorising individual people. That fits what you saw in lesson seven. The default forest was too flexible for fifteen hundred noisy training rows."
+    },
+    {
+      "scene": 11,
+      "start": 184.4,
+      "end": 205.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Highlight the output lines untuned 0.701 and tuned 0.737.",
+        "Show the overlay: logistic (L09) 0.752."
+      ],
+      "on_screen_text": "Untuned 0.701 · tuned 0.737 · logistic 0.752",
+      "voiceover": "On the test set, ROC AUC rose from zero point seven zero one to zero point seven three seven. But the logistic regression pipeline from lesson nine scored zero point seven five two on the same test set. Tuning improved the forest, yet the simpler model is still slightly ahead."
+    },
+    {
+      "scene": 12,
+      "start": 205.8,
+      "end": 225.1,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Add a text cell: Tuning helped the forest, but logistic regression is simpler and at least as good. Carry it forward."
+      ],
+      "on_screen_text": "Simpler model wins here",
+      "voiceover": "Youssef's conclusion: tuning helped the forest, but for this data, the logistic model is simpler, easier to explain, and at least as good. He will carry it forward. That is a good result. The search saved him from assuming that a complex model is better."
+    },
+    {
+      "scene": 13,
+      "start": 225.1,
+      "end": 250.0,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Random search first, small grid later",
+      "voiceover": "A common mistake is to tune on the test set, or to search before splitting. Then the best settings have seen the test rows, and the final score is too optimistic. Another is a huge grid that runs for hours. Start with a random search over wide ranges, then, if needed, a small grid around the best values."
+    },
+    {
+      "scene": 14,
+      "start": 250.0,
+      "end": 277.4,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Tuning = best cross-validated combination. 2. RandomizedSearchCV first; use step__parameter names. 3. Training data only; test once; compare with a simple baseline."
+      },
+      "voiceover": "Let's recap. First, hyperparameters are settings you choose before training, and tuning searches for the combination with the best cross-validated score. Second, random search is usually more efficient than grid search, and step name plus two underscores reaches a setting inside a pipeline. Third, search on training data only, check the test set once, and compare the tuned model with a simple baseline."
+    },
+    {
+      "scene": 15,
+      "start": 277.4,
+      "end": 304.8,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Interpreting Models",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will tune a random forest with random search, score it once on the test set, and compare it with the untuned model and your best simple model. It takes about thirty-five minutes. In the next lesson, Which Features Matter? Interpreting Models, you will explain what drives your model. See you there."
+    }
+  ]
+}

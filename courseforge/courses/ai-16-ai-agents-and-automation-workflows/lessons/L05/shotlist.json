@@ -1,7 +1,7 @@
 {
   "course_id": "AI-16",
   "lesson_id": "L05",
-  "duration_s": 269.6,
+  "duration_s": 294.0,
   "thumbnail": {
     "headline": "Add Claude to n8n",
     "slide": {
@@ -85,7 +85,20 @@
     {
       "scene": 7,
       "start": 90.4,
-      "end": 113.1,
+      "end": 115.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Two ways to call Claude in n8n",
+        "body": "Left: HTTP Request node: you set everything; you see exactly what is sent (this lesson). Right: Anthropic chat model node: details hidden; used with the AI Agent node (Lesson 10)."
+      },
+      "voiceover": "In n8n, you have two ways to make this call. The HTTP Request node lets you set the method, address, headers and body yourself. It shows exactly what is sent, so we use it today. There are also built-in Anthropic model nodes that hide these details. We use one with the AI Agent node later in the course."
+    },
+    {
+      "scene": 8,
+      "start": 115.7,
+      "end": 138.4,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -96,9 +109,9 @@
       "voiceover": "The Claude API is a paid, usage-based service. So before you start, set a spending limit in the Claude Console. Keep test runs to a few rows, and always limit output length. Store your key in an n8n credential, never in a node. And use sample data, not personal or confidential data."
     },
     {
-      "scene": 8,
-      "start": 113.1,
-      "end": 130.7,
+      "scene": 9,
+      "start": 138.4,
+      "end": 156.0,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -110,9 +123,9 @@
       "voiceover": "Let's build it. Mei-Lin Chen runs a tea shop in Taipei. Her reviews sheet has five invented reviews, with empty summary and tokens columns. First, she creates an API key in the Claude Console, and sets a monthly spending limit."
     },
     {
-      "scene": 9,
-      "start": 130.7,
-      "end": 144.0,
+      "scene": 10,
+      "start": 156.0,
+      "end": 169.3,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -123,9 +136,9 @@
       "voiceover": "In n8n, she creates a header credential called Claude API, with the key as its value. Then she builds a manual trigger, and a Sheets node that gets rows from reviews."
     },
     {
-      "scene": 10,
-      "start": 144.0,
-      "end": 158.6,
+      "scene": 11,
+      "start": 169.3,
+      "end": 183.9,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -138,9 +151,9 @@
       "voiceover": "Next, an HTTP Request node. She sets the method to POST, pastes the Messages address, and picks her Claude API credential. She adds the other two headers, and the body with her system prompt."
     },
     {
-      "scene": 11,
-      "start": 158.6,
-      "end": 171.9,
+      "scene": 12,
+      "start": 183.9,
+      "end": 197.2,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -153,9 +166,9 @@
       "voiceover": "She runs it with a single row first. In the output, you'll see something like: the customer liked the oolong, but found the delivery slow. You also see the token usage."
     },
     {
-      "scene": 12,
-      "start": 171.9,
-      "end": 193.8,
+      "scene": 13,
+      "start": 197.2,
+      "end": 221.6,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -164,21 +177,21 @@
         "Remove the one-item limit and run all 5",
         "Show the sheet with 5 summaries and token counts"
       ],
-      "voiceover": "Then she adds a Set node. It takes the summary text, adds the input and output tokens together, and keeps the review ID. Finally, a Sheets node updates the rows, matching on review ID. She runs all five. Her sheet now has five summaries, and a token count for each row."
+      "voiceover": "Then she adds a Set node. It takes the summary text, adds the input and output tokens together, and keeps the review ID. Finally, a Sheets node updates the rows, matching on review ID. She removes the one-row limit and runs all five. Her sheet now has five summaries, and a token count for each row."
     },
     {
-      "scene": 13,
-      "start": 193.8,
-      "end": 210.9,
+      "scene": 14,
+      "start": 221.6,
+      "end": 238.7,
       "section": "Demonstrate",
       "visual_type": "text",
       "on_screen_text": "One row first. Then the rest.",
       "voiceover": "A common mistake is to test on the whole sheet first. If the prompt has an error, every row gets the wrong prompt, and you pay for every call. Test with one item, check it, then run the full set."
     },
     {
-      "scene": 14,
-      "start": 210.9,
-      "end": 243.9,
+      "scene": 15,
+      "start": 238.7,
+      "end": 268.3,
       "section": "Recap",
       "visual_type": "slide",
       "slide": {
@@ -186,12 +199,12 @@
         "title": "Key takeaways",
         "body": "1. POST to /v1/messages: 3 headers + model, max_tokens, system, messages. 2. Key in a credential; model from the current docs; read usage. 3. Paid per use: spending limit, max_tokens, one row first."
       },
-      "voiceover": "Let's recap. First, a Claude API call is a POST request to the Messages address, with three headers and a body that holds the model, the output limit, the system prompt and the messages. Second, store the key in an n8n credential, take the model from the current models page, and read the usage from the response. Third, the API is paid per use. Set a spending limit, limit output length, and test with one row first."
+      "voiceover": "Let's recap. First, a Claude API call is a POST request to the Messages address, with three headers and a body that holds the model, the output limit, the system prompt and the messages. Second, store the key in an n8n credential, and read the usage from the response. Third, the API is paid per use. Set a spending limit, limit output length, and test with one row first."
     },
     {
-      "scene": 15,
-      "start": 243.9,
-      "end": 269.6,
+      "scene": 16,
+      "start": 268.3,
+      "end": 294.0,
       "section": "CTA",
       "visual_type": "presenter_full",
       "on_screen_text": "Next: Structured Output",

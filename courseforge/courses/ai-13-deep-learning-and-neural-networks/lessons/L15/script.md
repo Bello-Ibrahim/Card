@@ -1,6 +1,6 @@
 # L15 Common Training Problems and Fixes | Presenter Script
 
-Course: AI-13 · Video: 5 min · Words: 617
+Course: AI-13 · Video: 5 min · Words: 686
 
 ## Hook
 Your loss prints not a number at step eight. Or it never moves. Or memory runs out after ten minutes. Each looks like a disaster. But most have a small number of causes, and you can check them in a fixed order.
@@ -10,14 +10,16 @@ First, NaN or exploding loss. The loss grows fast, becomes infinity, then not a 
 
 Second, vanishing gradients. The loss hardly moves, and the early layers' gradients are close to zero. Gradients are multiplied layer by layer on the way back, and sigmoid makes each factor small. Use ReLU, normalisation layers, residual connections, or fewer layers. Diagnose by printing each layer's gradient norm.
 
-Third, the wrong loss for the label shape. Cross-entropy wants logits with one column per class, and integer labels. The binary loss wants float labels with the same shape as the logits. Fourth, out of memory. Use a smaller batch, mixed precision, and do not keep graphs alive by accident.
+Third, the wrong loss for the label shape. Cross-entropy wants logits with one column per class, and integer labels. The binary loss wants float labels with the same shape as the logits. Fourth, out of memory. Use a smaller batch, and mixed precision, which runs most operations in sixteen-bit numbers. And do not keep graphs alive by accident.
 
 Debugging is like a mechanic with a car that will not start. A good mechanic does not replace the engine first. They check the fuel, then the battery, then the spark plugs. Cheapest check first.
 
 Here is the checklist. Read the full error, and print shapes, types and devices. Overfit one small batch. Check the loss and label format. Lower the learning rate by ten. Print gradient norms. Check memory per step.
 
+Step two is a powerful test. A correct model and loop can reach almost zero loss on thirty-two examples. If yours cannot, the bug is in the code, not the settings.
+
 ## Demonstrate
-Nguyen Thi Hoa is an engineer at a logistics firm in Da Nang, Vietnam. She inherits four broken notebooks. You can open the same four from the course page.
+Nguyen Thi Hoa is an engineer at a logistics firm in Da Nang, Vietnam. She inherits four broken notebooks. You can open the same four from the course page. For each one, she writes the symptom in one line before she changes anything.
 
 Notebook A trains a linear model on raw inputs in the thousands. The loss explodes to infinity within a few steps, then becomes not a number. She standardises the inputs and targets, adds clipping, and the loss falls smoothly.
 
@@ -25,7 +27,7 @@ Notebook B stops with an error. The target size must match the input size. The l
 
 In Notebook C, the loss stays flat, near the level of random guessing. Twenty sigmoid layers make the gradients vanish. She prints each layer's gradient norm, and the first layer's is almost zero. With ReLU and batch normalisation, the gradients recover and the loss starts to fall.
 
-In Notebook D, training runs, but memory keeps rising every step. The loop logs an extra loss as a tensor, and that graph was never used for backward, so it is never freed. Logging the plain number with item fixes it, and memory stays flat.
+In Notebook D, training runs, but memory keeps rising every step. The loop logs an extra loss as a tensor, and that graph was never used for backward, so it is never freed. Logging the plain number with item fixes it, and memory stays flat. Only if memory is still short, reduce the batch size or add mixed precision.
 
 A common mistake is answering every problem by changing the learning rate or the architecture, without reading the error first. A missing zero grad, or a stored loss tensor, can look like a tuning problem. Follow the checklist, one change at a time.
 

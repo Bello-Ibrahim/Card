@@ -1,7 +1,7 @@
 {
   "course_id": "AI-13",
   "lesson_id": "L15",
-  "duration_s": 264.5,
+  "duration_s": 294.0,
   "thumbnail": {
     "headline": "Debug Training in Order",
     "slide": {
@@ -49,7 +49,7 @@
     {
       "scene": 4,
       "start": 59.6,
-      "end": 81.5,
+      "end": 85.3,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -57,12 +57,12 @@
         "title": "Loss format and memory",
         "body": "CrossEntropyLoss: logits (N, C), labels int64 (N,)\nBCEWithLogitsLoss: logits and float labels, same shape\nwith torch.autocast(device_type=\"cuda\", dtype=torch.float16): ...\nscaler = torch.amp.GradScaler(\"cuda\")"
       },
-      "voiceover": "Third, the wrong loss for the label shape. Cross-entropy wants logits with one column per class, and integer labels. The binary loss wants float labels with the same shape as the logits. Fourth, out of memory. Use a smaller batch, mixed precision, and do not keep graphs alive by accident."
+      "voiceover": "Third, the wrong loss for the label shape. Cross-entropy wants logits with one column per class, and integer labels. The binary loss wants float labels with the same shape as the logits. Fourth, out of memory. Use a smaller batch, and mixed precision, which runs most operations in sixteen-bit numbers. And do not keep graphs alive by accident."
     },
     {
       "scene": 5,
-      "start": 81.5,
-      "end": 96.5,
+      "start": 85.3,
+      "end": 100.3,
       "section": "Explain",
       "visual_type": "stock",
       "stock_query": "mechanic checking car engine in garage",
@@ -71,8 +71,8 @@
     },
     {
       "scene": 6,
-      "start": 96.5,
-      "end": 112.4,
+      "start": 100.3,
+      "end": 116.2,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -84,18 +84,31 @@
     },
     {
       "scene": 7,
-      "start": 112.4,
-      "end": 124.8,
+      "start": 116.2,
+      "end": 129.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Overfit one small batch",
+        "body": "32 examples → train repeatedly → loss curve drops close to zero (green tick: code works). Flat curve (red cross): bug in the code, not the settings."
+      },
+      "voiceover": "Step two is a powerful test. A correct model and loop can reach almost zero loss on thirty-two examples. If yours cannot, the bug is in the code, not the settings."
+    },
+    {
+      "scene": 8,
+      "start": 129.9,
+      "end": 148.3,
       "section": "Demonstrate",
       "visual_type": "stock",
       "stock_query": "port containers logistics yard aerial view",
       "on_screen_text": "Hoa · logistics · Da Nang",
-      "voiceover": "Nguyen Thi Hoa is an engineer at a logistics firm in Da Nang, Vietnam. She inherits four broken notebooks. You can open the same four from the course page."
+      "voiceover": "Nguyen Thi Hoa is an engineer at a logistics firm in Da Nang, Vietnam. She inherits four broken notebooks. You can open the same four from the course page. For each one, she writes the symptom in one line before she changes anything."
     },
     {
-      "scene": 8,
-      "start": 124.8,
-      "end": 141.5,
+      "scene": 9,
+      "start": 148.3,
+      "end": 165.0,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -107,9 +120,9 @@
       "voiceover": "Notebook A trains a linear model on raw inputs in the thousands. The loss explodes to infinity within a few steps, then becomes not a number. She standardises the inputs and targets, adds clipping, and the loss falls smoothly."
     },
     {
-      "scene": 9,
-      "start": 141.5,
-      "end": 156.5,
+      "scene": 10,
+      "start": 165.0,
+      "end": 180.0,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -121,9 +134,9 @@
       "voiceover": "Notebook B stops with an error. The target size must match the input size. The logits have an extra column, and the labels are integers. She squeezes the logits and turns the labels into floats."
     },
     {
-      "scene": 10,
-      "start": 156.5,
-      "end": 176.6,
+      "scene": 11,
+      "start": 180.0,
+      "end": 200.1,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -135,9 +148,9 @@
       "voiceover": "In Notebook C, the loss stays flat, near the level of random guessing. Twenty sigmoid layers make the gradients vanish. She prints each layer's gradient norm, and the first layer's is almost zero. With ReLU and batch normalisation, the gradients recover and the loss starts to fall."
     },
     {
-      "scene": 11,
-      "start": 176.6,
-      "end": 195.9,
+      "scene": 12,
+      "start": 200.1,
+      "end": 225.4,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -146,21 +159,21 @@
         "In the 'Your fixed version here' cell: copy the loop with losses.append(loss.item()), or compute the logged loss inside with torch.no_grad(); run and show memory staying flat"
       ],
       "on_screen_text": "D: logged loss tensor → use item()",
-      "voiceover": "In Notebook D, training runs, but memory keeps rising every step. The loop logs an extra loss as a tensor, and that graph was never used for backward, so it is never freed. Logging the plain number with item fixes it, and memory stays flat."
+      "voiceover": "In Notebook D, training runs, but memory keeps rising every step. The loop logs an extra loss as a tensor, and that graph was never used for backward, so it is never freed. Logging the plain number with item fixes it, and memory stays flat. Only if memory is still short, reduce the batch size or add mixed precision."
     },
     {
-      "scene": 12,
-      "start": 195.9,
-      "end": 214.3,
+      "scene": 13,
+      "start": 225.4,
+      "end": 243.8,
       "section": "Demonstrate",
       "visual_type": "text",
       "on_screen_text": "Read the error before you tune",
       "voiceover": "A common mistake is answering every problem by changing the learning rate or the architecture, without reading the error first. A missing zero grad, or a stored loss tensor, can look like a tuning problem. Follow the checklist, one change at a time."
     },
     {
-      "scene": 13,
-      "start": 214.3,
-      "end": 242.2,
+      "scene": 14,
+      "start": 243.8,
+      "end": 271.7,
       "section": "Recap",
       "visual_type": "slide",
       "slide": {
@@ -171,9 +184,9 @@
       "voiceover": "Let's recap. First, NaN or exploding loss usually means a high learning rate or unscaled inputs. Normalise, lower the rate, and clip gradients. Second, vanishing gradients show as a flat loss and near-zero early gradients. Use ReLU, normalisation or fewer layers. Third, for memory problems, stop storing graphs, reduce the batch size and use mixed precision. And for any problem, follow a fixed checklist."
     },
     {
-      "scene": 14,
-      "start": 242.2,
-      "end": 264.5,
+      "scene": 15,
+      "start": 271.7,
+      "end": 294.0,
       "section": "CTA",
       "visual_type": "presenter_full",
       "on_screen_text": "Next: Tuning Hyperparameters",

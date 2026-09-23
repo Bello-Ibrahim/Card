@@ -1,7 +1,7 @@
 {
   "course_id": "AI-13",
   "lesson_id": "L14",
-  "duration_s": 267.1,
+  "duration_s": 299.3,
   "thumbnail": {
     "headline": "Is It Better, Really?",
     "slide": {
@@ -75,7 +75,20 @@
     {
       "scene": 6,
       "start": 91.3,
-      "end": 110.6,
+      "end": 109.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Error analysis",
+        "body": "Collect misclassified validation examples · read and group them: wrong or unclear labels · examples that fit two classes · very short or unusual inputs · a pattern the model has not learned"
+      },
+      "voiceover": "Finally, error analysis turns a score into a plan. Collect the misclassified validation examples, read them, and group them. Wrong or unclear labels, examples that really belong to two classes, very short or unusual inputs, or a pattern the model has not learned."
+    },
+    {
+      "scene": 7,
+      "start": 109.7,
+      "end": 129.0,
       "section": "Explain",
       "visual_type": "stock",
       "stock_query": "football match stadium players on pitch",
@@ -83,9 +96,9 @@
       "voiceover": "One football match does not tell you which team is stronger. A lucky goal can decide it. A league of many matches is fairer. Several seeds are a small league for your models. And error analysis is watching the recording of the matches you lost."
     },
     {
-      "scene": 7,
-      "start": 110.6,
-      "end": 127.7,
+      "scene": 8,
+      "start": 129.0,
+      "end": 146.1,
       "section": "Demonstrate",
       "visual_type": "stock",
       "stock_query": "team monitoring news on screens office",
@@ -93,21 +106,21 @@
       "voiceover": "Ayesha is an engineer at a non-profit in Dhaka, Bangladesh, that sorts English news summaries by topic for a media-monitoring project. She uses the AG News setup from the last lesson, and wants a result she can trust."
     },
     {
-      "scene": 8,
-      "start": 127.7,
-      "end": 142.3,
+      "scene": 9,
+      "start": 146.1,
+      "end": 164.1,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
         "Show the run_experiment(seed) cell built from the L13 code; highlight seed=seed in TrainingArguments and in .shuffle(seed=seed)",
         "Highlight the return line: preds, labels as NumPy arrays"
       ],
-      "voiceover": "In Colab, she has wrapped her training code in a function that takes a seed and returns the validation predictions and labels. The function sets the seed everywhere, so each run can be repeated."
+      "voiceover": "In Colab, she has wrapped her training code in a function that takes a seed and returns the validation predictions and labels. The function sets the seed everywhere, so each run can be repeated. The same seed always gives the same result."
     },
     {
-      "scene": 9,
-      "start": 142.3,
-      "end": 156.9,
+      "scene": 10,
+      "start": 164.1,
+      "end": 178.7,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -119,9 +132,9 @@
       "voiceover": "She runs it with seeds zero, one and two, computes macro F1 for each, and prints the mean, standard deviation, minimum and maximum. This is the number she reports, not the best single run."
     },
     {
-      "scene": 10,
-      "start": 156.9,
-      "end": 171.5,
+      "scene": 11,
+      "start": 178.7,
+      "end": 193.3,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -131,9 +144,9 @@
       "voiceover": "Next, a confusion matrix for one run, with the four topic names. Then she lists the first ten misclassified validation examples, with the true label, the predicted label, and the start of the text."
     },
     {
-      "scene": 11,
-      "start": 171.5,
-      "end": 183.5,
+      "scene": 12,
+      "start": 193.3,
+      "end": 205.3,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -144,9 +157,9 @@
       "voiceover": "She reads them and groups them. Most errors are between Business and Science and Technology. Summaries about technology companies' earnings could fit either label. A few look mislabelled."
     },
     {
-      "scene": 12,
-      "start": 183.5,
-      "end": 202.4,
+      "scene": 13,
+      "start": 205.3,
+      "end": 224.2,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -157,18 +170,31 @@
       "voiceover": "Her conclusion. A larger model may help a little, but the class definitions themselves overlap, and she writes this down as a limitation. Each error group points to a different fix. Clean the labels, change the class definitions, collect data, or change the model."
     },
     {
-      "scene": 13,
-      "start": 202.4,
-      "end": 217.8,
+      "scene": 14,
+      "start": 224.2,
+      "end": 243.1,
       "section": "Demonstrate",
       "visual_type": "text",
       "on_screen_text": "Error analysis on validation only",
-      "voiceover": "A common mistake is comparing two settings with one run each, when the difference is smaller than normal seed variation. Another is doing error analysis on the test set. It then becomes a second validation set."
+      "voiceover": "A common mistake is comparing two settings with one run each, when the difference is smaller than normal seed variation. Another is doing error analysis on the test set. It then becomes a second validation set, and the final score is no longer honest."
     },
     {
-      "scene": 14,
-      "start": 217.8,
-      "end": 245.2,
+      "scene": 15,
+      "start": 243.1,
+      "end": 250.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Keep the test set honest",
+        "body": "Compare settings with several seeds, not one run each · error analysis on validation data only · test set: one final check"
+      },
+      "voiceover": "Do error analysis on validation data, and keep the test set for the final, single check."
+    },
+    {
+      "scene": 16,
+      "start": 250.0,
+      "end": 277.4,
       "section": "Recap",
       "visual_type": "slide",
       "slide": {
@@ -179,9 +205,9 @@
       "voiceover": "Let's recap. First, keep separate validation and test splits. Make every choice on validation, and use test once, at the end. Second, run key settings with at least three seeds, and report the mean and spread before claiming that one is better. Third, read and group misclassified examples, to find whether the problem is the labels, the class definitions, the data or the model."
     },
     {
-      "scene": 15,
-      "start": 245.2,
-      "end": 267.1,
+      "scene": 17,
+      "start": 277.4,
+      "end": 299.3,
       "section": "CTA",
       "visual_type": "presenter_full",
       "on_screen_text": "Next: Common Training Problems",

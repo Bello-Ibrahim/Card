@@ -1,6 +1,6 @@
 # L05 Calling the Claude API from n8n | Presenter Script
 
-Course: AI-16 · Video: 5 min · Words: 629
+Course: AI-16 · Video: 5 min · Words: 686
 
 ## Hook
 Your workflow can already read and write a sheet. Now it gets a new ability: understanding language. One extra node lets it summarise, classify, or pull out information from every row.
@@ -16,6 +16,8 @@ The response gives you the text, the reason it stopped, and a usage section with
 
 Here is a picture. Calling the API is like posting a form to a translation office. The envelope has an address, and stamps that prove who you are and which form version you use. Inside is the form itself. The office sends back the translation, with an invoice for how much work it did.
 
+In n8n, you have two ways to make this call. The HTTP Request node lets you set the method, address, headers and body yourself. It shows exactly what is sent, so we use it today. There are also built-in Anthropic model nodes that hide these details. We use one with the AI Agent node later in the course.
+
 The Claude API is a paid, usage-based service. So before you start, set a spending limit in the Claude Console. Keep test runs to a few rows, and always limit output length. Store your key in an n8n credential, never in a node. And use sample data, not personal or confidential data.
 
 ## Demonstrate
@@ -27,12 +29,12 @@ Next, an HTTP Request node. She sets the method to POST, pastes the Messages add
 
 She runs it with a single row first. In the output, you'll see something like: the customer liked the oolong, but found the delivery slow. You also see the token usage.
 
-Then she adds a Set node. It takes the summary text, adds the input and output tokens together, and keeps the review ID. Finally, a Sheets node updates the rows, matching on review ID. She runs all five. Her sheet now has five summaries, and a token count for each row.
+Then she adds a Set node. It takes the summary text, adds the input and output tokens together, and keeps the review ID. Finally, a Sheets node updates the rows, matching on review ID. She removes the one-row limit and runs all five. Her sheet now has five summaries, and a token count for each row.
 
 A common mistake is to test on the whole sheet first. If the prompt has an error, every row gets the wrong prompt, and you pay for every call. Test with one item, check it, then run the full set.
 
 ## Recap
-Let's recap. First, a Claude API call is a POST request to the Messages address, with three headers and a body that holds the model, the output limit, the system prompt and the messages. Second, store the key in an n8n credential, take the model from the current models page, and read the usage from the response. Third, the API is paid per use. Set a spending limit, limit output length, and test with one row first.
+Let's recap. First, a Claude API call is a POST request to the Messages address, with three headers and a body that holds the model, the output limit, the system prompt and the messages. Second, store the key in an n8n credential, and read the usage from the response. Third, the API is paid per use. Set a spending limit, limit output length, and test with one row first.
 
 ## CTA
 Now it is your turn. In the exercise below this video, you will send five customer reviews to the Claude API, write a one-sentence summary of each back to your sheet, and record the tokens the run used. It takes about forty minutes. In the next lesson, we cover Structured Output: Getting JSON You Can Trust. See you there.

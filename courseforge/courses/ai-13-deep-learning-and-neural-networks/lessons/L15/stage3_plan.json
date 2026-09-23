@@ -3,7 +3,11 @@
   "thumbnail": {
     "headline": "Debug Training in Order",
     "image": "Navy background, a loss chart that shoots up to NaN with a teal numbered checklist beside it, headline in teal Inter Bold.",
-    "slide": {"layout": "title", "title": "Debug Training in Order", "body": "Left: a loss line that shoots up and ends in 'nan'. Right: a six-step numbered checklist with the first box ticked. Small tag: Deep Learning and Neural Networks · Lesson 15."}
+    "slide": {
+      "layout": "title",
+      "title": "Debug Training in Order",
+      "body": "Left: a loss line that shoots up and ends in 'nan'. Right: a six-step numbered checklist with the first box ticked. Small tag: Deep Learning and Neural Networks · Lesson 15."
+    }
   },
   "production_notes": [
     "The demo uses the course team's ready-made notebooks assets/L15_broken_A.ipynb to assets/L15_broken_D.ipynb, all tested on CPU. The instructor answer key assets/L15_answer_key.md must not appear on screen or be published with the notebooks.",
@@ -14,62 +18,135 @@
   ],
   "sections": {
     "Hook": [
-      {"visual_type": "presenter_full",
-       "voiceover": "Your loss prints not a number at step eight. Or it never moves. Or memory runs out after ten minutes. Each looks like a disaster. But most have a small number of causes, and you can check them in a fixed order.",
-       "on_screen_text": "NaN, flat loss, out of memory"}
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Your loss prints not a number at step eight. Or it never moves. Or memory runs out after ten minutes. Each looks like a disaster. But most have a small number of causes, and you can check them in a fixed order.",
+        "on_screen_text": "NaN, flat loss, out of memory"
+      }
     ],
     "Explain": [
-      {"visual_type": "slide",
-       "voiceover": "First, NaN or exploding loss. The loss grows fast, becomes infinity, then not a number. Usual causes are a learning rate that is too high, inputs with very large values, or an invalid operation. Normalise the inputs, lower the learning rate, and add gradient clipping between backward and step.",
-       "slide": {"layout": "code", "title": "Exploding loss", "body": "loss.backward()\ntorch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)\nopt.step()\n# also: normalise inputs, lower the lr"}},
-      {"visual_type": "slide",
-       "voiceover": "Second, vanishing gradients. The loss hardly moves, and the early layers' gradients are close to zero. Gradients are multiplied layer by layer on the way back, and sigmoid makes each factor small. Use ReLU, normalisation layers, residual connections, or fewer layers. Diagnose by printing each layer's gradient norm.",
-       "slide": {"layout": "diagram", "title": "Vanishing gradients", "body": "20 layers drawn left to right; gradient arrows flowing back from the loss get thinner at each layer until almost invisible at layer 1. Fixes: ReLU · BatchNorm / LayerNorm · residual connections · fewer layers."}},
-      {"visual_type": "slide",
-       "voiceover": "Third, the wrong loss for the label shape. Cross-entropy wants logits with one column per class, and integer labels. The binary loss wants float labels with the same shape as the logits. Fourth, out of memory. Use a smaller batch, mixed precision, and do not keep graphs alive by accident.",
-       "slide": {"layout": "code", "title": "Loss format and memory", "body": "CrossEntropyLoss: logits (N, C), labels int64 (N,)\nBCEWithLogitsLoss: logits and float labels, same shape\nwith torch.autocast(device_type=\"cuda\", dtype=torch.float16): ...\nscaler = torch.amp.GradScaler(\"cuda\")"}},
-      {"visual_type": "stock",
-       "voiceover": "Debugging is like a mechanic with a car that will not start. A good mechanic does not replace the engine first. They check the fuel, then the battery, then the spark plugs. Cheapest check first.",
-       "stock_query": "mechanic checking car engine in garage",
-       "on_screen_text": "Cheapest check first"},
-      {"visual_type": "slide",
-       "voiceover": "Here is the checklist. Read the full error, and print shapes, types and devices. Overfit one small batch. Check the loss and label format. Lower the learning rate by ten. Print gradient norms. Check memory per step.",
-       "slide": {"layout": "bullets", "title": "Debugging checklist", "body": "1. Read the error; print shapes, dtypes, devices 2. Overfit one small batch 3. Check loss and label format 4. Lower lr by 10× 5. Print gradient norms 6. Check memory per step"}}
+      {
+        "visual_type": "slide",
+        "voiceover": "First, NaN or exploding loss. The loss grows fast, becomes infinity, then not a number. Usual causes are a learning rate that is too high, inputs with very large values, or an invalid operation. Normalise the inputs, lower the learning rate, and add gradient clipping between backward and step.",
+        "slide": {
+          "layout": "code",
+          "title": "Exploding loss",
+          "body": "loss.backward()\ntorch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)\nopt.step()\n# also: normalise inputs, lower the lr"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Second, vanishing gradients. The loss hardly moves, and the early layers' gradients are close to zero. Gradients are multiplied layer by layer on the way back, and sigmoid makes each factor small. Use ReLU, normalisation layers, residual connections, or fewer layers. Diagnose by printing each layer's gradient norm.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Vanishing gradients",
+          "body": "20 layers drawn left to right; gradient arrows flowing back from the loss get thinner at each layer until almost invisible at layer 1. Fixes: ReLU · BatchNorm / LayerNorm · residual connections · fewer layers."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Third, the wrong loss for the label shape. Cross-entropy wants logits with one column per class, and integer labels. The binary loss wants float labels with the same shape as the logits. Fourth, out of memory. Use a smaller batch, and mixed precision, which runs most operations in sixteen-bit numbers. And do not keep graphs alive by accident.",
+        "slide": {
+          "layout": "code",
+          "title": "Loss format and memory",
+          "body": "CrossEntropyLoss: logits (N, C), labels int64 (N,)\nBCEWithLogitsLoss: logits and float labels, same shape\nwith torch.autocast(device_type=\"cuda\", dtype=torch.float16): ...\nscaler = torch.amp.GradScaler(\"cuda\")"
+        }
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "Debugging is like a mechanic with a car that will not start. A good mechanic does not replace the engine first. They check the fuel, then the battery, then the spark plugs. Cheapest check first.",
+        "stock_query": "mechanic checking car engine in garage",
+        "on_screen_text": "Cheapest check first"
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Here is the checklist. Read the full error, and print shapes, types and devices. Overfit one small batch. Check the loss and label format. Lower the learning rate by ten. Print gradient norms. Check memory per step.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Debugging checklist",
+          "body": "1. Read the error; print shapes, dtypes, devices 2. Overfit one small batch 3. Check loss and label format 4. Lower lr by 10× 5. Print gradient norms 6. Check memory per step"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "slide": {
+          "layout": "diagram",
+          "title": "Overfit one small batch",
+          "body": "32 examples → train repeatedly → loss curve drops close to zero (green tick: code works). Flat curve (red cross): bug in the code, not the settings."
+        },
+        "voiceover": "Step two is a powerful test. A correct model and loop can reach almost zero loss on thirty-two examples. If yours cannot, the bug is in the code, not the settings."
+      }
     ],
     "Demonstrate": [
-      {"visual_type": "stock",
-       "voiceover": "Nguyen Thi Hoa is an engineer at a logistics firm in Da Nang, Vietnam. She inherits four broken notebooks. You can open the same four from the course page.",
-       "stock_query": "port containers logistics yard aerial view",
-       "on_screen_text": "Hoa · logistics · Da Nang"},
-      {"visual_type": "screen",
-       "voiceover": "Notebook A trains a linear model on raw inputs in the thousands. The loss explodes to infinity within a few steps, then becomes not a number. She standardises the inputs and targets, adds clipping, and the loss falls smoothly.",
-       "screen_steps": ["Open assets/L15_broken_A.ipynb in Colab and run all cells unchanged", "Point to the loss: huge values, then inf, then nan", "In the 'Your fixed version here' cell: standardise X and y; add torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0) between backward() and step(); re-run and show the loss falling"],
-       "on_screen_text": "A: unscaled inputs → standardise, clip"},
-      {"visual_type": "screen",
-       "voiceover": "Notebook B stops with an error. The target size must match the input size. The logits have an extra column, and the labels are integers. She squeezes the logits and turns the labels into floats.",
-       "screen_steps": ["Open assets/L15_broken_B.ipynb and run all cells", "Show the ValueError: Target size (torch.Size([32])) must be the same as input size (torch.Size([32, 1]))", "In the 'Your fixed version here' cell: nn.BCEWithLogitsLoss()(model(xb).squeeze(1), yb.float()); run with no error"],
-       "on_screen_text": "B: label shape → squeeze, float"},
-      {"visual_type": "screen",
-       "voiceover": "In Notebook C, the loss stays flat, near the level of random guessing. Twenty sigmoid layers make the gradients vanish. She prints each layer's gradient norm, and the first layer's is almost zero. With ReLU and batch normalisation, the gradients recover and the loss starts to fall.",
-       "screen_steps": ["Open assets/L15_broken_C.ipynb and run all cells; point to the loss stuck near 2.30", "In the 'Your fixed version here' cell, after one backward(): for name, p in model.named_parameters(): print(name, p.grad.norm()); point to the near-zero first-layer weight gradient", "Same cell: rebuild the model with nn.Linear(64, 64), nn.BatchNorm1d(64), nn.ReLU() per layer; re-run the loop and compare gradient norms and loss"],
-       "on_screen_text": "C: vanishing gradients → ReLU, BatchNorm"},
-      {"visual_type": "screen",
-       "voiceover": "In Notebook D, training runs, but memory keeps rising every step. The loop logs an extra loss as a tensor, and that graph was never used for backward, so it is never freed. Logging the plain number with item fixes it, and memory stays flat.",
-       "screen_steps": ["Open assets/L15_broken_D.ipynb and run all cells; point to the memory printout rising every 5 steps (on CPU also the Colab resource panel)", "Highlight losses.append(loss)  # keeps every graph alive", "In the 'Your fixed version here' cell: copy the loop with losses.append(loss.item()), or compute the logged loss inside with torch.no_grad(); run and show memory staying flat"],
-       "on_screen_text": "D: logged loss tensor → use item()"},
-      {"visual_type": "text",
-       "voiceover": "A common mistake is answering every problem by changing the learning rate or the architecture, without reading the error first. A missing zero grad, or a stored loss tensor, can look like a tuning problem. Follow the checklist, one change at a time.",
-       "on_screen_text": "Read the error before you tune"}
+      {
+        "visual_type": "stock",
+        "voiceover": "Nguyen Thi Hoa is an engineer at a logistics firm in Da Nang, Vietnam. She inherits four broken notebooks. You can open the same four from the course page. For each one, she writes the symptom in one line before she changes anything.",
+        "stock_query": "port containers logistics yard aerial view",
+        "on_screen_text": "Hoa · logistics · Da Nang"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Notebook A trains a linear model on raw inputs in the thousands. The loss explodes to infinity within a few steps, then becomes not a number. She standardises the inputs and targets, adds clipping, and the loss falls smoothly.",
+        "screen_steps": [
+          "Open assets/L15_broken_A.ipynb in Colab and run all cells unchanged",
+          "Point to the loss: huge values, then inf, then nan",
+          "In the 'Your fixed version here' cell: standardise X and y; add torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0) between backward() and step(); re-run and show the loss falling"
+        ],
+        "on_screen_text": "A: unscaled inputs → standardise, clip"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Notebook B stops with an error. The target size must match the input size. The logits have an extra column, and the labels are integers. She squeezes the logits and turns the labels into floats.",
+        "screen_steps": [
+          "Open assets/L15_broken_B.ipynb and run all cells",
+          "Show the ValueError: Target size (torch.Size([32])) must be the same as input size (torch.Size([32, 1]))",
+          "In the 'Your fixed version here' cell: nn.BCEWithLogitsLoss()(model(xb).squeeze(1), yb.float()); run with no error"
+        ],
+        "on_screen_text": "B: label shape → squeeze, float"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "In Notebook C, the loss stays flat, near the level of random guessing. Twenty sigmoid layers make the gradients vanish. She prints each layer's gradient norm, and the first layer's is almost zero. With ReLU and batch normalisation, the gradients recover and the loss starts to fall.",
+        "screen_steps": [
+          "Open assets/L15_broken_C.ipynb and run all cells; point to the loss stuck near 2.30",
+          "In the 'Your fixed version here' cell, after one backward(): for name, p in model.named_parameters(): print(name, p.grad.norm()); point to the near-zero first-layer weight gradient",
+          "Same cell: rebuild the model with nn.Linear(64, 64), nn.BatchNorm1d(64), nn.ReLU() per layer; re-run the loop and compare gradient norms and loss"
+        ],
+        "on_screen_text": "C: vanishing gradients → ReLU, BatchNorm"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "In Notebook D, training runs, but memory keeps rising every step. The loop logs an extra loss as a tensor, and that graph was never used for backward, so it is never freed. Logging the plain number with item fixes it, and memory stays flat. Only if memory is still short, reduce the batch size or add mixed precision.",
+        "screen_steps": [
+          "Open assets/L15_broken_D.ipynb and run all cells; point to the memory printout rising every 5 steps (on CPU also the Colab resource panel)",
+          "Highlight losses.append(loss)  # keeps every graph alive",
+          "In the 'Your fixed version here' cell: copy the loop with losses.append(loss.item()), or compute the logged loss inside with torch.no_grad(); run and show memory staying flat"
+        ],
+        "on_screen_text": "D: logged loss tensor → use item()"
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "A common mistake is answering every problem by changing the learning rate or the architecture, without reading the error first. A missing zero grad, or a stored loss tensor, can look like a tuning problem. Follow the checklist, one change at a time.",
+        "on_screen_text": "Read the error before you tune"
+      }
     ],
     "Recap": [
-      {"visual_type": "slide",
-       "voiceover": "Let's recap. First, NaN or exploding loss usually means a high learning rate or unscaled inputs. Normalise, lower the rate, and clip gradients. Second, vanishing gradients show as a flat loss and near-zero early gradients. Use ReLU, normalisation or fewer layers. Third, for memory problems, stop storing graphs, reduce the batch size and use mixed precision. And for any problem, follow a fixed checklist.",
-       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. NaN: normalise, lower lr, clip gradients. 2. Flat loss: check gradient norms; ReLU, normalisation. 3. Memory: .item(), smaller batch, mixed precision. Always: the checklist."}}
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, NaN or exploding loss usually means a high learning rate or unscaled inputs. Normalise, lower the rate, and clip gradients. Second, vanishing gradients show as a flat loss and near-zero early gradients. Use ReLU, normalisation or fewer layers. Third, for memory problems, stop storing graphs, reduce the batch size and use mixed precision. And for any problem, follow a fixed checklist.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. NaN: normalise, lower lr, clip gradients. 2. Flat loss: check gradient norms; ReLU, normalisation. 3. Memory: .item(), smaller batch, mixed precision. Always: the checklist."
+        }
+      }
     ],
     "CTA": [
-      {"visual_type": "presenter_full",
-       "voiceover": "Now it is your turn. In the exercise below this video, you will debug the four broken notebooks yourself, and record the symptom, the cause, the fix and the evidence for each one. It takes about forty minutes. In the next lesson, we tune hyperparameters and learning-rate schedules. See you there.",
-       "on_screen_text": "Next: Tuning Hyperparameters"}
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Now it is your turn. In the exercise below this video, you will debug the four broken notebooks yourself, and record the symptom, the cause, the fix and the evidence for each one. It takes about forty minutes. In the next lesson, we tune hyperparameters and learning-rate schedules. See you there.",
+        "on_screen_text": "Next: Tuning Hyperparameters"
+      }
     ]
   }
 }

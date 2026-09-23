@@ -3,7 +3,11 @@
   "thumbnail": {
     "headline": "Is It Better, Really?",
     "image": "Navy background, three overlapping score ranges drawn as teal bars with dots for three seeds, next to a small confusion matrix, headline in teal Inter Bold.",
-    "slide": {"layout": "title", "title": "Is It Better, Really?", "body": "Two settings, each with three seed dots and a range bar; the ranges overlap. A small 4×4 confusion matrix beside them. Small tag: Deep Learning and Neural Networks · Lesson 14."}
+    "slide": {
+      "layout": "title",
+      "title": "Is It Better, Really?",
+      "body": "Two settings, each with three seed dots and a range bar; the ranges overlap. A small 4×4 confusion matrix beside them. Small tag: Deep Learning and Neural Networks · Lesson 14."
+    }
   },
   "production_notes": [
     "[VERIFY] AG News dataset licence and source (carried from L13) must be confirmed before the dataset is used in the recording.",
@@ -14,63 +18,148 @@
   ],
   "sections": {
     "Hook": [
-      {"visual_type": "presenter_full",
-       "voiceover": "You change the learning rate, and accuracy goes up by one point. Is the new setting better? Run the old setting again with a different random seed, and it may move by one point on its own. So how much is just chance?",
-       "on_screen_text": "Better, or just lucky?"}
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "You change the learning rate, and accuracy goes up by one point. Is the new setting better? Run the old setting again with a different random seed, and it may move by one point on its own. So how much is just chance?",
+        "on_screen_text": "Better, or just lucky?"
+      }
     ],
     "Explain": [
-      {"visual_type": "slide",
-       "voiceover": "A quick recap from the scikit-learn course. Use three splits. Training to fit the weights. Validation to make choices, such as epochs and hyperparameters. And test, to measure the final choice once. Look beyond one number. A confusion matrix and per-class scores show which classes get confused.",
-       "slide": {"layout": "diagram", "title": "Recap: three splits", "body": "Three boxes: Training (fit weights) → Validation (make choices) → Test (locked; measure once). Beside it: a small confusion matrix and per-class precision, recall, F1."}},
-      {"visual_type": "slide",
-       "voiceover": "Deep models add two reasons to be careful. First, randomness is everywhere. The seed controls the new layer's starting weights, the shuffling order, dropout and augmentation. Two runs with the same settings but different seeds can give noticeably different scores, especially on small datasets.",
-       "slide": {"layout": "bullets", "title": "1. Randomness is everywhere", "body": "The seed controls: initial weights of the new layer · data shuffling · dropout masks · augmentation. Same settings, different seed → different score."}},
-      {"visual_type": "slide",
-       "voiceover": "So run important settings with three or more seeds, and report the mean and the spread. If two settings' ranges overlap a lot, you have not shown that one is better.",
-       "slide": {"layout": "diagram", "title": "Mean and spread", "body": "Setting A: three dots and a range bar. Setting B: three dots and a range bar that overlaps A's. Caption: overlap → no proof that B is better. Report mean, std, min and max."}},
-      {"visual_type": "slide",
-       "voiceover": "Second, many choices use up the validation set. Every time you look at validation results and change something, you fit your decisions a little to that split. After many experiments, the validation score becomes optimistic. That is why the test set stays locked until the end.",
-       "slide": {"layout": "bullets", "title": "2. Choices use up validation", "body": "Each look-and-change fits decisions to the validation split · after many experiments, validation is optimistic · the test set stays locked until the end (L19)"}},
-      {"visual_type": "stock",
-       "voiceover": "One football match does not tell you which team is stronger. A lucky goal can decide it. A league of many matches is fairer. Several seeds are a small league for your models. And error analysis is watching the recording of the matches you lost.",
-       "stock_query": "football match stadium players on pitch",
-       "on_screen_text": "Seeds are a small league"}
+      {
+        "visual_type": "slide",
+        "voiceover": "A quick recap from the scikit-learn course. Use three splits. Training to fit the weights. Validation to make choices, such as epochs and hyperparameters. And test, to measure the final choice once. Look beyond one number. A confusion matrix and per-class scores show which classes get confused.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Recap: three splits",
+          "body": "Three boxes: Training (fit weights) → Validation (make choices) → Test (locked; measure once). Beside it: a small confusion matrix and per-class precision, recall, F1."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Deep models add two reasons to be careful. First, randomness is everywhere. The seed controls the new layer's starting weights, the shuffling order, dropout and augmentation. Two runs with the same settings but different seeds can give noticeably different scores, especially on small datasets.",
+        "slide": {
+          "layout": "bullets",
+          "title": "1. Randomness is everywhere",
+          "body": "The seed controls: initial weights of the new layer · data shuffling · dropout masks · augmentation. Same settings, different seed → different score."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "So run important settings with three or more seeds, and report the mean and the spread. If two settings' ranges overlap a lot, you have not shown that one is better.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Mean and spread",
+          "body": "Setting A: three dots and a range bar. Setting B: three dots and a range bar that overlaps A's. Caption: overlap → no proof that B is better. Report mean, std, min and max."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Second, many choices use up the validation set. Every time you look at validation results and change something, you fit your decisions a little to that split. After many experiments, the validation score becomes optimistic. That is why the test set stays locked until the end.",
+        "slide": {
+          "layout": "bullets",
+          "title": "2. Choices use up validation",
+          "body": "Each look-and-change fits decisions to the validation split · after many experiments, validation is optimistic · the test set stays locked until the end (L19)"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "slide": {
+          "layout": "bullets",
+          "title": "Error analysis",
+          "body": "Collect misclassified validation examples · read and group them: wrong or unclear labels · examples that fit two classes · very short or unusual inputs · a pattern the model has not learned"
+        },
+        "voiceover": "Finally, error analysis turns a score into a plan. Collect the misclassified validation examples, read them, and group them. Wrong or unclear labels, examples that really belong to two classes, very short or unusual inputs, or a pattern the model has not learned."
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "One football match does not tell you which team is stronger. A lucky goal can decide it. A league of many matches is fairer. Several seeds are a small league for your models. And error analysis is watching the recording of the matches you lost.",
+        "stock_query": "football match stadium players on pitch",
+        "on_screen_text": "Seeds are a small league"
+      }
     ],
     "Demonstrate": [
-      {"visual_type": "stock",
-       "voiceover": "Ayesha is an engineer at a non-profit in Dhaka, Bangladesh, that sorts English news summaries by topic for a media-monitoring project. She uses the AG News setup from the last lesson, and wants a result she can trust.",
-       "stock_query": "team monitoring news on screens office",
-       "on_screen_text": "Ayesha · non-profit · Dhaka"},
-      {"visual_type": "screen",
-       "voiceover": "In Colab, she has wrapped her training code in a function that takes a seed and returns the validation predictions and labels. The function sets the seed everywhere, so each run can be repeated.",
-       "screen_steps": ["Show the run_experiment(seed) cell built from the L13 code; highlight seed=seed in TrainingArguments and in .shuffle(seed=seed)", "Highlight the return line: preds, labels as NumPy arrays"]},
-      {"visual_type": "screen",
-       "voiceover": "She runs it with seeds zero, one and two, computes macro F1 for each, and prints the mean, standard deviation, minimum and maximum. This is the number she reports, not the best single run.",
-       "screen_steps": ["Run: results = []; for seed in [0, 1, 2]: preds, labels = run_experiment(seed=seed); results.append(f1_score(labels, preds, average=\"macro\"))", "Run the print line: macro F1 mean, std, min, max", "Point to the spread between min and max"],
-       "on_screen_text": "Report the mean and the spread"},
-      {"visual_type": "screen",
-       "voiceover": "Next, a confusion matrix for one run, with the four topic names. Then she lists the first ten misclassified validation examples, with the true label, the predicted label, and the start of the text.",
-       "screen_steps": ["Run: ConfusionMatrixDisplay.from_predictions(labels, preds, display_labels=[\"World\", \"Sports\", \"Business\", \"Sci/Tech\"])", "Run: wrong = np.where(preds != labels)[0]; for i in wrong[:10]: print(labels[i], \"->\", preds[i], \"|\", val_texts[i][:120])"]},
-      {"visual_type": "screen",
-       "voiceover": "She reads them and groups them. Most errors are between Business and Science and Technology. Summaries about technology companies' earnings could fit either label. A few look mislabelled.",
-       "screen_steps": ["Point to the largest off-diagonal cells: Business ↔ Sci/Tech", "Scroll the printed errors and highlight two tech-earnings summaries and one likely mislabel"],
-       "on_screen_text": "Business or Sci/Tech? Both fit."},
-      {"visual_type": "slide",
-       "voiceover": "Her conclusion. A larger model may help a little, but the class definitions themselves overlap, and she writes this down as a limitation. Each error group points to a different fix. Clean the labels, change the class definitions, collect data, or change the model.",
-       "slide": {"layout": "comparison", "title": "From errors to a plan", "body": "Wrong or unclear labels → clean labels · Overlapping classes → change definitions · Short or unusual inputs → collect data · Unlearned pattern → change the model"}},
-      {"visual_type": "text",
-       "voiceover": "A common mistake is comparing two settings with one run each, when the difference is smaller than normal seed variation. Another is doing error analysis on the test set. It then becomes a second validation set.",
-       "on_screen_text": "Error analysis on validation only"}
+      {
+        "visual_type": "stock",
+        "voiceover": "Ayesha is an engineer at a non-profit in Dhaka, Bangladesh, that sorts English news summaries by topic for a media-monitoring project. She uses the AG News setup from the last lesson, and wants a result she can trust.",
+        "stock_query": "team monitoring news on screens office",
+        "on_screen_text": "Ayesha · non-profit · Dhaka"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "In Colab, she has wrapped her training code in a function that takes a seed and returns the validation predictions and labels. The function sets the seed everywhere, so each run can be repeated. The same seed always gives the same result.",
+        "screen_steps": [
+          "Show the run_experiment(seed) cell built from the L13 code; highlight seed=seed in TrainingArguments and in .shuffle(seed=seed)",
+          "Highlight the return line: preds, labels as NumPy arrays"
+        ]
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "She runs it with seeds zero, one and two, computes macro F1 for each, and prints the mean, standard deviation, minimum and maximum. This is the number she reports, not the best single run.",
+        "screen_steps": [
+          "Run: results = []; for seed in [0, 1, 2]: preds, labels = run_experiment(seed=seed); results.append(f1_score(labels, preds, average=\"macro\"))",
+          "Run the print line: macro F1 mean, std, min, max",
+          "Point to the spread between min and max"
+        ],
+        "on_screen_text": "Report the mean and the spread"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Next, a confusion matrix for one run, with the four topic names. Then she lists the first ten misclassified validation examples, with the true label, the predicted label, and the start of the text.",
+        "screen_steps": [
+          "Run: ConfusionMatrixDisplay.from_predictions(labels, preds, display_labels=[\"World\", \"Sports\", \"Business\", \"Sci/Tech\"])",
+          "Run: wrong = np.where(preds != labels)[0]; for i in wrong[:10]: print(labels[i], \"->\", preds[i], \"|\", val_texts[i][:120])"
+        ]
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "She reads them and groups them. Most errors are between Business and Science and Technology. Summaries about technology companies' earnings could fit either label. A few look mislabelled.",
+        "screen_steps": [
+          "Point to the largest off-diagonal cells: Business ↔ Sci/Tech",
+          "Scroll the printed errors and highlight two tech-earnings summaries and one likely mislabel"
+        ],
+        "on_screen_text": "Business or Sci/Tech? Both fit."
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Her conclusion. A larger model may help a little, but the class definitions themselves overlap, and she writes this down as a limitation. Each error group points to a different fix. Clean the labels, change the class definitions, collect data, or change the model.",
+        "slide": {
+          "layout": "comparison",
+          "title": "From errors to a plan",
+          "body": "Wrong or unclear labels → clean labels · Overlapping classes → change definitions · Short or unusual inputs → collect data · Unlearned pattern → change the model"
+        }
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "A common mistake is comparing two settings with one run each, when the difference is smaller than normal seed variation. Another is doing error analysis on the test set. It then becomes a second validation set, and the final score is no longer honest.",
+        "on_screen_text": "Error analysis on validation only"
+      },
+      {
+        "visual_type": "slide",
+        "slide": {
+          "layout": "bullets",
+          "title": "Keep the test set honest",
+          "body": "Compare settings with several seeds, not one run each · error analysis on validation data only · test set: one final check"
+        },
+        "voiceover": "Do error analysis on validation data, and keep the test set for the final, single check."
+      }
     ],
     "Recap": [
-      {"visual_type": "slide",
-       "voiceover": "Let's recap. First, keep separate validation and test splits. Make every choice on validation, and use test once, at the end. Second, run key settings with at least three seeds, and report the mean and spread before claiming that one is better. Third, read and group misclassified examples, to find whether the problem is the labels, the class definitions, the data or the model.",
-       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Choose on validation; test once. 2. Three or more seeds; report mean and spread. 3. Group errors: labels, definitions, data or model."}}
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, keep separate validation and test splits. Make every choice on validation, and use test once, at the end. Second, run key settings with at least three seeds, and report the mean and spread before claiming that one is better. Third, read and group misclassified examples, to find whether the problem is the labels, the class definitions, the data or the model.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. Choose on validation; test once. 2. Three or more seeds; report mean and spread. 3. Group errors: labels, definitions, data or model."
+        }
+      }
     ],
     "CTA": [
-      {"visual_type": "presenter_full",
-       "voiceover": "Now it is your turn. In the exercise below this video, you will run your text model with three seeds, report the mean and spread, and review ten misclassified examples to find a pattern. It takes about forty minutes. In the next lesson, we debug common training problems. See you there.",
-       "on_screen_text": "Next: Common Training Problems"}
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Now it is your turn. In the exercise below this video, you will run your text model with three seeds, report the mean and spread, and review ten misclassified examples to find a pattern. It takes about forty minutes. In the next lesson, we debug common training problems. See you there.",
+        "on_screen_text": "Next: Common Training Problems"
+      }
     ]
   }
 }

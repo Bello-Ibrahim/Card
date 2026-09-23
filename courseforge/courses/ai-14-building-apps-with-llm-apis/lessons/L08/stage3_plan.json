@@ -59,11 +59,20 @@
       },
       {
         "visual_type": "slide",
-        "voiceover": "On your computer, the key lives in an environment variable or a local secrets file. On a host, it goes into the host's secrets settings, never into the repository. Streamlit Community Cloud and Vercel both have free plans with limits, so check the current rules. And a public link means anyone can use your API credit. So keep max tokens low, keep your spend limit set, and consider a simple password or a message limit.",
+        "voiceover": "On your computer, the key lives in an environment variable or a local secrets file. On a host, it goes into the host's secrets settings, never into the repository. Streamlit Community Cloud and Vercel both have free plans with limits, so check the current rules.",
         "slide": {
           "layout": "comparison",
-          "title": "Keys and budget in hosted apps",
-          "body": "Local: environment variable or .streamlit/secrets.toml (in .gitignore). Hosted: the host's secrets settings. Public link → low max_tokens · spend limit · password or message limit."
+          "title": "Keys in hosted apps",
+          "body": "Local: environment variable or .streamlit/secrets.toml (in .gitignore). Hosted: the host's secrets settings. Free hosting: Streamlit Community Cloud (Python) · Vercel (Next.js), check current plans."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "And a public link means anyone can use your API credit. So keep max tokens low, keep your spend limit set, and consider a simple password or a per-session message limit.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Protect your budget",
+          "body": "Public link = anyone can spend your credit · Low max_tokens · Spend limit set · Simple password or per-session message limit"
         }
       }
     ],

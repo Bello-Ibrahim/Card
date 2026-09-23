@@ -1,6 +1,6 @@
 # L08 A Web Front End with Streamlit or Next.js | Presenter Script
 
-Course: AI-14 · Video: 5 min · Words: 672
+Course: AI-14 · Video: 5 min · Words: 674
 
 ## Hook
 A script in your terminal is a prototype. A link that a colleague can open on their phone is a product. With about thirty lines of Python, you can turn your streaming code into a chat app on the web.
@@ -14,7 +14,9 @@ Think of a waiter who forgets everything each time they walk back to the kitchen
 
 A chat app needs four features. Session state keeps the messages list, because the API is stateless. Chat message shows a bubble for the user or the assistant. Chat input shows a text box at the bottom. And write stream shows streamed text as it arrives, then returns the full reply.
 
-On your computer, the key lives in an environment variable or a local secrets file. On a host, it goes into the host's secrets settings, never into the repository. Streamlit Community Cloud and Vercel both have free plans with limits, so check the current rules. And a public link means anyone can use your API credit. So keep max tokens low, keep your spend limit set, and consider a simple password or a message limit.
+On your computer, the key lives in an environment variable or a local secrets file. On a host, it goes into the host's secrets settings, never into the repository. Streamlit Community Cloud and Vercel both have free plans with limits, so check the current rules.
+
+And a public link means anyone can use your API credit. So keep max tokens low, keep your spend limit set, and consider a simple password or a per-session message limit.
 
 ## Demonstrate
 Amara Diallo runs a small tour company in Dakar, Senegal. She wants a chat assistant that answers visitors' questions about her tours.
