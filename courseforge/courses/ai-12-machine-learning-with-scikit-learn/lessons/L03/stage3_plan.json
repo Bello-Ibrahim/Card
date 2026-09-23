@@ -1,0 +1,144 @@
+{
+  "title": "Train/Test Split and Why It Matters",
+  "thumbnail": {
+    "headline": "100% Is a Warning",
+    "image": "Navy background, two score cards side by side: 'train 1.0' in grey and 'test 0.728' in amber, a small exam paper icon, headline in teal Inter Bold.",
+    "slide": {
+      "layout": "title",
+      "title": "100% Is a Warning",
+      "body": "Two score cards: Train 1.0 (grey) and Test 0.728 (amber), with a gap arrow between them. Tag: Machine Learning with scikit-learn · Lesson 3."
+    }
+  },
+  "production_notes": [
+    "[VERSION] Outputs were recorded with scikit-learn 1.9.1 and Python 3.11. make_classification and train_test_split results can change between versions; re-run the cell in the current Colab version before recording and update every spoken and captioned score if the output differs.",
+    "Screen scenes 8 to 12 use one Colab cell, copied exactly from the content.md Worked Example. It runs on its own and needs no earlier setup cell.",
+    "Scene 9: content.md asks the presenter to point clearly to the order of the four outputs of the split; keep the highlight on screen for at least three seconds.",
+    "Fatima Zahra and the Casablanca insurance company are fictional; the data is synthetic.",
+    "Speak scores as decimals, for example 'zero point seven two eight'; the screen shows the exact output."
+  ],
+  "sections": {
+    "Hook": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "In the last lesson, the decision tree predicted every training row correctly. That sounds perfect, but it tells us almost nothing. Today you will see a model with a perfect training score lose more than a quarter of it on new data.",
+        "on_screen_text": "Perfect on training. Then what?"
+      }
+    ],
+    "Explain": [
+      {
+        "visual_type": "slide",
+        "voiceover": "The goal of a model is generalisation. That means good predictions on new cases. To estimate it, we hold back part of the data as a test set. The model never sees it during training. We train on the training set, and we measure on the test set.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Hold back a test set",
+          "body": "One data table split into two blocks: Training set (75%, 'model learns here') and Test set (25%, 'model never sees it; we measure here')."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "scikit-learn does this with one function, and three settings matter. The test size keeps a share of rows for testing, often between twenty and thirty percent. A fixed random state makes the split repeatable. And stratifying by the target keeps the same share of each class in both sets, which matters when one class is rare.",
+        "slide": {
+          "layout": "code",
+          "title": "train_test_split: three settings",
+          "body": "test_size=0.25   → keep 25% for testing\nrandom_state=42  → same split every time\nstratify=y       → same class balance in both sets"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Comparing the two scores tells you a lot. If the training score is high and the test score is much lower, the model is overfitting. It has learned the noise in the training rows, not the general pattern. If both scores are low, it is underfitting, too simple for the pattern. A good fit has both scores reasonably high, and close together.",
+        "slide": {
+          "layout": "comparison",
+          "title": "Read the two scores",
+          "body": "Overfitting: train high, test much lower. Underfitting: both low. Good fit: both reasonably high and close."
+        }
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "Remember this. A very high training score on its own is never evidence of a good model. A flexible model, such as a tree with no depth limit, can almost always reach close to one hundred percent on its own training data.",
+        "on_screen_text": "High training score proves nothing"
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "Think of a fair exam. If a teacher gives the exact questions from the homework, a student who memorised the answers scores one hundred percent. But that score does not show whether the student understands. The test set is the fair exam for your model.",
+        "stock_query": "students writing exam in classroom",
+        "on_screen_text": "The test set is the fair exam"
+      }
+    ],
+    "Demonstrate": [
+      {
+        "visual_type": "stock",
+        "voiceover": "Fatima Zahra is an analyst at an insurance company in Casablanca, Morocco. Before she uses real claims data, she tests the idea on synthetic data, with some label noise added, as real data has.",
+        "stock_query": "analyst working laptop office Morocco",
+        "on_screen_text": "Fatima · insurance analyst · Casablanca"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "In a new Colab cell, we create one thousand synthetic rows, split them, and train two decision trees. One tree has no depth limit. The other can ask only three questions in a row. For each tree, we print the training score and the test score.",
+        "screen_steps": [
+          "Open a new Colab notebook.",
+          "Type this exact code cell from content.md and run it with Shift+Enter:\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.tree import DecisionTreeClassifier\n\nX, y = make_classification(n_samples=1000, n_features=10, n_informative=4,\n                           flip_y=0.1, random_state=42)\nX_train, X_test, y_train, y_test = train_test_split(\n    X, y, test_size=0.25, stratify=y, random_state=42)\n\nfor depth in [None, 3]:\n    tree = DecisionTreeClassifier(max_depth=depth, random_state=42)\n    tree.fit(X_train, y_train)\n    print(depth, round(tree.score(X_train, y_train), 3),\n          round(tree.score(X_test, y_test), 3))"
+        ],
+        "on_screen_text": "Deep tree vs shallow tree"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Before we read the results, look at the split. It returns four pieces, in a fixed order: training features, test features, then training targets and test targets. Mixing up this order is a common bug.",
+        "screen_steps": [
+          "Highlight the line X_train, X_test, y_train, y_test = train_test_split(...).",
+          "Number the four outputs 1 to 4 on screen and hold for three seconds."
+        ],
+        "on_screen_text": "Order: X_train, X_test, y_train, y_test"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Now the first line of output. The deep tree scores one point zero on training data. That is one hundred percent. But on the test data, it scores only zero point seven two eight. It memorised the training rows, including the noisy labels.",
+        "screen_steps": [
+          "Highlight the output line: None 1.0 0.728.",
+          "Draw a gap arrow between 1.0 and 0.728."
+        ],
+        "on_screen_text": "Deep tree: train 1.0 · test 0.728"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "The second line is the shallow tree. Its training score is lower, zero point eight five three. But its test score is higher, zero point eight one two. And its two scores are much closer together.",
+        "screen_steps": [
+          "Highlight the output line: 3 0.853 0.812.",
+          "Draw a short gap arrow between 0.853 and 0.812."
+        ],
+        "on_screen_text": "Shallow tree: train 0.853 · test 0.812"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Fatima chooses the shallow tree as her starting point, and she writes a note in her notebook. The training score of one point zero was a warning sign, not a success.",
+        "screen_steps": [
+          "Add a text cell below the output.",
+          "Type: The training score of 1.0 was a warning sign, not a success."
+        ],
+        "on_screen_text": "1.0 was a warning sign"
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "A common mistake is to use the test set again and again. You try a setting, check the test score, change the setting, and check again. After many rounds, your choices are fitted to the test set, and the final score is too optimistic. Keep the test set for one final check. To choose between settings, you will use cross-validation in lesson ten.",
+        "on_screen_text": "Use the test set once, at the end"
+      }
+    ],
+    "Recap": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, hold back a test set, and use a fixed random state and stratification for repeatable, balanced splits. Second, a big gap between a high training score and a lower test score means overfitting, and two low scores mean underfitting. Third, a high training score alone proves nothing, so keep the test set for the final check only.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. train_test_split with random_state and stratify=y. 2. Big gap = overfitting; both low = underfitting. 3. A high training score proves nothing; test once at the end."
+        }
+      }
+    ],
+    "CTA": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Now it is your turn. In the exercise below this video, you will compare a deep and a shallow tree, then change the random seed and watch the test scores move. It takes about twenty minutes. In the next lesson, Preprocessing: Scaling and Encoding, you will prepare mixed data for a model. See you there.",
+        "on_screen_text": "Next: Scaling and Encoding"
+      }
+    ]
+  }
+}

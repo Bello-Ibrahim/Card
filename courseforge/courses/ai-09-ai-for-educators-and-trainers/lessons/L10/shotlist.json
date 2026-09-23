@@ -1,0 +1,188 @@
+{
+  "course_id": "AI-09",
+  "lesson_id": "L10",
+  "duration_s": 295.5,
+  "thumbnail": {
+    "headline": "Make Good Visible",
+    "slide": {
+      "layout": "title",
+      "title": "Make Good Visible",
+      "body": "A rubric grid with four level columns (Excellent, Good, Developing, Not yet) and a teal highlight on one cell. Small tag: AI for Educators and Trainers · Lesson 10 · Capstone step 2."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.0,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Seventy-two or fifty-eight?",
+      "voiceover": "Two educators mark the same piece of work. One gives it seventy-two. The other gives it fifty-eight. Neither is careless. They simply had different ideas of what good meant. A clear rubric makes those ideas visible, before the work begins."
+    },
+    {
+      "scene": 2,
+      "start": 18.0,
+      "end": 38.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "An analytic rubric",
+        "body": "Grid: rows = criteria (Criterion 1, 2, 3); columns = levels (Excellent · Good · Developing · Not yet). Each cell holds a short description."
+      },
+      "voiceover": "Last time, we built a quiz. Now we assess bigger tasks. An analytic rubric is a table that breaks a task into criteria and describes each level of quality. Each row is one criterion. Each column is one level, for example excellent, good, developing, and not yet."
+    },
+    {
+      "scene": 3,
+      "start": 38.1,
+      "end": 59.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "A good rubric",
+        "body": "Criteria linked to outcomes · Clear, observable levels: 'Explains 3 key features, each with a customer benefit' vs 'very good explanation' · Learner-friendly language"
+      },
+      "voiceover": "A good rubric has three features. First, criteria linked to outcomes. Each one checks something learners were taught and the outcome requires. Second, clear levels. Explains three key features, with a customer benefit for each, is much clearer than very good explanation. And third, language learners understand before they start."
+    },
+    {
+      "scene": 4,
+      "start": 59.5,
+      "end": 79.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Draft, test, revise",
+        "body": "Cycle: AI drafts rubric → you mark one sample → hesitation? → revise wording → back to test"
+      },
+      "voiceover": "AI is useful for the first draft. Give it the task, the outcomes, the number of levels and the learners, and ask for a table. Then test the rubric. Mark one sample piece of work with it. If you hesitate between two levels, revise the wording."
+    },
+    {
+      "scene": 5,
+      "start": 79.2,
+      "end": 90.3,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Test with a sample, not learner data",
+      "voiceover": "Use a sample you wrote yourself, or one the AI created. Never paste real learner work with names or personal details into a public AI tool."
+    },
+    {
+      "scene": 6,
+      "start": 90.3,
+      "end": 119.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Feedback from your notes",
+        "body": "Your notes ('clear opening; feature 2 missing benefit; spoke too fast') → AI → kind, specific comments linked to the rubric. Tag: the grade stays with you."
+      },
+      "voiceover": "AI can also help with feedback. Read the work yourself and write short notes, such as clear opening, feature two missing a benefit, spoke too fast. Then ask the AI to turn the notes into clear, kind, specific comments linked to the rubric. AI does not know the learner, the context, or the effort behind the work. So the final judgement and the grade always stay with you."
+    },
+    {
+      "scene": 7,
+      "start": 119.4,
+      "end": 140.0,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "two people looking at map together",
+      "on_screen_text": "A shared map for the journey",
+      "voiceover": "A rubric is like a shared map for a journey. The educator and the learner both see where they are going, what the stages are, and how far they have travelled. Without the map, the learner guesses the destination, and the educator judges the journey differently each time."
+    },
+    {
+      "scene": 8,
+      "start": 140.0,
+      "end": 153.7,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "new employee giving product demonstration presentation",
+      "on_screen_text": "Kateryna · sales trainer · Kraków",
+      "voiceover": "Let's go to a workplace. Kateryna is a sales trainer at a software company in Kraków, in Poland. At the end of her course, new staff give a five-minute product demonstration."
+    },
+    {
+      "scene": 9,
+      "start": 153.7,
+      "end": 177.7,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Five criteria become four",
+        "body": "Outcomes: explain key features · link features to customer needs · answer a customer question. AI draft: 5 criteria. Removed (cross): 'Creative slide design': not an outcome."
+      },
+      "voiceover": "She asks the AI for a four-level rubric, with criteria linked to her three outcomes. Explain key features, link each feature to a customer need, and answer a customer question. The draft has five criteria. She removes creative slide design, because it is not one of her outcomes, and not every trainee has design skills."
+    },
+    {
+      "scene": 10,
+      "start": 177.7,
+      "end": 194.4,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Testing on a sample",
+        "body": "Sample script (AI-made, typical weaknesses) → marked. Problem: 'Answering questions': 'good answer' vs 'very good answer'. Question mark between the two cells."
+      },
+      "voiceover": "Then she asks the AI for a sample demonstration script with some typical weaknesses, and she marks it. Two problems appear. Under answering questions, the levels say good answer and very good answer, and she cannot decide between them."
+    },
+    {
+      "scene": 11,
+      "start": 194.4,
+      "end": 210.7,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Clearer levels",
+        "body": "Before: 'very good answer' / 'good answer'. After: 'Answers accurately and checks the customer is satisfied' / 'Answers accurately but does not check'. Timing: 'too short' level added."
+      },
+      "voiceover": "So she rewrites them. Answers accurately and checks the customer is satisfied, and answers accurately but does not check. Under timing, the rubric does not say what happens if the demonstration is too short, so she adds that."
+    },
+    {
+      "scene": 12,
+      "start": 210.7,
+      "end": 228.7,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Feedback, her way",
+        "body": "Her own notes → AI → 2 strengths + 1 next step · Removes anything she did not see · Every grade is hers"
+      },
+      "voiceover": "For feedback, she writes her own notes after each real demonstration, and asks the AI to turn them into two strengths and one next step. She removes any sentence that does not match what she saw, and she decides every grade herself."
+    },
+    {
+      "scene": 13,
+      "start": 228.7,
+      "end": 244.1,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Test it. Grade it yourself.",
+      "voiceover": "A common mistake is to use an AI rubric without testing it. Another is to paste learner work into a chatbot and ask for a grade. That risks privacy, and hands your judgement to a tool."
+    },
+    {
+      "scene": 14,
+      "start": 244.1,
+      "end": 271.5,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Outcome-linked criteria, observable levels, clear language. 2. Mark a sample, revise what was hard. 3. Feedback from your notes; the grade is yours."
+      },
+      "voiceover": "Let's recap. First, a good rubric has criteria linked to outcomes, clear levels you can observe, and language learners understand. Second, test every AI-drafted rubric by marking a sample, and revise any criterion that was hard to apply. Third, AI can turn your own notes into feedback, but never paste learner work with personal data, and the final grade always stays with you."
+    },
+    {
+      "scene": 15,
+      "start": 271.5,
+      "end": 295.5,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Capstone, Planning Your Unit",
+      "voiceover": "Now it is your turn. This exercise is step two of your capstone. Draft a rubric for your unit's main assessment task with AI, test it on one sample you created, and revise any unclear criterion. It takes about thirty-five minutes. In the next lesson, we start the capstone: planning your unit. See you there."
+    }
+  ]
+}

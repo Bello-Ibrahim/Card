@@ -46,4 +46,4 @@ Image: Navy background, a six-step workflow ribbon with small tool icons over fo
 ## Production Notes
 - [VERSION] Tool capabilities described for Claude, ChatGPT, Canva, image generators and CapCut (AI features, automatic captions, free tiers) must be checked against the current products before recording. The script stays general on purpose.
 - Yuki and the Osaka bakery are fictional; stock footage must not show a real bakery name, logo or readable signs.
-- Scene 11 stock footage should show real bread being photographed, not AI-generated food, to match the point of the scene.
+- Scene 12 stock footage should show real bread being photographed, not AI-generated food, to match the point of the scene.

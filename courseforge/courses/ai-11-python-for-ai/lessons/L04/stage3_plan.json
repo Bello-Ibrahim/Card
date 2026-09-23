@@ -1,0 +1,76 @@
+{
+  "title": "Making Decisions with if, elif and else",
+  "thumbnail": {
+    "headline": "Teach Code to Decide",
+    "image": "Navy background, a road that splits into three lanes labelled 3 km, 10 km and further, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Teach Code to Decide", "body": "Three gates in a row labelled if, elif, else; only one gate is open (teal). Small tag: Python for AI · Lesson 4."}
+  },
+  "production_notes": [
+    "No facts to verify (content.md Review Flags: None). Dewi, the Jakarta delivery app, the price bands and the rupiah amounts are made up.",
+    "Printed outputs on screen must match content.md exactly: '7.5 km costs 15000 rupiah' and 'No extra fee'.",
+    "Content.md asks the presenter to change distance_km to 2 and then 12 and ask learners to predict; the expected outputs (8000 and 25000 rupiah) follow from the code but are not printed in content.md, so check them in Colab while recording.",
+    "Trace scene: show the trace as an overlay (7.5 <= 3? No. 7.5 <= 10? Yes.) before running the cell."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "A delivery app shows a different price for a short trip and a long one. Somewhere in its code, a program asked a question. Is the distance more than three kilometres? Today, you write that kind of question in Python.",
+       "on_screen_text": "Is it more than 3 km?"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Last time, we stored many values in lists and dictionaries. Now we teach a program to choose. First, you need a condition. A condition is a question whose answer is either True or False.",
+       "slide": {"layout": "title", "title": "A condition is True or False", "body": "distance_km <= 3  →  True or False?"}},
+      {"visual_type": "slide",
+       "voiceover": "You build conditions with comparison signs. Two equals signs mean equal to. Remember, one equals sign means store. There are also signs for not equal, less than, greater than, and so on. You can join conditions with and, or, and not.",
+       "slide": {"layout": "bullets", "title": "Comparison operators", "body": "== equal to (one = means store) · != not equal · < <= > >= · and: both true · or: at least one true · not: reverses"}},
+      {"visual_type": "slide",
+       "voiceover": "Here is the structure. An if line, then any number of elif lines, which means else if, and finally an else line. Python checks the conditions from top to bottom. It runs only the block under the first condition that is true, and skips the rest. Else runs only if nothing else was true. You can have many elif lines, or none at all.",
+       "slide": {"layout": "code", "title": "if, elif, else", "body": "if condition_1:\n    action_a\nelif condition_2:\n    action_b\nelse:\n    action_c"}},
+      {"visual_type": "slide",
+       "voiceover": "Two layout rules. Each of these lines ends with a colon. And the code that belongs to it is moved right by four spaces. In Python, this indentation is not just for looks. It decides which lines belong to which block. A wrong indent changes the meaning, or causes an error. Colab adds the indent for you after a colon.",
+       "slide": {"layout": "diagram", "title": "Colon and indentation", "body": "The if line with its colon highlighted; the next line shifted right with a bracket labelled '4 spaces = belongs to this block'."}},
+      {"visual_type": "stock",
+       "voiceover": "Picture a security guard checking tickets at a stadium. The first question is, VIP ticket? If yes, you go through the VIP gate, and no more questions are asked. If not, the next question is, standard ticket? If no ticket matches, you are sent to the ticket office. Only one gate opens for each person.",
+       "stock_query": "security guard checking tickets stadium entrance",
+       "on_screen_text": "Only one gate opens"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's build one. Dewi makes a price calculator for a delivery app in Jakarta. The prices are made up. Up to three kilometres costs eight thousand rupiah. Up to ten kilometres costs fifteen thousand. Anything further costs twenty-five thousand.",
+       "stock_query": "delivery scooter rider city traffic Asia",
+       "on_screen_text": "Dewi's delivery app · Jakarta"},
+      {"visual_type": "screen",
+       "voiceover": "In Colab, we set the distance to seven and a half kilometres. Then an if line for three or less, an elif line for ten or less, and an else line for anything further. Each one sets the price. Finally, we print the distance and the price.",
+       "screen_steps": ["Add a new code cell", "Type: distance_km = 7.5", "Type: if distance_km <= 3: / price = 8000 (indented)", "Type: elif distance_km <= 10: / price = 15000 (indented)", "Type: else: / price = 25000 (indented)", "Type: print(f\"{distance_km} km costs {price} rupiah\")"]},
+      {"visual_type": "screen",
+       "voiceover": "Before we run it, let's trace it. Is seven and a half three or less? No, so we skip the first block. Is it ten or less? Yes, so the price becomes fifteen thousand, and else is skipped. Now run it. Seven point five kilometres costs fifteen thousand rupiah.",
+       "screen_steps": ["Point at each condition in turn and show the trace overlay: 7.5 <= 3? No. 7.5 <= 10? Yes.", "Press Shift + Enter", "Output: 7.5 km costs 15000 rupiah"],
+       "on_screen_text": "Trace first, then run"},
+      {"visual_type": "screen",
+       "voiceover": "Notice that the elif line does not need to say more than three. If the distance were three or less, Python would already have stopped at the first block. The order does part of the work.",
+       "screen_steps": ["Highlight the elif line: elif distance_km <= 10:"]},
+      {"visual_type": "screen",
+       "voiceover": "Next, Dewi adds a long-distance fee, but members don't pay it. The condition says the distance is more than five, and the customer is not a member. The distance part is true, but the member part is false. And needs both, so we see no extra fee.",
+       "screen_steps": ["Add a new code cell", "Type: is_member = True", "Type: if distance_km > 5 and not is_member: / print(\"Add a long-distance fee\")", "Type: else: / print(\"No extra fee\")", "Press Shift + Enter", "Output: No extra fee"],
+       "on_screen_text": "and needs both to be true"},
+      {"visual_type": "screen",
+       "voiceover": "Now you try. What happens if I change the distance to two? And to twelve? Pause the video, make your prediction, and then watch the result.",
+       "screen_steps": ["In the first cell, change distance_km to 2 and pause for a prediction", "Run the cell and show the result", "Change distance_km to 12, pause, run and show the result"],
+       "on_screen_text": "Predict: 2 km? 12 km?"},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is putting the conditions in the wrong order. If the ten kilometre check came first, a two kilometre trip would pay fifteen thousand, and the three kilometre band would never be used. Put the smallest range first. And never write one equals sign in a condition, because that causes a syntax error.",
+       "on_screen_text": "Smallest range first"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, conditions are True or False. You build them with comparison signs and join them with and, or, and not. Second, Python checks if and elif from top to bottom, and runs only the first block that is true. Third, the colon and the four-space indentation decide which lines belong to each block.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Conditions are True/False: == != < > <= >=, joined with and, or, not. 2. Top to bottom: only the first true block runs. 3. Colon + 4-space indent define each block."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below this video, you will turn an exam score into a grade band, and predict the output for five test scores before you run the code. It takes about twenty minutes. In the next lesson, we learn how to repeat work with loops. See you there.",
+       "on_screen_text": "Next: Repeating Work with Loops"}
+    ]
+  }
+}

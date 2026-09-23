@@ -1,0 +1,192 @@
+{
+  "course_id": "AI-09",
+  "lesson_id": "L08",
+  "duration_s": 306.0,
+  "thumbnail": {
+    "headline": "Who Is Missing Here?",
+    "slide": {
+      "layout": "title",
+      "title": "Who Is Missing Here?",
+      "body": "A story page with a teal magnifying glass over it and small check marks in the margin. Small tag: AI for Educators and Trainers · Lesson 8."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 19.7,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Ready to print? Check first.",
+      "voiceover": "An AI-generated story reads well, and the questions look fine. But if every character comes from one culture, every doctor is a man, or one date is wrong, your learners will notice. Some will learn the error. Others will feel it is not for them."
+    },
+    {
+      "scene": 2,
+      "start": 19.7,
+      "end": 38.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Checking AI Materials for Accuracy and Bias",
+        "body": "AI for Educators and Trainers · Lesson 8 of 12. Subtitle: What goes in comes out."
+      },
+      "voiceover": "Last time, we made materials accessible. Now we check them for accuracy and bias. AI assistants learn from large amounts of existing text. That text contains errors, old information, and the same stereotypes that exist in society. So AI materials can contain them too."
+    },
+    {
+      "scene": 3,
+      "start": 38.6,
+      "end": 63.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "What can go wrong",
+        "body": "Factual errors · Outdated information · Cultural stereotypes · Exclusion: one culture only · Poor fit: level, curriculum, procedures"
+      },
+      "voiceover": "Watch for five kinds of problem. Factual errors, often written confidently. Outdated information, like rules that have changed. Cultural stereotypes, such as certain jobs always linked to one gender. Exclusion, where names, foods or family types come from only one culture. And poor fit, with the wrong level or content that does not match your curriculum or procedures."
+    },
+    {
+      "scene": 4,
+      "start": 63.5,
+      "end": 81.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "5-part review checklist",
+        "body": "Five boxes in a row: Facts (check a reliable source) · Level · Cultural fairness · Representation · Curriculum fit. First two highlighted."
+      },
+      "voiceover": "So use a five-part review on every AI material before learners see it. Facts: is every fact, number and definition correct? Check against a reliable source, like your textbook or an official procedure. Level: is the language right for these learners?"
+    },
+    {
+      "scene": 5,
+      "start": 81.5,
+      "end": 104.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "5-part review checklist",
+        "body": "Same five boxes; last three highlighted: Cultural fairness · Representation ('Could every learner see themselves here?') · Curriculum fit. Extra tag for quizzes: exactly one correct answer."
+      },
+      "voiceover": "Cultural fairness: are people and places shown respectfully, without stereotypes? Representation: do the examples include a range of names, genders, backgrounds, abilities and family types? Could all your learners see themselves here? And curriculum fit: does it match your outcome and syllabus? For quiz questions, also check there is exactly one correct answer."
+    },
+    {
+      "scene": 6,
+      "start": 104.2,
+      "end": 122.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Ask AI to review, then review yourself",
+        "body": "List any stereotypes or one-sided examples in this text.  → useful, but not a replacement for your own review"
+      },
+      "voiceover": "You can also ask the AI to list stereotypes or one-sided examples in its own text. This can find some problems. But it does not replace your own review, because the same patterns that created a problem can also hide it."
+    },
+    {
+      "scene": 7,
+      "start": 122.2,
+      "end": 141.5,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "cook tasting food before serving guests",
+      "on_screen_text": "You are the one serving it",
+      "voiceover": "Reviewing AI materials is like checking food before you serve it to guests. It may look good on the plate, but you still check it is cooked, fresh, and safe for a guest with an allergy. You check because you are the one serving it."
+    },
+    {
+      "scene": 8,
+      "start": 141.5,
+      "end": 158.2,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "primary school children science fair project",
+      "on_screen_text": "Leila · primary teacher · Amman",
+      "voiceover": "Let's go back to a primary classroom. Leila teaches Year Four at a primary school in Amman, in Jordan. She asks an AI assistant for a short story about a class preparing a science fair, with five comprehension questions."
+    },
+    {
+      "scene": 9,
+      "start": 158.2,
+      "end": 176.2,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Facts and level",
+        "body": "Before (red): 'Plants use oxygen to make their food.' After (green): 'Plants use carbon dioxide to make their food.' Level: two long sentences → split for 9-year-olds."
+      },
+      "voiceover": "She starts with facts. The story says plants use oxygen to make their food. That is wrong. In photosynthesis they use carbon dioxide, so she corrects it. Then level. Two sentences are too long for nine-year-olds, so she splits them."
+    },
+    {
+      "scene": 10,
+      "start": 176.2,
+      "end": 198.9,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Fairness and representation",
+        "body": "Before: six names from one culture; only a boy is good at science. After: names from a range of backgrounds; a girl explains the experiment."
+      },
+      "voiceover": "Next, fairness and representation. All six children's names come from one culture, and the only child who is good at science is a boy. Leila changes the names to reflect the range of backgrounds in her school and in the wider world. And she makes a girl the child who explains the experiment."
+    },
+    {
+      "scene": 11,
+      "start": 198.9,
+      "end": 217.3,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Fit and questions",
+        "body": "Next year's topic → removed · Question 4 'Why did the team win?' had two answers → rewritten with one clear answer"
+      },
+      "voiceover": "Curriculum fit. The story mentions a topic her class will not study until next year, so she removes it. And question four asks why the team won, but the story gives two possible reasons. She rewrites it, so there is one clear answer."
+    },
+    {
+      "scene": 12,
+      "start": 217.3,
+      "end": 229.7,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Leila's change log",
+        "body": "Table: Location | Type | Correction. Rows: fact, level, representation, fit, question. Footer: next prompt adds 'use a range of names from different cultures'."
+      },
+      "voiceover": "She records each change in a small table, so she can see patterns and write better prompts next time. For example, use a range of names from different cultures."
+    },
+    {
+      "scene": 13,
+      "start": 229.7,
+      "end": 250.7,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Who is missing? Who is stuck?",
+      "voiceover": "A common mistake is to check only the facts and stop there. Bias is harder to see, especially when the material matches our own background. So ask: who is missing, and who is always in the same role? And asking for diverse examples does not guarantee a fair result."
+    },
+    {
+      "scene": 14,
+      "start": 250.7,
+      "end": 276.4,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Errors, outdated facts, stereotypes, exclusion. 2. Facts · Level · Fairness · Representation · Fit. 3. AI helps; your review decides."
+      },
+      "voiceover": "Let's recap. First, AI materials can contain factual errors, outdated information, stereotypes, and examples that exclude some learners. Second, use a five-part review before learners see anything: facts, level, cultural fairness, representation and curriculum fit. Third, AI can point out possible problems, but it does not replace your review, and a good prompt does not guarantee a fair result."
+    },
+    {
+      "scene": 15,
+      "start": 276.4,
+      "end": 306.0,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Quizzes with AI and Google Forms",
+      "voiceover": "Now it is your turn. In the exercise below this video, ask AI for a short reading passage and five questions on a topic you know well, describing your learners only as a group. Review them with the checklist, record every error or bias, and write a corrected version. Next week, your capstone begins. In the next lesson, we build quizzes with AI and Google Forms. See you there."
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "title": "Capstone: Planning Your Unit",
+  "thumbnail": {
+    "headline": "Plan Your Whole Unit",
+    "image": "Navy background, four lesson cards in a row joined by a teal line that ends at an assessment badge, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Plan Your Whole Unit", "body": "Four lesson cards linked by a teal line to a badge labelled 'Assessment'. Small tag: AI for Educators and Trainers · Lesson 11 · Capstone step 3."}
+  },
+  "production_notes": [
+    "No facts to verify: content.md Review Flags say None. The lesson uses general planning methods and a hypothetical example.",
+    "Samuel and his school in Kisumu are fictional; the market prices in his examples are invented. Stock footage must show no real school name, crest or logo.",
+    "Show the full unit-plan template from content.md on the template slide (scene 8) so learners can pause and copy it; the presenter does not read it out.",
+    "The capstone rubric criteria named in scene 7 come from capstone_rubric.md; the voiceover names the areas but not the points."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "A single good lesson is useful. But a unit where every lesson builds on the last, and the assessment checks exactly what was taught, is much more powerful. Today, you bring together everything from this course, and plan your own unit.",
+       "on_screen_text": "From one lesson to a unit"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "You have already built a quiz and a rubric. Now you plan the unit around them. A unit of study is a short sequence of lessons, usually three to five, that leads learners to a set of connected outcomes. You plan it with backward design, just like a single lesson, but at a larger scale.",
+       "slide": {"layout": "title", "title": "Capstone: Planning Your Unit", "body": "AI for Educators and Trainers · Lesson 11 of 12 · Capstone step 3. Subtitle: 3 to 5 lessons, connected outcomes."}},
+      {"visual_type": "slide",
+       "voiceover": "There are four parts. First, two to four observable unit outcomes. Second, the assessment, which is your quiz and your main task with its rubric. Third, a lesson sequence, showing which outcome each lesson teaches. And fourth, the key activities and materials for each lesson, including your differentiated and accessible materials.",
+       "slide": {"layout": "diagram", "title": "Planning a unit", "body": "Four stacked blocks: 1 Unit outcomes (2–4) → 2 Assessment: quiz (L09) + task and rubric (L10) → 3 Lesson sequence → 4 Activities and materials (L06, L07)"}},
+      {"visual_type": "slide",
+       "voiceover": "Then run an alignment check, so every outcome is taught and assessed. A simple alignment table has one row per outcome, and columns for taught in and assessed in.",
+       "slide": {"layout": "comparison", "title": "Alignment table", "body": "Table: Outcome | Taught in | Assessed in. Rows O1, O2, O3 with lesson numbers and quiz / rubric ticks; one empty cell highlighted in amber."}},
+      {"visual_type": "slide",
+       "voiceover": "AI is good at this check. Paste your plan, with no learner data, and ask which outcomes are not taught or not assessed, and which activities do not support any outcome. Then you decide what to change.",
+       "slide": {"layout": "code", "title": "Ask for an alignment check", "body": "Which outcomes are not taught or not assessed? Which activities do not support any outcome?  (Plan pasted below, no learner data.)"}},
+      {"visual_type": "stock",
+       "voiceover": "Planning a unit is like training for a five-kilometre run. You set the goal first. Each week builds part of it, and the final run shows whether it worked. A week of only arm exercises may be good training, but it is not aligned with the goal.",
+       "stock_query": "runner training on track at sunrise",
+       "on_screen_text": "Every week builds towards the goal"},
+      {"visual_type": "slide",
+       "voiceover": "Now, the capstone brief. Build a complete AI-assisted unit, with lesson plans, differentiated materials, a quiz, a rubric and a unit AI policy, reviewed for accuracy, bias and accessibility. The rubric scores planning and alignment, materials, quiz and rubric quality, your review and policy, and the complete pack with your AI-use note.",
+       "slide": {"layout": "bullets", "title": "The capstone brief", "body": "AI-Assisted Unit of Study: lesson plans · differentiated materials · quiz · rubric · unit AI policy. Scored on: planning and alignment · materials · quiz and rubric · review and policy · complete pack + AI-use note"}},
+      {"visual_type": "slide",
+       "voiceover": "Use the unit-plan template below this video. It has space for your learners as a group, with no names, your outcomes, the assessment, the lesson sequence, the alignment table, your AI policy, and your AI-use note.",
+       "slide": {"layout": "code", "title": "Unit-plan template", "body": "UNIT PLAN\nTitle / Learners (group only, no names) / Setting / Number of lessons and length\nUnit outcomes: O1 ... O2 ... O3 ...\nAssessment: Quiz (link) - outcomes / Main task + rubric - outcomes\nLESSON SEQUENCE: Lesson | Outcome(s) | Key activity | Materials | Check\nALIGNMENT: Outcome | Taught in | Assessed in\nAI POLICY: task - colour - reason\nAI USE NOTE: where AI helped, what I changed"}}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's see a unit plan. Samuel teaches mathematics at a secondary school in Kisumu, in Kenya. His unit is on percentages for fourteen-year-olds, with four lessons of forty minutes.",
+       "stock_query": "secondary school maths class writing on board",
+       "on_screen_text": "Samuel · maths teacher · Kisumu"},
+      {"visual_type": "slide",
+       "voiceover": "He has three unit outcomes. Convert between fractions, decimals and percentages. Calculate a percentage of an amount. And solve percentage problems about prices and discounts.",
+       "slide": {"layout": "bullets", "title": "Samuel's unit outcomes", "body": "1. Convert between fractions, decimals and percentages · 2. Calculate a percentage of an amount · 3. Solve percentage problems about prices and discounts"}},
+      {"visual_type": "slide",
+       "voiceover": "He drafts the lesson sequence with AI. It proposes five lessons, including one on compound interest. Samuel removes it, because it is outside his syllabus for this age group, and he merges two short lessons to fit four.",
+       "slide": {"layout": "comparison", "title": "Five lessons become four", "body": "AI draft: 5 lessons incl. 'Compound interest' (cross: outside syllabus). Samuel's plan: 4 lessons, two short lessons merged."}},
+      {"visual_type": "slide",
+       "voiceover": "Then he asks for an alignment check. The AI points out that outcome three is taught in lesson four, but his quiz has only one question on it. So he adds two application questions about market prices. He also notices himself that lesson two has no check for understanding, so he adds a three-question exit ticket.",
+       "slide": {"layout": "comparison", "title": "Alignment gaps fixed", "body": "Found by AI: outcome 3 has only 1 quiz question → 2 application questions on market prices added. Found by Samuel: lesson 2 has no check → 3-question exit ticket added."}},
+      {"visual_type": "slide",
+       "voiceover": "Finally, he writes full plans for lessons one and four in the timed-table format. He adapts timings for his large class, and replaces the AI's shopping examples with invented prices from a local market.",
+       "slide": {"layout": "bullets", "title": "Two full lesson plans", "body": "Lessons 1 and 4 in timed tables · Timings adapted for a large class · Shopping examples → invented local market prices"}},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is to plan the lessons first, and add the assessment at the end. Fill in the alignment table before you write full lesson plans. And do not let AI decide the scope of your unit.",
+       "on_screen_text": "Align first, then write lessons"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, a unit plan starts with two to four outcomes, then the assessment, then a lesson sequence with activities, materials and checks. Second, an alignment table shows where each outcome is taught and assessed. AI can check it, but you decide the changes. Third, use the template, and adapt AI drafts to your syllabus, learners and context.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Outcomes → Assessment → Lesson sequence. 2. Alignment table: taught in, assessed in; you decide. 3. Use the template; adapt to your context."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. This is step three of your capstone. Write your unit plan with outcomes, a lesson sequence and full plans for at least two lessons, drafted with AI and edited by you. It takes about an hour. In the final lesson, we complete and review your unit. See you there.",
+       "on_screen_text": "Next: Completing and Reviewing Your Unit"}
+    ]
+  }
+}

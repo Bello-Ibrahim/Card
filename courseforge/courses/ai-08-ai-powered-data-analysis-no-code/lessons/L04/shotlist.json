@@ -1,0 +1,227 @@
+{
+  "course_id": "AI-08",
+  "lesson_id": "L04",
+  "duration_s": 317.1,
+  "thumbnail": {
+    "headline": "Clean Before You Analyse",
+    "slide": {
+      "layout": "title",
+      "title": "Clean Before You Analyse",
+      "body": "Left: messy rows with red highlights (duplicate, blank, 'Sth', '$30'). Arrow. Right: tidy rows with teal ticks. Small tag: AI-Powered Data Analysis · Lesson 4."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.0,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Six regions? We have three.",
+      "voiceover": "You ask AI for sales by region, and it reports six regions. Your company has three. The maths was right, but the data was messy. And messy data gives wrong answers, however clever the tool."
+    },
+    {
+      "scene": 2,
+      "start": 15.0,
+      "end": 22.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Cleaning Messy Data with AI Help",
+        "body": "AI-Powered Data Analysis (No Code) · Lesson 4 of 14"
+      },
+      "voiceover": "Last time, we turned vague worries into clear data questions. Before we answer them, we need clean data."
+    },
+    {
+      "scene": 3,
+      "start": 22.7,
+      "end": 46.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Five common problems",
+        "body": "1. Duplicates (totals too high) · 2. Blank cells (skipped or read as 0) · 3. Inconsistent spellings: 'South' · 'south' · 'Sth' · 'South␣' · 4. and 5. dimmed"
+      },
+      "voiceover": "Five problems appear again and again. Duplicates, where the same order is entered twice, so totals are too high. Blank cells, which some tools skip and others treat as zero. And inconsistent spellings. South, lower-case south, S T H, and South with a space at the end are four different values to a computer."
+    },
+    {
+      "scene": 4,
+      "start": 46.3,
+      "end": 65.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Five common problems",
+        "body": "4. Mixed date formats: 08/01/2026 = 8 January or 1 August? · 5. Numbers stored as text: '40 · $30 (look like numbers, left out of totals)"
+      },
+      "voiceover": "Then there are mixed date formats. Zero eight, zero one, twenty twenty-six can mean the eighth of January or the first of August, depending on the country. And numbers stored as text. They look like numbers, but they are not added up in totals."
+    },
+    {
+      "scene": 5,
+      "start": 65.6,
+      "end": 91.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Wrong way vs right way",
+        "body": "Wrong (red): upload → 'clean this' → download (black box: what changed?) | Right (teal): describe the problem → get step-by-step fixes → you apply each one in Google Sheets"
+      },
+      "voiceover": "AI can help, but there is a right way and a wrong way. The wrong way is to upload the file, say clean this, and download whatever comes back. You cannot see what was changed, deleted or guessed. The right way is to describe the problem, and ask for step-by-step fixes that you make yourself in Google Sheets."
+    },
+    {
+      "scene": 6,
+      "start": 91.3,
+      "end": 110.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Cleaning tools in Google Sheets",
+        "body": "=TRIM(C2) → removes extra spaces\n=PROPER(D2) → 'desk LAMP' becomes 'Desk Lamp'\n=VALUE(E6) → text to number\nMenus: Remove duplicates · Find and replace"
+      },
+      "voiceover": "Google Sheets has useful tools for this. TRIM removes extra spaces. PROPER fixes capital letters. VALUE turns a number stored as text into a real number. There are also menu tools to remove duplicates, and find and replace to change one spelling into another."
+    },
+    {
+      "scene": 7,
+      "start": 110.2,
+      "end": 117.5,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Keep a cleaning log",
+      "voiceover": "And keep a cleaning log. One line for each change, saying what you changed, how, and why."
+    },
+    {
+      "scene": 8,
+      "start": 117.5,
+      "end": 134.2,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "hands washing vegetables in kitchen sink",
+      "on_screen_text": "Wash the vegetables first",
+      "voiceover": "Cleaning data is like washing and sorting vegetables before you cook. If you skip it, the meal may look fine, but there is sand in the salad. And you wash them yourself, so you know what was thrown away."
+    },
+    {
+      "scene": 9,
+      "start": 134.2,
+      "end": 147.5,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "office manager reviewing spreadsheet at desk",
+      "on_screen_text": "Mateus · office supplies · Porto Alegre",
+      "voiceover": "Mateus is the office manager of a fictional online office-supplies shop in Porto Alegre, Brazil. He exports his orders sheet. It has eleven rows, and revenue is in US dollars."
+    },
+    {
+      "scene": 10,
+      "start": 147.5,
+      "end": 166.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Mateus's orders sheet (fictional)",
+        "body": "Full 11-row table from content.md, columns Order ID | Order Date | Region | Product | Units | Unit Price | Revenue. Highlights appear one by one: both 1006 rows (duplicate), blank Revenue for 1004, 'south' / 'North␣' / 'Sth', dates 08/01/2026 · 22 Jan 2026 · 25/03/2026, text numbers '40 · $30 · '1,800."
+      },
+      "voiceover": "Look closely, and the problems appear. Order ten oh six is there twice. One revenue cell is empty. Regions are spelled in different ways. Dates come in three formats. And some numbers have an apostrophe or a dollar sign, so they are stored as text."
+    },
+    {
+      "scene": 11,
+      "start": 166.8,
+      "end": 188.2,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Fixes 1 and 2",
+        "body": "1. Duplicate: one 1006 row removed (Remove duplicates). 2. Blank: order 1004, 3 × 120 = 360 → 360 entered."
+      },
+      "voiceover": "He asks an AI assistant to list the problems and suggest fixes, and makes each change himself. First, he removes the duplicate row. Second, the blank revenue for order ten oh four. He checks that three units times one hundred and twenty gives three hundred and sixty, and enters it."
+    },
+    {
+      "scene": 12,
+      "start": 188.2,
+      "end": 200.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Fix 3: Spellings",
+        "body": "Region: 'south', 'Sth', 'North␣' → TRIM + Find and replace → North · South · West. Product: PROPER, then company style: 'Desk lamp', 'Office chair', 'Notebook pack'."
+      },
+      "voiceover": "Third, spellings. He fixes the regions with TRIM, then find and replace, so south and S T H become South. He tidies the product names in the same way."
+    },
+    {
+      "scene": 13,
+      "start": 200.6,
+      "end": 222.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Fix 4: One date format",
+        "body": "1001: 08/01/2026 (?) · 1002: 2026-01-15 → so 1001 = 2026-01-08. All dates → YYYY-MM-DD (22 Jan 2026 → 2026-01-22, 25/03/2026 → 2026-03-25)."
+      },
+      "voiceover": "Fourth, dates. The AI warns that zero eight, zero one is ambiguous. The order IDs are in date order, and order ten oh two is the fifteenth of January. So order ten oh one must be the eighth of January. He changes every date to one format, year, month, day."
+    },
+    {
+      "scene": 14,
+      "start": 222.0,
+      "end": 228.4,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Fix 5: Text to numbers",
+        "body": "'40 → 40 · $30 → 30 · '1,800 → 1800 (VALUE and retyping)"
+      },
+      "voiceover": "Fifth, text numbers. He converts them into real numbers with VALUE, or by retyping them."
+    },
+    {
+      "scene": 15,
+      "start": 228.4,
+      "end": 250.7,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Before vs after",
+        "body": "Before: SUM = 1,470 (360 blank and 1,800 text left out; 180 counted twice) | After: 10 orders · total revenue 3,450 (green tick)"
+      },
+      "voiceover": "Before cleaning, the sum of the revenue column gave only one thousand four hundred and seventy. The blank and the one thousand eight hundred stored as text were left out, and the duplicate was counted twice. The clean sheet has ten orders, and total revenue of three thousand four hundred and fifty."
+    },
+    {
+      "scene": 16,
+      "start": 250.7,
+      "end": 267.4,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Ask for steps. Make each change yourself.",
+      "voiceover": "A common mistake is to let the AI clean the file, and never check what changed. It may delete real repeat orders as duplicates, or fill blanks with guesses. Ask for steps, make each change yourself, and log it."
+    },
+    {
+      "scene": 17,
+      "start": 267.4,
+      "end": 293.1,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Duplicates · blanks · spellings · dates · text numbers. 2. Ask AI for steps; apply them yourself in Google Sheets. 3. Log every change: what, how, why."
+      },
+      "voiceover": "Let's recap. First, the five common problems are duplicates, blank cells, inconsistent spellings, mixed date formats, and numbers stored as text. Second, describe the problem to AI, and ask for step-by-step fixes that you apply yourself, instead of letting it change the data invisibly. Third, keep a cleaning log with every change, how you made it, and why."
+    },
+    {
+      "scene": 18,
+      "start": 293.1,
+      "end": 317.1,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: AI-Written Formulas in Google Sheets",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will clean Mateus's messy orders sheet in Google Sheets with AI suggestions. Fix at least five types of problem, and log each change. It takes about thirty minutes. In the next lesson, we look at AI-written formulas in Google Sheets. See you there."
+    }
+  ]
+}

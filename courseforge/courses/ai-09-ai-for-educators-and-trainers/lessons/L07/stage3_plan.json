@@ -1,0 +1,79 @@
+{
+  "title": "Visual and Accessible Materials with Canva",
+  "thumbnail": {
+    "headline": "Beautiful and Accessible",
+    "image": "Navy background, a clean one-page worksheet with dark text and a simple illustration, a small alt text tag attached to the image, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Beautiful and Accessible", "body": "A clean worksheet mock-up with high-contrast text and a tag labelled 'alt text' on its illustration. Small tag: AI for Educators and Trainers · Lesson 7."}
+  },
+  "production_notes": [
+    "[VERSION] Record the Canva screen scenes on the live tool shortly before release and check: AI features, education plan availability, template search, the image library, the alternative text option, the 'mark as decorative' option, and PDF download and share-link options. Menu and button names in the voiceover are kept general ('find the alternative text option') so they survive interface changes.",
+    "Screen scenes 8 to 12 use Canva (free plan) in a browser; the chatbot step uses Claude, one of the course tools. Use a demo Canva account with no personal details visible, and close any personal files, notifications or other tabs.",
+    "The safe-lifting steps shown on screen are an illustration for the story only. In the demo they must match a general, sensible procedure, and the voiceover says Mele checks them against her company's own procedure. Do not present them as official safety guidance.",
+    "Mele and her warehouse company in Auckland are fictional; do not show a real company name or logo.",
+    "Scene 10 names no specific font; choose any simple sans-serif font available in the live tool."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "A worksheet can look beautiful and still be hard to use. Light grey text on a pale background, a decorative font, or a diagram a screen reader cannot describe can shut some learners out. Today, you make a worksheet that looks good and works for everyone.",
+       "on_screen_text": "Looks good, works for everyone"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Last time, we adapted texts for different learners. Now we make materials visual and accessible. Canva is a free online design tool with templates for worksheets, slides and infographics. It has AI features that help draft text and designs, but these features change often, so check what your own account offers.",
+       "slide": {"layout": "title", "title": "Visual and Accessible Materials with Canva", "body": "AI for Educators and Trainers · Lesson 7 of 12. Icons: worksheet · slide · infographic."}},
+      {"visual_type": "slide",
+       "voiceover": "Whatever tool you use, accessible materials follow the same five points. One, clear fonts: simple and readable, never decorative for body text. Two, strong colour contrast, like dark text on a light background. And never use colour alone to show meaning. Add a word or a symbol too.",
+       "slide": {"layout": "bullets", "title": "5-point accessibility checklist", "body": "1. Clear fonts, readable size · 2. Strong contrast; never colour alone · 3. Alt text for images · 4. Simple layout · 5. Plain-language instructions (points 1–2 highlighted)"}},
+      {"visual_type": "slide",
+       "voiceover": "Three, alternative text, or alt text, for images. That is a short description a screen reader reads aloud for learners who cannot see the image. Four, a simple layout, with a clear reading order, headings and white space. And five, plain-language instructions, in short numbered steps with one action each.",
+       "slide": {"layout": "bullets", "title": "5-point accessibility checklist", "body": "1. Clear fonts · 2. Strong contrast · 3. Alt text: read aloud by screen readers · 4. Simple layout: reading order, headings, white space · 5. Plain-language numbered steps (points 3–5 highlighted)"}},
+      {"visual_type": "slide",
+       "voiceover": "Good alt text describes what the image means for the lesson, not every detail. For a chart, you might write: bar chart showing that workplace accidents fell each year over four years. A purely decorative image can be marked as decorative instead. AI can draft alt text if you describe the image and its purpose, but you check it.",
+       "slide": {"layout": "comparison", "title": "Good alt text", "body": "Weak (cross): 'image1.png' · 'picture'. Good (tick): 'Bar chart: workplace accidents fell each year over four years.' Decorative image → mark as decorative."}},
+      {"visual_type": "stock",
+       "voiceover": "Think of a building with a ramp as well as stairs. The ramp helps wheelchair users, but also people with prams or heavy bags. Accessible design works the same way. It is designed for some learners, and it helps everyone.",
+       "stock_query": "building entrance with ramp and stairs",
+       "on_screen_text": "Designed for some, helps everyone"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Now let's build one. Mele is a health and safety trainer at a warehouse company in Auckland, in New Zealand. She needs a one-page worksheet on safe lifting for new staff, some of whom are still learning English.",
+       "stock_query": "warehouse staff training session with trainer",
+       "on_screen_text": "Mele · safety trainer · Auckland"},
+      {"visual_type": "screen",
+       "voiceover": "She opens Canva, searches the templates for worksheet, and chooses a simple design with plenty of white space. Then she changes the title to Safe Lifting, Five Steps.",
+       "screen_steps": ["Open Canva in a browser on the home page", "Type 'worksheet' in the template search box", "Choose a simple worksheet template with plenty of white space", "Click the title and replace it with 'Safe Lifting: 5 Steps'"],
+       "on_screen_text": "Simple template, lots of white space"},
+      {"visual_type": "screen",
+       "voiceover": "Next, she asks an AI chatbot for five numbered steps for safe lifting, in plain English, with a maximum of twelve words per step. She shares no staff names or personal details. She checks the steps against her company's safety procedure, and she corrects one step that does not match.",
+       "screen_steps": ["Switch to a Claude tab", "Type the prompt: 'Write 5 numbered steps for safe lifting for new warehouse staff. Plain English, maximum 12 words per step.'", "Show the 5 steps in the reply", "Place the company procedure beside it and highlight one step that does not match", "Edit that step so it matches the procedure"],
+       "on_screen_text": "Check AI text against your procedure"},
+      {"visual_type": "screen",
+       "voiceover": "She pastes the steps into the worksheet, and changes the font to a simple sans-serif at a readable size. Then she checks contrast. She changes pale grey text to dark text on white. And the instruction look at the red boxes becomes look at the boxes marked with a warning symbol.",
+       "screen_steps": ["Paste the 5 steps into the worksheet text box", "Select the text and change the font to a simple sans-serif font", "Increase the font size to a readable size", "Change the pale grey text colour to a dark colour on the white background", "Edit 'look at the red boxes' to 'look at the boxes marked with a warning symbol' and add a warning symbol"],
+       "on_screen_text": "Never colour alone"},
+      {"visual_type": "screen",
+       "voiceover": "She adds an illustration from the library, showing a person lifting with bent knees. She selects the image and finds the alternative text option. She types: worker lifting a box with bent knees and a straight back, keeping the box close to the body. Then she marks the decorative border as decorative.",
+       "screen_steps": ["Open the elements or image library and search 'lifting box'", "Drag an illustration of a person lifting with bent knees onto the page", "Select the image and open the alternative text option", "Type: 'Worker lifting a box with bent knees and a straight back, keeping the box close to the body.'", "Select the decorative border and mark it as decorative, if the option exists"],
+       "on_screen_text": "Alt text says what it means"},
+      {"visual_type": "screen",
+       "voiceover": "Finally, she reviews the page against the five-point checklist. She finds one last problem. Two steps are in one text box, with an unclear reading order, so she splits them. She downloads a PDF, and keeps the Canva link for staff who use screen readers.",
+       "screen_steps": ["Show the 5-point checklist beside the design and tick each point", "Click the text box holding steps 3 and 4 and split it into two boxes in the right order", "Open Share, choose Download, select PDF and download", "Copy the view link to share with staff who use screen readers"],
+       "on_screen_text": "Check all five points"},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is alt text that says only picture, or repeats the file name. Another is trusting an AI design because it looks professional. Check every design against the checklist.",
+       "on_screen_text": "Looks professional is not accessible"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, accessible materials have clear fonts, strong contrast, alt text, a simple layout and plain-language instructions. Second, good alt text explains what an image means for the lesson. AI can draft it, but you check it. Third, Canva's features change often, so check your live account, and review every design against the checklist.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Fonts · Contrast · Alt text · Layout · Plain language. 2. Alt text = meaning for the lesson; you check it. 3. Features change: check live, use the checklist."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below this video, create one worksheet or infographic in Canva for your lesson. Check it against the five-point checklist, and add alt text for every meaningful image. It takes about thirty-five minutes. In the next lesson, we check AI materials for accuracy and bias. See you there.",
+       "on_screen_text": "Next: Checking for Accuracy and Bias"}
+    ]
+  }
+}

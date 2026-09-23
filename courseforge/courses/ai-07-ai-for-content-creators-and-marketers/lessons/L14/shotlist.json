@@ -1,0 +1,179 @@
+{
+  "course_id": "AI-07",
+  "lesson_id": "L14",
+  "duration_s": 294.0,
+  "thumbnail": {
+    "headline": "Confident Is Not Correct",
+    "slide": {
+      "layout": "title",
+      "title": "Confident Is Not Correct",
+      "body": "A small seven-row results table, the Sign-ups column highlighted in teal, and a speech bubble with a large question mark. Small tag: AI for Content Creators · Lesson 14."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.9,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Should you follow its advice?",
+      "voiceover": "After a week of posting, you have numbers: views, likes and clicks. An AI assistant can read them and tell you exactly what to do next, in a very confident voice. But should you follow its advice?"
+    },
+    {
+      "scene": 2,
+      "start": 15.9,
+      "end": 43.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Four measures",
+        "body": "A funnel from wide to narrow: Reach (people who saw it) → Engagement (reacted, commented, shared, saved) → Clicks (followed a link) → Sign-ups or sales (completed the goal). The narrow end is highlighted in teal."
+      },
+      "voiceover": "In the last lesson, you produced your first week of content. Now let's see how it performs. First, choose a few measures that match your goal. Reach is how many different people saw it. Engagement is how many reacted, commented, shared or saved it. Clicks is how many followed a link. And sign-ups or sales is how many completed the action in your goal."
+    },
+    {
+      "scene": 3,
+      "start": 43.8,
+      "end": 63.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "Weight the goal most",
+        "body": "Large quote: \"A post with fewer likes that brings more sign-ups is doing the more important job.\""
+      },
+      "voiceover": "If your goal is sign-ups, reach and likes are helpful signs, but sign-ups matter most. A post with fewer likes that brings more sign-ups is doing the more important job. Platforms count these measures in different ways, so check each tool's definitions."
+    },
+    {
+      "scene": 4,
+      "start": 63.1,
+      "end": 91.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Check the AI's reasoning",
+        "body": "How many posts is this based on? · Could something else explain it (day, weather, holiday, luck)? · Is it connected to the goal? Small note with lock icon: totals only, no names or emails."
+      },
+      "voiceover": "AI can summarise a small results table quickly and suggest changes. But a small amount of data can mislead. In one week, one result can be unusual because of the day, the weather, a holiday or luck. The AI may still describe a clear trend. So check its reasoning. How many posts is this based on? Could something else explain it? Is it connected to the goal?"
+    },
+    {
+      "scene": 5,
+      "start": 91.8,
+      "end": 114.9,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "people eating dinner at restaurant table",
+      "on_screen_text": "One meal is not a pattern",
+      "voiceover": "And never paste personal data, such as the names or emails of people who signed up. Use totals only. Reading one week of results is like judging a restaurant after one meal. One bad evening might be the chef's day off. You look for patterns over several visits before you change the whole menu."
+    },
+    {
+      "scene": 6,
+      "start": 114.9,
+      "end": 132.0,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "baking class students kneading dough",
+      "on_screen_text": "Sample vegan bakery · Kraków",
+      "voiceover": "Let's try it. Ewa manages a sample campaign for a vegan bakery in Kraków, Poland. Her goal is one hundred and twenty sign-ups for a baking class in thirty days. After week one, she has twenty-two sign-ups."
+    },
+    {
+      "scene": 7,
+      "start": 132.0,
+      "end": 154.7,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Week 1 results · Sample data",
+        "body": "Table: Day · Channel · Format · Reach · Engagements · Link clicks · Sign-ups. 1 Social feed, photo post 1,200 · 85 · 12 · 2 | 2 Short video 3,400 · 210 · 20 · 1 | 3 Social feed, carousel 950 · 140 · 31 · 6 | 4 Email, newsletter 600 · 45 · 38 · 9 | 5 Social feed, quote card 700 · 30 · 4 · 0 | 6 Short video 2,100 · 95 · 9 · 1 | 7 Social feed, behind the scenes 1,500 · 160 · 15 · 3. Total sign-ups: 22."
+      },
+      "voiceover": "Here is her sample data. The two short videos reached the most people, three thousand four hundred and two thousand one hundred, but brought only one sign-up each. The email reached six hundred people, and brought nine sign-ups. The recipe carousel brought six. You can use this table in the exercise."
+    },
+    {
+      "scene": 8,
+      "start": 154.7,
+      "end": 167.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Ewa's prompt",
+        "body": "Here is week 1 of a campaign with the goal of 120 class sign-ups. Summarise the results and suggest 3 improvements. Explain your reasoning and say how confident you are."
+      },
+      "voiceover": "She gives the AI the table and the goal. She asks for a summary and three improvements, and asks it to explain its reasoning and say how confident it is."
+    },
+    {
+      "scene": 9,
+      "start": 167.6,
+      "end": 186.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Idea 1: CHANGE",
+        "body": "AI: 'Post more short videos, highest reach.' → Ewa (amber, Change): only 2 sign-ups; keep for awareness, add a sign-up call to action at the end."
+      },
+      "voiceover": "The first idea is to post more short videos, because they have the highest reach. Ewa changes this. The videos brought only two sign-ups. So she keeps them for awareness, but adds a clear sign-up call to action at the end."
+    },
+    {
+      "scene": 10,
+      "start": 186.0,
+      "end": 203.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Idea 2: ACCEPT, smaller",
+        "body": "AI: 'Send the email twice a week.' → Ewa (green, Accept a smaller version): one extra reminder email in week 3."
+      },
+      "voiceover": "The second idea is to send the email twice a week, because it brings the most sign-ups. Ewa accepts a smaller version. She adds one short reminder email in week three, because too many emails may make people unsubscribe."
+    },
+    {
+      "scene": 11,
+      "start": 203.1,
+      "end": 225.4,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Idea 3: REJECT, for now",
+        "body": "AI: 'Stop quote cards completely.' → Ewa (red, Reject for now): based on one post; test one more with a stronger call to action. Footer: calendar updated, reason noted for each change."
+      },
+      "voiceover": "The third idea is to stop quote cards completely, because they perform worst. Ewa rejects this for now. It is one post on one day. She will try one more quote card, with a stronger call to action, before she decides. Then she updates her calendar, with a reason for each change."
+    },
+    {
+      "scene": 12,
+      "start": 225.4,
+      "end": 243.8,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Toward the goal? Enough data?",
+      "voiceover": "The common mistake is following AI suggestions because they sound clear and confident. Another is judging content only by reach or likes. Always ask two questions. Which content moves people toward the goal? And is this result based on enough posts to trust?"
+    },
+    {
+      "scene": 13,
+      "start": 243.8,
+      "end": 267.4,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Measures that match the goal; weight the closest one most. 2. Small data can mislead: check the reasoning. 3. Accept, change or reject, with a reason."
+      },
+      "voiceover": "Let's recap. First, choose a few measures that match your goal, and give the most weight to the one closest to it. Second, AI can summarise results and suggest changes, but small amounts of data can mislead, so check its reasoning. Third, accept, change or reject each suggestion with a reason, then update your calendar."
+    },
+    {
+      "scene": 14,
+      "start": 267.4,
+      "end": 294.0,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Final Review and Presentation",
+      "voiceover": "Now it is your turn. In the exercise below, give an AI assistant the sample table, or your own totals, and ask for three improvement ideas. Accept, change or reject each one with a reason, and update your capstone calendar. It takes about twenty-five minutes. In the final lesson, Final Review and Campaign Presentation, we finish your campaign. See you there."
+    }
+  ]
+}

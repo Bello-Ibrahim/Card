@@ -1,0 +1,251 @@
+{
+  "course_id": "AI-08",
+  "lesson_id": "L07",
+  "duration_s": 317.8,
+  "thumbnail": {
+    "headline": "When Averages Mislead",
+    "slide": {
+      "layout": "title",
+      "title": "When Averages Mislead",
+      "body": "Three bars: 240, 180, 1,800; dashed teal line labelled 'Average 740'. Small tag: AI-Powered Data Analysis · Lesson 7."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 19.7,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "True, but the wrong story",
+      "voiceover": "Your manager asks, what is our average order in the South? You answer, seven hundred and forty dollars. It sounds healthy. But two of the three South orders were under two hundred and fifty dollars. The average was true, and still it told the wrong story."
+    },
+    {
+      "scene": 2,
+      "start": 19.7,
+      "end": 24.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Summaries and Pivot Tables",
+        "body": "AI-Powered Data Analysis (No Code) · Lesson 7 of 14"
+      },
+      "voiceover": "Today, we summarise data by group, with pivot tables in Google Sheets."
+    },
+    {
+      "scene": 3,
+      "start": 24.8,
+      "end": 48.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Summaries by group",
+        "body": "Total (sum): how much in all · Count: how many rows · Average (mean): total ÷ count"
+      },
+      "voiceover": "A summary by group takes many rows, and reduces them to a few numbers per group, such as per region or per month. The three most useful summaries are the total, which is how much in all. The count, which is how many rows. And the average, which is the total divided by the count."
+    },
+    {
+      "scene": 4,
+      "start": 48.4,
+      "end": 66.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "What an average can hide",
+        "body": "Dot plot: several small dots and one far-right large dot; average marker pulled right, median marker stays with the small dots. Side note: =MEDIAN(G2:G11) · check count, largest and smallest."
+      },
+      "voiceover": "The average is useful, but it can hide important differences. One very large value pulls the average up, so the typical order may be much smaller. When you see an average, also look at the count, and at the largest and smallest values."
+    },
+    {
+      "scene": 5,
+      "start": 66.8,
+      "end": 82.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "How a pivot table works",
+        "body": "Data table → pivot editor with two boxes: Rows = the groups (Region) · Values = the numbers (SUM, COUNTA, AVERAGE of Revenue) → small summary table"
+      },
+      "voiceover": "A pivot table builds these summaries for you, without formulas. You choose which column goes in rows, which are the groups. And which column goes in values, which are the numbers, added up, counted or averaged."
+    },
+    {
+      "scene": 6,
+      "start": 82.2,
+      "end": 98.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Pivot table vs AI summary",
+        "body": "Pivot table | AI summary → Agree: more confidence. Differ: skipped row? different column? different date grouping?"
+      },
+      "voiceover": "A good habit is to compare the pivot table with the AI's own summary. If they differ, there is usually a simple cause. The AI skipped a row, used a different column, or grouped dates in a different way."
+    },
+    {
+      "scene": 7,
+      "start": 98.9,
+      "end": 116.9,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "sorting paper receipts into envelopes table",
+      "on_screen_text": "Receipts into envelopes",
+      "voiceover": "Think of a pile of receipts. You sort them into envelopes, first by month and then by shop, and you write the total on each envelope. The receipts do not change. You only arrange them, so the totals are easy to read."
+    },
+    {
+      "scene": 8,
+      "start": 116.9,
+      "end": 128.9,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Tomasz's orders sheet (fictional)",
+        "body": "Clean 10-row orders table from content.md (Order ID 1001–1010, Region, Product, Units, Unit Price, Revenue: 80 · 240 · 150 · 360 · 160 · 180 · 120 · 1800 · 240 · 120) plus column H Month (2026-01 to 2026-03). Caption: Tomasz · Kraków"
+      },
+      "voiceover": "Tomasz is a sales coordinator in Kraków, Poland. He uses the same clean, fictional orders sheet, with revenue in US dollars, and the month column from lesson five."
+    },
+    {
+      "scene": 9,
+      "start": 128.9,
+      "end": 137.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Click cell C3 in the orders data",
+        "Open Insert > Pivot table",
+        "Select New sheet",
+        "Click Create; the empty pivot table and editor appear"
+      ],
+      "voiceover": "He clicks any cell in the data, and chooses insert, pivot table. He selects a new sheet, and clicks create."
+    },
+    {
+      "scene": 10,
+      "start": 137.5,
+      "end": 160.2,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Next to Rows, click Add and choose Region",
+        "Next to Values, click Add and choose Revenue",
+        "Zoom on 'Summarise by: SUM'",
+        "Highlight the result: North 680, South 2,220, West 550, Grand total 3,450"
+      ],
+      "voiceover": "In the editor, he adds region to rows. Then he adds revenue to values, and checks that it is summarised by sum. The result is North six hundred and eighty, South two thousand two hundred and twenty, and West five hundred and fifty. The grand total is three thousand four hundred and fifty."
+    },
+    {
+      "scene": 11,
+      "start": 160.2,
+      "end": 185.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Add Revenue to Values a second time; change Summarise by to COUNTA",
+        "Add Revenue to Values a third time; change Summarise by to AVERAGE",
+        "Highlight row by row: North 4 / 170, South 3 / 740, West 3 / 183.33"
+      ],
+      "voiceover": "Next, he adds revenue to values two more times, once as a count of orders, and once as an average. North has four orders, with an average of one hundred and seventy. South has three orders, with an average of seven hundred and forty. West has three orders, with an average of one hundred and eighty-three point three three."
+    },
+    {
+      "scene": 12,
+      "start": 185.9,
+      "end": 200.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Return to the data, Insert > Pivot table > New sheet > Create",
+        "Rows: Add > Month",
+        "Values: Add > Revenue (SUM)",
+        "Highlight 2026-01 470, 2026-02 820, 2026-03 2,160"
+      ],
+      "voiceover": "Then he builds a second pivot table, with month in rows and the sum of revenue. January is four hundred and seventy, February eight hundred and twenty, and March two thousand one hundred and sixty."
+    },
+    {
+      "scene": 13,
+      "start": 200.9,
+      "end": 213.3,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Download the sheet as .csv",
+        "In Claude or ChatGPT, upload the file",
+        "Type: 'Show total, count and average Revenue per Region in a table, and tell me how many rows you used.'"
+      ],
+      "voiceover": "He uploads the same sheet to the AI tool. He asks for total, count and average revenue per region in a table, and the number of rows it used."
+    },
+    {
+      "scene": 14,
+      "start": 213.3,
+      "end": 230.0,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Show the AI table: South total 420, 2 orders",
+        "Split screen with the pivot table: South 2,220, 3 orders; circle both South rows in red",
+        "Type in the chat: 'Which rows did you use for South?'"
+      ],
+      "voiceover": "The AI's table shows South with a total of four hundred and twenty, and only two orders. The pivot table shows two thousand two hundred and twenty, and three orders. So he asks the AI which rows it used."
+    },
+    {
+      "scene": 15,
+      "start": 230.0,
+      "end": 247.1,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Show the AI reply naming order 1008 as skipped",
+        "Open the exported file and zoom on \"1,800\" in quotation marks for order 1008",
+        "Fix the value to 1800, re-export and re-upload",
+        "Show the new AI table: South 2,220, 3 orders, with green ticks beside the pivot table"
+      ],
+      "voiceover": "It had read the revenue of order ten oh eight as text, because his exported file still had one thousand eight hundred in quotation marks. So it left that row out. He fixes the source file, and the numbers match."
+    },
+    {
+      "scene": 16,
+      "start": 247.1,
+      "end": 259.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "South: one order drives the average",
+        "body": "Three bars: 1002 = 240, 1006 = 180, 1008 = 1,800; dashed line 'Average 740' above the two small bars."
+      },
+      "voiceover": "Look again at the South average of seven hundred and forty. Most of it comes from one order of one thousand eight hundred. The average alone hides this."
+    },
+    {
+      "scene": 17,
+      "start": 259.1,
+      "end": 270.7,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Show the count next to the average",
+      "voiceover": "A common mistake is to report only the average. Always show the count next to it, and look at the individual rows when one group looks unusual."
+    },
+    {
+      "scene": 18,
+      "start": 270.7,
+      "end": 293.4,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Totals, counts, averages; pivot tables build them. 2. Averages hide differences: check count, largest, smallest. 3. Compare pivot vs AI; explain any difference."
+      },
+      "voiceover": "Let's recap. First, summaries by group use totals, counts and averages, and a pivot table builds them without formulas. Second, an average can hide large differences, so always check the count, and the largest and smallest values. Third, compare your pivot table with the AI's summary, and find the cause of any difference."
+    },
+    {
+      "scene": 19,
+      "start": 293.4,
+      "end": 317.8,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Trends, Outliers and Correlation",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will build two pivot tables in Google Sheets, sales by region and by month. Then ask the AI for the same summary, and explain any difference. It takes about thirty minutes. In the next lesson, we look at trends, outliers and correlation. See you there."
+    }
+  ]
+}

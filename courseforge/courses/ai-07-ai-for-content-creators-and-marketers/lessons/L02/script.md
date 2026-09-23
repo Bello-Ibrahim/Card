@@ -44,4 +44,4 @@ Image: Navy background, two speech bubbles side by side: a grey generic one and 
 ## Production Notes
 - [VERSION] Availability of project, custom instruction or saved-context features in Claude and ChatGPT, and which plans include them, must be checked before recording. The voiceover says 'if your plan has one' on purpose.
 - Valentina, the Suárez family, Don Álvaro and the coffee brand near Medellín are fictional. Stock footage must show no real coffee brand, packaging text or logo.
-- The caption texts on the scene 9 and 10 slides are read aloud in the voiceover; show them exactly as written.
+- The caption texts on the scene 9 and 11 slides are read aloud in the voiceover; show them exactly as written.

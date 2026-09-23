@@ -1,0 +1,185 @@
+{
+  "course_id": "AI-10",
+  "lesson_id": "L05",
+  "duration_s": 293.4,
+  "thumbnail": {
+    "headline": "Start Every Project Right",
+    "slide": {
+      "layout": "title",
+      "title": "Start Every Project Right",
+      "body": "Three fanned cards with icons: envelope (Welcome email), form (Questionnaire), checklist (Project checklist), tied with a teal ribbon. Small tag: AI for Freelancers · Lesson 5."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.0,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Problems start in week one",
+      "voiceover": "The client said yes. Three weeks later, you find they expected a feature you never discussed, and they never sent the files you needed on day one. Many project problems do not start in the middle. They start in the first week."
+    },
+    {
+      "scene": 2,
+      "start": 18.0,
+      "end": 30.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Onboarding Clients Smoothly",
+        "body": "AI for Freelancers and Solopreneurs · Lesson 5 of 12"
+      },
+      "voiceover": "Welcome to week two. Your proposal won the work. Now let's make sure the project starts well, with a small pack you build once and reuse with every client."
+    },
+    {
+      "scene": 3,
+      "start": 30.4,
+      "end": 54.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Between yes and work",
+        "body": "Timeline from 'Yes!' to 'Work starts' with three stops: Welcome (confirm next steps) → Collect (all info and files at once) → Set expectations (communication, feedback, what's included)"
+      },
+      "voiceover": "Onboarding is everything between yes and the start of the real work. A good onboarding process does three things. It welcomes the client and confirms what happens next. It collects the information and files you need, all at once. And it sets expectations, such as how you communicate, how feedback works, and what is not included."
+    },
+    {
+      "scene": 4,
+      "start": 54.4,
+      "end": 77.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Your onboarding pack",
+        "body": "Welcome email: thanks, summary, next 3 steps, hours, contact · Questionnaire: 8–10 questions (goals, audience, deadlines, access, examples, who approves) · Checklist: kick-off → handover, who does what"
+      },
+      "voiceover": "Most freelancers do this by hand, again and again. That makes it a perfect task for AI. You create three reusable pieces once. A welcome email with the next steps and your working hours. A questionnaire of eight to ten questions. And a project checklist, from kick-off to handover, with who does what."
+    },
+    {
+      "scene": 5,
+      "start": 77.5,
+      "end": 93.4,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "freelancer and client shaking hands meeting",
+      "on_screen_text": "A clear start, fewer surprises",
+      "voiceover": "Why does this matter? A clear start reduces misunderstandings later. When the client knows what happens next, what you need from them, and what is included, there are fewer surprises in week three, for both of you."
+    },
+    {
+      "scene": 6,
+      "start": 93.4,
+      "end": 110.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "Ask AI to find the gaps",
+        "body": "What questions do freelancers in my trade often forget to ask at the start of a project?"
+      },
+      "voiceover": "AI helps in two ways. It drafts the pieces quickly. But more usefully, it can find gaps. Ask it, what questions do freelancers in my trade often forget to ask at the start? Then you decide which suggestions are relevant."
+    },
+    {
+      "scene": 7,
+      "start": 110.5,
+      "end": 124.6,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Templates in. Client answers out.",
+      "voiceover": "Keep the templates in one folder, with blanks such as client name and start date. And never paste a client's completed questionnaire into an AI tool if it contains personal or confidential information."
+    },
+    {
+      "scene": 8,
+      "start": 124.6,
+      "end": 143.9,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "guest arriving at front door welcomed",
+      "on_screen_text": "Clear directions before they arrive",
+      "voiceover": "Think of onboarding as giving a guest clear directions before they visit your home. Tell them the address, where to park and which door to use, and they arrive calm and on time. If you do not, they phone you three times from the street."
+    },
+    {
+      "scene": 9,
+      "start": 143.9,
+      "end": 161.0,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "woman tutoring online video call home",
+      "on_screen_text": "Nadia · maths tutor · Kraków",
+      "voiceover": "Here is an example. Nadia is a freelance online maths tutor in Kraków, Poland. She works with parents of secondary school students. She used to start every new student with a long email thread about times, topics and exam dates."
+    },
+    {
+      "scene": 10,
+      "start": 161.0,
+      "end": 178.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "Nadia's prompt",
+        "body": "I am an online maths tutor for secondary school students. Draft a reusable onboarding pack: (1) a warm welcome email to a parent, under 150 words, with placeholders; (2) a questionnaire of 10 questions; (3) a checklist from the first lesson to the first progress report."
+      },
+      "voiceover": "She asks Claude for a reusable onboarding pack. A warm welcome email to a parent, under one hundred and fifty words, with blanks. A questionnaire of ten questions. And a checklist from the first lesson to the first progress report."
+    },
+    {
+      "scene": 11,
+      "start": 178.1,
+      "end": 206.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Gaps AI found",
+        "body": "Exam board → added · Learning support needs → added, gently worded, optional · Cancellation policy → Nadia writes this herself"
+      },
+      "voiceover": "The first draft is useful. The email is warm and short, and the checklist covers every step. But she does not stop there. Then she asks what tutors often forget. The AI suggests the exam board, learning support needs, and the cancellation policy. She adds the exam question. She adds a polite question on learning support, worded so the parent shares only what they want."
+    },
+    {
+      "scene": 12,
+      "start": 206.0,
+      "end": 224.9,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Your rules stay in your hands",
+      "voiceover": "But she writes the cancellation policy herself, because it is her business rule, not something AI should decide. She saves all three pieces in one folder. Starting with a new student now takes her about fifteen minutes, instead of emails over a whole week."
+    },
+    {
+      "scene": 13,
+      "start": 224.9,
+      "end": 244.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Shorter forms get answers",
+        "body": "Left, red cross: 30-question form, half empty. Right, green tick: 8–10 essential questions, all answered. Footer: Ask the rest when it becomes relevant."
+      },
+      "voiceover": "A common mistake is to let AI create a questionnaire of twenty-five or thirty questions, because it looks professional. Clients do not finish long forms, or they answer badly. Keep only what you need to start, about eight to ten questions. Ask the rest later."
+    },
+    {
+      "scene": 14,
+      "start": 244.6,
+      "end": 267.3,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Welcome, collect, set expectations. 2. AI drafts the pack and finds missing questions. 3. Your rules stay yours; client answers stay out of AI."
+      },
+      "voiceover": "Let's recap. First, onboarding welcomes the client, collects everything you need at once, and sets clear expectations. Second, use AI to draft a reusable welcome email, questionnaire and checklist, and to suggest questions you forgot. Third, keep your own business rules in your hands, and never paste clients' personal answers into AI tools."
+    },
+    {
+      "scene": 15,
+      "start": 267.3,
+      "end": 293.4,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Delivering Work Faster with Prompt Templates",
+      "voiceover": "Now it is your turn. In the exercise, adapt Nadia's prompt to your own trade and build your onboarding pack. Cut the questionnaire to eight to ten questions, add your own rules, and save everything in one folder. You will connect that questionnaire to an automation later in the course. In the next lesson, we deliver work faster with prompt templates."
+    }
+  ]
+}

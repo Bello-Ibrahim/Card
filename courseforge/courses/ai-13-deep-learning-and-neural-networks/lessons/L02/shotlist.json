@@ -1,0 +1,221 @@
+{
+  "course_id": "AI-13",
+  "lesson_id": "L02",
+  "duration_s": 301.9,
+  "thumbnail": {
+    "headline": "Most Bugs Are Shape Bugs",
+    "slide": {
+      "layout": "title",
+      "title": "Most Bugs Are Shape Bugs",
+      "body": "Stacked egg trays drawn as a 3D grid of dots, with a label (N, C, H, W). Small tag: Deep Learning and Neural Networks · Lesson 2."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.3,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Most bugs are shape bugs",
+      "voiceover": "Your first PyTorch error will probably not be about maths. It will say that two shapes cannot be multiplied. Most beginner bugs in deep learning are shape bugs. Today, you learn to read them and fix them fast."
+    },
+    {
+      "scene": 2,
+      "start": 16.3,
+      "end": 32.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Tensors: The Language of PyTorch",
+        "body": "Deep Learning and Neural Networks · Lesson 2 of 20"
+      },
+      "voiceover": "In the last lesson, we got a GPU ready. Now we meet the data structure that lives on it. A tensor is PyTorch's main data structure. If you know NumPy arrays, you already know most of it."
+    },
+    {
+      "scene": 3,
+      "start": 32.2,
+      "end": 52.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Check three things",
+        "body": "shape: e.g. (32, 3, 64, 64) · dtype: torch.float32 for inputs and weights, torch.int64 (long) for labels · device: cpu or cuda:0"
+      },
+      "voiceover": "Every tensor has three properties you should check all the time. Its shape, which is the size of each dimension. Its dtype, the number type, such as float for inputs and weights, or a long integer for class labels. And its device, the CPU or the GPU."
+    },
+    {
+      "scene": 4,
+      "start": 52.3,
+      "end": 71.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Tensor vs NumPy array",
+        "body": "Same: shapes, indexing, broadcasting. Extra for tensors: runs on a GPU · records operations for autograd (L04). Rule: same device in one operation."
+      },
+      "voiceover": "Two tensors in one operation must have compatible shapes, and they must be on the same device. Tensors also do two things NumPy arrays cannot. They run on a GPU, and they can record operations for automatic gradients, which we use in lesson four."
+    },
+    {
+      "scene": 5,
+      "start": 71.2,
+      "end": 84.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Batch first",
+        "body": "PyTorch images: (N, C, H, W) = batch, channels, height, width. Many image libraries: (H, W, C). Reorder with permute."
+      },
+      "voiceover": "In PyTorch, the first dimension is almost always the batch. Images use batch, channels, height, width. Many image libraries put the channels last instead, so you often need to reorder."
+    },
+    {
+      "scene": 6,
+      "start": 84.1,
+      "end": 99.5,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "stacked egg trays in a box",
+      "on_screen_text": "Shape = rows, columns, layers, boxes",
+      "voiceover": "Here is a picture to keep in mind. A tensor's shape is like a stack of egg trays. One tray has rows and columns. A stack adds layers. A box of stacks adds one more dimension."
+    },
+    {
+      "scene": 7,
+      "start": 99.5,
+      "end": 120.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Changing shape",
+        "body": "view / reshape: new shape, same data; -1 = 'work it out' · permute: reorder dimensions · unsqueeze(0): add batch dim · squeeze: remove size-1 dims"
+      },
+      "voiceover": "Reshaping moves the eggs into trays of a different size, but the number of eggs never changes. If the sizes do not multiply to the same total, the reshape fails. Reshape and view change the shape. Permute reorders the dimensions. Unsqueeze adds a batch dimension of size one."
+    },
+    {
+      "scene": 8,
+      "start": 120.1,
+      "end": 136.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Broadcasting",
+        "body": "Align from the right: (32, 3, 64, 64) minus (3, 1, 1). The 1s stretch to 64 × 64 and the batch of 32. Result: (32, 3, 64, 64)."
+      },
+      "voiceover": "Broadcasting follows the same rules as NumPy. Shapes are compared from the right, and a size of one can stretch to match. That is how you subtract one mean per colour channel from a whole batch of images."
+    },
+    {
+      "scene": 9,
+      "start": 136.4,
+      "end": 150.1,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "vineyard grapes close up harvest",
+      "on_screen_text": "Tomás · agritech · Valparaíso",
+      "voiceover": "Let's go to Colab. Tomás is an engineer at an agritech start-up in Valparaíso, Chile. He loads grape photos with an image library and wants to feed them to a network."
+    },
+    {
+      "scene": 10,
+      "start": 150.1,
+      "end": 168.1,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run: import torch; device = \"cuda\" if torch.cuda.is_available() else \"cpu\"",
+        "Run: x = torch.rand(32, 64, 64, 3) and print(x.shape)",
+        "Run: x = x.permute(0, 3, 1, 2); print(x.shape, x.dtype, x.device)",
+        "Output: torch.Size([32, 3, 64, 64]) torch.float32 cpu"
+      ],
+      "on_screen_text": "Channels last, then channels first",
+      "voiceover": "He starts with a batch of thirty-two photos, sixty-four pixels square, with the channels last. One permute moves the channels to position one. Now the print shows thirty-two, three, sixty-four, sixty-four, as float numbers on the CPU."
+    },
+    {
+      "scene": 11,
+      "start": 168.1,
+      "end": 181.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run: mean = torch.tensor([0.5, 0.4, 0.3]).view(3, 1, 1)",
+        "Run: x = (x - mean); print(x.shape)",
+        "Run: x = x.to(device); print(x.device) → cuda:0"
+      ],
+      "voiceover": "Next, he makes a mean with one value per channel, shaped three, one, one, and subtracts it. Broadcasting stretches it across the whole batch. Then he moves the batch to the GPU."
+    },
+    {
+      "scene": 12,
+      "start": 181.8,
+      "end": 202.4,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run: flat = x.reshape(x.shape[0], -1); print(flat.shape) → torch.Size([32, 12288])",
+        "Run: labels = torch.randint(0, 5, (32,)); print(labels.dtype) → torch.int64",
+        "Run: single = x[0].unsqueeze(0); print(single.shape) → torch.Size([1, 3, 64, 64])"
+      ],
+      "on_screen_text": "Minus one means work it out",
+      "voiceover": "For a linear layer, he flattens each image into one long row. The minus one tells PyTorch to work out the size, which is twelve thousand two hundred and eighty-eight. He also creates class labels as whole numbers, and picks one image with a new batch dimension."
+    },
+    {
+      "scene": 13,
+      "start": 202.4,
+      "end": 219.1,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run a cell that combines x on the GPU with labels on the CPU; show the error: Expected all tensors to be on the same device",
+        "Fix: labels = labels.to(device); re-run the cell with no error"
+      ],
+      "on_screen_text": "Same device, every time",
+      "voiceover": "Now Tomás gets an error. Expected all tensors to be on the same device. His images are on the GPU, but the labels are still on the CPU. The fix is always the same. Move both to one device."
+    },
+    {
+      "scene": 14,
+      "start": 219.1,
+      "end": 235.4,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Reorder with permute, not reshape",
+      "voiceover": "The most common mistake is using reshape when you need permute. Both give the same shape, but reshape only reinterprets the numbers in memory order. The pixels get mixed, and no error appears. The model just learns badly."
+    },
+    {
+      "scene": 15,
+      "start": 235.4,
+      "end": 248.7,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Permute or reshape?",
+        "body": "permute: (32, 64, 64, 3) → (32, 3, 64, 64), image intact. reshape: same shape, pixels scrambled, no error. One example: pass (1, C, H, W), not (C, H, W)."
+      },
+      "voiceover": "Use permute to reorder dimensions, and reshape only to merge or split dimensions that are already in order. And when you predict on one example, always add the batch dimension first."
+    },
+    {
+      "scene": 16,
+      "start": 248.7,
+      "end": 276.6,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Check shape, dtype and device. 2. Batch first; images are (N, C, H, W); permute to reorder, reshape to merge or split. 3. Broadcasting compares from the right; one device per operation."
+      },
+      "voiceover": "Let's recap. First, check shape, dtype and device for every tensor you create. Most bugs show up in one of the three. Second, PyTorch puts the batch first, and images use batch, channels, height, width. Use permute to reorder, and reshape only to merge or split. Third, broadcasting compares shapes from the right, and every tensor in one operation must be on the same device."
+    },
+    {
+      "scene": 17,
+      "start": 276.6,
+      "end": 301.9,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Neurons, Layers and Activations",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will create a batch of thirty-two colour images, move it to the GPU, and fix three shape errors in a provided cell, with one line explaining each fix. It takes about twenty minutes. In the next lesson, we build neurons, layers and activations. See you there."
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "course_id": "AI-10",
+  "lesson_id": "L07",
+  "duration_s": 290.6,
+  "thumbnail": {
+    "headline": "Guard Your Client's Keys",
+    "slide": {
+      "layout": "title",
+      "title": "Guard Your Client's Keys",
+      "body": "A simple ring of keys beside a teal shield icon with a tick. Small tag: AI for Freelancers · Lesson 7."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.9,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Your reputation is your business",
+      "voiceover": "Imagine a client finds a sentence from their confidential plan in someone else's work. Or a wrong figure in a report you sent. As a freelancer, your reputation is your business. One careless paste can cost you a client relationship you spent years building."
+    },
+    {
+      "scene": 2,
+      "start": 18.9,
+      "end": 32.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Quality Checks and Client Confidentiality",
+        "body": "AI for Freelancers and Solopreneurs · Lesson 7 of 12 · Three risks: Confidentiality · Accuracy · Disclosure"
+      },
+      "voiceover": "In the last lesson, you built prompt templates. Today is about the checks that keep that work safe. Using AI in client work brings three risks, and each one needs a rule."
+    },
+    {
+      "scene": 3,
+      "start": 32.6,
+      "end": 55.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "1. Confidentiality",
+        "body": "Laptop → arrow → cloud labelled 'AI provider'. Below the cloud, three small dials: Tool · Plan · Settings. Caption: Check your tool's current data settings yourself."
+      },
+      "voiceover": "Risk one is confidentiality. When you paste text into an AI tool, it leaves your computer. Depending on the tool, your plan and your settings, the provider may store it, and in some cases may use it to improve its models. These settings change often, so check your own tool's current settings yourself."
+    },
+    {
+      "scene": 4,
+      "start": 55.3,
+      "end": 74.2,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "No client secrets without consent",
+      "voiceover": "So here is the safe rule. Do not paste client secrets, personal data or unpublished work into an AI tool, unless the client agrees and the tool's settings are suitable. Otherwise, remove names, figures and details first, or describe the task in general terms."
+    },
+    {
+      "scene": 5,
+      "start": 74.2,
+      "end": 99.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "2. Accuracy: your quality check",
+        "body": "Every fact, figure, name, date vs your source · Read it as the client would · Tone fits their audience · Original: your work, your judgement"
+      },
+      "voiceover": "Risk two is accuracy. AI can invent facts, figures and sources, and it can quietly change numbers. So every AI-assisted deliverable needs a quality check. Check every fact, figure, name and date against your source. Read it as the client would. Check the tone for their audience. And make sure it is your work, shaped by your judgement."
+    },
+    {
+      "scene": 6,
+      "start": 99.5,
+      "end": 125.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "3. Disclosure: decide your rule now",
+        "body": "Example line for a proposal: 'I use AI for first drafts and organising notes. All work is checked and finished by me.'"
+      },
+      "voiceover": "Risk three is disclosure. Should you tell clients you use AI? There is no single answer, and some clients, contracts or countries may require it. But it is safer to decide your rule now than to explain later. A common honest approach is to say in your proposal how you use AI, and to ask before using it on sensitive material."
+    },
+    {
+      "scene": 7,
+      "start": 125.6,
+      "end": 146.6,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "hand locking office door with key",
+      "on_screen_text": "Never copy the client's keys",
+      "voiceover": "Think of client material as the keys to a client's office. You may use them to do your job. But you do not hand copies to a stranger, however helpful that stranger is. And before you leave, you check that every door is locked. That is your quality check."
+    },
+    {
+      "scene": 8,
+      "start": 146.6,
+      "end": 161.6,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "young man writing copy on laptop",
+      "on_screen_text": "Kofi · copywriter · Accra",
+      "voiceover": "Let's see how this works. Kofi is a freelance copywriter in Accra, Ghana. A start-up client sends him an internal document about a product that has not launched yet, and asks for website text."
+    },
+    {
+      "scene": 9,
+      "start": 161.6,
+      "end": 183.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Summarise, don't paste",
+        "body": "Left, locked and greyed out: Confidential document (product name, launch date, prices, partners). Right, green: General summary: 'Mobile app to help small traders track daily sales. Audience: market traders. Simple, works offline, local languages.'"
+      },
+      "voiceover": "Kofi wants AI help with structure. But instead of pasting the document, he writes a short, general summary. A mobile app that helps small traders track daily sales. It works offline and in local languages. He leaves out the product name, the launch date, the prices and the partner names."
+    },
+    {
+      "scene": 10,
+      "start": 183.0,
+      "end": 203.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Draft, write, check",
+        "body": "Summary → AI structure and headline ideas → Kofi writes final text with real details → Quality check: 'zero fees' struck through in red"
+      },
+      "voiceover": "He uses the summary to get a structure and some headline ideas. Then he writes the final text himself, using the real details from the document. His quality check finds one AI headline that promises zero fees. That is not in the brief, so he removes it."
+    },
+    {
+      "scene": 11,
+      "start": 203.1,
+      "end": 220.7,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "Kofi's disclosure line",
+        "body": "I sometimes use AI tools for early drafts and structure. I never share your confidential material with them, and all final work is written and checked by me."
+      },
+      "voiceover": "And disclosure was already done. His proposal said that he sometimes uses AI for early drafts and structure, that he never shares confidential material with it, and that he writes and checks all final work. The client agreed at the start."
+    },
+    {
+      "scene": 12,
+      "start": 220.7,
+      "end": 242.1,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Confidentiality is your default",
+      "voiceover": "A common mistake is to think a paid plan, or a setting you changed once, makes it safe to paste anything. Settings and terms change, and your client may not have agreed to any outside tool. Make confidentiality your default habit, and ask the client when you are not sure."
+    },
+    {
+      "scene": 13,
+      "start": 242.1,
+      "end": 265.7,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. No secrets or personal data without consent and suitable settings. 2. Check facts, figures, fit and originality. 3. Decide and state your disclosure rule."
+      },
+      "voiceover": "Let's recap. First, do not paste client secrets, personal data or unpublished work into AI tools, unless the client agrees and the settings are suitable. Remove identifying details instead. Second, check every AI-assisted deliverable for facts, figures, fit and originality. Third, decide your disclosure rule in advance, and state it clearly in your proposal."
+    },
+    {
+      "scene": 14,
+      "start": 265.7,
+      "end": 290.6,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Contracts, Invoices and Admin Help",
+      "voiceover": "Now it is your turn. In the exercise, write your personal AI-use policy on one page. What you will paste, what you will never paste, your quality checks, and your disclosure rule. Check your tool's data settings and write the date next to your notes. In the next lesson, we look at contracts, invoices and admin help."
+    }
+  ]
+}

@@ -1,0 +1,191 @@
+{
+  "course_id": "AI-13",
+  "lesson_id": "L05",
+  "duration_s": 295.9,
+  "thumbnail": {
+    "headline": "Five Lines That Train",
+    "slide": {
+      "layout": "title",
+      "title": "Five Lines That Train",
+      "body": "A circle of five arrows labelled zero_grad → forward → loss → backward → step. Small tag: Deep Learning and Neural Networks · Lesson 5."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.4,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "You write the loop yourself",
+      "voiceover": "In scikit-learn, training is one line. You call fit. In PyTorch, you write the loop yourself. That sounds like extra work, but it is why PyTorch is so flexible. Every later lesson is a small change to the loop you write today."
+    },
+    {
+      "scene": 2,
+      "start": 18.4,
+      "end": 40.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Dataset and DataLoader",
+        "body": "Dataset box with __len__ and __getitem__(i) → DataLoader → stack of mini-batches. Training: shuffled. Validation: fixed order. For tensors: TensorDataset(X, y)."
+      },
+      "voiceover": "First, the data. A dataset answers two questions. How many examples are there, and what is example number i? For data already in tensors, a ready-made tensor dataset is enough. A data loader wraps it and gives you mini-batches, shuffled for training and in a fixed order for validation."
+    },
+    {
+      "scene": 3,
+      "start": 40.3,
+      "end": 65.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Steps and epochs",
+        "body": "8,000 examples ÷ batch_size 64 = 125 steps per epoch\nSmaller batches: noisier, more updates · Larger: better GPU use, more memory"
+      },
+      "voiceover": "One step processes one batch and updates the weights once. One epoch is one full pass over the training data. With eight thousand examples and a batch size of sixty-four, one epoch has one hundred and twenty-five steps. Smaller batches give noisier but more frequent updates. Larger batches use the GPU better, but need more memory."
+    },
+    {
+      "scene": 4,
+      "start": 65.2,
+      "end": 79.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "The core loop",
+        "body": "optimizer.zero_grad()\nlogits = model(xb)\nloss = loss_fn(logits, yb)\nloss.backward()\noptimizer.step()"
+      },
+      "voiceover": "The core loop has five lines, always in this order. Clear the old gradients. Run the forward pass. Compute the loss. Compute the gradients with backward. Then let the optimiser update the weights."
+    },
+    {
+      "scene": 5,
+      "start": 79.3,
+      "end": 96.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Train mode and eval mode",
+        "body": "Training: model.train(). Validation: model.eval() + with torch.no_grad(). eval changes layer behaviour; no_grad turns off gradient tracking."
+      },
+      "voiceover": "Validation needs two switches. Eval mode changes how layers such as dropout behave. The no-grad block stops autograd from recording, which saves memory and time. You need both. Then switch back to train mode for the next epoch."
+    },
+    {
+      "scene": 6,
+      "start": 96.0,
+      "end": 117.0,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "teacher marking students work in classroom",
+      "on_screen_text": "Validation is the mock exam",
+      "voiceover": "Think of a language class. Each batch is one lesson with a few exercises. The teacher marks them, explains each error, and the student adjusts. An epoch is the whole textbook once. Validation is a mock exam. There is no feedback, and the student does not study from it."
+    },
+    {
+      "scene": 7,
+      "start": 117.0,
+      "end": 136.3,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "small business owner meeting loan officer",
+      "on_screen_text": "Folasade · microfinance · Ibadan",
+      "voiceover": "Folasade is a data scientist at a microfinance lender in Ibadan, Nigeria. She has a table of eight thousand loans with twenty features, and a logistic regression baseline. Does a small network do better? In the demo, a synthetic table stands in for her data."
+    },
+    {
+      "scene": 8,
+      "start": 136.3,
+      "end": 150.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run: X, y = make_classification(n_samples=8000, n_features=20, n_informative=8, random_state=0)",
+        "Run: train_test_split(X, y, test_size=0.2, random_state=0); sc = StandardScaler().fit(Xtr); transform Xtr and Xva",
+        "Run: print(\"logreg:\", LogisticRegression().fit(Xtr, ytr).score(Xva, yva))"
+      ],
+      "on_screen_text": "Baseline first, scaler on train only",
+      "voiceover": "She creates the synthetic data, splits it, and fits the scaler on the training part only, as in the scikit-learn course. Then she fits the logistic regression baseline and prints its validation score."
+    },
+    {
+      "scene": 9,
+      "start": 150.9,
+      "end": 165.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run: train_dl = DataLoader(TensorDataset(... torch.float32 ..., ... torch.long ...), batch_size=64, shuffle=True)",
+        "Run: val_dl = DataLoader(TensorDataset(...), batch_size=256)"
+      ],
+      "voiceover": "Next, she wraps the arrays in tensor datasets, with float features and long integer labels. The training loader uses batches of sixty-four and shuffles. The validation loader uses bigger batches and does not shuffle."
+    },
+    {
+      "scene": 10,
+      "start": 165.9,
+      "end": 178.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run: model = nn.Sequential(nn.Linear(20, 64), nn.ReLU(), nn.Linear(64, 2)).to(device)",
+        "Run: opt = torch.optim.Adam(model.parameters(), lr=1e-3); loss_fn = nn.CrossEntropyLoss()"
+      ],
+      "voiceover": "The model is small. Twenty inputs, sixty-four hidden units with ReLU, and two outputs. She moves it to the device, and chooses the Adam optimiser and cross-entropy loss."
+    },
+    {
+      "scene": 11,
+      "start": 178.8,
+      "end": 194.7,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run the loop cell: for epoch in range(10): model.train(); for xb, yb in train_dl: opt.zero_grad(); loss = loss_fn(model(xb), yb); loss.backward(); opt.step()",
+        "Highlight model.eval() and with torch.no_grad() in the validation part",
+        "Show the printed lines: epoch number and validation accuracy"
+      ],
+      "on_screen_text": "Train, then evaluate, every epoch",
+      "voiceover": "Now the loop, for ten epochs. Train mode, then for each batch, the five lines. After that, eval mode and no grad, and she counts correct predictions on the validation set. Each epoch prints its validation accuracy."
+    },
+    {
+      "scene": 12,
+      "start": 194.7,
+      "end": 213.1,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Scroll up to the logreg score and down to the last epoch accuracy; place them side by side (expected output: similar scores)"
+      ],
+      "on_screen_text": "The network must earn its place",
+      "voiceover": "She compares both scores on the same validation split. On data like this, you should see something like a network that is only slightly better, or about the same. Folasade records that honestly. The network costs more, so it must earn its place."
+    },
+    {
+      "scene": 13,
+      "start": 213.1,
+      "end": 243.1,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "train() to learn, eval() to check",
+      "voiceover": "A common mistake is forgetting eval mode and no grad during validation, or forgetting to switch back to train mode. With dropout, scores look noisy and too low. Or the model trains with dropout switched off. Put train mode at the top of the training part, and eval mode with no grad around validation, every epoch. And never shuffle or augment the validation data in a way that changes it."
+    },
+    {
+      "scene": 14,
+      "start": 243.1,
+      "end": 271.0,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Dataset → DataLoader → mini-batches; step = one batch, epoch = one pass. 2. zero_grad, forward, loss, backward, step. 3. train() / eval() + no_grad(); compare with a baseline on the same split."
+      },
+      "voiceover": "Let's recap. First, a dataset returns single examples, and a data loader turns them into shuffled mini-batches. A step is one batch, and an epoch is one full pass. Second, the core loop is always zero grad, forward, loss, backward, step. Third, use train mode for training, eval mode with no grad for validation, and compare against a classical baseline on the same split."
+    },
+    {
+      "scene": 15,
+      "start": 271.0,
+      "end": 295.9,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Image Data and Transforms",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will write a full training and validation loop for a small tabular classifier, and compare it with a logistic regression on the same split. It takes about thirty-five minutes. In the next lesson, we move to images, with image data and transforms. See you there."
+    }
+  ]
+}

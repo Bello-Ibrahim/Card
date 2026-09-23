@@ -1,0 +1,81 @@
+{
+  "title": "Building Quizzes with AI and Google Forms",
+  "thumbnail": {
+    "headline": "Quizzes That Mark Themselves",
+    "image": "Navy background, a quiz card with four options and a teal tick on one, beside a small gauge, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Quizzes That Mark Themselves", "body": "A multiple-choice quiz card with one option ticked in teal and a score badge. Small tag: AI for Educators and Trainers · Lesson 9 · Capstone step 1."}
+  },
+  "production_notes": [
+    "[VERSION] Record the Google Forms screen scenes on the live tool shortly before release and check: 'Make this a quiz', release of marks, feedback options, the Answer key button, points, Multiple choice, Shuffle option order and Preview. The voiceover names settings in general words so it survives small interface changes.",
+    "[REGION] Rules on collecting learners' names and email addresses in online forms differ by country and institution. The voiceover tells learners to collect only what they need and check their institution's rules; do not show a form that collects real learner details.",
+    "Screen scenes 10 to 13 use Google Forms with a demo Google account; hide the account name, profile photo and any other forms or files.",
+    "Chen Wei and his college in Kuala Lumpur are fictional; stock footage must show no real college name or logo.",
+    "The depreciation example is for illustration: a van bought for 20,000 over 5 years with the straight-line method gives 4,000 per year (assuming no residual value). No currency is named on purpose."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "AI can write twenty quiz questions in less than a minute. But how many actually test what you taught? Some will be too easy, some will have two correct answers, and some will test something you never taught. Today, you find and fix them.",
+       "on_screen_text": "Do your questions test what you taught?"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Welcome to week three, where your capstone unit comes together. A quiz is only useful if each question measures the learning outcome. So when you ask AI for questions, ask for a mix of three levels.",
+       "slide": {"layout": "title", "title": "Building Quizzes with AI and Google Forms", "body": "AI for Educators and Trainers · Lesson 9 of 12 · Week 3 · Capstone step 1"}},
+      {"visual_type": "slide",
+       "voiceover": "Recall means remembering a fact or term, like what does depreciation mean. Understanding means explaining an idea in new words. And application means using the idea in a new situation. For example, a company buys a van for twenty thousand, and uses the straight-line method over five years. What is the yearly depreciation? Also ask for an answer key and a short explanation for each question.",
+       "slide": {"layout": "diagram", "title": "Three levels of question", "body": "Three steps rising: Recall ('What does depreciation mean?') → Understanding ('Which statement best explains why a machine's value falls over time?') → Application ('A van costs 20,000, used over 5 years, straight-line: yearly depreciation?'). Tag: + answer key + explanation"}},
+      {"visual_type": "slide",
+       "voiceover": "Then analyse every question with three checks. Does it test the outcome? If the outcome is to calculate, recall questions alone are not enough. Is there exactly one correct answer? AI often writes options that are partly true. And are the wrong options believable? Good wrong options come from real learner mistakes.",
+       "slide": {"layout": "bullets", "title": "Three checks for every question", "body": "1. Does it test the outcome? · 2. Exactly one correct answer? · 3. Believable wrong options, from real mistakes?"}},
+      {"visual_type": "slide",
+       "voiceover": "Also look for clues. The correct answer is often the longest option, or the only one that repeats words from the question. Remove these clues.",
+       "slide": {"layout": "comparison", "title": "Remove the clues", "body": "Clue 1: the correct answer is the longest option. Clue 2: only the correct answer repeats words from the question. Fix: similar lengths, neutral wording."}},
+      {"visual_type": "stock",
+       "voiceover": "A quiz question is like a measuring tool. A kitchen scale is excellent, but it cannot measure temperature. A question can be well written and still measure the wrong thing, like reading speed, or a trick in the wording.",
+       "stock_query": "kitchen scale and thermometer on counter",
+       "on_screen_text": "Measure the skill you taught"},
+      {"visual_type": "slide",
+       "voiceover": "Google Forms is a free tool that can turn a form into a self-marking quiz, with an answer key, points and feedback. One reminder: collect only the learner data you need, and check your institution's rules before you collect names or email addresses.",
+       "slide": {"layout": "bullets", "title": "Google Forms quizzes", "body": "Free · Self-marking · Answer key, points, feedback. Padlock note: collect only the learner data you need; check your institution's rules."}}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's build one. Chen Wei teaches introductory accounting at a college in Kuala Lumpur, in Malaysia. His outcome is that students can calculate straight-line depreciation. He asks the AI for ten questions at three levels, with answer keys and explanations.",
+       "stock_query": "college accounting class students with calculators",
+       "on_screen_text": "Chen Wei · accounting lecturer · Kuala Lumpur"},
+      {"visual_type": "slide",
+       "voiceover": "His review finds three weak items. One has two correct options, so he fixes it. One asks for the year a method was invented, which he never taught, so he replaces it with an application question. And one has the correct answer as the only long option, so he rewrites the options to similar lengths.",
+       "slide": {"layout": "comparison", "title": "Three weak items", "body": "Two correct options → fixed · Tests something not taught → replaced with application question · Correct answer is the only long option → options rewritten to similar lengths"}},
+      {"visual_type": "screen",
+       "voiceover": "Now he opens Google Forms and starts a blank form called Depreciation Check. In the settings, he turns on the option to make it a quiz, and chooses when learners see their marks and feedback.",
+       "screen_steps": ["Open Google Forms and click Blank form", "Name the form 'Depreciation Check'", "Open the Settings tab", "Turn on 'Make this a quiz'", "Choose when marks are released and which feedback learners see"],
+       "on_screen_text": "Turn on quiz mode"},
+      {"visual_type": "screen",
+       "voiceover": "He adds his first question as multiple choice, and pastes in the question and four options. Then he opens the answer key, selects the correct option, and sets the points.",
+       "screen_steps": ["Back on the Questions tab, set the first question type to Multiple choice", "Paste the question text and the four options", "Click Answer key", "Select the correct option and set the points"],
+       "on_screen_text": "Answer key and points"},
+      {"visual_type": "screen",
+       "voiceover": "He adds feedback for correct and incorrect answers, using the AI's explanation after checking it himself. He repeats this for all ten questions, and turns on shuffle option order, so learners cannot copy the order.",
+       "screen_steps": ["In the answer key view, click add answer feedback", "Paste the checked explanation for incorrect answers and a short message for correct answers", "Add the remaining nine questions the same way", "Open the question menu and turn on Shuffle option order"],
+       "on_screen_text": "Checked feedback for every question"},
+      {"visual_type": "screen",
+       "voiceover": "Finally, he uses preview to take the quiz himself, and checks that the marking works. Then he shares the link with his students.",
+       "screen_steps": ["Click the Preview icon", "Answer all ten questions, including one deliberate wrong answer", "Submit and view the score and feedback", "Return to the editor, click Send and copy the link"],
+       "on_screen_text": "Preview before you share"},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is to copy AI questions straight into the form because they look correct. Many AI quizzes are mostly recall, even when the outcome is to calculate. Count your levels. And check the wrong options too, not only the right one.",
+       "on_screen_text": "Count your levels. Check every option."}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, ask AI for recall, understanding and application questions, with answer keys and explanations. Second, analyse every item. Does it test the outcome, does it have exactly one correct answer, and are the wrong options believable without clues? Third, Google Forms can mark the quiz for you. Check the live settings, and collect only the learner data you need.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Recall · Understanding · Application + keys. 2. Outcome? One correct answer? Believable options, no clues? 3. Self-marking in Google Forms; minimal learner data."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. This exercise is step one of your capstone unit. Generate ten quiz questions for your unit with AI, fix or remove any weak items, and build the final quiz in Google Forms. It takes about forty minutes. In the next lesson, we look at rubrics and feedback with AI. See you there.",
+       "on_screen_text": "Next: Rubrics and Feedback with AI"}
+    ]
+  }
+}

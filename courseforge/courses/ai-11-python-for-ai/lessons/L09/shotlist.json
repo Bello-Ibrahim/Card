@@ -1,0 +1,188 @@
+{
+  "course_id": "AI-11",
+  "lesson_id": "L09",
+  "duration_s": 292.3,
+  "thumbnail": {
+    "headline": "Borrow Tested Tools",
+    "slide": {
+      "layout": "title",
+      "title": "Borrow Tested Tools",
+      "body": "Toolbox icon with math, datetime and random; a separate box labelled pandas arriving. Small tag: Python for AI · Lesson 9."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.7,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Tested tools, ready to use",
+      "voiceover": "How many days until your next holiday? Which name should win a prize draw? You could write that code yourself, but you don't need to. Python already includes tested tools for both, and thousands more are free to install."
+    },
+    {
+      "scene": 2,
+      "start": 16.7,
+      "end": 40.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "A module",
+        "body": "import math\nmath.sqrt(81)"
+      },
+      "voiceover": "Last time, we learned to read errors. Today, we use code that other people have already written and tested. A module is a file of Python code that you load into your program with the word import. You can import a whole module, or just one part of it, such as the date tool from datetime."
+    },
+    {
+      "scene": 3,
+      "start": 40.7,
+      "end": 56.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "The standard library",
+        "body": "Nothing to install: math (maths functions) · datetime (dates and times) · random (random numbers and choices)"
+      },
+      "voiceover": "Python comes with a large standard library. These modules are always available, with nothing to install. Three useful ones are math, for maths functions, datetime, for dates and times, and random, for random numbers and choices."
+    },
+    {
+      "scene": 4,
+      "start": 56.1,
+      "end": 78.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Third-party libraries",
+        "body": "Installed separately: NumPy (fast number calculations) · pandas (tables of data, from L11) · matplotlib (charts)"
+      },
+      "voiceover": "A library, or package, is a larger collection of modules, often shared for free. Third-party libraries are not part of Python itself, so you install them. For AI work, three matter most. NumPy does fast calculations on large sets of numbers. pandas works with tables of data. And matplotlib draws charts."
+    },
+    {
+      "scene": 5,
+      "start": 78.4,
+      "end": 103.3,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "opening kitchen cupboard with cooking tools",
+      "on_screen_text": "Install once, import each time",
+      "voiceover": "Think of the kitchen tools that come with a new flat, like a pot, a pan and a few knives. That is the standard library. Third-party libraries are specialist tools you add later, like a bread machine. Import takes a tool out of the cupboard. Installing is buying the tool and putting it in the cupboard first."
+    },
+    {
+      "scene": 6,
+      "start": 103.3,
+      "end": 126.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Installing packages",
+        "body": "Colab: %pip install package-name · Your computer: pip install package-name (L10) · Trusted sources only · Check the spelling"
+      },
+      "voiceover": "Colab already has many data libraries installed, including pandas and matplotlib. If you need another one, you install it in a code cell with the pip install command. The exact commands change over time. And only install packages from trusted sources. Check the spelling, because a wrong name can install a different, unwanted package."
+    },
+    {
+      "scene": 7,
+      "start": 126.4,
+      "end": 143.1,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "outdoor book fair with volunteers",
+      "on_screen_text": "Valentina's book fair · Bogotá",
+      "voiceover": "Let's use them. Valentina organises a charity book fair in Bogotá, Colombia. She wants to know how many days remain until the fair, and to pick a prize winner from the volunteers. The date and names are made up."
+    },
+    {
+      "scene": 8,
+      "start": 143.1,
+      "end": 163.7,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Add a new code cell",
+        "Type: import math / import random / from datetime import date",
+        "Type: print(math.sqrt(81), math.ceil(4.2))"
+      ],
+      "voiceover": "We import math and random, and the date tool from datetime. First, a quick test of math. The square root of eighty-one is nine, and math ceil rounds four point two up to five. Rounding up is useful for questions like, how many boxes do I need?"
+    },
+    {
+      "scene": 9,
+      "start": 163.7,
+      "end": 185.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Type: fair = date(2026, 12, 5)",
+        "Type: today = date(2026, 9, 23)",
+        "Type: print((fair - today).days, \"days to go\")",
+        "Press Shift + Enter",
+        "Output: 9.0 5 / 73 days to go"
+      ],
+      "on_screen_text": "73 days to go",
+      "voiceover": "Next, two dates. The fair is on the fifth of December, twenty twenty-six. For today, we use a fixed date, so the output is the same every time. We subtract one date from the other and ask for the days. Run it, and there are seventy-three days to go."
+    },
+    {
+      "scene": 10,
+      "start": 185.6,
+      "end": 211.3,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Add a new code cell",
+        "Type: random.seed(42)",
+        "Type: names = [\"Tariq\", \"Ingrid\", \"Chen\", \"Adaeze\"]",
+        "Type: print(random.choice(names))",
+        "Press Shift + Enter",
+        "Output: Tariq"
+      ],
+      "on_screen_text": "A seed makes results repeatable",
+      "voiceover": "Now the prize draw. We make a list of four volunteer names, and random choice picks one. But first we set a seed. The seed makes the random result repeatable, so everyone who runs this gets the same name. That matters in data work, because others must be able to reproduce your results. For a real draw, remove the seed."
+    },
+    {
+      "scene": 11,
+      "start": 211.3,
+      "end": 226.7,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Add a new code cell",
+        "Type: import pandas as pd",
+        "Type: print(pd.__version__)",
+        "Type: # %pip install some-package-name",
+        "Press Shift + Enter; a version number appears (depends on the runtime)"
+      ],
+      "voiceover": "Finally, we import pandas with the short nickname p d, which almost all pandas code uses, and print its version. It is already installed. The install command stays as a comment, so we don't run it."
+    },
+    {
+      "scene": 12,
+      "start": 226.7,
+      "end": 245.1,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Try the import first",
+      "voiceover": "A common mistake is installing packages you already have. Check first by trying the import. If it works, the package is there. If you see a ModuleNotFoundError, install it once, then import again. In Colab, installed packages last only for the current session."
+    },
+    {
+      "scene": 13,
+      "start": 245.1,
+      "end": 267.4,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. import loads a module; math, datetime, random need no install. 2. NumPy, pandas, matplotlib: install missing ones with %pip / pip. 3. random.seed() makes results reproducible."
+      },
+      "voiceover": "Let's recap. First, import loads a module, and the standard library, with math, datetime and random, needs no installation. Second, third-party libraries such as NumPy, pandas and matplotlib add powerful tools, and you install missing ones with pip. Third, use a random seed when others need to reproduce your random results."
+    },
+    {
+      "scene": 14,
+      "start": 267.4,
+      "end": 292.3,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Files and VS Code",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will use datetime to count the days until a date you care about, and random to pick a winner from a list of made-up names. It takes about fifteen minutes. In the next lesson, we work locally with files and VS Code. See you there."
+    }
+  ]
+}

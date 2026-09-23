@@ -1,0 +1,79 @@
+{
+  "title": "Variables and Data Types",
+  "thumbnail": {
+    "headline": "Why Is 3 + 3 = 33?",
+    "image": "Navy background, two text blocks \"3\" + \"3\" = 33 next to 3 + 3 = 6, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Why Is 3 + 3 = 33?", "body": "Left: \"3\" + \"3\" → 33 (text, orange). Right: 3 + 3 → 6 (numbers, teal). Small tag: Python for AI · Lesson 2."}
+  },
+  "production_notes": [
+    "No facts to verify (content.md Review Flags: None). Prices and the 10% tax rate are made up; say so on screen as in content.md.",
+    "Wanjiru and 'Duka La Wanjiru' in Nairobi are fictional; do not show a real shop name or logo in stock footage.",
+    "Printed outputs on screen must match content.md exactly: \"<class 'float'> <class 'int'> <class 'str'> <class 'bool'>\", 'Duka La Wanjiru: subtotal 12.00, tax 1.20, total 13.20', and '33 / 6 / Items: 6'.",
+    "Screen demo: the presenter types each code block from content.md into a new Colab cell, including the # comments, and runs it."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Ask Python to add the text three to the text three, and you get thirty-three, not six. Why? The answer is data types. They explain many of the surprises beginners meet when they work with data.",
+       "on_screen_text": "Why do we get 33?"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "In the last lesson, you ran your first code in Colab. Today, we learn how Python remembers values. A variable is a name that holds a value. You create one with the equals sign.",
+       "slide": {"layout": "code", "title": "A variable", "body": "rice_price = 3.50   # store 3.50 in a variable called rice_price"}},
+      {"visual_type": "slide",
+       "voiceover": "Here, the equals sign does not mean is equal to. It means store. We store three point five in a variable called rice price. Later, you can use the name instead of the number, and you can store a new value in it at any time.",
+       "slide": {"layout": "diagram", "title": "= means store", "body": "Value 3.50 → arrow labelled 'store' → box with the label rice_price"}},
+      {"visual_type": "stock",
+       "voiceover": "Think of a labelled box on a shelf. The label is the name. The box holds one value. When you need the value, you look for the label. You can empty the box and put something new inside, and the label stays the same.",
+       "stock_query": "labelled storage boxes on shelf",
+       "on_screen_text": "A variable is a labelled box"},
+      {"visual_type": "slide",
+       "voiceover": "Every value has a data type. The type tells Python what the value is, and what you can do with it. There are four basic types. Int is for whole numbers. Float is for decimal numbers. String, or str, is for text, always inside quotation marks. And bool has only two values, True or False.",
+       "slide": {"layout": "bullets", "title": "Four basic types", "body": "int: whole numbers (2, 0, -15) · float: decimals (3.50, 0.1) · str: text in quotes (\"Nairobi\", \"3\") · bool: True or False"}},
+      {"visual_type": "slide",
+       "voiceover": "You can check a value's type with the type function, and convert it with int, float or str. This matters, because Python treats the text three and the number three very differently. The plus sign adds numbers, but it joins text.",
+       "slide": {"layout": "comparison", "title": "Text or number?", "body": "Check: type(value). Convert: int() · float() · str(). \"3\" + \"3\" → joins text. 3 + 3 → adds numbers."}},
+      {"visual_type": "slide",
+       "voiceover": "One more thing. Choose names that describe what they hold. Use lowercase letters and underscores. Names cannot start with a number or contain spaces.",
+       "slide": {"layout": "comparison", "title": "Good names", "body": "Good: tea_qty · rice_price. Not allowed: 2tea (starts with a number) · tea qty (space)."}}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's see this in a real situation. Wanjiru runs a small food shop in Nairobi. She wants a quick way to total a customer's basket and add a ten percent tax. The prices and the tax rate are made up for this example.",
+       "stock_query": "small grocery shop counter Kenya",
+       "on_screen_text": "Wanjiru's shop · Nairobi · made-up prices"},
+      {"visual_type": "screen",
+       "voiceover": "In a new cell, we create four variables. The price of rice, the quantity of rice, the shop name, and whether the shop is open. Then we print the type of each one. The text after the hash sign is a comment. Python ignores it. It is a note for people.",
+       "screen_steps": ["Add a new code cell", "Type: rice_price = 3.50  # float", "Type: rice_qty = 2  # int", "Type: shop_name = \"Duka La Wanjiru\"  # str", "Type: is_open = True  # bool", "Type: print(type(rice_price), type(rice_qty), type(shop_name), type(is_open))"]},
+      {"visual_type": "screen",
+       "voiceover": "When we run it, Python shows the four types in order. Float, int, str and bool. One of each.",
+       "screen_steps": ["Press Shift + Enter", "Output: <class 'float'> <class 'int'> <class 'str'> <class 'bool'>"],
+       "on_screen_text": "float, int, str, bool"},
+      {"visual_type": "screen",
+       "voiceover": "Next, Wanjiru adds four cups of tea. We multiply each price by its quantity and add them to get the subtotal. The tax is ten percent of the subtotal, and the total is the two added together.",
+       "screen_steps": ["Add a new code cell", "Type: tea_price = 1.25 and tea_qty = 4", "Type: subtotal = rice_price * rice_qty + tea_price * tea_qty", "Type: tax = subtotal * 0.10", "Type: total = subtotal + tax"]},
+      {"visual_type": "screen",
+       "voiceover": "To print a clear receipt line, we use an f-string. The letter f before the quotation marks tells Python to put each variable's value inside the text. We also ask for two decimal places, which suits money. Run it, and we see a subtotal of twelve, tax of one twenty, and a total of thirteen twenty.",
+       "screen_steps": ["Type: print(f\"{shop_name}: subtotal {subtotal:.2f}, tax {tax:.2f}, total {total:.2f}\")", "Highlight the f before the quotes and the :.2f parts", "Press Shift + Enter", "Output: Duka La Wanjiru: subtotal 12.00, tax 1.20, total 13.20"],
+       "on_screen_text": "f-strings put values into text"},
+      {"visual_type": "screen",
+       "voiceover": "Finally, the puzzle from the start. We store the text three and add it to itself. Python joins the text and prints thirty-three. When we convert both values to whole numbers first, we get six. And to join a number with text, we convert the number to text with str.",
+       "screen_steps": ["Add a new code cell", "Type: typed = \"3\"", "Type: print(typed + typed)", "Type: print(int(typed) + int(typed))", "Type: print(\"Items: \" + str(rice_qty + tea_qty))", "Press Shift + Enter", "Output: 33 / 6 / Items: 6"],
+       "on_screen_text": "Convert before you calculate"},
+      {"visual_type": "text",
+       "voiceover": "This is the most common mistake. Data from a form, a file or a user is often text, even when it looks like a number. Add text to a number and you get an error. So always check the type, and convert before you calculate.",
+       "on_screen_text": "Check the type. Then convert."}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, a variable is a name that stores a value, and the equals sign means store this value. Second, the four basic types are int, float, str and bool, and you can check them with type. Third, convert values before you mix text and numbers, and use f-strings to print clear results.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. A variable stores a value; = means store. 2. Four types: int, float, str, bool. Check with type(). 3. Convert with int(), float(), str(); print with f-strings."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below this video, you will store the prices and quantities of three items, calculate the total with a ten percent tax, and print a receipt line with an f-string. It takes about twenty minutes. In the next lesson, we look at lists and dictionaries. See you there.",
+       "on_screen_text": "Next: Lists and Dictionaries"}
+    ]
+  }
+}

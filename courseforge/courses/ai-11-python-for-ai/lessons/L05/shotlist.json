@@ -1,0 +1,202 @@
+{
+  "course_id": "AI-11",
+  "lesson_id": "L05",
+  "duration_s": 298.8,
+  "thumbnail": {
+    "headline": "Let the Loop Work",
+    "slide": {
+      "layout": "title",
+      "title": "Let the Loop Work",
+      "body": "Circular arrow icon passing over four boxes labelled 12, 9, 15, 11, with a running total 47. Small tag: Python for AI · Lesson 5."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.0,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "The same job, again and again",
+      "voiceover": "Adding up four numbers by hand is easy. Adding up forty thousand rows of sales is not. Computers are very good at doing the same small job again and again, without getting tired. In Python, the tool for this is the loop."
+    },
+    {
+      "scene": 2,
+      "start": 18.0,
+      "end": 36.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "A for loop",
+        "body": "for count in boxes:\n    print(count)"
+      },
+      "voiceover": "Last time, our code made decisions. Now it will repeat work. A for loop runs the same block of code once for each item in a collection. Read this example as, for each item in boxes, call it count, and run the indented code."
+    },
+    {
+      "scene": 3,
+      "start": 36.9,
+      "end": 53.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "One pass per item",
+        "body": "List of four boxes; an arrow moves along them. Pass 1: count = 12 · Pass 2: count = 9 · Pass 3 · Pass 4 → end."
+      },
+      "voiceover": "On the first pass, count is the first item. On the second pass, it is the second item, and so on, until the list ends. Just like if, the line ends with a colon, and the body is indented."
+    },
+    {
+      "scene": 4,
+      "start": 53.6,
+      "end": 75.5,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "supermarket cashier scanning items at checkout",
+      "on_screen_text": "One item at a time",
+      "voiceover": "Think of a cashier at a supermarket. The cashier picks up each item in the basket, one after another, scans it, and adds its price to the total. The cashier doesn't need to know how many items there are. When the basket is empty, the cashier stops and shows the total."
+    },
+    {
+      "scene": 5,
+      "start": 75.5,
+      "end": 96.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Two useful tools",
+        "body": "Running total: start at 0 before the loop, add inside it. range(1, 4) → 1, 2, 3 (stops before 4)"
+      },
+      "voiceover": "That is a very common pattern, called the running total. You create a variable at zero before the loop, and add to it inside the loop. You can also loop over range, which gives a sequence of numbers. It starts at the first number, and stops before the second."
+    },
+    {
+      "scene": 6,
+      "start": 96.5,
+      "end": 119.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "for or while?",
+        "body": "for: once per item in a list or range. while: repeats while a condition is true; can run forever if it never becomes false (use the stop button)."
+      },
+      "voiceover": "A while loop is different. It repeats as long as a condition stays true. It is useful when you don't know how many passes you need. But be careful. If the condition never becomes false, the loop never ends. In Colab, you can stop a running cell with the stop button next to it."
+    },
+    {
+      "scene": 7,
+      "start": 119.6,
+      "end": 143.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Built-in shortcuts",
+        "body": "sum() · max() · min() · len(). Week 3: pandas does most loops for you."
+      },
+      "voiceover": "When is a loop the right tool? Use one when you must do the same steps for every item. For simple totals, Python also has built-in functions, such as sum, max, min and len. They do the loop for you. And in week three, you will see that pandas does most loops for you too."
+    },
+    {
+      "scene": 8,
+      "start": 143.6,
+      "end": 158.2,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "folded towels packed in cardboard boxes",
+      "on_screen_text": "Ayşe's workshop · İzmir",
+      "voiceover": "Let's see a loop in action. Ayşe manages a small textile workshop in İzmir, in Türkiye. She records how many boxes of towels her team packs each day. The numbers are made up."
+    },
+    {
+      "scene": 9,
+      "start": 158.2,
+      "end": 174.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Add a new code cell",
+        "Type: boxes = [12, 9, 15, 11]",
+        "Type: total = 0",
+        "Type: for count in boxes: / total = total + count (indented) / print(\"Running total:\", total) (indented)",
+        "Type (not indented): print(\"Average:\", total / len(boxes))"
+      ],
+      "voiceover": "We store four days of boxes in a list, and set the total to zero. Inside the loop, we add each day's count to the total and print it. After the loop, not indented, we print the average."
+    },
+    {
+      "scene": 10,
+      "start": 174.5,
+      "end": 188.2,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Press Shift + Enter",
+        "Output: Running total: 12 / 21 / 36 / 47",
+        "Output: Average: 11.75",
+        "Highlight the indentation of the two print lines"
+      ],
+      "on_screen_text": "Inside runs 4 times, after runs once",
+      "voiceover": "Run it. The running total grows from twelve to forty-seven, one line per day. Then the average appears once, eleven point seven five, because that line runs after the loop ends."
+    },
+    {
+      "scene": 11,
+      "start": 188.2,
+      "end": 208.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Add a new code cell",
+        "Type: for day in range(1, 4): / print(\"Day\", day)",
+        "Type: stock = 5 / while stock > 0: / stock = stock - 2",
+        "Type: print(\"Stock after loop:\", stock)",
+        "Press Shift + Enter",
+        "Output: Day 1 / Day 2 / Day 3 / Stock after loop: -1"
+      ],
+      "on_screen_text": "Why -1 and not 0?",
+      "voiceover": "Next, a quick look at range and a while loop. The for loop prints day one, day two and day three. Then the stock starts at five, and the while loop takes away two, while the stock is above zero. The result is minus one. Why not zero?"
+    },
+    {
+      "scene": 12,
+      "start": 208.8,
+      "end": 226.4,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Show trace overlay: 5 → 3 → 1 → -1",
+        "Add a new code cell",
+        "Type: print(sum(boxes), max(boxes))",
+        "Press Shift + Enter",
+        "Output: 47 15"
+      ],
+      "voiceover": "Let's trace it. Five becomes three, then one, then minus one. Only then is the condition false. This is why we trace loops by hand. Finally, the built-in shortcut. Sum and max give forty-seven, and the best day, fifteen."
+    },
+    {
+      "scene": 13,
+      "start": 226.4,
+      "end": 251.7,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Before, inside, after",
+      "voiceover": "Here is the most common mistake with loops. It is putting the starting value inside the loop. Then the total resets on every pass, and you only get the last item. Create the total before the loop, update it inside, and use it after. The indentation of each line shows you which of these three places it is in."
+    },
+    {
+      "scene": 14,
+      "start": 251.7,
+      "end": 276.1,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. for runs its block once per item in a list or range(). 2. Running total: create before, update inside, use after. 3. while repeats while a condition is true; trace it."
+      },
+      "voiceover": "Let's recap. First, a for loop runs its indented block once for each item in a list or a range. Second, for a running total, create the variable before the loop, update it inside, and use it after. Third, a while loop repeats while a condition is true, so trace it carefully to check where it ends."
+    },
+    {
+      "scene": 15,
+      "start": 276.1,
+      "end": 298.8,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Functions",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will loop over seven daily sales figures from a café in Lima, and print the weekly total, the average and the best day. It takes about twenty minutes. In the next lesson, we package our logic into functions. See you there."
+    }
+  ]
+}

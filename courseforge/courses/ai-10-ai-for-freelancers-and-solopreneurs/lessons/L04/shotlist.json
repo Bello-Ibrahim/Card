@@ -1,0 +1,188 @@
+{
+  "course_id": "AI-10",
+  "lesson_id": "L04",
+  "duration_s": 298.5,
+  "thumbnail": {
+    "headline": "Check Every Promise",
+    "slide": {
+      "layout": "title",
+      "title": "Check Every Promise",
+      "body": "Simple two-page proposal icon; three lines circled in teal (deliverable, date, price) with a pen icon. Small tag: AI for Freelancers · Lesson 4."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 19.3,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Send me a proposal",
+      "voiceover": "You had a great call. The client said, send me a proposal. Now it is ten at night, your notes are messy, and the page is blank. AI can give you a strong first draft in minutes. But only you can check what it promises."
+    },
+    {
+      "scene": 2,
+      "start": 19.3,
+      "end": 29.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Proposals and Quotes That Win Work",
+        "body": "AI for Freelancers and Solopreneurs · Lesson 4 of 12"
+      },
+      "voiceover": "In the last lesson, you started conversations with potential clients. Now we turn a good conversation into a proposal that wins the work."
+    },
+    {
+      "scene": 3,
+      "start": 29.2,
+      "end": 49.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Six parts of a proposal",
+        "body": "1 Problem (their words) · 2 Approach (3–5 steps) · 3 Deliverables (with quantities) · 4 Timeline (and client deadlines) · 5 Price and payment terms · 6 One next step"
+      },
+      "voiceover": "A clear proposal has six parts. The client's problem, in their words, which shows you listened. Your approach, in three to five steps. The deliverables, with exact quantities. The timeline, including what you need from the client. The price and payment terms. And one clear next step."
+    },
+    {
+      "scene": 4,
+      "start": 49.3,
+      "end": 74.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Structure yes, facts no",
+        "body": "Left, green: AI is good at structure, order, clear wording. Right, red: AI fills gaps with invented deliverables · faster timelines · round-number prices. Footer: Each one becomes a promise."
+      },
+      "voiceover": "AI is very good at turning messy notes into this structure. But it does not know your real prices, your free time, or what the client actually agreed. So it often fills gaps with invented details. An extra deliverable. A faster timeline. A round number for the price. And each one becomes a promise once the client reads it."
+    },
+    {
+      "scene": 5,
+      "start": 74.6,
+      "end": 93.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "The method",
+        "body": "Three boxes in a row: You provide the facts → AI provides the structure → You check every promise. Below: 'Can I deliver this, at this price, by this date?'"
+      },
+      "voiceover": "So here is the method. You provide the facts. AI provides the structure. And you check every promise. Before you send, read the proposal once only for deliverables, dates and prices. Ask, can I really deliver this, at this price, by this date?"
+    },
+    {
+      "scene": 6,
+      "start": 93.0,
+      "end": 111.9,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "builder reviewing house plans on table",
+      "on_screen_text": "Check the plan before signing",
+      "voiceover": "Think of a builder's plan drawn by an assistant from your sketch. It may look professional. But if the assistant added an extra room you never discussed, you will have to build it at the agreed price. Check the plan before the client signs."
+    },
+    {
+      "scene": 7,
+      "start": 111.9,
+      "end": 123.9,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Remove names before you paste",
+      "voiceover": "And protect your client. Before you paste notes into AI, write the client instead of their name, and leave out financial or personal details you do not need."
+    },
+    {
+      "scene": 8,
+      "start": 123.9,
+      "end": 138.9,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "woman web designer working laptop office",
+      "on_screen_text": "Aisha · web designer · Dubai",
+      "voiceover": "Let's see an example. Aisha is a freelance web designer in Dubai. She has just had a call with a small yoga studio. The old site is slow and does not work well on phones."
+    },
+    {
+      "scene": 9,
+      "start": 138.9,
+      "end": 166.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Notes in, draft out",
+        "body": "Left: messy call notes (slow site, not mobile-friendly · timetable + booking link · 5 pages · Arabic and English · 6 weeks · photos?). Right: the prompt: 6 sections, [PRICE] and [DATE] placeholders, 'Do not add any deliverables that are not in my notes.'"
+      },
+      "voiceover": "Her notes say the studio wants a class timetable and a link to the booking app it already uses. Five pages, in Arabic and English. Launch in six weeks. And some extra photos, maybe. She removes the studio name, and asks Claude for a two-page proposal with the six sections, placeholders for price and date, and nothing added that is not in her notes."
+    },
+    {
+      "scene": 10,
+      "start": 166.8,
+      "end": 186.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Three problems found",
+        "body": "Red highlight: 'custom booking system' · Red highlight: 'professional photography' · Red highlight: 'unlimited revisions'"
+      },
+      "voiceover": "The draft is well organised. But when she checks it, she finds three problems. It promises a custom booking system, but the client already has one. She only adds a link. It includes professional photography, which she does not offer. And it offers unlimited revisions."
+    },
+    {
+      "scene": 11,
+      "start": 186.1,
+      "end": 209.7,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Before and after",
+        "body": "custom booking system → link to existing booking app · professional photography → advice on extra photos · unlimited revisions → 2 rounds of changes per page. Footer: her own price, 6-week timeline, her usual deposit term."
+      },
+      "voiceover": "She fixes each one. A link to the existing booking app. Advice on which extra photos to take. And two rounds of changes per page. Then she adds her own price, a six-week timeline with the client's content deadlines, and the deposit term she normally uses. Every promise is now one she can keep."
+    },
+    {
+      "scene": 12,
+      "start": 209.7,
+      "end": 223.4,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Trace every promise",
+        "body": "Left: call notes lines. Right: final proposal deliverables. Thin teal lines connect each deliverable to a note line. One unconnected line crossed out."
+      },
+      "voiceover": "Notice one more thing. Every deliverable in her final proposal comes from a line in her notes. If she cannot point to where a promise came from, it does not go in."
+    },
+    {
+      "scene": 13,
+      "start": 223.4,
+      "end": 248.3,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Professional-looking is not correct",
+      "voiceover": "The common mistake is to trust a draft because it looks professional. Watch for invented deliverables, unrealistic timelines and vague phrases like ongoing support with no limit. The fix is simple. Tell the AI not to add anything outside your notes, use placeholders for prices and dates, and always do a final check that looks only at promises."
+    },
+    {
+      "scene": 14,
+      "start": 248.3,
+      "end": 271.9,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Six parts: problem, approach, deliverables, timeline, price, next step. 2. You give facts; AI gives structure; nothing outside your notes. 3. Check every deliverable, date and price."
+      },
+      "voiceover": "Let's recap. First, a clear proposal has six parts. Problem, approach, deliverables, timeline, price and next step. Second, you provide the facts, and AI provides the structure. Tell it not to add anything outside your notes. Third, check every deliverable, date and price before you send, because each one becomes a promise you must keep."
+    },
+    {
+      "scene": 15,
+      "start": 271.9,
+      "end": 298.5,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Onboarding Clients Smoothly",
+      "voiceover": "Now it is your turn. In the exercise, write notes from a real or example call, without names, and ask AI for a draft. Then read it twice. Once for structure, and once only for promises. Save the final version as your proposal template, because you will reuse it in the capstone. Next week begins with onboarding clients smoothly. See you there."
+    }
+  ]
+}

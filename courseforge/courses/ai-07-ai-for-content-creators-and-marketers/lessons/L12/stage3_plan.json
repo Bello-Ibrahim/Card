@@ -1,0 +1,69 @@
+{
+  "title": "Planning a 30-Day Campaign Calendar",
+  "thumbnail": {
+    "headline": "Your 30-Day Timetable",
+    "image": "Navy background, a clean 30-day calendar grid with coloured dots by channel and two dates circled in teal, a small train icon on a line across the top, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Your 30-Day Timetable", "body": "A 30-day calendar grid with coloured dots for three channels; day 15 and day 22 circled in teal; a thin train line across the top. Small tag: AI for Content Creators · Lesson 12 · Capstone step 1."}
+  },
+  "production_notes": [
+    "[VERSION] Free-tier access to Claude and ChatGPT for long tables must be checked before recording; the voiceover makes no claim about table size limits.",
+    "Amara and the eco-friendly cleaning brand in Accra are fictional. Stock footage must show no real brand name, label text or logo.",
+    "The full 11-column calendar template is shown on the scene 5 slide and on the lesson page; the voiceover names only the main columns."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Posting when you have time produces random content, and random results. A campaign is different. One goal, one audience, and a clear plan for thirty days. And this lesson starts your capstone.",
+       "on_screen_text": "Capstone step one starts now"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Last time, we turned one idea into content for many channels. Now we plan when all of it goes out. A campaign plan answers six questions, in order. You decide the first four. AI can help with the rest.",
+       "slide": {"layout": "title", "title": "Planning a 30-Day Campaign Calendar", "body": "AI for Content Creators and Marketers · Lesson 12 of 15 · Capstone step 1"}},
+      {"visual_type": "slide",
+       "voiceover": "First, the goal. That is one main result, stated so you can measure it, such as one hundred and fifty sign-ups for a free workshop by the end of June. Second, the audience, the persona you confirmed in lesson three. Third, the channels, two to four places where that audience really spends time. For this capstone, choose at least three.",
+       "slide": {"layout": "bullets", "title": "You decide: questions 1 to 3", "body": "1 Goal: measurable, e.g. '150 sign-ups for our free workshop by 30 June' · 2 Audience: your confirmed persona (Lesson 3) · 3 Channels: 2–4 where they really are (capstone: at least 3)"}},
+      {"visual_type": "slide",
+       "voiceover": "Remember, fewer channels done well are better than many done badly. Fourth, key dates, such as launches, events and deadlines. Then, with AI's help, the fifth and sixth: three content pillars that support the goal, and a posting rhythm based on what you can really produce.",
+       "slide": {"layout": "bullets", "title": "Questions 4 to 6", "body": "4 Key dates: launches, events, holidays, deadlines (you decide) · 5 Content pillars: 3 themes (AI can help) · 6 Posting rhythm: what you can really produce (AI can help)"}},
+      {"visual_type": "slide",
+       "voiceover": "Give these decisions to an AI assistant and ask for a thirty-day calendar as a table. Useful columns include the day and date, a theme for each week, the channel, the format, the pillar, the topic, the call to action, the asset status, and who owns it. Add a notes column too, for example to say where a piece was repurposed from, or whether it needs a label.",
+       "slide": {"layout": "comparison", "title": "Calendar template", "body": "Table header, 11 columns: Day · Date · Week theme · Channel · Format · Pillar · Topic / hook · Call to action · Asset status · Owner · Notes. Side note: week themes, e.g. awareness → education → proof and stories → final push."}},
+      {"visual_type": "slide",
+       "voiceover": "Then review the draft. Are the key dates in the right places? Is the rhythm realistic? Does every week move the audience toward the goal? And are the pillars balanced? Fix anything that is wrong before you continue.",
+       "slide": {"layout": "bullets", "title": "Review the AI draft", "body": "Key dates in the right places? · Realistic rhythm? · Every week moves toward the goal? · Pillars balanced?"}},
+      {"visual_type": "stock",
+       "voiceover": "A campaign calendar is like a train timetable. The destination is fixed, and that is your goal. The stations are your key dates, and each train leaves at a known time. Without a timetable, trains might still run, but nobody could plan a journey.",
+       "stock_query": "train departure board at station",
+       "on_screen_text": "A calendar is a timetable"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's plan one. Amara runs a campaign for a sample eco-friendly cleaning products brand in Accra, Ghana. Her goal is that two hundred people sign up for a refill station launch list in thirty days.",
+       "stock_query": "refillable cleaning product bottles shelf",
+       "on_screen_text": "Sample eco brand · Accra"},
+      {"visual_type": "slide",
+       "voiceover": "Her audience is young families in the city who want to reduce plastic waste, but worry about cost. Her channels are an image-led social feed, a short-video platform and email. The refill station opens on day twenty-two, and there is a community clean-up event on day fifteen.",
+       "slide": {"layout": "bullets", "title": "Amara's decisions", "body": "Goal: 200 launch-list sign-ups in 30 days · Audience: young city families, reduce plastic, worried about cost · Channels: image feed · short video · email · Key dates: clean-up day 15 · refill station opens day 22"}},
+      {"visual_type": "slide",
+       "voiceover": "Her pillars are how to refill, real savings, and our community. Her rhythm is four feed posts, two short videos and one email each week. She gives all this to the AI, and asks that week four builds toward the opening, and follows up after it.",
+       "slide": {"layout": "code", "title": "Amara's calendar prompt", "body": "Create a 30-day content calendar as a table with these columns: … Use these decisions: … Pillars: how to refill · real savings · our community. Rhythm: 4 feed posts, 2 short videos, 1 email per week. Week 4 must build toward the opening on day 22 and follow up after it."}},
+      {"visual_type": "slide",
+       "voiceover": "The AI returns a full table, and Amara reviews it. She finds two problems. The clean-up event is on day sixteen, not fifteen. And week two has no real savings content, which is the persona's main worry. She fixes both. She also cuts week three's videos to one, because she knows she has less time that week.",
+       "slide": {"layout": "comparison", "title": "Amara's review", "body": "Red: clean-up on day 16 → fixed to day 15 · Red: week 2 has no 'real savings' posts → added · Amber: week 3 videos 2 → 1 (less time that week)"}},
+      {"visual_type": "text",
+       "voiceover": "The common mistake is to let the AI choose the goal, channels and dates. The calendar looks complete, but it is not connected to your real business. And a realistic calendar that you finish is much better than an ambitious one you abandon in week two.",
+       "on_screen_text": "Realistic beats ambitious"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, you decide the goal, audience, channels and key dates, and AI helps fill in the structure. Second, a clear calendar template includes the day, date, week theme, channel, format, pillar, topic, call to action, status, owner and notes. Third, review the AI draft for correct dates, balanced pillars and a rhythm you can really produce.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. You decide goal, audience, channels, dates; AI fills the structure. 2. Use a clear 11-column template. 3. Review dates, pillar balance and workload."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. This exercise is step one of your capstone. Write your campaign goal and audience, then build a thirty-day calendar with AI help, for a real or sample brand, across at least three channels. It takes about forty minutes. Keep your calendar safe. In the next lesson, Producing Campaign Assets at Speed, you start making it real. See you there.",
+       "on_screen_text": "Next: Producing Campaign Assets at Speed"}
+    ]
+  }
+}

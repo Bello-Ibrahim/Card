@@ -1,0 +1,207 @@
+{
+  "course_id": "AI-12",
+  "lesson_id": "L02",
+  "duration_s": 293.5,
+  "thumbnail": {
+    "headline": "Two Calls: fit, predict",
+    "slide": {
+      "layout": "title",
+      "title": "Two Calls: fit, predict",
+      "body": "Two large rounded buttons side by side: 'fit' and 'predict'. Small wine glass icon. Tag: Machine Learning with scikit-learn · Lesson 2."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.9,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Two steps: fit and predict",
+      "voiceover": "scikit-learn contains dozens of models, from simple lines to large forests of trees. The good news is that you use almost all of them in the same way. Learn two steps today, fit and predict, and you can use most of the library."
+    },
+    {
+      "scene": 2,
+      "start": 18.9,
+      "end": 31.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Every estimator: three stages",
+        "body": "Three boxes left to right: Create (choose settings) → Fit (learn from X and y) → Predict (answer for new rows)."
+      },
+      "voiceover": "In lesson one, you framed a problem. Now let's train a model. In scikit-learn, a model is called an estimator, and every estimator follows the same three stages."
+    },
+    {
+      "scene": 3,
+      "start": 31.3,
+      "end": 54.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Create, then fit",
+        "body": "model = DecisionTreeClassifier(max_depth=3)   # create: nothing learned yet\nmodel.fit(X, y)   # learning happens here\nX: one row per example, one column per feature · y: one value per row"
+      },
+      "voiceover": "First, you create it and choose its settings, for example a decision tree with a maximum depth of three. Nothing is learned yet. Second, you fit it on a table of features, called X, with one row per example, and a target, called y, with one value per row. Fitting is where learning happens."
+    },
+    {
+      "scene": 4,
+      "start": 54.4,
+      "end": 74.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Estimators and transformers",
+        "body": "Model: fit → predict (gives answers). Transformer: fit → transform (changes data, e.g. a scaler; see L04)."
+      },
+      "voiceover": "Third, you predict on new rows, and the model gives a target value for each one. Some objects do not predict. They change data instead, like a scaler that puts numbers on the same scale. These are called transformers, and you will use them in lesson four."
+    },
+    {
+      "scene": 5,
+      "start": 74.5,
+      "end": 89.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Two naming rules",
+        "body": "Before training: hyperparameters, passed when you create the model, e.g. max_depth=3. After fit: learned values end with an underscore, e.g. classes_, feature_importances_."
+      },
+      "voiceover": "Two naming rules help you read the documentation. Settings you choose before training are called hyperparameters. Values the model learns during fitting end with an underscore, such as the list of classes it found."
+    },
+    {
+      "scene": 6,
+      "start": 89.1,
+      "end": 106.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Two good habits",
+        "body": "model.score(X, y) returns a default metric (accuracy for classifiers) · print(sklearn.__version__) and open the matching documentation"
+      },
+      "voiceover": "Many estimators also have a score method that returns a default metric, such as accuracy for classifiers. And the exact settings and defaults depend on the version you have installed. So check the version in Colab, and open the matching documentation."
+    },
+    {
+      "scene": 7,
+      "start": 106.7,
+      "end": 126.4,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "kitchen counter blender toaster kettle",
+      "on_screen_text": "fit and predict are the buttons",
+      "voiceover": "Think of kitchen appliances from one brand. A blender, a toaster and a kettle do very different jobs, but they all have the same on and start buttons. Once you know the buttons, you can use a new appliance quickly. Fit and predict are the buttons."
+    },
+    {
+      "scene": 8,
+      "start": 126.4,
+      "end": 138.4,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "developer laptop desk city apartment evening",
+      "on_screen_text": "Kenji · developer · Osaka",
+      "voiceover": "Kenji Watanabe is a developer in Osaka. He wants a first model before he works with company data. He uses the wine dataset that comes with scikit-learn."
+    },
+    {
+      "scene": 9,
+      "start": 138.4,
+      "end": 152.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open Google Colab in the browser and create a new notebook.",
+        "Type this exact code cell from content.md and run it with Shift+Enter:\nfrom sklearn.datasets import load_wine\nfrom sklearn.tree import DecisionTreeClassifier\n\nX, y = load_wine(return_X_y=True, as_frame=True)\nprint(X.shape, y.value_counts().sort_index().tolist())\n\nmodel = DecisionTreeClassifier(random_state=0)\nmodel.fit(X, y)\nprint(model.predict(X.iloc[[0, 60, 130, 20, 100]]))",
+        "Pause on the finished cell before scrolling to the output."
+      ],
+      "on_screen_text": "Colab: create, fit, predict",
+      "voiceover": "Let's open Google Colab and create a new notebook. In the first cell, we load the wine data, create a decision tree, fit it, and predict five wines. Then we run the cell."
+    },
+    {
+      "scene": 10,
+      "start": 152.5,
+      "end": 167.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Highlight the first output line: (178, 13) [59, 71, 48].",
+        "Point to 178 rows, then 13 columns, then the three class counts."
+      ],
+      "on_screen_text": "178 wines · 13 measurements · 3 classes",
+      "voiceover": "The first line of output describes the data. There are one hundred and seventy-eight wines, with thirteen chemical measurements each. The three classes of wine have fifty-nine, seventy-one and forty-eight examples."
+    },
+    {
+      "scene": 11,
+      "start": 167.5,
+      "end": 184.2,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Highlight as_frame=True in the load_wine line.",
+        "Add a callout next to it: returns a pandas DataFrame, so column names stay visible."
+      ],
+      "on_screen_text": "A table with named columns",
+      "voiceover": "We asked for the data as a pandas table, so the column names stay visible. That makes it much easier to check which chemical measurement is which, and it will matter more when you work with your own data."
+    },
+    {
+      "scene": 12,
+      "start": 184.2,
+      "end": 200.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Highlight the line that creates DecisionTreeClassifier(random_state=0) and label it 'Create'.",
+        "Highlight model.fit(X, y) and label it 'Fit'.",
+        "Highlight model.predict(...) and label it 'Predict'."
+      ],
+      "on_screen_text": "Create · Fit · Predict",
+      "voiceover": "Now look at the three stages in the code. First, we create the tree with a fixed random state, so everyone who runs this gets the same tree. Then it learns from all the wines. Then it predicts."
+    },
+    {
+      "scene": 13,
+      "start": 200.5,
+      "end": 221.1,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Highlight the second output line: [0 1 2 0 1].",
+        "Point back to X.iloc[[0, 60, 130, 20, 100]] and note these rows were used in fit."
+      ],
+      "on_screen_text": "Predicted, or remembered?",
+      "voiceover": "The model predicted classes zero, one, two, zero and one for the five chosen rows. Kenji is pleased. But wait. These five wines were also in the training data. Did the model predict them, or did it simply remember them? That question leads directly to our next lesson."
+    },
+    {
+      "scene": 14,
+      "start": 221.1,
+      "end": 241.2,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "X is a table. Create, fit, predict.",
+      "voiceover": "A common mistake is passing data in the wrong shape. X must always be a table with two dimensions, even for one feature or one row. Another mistake is predicting before fitting, which gives an error. The fix is always the same order. Create, fit, then predict."
+    },
+    {
+      "scene": 15,
+      "start": 241.2,
+      "end": 267.8,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Create → fit(X, y) → predict(X_new). 2. X is a 2D table; y has one value per row; learned values end with _. 3. Set random_state; check sklearn.__version__."
+      },
+      "voiceover": "Let's recap. First, every scikit-learn estimator is created with settings, learns with fit, and is used with predict. Second, X is a two-dimensional table of features, y is one target value per row, and learned values end with an underscore. Third, set a random state so your results are repeatable, and check your library version before you trust parameter names."
+    },
+    {
+      "scene": 16,
+      "start": 267.8,
+      "end": 293.5,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Train/Test Split",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will load the wine data, train a decision tree, and predict five samples next to their true classes. You will also record your library version. It takes about twenty minutes. In the next lesson, Train/Test Split and Why It Matters, we answer Kenji's question. See you there."
+    }
+  ]
+}

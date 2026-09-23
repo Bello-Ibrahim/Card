@@ -1,0 +1,175 @@
+{
+  "title": "Your First Automation with Zapier or n8n",
+  "thumbnail": {
+    "headline": "Trigger, Then Action",
+    "image": "Navy background, a row of dominoes falling from left to right, the first tipped by a fingertip, three small app icons (form, sheet, envelope) above them, headline in teal Inter Bold.",
+    "slide": {
+      "layout": "title",
+      "title": "Trigger, Then Action",
+      "body": "A row of simple dominoes falling left to right; above them three generic icons in order: form → spreadsheet → envelope. Small tag: AI for Freelancers · Lesson 10."
+    }
+  },
+  "production_notes": [
+    "[VERSION] Zapier and n8n interfaces, menu names ('Zap', 'workflow', 'node', 'test', 'execute'), trigger and action names, and app connections must be checked against the live tools before the screen demo is recorded. Adjust screen_steps wording to match the live interface; keep the voiceover general.",
+    "[VERSION] Free-tier task limits, steps per automation and available apps for Zapier and n8n change often. The voiceover makes no claim about limits or prices and tells learners to check current plans.",
+    "[VERIFY] Whether a two-action (multi-step) automation is available on Zapier's free tier must be confirmed before recording. If it is not, record the demo in n8n with the same three nodes, or reduce the Zapier demo to one action and re-record scenes 12 and 13.",
+    "[VERIFY] Whether n8n can be used free only by self-hosting, and whether its online version offers a free tier or a trial, must be confirmed. The voiceover deliberately does not state this; the lesson page carries the flagged text.",
+    "Screen recording data: use only 'Test Client One', 'Test Client Two' and 'Test Client Three' with an email inbox owned by the production team. Blur account emails and any connected-account names. Use generic form, spreadsheet and email apps as available in the tool.",
+    "Sipho is fictional."
+  ],
+  "sections": {
+    "Hook": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Every new enquiry means copying a name into a spreadsheet, and sending the same thank-you email. Imagine it happening by itself, correctly, while you sleep. Today, you will build that.",
+        "on_screen_text": "It happens while you sleep"
+      }
+    ],
+    "Explain": [
+      {
+        "visual_type": "slide",
+        "voiceover": "In the last lesson, you chose two automation candidates. Now you will build one, and this is capstone step two.",
+        "slide": {
+          "layout": "title",
+          "title": "Your First Automation with Zapier or n8n",
+          "body": "AI for Freelancers and Solopreneurs · Lesson 10 of 12 · Capstone step 2"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Every automation has two parts. A trigger, which is the event that starts it, such as a new form entry. And one or more actions, which happen next, such as adding a row to a spreadsheet, sending an email, or creating a task.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Trigger and actions",
+          "body": "Left box: Trigger — 'New form entry'. Arrows to three boxes: Action — 'Add a row' · Action — 'Send an email' · Action — 'Create a task'"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Tools such as Zapier and n8n connect your apps, so that a trigger in one app causes actions in others. Zapier runs in your browser. n8n can run online or on your own computer. Their free options, limits and app connections change often, so check the current plans before you choose.",
+        "slide": {
+          "layout": "comparison",
+          "title": "Zapier or n8n",
+          "body": "Left: Zapier — runs in your browser. Right: n8n — online, or installed on your own computer or server. Footer: Check current plans, limits and app connections before you choose."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Follow three safety rules. Test with example data, never real client details. Start small, with one trigger and two actions. And check the result every time in the first weeks, because automations can fail silently. Also, connect only accounts you trust, and collect only the data you need.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Three safety rules",
+          "body": "1. Test with example data only ('Test Client One', your own email) · 2. Start small: one trigger, two actions · 3. Check every result in the first weeks. Plus: trusted accounts only; collect only what you need."
+        }
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "Think of a row of dominoes. The trigger is your finger pushing the first one. Each action is the next domino falling. If one domino is in the wrong place, the chain stops. So you test the whole row before a client ever touches it.",
+        "stock_query": "row of dominoes falling close up",
+        "on_screen_text": "Test the whole row first"
+      }
+    ],
+    "Demonstrate": [
+      {
+        "visual_type": "stock",
+        "voiceover": "Let's build one. Sipho is a freelance video editor in Durban, South Africa. His map shows he copies every enquiry into a spreadsheet and sends a thank-you email by hand.",
+        "stock_query": "man editing video on computer studio",
+        "on_screen_text": "Sipho · video editor · Durban"
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "He has a form, a spreadsheet with matching columns, and a short welcome email with a space for the client's name. His plan is simple. New form entry, then add a spreadsheet row, then send a welcome email.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Sipho's automation",
+          "body": "Three prepared pieces: form (name, email, project type) · spreadsheet with matching columns · welcome email with [NAME]. Below: New form entry → Add spreadsheet row → Send welcome email"
+        }
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "He signs in to Zapier and creates a new automation. For the trigger, he chooses his form app and the event for a new form response, then connects his account.",
+        "screen_steps": [
+          "Sign in to Zapier and click to create a new automation (a 'Zap').",
+          "In the trigger step, search for and select the form app.",
+          "Choose the event 'new form response' and connect the form account (blur the account email)."
+        ],
+        "on_screen_text": "Trigger: new form response"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "He submits a test entry in his form, called Test Client One, with his own email address. Then he tests the trigger, and checks that the test entry appears.",
+        "screen_steps": [
+          "In a second tab, open the form and submit: name 'Test Client One', own email address, project type 'Wedding video'.",
+          "Back in Zapier, click to test the trigger.",
+          "Show the test entry's fields appearing in the trigger result."
+        ]
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Now the first action. He chooses his spreadsheet app and the event to create a row. He picks his spreadsheet and matches each column to a form field. He tests it, and opens the spreadsheet to see the new row.",
+        "screen_steps": [
+          "Add an action step, select the spreadsheet app and the event 'create row'.",
+          "Choose the spreadsheet and worksheet.",
+          "Map the Name, Email and Project type columns to the matching form fields.",
+          "Test the action, then open the spreadsheet and highlight the new 'Test Client One' row."
+        ],
+        "on_screen_text": "Action one: add a row"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Then the second action. He chooses his email app, puts the form's email field in the To box, and inserts the name field into his welcome text. He tests it, and checks his own inbox.",
+        "screen_steps": [
+          "Add a second action step, select the email app and the event 'send email'.",
+          "Put the form's Email field in 'To'.",
+          "Paste the welcome text and insert the Name field after 'Dear'.",
+          "Test the action and open the test inbox to show the welcome email."
+        ],
+        "on_screen_text": "Action two: send the welcome"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "He turns the automation on, and submits two more test entries. On the third test, the email says Dear, with no name, because he left the name field empty. So he makes the name field required in his form.",
+        "screen_steps": [
+          "Turn the automation on.",
+          "Submit 'Test Client Two' with a long name and an accented character; check the spreadsheet and inbox.",
+          "Submit a third entry with the name left blank; show the email reading 'Dear ,'.",
+          "Open the form settings and mark the Name field as required."
+        ],
+        "on_screen_text": "Test three: found a gap"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "If you choose n8n, the idea is the same. You create a new workflow with a trigger for your form, then a spreadsheet step and an email step in a line. You run it with example data, and inspect each step's output.",
+        "screen_steps": [
+          "In n8n, create a new workflow.",
+          "Add a trigger node for the form, or a webhook.",
+          "Add a spreadsheet node and an email node, connected in a line.",
+          "Run the workflow with example data and click each node to inspect its output."
+        ]
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "A common mistake is to test once, turn it on, and never check again. Then a renamed column or a disconnected account stops it, and enquiries are lost without warning. So test three times with different example data, including an incomplete entry, and check the results regularly in the first weeks.",
+        "on_screen_text": "Automations can fail silently"
+      }
+    ],
+    "Recap": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, an automation is a trigger followed by one or more actions. Second, build small, test with example data only, and check the results in every connected app. Third, free limits, app connections and interfaces change often, so check the current plans before you choose.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. Trigger → one or more actions. 2. Build small; example data only; check every app. 3. Plans and interfaces change: check before you choose."
+        }
+      }
+    ],
+    "CTA": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Now it is your turn, with capstone step two. Choose one candidate from your map, and build the trigger and two actions. Test three times with example data only. One complete entry, one with an unusual name, and one with a missing field. Take screenshots as evidence. In the next lesson, we decide what to automate and what to keep human.",
+        "on_screen_text": "Next: What to Automate, What to Keep Human"
+      }
+    ]
+  }
+}

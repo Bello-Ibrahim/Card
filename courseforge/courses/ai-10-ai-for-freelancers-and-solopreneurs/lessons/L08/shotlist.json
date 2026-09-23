@@ -1,0 +1,175 @@
+{
+  "course_id": "AI-10",
+  "lesson_id": "L08",
+  "duration_s": 296.0,
+  "thumbnail": {
+    "headline": "Drafts, Not Legal Advice",
+    "slide": {
+      "layout": "title",
+      "title": "Drafts, Not Legal Advice",
+      "body": "Left: simple invoice icon and envelope icon. Right: an official-looking building icon with a teal tick (official source). Small tag: AI for Freelancers · Lesson 8."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 19.7,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Not your lawyer. Not your accountant.",
+      "voiceover": "Writing to a client who has not paid is uncomfortable. Knowing what must appear on an invoice is confusing. AI can help with the blank page. But there is one line it cannot cross. It is not your lawyer, and it is not your tax adviser."
+    },
+    {
+      "scene": 2,
+      "start": 19.7,
+      "end": 29.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Contracts, Invoices and Admin Help",
+        "body": "AI for Freelancers and Solopreneurs · Lesson 8 of 12"
+      },
+      "voiceover": "Last time, you wrote your AI-use policy. Now we finish week two with the admin that every freelancer has to do."
+    },
+    {
+      "scene": 3,
+      "start": 29.1,
+      "end": 51.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Where AI helps with admin",
+        "body": "Contract checklist: scope, deliverables, changes, deadlines, payment, late payment, ownership, confidentiality, ending the project · Invoice text · Payment reminders: friendly → firm → final · Short client updates"
+      },
+      "voiceover": "Admin is repeated and text-heavy, so AI can help a lot. It can draft a contract checklist, which lists the topics your agreement should cover. It can write clear invoice text. It can draft polite payment reminders, from friendly to firm. And it can turn your bullet points into short client updates."
+    },
+    {
+      "scene": 4,
+      "start": 51.8,
+      "end": 74.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "AI can't answer these reliably",
+        "body": "Left, AI helps: structure · wording · checklists. Right, check locally: required invoice details · sales or value-added tax · late-payment fees · contract law"
+      },
+      "voiceover": "What AI cannot do is tell you reliably what the law or tax rules require in your situation. These rules differ by country, and sometimes by region or type of business. What must appear on an invoice, whether you charge sales tax, and what late fees you may add all depend on local rules."
+    },
+    {
+      "scene": 5,
+      "start": 74.9,
+      "end": 87.3,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "AI drafts are not legal or tax advice",
+      "voiceover": "AI answers can sound confident but be out of date, from another country, or simply invented. So here is the rule. AI drafts are not legal or tax advice."
+    },
+    {
+      "scene": 6,
+      "start": 87.3,
+      "end": 111.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Draft, then confirm",
+        "body": "AI: structure and wording → You: highlight legal and tax parts → Confirm with official source or qualified professional. Side box, red: never paste signed contracts, bank details, tax numbers."
+      },
+      "voiceover": "Use AI for structure and wording. Then check the legal and tax parts with an official source, such as your national tax authority's website, or with a qualified professional, such as an accountant or a lawyer. And never paste a signed contract, bank details or a tax number into AI. Use a blank or anonymised template."
+    },
+    {
+      "scene": 7,
+      "start": 111.3,
+      "end": 133.6,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "two friends reviewing papers at kitchen table",
+      "on_screen_text": "A helpful friend, not an authority",
+      "voiceover": "Think of AI as a helpful friend who has read many contracts from many countries. The friend can remind you what to include and make your wording clearer. But you would not let that friend decide what your country's tax law says. For that, you ask the official office or a professional."
+    },
+    {
+      "scene": 8,
+      "start": 133.6,
+      "end": 148.2,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "woman illustrator drawing at desk studio",
+      "on_screen_text": "Ingrid · illustrator · Bergen",
+      "voiceover": "Let's see an example. Ingrid is a freelance illustrator in Bergen, Norway. A publishing client is fourteen days late with a payment. She wants to stay polite, keep the relationship, and still get paid."
+    },
+    {
+      "scene": 9,
+      "start": 148.2,
+      "end": 172.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "Ingrid's prompt",
+        "body": "Write three payment reminder emails for a freelance illustrator: a friendly first reminder, a firmer second reminder after 7 more days, and a final notice after 14 more days. Under 100 words each. Use placeholders. Do not mention any legal penalties or interest."
+      },
+      "voiceover": "She asks ChatGPT for three reminder emails. A friendly first reminder, a firmer second one, and a final notice, each under one hundred words, with blanks for the invoice number, amount and due date. She adds one more instruction. Do not mention any legal penalties or interest, because she does not yet know what she may charge."
+    },
+    {
+      "scene": 10,
+      "start": 172.6,
+      "end": 201.7,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Invoice template check",
+        "body": "Simple invoice mock-up with placeholder data. Two lines highlighted in amber with a question mark: 'Tax registration no.' and 'Tax rate'."
+      },
+      "voiceover": "She edits the first reminder so it sounds like her. Then she asks for an invoice template. The AI adds a line for a tax registration number and a tax rate. Ingrid does not know whether these apply to her, so she does not guess. Notice that she never asks AI what the rules are. She asks it for a draft, and she keeps the rules as questions."
+    },
+    {
+      "scene": 11,
+      "start": 201.7,
+      "end": 227.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Three points to check",
+        "body": "1. Required invoice details · 2. Value-added tax on this service? · 3. Interest or fees on late payment? Each with a small icon: official website or accountant"
+      },
+      "voiceover": "Instead, she writes three points to check. Which details must appear on a freelancer's invoice in her country. Whether she must charge value-added tax on this service. And whether she may add interest or a fee to late payments. She checks them on the official tax authority website, and plans to ask an accountant about the tax question."
+    },
+    {
+      "scene": 12,
+      "start": 227.0,
+      "end": 247.6,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "AI prepares. Official sources confirm.",
+      "voiceover": "A common mistake is to ask AI what an invoice must include, or whether a clause is legal, and trust the answer. It may describe another country's rules, or rules that have changed. Use AI to prepare good questions and a clear draft. Then confirm the rules locally."
+    },
+    {
+      "scene": 13,
+      "start": 247.6,
+      "end": 270.7,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. AI drafts checklists, invoices, reminders, updates. 2. Not legal or tax advice: confirm with official sources or professionals. 3. No signed contracts, bank details or tax numbers in AI."
+      },
+      "voiceover": "Let's recap. First, AI can quickly draft contract checklists, invoice text, payment reminders and client updates. Second, AI drafts are not legal or tax advice. The rules differ by country, so check them with an official source or a qualified professional. Third, never paste signed contracts, bank details or tax numbers into AI tools."
+    },
+    {
+      "scene": 14,
+      "start": 270.7,
+      "end": 296.0,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Mapping Your Client Workflow",
+      "voiceover": "Now it is your turn. In the exercise, adapt Ingrid's prompt to draft a payment reminder and an invoice template, with placeholders only. Then list three points you must check in your country, and find the official website for each. Save both for the capstone, which starts next week. In the next lesson, we begin mapping your client workflow."
+    }
+  ]
+}

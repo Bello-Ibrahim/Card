@@ -1,0 +1,199 @@
+{
+  "course_id": "AI-12",
+  "lesson_id": "L04",
+  "duration_s": 291.4,
+  "thumbnail": {
+    "headline": "Fit on Training Only",
+    "slide": {
+      "layout": "title",
+      "title": "Fit on Training Only",
+      "body": "Left: income and age bars of very different heights becoming equal. Right: a 'city' column splitting into city_Bogota, city_Lima, city_Quito with 0s and 1s. Tag: Machine Learning with scikit-learn · Lesson 4."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.9,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Numbers, text, and the right order",
+      "voiceover": "Your data has income in the thousands, age in the tens, and a city column with text. Most models cannot read text at all, and some are confused by very different number sizes. Preprocessing fixes both, if you do it in the right order."
+    },
+    {
+      "scene": 2,
+      "start": 18.9,
+      "end": 35.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Two preparation steps",
+        "body": "Clean table → Scale numbers → Encode categories → ready for a model."
+      },
+      "voiceover": "In the last lesson, you split data into training and test sets. You already know how to clean data with pandas. Today we add two steps that prepare clean data for a model: scaling numbers, and encoding categories."
+    },
+    {
+      "scene": 3,
+      "start": 35.2,
+      "end": 57.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Scaling numbers",
+        "body": "Before: income bars (thousands) dwarf age bars (tens). After StandardScaler: both columns centred on 0 with a spread of 1."
+      },
+      "voiceover": "Some models compare distances or add up weighted features, for example k-nearest neighbours and logistic regression. If income is in thousands and age in tens, income dominates just because its numbers are bigger. A standard scaler rescales each column so it has an average of zero and a standard deviation of one."
+    },
+    {
+      "scene": 4,
+      "start": 57.9,
+      "end": 79.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "One-hot encoding",
+        "body": "Column 'city' (Lima, Quito, Lima) → three columns city_Lima, city_Quito, city_Bogota filled with 1s and 0s. Note: trees do not need scaling."
+      },
+      "voiceover": "Tree-based models, such as decision trees and random forests, do not need scaling, because they split on one column at a time. For text categories, a one-hot encoder turns a city column into one column per city, with one where the row has that city and zero elsewhere."
+    },
+    {
+      "scene": 5,
+      "start": 79.3,
+      "end": 92.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "New city? No error",
+        "body": "OneHotEncoder(handle_unknown=\"ignore\")\nNew row: city = Cusco → city_Bogota 0 · city_Lima 0 · city_Quito 0"
+      },
+      "voiceover": "We tell the encoder to ignore unknown categories. Then a city that appears only in new data does not cause an error. That row simply gets zero in every city column."
+    },
+    {
+      "scene": 6,
+      "start": 92.6,
+      "end": 112.7,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Fit on training. Transform the test.",
+      "voiceover": "Now the golden rule. A scaler learns averages, and an encoder learns the list of categories. If they learn from all the data, information from the test set leaks into training. So always fit them on the training set only, and then just transform the test set."
+    },
+    {
+      "scene": 7,
+      "start": 112.7,
+      "end": 132.0,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "currency exchange rates board banknotes",
+      "on_screen_text": "Same currency before you compare",
+      "voiceover": "Scaling is like converting prices into one currency before you compare them. Five thousand in one currency is not bigger than fifty in another until you convert. And the exchange rate must come from the information you had at the time, not next month's rates."
+    },
+    {
+      "scene": 8,
+      "start": 132.0,
+      "end": 145.7,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "microfinance office South America analyst",
+      "on_screen_text": "Valentina · microfinance · Lima, Quito, Bogotá",
+      "voiceover": "Valentina Rojas is an analyst at a microfinance firm with offices in Lima, Quito and Bogotá. She has a small table of eight clients, and wants to prepare it for a model."
+    },
+    {
+      "scene": 9,
+      "start": 145.7,
+      "end": 161.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Type this exact code cell from content.md and run it with Shift+Enter:\nimport pandas as pd\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.preprocessing import StandardScaler, OneHotEncoder\n\ndf = pd.DataFrame({\n    \"income\": [1200, 3400, 2500, 5100, 1800, 4200, 2900, 3900],\n    \"age\": [23, 45, 31, 52, 27, 38, 60, 41],\n    \"city\": [\"Lima\", \"Quito\", \"Lima\", \"Bogota\", \"Quito\", \"Lima\", \"Bogota\", \"Quito\"],\n})\ntrain, test = train_test_split(df, test_size=0.25, random_state=0)\n\nscaler = StandardScaler().fit(train[[\"income\", \"age\"]])\nnum_test = scaler.transform(test[[\"income\", \"age\"]])\n\nencoder = OneHotEncoder(handle_unknown=\"ignore\", sparse_output=False)\nencoder.fit(train[[\"city\"]])\ncat_test = encoder.transform(test[[\"city\"]])\n\nprint(num_test.shape, cat_test.shape)\nprint(encoder.get_feature_names_out())\nprint(scaler.mean_.round(1))",
+        "Scroll so the whole cell and its three output lines are visible."
+      ],
+      "on_screen_text": "Split first, then fit",
+      "voiceover": "In Colab, this cell builds the table, splits it first, then fits a scaler on the training numbers and an encoder on the training cities. Only after that does it transform the test rows. Let's run it."
+    },
+    {
+      "scene": 10,
+      "start": 161.6,
+      "end": 171.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Highlight the output line (2, 2) (2, 3).",
+        "Label the first pair 'income, age scaled' and the second pair 'three city columns'."
+      ],
+      "on_screen_text": "2 rows · 2 number columns · 3 city columns",
+      "voiceover": "The first output line shows the shapes. The test set has two rows. They become two scaled number columns, and three city columns."
+    },
+    {
+      "scene": 11,
+      "start": 171.5,
+      "end": 185.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Highlight the output line ['city_Bogota' 'city_Lima' 'city_Quito'].",
+        "Point to the call to get_feature_names_out() in the code."
+      ],
+      "on_screen_text": "Readable names for new columns",
+      "voiceover": "The second line shows readable names for the new columns, one for each city in the training set. You will need these names again when we look inside a model in lesson six."
+    },
+    {
+      "scene": 12,
+      "start": 185.6,
+      "end": 204.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Highlight the output line [3266.7   37.7].",
+        "Point to StandardScaler().fit(train[[\"income\", \"age\"]]) and add the caption 'learned from training rows only'."
+      ],
+      "on_screen_text": "Averages from training rows only",
+      "voiceover": "The third line is the important one. The scaler learned an average income of three thousand, two hundred and sixty-six point seven, and an average age of thirty-seven point seven. These come from the six training rows only, not from all eight clients."
+    },
+    {
+      "scene": 13,
+      "start": 204.9,
+      "end": 217.3,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Scroll back up over the separate scaler and encoder lines to show how much manual work they take."
+      ],
+      "voiceover": "Valentina notices that doing this by hand, for every column, is slow and easy to get wrong. The next lesson shows how to do it all in one object."
+    },
+    {
+      "scene": 14,
+      "start": 217.3,
+      "end": 240.4,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Split first. Then fit.",
+      "voiceover": "The most common mistake is to scale or encode the whole dataset first, and then split it. The code runs, and the scores look normal, so the problem is hard to see. But the test rows have already shaped the average. With other steps, this habit leads to serious leakage. Split first, then fit."
+    },
+    {
+      "scene": 15,
+      "start": 240.4,
+      "end": 265.3,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. StandardScaler for distance-based and linear models; trees don't need it. 2. OneHotEncoder(handle_unknown=\"ignore\"); check sparse_output for your version. 3. Fit on training only; transform the test set."
+      },
+      "voiceover": "Let's recap. First, scale numbers for distance-based and linear models, but tree models do not need it. Second, turn categories into numbers with a one-hot encoder that ignores unknown values, and check the parameter names for your version. Third, fit preprocessing on the training set only, and transform the test set with the same fitted objects."
+    },
+    {
+      "scene": 16,
+      "start": 265.3,
+      "end": 291.4,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Pipelines and ColumnTransformer",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will scale and encode a mixed table, fitting on the training set only, and add a new city to check that nothing breaks. It takes about twenty-five minutes. In the next lesson, Pipelines and ColumnTransformer, you will put all of this into one safe object. See you there."
+    }
+  ]
+}

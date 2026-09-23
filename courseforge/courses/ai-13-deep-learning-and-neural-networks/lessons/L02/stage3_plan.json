@@ -1,0 +1,82 @@
+{
+  "title": "Tensors: The Language of PyTorch",
+  "thumbnail": {
+    "headline": "Most Bugs Are Shape Bugs",
+    "image": "Navy background, a stack of egg trays drawn as a 3D grid of teal dots with the shape (32, 3, 64, 64) beside it, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Most Bugs Are Shape Bugs", "body": "Stacked egg trays drawn as a 3D grid of dots, with a label (N, C, H, W). Small tag: Deep Learning and Neural Networks · Lesson 2."}
+  },
+  "production_notes": [
+    "Review flags: none. Run every snippet once before recording and confirm the printed shape torch.Size([32, 3, 64, 64]) and the flattened size 12288.",
+    "The device error message on screen must read: Expected all tensors to be on the same device. Trigger it on purpose by leaving labels on the CPU while x is on the GPU, then fix it with labels.to(device).",
+    "On a CPU runtime the device prints cpu; record on a GPU runtime so cuda:0 appears.",
+    "Tomás and the Valparaíso agritech start-up are hypothetical; stock footage must not show a real company name or logo."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Your first PyTorch error will probably not be about maths. It will say that two shapes cannot be multiplied. Most beginner bugs in deep learning are shape bugs. Today, you learn to read them and fix them fast.",
+       "on_screen_text": "Most bugs are shape bugs"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "In the last lesson, we got a GPU ready. Now we meet the data structure that lives on it. A tensor is PyTorch's main data structure. If you know NumPy arrays, you already know most of it.",
+       "slide": {"layout": "title", "title": "Tensors: The Language of PyTorch", "body": "Deep Learning and Neural Networks · Lesson 2 of 20"}},
+      {"visual_type": "slide",
+       "voiceover": "Every tensor has three properties you should check all the time. Its shape, which is the size of each dimension. Its dtype, the number type, such as float for inputs and weights, or a long integer for class labels. And its device, the CPU or the GPU.",
+       "slide": {"layout": "bullets", "title": "Check three things", "body": "shape: e.g. (32, 3, 64, 64) · dtype: torch.float32 for inputs and weights, torch.int64 (long) for labels · device: cpu or cuda:0"}},
+      {"visual_type": "slide",
+       "voiceover": "Two tensors in one operation must have compatible shapes, and they must be on the same device. Tensors also do two things NumPy arrays cannot. They run on a GPU, and they can record operations for automatic gradients, which we use in lesson four.",
+       "slide": {"layout": "comparison", "title": "Tensor vs NumPy array", "body": "Same: shapes, indexing, broadcasting. Extra for tensors: runs on a GPU · records operations for autograd (L04). Rule: same device in one operation."}},
+      {"visual_type": "slide",
+       "voiceover": "In PyTorch, the first dimension is almost always the batch. Images use batch, channels, height, width. Many image libraries put the channels last instead, so you often need to reorder.",
+       "slide": {"layout": "comparison", "title": "Batch first", "body": "PyTorch images: (N, C, H, W) = batch, channels, height, width. Many image libraries: (H, W, C). Reorder with permute."}},
+      {"visual_type": "stock",
+       "voiceover": "Here is a picture to keep in mind. A tensor's shape is like a stack of egg trays. One tray has rows and columns. A stack adds layers. A box of stacks adds one more dimension.",
+       "stock_query": "stacked egg trays in a box",
+       "on_screen_text": "Shape = rows, columns, layers, boxes"},
+      {"visual_type": "slide",
+       "voiceover": "Reshaping moves the eggs into trays of a different size, but the number of eggs never changes. If the sizes do not multiply to the same total, the reshape fails. Reshape and view change the shape. Permute reorders the dimensions. Unsqueeze adds a batch dimension of size one.",
+       "slide": {"layout": "bullets", "title": "Changing shape", "body": "view / reshape: new shape, same data; -1 = 'work it out' · permute: reorder dimensions · unsqueeze(0): add batch dim · squeeze: remove size-1 dims"}},
+      {"visual_type": "slide",
+       "voiceover": "Broadcasting follows the same rules as NumPy. Shapes are compared from the right, and a size of one can stretch to match. That is how you subtract one mean per colour channel from a whole batch of images.",
+       "slide": {"layout": "diagram", "title": "Broadcasting", "body": "Align from the right: (32, 3, 64, 64) minus (3, 1, 1). The 1s stretch to 64 × 64 and the batch of 32. Result: (32, 3, 64, 64)."}}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's go to Colab. Tomás is an engineer at an agritech start-up in Valparaíso, Chile. He loads grape photos with an image library and wants to feed them to a network.",
+       "stock_query": "vineyard grapes close up harvest",
+       "on_screen_text": "Tomás · agritech · Valparaíso"},
+      {"visual_type": "screen",
+       "voiceover": "He starts with a batch of thirty-two photos, sixty-four pixels square, with the channels last. One permute moves the channels to position one. Now the print shows thirty-two, three, sixty-four, sixty-four, as float numbers on the CPU.",
+       "screen_steps": ["Run: import torch; device = \"cuda\" if torch.cuda.is_available() else \"cpu\"", "Run: x = torch.rand(32, 64, 64, 3) and print(x.shape)", "Run: x = x.permute(0, 3, 1, 2); print(x.shape, x.dtype, x.device)", "Output: torch.Size([32, 3, 64, 64]) torch.float32 cpu"],
+       "on_screen_text": "Channels last, then channels first"},
+      {"visual_type": "screen",
+       "voiceover": "Next, he makes a mean with one value per channel, shaped three, one, one, and subtracts it. Broadcasting stretches it across the whole batch. Then he moves the batch to the GPU.",
+       "screen_steps": ["Run: mean = torch.tensor([0.5, 0.4, 0.3]).view(3, 1, 1)", "Run: x = (x - mean); print(x.shape)", "Run: x = x.to(device); print(x.device) → cuda:0"]},
+      {"visual_type": "screen",
+       "voiceover": "For a linear layer, he flattens each image into one long row. The minus one tells PyTorch to work out the size, which is twelve thousand two hundred and eighty-eight. He also creates class labels as whole numbers, and picks one image with a new batch dimension.",
+       "screen_steps": ["Run: flat = x.reshape(x.shape[0], -1); print(flat.shape) → torch.Size([32, 12288])", "Run: labels = torch.randint(0, 5, (32,)); print(labels.dtype) → torch.int64", "Run: single = x[0].unsqueeze(0); print(single.shape) → torch.Size([1, 3, 64, 64])"],
+       "on_screen_text": "Minus one means work it out"},
+      {"visual_type": "screen",
+       "voiceover": "Now Tomás gets an error. Expected all tensors to be on the same device. His images are on the GPU, but the labels are still on the CPU. The fix is always the same. Move both to one device.",
+       "screen_steps": ["Run a cell that combines x on the GPU with labels on the CPU; show the error: Expected all tensors to be on the same device", "Fix: labels = labels.to(device); re-run the cell with no error"],
+       "on_screen_text": "Same device, every time"},
+      {"visual_type": "text",
+       "voiceover": "The most common mistake is using reshape when you need permute. Both give the same shape, but reshape only reinterprets the numbers in memory order. The pixels get mixed, and no error appears. The model just learns badly.",
+       "on_screen_text": "Reorder with permute, not reshape"},
+      {"visual_type": "slide",
+       "voiceover": "Use permute to reorder dimensions, and reshape only to merge or split dimensions that are already in order. And when you predict on one example, always add the batch dimension first.",
+       "slide": {"layout": "comparison", "title": "Permute or reshape?", "body": "permute: (32, 64, 64, 3) → (32, 3, 64, 64), image intact. reshape: same shape, pixels scrambled, no error. One example: pass (1, C, H, W), not (C, H, W)."}}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, check shape, dtype and device for every tensor you create. Most bugs show up in one of the three. Second, PyTorch puts the batch first, and images use batch, channels, height, width. Use permute to reorder, and reshape only to merge or split. Third, broadcasting compares shapes from the right, and every tensor in one operation must be on the same device.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Check shape, dtype and device. 2. Batch first; images are (N, C, H, W); permute to reorder, reshape to merge or split. 3. Broadcasting compares from the right; one device per operation."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below this video, you will create a batch of thirty-two colour images, move it to the GPU, and fix three shape errors in a provided cell, with one line explaining each fix. It takes about twenty minutes. In the next lesson, we build neurons, layers and activations. See you there.",
+       "on_screen_text": "Next: Neurons, Layers and Activations"}
+    ]
+  }
+}

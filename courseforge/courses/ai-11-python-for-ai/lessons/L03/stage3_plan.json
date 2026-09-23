@@ -1,0 +1,78 @@
+{
+  "title": "Lists and Dictionaries",
+  "thumbnail": {
+    "headline": "Lists vs Dictionaries",
+    "image": "Navy background, a numbered shopping list on the left and a phone contact card on the right, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Lists vs Dictionaries", "body": "Left: numbered list with positions 0, 1, 2, 3. Right: contact card, name → number. Small tag: Python for AI · Lesson 3."}
+  },
+  "production_notes": [
+    "No facts to verify (content.md Review Flags: None). Tomás, the Montevideo market, and all names and phone numbers are made up.",
+    "Printed outputs on screen must match content.md exactly: 'fruit fish spices', \"['fruit', 'cakes', 'fish', 'spices', 'flowers'] 5\", '555-0199', \"{'Lucía': '555-0150', 'Arjun': '555-0199', 'Mei': '555-0107'}\", '3', 'not found'.",
+    "Scene with the stalls[2] question: pause on screen for about two seconds before running the cell, so learners can guess."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "One variable holds one value. But a real dataset has hundreds of prices, names or cities. So how do you keep many values together under one name? Python has two main answers: lists and dictionaries.",
+       "on_screen_text": "Many values, one name"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "In the last lesson, each variable held one value. Now let's hold many. A list is an ordered collection of values, written inside square brackets. Here is a list of four market stalls: fruit, bread, fish and spices.",
+       "slide": {"layout": "code", "title": "A list", "body": "stalls = [\"fruit\", \"bread\", \"fish\", \"spices\"]"}},
+      {"visual_type": "slide",
+       "voiceover": "Each item has a position, called an index. And here is the surprise. Python starts counting at zero. So position zero is fruit, and position two is fish. A negative index counts from the end, so minus one gives the last item.",
+       "slide": {"layout": "diagram", "title": "Positions start at 0", "body": "Four boxes in a row: fruit (0), bread (1), fish (2), spices (3). Below: -1 points to spices."}},
+      {"visual_type": "stock",
+       "voiceover": "A list is like a numbered shopping list. You read it from top to bottom, and you can say, give me item number three. You can add an item at the end with append, replace an item at a position, and count the items with len.",
+       "stock_query": "hand holding handwritten shopping list",
+       "on_screen_text": "append() · replace · len()"},
+      {"visual_type": "slide",
+       "voiceover": "A dictionary is different. It stores pairs of a key and a value, inside curly brackets. You find a value by its key, not by its position. Here, the keys are names, and the values are phone numbers.",
+       "slide": {"layout": "code", "title": "A dictionary", "body": "phone_book = {\"Lucía\": \"555-0142\", \"Arjun\": \"555-0199\"}\nphone_book[\"Arjun\"]  → \"555-0199\""}},
+      {"visual_type": "stock",
+       "voiceover": "Think of the contact book in your phone. You don't scroll to contact number fifty-seven. You type a name, and the phone finds the number. The name is the key, and the number is the value. Two contacts with exactly the same name would be confusing. That is why dictionary keys must be unique.",
+       "stock_query": "person searching contacts on smartphone",
+       "on_screen_text": "Key = name. Value = number."},
+      {"visual_type": "slide",
+       "voiceover": "So when should you use which? Use a list when order matters, or when you have many values of the same kind, like daily sales. Use a dictionary when each value has a label you will look up, like a country and its capital.",
+       "slide": {"layout": "comparison", "title": "Which one?", "body": "List: order matters, many values of one kind (daily sales, cities). Dictionary: look up by label (country → capital, product → price)."}}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's try both in Colab. Tomás organises a weekend market in Montevideo, in Uruguay. He keeps a list of stall types and a small contact book of stall holders. All names and numbers are made up.",
+       "stock_query": "outdoor weekend market stalls",
+       "on_screen_text": "Tomás's market · Montevideo"},
+      {"visual_type": "screen",
+       "voiceover": "We create the list of stalls, and print the items at position zero, position two and position minus one. Before I run it, a quick question. What will position two print? Many people say bread, because it is the second item.",
+       "screen_steps": ["Add a new code cell", "Type: stalls = [\"fruit\", \"bread\", \"fish\", \"spices\"]", "Type: print(stalls[0], stalls[2], stalls[-1])", "Pause and point at stalls[2] before running"],
+       "on_screen_text": "What will stalls[2] print?"},
+      {"visual_type": "screen",
+       "voiceover": "Let's run it. Fruit, fish, spices. Position two is fish, because counting starts at zero.",
+       "screen_steps": ["Press Shift + Enter", "Output: fruit fish spices"]},
+      {"visual_type": "screen",
+       "voiceover": "Now we add flowers at the end with append, and replace position one, bread, with cakes. Then we print the whole list and its length. The list now has five items, and cakes sits in position one.",
+       "screen_steps": ["Add lines: stalls.append(\"flowers\") and stalls[1] = \"cakes\"", "Add line: print(stalls, len(stalls))", "Press Shift + Enter", "Output: ['fruit', 'cakes', 'fish', 'spices', 'flowers'] 5"]},
+      {"visual_type": "screen",
+       "voiceover": "Next, the contact book. We look up Arjun by his name and get his number. Then we add a new contact, Mei, and change Lucía's number. When we print the dictionary, Lucía has her new number and Mei is at the end. The length is three, because len counts the pairs.",
+       "screen_steps": ["Add a new code cell", "Type: phone_book = {\"Lucía\": \"555-0142\", \"Arjun\": \"555-0199\"}", "Type: print(phone_book[\"Arjun\"])", "Type: phone_book[\"Mei\"] = \"555-0107\"  # add a new pair", "Type: phone_book[\"Lucía\"] = \"555-0150\"  # change an existing value", "Type: print(phone_book) and print(len(phone_book))", "Press Shift + Enter", "Output: 555-0199 / {'Lucía': '555-0150', 'Arjun': '555-0199', 'Mei': '555-0107'} / 3"]},
+      {"visual_type": "screen",
+       "voiceover": "Finally, what if a key is missing? We ask for Omar with the get method, and give it a second value to use if he is not there. Python prints not found, instead of stopping with an error.",
+       "screen_steps": ["Add line: print(phone_book.get(\"Omar\", \"not found\"))", "Press Shift + Enter", "Output: not found"],
+       "on_screen_text": "get() is a safe lookup"},
+      {"visual_type": "text",
+       "voiceover": "Watch out for two common mistakes. The first is expecting position one to be the first item. It is position zero. The second is looking up a key that does not exist, which stops your program with an error. Use get when a key might be missing, and remember that keys are case-sensitive.",
+       "on_screen_text": "First item is at index 0"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, a list is an ordered collection in square brackets, and positions start at zero. Second, a dictionary stores key and value pairs in curly brackets, and you look up values by key. Third, you add or change items by assigning to an index or a key, and len counts them.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. List: ordered, [square brackets], positions start at 0. 2. Dictionary: key: value pairs, {curly brackets}, look up by key. 3. Assign to an index or key to add or change; len() counts."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below this video, you will build a dictionary of five countries and their capital cities, look up two of them, add a sixth, and print how many entries it holds. Write down your prediction first. It takes about fifteen minutes. In the next lesson, we learn to make decisions with if, elif and else. See you there.",
+       "on_screen_text": "Next: Making Decisions with if"}
+    ]
+  }
+}

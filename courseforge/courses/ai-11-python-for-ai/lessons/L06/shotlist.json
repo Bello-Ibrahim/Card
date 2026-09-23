@@ -1,0 +1,210 @@
+{
+  "course_id": "AI-11",
+  "lesson_id": "L06",
+  "duration_s": 291.3,
+  "thumbnail": {
+    "headline": "Write Your Own Function",
+    "slide": {
+      "layout": "title",
+      "title": "Write Your Own Function",
+      "body": "Recipe card icon labelled to_fahrenheit; 35 goes in on the left, 95.0 comes out on the right. Small tag: Python for AI · Lesson 6."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 13.3,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Today: your own function",
+      "voiceover": "You have already used functions many times. Print, len, sum and type are all functions. Someone else wrote them once, and you use them every day. Today, you write your own."
+    },
+    {
+      "scene": 2,
+      "start": 13.3,
+      "end": 31.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Define once, call many times",
+        "body": "One box labelled 'define' → three arrows to 'call', 'call', 'call'."
+      },
+      "voiceover": "Last time, loops helped us repeat work. Functions help us reuse it. A function is a named block of code that does one job. You define it once, and then you call it, which means run it, as many times as you need."
+    },
+    {
+      "scene": 3,
+      "start": 31.7,
+      "end": 48.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Defining a function",
+        "body": "def to_fahrenheit(celsius):\n    \"\"\"Convert a temperature from Celsius to Fahrenheit.\"\"\"\n    return celsius * 9 / 5 + 32\n(highlight def, the name, and the parameter)"
+      },
+      "voiceover": "Here is a function that converts Celsius to Fahrenheit. The word def starts the definition, followed by the name. Inside the brackets is a parameter, called celsius. It is a name for the input the function will receive."
+    },
+    {
+      "scene": 4,
+      "start": 48.0,
+      "end": 63.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Body, docstring, return",
+        "body": "Same code; highlight the docstring line, then the return line with the label 'sends the result back'."
+      },
+      "voiceover": "The indented lines are the body. The text in triple quotation marks is a docstring, a short description of what the function does. And return sends the result back to the code that called the function."
+    },
+    {
+      "scene": 5,
+      "start": 63.4,
+      "end": 86.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "return vs print",
+        "body": "to_fahrenheit(35) → 95.0. return: gives the value back to store or reuse. print: only shows it on the screen."
+      },
+      "voiceover": "When you call it with thirty-five, the value thirty-five is called an argument. Inside the function, celsius becomes thirty-five, and the function returns ninety-five. Return and print are different. Print only shows a value. Return gives it back, so your code can store it, compare it, or use it again."
+    },
+    {
+      "scene": 6,
+      "start": 86.5,
+      "end": 109.2,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "cook reading recipe card in kitchen",
+      "on_screen_text": "Arguments in, result out",
+      "voiceover": "Think of a function as a recipe card. You write the recipe once, and then cook it many times with different ingredients. The ingredients are the arguments, and the finished dish is the return value. If you improve the recipe, every future meal improves too, because there is only one card to change."
+    },
+    {
+      "scene": 7,
+      "start": 109.2,
+      "end": 122.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Why use functions?",
+        "body": "No copied code · A clear name for the logic · Test each piece on its own"
+      },
+      "voiceover": "Functions help in three ways. You avoid copying the same code. You give a clear name to a piece of logic. And you can test each piece on its own."
+    },
+    {
+      "scene": 8,
+      "start": 122.1,
+      "end": 132.8,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "city skylines on different continents",
+      "on_screen_text": "Kwame's weather summary",
+      "voiceover": "Let's write one in Colab. Kwame prepares a weather summary for a travel website that covers cities on three continents. The temperatures are made up."
+    },
+    {
+      "scene": 9,
+      "start": 132.8,
+      "end": 145.7,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Add a new code cell",
+        "Type: def to_fahrenheit(celsius):",
+        "Type (indented): \"\"\"Convert a temperature from Celsius to Fahrenheit.\"\"\"",
+        "Type (indented): return celsius * 9 / 5 + 32",
+        "Press Shift + Enter; no output appears"
+      ],
+      "on_screen_text": "Defining does not run it",
+      "voiceover": "We type the function with its docstring and run the cell. Notice that nothing is printed. Defining a function only teaches Python the recipe. It does not cook anything yet."
+    },
+    {
+      "scene": 10,
+      "start": 145.7,
+      "end": 165.4,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Below the function, type: for city, temp in {\"Cairo\": 35, \"Oslo\": -4, \"Manila\": 31}.items():",
+        "Type (indented): print(city, to_fahrenheit(temp))"
+      ],
+      "voiceover": "Now we call it in a loop. We have a small dictionary of three cities, Cairo, Oslo and Manila, with their temperatures. The items method gives us each city and its temperature on every pass. For each one, we print the city and the converted value."
+    },
+    {
+      "scene": 11,
+      "start": 165.4,
+      "end": 176.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Press Shift + Enter",
+        "Output: Cairo 95.0 / Oslo 24.8 / Manila 87.8"
+      ],
+      "voiceover": "Run it. Cairo is ninety-five degrees Fahrenheit, Oslo is twenty-four point eight, and Manila is eighty-seven point eight. One function, called three times."
+    },
+    {
+      "scene": 12,
+      "start": 176.5,
+      "end": 197.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Add a new code cell",
+        "Type: def describe(city, celsius, unit=\"F\"):",
+        "Type (indented): if unit == \"F\": / return f\"{city}: {to_fahrenheit(celsius):.1f} °F\"",
+        "Type (indented): return f\"{city}: {celsius} °C\"",
+        "Highlight unit=\"F\" as the default value"
+      ],
+      "on_screen_text": "A default value: unit=\"F\"",
+      "voiceover": "Next, Kwame writes a second function called describe. It takes a city, a temperature, and a unit. The unit has a default value, F. If the unit is F, describe calls our first function. Otherwise, it keeps the temperature in Celsius. Parameters with default values always come after those without."
+    },
+    {
+      "scene": 13,
+      "start": 197.9,
+      "end": 216.3,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Type: print(describe(\"Oslo\", -4))",
+        "Type: print(describe(\"Oslo\", -4, unit=\"C\"))",
+        "Press Shift + Enter",
+        "Output: Oslo: 24.8 °F / Oslo: -4 °C"
+      ],
+      "voiceover": "We call it twice for Oslo. The first call gives no unit, so it uses the default, and we get Fahrenheit. The second call names the unit as C, which makes the call easy to read. And we get minus four degrees Celsius."
+    },
+    {
+      "scene": 14,
+      "start": 216.3,
+      "end": 245.9,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Need the result? Use return",
+      "voiceover": "A common mistake is using print inside a function when you mean return. The function shows a value, but gives back nothing, which Python calls None. If you then try to add one to it, you get an error. Use return when the caller needs the result. A second mistake is defining a function and forgetting to call it. Defining teaches Python the recipe. Calling it cooks the meal."
+    },
+    {
+      "scene": 15,
+      "start": 245.9,
+      "end": 269.0,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. def + name + parameters + indented body; call with arguments. 2. return gives back; print only shows. 3. Defaults make parameters optional; add a docstring."
+      },
+      "voiceover": "Let's recap. First, you define a function with def, a name, parameters and an indented body, and you call it with its name and arguments. Second, return sends a result back to the caller, while print only shows it. Third, default values make parameters optional, and a short docstring explains what the function does."
+    },
+    {
+      "scene": 16,
+      "start": 269.0,
+      "end": 291.3,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Clean Code Habits",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will write a currency conversion function that takes an amount and a rate, and call it for three currencies. Use made-up rates. It takes about twenty minutes. In the next lesson, we learn clean code habits. See you there."
+    }
+  ]
+}

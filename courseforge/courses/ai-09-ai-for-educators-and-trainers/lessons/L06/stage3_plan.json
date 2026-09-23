@@ -1,0 +1,73 @@
+{
+  "title": "Differentiating Materials for Different Learners",
+  "thumbnail": {
+    "headline": "Same Goal, Different Paths",
+    "image": "Navy background, three paths of different steepness leading up a hill to one viewpoint flag, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Same Goal, Different Paths", "body": "Three paths (blue, green, orange) climbing to one teal flag on a hilltop. Small tag: AI for Educators and Trainers · Lesson 6."}
+  },
+  "production_notes": [
+    "No facts to verify: content.md Review Flags say None. The flood causes are general, well-established geography.",
+    "Nadia and her school in Dhaka are fictional; stock footage must show no real school name, crest or logo.",
+    "Nadia's prompt appears on a code slide; the presenter describes it and does not read it out.",
+    "The Blue, Green and Orange version names are also shown in words, so the slides work for viewers with colour vision differences."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "In one room, you may have a learner who reads fluently, one who is still learning the language of instruction, and one who finishes early and waits. One worksheet cannot serve all three. Making three versions by hand takes hours. With AI, first drafts take minutes.",
+       "on_screen_text": "One worksheet, three learners"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Last time, we planned lessons from a clear outcome. Now we adapt the materials. Differentiation means giving learners different routes to the same learning outcome. The content and the outcome stay the same. What changes is the level of support or challenge.",
+       "slide": {"layout": "title", "title": "Differentiating Materials for Different Learners", "body": "AI for Educators and Trainers · Lesson 6 of 12. Subtitle: Same outcome, different routes."}},
+      {"visual_type": "slide",
+       "voiceover": "A common approach uses three versions. The support version has shorter sentences, simpler words, key terms explained, and sentence starters or a glossary. The core version is the standard one for most of the group. The challenge version has fewer hints and an extra question that asks learners to apply, compare or evaluate.",
+       "slide": {"layout": "comparison", "title": "Three versions", "body": "Support: short sentences, simple words, key terms explained, sentence starters, glossary · Core: standard version · Challenge: fewer hints, extra apply / compare / evaluate question"}},
+      {"visual_type": "slide",
+       "voiceover": "AI can also help learners studying in a second language. It can simplify the reading level while keeping subject terms, or add a key-word list in their first language. Check any translation with a fluent speaker if you can, because AI translations can contain errors.",
+       "slide": {"layout": "bullets", "title": "Second-language learners", "body": "Simpler reading level, subject terms kept · Short glossary · Key words in first language · Check translations with a fluent speaker"}},
+      {"visual_type": "slide",
+       "voiceover": "Plain language, short paragraphs and clear headings help many learners, including those with reading difficulties such as dyslexia. You can ask the AI directly for a simpler reading level, with sentences under fifteen words, and name the terms it must keep.",
+       "slide": {"layout": "code", "title": "Ask for a simpler reading level", "body": "Rewrite this at a simpler reading level, with sentences under 15 words. Keep these terms: ..."}},
+      {"visual_type": "text",
+       "voiceover": "Here is the key rule. Every version must keep the same key content and outcome. AI simplification can remove important ideas or introduce errors, so compare every version against a short list of key points.",
+       "on_screen_text": "Same key points in every version"},
+      {"visual_type": "stock",
+       "voiceover": "Picture different paths up to the same viewpoint on a hill. One is long and gentle, with rails to hold. One is the normal path. One is steep and direct. Everyone reaches the same view. A path to a different hill is a different lesson.",
+       "stock_query": "hiking paths leading up green hill",
+       "on_screen_text": "Different paths, same view"},
+      {"visual_type": "slide",
+       "voiceover": "Be careful with labels too. Easy and hard can make learners feel judged. Neutral names, like colours or version A, B and C, are kinder, and you can let learners move between versions.",
+       "slide": {"layout": "comparison", "title": "Name versions kindly", "body": "Avoid (cross): Easy · Hard. Use (tick): Blue · Green · Orange, or Version A · B · C. Learners may switch."}}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's see it in a classroom. Nadia teaches geography at a secondary school in Dhaka, in Bangladesh. Her thirteen-year-olds are studying why rivers flood. Some read well in English, and several are still building their reading skills.",
+       "stock_query": "secondary school geography class with river map",
+       "on_screen_text": "Nadia · geography teacher · Dhaka"},
+      {"visual_type": "slide",
+       "voiceover": "First, she writes her four key points. Heavy rain increases river water. Melting snow upstream adds water. Hard or paved ground makes water run off faster. And floods can damage homes and farms, but also bring fertile soil.",
+       "slide": {"layout": "bullets", "title": "Nadia's key points", "body": "1. Heavy rain increases river water · 2. Melting snow upstream adds water · 3. Hard or paved ground → faster run-off · 4. Floods damage homes and farms, but bring fertile soil"}},
+      {"visual_type": "slide",
+       "voiceover": "She pastes her own two-hundred-word text into the AI, and asks for three versions. The support version keeps the terms run-off and upstream, with a short explanation and a glossary. The challenge version adds a question comparing two causes. And all versions must keep her four points.",
+       "slide": {"layout": "code", "title": "Nadia's prompt", "body": "Create 3 versions of this text for 13-year-olds:\nSupport: short sentences, simple words, keep \"run-off\" and \"upstream\" with a one-line explanation, add a 5-word glossary.\nCore: the text as it is.\nChallenge: add one question comparing two causes.\nAll versions must keep these 4 key points: ..."}},
+      {"visual_type": "slide",
+       "voiceover": "Then she checks each version against her list. The support version has dropped the point about fertile soil, so she adds it back in one simple sentence. The challenge version says floods are always caused by rain. That is wrong, so she corrects it. She names the versions Blue, Green and Orange, and lets learners change version if theirs feels too easy or too hard.",
+       "slide": {"layout": "comparison", "title": "Checking every version", "body": "Table: key points 1–4 × Support / Core / Challenge. Support: point 4 missing → added back. Challenge: 'always caused by rain' → corrected (red mark then tick)."}},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is to simplify the content instead of the language. A support version without the difficult ideas teaches less, not differently. Keep the ideas, and change the route. A second mistake is to trust the challenge version without checking it. Adding complexity is also where AI adds errors.",
+       "on_screen_text": "Simplify the language, not the ideas"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, differentiation gives learners different routes to the same outcome, with support, core and challenge versions. Second, every version must keep the same key points, so check each one against your list and correct anything missing or wrong. Third, adjust reading level and language support, and use neutral names for your versions.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Support · Core · Challenge, one outcome. 2. Check every version against your key points. 3. Plain language, language support, neutral names."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below this video, take one short text you wrote, remove any learner names, and ask AI for support, core and challenge versions. Check all three against your key points, and correct any errors. It takes about thirty minutes. In the next lesson, we create visual and accessible materials with Canva. See you there.",
+       "on_screen_text": "Next: Accessible Materials with Canva"}
+    ]
+  }
+}

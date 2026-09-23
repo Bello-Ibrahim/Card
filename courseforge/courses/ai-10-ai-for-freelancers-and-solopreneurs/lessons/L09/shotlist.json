@@ -1,0 +1,197 @@
+{
+  "course_id": "AI-10",
+  "lesson_id": "L09",
+  "duration_s": 299.9,
+  "thumbnail": {
+    "headline": "Draw Your Workflow",
+    "slide": {
+      "layout": "title",
+      "title": "Draw Your Workflow",
+      "body": "A winding route line from 'Enquiry' to 'Paid invoice' with small dots; each dot has one of three coloured tags: AI draft (teal), Automation (blue), Human only (amber). Small tag: AI for Freelancers · Lesson 9."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.3,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Write down your process",
+      "voiceover": "Could you describe, step by step, what happens between a new enquiry and a paid invoice? For most freelancers, the steps live in their head. But you cannot improve, or automate, a process you have never written down."
+    },
+    {
+      "scene": 2,
+      "start": 16.3,
+      "end": 27.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Mapping Your Client Workflow",
+        "body": "AI for Freelancers and Solopreneurs · Lesson 9 of 12 · Capstone step 1"
+      },
+      "voiceover": "Welcome to week three. Last week, you built templates and rules. Now you connect them into one workflow, and this is where your capstone begins."
+    },
+    {
+      "scene": 3,
+      "start": 27.0,
+      "end": 45.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Your workflow map",
+        "body": "Table header only: # · Stage · Step · Tool now · Time · How often · Label · Why this label. Six empty rows labelled Find, Win, Onboard, Deliver, Invoice, Follow up."
+      },
+      "voiceover": "A workflow map is a simple list of every step in your client process, in order, from first contact to final invoice. For each step, you write who does it, what tool you use, how long it takes, and how often it happens."
+    },
+    {
+      "scene": 4,
+      "start": 45.4,
+      "end": 70.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Three labels",
+        "body": "Three columns: AI draft (teal) — proposals, welcome emails, reports · Automation (blue) — form answers to spreadsheet, standard confirmation, create a task · Human only (amber) — discovery calls, pricing, final checks, difficult conversations"
+      },
+      "voiceover": "Then you give each step one of three labels. AI draft, where AI writes a first version and you finish it, like a proposal. Automation, where a tool follows fixed rules without you, like copying form answers into a spreadsheet. And human only, for steps that need judgement, trust or expertise, like a discovery call or a pricing decision."
+    },
+    {
+      "scene": 5,
+      "start": 70.7,
+      "end": 95.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Good automation candidates are",
+        "body": "Repeated: every client · Rule-based: same input, same action · Low-risk: mistakes easy to spot and fix. Needs thinking or a personal touch? Not automation."
+      },
+      "voiceover": "Good automation candidates pass three tests. They are repeated, so they happen for every client. They are rule-based, so the same input always leads to the same action. And they are low risk, so a mistake is easy to notice and fix. If a step needs you to think or be personal, do not automate it."
+    },
+    {
+      "scene": 6,
+      "start": 95.1,
+      "end": 114.8,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "car driving city route morning traffic",
+      "on_screen_text": "Draw the route, find shortcuts",
+      "voiceover": "Think of the route you drive to work every day. You know the way without thinking, so you never notice the slow junction or the extra turn. When you draw it on paper, you suddenly see where you lose time, and where a shortcut is possible."
+    },
+    {
+      "scene": 7,
+      "start": 114.8,
+      "end": 132.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Under your map",
+        "body": "Automation candidate 1: Trigger (what starts it) → Action (what happens) · Automation candidate 2: Trigger → Action"
+      },
+      "voiceover": "Under your map, add two lines. Automation candidate one, and automation candidate two. For each, write the trigger, which is what starts it, and the action, which is what should happen next. You will build one of them in the next lesson."
+    },
+    {
+      "scene": 8,
+      "start": 132.8,
+      "end": 143.5,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "General steps, no client names",
+      "voiceover": "And describe steps in general terms. Do not put real client names or personal details into a map you will share or paste into AI."
+    },
+    {
+      "scene": 9,
+      "start": 143.5,
+      "end": 156.8,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "interior designer choosing fabric samples home",
+      "on_screen_text": "Meera · interior designer · Pune",
+      "voiceover": "Let's see a real map. Meera is a freelance interior designer in Pune, India. She works with home owners on single-room projects. She writes down every step of her process."
+    },
+    {
+      "scene": 10,
+      "start": 156.8,
+      "end": 175.2,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Meera's map: winning and onboarding",
+        "body": "Rows: 1 Enquiry via form · 5 min · Automation | 2 Copy to spreadsheet · 10 min · Automation | 3 Discovery call · 45 min · Human only | 4 Proposal from notes · 1 h · AI draft | 5 Welcome email and questionnaire · 20 min · AI draft"
+      },
+      "voiceover": "An enquiry arrives through her website form, and she copies the details into her client spreadsheet. Then comes the discovery call, which is human only. The proposal from her call notes is an AI draft. So is the welcome email with her questionnaire."
+    },
+    {
+      "scene": 11,
+      "start": 175.2,
+      "end": 190.2,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Meera's map: delivering and invoicing",
+        "body": "Rows: 6 Design concept and materials · 8 h · Human only | 7 Weekly update · 20 min · AI draft | 8 Send invoice · 15 min · Human check, template | 9 Payment reminder · 15 min · Automation (later)"
+      },
+      "voiceover": "The design concept and material choices take about eight hours, and they are human only. Weekly progress updates are AI drafts. She checks each invoice herself, using a template. Payment reminders could be automated later."
+    },
+    {
+      "scene": 12,
+      "start": 190.2,
+      "end": 213.3,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Two automation candidates",
+        "body": "Trigger: New form entry → Action 1: Add row to client spreadsheet → Action 2: Send standard thank-you email"
+      },
+      "voiceover": "Steps one and two happen for every enquiry, follow a fixed rule, and are easy to check. So they become her two automation candidates. When a new form entry arrives, add a row to the client spreadsheet. Then send a standard thank-you email. Each one has a clear trigger and a clear action."
+    },
+    {
+      "scene": 13,
+      "start": 213.3,
+      "end": 232.2,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Taste and advice stay human",
+      "voiceover": "The design work and the discovery call stay fully human, because clients hire Meera for her taste and advice. Notice that the longest step, the design work, is not the one she automates. She saves time around her expertise, not in place of it."
+    },
+    {
+      "scene": 14,
+      "start": 232.2,
+      "end": 250.2,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Repeated is not always rule-based",
+      "voiceover": "A common mistake is to label too many steps as automation, because it sounds efficient. A proposal may be repeated, but it needs your judgement. Automating it would send unchecked work to clients. Start with one or two simple, rule-based steps."
+    },
+    {
+      "scene": 15,
+      "start": 250.2,
+      "end": 274.6,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Map every step: tool, time, frequency. 2. Label: AI draft · Automation · Human only, with a reason. 3. Automate only repeated, rule-based, low-risk steps."
+      },
+      "voiceover": "Let's recap. First, a workflow map lists every step from first contact to final invoice, with the tool, time and frequency. Second, label each step AI draft, automation or human only, and give a reason. Third, good automation candidates are repeated, rule-based and low risk. Judgement steps stay human, or become AI drafts that you check."
+    },
+    {
+      "scene": 16,
+      "start": 274.6,
+      "end": 299.9,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Your First Automation with Zapier or n8n",
+      "voiceover": "Now it is your turn, and this is capstone step one. Copy the map template, list ten to fifteen steps for one typical project, and label each one with a reason. Then choose two automation candidates, and write the trigger and the action for each. In the next lesson, you will build your first automation with Zapier or n8n."
+    }
+  ]
+}

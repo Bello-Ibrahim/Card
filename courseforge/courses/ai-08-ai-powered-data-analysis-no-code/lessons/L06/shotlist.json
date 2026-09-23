@@ -1,0 +1,214 @@
+{
+  "course_id": "AI-08",
+  "lesson_id": "L06",
+  "duration_s": 306.4,
+  "thumbnail": {
+    "headline": "Same File, Better Prompt",
+    "slide": {
+      "layout": "title",
+      "title": "Same File, Better Prompt",
+      "body": "Left: chat bubble with a vague grey paragraph. Right: chat bubble with a small table and a 'Method: 10 rows, columns C and G' note. Small tag: AI-Powered Data Analysis · Lesson 6."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 20.1,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Same tool. Different prompt.",
+      "voiceover": "Two people upload the same file to one AI tool. One gets a vague paragraph that could fit any business. The other gets a clear table with exact numbers and a note on how they were calculated. The difference is not the tool. It is the prompt."
+    },
+    {
+      "scene": 2,
+      "start": 20.1,
+      "end": 27.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Asking Good Questions of Your Data",
+        "body": "AI-Powered Data Analysis (No Code) · Lesson 6 of 14 · Week 2"
+      },
+      "voiceover": "Last week, you prepared clean, safe data. This week, we analyse it, and that starts with the prompt."
+    },
+    {
+      "scene": 3,
+      "start": 27.8,
+      "end": 54.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Four parts of an analysis prompt",
+        "body": "Four stacked blocks, first two lit: 1. Describe the dataset: 'This file has 10 orders from January to March 2026, one row per order.' · 2. Name the columns: 'Revenue is in column G, in US dollars. Region is in column C.' · 3. State the question (dimmed) · 4. Ask for the method (dimmed)"
+      },
+      "voiceover": "In lesson three, you turned a business question into a measurable data question. Now you put that question into a prompt. A strong analysis prompt has four parts. First, describe the dataset. For example, this file has ten orders from January to March twenty twenty-six, one row per order. Second, name the columns. Revenue is in column G, in US dollars."
+    },
+    {
+      "scene": 4,
+      "start": 54.4,
+      "end": 74.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Four parts of an analysis prompt",
+        "body": "Blocks 3 and 4 now lit: 3. State the question: 'What was total Revenue per Region for January to March 2026?' · 4. Ask for the method: 'Show the table first. Then tell me how many rows you used, which columns, and how you calculated each number.'"
+      },
+      "voiceover": "Third, state the question, with the measure, group, period and comparison. What was total revenue per region for January to March? Fourth, ask for the method. Show the table first. Then tell me how many rows and which columns you used, and how you calculated each number."
+    },
+    {
+      "scene": 5,
+      "start": 74.5,
+      "end": 88.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Table first, conclusions second",
+        "body": "Table: easy to check (teal tick) | Paragraph: easy to believe, hard to check (amber warning)"
+      },
+      "voiceover": "Asking for a table first, and conclusions second, is important. A table is easy to check against your own data. A paragraph of conclusions is easy to believe, and hard to check."
+    },
+    {
+      "scene": 6,
+      "start": 88.2,
+      "end": 110.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Why ask for the method?",
+        "body": "AI: 'I used 9 rows' vs your sheet: 10 rows → something is wrong · One question per prompt when you start"
+      },
+      "voiceover": "Asking for the method helps you spot problems early. If the AI says it used nine rows, and your sheet has ten, you know something is wrong before you read any conclusion. And keep one question per prompt when you start. Long prompts with five questions often skip or mix up one part."
+    },
+    {
+      "scene": 7,
+      "start": 110.9,
+      "end": 120.8,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Anonymised, fictional or approved data only",
+      "voiceover": "And remember the safety rule from lesson two. Upload only anonymised or fictional data, or data your organisation has approved for the tool."
+    },
+    {
+      "scene": 8,
+      "start": 120.8,
+      "end": 140.1,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "customer ordering food at busy counter",
+      "on_screen_text": "Order exactly what you want",
+      "voiceover": "Asking AI about your data is like ordering at a busy counter. Something to eat, please, gets you whatever is easiest to serve. One vegetable soup, small, no bread, and the receipt, gets you exactly what you wanted, plus proof of what you paid for."
+    },
+    {
+      "scene": 9,
+      "start": 140.1,
+      "end": 153.8,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "courier on motorbike city delivery",
+      "on_screen_text": "Sofia · courier company · Mexico City",
+      "voiceover": "Sofia is an operations analyst for a courier company in Mexico City. She uploads a fictional, anonymised file of deliveries. The columns are delivery ID, date, zone, promised minutes and actual minutes."
+    },
+    {
+      "scene": 10,
+      "start": 153.8,
+      "end": 170.5,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Prompt 1: vague",
+        "body": "Prompt: 'Are our deliveries late?' → AI: 'Some deliveries appear to be delayed, especially at busy times … monitor performance.' Red label: no numbers"
+      },
+      "voiceover": "Her first prompt is short. Are our deliveries late? The AI answers with a general paragraph. Some deliveries appear to be delayed, especially at busy times. It suggests that she monitor performance. There are no numbers she can use."
+    },
+    {
+      "scene": 11,
+      "start": 170.5,
+      "end": 190.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "Prompt 2: specific",
+        "body": "'This file has one row per delivery for March 2026. A delivery is late when Actual minutes minus Promised minutes is more than 10. For each Zone, count the deliveries and the late deliveries, and give the percentage late.'"
+      },
+      "voiceover": "So she writes a second prompt. This file has one row per delivery for March twenty twenty-six. A delivery is late when actual minutes minus promised minutes is more than ten. For each zone, count the deliveries and the late deliveries, and give the percentage late."
+    },
+    {
+      "scene": 12,
+      "start": 190.6,
+      "end": 200.5,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "Prompt 2: specific (continued)",
+        "body": "'Show the table first. Then tell me how many rows you used and how you calculated each column. Conclusion in two sentences maximum.'"
+      },
+      "voiceover": "Show the table first. Then tell me how many rows you used, and how you calculated each column. Conclusion in two sentences maximum."
+    },
+    {
+      "scene": 13,
+      "start": 200.5,
+      "end": 221.5,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Answer 2: a table and a method",
+        "body": "Placeholder table: Zone | Deliveries | Late | % late (zone rows, values greyed, no real figures) · Note: 'Used all rows' · 'Late = Actual − Promised > 10' · Two-sentence conclusion"
+      },
+      "voiceover": "This time, the AI gives a table with one row per zone, and the three numbers she asked for. It notes that it used all the rows in the file, and it shows the formula it used for late. The conclusion names the zone with the highest percentage late."
+    },
+    {
+      "scene": 14,
+      "start": 221.5,
+      "end": 236.5,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Sofia's two checks",
+        "body": "=COUNTA(A2:A5000) → row count matches the AI ✓ · One zone's % late recalculated by formula ✓"
+      },
+      "voiceover": "Sofia still checks. She counts the rows in her own sheet with a COUNTA formula, and she recalculates the percentage for one zone. Both match, so she can use the table in her weekly report."
+    },
+    {
+      "scene": 15,
+      "start": 236.5,
+      "end": 257.5,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Ask your own question. Table first.",
+      "voiceover": "A common mistake is to ask for insights or interesting patterns, and accept whatever comes back. The AI then chooses the measure, the group and the period for you, often without saying so. Ask your own measurable question, and ask for the table and the method before the conclusion."
+    },
+    {
+      "scene": 16,
+      "start": 257.5,
+      "end": 282.4,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Dataset · columns · question · method. 2. Table first, conclusions second. 3. Check row count and columns before trusting the conclusion."
+      },
+      "voiceover": "Let's recap. First, a strong analysis prompt describes the dataset, names the columns, states a measurable question, and asks for the method. Second, ask for a table first and conclusions second, because tables are easier to check than sentences. Third, check the row count and columns the AI reports against your own sheet, before you trust the conclusion."
+    },
+    {
+      "scene": 17,
+      "start": 282.4,
+      "end": 306.4,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Summaries and Pivot Tables",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will upload the clean orders sheet and ask three questions, using the four-part prompt. For each answer, note whether the AI showed its method. It takes about twenty-five minutes. In the next lesson, we build summaries and pivot tables. See you there."
+    }
+  ]
+}

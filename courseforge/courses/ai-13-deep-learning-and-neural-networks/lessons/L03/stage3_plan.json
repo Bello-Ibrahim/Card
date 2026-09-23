@@ -1,0 +1,75 @@
+{
+  "title": "Neurons, Layers and Activations",
+  "thumbnail": {
+    "headline": "Why Layers Need ReLU",
+    "image": "Navy background, three stacked layers of nodes with a teal bent line between them, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Why Layers Need ReLU", "body": "Three columns of connected nodes; between them, small teal 'gate' icons shaped like the ReLU curve. Small tag: Deep Learning and Neural Networks · Lesson 3."}
+  },
+  "production_notes": [
+    "Review flags: none. Run the FaultNet cell once before recording and confirm the printed parameter count 235146 and the output shape torch.Size([16, 10]).",
+    "Hand-count slide must match content.md exactly: 784×256 + 256 = 200,960; 256×128 + 128 = 32,896; 128×10 + 10 = 1,290; total 235,146.",
+    "Aroha and the Wellington energy company are hypothetical; stock footage must not show a real company name or logo."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Stack ten linear layers and you might expect a powerful model. In fact, you get a model that can only draw straight lines, just like logistic regression. One small function between the layers changes everything.",
+       "on_screen_text": "Ten layers, still a straight line?"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Last time, we learned to shape tensors. Now we pass them through layers. A neuron computes a weighted sum of its inputs, plus a bias. A linear layer is many neurons side by side, working on a whole batch at once.",
+       "slide": {"layout": "diagram", "title": "A neuron and a layer", "body": "Inputs x1, x2, x3 → weights w1, w2, w3 → sum + bias b → z. Then many neurons side by side = nn.Linear(in_features, out_features)."}},
+      {"visual_type": "slide",
+       "voiceover": "A linear layer has one weight for every pair of input and output, plus one bias for each output. Keep that rule in mind, because we will count parameters in a moment.",
+       "slide": {"layout": "code", "title": "Counting parameters", "body": "nn.Linear(in, out) → in × out weights + out biases"}},
+      {"visual_type": "slide",
+       "voiceover": "Here is the surprise. If you stack two linear layers with nothing in between, the result is still one linear function. A straight line of a straight line is still a straight line. Depth adds nothing.",
+       "slide": {"layout": "diagram", "title": "Linear + linear = linear", "body": "Linear → Linear → Linear collapses into a single Linear box. Beside it, a decision boundary that is a straight line."}},
+      {"visual_type": "slide",
+       "voiceover": "An activation function fixes this. It adds a bend after each hidden layer. ReLU is the default. It keeps positive values and turns negative values into zero. Sigmoid and tanh squash values into a range, but they can slow learning in deep networks. GELU, a smooth version of ReLU, is common in transformers.",
+       "slide": {"layout": "bullets", "title": "Activation functions", "body": "ReLU: max(0, z), the default for hidden layers · Sigmoid, tanh: squash into a range; can slow deep networks (L15) · GELU: smooth ReLU, common in transformers (L12)"}},
+      {"visual_type": "stock",
+       "voiceover": "Think of each layer as a team in a factory, and the activation as a quality gate between teams. Without the gates, ten teams in a row can only do what one team could do. The gates decide what passes on, so later teams can build new things.",
+       "stock_query": "factory workers quality check production line",
+       "on_screen_text": "Activations are the quality gates"},
+      {"visual_type": "slide",
+       "voiceover": "For classification, the last layer has no activation. It outputs raw scores called logits, one per class. The cross-entropy loss applies softmax for you. For a simple chain of layers, use a sequential container. For branches or custom logic, write your own module class. You create the layers in one method and describe the data flow in another, called forward. PyTorch then tracks every parameter for you.",
+       "slide": {"layout": "bullets", "title": "Building models", "body": "Last layer: raw logits, no activation · nn.CrossEntropyLoss applies softmax inside · nn.Sequential for a simple chain · nn.Module subclass: layers in __init__, data flow in forward"}}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's build one. Aroha is an engineer at an energy company in Wellington, New Zealand. She wants to classify ten types of fault from seven hundred and eighty-four sensor readings per event.",
+       "stock_query": "engineer checking electrical substation equipment",
+       "on_screen_text": "Aroha · energy company · Wellington"},
+      {"visual_type": "screen",
+       "voiceover": "In Colab, she defines a model called FaultNet. Inside it, a sequential block goes from seven hundred and eighty-four inputs to two hundred and fifty-six, then to one hundred and twenty-eight, then to ten outputs. There is a ReLU after each hidden layer, and nothing after the last one.",
+       "screen_steps": ["Run the FaultNet cell from content.md: class FaultNet(nn.Module) with nn.Sequential(nn.Linear(n_in, 256), nn.ReLU(), nn.Linear(256, 128), nn.ReLU(), nn.Linear(128, n_classes))", "Highlight the comment '# logits, no activation' on the last layer", "Highlight forward(self, x): return self.net(x)"],
+       "on_screen_text": "784 → 256 → 128 → 10"},
+      {"visual_type": "screen",
+       "voiceover": "Next, she counts the parameters by adding up the size of every weight and bias tensor. The total is two hundred and thirty-five thousand, one hundred and forty-six.",
+       "screen_steps": ["Run: model = FaultNet(); n_params = sum(p.numel() for p in model.parameters()); print(n_params)", "Output: 235146"],
+       "on_screen_text": "235,146 parameters"},
+      {"visual_type": "slide",
+       "voiceover": "She checks it by hand, layer by layer. Almost two hundred and one thousand parameters sit in the first layer alone. That is typical when the inputs are wide, and in lesson seven you will see why it becomes a problem for images.",
+       "slide": {"layout": "code", "title": "Check by hand", "body": "784×256 + 256 = 200,960\n256×128 + 128 = 32,896\n128×10 + 10 = 1,290\nTotal = 235,146 (most in layer 1)"}},
+      {"visual_type": "screen",
+       "voiceover": "Finally, a forward pass. She sends a random batch of sixteen events through the model and gets sixteen rows of ten logits. One row per event, one score per fault type. Softmax turns them into probabilities, but only for reading, never for the loss.",
+       "screen_steps": ["Run: x = torch.randn(16, 784); logits = model(x); print(logits.shape)", "Output: torch.Size([16, 10])", "Run: probs = logits.softmax(dim=1); highlight the comment 'only for reading, not for the loss'"],
+       "on_screen_text": "Output shape: 16 by 10"},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is adding softmax as the last layer and then using cross-entropy loss. Softmax is then applied twice. Training still runs, but gradients become small and learning is slower. Output raw logits, and use softmax only to show probabilities. Also, call the model directly, not its forward method, so PyTorch runs its hooks.",
+       "on_screen_text": "Return logits. No softmax layer."}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, a linear layer is a weighted sum plus a bias for many neurons at once. Its parameter count is inputs times outputs, plus outputs. Second, activations like ReLU add the bend that makes depth useful. Without them, stacked layers collapse into one linear model. Third, build models with a sequential container or a module class, and return raw logits for classification.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Linear layer: in × out + out parameters. 2. Activations make depth useful; without them, layers collapse. 3. nn.Sequential or nn.Module; return raw logits."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below this video, you will build a three-layer network for a ten-class problem, check its parameter count by hand, and then remove the ReLUs and explain what changes. It takes about twenty minutes. In the next lesson, we see how networks learn, with loss and backpropagation. See you there.",
+       "on_screen_text": "Next: Loss and Backpropagation"}
+    ]
+  }
+}

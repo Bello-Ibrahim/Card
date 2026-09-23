@@ -16,7 +16,7 @@ The third question is, should you label it as made with AI? Check what your plat
 
 The fourth question is, is every fact and claim checked? AI can invent statistics, quotes, sources and product details. A false claim can mislead customers and damage their trust. So check every number, name, quote and claim against a source you trust.
 
-And some rules never change. Never imitate a named artist or an existing brand. Never use real people, logos or famous characters without permission. And never paste confidential or personal data into AI tools.
+And some rules never change. Never imitate a named artist or an existing brand. Never use real people, logos or copyrighted characters without permission. And never paste confidential or personal data into AI tools.
 
 Publishing is like driving across a border. The basic habits are the same everywhere, but the exact rules change by country and over time. A careful driver checks the local rules before each trip.
 
@@ -46,5 +46,5 @@ Image: Navy background, a road with four teal signposts, each with a question ma
 - [REGION] [VERIFY] Left out of the voiceover: that copyright generally protects human-made work, and that ownership of AI output is an open question in several countries. Keep these on the lesson page only, with their tags, until a reviewer confirms them for the target markets (en, fr, pt, ar).
 - [REGION] [VERIFY] [VERSION] Left out of the voiceover: that some platforms ask for labels on realistic AI media and that some countries have disclosure rules or proposals, including for advertising. The script only tells learners to check platform and local expectations.
 - [REGION] Whether false marketing claims break advertising rules differs by market; the voiceover only says a false claim can mislead customers and damage trust.
-- [VERSION] Commercial-use terms for Claude, ChatGPT, Canva, CapCut and free image generators, and free versus paid plan differences, change often. Do not show any real terms page on screen; the scene 9 slide uses a generic sample table.
+- [VERSION] Commercial-use terms for Claude, ChatGPT, Canva, CapCut and free image generators, and free versus paid plan differences, change often. Do not show any real terms page on screen; the scene 10 slide uses a generic sample table.
 - Tomás and the language school in Buenos Aires are fictional.
