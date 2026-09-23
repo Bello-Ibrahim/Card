@@ -1,0 +1,219 @@
+{
+  "course_id": "AI-29",
+  "slug": "ai-29-ai-ethics-bias-and-safety",
+  "course_title": "AI Ethics, Bias and Safety",
+  "level": "Beginner",
+  "status": "AWAITING_APPROVAL",
+  "screen_demo_lessons": [],
+  "overview": "A two-week introduction for anyone who builds, buys or uses AI. No technical background is needed. Learners find out how bias gets into AI systems, why chatbots can produce confident but false answers, what happens to the data they share, and how unsafe outputs can cause real harm. Each risk is taught through everyday analogies and hypothetical cases from many countries and industries. Learners then use simple, practical frameworks to test an AI tool, rate the risks they find and decide what to do about them. By the end, learners audit a real AI tool for bias and safety risks and write clear recommendations.",
+  "time_plan": {
+    "video_minutes": 50,
+    "weekly_hours": 2,
+    "per_week": "About 25 minutes of video, 55 minutes of exercises and quizzes, and 40 minutes of reading and reflection. In week 2 most of the exercise and reflection time goes to the capstone audit."
+  },
+  "objectives": [
+    {
+      "id": "O1",
+      "bloom": "Remember",
+      "text": "Define the key terms of responsible AI: bias, fairness, hallucination, misinformation, privacy, safety, transparency and accountability."
+    },
+    {
+      "id": "O2",
+      "bloom": "Understand",
+      "text": "Explain how bias can enter an AI system through its data, its design and the way it is used."
+    },
+    {
+      "id": "O3",
+      "bloom": "Understand",
+      "text": "Describe the main misinformation, privacy and safety risks of AI tools, and who can be harmed by them."
+    },
+    {
+      "id": "O4",
+      "bloom": "Apply",
+      "text": "Apply a responsible-use checklist when using AI tools at work: protecting personal data, checking outputs and keeping a human in control."
+    },
+    {
+      "id": "O5",
+      "bloom": "Analyse",
+      "text": "Analyse the outputs of an AI tool for bias by running structured tests, such as paired prompts that change only one detail."
+    },
+    {
+      "id": "O6",
+      "bloom": "Evaluate",
+      "text": "Evaluate AI risks by their likelihood and impact, and prioritise realistic ways to reduce them."
+    },
+    {
+      "id": "O7",
+      "bloom": "Create",
+      "text": "Write a short audit report on a real AI tool that describes its bias and safety risks and gives clear recommendations."
+    }
+  ],
+  "modules": [
+    {
+      "module_id": "M1",
+      "week": 1,
+      "title": "Where AI Goes Wrong",
+      "lessons": [
+        {
+          "lesson_id": "L01",
+          "title": "Why AI Ethics Matters to Everyone",
+          "objectives": [
+            "O1"
+          ],
+          "summary": "AI now helps decide who gets a job interview, a loan or a medical appointment, so its mistakes affect real people. The eight key terms of responsible AI, each with a one-line everyday example. Analogy: an AI system is like a new colleague who works very fast but was trained by someone else, so you need to know what they learned.",
+          "exercise": "Match the 8 key terms to 8 short scenarios (for example, a chatbot inventing a court case, or a photo app that works badly for darker skin tones), then check with the answer key."
+        },
+        {
+          "lesson_id": "L02",
+          "title": "How Bias Gets into AI",
+          "objectives": [
+            "O1",
+            "O2"
+          ],
+          "summary": "Bias can enter at three points: the data (who is missing or over-represented), the design (what the model is told to predict) and the use (who applies it, and where). Worked example: a hypothetical CV-screening tool in Canada trained on ten years of past hires learns to prefer the kind of people the company hired before. Analogy: a recipe copied from an old cookbook repeats its mistakes, however carefully you cook.",
+          "exercise": "For a hypothetical loan-approval model at a bank in Kenya, list one way bias could enter through the data, one through the design and one through the use."
+        },
+        {
+          "lesson_id": "L03",
+          "title": "Fairness: Who Gets Helped and Who Gets Hurt",
+          "objectives": [
+            "O2",
+            "O5"
+          ],
+          "summary": "Fairness can be checked by comparing results between groups, for example approval rates or error rates for women and men. Worked example: a hypothetical health-risk tool in Brazil is equally accurate overall but misses far more cases in rural patients. Different definitions of fairness can conflict, so people must choose which one matters most for each use.",
+          "exercise": "Use a small table of hypothetical results for two groups to calculate approval rates and error rates, then write 2 sentences on whether the tool looks fair and why."
+        },
+        {
+          "lesson_id": "L04",
+          "title": "Hallucinations, Misinformation and Deepfakes",
+          "objectives": [
+            "O1",
+            "O3"
+          ],
+          "summary": "Chatbots predict likely text, so they can produce confident answers that are false, including invented sources. Generated images, voices and videos (deepfakes) can make false stories look real. Simple habits help: check claims against a trusted source, ask for sources and open them, and be careful with content that makes you feel a strong emotion.",
+          "exercise": "Ask Claude or ChatGPT (free versions) 3 factual questions about your own country or industry, check every answer against a trusted source, and record each error you find."
+        },
+        {
+          "lesson_id": "L05",
+          "title": "Privacy: What Happens to the Data You Share",
+          "objectives": [
+            "O3",
+            "O4"
+          ],
+          "summary": "Anything you type into an AI tool may be stored, reviewed or used to improve the service, depending on the tool and your settings. Worked example: a hypothetical nurse in the Philippines pastes patient notes into a chatbot to summarise them, and a better way to do the same task without personal data. What personal and confidential data is, and why removing names alone is often not enough. [VERSION] Data and privacy settings differ between tools and plans and change often.",
+          "exercise": "Find the data-use and chat-history settings in Claude or ChatGPT, write down what each one does, and rewrite one work prompt so that it contains no personal or confidential data."
+        }
+      ]
+    },
+    {
+      "module_id": "M2",
+      "week": 2,
+      "title": "Using and Auditing AI Responsibly",
+      "lessons": [
+        {
+          "lesson_id": "L06",
+          "title": "Safety Risks and Human Oversight",
+          "objectives": [
+            "O3",
+            "O6"
+          ],
+          "summary": "Safety risks include harmful advice, unsafe instructions, over-trust in automated decisions and AI used in high-stakes areas without checks. Human oversight means that a person with enough time, knowledge and authority can question and change the AI's decision. Analogy: an aeroplane autopilot is useful, but the pilot is still trained, alert and able to take control.",
+          "exercise": "For 3 hypothetical uses of AI (a school essay grader in Egypt, a chatbot for bank customers in India, a crop-disease app for farmers in Ghana), decide where a human should review the output and explain why."
+        },
+        {
+          "lesson_id": "L07",
+          "title": "Responsible AI Frameworks in Practice",
+          "objectives": [
+            "O4"
+          ],
+          "summary": "Many international and company frameworks share the same core principles: fairness, transparency, privacy, safety, accountability and human oversight. [VERIFY] Named frameworks (for example, the OECD AI Principles and the UNESCO Recommendation on the Ethics of AI) and their exact wording must be checked before scripting. These principles become a practical responsible-use checklist for everyday work.",
+          "exercise": "Build a personal 6-question responsible-use checklist from the shared principles, then use it on one real task you did with an AI tool this month."
+        },
+        {
+          "lesson_id": "L08",
+          "title": "Testing an AI Tool for Bias",
+          "objectives": [
+            "O5"
+          ],
+          "summary": "Paired prompts: send the same request twice and change only one detail, such as a name, gender, age or country, then compare the answers. Worked example: asking a chatbot to write job references for 'Amina' and 'Lucas' with identical CVs, and comparing the words it chooses. How to record results fairly, repeat tests and avoid reading too much into a single answer. [VERSION] Chatbot behaviour changes between model versions.",
+          "exercise": "Capstone step 1: choose a real AI tool (Claude or ChatGPT is fine), run at least 5 pairs of prompts that change one detail each, and record the differences in a table. Use a free published bias audit case study as a model for your notes."
+        },
+        {
+          "lesson_id": "L09",
+          "title": "Rating and Prioritising Risks",
+          "objectives": [
+            "O6"
+          ],
+          "summary": "A simple risk matrix rates each risk by likelihood (how often it could happen) and impact (how badly it could hurt someone). Worked example: rating 4 risks for a hypothetical customer-service chatbot at a telecom company in Indonesia, then choosing which two to fix first. Common ways to reduce risk: better data, clear limits, human review, user warnings and monitoring.",
+          "exercise": "Capstone step 2: list at least 5 bias, misinformation, privacy or safety risks for the tool you tested, place each one on a likelihood-and-impact matrix, and pick your top 3."
+        },
+        {
+          "lesson_id": "L10",
+          "title": "Writing Your Audit and Recommendations",
+          "objectives": [
+            "O6",
+            "O7"
+          ],
+          "summary": "A good audit report is short and clear: what you tested, what you found, how serious it is, and what should change. Recommendations should be specific, realistic and assigned to someone, for example 'the HR team reviews every AI-drafted reference before sending'. The capstone brief and rubric.",
+          "exercise": "Capstone step 3: write a 1–2 page audit report on your chosen tool with your test results, your risk ratings and at least 3 recommendations."
+        }
+      ]
+    }
+  ],
+  "capstone": {
+    "title": "Audit an AI Tool for Bias and Safety Risks",
+    "brief": "Test a real AI tool for bias and safety risks with structured prompts, rate the risks you find, and write a short audit report with clear recommendations.",
+    "built_in": [
+      "L08",
+      "L09",
+      "L10"
+    ],
+    "assesses": [
+      "O5",
+      "O6",
+      "O7"
+    ]
+  },
+  "coverage_check": {
+    "O1": [
+      "L01",
+      "L02",
+      "L04"
+    ],
+    "O2": [
+      "L02",
+      "L03"
+    ],
+    "O3": [
+      "L04",
+      "L05",
+      "L06"
+    ],
+    "O4": [
+      "L05",
+      "L07"
+    ],
+    "O5": [
+      "L03",
+      "L08"
+    ],
+    "O6": [
+      "L06",
+      "L09",
+      "L10"
+    ],
+    "O7": [
+      "L10"
+    ]
+  },
+  "flags": [
+    "PROPOSED: screen demo for L08 (a live walkthrough of running and recording paired prompts in a chatbot is much clearer on screen than on slides). Needs approval.",
+    "L05 [VERSION]: data-use, chat-history and training settings in Claude and ChatGPT differ between free and paid plans and change often. Check the live tools before scripting.",
+    "L08 [VERSION]: chatbot outputs change between model versions, so any example outputs in the demo must be recorded from the live tool, not written in advance.",
+    "L07 [VERIFY]: the names, dates and exact wording of any named framework (OECD AI Principles, UNESCO Recommendation on the Ethics of AI) must be checked against the official sources.",
+    "Tools [VERIFY]: 'free bias audit case studies' are not yet chosen. Stage 2 must select published, reputable, freely available case studies and check each one before use; any named incident or statistic taken from them must be marked [VERIFY].",
+    "Judgement call: L02, L03, L05, L06 and L09 use hypothetical cases on purpose, to avoid unverified claims about real companies or incidents. Real, sourced cases can be added after [VERIFY] review.",
+    "Judgement call: the capstone asks learners to audit a real tool. The rubric should tell learners to follow the tool's terms of use, never enter real personal or confidential data in test prompts, and describe findings as limited tests, not proof of bias.",
+    "Judgement call: this course touches privacy and safety only at a practical user level. Legal duties (GDPR, EU AI Act, NDPA) are left to AI-30 so this beginner course does not give legal guidance."
+  ]
+}

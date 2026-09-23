@@ -1,0 +1,272 @@
+{
+  "course_id": "AI-30",
+  "slug": "ai-30-ai-governance-privacy-and-compliance",
+  "course_title": "AI Governance, Privacy and Compliance",
+  "level": "Intermediate",
+  "status": "AWAITING_APPROVAL",
+  "screen_demo_lessons": [],
+  "overview": "A three-week course for legal, risk, compliance and data protection professionals who need to govern how their organisation builds, buys and uses AI. It assumes learners already know basic data protection ideas, so it does not reteach them. Instead, it shows how those ideas apply to AI, and how they connect with the EU AI Act's risk-based rules and Nigeria's Nigeria Data Protection Act (NDPA). The focus is on structure and principles: risk tiers, roles, lawful basis, data subject rights, impact assessments and accountability. Learners practise with hypothetical AI systems from several countries and industries. By the end, they draft an AI governance policy and a risk register for a sample organisation. This course is educational and is not legal advice. Specific articles, deadlines, penalties and regulator guidance are marked for verification because they continue to change.",
+  "time_plan": {
+    "video_minutes": 70,
+    "weekly_hours": 3,
+    "per_week": "About 25 minutes of video, 75 minutes of exercises and quizzes, and 80 minutes of reading official regulator guidance and templates. In week 3 most of the exercise and reading time goes to the capstone."
+  },
+  "objectives": [
+    {
+      "id": "O1",
+      "bloom": "Remember",
+      "text": "Describe the building blocks of an AI governance framework and the overall structure, scope and key roles of the EU AI Act, the GDPR and Nigeria's NDPA."
+    },
+    {
+      "id": "O2",
+      "bloom": "Understand",
+      "text": "Explain the EU AI Act's risk-based approach and how data protection principles apply at each stage of the AI lifecycle."
+    },
+    {
+      "id": "O3",
+      "bloom": "Apply",
+      "text": "Apply lawful-basis and data-subject-rights analysis under the GDPR and the NDPA to realistic AI use cases."
+    },
+    {
+      "id": "O4",
+      "bloom": "Analyse",
+      "text": "Analyse an AI system to identify its likely risk tier, the organisation's role, and the obligations that may apply under each framework."
+    },
+    {
+      "id": "O5",
+      "bloom": "Evaluate",
+      "text": "Evaluate AI risks and existing controls through impact assessments such as DPIAs, and judge whether the remaining risk is acceptable."
+    },
+    {
+      "id": "O6",
+      "bloom": "Create",
+      "text": "Draft an AI governance policy and an AI risk register for a sample organisation that map to the EU AI Act, the GDPR and the NDPA."
+    }
+  ],
+  "modules": [
+    {
+      "module_id": "M1",
+      "week": 1,
+      "title": "AI Governance and the EU AI Act",
+      "lessons": [
+        {
+          "lesson_id": "L01",
+          "title": "What AI Governance Is and Why It Matters",
+          "objectives": [
+            "O1"
+          ],
+          "summary": "AI governance is the set of roles, policies, processes and controls that decide how an organisation builds, buys and uses AI. It connects legal compliance with ethics, security and business risk. Analogy: governance is the building code and the inspection plan, not the building itself.",
+          "exercise": "Using a free policy template, list the 6 building blocks of AI governance (roles, principles, inventory, risk assessment, controls, monitoring) and write one sentence on how your own organisation handles each today."
+        },
+        {
+          "lesson_id": "L02",
+          "title": "The Regulatory Map: Three Laws, Different Jobs",
+          "objectives": [
+            "O1"
+          ],
+          "summary": "The EU AI Act regulates AI systems and models by risk; the GDPR and the NDPA regulate the processing of personal data, including inside AI systems. Each law has its own territorial scope, so one AI system can fall under all three. Worked example: a hypothetical lending app based in Lagos with customers in Portugal. [REGION] [VERIFY] Territorial scope rules must be checked for each law.",
+          "exercise": "Fill in a comparison table (who it protects, what it regulates, key roles, main regulator) for the three laws using official regulator guidance, marking any point you could not confirm."
+        },
+        {
+          "lesson_id": "L03",
+          "title": "The EU AI Act: A Risk-Based Approach",
+          "objectives": [
+            "O1",
+            "O2"
+          ],
+          "summary": "The Act sorts AI uses into tiers: prohibited practices, high-risk systems, systems with transparency duties, and minimal-risk systems, with separate rules for general-purpose AI models. Analogy: like product safety rules, stricter checks apply where the possible harm is greater. The obligations apply in phases, and the timeline has been subject to change. [VERIFY] [REGION] Article numbers, annexes and every application date must be checked against the official text and the latest amendments before scripting.",
+          "exercise": "Sort 8 short, hypothetical AI use cases into the four risk tiers and note which ones you are unsure about and why."
+        },
+        {
+          "lesson_id": "L04",
+          "title": "EU AI Act Roles and Obligations",
+          "objectives": [
+            "O2",
+            "O4"
+          ],
+          "summary": "Obligations depend on your role: provider, deployer, importer or distributor, and one organisation can hold more than one role. High-risk systems carry duties such as risk management, data governance, technical documentation, logging, human oversight, accuracy and robustness, and deployers have their own duties. [VERIFY] [REGION] The exact list of obligations, their article numbers and penalty ranges must be checked against the official text.",
+          "exercise": "For 3 hypothetical organisations (a Spanish software vendor, a hospital in the Netherlands buying its tool, and a Nigerian company selling to EU clients), identify each one's likely role and list its main obligations at a high level."
+        },
+        {
+          "lesson_id": "L05",
+          "title": "Classifying an AI System Step by Step",
+          "objectives": [
+            "O4"
+          ],
+          "summary": "A repeatable method: describe the system and its purpose, check whether it is an AI system under the Act, check the prohibited list, check the high-risk categories, then check the transparency duties. Worked example: a hypothetical CV-screening tool used by a recruitment agency in Germany. Record the reasoning, because a classification decision must be explainable later. [VERIFY] [REGION]",
+          "exercise": "Use the 5-step method on a hypothetical customer-service chatbot and on a hypothetical exam-proctoring tool, and write a short classification note for each."
+        }
+      ]
+    },
+    {
+      "module_id": "M2",
+      "week": 2,
+      "title": "Data Protection Law and AI",
+      "lessons": [
+        {
+          "lesson_id": "L06",
+          "title": "Data Protection Principles Across the AI Lifecycle",
+          "objectives": [
+            "O2"
+          ],
+          "summary": "Principles such as lawfulness, fairness, transparency, purpose limitation, data minimisation, accuracy, storage limitation, security and accountability apply at every stage: data collection, training, testing, deployment and retirement. Worked example: what data minimisation means when a hypothetical insurer in Morocco wants to train a claims model on ten years of files. [VERIFY] [REGION] How each principle is worded in the GDPR and the NDPA must be checked.",
+          "exercise": "Draw the 5 stages of an AI lifecycle and write, for each stage, the one data protection principle most at risk and one control that protects it."
+        },
+        {
+          "lesson_id": "L07",
+          "title": "Lawful Basis for AI Processing",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "Every processing activity needs a lawful basis, and training a model may need a different basis from using it. Worked example: consent, contract and legitimate interests compared for a hypothetical retail recommendation system in Poland, including a balancing test. Special categories of data, such as health data, need extra conditions. [VERIFY] [REGION] The GDPR and NDPA articles or sections on lawful basis and special categories, and regulator guidance on legitimate interests for AI, must be checked.",
+          "exercise": "For 3 hypothetical AI processing activities, choose the most suitable lawful basis under the GDPR and under the NDPA, and justify each choice in two sentences."
+        },
+        {
+          "lesson_id": "L08",
+          "title": "Nigeria's NDPA: Structure and Key Duties",
+          "objectives": [
+            "O1",
+            "O3"
+          ],
+          "summary": "The NDPA sets up a national data protection regulator and places duties on data controllers and data processors, including principles, lawful bases, rights, security, impact assessments and rules for cross-border transfers. Some organisations may carry extra duties, for example registration or appointing a data protection officer, depending on their classification. [VERIFY] [REGION] The regulator's name and powers, section numbers, classification thresholds, registration and filing duties, implementing regulations or directives, and penalty figures must all be checked against current official sources.",
+          "exercise": "Read an official NDPA summary or guidance note from the regulator and list 5 duties that would apply to a hypothetical fintech in Abuja using AI for credit scoring."
+        },
+        {
+          "lesson_id": "L09",
+          "title": "Data Subject Rights and Automated Decisions",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "People have rights such as access, correction, erasure, objection and information about how their data is used, and these are harder to honour when data is inside a trained model. Both laws include protections for decisions made solely by automated means that have significant effects. Worked example: a hypothetical loan applicant in Lagos asks why an AI system refused her and asks for a human review. [VERIFY] [REGION] The exact rights, their exceptions, response deadlines and the articles or sections on automated decisions must be checked.",
+          "exercise": "Write a step-by-step internal procedure for answering an access request and a request for human review of an automated decision, for a hypothetical AI system."
+        },
+        {
+          "lesson_id": "L10",
+          "title": "Impact Assessments: DPIAs and AI Risk Assessments",
+          "objectives": [
+            "O5"
+          ],
+          "summary": "A DPIA is required when processing is likely to result in a high risk to people, and many AI uses meet that test. The EU AI Act adds its own assessment duties for some deployers of high-risk systems, and the two can be combined in one process. Worked example: a short DPIA for a hypothetical facial-recognition entry system at an office in Johannesburg. [VERIFY] [REGION] When each assessment is mandatory, and what it must contain, must be checked for each law.",
+          "exercise": "Complete a free DPIA template for a hypothetical AI chatbot that handles customer complaints, then judge whether the remaining risk is acceptable and explain why."
+        }
+      ]
+    },
+    {
+      "module_id": "M3",
+      "week": 3,
+      "title": "Building Your AI Governance Framework",
+      "lessons": [
+        {
+          "lesson_id": "L11",
+          "title": "Designing an AI Governance Framework",
+          "objectives": [
+            "O2",
+            "O6"
+          ],
+          "summary": "A practical framework has clear roles (an accountable executive, an AI governance group, the data protection officer, system owners), a set of principles, an AI inventory, a risk assessment process, lifecycle controls and monitoring. Voluntary standards and frameworks can give structure, such as ISO/IEC 42001 and the NIST AI Risk Management Framework. [VERIFY] [VERSION] Standard names, editions and content must be checked. Introduces the capstone sample organisation and brief.",
+          "exercise": "Draw a one-page framework diagram for the capstone sample organisation, showing who approves a new AI system and at which stage."
+        },
+        {
+          "lesson_id": "L12",
+          "title": "Building an AI Inventory and Risk Register",
+          "objectives": [
+            "O4",
+            "O5",
+            "O6"
+          ],
+          "summary": "An AI inventory lists every AI system in use, its owner, purpose, data, role under each law and risk tier. A risk register records each risk, its likelihood and impact, the controls in place, the owner and the review date. Worked example: two register entries for a hypothetical HR screening tool and a translation tool.",
+          "exercise": "Capstone step 1: build an AI inventory and a risk register of at least 6 risks for the sample organisation, mapping each risk to the relevant law or laws. Use a free spreadsheet template."
+        },
+        {
+          "lesson_id": "L13",
+          "title": "Drafting the AI Governance Policy",
+          "objectives": [
+            "O6"
+          ],
+          "summary": "A good policy states its scope, principles, roles, approval process, acceptable and prohibited uses, rules for personal data, assessment triggers, training and review cycle. How to use Claude to produce a first draft from a free template, and why every AI-drafted clause must be checked by a person against the law and the organisation's facts. [VERSION] Claude's interface and features may change.",
+          "exercise": "Capstone step 2: draft a 2–3 page AI governance policy for the sample organisation, starting from a free policy template and using Claude for a first draft of at least one section, then mark what you changed."
+        },
+        {
+          "lesson_id": "L14",
+          "title": "Accountability, Monitoring and Finalising Your Framework",
+          "objectives": [
+            "O5",
+            "O6"
+          ],
+          "summary": "Accountability means being able to show compliance with records: decisions, assessments, training, audits and incident logs. Monitoring checks that systems keep working as expected, and an incident process says who acts when something goes wrong, including any duty to notify a regulator. [VERIFY] [REGION] Breach and serious-incident notification duties and deadlines must be checked for each law. The capstone rubric.",
+          "exercise": "Capstone step 3: add a monitoring and incident-response section to your policy, review your risk register against the rubric, and submit both documents."
+        }
+      ]
+    }
+  ],
+  "capstone": {
+    "title": "AI Governance Policy and Risk Register",
+    "brief": "Draft an AI governance policy and an AI risk register for a sample organisation that uses AI and processes personal data in the EU and in Nigeria, mapped to the EU AI Act, the GDPR and the NDPA.",
+    "built_in": [
+      "L12",
+      "L13",
+      "L14"
+    ],
+    "assesses": [
+      "O4",
+      "O5",
+      "O6"
+    ]
+  },
+  "coverage_check": {
+    "O1": [
+      "L01",
+      "L02",
+      "L03",
+      "L08"
+    ],
+    "O2": [
+      "L03",
+      "L04",
+      "L06",
+      "L11"
+    ],
+    "O3": [
+      "L07",
+      "L08",
+      "L09"
+    ],
+    "O4": [
+      "L04",
+      "L05",
+      "L12"
+    ],
+    "O5": [
+      "L10",
+      "L12",
+      "L14"
+    ],
+    "O6": [
+      "L11",
+      "L12",
+      "L13",
+      "L14"
+    ]
+  },
+  "flags": [
+    "RELEASE BLOCKER: a qualified legal/compliance reviewer with EU and Nigerian data protection expertise must review and sign off on AI-30 (curriculum, lesson content, scripts, quizzes and capstone rubric) before release.",
+    "Disclaimer: every lesson, the course page and the capstone brief must state that the course is educational and is not legal advice, and that learners should consult qualified advisers for their own situation.",
+    "L03 [VERIFY] [REGION]: EU AI Act entry into force, the phased application dates (prohibitions, general-purpose AI models, high-risk systems, other obligations) and any amendments or proposed delays to the timeline (for example, EU simplification or 'omnibus' proposals) must be checked against the Official Journal and the European Commission on the date of scripting.",
+    "L03–L05 [VERIFY] [REGION]: EU AI Act article and annex references (prohibited practices, high-risk classification rules and categories, transparency duties, general-purpose AI model rules) must be checked against the official text.",
+    "L04 [VERIFY] [REGION]: EU AI Act role definitions, provider and deployer obligations for high-risk systems, and penalty ranges (fixed amounts and percentages of worldwide turnover) must be checked; no penalty figure may be scripted without verification.",
+    "L02, L04 [VERIFY] [REGION]: EU AI Act supervisory structure (AI Office, national market surveillance authorities) and national designations must be checked.",
+    "L02 [VERIFY] [REGION]: territorial scope rules for the EU AI Act, the GDPR and the NDPA must be checked.",
+    "L06, L07 [VERIFY] [REGION]: GDPR articles on principles, lawful bases and special categories, the matching NDPA sections, and current EDPB and national regulator guidance on legitimate interests and AI model training must be checked.",
+    "L08 [VERIFY] [REGION]: NDPA details must be checked against current official sources: the regulator (Nigeria Data Protection Commission) and its powers, section numbers, 'data controllers and processors of major importance' classification and thresholds, registration, DPO and filing or audit duties, the status and content of any implementing directive or guidance (for example, the General Application and Implementation Directive), cross-border transfer rules and penalty figures.",
+    "L09 [VERIFY] [REGION]: data subject rights, exceptions, response deadlines, and the GDPR article and NDPA section on solely automated decisions must be checked.",
+    "L10 [VERIFY] [REGION]: when a DPIA is mandatory under the GDPR and the NDPA, required DPIA content, regulator lists of high-risk processing, and the EU AI Act fundamental rights impact assessment duty for certain deployers must be checked.",
+    "L14 [VERIFY] [REGION]: personal data breach notification duties and deadlines under the GDPR and the NDPA, and serious-incident reporting under the EU AI Act, must be checked.",
+    "L11 [VERIFY] [VERSION]: names, editions and content of ISO/IEC 42001 and the NIST AI Risk Management Framework must be checked; they are described as voluntary frameworks, not legal requirements.",
+    "L13 [VERSION]: Claude interface and features may change; check before scripting. No screen demo is proposed because the lesson focuses on reviewing the draft, not on the tool.",
+    "Tools [VERIFY]: the 'free policy templates', DPIA template and 'official regulator guidance' must be chosen in Stage 2 from official or reputable free sources (for example, the European Commission, EDPB, national EU regulators and the Nigeria Data Protection Commission), with licence and date recorded.",
+    "Judgement call: no screen demo is proposed for AI-30. Exercises use documents, templates and spreadsheets that slides can show clearly.",
+    "Judgement call: prerequisites cover basic data protection awareness, so L06–L09 do not reteach what personal data is or the basic rights; they focus on how the rules apply to AI.",
+    "Judgement call: the capstone sample organisation is fictional and operates in both the EU and Nigeria so that all three laws apply. Any name given to it in Stage 2 must be checked so it does not match a real company.",
+    "Judgement call: all worked examples are hypothetical and no real enforcement cases are named. Real, sourced enforcement examples can be added only after [VERIFY] review by the legal reviewer."
+  ]
+}
