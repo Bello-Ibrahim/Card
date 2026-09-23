@@ -1,0 +1,322 @@
+{
+  "course_id": "AI-14",
+  "slug": "ai-14-building-apps-with-llm-apis",
+  "course_title": "Building Apps with LLM APIs",
+  "level": "Intermediate",
+  "status": "AWAITING_APPROVAL",
+  "screen_demo_lessons": [
+    "L02",
+    "L03",
+    "L04",
+    "L05",
+    "L06",
+    "L07",
+    "L08",
+    "L09",
+    "L10",
+    "L11",
+    "L12",
+    "L13",
+    "L14",
+    "L15",
+    "L16"
+  ],
+  "overview": "A four-week course for developers who already know Python or JavaScript and how to call a web API. Learners build real features on a large language model API, using the Claude API as the main example: messages and system prompts, prompt design for applications, structured outputs that code can trust, streaming, and tool use. Week 3 focuses on reliability and security (validation, prompt injection, small evaluation sets). Week 4 covers cost control and monitoring and the capstone: a deployed web app with structured outputs and a cost dashboard. The main path uses Python with Streamlit, and a Node.js with Next.js path is offered as extra code. The Claude API is a paid service, so the course shows a low-cost setup from the first day. Retrieval over documents is left to AI-15, and multi-step agents and automation workflows to AI-16.",
+  "time_plan": {
+    "video_minutes": 80,
+    "weekly_hours": 3,
+    "per_week": "About 20 minutes of video, 120 minutes of building and testing code, and 40 minutes of reading documentation and quizzes. Week 4 goes mostly to the capstone app."
+  },
+  "objectives": [
+    {
+      "id": "O1",
+      "bloom": "Remember",
+      "text": "Describe how LLM APIs work: messages and roles, system prompts, tokens, context windows, stop reasons and key request settings such as max_tokens."
+    },
+    {
+      "id": "O2",
+      "bloom": "Understand",
+      "text": "Explain how model choice, prompt design and token usage affect output quality, speed and cost."
+    },
+    {
+      "id": "O3",
+      "bloom": "Apply",
+      "text": "Build LLM features that return schema-validated structured outputs and stream responses to a web interface."
+    },
+    {
+      "id": "O4",
+      "bloom": "Apply",
+      "text": "Implement tool use (function calling) so that the model can request your own functions and APIs, with safe limits."
+    },
+    {
+      "id": "O5",
+      "bloom": "Analyse",
+      "text": "Diagnose failures such as invalid outputs, API errors, rate limits and prompt injection, and test prompts with a small evaluation set."
+    },
+    {
+      "id": "O6",
+      "bloom": "Evaluate",
+      "text": "Choose and justify cost-control and production strategies (caching, batching, model choice, limits and monitoring) by weighing quality, speed and cost."
+    },
+    {
+      "id": "O7",
+      "bloom": "Create",
+      "text": "Ship a working AI-powered web app with structured outputs and a cost dashboard."
+    }
+  ],
+  "modules": [
+    {
+      "module_id": "M1",
+      "week": 1,
+      "title": "LLM API Foundations",
+      "lessons": [
+        {
+          "lesson_id": "L01",
+          "title": "How LLM APIs Work",
+          "objectives": [
+            "O1"
+          ],
+          "summary": "The request and response cycle: a list of messages with user and assistant roles, an optional system prompt, and a response with text, a stop reason and token usage. The API is stateless, so your app sends the conversation history every time. Analogy: a very knowledgeable assistant who forgets every phone call unless you read the notes back.",
+          "exercise": "Turn a 4-turn chat conversation into a messages list on paper, and mark which parts are sent again on the next request."
+        },
+        {
+          "lesson_id": "L02",
+          "title": "Setup: API Keys, SDKs and a Low-Cost Budget",
+          "objectives": [
+            "O1",
+            "O6"
+          ],
+          "summary": "Creating an account and API key, storing the key in an environment variable (never in code or Git), and installing the official Python or TypeScript SDK. The Claude API is paid: set a monthly spend limit, use a smaller, cheaper model while developing, and keep max_tokens low. [VERSION] Console steps, SDK install, models and prices.",
+          "exercise": "Make your first API call, then print the reply text, the stop reason and the input and output token counts."
+        },
+        {
+          "lesson_id": "L03",
+          "title": "Prompt Design for Applications",
+          "objectives": [
+            "O2"
+          ],
+          "summary": "Writing system prompts that set role, rules and output style; separating instructions from user data with clear tags; adding examples. Worked example: a reply assistant for a mobile network provider in Ghana. Prompts are code, so keep them in version control.",
+          "exercise": "Improve a weak support-reply prompt in 3 versions and compare the outputs on the same 5 customer messages."
+        },
+        {
+          "lesson_id": "L04",
+          "title": "Tokens, Context and Cost",
+          "objectives": [
+            "O2",
+            "O6"
+          ],
+          "summary": "Reading usage fields, counting tokens before sending, and estimating cost as tokens × price per million tokens. Longer context means more cost and slower replies. The same meaning can use different numbers of tokens in different languages. [VERSION] Prices and token-counting endpoint. [VERIFY] Language token differences.",
+          "exercise": "Write a helper that logs tokens and estimated cost for every call, and compare the cost of the same request in English and one other language."
+        }
+      ]
+    },
+    {
+      "module_id": "M2",
+      "week": 2,
+      "title": "Structured Outputs and Streaming",
+      "lessons": [
+        {
+          "lesson_id": "L05",
+          "title": "Structured Outputs with JSON Schemas",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "Free text breaks code that needs fields. Defining a schema with Pydantic (Python) or Zod (TypeScript) and using the API's structured-output feature to get JSON that matches it. Worked example: extract supplier, date, total and currency from invoices from India, Mexico and Germany. [VERSION] Structured-output parameters and SDK helpers.",
+          "exercise": "Build an invoice extractor that returns validated objects for 5 sample invoices written in different formats."
+        },
+        {
+          "lesson_id": "L06",
+          "title": "Validation, Errors and Retries",
+          "objectives": [
+            "O3",
+            "O5"
+          ],
+          "summary": "Checking stop reasons (for example, output cut off by max_tokens or a refusal), handling API errors by type, and using the SDK's automatic retries for rate limits and server errors. Retrying a failed validation with the error message included. [VERSION] Error classes and retry defaults.",
+          "exercise": "Add error handling to your extractor and test it with a too-small max_tokens value, an invalid key and a malformed input."
+        },
+        {
+          "lesson_id": "L07",
+          "title": "Streaming Responses",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "Why streaming makes an app feel faster: users see text as it is generated. Using the SDK's streaming helpers and getting the final message and usage at the end. [VERSION] Streaming events and helpers.",
+          "exercise": "Stream a long answer to the terminal, then record the time to the first token and the total time."
+        },
+        {
+          "lesson_id": "L08",
+          "title": "A Web Front End with Streamlit or Next.js",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "Building a chat interface in Streamlit with chat input, session state for history and streamed output; the same pattern in Next.js as an extra. Keeping API keys in the host's secrets settings, and free hosting options. [VERSION] Streamlit functions and free hosting plans.",
+          "exercise": "Build and deploy a small streaming chat app with a system prompt, and share the link with a classmate."
+        }
+      ]
+    },
+    {
+      "module_id": "M3",
+      "week": 3,
+      "title": "Tool Use and Reliability",
+      "lessons": [
+        {
+          "lesson_id": "L09",
+          "title": "Tool Use: Letting the Model Call Your Functions",
+          "objectives": [
+            "O4"
+          ],
+          "summary": "Defining tools with a name, description and input schema. The model asks for a tool, your code runs it, and you send the result back. Analogy: a manager asks an assistant to check the stock system before replying to a customer. Worked example: a mock shipment-tracking tool for a courier company in Vietnam. [VERSION] Tool-definition options.",
+          "exercise": "Add a tool that looks up an order status in a local dictionary, and test it with 5 customer questions."
+        },
+        {
+          "lesson_id": "L10",
+          "title": "Tool Loops and Guardrails",
+          "objectives": [
+            "O4",
+            "O5"
+          ],
+          "summary": "Handling several tool calls in one turn, stopping after a maximum number of steps, strict schema checks on tool inputs, and asking a human to confirm any action that changes data. Give each tool the smallest permissions it needs.",
+          "exercise": "Add a second tool that changes a delivery address, require user confirmation before it runs, and cap the loop at 5 steps."
+        },
+        {
+          "lesson_id": "L11",
+          "title": "Security: Prompt Injection and Data Privacy",
+          "objectives": [
+            "O5"
+          ],
+          "summary": "Any text from users, web pages or files can contain instructions that try to take control of the model. Separate instructions from data, limit what tools can do, and never place secrets in prompts. Send only the personal data you need; data protection laws differ by country. [REGION] [VERIFY]",
+          "exercise": "Attack your own app with 5 prompt-injection attempts, record which ones worked, and fix at least 2."
+        },
+        {
+          "lesson_id": "L12",
+          "title": "Testing Prompts with a Small Evaluation Set",
+          "objectives": [
+            "O5",
+            "O6"
+          ],
+          "summary": "A set of 20–30 test inputs with expected properties. Automatic checks (valid schema, required fields, length) and careful use of a model as a judge. Comparing prompt versions and catching regressions before users do.",
+          "exercise": "Build a 20-case test set for your extractor, run 2 prompt versions, and report the pass rate and cost of each."
+        }
+      ]
+    },
+    {
+      "module_id": "M4",
+      "week": 4,
+      "title": "Production, Cost Control and the Capstone",
+      "lessons": [
+        {
+          "lesson_id": "L13",
+          "title": "Cost Control in Practice",
+          "objectives": [
+            "O2",
+            "O6"
+          ],
+          "summary": "The main levers: prompt caching for repeated context, batch processing for jobs that can wait, sending easy tasks to a smaller model, output limits and per-user quotas. Measuring quality before and after each change. [VERSION] Caching and batch features, discounts and rules.",
+          "exercise": "Apply prompt caching to a request with a long system prompt, and compare the cached and uncached token usage and cost."
+        },
+        {
+          "lesson_id": "L14",
+          "title": "Capstone Step 1: Build the Core Feature",
+          "objectives": [
+            "O3",
+            "O4",
+            "O7"
+          ],
+          "summary": "Choosing a use case, for example a job-advert analyser for a recruitment agency in Poland or a meal planner for a grocery app in Nigeria. Writing a one-page spec, then building the core feature with structured outputs and, if useful, a tool.",
+          "exercise": "Capstone step 1: write the spec and build the core feature with a validated schema and streaming output."
+        },
+        {
+          "lesson_id": "L15",
+          "title": "Capstone Step 2: Usage Logging and a Cost Dashboard",
+          "objectives": [
+            "O6",
+            "O7"
+          ],
+          "summary": "Logging every call (time, feature, model, tokens, latency, estimated cost, errors) to SQLite or CSV. Building a dashboard page with cost per day, cost per request and error rate, and an alert when spend nears a limit.",
+          "exercise": "Capstone step 2: add usage logging and a cost dashboard page to your app."
+        },
+        {
+          "lesson_id": "L16",
+          "title": "Capstone Step 3: Test, Deploy and Present",
+          "objectives": [
+            "O5",
+            "O7"
+          ],
+          "summary": "A final checklist: run the evaluation set and injection tests, set spend limits, deploy to a free hosting plan, and write a README with architecture, cost per request and known limits. Presenting the app in a 3-minute demo.",
+          "exercise": "Capstone step 3: deploy the app, share the link and README, and record a 3-minute demo."
+        }
+      ]
+    }
+  ],
+  "capstone": {
+    "title": "AI-Powered Web App with a Cost Dashboard",
+    "brief": "Ship a working AI-powered web app with structured outputs and a cost dashboard. Learners design and deploy a small web app that uses an LLM API with validated structured outputs, streaming and optional tool use, log every call, and show usage and cost on a dashboard page.",
+    "built_in": [
+      "L14",
+      "L15",
+      "L16"
+    ],
+    "assesses": [
+      "O3",
+      "O4",
+      "O5",
+      "O6",
+      "O7"
+    ]
+  },
+  "coverage_check": {
+    "O1": [
+      "L01",
+      "L02"
+    ],
+    "O2": [
+      "L03",
+      "L04",
+      "L13"
+    ],
+    "O3": [
+      "L05",
+      "L06",
+      "L07",
+      "L08",
+      "L14"
+    ],
+    "O4": [
+      "L09",
+      "L10",
+      "L14"
+    ],
+    "O5": [
+      "L06",
+      "L10",
+      "L11",
+      "L12",
+      "L16"
+    ],
+    "O6": [
+      "L02",
+      "L04",
+      "L12",
+      "L13",
+      "L15"
+    ],
+    "O7": [
+      "L14",
+      "L15",
+      "L16"
+    ]
+  },
+  "flags": [
+    "Screen demos: L02–L16 are listed because each one needs live coding, the API console or a running app. L01 uses diagrams.",
+    "[VERSION] Claude API is paid, not free, although the brief lists it first under tools_free_first. The course teaches a low-cost setup (L02): a monthly spend limit, a smaller model for development, low max_tokens, prompt caching and batch processing. [VERIFY] whether new accounts receive any trial credit, and estimate a realistic cost per learner before publishing.",
+    "[VERSION] No model IDs or prices are hard-coded. Lessons point learners to the live models and pricing pages. Scripts must be checked against those pages at recording time.",
+    "L02, L05–L07, L09, L13 [VERSION]: SDK features (structured-output parameters and parse helpers, streaming helpers, tool definitions and strict mode, token counting, prompt caching, message batches and their discount) change often. Check them against current docs before scripting.",
+    "L08, L16 [VERSION]: Streamlit chat functions and session state, and the free plans of Streamlit Community Cloud and Vercel.",
+    "L02 [REGION]: the Claude API is only offered in supported countries. Learners elsewhere may need access through a cloud provider. [VERIFY] current country list and alternatives.",
+    "L11 [REGION] [VERIFY]: any data protection laws named in examples (for example, the EU GDPR and Brazil's LGPD) must be checked by a reviewer.",
+    "L04 [VERIFY]: claim that the same meaning can use different token counts in different languages must be checked with the current tokenizer.",
+    "Judgement call: Python with Streamlit is the main path to keep videos at 5 minutes. Node.js with Next.js is offered as extra code in the resources, not in the videos.",
+    "Judgement call: sampling settings such as temperature are not taught, because newer models may not accept them. [VERSION]",
+    "Judgement call: tool use stays at single-app function calling with guardrails. Multi-step agents, workflows and human approval flows are left to AI-16, and retrieval over documents to AI-15."
+  ]
+}

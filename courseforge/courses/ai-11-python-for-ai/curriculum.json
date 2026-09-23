@@ -1,0 +1,363 @@
+{
+  "course_id": "AI-11",
+  "slug": "ai-11-python-for-ai",
+  "course_title": "Python for AI",
+  "level": "Beginner",
+  "status": "AWAITING_APPROVAL",
+  "screen_demo_lessons": [
+    "L01",
+    "L02",
+    "L03",
+    "L04",
+    "L05",
+    "L06",
+    "L08",
+    "L09",
+    "L10",
+    "L11",
+    "L12",
+    "L13",
+    "L14",
+    "L15",
+    "L16",
+    "L17",
+    "L18",
+    "L19",
+    "L20"
+  ],
+  "overview": "A four-week first course in programming for people who have never written code. Learners write Python in Google Colab, a free notebook that runs in the web browser, so there is nothing to install at the start. Week 1 covers the basic building blocks, week 2 turns them into clean and reusable code and shows how to work locally in VS Code, and week 3 introduces pandas for working with tables of data. In week 4 learners clean and prepare a real public dataset so that it is ready for machine learning. The course stops at an ML-ready table: splitting data and training models is the next course, Machine Learning with scikit-learn (AI-12).",
+  "time_plan": {
+    "video_minutes": 100,
+    "weekly_hours": 2,
+    "per_week": "About 25 minutes of video, 65 minutes of coding exercises in Colab, and 30 minutes of reading and quizzes. In week 4 most of the exercise time goes to the capstone notebook."
+  },
+  "objectives": [
+    {
+      "id": "O1",
+      "bloom": "Remember",
+      "text": "Recall core Python building blocks (variables, the data types int, float, str and bool, lists and dictionaries) and how to write and run code in a Google Colab notebook."
+    },
+    {
+      "id": "O2",
+      "bloom": "Understand",
+      "text": "Explain how conditions, loops and functions control what a program does, and predict the output of short programs by reading them."
+    },
+    {
+      "id": "O3",
+      "bloom": "Apply",
+      "text": "Write short, readable Python programs that use functions, loops, files and error handling, following basic clean-code habits."
+    },
+    {
+      "id": "O4",
+      "bloom": "Apply",
+      "text": "Load, select, filter, sort and summarise tabular data with pandas DataFrames."
+    },
+    {
+      "id": "O5",
+      "bloom": "Analyse",
+      "text": "Find data quality problems (missing values, duplicates, wrong types, outliers) and explore patterns with group summaries and simple charts."
+    },
+    {
+      "id": "O6",
+      "bloom": "Evaluate",
+      "text": "Choose and justify data-cleaning and preparation decisions, such as dropping or filling missing values and encoding categories, for a machine learning dataset."
+    },
+    {
+      "id": "O7",
+      "bloom": "Create",
+      "text": "Build a documented, reproducible data-cleaning and exploration notebook on a real public dataset."
+    }
+  ],
+  "modules": [
+    {
+      "module_id": "M1",
+      "week": 1,
+      "title": "Python Basics in Google Colab",
+      "lessons": [
+        {
+          "lesson_id": "L01",
+          "title": "Welcome to Python and Google Colab",
+          "objectives": [
+            "O1"
+          ],
+          "summary": "Why Python is the most common language for AI work: it is readable and has a very large set of free data and machine learning libraries. A tour of Google Colab: code cells, text cells, running a cell and saving to Google Drive. Analogy: a notebook is like a lab notebook where notes and experiments sit side by side. [VERSION] Colab interface and free-tier limits change.",
+          "exercise": "Create a new Colab notebook, print a greeting in your own language, and add a text cell with your name and one goal for this course."
+        },
+        {
+          "lesson_id": "L02",
+          "title": "Variables and Data Types",
+          "objectives": [
+            "O1"
+          ],
+          "summary": "A variable is a labelled box that holds a value. The four basic types: whole numbers (int), decimal numbers (float), text (str) and True/False (bool), and how to check and convert them with type(), int() and str(). Worked example: a small shop in Nairobi calculates a basket total with a made-up 10% tax.",
+          "exercise": "Store the prices and quantities of 3 items in variables, calculate the total with a 10% tax, and print a receipt line with an f-string."
+        },
+        {
+          "lesson_id": "L03",
+          "title": "Lists and Dictionaries",
+          "objectives": [
+            "O1",
+            "O2"
+          ],
+          "summary": "A list is an ordered collection (positions start at 0), like a numbered shopping list. A dictionary looks up values by key, like a contact book that finds a phone number by name. Adding, changing and reading items in both.",
+          "exercise": "Build a dictionary of 5 countries and their capital cities, look up two of them, add a sixth, and print how many entries it holds."
+        },
+        {
+          "lesson_id": "L04",
+          "title": "Making Decisions with if, elif and else",
+          "objectives": [
+            "O2"
+          ],
+          "summary": "Comparison operators, and/or/not, and why indentation matters in Python. Worked example: a delivery app in Jakarta sets a shipping price band from the delivery distance. Tracing the code line by line to predict the result.",
+          "exercise": "Write code that turns an exam score (0–100) into a grade band, then predict the output for 5 test scores before you run it."
+        },
+        {
+          "lesson_id": "L05",
+          "title": "Repeating Work with Loops",
+          "objectives": [
+            "O2",
+            "O3"
+          ],
+          "summary": "for loops over lists and range(), a short look at while loops, and keeping a running total. Analogy: a cashier who scans each item in the basket, one after another. When a loop is the right tool and when it is not.",
+          "exercise": "Loop over a list of 7 daily sales figures from a café in Lima, and print the weekly total, the average and the best day."
+        }
+      ]
+    },
+    {
+      "module_id": "M2",
+      "week": 2,
+      "title": "Writing Clean, Reusable Code",
+      "lessons": [
+        {
+          "lesson_id": "L06",
+          "title": "Functions: Package Your Logic",
+          "objectives": [
+            "O2",
+            "O3"
+          ],
+          "summary": "Defining functions with def, parameters, return values and default values. Analogy: a function is a recipe you write once and cook many times with different ingredients. Worked example: a Celsius-to-Fahrenheit converter used for cities on three continents.",
+          "exercise": "Write a currency-conversion function that takes an amount and a rate (use made-up rates), then call it for 3 currencies."
+        },
+        {
+          "lesson_id": "L07",
+          "title": "Clean Code Habits",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "Clear names, short functions, comments that explain why, docstrings, and the main PEP 8 style rules. Analogy: a tidy kitchen, where everyone can find the tools and cook safely. Before-and-after refactoring of a messy script.",
+          "exercise": "Refactor a provided 20-line messy script: rename variables, split it into 2 functions, and add docstrings."
+        },
+        {
+          "lesson_id": "L08",
+          "title": "Errors and How to Fix Them",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "How to read a traceback, starting from the last line. Common errors: NameError, TypeError, IndexError, KeyError and IndentationError. Using try and except to handle expected problems, such as a user typing text where a number is needed.",
+          "exercise": "Fix 5 broken Colab cells, and write down which error each one raised and why."
+        },
+        {
+          "lesson_id": "L09",
+          "title": "Modules, Libraries and Installing Packages",
+          "objectives": [
+            "O1",
+            "O3"
+          ],
+          "summary": "Importing modules from the standard library (math, datetime, random), and what third-party libraries such as NumPy and pandas add. Installing packages in Colab with %pip and locally with pip. [VERSION] Install commands and the libraries pre-installed in Colab change over time.",
+          "exercise": "Use the datetime module to calculate how many days remain until a date of your choice, and use random to pick a winner from a list of names."
+        },
+        {
+          "lesson_id": "L10",
+          "title": "Working Locally: Files and VS Code",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "Installing Python and VS Code with the Python extension, and running a .py script from the terminal. Reading and writing text and CSV files with open() and the with statement. When to use a notebook and when to use a script. [VERSION] Installer and extension steps differ by operating system and version.",
+          "exercise": "In VS Code (or Colab if you cannot install software), write a script that reads a small CSV of names and cities and writes a summary text file."
+        }
+      ]
+    },
+    {
+      "module_id": "M3",
+      "week": 3,
+      "title": "Working with Data in pandas",
+      "lessons": [
+        {
+          "lesson_id": "L11",
+          "title": "Meet pandas: Series and DataFrames",
+          "objectives": [
+            "O4"
+          ],
+          "summary": "A DataFrame is a spreadsheet you control with code; a Series is one column. Loading a CSV from a file or URL with read_csv, and a first look with head(), info(), shape and describe(). Example dataset: Gapminder country indicators (life expectancy, population, GDP per person). [VERIFY] dataset source and licence.",
+          "exercise": "Load the Gapminder data into a DataFrame and answer 4 questions: how many rows, which columns, which years, and which column has the widest range."
+        },
+        {
+          "lesson_id": "L12",
+          "title": "Selecting and Filtering Rows and Columns",
+          "objectives": [
+            "O4"
+          ],
+          "summary": "Choosing columns, using loc and iloc, and filtering rows with conditions joined by & and |. Worked example: countries in Africa and South America with life expectancy above a threshold in the most recent year.",
+          "exercise": "Write 5 filters on the Gapminder data, for example all Asian countries in 2007 sorted by population, and check each result by counting rows."
+        },
+        {
+          "lesson_id": "L13",
+          "title": "Sorting, Grouping and Summarising",
+          "objectives": [
+            "O4",
+            "O5"
+          ],
+          "summary": "sort_values, value_counts, groupby with agg (mean, median, count), and adding calculated columns. Analogy: groupby is like sorting receipts into piles by month and adding up each pile. Worked example: median GDP per person by continent over time.",
+          "exercise": "Produce a table of average life expectancy by continent for 3 different years, and write 2 sentences on what changed."
+        },
+        {
+          "lesson_id": "L14",
+          "title": "Finding Data Quality Problems",
+          "objectives": [
+            "O5"
+          ],
+          "summary": "A data audit: isna().sum(), duplicated(), wrong dtypes (numbers stored as text), impossible values and outliers found with describe(). Worked example: a synthetic, messy customer-order file from shops in Lagos, Hanoi and Lima.",
+          "exercise": "Audit the messy order file and list every problem you find, with the code that found it."
+        },
+        {
+          "lesson_id": "L15",
+          "title": "Exploring Data with Charts",
+          "objectives": [
+            "O5"
+          ],
+          "summary": "Histograms for distributions, bar charts for comparisons and scatter plots for relationships, using pandas plotting built on matplotlib. How to read a chart for patterns, gaps and outliers, and how to label it clearly. [VERSION] Plotting options differ between library versions.",
+          "exercise": "Make 3 labelled charts from the Gapminder data and write one sentence of insight under each chart."
+        }
+      ]
+    },
+    {
+      "module_id": "M4",
+      "week": 4,
+      "title": "Preparing Data for Machine Learning",
+      "lessons": [
+        {
+          "lesson_id": "L16",
+          "title": "Cleaning Data: Missing Values, Duplicates and Types",
+          "objectives": [
+            "O5",
+            "O6"
+          ],
+          "summary": "dropna and fillna (mean, median or most common value), drop_duplicates, and fixing types with astype and to_datetime. Every choice has a cost: dropping rows loses information, and filling values can hide real gaps. Keeping a cleaning log.",
+          "exercise": "Clean the messy order file and write a one-line justification for each decision in a cleaning log."
+        },
+        {
+          "lesson_id": "L17",
+          "title": "Shaping Features: Text, Categories and Dates",
+          "objectives": [
+            "O4",
+            "O6"
+          ],
+          "summary": "Cleaning text with str methods (strip, lower, replace), grouping rare categories, one-hot encoding with pd.get_dummies, and extracting year, month and weekday from dates. Why models need numbers. [VERSION] get_dummies output types changed between pandas versions.",
+          "exercise": "Standardise a city column with inconsistent spellings, one-hot encode it, and add weekday and month columns from an order date."
+        },
+        {
+          "lesson_id": "L18",
+          "title": "Building an ML-Ready Table",
+          "objectives": [
+            "O6"
+          ],
+          "summary": "What a machine learning dataset looks like: one row per example, one target column and numeric feature columns. Removing identifiers and 'leaky' columns that reveal the answer. Saving the result to CSV. Splitting data and training models is left to AI-12.",
+          "exercise": "From your cleaned file, choose a target and 5 features, explain why you removed 2 columns, and save an ML-ready CSV."
+        },
+        {
+          "lesson_id": "L19",
+          "title": "Capstone Step 1: Choose, Load and Audit a Public Dataset",
+          "objectives": [
+            "O5",
+            "O7"
+          ],
+          "summary": "How to choose a real public dataset and check its licence. Suggested sources: World Bank Open Data, Our World in Data, the UCI Machine Learning Repository and Kaggle. [VERIFY] licence terms of each source. A notebook template: question, source, audit and cleaning log.",
+          "exercise": "Capstone step 1: choose a dataset, write your question, load the data, and complete a full data-quality audit in your notebook."
+        },
+        {
+          "lesson_id": "L20",
+          "title": "Capstone Step 2: Clean, Explore and Document",
+          "objectives": [
+            "O6",
+            "O7"
+          ],
+          "summary": "Completing the notebook: cleaning with a justified log, 3 or more charts with insights, and an ML-ready table. Checking reproducibility with 'Restart and run all'. Sharing a Colab link or exporting the notebook to GitHub.",
+          "exercise": "Capstone step 2: finish, run from top to bottom without errors, and share your data-cleaning and exploration notebook."
+        }
+      ]
+    }
+  ],
+  "capstone": {
+    "title": "Clean and Explore a Real Public Dataset",
+    "brief": "Build a data-cleaning and exploration notebook on a real public dataset. Learners choose a public dataset, audit and clean it with a justified cleaning log, explore it with labelled charts, and finish with an ML-ready table in a notebook that runs from top to bottom.",
+    "built_in": [
+      "L19",
+      "L20"
+    ],
+    "assesses": [
+      "O4",
+      "O5",
+      "O6",
+      "O7"
+    ]
+  },
+  "coverage_check": {
+    "O1": [
+      "L01",
+      "L02",
+      "L03",
+      "L09"
+    ],
+    "O2": [
+      "L03",
+      "L04",
+      "L05",
+      "L06"
+    ],
+    "O3": [
+      "L05",
+      "L06",
+      "L07",
+      "L08",
+      "L09",
+      "L10"
+    ],
+    "O4": [
+      "L11",
+      "L12",
+      "L13",
+      "L17"
+    ],
+    "O5": [
+      "L13",
+      "L14",
+      "L15",
+      "L16",
+      "L19"
+    ],
+    "O6": [
+      "L16",
+      "L17",
+      "L18",
+      "L20"
+    ],
+    "O7": [
+      "L19",
+      "L20"
+    ]
+  },
+  "flags": [
+    "Screen demos: every lesson except L07 is listed because each one is a live coding walkthrough in Colab or VS Code. L07 (refactoring) can use before-and-after code slides. Reviewer can reduce the list to save OBS recording time.",
+    "L01 [VERSION]: Google Colab interface, free-tier limits and session length must be checked against the live tool before scripting.",
+    "L01 [REGION]: Google Colab may not be available in every country. Suggest local Python with VS Code (L10) or Jupyter as the fallback.",
+    "L09 [VERSION]: package install commands (%pip vs !pip) and the libraries pre-installed in Colab.",
+    "L10 [VERSION]: Python and VS Code installation and Python extension steps differ by operating system and version.",
+    "L11–L15 [VERIFY]: Gapminder data source, access method (CSV URL or a library copy) and licence.",
+    "L15 [VERSION]: pandas plotting and matplotlib options.",
+    "L17 [VERSION]: pd.get_dummies default output type (bool vs integer) depends on the pandas version.",
+    "L19 [VERIFY]: licence terms of World Bank Open Data, Our World in Data, UCI Machine Learning Repository and Kaggle datasets. Kaggle needs a free account.",
+    "L14 and L16 need a synthetic messy order dataset (shops in Lagos, Hanoi and Lima) created by the course team before Stage 2.",
+    "Judgement call: the course ends at an ML-ready table. Train/test splits, scaling and modelling are left to AI-12 to avoid overlap.",
+    "Judgement call: NumPy is only introduced by name (L09). Its maths use is covered in AI-05 Math and Statistics for AI."
+  ]
+}

@@ -1,0 +1,321 @@
+{
+  "course_id": "AI-15",
+  "slug": "ai-15-rag-systems-chat-with-your-data",
+  "course_title": "RAG Systems: Chat with Your Data",
+  "level": "Advanced",
+  "status": "AWAITING_APPROVAL",
+  "screen_demo_lessons": [
+    "L02",
+    "L03",
+    "L04",
+    "L05",
+    "L06",
+    "L07",
+    "L08",
+    "L09",
+    "L10",
+    "L11",
+    "L12",
+    "L13",
+    "L14",
+    "L15",
+    "L16"
+  ],
+  "overview": "A four-week advanced course for developers and data teams who can already build LLM features with structured outputs, streaming and tool use (as in AI-14). Learners build retrieval-augmented generation (RAG) systems that answer questions from a real document collection and cite their sources. Week 1 covers the idea of RAG, embeddings and a first working pipeline. Week 2 goes deeper into chunking, vector databases (Chroma or pgvector), hybrid search, reranking and query rewriting. Week 3 covers grounded answers with citations and evaluation of both retrieval and answers. Week 4 covers access control, cost, deployment and the capstone. Embeddings run on free open-source models, and answers are generated with the Claude API, which is paid, so evaluation runs are kept small.",
+  "time_plan": {
+    "video_minutes": 80,
+    "weekly_hours": 4,
+    "per_week": "About 20 minutes of video, 170 minutes of building and evaluation work, and 50 minutes of reading and quizzes. Week 4 is mainly the capstone."
+  },
+  "objectives": [
+    {
+      "id": "O1",
+      "bloom": "Remember",
+      "text": "Describe the stages of a RAG pipeline (loading, chunking, embedding, indexing, retrieval and generation) and the key terms for each stage."
+    },
+    {
+      "id": "O2",
+      "bloom": "Understand",
+      "text": "Explain how embeddings capture meaning, and why and when RAG reduces hallucinations compared with prompting alone, long context or fine-tuning."
+    },
+    {
+      "id": "O3",
+      "bloom": "Apply",
+      "text": "Build an ingestion and retrieval pipeline with open-source embedding models and Chroma or pgvector, including parsing, chunking and metadata."
+    },
+    {
+      "id": "O4",
+      "bloom": "Apply",
+      "text": "Generate grounded answers with the Claude API that cite their sources and say clearly when the documents do not contain the answer."
+    },
+    {
+      "id": "O5",
+      "bloom": "Analyse",
+      "text": "Diagnose retrieval and answer failures with a test set and metrics such as hit rate, recall@k, MRR, faithfulness and answer relevance."
+    },
+    {
+      "id": "O6",
+      "bloom": "Evaluate",
+      "text": "Justify design choices (chunk size, hybrid search, reranking, query rewriting, access control, cost and latency) using evaluation results."
+    },
+    {
+      "id": "O7",
+      "bloom": "Create",
+      "text": "Build, evaluate and deploy a RAG assistant over a real document collection, with an evaluation report."
+    }
+  ],
+  "modules": [
+    {
+      "module_id": "M1",
+      "week": 1,
+      "title": "RAG Foundations",
+      "lessons": [
+        {
+          "lesson_id": "L01",
+          "title": "Why RAG? Grounding Answers in Your Data",
+          "objectives": [
+            "O1",
+            "O2"
+          ],
+          "summary": "A model's built-in knowledge stops at its training data and never includes your private documents, so it may guess. RAG finds relevant passages first and gives them to the model. Analogy: an open-book exam instead of answering from memory. When to choose RAG, long context or fine-tuning.",
+          "exercise": "For a public document collection of your choice, write 5 questions that a model alone cannot answer reliably, and explain why."
+        },
+        {
+          "lesson_id": "L02",
+          "title": "Embeddings: Meaning as Numbers",
+          "objectives": [
+            "O2"
+          ],
+          "summary": "An embedding model turns text into a vector; texts with similar meanings end up close together, which we measure with cosine similarity. Multilingual models can match a question in one language with a passage in another. [VERSION] sentence-transformers API and model names.",
+          "exercise": "Embed 12 sentences in English, French and Arabic with an open-source multilingual model, and plot a similarity heatmap."
+        },
+        {
+          "lesson_id": "L03",
+          "title": "Your First RAG Pipeline",
+          "objectives": [
+            "O1",
+            "O3",
+            "O4"
+          ],
+          "summary": "A minimal end-to-end pipeline in about 50 lines: split a document, embed the chunks, store them in Chroma, retrieve the top matches for a question, and send them with the question to the Claude API. Each later lesson improves one stage. [VERSION] Chroma client API.",
+          "exercise": "Build the minimal pipeline over one public report and ask it 5 questions, noting which answers are correct."
+        },
+        {
+          "lesson_id": "L04",
+          "title": "Loading and Preparing a Document Collection",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "Parsing PDF, HTML and Markdown, cleaning headers and footers, and keeping metadata (title, page, date, URL) for citations and filters. Checking the licence. Example collections: World Bank reports and open-source project documentation. [VERIFY] licences. [VERSION] parsing libraries.",
+          "exercise": "Load 20 or more documents from a public collection into a list of records with clean text and metadata, and save it."
+        }
+      ]
+    },
+    {
+      "module_id": "M2",
+      "week": 2,
+      "title": "Chunking, Indexing and Retrieval",
+      "lessons": [
+        {
+          "lesson_id": "L05",
+          "title": "Chunking Strategies",
+          "objectives": [
+            "O3",
+            "O6"
+          ],
+          "summary": "Fixed-size chunks with overlap, splitting by headings or sentences, and adding the section title to each chunk. Analogy: cutting a book into index cards; too small loses context, too large mixes topics. Measuring the effect instead of guessing.",
+          "exercise": "Index your collection with 3 chunk sizes, and compare how often the right chunk is in the top 5 for 10 test questions."
+        },
+        {
+          "lesson_id": "L06",
+          "title": "Vector Databases: Chroma and pgvector",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "Collections, adding vectors with metadata, similarity search and metadata filters. Chroma for local, free development; pgvector when the data already lives in PostgreSQL. Approximate nearest-neighbour indexes such as HNSW trade a little accuracy for speed. [VERSION] APIs, index types and hosted free plans.",
+          "exercise": "Store your chunks in Chroma (or pgvector), run searches with and without a metadata filter by year or document type, and compare."
+        },
+        {
+          "lesson_id": "L07",
+          "title": "Hybrid Search and Reranking",
+          "objectives": [
+            "O6"
+          ],
+          "summary": "Keyword search (BM25) finds exact names, codes and numbers that embeddings can miss. Combining keyword and vector results with reciprocal rank fusion, then reranking the top results with an open-source cross-encoder. [VERSION] reranker model names and libraries.",
+          "exercise": "Add BM25 and a reranker to your pipeline, and compare retrieval results on questions that contain product codes or names."
+        },
+        {
+          "lesson_id": "L08",
+          "title": "Query Rewriting and Conversational Retrieval",
+          "objectives": [
+            "O3",
+            "O6"
+          ],
+          "summary": "Follow-up questions such as 'And in 2022?' cannot be searched as they are. Rewriting them into complete queries with a structured output from the LLM (from AI-14), and generating several versions of a query to find more passages.",
+          "exercise": "Add query rewriting for follow-up questions, and test it on 5 short conversations."
+        }
+      ]
+    },
+    {
+      "module_id": "M3",
+      "week": 3,
+      "title": "Grounded Generation and Evaluation",
+      "lessons": [
+        {
+          "lesson_id": "L09",
+          "title": "Grounded Answers with Citations",
+          "objectives": [
+            "O4"
+          ],
+          "summary": "Giving the model numbered chunks, telling it to answer only from them, to cite chunk IDs and to say 'not found in the documents' when needed. Returning answer and sources as structured output, or using the API's document citations feature. [VERSION] Citations and structured outputs may not be combinable in one request.",
+          "exercise": "Change your pipeline so every answer lists its sources, and test it with 3 questions the documents cannot answer."
+        },
+        {
+          "lesson_id": "L10",
+          "title": "Building a RAG Test Set",
+          "objectives": [
+            "O5"
+          ],
+          "summary": "A test set of 30–50 questions with the expected answer and source, including questions with no answer in the documents. Drafting candidate questions with an LLM, then checking every one by hand. Covering different document types and languages.",
+          "exercise": "Build a 30-question test set for your collection, including at least 5 unanswerable questions."
+        },
+        {
+          "lesson_id": "L11",
+          "title": "Measuring Retrieval Quality",
+          "objectives": [
+            "O5"
+          ],
+          "summary": "Hit rate and recall@k (is the right chunk in the top k?) and mean reciprocal rank (how high is it?). Looking at failures one by one to find the cause: chunking, embeddings, missing keywords or a vague question.",
+          "exercise": "Compute hit rate, recall@5 and MRR for 2 versions of your pipeline, and classify the causes of 5 failures."
+        },
+        {
+          "lesson_id": "L12",
+          "title": "Measuring Answer Quality: Faithfulness and Relevance",
+          "objectives": [
+            "O5",
+            "O6"
+          ],
+          "summary": "Faithfulness (every claim is supported by the retrieved text) and answer relevance. Using an LLM as a judge with a clear rubric, checking it against human labels on a sample, and keeping evaluation costs low with small sets and batch processing. [VERSION] Optional evaluation libraries.",
+          "exercise": "Score 20 answers for faithfulness with an LLM judge, label 10 of them yourself, and report how often you and the judge agree."
+        }
+      ]
+    },
+    {
+      "module_id": "M4",
+      "week": 4,
+      "title": "Production RAG and the Capstone",
+      "lessons": [
+        {
+          "lesson_id": "L13",
+          "title": "Access Control, Freshness and Security",
+          "objectives": [
+            "O6"
+          ],
+          "summary": "Users should only retrieve documents they are allowed to see, so filter by permissions before generation. Updating and deleting documents, handling personal data, and prompt injection hidden inside documents. Data-location rules differ by country. [REGION]",
+          "exercise": "Add a user-role filter to retrieval, then test that a restricted document never appears in answers for other roles."
+        },
+        {
+          "lesson_id": "L14",
+          "title": "Cost, Latency and Deployment",
+          "objectives": [
+            "O6"
+          ],
+          "summary": "Where time and money go in one query: embedding (free when run locally), retrieval and LLM tokens. Choosing top-k and context size, caching the stable parts of the prompt, and deploying with Streamlit or FastAPI. [VERSION] Prices and hosting plans.",
+          "exercise": "Measure latency and estimated cost per query for 3 top-k settings, and choose one based on quality and cost."
+        },
+        {
+          "lesson_id": "L15",
+          "title": "Capstone Step 1: Build Your RAG Assistant",
+          "objectives": [
+            "O3",
+            "O4",
+            "O7"
+          ],
+          "summary": "Choosing a real document collection and user group, for example public health guidance for clinic staff in Kenya or open-source documentation for developers in Brazil. Building the full pipeline with metadata, hybrid retrieval and cited answers.",
+          "exercise": "Capstone step 1: build the RAG assistant over your chosen collection, with cited answers in a simple web interface."
+        },
+        {
+          "lesson_id": "L16",
+          "title": "Capstone Step 2: Evaluate, Improve and Report",
+          "objectives": [
+            "O5",
+            "O6",
+            "O7"
+          ],
+          "summary": "Running the test set, making at least 2 evidence-based improvements, and re-measuring. Writing an evaluation report: design choices, metrics before and after, cost per query, known failure cases and next steps.",
+          "exercise": "Capstone step 2: evaluate, improve and deploy the assistant, and write a 2-page evaluation report."
+        }
+      ]
+    }
+  ],
+  "capstone": {
+    "title": "Evaluated RAG Assistant over a Real Document Collection",
+    "brief": "Build and evaluate a RAG assistant over a real document collection. Learners build a RAG assistant with open-source embeddings, Chroma or pgvector and the Claude API over a real document collection, measure retrieval and answer quality with their own test set, improve it based on the results, and deliver an evaluation report.",
+    "built_in": [
+      "L15",
+      "L16"
+    ],
+    "assesses": [
+      "O3",
+      "O4",
+      "O5",
+      "O6",
+      "O7"
+    ]
+  },
+  "coverage_check": {
+    "O1": [
+      "L01",
+      "L03"
+    ],
+    "O2": [
+      "L01",
+      "L02"
+    ],
+    "O3": [
+      "L03",
+      "L04",
+      "L05",
+      "L06",
+      "L08",
+      "L15"
+    ],
+    "O4": [
+      "L03",
+      "L09",
+      "L15"
+    ],
+    "O5": [
+      "L10",
+      "L11",
+      "L12",
+      "L16"
+    ],
+    "O6": [
+      "L05",
+      "L07",
+      "L08",
+      "L12",
+      "L13",
+      "L14",
+      "L16"
+    ],
+    "O7": [
+      "L15",
+      "L16"
+    ]
+  },
+  "flags": [
+    "Screen demos: L02–L16 are listed because each one needs live coding or a running pipeline. L01 uses diagrams.",
+    "[VERSION] Claude API is paid, not free. Low-cost setup: free open-source embeddings run locally or in Colab, local Chroma, a smaller model for development, small test sets, prompt caching and batch processing for evaluation runs. [VERIFY] realistic cost per learner before publishing.",
+    "[VERSION] No model IDs or prices are hard-coded, either for the Claude API or for open-source embedding and reranker models. Names must be checked at recording time. [VERIFY] licence of each open-source model used.",
+    "L03, L06 [VERSION]: Chroma client API (it changed between major versions), pgvector index types (HNSW, IVFFlat) and query operators, and free plans of hosted PostgreSQL services.",
+    "L09 [VERSION]: Claude API document citations and structured outputs, including whether they can be used in the same request.",
+    "L04, L15 [VERIFY]: licences of the example document collections (World Bank reports, public health guidance, open-source documentation).",
+    "L12 [VERSION]: optional open-source RAG evaluation libraries and their metric definitions.",
+    "L13 [REGION]: data-location and privacy rules differ by country, and any law named in examples needs review.",
+    "Judgement call: tools_free_first does not list Colab. The course runs in plain Python, locally or in Colab. pgvector needs a PostgreSQL instance (local Docker or a hosted free plan), so it is the optional path and Chroma is the default.",
+    "Judgement call: API basics, structured outputs, streaming, tool use and prompt injection basics are assumed from AI-14 and only applied to RAG. Fine-tuning is compared only as a concept.",
+    "Judgement call: agent-based RAG and knowledge graphs are out of scope. Agents are covered in AI-16."
+  ]
+}

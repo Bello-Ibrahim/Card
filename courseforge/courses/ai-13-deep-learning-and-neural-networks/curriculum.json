@@ -1,0 +1,367 @@
+{
+  "course_id": "AI-13",
+  "slug": "ai-13-deep-learning-and-neural-networks",
+  "course_title": "Deep Learning and Neural Networks",
+  "level": "Advanced",
+  "status": "AWAITING_APPROVAL",
+  "screen_demo_lessons": [
+    "L01",
+    "L02",
+    "L03",
+    "L04",
+    "L05",
+    "L06",
+    "L07",
+    "L08",
+    "L09",
+    "L10",
+    "L11",
+    "L13",
+    "L14",
+    "L15",
+    "L16",
+    "L17",
+    "L18",
+    "L19"
+  ],
+  "overview": "A four-week advanced course for learners who can already build and evaluate classical models with scikit-learn and are comfortable with the maths behind them (AI-12 and AI-05). Learners use PyTorch on Google Colab's free GPU to build neural networks from tensors up, train them with their own training loops, and read learning curves to find and fix problems. Week 2 focuses on images with convolutional networks and transfer learning. Week 3 moves to text with tokenisation, embeddings and fine-tuning pretrained transformers from Hugging Face. Week 4 covers tuning, experiment tracking and a capstone in which learners fine-tune a network for a real classification task and document every experiment.",
+  "time_plan": {
+    "video_minutes": 100,
+    "weekly_hours": 4,
+    "per_week": "About 25 minutes of video, 150 minutes of coding and GPU training runs, and 65 minutes of reading and quizzes. Week 4 is mainly capstone experiments."
+  },
+  "objectives": [
+    {
+      "id": "O1",
+      "bloom": "Remember",
+      "text": "Describe the building blocks of a neural network in PyTorch: tensors, layers, activation functions, loss functions and optimisers."
+    },
+    {
+      "id": "O2",
+      "bloom": "Understand",
+      "text": "Explain how the forward pass, backpropagation and gradient descent train a network, and how learning rate, batch size and epochs affect training."
+    },
+    {
+      "id": "O3",
+      "bloom": "Apply",
+      "text": "Implement and train neural networks in PyTorch on a Colab GPU, using Dataset and DataLoader classes and a complete training and evaluation loop."
+    },
+    {
+      "id": "O4",
+      "bloom": "Apply",
+      "text": "Use convolutional networks and pretrained models from torchvision and Hugging Face, with transfer learning and fine-tuning, for image and text classification."
+    },
+    {
+      "id": "O5",
+      "bloom": "Analyse",
+      "text": "Diagnose training problems such as overfitting, underfitting, unstable or NaN loss and vanishing or exploding gradients from learning curves, metrics and errors."
+    },
+    {
+      "id": "O6",
+      "bloom": "Evaluate",
+      "text": "Compare architectures and hyperparameters with regularisation, learning-rate schedules and tracked experiments, and justify the final model choice."
+    },
+    {
+      "id": "O7",
+      "bloom": "Create",
+      "text": "Train and fine-tune a neural network for a real classification task and document the experiments in a reproducible report."
+    }
+  ],
+  "modules": [
+    {
+      "module_id": "M1",
+      "week": 1,
+      "title": "From Classical ML to Neural Networks",
+      "lessons": [
+        {
+          "lesson_id": "L01",
+          "title": "Why Deep Learning?",
+          "objectives": [
+            "O1"
+          ],
+          "summary": "Neural networks work best on unstructured data such as images, audio and text. On small tables, the models from AI-12 are often as good and cheaper. Setting up a Colab GPU runtime and checking that PyTorch can see it. [VERSION] Colab GPU availability and limits.",
+          "exercise": "Switch Colab to a GPU runtime, confirm torch.cuda.is_available(), and time a large matrix multiplication on CPU and GPU."
+        },
+        {
+          "lesson_id": "L02",
+          "title": "Tensors: The Language of PyTorch",
+          "objectives": [
+            "O1",
+            "O3"
+          ],
+          "summary": "Tensors compared with NumPy arrays: shape, dtype and device. Reshaping, indexing and broadcasting. Analogy: a tensor's shape is like the rows, columns and layers of a stack of egg trays. Most beginner bugs are shape bugs.",
+          "exercise": "Create tensors for a batch of 32 colour images of 64×64 pixels, move them to the GPU, and fix 3 shape errors in a provided cell."
+        },
+        {
+          "lesson_id": "L03",
+          "title": "Neurons, Layers and Activations",
+          "objectives": [
+            "O1",
+            "O2"
+          ],
+          "summary": "A linear layer is a weighted sum plus a bias; an activation such as ReLU adds non-linearity so layers can learn complex patterns. Building models with nn.Module and nn.Sequential and counting parameters.",
+          "exercise": "Build a 3-layer network for a 10-class problem, print its parameter count, and run one forward pass on random data."
+        },
+        {
+          "lesson_id": "L04",
+          "title": "How Networks Learn: Loss and Backpropagation",
+          "objectives": [
+            "O2"
+          ],
+          "summary": "Loss functions (cross-entropy for classes, mean squared error for numbers), autograd, and gradient descent. Analogy: walking downhill in fog by feeling the slope under your feet. A short recap of derivatives from AI-05, with no new maths.",
+          "exercise": "Use autograd to compute a gradient for a simple function, then take 10 manual gradient-descent steps and plot the loss."
+        },
+        {
+          "lesson_id": "L05",
+          "title": "The Training Loop",
+          "objectives": [
+            "O2",
+            "O3"
+          ],
+          "summary": "Dataset and DataLoader, batches and epochs, and the core loop: zero_grad, forward, loss, backward, step. Using model.train(), model.eval() and torch.no_grad() correctly. Worked example on a tabular dataset, compared with an AI-12 baseline.",
+          "exercise": "Write a full training and validation loop for a small tabular classifier and compare its score with a scikit-learn logistic regression."
+        }
+      ]
+    },
+    {
+      "module_id": "M2",
+      "week": 2,
+      "title": "Neural Networks for Images",
+      "lessons": [
+        {
+          "lesson_id": "L06",
+          "title": "Image Data and Transforms",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "Images as tensors (channels, height, width), torchvision datasets such as Fashion-MNIST, normalisation, and data augmentation (flips, crops, colour changes). Why augmentation must only be applied to training data. [VERIFY] Fashion-MNIST licence.",
+          "exercise": "Load Fashion-MNIST, show a grid of augmented samples, and compute the mean and standard deviation for normalisation."
+        },
+        {
+          "lesson_id": "L07",
+          "title": "Convolutional Neural Networks",
+          "objectives": [
+            "O2",
+            "O3"
+          ],
+          "summary": "A convolution filter is a small pattern detector that slides across an image; early layers find edges and later layers find shapes. Pooling, channels and building a small CNN. Why CNNs need far fewer parameters than fully connected networks for images.",
+          "exercise": "Train a small CNN on Fashion-MNIST and compare its accuracy and parameter count with a fully connected network."
+        },
+        {
+          "lesson_id": "L08",
+          "title": "Reading Learning Curves",
+          "objectives": [
+            "O5"
+          ],
+          "summary": "Plotting training and validation loss per epoch. Recognising overfitting (the curves separate), underfitting (both stay high) and a learning rate that is too high (loss jumps or grows). Deciding what to change next.",
+          "exercise": "Diagnose 4 provided learning curves, then plot your own CNN's curves and write a one-paragraph diagnosis."
+        },
+        {
+          "lesson_id": "L09",
+          "title": "Regularisation: Dropout, Weight Decay and Early Stopping",
+          "objectives": [
+            "O5",
+            "O6"
+          ],
+          "summary": "Dropout randomly switches off units during training; weight decay keeps weights small; early stopping keeps the best checkpoint. Analogy: a student who practises with different question sets instead of memorising one.",
+          "exercise": "Add dropout and weight decay to your CNN, use early stopping, and compare validation curves before and after."
+        },
+        {
+          "lesson_id": "L10",
+          "title": "Transfer Learning with Pretrained CNNs",
+          "objectives": [
+            "O4"
+          ],
+          "summary": "Reusing a network pretrained on a large image dataset: freeze the backbone, replace the final layer, then fine-tune some layers. Analogy: an experienced chef learns a new cuisine faster than a beginner. Example dataset: bean-leaf disease images from Uganda. [VERSION] torchvision weights API. [VERIFY] dataset source and licence.",
+          "exercise": "Fine-tune a pretrained ResNet on the bean-leaf dataset and compare accuracy with your CNN trained from scratch."
+        }
+      ]
+    },
+    {
+      "module_id": "M3",
+      "week": 3,
+      "title": "Neural Networks for Text",
+      "lessons": [
+        {
+          "lesson_id": "L11",
+          "title": "Turning Text into Numbers: Tokens and Embeddings",
+          "objectives": [
+            "O1",
+            "O2"
+          ],
+          "summary": "Tokenisers split text into sub-word tokens with IDs; an embedding layer turns each ID into a vector where similar words are close together. Why the same sentence can produce different token counts in different languages. [VERSION] Hugging Face tokenizer API.",
+          "exercise": "Tokenise the same sentence in English, French, Portuguese and Arabic with a multilingual tokenizer, and compare the tokens and counts."
+        },
+        {
+          "lesson_id": "L12",
+          "title": "From Sequences to Transformers",
+          "objectives": [
+            "O2"
+          ],
+          "summary": "Why reading words one at a time (recurrent networks) was slow and forgetful, and how attention lets every word look at every other word. Encoder models for classification. Concepts only, with diagrams and no heavy maths.",
+          "exercise": "Get sentence embeddings from a pretrained encoder and compute similarity scores for 5 pairs of paraphrases and 5 unrelated pairs."
+        },
+        {
+          "lesson_id": "L13",
+          "title": "Fine-Tuning a Transformer for Text Classification",
+          "objectives": [
+            "O4"
+          ],
+          "summary": "Loading a dataset with the datasets library, tokenising in batches, and fine-tuning a small pretrained model with AutoModelForSequenceClassification and the Trainer API. Example: AG News topic classification. [VERSION] Trainer argument names. [VERIFY] dataset and model licences.",
+          "exercise": "Fine-tune a small pretrained model on a subset of AG News on the free GPU and report accuracy and F1 on the test split."
+        },
+        {
+          "lesson_id": "L14",
+          "title": "Evaluating Deep Models Properly",
+          "objectives": [
+            "O5",
+            "O6"
+          ],
+          "summary": "Separate validation and test sets, confusion matrices and per-class errors (recapped from AI-12, not retaught). Looking at misclassified examples, and running with several random seeds to see how much results vary.",
+          "exercise": "Run your text model with 3 seeds, report the mean and spread, and review 10 misclassified examples to find a pattern."
+        },
+        {
+          "lesson_id": "L15",
+          "title": "Common Training Problems and Fixes",
+          "objectives": [
+            "O5"
+          ],
+          "summary": "NaN loss, exploding and vanishing gradients, gradient clipping, wrong loss for the label shape, and GPU out-of-memory errors (smaller batches, mixed precision). A checklist for debugging a training run. [VERSION] Mixed-precision API.",
+          "exercise": "Debug 4 provided broken training notebooks and record the symptom, the cause and the fix for each one."
+        }
+      ]
+    },
+    {
+      "module_id": "M4",
+      "week": 4,
+      "title": "Tuning, Experiments and the Capstone",
+      "lessons": [
+        {
+          "lesson_id": "L16",
+          "title": "Tuning Hyperparameters and Learning-Rate Schedules",
+          "objectives": [
+            "O6"
+          ],
+          "summary": "Which settings matter most: learning rate first, then batch size, epochs and model size. Learning-rate schedulers and warm-up. Planning small sweeps within free GPU time limits.",
+          "exercise": "Run a small learning-rate sweep with and without a scheduler and choose the best setting from validation scores."
+        },
+        {
+          "lesson_id": "L17",
+          "title": "Tracking Experiments and Reproducibility",
+          "objectives": [
+            "O6",
+            "O7"
+          ],
+          "summary": "Fixing seeds, keeping settings in a config dictionary, logging each run to a results table, and saving checkpoints to Google Drive so a timed-out session does not lose work. Optional tools such as TensorBoard. [VERSION] Tool features and free plans.",
+          "exercise": "Log 3 runs to a results table with their settings and scores, save the best checkpoint to Drive, and reload it."
+        },
+        {
+          "lesson_id": "L18",
+          "title": "Capstone Step 1: Choose a Task and Build a Baseline",
+          "objectives": [
+            "O3",
+            "O7"
+          ],
+          "summary": "Choosing an image or text classification task and a public dataset with a clear licence (for example, from the Hugging Face Hub). Building a simple baseline and writing an experiment plan with hypotheses.",
+          "exercise": "Capstone step 1: choose a dataset, train a baseline, and write an experiment plan with at least 3 planned experiments."
+        },
+        {
+          "lesson_id": "L19",
+          "title": "Capstone Step 2: Fine-Tune and Compare",
+          "objectives": [
+            "O4",
+            "O6",
+            "O7"
+          ],
+          "summary": "Running the planned experiments: a pretrained model, regularisation and tuning. Comparing runs fairly on the same validation data, and testing only the final choice on the test set.",
+          "exercise": "Capstone step 2: run at least 3 tracked experiments, choose the final model, and evaluate it once on the test set."
+        },
+        {
+          "lesson_id": "L20",
+          "title": "Capstone Step 3: Document Your Experiments",
+          "objectives": [
+            "O7"
+          ],
+          "summary": "Writing a report in the style of a model card: data, method, experiments table, results, error analysis, limits and intended use. Optional: share the model on the Hugging Face Hub. [VERSION] Hub upload steps.",
+          "exercise": "Capstone step 3: write the experiment report and share the notebook so that someone else can run it from the start."
+        }
+      ]
+    }
+  ],
+  "capstone": {
+    "title": "Fine-Tune and Document a Neural Network",
+    "brief": "Train and fine-tune a neural network for a real classification task and document the experiments. Learners choose a real image or text classification task, build a baseline, run tracked experiments with a pretrained model, and deliver a reproducible notebook with a model-card-style report.",
+    "built_in": [
+      "L18",
+      "L19",
+      "L20"
+    ],
+    "assesses": [
+      "O3",
+      "O4",
+      "O5",
+      "O6",
+      "O7"
+    ]
+  },
+  "coverage_check": {
+    "O1": [
+      "L01",
+      "L02",
+      "L03",
+      "L11"
+    ],
+    "O2": [
+      "L03",
+      "L04",
+      "L05",
+      "L07",
+      "L11",
+      "L12"
+    ],
+    "O3": [
+      "L02",
+      "L05",
+      "L06",
+      "L07",
+      "L18"
+    ],
+    "O4": [
+      "L10",
+      "L13",
+      "L19"
+    ],
+    "O5": [
+      "L08",
+      "L09",
+      "L14",
+      "L15"
+    ],
+    "O6": [
+      "L09",
+      "L14",
+      "L16",
+      "L17",
+      "L19"
+    ],
+    "O7": [
+      "L17",
+      "L18",
+      "L19",
+      "L20"
+    ]
+  },
+  "flags": [
+    "Screen demos: all lessons except L12 (transformer concepts, taught with diagrams) and L20 (report writing) are listed, because they are live PyTorch or Hugging Face walkthroughs.",
+    "L01 [VERSION]: Colab free GPU access, GPU type, usage limits and session timeouts are not guaranteed. Exercises must also finish on CPU with smaller data subsets.",
+    "L01 [REGION]: Google Colab and the Hugging Face Hub may not be available in every country. A local or alternative notebook service is needed as a fallback.",
+    "L10 [VERSION]: torchvision pretrained weights API (the weights= argument replaced pretrained=True in newer versions).",
+    "L13 [VERSION]: Hugging Face Trainer and TrainingArguments parameter names (for example, evaluation_strategy vs eval_strategy) and datasets loading.",
+    "L15 [VERSION]: PyTorch mixed-precision (torch.amp) API.",
+    "L17 [VERSION]: TensorBoard and other experiment-tracking tools, and their free plans.",
+    "L06, L10, L13 [VERIFY]: licences and sources of Fashion-MNIST, the bean-leaf disease dataset (Uganda) and AG News, and of every pretrained model checkpoint used.",
+    "L15 needs 4 purpose-built broken training notebooks created by the course team before Stage 2.",
+    "Judgement call: calculus and linear algebra are assumed from AI-05, and metrics and train/test practice from AI-12, so they are only recapped in 20 seconds or less.",
+    "Judgement call: generative models (GANs, diffusion, training LLMs) and object detection are out of scope. Object detection is covered in AI-19, and LLM applications in AI-14."
+  ]
+}

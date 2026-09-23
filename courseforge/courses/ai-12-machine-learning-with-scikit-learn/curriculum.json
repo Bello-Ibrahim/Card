@@ -1,0 +1,339 @@
+{
+  "course_id": "AI-12",
+  "slug": "ai-12-machine-learning-with-scikit-learn",
+  "course_title": "Machine Learning with scikit-learn",
+  "level": "Intermediate",
+  "status": "AWAITING_APPROVAL",
+  "screen_demo_lessons": [
+    "L02",
+    "L03",
+    "L04",
+    "L05",
+    "L06",
+    "L07",
+    "L08",
+    "L09",
+    "L10",
+    "L11",
+    "L12",
+    "L13",
+    "L14",
+    "L15",
+    "L16",
+    "L17"
+  ],
+  "overview": "A four-week, hands-on course for people who can already write Python and clean data with pandas (as in AI-11 Python for AI). Learners use scikit-learn in Google Colab to frame business problems as machine learning tasks, build preprocessing pipelines, train classification and regression models, and measure them with the right metrics and cross-validation. Week 3 improves models through feature engineering, ensembles and tuning. Week 4 covers how to interpret a model, check it for fairness risks, and explain its performance in business language. The capstone is an end-to-end predictive model on a real business dataset with a one-page stakeholder report. Neural networks are left to AI-13, and deployment to AI-18.",
+  "time_plan": {
+    "video_minutes": 90,
+    "weekly_hours": 3,
+    "per_week": "About 20–25 minutes of video, 110 minutes of hands-on notebook work, and 45 minutes of reading and quizzes. In week 4 most of the notebook time goes to the capstone."
+  },
+  "objectives": [
+    {
+      "id": "O1",
+      "bloom": "Remember",
+      "text": "Describe the scikit-learn workflow (estimators, fit, predict, transform) and the terms features, target, training set and test set."
+    },
+    {
+      "id": "O2",
+      "bloom": "Understand",
+      "text": "Explain why models must be tested on unseen data, and how overfitting, underfitting and data leakage give misleading results."
+    },
+    {
+      "id": "O3",
+      "bloom": "Apply",
+      "text": "Train classification and regression models (linear and logistic regression, decision trees, k-nearest neighbours, random forests and gradient boosting) inside scikit-learn pipelines."
+    },
+    {
+      "id": "O4",
+      "bloom": "Analyse",
+      "text": "Compare models with suitable metrics (accuracy, precision, recall, F1, ROC AUC, MAE, RMSE, R²) and cross-validation, and interpret confusion matrices and error patterns."
+    },
+    {
+      "id": "O5",
+      "bloom": "Evaluate",
+      "text": "Improve and select a model through feature engineering, hyperparameter tuning and threshold choice, and justify the trade-offs."
+    },
+    {
+      "id": "O6",
+      "bloom": "Evaluate",
+      "text": "Judge whether a model is fit for a business decision, including subgroup performance and risks, and explain its performance and limits to non-technical stakeholders."
+    },
+    {
+      "id": "O7",
+      "bloom": "Create",
+      "text": "Build, evaluate and report an end-to-end predictive model for a real business problem."
+    }
+  ],
+  "modules": [
+    {
+      "module_id": "M1",
+      "week": 1,
+      "title": "The Machine Learning Workflow",
+      "lessons": [
+        {
+          "lesson_id": "L01",
+          "title": "From Business Question to ML Problem",
+          "objectives": [
+            "O1"
+          ],
+          "summary": "A short recap of supervised learning, then how to frame a problem: business question, target, features, and how success will be measured. Classification or regression? Worked example: a logistics company in Brazil wants to predict late deliveries.",
+          "exercise": "Frame 3 business problems (for example, loan default in Kenya, hotel cancellations in Portugal, crop yield in India): name the target, 4 features, the task type and a metric."
+        },
+        {
+          "lesson_id": "L02",
+          "title": "Your First Model: fit and predict",
+          "objectives": [
+            "O1",
+            "O3"
+          ],
+          "summary": "Every scikit-learn estimator has the same buttons: fit to learn and predict to use what it learned. Analogy: different kitchen appliances that all have the same on and start controls. Loading a built-in dataset and training a decision tree. [VERSION] scikit-learn API details depend on the installed version.",
+          "exercise": "Load the wine dataset that ships with scikit-learn, train a DecisionTreeClassifier, and predict the class of 5 samples."
+        },
+        {
+          "lesson_id": "L03",
+          "title": "Train/Test Split and Why It Matters",
+          "objectives": [
+            "O2"
+          ],
+          "summary": "Holding back a test set that the model never sees during training. train_test_split with random_state and stratify. Analogy: a fair exam uses questions the student has not seen. Why a very high training score can hide a weak model.",
+          "exercise": "Compare training and test accuracy for a deep and a shallow decision tree, and explain the gap in 2 sentences."
+        },
+        {
+          "lesson_id": "L04",
+          "title": "Preprocessing: Scaling and Encoding",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "Why some models need scaled numbers (StandardScaler) and all need categories as numbers (OneHotEncoder). The golden rule: learn preprocessing settings from training data only. Cleaning with pandas was covered in AI-11 and is not repeated. [VERSION] OneHotEncoder parameter names changed in recent releases.",
+          "exercise": "Scale and one-hot encode a mixed dataset, fitting on the training set only, and check the shapes of the results."
+        },
+        {
+          "lesson_id": "L05",
+          "title": "Pipelines and ColumnTransformer",
+          "objectives": [
+            "O2",
+            "O3"
+          ],
+          "summary": "Pipeline chains preprocessing and model into one object, which prevents data leakage. ColumnTransformer applies different steps to numeric and categorical columns. Dataset: UCI Bank Marketing (a Portuguese bank's term-deposit campaign). [VERIFY] dataset licence.",
+          "exercise": "Build a pipeline for the Bank Marketing data that imputes, scales, encodes and fits a model, all in one fit call."
+        }
+      ]
+    },
+    {
+      "module_id": "M2",
+      "week": 2,
+      "title": "Classification: Models and Metrics",
+      "lessons": [
+        {
+          "lesson_id": "L06",
+          "title": "Logistic Regression for Yes/No Questions",
+          "objectives": [
+            "O3"
+          ],
+          "summary": "Logistic regression outputs a probability, and a threshold (0.5 by default) turns it into a yes or no. A first look at coefficients: which features push the probability up or down. Worked example: will a bank customer subscribe to a term deposit?",
+          "exercise": "Train logistic regression on the Bank Marketing data and list the 3 features with the largest positive and negative coefficients."
+        },
+        {
+          "lesson_id": "L07",
+          "title": "Decision Trees and k-Nearest Neighbours",
+          "objectives": [
+            "O2",
+            "O3"
+          ],
+          "summary": "A decision tree is a flowchart of yes/no questions; very deep trees memorise the training data. k-nearest neighbours predicts by asking the most similar past examples, so scaling matters. Seeing overfitting and underfitting in a plot.",
+          "exercise": "Vary max_depth from 1 to 20, plot training and test scores, and mark where the model starts to overfit."
+        },
+        {
+          "lesson_id": "L08",
+          "title": "Accuracy Is Not Enough: The Confusion Matrix",
+          "objectives": [
+            "O4"
+          ],
+          "summary": "With imbalanced classes, a model can be 99% accurate and useless. Worked example: if 1 in 100 card payments is fraud, a model that always says 'not fraud' is 99% accurate. The confusion matrix, precision, recall and F1.",
+          "exercise": "Build a confusion matrix for your Bank Marketing model and calculate precision, recall and F1 by hand, then check them with scikit-learn."
+        },
+        {
+          "lesson_id": "L09",
+          "title": "Probabilities, Thresholds and ROC Curves",
+          "objectives": [
+            "O4",
+            "O5"
+          ],
+          "summary": "Using predict_proba and moving the threshold to trade precision against recall. The ROC curve, ROC AUC and precision-recall curves. Hypothetical example: a clinic in Nairobi prefers to call extra patients for screening rather than miss one.",
+          "exercise": "Given a cost for each false positive and false negative, find the threshold that gives the lowest total cost."
+        },
+        {
+          "lesson_id": "L10",
+          "title": "Cross-Validation for Reliable Scores",
+          "objectives": [
+            "O2",
+            "O4"
+          ],
+          "summary": "One train/test split can be lucky or unlucky. k-fold and stratified k-fold cross-validation with cross_val_score and cross_validate. Reporting the mean and the spread of the scores.",
+          "exercise": "Run 5-fold cross-validation for 3 classifiers and report each one's mean score and standard deviation in a small table."
+        }
+      ]
+    },
+    {
+      "module_id": "M3",
+      "week": 3,
+      "title": "Regression and Model Improvement",
+      "lessons": [
+        {
+          "lesson_id": "L11",
+          "title": "Regression Models and Metrics",
+          "objectives": [
+            "O3",
+            "O4"
+          ],
+          "summary": "Predicting numbers with linear regression and tree-based regressors. MAE, RMSE and R², and what each one means in business units. Dataset: UCI Seoul Bike Sharing Demand (hourly bike rentals and weather). [VERIFY] dataset licence.",
+          "exercise": "Predict hourly bike rentals, report MAE and RMSE in 'bikes per hour', and plot predicted against actual values."
+        },
+        {
+          "lesson_id": "L12",
+          "title": "Ensembles: Random Forests and Gradient Boosting",
+          "objectives": [
+            "O3",
+            "O4"
+          ],
+          "summary": "Many weak models combined can be strong. Analogy: the average guess of a crowd is often better than one expert's guess. RandomForest and HistGradientBoosting models, and when to try each one. [VERSION] Estimator names and defaults.",
+          "exercise": "Compare linear regression, a random forest and gradient boosting on the bike data with cross-validation, and pick one."
+        },
+        {
+          "lesson_id": "L13",
+          "title": "Feature Engineering That Helps",
+          "objectives": [
+            "O5"
+          ],
+          "summary": "Creating useful features: hour and weekday from timestamps, ratios, interactions and bins. Checking every new feature with cross-validation, and making sure no feature leaks future information.",
+          "exercise": "Add 3 new features to the bike data, measure the change in cross-validated RMSE, and keep only the features that help."
+        },
+        {
+          "lesson_id": "L14",
+          "title": "Hyperparameter Tuning with Grid and Random Search",
+          "objectives": [
+            "O5"
+          ],
+          "summary": "What hyperparameters are and why defaults are only a starting point. GridSearchCV and RandomizedSearchCV on a full pipeline. Keeping the test set untouched until the very end.",
+          "exercise": "Tune a random forest with RandomizedSearchCV and compare its test score with the untuned model."
+        }
+      ]
+    },
+    {
+      "module_id": "M4",
+      "week": 4,
+      "title": "Explaining Models and the Capstone",
+      "lessons": [
+        {
+          "lesson_id": "L15",
+          "title": "Which Features Matter? Interpreting Models",
+          "objectives": [
+            "O4",
+            "O6"
+          ],
+          "summary": "Coefficients, tree feature importances and permutation importance, and the limits of each. Importance is not the same as cause. Turning model results into plain-language statements. [VERSION] sklearn.inspection functions.",
+          "exercise": "Calculate permutation importance for your best model and write 3 plain-language sentences a sales manager could understand."
+        },
+        {
+          "lesson_id": "L16",
+          "title": "Fairness, Limits and Model Risk",
+          "objectives": [
+            "O6"
+          ],
+          "summary": "Checking performance for subgroups, such as by region or age band, and spotting groups where the model fails. Class imbalance, data that changes over time, and 'what happens if the model is wrong?'. Hypothetical cases only.",
+          "exercise": "Compare recall across 3 subgroups in your model and write a short risk note with one mitigation for each risk."
+        },
+        {
+          "lesson_id": "L17",
+          "title": "Capstone Step 1: Build an End-to-End Model",
+          "objectives": [
+            "O5",
+            "O7"
+          ],
+          "summary": "Choosing a business dataset from Kaggle or UCI and framing the problem. Workflow: baseline with a Dummy model, pipeline, cross-validation, tuning, one final test, and saving the model with joblib. [VERSION] Saved models only load with compatible library versions, and saved files should never be loaded from untrusted sources.",
+          "exercise": "Capstone step 1: complete the modelling notebook, from problem framing to a tuned, tested and saved model."
+        },
+        {
+          "lesson_id": "L18",
+          "title": "Capstone Step 2: Report to Stakeholders",
+          "objectives": [
+            "O6",
+            "O7"
+          ],
+          "summary": "A one-page stakeholder report: the problem, what the model does, performance in business terms (for example, 'of every 100 customers we call, about N subscribe'), limits, risks and a recommendation. Avoiding jargon.",
+          "exercise": "Capstone step 2: write the one-page stakeholder report and a 3-sentence summary for an executive."
+        }
+      ]
+    }
+  ],
+  "capstone": {
+    "title": "End-to-End Predictive Model with a Stakeholder Report",
+    "brief": "Build and evaluate an end-to-end predictive model on a real business problem. Learners choose a public business dataset, build and tune a scikit-learn pipeline, evaluate it honestly on held-out data, check subgroup performance, and explain the results in a one-page report for non-technical readers.",
+    "built_in": [
+      "L17",
+      "L18"
+    ],
+    "assesses": [
+      "O3",
+      "O4",
+      "O5",
+      "O6",
+      "O7"
+    ]
+  },
+  "coverage_check": {
+    "O1": [
+      "L01",
+      "L02"
+    ],
+    "O2": [
+      "L03",
+      "L05",
+      "L07",
+      "L10"
+    ],
+    "O3": [
+      "L02",
+      "L04",
+      "L05",
+      "L06",
+      "L07",
+      "L11",
+      "L12"
+    ],
+    "O4": [
+      "L08",
+      "L09",
+      "L10",
+      "L11",
+      "L12",
+      "L15"
+    ],
+    "O5": [
+      "L09",
+      "L13",
+      "L14",
+      "L17"
+    ],
+    "O6": [
+      "L15",
+      "L16",
+      "L18"
+    ],
+    "O7": [
+      "L17",
+      "L18"
+    ]
+  },
+  "flags": [
+    "Screen demos: L02–L17 are listed because they are live notebook walkthroughs. L01 (problem framing) and L18 (report writing) use slides.",
+    "[VERSION]: scikit-learn parameter names and defaults (for example, OneHotEncoder sparse vs sparse_output, HistGradientBoosting, set_output) must be checked against the version installed in Colab before scripting.",
+    "L05, L11 [VERIFY]: availability and licences of UCI Bank Marketing and UCI Seoul Bike Sharing Demand datasets.",
+    "L17 [VERIFY]: Kaggle datasets each have their own licence. Kaggle needs a free account, and download steps in Colab are [VERSION].",
+    "L17 [VERSION]: joblib model files depend on library versions and must not be loaded from untrusted sources.",
+    "L09, L16 use hypothetical cases (clinic screening, subgroup failures) on purpose, to avoid unverified claims about real organisations.",
+    "Judgement call: pandas cleaning and ML-ready tables are assumed from AI-11 and not retaught. Unsupervised learning (clustering) is out of scope because the brief focuses on classification and regression.",
+    "Judgement call: metrics are explained intuitively. The maths behind them belongs to AI-05. Deployment and monitoring are left to AI-18."
+  ]
+}
