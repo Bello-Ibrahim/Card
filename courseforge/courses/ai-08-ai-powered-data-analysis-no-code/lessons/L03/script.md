@@ -1,6 +1,6 @@
 # L03 From Business Question to Data Question | Presenter Script
 
-Course: AI-08 · Video: 5 min · Words: 678
+Course: AI-08 · Video: 5 min · Words: 682
 
 ## Hook
 How is the shop doing? Every owner asks this question. But if you type it into an AI tool with your sales sheet, you get a long, general answer that does not help you decide anything. The problem is not the AI. The problem is the question.
@@ -14,7 +14,7 @@ To turn a business question into data questions, make each one measurable with f
 
 And the fourth part, compared with what? This is the one people forget most often. Revenue was five thousand in March means little on its own. Revenue was five thousand in March, against six thousand in February, tells you something.
 
-Next, check that your data can answer each question. Name the columns you need. If a column does not exist, you need more data or a different question. You find missing data before you start the analysis, not after. And write your data questions before you open any AI tool.
+Next, check that your data can answer each question. Name the columns you need. If a column does not exist, you need more data or a different question. This step saves time. You find missing data before you start the analysis, not after. And write your data questions before you open any AI tool.
 
 Here is a way to picture it. A business question is like telling a taxi driver, take me somewhere nice. A data question is like giving the exact address. Both start the journey, but only one gets you to a place you can check you have reached.
 
