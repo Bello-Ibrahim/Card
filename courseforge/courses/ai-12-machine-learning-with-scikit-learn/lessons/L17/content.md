@@ -3,17 +3,17 @@
 Course: AI-12 · Module: M4 · Objectives: O5, O7 · Video: 6 min (screen demo)
 
 ## Hook
-You now have every piece: framing, pipelines, metrics, cross-validation, feature engineering, tuning and risk checks. In this lesson you put them together in the right order, on a dataset you choose, and finish with a tested model saved to a file.
+You now have every piece. In this lesson you put them together in the right order, on a dataset you choose, and finish with a tested model saved to a file.
 
 ## Explanation
 Choose a **public business dataset** with a clear target and at least a few thousand rows. Good options include the UCI Bank Marketing or Online Shoppers Purchasing Intention data, a Kaggle telecom churn or hotel booking dataset, or the UCI Seoul Bike data for regression. [VERIFY] Every Kaggle dataset has its own licence, which you must read and cite. Downloading from Kaggle needs a free account, and the steps to connect Colab to Kaggle change over time. [VERSION] Do not use personal or confidential data from your employer, and do not paste such data into Colab or any AI tool.
 
 Then follow this workflow in one notebook:
 
-1. **Frame the problem** (L01): business question, target, features known at prediction time, task type, metric and the cost of each mistake.
-2. **Split once** (L03): hold back a test set with `stratify` for classification and a fixed `random_state`. Do not look at it again until step 7.
-3. **Baseline** (L08): a `DummyClassifier` or `DummyRegressor` inside the same pipeline. Every model must beat it.
-4. **Pipeline** (L05): imputation, scaling and encoding in a ColumnTransformer, with a simple model first.
+1. **Frame the problem** (L01), including the cost of each mistake.
+2. **Split once** (L03) with a fixed `random_state`. Do not look at the test set again until step 7.
+3. **Baseline** (L08): a `DummyClassifier` or `DummyRegressor`. Every model must beat it.
+4. **Pipeline** (L05) with a simple model first.
 5. **Compare and improve** (L10 to L13): cross-validate 2 or 3 models and test new features.
 6. **Tune** (L14): a randomized search on the best candidate, and, for classification, a threshold chosen from costs (L09).
 7. **Final test**: score the chosen pipeline once on the test set.
@@ -60,14 +60,14 @@ saved with scikit-learn 1.9.1
 The presenter walks through it step by step:
 
 1. The baseline scores 0.5, which is random ranking. The model scores 0.778 in cross-validation, so it clearly learns something.
-2. The single test score, 0.752, is a little lower than the cross-validation mean. That is normal, and it is within the fold spread seen in L10. Elena reports the test score as her final number.
+2. The single test score, 0.752, is a little lower than the cross-validation mean, but within the fold spread seen in L10. Elena reports it as her final number.
 3. The whole pipeline, including preprocessing, is saved to one file. Loading it and predicting on 3 rows confirms that the file works.
-4. In Colab, the presenter opens the Files panel and downloads the `.joblib` file, because Colab storage is temporary. [VERSION]
+4. The presenter downloads the `.joblib` file from the Colab Files panel, because Colab storage is temporary. [VERSION]
 
 Elena adds a text cell with the scikit-learn version, the chosen threshold of 0.15 from L09, and the date.
 
 ## Common Mistake
-Learners often save only the model step, `pipe.named_steps["model"]`, without the preprocessing. When the file is loaded later, raw data cannot be passed to it, and people rebuild the preprocessing by hand, often with small differences. Save the whole fitted pipeline. A second mistake is changing the model after seeing the test score and then reporting the new test score as if it were independent.
+Learners often save only the model step, `pipe.named_steps["model"]`, without the preprocessing. When the file is loaded later, raw data cannot be passed to it, and people rebuild the preprocessing by hand, often with small differences. Save the whole fitted pipeline.
 
 ## Key Takeaways
 1. Follow one order: frame, split once, baseline, pipeline, compare, tune, test once, save.
@@ -79,13 +79,12 @@ Learners often save only the model step, `pipe.named_steps["model"]`, without th
 **Tools:** Google Colab (free), scikit-learn, pandas, joblib; a public dataset from UCI or Kaggle (free account needed for Kaggle). [VERIFY]
 **Steps:**
 1. Choose your dataset, record its source and licence, and write the problem framing in a text cell.
-2. Load and inspect the data; remove features that are not known at prediction time.
-3. Split once, with a fixed `random_state`, and put the test set aside.
-4. Build a Dummy baseline and a first pipeline, and cross-validate both.
-5. Compare at least 2 more models and test at least 2 new features with cross-validation.
-6. Tune the best model with `RandomizedSearchCV`; for classification, choose a threshold from costs.
-7. Score the final pipeline once on the test set and check one subgroup (L16).
-8. Save the pipeline with joblib, record the library versions, and download the file.
+2. Remove features that are not known at prediction time, then split once and put the test set aside.
+3. Build a Dummy baseline and a first pipeline, and cross-validate both.
+4. Compare at least 2 more models and test at least 2 new features with cross-validation.
+5. Tune the best model with `RandomizedSearchCV`; for classification, choose a threshold from costs.
+6. Score the final pipeline once on the test set and check one subgroup (L16).
+7. Save the pipeline with joblib, record the library versions, and download the file.
 **What good looks like:** A notebook that runs from top to bottom, a results table (baseline, candidates, tuned model), one final test score, a subgroup check, and a saved model file with versions recorded.
 **Time:** about 120 minutes, spread over the week
 
