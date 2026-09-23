@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-04",
+  "module_id": "M1",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L01",
+      "objective": "O1",
+      "question": "A manager proposes \"AI\" to send payment reminders to customers on a fixed schedule, 7 days after each due date. What is the most accurate description of this proposal?",
+      "options": [
+        "Generative AI, because it produces a written reminder.",
+        "Rule-based automation, which may not need AI at all.",
+        "Machine learning, because it uses past invoices.",
+        "A model that must be trained on customer payment data."
+      ],
+      "answer_index": 1,
+      "explanation": "A fixed schedule is a simple rule, so this is automation that may need no AI. The most tempting wrong option is machine learning because invoices are data. But the reminder is not learned from past examples; it follows one fixed rule that a person wrote."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L02",
+      "objective": "O2",
+      "question": "A public hospital uses a tool that predicts busy days one week ahead. The administration team still builds the staff rota itself. Which type of AI value is this?",
+      "options": [
+        "Enabling a new product or service",
+        "Automating a routine task end to end",
+        "Replacing the rota team's judgement",
+        "Supporting people's decisions"
+      ],
+      "answer_index": 3,
+      "explanation": "The tool gives better information, but people still decide, so it supports decisions. The most tempting wrong option is automation. Automation would mean the tool builds the rota without a person doing each step, which is not the case here."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L03",
+      "objective": "O2",
+      "question": "A team says its AI project is cheap because the subscription costs less than one employee's monthly salary. What is the best leadership response?",
+      "options": [
+        "Ask for estimates of data, people, process and oversight costs in staff time and money before approving.",
+        "Approve it, because the subscription is the main cost of an AI project.",
+        "Reject it, because AI projects always cost more than they save.",
+        "Ask the vendor for a discount on the subscription."
+      ],
+      "answer_index": 0,
+      "explanation": "The licence is often only a small part of total cost; data, people, process and oversight costs must be estimated too. The most tempting wrong option is approving on the subscription price, because it looks like a fair comparison. It ignores the hidden costs that often decide whether the project succeeds."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L04",
+      "objective": "O3",
+      "question": "On a value-and-feasibility matrix, a use case scores 5 for value but 2 for feasibility because its data sits in three systems. How should a leader treat it?",
+      "options": [
+        "As a quick win to start immediately.",
+        "As an idea to avoid permanently.",
+        "As a strategic project: plan it and fix the data gap first.",
+        "As a small improvement to do only if it is almost free."
+      ],
+      "answer_index": 2,
+      "explanation": "High value with low feasibility is a strategic project, so you prepare the data and skills before a pilot. The most tempting wrong option is a quick win, because the value is so high. Starting now would likely stall on the data problem."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L05",
+      "objective": "O3",
+      "question": "A team's readiness scores are: data 4, skills 3, culture 4, leadership support 4, governance 1. What should the leader do first?",
+      "options": [
+        "Start the most ambitious use case, because the average score is above 3.",
+        "Write simple rules for AI tool use and data handling before any pilot.",
+        "Stop all AI work until every area scores 5.",
+        "Focus on improving data, because it is the most important area."
+      ],
+      "answer_index": 1,
+      "explanation": "The lowest score shows where projects will fail, and low governance calls for a simple acceptable-use policy before a pilot. The most tempting wrong option is relying on the average above 3. An average hides the weakest area, which here is governance."
+    }
+  ]
+}

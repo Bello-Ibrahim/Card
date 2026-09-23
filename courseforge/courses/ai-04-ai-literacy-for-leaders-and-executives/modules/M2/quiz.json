@@ -1,0 +1,76 @@
+{
+  "course_id": "AI-04",
+  "module_id": "M2",
+  "questions": [
+    {
+      "id": "Q1",
+      "lesson_id": "L06",
+      "objective": "O4",
+      "question": "An AI tool ranks job applicants. The risk that it favours groups hired more often in the past scores highest in the risk register. Which control is most appropriate?",
+      "options": [
+        "Let the tool reject low-ranked candidates automatically to save time.",
+        "Ask the IT team to own the risk, because it is a technical problem.",
+        "Test results across groups and allow no automatic rejections, with a business owner for the risk.",
+        "Remove the risk from the register because the vendor says the tool is fair."
+      ],
+      "answer_index": 2,
+      "explanation": "Testing across groups and keeping people responsible for decisions directly controls bias, and a business leader should own it. The most tempting wrong option is giving the risk to IT. Bias is a business risk about fair treatment, so technical staff can help but should not own the decision."
+    },
+    {
+      "id": "Q2",
+      "lesson_id": "L07",
+      "objective": "O4",
+      "question": "A leader finds that staff are pasting client information into free AI chat tools. What is usually the most effective first response?",
+      "options": [
+        "Write a short acceptable-use policy with approved tools and clear data rules, and explain it to staff.",
+        "Ban all AI tools and take no further action.",
+        "Ignore it, because free tools are safe to use.",
+        "Ask each employee to decide for themselves which data is safe to share."
+      ],
+      "answer_index": 0,
+      "explanation": "A clear policy with approved tools and data rules lets staff use AI safely. The most tempting wrong option is a total ban. Bans are hard to enforce, and staff often move to personal accounts where the organisation has no control at all."
+    },
+    {
+      "id": "Q3",
+      "lesson_id": "L08",
+      "objective": "O5",
+      "question": "Two AI vendors give strong demonstrations. Which question best separates them during due diligence?",
+      "options": [
+        "Which vendor's presenter answered most confidently?",
+        "Which vendor has the lowest monthly price in the first quote?",
+        "Which vendor has the most features in the demo?",
+        "Is our data used to train your models, and will you confirm the answer in the contract?"
+      ],
+      "answer_index": 3,
+      "explanation": "Data use and written commitments reveal real differences that a demo hides. The most tempting wrong option is the lowest first quote. Pricing often grows with use and may exclude setup or support costs, so the first price can be misleading."
+    },
+    {
+      "id": "Q4",
+      "lesson_id": "L09",
+      "objective": "O5",
+      "question": "Which pilot plan will give the most reliable evidence for a go, adjust or stop decision?",
+      "options": [
+        "Launch the tool to all teams and ask managers for their opinion after three months.",
+        "Measure the current performance first, agree three success measures, run for a fixed time and set a decision date.",
+        "Run the pilot until the team feels confident, then decide.",
+        "Ask the vendor to measure results and report back."
+      ],
+      "answer_index": 1,
+      "explanation": "A baseline, agreed measures, a fixed duration and a decision date make the result measurable. The most tempting wrong option is asking managers for their opinion. Opinions are useful, but without a baseline nobody can show whether the work actually improved."
+    },
+    {
+      "id": "Q5",
+      "lesson_id": "L10",
+      "objective": "O6",
+      "question": "A draft 90-day roadmap lists the tools to buy each month but has no owners, measures or decision dates. What is the main problem?",
+      "options": [
+        "It should cover 12 months instead of 90 days.",
+        "It should list more tools to show ambition.",
+        "It lacks accountability and evidence, so it is a wish list rather than a plan.",
+        "It should be shared only with the IT team."
+      ],
+      "answer_index": 2,
+      "explanation": "A roadmap needs owners, measures, risks and decision dates in each phase so people know who acts and how success is judged. The most tempting wrong option is making it longer. A longer plan with the same gaps would still have no one accountable and no evidence."
+    }
+  ]
+}
