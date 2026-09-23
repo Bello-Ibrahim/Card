@@ -1,0 +1,77 @@
+{
+  "title": "Prompting for Teaching Tasks",
+  "thumbnail": {
+    "headline": "Brief It Like a Colleague",
+    "image": "Navy background, a short one-line prompt card next to a longer four-part prompt card with teal tick marks, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Brief It Like a Colleague", "body": "Left: a tiny one-line prompt card with a question mark. Right: a four-part prompt card labelled Learners · Outcome · Time · Format. Small tag: AI for Educators and Trainers · Lesson 2."}
+  },
+  "production_notes": [
+    "No facts to verify: content.md Review Flags say None. The prompt structure is general advice and the example is hypothetical.",
+    "Ngozi and her school in Abuja are fictional; stock footage must show no real school name, crest or logo.",
+    "The prompts appear on code-layout slides only; the presenter describes them and does not read them out word for word.",
+    "The science in Ngozi's answer key is checked by her against a textbook in the story; no science claims are stated as new facts in the voiceover."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Ask an AI assistant for an activity about photosynthesis, and you will get something. It may be too long, too easy, or written for a different age group. The problem is usually not the AI. It is the missing information in the request.",
+       "on_screen_text": "What is missing from your request?"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "In the last lesson, we sorted teaching tasks into what AI can draft and what stays human. Now we learn how to ask well. A prompt is the instruction you type into an AI assistant. The assistant only knows what you tell it. A short, general prompt gets a general answer.",
+       "slide": {"layout": "title", "title": "Prompting for Teaching Tasks", "body": "AI for Educators and Trainers · Lesson 2 of 12. Subtitle: The assistant only knows what you tell it."}},
+      {"visual_type": "slide",
+       "voiceover": "A good teaching prompt has four parts. First, the learners: their age or role, their level, and the language they learn in. That could be fifteen-year-olds learning science in their second language, or new call-centre staff in their first week.",
+       "slide": {"layout": "bullets", "title": "Part 1: The learners", "body": "Age or role · Level · Language of learning. Examples: 15-year-olds, science in a second language · New call-centre staff, first week, no technical background"}},
+      {"visual_type": "slide",
+       "voiceover": "Second, the learning outcome: what learners should be able to do at the end, with an action verb like explain, compare or apply. Third, the time available, such as a forty-minute lesson or a ninety-minute workshop. And fourth, the format you want, for example a table, numbered steps, or three options to choose from.",
+       "slide": {"layout": "diagram", "title": "The four-part prompt", "body": "Four connected blocks: Learners → Outcome (action verb: explain, compare, apply) → Time (40-minute lesson, 90-minute workshop) → Format (table, steps, 3 options, max length)"}},
+      {"visual_type": "slide",
+       "voiceover": "After the first answer, you do not need to start again. Continue the conversation, and say exactly what to change. For example, make step two shorter, use examples from farming, or give the instructions at a simpler reading level.",
+       "slide": {"layout": "bullets", "title": "Keep the conversation going", "body": "Follow-ups: 'Make step 2 shorter' · 'Use examples from farming instead of cooking' · 'Give the instructions at a simpler reading level'"}},
+      {"visual_type": "stock",
+       "voiceover": "Think of prompting like briefing a substitute teacher who arrives five minutes before your class. If you only say teach photosynthesis, they will do something general.",
+       "stock_query": "teacher briefing colleague in school corridor",
+       "on_screen_text": "Brief it like a substitute teacher"},
+      {"visual_type": "stock",
+       "voiceover": "But if you tell them the year group, the mixed level, the forty minutes, the outcome, and that there is no projector, they can plan something that works for your room.",
+       "stock_query": "classroom with chalkboard and no projector",
+       "on_screen_text": "Details make it fit your room"},
+      {"visual_type": "text",
+       "voiceover": "And one rule from the start. Describe your learners as a group, never as individuals. Do not include names, grades, health details or any other personal information in a prompt.",
+       "on_screen_text": "Describe the group, never individuals"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's see it in practice. Ngozi teaches science at a secondary school in Abuja, in Nigeria. She needs an activity on photosynthesis for tomorrow.",
+       "stock_query": "science teacher preparing lesson at school desk",
+       "on_screen_text": "Ngozi · science teacher · Abuja"},
+      {"visual_type": "slide",
+       "voiceover": "Her first prompt is one short line asking for an activity about photosynthesis. The answer suggests a two-hour experiment, with equipment she does not have, and instructions written for university students.",
+       "slide": {"layout": "code", "title": "First prompt", "body": "Give me an activity about photosynthesis.  → Result (red cross): 2-hour experiment, lab equipment she does not have, university-level instructions"}},
+      {"visual_type": "slide",
+       "voiceover": "So she tries again with the four parts. Thirty students aged fourteen to fifteen, mixed ability, learning science in English as a second language. The outcome: they can explain in two or three sentences why a plant needs light, water and carbon dioxide. Forty minutes, no lab equipment. And a timed plan in a table, plus three check questions with answers.",
+       "slide": {"layout": "code", "title": "Four-part prompt", "body": "Learners: 30 students aged 14-15, mixed ability, learning science in English as a second language.\nOutcome: students can explain in 2-3 sentences why a plant needs light, water and carbon dioxide to make food.\nTime: 40 minutes, no lab equipment, one board.\nFormat: a timed plan in a table, plus 3 check questions with answers. Use short sentences."}},
+      {"visual_type": "slide",
+       "voiceover": "The new answer is a forty-minute plan. A five-minute question about why plants on a dark windowsill grow poorly. A fifteen-minute pair activity sorting cards into inputs and outputs. Ten minutes for a diagram, and ten minutes for the check questions.",
+       "slide": {"layout": "diagram", "title": "The 40-minute plan", "body": "Timeline bar: 5 min dark-windowsill question → 15 min pair card sort (inputs / outputs) → 10 min diagram → 10 min check questions"}},
+      {"visual_type": "slide",
+       "voiceover": "Ngozi still edits it. She replaces one example with a local crop her students know, and she checks the science in the answer key against her textbook. Then she asks for the card instructions to be rewritten for students still building their English reading skills. Now the activity fits her class.",
+       "slide": {"layout": "bullets", "title": "Ngozi still edits", "body": "Swap in a local crop example · Check the answer key against the textbook · Follow-up: simpler card instructions for English learners. Tick: fits her class"}},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is to accept the first answer, or to give up and decide AI is not useful for your subject. The first answer is only a starting point. And never add detail by pasting a class list or grades.",
+       "on_screen_text": "The first answer is a starting point"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, a strong teaching prompt includes the learners, the learning outcome, the time available and the format you want. Second, improve results by continuing the conversation with specific changes. Third, describe learners as a group, never by name, and always check facts and fit before you use the output.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Learners · Outcome · Time · Format. 2. Continue the conversation with specific changes. 3. Describe the group, no personal data; check facts and fit."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below this video, write a one-line prompt and then a four-part prompt for an activity you will teach soon. Test both in Claude or ChatGPT, improve the result once, and compare. It takes about twenty-five minutes. In the next lesson, we look at privacy, integrity and ethics. See you there.",
+       "on_screen_text": "Next: Privacy, Integrity and Ethics"}
+    ]
+  }
+}

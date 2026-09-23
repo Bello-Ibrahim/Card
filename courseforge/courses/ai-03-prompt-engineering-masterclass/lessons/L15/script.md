@@ -1,6 +1,6 @@
 # L15 Documenting and Sharing Your Library | Presenter Script
 
-Course: AI-03 · Video: 5 min · Words: 701
+Course: AI-03 · Video: 5 min · Words: 702
 
 ## Hook
 Six months from now, will you remember why a template says do not make promises? Will a new colleague know which placeholder to fill? Good documentation turns your prompts into a tool other people can trust.
@@ -32,10 +32,10 @@ A common mistake is to keep only the final prompt, and delete the test notes. Wi
 Your library will be assessed on the quality of your prompts, how you improved them, how you tested and checked them, how safely you handled data, and how well they are documented. Read the full rubric on the course page before you submit.
 
 ## Recap
-Let's recap. First, every prompt card has the same fields, from name and version to test notes and the date of the last test. Second, retest important prompts regularly, and update the version and date, because tools change. Third, a short introduction with clear safety rules helps colleagues use the library correctly.
+Let's recap. First, every prompt card has the same fields, from name and version to test notes and the date of the last test. Second, retest important prompts regularly, and update the version and date, because tools change. Third, a short introduction with clear safety rules helps colleagues use the library correctly. Your library is a real tool you can use at work every week.
 
 ## CTA
-Congratulations. You have completed the Prompt Engineering Masterclass. Your last exercise is capstone step three. Document all fifteen prompts in one shared place, write a short introduction, and ask a colleague to try one card. Then submit your Personal Prompt Library for assessment. Before you submit, go through the checklist on the course page. This is a real tool you can use at work every week. Thank you for learning with us, and good luck.
+Congratulations. You have completed the Prompt Engineering Masterclass. Your last exercise is capstone step three. Document all fifteen prompts in one shared place, write a short introduction, and ask a colleague to try one card. Then submit your Personal Prompt Library for assessment. Before you submit, go through the checklist on the course page. Thank you for learning with us, and good luck.
 
 ## Thumbnail
 Headline: A Library Others Trust
