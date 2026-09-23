@@ -1,0 +1,202 @@
+{
+  "course_id": "AI-08",
+  "lesson_id": "L02",
+  "duration_s": 310.3,
+  "thumbnail": {
+    "headline": "Check Before You Upload",
+    "slide": {
+      "layout": "title",
+      "title": "Check Before You Upload",
+      "body": "Spreadsheet icon with Name, Email and Phone columns crossed out and blurred; teal shield on an upload arrow. Small tag: AI-Powered Data Analysis · Lesson 2."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.0,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Would your customers be comfortable?",
+      "voiceover": "You want AI to analyse last month's customer list. The file has names, email addresses and phone numbers. Before you press upload, ask yourself one question. Would each of these customers be comfortable with this?"
+    },
+    {
+      "scene": 2,
+      "start": 15.0,
+      "end": 24.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Safe Data Handling Before You Upload",
+        "body": "AI-Powered Data Analysis (No Code) · Lesson 2 of 14"
+      },
+      "voiceover": "In the last lesson, we saw what AI can do with a spreadsheet. Today, we make sure the file you upload is safe."
+    },
+    {
+      "scene": 3,
+      "start": 24.9,
+      "end": 45.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Where your upload goes",
+        "body": "Laptop with spreadsheet → arrow labelled 'a copy' → cloud labelled 'Tool provider's servers' (settings and plan icons beside it). Bottom banner: Upload only what the analysis needs."
+      },
+      "voiceover": "When you upload a file to an AI tool, a copy of the data leaves your computer and goes to the tool provider's servers. What happens next depends on the tool, your plan and its settings. So the safest rule is simple. Upload only what the analysis needs."
+    },
+    {
+      "scene": 4,
+      "start": 45.5,
+      "end": 70.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Never upload (unless approved)",
+        "body": "Names · Contact details · ID numbers · Salaries and health information · Confidential business figures (red no-entry icons)"
+      },
+      "voiceover": "Never upload these, unless your organisation has approved the tool for this data. Names of customers, patients, students or staff. Contact details, like email addresses, phone numbers and home addresses. ID numbers, such as national ID, passport, tax or account numbers. Salaries, health information and other sensitive details. And confidential business figures, like unpublished results or contract prices."
+    },
+    {
+      "scene": 5,
+      "start": 70.4,
+      "end": 87.5,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "colleagues discussing policy document in office",
+      "on_screen_text": "Follow your organisation's policy",
+      "voiceover": "Data protection rules differ by country, and employers often have their own rules on top. This lesson gives general principles, not legal advice. Always follow your organisation's policy, and ask your data protection or IT contact if you are unsure."
+    },
+    {
+      "scene": 6,
+      "start": 87.5,
+      "end": 107.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Anonymise in five steps",
+        "body": "Five numbered steps as a path, first two lit: 1. Keep the original (make a copy) · 2. Remove columns you don't need · 3. Replace identifiers with codes · 4. Make details less exact · 5. Check the result"
+      },
+      "voiceover": "Most analysis questions do not need to know who each person is. So before uploading, anonymise the file in five steps. First, keep the original untouched. Make a copy, and work only on the copy. Second, remove columns you do not need, such as email and phone."
+    },
+    {
+      "scene": 7,
+      "start": 107.6,
+      "end": 133.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Anonymise in five steps",
+        "body": "Same path, steps 3 to 5 now lit: 'Customer 01' replaces a name (code list in a locked separate file) · 1990-04-12 → 35–44 · full address → city · magnifying glass: Could someone be identified?"
+      },
+      "voiceover": "Third, replace identifiers with codes, for example customer zero one instead of a name. Keep the code list in a separate, protected file that you never upload. Fourth, make details less exact. Change a date of birth into an age band, and a full address into a city. Fifth, check the result. Could someone work out who this person is?"
+    },
+    {
+      "scene": 8,
+      "start": 133.3,
+      "end": 152.6,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "doctor writing letter at clinic desk",
+      "on_screen_text": "Everything needed, nothing that identifies",
+      "voiceover": "Think of a doctor who sends a letter about a case to a specialist, without the patient's name and address. The specialist gets everything needed to give advice, but nothing that points to one person. The full record stays locked in the clinic's own cabinet."
+    },
+    {
+      "scene": 9,
+      "start": 152.6,
+      "end": 163.7,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "modern gym reception desk morning",
+      "on_screen_text": "Nadia · gym chain · Casablanca",
+      "voiceover": "Let's see it in practice. Nadia is a marketing coordinator for a gym chain in Casablanca, Morocco. She wants AI to compare spending across membership plans."
+    },
+    {
+      "scene": 10,
+      "start": 163.7,
+      "end": 177.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Nadia's export (fictional)",
+        "body": "Table with 6 rows, columns Customer ID | Name | Email | Phone | Date of birth | City | Plan | Monthly spend: 5501 Youssef Amrani … Casablanca Premium 45 · 5502 Grace Mensah … Rabat Basic 20 · 5503 Lina Haddad … Casablanca Student 12 · 5504 Pierre Laurent … Marrakesh Premium 45 · 5505 Amal Idrissi … Rabat Basic 20 · 5506 Chen Wei … Casablanca Basic 20. City, Plan and Monthly spend highlighted in teal."
+      },
+      "voiceover": "Her fictional export has six customers and eight columns. Customer ID, name, email, phone, date of birth, city, plan and monthly spend. Only the last three are needed for her question."
+    },
+    {
+      "scene": 11,
+      "start": 177.0,
+      "end": 200.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Original vs safe copy",
+        "body": "Left (Original): Name, Email, Phone struck through; Customer ID 5501–5506 → Right (Safe copy): codes C01–C06. Small locked file icon: 'code list, never uploaded'."
+      },
+      "voiceover": "She makes a copy and changes it. She deletes the name, email and phone columns. She replaces the customer IDs with new codes, C zero one to C zero six, because the old IDs could be matched with the gym's own system. The link between old and new codes stays in a separate file."
+    },
+    {
+      "scene": 12,
+      "start": 200.1,
+      "end": 216.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Dates of birth become age bands",
+        "body": "1990-04-12 → 35–44 · 1985-11-30 → 35–44 · 2001-07-05 → 25–34 · 1978-02-19 → 45–54 · 1996-09-23 → 25–34 · 1969-12-01 → 55–64"
+      },
+      "voiceover": "She replaces each date of birth with an age band. For example, the first customer, born in nineteen ninety, becomes thirty-five to forty-four. The customer born in two thousand and one becomes twenty-five to thirty-four."
+    },
+    {
+      "scene": 13,
+      "start": 216.8,
+      "end": 227.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "The safe copy",
+        "body": "Table, columns Code | Age band | City | Plan | Monthly spend: C01 35–44 Casablanca Premium 45 · C02 35–44 Rabat Basic 20 · C03 25–34 Casablanca Student 12 · C04 45–54 Marrakesh Premium 45 · C05 25–34 Rabat Basic 20 · C06 55–64 Casablanca Basic 20. Green tick: ready to upload."
+      },
+      "voiceover": "She keeps city, plan and monthly spend, because her question needs them. The safe copy has five columns, and it still answers her question."
+    },
+    {
+      "scene": 14,
+      "start": 227.1,
+      "end": 254.1,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Deleting names is not enough",
+      "voiceover": "A common mistake is to think that deleting the name column is enough. It is not. A customer ID, an exact date of birth, or a rare combination can still point to one person. For example, the only person aged fifty-five to sixty-four on a basic plan in a small town. So check the rows as well as the column headers."
+    },
+    {
+      "scene": 15,
+      "start": 254.1,
+      "end": 282.0,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. No personal or confidential data in unapproved tools. 2. Keep the original; anonymise a copy: remove, replace with codes, blur. 3. Follow your organisation's policy; ask when unsure."
+      },
+      "voiceover": "Let's recap. First, do not upload names, contact details, ID numbers, salaries or confidential figures, unless your organisation has approved the tool for that data. Second, always keep an untouched original, and anonymise a copy by removing columns, replacing identifiers with codes, and making details less exact. Third, rules differ by country and employer, so follow your organisation's policy, and ask when you are unsure."
+    },
+    {
+      "scene": 16,
+      "start": 282.0,
+      "end": 310.3,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: From Business Question to Data Question",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will take Nadia's customer table and build a safe copy in Google Sheets. You will remove or replace at least four types of personal data, and write a short log of what you changed. It takes about twenty minutes. In the next lesson, we go from business question to data question. See you there."
+    }
+  ]
+}

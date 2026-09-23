@@ -1,0 +1,179 @@
+{
+  "course_id": "AI-05",
+  "lesson_id": "L16",
+  "duration_s": 294.9,
+  "thumbnail": {
+    "headline": "Memorised, Not Learned",
+    "slide": {
+      "layout": "title",
+      "title": "Memorised, Not Learned",
+      "body": "Left: a wiggly curve through seven training dots. Right: a straight line through the same dots, with three new test dots close to the line. Small tag: Math and Statistics for AI · Lesson 16."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.9,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "100% on old questions, 50% on new",
+      "voiceover": "A student memorises every answer in last year's exam and scores one hundred percent on it. Then the real exam has new questions, and the score falls to fifty percent. Models can do exactly the same thing."
+    },
+    {
+      "scene": 2,
+      "start": 15.9,
+      "end": 44.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Overfitting vs underfitting",
+        "body": "Overfitting: learned the noise and accidents of the training data. Underfitting: too simple to capture the pattern."
+      },
+      "voiceover": "Last time, we saw how one number can hide a lot. Today: how to catch a model that memorises, and how to tell if a model is worth using at all. When a model fits its training data very closely but fails on new data, that is called overfitting. It learned the noise, not the general pattern. A model too simple to capture the pattern is underfitting."
+    },
+    {
+      "scene": 3,
+      "start": 44.6,
+      "end": 71.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Train/test split",
+        "body": "A shuffled stack of rows split into a large block 'Training set (about 70–80%): fit the weights' and a small locked block 'Test set: use only at the end'."
+      },
+      "voiceover": "So never judge a model only on the data it learned from. Use a train and test split. The training set fits the weights. The test set is kept aside, and used only at the end, on examples the model has never seen. A common split is about seventy to eighty percent for training. Shuffle the rows first, so both parts look similar."
+    },
+    {
+      "scene": 4,
+      "start": 71.6,
+      "end": 84.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Reading the two errors",
+        "body": "Both low and close → generalises well. Training very low, test much higher → overfitting. Both high → underfitting."
+      },
+      "voiceover": "Then compare training error and test error. Both low and close together: the model generalises well. Training error very low but test error much higher: overfitting. Both high: underfitting."
+    },
+    {
+      "scene": 5,
+      "start": 84.0,
+      "end": 113.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Always use a baseline",
+        "body": "Numbers: always predict the training average. Classes: always predict the most common class (L15). Must clearly beat it on the test set."
+      },
+      "voiceover": "Finally, every model needs a baseline: the simplest sensible prediction, which a real model must beat. For numbers, always predict the average of the training targets. For classes, always predict the most common class. If your model does not clearly beat the baseline on the test set, it has not learned anything useful. And remember lesson ten: with a small test set, a small difference may be random variation."
+    },
+    {
+      "scene": 6,
+      "start": 113.6,
+      "end": 132.5,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "person looking at sky weather clouds",
+      "on_screen_text": "Tomorrow will be like today",
+      "voiceover": "Think of a weather forecaster who always says: tomorrow will be like today. It sounds too simple, but it is right surprisingly often. A new forecasting system is only worth paying for if it clearly beats that rule on days it has never seen."
+    },
+    {
+      "scene": 7,
+      "start": 132.5,
+      "end": 150.1,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "ice cream kiosk on sunny street",
+      "on_screen_text": "10 days · 7 train · 3 test",
+      "voiceover": "Lucía runs an ice-cream kiosk in Guadalajara, Mexico. She records ten days of temperature and cones sold. All values are invented. She uses the first seven days for training and the last three for testing. With real data, shuffle first."
+    },
+    {
+      "scene": 8,
+      "start": 150.1,
+      "end": 169.4,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Three approaches",
+        "body": "1. Baseline: always predict the training mean ≈ 48.3 cones. 2. Straight line: sales = w × temperature + b. 3. Wiggly curve: polynomial of degree 6."
+      },
+      "voiceover": "She compares three approaches. A baseline that always predicts the training mean, about forty-eight point three cones. A simple straight line: sales equals w times temperature plus b. And a wiggly curve, a polynomial of degree six, that can bend through every training point."
+    },
+    {
+      "scene": 9,
+      "start": 169.4,
+      "end": 184.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Fit and compare",
+        "body": "x_tr, y_tr, x_te, y_te = temp[:7], sales[:7], temp[7:], sales[7:]\nmse(y_te, np.full(3, y_tr.mean()))   # baseline\nfor deg in [1, 6]:\n    c = np.polyfit(x_tr, y_tr, deg)\n    mse(y_tr, np.polyval(c, x_tr)), mse(y_te, np.polyval(c, x_te))"
+      },
+      "voiceover": "In NumPy, poly fit finds the best curve of a chosen degree, and poly val uses it to predict. Lucía calculates the mean squared error on the training days and on the test days."
+    },
+    {
+      "scene": 10,
+      "start": 184.0,
+      "end": 203.7,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Results (MSE)",
+        "body": "Table: Approach | Training | Test. Baseline | — | 76.03 · Straight line | 1.87 | 4.18 · Wiggly curve | 0.00 | 30.89. The wiggly curve's 30.89 flagged in red, the straight line's 4.18 in teal."
+      },
+      "voiceover": "Here are the results. The baseline's test error is seventy-six point zero three. The straight line: one point eight seven on training, and four point one eight on test. The wiggly curve: zero on training, a perfect score, but thirty point eight nine on test."
+    },
+    {
+      "scene": 11,
+      "start": 203.7,
+      "end": 228.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Lucía's decision",
+        "body": "Wiggly curve: perfect training, poor test → overfitting. Straight line: 4.18 vs baseline 76.03 → chosen. Caution: only 3 test days."
+      },
+      "voiceover": "The wiggly curve is perfect on training data but much worse on new days. That is overfitting. The straight line beats the baseline clearly, four point one eight against seventy-six point zero three. Lucía chooses the line. But three test days is a very small sample, so she will collect more days before relying on it."
+    },
+    {
+      "scene": 12,
+      "start": 228.1,
+      "end": 250.8,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Judge on the test set. Look once.",
+      "voiceover": "The most common mistake is choosing the model with the lowest training error. That rewards memorising. A quieter mistake is looking at the test set again and again while you adjust the model. Each look lets information leak in, so the test set slowly stops being new. Keep it aside until the end."
+    },
+    {
+      "scene": 13,
+      "start": 250.8,
+      "end": 275.2,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Overfitting: low training error, high test error. 2. Split; fit on training; judge on test. 3. Beat a simple baseline; small test set = caution."
+      },
+      "voiceover": "Let's recap. First, overfitting means very low training error but much higher test error. The model memorised instead of learning. Second, split your data, fit only on the training set, and judge on the test set. Third, every model must clearly beat a simple baseline on the test set, and a small test set means extra caution."
+    },
+    {
+      "scene": 14,
+      "start": 275.2,
+      "end": 294.9,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Capstone Build",
+      "voiceover": "Your turn. In the exercise, you split a small study-hours dataset, compare a baseline with a straight line, and decide if it is a real improvement. It takes about thirty minutes. Then the capstone begins. Next: Capstone Build: Linear Regression from Scratch. See you there."
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "course_id": "AI-05",
+  "lesson_id": "L18",
+  "duration_s": 298.2,
+  "thumbnail": {
+    "headline": "Prove It, Explain It",
+    "slide": {
+      "layout": "title",
+      "title": "Prove It, Explain It",
+      "body": "Loop weights [2.02 3.75 6.53] above lstsq weights [2.02 3.75 6.53] with a green tick. Small tag: Math and Statistics for AI · Lesson 18 · Capstone."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.0,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Check it. Explain it.",
+      "voiceover": "Your model has trained, and the loss has fallen. But are the weights right, and what do they mean? A model you cannot check or explain is not finished. In this final lesson, you will prove your result and explain it clearly."
+    },
+    {
+      "scene": 2,
+      "start": 18.0,
+      "end": 38.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Step 1: Check the weights",
+        "body": "np.linalg.lstsq = least squares, no loop. Match to about 2 decimal places → loop is correct. If not: check learning rate, number of steps, sign of the error."
+      },
+      "voiceover": "Finishing the capstone takes four steps. Step one: check the weights. Linear regression is special, because its best weights can also be calculated directly, without a loop. NumPy's least squares function does this. If your loop's weights match it to about two decimal places, your loop is correct."
+    },
+    {
+      "scene": 3,
+      "start": 38.6,
+      "end": 58.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Step 2: Interpret each weight",
+        "body": "Weight = change in prediction for +1 of its feature, others fixed. Bias = prediction when all features are 0 (use with care)."
+      },
+      "voiceover": "Step two: interpret each weight. A weight is the change in the prediction when its feature goes up by one, and the other features stay the same. The bias is the prediction when every feature is zero. That may not be realistic, so use it with care."
+    },
+    {
+      "scene": 4,
+      "start": 58.7,
+      "end": 86.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Steps 3 and 4",
+        "body": "3. Training MSE · test MSE · baseline test MSE, plus RMSE. 4. Judge: sample size, random variation? Document: a text cell before every code cell."
+      },
+      "voiceover": "Step three: compare with a baseline on the test set. Calculate training error, test error, and the test error of always predicting the training mean. Report R M S E too, because it is in real units. Step four: judge and document. How many test examples are there? Could the difference be random? Then add a plain-language text cell before every code cell."
+    },
+    {
+      "scene": 5,
+      "start": 86.1,
+      "end": 100.7,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "person checking handwritten sums with calculator",
+      "on_screen_text": "A second method confirms your work",
+      "voiceover": "Checking with least squares is like checking a long division on a calculator. You still did the work yourself, and you understand each step. A second method just confirms you made no small slip."
+    },
+    {
+      "scene": 6,
+      "start": 100.7,
+      "end": 123.4,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open the L17 notebook in Colab.",
+        "Add a text cell: '3. Check with least squares'.",
+        "Type: w_ls, *_ = np.linalg.lstsq(X_tr, y_tr, rcond=None) and print(w_ls.round(2))",
+        "Run the cell and zoom in on [2.02 3.75 6.53]."
+      ],
+      "voiceover": "Back to Baraka's kiosk notebook in Colab. Add a text cell called Check with least squares, and run least squares on the training data. The first result is a list of values, and we keep only the weights. They are two point zero two, three point seven five and six point five three."
+    },
+    {
+      "scene": 7,
+      "start": 123.4,
+      "end": 135.4,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Type: print(np.allclose(w, w_ls, atol=0.001))",
+        "Run the cell and zoom in on True."
+      ],
+      "on_screen_text": "Weights match: the loop is correct",
+      "voiceover": "Then n p dot all close compares both sets of weights, and prints True. They match to better than zero point zero zero one. Your loop was correct."
+    },
+    {
+      "scene": 8,
+      "start": 135.4,
+      "end": 153.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Add a text cell: '4. Evaluate'.",
+        "Type the mse function and the three print lines: training, test and baseline with np.full(5, y_tr.mean()).",
+        "Run the cell and zoom in on 5.91, 11.2 and 348.01."
+      ],
+      "voiceover": "Now a text cell called Evaluate. Using the m s e function, the training error is five point nine one. The test error is eleven point two. And the baseline on the test set is three hundred and forty-eight point zero one."
+    },
+    {
+      "scene": 9,
+      "start": 153.8,
+      "end": 182.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Results and meaning",
+        "body": "Table: Training MSE 5.91 / RMSE 2.43 · Test 11.2 / 3.35 · Baseline 348.01 / 18.66. Weights: sunshine ≈ 3.75 drinks per hour · foot traffic ≈ 6.53 drinks per hundred people · bias ≈ 2.02 (no such day in data)."
+      },
+      "voiceover": "In real units, that is an R M S E of about three drinks on the test days, against about nineteen for the baseline. Now the weights, all hypothetical. With the same foot traffic, each extra hour of sunshine is linked to about three point seven five more drinks. With the same sunshine, each extra hundred people passing is linked to about six point five more."
+    },
+    {
+      "scene": 10,
+      "start": 182.1,
+      "end": 204.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Handle with care",
+        "body": "Bias ≈ 2.02: a day with no sun and no passers-by is not in the data → do not rely on it. Largest miss: test day with 81 drinks, predicted about 88."
+      },
+      "voiceover": "The bias, about two point zero two, is the prediction for a day with no sun and no passers-by. No such day is in the data, so Baraka does not rely on it. And the largest miss is the test day with eighty-one drinks, where the model predicted about eighty-eight."
+    },
+    {
+      "scene": 11,
+      "start": 204.8,
+      "end": 227.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Add a text cell: 'Judgement'.",
+        "Type: 'Promising, but check again after one more month of data.'",
+        "Type a second sentence: the weights show links in this data, not causes.",
+        "Use Run all to run every cell from the top."
+      ],
+      "voiceover": "Baraka writes his judgement in a text cell. The gain over the baseline is very large, so it is unlikely to be random. But there are only five test days, so: promising, but check again after one more month of data. The weights show links in this data, not proof that sunshine causes sales."
+    },
+    {
+      "scene": 12,
+      "start": 227.9,
+      "end": 247.2,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Better than what? On which data?",
+      "voiceover": "A common mistake is saying the model is ninety-six percent better, without saying better than what, on which data, and with how many examples. Always name the metric, the data, the baseline and the sample size. And never describe a weight as a cause."
+    },
+    {
+      "scene": 13,
+      "start": 247.2,
+      "end": 275.1,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Check with np.linalg.lstsq. 2. Weight = change per unit, others fixed: a link, not a cause. 3. Training + test + baseline, RMSE, sample size."
+      },
+      "voiceover": "Let's recap. First, confirm your gradient descent weights with least squares. Matching weights prove the loop is correct. Second, each weight is the change in prediction for one extra unit of its feature, with the others fixed. It shows a link, not a cause. Third, report training error, test error and a baseline together, with R M S E and a note on sample size."
+    },
+    {
+      "scene": 14,
+      "start": 275.1,
+      "end": 298.2,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Submit your capstone notebook",
+      "voiceover": "Congratulations. You may have started this course nervous about symbols, and you have built and explained a real model from scratch. Now finish capstone step two, check your notebook against the rubric and the submission checklist, run it from the top, and submit it. I am proud of what you have done. Well done."
+    }
+  ]
+}

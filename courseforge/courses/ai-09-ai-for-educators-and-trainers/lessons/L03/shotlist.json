@@ -1,0 +1,201 @@
+{
+  "course_id": "AI-09",
+  "lesson_id": "L03",
+  "duration_s": 299.0,
+  "thumbnail": {
+    "headline": "Whose Data Is This?",
+    "slide": {
+      "layout": "title",
+      "title": "Whose Data Is This?",
+      "body": "Icon of a stack of reports with a teal padlock. Small tag: AI for Educators and Trainers · Lesson 3."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.4,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Where does pasted data go?",
+      "voiceover": "You have sixty reports to mark. Pasting them into a chatbot for grades would save hours. But first, ask two questions. Whose information is in those reports? And where does it go when you paste it?"
+    },
+    {
+      "scene": 2,
+      "start": 15.4,
+      "end": 26.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Privacy, Integrity and Ethics",
+        "body": "AI for Educators and Trainers · Lesson 3 of 12. Three icons: padlock (privacy) · scales (integrity) · open hands (fairness)."
+      },
+      "voiceover": "Last time, we learned to write better prompts. Today, we look at the responsibility side of AI in teaching: learner privacy, academic integrity, and fairness."
+    },
+    {
+      "scene": 3,
+      "start": 26.1,
+      "end": 45.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Where your text goes",
+        "body": "Laptop → arrow → cloud labelled 'AI company servers' → dotted arrows to 'may be stored' and 'may improve the product'. Note: depends on the tool and your settings."
+      },
+      "voiceover": "Start with privacy. When you type or paste something into an AI tool, it leaves your device and is processed by the company that runs the tool. Depending on the tool and your settings, it may be stored, or used to improve the product."
+    },
+    {
+      "scene": 4,
+      "start": 45.0,
+      "end": 60.4,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "No learner personal data in public AI",
+      "voiceover": "So the basic rule is simple. Never paste learners' names, grades, health information, contact details, photos or other personal data into a public AI tool. That includes essays and reports that contain names or personal stories."
+    },
+    {
+      "scene": 5,
+      "start": 60.4,
+      "end": 77.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Safer ways to get AI help",
+        "body": "Remove anything that identifies a person · Use your own notes, not learner work · Use your institution's approved tool and follow its rules"
+      },
+      "voiceover": "If you want AI help with learner work, remove everything that could identify a person, or use only your own notes. And if your institution provides an approved AI tool with extra data protection, use it and follow its rules."
+    },
+    {
+      "scene": 6,
+      "start": 77.5,
+      "end": 100.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Check before learners use AI",
+        "body": "Your institution's policy · The local rules that apply to you · The tool's current terms and minimum age"
+      },
+      "voiceover": "Rules on learner data, and on whether minors may use AI tools at all, differ between countries, regions and institutions. AI companies also set their own minimum ages and terms. So before you ask learners to use any AI tool directly, check your institution's policy, your local rules, and the tool's current terms."
+    },
+    {
+      "scene": 7,
+      "start": 100.2,
+      "end": 118.2,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "shared office photocopier with papers",
+      "on_screen_text": "Like a shared photocopier",
+      "voiceover": "Here is a picture to remember. A public AI tool is like a busy shared office photocopier. It is useful, but you would not leave confidential learner files on it. You remove the private pages first, or you use a secure machine."
+    },
+    {
+      "scene": 8,
+      "start": 118.2,
+      "end": 140.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Detection tools: be careful",
+        "body": "Left: a gauge reading 'AI score' with a question mark. Right: 'Can give false results' → talk with the learner · look at drafts and notes · follow your institution's process."
+      },
+      "voiceover": "Next, academic integrity. Learners can use AI to produce work that is not their own, and some institutions use detection tools to find this. Be careful. Detection tools can give false results, including marking a learner's own writing as AI-generated. So a detector score should never be the only evidence of misconduct."
+    },
+    {
+      "scene": 9,
+      "start": 140.9,
+      "end": 160.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Design tasks that are harder to hand to AI",
+        "body": "Link to your class or workplace · Show drafts, notes or steps · Short conversation or presentation · Personal reflection on a real experience"
+      },
+      "voiceover": "Task design often helps more than detection. Tasks are harder to hand to AI when they connect to something that happened in your class or workplace, ask for drafts or steps, include a short conversation about the work, or ask for reflection on a real experience."
+    },
+    {
+      "scene": 10,
+      "start": 160.6,
+      "end": 174.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Fairness",
+        "body": "Not everyone has devices, internet or paid AI · If a task needs AI: class time or a free option for all"
+      },
+      "voiceover": "Finally, fairness. Learners do not all have the same devices, internet or paid tools. If a task needs AI, make sure everyone can do it in class, or with a free option."
+    },
+    {
+      "scene": 11,
+      "start": 174.3,
+      "end": 186.3,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "university lecturer reading papers in office",
+      "on_screen_text": "Ali · business lecturer · Lahore",
+      "voiceover": "Let's meet Ali. He lectures in business studies at a university in Lahore, in Pakistan, and he wants help with feedback on forty-five short case-study answers."
+    },
+    {
+      "scene": 12,
+      "start": 186.3,
+      "end": 211.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Ali changes his plan",
+        "body": "Left (red cross): 45 answers with names and ID numbers → free chatbot. Right (green tick): Ali reads and writes notes → AI turns notes into 2 polite feedback sentences. No names leave his computer; the grade is his."
+      },
+      "voiceover": "His first idea is to paste all forty-five answers, with names and ID numbers, into a free chatbot. He changes his plan. He reads the answers himself and writes short notes, such as good use of the case, but no clear recommendation. Then he asks the AI to turn his notes into two polite, specific feedback sentences each."
+    },
+    {
+      "scene": 13,
+      "start": 211.6,
+      "end": 232.2,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "A signal, not proof",
+        "body": "Generic report card '90% AI' → speech bubbles: Ali asks, learner explains → early drafts shown → 'Matter closed' tick"
+      },
+      "voiceover": "Later, a detector report says one essay is ninety percent AI. Ali does not treat this as proof. He asks the learner to explain how they wrote it and to show their notes. The learner explains the argument clearly and shows early drafts, so Ali closes the matter."
+    },
+    {
+      "scene": 14,
+      "start": 232.2,
+      "end": 247.6,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Removing the name is not enough",
+      "voiceover": "A common mistake is to think that removing the name is enough. An ID number, a rare medical condition, a small class or a personal story can still point to one person. Remove all of it."
+    },
+    {
+      "scene": 15,
+      "start": 247.6,
+      "end": 273.3,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. No learner personal data in public AI; use your own notes. 2. Detector score ≠ proof; design tasks, talk to learners. 3. Check local rules, institution policy and tool terms."
+      },
+      "voiceover": "Let's recap. First, never paste learners' personal data into a public AI tool. Remove identifying details, or use your own notes. Second, detection tools can give false results, so never use them as the only evidence. Task design and conversation work better. Third, rules differ by country and institution, so check local rules, your policy and the tool's terms first."
+    },
+    {
+      "scene": 16,
+      "start": 273.3,
+      "end": 299.0,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Writing a Fair Classroom AI Policy",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will read five short scenarios, like a teacher pasting student essays into a chatbot. Decide if each is acceptable, acceptable with changes, or not acceptable, and give a reason. It takes about twenty minutes. In the next lesson, we write a fair classroom AI policy. See you there."
+    }
+  ]
+}

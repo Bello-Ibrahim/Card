@@ -1,0 +1,216 @@
+{
+  "course_id": "AI-10",
+  "lesson_id": "L02",
+  "duration_s": 304.0,
+  "thumbnail": {
+    "headline": "Who Do You Help?",
+    "slide": {
+      "layout": "title",
+      "title": "Who Do You Help?",
+      "body": "Left: grey, blurred line 'I translate documents' with a thin strike-through. Right: simple mock-up of a one-page service sheet with a bold teal heading. Small tag: AI for Freelancers · Lesson 2."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.4,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Why should a client choose you?",
+      "voiceover": "I do translation. I do graphic design. I do bookkeeping. Thousands of people could say the same sentence. A potential client reads it and has no reason to choose you. Today, you will use AI to turn that sentence into a clear offer."
+    },
+    {
+      "scene": 2,
+      "start": 18.4,
+      "end": 29.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Sharpen Your Offer and Profile",
+        "body": "AI for Freelancers and Solopreneurs · Lesson 2 of 12"
+      },
+      "voiceover": "In the last lesson, you mapped your business. Now we start at the first stage, finding clients, with the words you use to describe yourself."
+    },
+    {
+      "scene": 3,
+      "start": 29.1,
+      "end": 49.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "A clear offer answers",
+        "body": "Who do you help? (a specific client type) · What problem do you solve? (a real worry) · What result do you deliver? (the change, not only the task). Pattern: I help [client] [get result] by [what you do]."
+      },
+      "voiceover": "A clear offer answers three questions in one sentence. Who do you help? A specific type of client, not everyone. What problem do you solve? Something the client already worries about. And what result do you deliver? The change the client gets, not only the task you do."
+    },
+    {
+      "scene": 4,
+      "start": 49.7,
+      "end": 70.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Interview first, then draft",
+        "body": "Left, red cross: 'Write my offer' → general text that fits anyone. Right, green tick: 'Interview me, one question at a time' → your answers → specific drafts."
+      },
+      "voiceover": "Most people find this hard to write about themselves. AI helps here, not because it knows your business, but because it can ask you good questions and then organise your answers. If you just ask it to write your offer, you get general text that could describe anyone."
+    },
+    {
+      "scene": 5,
+      "start": 70.3,
+      "end": 88.3,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "journalist interviewing person notebook table",
+      "on_screen_text": "AI as your interviewer",
+      "voiceover": "Think of it like a good magazine interviewer. The interviewer does not know your story. But the right questions help you say things you already knew and never put into words. The final article is still about you, and you approve it."
+    },
+    {
+      "scene": 6,
+      "start": 88.3,
+      "end": 111.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "From offer to two pieces",
+        "body": "Centre box: One-sentence offer. Arrow left → Profile (60–100 words). Arrow right → One-page service sheet (offer · who it is for · what's included · process · 'from' price · contact)."
+      },
+      "voiceover": "From your offer, you can build two short pieces. First, a profile of sixty to one hundred words for your website or your professional network. Second, a one-page service sheet. It shows your offer, who it is for, what is included, how the process works, a starting price, and how to contact you."
+    },
+    {
+      "scene": 7,
+      "start": 111.4,
+      "end": 123.4,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "If you cannot prove it, cut it",
+      "voiceover": "One warning before we start. AI often adds impressive phrases, like award-winning or ten years of experience, that are simply not true. Remove anything you cannot prove."
+    },
+    {
+      "scene": 8,
+      "start": 123.4,
+      "end": 135.8,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "young man translating documents at desk",
+      "on_screen_text": "Joon-ho · translator · Busan",
+      "voiceover": "Let's watch this work. Joon-ho is a freelance Korean to English translator in Busan, South Korea. His old profile said only, I translate documents from Korean to English."
+    },
+    {
+      "scene": 9,
+      "start": 135.8,
+      "end": 153.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open a new chat in Claude.",
+        "Type the prompt: 'Interview me to help me write a clear offer for my freelance service. Ask me 8 questions, one at a time. Wait for my answer before asking the next. After the 8th answer, write 3 versions of a one-sentence offer and an 80-word profile.'",
+        "Send it and show the first question appearing on its own."
+      ],
+      "on_screen_text": "Ask AI to interview you",
+      "voiceover": "He opens Claude and asks it to interview him. The prompt asks for eight questions, one at a time, and to wait for each answer. Only after the last answer should it write three one-sentence offers and an eighty-word profile."
+    },
+    {
+      "scene": 10,
+      "start": 153.8,
+      "end": 172.2,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Scroll through several question-and-answer turns with Joon-ho's example answers.",
+        "Highlight the answers that mention small export companies, product descriptions and packaging text.",
+        "Highlight the worry: sounding unprofessional abroad."
+      ],
+      "voiceover": "The questions ask about his best past clients, the work he enjoys and the problems clients mention. A pattern appears. His favourite clients are small export companies that need product and packaging text for English-speaking markets. They worry about sounding unprofessional abroad."
+    },
+    {
+      "scene": 11,
+      "start": 172.2,
+      "end": 189.3,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Show the three offer drafts at the end of the chat.",
+        "Highlight the chosen offer sentence.",
+        "Highlight the phrase 'guaranteed higher sales' in another draft and strike it through in the edited version."
+      ],
+      "on_screen_text": "Remove claims you cannot prove",
+      "voiceover": "One draft says, I help small Korean export companies sell abroad with clear, natural English product text and packaging copy. Another draft promises guaranteed higher sales. He cannot promise that, so he removes it. Check every claim the AI writes."
+    },
+    {
+      "scene": 12,
+      "start": 189.3,
+      "end": 206.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open Canva and search templates for 'service sheet' or 'one-page flyer' in A4 or Letter size.",
+        "Choose a simple template with space for a heading and 4 to 5 short sections.",
+        "Replace the template heading with the one-sentence offer."
+      ],
+      "voiceover": "Now the service sheet. In Canva, he searches the templates for a one-page service sheet or flyer, and chooses a simple design with space for a heading and a few short sections. He replaces the heading with his new offer."
+    },
+    {
+      "scene": 13,
+      "start": 206.9,
+      "end": 224.0,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Add the sections: 'Who this is for', 'What you get', 'How it works' (3 steps), 'Price' (a 'from' price), 'Contact'.",
+        "Change colours and fonts to his own brand colours.",
+        "Add a placeholder photo and placeholder logo."
+      ],
+      "on_screen_text": "Five short sections, one page",
+      "voiceover": "He adds five sections. Who this is for. What you get. How it works, in three steps. A from price. And contact details. Then he changes the colours and fonts to match his own brand, and adds his own photo."
+    },
+    {
+      "scene": 14,
+      "start": 224.0,
+      "end": 235.1,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Click Share, then Download, and choose PDF.",
+        "Open the downloaded PDF on a phone-sized view and zoom to check readability."
+      ],
+      "voiceover": "Finally, he downloads the sheet as a PDF and opens it on a phone, to check that it is easy to read on a small screen."
+    },
+    {
+      "scene": 15,
+      "start": 235.1,
+      "end": 252.2,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Short and specific beats 'professional'",
+      "voiceover": "A common mistake is to ask AI to make your profile sound more professional, and accept the result. The text fills with general words like passionate and innovative, and loses the details that build trust. Keep it short and specific."
+    },
+    {
+      "scene": 16,
+      "start": 252.2,
+      "end": 277.9,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. One sentence: who, what problem, what result. 2. Let AI interview you before it drafts. 3. Remove unprovable claims; build a profile and a one-page sheet."
+      },
+      "voiceover": "Let's recap. First, a clear offer says who you help, what problem you solve and what result you deliver, in one sentence. Second, ask AI to interview you first, because drafts without your real information are general and forgettable. Third, remove any claim you cannot prove, then turn your offer into a short profile and a one-page service sheet."
+    },
+    {
+      "scene": 17,
+      "start": 277.9,
+      "end": 304.0,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Finding Clients and Writing Outreach",
+      "voiceover": "Now it is your turn. In the exercise, paste the interview prompt into Claude or ChatGPT and answer all eight questions honestly, without real client names. Choose and edit your offer, write your profile, and build your service sheet in Canva. Then ask a friend who it is for. In the next lesson, we look at finding clients and writing outreach."
+    }
+  ]
+}

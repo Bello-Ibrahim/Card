@@ -7,7 +7,7 @@
   },
   "production_notes": [
     "[VERSION] Google Colab: confirm current sign-in requirements, free usage limits and the interface before recording the screen scenes.",
-    "[VERSION] NumPy: confirm that a learning rate of 0.02 still produces overflow RuntimeWarning messages (scene 13), and that all outputs shown (weights 2.02, 3.75, 6.53; loss 3,284.7 to 5.91) match the current Colab NumPy version. Outputs were checked with NumPy 2.4.",
+    "[VERSION] NumPy: confirm that a learning rate of 0.02 still produces overflow RuntimeWarning messages (scene 12), and that all outputs shown (weights 2.02, 3.75, 6.53; loss 3,284.7 to 5.91) match the current Colab NumPy version. Outputs were checked with NumPy 2.4.",
     "Baraka and the Mombasa cold-drink kiosk are fictional; the 15 days of data are invented.",
     "The presenter describes the code in words; the screen shows every line. Type at a readable speed or use a pre-typed cell revealed line by line."
   ],

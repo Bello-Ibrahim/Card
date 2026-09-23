@@ -28,7 +28,7 @@
        "voiceover": "Then compare training error and test error. Both low and close together: the model generalises well. Training error very low but test error much higher: overfitting. Both high: underfitting.",
        "slide": {"layout": "bullets", "title": "Reading the two errors", "body": "Both low and close → generalises well. Training very low, test much higher → overfitting. Both high → underfitting."}},
       {"visual_type": "slide",
-       "voiceover": "Finally, every model needs a baseline: the simplest sensible prediction, which a real model must beat. For numbers, always predict the average of the training targets. For classes, always predict the most common class. If your model does not clearly beat the baseline on the test set, it has not learned anything useful.",
+       "voiceover": "Finally, every model needs a baseline: the simplest sensible prediction, which a real model must beat. For numbers, always predict the average of the training targets. For classes, always predict the most common class. If your model does not clearly beat the baseline on the test set, it has not learned anything useful. And remember lesson ten: with a small test set, a small difference may be random variation.",
        "slide": {"layout": "bullets", "title": "Always use a baseline", "body": "Numbers: always predict the training average. Classes: always predict the most common class (L15). Must clearly beat it on the test set."}},
       {"visual_type": "stock",
        "voiceover": "Think of a weather forecaster who always says: tomorrow will be like today. It sounds too simple, but it is right surprisingly often. A new forecasting system is only worth paying for if it clearly beats that rule on days it has never seen.",
@@ -53,7 +53,7 @@
        "voiceover": "The wiggly curve is perfect on training data but much worse on new days. That is overfitting. The straight line beats the baseline clearly, four point one eight against seventy-six point zero three. Lucía chooses the line. But three test days is a very small sample, so she will collect more days before relying on it.",
        "slide": {"layout": "comparison", "title": "Lucía's decision", "body": "Wiggly curve: perfect training, poor test → overfitting. Straight line: 4.18 vs baseline 76.03 → chosen. Caution: only 3 test days."}},
       {"visual_type": "text",
-       "voiceover": "The most common mistake is choosing the model with the lowest training error. That rewards memorising. A quieter mistake is looking at the test set again and again while you adjust the model. Keep it aside until the end.",
+       "voiceover": "The most common mistake is choosing the model with the lowest training error. That rewards memorising. A quieter mistake is looking at the test set again and again while you adjust the model. Each look lets information leak in, so the test set slowly stops being new. Keep it aside until the end.",
        "on_screen_text": "Judge on the test set. Look once."}
     ],
     "Recap": [
