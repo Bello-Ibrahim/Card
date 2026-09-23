@@ -22,14 +22,14 @@ Laws about voice, likeness and deepfakes differ by country and change quickly [V
 
 **Principle 5: Never clone someone without permission.** This includes famous people, colleagues, family members and people who have died. In this course we do not clone anyone's voice. You will write a consent form instead.
 
-Many tools also require you to confirm that you have the right to use a voice before cloning it [VERSION]. That confirmation protects the tool, not the person. Your own consent process is still necessary.
+Many tools ask you to confirm you have the right to use a voice [VERSION]. That protects the tool, not the person, so your own consent process is still necessary.
 
 **Analogy:** Consent for a voice clone is like lending someone your car. You agree who will drive it, where, for how long and when they must give it back. Saying "yes, you can borrow it" does not mean "you can keep it forever and lend it to strangers".
 
 ## Worked Example
 Kwame and Efua host a weekly business podcast in Accra, Ghana. Efua will travel for six weeks and suggests that Kwame use a clone of her voice to read the short introduction to each episode while she is away.
 
-Kwame does not start with a tool. He writes a one-page agreement and they discuss it together:
+Kwame starts with a one-page agreement, not a tool:
 
 - **Purpose:** reading the 30-second introduction to episodes during Efua's travel.
 - **Duration:** six weeks from a stated start date. After that, the voice model is deleted.
@@ -37,12 +37,11 @@ Kwame does not start with a tool. He writes a one-page agreement and they discus
 - **Not allowed:** adverts, social media clips, other podcasts, or any text Efua has not approved.
 - **Disclosure:** each episode's notes say "The introduction uses an AI version of Efua's voice, with her permission."
 - **Withdrawal:** Efua can withdraw by message at any time. Kwame will stop using the clone at once and delete the model and samples within a stated number of days.
-- **Storage:** the voice samples are kept in one private folder that only the two hosts can open.
 
 Both sign and date the page. Kwame also checks the cloning tool's terms to make sure it allows this use and lets him delete the voice model [VERSION].
 
 ## Common Mistake
-Many people think that if a voice is public, such as a speaker on a well-known podcast or a public figure on television, it is free to clone. It is not. Being able to hear a voice does not give you permission to copy it. Another common mistake is getting a quick verbal "sure" and treating it as consent. Without a written record of purpose, duration and allowed uses, nobody can later show what was agreed.
+Many people think that if a voice is public, such as a speaker on a well-known podcast or a public figure on television, it is free to clone. It is not. Being able to hear a voice does not give you permission to copy it. Another mistake is treating a quick verbal "sure" as consent. Without a written record, nobody can later show what was agreed.
 
 ## Key Takeaways
 1. Only clone a voice with the person's clear, informed and recorded consent, and never clone anyone without permission.
@@ -65,5 +64,5 @@ Many people think that if a voice is public, such as a speaker on a well-known p
 ## Review Flags
 - [VERIFY] [REGION] Voice-cloning, likeness, publicity and deepfake laws differ by country and change often; the lesson teaches consent principles only and states no legal conclusion as settled. A reviewer should confirm the wording gives no legal advice.
 - [VERIFY] Confirm the general statement that some tools can clone a voice from a short sample.
-- [VERSION] Whether current cloning tools require the user to confirm rights to a voice, and whether they allow voice models to be deleted, must be checked against live tool terms.
+- [VERSION] Check against live tool terms whether cloning tools ask users to confirm rights to a voice and allow voice models to be deleted.
 - Curriculum judgement call carried: the course never demonstrates cloning another person's voice; the consent form exercise replaces a cloning demo.
