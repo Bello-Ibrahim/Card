@@ -1,0 +1,178 @@
+{
+  "course_id": "AI-14",
+  "lesson_id": "L08",
+  "presenter_track": {
+    "file": "/incoming/ai-14-building-apps-with-llm-apis_M2_L08_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 288.8
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.1,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_M2_L08_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 17.1,
+      "end": 41.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 41.5,
+      "end": 62.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 62.5,
+      "end": 77.9,
+      "visual_type": "stock",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L08_stock_04.mp4",
+      "status": "PENDING_STOCK",
+      "query": "waiter writing order on notepad restaurant"
+    },
+    {
+      "scene": 5,
+      "start": 77.9,
+      "end": 99.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 99.8,
+      "end": 119.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 119.1,
+      "end": 132.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 132.8,
+      "end": 142.2,
+      "visual_type": "stock",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L08_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "tour guide with tourists on Dakar coast"
+    },
+    {
+      "scene": 9,
+      "start": 142.2,
+      "end": 162.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L08_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open app.py in VS Code",
+        "Highlight MODEL and SYSTEM constants",
+        "Highlight anthropic.Anthropic(api_key=st.secrets[\"ANTHROPIC_API_KEY\"])",
+        "Highlight the check that creates st.session_state.messages",
+        "Highlight the loop that draws each message with st.chat_message"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 162.8,
+      "end": 181.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L08_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight st.chat_input(\"Ask about our tours\")",
+        "Highlight appending the user message to st.session_state.messages",
+        "Highlight reply_stream() with messages.stream, max_tokens=400 and the full history",
+        "Highlight reply = st.write_stream(reply_stream()) and appending the assistant reply"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 181.7,
+      "end": 198.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L08_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Create .streamlit/secrets.toml with ANTHROPIC_API_KEY = \"...\" (value blurred)",
+        "Add .streamlit/ to .gitignore",
+        "Run pip install streamlit anthropic, then streamlit run app.py",
+        "In the browser, ask about a tour, then ask a follow-up that uses 'it'",
+        "Show the streamed reply that understands the follow-up"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 198.4,
+      "end": 221.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L08_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Create requirements.txt with streamlit and anthropic",
+        "Run git status and show no secrets.toml, then push to GitHub",
+        "In Streamlit Community Cloud, create a new app from the repository",
+        "Paste the key into the app's secrets settings (blurred) and deploy",
+        "Open the public link on a phone and send a test message"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 221.1,
+      "end": 237.4,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 237.4,
+      "end": 263.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 263.1,
+      "end": 288.8,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_M2_L08_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "course_id": "AI-15",
+  "lesson_id": "L05",
+  "presenter_track": {
+    "file": "/incoming/ai-15-rag-systems-chat-with-your-data_M2_L05_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 298.2
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.9,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_M2_L05_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.9,
+      "end": 30.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 30.9,
+      "end": 59.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 59.6,
+      "end": 78.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 78.0,
+      "end": 99.4,
+      "visual_type": "stock",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L05_stock_05.mp4",
+      "status": "PENDING_STOCK",
+      "query": "student writing notes on index cards"
+    },
+    {
+      "scene": 6,
+      "start": 99.4,
+      "end": 120.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L05_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the chunk_sentences function in a notebook cell.",
+        "Highlight the sentence split, the max_chars check, the overlap line cur = cur[-overlap:] and the title prefix."
+      ]
+    },
+    {
+      "scene": 7,
+      "start": 120.8,
+      "end": 145.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L05_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the four-sentence text and run the loop with title 'Returns > Online' and max_chars=60.",
+        "Show the exact three printed chunks from content.md.",
+        "Highlight the repeated sentences 'Returns are free.' and 'Refunds take 10 days.'"
+      ]
+    },
+    {
+      "scene": 8,
+      "start": 145.2,
+      "end": 168.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L05_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the hit_at_k function.",
+        "Show the results and expected dictionaries for q1 and q2.",
+        "Run print(hit_at_k(results, expected)) and show the output 0.5."
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 168.3,
+      "end": 191.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L05_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the loop that creates three collections: chunks_300, chunks_800 and chunks_1500."
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 191.4,
+      "end": 206.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L05_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the test questions file: each question with an expected doc_id and a short answer phrase.",
+        "For each collection, retrieve the top 5 for the 10 questions and mark a hit if a chunk comes from the expected document and contains the phrase."
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 206.0,
+      "end": 230.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 12,
+      "start": 230.0,
+      "end": 246.7,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 246.7,
+      "end": 271.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 271.6,
+      "end": 298.2,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_M2_L05_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

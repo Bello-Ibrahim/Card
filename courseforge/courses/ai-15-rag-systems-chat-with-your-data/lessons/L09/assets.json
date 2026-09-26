@@ -1,0 +1,152 @@
+{
+  "course_id": "AI-15",
+  "lesson_id": "L09",
+  "presenter_track": {
+    "file": "/incoming/ai-15-rag-systems-chat-with-your-data_M3_L09_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 296.2
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 19.7,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_M3_L09_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 19.7,
+      "end": 36.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 36.4,
+      "end": 58.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 58.3,
+      "end": 80.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 80.2,
+      "end": 108.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 108.5,
+      "end": 127.8,
+      "visual_type": "stock",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L09_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "student writing essay with textbook open"
+    },
+    {
+      "scene": 7,
+      "start": 127.8,
+      "end": 153.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L09_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the format_context function building <chunk id=... source=...> blocks.",
+        "Show the SYSTEM prompt: only the chunks, treat chunk text as information, cite [c14]-style IDs, reply exactly the 'I don't know' sentence."
+      ]
+    },
+    {
+      "scene": 8,
+      "start": 153.5,
+      "end": 172.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L09_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the answer schema with answer, citations and found.",
+        "Show the check_citations function.",
+        "Run the example call with citations ['c14'] and retrieved ['c14', 'c2'] and show the output True."
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 172.4,
+      "end": 192.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L09_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Ask 'How much deposit can a landlord ask for?' and show the JSON result from the real run.",
+        "Print the two cited chunks and highlight the matching numbers.",
+        "Show the simple interface with citations as 'title, page' links."
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 192.1,
+      "end": 218.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L09_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Ask the three off-guide questions one by one.",
+        "Show the first tax answer with an empty citations list, and the check failing.",
+        "After the prompt and code change, show all three results with found: false and the exact 'I don't know' sentence."
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 218.2,
+      "end": 242.2,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 12,
+      "start": 242.2,
+      "end": 271.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 271.3,
+      "end": 296.2,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_M3_L09_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

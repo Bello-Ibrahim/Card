@@ -1,0 +1,163 @@
+{
+  "course_id": "AI-15",
+  "lesson_id": "L15",
+  "presenter_track": {
+    "file": "/incoming/ai-15-rag-systems-chat-with-your-data_M4_L15_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 292.9
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_M4_L15_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.0,
+      "end": 33.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 33.0,
+      "end": 58.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 58.7,
+      "end": 78.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 78.0,
+      "end": 100.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 100.3,
+      "end": 119.2,
+      "visual_type": "stock",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L15_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "new kitchen being installed by workers"
+    },
+    {
+      "scene": 7,
+      "start": 119.2,
+      "end": 142.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L15_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the folder of 45 guidance PDFs and the CSV with URL and licence columns.",
+        "Run python ingest.py and show the log ending with 2 scanned files skipped."
+      ]
+    },
+    {
+      "scene": 8,
+      "start": 142.8,
+      "end": 163.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L15_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show config.py with the chosen chunk size and k.",
+        "Run the collection count and show 2,900 chunks.",
+        "Print one chunk with its metadata: title, page, year, url, access."
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 163.8,
+      "end": 183.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L15_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Scroll through rag.py: hybrid retrieval with RRF, reranker, grounded SYSTEM prompt, structured answer with citations and found, check_citations.",
+        "Show app.py with st.title, the notice caption and the chat input.",
+        "Run streamlit run app.py and show the app with the notice at the top."
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 183.5,
+      "end": 205.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L15_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Ask a vaccination schedule question and show the answer with title and page source links.",
+        "Ask a question in Kiswahili and show the cited answer.",
+        "Ask about a drug not in the guidance and show the exact refusal sentence."
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 205.4,
+      "end": 226.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L15_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open NOTES.md and show two open issues: split dosage tables, overlapping guidance versions."
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 226.0,
+      "end": 241.0,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 241.0,
+      "end": 265.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 265.9,
+      "end": 292.9,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_M4_L15_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

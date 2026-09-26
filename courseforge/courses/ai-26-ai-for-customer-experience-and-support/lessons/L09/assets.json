@@ -1,0 +1,195 @@
+{
+  "course_id": "AI-26",
+  "lesson_id": "L09",
+  "presenter_track": {
+    "file": "/incoming/ai-26-ai-for-customer-experience-and-support_M3_L09_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 300.3
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-26-ai-for-customer-experience-and-support_M3_L09_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.0,
+      "end": 38.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 38.1,
+      "end": 55.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 55.2,
+      "end": 68.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 68.1,
+      "end": 90.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 90.4,
+      "end": 106.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 106.7,
+      "end": 126.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 126.8,
+      "end": 140.9,
+      "visual_type": "stock",
+      "file": "/incoming/ai-26-ai-for-customer-experience-and-support_L09_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "small street food stall serving customers"
+    },
+    {
+      "scene": 9,
+      "start": 140.9,
+      "end": 152.5,
+      "visual_type": "stock",
+      "file": "/incoming/ai-26-ai-for-customer-experience-and-support_L09_stock_09.mp4",
+      "status": "PENDING_STOCK",
+      "query": "language school classroom adult students"
+    },
+    {
+      "scene": 10,
+      "start": 152.5,
+      "end": 175.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-26-ai-for-customer-experience-and-support_L09_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Sign in to Botpress on the free plan and click 'Create Bot'",
+        "Name the bot 'Noor – Language school assistant (test)'",
+        "Open 'Knowledge Bases' and click 'Add source', then choose text",
+        "Paste three short articles: 'When do courses start?', 'How do I choose my level?', 'How can I pay?'"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 175.6,
+      "end": 196.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-26-ai-for-customer-experience-and-support_L09_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open the 'Instructions' box of the bot",
+        "Paste the scope, the knowledge-only rule, the tone guide and the hand-off rules",
+        "Open the welcome message setting and type: 'Hello, I am Noor, the school's AI assistant. I can help with course dates, levels and payment. You can ask for a person at any time.'"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 196.6,
+      "end": 215.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-26-ai-for-customer-experience-and-support_L09_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open the 'Emulator' test chat",
+        "Ask one question per topic and show each article beside the answer",
+        "Ask the out-of-scope question 'Can you help with my visa?'",
+        "Pause on Noor's answer"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 215.5,
+      "end": 233.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-26-ai-for-customer-experience-and-support_L09_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show Noor's first reply giving general visa advice (highlight it in red)",
+        "Add to Instructions: 'Do not give advice on visas or legal matters; offer a person.'",
+        "Ask the visa question again and show Noor offering a person",
+        "Type the Arabic question: متى تبدأ الدورة القادمة؟ and show the answer with an English subtitle"
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 233.9,
+      "end": 240.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-26-ai-for-customer-experience-and-support_L09_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Click 'Publish' and keep the bot in test mode",
+        "Copy the share link and paste it into a notes file for L11 testing"
+      ]
+    },
+    {
+      "scene": 15,
+      "start": 240.8,
+      "end": 257.9,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 257.9,
+      "end": 278.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 17,
+      "start": 278.0,
+      "end": 300.3,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-26-ai-for-customer-experience-and-support_M3_L09_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

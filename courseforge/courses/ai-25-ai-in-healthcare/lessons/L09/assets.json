@@ -1,0 +1,155 @@
+{
+  "course_id": "AI-25",
+  "lesson_id": "L09",
+  "presenter_track": {
+    "file": "/incoming/ai-25-ai-in-healthcare_M2_L09_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 316.3
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.9,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-25-ai-in-healthcare_M2_L09_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.9,
+      "end": 38.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 38.2,
+      "end": 65.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 65.6,
+      "end": 86.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 86.6,
+      "end": 107.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 107.2,
+      "end": 123.1,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 123.1,
+      "end": 144.1,
+      "visual_type": "stock",
+      "file": "/incoming/ai-25-ai-in-healthcare_L09_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "person walking on rural dirt road"
+    },
+    {
+      "scene": 8,
+      "start": 144.1,
+      "end": 165.1,
+      "visual_type": "stock",
+      "file": "/incoming/ai-25-ai-in-healthcare_L09_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "portable x-ray machine in rural clinic"
+    },
+    {
+      "scene": 9,
+      "start": 165.1,
+      "end": 181.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 10,
+      "start": 181.8,
+      "end": 207.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 11,
+      "start": 207.5,
+      "end": 225.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 12,
+      "start": 225.9,
+      "end": 247.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 247.8,
+      "end": 267.9,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 267.9,
+      "end": 292.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 292.3,
+      "end": 316.3,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-25-ai-in-healthcare_M2_L09_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

@@ -13,7 +13,7 @@ Two answer metrics matter most in RAG:
 
 For unanswerable questions, the correct result is the "I don't know" sentence. Score these separately as **correct refusal rate**: how often the system refuses when it should, and how often it refuses when it should not.
 
-**LLM as a judge.** Checking every answer by hand is slow, so we ask an LLM to act as a judge with a clear rubric. Give the judge the question, the retrieved chunks and the answer, and ask for a structured verdict. A forced tool call with a schema such as `{"faithful": "yes" | "partly" | "no", "unsupported_claims": [str], "relevant": 1-3}` works well. The rubric must define each label, for example:
+**LLM as a judge.** Checking every answer by hand is slow, so we ask an LLM to act as a judge with a clear rubric. Give the judge the question, the retrieved chunks and the answer, and ask for a structured verdict. Structured output (a JSON Schema in `output_config`) with a schema such as `{"faithful": "yes" | "partly" | "no", "unsupported_claims": [str], "relevant": 1-3}` works well. The rubric must define each label, for example:
 
 ```python
 JUDGE_RUBRIC = """Judge the ANSWER using only the CHUNKS.
@@ -58,7 +58,7 @@ Kwame is a developer for a hypothetical agricultural advice service in Kumasi, G
 On screen, follow his evaluation:
 
 1. He runs 25 test questions (20 answerable, 5 unanswerable) and saves question, chunks and answer to `answers.jsonl`.
-2. For the 20 answerable ones, he calls the judge with `JUDGE_RUBRIC` and a forced tool output, and saves the verdicts.
+2. For the 20 answerable ones, he calls the judge with `JUDGE_RUBRIC` and structured output, and saves the verdicts.
 3. He labels 10 answers himself before he opens the judge's file.
 4. Agreement is 8 of 10. In both disagreements, the judge said "yes" but the answer had added a planting month that was not in the chunks. He changes the rubric to "list every claim first, then check each claim", re-judges, and agreement rises to 9 of 10.
 5. Result (hypothetical): 16 of 20 faithful, 3 partly, 1 no; 4 of 5 correct refusals.
@@ -78,7 +78,7 @@ Many teams run an LLM judge and report its score as if it were the truth. Withou
 **Tools:** Python 3, the anthropic SDK (paid; keep runs small), your test set and pipeline. [VERSION]
 **Steps:**
 1. Run 20 answerable test questions and save question, chunks and answer to a file.
-2. Write your rubric and a forced tool schema for the judge.
+2. Write your rubric and a JSON Schema for the judge's structured output.
 3. Judge all 20 answers and save the verdicts.
 4. Label 10 answers yourself, without looking at the judge's verdicts.
 5. Compute agreement with `agreement()` and read every disagreement.
@@ -87,6 +87,6 @@ Many teams run an LLM judge and report its score as if it were the truth. Withou
 **Time:** about 50 minutes
 
 ## Review Flags
-- [VERSION] Claude API batch processing option (interface, discount and delivery time), forced tool use for the judge, and model choice (check the current models page).
+- [VERSION] Claude API batch processing option (interface, discount and delivery time), structured output for the judge (`output_config`), and model choice (check the current models page).
 - [VERSION] Optional open-source RAG evaluation libraries and their metric definitions (course-level flag).
 - Kwame's results are hypothetical.

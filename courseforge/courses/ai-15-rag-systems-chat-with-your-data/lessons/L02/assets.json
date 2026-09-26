@@ -1,0 +1,182 @@
+{
+  "course_id": "AI-15",
+  "lesson_id": "L02",
+  "presenter_track": {
+    "file": "/incoming/ai-15-rag-systems-chat-with-your-data_M1_L02_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 294.8
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.1,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_M1_L02_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 17.1,
+      "end": 26.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 26.5,
+      "end": 43.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 43.6,
+      "end": 58.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 58.2,
+      "end": 74.1,
+      "visual_type": "stock",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L02_stock_05.mp4",
+      "status": "PENDING_STOCK",
+      "query": "librarian arranging books on library shelves"
+    },
+    {
+      "scene": 6,
+      "start": 74.1,
+      "end": 97.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 97.7,
+      "end": 117.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 117.8,
+      "end": 134.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L02_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open a new notebook cell and show the import of SentenceTransformer from sentence_transformers.",
+        "Set EMBED_MODEL to the chosen multilingual model name and run model = SentenceTransformer(EMBED_MODEL).",
+        "Briefly show the model card page in the browser: vector size, prefixes, licence."
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 134.1,
+      "end": 150.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L02_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Type the sentences list: 'How do I reset my password?', 'Comment réinitialiser mon mot de passe ?', 'The invoice is due in 30 days.'",
+        "Run vecs = model.encode(sentences, normalize_embeddings=True).",
+        "Run sims = vecs @ vecs.T, then print(vecs.shape) and print(sims.round(2))."
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 150.8,
+      "end": 167.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L02_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the printed shape and the 3 by 3 similarity matrix from the real run.",
+        "Highlight the high English–French cell and the two low invoice cells."
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 167.5,
+      "end": 188.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L02_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show a cell with three French policy passages: cancellation, luggage, airport transfer.",
+        "Show three guest questions: English 'Can I cancel my tour?', an Arabic luggage question, a French airport shuttle question.",
+        "Encode all six with normalize_embeddings=True and print the 6 by 6 similarity matrix."
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 188.9,
+      "end": 209.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L02_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight the highest score in each question row, including the Arabic row.",
+        "Add the English question 'bags on the bus' and show its two close scores for luggage and transfer."
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 209.0,
+      "end": 226.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 226.6,
+      "end": 245.0,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 245.0,
+      "end": 269.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 269.9,
+      "end": 294.8,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_M1_L02_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

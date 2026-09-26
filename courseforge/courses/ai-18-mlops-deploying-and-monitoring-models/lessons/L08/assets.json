@@ -1,0 +1,172 @@
+{
+  "course_id": "AI-18",
+  "lesson_id": "L08",
+  "presenter_track": {
+    "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_M2_L08_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 282.0
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.1,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_M2_L08_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 17.1,
+      "end": 33.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 33.8,
+      "end": 56.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 56.5,
+      "end": 71.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 71.9,
+      "end": 101.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 101.0,
+      "end": 116.0,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 116.0,
+      "end": 132.3,
+      "visual_type": "stock",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L08_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "shipping containers stacked at port crane"
+    },
+    {
+      "scene": 8,
+      "start": 132.3,
+      "end": 155.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L08_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: python export_model.py and show the output 'exported wine-quality-clf v1'",
+        "Show the new model/ folder and model_version.txt",
+        "Create .dockerignore with .venv, mlflow.db, mlruns, data, *.jsonl, .git and .env"
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 155.9,
+      "end": 173.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L08_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open the Dockerfile in the editor",
+        "Highlight Stage 1: FROM python:3.11-slim AS build and the pip wheel line",
+        "Highlight Stage 2: COPY --from=build, useradd appuser and chown",
+        "Highlight COPY app.py, COPY model/, ENV MODEL_URI=/app/model and USER appuser"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 173.5,
+      "end": 182.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L08_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: docker build -t wine-api:v1 .",
+        "Run: docker run --rm -p 8000:8000 -e MODEL_VERSION=1 wine-api:v1",
+        "Open http://127.0.0.1:8000/health and show model_loaded true"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 182.9,
+      "end": 204.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L08_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: docker images wine-api and show the SIZE column",
+        "Show the size of a single-stage build on the full python:3.11 image and place the two side by side",
+        "Run: docker run --rm wine-api:v1 whoami and show the output appuser"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 204.8,
+      "end": 228.8,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 228.8,
+      "end": 253.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 253.7,
+      "end": 272.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 272.6,
+      "end": 282.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_M2_L08_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

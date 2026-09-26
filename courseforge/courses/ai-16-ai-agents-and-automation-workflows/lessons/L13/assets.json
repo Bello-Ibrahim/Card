@@ -1,0 +1,164 @@
+{
+  "course_id": "AI-16",
+  "lesson_id": "L13",
+  "presenter_track": {
+    "file": "/incoming/ai-16-ai-agents-and-automation-workflows_M4_L13_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 294.8
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.6,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_M4_L13_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 17.6,
+      "end": 44.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 44.6,
+      "end": 60.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 60.9,
+      "end": 81.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 81.9,
+      "end": 107.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 107.6,
+      "end": 126.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 126.5,
+      "end": 143.6,
+      "visual_type": "stock",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L13_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "pilots reviewing checklist in cockpit"
+    },
+    {
+      "scene": 8,
+      "start": 143.6,
+      "end": 164.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L13_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Create a new workflow 'Error handler'",
+        "Add an Error Trigger node",
+        "Add Google Sheets: append to 'errors' with time, workflow, node, message, execution_url mapped from the Error Trigger output"
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 164.6,
+      "end": 177.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L13_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add an email node: 'Workflow X failed at node Y: message. Link: …' to her own address (blurred)",
+        "Open the main workflow → Settings → Error workflow: 'Error handler'"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 177.9,
+      "end": 198.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L13_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Claude HTTP Request node → Settings → Retry On Fail: 3 tries, wait between tries",
+        "On Error: continue (using error output)",
+        "Error output → Google Sheets append to 'dead_letter' with item ID and error message",
+        "End of workflow: Google Sheets append to 'log' with counts and total tokens"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 198.0,
+      "end": 227.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L13_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Put a fake key in a copy of the credential",
+        "Run manually: the Error handler does not start",
+        "Activate the schedule and let it run",
+        "Show the new 'errors' row and the email with no secrets",
+        "Restore the correct key and run again"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 227.1,
+      "end": 248.1,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 248.1,
+      "end": 271.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 271.2,
+      "end": 294.8,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_M4_L13_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

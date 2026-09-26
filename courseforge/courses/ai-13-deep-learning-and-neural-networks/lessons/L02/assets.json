@@ -1,0 +1,189 @@
+{
+  "course_id": "AI-13",
+  "lesson_id": "L02",
+  "presenter_track": {
+    "file": "/incoming/ai-13-deep-learning-and-neural-networks_M1_L02_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 301.9
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.3,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_M1_L02_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 16.3,
+      "end": 32.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 32.2,
+      "end": 52.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 52.3,
+      "end": 71.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 71.2,
+      "end": 84.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 84.1,
+      "end": 99.5,
+      "visual_type": "stock",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L02_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "stacked egg trays in a box"
+    },
+    {
+      "scene": 7,
+      "start": 99.5,
+      "end": 120.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 120.1,
+      "end": 136.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 9,
+      "start": 136.4,
+      "end": 150.1,
+      "visual_type": "stock",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L02_stock_09.mp4",
+      "status": "PENDING_STOCK",
+      "query": "vineyard grapes close up harvest"
+    },
+    {
+      "scene": 10,
+      "start": 150.1,
+      "end": 168.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L02_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: import torch; device = \"cuda\" if torch.cuda.is_available() else \"cpu\"",
+        "Run: x = torch.rand(32, 64, 64, 3) and print(x.shape)",
+        "Run: x = x.permute(0, 3, 1, 2); print(x.shape, x.dtype, x.device)",
+        "Output: torch.Size([32, 3, 64, 64]) torch.float32 cpu"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 168.1,
+      "end": 181.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L02_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: mean = torch.tensor([0.5, 0.4, 0.3]).view(3, 1, 1)",
+        "Run: x = (x - mean); print(x.shape)",
+        "Run: x = x.to(device); print(x.device) → cuda:0"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 181.8,
+      "end": 202.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L02_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: flat = x.reshape(x.shape[0], -1); print(flat.shape) → torch.Size([32, 12288])",
+        "Run: labels = torch.randint(0, 5, (32,)); print(labels.dtype) → torch.int64",
+        "Run: single = x[0].unsqueeze(0); print(single.shape) → torch.Size([1, 3, 64, 64])"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 202.4,
+      "end": 219.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L02_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run a cell that combines x on the GPU with labels on the CPU; show the error: Expected all tensors to be on the same device",
+        "Fix: labels = labels.to(device); re-run the cell with no error"
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 219.1,
+      "end": 235.4,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 235.4,
+      "end": 248.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 248.7,
+      "end": 276.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 17,
+      "start": 276.6,
+      "end": 301.9,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_M1_L02_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

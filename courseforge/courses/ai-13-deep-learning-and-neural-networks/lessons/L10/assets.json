@@ -1,0 +1,172 @@
+{
+  "course_id": "AI-13",
+  "lesson_id": "L10",
+  "presenter_track": {
+    "file": "/incoming/ai-13-deep-learning-and-neural-networks_M2_L10_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 295.7
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.9,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_M2_L10_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.9,
+      "end": 42.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 42.0,
+      "end": 61.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 61.7,
+      "end": 76.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 76.7,
+      "end": 93.4,
+      "visual_type": "stock",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L10_stock_05.mp4",
+      "status": "PENDING_STOCK",
+      "query": "chef cooking new dish in kitchen"
+    },
+    {
+      "scene": 6,
+      "start": 93.4,
+      "end": 119.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 119.5,
+      "end": 138.4,
+      "visual_type": "stock",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L10_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "green bean plants growing in field"
+    },
+    {
+      "scene": 8,
+      "start": 138.4,
+      "end": 156.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L10_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: weights = ResNet18_Weights.DEFAULT; model = resnet18(weights=weights)",
+        "Run: for p in model.parameters(): p.requires_grad = False",
+        "Run: model.fc = nn.Linear(model.fc.in_features, 3); preprocess = weights.transforms()"
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 156.4,
+      "end": 171.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L10_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: print(sum(p.numel() for p in model.parameters() if p.requires_grad))",
+        "Output: 1539"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 171.4,
+      "end": 183.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L10_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: ds = load_dataset(\"AI-Lab-Makerere/beans\") and show the dataset card on the Hub",
+        "Run: define to_tensors with preprocess(img.convert(\"RGB\")); ds = ds.with_transform(to_tensors)",
+        "Run: collate = ...; train_dl = DataLoader(ds[\"train\"], batch_size=32, shuffle=True, collate_fn=collate)"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 183.8,
+      "end": 201.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L10_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: opt = torch.optim.AdamW(model.fc.parameters(), lr=1e-3); train 3–5 epochs with the L05 loop",
+        "Run: for p in model.layer4.parameters(): p.requires_grad = True",
+        "Run: opt = torch.optim.AdamW([{\"params\": model.layer4.parameters(), \"lr\": 1e-4}, {\"params\": model.fc.parameters(), \"lr\": 1e-3}])"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 201.4,
+      "end": 219.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L10_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show a results table with three rows: CNN from scratch (L07, 3-channel), frozen ResNet + new head, fine-tuned ResNet (expected output: both pretrained runs clearly better)"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 219.4,
+      "end": 244.7,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 244.7,
+      "end": 272.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 272.6,
+      "end": 295.7,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_M2_L10_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

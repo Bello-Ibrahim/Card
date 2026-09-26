@@ -1,0 +1,164 @@
+{
+  "course_id": "AI-01",
+  "lesson_id": "L09",
+  "presenter_track": {
+    "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_M3_L09_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 300.5
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "RENDERED"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.6,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_M3_L09_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 17.6,
+      "end": 33.9,
+      "visual_type": "slide",
+      "file": "assets/slides/s02.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 33.9,
+      "end": 53.6,
+      "visual_type": "slide",
+      "file": "assets/slides/s03.png",
+      "status": "RENDERED",
+      "needs_design": true
+    },
+    {
+      "scene": 4,
+      "start": 53.6,
+      "end": 75.5,
+      "visual_type": "slide",
+      "file": "assets/slides/s04.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 75.5,
+      "end": 93.5,
+      "visual_type": "slide",
+      "file": "assets/slides/s05.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 93.5,
+      "end": 106.8,
+      "visual_type": "text",
+      "file": "assets/slides/s06.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 106.8,
+      "end": 130.8,
+      "visual_type": "stock",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_L09_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "confident speaker giving lecture to students"
+    },
+    {
+      "scene": 8,
+      "start": 130.8,
+      "end": 150.5,
+      "visual_type": "slide",
+      "file": "assets/slides/s08.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 9,
+      "start": 150.5,
+      "end": 162.9,
+      "visual_type": "stock",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_L09_stock_09.mp4",
+      "status": "PENDING_STOCK",
+      "query": "teacher planning lesson on laptop at desk"
+    },
+    {
+      "scene": 10,
+      "start": 162.9,
+      "end": 179.2,
+      "visual_type": "slide",
+      "file": "assets/slides/s10.png",
+      "status": "RENDERED",
+      "needs_design": true
+    },
+    {
+      "scene": 11,
+      "start": 179.2,
+      "end": 192.9,
+      "visual_type": "slide",
+      "file": "assets/slides/s11.png",
+      "status": "RENDERED",
+      "needs_design": true
+    },
+    {
+      "scene": 12,
+      "start": 192.9,
+      "end": 207.9,
+      "visual_type": "slide",
+      "file": "assets/slides/s12.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 207.9,
+      "end": 227.6,
+      "visual_type": "text",
+      "file": "assets/slides/s13.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 227.6,
+      "end": 249.5,
+      "visual_type": "slide",
+      "file": "assets/slides/s14.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 249.5,
+      "end": 274.8,
+      "visual_type": "slide",
+      "file": "assets/slides/s15.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 274.8,
+      "end": 300.5,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_M3_L09_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

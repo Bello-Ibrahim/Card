@@ -1,0 +1,179 @@
+{
+  "course_id": "AI-11",
+  "lesson_id": "L18",
+  "presenter_track": {
+    "file": "/incoming/ai-11-python-for-ai_M4_L18_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 281.5
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.7,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-11-python-for-ai_M4_L18_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 16.7,
+      "end": 38.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 38.1,
+      "end": 59.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 59.5,
+      "end": 77.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 77.5,
+      "end": 95.5,
+      "visual_type": "stock",
+      "file": "/incoming/ai-11-python-for-ai_L18_stock_05.mp4",
+      "status": "PENDING_STOCK",
+      "query": "student writing exam in classroom"
+    },
+    {
+      "scene": 6,
+      "start": 95.5,
+      "end": 108.8,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 108.8,
+      "end": 124.7,
+      "visual_type": "stock",
+      "file": "/incoming/ai-11-python-for-ai_L18_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "data analyst working at desk India"
+    },
+    {
+      "scene": 8,
+      "start": 124.7,
+      "end": 137.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L18_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run the L14, L16 and L17 cells so encoded exists",
+        "Add a new code cell",
+        "Type: print(encoded[[\"returned\", \"refund\"]].head(3))",
+        "Press Shift + Enter",
+        "Output: no 0.0 / yes 12.0 / no 0.0",
+        "Highlight the yes / 12.0 row"
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 137.1,
+      "end": 162.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L18_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add a new code cell",
+        "Type: ml = encoded.copy()",
+        "Type: ml[\"returned\"] = (ml[\"returned\"] == \"yes\").astype(int)",
+        "Type: ml = ml.drop(columns=[\"order_id\", \"refund\", \"order_date\"])",
+        "Type: print(ml.shape) and print(ml.columns.tolist())"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 162.8,
+      "end": 171.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L18_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Press Shift + Enter",
+        "Output: (8, 11)",
+        "Output: ['quantity', 'unit_price', 'returned', 'month', 'weekday', 'city_hanoi', 'city_lagos', 'city_lima', 'payment_card', 'payment_cash', 'payment_other']"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 171.8,
+      "end": 186.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L18_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add a new code cell",
+        "Type: print(ml.select_dtypes(\"number\").shape[1] == ml.shape[1])",
+        "Type: ml.to_csv(\"orders_ml_ready.csv\", index=False)",
+        "Press Shift + Enter",
+        "Output: True",
+        "Open the Colab file panel and show orders_ml_ready.csv"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 186.4,
+      "end": 203.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 203.5,
+      "end": 228.8,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 228.8,
+      "end": 252.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 252.4,
+      "end": 281.5,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-11-python-for-ai_M4_L18_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

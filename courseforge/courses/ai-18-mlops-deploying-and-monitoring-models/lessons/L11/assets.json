@@ -1,0 +1,188 @@
+{
+  "course_id": "AI-18",
+  "lesson_id": "L11",
+  "presenter_track": {
+    "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_M3_L11_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 296.8
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.1,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_M3_L11_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 17.1,
+      "end": 39.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 39.4,
+      "end": 60.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 60.8,
+      "end": 77.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 77.9,
+      "end": 94.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 94.6,
+      "end": 115.2,
+      "visual_type": "stock",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L11_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "mechanic inspecting car in workshop"
+    },
+    {
+      "scene": 7,
+      "start": 115.2,
+      "end": 133.6,
+      "visual_type": "stock",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L11_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "engineer writing code at laptop in office"
+    },
+    {
+      "scene": 8,
+      "start": 133.6,
+      "end": 153.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L11_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show pytest.ini with [pytest] and pythonpath = .",
+        "Open tests/test_model.py",
+        "Highlight test_load_data_columns and the labels test",
+        "Highlight test_no_missing_or_out_of_range",
+        "Highlight test_quality_gate with random_state=42 and the check f1_score >= 0.50"
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 153.3,
+      "end": 173.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L11_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open tests/test_api.py",
+        "Highlight the GOOD example wine",
+        "Highlight test_rejects_out_of_range expecting status 422",
+        "Highlight the with TestClient(app) as client block"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 173.0,
+      "end": 185.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L11_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: export MODEL_URI=model",
+        "Run: pytest -q",
+        "Highlight the output '6 passed' and the single warning"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 185.0,
+      "end": 212.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L11_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Edit test_quality_gate: change >= 0.50 to >= 0.90",
+        "Run: pytest -q",
+        "Highlight 'FAILED ... test_quality_gate'",
+        "Highlight 'AssertionError: assert 0.5568181818181818 >= 0.9'"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 212.0,
+      "end": 223.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L11_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Change the gate back to >= 0.50",
+        "Run: pytest -q",
+        "Show all tests passing"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 223.1,
+      "end": 245.8,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 245.8,
+      "end": 268.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 268.9,
+      "end": 286.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 286.5,
+      "end": 296.8,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_M3_L11_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

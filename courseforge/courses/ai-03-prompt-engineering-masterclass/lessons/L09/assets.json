@@ -1,0 +1,197 @@
+{
+  "course_id": "AI-03",
+  "lesson_id": "L09",
+  "presenter_track": {
+    "file": "/incoming/ai-03-prompt-engineering-masterclass_M2_L09_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 300.9
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.3,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-03-prompt-engineering-masterclass_M2_L09_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 16.3,
+      "end": 26.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 26.6,
+      "end": 50.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 50.6,
+      "end": 67.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 67.7,
+      "end": 81.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 81.4,
+      "end": 100.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 100.3,
+      "end": 116.2,
+      "visual_type": "stock",
+      "file": "/incoming/ai-03-prompt-engineering-masterclass_L09_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "architect showing house sketch to clients"
+    },
+    {
+      "scene": 8,
+      "start": 116.2,
+      "end": 133.8,
+      "visual_type": "stock",
+      "file": "/incoming/ai-03-prompt-engineering-masterclass_L09_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "construction site safety briefing workers helmets"
+    },
+    {
+      "scene": 9,
+      "start": 133.8,
+      "end": 155.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-03-prompt-engineering-masterclass_L09_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open Claude in a web browser and start a new chat.",
+        "Type the interview prompt from content.md: 'Act as an experienced safety trainer for construction sites. I need a one-page safety briefing for new site workers. Before you write anything, ask me five questions, one at a time, about what you need to know.'",
+        "Press Enter and wait for the first reply."
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 155.2,
+      "end": 174.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-03-prompt-engineering-masterclass_L09_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the first question on screen, for example 'What type of site is this?'",
+        "Type the answer: 'A 6-storey residential building, concrete frame.'",
+        "Answer the other four questions briefly, using invented site details only.",
+        "Highlight each question as it appears to show the context it adds."
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 174.9,
+      "end": 187.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-03-prompt-engineering-masterclass_L09_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "After the fifth answer, let the tool write the briefing.",
+        "Scroll slowly through the full briefing on screen."
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 187.3,
+      "end": 205.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-03-prompt-engineering-masterclass_L09_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Type: 'Now act as a strict editor. List the three least clear sentences for a worker who reads slowly.'",
+        "Show the feedback.",
+        "Type: 'Rewrite those three sentences in simpler words.'",
+        "Show the improved briefing."
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 205.7,
+      "end": 222.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-03-prompt-engineering-masterclass_L09_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open Claude's settings area and show where saved or custom instructions are entered (check the current name and location first).",
+        "Type the example: 'I work in construction training. Write in plain language for adult learners.'",
+        "Point out that it will apply to future chats."
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 222.8,
+      "end": 232.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-03-prompt-engineering-masterclass_L09_screen_6.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Briefly show where a similar saved-instruction feature is found in ChatGPT and in Gemini, only if it is available on the free plan at recording time.",
+        "Return to the Claude chat."
+      ]
+    },
+    {
+      "scene": 15,
+      "start": 232.7,
+      "end": 247.3,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 247.3,
+      "end": 277.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 17,
+      "start": 277.3,
+      "end": 300.9,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-03-prompt-engineering-masterclass_M2_L09_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

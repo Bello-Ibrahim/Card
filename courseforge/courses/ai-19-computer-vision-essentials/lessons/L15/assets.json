@@ -1,0 +1,169 @@
+{
+  "course_id": "AI-19",
+  "lesson_id": "L15",
+  "presenter_track": {
+    "file": "/incoming/ai-19-computer-vision-essentials_M4_L15_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 300.9
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.4,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-19-computer-vision-essentials_M4_L15_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.4,
+      "end": 39.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 39.0,
+      "end": 62.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 62.6,
+      "end": 85.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 85.3,
+      "end": 102.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 102.0,
+      "end": 123.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 123.0,
+      "end": 136.7,
+      "visual_type": "stock",
+      "file": "/incoming/ai-19-computer-vision-essentials_L15_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "car dashboard speedometer while driving"
+    },
+    {
+      "scene": 8,
+      "start": 136.7,
+      "end": 150.4,
+      "visual_type": "stock",
+      "file": "/incoming/ai-19-computer-vision-essentials_L15_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "grocery shelf with rows of drink cartons"
+    },
+    {
+      "scene": 9,
+      "start": 150.4,
+      "end": 171.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L15_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "In Colab, run !pip install ultralytics gradio",
+        "Upload best.pt",
+        "Scroll through the cell: the count function with the RGB to BGR flips, and gr.Interface with gr.Image, gr.Slider and gr.Number"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 171.0,
+      "end": 190.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L15_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run the cell and open the temporary link that Gradio prints",
+        "Upload a shelf photo and move the confidence slider",
+        "Point to the count and to the missed carton behind the price label"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 190.7,
+      "end": 215.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L15_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "On huggingface.co, create a new Space with the Gradio SDK and free CPU hardware",
+        "Upload app.py, best.pt and requirements.txt listing ultralytics and gradio"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 215.6,
+      "end": 234.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L15_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Wait for the Space build to finish",
+        "Upload a new shelf photo and show the result"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 234.5,
+      "end": 251.6,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 251.6,
+      "end": 276.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 276.0,
+      "end": 300.9,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-19-computer-vision-essentials_M4_L15_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

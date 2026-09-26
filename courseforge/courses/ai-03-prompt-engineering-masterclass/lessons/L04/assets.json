@@ -1,0 +1,155 @@
+{
+  "course_id": "AI-03",
+  "lesson_id": "L04",
+  "presenter_track": {
+    "file": "/incoming/ai-03-prompt-engineering-masterclass_M1_L04_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 300.7
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.3,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-03-prompt-engineering-masterclass_M1_L04_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 16.3,
+      "end": 30.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 30.0,
+      "end": 57.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 57.0,
+      "end": 73.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 73.7,
+      "end": 102.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 102.8,
+      "end": 115.2,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 115.2,
+      "end": 134.5,
+      "visual_type": "stock",
+      "file": "/incoming/ai-03-prompt-engineering-masterclass_L04_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "coffee and biscuits on meeting table"
+    },
+    {
+      "scene": 8,
+      "start": 134.5,
+      "end": 151.6,
+      "visual_type": "stock",
+      "file": "/incoming/ai-03-prompt-engineering-masterclass_L04_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "project manager factory floor tablet"
+    },
+    {
+      "scene": 9,
+      "start": 151.6,
+      "end": 168.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 10,
+      "start": 168.7,
+      "end": 195.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 11,
+      "start": 195.7,
+      "end": 210.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 12,
+      "start": 210.7,
+      "end": 222.7,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 222.7,
+      "end": 251.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 251.4,
+      "end": 276.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 276.3,
+      "end": 300.7,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-03-prompt-engineering-masterclass_M1_L04_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

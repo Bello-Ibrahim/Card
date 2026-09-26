@@ -1,0 +1,165 @@
+{
+  "course_id": "AI-14",
+  "lesson_id": "L10",
+  "presenter_track": {
+    "file": "/incoming/ai-14-building-apps-with-llm-apis_M3_L10_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 295.8
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 19.7,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_M3_L10_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 19.7,
+      "end": 43.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 43.7,
+      "end": 61.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 61.7,
+      "end": 84.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 84.4,
+      "end": 112.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 112.7,
+      "end": 133.3,
+      "visual_type": "stock",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L10_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "bank clerk at counter checking documents"
+    },
+    {
+      "scene": 7,
+      "start": 133.3,
+      "end": 144.9,
+      "visual_type": "stock",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L10_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "furniture delivery team loading sofa truck"
+    },
+    {
+      "scene": 8,
+      "start": 144.9,
+      "end": 174.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L10_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open support_loop.py in VS Code",
+        "Highlight MAX_STEPS = 5 and WRITE_TOOLS = {\"change_delivery_address\"}",
+        "Highlight the unknown-tool check that returns 'Unknown tool' with err True",
+        "Highlight the confirm() check for write tools",
+        "Highlight the tool_result with is_error, then the else branch: 'Stopped: too many tool steps.'"
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 174.0,
+      "end": 193.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L10_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open the change_delivery_address handler",
+        "Highlight the check that the order belongs to the current customer",
+        "Highlight the not-shipped check and the empty-address check"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 193.7,
+      "end": 210.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L10_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run the script and type 'Send my order CO-778 to my office instead'",
+        "Show the confirm prompt: 'Change the address of order CO-778 to Calle 10 #43-12, Medellín? (yes/no)'",
+        "Type no",
+        "Show the model's reply (labelled 'example output')"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 210.4,
+      "end": 223.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L10_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Ask for the status of four orders in one message",
+        "Print the user message and show four tool_result blocks together",
+        "Change MAX_STEPS to 1, run again, and show 'Stopped: too many tool steps.'"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 223.7,
+      "end": 243.0,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 243.0,
+      "end": 270.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 270.9,
+      "end": 295.8,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_M3_L10_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

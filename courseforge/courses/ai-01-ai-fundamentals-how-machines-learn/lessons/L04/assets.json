@@ -1,0 +1,164 @@
+{
+  "course_id": "AI-01",
+  "lesson_id": "L04",
+  "presenter_track": {
+    "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_M1_L04_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 296.6
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "RENDERED"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 12.9,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_M1_L04_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 12.9,
+      "end": 24.9,
+      "visual_type": "slide",
+      "file": "assets/slides/s02.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 24.9,
+      "end": 44.2,
+      "visual_type": "slide",
+      "file": "assets/slides/s03.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 44.2,
+      "end": 52.8,
+      "visual_type": "text",
+      "file": "assets/slides/s04.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 52.8,
+      "end": 72.1,
+      "visual_type": "slide",
+      "file": "assets/slides/s05.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 72.1,
+      "end": 97.8,
+      "visual_type": "slide",
+      "file": "assets/slides/s06.png",
+      "status": "RENDERED",
+      "needs_design": true
+    },
+    {
+      "scene": 7,
+      "start": 97.8,
+      "end": 106.8,
+      "visual_type": "stock",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_L04_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "student studying with notes at desk"
+    },
+    {
+      "scene": 8,
+      "start": 106.8,
+      "end": 123.5,
+      "visual_type": "stock",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_L04_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "students writing exam in classroom"
+    },
+    {
+      "scene": 9,
+      "start": 123.5,
+      "end": 137.6,
+      "visual_type": "stock",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_L04_stock_09.mp4",
+      "status": "PENDING_STOCK",
+      "query": "farmer examining cassava leaves in field"
+    },
+    {
+      "scene": 10,
+      "start": 137.6,
+      "end": 153.9,
+      "visual_type": "slide",
+      "file": "assets/slides/s10.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 11,
+      "start": 153.9,
+      "end": 176.2,
+      "visual_type": "slide",
+      "file": "assets/slides/s11.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 12,
+      "start": 176.2,
+      "end": 194.6,
+      "visual_type": "slide",
+      "file": "assets/slides/s12.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 194.6,
+      "end": 218.6,
+      "visual_type": "text",
+      "file": "assets/slides/s13.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 218.6,
+      "end": 239.2,
+      "visual_type": "slide",
+      "file": "assets/slides/s14.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 239.2,
+      "end": 269.2,
+      "visual_type": "slide",
+      "file": "assets/slides/s15.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 269.2,
+      "end": 296.6,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_M1_L04_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

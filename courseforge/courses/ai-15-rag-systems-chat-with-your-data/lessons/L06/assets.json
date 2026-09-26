@@ -1,0 +1,173 @@
+{
+  "course_id": "AI-15",
+  "lesson_id": "L06",
+  "presenter_track": {
+    "file": "/incoming/ai-15-rag-systems-chat-with-your-data_M2_L06_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 297.9
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_M2_L06_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.0,
+      "end": 26.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 26.6,
+      "end": 55.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 55.3,
+      "end": 77.2,
+      "visual_type": "stock",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L06_stock_04.mp4",
+      "status": "PENDING_STOCK",
+      "query": "customer browsing vinyl records in music shop"
+    },
+    {
+      "scene": 5,
+      "start": 77.2,
+      "end": 98.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 98.2,
+      "end": 123.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 123.9,
+      "end": 146.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L06_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the add step: ids, documents and metadatas with year as an integer and doc_type.",
+        "Run col.count() and show 1,200."
+      ]
+    },
+    {
+      "scene": 8,
+      "start": 146.2,
+      "end": 165.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L06_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run col.query(query_texts=['chargeback time limit'], n_results=5) without a where argument.",
+        "Print id, title, year and rounded distance for each result.",
+        "Highlight the top result with year 2019."
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 165.1,
+      "end": 182.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L06_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add where={'year': {'$gte': 2024}} to the same query and run it.",
+        "Show the current policy as the top result.",
+        "Show briefly the $and example combining year and doc_type from content.md."
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 182.2,
+      "end": 203.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L06_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the terminal with a local PostgreSQL Docker container running.",
+        "Run the SQL: CREATE EXTENSION vector, CREATE TABLE chunks with embedding vector(n), CREATE INDEX using hnsw with vector_cosine_ops.",
+        "In Python, encode the question and pass the vector as the query parameter."
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 203.6,
+      "end": 222.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L06_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run the SELECT with ORDER BY embedding <=> query vector, WHERE year >= 2024, LIMIT 5.",
+        "Place the Chroma top 3 and the pgvector top 3 side by side and show that they match."
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 222.5,
+      "end": 235.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 235.8,
+      "end": 251.2,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 251.2,
+      "end": 275.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 275.6,
+      "end": 297.9,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_M2_L06_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

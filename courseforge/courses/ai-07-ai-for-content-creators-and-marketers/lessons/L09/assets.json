@@ -1,0 +1,173 @@
+{
+  "course_id": "AI-07",
+  "lesson_id": "L09",
+  "presenter_track": {
+    "file": "/incoming/ai-07-ai-for-content-creators-and-marketers_M2_L09_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 295.5
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.3,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-07-ai-for-content-creators-and-marketers_M2_L09_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 16.3,
+      "end": 45.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 45.9,
+      "end": 67.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 67.8,
+      "end": 91.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 91.4,
+      "end": 107.3,
+      "visual_type": "stock",
+      "file": "/incoming/ai-07-ai-for-content-creators-and-marketers_L09_stock_05.mp4",
+      "status": "PENDING_STOCK",
+      "query": "city bus passing bright shop windows"
+    },
+    {
+      "scene": 6,
+      "start": 107.3,
+      "end": 128.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-07-ai-for-content-creators-and-marketers_L09_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open Claude or ChatGPT",
+        "Paste the voice guide",
+        "Type: 'Using the voice guide below, write a 30-second video script and shot list for a vertical video showing how to repot a small plant. Include a hook for the first 2 seconds, 3 scenes and a call to action.'",
+        "Show the returned table"
+      ]
+    },
+    {
+      "scene": 7,
+      "start": 128.7,
+      "end": 149.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-07-ai-for-content-creators-and-marketers_L09_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "In the shot list table, change the 'garden' shot to 'shop counter'",
+        "Open CapCut and start a new project",
+        "Import the five vertical clips in order"
+      ]
+    },
+    {
+      "scene": 8,
+      "start": 149.3,
+      "end": 167.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-07-ai-for-content-creators-and-marketers_L09_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Trim clip 1 to start on the roots coming out of the small pot, under 2 seconds",
+        "Trim the other clips to match the script timings",
+        "Delete pauses between actions"
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 167.7,
+      "end": 187.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-07-ai-for-content-creators-and-marketers_L09_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open the captions feature and choose auto-captions for the spoken language",
+        "Play the video and pause on each caption",
+        "Highlight the misspelled plant name and correct it",
+        "Highlight 'soul' and correct it to 'soil'"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 187.4,
+      "end": 206.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-07-ai-for-content-creators-and-marketers_L09_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Choose a white caption style with a dark outline",
+        "Drag the captions up from the bottom edge",
+        "Add text on the last scene: 'Visit us for free repotting advice.'"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 206.3,
+      "end": 221.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-07-ai-for-content-creators-and-marketers_L09_screen_6.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open the music library and add a quiet background track",
+        "Open the track's licence information and note it in the asset log",
+        "Export in vertical format",
+        "Play the exported file on a phone with the sound muted"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 221.3,
+      "end": 241.0,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 241.0,
+      "end": 267.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 267.6,
+      "end": 295.5,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-07-ai-for-content-creators-and-marketers_M2_L09_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

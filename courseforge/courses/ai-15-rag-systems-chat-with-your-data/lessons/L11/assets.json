@@ -1,0 +1,148 @@
+{
+  "course_id": "AI-15",
+  "lesson_id": "L11",
+  "presenter_track": {
+    "file": "/incoming/ai-15-rag-systems-chat-with-your-data_M3_L11_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 292.2
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.1,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_M3_L11_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 17.1,
+      "end": 34.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 34.2,
+      "end": 59.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 59.9,
+      "end": 83.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 83.5,
+      "end": 103.2,
+      "visual_type": "stock",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L11_stock_05.mp4",
+      "status": "PENDING_STOCK",
+      "query": "doctor checking patient blood pressure clinic"
+    },
+    {
+      "scene": 6,
+      "start": 103.2,
+      "end": 128.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L11_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the retrieval_metrics function.",
+        "Show the three example runs.",
+        "Run the print line with k=3 and show the exact output {'hit@k': 0.667, 'recall@k': 0.5, 'mrr': 0.444}."
+      ]
+    },
+    {
+      "scene": 7,
+      "start": 128.1,
+      "end": 151.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L11_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the two pipeline versions: A vector only, B hybrid with RRF, both with 800-character chunks.",
+        "Run both over the test set and save runs_A.json and runs_B.json with the top 10 IDs per question."
+      ]
+    },
+    {
+      "scene": 8,
+      "start": 151.7,
+      "end": 174.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 9,
+      "start": 174.8,
+      "end": 198.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L11_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Print the five failed questions from version B.",
+        "For each, show the retrieved chunks next to the relevant chunk.",
+        "Fill a small table: chunking ×2 (split table), embeddings ×1 (Czech legal term), vague question ×1 ('what about the form?'), parsing ×1 (scanned appendix)."
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 198.8,
+      "end": 216.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 11,
+      "start": 216.8,
+      "end": 239.5,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 12,
+      "start": 239.5,
+      "end": 263.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 263.1,
+      "end": 292.2,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_M3_L11_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

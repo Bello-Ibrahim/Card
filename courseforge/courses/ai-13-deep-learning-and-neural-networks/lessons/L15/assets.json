@@ -1,0 +1,171 @@
+{
+  "course_id": "AI-13",
+  "lesson_id": "L15",
+  "presenter_track": {
+    "file": "/incoming/ai-13-deep-learning-and-neural-networks_M3_L15_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 294.0
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_M3_L15_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.0,
+      "end": 39.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 39.0,
+      "end": 59.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 59.6,
+      "end": 85.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 85.3,
+      "end": 100.3,
+      "visual_type": "stock",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L15_stock_05.mp4",
+      "status": "PENDING_STOCK",
+      "query": "mechanic checking car engine in garage"
+    },
+    {
+      "scene": 6,
+      "start": 100.3,
+      "end": 116.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 116.2,
+      "end": 129.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 129.9,
+      "end": 148.3,
+      "visual_type": "stock",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L15_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "port containers logistics yard aerial view"
+    },
+    {
+      "scene": 9,
+      "start": 148.3,
+      "end": 165.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L15_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open assets/L15_broken_A.ipynb in Colab and run all cells unchanged",
+        "Point to the loss: huge values, then inf, then nan",
+        "In the 'Your fixed version here' cell: standardise X and y; add torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0) between backward() and step(); re-run and show the loss falling"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 165.0,
+      "end": 180.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L15_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open assets/L15_broken_B.ipynb and run all cells",
+        "Show the ValueError: Target size (torch.Size([32])) must be the same as input size (torch.Size([32, 1]))",
+        "In the 'Your fixed version here' cell: nn.BCEWithLogitsLoss()(model(xb).squeeze(1), yb.float()); run with no error"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 180.0,
+      "end": 200.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L15_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open assets/L15_broken_C.ipynb and run all cells; point to the loss stuck near 2.30",
+        "In the 'Your fixed version here' cell, after one backward(): for name, p in model.named_parameters(): print(name, p.grad.norm()); point to the near-zero first-layer weight gradient",
+        "Same cell: rebuild the model with nn.Linear(64, 64), nn.BatchNorm1d(64), nn.ReLU() per layer; re-run the loop and compare gradient norms and loss"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 200.1,
+      "end": 225.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L15_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open assets/L15_broken_D.ipynb and run all cells; point to the memory printout rising every 5 steps (on CPU also the Colab resource panel)",
+        "Highlight losses.append(loss)  # keeps every graph alive",
+        "In the 'Your fixed version here' cell: copy the loop with losses.append(loss.item()), or compute the logged loss inside with torch.no_grad(); run and show memory staying flat"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 225.4,
+      "end": 243.8,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 243.8,
+      "end": 271.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 271.7,
+      "end": 294.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_M3_L15_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "course_id": "AI-01",
+  "lesson_id": "L11",
+  "presenter_track": {
+    "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_M3_L11_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 295.4
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "RENDERED"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.4,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_M3_L11_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.4,
+      "end": 36.4,
+      "visual_type": "slide",
+      "file": "assets/slides/s02.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 36.4,
+      "end": 60.0,
+      "visual_type": "slide",
+      "file": "assets/slides/s03.png",
+      "status": "RENDERED",
+      "needs_design": true
+    },
+    {
+      "scene": 4,
+      "start": 60.0,
+      "end": 78.9,
+      "visual_type": "stock",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_L11_stock_04.mp4",
+      "status": "PENDING_STOCK",
+      "query": "young child holding different fruits kitchen"
+    },
+    {
+      "scene": 5,
+      "start": 78.9,
+      "end": 93.9,
+      "visual_type": "text",
+      "file": "assets/slides/s05.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 93.9,
+      "end": 108.5,
+      "visual_type": "stock",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_L11_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "community recycling project plastic bottles cans"
+    },
+    {
+      "scene": 7,
+      "start": 108.5,
+      "end": 123.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_L11_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open Google Teachable Machine in a clean browser window",
+        "Click the button to get started",
+        "Choose Image Project",
+        "Choose the standard image model option",
+        "Show the empty project with two default classes and the Train and Preview panels"
+      ]
+    },
+    {
+      "scene": 8,
+      "start": 123.9,
+      "end": 135.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_L11_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Click the name of the first default class and type 'plastic bottle'",
+        "Click the name of the second default class and type 'metal can'",
+        "Point to the option to add a class, without clicking it"
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 135.5,
+      "end": 154.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_L11_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "In the 'plastic bottle' class, click Webcam and allow camera access",
+        "Hold to record while turning several unbranded bottles of different sizes and colours, some crushed, until about 30 images appear",
+        "Repeat in the 'metal can' class with several cans, some crushed, until about 30 images appear",
+        "Briefly show the Upload option as the alternative",
+        "Scroll through the thumbnails to show the variety"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 154.4,
+      "end": 167.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_L11_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Click Train",
+        "Show the training progress message",
+        "Speed up the wait if needed",
+        "Show that training is complete"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 167.3,
+      "end": 180.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_L11_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Turn on the webcam in the Preview area",
+        "Hold up new bottles and cans not used in training, one at a time",
+        "Pause on the confidence bars for a correct bottle and a correct can",
+        "Show a simple tally on a sticky note: 8 of 10 correct"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 180.2,
+      "end": 203.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_L11_screen_6.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "In Preview, hold a clear plastic bottle in front of a bright window: the bar leans to 'metal can'",
+        "Hold a very shiny can: show the wrong or uncertain result",
+        "Go back to the 'plastic bottle' class and record extra images near the window",
+        "Click Train again and wait",
+        "Test again with new items near the window and show the improved result"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 203.8,
+      "end": 220.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_L11_screen_7.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Point to the advanced settings and export area without opening them",
+        "Take a screenshot of both classes with their image thumbnails",
+        "Take a screenshot of the Preview area showing one test result with its confidence bars"
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 220.5,
+      "end": 243.2,
+      "visual_type": "text",
+      "file": "assets/slides/s14.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 243.2,
+      "end": 266.3,
+      "visual_type": "slide",
+      "file": "assets/slides/s15.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 266.3,
+      "end": 295.4,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_M3_L11_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

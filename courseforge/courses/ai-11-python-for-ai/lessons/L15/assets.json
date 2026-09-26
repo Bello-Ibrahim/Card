@@ -1,0 +1,170 @@
+{
+  "course_id": "AI-11",
+  "lesson_id": "L15",
+  "presenter_track": {
+    "file": "/incoming/ai-11-python-for-ai_M3_L15_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 284.4
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 19.7,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-11-python-for-ai_M3_L15_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 19.7,
+      "end": 37.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 37.3,
+      "end": 64.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 64.3,
+      "end": 85.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 85.3,
+      "end": 106.3,
+      "visual_type": "stock",
+      "file": "/incoming/ai-11-python-for-ai_L15_stock_05.mp4",
+      "status": "PENDING_STOCK",
+      "query": "mountain landscape seen from above"
+    },
+    {
+      "scene": 6,
+      "start": 106.3,
+      "end": 127.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 127.7,
+      "end": 137.1,
+      "visual_type": "stock",
+      "file": "/incoming/ai-11-python-for-ai_L15_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "teacher training workshop classroom"
+    },
+    {
+      "scene": 8,
+      "start": 137.1,
+      "end": 166.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L15_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run the L11 sample cell so df exists",
+        "Add a new code cell",
+        "Type: import matplotlib.pyplot as plt",
+        "Type: ax = df[\"lifeExp\"].plot(kind=\"hist\", bins=6, title=\"Life expectancy (practice sample)\")",
+        "Type: ax.set_xlabel(\"Life expectancy (years)\") and plt.show()",
+        "Press Shift + Enter; the histogram appears",
+        "Point at the two groups of bars"
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 166.2,
+      "end": 182.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L15_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add a new code cell",
+        "Type: latest = df[df[\"year\"] == 2007]",
+        "Type: ax = latest.plot(kind=\"bar\", x=\"country\", y=\"gdpPercap\", legend=False, title=\"GDP per person, 2007 (practice sample)\")",
+        "Type: ax.set_ylabel(\"GDP per person (US$)\") and plt.show()",
+        "Press Shift + Enter; the bar chart appears"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 182.9,
+      "end": 200.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L15_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add a new code cell",
+        "Type: ax = df.plot(kind=\"scatter\", x=\"gdpPercap\", y=\"lifeExp\", logx=True, title=\"Richer countries, longer lives?\")",
+        "Type: ax.set_xlabel(\"GDP per person (log scale)\") and ax.set_ylabel(\"Life expectancy (years)\")",
+        "Type: plt.show()",
+        "Press Shift + Enter; the scatter plot appears",
+        "Circle the three Vietnam points high on the left"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 200.9,
+      "end": 213.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L15_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add a text cell under the scatter plot",
+        "Type: Question: why is Vietnam high on the left? Practice data only, not a conclusion."
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 213.3,
+      "end": 233.0,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 233.0,
+      "end": 258.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 258.3,
+      "end": 284.4,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-11-python-for-ai_M3_L15_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

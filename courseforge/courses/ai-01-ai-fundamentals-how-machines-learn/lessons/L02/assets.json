@@ -1,0 +1,173 @@
+{
+  "course_id": "AI-01",
+  "lesson_id": "L02",
+  "presenter_track": {
+    "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_M1_L02_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 308.7
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "RENDERED"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.9,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_M1_L02_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 15.9,
+      "end": 28.8,
+      "visual_type": "slide",
+      "file": "assets/slides/s02.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 28.8,
+      "end": 50.7,
+      "visual_type": "slide",
+      "file": "assets/slides/s03.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 50.7,
+      "end": 74.3,
+      "visual_type": "slide",
+      "file": "assets/slides/s04.png",
+      "status": "RENDERED",
+      "needs_design": true
+    },
+    {
+      "scene": 5,
+      "start": 74.3,
+      "end": 95.7,
+      "visual_type": "slide",
+      "file": "assets/slides/s05.png",
+      "status": "RENDERED",
+      "needs_design": true
+    },
+    {
+      "scene": 6,
+      "start": 95.7,
+      "end": 109.4,
+      "visual_type": "text",
+      "file": "assets/slides/s06.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 109.4,
+      "end": 126.1,
+      "visual_type": "stock",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_L02_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "weather forecaster pointing at weather map"
+    },
+    {
+      "scene": 8,
+      "start": 126.1,
+      "end": 137.2,
+      "visual_type": "slide",
+      "file": "assets/slides/s08.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 9,
+      "start": 137.2,
+      "end": 158.2,
+      "visual_type": "stock",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_L02_stock_09.mp4",
+      "status": "PENDING_STOCK",
+      "query": "delivery driver checking phone early morning"
+    },
+    {
+      "scene": 10,
+      "start": 158.2,
+      "end": 175.8,
+      "visual_type": "slide",
+      "file": "assets/slides/s10.png",
+      "status": "RENDERED",
+      "needs_design": true
+    },
+    {
+      "scene": 11,
+      "start": 175.8,
+      "end": 192.9,
+      "visual_type": "slide",
+      "file": "assets/slides/s11.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 12,
+      "start": 192.9,
+      "end": 207.5,
+      "visual_type": "stock",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_L02_stock_12.mp4",
+      "status": "PENDING_STOCK",
+      "query": "man relaxing watching cricket on phone"
+    },
+    {
+      "scene": 13,
+      "start": 207.5,
+      "end": 225.9,
+      "visual_type": "stock",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_L02_stock_13.mp4",
+      "status": "PENDING_STOCK",
+      "query": "nurse listening to music on night shift"
+    },
+    {
+      "scene": 14,
+      "start": 225.9,
+      "end": 240.9,
+      "visual_type": "slide",
+      "file": "assets/slides/s14.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 240.9,
+      "end": 258.5,
+      "visual_type": "text",
+      "file": "assets/slides/s15.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 258.5,
+      "end": 283.4,
+      "visual_type": "slide",
+      "file": "assets/slides/s16.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 17,
+      "start": 283.4,
+      "end": 308.7,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_M1_L02_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

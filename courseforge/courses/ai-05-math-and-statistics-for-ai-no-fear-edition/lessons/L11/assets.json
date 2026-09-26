@@ -1,0 +1,179 @@
+{
+  "course_id": "AI-05",
+  "lesson_id": "L11",
+  "presenter_track": {
+    "file": "/incoming/ai-05-math-and-statistics-for-ai-no-fear-edition_M3_L11_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 314.0
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.4,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-05-math-and-statistics-for-ai-no-fear-edition_M3_L11_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.4,
+      "end": 37.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 37.3,
+      "end": 63.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 63.4,
+      "end": 90.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 90.4,
+      "end": 114.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 114.0,
+      "end": 135.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 135.4,
+      "end": 158.1,
+      "visual_type": "stock",
+      "file": "/incoming/ai-05-math-and-statistics-for-ai-no-fear-edition_L11_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "car dashboard speedometer while driving"
+    },
+    {
+      "scene": 8,
+      "start": 158.1,
+      "end": 174.0,
+      "visual_type": "stock",
+      "file": "/incoming/ai-05-math-and-statistics-for-ai-no-fear-edition_L11_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "colourful mosaic tiles craftsman workshop"
+    },
+    {
+      "scene": 9,
+      "start": 174.0,
+      "end": 189.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-05-math-and-statistics-for-ai-no-fear-edition_L11_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open the Desmos graphing calculator in a browser.",
+        "Line 1: type f(x)=x^2 and show the curve.",
+        "Line 2: type a=1.",
+        "Click the offer to add a slider for a."
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 189.0,
+      "end": 202.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-05-math-and-statistics-for-ai-no-fear-edition_L11_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Line 3: type y=2a(x-a)+f(a).",
+        "Show the straight line touching the curve at x = 1."
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 202.3,
+      "end": 214.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-05-math-and-statistics-for-ai-no-fear-edition_L11_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Drag the slider a to 1, then 2, then 3.",
+        "Pause at each value so the line is clearly touching the curve.",
+        "Editor overlay: slope labels 2, 4, 6."
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 214.7,
+      "end": 222.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-05-math-and-statistics-for-ai-no-fear-edition_L11_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Line 4: type f'(x).",
+        "Show the straight line y = 2x appear."
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 222.8,
+      "end": 249.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 249.8,
+      "end": 270.8,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 270.8,
+      "end": 293.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 293.9,
+      "end": 314.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-05-math-and-statistics-for-ai-no-fear-edition_M3_L11_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

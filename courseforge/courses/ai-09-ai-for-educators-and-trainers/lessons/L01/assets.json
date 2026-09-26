@@ -1,0 +1,164 @@
+{
+  "course_id": "AI-09",
+  "lesson_id": "L01",
+  "presenter_track": {
+    "file": "/incoming/ai-09-ai-for-educators-and-trainers_M1_L01_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 316.6
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 20.1,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-09-ai-for-educators-and-trainers_M1_L01_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 20.1,
+      "end": 40.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 40.7,
+      "end": 63.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 63.4,
+      "end": 86.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 86.5,
+      "end": 111.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 111.4,
+      "end": 128.1,
+      "visual_type": "stock",
+      "file": "/incoming/ai-09-ai-for-educators-and-trainers_L01_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "teaching assistant preparing worksheets at desk"
+    },
+    {
+      "scene": 7,
+      "start": 128.1,
+      "end": 143.1,
+      "visual_type": "stock",
+      "file": "/incoming/ai-09-ai-for-educators-and-trainers_L01_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "trainer reviewing printed handouts with pen"
+    },
+    {
+      "scene": 8,
+      "start": 143.1,
+      "end": 172.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 9,
+      "start": 172.2,
+      "end": 186.8,
+      "visual_type": "stock",
+      "file": "/incoming/ai-09-ai-for-educators-and-trainers_L01_stock_09.mp4",
+      "status": "PENDING_STOCK",
+      "query": "teacher planning week at kitchen table evening"
+    },
+    {
+      "scene": 10,
+      "start": 186.8,
+      "end": 205.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 11,
+      "start": 205.2,
+      "end": 216.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 12,
+      "start": 216.3,
+      "end": 233.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 233.9,
+      "end": 248.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 248.0,
+      "end": 270.3,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 270.3,
+      "end": 294.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 294.7,
+      "end": 316.6,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-09-ai-for-educators-and-trainers_M1_L01_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "course_id": "AI-13",
+  "lesson_id": "L04",
+  "presenter_track": {
+    "file": "/incoming/ai-13-deep-learning-and-neural-networks_M1_L04_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 300.4
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_M1_L04_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.0,
+      "end": 28.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 28.3,
+      "end": 49.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 49.7,
+      "end": 70.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 70.3,
+      "end": 81.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 81.9,
+      "end": 97.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 97.8,
+      "end": 117.5,
+      "visual_type": "stock",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L04_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "hiker walking down foggy hillside"
+    },
+    {
+      "scene": 8,
+      "start": 117.5,
+      "end": 134.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 9,
+      "start": 134.2,
+      "end": 154.3,
+      "visual_type": "stock",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L04_stock_09.mp4",
+      "status": "PENDING_STOCK",
+      "query": "data scientist working at laptop office"
+    },
+    {
+      "scene": 10,
+      "start": 154.3,
+      "end": 168.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L04_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: w = torch.tensor(0.0, requires_grad=True); loss = (w - 3) ** 2; loss.backward(); print(w.grad)",
+        "Output: tensor(-6.)"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 168.0,
+      "end": 183.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L04_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run the loop cell: lr, history = 0.1, []; w.grad.zero_(); for step in range(10): loss = (w - 3) ** 2; loss.backward(); with torch.no_grad(): w -= lr * w.grad; w.grad.zero_(); history.append(loss.item())",
+        "Highlight the with torch.no_grad() block and w.grad.zero_()"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 183.0,
+      "end": 198.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L04_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: print(round(w.item(), 3)) → 2.678",
+        "Run: plt.plot(history); plt.xlabel(\"step\"); plt.ylabel(\"loss\"); plt.show()",
+        "Point to the curve falling fast, then flattening"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 198.4,
+      "end": 214.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L04_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Reset w to 0.0, change lr to 1.1 in the loop cell and re-run",
+        "Re-run the plot cell; point to the loss growing each step"
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 214.7,
+      "end": 227.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 227.1,
+      "end": 245.5,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 245.5,
+      "end": 273.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 17,
+      "start": 273.4,
+      "end": 300.4,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_M1_L04_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

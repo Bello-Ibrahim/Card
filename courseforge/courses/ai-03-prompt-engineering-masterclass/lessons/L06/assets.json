@@ -1,0 +1,155 @@
+{
+  "course_id": "AI-03",
+  "lesson_id": "L06",
+  "presenter_track": {
+    "file": "/incoming/ai-03-prompt-engineering-masterclass_M2_L06_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 301.0
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.9,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-03-prompt-engineering-masterclass_M2_L06_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.9,
+      "end": 33.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 33.0,
+      "end": 57.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 57.9,
+      "end": 81.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 81.5,
+      "end": 102.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 102.5,
+      "end": 121.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 121.4,
+      "end": 135.5,
+      "visual_type": "stock",
+      "file": "/incoming/ai-03-prompt-engineering-masterclass_L06_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "business meeting with interpreter international partners"
+    },
+    {
+      "scene": 8,
+      "start": 135.5,
+      "end": 157.4,
+      "visual_type": "stock",
+      "file": "/incoming/ai-03-prompt-engineering-masterclass_L06_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "sales manager writing at laptop sunny office"
+    },
+    {
+      "scene": 9,
+      "start": 157.4,
+      "end": 181.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 10,
+      "start": 181.4,
+      "end": 201.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 11,
+      "start": 201.5,
+      "end": 220.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 12,
+      "start": 220.8,
+      "end": 236.7,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 236.7,
+      "end": 251.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 251.3,
+      "end": 274.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 274.0,
+      "end": 301.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-03-prompt-engineering-masterclass_M2_L06_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

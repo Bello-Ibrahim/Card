@@ -1,0 +1,180 @@
+{
+  "course_id": "AI-17",
+  "lesson_id": "L09",
+  "presenter_track": {
+    "file": "/incoming/ai-17-data-engineering-for-ai_M2_L09_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 295.2
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.1,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-17-data-engineering-for-ai_M2_L09_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 17.1,
+      "end": 35.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 35.5,
+      "end": 63.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 63.4,
+      "end": 75.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 75.0,
+      "end": 102.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 102.9,
+      "end": 116.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 116.6,
+      "end": 136.3,
+      "visual_type": "stock",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L09_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "adding pages to a ring binder"
+    },
+    {
+      "scene": 8,
+      "start": 136.3,
+      "end": 147.0,
+      "visual_type": "stock",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L09_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "person learning language on smartphone app"
+    },
+    {
+      "scene": 9,
+      "start": 147.0,
+      "end": 165.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L09_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Create models/marts/fct_events.sql",
+        "Type the config line: materialized='incremental', unique_key='event_id'",
+        "Type the select of event_id, user_id, event_type, event_ts and current_timestamp as dbt_loaded_at from the raw events source, as in content.md"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 165.0,
+      "end": 174.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L09_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Type the if is_incremental() block with: where event_ts > (select max(event_ts) from {{ this }})",
+        "Highlight the whole block"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 174.0,
+      "end": 192.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L09_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: dbt run --select fct_events  (full build: 3 events)",
+        "Insert 2 new events for the next day into raw.events",
+        "Run the same command again: 2 rows selected",
+        "Run it a third time: 0 rows selected"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 192.4,
+      "end": 213.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L09_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run the duplicate check from content.md: select event_id, count(*) from main.fct_events group by event_id having count(*) > 1;",
+        "Show: no rows returned",
+        "Run select * from main.fct_events; show 5 rows and highlight dbt_loaded_at on the first 3"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 213.0,
+      "end": 229.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 229.3,
+      "end": 249.4,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 249.4,
+      "end": 273.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 273.8,
+      "end": 295.2,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-17-data-engineering-for-ai_M2_L09_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

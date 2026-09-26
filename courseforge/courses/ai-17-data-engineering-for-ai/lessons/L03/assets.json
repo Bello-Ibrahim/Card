@@ -1,0 +1,185 @@
+{
+  "course_id": "AI-17",
+  "lesson_id": "L03",
+  "presenter_track": {
+    "file": "/incoming/ai-17-data-engineering-for-ai_M1_L03_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 291.3
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.3,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-17-data-engineering-for-ai_M1_L03_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 16.3,
+      "end": 32.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 32.2,
+      "end": 53.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 53.6,
+      "end": 68.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 68.6,
+      "end": 91.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 91.7,
+      "end": 105.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 105.8,
+      "end": 120.8,
+      "visual_type": "stock",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L03_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "accountant sorting paper receipts at desk"
+    },
+    {
+      "scene": 8,
+      "start": 120.8,
+      "end": 141.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 9,
+      "start": 141.8,
+      "end": 152.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L03_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open a terminal in the folder that holds indicators.csv",
+        "Run: docker run --name pg-course -e POSTGRES_PASSWORD=course_pw -p 5432:5432 -d postgres:17",
+        "Run docker ps to show the pg-course container is up"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 152.9,
+      "end": 158.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L03_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: docker cp indicators.csv pg-course:/tmp/indicators.csv",
+        "Run: docker exec -it pg-course psql -U postgres",
+        "Show the postgres=# prompt"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 158.5,
+      "end": 184.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L03_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Type: CREATE SCHEMA IF NOT EXISTS raw;",
+        "Type: CREATE TABLE raw.indicators (country_code TEXT, indicator TEXT, year TEXT, value TEXT);",
+        "Type: \\copy raw.indicators FROM '/tmp/indicators.csv' WITH (FORMAT csv, HEADER true)",
+        "Show the COPY 5 confirmation"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 184.6,
+      "end": 199.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L03_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: SELECT count(*) FROM raw.indicators;  (result: 5)",
+        "Run: SELECT column_name, data_type FROM information_schema.columns WHERE table_schema = 'raw' AND table_name = 'indicators';",
+        "Show four rows, each with data_type text"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 199.6,
+      "end": 215.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L03_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: SELECT * FROM raw.indicators;",
+        "Highlight the empty value (shown as null) for PER 2023 and the '..' for BOL 2023",
+        "Cut to a notes file listing: 1. empty value PER 2023, 2. '..' placeholder BOL 2023"
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 215.9,
+      "end": 238.6,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 238.6,
+      "end": 263.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 263.0,
+      "end": 291.3,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-17-data-engineering-for-ai_M1_L03_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

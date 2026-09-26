@@ -1,0 +1,146 @@
+{
+  "course_id": "AI-25",
+  "lesson_id": "L01",
+  "presenter_track": {
+    "file": "/incoming/ai-25-ai-in-healthcare_M1_L01_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 303.1
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.9,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-25-ai-in-healthcare_M1_L01_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.9,
+      "end": 42.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 42.0,
+      "end": 65.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 65.6,
+      "end": 86.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 86.6,
+      "end": 102.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 102.9,
+      "end": 128.2,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 128.2,
+      "end": 150.1,
+      "visual_type": "stock",
+      "file": "/incoming/ai-25-ai-in-healthcare_L01_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "senior doctor reviewing notes with junior colleague"
+    },
+    {
+      "scene": 8,
+      "start": 150.1,
+      "end": 170.2,
+      "visual_type": "stock",
+      "file": "/incoming/ai-25-ai-in-healthcare_L01_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "radiologist looking at chest x-ray screen"
+    },
+    {
+      "scene": 9,
+      "start": 170.2,
+      "end": 189.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 10,
+      "start": 189.1,
+      "end": 201.1,
+      "visual_type": "stock",
+      "file": "/incoming/ai-25-ai-in-healthcare_L01_stock_10.mp4",
+      "status": "PENDING_STOCK",
+      "query": "clinic receptionist calling patient on phone"
+    },
+    {
+      "scene": 11,
+      "start": 201.1,
+      "end": 228.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 12,
+      "start": 228.1,
+      "end": 254.7,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 254.7,
+      "end": 278.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 278.7,
+      "end": 303.1,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-25-ai-in-healthcare_M1_L01_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

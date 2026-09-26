@@ -1,0 +1,174 @@
+{
+  "course_id": "AI-16",
+  "lesson_id": "L11",
+  "presenter_track": {
+    "file": "/incoming/ai-16-ai-agents-and-automation-workflows_M3_L11_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 289.4
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 19.3,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_M3_L11_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 19.3,
+      "end": 36.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 36.9,
+      "end": 62.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 62.2,
+      "end": 82.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 82.3,
+      "end": 106.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 106.3,
+      "end": 121.3,
+      "visual_type": "stock",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L11_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "receptionist writing notes at front desk"
+    },
+    {
+      "scene": 7,
+      "start": 121.3,
+      "end": 132.9,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 132.9,
+      "end": 148.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L11_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open the agent workflow: Chat Trigger → AI Agent → Anthropic Chat Model + Google Sheets tool for 'tours'",
+        "Show the 'tours' sheet with invented packages"
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 148.8,
+      "end": 163.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L11_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Chat: 'What is the price of the Danube Delta tour?'",
+        "Chat: 'Is it available in May?'",
+        "Show the reply 'Which tour do you mean?' (example output)"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 163.8,
+      "end": 185.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L11_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Connect a Simple Memory sub-node to the AI Agent",
+        "Session key from the Chat Trigger; context window length 2",
+        "Hold the 6-turn conversation from content.md"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 185.7,
+      "end": 195.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L11_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the turn-6 reply asking which tour (example output)",
+        "Open the memory node output to show only the last 2 exchanges"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 195.6,
+      "end": 218.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L11_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Change context window length to 6 and repeat the conversation",
+        "Show the correct turn-6 answer",
+        "Open the execution log and compare input tokens across turns",
+        "Set the window to 4 and add the system message rule from content.md"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 218.7,
+      "end": 240.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 240.1,
+      "end": 264.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 264.1,
+      "end": 289.4,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_M3_L11_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "course_id": "AI-20",
+  "lesson_id": "L08",
+  "presenter_track": {
+    "file": "/incoming/ai-20-ai-image-generation-and-visual-design_M2_L08_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 296.7
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.3,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-20-ai-image-generation-and-visual-design_M2_L08_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 16.3,
+      "end": 28.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 28.3,
+      "end": 38.2,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 38.2,
+      "end": 63.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 63.5,
+      "end": 90.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 90.5,
+      "end": 106.4,
+      "visual_type": "stock",
+      "file": "/incoming/ai-20-ai-image-generation-and-visual-design_L08_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "decorating a cake with icing"
+    },
+    {
+      "scene": 7,
+      "start": 106.4,
+      "end": 117.5,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 117.5,
+      "end": 138.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-20-ai-image-generation-and-visual-design_L08_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open Canva and sign in with a free account",
+        "Click Create a design",
+        "Choose a square social post size, or enter custom dimensions of 1080 × 1080 pixels"
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 138.1,
+      "end": 154.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-20-ai-image-generation-and-visual-design_L08_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Upload the AI image using the uploads panel",
+        "Drag it onto the page and resize it to fill the page",
+        "Add a text box",
+        "Type the headline: 'Sunrise Flow – Mondays 7 am'"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 154.8,
+      "end": 174.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-20-ai-image-generation-and-visual-design_L08_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Choose a clear font",
+        "Open the colour picker and type the brand hex code #1F6F5C",
+        "Move the headline into the empty space of the image, away from the main subject",
+        "Upload the placeholder studio logo and place it small in a corner"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 174.5,
+      "end": 188.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-20-ai-image-generation-and-visual-design_L08_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Select a product image, such as a yoga mat",
+        "Open the edit image options",
+        "Find the background remover",
+        "Point out whether it is marked as a paid feature"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 188.2,
+      "end": 207.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-20-ai-image-generation-and-visual-design_L08_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "On a paid plan: use the resize option to create copies at 1080 × 1920 (story) and a wide banner size",
+        "On the free plan: create a new design at the story size",
+        "Copy and paste the image, headline and logo into it"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 207.1,
+      "end": 224.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-20-ai-image-generation-and-visual-design_L08_screen_6.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "In the story, move the headline higher",
+        "In the banner, move the headline to the side",
+        "Check that the headline is clear and readable in each size",
+        "Download each design as PNG"
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 224.7,
+      "end": 246.6,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 246.6,
+      "end": 272.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 272.3,
+      "end": 296.7,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-20-ai-image-generation-and-visual-design_M2_L08_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "course_id": "AI-26",
+  "lesson_id": "L08",
+  "presenter_track": {
+    "file": "/incoming/ai-26-ai-for-customer-experience-and-support_M2_L08_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 301.8
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.1,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-26-ai-for-customer-experience-and-support_M2_L08_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 17.1,
+      "end": 37.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 37.2,
+      "end": 61.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 61.6,
+      "end": 82.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 82.2,
+      "end": 99.8,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 99.8,
+      "end": 120.4,
+      "visual_type": "stock",
+      "file": "/incoming/ai-26-ai-for-customer-experience-and-support_L08_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "row of dominoes falling close up"
+    },
+    {
+      "scene": 7,
+      "start": 120.4,
+      "end": 135.0,
+      "visual_type": "stock",
+      "file": "/incoming/ai-26-ai-for-customer-experience-and-support_L08_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "outdoor equipment shop tents and backpacks"
+    },
+    {
+      "scene": 8,
+      "start": 135.0,
+      "end": 151.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-26-ai-for-customer-experience-and-support_L08_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open Google Forms and create a form titled 'Contact us (test)'",
+        "Add three fields: Name, Email, Message",
+        "Submit two made-up test responses",
+        "Open Google Sheets and create a sheet called 'Support log'",
+        "Type column headers in row 1: Date, Email, Message, Label"
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 151.7,
+      "end": 168.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-26-ai-for-customer-experience-and-support_L08_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Log in to Zapier and click 'Create', then 'Zap' (or the current button for a new automation)",
+        "Choose trigger app 'Google Forms' and event 'New Form Response'",
+        "Connect the test Google account and select the 'Contact us (test)' form",
+        "Click 'Test trigger' and show the sample response loading"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 168.8,
+      "end": 190.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-26-ai-for-customer-experience-and-support_L08_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add a second step and choose the built-in AI option (for example 'AI by Zapier')",
+        "Type the instruction: 'Read the message. Reply with exactly one label from this list: Order, Product question, Return, Other. If unsure, reply Other.'",
+        "Map the Message field from step 1 into the input",
+        "Click 'Test step' and zoom in on the output: a single label"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 190.7,
+      "end": 209.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-26-ai-for-customer-experience-and-support_L08_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add a third step: app 'Google Sheets', event 'Create Spreadsheet Row'",
+        "Select the 'Support log' sheet",
+        "Map Date, Email, Message and the AI label to the four columns",
+        "Click 'Test step', then switch to the sheet and highlight the new row"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 209.6,
+      "end": 224.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-26-ai-for-customer-experience-and-support_L08_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Turn the automation on (publish it)",
+        "Submit a new made-up form response",
+        "Refresh the 'Support log' sheet and show the new labelled row",
+        "Optional: show a still of the same three-node flow on the n8n canvas (only if node names are confirmed)"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 224.2,
+      "end": 239.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 239.6,
+      "end": 254.6,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 254.6,
+      "end": 279.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 279.9,
+      "end": 301.8,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-26-ai-for-customer-experience-and-support_M2_L08_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "course_id": "AI-21",
+  "lesson_id": "L01",
+  "presenter_track": {
+    "file": "/incoming/ai-21-ai-video-production-and-motion_M1_L01_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 309.3
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.6,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_M1_L01_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 17.6,
+      "end": 29.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 29.2,
+      "end": 56.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 56.6,
+      "end": 73.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 73.3,
+      "end": 89.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 89.2,
+      "end": 104.2,
+      "visual_type": "stock",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L01_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "video editor working on timeline laptop"
+    },
+    {
+      "scene": 7,
+      "start": 104.2,
+      "end": 116.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 116.2,
+      "end": 134.6,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 9,
+      "start": 134.6,
+      "end": 153.0,
+      "visual_type": "stock",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L01_stock_09.mp4",
+      "status": "PENDING_STOCK",
+      "query": "small film crew preparing a shoot"
+    },
+    {
+      "scene": 10,
+      "start": 153.0,
+      "end": 169.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 11,
+      "start": 169.7,
+      "end": 181.7,
+      "visual_type": "stock",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L01_stock_11.mp4",
+      "status": "PENDING_STOCK",
+      "query": "baker shaping sourdough bread small bakery"
+    },
+    {
+      "scene": 12,
+      "start": 181.7,
+      "end": 193.3,
+      "visual_type": "hero_broll",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L01_broll_1.mp4",
+      "status": "PENDING_UPLOAD"
+    },
+    {
+      "scene": 13,
+      "start": 193.3,
+      "end": 207.0,
+      "visual_type": "hero_broll",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L01_broll_2.mp4",
+      "status": "PENDING_UPLOAD"
+    },
+    {
+      "scene": 14,
+      "start": 207.0,
+      "end": 225.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 225.4,
+      "end": 242.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 242.5,
+      "end": 260.5,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 17,
+      "start": 260.5,
+      "end": 284.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 18,
+      "start": 284.9,
+      "end": 309.3,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_M1_L01_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

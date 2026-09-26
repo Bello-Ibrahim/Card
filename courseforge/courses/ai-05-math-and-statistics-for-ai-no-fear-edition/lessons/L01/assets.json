@@ -1,0 +1,192 @@
+{
+  "course_id": "AI-05",
+  "lesson_id": "L01",
+  "presenter_track": {
+    "file": "/incoming/ai-05-math-and-statistics-for-ai-no-fear-edition_M1_L01_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 313.6
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.9,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-05-math-and-statistics-for-ai-no-fear-edition_M1_L01_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.9,
+      "end": 33.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 33.9,
+      "end": 51.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 51.5,
+      "end": 65.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 65.6,
+      "end": 90.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 90.0,
+      "end": 105.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 105.0,
+      "end": 128.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 128.1,
+      "end": 145.2,
+      "visual_type": "stock",
+      "file": "/incoming/ai-05-math-and-statistics-for-ai-no-fear-edition_L01_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "person cooking small portion following recipe"
+    },
+    {
+      "scene": 9,
+      "start": 145.2,
+      "end": 160.6,
+      "visual_type": "stock",
+      "file": "/incoming/ai-05-math-and-statistics-for-ai-no-fear-edition_L01_stock_09.mp4",
+      "status": "PENDING_STOCK",
+      "query": "small bakery counter with cakes"
+    },
+    {
+      "scene": 10,
+      "start": 160.6,
+      "end": 186.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 11,
+      "start": 186.3,
+      "end": 201.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-05-math-and-statistics-for-ai-no-fear-edition_L01_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open a web browser and go to Google Colab.",
+        "Sign in with a Google account if Colab asks.",
+        "Open the File menu and choose New notebook.",
+        "Show the empty first code cell."
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 201.3,
+      "end": 219.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-05-math-and-statistics-for-ai-no-fear-edition_L01_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Click in the first code cell.",
+        "Type: import numpy as np",
+        "Type: sales = np.array([12, 15, 9, 20, 14])",
+        "Highlight the array line."
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 219.7,
+      "end": 234.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-05-math-and-statistics-for-ai-no-fear-edition_L01_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Type: print(sales.sum())",
+        "Type: print(sales.mean())",
+        "Hover over the play button next to the cell.",
+        "Run the cell with Shift + Enter."
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 234.3,
+      "end": 240.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-05-math-and-statistics-for-ai-no-fear-edition_L01_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Zoom in on the output: 70 and 14.0.",
+        "Place the handwritten 70 ÷ 5 = 14 next to the output.",
+        "Add a green tick beside each matching number."
+      ]
+    },
+    {
+      "scene": 15,
+      "start": 240.7,
+      "end": 264.3,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 264.3,
+      "end": 291.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 17,
+      "start": 291.3,
+      "end": 313.6,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-05-math-and-statistics-for-ai-no-fear-edition_M1_L01_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

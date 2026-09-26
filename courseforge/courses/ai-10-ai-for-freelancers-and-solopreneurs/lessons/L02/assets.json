@@ -1,0 +1,196 @@
+{
+  "course_id": "AI-10",
+  "lesson_id": "L02",
+  "presenter_track": {
+    "file": "/incoming/ai-10-ai-for-freelancers-and-solopreneurs_M1_L02_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 304.0
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.4,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-10-ai-for-freelancers-and-solopreneurs_M1_L02_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.4,
+      "end": 29.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 29.1,
+      "end": 49.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 49.7,
+      "end": 70.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 70.3,
+      "end": 88.3,
+      "visual_type": "stock",
+      "file": "/incoming/ai-10-ai-for-freelancers-and-solopreneurs_L02_stock_05.mp4",
+      "status": "PENDING_STOCK",
+      "query": "journalist interviewing person notebook table"
+    },
+    {
+      "scene": 6,
+      "start": 88.3,
+      "end": 111.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 111.4,
+      "end": 123.4,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 123.4,
+      "end": 135.8,
+      "visual_type": "stock",
+      "file": "/incoming/ai-10-ai-for-freelancers-and-solopreneurs_L02_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "young man translating documents at desk"
+    },
+    {
+      "scene": 9,
+      "start": 135.8,
+      "end": 153.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-10-ai-for-freelancers-and-solopreneurs_L02_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open a new chat in Claude.",
+        "Type the prompt: 'Interview me to help me write a clear offer for my freelance service. Ask me 8 questions, one at a time. Wait for my answer before asking the next. After the 8th answer, write 3 versions of a one-sentence offer and an 80-word profile.'",
+        "Send it and show the first question appearing on its own."
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 153.8,
+      "end": 172.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-10-ai-for-freelancers-and-solopreneurs_L02_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Scroll through several question-and-answer turns with Joon-ho's example answers.",
+        "Highlight the answers that mention small export companies, product descriptions and packaging text.",
+        "Highlight the worry: sounding unprofessional abroad."
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 172.2,
+      "end": 189.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-10-ai-for-freelancers-and-solopreneurs_L02_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the three offer drafts at the end of the chat.",
+        "Highlight the chosen offer sentence.",
+        "Highlight the phrase 'guaranteed higher sales' in another draft and strike it through in the edited version."
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 189.3,
+      "end": 206.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-10-ai-for-freelancers-and-solopreneurs_L02_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open Canva and search templates for 'service sheet' or 'one-page flyer' in A4 or Letter size.",
+        "Choose a simple template with space for a heading and 4 to 5 short sections.",
+        "Replace the template heading with the one-sentence offer."
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 206.9,
+      "end": 224.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-10-ai-for-freelancers-and-solopreneurs_L02_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add the sections: 'Who this is for', 'What you get', 'How it works' (3 steps), 'Price' (a 'from' price), 'Contact'.",
+        "Change colours and fonts to his own brand colours.",
+        "Add a placeholder photo and placeholder logo."
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 224.0,
+      "end": 235.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-10-ai-for-freelancers-and-solopreneurs_L02_screen_6.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Click Share, then Download, and choose PDF.",
+        "Open the downloaded PDF on a phone-sized view and zoom to check readability."
+      ]
+    },
+    {
+      "scene": 15,
+      "start": 235.1,
+      "end": 252.2,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 252.2,
+      "end": 277.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 17,
+      "start": 277.9,
+      "end": 304.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-10-ai-for-freelancers-and-solopreneurs_M1_L02_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

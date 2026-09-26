@@ -1,0 +1,178 @@
+{
+  "course_id": "AI-22",
+  "lesson_id": "L04",
+  "presenter_track": {
+    "file": "/incoming/ai-22-ai-voice-audio-and-music_M1_L04_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 295.0
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 20.1,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-22-ai-voice-audio-and-music_M1_L04_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 20.1,
+      "end": 42.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 42.4,
+      "end": 63.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 63.4,
+      "end": 82.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 82.7,
+      "end": 101.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 101.6,
+      "end": 122.6,
+      "visual_type": "stock",
+      "file": "/incoming/ai-22-ai-voice-audio-and-music_L04_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "assistant typing notes in meeting"
+    },
+    {
+      "scene": 7,
+      "start": 122.6,
+      "end": 142.3,
+      "visual_type": "stock",
+      "file": "/incoming/ai-22-ai-voice-audio-and-music_L04_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "teacher recording video lesson at desk"
+    },
+    {
+      "scene": 8,
+      "start": 142.3,
+      "end": 158.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-22-ai-voice-audio-and-music_L04_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open Buzz on the desktop",
+        "Add the file water-cycle.mp3",
+        "Set the language to Portuguese",
+        "Select the Whisper medium model",
+        "Click the button to start transcribing",
+        "Open the finished transcript: each line shows start and end times"
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 158.6,
+      "end": 183.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-22-ai-voice-audio-and-music_L04_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Play the audio while the transcript scrolls",
+        "Highlight error 1: 'evapotranspiração' split into two wrong words",
+        "Highlight error 2: '32 graus' written as '30 e 2 graus'",
+        "Highlight error 3: one sentence repeated on two lines"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 183.0,
+      "end": 198.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-22-ai-voice-audio-and-music_L04_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Double-click each wrong line in the Buzz editor and type the correct text",
+        "Delete the repeated sentence",
+        "Export the transcript as SRT",
+        "Import the SRT into the video editor",
+        "Play the full video with captions on"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 198.9,
+      "end": 216.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-22-ai-voice-audio-and-music_L04_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open the exported SRT file in a plain text editor",
+        "Scroll through: point to a caption number, a timing line and a text line",
+        "Point to one long caption line and split it into two shorter lines",
+        "Save the file"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 216.5,
+      "end": 230.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 230.6,
+      "end": 249.5,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 249.5,
+      "end": 273.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 273.1,
+      "end": 295.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-22-ai-voice-audio-and-music_M1_L04_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

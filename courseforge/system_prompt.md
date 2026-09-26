@@ -159,6 +159,8 @@ Manual (see HANDOFFS):
   lesson only when all of that lesson's expected files are present.
 - Save every asset path, source URL, licence and filename to
   /courses/{slug}/lessons/{lesson_id}/assets.json
+- Tools in this repo: render_slides.py renders slides, text cards and thumbnails
+  (the slide_render step), and build_packs.py writes the packs and assets.json.
 
 STAGE 5: QUALITY GATE (per asset)
 Run media_probe on every asset. Reject an asset if:

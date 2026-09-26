@@ -1,0 +1,187 @@
+{
+  "course_id": "AI-11",
+  "lesson_id": "L06",
+  "presenter_track": {
+    "file": "/incoming/ai-11-python-for-ai_M2_L06_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 291.3
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 13.3,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-11-python-for-ai_M2_L06_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 13.3,
+      "end": 31.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 31.7,
+      "end": 48.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 48.0,
+      "end": 63.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 63.4,
+      "end": 86.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 86.5,
+      "end": 109.2,
+      "visual_type": "stock",
+      "file": "/incoming/ai-11-python-for-ai_L06_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "cook reading recipe card in kitchen"
+    },
+    {
+      "scene": 7,
+      "start": 109.2,
+      "end": 122.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 122.1,
+      "end": 132.8,
+      "visual_type": "stock",
+      "file": "/incoming/ai-11-python-for-ai_L06_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "city skylines on different continents"
+    },
+    {
+      "scene": 9,
+      "start": 132.8,
+      "end": 145.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L06_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add a new code cell",
+        "Type: def to_fahrenheit(celsius):",
+        "Type (indented): \"\"\"Convert a temperature from Celsius to Fahrenheit.\"\"\"",
+        "Type (indented): return celsius * 9 / 5 + 32",
+        "Press Shift + Enter; no output appears"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 145.7,
+      "end": 165.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L06_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Below the function, type: for city, temp in {\"Cairo\": 35, \"Oslo\": -4, \"Manila\": 31}.items():",
+        "Type (indented): print(city, to_fahrenheit(temp))"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 165.4,
+      "end": 176.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L06_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Press Shift + Enter",
+        "Output: Cairo 95.0 / Oslo 24.8 / Manila 87.8"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 176.5,
+      "end": 197.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L06_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add a new code cell",
+        "Type: def describe(city, celsius, unit=\"F\"):",
+        "Type (indented): if unit == \"F\": / return f\"{city}: {to_fahrenheit(celsius):.1f} °F\"",
+        "Type (indented): return f\"{city}: {celsius} °C\"",
+        "Highlight unit=\"F\" as the default value"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 197.9,
+      "end": 216.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L06_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Type: print(describe(\"Oslo\", -4))",
+        "Type: print(describe(\"Oslo\", -4, unit=\"C\"))",
+        "Press Shift + Enter",
+        "Output: Oslo: 24.8 °F / Oslo: -4 °C"
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 216.3,
+      "end": 245.9,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 245.9,
+      "end": 269.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 269.0,
+      "end": 291.3,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-11-python-for-ai_M2_L06_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "course_id": "AI-17",
+  "lesson_id": "L05",
+  "presenter_track": {
+    "file": "/incoming/ai-17-data-engineering-for-ai_M1_L05_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 293.6
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.3,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-17-data-engineering-for-ai_M1_L05_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 16.3,
+      "end": 29.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 29.2,
+      "end": 48.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 48.5,
+      "end": 76.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 76.4,
+      "end": 97.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 97.8,
+      "end": 117.1,
+      "visual_type": "stock",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L05_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "long paper shopping receipt close up"
+    },
+    {
+      "scene": 7,
+      "start": 117.1,
+      "end": 142.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 142.8,
+      "end": 156.9,
+      "visual_type": "stock",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L05_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "smart electricity meter on apartment wall"
+    },
+    {
+      "scene": 9,
+      "start": 156.9,
+      "end": 162.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L05_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "In a terminal, run: pip install duckdb",
+        "Open a new file compare.py in the editor"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 162.9,
+      "end": 176.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L05_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Type the first part of compare.py from content.md: import duckdb, os, time; con = duckdb.connect()",
+        "Type the COPY statement that selects meter_id, slot and kwh from range(2000000) TO 'readings.csv' (HEADER)",
+        "Type: COPY (SELECT * FROM 'readings.csv') TO 'readings.parquet' (FORMAT parquet)"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 176.6,
+      "end": 188.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L05_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Type the for loop over readings.csv and readings.parquet from content.md",
+        "Highlight the query: SELECT meter_id, avg(kwh) FROM the file GROUP BY meter_id",
+        "Highlight the print line with file size in MB and seconds"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 188.2,
+      "end": 208.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L05_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: python compare.py",
+        "Show the output exactly as in content.md: readings.csv 28.8 MB 0.121 s / readings.parquet 5.9 MB 0.009 s"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 208.3,
+      "end": 224.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L05_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight the two size values side by side: 28.8 MB and 5.9 MB",
+        "Highlight the two times: 0.121 s and 0.009 s"
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 224.6,
+      "end": 244.3,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 244.3,
+      "end": 265.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 265.7,
+      "end": 293.6,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-17-data-engineering-for-ai_M1_L05_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

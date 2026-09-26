@@ -1,0 +1,165 @@
+{
+  "course_id": "AI-05",
+  "lesson_id": "L09",
+  "presenter_track": {
+    "file": "/incoming/ai-05-math-and-statistics-for-ai-no-fear-edition_M2_L09_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 293.9
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.4,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-05-math-and-statistics-for-ai-no-fear-edition_M2_L09_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.4,
+      "end": 38.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 38.5,
+      "end": 58.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 58.6,
+      "end": 71.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 71.9,
+      "end": 100.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 100.2,
+      "end": 122.1,
+      "visual_type": "stock",
+      "file": "/incoming/ai-05-math-and-statistics-for-ai-no-fear-edition_L09_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "worn footpath across green park grass"
+    },
+    {
+      "scene": 7,
+      "start": 122.1,
+      "end": 149.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 149.1,
+      "end": 164.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-05-math-and-statistics-for-ai-no-fear-edition_L09_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open a Colab notebook and add a new code cell.",
+        "Type: import numpy as np and import matplotlib.pyplot as plt",
+        "Type: rng = np.random.default_rng(42)",
+        "Highlight the seed 42."
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 164.5,
+      "end": 188.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-05-math-and-statistics-for-ai-no-fear-edition_L09_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Type: correct = rng.binomial(n=20, p=0.8, size=1000)",
+        "Type: times = rng.normal(loc=30, scale=5, size=1000)",
+        "Type: print(correct.mean()) and print(times.mean().round(2))",
+        "Run the cell and zoom in on 16.023 and 29.61."
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 188.5,
+      "end": 200.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-05-math-and-statistics-for-ai-no-fear-edition_L09_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Type: plt.hist(correct, bins=range(8, 22)) and plt.show()",
+        "Run the cell.",
+        "Point at the tall bars at 15, 16 and 17, then at the short bars near 10 and 20."
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 200.5,
+      "end": 219.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-05-math-and-statistics-for-ai-no-fear-edition_L09_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Edit the plot line to: plt.hist(times)",
+        "Run the cell.",
+        "Show the bell-shaped histogram centred near 30.",
+        "Shade the band from 25 to 35 as an editor overlay."
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 219.4,
+      "end": 242.5,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 242.5,
+      "end": 268.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 268.2,
+      "end": 293.9,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-05-math-and-statistics-for-ai-no-fear-edition_M2_L09_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

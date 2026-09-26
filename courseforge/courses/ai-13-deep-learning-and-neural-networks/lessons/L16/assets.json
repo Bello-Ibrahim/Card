@@ -1,0 +1,167 @@
+{
+  "course_id": "AI-13",
+  "lesson_id": "L16",
+  "presenter_track": {
+    "file": "/incoming/ai-13-deep-learning-and-neural-networks_M4_L16_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 303.0
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.6,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_M4_L16_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 17.6,
+      "end": 42.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 42.9,
+      "end": 69.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 69.0,
+      "end": 93.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 93.4,
+      "end": 116.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 116.1,
+      "end": 137.1,
+      "visual_type": "stock",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L16_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "cyclist adjusting bicycle saddle height"
+    },
+    {
+      "scene": 7,
+      "start": 137.1,
+      "end": 153.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 153.0,
+      "end": 165.9,
+      "visual_type": "stock",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L16_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "fish farm pens in Norwegian fjord"
+    },
+    {
+      "scene": 9,
+      "start": 165.9,
+      "end": 185.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L16_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run the make_scheduler cell from content.md: SequentialLR(opt, [LinearLR(opt, start_factor=0.1, total_iters=warm), CosineAnnealingLR(opt, T_max=steps - warm)], milestones=[warm])",
+        "Show the loop line after opt.step(): if sched: sched.step()"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 185.6,
+      "end": 200.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L16_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run the sweep cell: for lr in [1e-4, 3e-4, 1e-3, 3e-3]: for use_schedule in [False, True]: acc = run(lr=lr, use_schedule=use_schedule, epochs=5, seed=0); results.append(...)",
+        "Show the progress as each of the 8 runs finishes"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 200.2,
+      "end": 215.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L16_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: pd.DataFrame(results).sort_values(\"val_acc\", ascending=False)",
+        "Plot the learning rate per step for one scheduled run; point to the ramp up and the cosine decay"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 215.2,
+      "end": 232.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L16_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight the top two rows of the table",
+        "Run the top two settings with seeds 1 and 2 and add the rows to the table"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 232.3,
+      "end": 250.3,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 250.3,
+      "end": 277.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 277.3,
+      "end": 303.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_M4_L16_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

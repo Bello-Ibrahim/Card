@@ -1,0 +1,171 @@
+{
+  "course_id": "AI-14",
+  "lesson_id": "L04",
+  "presenter_track": {
+    "file": "/incoming/ai-14-building-apps-with-llm-apis_M1_L04_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 293.2
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.7,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_M1_L04_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 16.7,
+      "end": 34.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 34.7,
+      "end": 60.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 60.4,
+      "end": 83.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 83.1,
+      "end": 103.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 103.2,
+      "end": 122.5,
+      "visual_type": "stock",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L04_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "taxi meter inside car at night"
+    },
+    {
+      "scene": 7,
+      "start": 122.5,
+      "end": 139.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 139.2,
+      "end": 152.5,
+      "visual_type": "stock",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L04_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "student studying with phone app Cairo"
+    },
+    {
+      "scene": 9,
+      "start": 152.5,
+      "end": 173.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L04_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open log_helper.py in VS Code",
+        "Highlight PRICE_IN and PRICE_OUT with the comment to copy them from the pricing page (values left as 0.0 placeholders)",
+        "Highlight the cost line inside log_call()",
+        "Highlight the csv.writer row: time, feature, model, input tokens, output tokens, cost"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 173.5,
+      "end": 183.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L04_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open compare_languages.py",
+        "Show the English and Arabic versions of the same invented grammar question",
+        "Run count_tokens for both and show the two input token counts in the terminal"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 183.8,
+      "end": 208.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L04_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run the script to send both requests and call log_call() after each",
+        "Open usage_log.csv and show the two rows, labelled 'example numbers'",
+        "Highlight the input and output token columns for both rows"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 208.7,
+      "end": 222.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L04_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open the system prompt file and show its token count from count_tokens",
+        "Add a TODO comment in the code: try prompt caching (L13)"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 222.0,
+      "end": 240.9,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 240.9,
+      "end": 266.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 266.6,
+      "end": 293.2,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_M1_L04_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

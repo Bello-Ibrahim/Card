@@ -1,0 +1,168 @@
+{
+  "course_id": "AI-19",
+  "lesson_id": "L08",
+  "presenter_track": {
+    "file": "/incoming/ai-19-computer-vision-essentials_M2_L08_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 295.2
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.4,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-19-computer-vision-essentials_M2_L08_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.4,
+      "end": 34.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 34.3,
+      "end": 48.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 48.9,
+      "end": 68.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 68.6,
+      "end": 90.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 90.0,
+      "end": 111.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 111.4,
+      "end": 131.5,
+      "visual_type": "stock",
+      "file": "/incoming/ai-19-computer-vision-essentials_L08_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "teacher reviewing exam papers at desk"
+    },
+    {
+      "scene": 8,
+      "start": 131.5,
+      "end": 149.9,
+      "visual_type": "stock",
+      "file": "/incoming/ai-19-computer-vision-essentials_L08_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "plastic bottles and cans on recycling conveyor"
+    },
+    {
+      "scene": 9,
+      "start": 149.9,
+      "end": 163.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L08_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run the worked-example cell with the labels list, y_true and y_pred",
+        "Show the printed confusion matrix and classification report",
+        "Highlight accuracy 0.86 and recall 0.40 for glass and metal"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 163.6,
+      "end": 179.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L08_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Plot the matrix with ConfusionMatrixDisplay.from_predictions",
+        "Point to the plastic column: 9 glass and 3 metal items"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 179.5,
+      "end": 194.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L08_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Filter the test images where the true and predicted class differ",
+        "Show 8 of them in a grid with both labels"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 194.9,
+      "end": 218.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L08_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Group the wrong images by likely cause: lighting, angle, blur, hidden, background, label error",
+        "Count each group and show that 7 of 9 glass errors are strong top lighting"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 218.9,
+      "end": 245.9,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 245.9,
+      "end": 270.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 270.3,
+      "end": 295.2,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-19-computer-vision-essentials_M2_L08_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

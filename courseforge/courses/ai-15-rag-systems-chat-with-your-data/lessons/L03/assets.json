@@ -1,0 +1,164 @@
+{
+  "course_id": "AI-15",
+  "lesson_id": "L03",
+  "presenter_track": {
+    "file": "/incoming/ai-15-rag-systems-chat-with-your-data_M1_L03_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 299.5
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.1,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_M1_L03_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 17.1,
+      "end": 26.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 26.5,
+      "end": 54.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 54.8,
+      "end": 71.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 71.9,
+      "end": 92.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 92.9,
+      "end": 110.9,
+      "visual_type": "stock",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L03_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "person assembling a bicycle in workshop"
+    },
+    {
+      "scene": 7,
+      "start": 110.9,
+      "end": 135.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L03_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "In the terminal, set ANTHROPIC_API_KEY (masked) and CLAUDE_MODEL.",
+        "Show report.txt open briefly in the editor: a long plain-text report."
+      ]
+    },
+    {
+      "scene": 8,
+      "start": 135.8,
+      "end": 163.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L03_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Scroll through the script: imports, MODEL read from the environment, the chunk function with size 800 and overlap 100.",
+        "Highlight chromadb.PersistentClient(path='./rag_db'), the SentenceTransformerEmbeddingFunction and get_or_create_collection('report').",
+        "Highlight col.add with ids c0, c1, … and metadatas source report.txt."
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 163.2,
+      "end": 181.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L03_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight the ask function: col.query with n_results=k, the context built as [id] text, client.messages.create with system=SYSTEM.",
+        "Point to the return value: the answer text and res['ids'][0]."
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 181.6,
+      "end": 203.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L03_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run the script to build the index, then run col.count() and show the number.",
+        "Call ask('What target does the report set for solar capacity?').",
+        "Print the answer and the retrieved IDs side by side (real run output)."
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 203.5,
+      "end": 228.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L03_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Print the documents for the two cited chunk IDs and highlight the matching sentences.",
+        "Ask an off-topic question and show the reply 'I don't know.'",
+        "Ask a table question, show the incomplete answer, then print the retrieved chunk that ends mid-table."
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 228.8,
+      "end": 245.5,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 245.5,
+      "end": 272.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 272.1,
+      "end": 299.5,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_M1_L03_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

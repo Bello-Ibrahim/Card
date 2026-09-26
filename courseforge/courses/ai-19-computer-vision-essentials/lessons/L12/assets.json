@@ -1,0 +1,170 @@
+{
+  "course_id": "AI-19",
+  "lesson_id": "L12",
+  "presenter_track": {
+    "file": "/incoming/ai-19-computer-vision-essentials_M3_L12_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 296.6
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 20.1,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-19-computer-vision-essentials_M3_L12_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 20.1,
+      "end": 36.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 36.8,
+      "end": 65.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 65.9,
+      "end": 86.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 86.5,
+      "end": 112.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 112.6,
+      "end": 127.2,
+      "visual_type": "stock",
+      "file": "/incoming/ai-19-computer-vision-essentials_L12_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "rain streaked window with paper note"
+    },
+    {
+      "scene": 7,
+      "start": 127.2,
+      "end": 140.5,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 140.5,
+      "end": 156.4,
+      "visual_type": "stock",
+      "file": "/incoming/ai-19-computer-vision-essentials_L12_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "paper receipt on cafe table"
+    },
+    {
+      "scene": 9,
+      "start": 156.4,
+      "end": 166.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L12_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run !apt-get install -y tesseract-ocr tesseract-ocr-fra tesseract-ocr-ara tesseract-ocr-por",
+        "Run !pip install pytesseract",
+        "Upload receipt.jpg"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 166.7,
+      "end": 192.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L12_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run the OCR cell: raw image_to_string with lang='fra+ara', then greyscale, resize fx=2, adaptiveThreshold, and image_to_string on the clean image",
+        "Show the raw and cleaned images side by side",
+        "Show both OCR outputs side by side"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 192.0,
+      "end": 212.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L12_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Point to the raw total line: T0TAL 12.500 DT",
+        "Type the true total line: TOTAL 12,500 DT",
+        "Run the cer function and show 0.133"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 212.1,
+      "end": 228.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L12_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Calculate the CER for the cleaned total line",
+        "Scroll to the Arabic lines in both outputs and compare them with the receipt"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 228.0,
+      "end": 249.0,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 249.0,
+      "end": 271.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 271.3,
+      "end": 296.6,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-19-computer-vision-essentials_M3_L12_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

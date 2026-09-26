@@ -1,0 +1,164 @@
+{
+  "course_id": "AI-17",
+  "lesson_id": "L02",
+  "presenter_track": {
+    "file": "/incoming/ai-17-data-engineering-for-ai_M1_L02_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 306.6
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.1,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-17-data-engineering-for-ai_M1_L02_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 17.1,
+      "end": 30.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 30.4,
+      "end": 49.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 49.7,
+      "end": 59.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 59.6,
+      "end": 86.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 86.6,
+      "end": 102.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 102.0,
+      "end": 129.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 129.9,
+      "end": 151.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 9,
+      "start": 151.8,
+      "end": 171.5,
+      "visual_type": "stock",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L02_stock_09.mp4",
+      "status": "PENDING_STOCK",
+      "query": "chefs preparing fresh ingredients restaurant kitchen"
+    },
+    {
+      "scene": 10,
+      "start": 171.5,
+      "end": 178.4,
+      "visual_type": "stock",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L02_stock_10.mp4",
+      "status": "PENDING_STOCK",
+      "query": "delivery truck and moving conveyor belt"
+    },
+    {
+      "scene": 11,
+      "start": 178.4,
+      "end": 187.0,
+      "visual_type": "stock",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L02_stock_11.mp4",
+      "status": "PENDING_STOCK",
+      "query": "parcels sorting depot warehouse workers"
+    },
+    {
+      "scene": 12,
+      "start": 187.0,
+      "end": 212.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 212.3,
+      "end": 238.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 238.4,
+      "end": 257.7,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 257.7,
+      "end": 284.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 284.3,
+      "end": 306.6,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-17-data-engineering-for-ai_M1_L02_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

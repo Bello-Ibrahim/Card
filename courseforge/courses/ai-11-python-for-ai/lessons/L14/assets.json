@@ -1,0 +1,177 @@
+{
+  "course_id": "AI-11",
+  "lesson_id": "L14",
+  "presenter_track": {
+    "file": "/incoming/ai-11-python-for-ai_M3_L14_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 288.4
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.4,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-11-python-for-ai_M3_L14_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.4,
+      "end": 33.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 33.8,
+      "end": 57.8,
+      "visual_type": "stock",
+      "file": "/incoming/ai-11-python-for-ai_L14_stock_03.mp4",
+      "status": "PENDING_STOCK",
+      "query": "mechanic inspecting car with checklist"
+    },
+    {
+      "scene": 4,
+      "start": 57.8,
+      "end": 80.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 80.1,
+      "end": 100.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 100.7,
+      "end": 111.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 111.0,
+      "end": 127.3,
+      "visual_type": "stock",
+      "file": "/incoming/ai-11-python-for-ai_L14_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "operations analyst reviewing orders on laptop"
+    },
+    {
+      "scene": 8,
+      "start": 127.3,
+      "end": 139.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L14_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add a new code cell",
+        "Paste the data cell from content.md: import io, import pandas as pd, the raw text (order_id,city,order_date,quantity,unit_price,payment,returned,refund and 11 rows), then orders = pd.read_csv(io.StringIO(raw))",
+        "Press Shift + Enter"
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 139.7,
+      "end": 159.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L14_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add a new code cell",
+        "Type: print(orders.isna().sum()[lambda s: s > 0])",
+        "Type: print(orders.duplicated().sum())",
+        "Type: print(orders[\"city\"].unique().tolist())",
+        "Press Shift + Enter",
+        "Output: order_date 1 / payment 1 / dtype: int64 / 1 / ['Lagos', 'lagos ', 'Hanoi', 'Lima', 'LIMA', 'Ha Noi']"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 159.4,
+      "end": 179.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L14_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add a new code cell",
+        "Type: print(orders.dtypes) and point at unit_price and order_date shown as text",
+        "Type: bad_price = pd.to_numeric(orders[\"unit_price\"], errors=\"coerce\").isna()",
+        "Type: print(orders.loc[bad_price, [\"order_id\", \"unit_price\"]])",
+        "Press Shift + Enter",
+        "Output: 1005 unknown (index 4)"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 179.5,
+      "end": 191.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L14_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Type: print(orders[\"quantity\"].describe()[[\"min\", \"50%\", \"max\"]])",
+        "Press Shift + Enter",
+        "Output: min -2.0 / 50% 2.0 / max 500.0"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 191.1,
+      "end": 217.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 217.7,
+      "end": 243.4,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 243.4,
+      "end": 262.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 262.3,
+      "end": 288.4,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-11-python-for-ai_M3_L14_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

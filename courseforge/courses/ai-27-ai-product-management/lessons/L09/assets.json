@@ -1,0 +1,180 @@
+{
+  "course_id": "AI-27",
+  "lesson_id": "L09",
+  "presenter_track": {
+    "file": "/incoming/ai-27-ai-product-management_M2_L09_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 298.3
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 14.6,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-27-ai-product-management_M2_L09_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 14.6,
+      "end": 32.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 32.2,
+      "end": 53.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 53.6,
+      "end": 77.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 77.2,
+      "end": 97.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 97.3,
+      "end": 114.9,
+      "visual_type": "stock",
+      "file": "/incoming/ai-27-ai-product-management_L09_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "car driving on wet road at night"
+    },
+    {
+      "scene": 7,
+      "start": 114.9,
+      "end": 134.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-27-ai-product-management_L09_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open a new Google Sheets file",
+        "Type headers in columns A to F: ID, Type, Input, Expected behaviour, Output, Human score",
+        "Add column G: Judge score"
+      ]
+    },
+    {
+      "scene": 8,
+      "start": 134.6,
+      "end": 156.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-27-ai-product-management_L09_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Fill 20 rows with invented cases: 8 Common, 5 Edge, 4 Language, 3 Refuse",
+        "Paste each input into Claude together with the return policy",
+        "Paste Claude's answer into column E (Output)",
+        "Score column F (Human score) with the 0, 1, 2 rubric"
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 156.5,
+      "end": 172.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-27-ai-product-management_L09_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open a new Claude chat and paste the rubric",
+        "Send one case at a time: \"Score this answer 0, 1 or 2 using the rubric. Give the score and one reason.\"",
+        "Record each score in column G (Judge score)"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 172.8,
+      "end": 193.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-27-ai-product-management_L09_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add pass rate formula: =COUNTIF(F2:F21,2)/20",
+        "Add pass rate by type: =COUNTIFS(B2:B21,\"Edge\",F2:F21,2)/COUNTIF(B2:B21,\"Edge\") and repeat for each type",
+        "Add agreement formula: =SUMPRODUCT(--(F2:F21=G2:G21))/20",
+        "Highlight results: 60% overall, Common 75%, Edge 40%, Language 50%, Refuse 67%"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 193.8,
+      "end": 208.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-27-ai-product-management_L09_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the judge pass rate cell: 14 of 20, 70%",
+        "Show the agreement cell: 15 of 20, 75%"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 208.8,
+      "end": 231.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-27-ai-product-management_L09_screen_6.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Filter rows where column F and column G differ",
+        "Read each of the 5 disagreement rows",
+        "Highlight row 16: Cebuano return question, Human 0, Judge 2"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 231.5,
+      "end": 249.5,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 249.5,
+      "end": 273.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 273.9,
+      "end": 298.3,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-27-ai-product-management_M2_L09_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

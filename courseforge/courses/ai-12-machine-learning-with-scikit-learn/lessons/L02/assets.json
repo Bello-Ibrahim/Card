@@ -1,0 +1,181 @@
+{
+  "course_id": "AI-12",
+  "lesson_id": "L02",
+  "presenter_track": {
+    "file": "/incoming/ai-12-machine-learning-with-scikit-learn_M1_L02_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 293.5
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.9,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_M1_L02_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.9,
+      "end": 31.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 31.3,
+      "end": 54.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 54.4,
+      "end": 74.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 74.5,
+      "end": 89.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 89.1,
+      "end": 106.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 106.7,
+      "end": 126.4,
+      "visual_type": "stock",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L02_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "kitchen counter blender toaster kettle"
+    },
+    {
+      "scene": 8,
+      "start": 126.4,
+      "end": 138.4,
+      "visual_type": "stock",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L02_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "developer laptop desk city apartment evening"
+    },
+    {
+      "scene": 9,
+      "start": 138.4,
+      "end": 152.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L02_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open Google Colab in the browser and create a new notebook.",
+        "Type this exact code cell from content.md and run it with Shift+Enter:\nfrom sklearn.datasets import load_wine\nfrom sklearn.tree import DecisionTreeClassifier\n\nX, y = load_wine(return_X_y=True, as_frame=True)\nprint(X.shape, y.value_counts().sort_index().tolist())\n\nmodel = DecisionTreeClassifier(random_state=0)\nmodel.fit(X, y)\nprint(model.predict(X.iloc[[0, 60, 130, 20, 100]]))",
+        "Pause on the finished cell before scrolling to the output."
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 152.5,
+      "end": 167.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L02_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight the first output line: (178, 13) [59, 71, 48].",
+        "Point to 178 rows, then 13 columns, then the three class counts."
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 167.5,
+      "end": 184.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L02_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight as_frame=True in the load_wine line.",
+        "Add a callout next to it: returns a pandas DataFrame, so column names stay visible."
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 184.2,
+      "end": 200.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L02_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight the line that creates DecisionTreeClassifier(random_state=0) and label it 'Create'.",
+        "Highlight model.fit(X, y) and label it 'Fit'.",
+        "Highlight model.predict(...) and label it 'Predict'."
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 200.5,
+      "end": 221.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L02_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight the second output line: [0 1 2 0 1].",
+        "Point back to X.iloc[[0, 60, 130, 20, 100]] and note these rows were used in fit."
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 221.1,
+      "end": 241.2,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 241.2,
+      "end": 267.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 267.8,
+      "end": 293.5,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_M1_L02_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

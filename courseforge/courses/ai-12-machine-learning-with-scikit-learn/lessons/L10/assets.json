@@ -1,0 +1,170 @@
+{
+  "course_id": "AI-12",
+  "lesson_id": "L10",
+  "presenter_track": {
+    "file": "/incoming/ai-12-machine-learning-with-scikit-learn_M2_L10_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 299.0
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.7,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_M2_L10_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 16.7,
+      "end": 39.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 39.0,
+      "end": 55.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 55.7,
+      "end": 78.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 78.8,
+      "end": 95.5,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 95.5,
+      "end": 113.9,
+      "visual_type": "stock",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L10_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "student taking several short tests"
+    },
+    {
+      "scene": 7,
+      "start": 113.9,
+      "end": 128.9,
+      "visual_type": "stock",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L10_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "energy company office analyst Scandinavia"
+    },
+    {
+      "scene": 8,
+      "start": 128.9,
+      "end": 148.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L10_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Scroll past the L05 setup and pipeline cells, already executed.",
+        "Type this exact code cell from content.md and run it with Shift+Enter:\nfrom sklearn.model_selection import StratifiedKFold, cross_val_score\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.neighbors import KNeighborsClassifier\n\ncv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)\nmodels = {\"logistic\": LogisticRegression(max_iter=1000),\n          \"tree\": DecisionTreeClassifier(max_depth=4, random_state=42),\n          \"knn\": KNeighborsClassifier(n_neighbors=25)}\n\nfor name, model in models.items():\n    candidate = Pipeline([(\"prep\", prep), (\"model\", model)])\n    scores = cross_val_score(candidate, X_train, y_train, cv=cv, scoring=\"roc_auc\")\n    print(f\"{name:9} mean={scores.mean():.3f} std={scores.std():.3f}\")"
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 148.2,
+      "end": 172.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L10_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight logistic mean=0.774 std=0.048.",
+        "Highlight tree mean=0.682 std=0.034.",
+        "Show the overlay: gap about 0.09 > spread."
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 172.6,
+      "end": 190.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L10_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight knn mean=0.733 std=0.047.",
+        "Add a text cell: Logistic vs KNN: probably better, not certain."
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 190.6,
+      "end": 199.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L10_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Type this exact code cell from content.md and run it with Shift+Enter:\nfrom sklearn.model_selection import cross_validate\nres = cross_validate(pipe, X_train, y_train, cv=cv, scoring=[\"roc_auc\", \"recall\"])\nprint(res[\"test_roc_auc\"].round(3), res[\"test_recall\"].round(3))"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 199.6,
+      "end": 222.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L10_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight the first array [0.775 0.81 0.725 0.718 0.843] and mark the lowest 0.718 and highest 0.843.",
+        "Highlight the second array [0.056 0.056 0.028 0.027 0.108]."
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 222.3,
+      "end": 244.6,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 244.6,
+      "end": 272.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 272.9,
+      "end": 299.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_M2_L10_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

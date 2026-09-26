@@ -1,0 +1,175 @@
+{
+  "course_id": "AI-16",
+  "lesson_id": "L06",
+  "presenter_track": {
+    "file": "/incoming/ai-16-ai-agents-and-automation-workflows_M2_L06_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 290.3
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_M2_L06_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.0,
+      "end": 36.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 36.0,
+      "end": 59.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 59.6,
+      "end": 65.2,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 65.2,
+      "end": 91.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 91.3,
+      "end": 114.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 114.4,
+      "end": 131.5,
+      "visual_type": "stock",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L06_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "warehouse worker checking delivery boxes clipboard"
+    },
+    {
+      "scene": 8,
+      "start": 131.5,
+      "end": 154.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L06_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the Google Sheet with tabs 'emails' (email_id, text), 'classified' and 'needs_review'",
+        "Scroll through 10 invented emails in four languages"
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 154.6,
+      "end": 167.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L06_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Manual Trigger → Google Sheets (get rows from 'emails')",
+        "HTTP Request to the Claude Messages endpoint with the JSON-shape system prompt",
+        "Set max_tokens to a small value"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 167.0,
+      "end": 177.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L06_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add a Code node and paste the validation script from content.md",
+        "Run on one email",
+        "Show output for E07: category complaint, urgency high, language fr, valid true (example output)"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 177.7,
+      "end": 197.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L06_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add an IF node: valid is true",
+        "True branch: Google Sheets (append to 'classified')",
+        "False branch: second HTTP Request with the extra line 'Your previous answer was not valid JSON. Return only the JSON.'",
+        "Second Code check, then Google Sheets (append to 'needs_review' with the original text)"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 197.8,
+      "end": 214.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L06_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run with the email '????': result category 'other', valid true",
+        "Run with the long three-language email: item lands in 'needs_review'",
+        "Open both tabs to show where each item ended up"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 214.5,
+      "end": 240.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 240.2,
+      "end": 262.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 262.9,
+      "end": 290.3,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_M2_L06_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

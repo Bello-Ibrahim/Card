@@ -1,0 +1,178 @@
+{
+  "course_id": "AI-13",
+  "lesson_id": "L18",
+  "presenter_track": {
+    "file": "/incoming/ai-13-deep-learning-and-neural-networks_M4_L18_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 295.3
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.1,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_M4_L18_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 17.1,
+      "end": 28.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 28.7,
+      "end": 48.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 48.8,
+      "end": 72.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 72.4,
+      "end": 95.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 95.1,
+      "end": 114.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 114.0,
+      "end": 129.9,
+      "visual_type": "stock",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L18_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "runner checking stopwatch after morning run"
+    },
+    {
+      "scene": 8,
+      "start": 129.9,
+      "end": 144.0,
+      "visual_type": "stock",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L18_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "woman data scientist working laptop Dakar"
+    },
+    {
+      "scene": 9,
+      "start": 144.0,
+      "end": 157.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L18_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open the chosen dataset's card on the Hugging Face Hub; scroll to the licence and the label description",
+        "Add a text cell: dataset name, licence, source, label meanings"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 157.3,
+      "end": 171.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L18_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: ds = load_dataset(\"<chosen dataset ID>\"); split = ds[\"train\"].train_test_split(test_size=0.2, seed=0); train, val = split[\"train\"], split[\"test\"]",
+        "Run: print(train.features[\"label\"], train.to_pandas()[\"label\"].value_counts())",
+        "Point to the class counts"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 171.0,
+      "end": 187.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L18_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: vec = TfidfVectorizer(ngram_range=(1, 2), min_df=2); clf = LogisticRegression(max_iter=1000, class_weight=\"balanced\")",
+        "Run: clf.fit(vec.fit_transform(train[\"text\"]), train[\"label\"]); preds = clf.predict(vec.transform(val[\"text\"]))",
+        "Run: print(\"baseline macro F1:\", f1_score(val[\"label\"], preds, average=\"macro\"))"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 187.7,
+      "end": 212.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L18_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Append the baseline row to results.csv with its config (L17 code)",
+        "Add a text cell 'Experiment plan' with 3 numbered experiments, each with a hypothesis, one change and the metric validation macro F1"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 212.6,
+      "end": 232.7,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 232.7,
+      "end": 242.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 242.6,
+      "end": 269.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 269.2,
+      "end": 295.3,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_M4_L18_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

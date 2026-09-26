@@ -1,0 +1,190 @@
+{
+  "course_id": "AI-11",
+  "lesson_id": "L03",
+  "presenter_track": {
+    "file": "/incoming/ai-11-python-for-ai_M1_L03_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 295.0
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-11-python-for-ai_M1_L03_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 15.0,
+      "end": 31.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 31.3,
+      "end": 49.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 49.3,
+      "end": 69.0,
+      "visual_type": "stock",
+      "file": "/incoming/ai-11-python-for-ai_L03_stock_04.mp4",
+      "status": "PENDING_STOCK",
+      "query": "hand holding handwritten shopping list"
+    },
+    {
+      "scene": 5,
+      "start": 69.0,
+      "end": 85.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 85.3,
+      "end": 108.9,
+      "visual_type": "stock",
+      "file": "/incoming/ai-11-python-for-ai_L03_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "person searching contacts on smartphone"
+    },
+    {
+      "scene": 7,
+      "start": 108.9,
+      "end": 127.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 127.8,
+      "end": 143.2,
+      "visual_type": "stock",
+      "file": "/incoming/ai-11-python-for-ai_L03_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "outdoor weekend market stalls"
+    },
+    {
+      "scene": 9,
+      "start": 143.2,
+      "end": 160.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L03_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add a new code cell",
+        "Type: stalls = [\"fruit\", \"bread\", \"fish\", \"spices\"]",
+        "Type: print(stalls[0], stalls[2], stalls[-1])",
+        "Pause and point at stalls[2] before running"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 160.8,
+      "end": 167.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L03_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Press Shift + Enter",
+        "Output: fruit fish spices"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 167.2,
+      "end": 183.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L03_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add lines: stalls.append(\"flowers\") and stalls[1] = \"cakes\"",
+        "Add line: print(stalls, len(stalls))",
+        "Press Shift + Enter",
+        "Output: ['fruit', 'cakes', 'fish', 'spices', 'flowers'] 5"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 183.1,
+      "end": 205.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L03_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add a new code cell",
+        "Type: phone_book = {\"Lucía\": \"555-0142\", \"Arjun\": \"555-0199\"}",
+        "Type: print(phone_book[\"Arjun\"])",
+        "Type: phone_book[\"Mei\"] = \"555-0107\"  # add a new pair",
+        "Type: phone_book[\"Lucía\"] = \"555-0150\"  # change an existing value",
+        "Type: print(phone_book) and print(len(phone_book))",
+        "Press Shift + Enter",
+        "Output: 555-0199 / {'Lucía': '555-0150', 'Arjun': '555-0199', 'Mei': '555-0107'} / 3"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 205.0,
+      "end": 221.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L03_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add line: print(phone_book.get(\"Omar\", \"not found\"))",
+        "Press Shift + Enter",
+        "Output: not found"
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 221.3,
+      "end": 244.4,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 244.4,
+      "end": 267.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 267.1,
+      "end": 295.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-11-python-for-ai_M1_L03_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

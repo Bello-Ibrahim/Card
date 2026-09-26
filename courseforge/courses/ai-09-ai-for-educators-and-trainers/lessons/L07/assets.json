@@ -1,0 +1,183 @@
+{
+  "course_id": "AI-09",
+  "lesson_id": "L07",
+  "presenter_track": {
+    "file": "/incoming/ai-09-ai-for-educators-and-trainers_M2_L07_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 302.6
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 19.7,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-09-ai-for-educators-and-trainers_M2_L07_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 19.7,
+      "end": 41.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 41.6,
+      "end": 62.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 62.2,
+      "end": 84.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 84.1,
+      "end": 109.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 109.4,
+      "end": 126.5,
+      "visual_type": "stock",
+      "file": "/incoming/ai-09-ai-for-educators-and-trainers_L07_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "building entrance with ramp and stairs"
+    },
+    {
+      "scene": 7,
+      "start": 126.5,
+      "end": 143.2,
+      "visual_type": "stock",
+      "file": "/incoming/ai-09-ai-for-educators-and-trainers_L07_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "warehouse staff training session with trainer"
+    },
+    {
+      "scene": 8,
+      "start": 143.2,
+      "end": 155.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-09-ai-for-educators-and-trainers_L07_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open Canva in a browser on the home page",
+        "Type 'worksheet' in the template search box",
+        "Choose a simple worksheet template with plenty of white space",
+        "Click the title and replace it with 'Safe Lifting: 5 Steps'"
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 155.2,
+      "end": 176.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-09-ai-for-educators-and-trainers_L07_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Switch to a Claude tab",
+        "Type the prompt: 'Write 5 numbered steps for safe lifting for new warehouse staff. Plain English, maximum 12 words per step.'",
+        "Show the 5 steps in the reply",
+        "Place the company procedure beside it and highlight one step that does not match",
+        "Edit that step so it matches the procedure"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 176.6,
+      "end": 198.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-09-ai-for-educators-and-trainers_L07_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Paste the 5 steps into the worksheet text box",
+        "Select the text and change the font to a simple sans-serif font",
+        "Increase the font size to a readable size",
+        "Change the pale grey text colour to a dark colour on the white background",
+        "Edit 'look at the red boxes' to 'look at the boxes marked with a warning symbol' and add a warning symbol"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 198.9,
+      "end": 221.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-09-ai-for-educators-and-trainers_L07_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open the elements or image library and search 'lifting box'",
+        "Drag an illustration of a person lifting with bent knees onto the page",
+        "Select the image and open the alternative text option",
+        "Type: 'Worker lifting a box with bent knees and a straight back, keeping the box close to the body.'",
+        "Select the decorative border and mark it as decorative, if the option exists"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 221.2,
+      "end": 240.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-09-ai-for-educators-and-trainers_L07_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the 5-point checklist beside the design and tick each point",
+        "Click the text box holding steps 3 and 4 and split it into two boxes in the right order",
+        "Open Share, choose Download, select PDF and download",
+        "Copy the view link to share with staff who use screen readers"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 240.9,
+      "end": 254.2,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 254.2,
+      "end": 278.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 278.2,
+      "end": 302.6,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-09-ai-for-educators-and-trainers_M2_L07_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

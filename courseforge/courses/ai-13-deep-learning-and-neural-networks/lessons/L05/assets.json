@@ -1,0 +1,171 @@
+{
+  "course_id": "AI-13",
+  "lesson_id": "L05",
+  "presenter_track": {
+    "file": "/incoming/ai-13-deep-learning-and-neural-networks_M1_L05_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 295.9
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.4,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_M1_L05_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.4,
+      "end": 40.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 40.3,
+      "end": 65.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 65.2,
+      "end": 79.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 79.3,
+      "end": 96.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 96.0,
+      "end": 117.0,
+      "visual_type": "stock",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L05_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "teacher marking students work in classroom"
+    },
+    {
+      "scene": 7,
+      "start": 117.0,
+      "end": 136.3,
+      "visual_type": "stock",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L05_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "small business owner meeting loan officer"
+    },
+    {
+      "scene": 8,
+      "start": 136.3,
+      "end": 150.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L05_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: X, y = make_classification(n_samples=8000, n_features=20, n_informative=8, random_state=0)",
+        "Run: train_test_split(X, y, test_size=0.2, random_state=0); sc = StandardScaler().fit(Xtr); transform Xtr and Xva",
+        "Run: print(\"logreg:\", LogisticRegression().fit(Xtr, ytr).score(Xva, yva))"
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 150.9,
+      "end": 165.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L05_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: train_dl = DataLoader(TensorDataset(... torch.float32 ..., ... torch.long ...), batch_size=64, shuffle=True)",
+        "Run: val_dl = DataLoader(TensorDataset(...), batch_size=256)"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 165.9,
+      "end": 178.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L05_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: model = nn.Sequential(nn.Linear(20, 64), nn.ReLU(), nn.Linear(64, 2)).to(device)",
+        "Run: opt = torch.optim.Adam(model.parameters(), lr=1e-3); loss_fn = nn.CrossEntropyLoss()"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 178.8,
+      "end": 194.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L05_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run the loop cell: for epoch in range(10): model.train(); for xb, yb in train_dl: opt.zero_grad(); loss = loss_fn(model(xb), yb); loss.backward(); opt.step()",
+        "Highlight model.eval() and with torch.no_grad() in the validation part",
+        "Show the printed lines: epoch number and validation accuracy"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 194.7,
+      "end": 213.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L05_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Scroll up to the logreg score and down to the last epoch accuracy; place them side by side (expected output: similar scores)"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 213.1,
+      "end": 243.1,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 243.1,
+      "end": 271.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 271.0,
+      "end": 295.9,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_M1_L05_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

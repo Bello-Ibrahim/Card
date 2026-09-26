@@ -1,0 +1,176 @@
+{
+  "course_id": "AI-13",
+  "lesson_id": "L11",
+  "presenter_track": {
+    "file": "/incoming/ai-13-deep-learning-and-neural-networks_M3_L11_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 295.7
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.9,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_M3_L11_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 15.9,
+      "end": 33.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 33.5,
+      "end": 52.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 52.4,
+      "end": 74.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 74.7,
+      "end": 94.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 94.8,
+      "end": 114.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 114.9,
+      "end": 125.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 125.2,
+      "end": 143.6,
+      "visual_type": "stock",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L11_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "library shelves with rows of books"
+    },
+    {
+      "scene": 9,
+      "start": 143.6,
+      "end": 158.6,
+      "visual_type": "stock",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L11_stock_09.mp4",
+      "status": "PENDING_STOCK",
+      "query": "support team working on headsets office"
+    },
+    {
+      "scene": 10,
+      "start": 158.6,
+      "end": 173.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L11_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the xlm-roberta-base model card on the Hugging Face Hub (licence section)",
+        "Run: from transformers import AutoTokenizer; tok = AutoTokenizer.from_pretrained(\"xlm-roberta-base\")",
+        "Run the sentences dictionary cell from content.md with keys en, fr, pt, ar"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 173.2,
+      "end": 192.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L11_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: for lang, text in sentences.items(): ids = tok(text)[\"input_ids\"]; print(lang, len(ids), tok.convert_ids_to_tokens(ids))",
+        "Point to the special tokens at the start and end of each row",
+        "Highlight one word split into several pieces (expected output: similar but unequal counts)"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 192.9,
+      "end": 213.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L11_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: batch = tok(list(sentences.values()), padding=True, return_tensors=\"pt\"); print(batch[\"input_ids\"].shape, batch[\"attention_mask\"][0])",
+        "Point to where the mask changes from 1 to 0 in a shorter row",
+        "Run: tok.decode(ids) for one sentence and compare with the original"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 213.0,
+      "end": 221.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 221.1,
+      "end": 246.4,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 246.4,
+      "end": 274.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 274.7,
+      "end": 295.7,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_M3_L11_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

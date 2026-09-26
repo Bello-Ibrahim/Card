@@ -1,0 +1,162 @@
+{
+  "course_id": "AI-15",
+  "lesson_id": "L16",
+  "presenter_track": {
+    "file": "/incoming/ai-15-rag-systems-chat-with-your-data_M4_L16_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 291.8
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_M4_L16_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.0,
+      "end": 35.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 35.1,
+      "end": 52.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 52.7,
+      "end": 77.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 77.1,
+      "end": 96.0,
+      "visual_type": "stock",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L16_stock_05.mp4",
+      "status": "PENDING_STOCK",
+      "query": "building inspector checking new house clipboard"
+    },
+    {
+      "scene": 6,
+      "start": 96.0,
+      "end": 115.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 115.3,
+      "end": 142.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L16_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the frozen test set file and its version tag.",
+        "Run the baseline evaluation and log it with log_run as v1.",
+        "Show the v1 line: hit@5 0.70, MRR 0.52, faithfulness 0.80, refusals 4 of 6."
+      ]
+    },
+    {
+      "scene": 8,
+      "start": 142.3,
+      "end": 162.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L16_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the classified failures: mostly function names, two Portuguese technical-term questions.",
+        "Switch retrieval to hybrid with RRF, re-run, and log v2.",
+        "Show hit@5 0.83 with faithfulness unchanged."
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 162.4,
+      "end": 180.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L16_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the prompt change: 'reply exactly' refusal sentence and claim-by-claim citations.",
+        "Re-run and log v3.",
+        "Show refusals 6 of 6 and faithfulness 0.90."
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 180.0,
+      "end": 203.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L16_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the rejected reranker run in the log with higher latency and no hit@5 gain.",
+        "Run compare('runs.jsonl') and show one line per version with hit@5, faithfulness and cost.",
+        "Show the deployed v3 answering a Portuguese question with sources."
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 203.1,
+      "end": 225.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 12,
+      "start": 225.8,
+      "end": 241.2,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 241.2,
+      "end": 266.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 266.5,
+      "end": 291.8,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_M4_L16_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

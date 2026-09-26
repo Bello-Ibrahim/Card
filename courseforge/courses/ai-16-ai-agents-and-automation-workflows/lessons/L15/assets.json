@@ -1,0 +1,189 @@
+{
+  "course_id": "AI-16",
+  "lesson_id": "L15",
+  "presenter_track": {
+    "file": "/incoming/ai-16-ai-agents-and-automation-workflows_M4_L15_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 297.9
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.7,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_M4_L15_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 16.7,
+      "end": 29.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 29.1,
+      "end": 39.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 39.4,
+      "end": 54.0,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 54.0,
+      "end": 81.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 81.9,
+      "end": 97.3,
+      "visual_type": "stock",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L15_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "architect sketching floor plan on paper"
+    },
+    {
+      "scene": 7,
+      "start": 97.3,
+      "end": 117.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 117.4,
+      "end": 138.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 9,
+      "start": 138.8,
+      "end": 159.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L15_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open Lan's one-page design in a document editor",
+        "Scroll to Tools: get_registration (read), get_session_capacity (read), propose_session_change (writes a proposal only)",
+        "Scroll to Approval points: all replies; refund requests → finance staff",
+        "Scroll to Data: invented attendee names and emails only"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 159.4,
+      "end": 179.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L15_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Scroll to Failure modes in the design page",
+        "Highlight: invalid JSON → retry once, then review",
+        "Highlight: API down → retry, then error workflow",
+        "Highlight: session full → agent says so, proposes alternatives"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 179.5,
+      "end": 195.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L15_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add a Webhook node and copy its test URL",
+        "Send one sample submission from a free API client",
+        "Add the IF rule rejecting empty submissions",
+        "Add the Claude HTTP Request with the classification prompt",
+        "Add the validation Code node from L06"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 195.4,
+      "end": 208.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L15_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add a Switch node on category",
+        "Connect session_change to an AI Agent with the Anthropic Chat Model",
+        "Attach the three tools: get_registration, get_session_capacity, propose_session_change",
+        "Connect every branch to Google Sheets append to 'approvals' with status = pending"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 208.3,
+      "end": 225.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L15_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Send 5 test submissions, one per category",
+        "Open the executions list: 5 successful runs",
+        "Open the 'approvals' tab: 5 pending rows with drafts (example output)"
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 225.9,
+      "end": 248.2,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 248.2,
+      "end": 268.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 268.3,
+      "end": 297.9,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_M4_L15_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

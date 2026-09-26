@@ -1,0 +1,171 @@
+{
+  "course_id": "AI-12",
+  "lesson_id": "L07",
+  "presenter_track": {
+    "file": "/incoming/ai-12-machine-learning-with-scikit-learn_M2_L07_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 309.1
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 19.3,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_M2_L07_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 19.3,
+      "end": 43.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 43.7,
+      "end": 65.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 65.6,
+      "end": 87.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 87.9,
+      "end": 105.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 105.9,
+      "end": 127.8,
+      "visual_type": "stock",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L07_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "friends playing guessing game at table"
+    },
+    {
+      "scene": 7,
+      "start": 127.8,
+      "end": 141.1,
+      "visual_type": "stock",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L07_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "farm fields Argentina farmer tablet"
+    },
+    {
+      "scene": 8,
+      "start": 141.1,
+      "end": 157.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L07_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Scroll past the L03 cell, already executed.",
+        "Type this exact code cell from content.md and run it with Shift+Enter:\nimport matplotlib.pyplot as plt\n\ndepths, train_acc, test_acc = range(1, 21), [], []\nfor d in depths:\n    tree = DecisionTreeClassifier(max_depth=d, random_state=42).fit(X_train, y_train)\n    train_acc.append(tree.score(X_train, y_train))\n    test_acc.append(tree.score(X_test, y_test))\n\nplt.plot(depths, train_acc, label=\"train\")\nplt.plot(depths, test_acc, label=\"test\")\nplt.xlabel(\"max_depth\"); plt.ylabel(\"accuracy\"); plt.legend(); plt.show()"
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 157.0,
+      "end": 177.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L07_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the overlay table from content.md next to the plot.",
+        "Point to depth 1 on the plot: 0.689 / 0.648.",
+        "Point to depth 4: 0.865 / 0.828 and add a vertical marker."
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 177.6,
+      "end": 197.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L07_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Point to depth 8: 0.947 / 0.792.",
+        "Point to depths 13 to 20: 1.000 / 0.728.",
+        "Shade the area right of depth 4 and label it 'overfitting'."
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 197.7,
+      "end": 213.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L07_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Type this exact code cell from content.md and run it with Shift+Enter:\nfrom sklearn.datasets import load_wine\nfrom sklearn.neighbors import KNeighborsClassifier\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\nXw, yw = load_wine(return_X_y=True)\nXw_tr, Xw_te, yw_tr, yw_te = train_test_split(\n    Xw, yw, test_size=0.3, stratify=yw, random_state=0)\nraw = KNeighborsClassifier(n_neighbors=5).fit(Xw_tr, yw_tr)\nscaled = make_pipeline(StandardScaler(), KNeighborsClassifier(n_neighbors=5))\nscaled.fit(Xw_tr, yw_tr)\nprint(round(raw.score(Xw_te, yw_te), 3), round(scaled.score(Xw_te, yw_te), 3))"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 213.6,
+      "end": 230.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L07_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight the output 0.722 0.963.",
+        "Label 0.722 'raw' and 0.963 'scaled'."
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 230.7,
+      "end": 255.1,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 255.1,
+      "end": 280.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 280.4,
+      "end": 309.1,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_M2_L07_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

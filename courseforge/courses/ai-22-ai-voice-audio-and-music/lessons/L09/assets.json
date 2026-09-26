@@ -1,0 +1,164 @@
+{
+  "course_id": "AI-22",
+  "lesson_id": "L09",
+  "presenter_track": {
+    "file": "/incoming/ai-22-ai-voice-audio-and-music_M2_L09_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 298.3
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.9,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-22-ai-voice-audio-and-music_M2_L09_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.9,
+      "end": 37.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 37.3,
+      "end": 54.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 54.9,
+      "end": 77.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 77.2,
+      "end": 99.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 99.5,
+      "end": 113.2,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 113.2,
+      "end": 126.1,
+      "visual_type": "stock",
+      "file": "/incoming/ai-22-ai-voice-audio-and-music_L09_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "person listening to phone speaker in kitchen"
+    },
+    {
+      "scene": 8,
+      "start": 126.1,
+      "end": 141.5,
+      "visual_type": "stock",
+      "file": "/incoming/ai-22-ai-voice-audio-and-music_L09_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "friends talking at dinner table candles"
+    },
+    {
+      "scene": 9,
+      "start": 141.5,
+      "end": 161.2,
+      "visual_type": "stock",
+      "file": "/incoming/ai-22-ai-voice-audio-and-music_L09_stock_09.mp4",
+      "status": "PENDING_STOCK",
+      "query": "woman podcast host small business microphone"
+    },
+    {
+      "scene": 10,
+      "start": 161.2,
+      "end": 183.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 11,
+      "start": 183.5,
+      "end": 200.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 12,
+      "start": 200.6,
+      "end": 222.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 222.0,
+      "end": 230.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 230.6,
+      "end": 250.7,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 250.7,
+      "end": 275.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 275.6,
+      "end": 298.3,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-22-ai-voice-audio-and-music_M2_L09_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

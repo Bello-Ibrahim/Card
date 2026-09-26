@@ -1,0 +1,184 @@
+{
+  "course_id": "AI-22",
+  "lesson_id": "L03",
+  "presenter_track": {
+    "file": "/incoming/ai-22-ai-voice-audio-and-music_M1_L03_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 302.9
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 20.1,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-22-ai-voice-audio-and-music_M1_L03_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 20.1,
+      "end": 40.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 40.2,
+      "end": 58.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 58.2,
+      "end": 77.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 77.9,
+      "end": 103.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 103.6,
+      "end": 126.3,
+      "visual_type": "stock",
+      "file": "/incoming/ai-22-ai-voice-audio-and-music_L03_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "director giving notes to actor rehearsal"
+    },
+    {
+      "scene": 7,
+      "start": 126.3,
+      "end": 146.0,
+      "visual_type": "stock",
+      "file": "/incoming/ai-22-ai-voice-audio-and-music_L03_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "warehouse forklift safety training"
+    },
+    {
+      "scene": 8,
+      "start": 146.0,
+      "end": 165.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-22-ai-voice-audio-and-music_L03_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open ElevenLabs text-to-speech and sign in with the demo account",
+        "Paste Agnieszka's ear-ready safety script into the text box",
+        "Set the language to English",
+        "Play four voices on the first paragraph only, one after another",
+        "Select a calm, mid-pitch voice with a neutral international accent"
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 165.3,
+      "end": 186.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-22-ai-voice-audio-and-music_L03_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Click Generate for the full script",
+        "Play the result from the start with headphones on",
+        "Pause at 0:08 and note: 'Wrocław' sounds like 'Rock-law'",
+        "Pause at 0:21 and note: '1.5 metres' read too quickly",
+        "Pause at 0:50 and note: last three sentences rushed",
+        "Show the three notes with times in a notes app beside the tool"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 186.7,
+      "end": 205.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-22-ai-voice-audio-and-music_L03_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Replace 'Wrocław' with 'VROTS-waff' in the text box",
+        "Regenerate the first paragraph and play it: the name now sounds right",
+        "Replace '1.5 metres' with 'one and a half metres'",
+        "Add a full stop straight after the safety rule",
+        "Regenerate and play the rule: the voice now pauses after it"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 205.6,
+      "end": 223.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-22-ai-voice-audio-and-music_L03_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Move the speed slider down one small step",
+        "Add a paragraph break before the final sentence",
+        "Regenerate the full script",
+        "Play the whole file from 0:00 to the end with headphones",
+        "Tick off the three notes as each fix is heard"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 223.2,
+      "end": 237.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-22-ai-voice-audio-and-music_L03_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open the download options and choose WAV, or the best quality the free plan allows",
+        "Download the file",
+        "Type the tool name, plan, voice name and date into the project notes"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 237.8,
+      "end": 257.5,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 257.5,
+      "end": 281.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 281.5,
+      "end": 302.9,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-22-ai-voice-audio-and-music_M1_L03_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

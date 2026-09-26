@@ -1,0 +1,180 @@
+{
+  "course_id": "AI-11",
+  "lesson_id": "L19",
+  "presenter_track": {
+    "file": "/incoming/ai-11-python-for-ai_M4_L19_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 279.8
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.3,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-11-python-for-ai_M4_L19_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 16.3,
+      "end": 38.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 38.6,
+      "end": 62.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 62.2,
+      "end": 80.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 80.6,
+      "end": 96.9,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 96.9,
+      "end": 121.3,
+      "visual_type": "stock",
+      "file": "/incoming/ai-11-python-for-ai_L19_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "person inspecting used car engine"
+    },
+    {
+      "scene": 7,
+      "start": 121.3,
+      "end": 136.7,
+      "visual_type": "stock",
+      "file": "/incoming/ai-11-python-for-ai_L19_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "farmer and advisor in green field"
+    },
+    {
+      "scene": 8,
+      "start": 136.7,
+      "end": 155.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L19_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Create a new Colab notebook named: Capstone - cereal yield",
+        "Add five text cells with the headings: 1 Question · 2 Source · 3 Load · 4 Audit · 5 Cleaning log",
+        "Under Source, type placeholders: Name · Web address · Download date · Licence"
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 155.1,
+      "end": 165.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L19_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open the Colab file panel and upload the downloaded CSV",
+        "Under Load, type: df = pd.read_csv(\"file_name.csv\")",
+        "Type: df.head() and df.info() in separate cells"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 165.8,
+      "end": 183.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L19_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Under Audit, add a code cell",
+        "Type: def audit(df):",
+        "Type (indented): \"\"\"Print a short data-quality report for a DataFrame.\"\"\"",
+        "Type (indented): print(\"Shape:\", df.shape) / print(\"Duplicate rows:\", df.duplicated().sum())",
+        "Type (indented): print(\"Missing values:\") / print(df.isna().sum()[lambda s: s > 0])",
+        "Type (indented): print(\"Text columns:\", df.select_dtypes(exclude=\"number\").columns.tolist())"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 183.4,
+      "end": 198.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L19_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run the L14 data cell",
+        "Type: audit(orders)",
+        "Press Shift + Enter",
+        "Output: Shape: (11, 8) / Duplicate rows: 1 / Missing values: order_date 1, payment 1 / Text columns: ['city', 'order_date', 'unit_price', 'payment', 'returned']"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 198.4,
+      "end": 213.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L19_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Type: audit(df), then df.describe()",
+        "Type: df[\"category_column\"].unique() for each category column",
+        "Plot a histogram of the main number column",
+        "In the Audit text cell, list each problem marked 'error' or 'needs a decision'"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 213.4,
+      "end": 234.8,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 234.8,
+      "end": 256.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 256.2,
+      "end": 279.8,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-11-python-for-ai_M4_L19_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

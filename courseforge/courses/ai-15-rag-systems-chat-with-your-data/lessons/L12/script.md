@@ -42,8 +42,8 @@ Headline: Is Every Claim Supported?
 Image: Navy background, an answer paragraph with each sentence linked by thin teal lines to source chunks, one sentence with no line marked in amber, headline in teal Inter Bold.
 
 ## Production Notes
-- [VERSION] Claude API batch processing option (interface, discount and delivery time), forced tool use for the judge, and model choice (check the current models page). The voiceover mentions batch processing for larger runs but states no price, discount or delivery time.
-- Content check: content.md asks for a forced tool call for the judge, while L08 warns that some current models reject a forced tool_choice. The voiceover says 'structured verdict'. Record the demo with the method that works at recording time. [VERSION]
+- [VERSION] Claude API batch processing option (interface, discount and delivery time), structured output for the judge, and model choice (check the current models page). The voiceover mentions batch processing for larger runs but states no price, discount or delivery time.
+- RESOLVED 2026-09-26: content.md now uses structured output (output_config JSON Schema) instead of a forced tool call.
 - [VERSION] Optional open-source RAG evaluation libraries and their metric definitions; none is named in the voiceover.
 - The agreement function is tested plain Python: the screen must show exactly 0.8 [(1, 'yes', 'partly')].
 - Kwame's results (8 then 9 of 10 agreement; 16 faithful, 3 partly, 1 no; 4 of 5 correct refusals) are hypothetical; the voiceover calls them example results. Judge verdicts on screen come from a real run.

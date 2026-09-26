@@ -57,7 +57,7 @@ On screen, follow her build:
 1. She collects 45 public guidance PDFs, records each URL and licence, and runs `ingest.py`. The log shows 2 scanned files skipped.
 2. She chooses 800-character sentence chunks with section titles, based on a quick hit@5 check.
 3. She stores 2,900 chunks in Chroma with metadata, including `year`, so answers prefer current guidance.
-4. She connects hybrid retrieval, reranking and the grounded prompt with a forced tool output for answer, citations and `found`.
+4. She connects hybrid retrieval, reranking and the grounded prompt with structured output for answer, citations and `found`.
 5. She builds the Streamlit app with a notice at the top and clickable sources.
 6. She asks 5 real-style questions, including one in Kiswahili, and one about a drug not in the guidance. The last one returns "I don't know. The documents do not contain this information."
 

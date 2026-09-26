@@ -47,8 +47,10 @@ def estimate(brief):
 def warnings(brief):
     out = []
     p = brief["presenter"]
-    if not p.get("avatar_id") or not p.get("voice_id"):
-        out.append("presenter avatar_id/voice_id empty: Stage 4 HeyGen pack is blocked until set")
+    if not p.get("avatar_id"):
+        out.append("presenter avatar_id empty: Stage 4 HeyGen pack is blocked until set")
+    if not p.get("voice_id"):
+        out.append("presenter voice_id empty: HeyGen packs use the avatar's paired voice until an ID is recorded")
     if RTL_LANGUAGES & set(brief["languages"]):
         out.append("RTL language: captions need an Arabic-capable font (Inter has no Arabic glyphs)")
     if not brief["brand"].get("logo_url"):

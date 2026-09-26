@@ -1,0 +1,182 @@
+{
+  "course_id": "AI-06",
+  "lesson_id": "L07",
+  "presenter_track": {
+    "file": "/incoming/ai-06-ai-for-everyday-work-documents-email-and-research_M2_L07_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 305.9
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.7,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-06-ai-for-everyday-work-documents-email-and-research_M2_L07_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 16.7,
+      "end": 38.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 38.6,
+      "end": 58.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 58.7,
+      "end": 84.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 84.8,
+      "end": 106.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 106.2,
+      "end": 122.9,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 122.9,
+      "end": 140.0,
+      "visual_type": "stock",
+      "file": "/incoming/ai-06-ai-for-everyday-work-documents-email-and-research_L07_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "two colleagues talking in office corridor"
+    },
+    {
+      "scene": 8,
+      "start": 140.0,
+      "end": 157.1,
+      "visual_type": "stock",
+      "file": "/incoming/ai-06-ai-for-everyday-work-documents-email-and-research_L07_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "policy officer reading long report office"
+    },
+    {
+      "scene": 9,
+      "start": 157.1,
+      "end": 174.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-06-ai-for-everyday-work-documents-email-and-research_L07_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open a long public government guidance page in the browser",
+        "Scroll slowly to show its length",
+        "Open Claude (free tier) in a new tab and start a new chat",
+        "Copy a section of the public page, or upload the file if the plan allows it, and paste it into the chat"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 174.7,
+      "end": 190.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 11,
+      "start": 190.6,
+      "end": 201.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-06-ai-for-everyday-work-documents-email-and-research_L07_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Type the purpose-driven prompt below the pasted text",
+        "Press Enter",
+        "Show the five bullets and the Action, Who, Deadline table"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 201.3,
+      "end": 217.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-06-ai-for-everyday-work-documents-email-and-research_L07_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Switch back to the original page tab",
+        "Find the passage behind one summary bullet and highlight it: correct",
+        "Find the passage behind a second bullet and highlight the difference: a missed or changed detail"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 217.6,
+      "end": 236.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 236.5,
+      "end": 254.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-06-ai-for-everyday-work-documents-email-and-research_L07_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open a non-confidential sample document in Microsoft Copilot in Microsoft 365 or Gemini in Google Workspace",
+        "Click the built-in summarise button",
+        "Show the summary panel next to the document",
+        "Point out that no text was copied out of the work system"
+      ]
+    },
+    {
+      "scene": 15,
+      "start": 254.1,
+      "end": 279.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 279.8,
+      "end": 305.9,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-06-ai-for-everyday-work-documents-email-and-research_M2_L07_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

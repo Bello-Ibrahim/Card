@@ -1,0 +1,179 @@
+{
+  "course_id": "AI-11",
+  "lesson_id": "L04",
+  "presenter_track": {
+    "file": "/incoming/ai-11-python-for-ai_M1_L04_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 302.0
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.1,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-11-python-for-ai_M1_L04_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 17.1,
+      "end": 31.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 31.7,
+      "end": 49.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 49.3,
+      "end": 76.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 76.7,
+      "end": 102.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 102.4,
+      "end": 126.0,
+      "visual_type": "stock",
+      "file": "/incoming/ai-11-python-for-ai_L04_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "security guard checking tickets stadium entrance"
+    },
+    {
+      "scene": 7,
+      "start": 126.0,
+      "end": 143.1,
+      "visual_type": "stock",
+      "file": "/incoming/ai-11-python-for-ai_L04_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "delivery scooter rider city traffic Asia"
+    },
+    {
+      "scene": 8,
+      "start": 143.1,
+      "end": 163.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L04_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add a new code cell",
+        "Type: distance_km = 7.5",
+        "Type: if distance_km <= 3: / price = 8000 (indented)",
+        "Type: elif distance_km <= 10: / price = 15000 (indented)",
+        "Type: else: / price = 25000 (indented)",
+        "Type: print(f\"{distance_km} km costs {price} rupiah\")"
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 163.2,
+      "end": 184.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L04_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Point at each condition in turn and show the trace overlay: 7.5 <= 3? No. 7.5 <= 10? Yes.",
+        "Press Shift + Enter",
+        "Output: 7.5 km costs 15000 rupiah"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 184.2,
+      "end": 199.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L04_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight the elif line: elif distance_km <= 10:"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 199.6,
+      "end": 220.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L04_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add a new code cell",
+        "Type: is_member = True",
+        "Type: if distance_km > 5 and not is_member: / print(\"Add a long-distance fee\")",
+        "Type: else: / print(\"No extra fee\")",
+        "Press Shift + Enter",
+        "Output: No extra fee"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 220.2,
+      "end": 231.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L04_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "In the first cell, change distance_km to 2 and pause for a prediction",
+        "Run the cell and show the result",
+        "Change distance_km to 12, pause, run and show the result"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 231.3,
+      "end": 254.9,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 254.9,
+      "end": 278.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 278.9,
+      "end": 302.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-11-python-for-ai_M1_L04_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

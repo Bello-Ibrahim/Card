@@ -1,0 +1,173 @@
+{
+  "course_id": "AI-14",
+  "lesson_id": "L05",
+  "presenter_track": {
+    "file": "/incoming/ai-14-building-apps-with-llm-apis_M2_L05_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 297.8
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_M2_L05_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.0,
+      "end": 42.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 42.0,
+      "end": 64.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 64.3,
+      "end": 85.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 85.3,
+      "end": 96.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 96.9,
+      "end": 122.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 122.2,
+      "end": 140.6,
+      "visual_type": "stock",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L05_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "person filling in paper form at desk"
+    },
+    {
+      "scene": 8,
+      "start": 140.6,
+      "end": 151.7,
+      "visual_type": "stock",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L05_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "accountant reviewing invoices at office desk"
+    },
+    {
+      "scene": 9,
+      "start": 151.7,
+      "end": 170.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L05_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open extract.py in VS Code",
+        "Highlight the Invoice Pydantic class",
+        "Highlight the system prompt: 'Extract invoice fields. Convert all dates to YYYY-MM-DD. Use the ISO 4217 currency code.'",
+        "Highlight the user content wrapped in <invoice> tags"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 170.1,
+      "end": 192.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L05_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight client.messages.parse(...) with output_format=Invoice and max_tokens=500",
+        "Highlight response.parsed_output",
+        "Run python extract.py invoices/mexico.txt",
+        "Show the parsed object: supplier 'Papelería del Centro', invoice_date 2026-03-12, total 18450.0, currency MXN (labelled 'example output')"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 192.4,
+      "end": 210.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L05_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the line that saves the Invoice object to the database",
+        "Run the extractor on invoices/germany.txt with the total '1.234,50 EUR'",
+        "Show the result total 1.2345 and circle it in red (example output)"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 210.8,
+      "end": 225.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L05_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add to the system prompt: 'Numbers may use a comma as the decimal separator.'",
+        "Add a business check that prints REVIEW for totals below 5",
+        "Run the German invoice again and show total 1234.5"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 225.4,
+      "end": 245.5,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 245.5,
+      "end": 273.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 273.8,
+      "end": 297.8,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_M2_L05_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

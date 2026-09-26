@@ -1,0 +1,158 @@
+{
+  "course_id": "AI-13",
+  "lesson_id": "L07",
+  "presenter_track": {
+    "file": "/incoming/ai-13-deep-learning-and-neural-networks_M2_L07_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 291.0
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.1,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_M2_L07_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 17.1,
+      "end": 33.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 33.4,
+      "end": 57.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 57.0,
+      "end": 71.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 71.6,
+      "end": 96.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 96.0,
+      "end": 118.7,
+      "visual_type": "stock",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L07_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "person studying large paper map with magnifier"
+    },
+    {
+      "scene": 7,
+      "start": 118.7,
+      "end": 133.3,
+      "visual_type": "stock",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L07_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "online shop warehouse packing clothes"
+    },
+    {
+      "scene": 8,
+      "start": 133.3,
+      "end": 150.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L07_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run the model cell from content.md: cnn = nn.Sequential(nn.Conv2d(1, 32, 3, padding=1), nn.ReLU(), nn.MaxPool2d(2), nn.Conv2d(32, 64, 3, padding=1), nn.ReLU(), nn.MaxPool2d(2), nn.Flatten(), nn.Linear(64 * 7 * 7, 10))",
+        "Same cell: mlp = nn.Sequential(nn.Flatten(), nn.Linear(784, 256), nn.ReLU(), nn.Linear(256, 128), nn.ReLU(), nn.Linear(128, 10))"
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 150.0,
+      "end": 166.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L07_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: count = lambda m: sum(p.numel() for p in m.parameters()); print(count(cnn), count(mlp))",
+        "Output: 50186 235146"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 166.7,
+      "end": 186.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L07_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: x = torch.randn(8, 1, 28, 28); for layer in cnn: x = layer(x); print(type(layer).__name__, tuple(x.shape))",
+        "Point to (8, 32, 14, 14), then (8, 64, 7, 7), then Flatten (8, 3136), then Linear (8, 10)"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 186.4,
+      "end": 214.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L07_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run the L05 training loop for cnn, 5 epochs; then for mlp with the same optimiser and lr (on CPU: 10,000-image subset)",
+        "Show the final validation accuracy of each model side by side (expected output: CNN higher)"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 214.7,
+      "end": 238.7,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 238.7,
+      "end": 266.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 266.6,
+      "end": 291.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_M2_L07_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

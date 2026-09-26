@@ -1,0 +1,211 @@
+{
+  "course_id": "AI-20",
+  "lesson_id": "L06",
+  "presenter_track": {
+    "file": "/incoming/ai-20-ai-image-generation-and-visual-design_M2_L06_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 315.5
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-20-ai-image-generation-and-visual-design_M2_L06_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.0,
+      "end": 33.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 33.9,
+      "end": 52.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 52.3,
+      "end": 76.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 76.3,
+      "end": 91.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 91.3,
+      "end": 109.3,
+      "visual_type": "stock",
+      "file": "/incoming/ai-20-ai-image-generation-and-visual-design_L06_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "amateur sports team in matching uniforms"
+    },
+    {
+      "scene": 7,
+      "start": 109.3,
+      "end": 120.0,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 120.0,
+      "end": 144.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 9,
+      "start": 144.4,
+      "end": 160.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-20-ai-image-generation-and-visual-design_L06_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open Gemini and start a new chat",
+        "Paste: 'A frosted glass serum bottle with a white dropper.'",
+        "Paste the style block below it and press send",
+        "Download the best result: this is the hero image"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 160.7,
+      "end": 182.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-20-ai-image-generation-and-visual-design_L06_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "In the same chat, use the attach or upload option to add the hero image",
+        "Type: 'Create a new image in exactly the same style, background and lighting as this reference. Subject: a white cream jar with a wooden lid.'",
+        "Paste the style block again and press send"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 182.6,
+      "end": 192.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-20-ai-image-generation-and-visual-design_L06_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Repeat the reference request with 'a tall sage-green toner bottle'",
+        "Repeat again with 'a small tube of lip balm'",
+        "Download each result"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 192.5,
+      "end": 206.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-20-ai-image-generation-and-visual-design_L06_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open Adobe Firefly and choose text to image",
+        "Paste the subject line and the style block",
+        "Find the style reference setting and upload the hero image"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 206.6,
+      "end": 223.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-20-ai-image-generation-and-visual-design_L06_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "If a reference strength setting exists, adjust it and point out how the result changes",
+        "Click Generate",
+        "Repeat with the next subject, keeping the reference and style block the same"
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 223.3,
+      "end": 238.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-20-ai-image-generation-and-visual-design_L06_screen_6.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Place the 4 images in a row",
+        "Check background colour, light direction, shadow position and framing",
+        "Point to the lip balm image: its shadow is stronger than the others"
+      ]
+    },
+    {
+      "scene": 15,
+      "start": 238.7,
+      "end": 245.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-20-ai-image-generation-and-visual-design_L06_screen_7.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add 'very soft, faint shadow' to the lip balm prompt only",
+        "Regenerate that image",
+        "Show the 4 images in a row again"
+      ]
+    },
+    {
+      "scene": 16,
+      "start": 245.6,
+      "end": 265.3,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 17,
+      "start": 265.3,
+      "end": 290.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 18,
+      "start": 290.6,
+      "end": 315.5,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-20-ai-image-generation-and-visual-design_M2_L06_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

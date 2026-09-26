@@ -1,0 +1,183 @@
+{
+  "course_id": "AI-02",
+  "lesson_id": "L06",
+  "presenter_track": {
+    "file": "/incoming/ai-02-generative-ai-explained-llms-diffusion-and-multimodal-models_M2_L06_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 294.4
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.4,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-02-generative-ai-explained-llms-diffusion-and-multimodal-models_M2_L06_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.4,
+      "end": 37.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 37.3,
+      "end": 56.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 56.2,
+      "end": 79.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 79.3,
+      "end": 93.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 93.9,
+      "end": 112.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 112.8,
+      "end": 132.1,
+      "visual_type": "stock",
+      "file": "/incoming/ai-02-generative-ai-explained-llms-diffusion-and-multimodal-models_L06_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "photographer shooting bread in bakery"
+    },
+    {
+      "scene": 8,
+      "start": 132.1,
+      "end": 148.8,
+      "visual_type": "stock",
+      "file": "/incoming/ai-02-generative-ai-explained-llms-diffusion-and-multimodal-models_L06_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "fresh bread baskets at outdoor market"
+    },
+    {
+      "scene": 9,
+      "start": 148.8,
+      "end": 160.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-02-generative-ai-explained-llms-diffusion-and-multimodal-models_L06_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open Google Gemini image generation and start a new chat",
+        "Choose a portrait (tall) aspect ratio",
+        "Type version 1: 'bread on a market stall' and generate"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 160.8,
+      "end": 177.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-02-generative-ai-explained-llms-diffusion-and-multimodal-models_L06_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the version 1 image full size",
+        "Type version 2: 'Fresh round loaves and small brown bread rolls in woven baskets on a wooden market stall, soft morning sunlight.'",
+        "Generate"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 177.9,
+      "end": 200.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-02-generative-ai-explained-llms-diffusion-and-multimodal-models_L06_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the version 2 image and point to the full edges",
+        "Type version 3: 'Realistic photograph of fresh round loaves and small brown bread rolls in woven baskets on a wooden market stall, soft morning sunlight, close-up, baskets in the lower half, plain light sky in the upper half for a title.'",
+        "Generate"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 200.6,
+      "end": 218.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-02-generative-ai-explained-llms-diffusion-and-multimodal-models_L06_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Place the three images side by side with their prompts",
+        "Label what each change improved: v2 fresh and warm, v3 space for a title",
+        "Briefly show the poster with the bakery name and hours added in a design tool"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 218.6,
+      "end": 229.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-02-generative-ai-explained-llms-diffusion-and-multimodal-models_L06_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Zoom into the version 3 image to check the baskets and bread for strange details",
+        "Open the tool's terms page and scroll to the section on using generated images"
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 229.3,
+      "end": 246.0,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 246.0,
+      "end": 269.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 269.1,
+      "end": 294.4,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-02-generative-ai-explained-llms-diffusion-and-multimodal-models_M2_L06_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "course_id": "AI-16",
+  "lesson_id": "L07",
+  "presenter_track": {
+    "file": "/incoming/ai-16-ai-agents-and-automation-workflows_M2_L07_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 293.5
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.4,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_M2_L07_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 15.4,
+      "end": 30.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 30.4,
+      "end": 46.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 46.7,
+      "end": 57.8,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 57.8,
+      "end": 87.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 87.4,
+      "end": 108.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 108.0,
+      "end": 127.7,
+      "visual_type": "stock",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L07_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "hospital triage nurse at reception desk"
+    },
+    {
+      "scene": 8,
+      "start": 127.7,
+      "end": 144.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L07_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open the L06 classification workflow (duplicated and renamed)",
+        "Show the sheet with 20 invented claim messages in English and Filipino"
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 144.0,
+      "end": 160.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L07_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add an IF node before the HTTP Request to Claude",
+        "Condition 1: text matches the regular expression CL-\\d{6}",
+        "Condition 2: text contains 'status'",
+        "True branch → 'auto status reply' path; false branch → Claude"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 160.3,
+      "end": 177.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L07_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Update the system prompt: categories claim_new, claim_status, complaint, document_question, not_sure; plus urgency",
+        "Update the validation Code node with the new allowed values",
+        "Add a Switch node on category, one output per value, fallback output turned on"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 177.4,
+      "end": 195.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L07_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "complaint + urgency high → Google Sheets append to 'urgent_complaints'",
+        "document_question → second HTTP Request that drafts a reply → append to 'drafts' (not sent)",
+        "not_sure and fallback → append to 'review'"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 195.4,
+      "end": 216.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L07_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run the workflow on all 20 messages",
+        "Open each tab and show the item counts",
+        "Open 'review' and point to the mixed car accident and cancellation message with category not_sure (example output)"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 216.8,
+      "end": 239.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 239.9,
+      "end": 263.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 263.5,
+      "end": 293.5,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_M2_L07_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

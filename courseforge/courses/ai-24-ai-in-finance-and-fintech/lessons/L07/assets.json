@@ -1,0 +1,188 @@
+{
+  "course_id": "AI-24",
+  "lesson_id": "L07",
+  "presenter_track": {
+    "file": "/incoming/ai-24-ai-in-finance-and-fintech_M2_L07_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 302.8
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-24-ai-in-finance-and-fintech_M2_L07_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 15.0,
+      "end": 31.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 31.7,
+      "end": 56.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 56.1,
+      "end": 80.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 80.1,
+      "end": 98.5,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 98.5,
+      "end": 118.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 118.6,
+      "end": 139.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-24-ai-in-finance-and-fintech_L07_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the course page and click the ready-made notebook link",
+        "The notebook opens in Google Colab; point to the title and the single code cell"
+      ]
+    },
+    {
+      "scene": 8,
+      "start": 139.6,
+      "end": 150.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-24-ai-in-finance-and-fintech_L07_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open the File menu",
+        "Click Save a copy in Drive",
+        "Show the new tab with the copy's name"
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 150.3,
+      "end": 172.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-24-ai-in-finance-and-fintech_L07_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Scroll slowly through the code cell",
+        "Highlight the counts line",
+        "Highlight the lines that calculate approval_rate, false_rejection_rate and bad_loans_approved_rate",
+        "Highlight the final print line for the approval-rate ratio"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 172.2,
+      "end": 185.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-24-ai-in-finance-and-fintech_L07_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open the Runtime menu",
+        "Click Run all",
+        "Wait for the output table to appear under the cell",
+        "Split screen briefly with the lesson page table to show the numbers match"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 185.9,
+      "end": 212.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-24-ai-in-finance-and-fintech_L07_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Zoom in on the output table",
+        "Highlight approval_rate: A 0.725, B 0.560",
+        "Highlight Approval-rate ratio: 0.772",
+        "Highlight false_rejection_rate: A 0.133, B 0.264",
+        "Highlight bad_loans_approved_rate: A 0.300, B 0.107"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 212.0,
+      "end": 228.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-24-ai-in-finance-and-fintech_L07_screen_6.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Keep the output table on screen",
+        "Draw a teal box around Group B false_rejection_rate",
+        "Show a short caption: Main measure: false rejection rate"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 228.3,
+      "end": 249.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-24-ai-in-finance-and-fintech_L07_screen_7.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Click in the counts line",
+        "Change 95 to 45",
+        "Change 265 to 315",
+        "Open Runtime and click Run all",
+        "Highlight the new ratio 0.91 and Group B false_rejection_rate 0.125"
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 249.7,
+      "end": 276.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 276.7,
+      "end": 302.8,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-24-ai-in-finance-and-fintech_M2_L07_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

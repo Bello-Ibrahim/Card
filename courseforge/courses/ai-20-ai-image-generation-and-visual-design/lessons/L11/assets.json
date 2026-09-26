@@ -1,0 +1,155 @@
+{
+  "course_id": "AI-20",
+  "lesson_id": "L11",
+  "presenter_track": {
+    "file": "/incoming/ai-20-ai-image-generation-and-visual-design_M3_L11_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 294.5
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 12.9,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-20-ai-image-generation-and-visual-design_M3_L11_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 12.9,
+      "end": 38.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 38.6,
+      "end": 63.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 63.5,
+      "end": 83.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 83.6,
+      "end": 105.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 105.5,
+      "end": 126.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 126.9,
+      "end": 139.8,
+      "visual_type": "stock",
+      "file": "/incoming/ai-20-ai-image-generation-and-visual-design_L11_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "architect drawing house floor plan"
+    },
+    {
+      "scene": 8,
+      "start": 139.8,
+      "end": 150.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 9,
+      "start": 150.5,
+      "end": 174.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 10,
+      "start": 174.1,
+      "end": 185.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 11,
+      "start": 185.2,
+      "end": 207.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 12,
+      "start": 207.5,
+      "end": 226.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 226.4,
+      "end": 241.8,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 241.8,
+      "end": 268.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 268.4,
+      "end": 294.5,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-20-ai-image-generation-and-visual-design_M3_L11_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

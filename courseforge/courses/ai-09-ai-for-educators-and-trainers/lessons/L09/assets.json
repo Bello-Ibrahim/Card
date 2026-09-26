@@ -1,0 +1,185 @@
+{
+  "course_id": "AI-09",
+  "lesson_id": "L09",
+  "presenter_track": {
+    "file": "/incoming/ai-09-ai-for-educators-and-trainers_M3_L09_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 294.5
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.9,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-09-ai-for-educators-and-trainers_M3_L09_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.9,
+      "end": 34.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 34.3,
+      "end": 63.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 63.0,
+      "end": 85.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 85.3,
+      "end": 96.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 96.0,
+      "end": 112.7,
+      "visual_type": "stock",
+      "file": "/incoming/ai-09-ai-for-educators-and-trainers_L09_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "kitchen scale and thermometer on counter"
+    },
+    {
+      "scene": 7,
+      "start": 112.7,
+      "end": 131.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 131.6,
+      "end": 149.2,
+      "visual_type": "stock",
+      "file": "/incoming/ai-09-ai-for-educators-and-trainers_L09_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "college accounting class students with calculators"
+    },
+    {
+      "scene": 9,
+      "start": 149.2,
+      "end": 172.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 10,
+      "start": 172.8,
+      "end": 187.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-09-ai-for-educators-and-trainers_L09_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open Google Forms and click Blank form",
+        "Name the form 'Depreciation Check'",
+        "Open the Settings tab",
+        "Turn on 'Make this a quiz'",
+        "Choose when marks are released and which feedback learners see"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 187.8,
+      "end": 200.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-09-ai-for-educators-and-trainers_L09_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Back on the Questions tab, set the first question type to Multiple choice",
+        "Paste the question text and the four options",
+        "Click Answer key",
+        "Select the correct option and set the points"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 200.7,
+      "end": 215.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-09-ai-for-educators-and-trainers_L09_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "In the answer key view, click add answer feedback",
+        "Paste the checked explanation for incorrect answers and a short message for correct answers",
+        "Add the remaining nine questions the same way",
+        "Open the question menu and turn on Shuffle option order"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 215.7,
+      "end": 225.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-09-ai-for-educators-and-trainers_L09_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Click the Preview icon",
+        "Answer all ten questions, including one deliberate wrong answer",
+        "Submit and view the score and feedback",
+        "Return to the editor, click Send and copy the link"
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 225.6,
+      "end": 244.0,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 244.0,
+      "end": 270.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 270.1,
+      "end": 294.5,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-09-ai-for-educators-and-trainers_M3_L09_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "course_id": "AI-15",
+  "lesson_id": "L04",
+  "presenter_track": {
+    "file": "/incoming/ai-15-rag-systems-chat-with-your-data_M1_L04_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 293.6
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.4,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_M1_L04_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.4,
+      "end": 29.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 29.1,
+      "end": 50.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 50.1,
+      "end": 75.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 75.8,
+      "end": 97.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 97.7,
+      "end": 114.8,
+      "visual_type": "stock",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L04_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "chef washing and labelling vegetables kitchen"
+    },
+    {
+      "scene": 7,
+      "start": 114.8,
+      "end": 134.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L04_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the drop_repeated_lines function in a notebook cell: Counter over the unique lines of each page, limit = min_share * len(pages), then remove repeated lines.",
+        "Highlight the default min_share=0.6."
+      ]
+    },
+    {
+      "scene": 8,
+      "start": 134.5,
+      "end": 156.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L04_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the pages list: 'Annual Review' header, one sentence, 'Page 1' / 'Page 2' / 'Page 3'.",
+        "Run print(drop_repeated_lines(pages)) and show the exact output: ['Water access rose.\\nPage 1', 'Schools reopened.\\nPage 2', 'Budget was stable.\\nPage 3'].",
+        "Show the page-number regular expression ^Page \\d+$ removing the last line."
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 156.8,
+      "end": 178.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L04_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the folder data/raw/ with 25 PDF files.",
+        "Open the CSV file with columns for file name, source URL and licence."
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 178.7,
+      "end": 201.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L04_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run the loop that reads each PDF page by page with pypdf.",
+        "Apply drop_repeated_lines and the page-number pattern to each document.",
+        "Build records with doc_id, title, page, date and url from the CSV.",
+        "Write data/records.jsonl and show its first lines."
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 201.0,
+      "end": 219.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L04_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Print 3 random records and read them on screen.",
+        "Print a count of empty or very short pages per document.",
+        "Show the skipped list with two scanned reports and the reason 'scanned, no text'."
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 219.0,
+      "end": 243.0,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 243.0,
+      "end": 266.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 266.6,
+      "end": 293.6,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_M1_L04_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

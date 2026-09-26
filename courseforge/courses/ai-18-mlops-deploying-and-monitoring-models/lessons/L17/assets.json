@@ -1,0 +1,187 @@
+{
+  "course_id": "AI-18",
+  "lesson_id": "L17",
+  "presenter_track": {
+    "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_M4_L17_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 293.0
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_M4_L17_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 15.0,
+      "end": 30.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 30.0,
+      "end": 58.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 58.3,
+      "end": 81.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 81.0,
+      "end": 98.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 98.1,
+      "end": 122.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 122.5,
+      "end": 140.1,
+      "visual_type": "stock",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L17_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "mechanics assembling car in workshop"
+    },
+    {
+      "scene": 8,
+      "start": 140.1,
+      "end": 156.4,
+      "visual_type": "stock",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L17_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "technician repairing washing machine at home"
+    },
+    {
+      "scene": 9,
+      "start": 156.4,
+      "end": 170.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L17_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Create the capstone-api repository from the L03 template",
+        "Replace data.py with a loader for her dataset",
+        "Show the source and licence lines in README.md",
+        "Run python train.py twice and show identical metrics"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 170.5,
+      "end": 181.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L17_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Log 4 runs to MLflow",
+        "Open the MLflow UI and compare the runs",
+        "Run python register.py",
+        "Show the registered model with the champion alias, data hash tag and Git commit tag"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 181.6,
+      "end": 195.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L17_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: python export_model.py",
+        "Run: docker build -t repair-api:dev .",
+        "Run: docker run -p 8000:8000 repair-api:dev",
+        "Open /docs and send one valid and one invalid request",
+        "Run: pytest -q and show all tests passing"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 195.7,
+      "end": 219.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L17_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Push a branch with a deliberately broken quality gate",
+        "Open a pull request and show the blocked merge",
+        "Fix the gate, wait for the green check and merge",
+        "Open Actions and show the publish run",
+        "Open Packages and show the image with commit and model tags",
+        "Show the evidence list in README.md"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 219.3,
+      "end": 239.4,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 239.4,
+      "end": 264.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 264.3,
+      "end": 283.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 283.6,
+      "end": 293.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_M4_L17_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "course_id": "AI-22",
+  "lesson_id": "L10",
+  "presenter_track": {
+    "file": "/incoming/ai-22-ai-voice-audio-and-music_M2_L10_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 297.3
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.4,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-22-ai-voice-audio-and-music_M2_L10_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.4,
+      "end": 39.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 39.4,
+      "end": 65.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 65.5,
+      "end": 89.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 89.5,
+      "end": 98.1,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 98.1,
+      "end": 122.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 122.1,
+      "end": 139.2,
+      "visual_type": "stock",
+      "file": "/incoming/ai-22-ai-voice-audio-and-music_L10_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "pilot checking cockpit checklist before takeoff"
+    },
+    {
+      "scene": 8,
+      "start": 139.2,
+      "end": 160.6,
+      "visual_type": "stock",
+      "file": "/incoming/ai-22-ai-voice-audio-and-music_L10_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "teacher preparing geography lesson with photos"
+    },
+    {
+      "scene": 9,
+      "start": 160.6,
+      "end": 184.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 10,
+      "start": 184.6,
+      "end": 204.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 11,
+      "start": 204.3,
+      "end": 220.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 12,
+      "start": 220.2,
+      "end": 226.6,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 226.6,
+      "end": 245.9,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 245.9,
+      "end": 270.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 270.3,
+      "end": 297.3,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-22-ai-voice-audio-and-music_M2_L10_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

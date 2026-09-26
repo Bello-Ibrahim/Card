@@ -1,0 +1,155 @@
+{
+  "course_id": "AI-20",
+  "lesson_id": "L12",
+  "presenter_track": {
+    "file": "/incoming/ai-20-ai-image-generation-and-visual-design_M3_L12_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 296.0
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.4,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-20-ai-image-generation-and-visual-design_M3_L12_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 15.4,
+      "end": 39.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 39.4,
+      "end": 60.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 60.4,
+      "end": 78.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 78.8,
+      "end": 102.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 102.8,
+      "end": 119.9,
+      "visual_type": "stock",
+      "file": "/incoming/ai-20-ai-image-generation-and-visual-design_L12_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "busy restaurant kitchen plating dishes"
+    },
+    {
+      "scene": 7,
+      "start": 119.9,
+      "end": 135.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 135.3,
+      "end": 151.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 9,
+      "start": 151.6,
+      "end": 170.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 10,
+      "start": 170.9,
+      "end": 186.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 11,
+      "start": 186.3,
+      "end": 206.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 12,
+      "start": 206.0,
+      "end": 218.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 218.4,
+      "end": 244.1,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 244.1,
+      "end": 269.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 269.0,
+      "end": 296.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-20-ai-image-generation-and-visual-design_M3_L12_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

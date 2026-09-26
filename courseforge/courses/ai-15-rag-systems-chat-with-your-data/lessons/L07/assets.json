@@ -1,0 +1,162 @@
+{
+  "course_id": "AI-15",
+  "lesson_id": "L07",
+  "presenter_track": {
+    "file": "/incoming/ai-15-rag-systems-chat-with-your-data_M2_L07_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 294.5
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.9,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_M2_L07_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.9,
+      "end": 28.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 28.8,
+      "end": 54.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 54.1,
+      "end": 74.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 74.2,
+      "end": 95.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 95.2,
+      "end": 116.2,
+      "visual_type": "stock",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L07_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "hiring manager interviewing job candidate office"
+    },
+    {
+      "scene": 7,
+      "start": 116.2,
+      "end": 138.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L07_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the rrf function with k=60.",
+        "Show vector_ids = ['c12', 'c7', 'c33', 'c2'] and bm25_ids = ['c90', 'c12', 'c5'].",
+        "Run print(rrf([vector_ids, bm25_ids])) and show the exact output ['c12', 'c90', 'c7', 'c33', 'c5', 'c2']."
+      ]
+    },
+    {
+      "scene": 8,
+      "start": 138.1,
+      "end": 159.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L07_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the product sheet chunks and a sample sheet with code BR-7732.",
+        "Build the BM25 index: lower-case, split into words, BM25Okapi(tokenised).",
+        "Run bm25.get_scores for a code question and show the top chunk IDs."
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 159.1,
+      "end": 180.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L07_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the CrossEncoder cell with RERANK_MODEL read from a variable.",
+        "Build question and chunk pairs for 25 fused candidates and run reranker.predict.",
+        "Print the top 5 IDs before and after reranking side by side."
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 180.1,
+      "end": 202.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 11,
+      "start": 202.4,
+      "end": 223.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L07_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show a small normalise function that removes dashes and spaces from codes.",
+        "Re-run the failed question typed as BR7732 and show the right sheet now retrieved.",
+        "Print the average reranking time per question."
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 223.4,
+      "end": 243.1,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 243.1,
+      "end": 268.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 268.4,
+      "end": 294.5,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_M2_L07_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

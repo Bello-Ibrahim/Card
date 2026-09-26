@@ -1,0 +1,178 @@
+{
+  "course_id": "AI-12",
+  "lesson_id": "L04",
+  "presenter_track": {
+    "file": "/incoming/ai-12-machine-learning-with-scikit-learn_M1_L04_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 291.4
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.9,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_M1_L04_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.9,
+      "end": 35.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 35.2,
+      "end": 57.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 57.9,
+      "end": 79.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 79.3,
+      "end": 92.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 92.6,
+      "end": 112.7,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 112.7,
+      "end": 132.0,
+      "visual_type": "stock",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L04_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "currency exchange rates board banknotes"
+    },
+    {
+      "scene": 8,
+      "start": 132.0,
+      "end": 145.7,
+      "visual_type": "stock",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L04_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "microfinance office South America analyst"
+    },
+    {
+      "scene": 9,
+      "start": 145.7,
+      "end": 161.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L04_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Type this exact code cell from content.md and run it with Shift+Enter:\nimport pandas as pd\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.preprocessing import StandardScaler, OneHotEncoder\n\ndf = pd.DataFrame({\n    \"income\": [1200, 3400, 2500, 5100, 1800, 4200, 2900, 3900],\n    \"age\": [23, 45, 31, 52, 27, 38, 60, 41],\n    \"city\": [\"Lima\", \"Quito\", \"Lima\", \"Bogota\", \"Quito\", \"Lima\", \"Bogota\", \"Quito\"],\n})\ntrain, test = train_test_split(df, test_size=0.25, random_state=0)\n\nscaler = StandardScaler().fit(train[[\"income\", \"age\"]])\nnum_test = scaler.transform(test[[\"income\", \"age\"]])\n\nencoder = OneHotEncoder(handle_unknown=\"ignore\", sparse_output=False)\nencoder.fit(train[[\"city\"]])\ncat_test = encoder.transform(test[[\"city\"]])\n\nprint(num_test.shape, cat_test.shape)\nprint(encoder.get_feature_names_out())\nprint(scaler.mean_.round(1))",
+        "Scroll so the whole cell and its three output lines are visible."
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 161.6,
+      "end": 171.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L04_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight the output line (2, 2) (2, 3).",
+        "Label the first pair 'income, age scaled' and the second pair 'three city columns'."
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 171.5,
+      "end": 185.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L04_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight the output line ['city_Bogota' 'city_Lima' 'city_Quito'].",
+        "Point to the call to get_feature_names_out() in the code."
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 185.6,
+      "end": 204.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L04_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight the output line [3266.7   37.7].",
+        "Point to StandardScaler().fit(train[[\"income\", \"age\"]]) and add the caption 'learned from training rows only'."
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 204.9,
+      "end": 217.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L04_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Scroll back up over the separate scaler and encoder lines to show how much manual work they take."
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 217.3,
+      "end": 240.4,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 240.4,
+      "end": 265.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 265.3,
+      "end": 291.4,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_M1_L04_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

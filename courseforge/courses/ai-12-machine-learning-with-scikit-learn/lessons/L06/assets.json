@@ -1,0 +1,177 @@
+{
+  "course_id": "AI-12",
+  "lesson_id": "L06",
+  "presenter_track": {
+    "file": "/incoming/ai-12-machine-learning-with-scikit-learn_M2_L06_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 304.5
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.6,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_M2_L06_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 17.6,
+      "end": 32.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 32.2,
+      "end": 49.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 49.3,
+      "end": 71.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 71.6,
+      "end": 93.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 93.5,
+      "end": 108.1,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 108.1,
+      "end": 127.4,
+      "visual_type": "stock",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L06_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "panel of judges holding score cards"
+    },
+    {
+      "scene": 8,
+      "start": 127.4,
+      "end": 145.8,
+      "visual_type": "stock",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L06_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "marketing analyst office India laptop"
+    },
+    {
+      "scene": 9,
+      "start": 145.8,
+      "end": 163.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L06_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Scroll past the L05 setup and pipeline cells, already executed.",
+        "Type this exact code cell from content.md and run it with Shift+Enter:\nimport pandas as pd\n\nnames = pipe.named_steps[\"prep\"].get_feature_names_out()\ncoefs = pd.Series(pipe.named_steps[\"model\"].coef_[0], index=names)\nprint(coefs.sort_values().round(2))\n\nprint(pipe.predict_proba(X_test.head(3))[:, 1].round(2))\nprint(pipe.predict(X_test.head(3)))"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 163.8,
+      "end": 181.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L06_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight the last three rows: num__balance 0.42, num__age 0.58, cat__job_retired 0.82."
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 181.8,
+      "end": 197.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L06_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight the first three rows: num__calls -0.69, cat__contact_telephone -0.36, cat__job_technician -0.34."
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 197.7,
+      "end": 217.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L06_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight the output [0.03 0.02 0.17].",
+        "Highlight the output [0 0 0].",
+        "Point to the num__ and cat__ prefixes in the coefficient list."
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 217.0,
+      "end": 231.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L06_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add a text cell: More calls is linked with fewer subscriptions. Cause unknown."
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 231.6,
+      "end": 250.9,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 250.9,
+      "end": 277.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 277.5,
+      "end": 304.5,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_M2_L06_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

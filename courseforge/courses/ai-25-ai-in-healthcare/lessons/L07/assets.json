@@ -1,0 +1,137 @@
+{
+  "course_id": "AI-25",
+  "lesson_id": "L07",
+  "presenter_track": {
+    "file": "/incoming/ai-25-ai-in-healthcare_M2_L07_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 293.9
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.1,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-25-ai-in-healthcare_M2_L07_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 17.1,
+      "end": 40.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 40.2,
+      "end": 65.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 65.1,
+      "end": 87.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 87.0,
+      "end": 109.7,
+      "visual_type": "stock",
+      "file": "/incoming/ai-25-ai-in-healthcare_L07_stock_05.mp4",
+      "status": "PENDING_STOCK",
+      "query": "friendly clinic receptionist helping patient at desk"
+    },
+    {
+      "scene": 6,
+      "start": 109.7,
+      "end": 127.7,
+      "visual_type": "stock",
+      "file": "/incoming/ai-25-ai-in-healthcare_L07_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "nurse educator writing notes at desk"
+    },
+    {
+      "scene": 7,
+      "start": 127.7,
+      "end": 153.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 153.0,
+      "end": 179.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 9,
+      "start": 179.1,
+      "end": 203.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 10,
+      "start": 203.1,
+      "end": 226.2,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 11,
+      "start": 226.2,
+      "end": 251.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 12,
+      "start": 251.9,
+      "end": 268.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 268.6,
+      "end": 293.9,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-25-ai-in-healthcare_M2_L07_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

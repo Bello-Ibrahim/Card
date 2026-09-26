@@ -1,0 +1,205 @@
+{
+  "course_id": "AI-17",
+  "lesson_id": "L13",
+  "presenter_track": {
+    "file": "/incoming/ai-17-data-engineering-for-ai_M3_L13_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 308.1
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-17-data-engineering-for-ai_M3_L13_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 15.0,
+      "end": 33.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 33.4,
+      "end": 48.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 48.4,
+      "end": 62.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 62.1,
+      "end": 83.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 83.5,
+      "end": 104.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 104.1,
+      "end": 116.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 116.1,
+      "end": 134.1,
+      "visual_type": "stock",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L13_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "train station departure board with trains"
+    },
+    {
+      "scene": 9,
+      "start": 134.1,
+      "end": 148.7,
+      "visual_type": "stock",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L13_stock_09.mp4",
+      "status": "PENDING_STOCK",
+      "query": "bakery shelves with fresh bread loaves"
+    },
+    {
+      "scene": 10,
+      "start": 148.7,
+      "end": 162.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L13_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Download the official docker-compose.yaml for the Airflow version from the Airflow documentation",
+        "In the same folder, create dags, logs, plugins and config folders",
+        "On Linux, create .env with AIRFLOW_UID= followed by the output of id -u"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 162.4,
+      "end": 174.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L13_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "In docker-compose.yaml, add volumes such as ./dbt:/opt/airflow/dbt and the scripts folder",
+        "Add dbt through _PIP_ADDITIONAL_REQUIREMENTS, with a 'local testing only' caption",
+        "Run: docker compose up airflow-init",
+        "Run: docker compose up -d"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 174.0,
+      "end": 198.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L13_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Create dags/shop_elt.py",
+        "Paste the DAG code from content.md, with the Airflow 2 import comments visible",
+        "Highlight dag_id, start_date, schedule=\"@daily\" and catchup=False",
+        "Highlight the three BashOperator tasks and {{ ds }} in load_raw"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 198.9,
+      "end": 209.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L13_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight the last line: load_raw >> dbt_run >> dbt_test"
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 209.6,
+      "end": 223.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L13_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open http://localhost:8080 and sign in with the default local account from the documentation",
+        "Find shop_elt in the DAG list",
+        "Switch it on and trigger it manually"
+      ]
+    },
+    {
+      "scene": 15,
+      "start": 223.3,
+      "end": 235.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L13_screen_6.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open the graph view and show load_raw, dbt_run and dbt_test turning green in order",
+        "Open the dbt_run task log and show the dbt output"
+      ]
+    },
+    {
+      "scene": 16,
+      "start": 235.3,
+      "end": 258.4,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 17,
+      "start": 258.4,
+      "end": 284.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 18,
+      "start": 284.5,
+      "end": 308.1,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-17-data-engineering-for-ai_M3_L13_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

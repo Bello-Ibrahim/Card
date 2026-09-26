@@ -1,0 +1,201 @@
+{
+  "course_id": "AI-11",
+  "lesson_id": "L01",
+  "presenter_track": {
+    "file": "/incoming/ai-11-python-for-ai_M1_L01_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 316.5
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.6,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-11-python-for-ai_M1_L01_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 17.6,
+      "end": 32.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 32.2,
+      "end": 46.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 46.3,
+      "end": 66.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 66.9,
+      "end": 87.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 87.9,
+      "end": 102.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 102.5,
+      "end": 117.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 117.9,
+      "end": 139.8,
+      "visual_type": "stock",
+      "file": "/incoming/ai-11-python-for-ai_L01_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "scientist writing in lab notebook"
+    },
+    {
+      "scene": 9,
+      "start": 139.8,
+      "end": 156.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 10,
+      "start": 156.9,
+      "end": 173.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L01_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open colab.research.google.com and sign in with a Google account",
+        "Click New notebook; Untitled0.ipynb opens with one empty code cell",
+        "Click the file name at the top and rename it to: L01 first notebook"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 173.2,
+      "end": 186.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L01_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Click inside the code cell",
+        "Type line 1: print(\"Habari! Karibu kwenye Python.\")",
+        "Type line 2: print(7 * 24)"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 186.1,
+      "end": 202.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L01_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Press Shift + Enter (or click the round play button left of the cell)",
+        "Wait for Colab to connect on the first run",
+        "Output appears below the cell: Habari! Karibu kwenye Python. / 168"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 202.4,
+      "end": 218.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L01_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight the quotation marks around the greeting in line 1",
+        "Highlight 7 * 24 in line 2 and the output 168"
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 218.3,
+      "end": 235.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L01_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Click + Text to add a text cell",
+        "Type the heading: My first notebook, and one sentence about what the code does",
+        "Open File > Save; the notebook is saved to Google Drive"
+      ]
+    },
+    {
+      "scene": 15,
+      "start": 235.9,
+      "end": 254.8,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 254.8,
+      "end": 267.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 17,
+      "start": 267.7,
+      "end": 292.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 18,
+      "start": 292.1,
+      "end": 316.5,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-11-python-for-ai_M1_L01_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

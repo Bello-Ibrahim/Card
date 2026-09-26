@@ -1,0 +1,200 @@
+{
+  "course_id": "AI-20",
+  "lesson_id": "L07",
+  "presenter_track": {
+    "file": "/incoming/ai-20-ai-image-generation-and-visual-design_M2_L07_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 296.1
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 19.7,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-20-ai-image-generation-and-visual-design_M2_L07_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 19.7,
+      "end": 29.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 29.1,
+      "end": 53.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 53.5,
+      "end": 74.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 74.5,
+      "end": 96.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 96.8,
+      "end": 113.1,
+      "visual_type": "stock",
+      "file": "/incoming/ai-20-ai-image-generation-and-visual-design_L07_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "painter repairing patch on wall"
+    },
+    {
+      "scene": 7,
+      "start": 113.1,
+      "end": 122.5,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 122.5,
+      "end": 140.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 9,
+      "start": 140.1,
+      "end": 151.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-20-ai-image-generation-and-visual-design_L07_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open Adobe Firefly and sign in",
+        "Choose the Generative Fill option and upload the square workshop image",
+        "Choose the remove tool or brush",
+        "Paint over the bottle and its shadow"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 151.2,
+      "end": 161.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-20-ai-image-generation-and-visual-design_L07_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Click the remove or generate button",
+        "Compare the results offered",
+        "Choose the one with the cleanest counter surface and keep it"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 161.1,
+      "end": 181.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-20-ai-image-generation-and-visual-design_L07_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Choose the insert or add brush",
+        "Select a small empty area on the right of the counter",
+        "Type: 'a small green potted plant in a metal pot'",
+        "Click Generate",
+        "Choose the result that matches the light direction"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 181.7,
+      "end": 199.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-20-ai-image-generation-and-visual-design_L07_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open the Generative Expand option with the edited image",
+        "Choose the 16:9 aspect ratio from the size or ratio menu",
+        "Move the original image to the right inside the new frame, leaving space on the left"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 199.7,
+      "end": 216.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-20-ai-image-generation-and-visual-design_L07_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Leave the prompt empty, or type 'plain workshop wall'",
+        "Click Generate",
+        "Zoom in on the new edges and check for repeated tools or bent lines",
+        "Download the best result"
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 216.4,
+      "end": 227.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-20-ai-image-generation-and-visual-design_L07_screen_6.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the square original and the final 16:9 banner side by side",
+        "Point to the empty wall on the left, ready for a headline"
+      ]
+    },
+    {
+      "scene": 15,
+      "start": 227.1,
+      "end": 247.2,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 247.2,
+      "end": 273.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 17,
+      "start": 273.8,
+      "end": 296.1,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-20-ai-image-generation-and-visual-design_M2_L07_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "course_id": "AI-23",
+  "lesson_id": "L07",
+  "presenter_track": {
+    "file": "/incoming/ai-23-ai-for-brand-and-product-design_M2_L07_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 315.4
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-23-ai-for-brand-and-product-design_M2_L07_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 15.0,
+      "end": 24.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 24.4,
+      "end": 38.1,
+      "visual_type": "stock",
+      "file": "/incoming/ai-23-ai-for-brand-and-product-design_L07_stock_03.mp4",
+      "status": "PENDING_STOCK",
+      "query": "designer arranging moodboard images on table"
+    },
+    {
+      "scene": 4,
+      "start": 38.1,
+      "end": 58.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 58.7,
+      "end": 77.1,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 77.1,
+      "end": 97.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 97.2,
+      "end": 119.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 119.5,
+      "end": 139.2,
+      "visual_type": "stock",
+      "file": "/incoming/ai-23-ai-for-brand-and-product-design_L07_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "chef arranging colourful spices and ingredients"
+    },
+    {
+      "scene": 9,
+      "start": 139.2,
+      "end": 155.1,
+      "visual_type": "stock",
+      "file": "/incoming/ai-23-ai-for-brand-and-product-design_L07_stock_09.mp4",
+      "status": "PENDING_STOCK",
+      "query": "handmade ceramic bowls in pottery studio"
+    },
+    {
+      "scene": 10,
+      "start": 155.1,
+      "end": 166.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-23-ai-for-brand-and-product-design_L07_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open Google Gemini in a browser and sign in with a Google account",
+        "Check the image visibility or sharing settings and keep images private",
+        "Choose a square aspect ratio for moodboard tiles (if there is no setting, add 'square format' to each prompt)"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 166.2,
+      "end": 186.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-23-ai-for-brand-and-product-design_L07_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Type the Direction A prompt: 'Handmade ceramic bowls on a pale oak table, soft morning window light, muted terracotta and cream, a lot of empty space, calm contemporary kitchen, close-up photograph.'",
+        "Generate a set of images",
+        "Keep the 2 strongest images and type a short note on why each works"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 186.3,
+      "end": 195.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-23-ai-for-brand-and-product-design_L07_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Change the prompt to: 'Hands shaping raw clay, same light and palette.'",
+        "Generate and keep 2 more images for Direction A"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 195.3,
+      "end": 215.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-23-ai-for-brand-and-product-design_L07_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Type the Direction B prompt: 'Glazed ceramic plates in deep cobalt and white, hard midday shadows, bright outdoor courtyard, bold geometric composition.'",
+        "Generate images for Direction B",
+        "Type the Direction C prompt: 'Matte charcoal ceramics on dark slate, a single warm lamp at night, quiet and minimal, wide shot.'",
+        "Generate images for Direction C"
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 215.9,
+      "end": 229.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-23-ai-for-brand-and-product-design_L07_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Generate 6 images for each direction and download them",
+        "Open Figma and create three frames named 'A: Morning Studio', 'B: Courtyard Colour' and 'C: Evening Quiet'",
+        "Place 6 images in each frame"
+      ]
+    },
+    {
+      "scene": 15,
+      "start": 229.6,
+      "end": 245.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-23-ai-for-brand-and-product-design_L07_screen_6.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Under each frame, type one sentence on the idea behind the direction",
+        "Add the label 'AI-generated reference' under each frame",
+        "Zoom out to show all three frames side by side; highlight Direction A and the cobalt accent from B"
+      ]
+    },
+    {
+      "scene": 16,
+      "start": 245.9,
+      "end": 263.9,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 17,
+      "start": 263.9,
+      "end": 290.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 18,
+      "start": 290.5,
+      "end": 315.4,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-23-ai-for-brand-and-product-design_M2_L07_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

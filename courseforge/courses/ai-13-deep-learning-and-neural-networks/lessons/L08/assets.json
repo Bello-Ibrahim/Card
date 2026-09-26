@@ -1,0 +1,185 @@
+{
+  "course_id": "AI-13",
+  "lesson_id": "L08",
+  "presenter_track": {
+    "file": "/incoming/ai-13-deep-learning-and-neural-networks_M2_L08_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 289.4
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.6,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_M2_L08_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 17.6,
+      "end": 39.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 39.9,
+      "end": 53.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 53.6,
+      "end": 70.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 70.7,
+      "end": 83.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 83.6,
+      "end": 96.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 96.0,
+      "end": 118.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 118.7,
+      "end": 135.0,
+      "visual_type": "stock",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L08_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "doctor reviewing patient chart in hospital"
+    },
+    {
+      "scene": 9,
+      "start": 135.0,
+      "end": 150.9,
+      "visual_type": "stock",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L08_stock_09.mp4",
+      "status": "PENDING_STOCK",
+      "query": "wheat fields under wide blue sky"
+    },
+    {
+      "scene": 10,
+      "start": 150.9,
+      "end": 164.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L08_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run the plot_curves cell from content.md: plot train_loss and val_loss against epochs, best = epoch with lowest val_loss, plt.axvline(best + 1, linestyle=\"--\", color=\"grey\"), legend, return best + 1",
+        "Highlight the axvline line"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 164.2,
+      "end": 178.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L08_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: best_epoch = plot_curves(history[\"train_loss\"], history[\"val_loss\"], \"CNN, 10k images\")",
+        "Point to the training line falling, the validation minimum near epoch 6 and the dashed marker"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 178.3,
+      "end": 192.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L08_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add a text cell under the chart: Diagnosis: overfitting after epoch 6; small subset; epoch-6 model is the best",
+        "Print best_epoch"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 192.4,
+      "end": 210.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L08_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add RandomHorizontalFlip and RandomCrop(28, padding=2) to the training transform (from L06)",
+        "Retrain and plot the old and new validation curves on one chart"
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 210.0,
+      "end": 231.9,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 231.9,
+      "end": 241.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 241.8,
+      "end": 265.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 17,
+      "start": 265.8,
+      "end": 289.4,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_M2_L08_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "course_id": "AI-16",
+  "lesson_id": "L05",
+  "presenter_track": {
+    "file": "/incoming/ai-16-ai-agents-and-automation-workflows_M2_L05_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 294.0
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 13.3,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_M2_L05_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 13.3,
+      "end": 26.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 26.6,
+      "end": 39.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 39.5,
+      "end": 56.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 56.6,
+      "end": 67.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 67.3,
+      "end": 90.4,
+      "visual_type": "stock",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L05_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "person posting envelope at post office"
+    },
+    {
+      "scene": 7,
+      "start": 90.4,
+      "end": 115.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 115.7,
+      "end": 138.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 9,
+      "start": 138.4,
+      "end": 156.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L05_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the 'reviews' sheet: review_id, review, summary, tokens, with 5 invented reviews",
+        "Open the Claude Console and create an API key (blurred)",
+        "Set a monthly spending limit"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 156.0,
+      "end": 169.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L05_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Credentials → new Header Auth credential named 'Claude API'",
+        "Name: x-api-key, Value: the key (blurred)",
+        "New workflow: Manual Trigger → Google Sheets (get rows from 'reviews')"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 169.3,
+      "end": 183.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L05_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add an HTTP Request node",
+        "Method POST, URL https://api.anthropic.com/v1/messages",
+        "Authentication: the 'Claude API' Header Auth credential",
+        "Add headers anthropic-version and content-type",
+        "Paste the JSON body from content.md with the review expression"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 183.9,
+      "end": 197.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L05_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Limit the run to one item",
+        "Execute the HTTP Request node",
+        "Open the output and point to content[0].text (example output)",
+        "Point to usage: input_tokens and output_tokens"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 197.2,
+      "end": 221.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L05_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add Edit Fields (Set): summary = {{ $json.content[0].text }}, tokens = input + output tokens, keep review_id",
+        "Add Google Sheets (update row, match on review_id)",
+        "Remove the one-item limit and run all 5",
+        "Show the sheet with 5 summaries and token counts"
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 221.6,
+      "end": 238.7,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 238.7,
+      "end": 268.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 268.3,
+      "end": 294.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_M2_L05_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

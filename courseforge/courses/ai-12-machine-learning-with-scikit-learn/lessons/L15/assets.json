@@ -1,0 +1,168 @@
+{
+  "course_id": "AI-12",
+  "lesson_id": "L15",
+  "presenter_track": {
+    "file": "/incoming/ai-12-machine-learning-with-scikit-learn_M4_L15_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 298.7
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.4,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_M4_L15_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.4,
+      "end": 36.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 36.0,
+      "end": 54.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 54.9,
+      "end": 78.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 78.9,
+      "end": 99.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 99.9,
+      "end": 120.0,
+      "visual_type": "stock",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L15_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "band rehearsing drums guitars studio"
+    },
+    {
+      "scene": 7,
+      "start": 120.0,
+      "end": 136.3,
+      "visual_type": "stock",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L15_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "data scientist presenting to sales team"
+    },
+    {
+      "scene": 8,
+      "start": 136.3,
+      "end": 153.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L15_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Scroll past the L05 setup and pipeline cells, already executed.",
+        "Type this exact code cell from content.md and run it with Shift+Enter:\nfrom sklearn.inspection import permutation_importance\nimport pandas as pd\n\nresult = permutation_importance(pipe, X_test, y_test, scoring=\"roc_auc\",\n                                n_repeats=20, random_state=42)\nimp = pd.DataFrame({\"mean\": result.importances_mean, \"std\": result.importances_std},\n                   index=X_test.columns)\nprint(imp.sort_values(\"mean\", ascending=False).round(3))"
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 153.0,
+      "end": 169.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L15_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight the rows calls 0.078, age 0.066 and job 0.065."
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 169.7,
+      "end": 191.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L15_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight the row contact 0.030 0.013.",
+        "Highlight the row balance 0.011 0.012 and label it 'no clear effect'."
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 191.1,
+      "end": 207.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L15_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add a text cell and type sentence 1 from content.md."
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 207.0,
+      "end": 226.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L15_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Type sentences 2 and 3 from content.md in the same text cell.",
+        "Highlight 'not proof'."
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 226.7,
+      "end": 244.7,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 244.7,
+      "end": 270.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 270.0,
+      "end": 298.7,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_M4_L15_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

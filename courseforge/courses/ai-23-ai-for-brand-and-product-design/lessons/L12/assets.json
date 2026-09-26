@@ -1,0 +1,206 @@
+{
+  "course_id": "AI-23",
+  "lesson_id": "L12",
+  "presenter_track": {
+    "file": "/incoming/ai-23-ai-for-brand-and-product-design_M3_L12_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 313.5
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-23-ai-for-brand-and-product-design_M3_L12_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 15.0,
+      "end": 26.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 26.6,
+      "end": 47.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 47.6,
+      "end": 66.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 66.5,
+      "end": 87.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 87.5,
+      "end": 97.8,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 97.8,
+      "end": 119.7,
+      "visual_type": "stock",
+      "file": "/incoming/ai-23-ai-for-brand-and-product-design_L12_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "person testing mobile app while designer observes"
+    },
+    {
+      "scene": 8,
+      "start": 119.7,
+      "end": 135.6,
+      "visual_type": "stock",
+      "file": "/incoming/ai-23-ai-for-brand-and-product-design_L12_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "theatre actors rehearsing on empty stage"
+    },
+    {
+      "scene": 9,
+      "start": 135.6,
+      "end": 154.5,
+      "visual_type": "stock",
+      "file": "/incoming/ai-23-ai-for-brand-and-product-design_L12_stock_09.mp4",
+      "status": "PENDING_STOCK",
+      "query": "busy street food stall at lunchtime"
+    },
+    {
+      "scene": 10,
+      "start": 154.5,
+      "end": 171.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-23-ai-for-brand-and-product-design_L12_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open the 'final' page with the 5 rebuilt screens from L11",
+        "Switch to Prototype mode",
+        "Select the 'Order' button on the item detail screen and drag the connection to the pickup time screen",
+        "Set the trigger to 'On tap' and choose a slide animation",
+        "Repeat for the other screens"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 171.2,
+      "end": 187.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-23-ai-for-brand-and-product-design_L12_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Set the menu screen as the flow's starting point and name the flow 'Pre-order lunch'",
+        "Switch to Claude and type: 'List 8 edge cases in a lunch pre-order flow.'",
+        "Highlight two items in the answer: 'chosen pickup time is now full' and 'no past orders' (empty state)"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 187.5,
+      "end": 201.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-23-ai-for-brand-and-product-design_L12_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "In Claude, ask for 5 microcopy options for the full-time-slot error, with the tone and length rules",
+        "Pick one option and edit it to: '12:30 is full. Choose 12:45 or later.'"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 201.6,
+      "end": 217.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-23-ai-for-brand-and-product-design_L12_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Back in Figma, duplicate the pickup time screen",
+        "Add the error message and a disabled 12:30 option, then connect the new screen in the flow",
+        "Create the empty state for 'My orders' with an illustration and a button to the menu"
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 217.9,
+      "end": 227.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-23-ai-for-brand-and-product-design_L12_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Make the time-slot component interactive with two variants: selected and not selected",
+        "Click Present and run the whole flow once, from menu to success"
+      ]
+    },
+    {
+      "scene": 15,
+      "start": 227.8,
+      "end": 246.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-23-ai-for-brand-and-product-design_L12_screen_6.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the task card: 'Order a bowl of noodles for 12:30.'",
+        "Play the tester's taps on the prototype: two taps on the disabled 12:30 slot before reading the message",
+        "In Figma, move the error message above the time slots"
+      ]
+    },
+    {
+      "scene": 16,
+      "start": 246.7,
+      "end": 266.4,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 17,
+      "start": 266.4,
+      "end": 289.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 18,
+      "start": 289.5,
+      "end": 313.5,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-23-ai-for-brand-and-product-design_M3_L12_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

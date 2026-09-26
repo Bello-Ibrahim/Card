@@ -1,0 +1,163 @@
+{
+  "course_id": "AI-01",
+  "lesson_id": "L01",
+  "presenter_track": {
+    "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_M1_L01_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 303.7
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "RENDERED"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.6,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_M1_L01_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 17.6,
+      "end": 26.2,
+      "visual_type": "slide",
+      "file": "assets/slides/s02.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 26.2,
+      "end": 41.6,
+      "visual_type": "slide",
+      "file": "assets/slides/s03.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 41.6,
+      "end": 60.5,
+      "visual_type": "slide",
+      "file": "assets/slides/s04.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 60.5,
+      "end": 76.4,
+      "visual_type": "stock",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_L01_stock_05.mp4",
+      "status": "PENDING_STOCK",
+      "query": "person frowning at email inbox laptop"
+    },
+    {
+      "scene": 6,
+      "start": 76.4,
+      "end": 97.0,
+      "visual_type": "slide",
+      "file": "assets/slides/s06.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 97.0,
+      "end": 112.9,
+      "visual_type": "hero_broll",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_L01_broll_1.mp4",
+      "status": "PENDING_UPLOAD"
+    },
+    {
+      "scene": 8,
+      "start": 112.9,
+      "end": 127.5,
+      "visual_type": "stock",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_L01_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "person walking confidently through city streets"
+    },
+    {
+      "scene": 9,
+      "start": 127.5,
+      "end": 154.9,
+      "visual_type": "slide",
+      "file": "assets/slides/s09.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 10,
+      "start": 154.9,
+      "end": 171.6,
+      "visual_type": "stock",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_L01_stock_10.mp4",
+      "status": "PENDING_STOCK",
+      "query": "handmade woven baskets market stall"
+    },
+    {
+      "scene": 11,
+      "start": 171.6,
+      "end": 194.3,
+      "visual_type": "slide",
+      "file": "assets/slides/s11.png",
+      "status": "RENDERED",
+      "needs_design": true
+    },
+    {
+      "scene": 12,
+      "start": 194.3,
+      "end": 216.6,
+      "visual_type": "slide",
+      "file": "assets/slides/s12.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 216.6,
+      "end": 231.2,
+      "visual_type": "slide",
+      "file": "assets/slides/s13.png",
+      "status": "RENDERED",
+      "needs_design": true
+    },
+    {
+      "scene": 14,
+      "start": 231.2,
+      "end": 254.8,
+      "visual_type": "text",
+      "file": "assets/slides/s14.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 254.8,
+      "end": 279.7,
+      "visual_type": "slide",
+      "file": "assets/slides/s15.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 279.7,
+      "end": 303.7,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_M1_L01_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

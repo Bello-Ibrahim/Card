@@ -1,0 +1,181 @@
+{
+  "course_id": "AI-17",
+  "lesson_id": "L15",
+  "presenter_track": {
+    "file": "/incoming/ai-17-data-engineering-for-ai_M4_L15_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 311.6
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.6,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-17-data-engineering-for-ai_M4_L15_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 17.6,
+      "end": 28.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 28.7,
+      "end": 49.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 49.7,
+      "end": 79.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 79.3,
+      "end": 94.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 94.3,
+      "end": 123.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 123.0,
+      "end": 140.6,
+      "visual_type": "stock",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L15_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "weather forecast map on screen"
+    },
+    {
+      "scene": 8,
+      "start": 140.6,
+      "end": 158.2,
+      "visual_type": "stock",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L15_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "loan officer reviewing documents at desk"
+    },
+    {
+      "scene": 9,
+      "start": 158.2,
+      "end": 179.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L15_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open a Python session and connect to DuckDB",
+        "Run the CREATE TABLE ml_ready AS SELECT md5(borrower_id || 'course-salt-2026') AS borrower_key ... query from content.md",
+        "Caption: in real use the salt is a secret stored outside the code"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 179.2,
+      "end": 193.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L15_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run COPY (SELECT * FROM ml_ready WHERE feature_date < DATE '2026-04-01') TO 'train.parquet' (FORMAT parquet)",
+        "Run COPY (SELECT * FROM ml_ready WHERE feature_date >= DATE '2026-04-01') TO 'test.parquet' (FORMAT parquet)"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 193.3,
+      "end": 209.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L15_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run the check query from content.md with UNION ALL over 'train.parquet' and 'test.parquet'",
+        "Show the output: train | 3 | 2026-01-01 | 2026-03-01 and test | 3 | 2026-04-01 | 2026-05-01"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 209.6,
+      "end": 220.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L15_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight the 2026-03-01 train row and the 90-day label window overlapping April",
+        "Add a note: real dataset needs a gap"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 220.7,
+      "end": 243.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L15_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open a new datasheet file in the editor",
+        "Fill in: source (loan system, nightly), grain (one borrower per month), date range, split rule, personal data removed",
+        "Add known issues (few borrowers from rural branches) and intended use (payment reminder ranking, not rejecting loans)"
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 243.0,
+      "end": 267.0,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 267.0,
+      "end": 288.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 288.9,
+      "end": 311.6,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-17-data-engineering-for-ai_M4_L15_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

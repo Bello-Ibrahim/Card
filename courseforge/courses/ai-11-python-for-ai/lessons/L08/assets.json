@@ -1,0 +1,175 @@
+{
+  "course_id": "AI-11",
+  "lesson_id": "L08",
+  "presenter_track": {
+    "file": "/incoming/ai-11-python-for-ai_M2_L08_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 296.8
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.4,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-11-python-for-ai_M2_L08_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 15.4,
+      "end": 33.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 33.4,
+      "end": 54.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 54.4,
+      "end": 72.8,
+      "visual_type": "stock",
+      "file": "/incoming/ai-11-python-for-ai_L08_stock_04.mp4",
+      "status": "PENDING_STOCK",
+      "query": "doctor explaining x-ray to patient"
+    },
+    {
+      "scene": 5,
+      "start": 72.8,
+      "end": 92.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 92.5,
+      "end": 118.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 118.2,
+      "end": 138.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 138.8,
+      "end": 152.5,
+      "visual_type": "stock",
+      "file": "/incoming/ai-11-python-for-ai_L08_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "colourful spices in market sacks"
+    },
+    {
+      "scene": 9,
+      "start": 152.5,
+      "end": 164.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L08_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add a new code cell",
+        "Type: prices = [4, 6, 9]",
+        "Type: print(prices[3])",
+        "Press Shift + Enter; a traceback appears"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 164.9,
+      "end": 188.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L08_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight the last line: IndexError: list index out of range",
+        "Highlight the marked line above: print(prices[3])",
+        "Change prices[3] to prices[2] (or prices[-1])",
+        "Press Shift + Enter; the cell runs"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 188.9,
+      "end": 209.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L08_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add a new code cell",
+        "Type: def ask_boxes(answer):",
+        "Type (indented): try: / return int(answer)",
+        "Type (indented): except ValueError: / print(\"Please type a whole number, such as 12.\") / return None"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 209.0,
+      "end": 228.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L08_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Type: print(ask_boxes(\"12\"))",
+        "Type: print(ask_boxes(\"twelve\"))",
+        "Press Shift + Enter",
+        "Output: 12 / Please type a whole number, such as 12. / None"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 228.3,
+      "end": 252.7,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 252.7,
+      "end": 276.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 276.7,
+      "end": 296.8,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-11-python-for-ai_M2_L08_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

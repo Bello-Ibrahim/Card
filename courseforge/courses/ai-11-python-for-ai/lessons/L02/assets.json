@@ -1,0 +1,193 @@
+{
+  "course_id": "AI-11",
+  "lesson_id": "L02",
+  "presenter_track": {
+    "file": "/incoming/ai-11-python-for-ai_M1_L02_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 298.1
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.9,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-11-python-for-ai_M1_L02_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 15.9,
+      "end": 30.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 30.5,
+      "end": 50.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 50.2,
+      "end": 69.1,
+      "visual_type": "stock",
+      "file": "/incoming/ai-11-python-for-ai_L02_stock_04.mp4",
+      "status": "PENDING_STOCK",
+      "query": "labelled storage boxes on shelf"
+    },
+    {
+      "scene": 5,
+      "start": 69.1,
+      "end": 92.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 92.7,
+      "end": 110.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 110.3,
+      "end": 120.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 120.6,
+      "end": 139.0,
+      "visual_type": "stock",
+      "file": "/incoming/ai-11-python-for-ai_L02_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "small grocery shop counter Kenya"
+    },
+    {
+      "scene": 9,
+      "start": 139.0,
+      "end": 160.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L02_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add a new code cell",
+        "Type: rice_price = 3.50  # float",
+        "Type: rice_qty = 2  # int",
+        "Type: shop_name = \"Duka La Wanjiru\"  # str",
+        "Type: is_open = True  # bool",
+        "Type: print(type(rice_price), type(rice_qty), type(shop_name), type(is_open))"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 160.9,
+      "end": 169.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L02_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Press Shift + Enter",
+        "Output: <class 'float'> <class 'int'> <class 'str'> <class 'bool'>"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 169.0,
+      "end": 184.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L02_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add a new code cell",
+        "Type: tea_price = 1.25 and tea_qty = 4",
+        "Type: subtotal = rice_price * rice_qty + tea_price * tea_qty",
+        "Type: tax = subtotal * 0.10",
+        "Type: total = subtotal + tax"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 184.9,
+      "end": 209.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L02_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Type: print(f\"{shop_name}: subtotal {subtotal:.2f}, tax {tax:.2f}, total {total:.2f}\")",
+        "Highlight the f before the quotes and the :.2f parts",
+        "Press Shift + Enter",
+        "Output: Duka La Wanjiru: subtotal 12.00, tax 1.20, total 13.20"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 209.3,
+      "end": 231.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L02_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add a new code cell",
+        "Type: typed = \"3\"",
+        "Type: print(typed + typed)",
+        "Type: print(int(typed) + int(typed))",
+        "Type: print(\"Items: \" + str(rice_qty + tea_qty))",
+        "Press Shift + Enter",
+        "Output: 33 / 6 / Items: 6"
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 231.2,
+      "end": 250.5,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 250.5,
+      "end": 274.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 274.1,
+      "end": 298.1,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-11-python-for-ai_M1_L02_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

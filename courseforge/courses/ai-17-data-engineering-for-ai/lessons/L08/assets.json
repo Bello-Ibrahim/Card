@@ -1,0 +1,181 @@
+{
+  "course_id": "AI-17",
+  "lesson_id": "L08",
+  "presenter_track": {
+    "file": "/incoming/ai-17-data-engineering-for-ai_M2_L08_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 293.9
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 19.3,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-17-data-engineering-for-ai_M2_L08_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 19.3,
+      "end": 40.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 40.7,
+      "end": 63.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 63.8,
+      "end": 79.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 79.7,
+      "end": 101.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 101.1,
+      "end": 115.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 115.2,
+      "end": 133.2,
+      "visual_type": "stock",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L08_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "student studying for exam at desk"
+    },
+    {
+      "scene": 8,
+      "start": 133.2,
+      "end": 152.9,
+      "visual_type": "stock",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L08_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "person topping up mobile phone credit"
+    },
+    {
+      "scene": 9,
+      "start": 152.9,
+      "end": 161.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L08_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open dbt_project.yml",
+        "Add: vars: feature_date: '2026-03-01'"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 161.5,
+      "end": 175.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L08_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Create models/marts/fct_customer_features.sql",
+        "Type the select list from content.md: customer_id, feature_date, recharges_90d, spend_90d_brl, last_recharge_date, days_since_last",
+        "Show from {{ ref('stg_recharges') }} and group by customer_id"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 175.6,
+      "end": 188.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L08_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight the where clause: recharge_date < feature_date and recharge_date >= feature_date - interval '90 days'",
+        "Highlight each {{ var(\"feature_date\") }} reference"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 188.0,
+      "end": 203.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L08_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: dbt run --select fct_customer_features",
+        "Query the table and show the three rows exactly as in content.md",
+        "Highlight the M01 row: 3 | 70.0 | 2026-02-20 | 9"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 203.9,
+      "end": 228.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L08_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the stg_recharges rows for M01 on 2026-03-05 and M03 on 2026-03-10, greyed out and marked 'after feature date'",
+        "Cut to her notes: feature, formula, 90-day window, based on 2026-03-01"
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 228.8,
+      "end": 245.5,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 245.5,
+      "end": 271.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 271.2,
+      "end": 293.9,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-17-data-engineering-for-ai_M2_L08_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

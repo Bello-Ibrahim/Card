@@ -1,0 +1,182 @@
+{
+  "course_id": "AI-26",
+  "lesson_id": "L10",
+  "presenter_track": {
+    "file": "/incoming/ai-26-ai-for-customer-experience-and-support_M3_L10_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 297.9
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-26-ai-for-customer-experience-and-support_M3_L10_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 15.0,
+      "end": 29.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 29.1,
+      "end": 51.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 51.0,
+      "end": 64.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 64.7,
+      "end": 90.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 90.0,
+      "end": 111.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 111.0,
+      "end": 131.6,
+      "visual_type": "stock",
+      "file": "/incoming/ai-26-ai-for-customer-experience-and-support_L10_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "hotel receptionist writing a message note"
+    },
+    {
+      "scene": 8,
+      "start": 131.6,
+      "end": 145.3,
+      "visual_type": "stock",
+      "file": "/incoming/ai-26-ai-for-customer-experience-and-support_L10_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "safari vehicle on savanna at sunrise"
+    },
+    {
+      "scene": 9,
+      "start": 145.3,
+      "end": 163.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-26-ai-for-customer-experience-and-support_L10_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open the test bot in Botpress and go to the human hand-off (HITL) settings",
+        "Add trigger phrases and topics: 'person', 'agent', 'change my booking', 'injured', 'medical'",
+        "Show the list of triggers saved"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 163.7,
+      "end": 183.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-26-ai-for-customer-experience-and-support_L10_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "In the hand-off step, add the question: 'May I have your email address so a colleague can reply? I will share a summary of our chat with them.'",
+        "Add the summary fields: Need, Trigger, Details, Assistant said, Mood, Urgency"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 183.0,
+      "end": 203.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-26-ai-for-customer-experience-and-support_L10_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Option A (record): choose the builder's email notification and enter the test support inbox address",
+        "Option B (optional insert, only if confirmed): send the hand-off to a Zapier or n8n automation that emails the team and adds a row to a 'Hand-offs' sheet"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 203.1,
+      "end": 220.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-26-ai-for-customer-experience-and-support_L10_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open the out-of-hours message setting",
+        "Type: 'Our team is offline now. A person will read your message and reply by email when the office opens. For an emergency during your trip, use the emergency number in your travel documents.'"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 220.7,
+      "end": 236.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-26-ai-for-customer-experience-and-support_L10_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open the 'Emulator' test chat and type a made-up request: 'I want to change my booking, can I talk to a person?'",
+        "Switch to the test inbox and open the summary; highlight the missing email field in red",
+        "Back in the builder, move the Collect step before the Send step",
+        "Retest and show the complete summary in the inbox"
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 236.6,
+      "end": 252.5,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 252.5,
+      "end": 273.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 273.9,
+      "end": 297.9,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-26-ai-for-customer-experience-and-support_M3_L10_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

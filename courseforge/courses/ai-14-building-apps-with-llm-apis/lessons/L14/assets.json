@@ -1,0 +1,178 @@
+{
+  "course_id": "AI-14",
+  "lesson_id": "L14",
+  "presenter_track": {
+    "file": "/incoming/ai-14-building-apps-with-llm-apis_M4_L14_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 292.1
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.9,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_M4_L14_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 15.9,
+      "end": 33.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 33.9,
+      "end": 61.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 61.8,
+      "end": 86.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 86.7,
+      "end": 103.0,
+      "visual_type": "stock",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L14_stock_05.mp4",
+      "status": "PENDING_STOCK",
+      "query": "architect drawing floor plan on paper"
+    },
+    {
+      "scene": 6,
+      "start": 103.0,
+      "end": 126.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 126.1,
+      "end": 139.0,
+      "visual_type": "stock",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L14_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "recruiter reading job advert on computer"
+    },
+    {
+      "scene": 8,
+      "start": 139.0,
+      "end": 161.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L14_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open spec.md in VS Code",
+        "Scroll through the six headings: User and problem, Input and output, Prompt plan, Tool (optional), Limits, Success",
+        "Highlight the Limits section: small model placeholder, low max_tokens, spend limit set, no personal data",
+        "Highlight the Success line: 5 invented test adverts return correct fields"
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 161.7,
+      "end": 175.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L14_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open schema.py in VS Code",
+        "Highlight the JobAnalysis Pydantic class",
+        "Point to the optional salary_min, salary_max and currency fields",
+        "Point to red_flags with the comment e.g. 'no salary given'"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 175.0,
+      "end": 189.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L14_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open core.py and highlight analyse()",
+        "Highlight the <advert> tags and output_format=JobAnalysis",
+        "Highlight the stop_reason check that raises 'Stopped early'",
+        "Run python core.py adverts/advert_01.txt and show the printed object"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 189.6,
+      "end": 201.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L14_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open app.py and highlight st.json(analysis.model_dump())",
+        "Highlight st.write_stream() for the comment",
+        "Run streamlit run app.py, paste an invented advert and show the fields, then the streamed comment"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 201.2,
+      "end": 225.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L14_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Paste the Polish advert and show the parsed fields",
+        "Paste the advert with no salary and show salary_min empty and 'no salary given' in red_flags (example output)",
+        "Show the spec line: 'Tool (optional): read-only salary table, after core tests pass'"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 225.2,
+      "end": 243.2,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 243.2,
+      "end": 268.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 268.1,
+      "end": 292.1,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_M4_L14_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

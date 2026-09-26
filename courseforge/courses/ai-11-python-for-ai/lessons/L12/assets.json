@@ -1,0 +1,164 @@
+{
+  "course_id": "AI-11",
+  "lesson_id": "L12",
+  "presenter_track": {
+    "file": "/incoming/ai-11-python-for-ai_M3_L12_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 289.4
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-11-python-for-ai_M3_L12_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 15.0,
+      "end": 37.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 37.3,
+      "end": 51.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 51.4,
+      "end": 70.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 70.7,
+      "end": 91.3,
+      "visual_type": "stock",
+      "file": "/incoming/ai-11-python-for-ai_L12_stock_05.mp4",
+      "status": "PENDING_STOCK",
+      "query": "flour being sifted through sieve"
+    },
+    {
+      "scene": 6,
+      "start": 91.3,
+      "end": 120.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 120.0,
+      "end": 137.6,
+      "visual_type": "stock",
+      "file": "/incoming/ai-11-python-for-ai_L12_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "university student studying with laptop"
+    },
+    {
+      "scene": 8,
+      "start": 137.6,
+      "end": 150.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L12_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run the L11 sample cell so df exists",
+        "Add a new code cell",
+        "Type: latest = df[df[\"year\"] == df[\"year\"].max()]"
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 150.5,
+      "end": 166.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L12_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Type: mask = latest[\"continent\"].isin([\"Africa\", \"Americas\"]) & (latest[\"lifeExp\"] > 60)",
+        "Type: result = latest.loc[mask, [\"country\", \"continent\", \"lifeExp\"]]",
+        "Type: print(result) and print(len(result))"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 166.4,
+      "end": 189.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L12_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Press Shift + Enter",
+        "Output: Ghana Africa 60.1 (index 5) / Peru Americas 71.6 (index 8) / Chile Americas 78.5 (index 11) / 3",
+        "Point at the index labels 5, 8, 11"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 189.1,
+      "end": 212.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L12_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add a new code cell",
+        "Type: asia07 = df[(df[\"continent\"] == \"Asia\") & (df[\"year\"] == 2007)]",
+        "Type: print(asia07.sort_values(\"pop\", ascending=False)[[\"country\", \"pop\"]])",
+        "Press Shift + Enter",
+        "Output: Vietnam 85000000 (index 14) / Nepal 28000000 (index 17)"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 212.7,
+      "end": 240.1,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 240.1,
+      "end": 264.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 264.5,
+      "end": 289.4,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-11-python-for-ai_M3_L12_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

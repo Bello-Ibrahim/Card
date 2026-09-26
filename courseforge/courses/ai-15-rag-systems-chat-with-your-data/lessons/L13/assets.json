@@ -1,0 +1,153 @@
+{
+  "course_id": "AI-15",
+  "lesson_id": "L13",
+  "presenter_track": {
+    "file": "/incoming/ai-15-rag-systems-chat-with-your-data_M4_L13_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 293.4
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.4,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_M4_L13_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.4,
+      "end": 28.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 28.3,
+      "end": 57.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 57.4,
+      "end": 77.1,
+      "visual_type": "stock",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L13_stock_04.mp4",
+      "status": "PENDING_STOCK",
+      "query": "hotel guest opening room door with key card"
+    },
+    {
+      "scene": 5,
+      "start": 77.1,
+      "end": 103.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 103.2,
+      "end": 127.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 127.2,
+      "end": 150.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L13_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the ingestion step writing access = public, clinical or hr into chunk metadata.",
+        "Show ROLE_ACCESS and retrieve_for_user with where={'access': {'$in': allowed}}.",
+        "Show the role read from the login session, with unknown roles falling back to public."
+      ]
+    },
+    {
+      "scene": 8,
+      "start": 150.3,
+      "end": 176.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L13_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Index hr-test-secret containing 'BLUE-HERON-42' with access: hr.",
+        "Run 10 questions as role nurse, including 'What is BLUE-HERON-42?'.",
+        "Show the assertions: hr-test-secret never in retrieved IDs, phrase never in the answer; test passes."
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 176.0,
+      "end": 199.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L13_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Index a test leaflet with the injected sentence.",
+        "Ask a question that retrieves it and show the answer from the real run.",
+        "Show the ingestion scan output flagging the leaflet."
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 199.1,
+      "end": 218.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L13_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run col.delete(where={'doc_id': 'hr-test-secret'}).",
+        "Ask as role hr and show that the document is no longer retrieved.",
+        "Show the project notes entry for the legal team's answer."
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 218.0,
+      "end": 242.9,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 12,
+      "start": 242.9,
+      "end": 269.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 269.0,
+      "end": 293.4,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_M4_L13_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

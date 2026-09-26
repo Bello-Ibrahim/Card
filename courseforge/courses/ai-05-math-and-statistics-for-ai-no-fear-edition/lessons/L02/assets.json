@@ -1,0 +1,183 @@
+{
+  "course_id": "AI-05",
+  "lesson_id": "L02",
+  "presenter_track": {
+    "file": "/incoming/ai-05-math-and-statistics-for-ai-no-fear-edition_M1_L02_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 313.0
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-05-math-and-statistics-for-ai-no-fear-edition_M1_L02_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.0,
+      "end": 36.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 36.0,
+      "end": 57.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 57.0,
+      "end": 80.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 80.1,
+      "end": 105.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 105.0,
+      "end": 129.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 129.9,
+      "end": 150.9,
+      "visual_type": "stock",
+      "file": "/incoming/ai-05-math-and-statistics-for-ai-no-fear-edition_L02_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "handwritten recipe card eggs flour milk"
+    },
+    {
+      "scene": 8,
+      "start": 150.9,
+      "end": 162.5,
+      "visual_type": "stock",
+      "file": "/incoming/ai-05-math-and-statistics-for-ai-no-fear-edition_L02_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "apartment buildings Lisbon street"
+    },
+    {
+      "scene": 9,
+      "start": 162.5,
+      "end": 183.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 10,
+      "start": 183.5,
+      "end": 205.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-05-math-and-statistics-for-ai-no-fear-edition_L02_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open the Desmos graphing calculator in a browser.",
+        "Line 1: type a=(3,1).",
+        "Line 2: type b=(1,2).",
+        "Line 3: type vector((0,0),a).",
+        "Line 4: type vector((0,0),b)."
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 205.4,
+      "end": 221.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-05-math-and-statistics-for-ai-no-fear-edition_L02_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Type vector(a,a+b) to place arrow b at the tip of arrow a.",
+        "Type vector((0,0),a+b).",
+        "Hover over the end point to show (4, 3)."
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 221.3,
+      "end": 231.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-05-math-and-statistics-for-ai-no-fear-edition_L02_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Type 2a on a new line.",
+        "Show the point (6, 2) on the same line as a.",
+        "Hover to show the coordinates (6, 2)."
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 231.6,
+      "end": 249.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-05-math-and-statistics-for-ai-no-fear-edition_L02_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open a Colab notebook.",
+        "Type: import numpy as np; a = np.array([3, 1]); b = np.array([1, 2])",
+        "Type: print(a + b), print(2 * a), print(np.linalg.norm(np.array([3, 4])))",
+        "Run the cell and zoom in on [4 3], [6 2] and 5.0."
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 249.6,
+      "end": 271.0,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 271.0,
+      "end": 292.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 292.4,
+      "end": 313.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-05-math-and-statistics-for-ai-no-fear-edition_M1_L02_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

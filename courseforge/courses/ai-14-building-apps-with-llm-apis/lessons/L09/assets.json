@@ -1,0 +1,174 @@
+{
+  "course_id": "AI-14",
+  "lesson_id": "L09",
+  "presenter_track": {
+    "file": "/incoming/ai-14-building-apps-with-llm-apis_M3_L09_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 288.7
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 19.3,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_M3_L09_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 19.3,
+      "end": 40.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 40.7,
+      "end": 65.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 65.1,
+      "end": 87.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 87.4,
+      "end": 108.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 108.4,
+      "end": 123.4,
+      "visual_type": "stock",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L09_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "shop manager on phone in clothing store"
+    },
+    {
+      "scene": 7,
+      "start": 123.4,
+      "end": 131.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 131.5,
+      "end": 145.6,
+      "visual_type": "stock",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L09_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "courier scooter delivering parcels Vietnam street"
+    },
+    {
+      "scene": 9,
+      "start": 145.6,
+      "end": 161.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L09_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open tracking.py in VS Code",
+        "Highlight the SHIPMENTS dictionary with VN-4471 and VN-5820",
+        "Highlight the tools list: name, description and input_schema with tracking_code required",
+        "Highlight the get_shipment_status function"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 161.5,
+      "end": 177.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L09_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight messages.create with tools=tools",
+        "Add print(response.content) after the first call and run the script",
+        "Show the tool_use block and point to its id, name and input {\"tracking_code\": \"VN-4471\"}",
+        "Show stop_reason: tool_use"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 177.8,
+      "end": 200.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L09_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight while response.stop_reason == \"tool_use\"",
+        "Highlight messages.append with role assistant and response.content",
+        "Highlight block.input[\"tracking_code\"] and the tool_result with tool_use_id=block.id",
+        "Highlight the second messages.create call"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 200.1,
+      "end": 218.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L09_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run the full script and show the final answer (labelled 'example output')",
+        "Change the question to 'What are your opening hours?' and run again",
+        "Show that no tool_use block appears and the model answers directly"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 218.5,
+      "end": 236.5,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 236.5,
+      "end": 265.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 265.6,
+      "end": 288.7,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_M3_L09_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

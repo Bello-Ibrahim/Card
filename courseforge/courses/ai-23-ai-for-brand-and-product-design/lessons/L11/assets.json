@@ -1,0 +1,198 @@
+{
+  "course_id": "AI-23",
+  "lesson_id": "L11",
+  "presenter_track": {
+    "file": "/incoming/ai-23-ai-for-brand-and-product-design_M3_L11_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 294.0
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 13.7,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-23-ai-for-brand-and-product-design_M3_L11_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 13.7,
+      "end": 23.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 23.6,
+      "end": 44.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 44.2,
+      "end": 67.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 67.8,
+      "end": 88.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 88.4,
+      "end": 102.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 102.1,
+      "end": 116.7,
+      "visual_type": "stock",
+      "file": "/incoming/ai-23-ai-for-brand-and-product-design_L11_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "construction scaffolding around a building"
+    },
+    {
+      "scene": 8,
+      "start": 116.7,
+      "end": 132.1,
+      "visual_type": "stock",
+      "file": "/incoming/ai-23-ai-for-brand-and-product-design_L11_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "adult learning a language on smartphone"
+    },
+    {
+      "scene": 9,
+      "start": 132.1,
+      "end": 146.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-23-ai-for-brand-and-product-design_L11_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open the Figma file that contains the brand guidelines page, with styles and components",
+        "Create a new page called 'Onboarding: AI drafts'",
+        "Open Figma's AI features (for example, from the Actions or AI menu) and choose the option to generate a design from a prompt"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 146.7,
+      "end": 166.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-23-ai-for-brand-and-product-design_L11_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Type the prompt: 'Mobile onboarding screen for a language-learning app for adults in Brazil. Goal: choose a language to learn. Headline in Portuguese, 6 language options as cards, a progress indicator showing step 1 of 3, and a \"Continuar\" button.'",
+        "Generate the draft",
+        "Generate one alternative",
+        "Place the two drafts side by side"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 166.8,
+      "end": 182.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-23-ai-for-brand-and-product-design_L11_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Review both drafts",
+        "Add a sticky note: 'Keep: card grid, progress indicator.'",
+        "Add a sticky note: 'Change: flags only (some languages are spoken in many countries), button too low.'"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 182.2,
+      "end": 197.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-23-ai-for-brand-and-product-design_L11_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Create a page called 'Onboarding: final' and add a new frame at the same size",
+        "Insert the Button, Card and Progress components from the brand library",
+        "Apply text styles and colour variables"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 197.6,
+      "end": 213.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-23-ai-for-brand-and-product-design_L11_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Replace the flags with language names and a small icon",
+        "Run a community content plugin to fill realistic content, such as learner names in the progress messages",
+        "Read and correct the generated text"
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 213.5,
+      "end": 231.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-23-ai-for-brand-and-product-design_L11_screen_6.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run a contrast plugin on the text on the cards",
+        "Check the button size against the touch-target size in the design system",
+        "Show the two pages: 'Onboarding: AI drafts' kept as a record, 'Onboarding: final' built only from components"
+      ]
+    },
+    {
+      "scene": 15,
+      "start": 231.5,
+      "end": 249.9,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 249.9,
+      "end": 273.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 17,
+      "start": 273.0,
+      "end": 294.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-23-ai-for-brand-and-product-design_M3_L11_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

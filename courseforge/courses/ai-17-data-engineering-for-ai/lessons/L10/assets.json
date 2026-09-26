@@ -1,0 +1,189 @@
+{
+  "course_id": "AI-17",
+  "lesson_id": "L10",
+  "presenter_track": {
+    "file": "/incoming/ai-17-data-engineering-for-ai_M2_L10_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 298.5
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.1,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-17-data-engineering-for-ai_M2_L10_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 17.1,
+      "end": 35.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 35.1,
+      "end": 45.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 45.8,
+      "end": 63.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 63.8,
+      "end": 83.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 83.9,
+      "end": 103.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 103.6,
+      "end": 117.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 117.7,
+      "end": 133.6,
+      "visual_type": "stock",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L10_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "reading a thick novel family tree"
+    },
+    {
+      "scene": 9,
+      "start": 133.6,
+      "end": 145.2,
+      "visual_type": "stock",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L10_stock_09.mp4",
+      "status": "PENDING_STOCK",
+      "query": "loan officer meeting small business owner"
+    },
+    {
+      "scene": 10,
+      "start": 145.2,
+      "end": 161.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L10_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open models/marts/schema.yml (create it if needed)",
+        "Type the fct_borrower_features model description from content.md",
+        "Highlight: 'One row per borrower per feature_date'"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 161.9,
+      "end": 180.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L10_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Type the borrower_id column description: internal ID from stg_borrowers, not a national ID",
+        "Type the late_payments_180d description from content.md",
+        "Add short descriptions for stg_repayments and stg_borrowers in models/staging/schema.yml"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 180.3,
+      "end": 190.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L10_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: dbt docs generate",
+        "Run: dbt docs serve",
+        "In the browser, open fct_borrower_features and show the descriptions and column types"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 190.6,
+      "end": 204.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L10_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open the lineage graph view",
+        "Show raw.repayments → stg_repayments → fct_borrower_features and raw.borrowers → stg_borrowers → fct_borrower_features",
+        "Click stg_repayments and show its downstream models"
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 204.7,
+      "end": 225.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 225.7,
+      "end": 251.8,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 251.8,
+      "end": 275.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 17,
+      "start": 275.8,
+      "end": 298.5,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-17-data-engineering-for-ai_M2_L10_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

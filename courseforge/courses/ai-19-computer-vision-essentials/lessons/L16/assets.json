@@ -1,0 +1,169 @@
+{
+  "course_id": "AI-19",
+  "lesson_id": "L16",
+  "presenter_track": {
+    "file": "/incoming/ai-19-computer-vision-essentials_M4_L16_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 295.2
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-19-computer-vision-essentials_M4_L16_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.0,
+      "end": 35.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 35.6,
+      "end": 49.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 49.7,
+      "end": 72.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 72.8,
+      "end": 95.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 95.5,
+      "end": 110.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 110.9,
+      "end": 127.6,
+      "visual_type": "stock",
+      "file": "/incoming/ai-19-computer-vision-essentials_L16_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "learner driver at busy junction"
+    },
+    {
+      "scene": 8,
+      "start": 127.6,
+      "end": 145.6,
+      "visual_type": "stock",
+      "file": "/incoming/ai-19-computer-vision-essentials_L16_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "distant view of car park in rain"
+    },
+    {
+      "scene": 9,
+      "start": 145.6,
+      "end": 168.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L16_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open a spreadsheet with the columns image, condition, true, before and after",
+        "Fill in a few rows",
+        "Export it as test_results.csv"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 168.3,
+      "end": 180.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L16_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Upload test_results.csv to Colab",
+        "Run the pandas cell",
+        "Point to the overall means: before_err 0.75, after_err 0.46"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 180.3,
+      "end": 206.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L16_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Point to the per-condition table: day 0.12 to 0.25, evening 0.62 to 0.25, rain 1.50 to 0.88",
+        "Open two images from the rain condition"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 206.9,
+      "end": 227.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L16_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the updated fitness check with the new numbers",
+        "Show the outline of the 3-minute demo on one slide"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 227.0,
+      "end": 246.3,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 246.3,
+      "end": 271.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 271.2,
+      "end": 295.2,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-19-computer-vision-essentials_M4_L16_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

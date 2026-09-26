@@ -1,0 +1,170 @@
+{
+  "course_id": "AI-15",
+  "lesson_id": "L12",
+  "presenter_track": {
+    "file": "/incoming/ai-15-rag-systems-chat-with-your-data_M3_L12_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 302.6
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.6,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_M3_L12_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 17.6,
+      "end": 30.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 30.5,
+      "end": 54.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 54.5,
+      "end": 80.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 80.2,
+      "end": 100.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 100.3,
+      "end": 121.3,
+      "visual_type": "stock",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L12_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "teacher marking exam papers at desk"
+    },
+    {
+      "scene": 7,
+      "start": 121.3,
+      "end": 142.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L12_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the agreement function.",
+        "Show the judge and human label lists for five answers.",
+        "Run print(rate, diffs) and show the exact output 0.8 [(1, 'yes', 'partly')]."
+      ]
+    },
+    {
+      "scene": 8,
+      "start": 142.7,
+      "end": 162.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L12_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run the pipeline over 25 test questions.",
+        "Open answers.jsonl and show one saved line with question, chunks and answer."
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 162.4,
+      "end": 180.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L12_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show JUDGE_RUBRIC and the judge call with a structured verdict.",
+        "Run it over the 20 answerable answers and save the verdicts.",
+        "Show his own labels for 10 answers in a separate file, created before opening the verdicts."
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 180.8,
+      "end": 200.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L12_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run agreement and show 8 of 10 with two disagreements.",
+        "Open one disagreement and highlight the planting month missing from the chunks.",
+        "Edit the rubric to 'list every claim first, then check each claim', re-judge, and show 9 of 10."
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 200.9,
+      "end": 218.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 12,
+      "start": 218.9,
+      "end": 233.5,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 233.5,
+      "end": 255.4,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 255.4,
+      "end": 280.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 280.7,
+      "end": 302.6,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_M3_L12_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

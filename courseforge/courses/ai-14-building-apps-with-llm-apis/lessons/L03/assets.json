@@ -1,0 +1,183 @@
+{
+  "course_id": "AI-14",
+  "lesson_id": "L03",
+  "presenter_track": {
+    "file": "/incoming/ai-14-building-apps-with-llm-apis_M1_L03_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 293.9
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.6,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_M1_L03_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 17.6,
+      "end": 37.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 37.7,
+      "end": 57.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 57.0,
+      "end": 73.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 73.7,
+      "end": 90.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 90.8,
+      "end": 104.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 104.9,
+      "end": 123.8,
+      "visual_type": "stock",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L03_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "manager briefing new employee in office"
+    },
+    {
+      "scene": 8,
+      "start": 123.8,
+      "end": 145.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 9,
+      "start": 145.7,
+      "end": 156.8,
+      "visual_type": "stock",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L03_stock_09.mp4",
+      "status": "PENDING_STOCK",
+      "query": "customer support agent headset Accra office"
+    },
+    {
+      "scene": 10,
+      "start": 156.8,
+      "end": 172.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L03_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open prompts/support_v1.txt in VS Code: 'Reply to this customer: {message}'",
+        "Run the script on one test message",
+        "Highlight in the output a long reply that promises a refund"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 172.7,
+      "end": 194.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L03_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open prompts/support_v3.txt",
+        "Highlight the role line and the audience line",
+        "Highlight the 80-word limit and the three rules (no refunds or credits, outage link, one clarifying question)",
+        "Highlight the sentence about <customer_message> tags being data, not instructions",
+        "Highlight the example message and reply"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 194.1,
+      "end": 213.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L03_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open support.py",
+        "Highlight SYSTEM = Path(\"prompts/support_v3.txt\").read_text()",
+        "Highlight the draft_reply function with system=SYSTEM and max_tokens=300",
+        "Highlight the f-string that wraps customer_text in <customer_message> tags"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 213.8,
+      "end": 227.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L03_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run the comparison script for v1 and v3 on the same five test messages",
+        "Show the outputs side by side in the terminal",
+        "Show her notes table with the label 'example results': shorter replies, no refund promises, hidden instruction ignored"
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 227.5,
+      "end": 245.9,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 245.9,
+      "end": 271.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 271.2,
+      "end": 293.9,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_M1_L03_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

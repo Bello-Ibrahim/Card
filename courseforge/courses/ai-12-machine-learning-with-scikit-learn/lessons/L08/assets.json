@@ -1,0 +1,190 @@
+{
+  "course_id": "AI-12",
+  "lesson_id": "L08",
+  "presenter_track": {
+    "file": "/incoming/ai-12-machine-learning-with-scikit-learn_M2_L08_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 313.3
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.4,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_M2_L08_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.4,
+      "end": 39.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 39.0,
+      "end": 54.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 54.4,
+      "end": 75.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 75.8,
+      "end": 94.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 94.2,
+      "end": 110.1,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 110.1,
+      "end": 132.8,
+      "visual_type": "stock",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L08_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "smoke alarm on kitchen ceiling"
+    },
+    {
+      "scene": 8,
+      "start": 132.8,
+      "end": 147.4,
+      "visual_type": "stock",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L08_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "card payment terminal shop counter"
+    },
+    {
+      "scene": 9,
+      "start": 147.4,
+      "end": 160.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L08_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Type this exact code cell from content.md and run it with Shift+Enter:\nfrom sklearn.datasets import make_classification\nfrom sklearn.dummy import DummyClassifier\nfrom sklearn.metrics import accuracy_score, recall_score\n\nXf, yf = make_classification(n_samples=10000, weights=[0.99], flip_y=0,\n                             random_state=1)\nlazy = DummyClassifier(strategy=\"most_frequent\").fit(Xf, yf)\npred = lazy.predict(Xf)\nprint(round(accuracy_score(yf, pred), 3), recall_score(yf, pred))"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 160.3,
+      "end": 168.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L08_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight the output 0.99 0.0.",
+        "Label 0.99 'accuracy' and 0.0 'recall'."
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 168.4,
+      "end": 183.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L08_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Scroll up to show the L05 setup and pipeline cells, already executed.",
+        "Type this exact code cell from content.md and run it with Shift+Enter:\nfrom sklearn.metrics import confusion_matrix, classification_report\n\ny_pred = pipe.predict(X_test)\nprint(confusion_matrix(y_test, y_pred))\nprint(classification_report(y_test, y_pred, digits=3))"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 183.4,
+      "end": 201.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L08_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight the matrix [[435 5] [53 7]].",
+        "Label the cells TN 435, FP 5, FN 53, TP 7."
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 201.4,
+      "end": 215.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L08_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Zoom in on the report row for class 1: 0.583, 0.117, 0.194, support 60.",
+        "Show the overlay calculation 7 / (7 + 5) and 7 / (7 + 53)."
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 215.5,
+      "end": 236.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L08_screen_6.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight the accuracy row: 0.884, 500.",
+        "Show the overlay 440 / 500 = 0.88 next to it."
+      ]
+    },
+    {
+      "scene": 15,
+      "start": 236.1,
+      "end": 261.4,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 261.4,
+      "end": 286.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 17,
+      "start": 286.7,
+      "end": 313.3,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_M2_L08_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

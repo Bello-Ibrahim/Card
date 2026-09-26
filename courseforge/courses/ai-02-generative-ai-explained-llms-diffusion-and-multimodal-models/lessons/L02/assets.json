@@ -1,0 +1,190 @@
+{
+  "course_id": "AI-02",
+  "lesson_id": "L02",
+  "presenter_track": {
+    "file": "/incoming/ai-02-generative-ai-explained-llms-diffusion-and-multimodal-models_M1_L02_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 296.6
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.9,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-02-generative-ai-explained-llms-diffusion-and-multimodal-models_M1_L02_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.9,
+      "end": 34.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 34.3,
+      "end": 52.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 52.7,
+      "end": 61.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 61.7,
+      "end": 79.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 79.3,
+      "end": 92.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 92.2,
+      "end": 110.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 110.6,
+      "end": 126.5,
+      "visual_type": "stock",
+      "file": "/incoming/ai-02-generative-ai-explained-llms-diffusion-and-multimodal-models_L02_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "person typing message on smartphone close up"
+    },
+    {
+      "scene": 9,
+      "start": 126.5,
+      "end": 150.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 10,
+      "start": 150.9,
+      "end": 165.9,
+      "visual_type": "stock",
+      "file": "/incoming/ai-02-generative-ai-explained-llms-diffusion-and-multimodal-models_L02_stock_10.mp4",
+      "status": "PENDING_STOCK",
+      "query": "customer support team office headsets"
+    },
+    {
+      "scene": 11,
+      "start": 165.9,
+      "end": 179.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-02-generative-ai-explained-llms-diffusion-and-multimodal-models_L02_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open Google AI Studio in a browser and sign in with a Google account",
+        "Start a new chat or prompt",
+        "Point to the run settings panel and highlight the Temperature control"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 179.2,
+      "end": 196.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-02-generative-ai-explained-llms-diffusion-and-multimodal-models_L02_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Drag the Temperature slider near the bottom of the range",
+        "Paste the prompt: 'Write a two-sentence reply to a customer whose sofa delivery is one day late.'",
+        "Run the prompt and copy the answer into a notes file",
+        "Run the same prompt two more times and copy both answers"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 196.3,
+      "end": 210.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-02-generative-ai-explained-llms-diffusion-and-multimodal-models_L02_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the three low-temperature answers side by side in the notes file",
+        "Drag the Temperature slider near the top of the range",
+        "Run the same prompt three more times and copy each answer"
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 210.9,
+      "end": 231.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-02-generative-ai-explained-llms-diffusion-and-multimodal-models_L02_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the three high-temperature answers side by side",
+        "Highlight the discount code, the informal tone and the 'free cushion' promise",
+        "Type a note: 'Customer replies: low temperature'"
+      ]
+    },
+    {
+      "scene": 15,
+      "start": 231.0,
+      "end": 252.0,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 252.0,
+      "end": 274.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 17,
+      "start": 274.3,
+      "end": 296.6,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-02-generative-ai-explained-llms-diffusion-and-multimodal-models_M1_L02_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

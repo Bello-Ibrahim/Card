@@ -1,0 +1,171 @@
+{
+  "course_id": "AI-19",
+  "lesson_id": "L03",
+  "presenter_track": {
+    "file": "/incoming/ai-19-computer-vision-essentials_M1_L03_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 296.4
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.4,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-19-computer-vision-essentials_M1_L03_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.4,
+      "end": 33.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 33.4,
+      "end": 53.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 53.5,
+      "end": 82.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 82.2,
+      "end": 102.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 102.3,
+      "end": 125.4,
+      "visual_type": "stock",
+      "file": "/incoming/ai-19-computer-vision-essentials_L03_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "hands washing and chopping fresh vegetables"
+    },
+    {
+      "scene": 7,
+      "start": 125.4,
+      "end": 143.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 143.0,
+      "end": 162.7,
+      "visual_type": "stock",
+      "file": "/incoming/ai-19-computer-vision-essentials_L03_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "paper form lying on wooden desk"
+    },
+    {
+      "scene": 9,
+      "start": 162.7,
+      "end": 180.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L03_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Upload form.jpg to a Colab notebook",
+        "Run the first three lines: cv2.imread, cv2.cvtColor to greyscale, cv2.GaussianBlur with (5, 5)",
+        "Display blur next to the original image"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 180.7,
+      "end": 198.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L03_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run the Canny and findContours lines",
+        "Run the line that keeps the largest contour with cv2.contourArea and gets cv2.boundingRect",
+        "Draw the rectangle on a copy of the image with cv2.rectangle and display it"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 198.3,
+      "end": 215.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L03_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run the crop and threshold lines and the cv2.imwrite line",
+        "Show the final clean black-and-white image",
+        "Point to the printed output (900, 1200, 3) -> (760, 540)"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 215.4,
+      "end": 227.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L03_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Change the Canny thresholds to (10, 30)",
+        "Run the cell again and display the edge image",
+        "Show how many extra edges appear compared with (50, 150)"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 227.8,
+      "end": 247.1,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 247.1,
+      "end": 272.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 272.0,
+      "end": 296.4,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-19-computer-vision-essentials_M1_L03_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

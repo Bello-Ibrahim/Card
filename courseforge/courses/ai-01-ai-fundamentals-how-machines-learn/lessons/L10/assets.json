@@ -1,0 +1,164 @@
+{
+  "course_id": "AI-01",
+  "lesson_id": "L10",
+  "presenter_track": {
+    "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_M3_L10_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 294.4
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "RENDERED"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.9,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_M3_L10_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 15.9,
+      "end": 29.2,
+      "visual_type": "slide",
+      "file": "assets/slides/s02.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 29.2,
+      "end": 42.5,
+      "visual_type": "text",
+      "file": "assets/slides/s03.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 42.5,
+      "end": 63.5,
+      "visual_type": "slide",
+      "file": "assets/slides/s04.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 63.5,
+      "end": 84.5,
+      "visual_type": "slide",
+      "file": "assets/slides/s05.png",
+      "status": "RENDERED",
+      "needs_design": true
+    },
+    {
+      "scene": 6,
+      "start": 84.5,
+      "end": 105.5,
+      "visual_type": "slide",
+      "file": "assets/slides/s06.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 105.5,
+      "end": 122.6,
+      "visual_type": "stock",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_L10_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "shop shelves changing seasonal products"
+    },
+    {
+      "scene": 8,
+      "start": 122.6,
+      "end": 142.3,
+      "visual_type": "stock",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_L10_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "village cook preparing food outdoors"
+    },
+    {
+      "scene": 9,
+      "start": 142.3,
+      "end": 157.3,
+      "visual_type": "stock",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_L10_stock_09.mp4",
+      "status": "PENDING_STOCK",
+      "query": "small business owner meeting loan officer"
+    },
+    {
+      "scene": 10,
+      "start": 157.3,
+      "end": 176.2,
+      "visual_type": "slide",
+      "file": "assets/slides/s10.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 11,
+      "start": 176.2,
+      "end": 197.2,
+      "visual_type": "slide",
+      "file": "assets/slides/s11.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 12,
+      "start": 197.2,
+      "end": 206.6,
+      "visual_type": "slide",
+      "file": "assets/slides/s12.png",
+      "status": "RENDERED",
+      "needs_design": true
+    },
+    {
+      "scene": 13,
+      "start": 206.6,
+      "end": 219.5,
+      "visual_type": "slide",
+      "file": "assets/slides/s13.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 219.5,
+      "end": 246.9,
+      "visual_type": "text",
+      "file": "assets/slides/s14.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 246.9,
+      "end": 267.0,
+      "visual_type": "slide",
+      "file": "assets/slides/s15.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 267.0,
+      "end": 294.4,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_M3_L10_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

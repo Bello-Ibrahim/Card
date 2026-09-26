@@ -1,0 +1,171 @@
+{
+  "course_id": "AI-19",
+  "lesson_id": "L10",
+  "presenter_track": {
+    "file": "/incoming/ai-19-computer-vision-essentials_M3_L10_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 297.5
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-19-computer-vision-essentials_M3_L10_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.0,
+      "end": 29.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 29.1,
+      "end": 51.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 51.4,
+      "end": 69.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 69.8,
+      "end": 91.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 91.2,
+      "end": 108.3,
+      "visual_type": "stock",
+      "file": "/incoming/ai-19-computer-vision-essentials_L10_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "metal detector on sandy beach"
+    },
+    {
+      "scene": 7,
+      "start": 108.3,
+      "end": 125.0,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 125.0,
+      "end": 140.4,
+      "visual_type": "stock",
+      "file": "/incoming/ai-19-computer-vision-essentials_L10_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "lorries driving on road near container port"
+    },
+    {
+      "scene": 9,
+      "start": 140.4,
+      "end": 162.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L10_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "In a new Colab notebook, run !pip install ultralytics and wait for it to finish",
+        "Upload port_road.jpg",
+        "Run the first cell: YOLO('yolo11n.pt'), model('port_road.jpg', conf=0.25), print name, score and box, r.save"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 162.7,
+      "end": 184.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L10_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open port_road_boxes.jpg from the file panel",
+        "Point to the printed line for the truck and its box"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 184.6,
+      "end": 209.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L10_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run the loop over conf 0.1, 0.25 and 0.5",
+        "Show the three detection counts",
+        "Display the 0.1 result and point out the two false alarms",
+        "Display the 0.5 result and point out the missed distant car"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 209.5,
+      "end": 233.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L10_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Upload port_road.mp4",
+        "Run model.predict('port_road.mp4', conf=0.25, stream=True, save=True) in a loop",
+        "Open the saved video from runs/detect/ and play it"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 233.1,
+      "end": 249.0,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 249.0,
+      "end": 272.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 272.6,
+      "end": 297.5,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-19-computer-vision-essentials_M3_L10_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

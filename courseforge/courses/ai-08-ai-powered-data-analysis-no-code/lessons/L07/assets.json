@@ -1,0 +1,223 @@
+{
+  "course_id": "AI-08",
+  "lesson_id": "L07",
+  "presenter_track": {
+    "file": "/incoming/ai-08-ai-powered-data-analysis-no-code_M2_L07_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 317.8
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 19.7,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-08-ai-powered-data-analysis-no-code_M2_L07_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 19.7,
+      "end": 24.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 24.8,
+      "end": 48.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 48.4,
+      "end": 66.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 66.8,
+      "end": 82.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 82.2,
+      "end": 98.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 98.9,
+      "end": 116.9,
+      "visual_type": "stock",
+      "file": "/incoming/ai-08-ai-powered-data-analysis-no-code_L07_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "sorting paper receipts into envelopes table"
+    },
+    {
+      "scene": 8,
+      "start": 116.9,
+      "end": 128.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 9,
+      "start": 128.9,
+      "end": 137.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-08-ai-powered-data-analysis-no-code_L07_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Click cell C3 in the orders data",
+        "Open Insert > Pivot table",
+        "Select New sheet",
+        "Click Create; the empty pivot table and editor appear"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 137.5,
+      "end": 160.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-08-ai-powered-data-analysis-no-code_L07_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Next to Rows, click Add and choose Region",
+        "Next to Values, click Add and choose Revenue",
+        "Zoom on 'Summarise by: SUM'",
+        "Highlight the result: North 680, South 2,220, West 550, Grand total 3,450"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 160.2,
+      "end": 185.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-08-ai-powered-data-analysis-no-code_L07_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add Revenue to Values a second time; change Summarise by to COUNTA",
+        "Add Revenue to Values a third time; change Summarise by to AVERAGE",
+        "Highlight row by row: North 4 / 170, South 3 / 740, West 3 / 183.33"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 185.9,
+      "end": 200.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-08-ai-powered-data-analysis-no-code_L07_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Return to the data, Insert > Pivot table > New sheet > Create",
+        "Rows: Add > Month",
+        "Values: Add > Revenue (SUM)",
+        "Highlight 2026-01 470, 2026-02 820, 2026-03 2,160"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 200.9,
+      "end": 213.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-08-ai-powered-data-analysis-no-code_L07_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Download the sheet as .csv",
+        "In Claude or ChatGPT, upload the file",
+        "Type: 'Show total, count and average Revenue per Region in a table, and tell me how many rows you used.'"
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 213.3,
+      "end": 230.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-08-ai-powered-data-analysis-no-code_L07_screen_6.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the AI table: South total 420, 2 orders",
+        "Split screen with the pivot table: South 2,220, 3 orders; circle both South rows in red",
+        "Type in the chat: 'Which rows did you use for South?'"
+      ]
+    },
+    {
+      "scene": 15,
+      "start": 230.0,
+      "end": 247.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-08-ai-powered-data-analysis-no-code_L07_screen_7.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the AI reply naming order 1008 as skipped",
+        "Open the exported file and zoom on \"1,800\" in quotation marks for order 1008",
+        "Fix the value to 1800, re-export and re-upload",
+        "Show the new AI table: South 2,220, 3 orders, with green ticks beside the pivot table"
+      ]
+    },
+    {
+      "scene": 16,
+      "start": 247.1,
+      "end": 259.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 17,
+      "start": 259.1,
+      "end": 270.7,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 18,
+      "start": 270.7,
+      "end": 293.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 19,
+      "start": 293.4,
+      "end": 317.8,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-08-ai-powered-data-analysis-no-code_M2_L07_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

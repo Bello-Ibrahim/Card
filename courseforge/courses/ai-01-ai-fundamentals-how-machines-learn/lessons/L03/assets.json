@@ -1,0 +1,173 @@
+{
+  "course_id": "AI-01",
+  "lesson_id": "L03",
+  "presenter_track": {
+    "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_M1_L03_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 306.0
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "RENDERED"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.6,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_M1_L03_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 17.6,
+      "end": 30.9,
+      "visual_type": "slide",
+      "file": "assets/slides/s02.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 30.9,
+      "end": 40.8,
+      "visual_type": "slide",
+      "file": "assets/slides/s03.png",
+      "status": "RENDERED",
+      "needs_design": true
+    },
+    {
+      "scene": 4,
+      "start": 40.8,
+      "end": 64.8,
+      "visual_type": "slide",
+      "file": "assets/slides/s04.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 64.8,
+      "end": 86.2,
+      "visual_type": "slide",
+      "file": "assets/slides/s05.png",
+      "status": "RENDERED",
+      "needs_design": true
+    },
+    {
+      "scene": 6,
+      "start": 86.2,
+      "end": 106.3,
+      "visual_type": "stock",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_L03_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "parent and child reading picture book"
+    },
+    {
+      "scene": 7,
+      "start": 106.3,
+      "end": 115.7,
+      "visual_type": "stock",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_L03_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "child pointing at animal in book"
+    },
+    {
+      "scene": 8,
+      "start": 115.7,
+      "end": 140.1,
+      "visual_type": "slide",
+      "file": "assets/slides/s08.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 9,
+      "start": 140.1,
+      "end": 155.5,
+      "visual_type": "stock",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_L03_stock_09.mp4",
+      "status": "PENDING_STOCK",
+      "query": "textile factory fabric rolls quality inspection"
+    },
+    {
+      "scene": 10,
+      "start": 155.5,
+      "end": 176.9,
+      "visual_type": "slide",
+      "file": "assets/slides/s10.png",
+      "status": "RENDERED",
+      "needs_design": true
+    },
+    {
+      "scene": 11,
+      "start": 176.9,
+      "end": 192.3,
+      "visual_type": "slide",
+      "file": "assets/slides/s11.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 12,
+      "start": 192.3,
+      "end": 203.9,
+      "visual_type": "slide",
+      "file": "assets/slides/s12.png",
+      "status": "RENDERED",
+      "needs_design": true
+    },
+    {
+      "scene": 13,
+      "start": 203.9,
+      "end": 217.6,
+      "visual_type": "slide",
+      "file": "assets/slides/s13.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 217.6,
+      "end": 233.5,
+      "visual_type": "stock",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_L03_stock_14.mp4",
+      "status": "PENDING_STOCK",
+      "query": "librarian sorting donated books on shelves"
+    },
+    {
+      "scene": 15,
+      "start": 233.5,
+      "end": 255.4,
+      "visual_type": "text",
+      "file": "assets/slides/s15.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 255.4,
+      "end": 279.4,
+      "visual_type": "slide",
+      "file": "assets/slides/s16.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 17,
+      "start": 279.4,
+      "end": 306.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_M1_L03_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

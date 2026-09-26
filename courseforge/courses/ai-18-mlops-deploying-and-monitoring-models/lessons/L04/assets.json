@@ -1,0 +1,165 @@
+{
+  "course_id": "AI-18",
+  "lesson_id": "L04",
+  "presenter_track": {
+    "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_M1_L04_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 293.2
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.7,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_M1_L04_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 16.7,
+      "end": 36.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 36.4,
+      "end": 63.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 63.4,
+      "end": 87.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 87.4,
+      "end": 109.3,
+      "visual_type": "stock",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L04_stock_05.mp4",
+      "status": "PENDING_STOCK",
+      "query": "scientist writing notes in laboratory notebook"
+    },
+    {
+      "scene": 6,
+      "start": 109.3,
+      "end": 128.6,
+      "visual_type": "stock",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L04_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "vineyard rows at sunset with wine barrels"
+    },
+    {
+      "scene": 7,
+      "start": 128.6,
+      "end": 151.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L04_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open a terminal in the wine-api folder with the virtual environment active",
+        "Run: pip install mlflow",
+        "Show track.py in the editor, scrolling past the loop over C values",
+        "Run: python track.py and let it finish"
+      ]
+    },
+    {
+      "scene": 8,
+      "start": 151.7,
+      "end": 167.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L04_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: mlflow ui --backend-store-uri sqlite:///mlflow.db",
+        "Open the printed local address, usually http://127.0.0.1:5000, in the browser",
+        "Click the wine-quality experiment",
+        "Show the runs table with logreg-C-1.0, logreg-C-0.1 and logreg-C-0.01"
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 167.1,
+      "end": 192.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L04_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Tick the checkboxes of all three runs",
+        "Click Compare",
+        "Show the comparison view with the parameter C and the metric f1 side by side",
+        "Highlight the values 0.557, 0.538 and 0.461"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 192.4,
+      "end": 217.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L04_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Go back to the runs table and open logreg-C-1.0",
+        "Click the Artifacts tab",
+        "Expand the model folder to show the saved model files"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 217.3,
+      "end": 241.7,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 12,
+      "start": 241.7,
+      "end": 263.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 263.6,
+      "end": 282.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 282.9,
+      "end": 293.2,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_M1_L04_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

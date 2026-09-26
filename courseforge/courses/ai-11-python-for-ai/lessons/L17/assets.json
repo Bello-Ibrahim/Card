@@ -1,0 +1,181 @@
+{
+  "course_id": "AI-11",
+  "lesson_id": "L17",
+  "presenter_track": {
+    "file": "/incoming/ai-11-python-for-ai_M4_L17_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 287.5
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.6,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-11-python-for-ai_M4_L17_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 17.6,
+      "end": 37.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 37.7,
+      "end": 55.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 55.7,
+      "end": 73.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 73.7,
+      "end": 96.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 96.4,
+      "end": 116.1,
+      "visual_type": "stock",
+      "file": "/incoming/ai-11-python-for-ai_L17_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "person ticking boxes on paper form"
+    },
+    {
+      "scene": 7,
+      "start": 116.1,
+      "end": 142.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 142.2,
+      "end": 156.3,
+      "visual_type": "stock",
+      "file": "/incoming/ai-11-python-for-ai_L17_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "data analyst working in bright office"
+    },
+    {
+      "scene": 9,
+      "start": 156.3,
+      "end": 171.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L17_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run the L14 and L16 cells so clean exists",
+        "Add a new code cell",
+        "Type: df = clean.copy()",
+        "Type: df[\"city\"] = df[\"city\"].str.strip().str.lower().str.replace(\"ha noi\", \"hanoi\")",
+        "Type: print(df[\"city\"].value_counts())",
+        "Press Shift + Enter",
+        "Output: lagos 3 / lima 3 / hanoi 2"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 171.3,
+      "end": 183.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L17_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add a new code cell",
+        "Type: df[\"month\"] = df[\"order_date\"].dt.month",
+        "Type: df[\"weekday\"] = df[\"order_date\"].dt.dayofweek",
+        "Type: print(df[[\"order_date\", \"month\", \"weekday\"]].head(3))",
+        "Press Shift + Enter",
+        "Output: 2026-03-02 3 0 / 2026-03-02 3 0 / 2026-03-03 3 1"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 183.3,
+      "end": 198.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L17_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add a new code cell",
+        "Type: counts = df[\"payment\"].value_counts()",
+        "Type: rare = counts[counts < 2].index",
+        "Type: df[\"payment\"] = df[\"payment\"].replace(list(rare), \"other\")",
+        "Type: encoded = pd.get_dummies(df, columns=[\"city\", \"payment\"], dtype=int)",
+        "Type: print(encoded.filter(like=\"city_\").head(3))"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 198.3,
+      "end": 212.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L17_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Press Shift + Enter",
+        "Output: city_hanoi city_lagos city_lima / 0 1 0 / 0 1 0 / 1 0 0",
+        "Scroll to show payment_card, payment_cash and payment_other in encoded.columns"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 212.9,
+      "end": 237.8,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 237.8,
+      "end": 261.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 261.8,
+      "end": 287.5,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-11-python-for-ai_M4_L17_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

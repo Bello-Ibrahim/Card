@@ -1,0 +1,181 @@
+{
+  "course_id": "AI-18",
+  "lesson_id": "L16",
+  "presenter_track": {
+    "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_M4_L16_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 298.2
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 14.1,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_M4_L16_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 14.1,
+      "end": 37.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 37.2,
+      "end": 57.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 57.8,
+      "end": 75.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 75.4,
+      "end": 100.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 100.3,
+      "end": 123.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 123.9,
+      "end": 136.3,
+      "visual_type": "stock",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L16_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "shop owner watching customers enter clothing store"
+    },
+    {
+      "scene": 8,
+      "start": 136.3,
+      "end": 159.4,
+      "visual_type": "stock",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L16_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "young people applying for loan online"
+    },
+    {
+      "scene": 9,
+      "start": 159.4,
+      "end": 175.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L16_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open a Jupyter notebook in the wine-api project",
+        "Run: train, _ = load_data(seed=42)",
+        "Run: new, _ = load_data(seed=7)",
+        "Run: new['alcohol'] = new['alcohol'] + 0.8"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 175.7,
+      "end": 199.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L16_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the psi() function cell",
+        "Run the loop over train.columns",
+        "Highlight: alcohol PSI=0.505 KS p=1.54e-65",
+        "Highlight the other three rows: PSI 0.003, 0.011, 0.006"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 199.7,
+      "end": 211.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L16_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Load the champion model",
+        "Predict probabilities for train and new",
+        "Run psi() on the two probability arrays and show the result"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 211.7,
+      "end": 225.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L16_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add a markdown cell",
+        "Type the decision: Investigate: check whether the alcohol measurement or unit changed at the source; retrain only if the change is real and labels are available"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 225.0,
+      "end": 242.1,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 242.1,
+      "end": 265.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 265.7,
+      "end": 288.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 288.8,
+      "end": 298.2,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_M4_L16_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

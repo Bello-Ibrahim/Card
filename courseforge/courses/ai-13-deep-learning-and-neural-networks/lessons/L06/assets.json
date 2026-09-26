@@ -1,0 +1,179 @@
+{
+  "course_id": "AI-13",
+  "lesson_id": "L06",
+  "presenter_track": {
+    "file": "/incoming/ai-13-deep-learning-and-neural-networks_M2_L06_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 288.2
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.6,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_M2_L06_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 17.6,
+      "end": 46.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 46.3,
+      "end": 67.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 67.7,
+      "end": 88.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 88.3,
+      "end": 102.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 102.9,
+      "end": 117.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 117.5,
+      "end": 136.4,
+      "visual_type": "stock",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L06_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "students writing exam in quiet classroom"
+    },
+    {
+      "scene": 8,
+      "start": 136.4,
+      "end": 154.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 9,
+      "start": 154.4,
+      "end": 167.3,
+      "visual_type": "stock",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L06_stock_09.mp4",
+      "status": "PENDING_STOCK",
+      "query": "folded clothes photographed for online shop"
+    },
+    {
+      "scene": 10,
+      "start": 167.3,
+      "end": 183.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L06_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: raw = datasets.FashionMNIST(\"data\", train=True, download=True)",
+        "Run: pixels = raw.data.float() / 255; mean, std = pixels.mean().item(), pixels.std().item(); print(round(mean, 3), round(std, 3))",
+        "Expected output: something like 0.286 0.353"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 183.2,
+      "end": 194.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L06_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run the train_tf cell: RandomHorizontalFlip(), RandomCrop(28, padding=2), ToTensor(), Normalize((mean,), (std,))",
+        "Run the eval_tf cell: ToTensor(), Normalize((mean,), (std,))",
+        "Show both side by side and highlight the two random steps"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 194.8,
+      "end": 204.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L06_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: train_ds = datasets.FashionMNIST(\"data\", train=True, transform=train_tf)",
+        "Run: test_ds = datasets.FashionMNIST(\"data\", train=False, transform=eval_tf)"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 204.2,
+      "end": 221.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L06_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: imgs = torch.stack([train_ds[0][0] for _ in range(16)])",
+        "Run: plt.imshow(make_grid(imgs * std + mean, nrow=8).permute(1, 2, 0)); plt.axis(\"off\"); plt.show()",
+        "Point to shifted and flipped copies in the 2×8 grid"
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 221.8,
+      "end": 242.4,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 242.4,
+      "end": 268.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 268.1,
+      "end": 288.2,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_M2_L06_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

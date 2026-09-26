@@ -1,0 +1,168 @@
+{
+  "course_id": "AI-12",
+  "lesson_id": "L14",
+  "presenter_track": {
+    "file": "/incoming/ai-12-machine-learning-with-scikit-learn_M3_L14_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 304.8
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.9,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_M3_L14_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.9,
+      "end": 37.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 37.8,
+      "end": 60.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 60.5,
+      "end": 83.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 83.2,
+      "end": 98.2,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 98.2,
+      "end": 120.1,
+      "visual_type": "stock",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L14_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "tailor adjusting sewing machine workshop"
+    },
+    {
+      "scene": 7,
+      "start": 120.1,
+      "end": 133.0,
+      "visual_type": "stock",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L14_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "data scientist office desk laptop Beirut"
+    },
+    {
+      "scene": 8,
+      "start": 133.0,
+      "end": 153.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L14_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Scroll past the L05 setup and pipeline cells, already executed.",
+        "Type this exact code cell from content.md and run it with Shift+Enter:\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.model_selection import RandomizedSearchCV\nfrom sklearn.metrics import roc_auc_score\n\nrf_pipe = Pipeline([(\"prep\", prep),\n                    (\"model\", RandomForestClassifier(random_state=42))])\nparams = {\"model__n_estimators\": [100, 200, 400],\n          \"model__max_depth\": [3, 5, 8, 12, None],\n          \"model__min_samples_leaf\": [1, 5, 10, 20, 40],\n          \"model__max_features\": [\"sqrt\", 0.5, 1.0]}\nsearch = RandomizedSearchCV(rf_pipe, params, n_iter=20, cv=5, scoring=\"roc_auc\",\n                            random_state=42, n_jobs=-1)\nsearch.fit(X_train, y_train)\nprint(search.best_params_, round(search.best_score_, 3))\n\nuntuned = rf_pipe.fit(X_train, y_train)\nfor name, m in [(\"untuned\", untuned), (\"tuned\", search.best_estimator_)]:\n    print(name, round(roc_auc_score(y_test, m.predict_proba(X_test)[:, 1]), 3))"
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 153.6,
+      "end": 169.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L14_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight the best_params_ output line and the score 0.769."
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 169.0,
+      "end": 184.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L14_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight 'model__min_samples_leaf': 40.",
+        "Add the caption: at least 40 customers per leaf."
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 184.4,
+      "end": 205.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L14_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight the output lines untuned 0.701 and tuned 0.737.",
+        "Show the overlay: logistic (L09) 0.752."
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 205.8,
+      "end": 225.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L14_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add a text cell: Tuning helped the forest, but logistic regression is simpler and at least as good. Carry it forward."
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 225.1,
+      "end": 250.0,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 250.0,
+      "end": 277.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 277.4,
+      "end": 304.8,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_M3_L14_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

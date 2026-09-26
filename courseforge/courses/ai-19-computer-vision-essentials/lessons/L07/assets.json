@@ -1,0 +1,168 @@
+{
+  "course_id": "AI-19",
+  "lesson_id": "L07",
+  "presenter_track": {
+    "file": "/incoming/ai-19-computer-vision-essentials_M2_L07_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 297.1
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 20.1,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-19-computer-vision-essentials_M2_L07_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 20.1,
+      "end": 36.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 36.0,
+      "end": 50.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 50.6,
+      "end": 74.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 74.2,
+      "end": 97.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 97.8,
+      "end": 116.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 116.2,
+      "end": 133.3,
+      "visual_type": "stock",
+      "file": "/incoming/ai-19-computer-vision-essentials_L07_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "photographer sorting printed photos on table"
+    },
+    {
+      "scene": 8,
+      "start": 133.3,
+      "end": 150.0,
+      "visual_type": "stock",
+      "file": "/incoming/ai-19-computer-vision-essentials_L07_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "close up of green bean plant leaves"
+    },
+    {
+      "scene": 9,
+      "start": 150.0,
+      "end": 166.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L07_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open Runtime, then Change runtime type",
+        "Select a GPU if one is available and save"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 166.7,
+      "end": 190.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L07_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Scroll through the cell: load_dataset, class names, AutoImageProcessor, AutoModelForImageClassification with num_labels",
+        "Highlight the loop that sets requires_grad = False on model.base_model.parameters()"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 190.3,
+      "end": 208.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L07_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run the cell",
+        "Point to the printed 'before' accuracy",
+        "Show the training loss decreasing over the 3 epochs"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 208.3,
+      "end": 223.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L07_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Point to the printed 'after' accuracy",
+        "Run trainer.save_model() and show the saved folder in the file panel"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 223.7,
+      "end": 245.6,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 245.6,
+      "end": 270.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 270.5,
+      "end": 297.1,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-19-computer-vision-essentials_M2_L07_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

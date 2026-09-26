@@ -1,0 +1,176 @@
+{
+  "course_id": "AI-12",
+  "lesson_id": "L16",
+  "presenter_track": {
+    "file": "/incoming/ai-12-machine-learning-with-scikit-learn_M4_L16_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 299.2
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.7,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_M4_L16_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 16.7,
+      "end": 36.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 36.0,
+      "end": 54.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 54.0,
+      "end": 67.3,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 67.3,
+      "end": 92.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 92.6,
+      "end": 115.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 115.7,
+      "end": 130.7,
+      "visual_type": "stock",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L16_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "head teacher reviewing class results"
+    },
+    {
+      "scene": 8,
+      "start": 130.7,
+      "end": 149.6,
+      "visual_type": "stock",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L16_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "financial analyst office South Africa"
+    },
+    {
+      "scene": 9,
+      "start": 149.6,
+      "end": 171.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L16_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Scroll past the L05 setup and pipeline cells, already executed.",
+        "Type this exact code cell from content.md and run it with Shift+Enter:\nimport pandas as pd\n\nthreshold = 0.15                      # chosen in L09\nresults = pd.DataFrame({\n    \"age_band\": pd.cut(X_test[\"age\"], bins=[17, 30, 50, 80],\n                       labels=[\"18-30\", \"31-50\", \"51-79\"]),\n    \"actual\": y_test,\n    \"pred\": (pipe.predict_proba(X_test)[:, 1] >= threshold).astype(int),\n})\nbuyers = results[results[\"actual\"] == 1]\nsummary = buyers.groupby(\"age_band\", observed=True).agg(\n    positives=(\"actual\", \"size\"), recall=(\"pred\", \"mean\"))\nprint(summary.round(2))"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 171.9,
+      "end": 183.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L16_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight the row 51-79: positives 40, recall 0.72."
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 183.0,
+      "end": 194.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L16_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight the row 31-50: positives 15, recall 0.53, in amber."
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 194.1,
+      "end": 208.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L16_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight the row 18-30: positives 5, recall 0.60.",
+        "Add the label 'too small to judge'."
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 208.7,
+      "end": 230.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L16_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add a text cell with the three-row risk note from content.md: risk and mitigation for each."
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 230.6,
+      "end": 249.5,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 249.5,
+      "end": 274.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 274.8,
+      "end": 299.2,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_M4_L16_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

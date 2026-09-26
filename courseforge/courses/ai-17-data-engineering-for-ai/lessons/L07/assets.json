@@ -1,0 +1,184 @@
+{
+  "course_id": "AI-17",
+  "lesson_id": "L07",
+  "presenter_track": {
+    "file": "/incoming/ai-17-data-engineering-for-ai_M2_L07_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 296.6
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 19.7,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-17-data-engineering-for-ai_M2_L07_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 19.7,
+      "end": 35.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 35.6,
+      "end": 60.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 60.9,
+      "end": 73.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 73.3,
+      "end": 101.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 101.6,
+      "end": 120.5,
+      "visual_type": "stock",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L07_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "chef chopping vegetables into equal pieces"
+    },
+    {
+      "scene": 7,
+      "start": 120.5,
+      "end": 139.8,
+      "visual_type": "stock",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L07_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "handmade crafts packed for online orders"
+    },
+    {
+      "scene": 8,
+      "start": 139.8,
+      "end": 151.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L07_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Create the folder models/staging/",
+        "Create models/staging/_sources.yml",
+        "Type the YAML from content.md: version 2, source raw, schema raw, table orders"
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 151.4,
+      "end": 170.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L07_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Create models/staging/stg_orders.sql",
+        "Type the source CTE: select distinct * from {{ source('raw', 'orders') }}",
+        "Type the casts for order_id, order_date and amount_usd, as in content.md"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 170.3,
+      "end": 184.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L07_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Type: lower(trim(status)) as order_status, upper(country) as country_code",
+        "Type: where customer_id <> 'TEST'",
+        "Highlight the new column names amount_usd, order_status, country_code"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 184.4,
+      "end": 194.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L07_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Delete models/orders_first.sql",
+        "Run: dbt run --select stg_orders",
+        "Highlight the success line in the log"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 194.7,
+      "end": 220.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L07_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: select * from main.stg_orders order by order_id;",
+        "Show 7 rows; highlight order 1005 status 'delivered' and order 1006 amount_usd NULL",
+        "Caption: 9 raw rows → 7 staged rows"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 220.4,
+      "end": 231.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 231.5,
+      "end": 249.5,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 249.5,
+      "end": 273.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 273.9,
+      "end": 296.6,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-17-data-engineering-for-ai_M2_L07_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

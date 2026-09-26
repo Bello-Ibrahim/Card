@@ -1,0 +1,166 @@
+{
+  "course_id": "AI-11",
+  "lesson_id": "L20",
+  "presenter_track": {
+    "file": "/incoming/ai-11-python-for-ai_M4_L20_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 301.6
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-11-python-for-ai_M4_L20_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.0,
+      "end": 44.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 44.1,
+      "end": 64.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 64.2,
+      "end": 87.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 87.8,
+      "end": 108.8,
+      "visual_type": "stock",
+      "file": "/incoming/ai-11-python-for-ai_L20_stock_05.mp4",
+      "status": "PENDING_STOCK",
+      "query": "friend cooking from recipe in kitchen"
+    },
+    {
+      "scene": 6,
+      "start": 108.8,
+      "end": 131.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 131.5,
+      "end": 149.9,
+      "visual_type": "stock",
+      "file": "/incoming/ai-11-python-for-ai_L20_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "teacher working on laptop at home"
+    },
+    {
+      "scene": 8,
+      "start": 149.9,
+      "end": 168.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L20_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run the L14, L16, L17 and L18 cells so ml exists",
+        "Add a new code cell",
+        "Type: assert ml.isna().sum().sum() == 0, \"missing values remain\"",
+        "Type: assert ml.select_dtypes(\"number\").shape[1] == ml.shape[1], \"non-numeric column\"",
+        "Type: print(\"Checks passed:\", ml.shape)",
+        "Press Shift + Enter",
+        "Output: Checks passed: (8, 11)"
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 168.8,
+      "end": 189.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L20_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open the example notebook (hypothetical data)",
+        "Scroll through: Question · Source (licence, download date) · Load · Audit with problem list",
+        "Stop at the Cleaning section and highlight the log row: Negative readings (14 rows): removed, because a pollution level cannot be below 0."
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 189.8,
+      "end": 209.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L20_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Scroll to Exploration: three labelled charts, each with one insight sentence",
+        "Scroll to ML-ready table: target, features, removed columns with reasons, saved CSV",
+        "Scroll to Limits and highlight the example sentence about the missing month"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 209.9,
+      "end": 223.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L20_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Choose the Colab menu option that restarts the session and runs all cells (check its current name and menu)",
+        "Wait for all cells to finish",
+        "Scroll from top to bottom to show every cell ran without errors"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 223.2,
+      "end": 249.3,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 249.3,
+      "end": 275.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 275.9,
+      "end": 301.6,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-11-python-for-ai_M4_L20_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "course_id": "AI-21",
+  "lesson_id": "L11",
+  "presenter_track": {
+    "file": "/incoming/ai-21-ai-video-production-and-motion_M3_L11_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 292.6
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.4,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_M3_L11_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 15.4,
+      "end": 24.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 24.8,
+      "end": 41.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 41.5,
+      "end": 54.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 54.4,
+      "end": 72.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 72.8,
+      "end": 92.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 92.5,
+      "end": 109.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 109.2,
+      "end": 121.2,
+      "visual_type": "stock",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L11_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "person watching video on phone without sound"
+    },
+    {
+      "scene": 9,
+      "start": 121.2,
+      "end": 136.6,
+      "visual_type": "stock",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L11_stock_09.mp4",
+      "status": "PENDING_STOCK",
+      "query": "tailor fitting a suit jacket on customer"
+    },
+    {
+      "scene": 10,
+      "start": 136.6,
+      "end": 152.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L11_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show Kwame's project folder: voice-over, avatar segment and 9 clips named by shot number.",
+        "Open the CapCut desktop app and create a new project.",
+        "Set the project to 16:9."
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 152.9,
+      "end": 166.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L11_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Click Import and add the voice-over, the avatar segment and all clips.",
+        "Drag the avatar segment to the start of the main track.",
+        "Drag the voice-over to the audio track after the avatar segment."
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 166.2,
+      "end": 178.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L11_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open the shot list beside the timeline.",
+        "Drag shot 2 to the video track above the voice-over, where its words begin.",
+        "Repeat quickly for shots 3 to 9 (speed up the recording)."
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 178.6,
+      "end": 194.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L11_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Select shot 4 and drag its left edge to cut the first second.",
+        "Play the timeline from the start.",
+        "Pause at the end of shot 6's line and trim 2 seconds from its end."
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 194.5,
+      "end": 205.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L11_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open transitions and drag one short cross-fade between the last farm shot and the city market shot.",
+        "Play across the transition once."
+      ]
+    },
+    {
+      "scene": 15,
+      "start": 205.2,
+      "end": 220.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L11_screen_6.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open Text, then Auto captions; choose English and generate.",
+        "Scroll through the caption lines.",
+        "Correct 'Kumasee' to 'Kumasi' and 'cocoon' to 'cocoa'.",
+        "Set a plain font with high contrast, placed in the lower third."
+      ]
+    },
+    {
+      "scene": 16,
+      "start": 220.2,
+      "end": 229.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L11_screen_7.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Play the whole rough cut from the start.",
+        "Point to the total length: 78 seconds.",
+        "Save the project."
+      ]
+    },
+    {
+      "scene": 17,
+      "start": 229.2,
+      "end": 251.5,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 18,
+      "start": 251.5,
+      "end": 271.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 19,
+      "start": 271.6,
+      "end": 292.6,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_M3_L11_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "course_id": "AI-18",
+  "lesson_id": "L12",
+  "presenter_track": {
+    "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_M3_L12_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 292.5
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_M3_L12_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.0,
+      "end": 39.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 39.0,
+      "end": 55.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 55.7,
+      "end": 83.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 83.6,
+      "end": 102.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 102.9,
+      "end": 118.3,
+      "visual_type": "stock",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L12_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "boxes moving through factory scanner gate"
+    },
+    {
+      "scene": 7,
+      "start": 118.3,
+      "end": 133.3,
+      "visual_type": "stock",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L12_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "engineer working on laptop in bright office"
+    },
+    {
+      "scene": 8,
+      "start": 133.3,
+      "end": 149.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L12_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open the wine-api repository in the editor",
+        "Create .github/workflows/ci.yml with the CI workflow from content.md",
+        "Highlight the on: push/pull_request block, then the four steps",
+        "Create export_ci_model.py (two lines)"
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 149.2,
+      "end": 164.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L12_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Commit and push to main",
+        "Open the Actions tab on GitHub",
+        "Show the ci workflow running",
+        "Show the green check mark on the completed run"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 164.2,
+      "end": 179.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L12_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open Settings, then Branches (or Rules)",
+        "Add a rule for main",
+        "Tick 'require a pull request before merging'",
+        "Add the required status check: test",
+        "Save the rule"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 179.6,
+      "end": 197.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L12_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: git switch -c raise-gate",
+        "Change the quality gate to >= 0.90, commit and push",
+        "Open a pull request",
+        "Show the failing test check and the disabled merge button with its message"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 197.2,
+      "end": 213.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L12_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open the failed job log and highlight the AssertionError from test_quality_gate",
+        "Revert the change, commit and push",
+        "Wait for the green test check",
+        "Merge the pull request"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 213.1,
+      "end": 233.7,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 233.7,
+      "end": 257.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 257.3,
+      "end": 279.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 279.2,
+      "end": 292.5,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_M3_L12_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

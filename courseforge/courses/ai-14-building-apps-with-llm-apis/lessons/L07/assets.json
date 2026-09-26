@@ -1,0 +1,160 @@
+{
+  "course_id": "AI-14",
+  "lesson_id": "L07",
+  "presenter_track": {
+    "file": "/incoming/ai-14-building-apps-with-llm-apis_M2_L07_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 296.6
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.4,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_M2_L07_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.4,
+      "end": 40.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 40.7,
+      "end": 62.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 62.1,
+      "end": 83.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 83.5,
+      "end": 101.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 101.9,
+      "end": 122.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 122.5,
+      "end": 142.2,
+      "visual_type": "stock",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L07_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "person listening to radio sports commentary"
+    },
+    {
+      "scene": 8,
+      "start": 142.2,
+      "end": 159.8,
+      "visual_type": "stock",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L07_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "lawyer reading documents at desk office"
+    },
+    {
+      "scene": 9,
+      "start": 159.8,
+      "end": 182.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L07_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open stream_timing.py in VS Code",
+        "Highlight start = time.perf_counter()",
+        "Highlight the check that records first when the first text piece arrives",
+        "Highlight final = stream.get_final_message() and total = time.perf_counter() - start",
+        "Highlight the final print with TTFT, total and output tokens"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 182.1,
+      "end": 201.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L07_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run python stream_timing.py with an invented question about a contract term",
+        "Show the text appearing piece by piece in the terminal",
+        "Show the final line: TTFT 0.9s, total 11.4s, output tokens 610 (labelled 'example')"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 201.4,
+      "end": 225.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L07_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add log_call(final, \"legal_explain\") after the loop",
+        "Add two columns for TTFT and total time to the log row",
+        "Run once more and open usage_log.csv to show the new row"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 225.0,
+      "end": 246.0,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 246.0,
+      "end": 271.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 271.3,
+      "end": 296.6,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_M2_L07_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

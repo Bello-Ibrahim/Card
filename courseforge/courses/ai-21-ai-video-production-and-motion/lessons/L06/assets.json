@@ -1,0 +1,211 @@
+{
+  "course_id": "AI-21",
+  "lesson_id": "L06",
+  "presenter_track": {
+    "file": "/incoming/ai-21-ai-video-production-and-motion_M2_L06_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 298.6
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 13.7,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_M2_L06_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 13.7,
+      "end": 22.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 22.3,
+      "end": 40.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 40.3,
+      "end": 57.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 57.0,
+      "end": 78.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 78.0,
+      "end": 95.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 95.6,
+      "end": 113.6,
+      "visual_type": "stock",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L06_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "scientist examining small plants in greenhouse"
+    },
+    {
+      "scene": 8,
+      "start": 113.6,
+      "end": 133.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L06_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open Flow in a web browser and sign in with the demo Google account.",
+        "Create a new project and name it 'Ridge test'."
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 133.3,
+      "end": 147.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L06_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Choose the text-to-video mode.",
+        "Open the settings panel.",
+        "Choose the model, the aspect ratio 16:9 and the number of outputs per prompt.",
+        "Point to the credit cost shown and note it."
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 147.4,
+      "end": 164.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L06_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Paste Ingrid's prompt from content.md into the prompt box and hold on it for 3 seconds.",
+        "Click Generate."
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 164.1,
+      "end": 179.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L06_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Wait for the results.",
+        "Play each clip once for the whole picture.",
+        "Play again and zoom in on the feet, the snow and the horizon.",
+        "Show the log document: attempt 1, no change, legs blur at the end."
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 179.5,
+      "end": 198.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L06_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Attempt 2: change only the action to 'walks slowly and steadily' and generate.",
+        "Compare with attempt 1; log: action changed, legs clearer.",
+        "Attempt 3: change only the camera to 'static wide shot' and generate.",
+        "Log: camera changed, calmer but flat; keep attempt 2."
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 198.8,
+      "end": 208.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L06_screen_6.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Select the attempt 2 clip.",
+        "Use extend to add a few seconds: the hiker stops and looks at the view."
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 208.2,
+      "end": 225.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L06_screen_7.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Download the chosen clip and point to the resolution options and any watermark.",
+        "Rename the file 'S03_ridge_v2.mp4'.",
+        "Save the final prompt in a text file next to the clip.",
+        "Show the finished log with three attempts."
+      ]
+    },
+    {
+      "scene": 15,
+      "start": 225.8,
+      "end": 236.5,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 236.5,
+      "end": 251.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 17,
+      "start": 251.9,
+      "end": 274.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 18,
+      "start": 274.2,
+      "end": 298.6,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_M2_L06_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "course_id": "AI-12",
+  "lesson_id": "L09",
+  "presenter_track": {
+    "file": "/incoming/ai-12-machine-learning-with-scikit-learn_M2_L09_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 304.7
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_M2_L09_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.0,
+      "end": 37.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 37.7,
+      "end": 60.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 60.0,
+      "end": 79.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 79.3,
+      "end": 96.0,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 96.0,
+      "end": 116.1,
+      "visual_type": "stock",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L09_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "fishing boat crew pulling net"
+    },
+    {
+      "scene": 7,
+      "start": 116.1,
+      "end": 135.0,
+      "visual_type": "stock",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L09_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "community health worker phone call office"
+    },
+    {
+      "scene": 8,
+      "start": 135.0,
+      "end": 144.9,
+      "visual_type": "stock",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L09_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "analyst laptop charts small office"
+    },
+    {
+      "scene": 9,
+      "start": 144.9,
+      "end": 157.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L09_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Scroll past the L05 setup and pipeline cells, already executed.",
+        "Type this exact code cell from content.md and run it with Shift+Enter:\npred = (proba >= 0.3).astype(int)"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 157.3,
+      "end": 180.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L09_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight ROC AUC: 0.752.",
+        "Highlight the rows 0.5 0.583 0.117 and 0.3 0.396 0.317."
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 180.0,
+      "end": 196.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L09_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight the row 0.15 0.292 0.667.",
+        "Add a caption: finds 2 in 3, about 29% of flags correct."
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 196.3,
+      "end": 216.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L09_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Type this exact code cell from content.md and run it with Shift+Enter:\nimport numpy as np\nfrom sklearn.metrics import roc_auc_score, precision_score, recall_score\n\nproba = pipe.predict_proba(X_test)[:, 1]\nprint(\"ROC AUC:\", round(roc_auc_score(y_test, proba), 3))\nfor t in [0.5, 0.3, 0.15]:\n    pred = (proba >= t).astype(int)\n    print(t, round(precision_score(y_test, pred), 3), round(recall_score(y_test, pred), 3))"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 216.0,
+      "end": 231.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L09_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight the output 0.1 813 1381.",
+        "Label: best threshold 0.1 · cost 813 · cost at 0.5: 1381."
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 231.9,
+      "end": 253.3,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 253.3,
+      "end": 278.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 278.6,
+      "end": 304.7,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_M2_L09_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

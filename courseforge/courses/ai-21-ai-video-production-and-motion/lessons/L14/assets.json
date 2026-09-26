@@ -1,0 +1,172 @@
+{
+  "course_id": "AI-21",
+  "lesson_id": "L14",
+  "presenter_track": {
+    "file": "/incoming/ai-21-ai-video-production-and-motion_M3_L14_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 290.9
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.1,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_M3_L14_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 17.1,
+      "end": 25.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 25.2,
+      "end": 46.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 46.2,
+      "end": 63.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 63.8,
+      "end": 77.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 77.9,
+      "end": 94.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 94.6,
+      "end": 111.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 111.3,
+      "end": 125.9,
+      "visual_type": "stock",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L14_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "engineer writing notes beside finished machine"
+    },
+    {
+      "scene": 9,
+      "start": 125.9,
+      "end": 140.5,
+      "visual_type": "stock",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L14_stock_09.mp4",
+      "status": "PENDING_STOCK",
+      "query": "woman riding bicycle along seaside road"
+    },
+    {
+      "scene": 10,
+      "start": 140.5,
+      "end": 161.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 11,
+      "start": 161.1,
+      "end": 173.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 12,
+      "start": 173.5,
+      "end": 185.5,
+      "visual_type": "hero_broll",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L14_broll_1.mp4",
+      "status": "PENDING_UPLOAD"
+    },
+    {
+      "scene": 13,
+      "start": 185.5,
+      "end": 201.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 201.8,
+      "end": 227.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 227.9,
+      "end": 244.6,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 244.6,
+      "end": 265.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 17,
+      "start": 265.6,
+      "end": 290.9,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_M3_L14_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

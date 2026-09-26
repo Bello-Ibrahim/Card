@@ -1,0 +1,165 @@
+{
+  "course_id": "AI-18",
+  "lesson_id": "L09",
+  "presenter_track": {
+    "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_M2_L09_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 277.3
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 11.6,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_M2_L09_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 11.6,
+      "end": 38.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 38.2,
+      "end": 66.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 66.5,
+      "end": 91.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 91.4,
+      "end": 114.1,
+      "visual_type": "stock",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L09_stock_05.mp4",
+      "status": "PENDING_STOCK",
+      "query": "barista making coffee for waiting customer"
+    },
+    {
+      "scene": 6,
+      "start": 114.1,
+      "end": 138.1,
+      "visual_type": "stock",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L09_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "online shop parcels packed in warehouse"
+    },
+    {
+      "scene": 7,
+      "start": 138.1,
+      "end": 155.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L09_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Start the service: uvicorn app:app --port 8000",
+        "Show locustfile.py with the ApiUser class posting a valid wine to /predict",
+        "Run: locust -f locustfile.py --host http://127.0.0.1:8000",
+        "Open http://localhost:8089"
+      ]
+    },
+    {
+      "scene": 8,
+      "start": 155.7,
+      "end": 169.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L09_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Start a test with 5 users and a spawn rate of 10",
+        "Let it run for 20 seconds",
+        "Open the Statistics tab and highlight 16 requests per second, median 6 ms, 95th percentile 11 ms"
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 169.8,
+      "end": 189.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L09_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Stop the test",
+        "Start a new test with 50 users",
+        "Open the Statistics tab and highlight 145 requests per second, median 9 ms, 95th percentile 30 ms",
+        "Place the two results side by side"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 189.5,
+      "end": 206.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L09_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show batch_score.py loading models:/wine-quality-clf@champion",
+        "Run: python batch_score.py new_batch.csv scored.csv",
+        "Show the output 'scored 500 rows -> scored.csv'",
+        "Open scored.csv and show the probability column"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 206.6,
+      "end": 226.3,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 12,
+      "start": 226.3,
+      "end": 249.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 249.9,
+      "end": 266.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 266.6,
+      "end": 277.3,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_M2_L09_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

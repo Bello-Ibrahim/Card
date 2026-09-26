@@ -1,0 +1,172 @@
+{
+  "course_id": "AI-19",
+  "lesson_id": "L02",
+  "presenter_track": {
+    "file": "/incoming/ai-19-computer-vision-essentials_M1_L02_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 315.8
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 19.7,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-19-computer-vision-essentials_M1_L02_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 19.7,
+      "end": 42.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 42.0,
+      "end": 59.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 59.6,
+      "end": 82.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 82.3,
+      "end": 108.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 108.0,
+      "end": 132.0,
+      "visual_type": "stock",
+      "file": "/incoming/ai-19-computer-vision-essentials_L02_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "empty cardboard egg trays stacked"
+    },
+    {
+      "scene": 7,
+      "start": 132.0,
+      "end": 150.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 150.4,
+      "end": 162.4,
+      "visual_type": "stock",
+      "file": "/incoming/ai-19-computer-vision-essentials_L02_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "rows of ceramic tiles close up"
+    },
+    {
+      "scene": 9,
+      "start": 162.4,
+      "end": 180.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L02_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open colab.research.google.com and create a new notebook",
+        "Click the folder icon in the left panel",
+        "Upload tile.jpg and show it in the file list"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 180.0,
+      "end": 200.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L02_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Paste the code from content.md into a cell: cv2.imread, print shape and dtype, print img[0, 0], set img[50:150, 100:200] = (0, 0, 255), plt.imshow with cv2.cvtColor(img, cv2.COLOR_BGR2RGB)",
+        "Highlight the line that sets the block to (0, 0, 255)",
+        "Run the cell with Shift+Enter"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 200.6,
+      "end": 225.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L02_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Point to the printed output (480, 640, 3) uint8",
+        "Name each number in turn: height, width, channels",
+        "Point to the printed top-left pixel values and label them B, G, R"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 225.0,
+      "end": 241.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L02_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the displayed image with the red square",
+        "Delete the cv2.cvtColor call so plt.imshow(img) receives BGR",
+        "Run again and show the blue square",
+        "Put the cvtColor call back and run once more"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 241.3,
+      "end": 261.4,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 261.4,
+      "end": 290.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 290.1,
+      "end": 315.8,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-19-computer-vision-essentials_M1_L02_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

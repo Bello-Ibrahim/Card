@@ -1,0 +1,173 @@
+{
+  "course_id": "AI-18",
+  "lesson_id": "L15",
+  "presenter_track": {
+    "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_M4_L15_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 295.9
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.3,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_M4_L15_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 16.3,
+      "end": 44.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 44.2,
+      "end": 67.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 67.8,
+      "end": 93.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 93.1,
+      "end": 112.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 112.8,
+      "end": 124.8,
+      "visual_type": "stock",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L15_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "doctor checking patient heart rate"
+    },
+    {
+      "scene": 7,
+      "start": 124.8,
+      "end": 134.2,
+      "visual_type": "stock",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L15_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "young engineer working on laptop in office"
+    },
+    {
+      "scene": 8,
+      "start": 134.2,
+      "end": 156.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L15_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open app.py and add the log_requests middleware",
+        "Restart the service",
+        "Run the traffic script: 300 requests with random valid inputs, every 25th with alcohol = 40",
+        "Show a few JSON request lines in predictions.jsonl"
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 156.9,
+      "end": 178.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L15_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open a Jupyter notebook in the project folder",
+        "Run the dashboard cell that reads predictions.jsonl with pandas",
+        "Highlight the hourly table: requests 300, error_rate 0.04, p95_ms 3.9",
+        "Filter to show the 12 rejected requests with status 422"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 178.8,
+      "end": 202.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L15_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight the value counts: 94, 64, 59, 71 across the four probability bands",
+        "Run hourly['requests'].plot(kind='bar')",
+        "Plot a histogram of pred.probability"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 202.8,
+      "end": 220.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L15_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add a markdown cell under the charts",
+        "Write alert rule 1 with metric, threshold, time window and owner",
+        "Write alert rule 2 for the prediction distribution with metric, threshold, window and owner"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 220.4,
+      "end": 241.0,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 241.0,
+      "end": 265.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 265.9,
+      "end": 286.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 286.9,
+      "end": 295.9,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_M4_L15_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

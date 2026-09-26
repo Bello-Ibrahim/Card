@@ -1,0 +1,162 @@
+{
+  "course_id": "AI-15",
+  "lesson_id": "L08",
+  "presenter_track": {
+    "file": "/incoming/ai-15-rag-systems-chat-with-your-data_M2_L08_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 295.9
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.6,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_M2_L08_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 17.6,
+      "end": 27.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 27.5,
+      "end": 51.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 51.1,
+      "end": 79.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 79.0,
+      "end": 100.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 100.9,
+      "end": 121.5,
+      "visual_type": "stock",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L08_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "receptionist writing phone message at desk"
+    },
+    {
+      "scene": 7,
+      "start": 121.5,
+      "end": 138.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L08_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open the chat notebook with the pipeline from earlier lessons.",
+        "Ask 'What is the travel allowance for Astana?' and show the answer with a citation to the travel policy chunk."
+      ]
+    },
+    {
+      "scene": 8,
+      "start": 138.6,
+      "end": 159.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L08_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Ask 'And for drivers?' with no rewriting.",
+        "Print the top 5 retrieved chunks and highlight the vehicle maintenance titles."
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 159.6,
+      "end": 180.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L08_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the rewrite function: history[-6:], output_config with REWRITE_SCHEMA, json.loads of the text block.",
+        "Run rewrite(history, 'And for drivers?') and show the JSON from the real run."
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 180.6,
+      "end": 200.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L08_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Retrieve with the standalone query and each variant, then fuse the lists with rrf.",
+        "Show the drivers' section of the travel policy as the top chunk.",
+        "Show the debug panel line 'Searched for: …' under the answer."
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 200.7,
+      "end": 218.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L08_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run rewrite on a complete first question and compare it with the original.",
+        "Show the answer call using the original question, not the rewritten one."
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 218.3,
+      "end": 242.3,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 242.3,
+      "end": 267.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 267.6,
+      "end": 295.9,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_M2_L08_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

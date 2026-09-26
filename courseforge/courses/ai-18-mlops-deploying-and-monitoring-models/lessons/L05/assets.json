@@ -1,0 +1,185 @@
+{
+  "course_id": "AI-18",
+  "lesson_id": "L05",
+  "presenter_track": {
+    "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_M1_L05_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 287.9
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.1,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_M1_L05_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 17.1,
+      "end": 32.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 32.5,
+      "end": 50.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 50.1,
+      "end": 73.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 73.7,
+      "end": 84.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 84.8,
+      "end": 107.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 107.9,
+      "end": 124.6,
+      "visual_type": "stock",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L05_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "library shelves with numbered book editions"
+    },
+    {
+      "scene": 8,
+      "start": 124.6,
+      "end": 146.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L05_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "In the terminal, run: git add . and git commit -m \"Add registration script\"",
+        "Show register.py in the editor, highlighting search_runs ordered by metrics.f1, register_model, the two set_model_version_tag calls and set_registered_model_alias",
+        "Run: python register.py",
+        "Show the printed message that version 1 of wine-quality-clf was created"
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 146.9,
+      "end": 161.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L05_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open the MLflow interface in the browser",
+        "Click Models",
+        "Click wine-quality-clf and open Version 1",
+        "Point to the champion alias",
+        "Point to the tags data_sha256 = bfc250d53981 and git_commit"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 161.9,
+      "end": 174.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L05_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Edit config.yaml and change model C",
+        "Run the training and tracking script, then run: python register.py again",
+        "Refresh the Models page: Version 2 appears",
+        "Show that the champion alias is still on Version 1"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 174.8,
+      "end": 193.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L05_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "In a Python shell, run: client.set_registered_model_alias(NAME, \"champion\", 2)",
+        "Refresh the registry page: champion now on Version 2",
+        "Run: client.set_registered_model_alias(NAME, \"champion\", 1)",
+        "Refresh: champion back on Version 1"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 193.7,
+      "end": 212.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 212.1,
+      "end": 231.8,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 231.8,
+      "end": 255.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 255.8,
+      "end": 277.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 277.2,
+      "end": 287.9,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_M1_L05_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

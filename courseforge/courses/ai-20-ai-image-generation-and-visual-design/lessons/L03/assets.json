@@ -1,0 +1,214 @@
+{
+  "course_id": "AI-20",
+  "lesson_id": "L03",
+  "presenter_track": {
+    "file": "/incoming/ai-20-ai-image-generation-and-visual-design_M1_L03_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 313.8
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.3,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-20-ai-image-generation-and-visual-design_M1_L03_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 16.3,
+      "end": 23.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 23.2,
+      "end": 44.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 44.2,
+      "end": 63.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 63.5,
+      "end": 90.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 90.1,
+      "end": 106.8,
+      "visual_type": "stock",
+      "file": "/incoming/ai-20-ai-image-generation-and-visual-design_L03_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "designer desk with control panel switches"
+    },
+    {
+      "scene": 7,
+      "start": 106.8,
+      "end": 117.9,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 117.9,
+      "end": 140.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 9,
+      "start": 140.2,
+      "end": 162.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-20-ai-image-generation-and-visual-design_L03_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open Gemini in a web browser and sign in with a Google account",
+        "Start a new chat",
+        "If there is an image option or tool menu, select image creation",
+        "Paste the bakery prompt and add: 'Make it a square 1:1 image.'",
+        "Press send"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 162.9,
+      "end": 180.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-20-ai-image-generation-and-visual-design_L03_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Wait for the result",
+        "Point out which details from the prompt appear: tray, bread, meat pies, light from the left, green plant",
+        "Type the follow-up: 'Keep everything the same, but make the background slightly darker.'",
+        "Press send"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 180.9,
+      "end": 197.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-20-ai-image-generation-and-visual-design_L03_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show how the image changed after the follow-up",
+        "Open the image",
+        "Use the download option to save it"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 197.6,
+      "end": 215.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-20-ai-image-generation-and-visual-design_L03_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open the Adobe Firefly website and sign in with a free Adobe account",
+        "Choose the text-to-image option",
+        "Paste the same prompt, without the aspect-ratio sentence"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 215.2,
+      "end": 230.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-20-ai-image-generation-and-visual-design_L03_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "In the settings panel, set aspect ratio to square (1:1)",
+        "Set content type to photo",
+        "Point out the credit counter, if visible, and explain that each generation uses credits",
+        "Click Generate"
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 230.2,
+      "end": 240.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-20-ai-image-generation-and-visual-design_L03_screen_6.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Hover over the best Firefly result",
+        "Download it",
+        "Place the Gemini image and the Firefly image side by side"
+      ]
+    },
+    {
+      "scene": 15,
+      "start": 240.5,
+      "end": 255.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-20-ai-image-generation-and-visual-design_L03_screen_7.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "With both images side by side, point to the difference in lighting",
+        "Point to how much of the counter each image shows",
+        "Name the two differences out loud"
+      ]
+    },
+    {
+      "scene": 16,
+      "start": 255.9,
+      "end": 271.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 17,
+      "start": 271.3,
+      "end": 293.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 18,
+      "start": 293.2,
+      "end": 313.8,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-20-ai-image-generation-and-visual-design_M1_L03_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

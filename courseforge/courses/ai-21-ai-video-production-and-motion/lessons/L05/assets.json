@@ -1,0 +1,182 @@
+{
+  "course_id": "AI-21",
+  "lesson_id": "L05",
+  "presenter_track": {
+    "file": "/incoming/ai-21-ai-video-production-and-motion_M1_L05_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 301.7
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_M1_L05_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 15.0,
+      "end": 25.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 25.7,
+      "end": 41.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 41.1,
+      "end": 62.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 62.5,
+      "end": 84.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 84.4,
+      "end": 98.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 98.1,
+      "end": 119.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 119.5,
+      "end": 134.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 9,
+      "start": 134.9,
+      "end": 152.5,
+      "visual_type": "stock",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L05_stock_09.mp4",
+      "status": "PENDING_STOCK",
+      "query": "film crew reviewing set photos on a board"
+    },
+    {
+      "scene": 10,
+      "start": 152.5,
+      "end": 166.6,
+      "visual_type": "stock",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L05_stock_10.mp4",
+      "status": "PENDING_STOCK",
+      "query": "tiled courtyard with fountain and orange trees"
+    },
+    {
+      "scene": 11,
+      "start": 166.6,
+      "end": 178.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 12,
+      "start": 178.6,
+      "end": 191.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 191.0,
+      "end": 207.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 207.7,
+      "end": 219.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 219.7,
+      "end": 238.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 238.6,
+      "end": 254.5,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 17,
+      "start": 254.5,
+      "end": 278.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 18,
+      "start": 278.1,
+      "end": 301.7,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_M1_L05_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

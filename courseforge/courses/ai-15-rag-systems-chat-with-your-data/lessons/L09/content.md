@@ -28,7 +28,7 @@ SYSTEM = (
     "I don't know. The documents do not contain this information.")
 ```
 
-**Structured output for answer and sources.** For an application, it is better to return JSON than to parse brackets from free text. Use a forced tool call, as in L08, with a schema such as `{"answer": str, "citations": [str], "found": bool}`. Then check the result in code:
+**Structured output for answer and sources.** For an application, it is better to return JSON than to parse brackets from free text. Use structured output with a JSON Schema in `output_config`, as in L08 (some current models reject a forced tool call), with a schema such as `{"answer": str, "citations": [str], "found": bool}`. Then check the result in code:
 
 ```python
 def check_citations(result, retrieved_ids):
@@ -55,7 +55,7 @@ Priya is building a question-answering tool for a hypothetical legal aid clinic 
 On screen, follow her changes:
 
 1. She replaces her old one-line prompt with the `SYSTEM` prompt above and the `format_context` function.
-2. She adds the forced tool call with `answer`, `citations` and `found`.
+2. She adds structured output with `answer`, `citations` and `found`.
 3. She asks, "How much deposit can a landlord ask for?" The result cites two chunks, and `check_citations` passes. She opens both chunks and confirms the numbers.
 4. She asks three questions the guide does not cover: rules in another country, a tax question, and a question about a named landlord. All three return `found: false` and the exact "I don't know" sentence.
 5. In the interface she shows each citation as the document title and page, with a link.
@@ -75,7 +75,7 @@ Many developers ask for citations but never check them. Models can cite an ID th
 **Tools:** Python 3, the anthropic SDK (paid API, smaller model for testing), your Chroma collection. [VERSION]
 **Steps:**
 1. Add `format_context` and the grounded `SYSTEM` prompt to your pipeline.
-2. Add a forced tool call that returns `answer`, `citations` and `found`, and run `check_citations` on every result.
+2. Add structured output (a JSON Schema in `output_config`) that returns `answer`, `citations` and `found`, and run `check_citations` on every result.
 3. Show each citation as title, page and link.
 4. Ask 5 answerable questions and open the cited chunks to check support.
 5. Ask 3 questions the documents cannot answer, including one on a nearby topic.
@@ -84,5 +84,5 @@ Many developers ask for citations but never check them. Models can cite an ID th
 **Time:** about 40 minutes
 
 ## Review Flags
-- [VERSION] Claude API document citations feature (document content blocks, citation response format), structured outputs and forced tool use, and whether citations and structured outputs can be used in the same request (course-level flag).
+- [VERSION] Claude API document citations feature (document content blocks, citation response format), structured outputs (`output_config` JSON Schema; forced tool use is rejected by some current models), and whether citations and structured outputs can be used in the same request (course-level flag).
 - [REGION] Rental rules differ by state and country; the example uses a hypothetical guide and names no law.

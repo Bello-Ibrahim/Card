@@ -1,0 +1,171 @@
+{
+  "course_id": "AI-19",
+  "lesson_id": "L05",
+  "presenter_track": {
+    "file": "/incoming/ai-19-computer-vision-essentials_M2_L05_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 302.6
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 19.7,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-19-computer-vision-essentials_M2_L05_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 19.7,
+      "end": 30.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 30.8,
+      "end": 56.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 56.5,
+      "end": 78.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 78.4,
+      "end": 102.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 102.8,
+      "end": 129.4,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 129.4,
+      "end": 151.7,
+      "visual_type": "stock",
+      "file": "/incoming/ai-19-computer-vision-essentials_L05_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "hands sliding stencil over paper"
+    },
+    {
+      "scene": 8,
+      "start": 151.7,
+      "end": 165.8,
+      "visual_type": "stock",
+      "file": "/incoming/ai-19-computer-vision-essentials_L05_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "close up of striped woven fabric"
+    },
+    {
+      "scene": 9,
+      "start": 165.8,
+      "end": 180.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L05_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Upload fabric.jpg to a Colab notebook",
+        "Show the kernels dictionary: vertical_edge, blur, sharpen",
+        "Run the cell with cv2.filter2D and cv2.convertScaleAbs"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 180.4,
+      "end": 201.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L05_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Display the original and the three outputs in a 2 × 2 Matplotlib grid",
+        "Point to the bright vertical threads in the edge map",
+        "Point to a pulled thread in the sharpened image"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 201.0,
+      "end": 214.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L05_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Change the edge kernel to its transpose, k.T",
+        "Run the cell again and display the new edge map",
+        "Show that horizontal edges are now bright"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 214.7,
+      "end": 231.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L05_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the prepared image of the first 16 first-layer filters of a pre-trained CNN",
+        "Point to two edge-like filters",
+        "Point to one colour-blob filter"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 231.0,
+      "end": 251.6,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 251.6,
+      "end": 277.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 277.3,
+      "end": 302.6,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-19-computer-vision-essentials_M2_L05_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

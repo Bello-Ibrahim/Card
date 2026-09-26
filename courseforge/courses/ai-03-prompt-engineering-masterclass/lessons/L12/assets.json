@@ -1,0 +1,181 @@
+{
+  "course_id": "AI-03",
+  "lesson_id": "L12",
+  "presenter_track": {
+    "file": "/incoming/ai-03-prompt-engineering-masterclass_M3_L12_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 293.1
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.1,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-03-prompt-engineering-masterclass_M3_L12_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 17.1,
+      "end": 27.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 27.0,
+      "end": 45.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 45.4,
+      "end": 66.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 66.4,
+      "end": 87.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 87.8,
+      "end": 106.7,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 106.7,
+      "end": 123.0,
+      "visual_type": "stock",
+      "file": "/incoming/ai-03-prompt-engineering-masterclass_L12_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "three cakes baking in ovens kitchen"
+    },
+    {
+      "scene": 8,
+      "start": 123.0,
+      "end": 136.3,
+      "visual_type": "stock",
+      "file": "/incoming/ai-03-prompt-engineering-masterclass_L12_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "volunteers river clean up collecting waste"
+    },
+    {
+      "scene": 9,
+      "start": 136.3,
+      "end": 160.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-03-prompt-engineering-masterclass_L12_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show three browser tabs open: Claude, ChatGPT and Gemini, each signed in to the free plan.",
+        "Switch to a notes app and show the full prompt and notes from content.md."
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 160.3,
+      "end": 175.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-03-prompt-engineering-masterclass_L12_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "In Claude, start a new chat, paste the prompt exactly and send it. Show the output.",
+        "In ChatGPT, start a new chat, paste the same prompt and send it. Show the output.",
+        "In Gemini, start a new chat, paste the same prompt and send it. Show the output."
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 175.7,
+      "end": 186.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-03-prompt-engineering-masterclass_L12_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Place the three outputs side by side on screen.",
+        "Open a spreadsheet with columns: Tool, Date, Accuracy, Format, Tone, Total, Notes. Type today's date in each row."
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 186.4,
+      "end": 206.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-03-prompt-engineering-masterclass_L12_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Count the words of each output and enter the Format score.",
+        "Highlight any phrase or figure that is not in the notes and enter the Accuracy score.",
+        "Read each output for tone and enter the Tone score. Let the Total column add up."
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 206.1,
+      "end": 221.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-03-prompt-engineering-masterclass_L12_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Fill in the Notes column with one reason for each lowest score.",
+        "Type the final choice: 'Use the highest-scoring tool for this task. Retest in 3 months.'"
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 221.1,
+      "end": 241.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 241.7,
+      "end": 267.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 267.4,
+      "end": 293.1,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-03-prompt-engineering-masterclass_M3_L12_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

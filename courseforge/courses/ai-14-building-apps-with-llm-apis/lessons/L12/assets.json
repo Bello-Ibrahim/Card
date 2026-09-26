@@ -1,0 +1,172 @@
+{
+  "course_id": "AI-14",
+  "lesson_id": "L12",
+  "presenter_track": {
+    "file": "/incoming/ai-14-building-apps-with-llm-apis_M3_L12_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 301.8
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.1,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_M3_L12_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 17.1,
+      "end": 40.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 40.7,
+      "end": 62.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 62.1,
+      "end": 81.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 81.0,
+      "end": 103.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 103.7,
+      "end": 130.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 130.7,
+      "end": 147.0,
+      "visual_type": "stock",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L12_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "learner driver car on city roundabout"
+    },
+    {
+      "scene": 8,
+      "start": 147.0,
+      "end": 156.9,
+      "visual_type": "stock",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L12_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "accountant working at desk Scandinavian office"
+    },
+    {
+      "scene": 9,
+      "start": 156.9,
+      "end": 173.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L12_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open evals/cases.json in VS Code",
+        "Highlight case se-07 with its file path and expected currency SEK, total 12500.0 and invoice_date 2026-02-28"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 173.2,
+      "end": 192.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L12_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open run_eval.py",
+        "Highlight the loop over cases and the call extract(text, prompt_version)",
+        "Highlight the all(...) check that compares each expected field",
+        "Highlight cost += call_cost and the FAIL print",
+        "Highlight the final summary print"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 192.1,
+      "end": 211.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L12_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run python run_eval.py v1 and show 'v1: 18/20 passed' with FAIL se-07 and FAIL de-03",
+        "Run python run_eval.py v2 and show 'v2: 19/20 passed' with FAIL mx-02",
+        "Circle mx-02 in red and add the label 'regression' (example output)"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 211.8,
+      "end": 228.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L12_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open prompts/extract_v2.txt and highlight the decimal-comma rule",
+        "Save an edited copy as prompts/extract_v3.txt",
+        "Run python run_eval.py v3 and show no regressions against v1 (example output)"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 228.5,
+      "end": 245.6,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 245.6,
+      "end": 275.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 275.2,
+      "end": 301.8,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_M3_L12_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

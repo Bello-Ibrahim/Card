@@ -1,0 +1,190 @@
+{
+  "course_id": "AI-28",
+  "lesson_id": "L14",
+  "presenter_track": {
+    "file": "/incoming/ai-28-building-an-ai-startup_M3_L14_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 294.9
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.1,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-28-building-an-ai-startup_M3_L14_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 17.1,
+      "end": 40.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 40.2,
+      "end": 57.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 57.8,
+      "end": 77.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 77.9,
+      "end": 91.2,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 91.2,
+      "end": 107.5,
+      "visual_type": "stock",
+      "file": "/incoming/ai-28-building-an-ai-startup_L14_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "large road signs over busy motorway"
+    },
+    {
+      "scene": 7,
+      "start": 107.5,
+      "end": 129.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 129.4,
+      "end": 144.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-28-building-an-ai-startup_L14_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open Canva and sign in with a free account.",
+        "Type 'pitch deck' in the search bar and filter to Presentations [VERSION].",
+        "Choose a simple template with plenty of white space.",
+        "In the page view, delete extra slides or duplicate slides until there are exactly 10."
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 144.4,
+      "end": 159.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-28-building-an-ai-startup_L14_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open the template's style or brand options and apply one colour set and one font to all pages [VERSION].",
+        "Click the title on slide 1 and type: 'Small pharmacies lose stock to expiry because they track dates on paper.'",
+        "Scroll through slides 2 to 10 and type a full-sentence title on each."
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 159.8,
+      "end": 174.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-28-building-an-ai-startup_L14_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Go to slide 4 and add a text box.",
+        "Type: '11 interviews · waitlist 34 of 120 visitors (threshold 25) · 4 pharmacies in a paid pilot'.",
+        "Increase the font size so the three numbers are easy to read."
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 174.4,
+      "end": 192.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-28-building-an-ai-startup_L14_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open Uploads and upload two MVP screenshots made with fake data [VERSION].",
+        "Drag them onto slide 3 and align them side by side.",
+        "Go to slide 6, open Elements, search 'chart' and insert a bar chart [VERSION].",
+        "Edit the chart data to two bars: revenue and cost to serve for a typical customer (placeholder numbers)."
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 192.0,
+      "end": 211.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-28-building-an-ai-startup_L14_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Go to slide 7 and highlight the title 'We use the latest AI'.",
+        "Replace it with: 'Our moat: a growing set of corrected shelf photos from partner pharmacies, used with permission, and a distribution deal with a pharmacists' association.'",
+        "Shorten the supporting text to two lines."
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 211.3,
+      "end": 224.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-28-building-an-ai-startup_L14_screen_6.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Click Present and step through all 10 slides [VERSION].",
+        "Exit, click Share, then Download and choose PDF [VERSION].",
+        "Show the alternative: create a view-only link."
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 224.6,
+      "end": 249.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 249.5,
+      "end": 269.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 269.2,
+      "end": 294.9,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-28-building-an-ai-startup_M3_L14_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

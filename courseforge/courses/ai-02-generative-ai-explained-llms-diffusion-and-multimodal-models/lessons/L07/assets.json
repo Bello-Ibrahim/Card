@@ -1,0 +1,175 @@
+{
+  "course_id": "AI-02",
+  "lesson_id": "L07",
+  "presenter_track": {
+    "file": "/incoming/ai-02-generative-ai-explained-llms-diffusion-and-multimodal-models_M2_L07_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 295.5
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.9,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-02-generative-ai-explained-llms-diffusion-and-multimodal-models_M2_L07_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.9,
+      "end": 40.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 40.8,
+      "end": 65.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 65.2,
+      "end": 81.9,
+      "visual_type": "stock",
+      "file": "/incoming/ai-02-generative-ai-explained-llms-diffusion-and-multimodal-models_L07_stock_04.mp4",
+      "status": "PENDING_STOCK",
+      "query": "colleague reading handwritten notes at desk"
+    },
+    {
+      "scene": 5,
+      "start": 81.9,
+      "end": 107.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 107.2,
+      "end": 124.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 124.3,
+      "end": 138.0,
+      "visual_type": "stock",
+      "file": "/incoming/ai-02-generative-ai-explained-llms-diffusion-and-multimodal-models_L07_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "small hardware store owner behind counter"
+    },
+    {
+      "scene": 8,
+      "start": 138.0,
+      "end": 154.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-02-generative-ai-explained-llms-diffusion-and-multimodal-models_L07_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the photo of the handwritten price list, taken from above in good light",
+        "Crop the photo so only the list remains",
+        "Open Google AI Studio and start a new chat"
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 154.3,
+      "end": 179.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-02-generative-ai-explained-llms-diffusion-and-multimodal-models_L07_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Click the upload or attach button and add the cropped photo",
+        "Type: 'Copy this price list into a table with the columns Item, Unit and Price. Do not guess: if a value is unclear, write \"unclear\".'",
+        "Highlight the 'Do not guess' line"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 179.6,
+      "end": 195.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-02-generative-ai-explained-llms-diffusion-and-multimodal-models_L07_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Send the request and wait for the table",
+        "Place the table and the photo side by side",
+        "Move a highlight down the rows, comparing each row with the photo"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 195.9,
+      "end": 213.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-02-generative-ai-explained-llms-diffusion-and-multimodal-models_L07_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Circle the row showing 17.00 and the matching handwritten 11.00 in the photo",
+        "Point to the item at the edge of the photo that is missing from the table",
+        "Point to the value marked 'unclear'",
+        "Correct the price, add the missing row and fill in the unclear value"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 213.5,
+      "end": 225.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-02-generative-ai-explained-llms-diffusion-and-multimodal-models_L07_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Copy the corrected table",
+        "Paste it into a blank spreadsheet and show the three columns"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 225.1,
+      "end": 247.0,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 247.0,
+      "end": 271.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 271.9,
+      "end": 295.5,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-02-generative-ai-explained-llms-diffusion-and-multimodal-models_M2_L07_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

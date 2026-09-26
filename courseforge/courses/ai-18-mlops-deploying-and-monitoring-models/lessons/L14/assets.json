@@ -1,0 +1,202 @@
+{
+  "course_id": "AI-18",
+  "lesson_id": "L14",
+  "presenter_track": {
+    "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_M3_L14_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 291.4
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.6,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_M3_L14_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 17.6,
+      "end": 33.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 33.0,
+      "end": 52.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 52.7,
+      "end": 67.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 67.7,
+      "end": 94.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 94.7,
+      "end": 110.1,
+      "visual_type": "stock",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L14_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "goalkeeper training on football pitch"
+    },
+    {
+      "scene": 7,
+      "start": 110.1,
+      "end": 120.0,
+      "visual_type": "stock",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L14_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "tea plantation hills in morning light"
+    },
+    {
+      "scene": 8,
+      "start": 120.0,
+      "end": 141.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L14_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open add_challenger.py and highlight the challenger alias being set",
+        "Open compare.py and highlight score('champion'), score('challenger') and the exit rule chall > champ + 0.01",
+        "Open promote.py and highlight the two set_registered_model_alias lines",
+        "Run the three scripts locally against the tracking server"
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 141.0,
+      "end": 155.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L14_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open Settings, then Environments",
+        "Create the environment production",
+        "Add himself as a required reviewer and save",
+        "Open .github/workflows/retrain.yml and highlight the schedule, workflow_dispatch, the retrain job and the promote job with environment: production",
+        "Commit the workflow"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 155.6,
+      "end": 177.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L14_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open the Actions tab and choose the retrain workflow",
+        "Click Run workflow",
+        "Open the retrain job log",
+        "Highlight 'champion F1=0.5568  challenger F1=0.5380'"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 177.0,
+      "end": 187.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L14_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the promote job marked as skipped in the run summary",
+        "Open the MLflow UI, Models, wine-quality-clf",
+        "Show the champion alias on the same version as before"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 187.3,
+      "end": 207.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L14_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Change the training settings in add_challenger.py and commit",
+        "Click Run workflow again",
+        "Show the promote job waiting for review",
+        "Click Review deployments, select production, click Approve"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 207.4,
+      "end": 219.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L14_screen_6.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Refresh the MLflow registry page",
+        "Show champion on the new version",
+        "Show previous on the old version"
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 219.8,
+      "end": 239.5,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 239.5,
+      "end": 263.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 263.9,
+      "end": 282.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 17,
+      "start": 282.8,
+      "end": 291.4,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_M3_L14_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

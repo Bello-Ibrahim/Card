@@ -1,0 +1,163 @@
+{
+  "course_id": "AI-05",
+  "lesson_id": "L18",
+  "presenter_track": {
+    "file": "/incoming/ai-05-math-and-statistics-for-ai-no-fear-edition_M4_L18_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 298.2
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-05-math-and-statistics-for-ai-no-fear-edition_M4_L18_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.0,
+      "end": 38.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 38.6,
+      "end": 58.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 58.7,
+      "end": 86.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 86.1,
+      "end": 100.7,
+      "visual_type": "stock",
+      "file": "/incoming/ai-05-math-and-statistics-for-ai-no-fear-edition_L18_stock_05.mp4",
+      "status": "PENDING_STOCK",
+      "query": "person checking handwritten sums with calculator"
+    },
+    {
+      "scene": 6,
+      "start": 100.7,
+      "end": 123.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-05-math-and-statistics-for-ai-no-fear-edition_L18_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open the L17 notebook in Colab.",
+        "Add a text cell: '3. Check with least squares'.",
+        "Type: w_ls, *_ = np.linalg.lstsq(X_tr, y_tr, rcond=None) and print(w_ls.round(2))",
+        "Run the cell and zoom in on [2.02 3.75 6.53]."
+      ]
+    },
+    {
+      "scene": 7,
+      "start": 123.4,
+      "end": 135.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-05-math-and-statistics-for-ai-no-fear-edition_L18_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Type: print(np.allclose(w, w_ls, atol=0.001))",
+        "Run the cell and zoom in on True."
+      ]
+    },
+    {
+      "scene": 8,
+      "start": 135.4,
+      "end": 153.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-05-math-and-statistics-for-ai-no-fear-edition_L18_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add a text cell: '4. Evaluate'.",
+        "Type the mse function and the three print lines: training, test and baseline with np.full(5, y_tr.mean()).",
+        "Run the cell and zoom in on 5.91, 11.2 and 348.01."
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 153.8,
+      "end": 182.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 10,
+      "start": 182.1,
+      "end": 204.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 11,
+      "start": 204.8,
+      "end": 227.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-05-math-and-statistics-for-ai-no-fear-edition_L18_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add a text cell: 'Judgement'.",
+        "Type: 'Promising, but check again after one more month of data.'",
+        "Type a second sentence: the weights show links in this data, not causes.",
+        "Use Run all to run every cell from the top."
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 227.9,
+      "end": 247.2,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 247.2,
+      "end": 275.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 275.1,
+      "end": 298.2,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-05-math-and-statistics-for-ai-no-fear-edition_M4_L18_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

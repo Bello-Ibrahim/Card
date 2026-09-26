@@ -1,0 +1,199 @@
+{
+  "course_id": "AI-18",
+  "lesson_id": "L03",
+  "presenter_track": {
+    "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_M1_L03_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 294.8
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 13.3,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_M1_L03_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 13.3,
+      "end": 30.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 30.4,
+      "end": 48.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 48.0,
+      "end": 61.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 61.7,
+      "end": 80.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 80.6,
+      "end": 96.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 96.5,
+      "end": 114.1,
+      "visual_type": "stock",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L03_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "handwritten recipe card on kitchen table"
+    },
+    {
+      "scene": 8,
+      "start": 114.1,
+      "end": 130.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L03_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open a clean terminal",
+        "Run: mkdir wine-api && cd wine-api && git init",
+        "Run: python -m venv .venv, then activate the environment",
+        "Run: pip install scikit-learn pandas pyyaml joblib and let it finish"
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 130.8,
+      "end": 150.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L03_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "In the code editor, create config.yaml",
+        "Show its contents: seed 42, test_size 0.2, model C 1.0, max_iter 1000",
+        "Highlight the seed line"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 150.1,
+      "end": 176.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L03_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Create train.py in the editor and show the full script",
+        "Highlight the line that reads config.yaml",
+        "Highlight train_test_split with random_state from the config and stratify=y",
+        "Highlight make_pipeline(StandardScaler(), LogisticRegression(...))",
+        "Highlight joblib.dump to model.joblib and json.dump to metrics.json"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 176.2,
+      "end": 192.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L03_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: pip freeze > requirements.txt",
+        "Open requirements.txt and scroll to the scikit-learn and pandas lines with exact versions"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 192.9,
+      "end": 211.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L03_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: python train.py and show the output F1 = 0.5568",
+        "Run: python train.py again and show the same output F1 = 0.5568",
+        "Place the two outputs side by side"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 211.3,
+      "end": 222.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_L03_screen_6.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open .gitignore and add model.joblib, metrics.json and data/*.csv",
+        "Run: git add . and git commit -m \"Reproducible training project\"",
+        "Run: git status and show a clean working tree"
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 222.9,
+      "end": 243.0,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 243.0,
+      "end": 263.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 263.1,
+      "end": 287.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 17,
+      "start": 287.1,
+      "end": 294.8,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-18-mlops-deploying-and-monitoring-models_M1_L03_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

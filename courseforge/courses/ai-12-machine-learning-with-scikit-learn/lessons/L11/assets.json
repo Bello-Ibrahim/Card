@@ -1,0 +1,170 @@
+{
+  "course_id": "AI-12",
+  "lesson_id": "L11",
+  "presenter_track": {
+    "file": "/incoming/ai-12-machine-learning-with-scikit-learn_M3_L11_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 306.4
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.1,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_M3_L11_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 17.1,
+      "end": 30.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 30.0,
+      "end": 54.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 54.0,
+      "end": 77.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 77.1,
+      "end": 101.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 101.5,
+      "end": 121.2,
+      "visual_type": "stock",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L11_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "passengers waiting at city bus stop"
+    },
+    {
+      "scene": 7,
+      "start": 121.2,
+      "end": 137.9,
+      "visual_type": "stock",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L11_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "bike sharing station city street morning"
+    },
+    {
+      "scene": 8,
+      "start": 137.9,
+      "end": 158.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L11_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Start a fresh Colab runtime and add a text cell: Setup cell, shared by L11 to L13.",
+        "Type this exact code cell from content.md and run it with Shift+Enter:\nimport numpy as np, pandas as pd\n\nrng = np.random.default_rng(7)\nts = pd.date_range(\"2025-01-01\", periods=24 * 365, freq=\"h\")\nhour, workday = np.asarray(ts.hour), np.asarray(ts.dayofweek < 5)\nseason = np.sin(2 * np.pi * (np.asarray(ts.dayofyear) - 110) / 365)\nrush = np.exp(-(hour - 8) ** 2 / 3) + np.exp(-(hour - 18) ** 2 / 3)\nbikes = pd.DataFrame({\"timestamp\": ts,\n                      \"temp\": 12 + 10 * season + rng.normal(0, 3, len(ts)),\n                      \"humidity\": rng.uniform(20, 95, len(ts))})\nbikes[\"rentals\"] = np.clip(\n    40 + 15 * bikes[\"temp\"] - 2 * bikes[\"humidity\"] + 600 * rush * workday\n    + 200 * ~workday * ((hour > 10) & (hour < 19)) + rng.normal(0, 60, len(ts)),\n    0, None).round()",
+        "In a scratch cell, run bikes.shape and bikes['rentals'].mean() to show 8,760 rows and about 243, then delete the scratch cell."
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 158.9,
+      "end": 178.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L11_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Type this exact code cell from content.md and run it with Shift+Enter:\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.linear_model import LinearRegression\nfrom sklearn.tree import DecisionTreeRegressor\nfrom sklearn.metrics import mean_absolute_error, root_mean_squared_error, r2_score\n\nX = bikes[[\"temp\", \"humidity\"]].assign(hour=bikes[\"timestamp\"].dt.hour)\ny = bikes[\"rentals\"]\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)\n\nfor model in [LinearRegression(), DecisionTreeRegressor(max_depth=8, random_state=0)]:\n    pred = model.fit(X_train, y_train).predict(X_test)\n    print(type(model).__name__, round(mean_absolute_error(y_test, pred), 1),\n          round(root_mean_squared_error(y_test, pred), 1), round(r2_score(y_test, pred), 3))"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 178.6,
+      "end": 200.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L11_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight the output line LinearRegression 141.7 186.4 0.268.",
+        "Add the caption: about 142 bikes per hour off."
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 200.5,
+      "end": 225.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L11_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight the output line DecisionTreeRegressor 89.5 124.0 0.676.",
+        "Add the caption: about 90 bikes per hour off."
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 225.8,
+      "end": 235.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L11_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "In a new cell, type and run: import matplotlib.pyplot as plt; plt.scatter(y_test, pred, s=3); plt.plot([0, y_test.max()], [0, y_test.max()]); plt.show()",
+        "Circle a few points far from the diagonal."
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 235.7,
+      "end": 256.7,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 256.7,
+      "end": 282.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 282.4,
+      "end": 306.4,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_M3_L11_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

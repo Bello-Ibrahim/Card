@@ -1,0 +1,155 @@
+{
+  "course_id": "AI-03",
+  "lesson_id": "L03",
+  "presenter_track": {
+    "file": "/incoming/ai-03-prompt-engineering-masterclass_M1_L03_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 293.7
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-03-prompt-engineering-masterclass_M1_L03_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 15.0,
+      "end": 25.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 25.3,
+      "end": 50.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 50.2,
+      "end": 57.9,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 57.9,
+      "end": 85.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 85.8,
+      "end": 115.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 115.8,
+      "end": 132.5,
+      "visual_type": "stock",
+      "file": "/incoming/ai-03-prompt-engineering-masterclass_L03_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "passenger talking to taxi driver city"
+    },
+    {
+      "scene": 8,
+      "start": 132.5,
+      "end": 151.8,
+      "visual_type": "stock",
+      "file": "/incoming/ai-03-prompt-engineering-masterclass_L03_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "marketing coordinator reading email office Asia"
+    },
+    {
+      "scene": 9,
+      "start": 151.8,
+      "end": 166.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 10,
+      "start": 166.4,
+      "end": 196.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 11,
+      "start": 196.4,
+      "end": 201.5,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 12,
+      "start": 201.5,
+      "end": 212.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 212.6,
+      "end": 242.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 242.2,
+      "end": 265.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 265.8,
+      "end": 293.7,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-03-prompt-engineering-masterclass_M1_L03_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

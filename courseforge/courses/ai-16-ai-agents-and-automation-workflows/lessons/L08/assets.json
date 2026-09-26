@@ -1,0 +1,151 @@
+{
+  "course_id": "AI-16",
+  "lesson_id": "L08",
+  "presenter_track": {
+    "file": "/incoming/ai-16-ai-agents-and-automation-workflows_M2_L08_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 291.1
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.6,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_M2_L08_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 17.6,
+      "end": 47.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 47.6,
+      "end": 71.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 71.6,
+      "end": 90.9,
+      "visual_type": "stock",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L08_stock_04.mp4",
+      "status": "PENDING_STOCK",
+      "query": "people waiting in orderly queue bank"
+    },
+    {
+      "scene": 5,
+      "start": 90.9,
+      "end": 115.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 115.8,
+      "end": 132.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 132.5,
+      "end": 155.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L08_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run the classification workflow on 20 rows",
+        "Open the HTTP Request output and point to usage.input_tokens and usage.output_tokens",
+        "Show the averages in a sheet: about 400 input and 40 output tokens per row (example output)"
+      ]
+    },
+    {
+      "scene": 8,
+      "start": 155.2,
+      "end": 177.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 9,
+      "start": 177.1,
+      "end": 199.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L08_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add Loop Over Items after Google Sheets (get rows), batch size 10",
+        "Inside the loop: HTTP Request to Claude → Settings → Retry On Fail on, a few tries with a wait",
+        "Validation Code node → Google Sheets update",
+        "Wait node, a few seconds → connect back to Loop Over Items"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 199.8,
+      "end": 216.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L08_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add a 'processed' column to the sheet",
+        "Filter the Google Sheets read to rows where processed is empty",
+        "Set processed to 'yes' in the update node",
+        "Run 50 rows and show the start and end time in the Executions list"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 216.5,
+      "end": 241.8,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 12,
+      "start": 241.8,
+      "end": 263.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 263.7,
+      "end": 291.1,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_M2_L08_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "course_id": "AI-13",
+  "lesson_id": "L14",
+  "presenter_track": {
+    "file": "/incoming/ai-13-deep-learning-and-neural-networks_M3_L14_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 299.3
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.4,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_M3_L14_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.4,
+      "end": 39.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 39.4,
+      "end": 58.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 58.3,
+      "end": 71.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 71.6,
+      "end": 91.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 91.3,
+      "end": 109.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 109.7,
+      "end": 129.0,
+      "visual_type": "stock",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L14_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "football match stadium players on pitch"
+    },
+    {
+      "scene": 8,
+      "start": 129.0,
+      "end": 146.1,
+      "visual_type": "stock",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L14_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "team monitoring news on screens office"
+    },
+    {
+      "scene": 9,
+      "start": 146.1,
+      "end": 164.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L14_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the run_experiment(seed) cell built from the L13 code; highlight seed=seed in TrainingArguments and in .shuffle(seed=seed)",
+        "Highlight the return line: preds, labels as NumPy arrays"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 164.1,
+      "end": 178.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L14_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: results = []; for seed in [0, 1, 2]: preds, labels = run_experiment(seed=seed); results.append(f1_score(labels, preds, average=\"macro\"))",
+        "Run the print line: macro F1 mean, std, min, max",
+        "Point to the spread between min and max"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 178.7,
+      "end": 193.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L14_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: ConfusionMatrixDisplay.from_predictions(labels, preds, display_labels=[\"World\", \"Sports\", \"Business\", \"Sci/Tech\"])",
+        "Run: wrong = np.where(preds != labels)[0]; for i in wrong[:10]: print(labels[i], \"->\", preds[i], \"|\", val_texts[i][:120])"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 193.3,
+      "end": 205.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_L14_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Point to the largest off-diagonal cells: Business ↔ Sci/Tech",
+        "Scroll the printed errors and highlight two tech-earnings summaries and one likely mislabel"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 205.3,
+      "end": 224.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 224.2,
+      "end": 243.1,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 243.1,
+      "end": 250.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 250.0,
+      "end": 277.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 17,
+      "start": 277.4,
+      "end": 299.3,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-13-deep-learning-and-neural-networks_M3_L14_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

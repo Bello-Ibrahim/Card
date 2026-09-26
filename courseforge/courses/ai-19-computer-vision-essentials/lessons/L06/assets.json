@@ -1,0 +1,170 @@
+{
+  "course_id": "AI-19",
+  "lesson_id": "L06",
+  "presenter_track": {
+    "file": "/incoming/ai-19-computer-vision-essentials_M2_L06_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 299.8
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 20.1,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-19-computer-vision-essentials_M2_L06_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 20.1,
+      "end": 35.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 35.1,
+      "end": 57.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 57.8,
+      "end": 75.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 75.8,
+      "end": 98.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 98.9,
+      "end": 123.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 123.3,
+      "end": 143.4,
+      "visual_type": "stock",
+      "file": "/incoming/ai-19-computer-vision-essentials_L06_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "person reading large illustrated encyclopedia"
+    },
+    {
+      "scene": 8,
+      "start": 143.4,
+      "end": 160.1,
+      "visual_type": "stock",
+      "file": "/incoming/ai-19-computer-vision-essentials_L06_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "second hand wooden furniture in shop"
+    },
+    {
+      "scene": 9,
+      "start": 160.1,
+      "end": 179.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L06_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open a new Colab notebook and upload 10 furniture photos with no people in them",
+        "Run the pipeline cell on the first photo",
+        "Show the top 3 labels and scores"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 179.0,
+      "end": 192.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L06_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Loop over all 10 photos with top_k=3",
+        "Collect results in a pandas DataFrame with columns file, label_1, score_1, label_2, label_3",
+        "Display the DataFrame"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 192.7,
+      "end": 206.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L06_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open the model card on the Hugging Face Hub in a new tab",
+        "Scroll to the training data section",
+        "Scroll to the label list"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 206.0,
+      "end": 227.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L06_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Sort the DataFrame by score_1",
+        "Display the two photos with the lowest top score next to their labels"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 227.0,
+      "end": 249.7,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 249.7,
+      "end": 275.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 275.8,
+      "end": 299.8,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-19-computer-vision-essentials_M2_L06_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

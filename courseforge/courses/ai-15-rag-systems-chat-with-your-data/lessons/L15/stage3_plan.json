@@ -12,7 +12,7 @@
   "production_notes": [
     "[VERIFY] Licence and reuse terms of the public health guidance used in Wanjiru's demo, and of the open-source documentation example. Confirm before recording, or use another collection whose licence is confirmed.",
     "[VERSION] Streamlit chat API (chat_input, chat_message) and all libraries used in the pipeline; Claude model choice read from config (check the current models page). Never say a model ID or price.",
-    "Content check: content.md step 4 says 'a forced tool output'; L08 warns that some current models reject a forced tool_choice. The voiceover says 'structured output'. Record with the method that works at recording time. [VERSION]",
+    "RESOLVED 2026-09-26: content.md now uses structured output (output_config JSON Schema) instead of a forced tool call.",
     "Health example: the Streamlit app on screen must show the notice that the assistant supports but does not replace professional judgement.",
     "The Kiswahili question shown on screen needs a native-speaker check before release.",
     "Wanjiru and the clinic network near Kisumu are hypothetical; the counts (45 PDFs, 2 skipped, 2,900 chunks) describe her example build. Answers on screen come from a real run and are introduced with 'you'll see something like'. The refusal sentence must match exactly: 'I don't know. The documents do not contain this information.'",

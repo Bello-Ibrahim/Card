@@ -1,0 +1,163 @@
+{
+  "course_id": "AI-22",
+  "lesson_id": "L01",
+  "presenter_track": {
+    "file": "/incoming/ai-22-ai-voice-audio-and-music_M1_L01_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 317.2
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.9,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-22-ai-voice-audio-and-music_M1_L01_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.9,
+      "end": 35.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 35.6,
+      "end": 57.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 57.0,
+      "end": 78.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 78.4,
+      "end": 100.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 100.3,
+      "end": 122.2,
+      "visual_type": "stock",
+      "file": "/incoming/ai-22-ai-voice-audio-and-music_L01_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "sound waveform on studio computer screen"
+    },
+    {
+      "scene": 7,
+      "start": 122.2,
+      "end": 141.9,
+      "visual_type": "hero_broll",
+      "file": "/incoming/ai-22-ai-voice-audio-and-music_L01_broll_1.mp4",
+      "status": "PENDING_UPLOAD"
+    },
+    {
+      "scene": 8,
+      "start": 141.9,
+      "end": 149.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 9,
+      "start": 149.2,
+      "end": 172.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 10,
+      "start": 172.3,
+      "end": 191.2,
+      "visual_type": "stock",
+      "file": "/incoming/ai-22-ai-voice-audio-and-music_L01_stock_10.mp4",
+      "status": "PENDING_STOCK",
+      "query": "radio presenter at microphone in small studio"
+    },
+    {
+      "scene": 11,
+      "start": 191.2,
+      "end": 215.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 12,
+      "start": 215.2,
+      "end": 227.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 227.2,
+      "end": 248.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 248.6,
+      "end": 270.9,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 270.9,
+      "end": 295.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 295.3,
+      "end": 317.2,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-22-ai-voice-audio-and-music_M1_L01_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

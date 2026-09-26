@@ -1,0 +1,195 @@
+{
+  "course_id": "AI-17",
+  "lesson_id": "L14",
+  "presenter_track": {
+    "file": "/incoming/ai-17-data-engineering-for-ai_M3_L14_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 292.4
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.9,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-17-data-engineering-for-ai_M3_L14_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 15.9,
+      "end": 28.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 28.3,
+      "end": 45.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 45.0,
+      "end": 71.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 71.1,
+      "end": 87.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 87.4,
+      "end": 102.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 102.0,
+      "end": 123.0,
+      "visual_type": "stock",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L14_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "courier delivering parcel at front door"
+    },
+    {
+      "scene": 8,
+      "start": 123.0,
+      "end": 138.0,
+      "visual_type": "stock",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L14_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "pharmacy shelves with medicine boxes"
+    },
+    {
+      "scene": 9,
+      "start": 138.0,
+      "end": 150.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L14_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open load_sales.py",
+        "Show the script from content.md: ds = sys.argv[1], connect to pharmacy.duckdb",
+        "Highlight DELETE FROM raw.sales WHERE load_date = ? and the INSERT from read_csv of sales_{ds}.csv"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 150.9,
+      "end": 161.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L14_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: python load_sales.py 2026-09-01, then count rows in raw.sales: 3",
+        "Run the same command again and count again: still 3"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 161.2,
+      "end": 177.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L14_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open the DAG file and add the default_args block from content.md: retries 3, retry_delay timedelta(minutes=10), on_failure_callback notify_failure",
+        "Show notify_failure printing the ALERT line",
+        "Pass default_args=default_args to the DAG"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 177.9,
+      "end": 193.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L14_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Rename the sales file for one date",
+        "Trigger the DAG and show the task in the up for retry state",
+        "Show the task failed after 3 retries and the ALERT line in the task log"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 193.8,
+      "end": 199.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L14_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Restore the file name",
+        "Clear the failed task and show it turning green"
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 199.4,
+      "end": 222.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L14_screen_6.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run with docker compose exec: airflow backfill create --dag-id pharmacy_sales --from-date 2026-09-01 --to-date 2026-09-03 (show the Airflow 2 command as a caption)",
+        "Run: SELECT load_date, count(*) FROM raw.sales GROUP BY load_date ORDER BY load_date;",
+        "Highlight that each date appears once"
+      ]
+    },
+    {
+      "scene": 15,
+      "start": 222.1,
+      "end": 243.1,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 243.1,
+      "end": 269.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 17,
+      "start": 269.7,
+      "end": 292.4,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-17-data-engineering-for-ai_M3_L14_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

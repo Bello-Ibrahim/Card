@@ -1,0 +1,151 @@
+{
+  "course_id": "AI-15",
+  "lesson_id": "L14",
+  "presenter_track": {
+    "file": "/incoming/ai-15-rag-systems-chat-with-your-data_M4_L14_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 291.8
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.7,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_M4_L14_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 16.7,
+      "end": 30.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 30.8,
+      "end": 57.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 57.4,
+      "end": 77.5,
+      "visual_type": "stock",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L14_stock_04.mp4",
+      "status": "PENDING_STOCK",
+      "query": "delivery driver loading van with parcels"
+    },
+    {
+      "scene": 5,
+      "start": 77.5,
+      "end": 106.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 106.6,
+      "end": 127.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L14_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show timed_answer: perf_counter around col.query and around client.messages.create.",
+        "Highlight msg.usage.input_tokens and output_tokens and the cost formula.",
+        "Show PRICE_IN and PRICE_OUT read from environment variables (values blurred)."
+      ]
+    },
+    {
+      "scene": 7,
+      "start": 127.2,
+      "end": 149.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L14_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run the 20 test questions at k=3, k=5 and k=10 with timed_answer.",
+        "Show the results table from the real run: median and slowest latency, average input and output tokens, cost per query."
+      ]
+    },
+    {
+      "scene": 8,
+      "start": 149.5,
+      "end": 173.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 9,
+      "start": 173.5,
+      "end": 193.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L14_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show SYSTEM_BLOCKS with cache_control on the system prompt block.",
+        "Set max_tokens=400 and k=5, then re-run one setting and compare timings."
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 193.6,
+      "end": 218.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_L14_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the short FastAPI /ask endpoint from content.md.",
+        "Run the Streamlit app and ask a warranty question; show the answer with citations.",
+        "Show the API key set as a server environment variable (masked)."
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 218.0,
+      "end": 239.9,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 12,
+      "start": 239.9,
+      "end": 267.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 267.8,
+      "end": 291.8,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-15-rag-systems-chat-with-your-data_M4_L14_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

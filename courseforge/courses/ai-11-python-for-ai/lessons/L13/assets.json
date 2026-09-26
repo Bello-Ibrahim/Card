@@ -1,0 +1,151 @@
+{
+  "course_id": "AI-11",
+  "lesson_id": "L13",
+  "presenter_track": {
+    "file": "/incoming/ai-11-python-for-ai_M3_L13_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 287.0
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 13.7,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-11-python-for-ai_M3_L13_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 13.7,
+      "end": 42.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 42.0,
+      "end": 61.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 61.7,
+      "end": 81.8,
+      "visual_type": "stock",
+      "file": "/incoming/ai-11-python-for-ai_L13_stock_04.mp4",
+      "status": "PENDING_STOCK",
+      "query": "sorting paper receipts into piles on desk"
+    },
+    {
+      "scene": 5,
+      "start": 81.8,
+      "end": 101.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 101.9,
+      "end": 131.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 131.0,
+      "end": 146.0,
+      "visual_type": "stock",
+      "file": "/incoming/ai-11-python-for-ai_L13_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "analyst reviewing charts in modern office"
+    },
+    {
+      "scene": 8,
+      "start": 146.0,
+      "end": 165.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L13_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run the L11 sample cell so df exists",
+        "Add a new code cell",
+        "Type: summary = df.groupby([\"continent\", \"year\"])[\"gdpPercap\"].median()",
+        "Type: print(summary.unstack())"
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 165.3,
+      "end": 183.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L13_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Press Shift + Enter",
+        "Output: table with columns 1997, 2002, 2007: Africa 1230.0 / 1235.0 / 1405.0; Americas 7980.0 / 8345.0 / 10290.0; Asia 1200.0 / 1410.0 / 1765.0",
+        "Point along the Americas row, then down the 2007 column"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 183.3,
+      "end": 210.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L13_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add a new code cell",
+        "Type: print(df.sort_values(\"gdpPercap\", ascending=False).head(3)[[\"country\", \"year\", \"gdpPercap\"]])",
+        "Press Shift + Enter",
+        "Output: Chile 2007 13170 / Chile 2002 10780 / Chile 1997 10120"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 210.7,
+      "end": 239.0,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 12,
+      "start": 239.0,
+      "end": 263.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 263.9,
+      "end": 287.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-11-python-for-ai_M3_L13_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

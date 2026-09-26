@@ -1,0 +1,180 @@
+{
+  "course_id": "AI-19",
+  "lesson_id": "L04",
+  "presenter_track": {
+    "file": "/incoming/ai-19-computer-vision-essentials_M1_L04_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 305.6
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.9,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-19-computer-vision-essentials_M1_L04_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.9,
+      "end": 33.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 33.9,
+      "end": 58.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 58.3,
+      "end": 81.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 81.4,
+      "end": 94.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 94.3,
+      "end": 116.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 116.2,
+      "end": 133.8,
+      "visual_type": "stock",
+      "file": "/incoming/ai-19-computer-vision-essentials_L04_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "factory conveyor belt with packages moving"
+    },
+    {
+      "scene": 8,
+      "start": 133.8,
+      "end": 157.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 9,
+      "start": 157.8,
+      "end": 173.2,
+      "visual_type": "stock",
+      "file": "/incoming/ai-19-computer-vision-essentials_L04_stock_09.mp4",
+      "status": "PENDING_STOCK",
+      "query": "mangoes moving on fruit sorting belt"
+    },
+    {
+      "scene": 10,
+      "start": 173.2,
+      "end": 186.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L04_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Upload belt.mp4 (a 10-second clip) to Colab",
+        "Run only the first four lines: cv2.VideoCapture, CAP_PROP_FPS, CAP_PROP_FRAME_WIDTH, CAP_PROP_FRAME_HEIGHT",
+        "Print fps, w and h"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 186.9,
+      "end": 213.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L04_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Paste and run the full cell from content.md: VideoWriter with mp4v and isColor=False, the while loop with cap.read, cvtColor to grey, putText 'frame n', out.write",
+        "Highlight cap.release() and out.release()",
+        "Point to the printed summary: 250 frames at 25 FPS, size 640x360"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 213.5,
+      "end": 222.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L04_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open the file panel and download belt_gray.mp4",
+        "Play the video and pause on one frame to show the frame number"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 222.9,
+      "end": 238.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L04_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Change isColor=False to isColor=True",
+        "Run the cell again and show that no exception appears",
+        "Show that belt_gray.mp4 is broken or very small in the file panel",
+        "Change it back to isColor=False"
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 238.3,
+      "end": 257.6,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 257.6,
+      "end": 285.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 285.0,
+      "end": 305.6,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-19-computer-vision-essentials_M1_L04_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

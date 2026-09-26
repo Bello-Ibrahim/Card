@@ -1,0 +1,171 @@
+{
+  "course_id": "AI-19",
+  "lesson_id": "L11",
+  "presenter_track": {
+    "file": "/incoming/ai-19-computer-vision-essentials_M3_L11_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 298.4
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.7,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-19-computer-vision-essentials_M3_L11_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 16.7,
+      "end": 29.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 29.1,
+      "end": 52.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 52.7,
+      "end": 62.6,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 62.6,
+      "end": 84.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 84.5,
+      "end": 112.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 112.4,
+      "end": 126.1,
+      "visual_type": "stock",
+      "file": "/incoming/ai-19-computer-vision-essentials_L11_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "teacher marking exam answer sheet"
+    },
+    {
+      "scene": 8,
+      "start": 126.1,
+      "end": 139.4,
+      "visual_type": "stock",
+      "file": "/incoming/ai-19-computer-vision-essentials_L11_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "convenience store shelf with packaged goods"
+    },
+    {
+      "scene": 9,
+      "start": 139.4,
+      "end": 154.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L11_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "In Label Studio, create a project with the labels juice_carton and rice_bag",
+        "Import the images",
+        "Draw boxes on one image, including a half-hidden carton"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 154.4,
+      "end": 174.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L11_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Export in YOLO format and download the zip file",
+        "Open two exported .txt label files and compare them with their images",
+        "In Colab, unzip into /content/shelf with images/ and labels/ split into train and val",
+        "Create shelf.yaml"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 174.5,
+      "end": 198.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L11_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run the training cell: YOLO('yolo11n.pt'), model.train(data='shelf.yaml', epochs=50, imgsz=640)",
+        "Run model.val() and show the printed mAP50 and mAP50-95"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 198.5,
+      "end": 222.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L11_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open results.png from the results folder",
+        "Open one validation image with boxes",
+        "Point to the missed bottom-shelf rice bags, the merged carton box and the carton behind the price label"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 222.1,
+      "end": 244.0,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 244.0,
+      "end": 271.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 271.0,
+      "end": 298.4,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-19-computer-vision-essentials_M3_L11_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

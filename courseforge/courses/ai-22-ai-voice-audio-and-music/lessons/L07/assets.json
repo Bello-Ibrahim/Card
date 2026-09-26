@@ -1,0 +1,175 @@
+{
+  "course_id": "AI-22",
+  "lesson_id": "L07",
+  "presenter_track": {
+    "file": "/incoming/ai-22-ai-voice-audio-and-music_M2_L07_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 295.3
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 19.3,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-22-ai-voice-audio-and-music_M2_L07_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 19.3,
+      "end": 40.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 40.7,
+      "end": 60.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 60.0,
+      "end": 82.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 82.3,
+      "end": 96.9,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 96.9,
+      "end": 119.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 119.6,
+      "end": 136.7,
+      "visual_type": "stock",
+      "file": "/incoming/ai-22-ai-voice-audio-and-music_L07_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "plain tablecloth with dinner dishes"
+    },
+    {
+      "scene": 8,
+      "start": 136.7,
+      "end": 152.6,
+      "visual_type": "stock",
+      "file": "/incoming/ai-22-ai-voice-audio-and-music_L07_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "young woman podcaster with headphones smiling"
+    },
+    {
+      "scene": 9,
+      "start": 152.6,
+      "end": 174.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-22-ai-voice-audio-and-music_L07_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open Suno and sign in with the demo account",
+        "Open the free plan limits and the licence page, then return to Create",
+        "Type the prompt: 'Calm and curious, light Latin folk, about 90 BPM, nylon-string guitar and soft marimba, light shaker, instrumental, no vocals, 30 seconds, gentle ending.'",
+        "Highlight each of the five parts of the prompt in turn"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 174.0,
+      "end": 192.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-22-ai-voice-audio-and-music_L07_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Click Create and wait for the options",
+        "Generate until there are three options, A, B and C, then download each one",
+        "In Audacity, import the voiceover and the three options onto separate tracks",
+        "Lower the gain of each music track so the voice is clearly on top"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 192.9,
+      "end": 210.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-22-ai-voice-audio-and-music_L07_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Solo the voice and option A, then play: the melody jumps in on the podcast name",
+        "Type a note: 'A: good mood, loud marimba under the podcast name'",
+        "Solo the voice and option C, then play",
+        "Type a note: 'C: too slow and a little sad'"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 210.5,
+      "end": 226.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-22-ai-voice-audio-and-music_L07_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Solo the voice and option B, then play to the end",
+        "Type a note: 'B: steady warm guitar, tempo matches, clean ending'",
+        "Mute A and C and keep B",
+        "Type the prompt, tool, plan and date into the project notes"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 226.8,
+      "end": 246.5,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 246.5,
+      "end": 269.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 269.2,
+      "end": 295.3,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-22-ai-voice-audio-and-music_M2_L07_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

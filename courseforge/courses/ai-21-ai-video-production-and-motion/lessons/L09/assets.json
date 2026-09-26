@@ -1,0 +1,207 @@
+{
+  "course_id": "AI-21",
+  "lesson_id": "L09",
+  "presenter_track": {
+    "file": "/incoming/ai-21-ai-video-production-and-motion_M2_L09_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 292.2
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_M2_L09_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 15.0,
+      "end": 23.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 23.1,
+      "end": 36.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 36.4,
+      "end": 56.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 56.1,
+      "end": 76.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 76.7,
+      "end": 87.4,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 87.4,
+      "end": 103.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 103.7,
+      "end": 123.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 9,
+      "start": 123.4,
+      "end": 141.0,
+      "visual_type": "stock",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L09_stock_09.mp4",
+      "status": "PENDING_STOCK",
+      "query": "presenter speaking to camera in studio"
+    },
+    {
+      "scene": 10,
+      "start": 141.0,
+      "end": 157.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L09_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Sign in to HeyGen with the demo account.",
+        "Open the account area and point to the free-plan limits."
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 157.7,
+      "end": 171.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L09_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Click Create video.",
+        "Choose the landscape 16:9 format.",
+        "Open the avatars list and filter to stock or public avatars.",
+        "Choose a friendly, professional stock presenter."
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 171.4,
+      "end": 186.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L09_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Paste Mariam's script from content.md into the script box and hold on it for 3 seconds.",
+        "Open the voice list and choose a stock voice with a suitable language and accent.",
+        "Play the voice preview."
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 186.0,
+      "end": 200.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L09_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Replay the preview at the word 'Nile'.",
+        "Change 'Nile Words' to 'Nyle Words' in the script box.",
+        "Add a short pause before 'Let's begin.' and check the full stop after it.",
+        "Play the preview again."
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 200.1,
+      "end": 213.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L09_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Click Submit or Generate.",
+        "Point to the time used from the allowance.",
+        "Play the result three times, with a caption for each pass: lip-sync, pronunciation, pacing."
+      ]
+    },
+    {
+      "scene": 15,
+      "start": 213.4,
+      "end": 220.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L09_screen_6.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Download the video.",
+        "Point to the resolution and any watermark.",
+        "Rename the file 'S01_avatar_intro.mp4'."
+      ]
+    },
+    {
+      "scene": 16,
+      "start": 220.7,
+      "end": 243.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 17,
+      "start": 243.4,
+      "end": 266.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 18,
+      "start": 266.1,
+      "end": 292.2,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_M2_L09_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

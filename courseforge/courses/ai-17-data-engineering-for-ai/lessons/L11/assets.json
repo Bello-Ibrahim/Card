@@ -1,0 +1,175 @@
+{
+  "course_id": "AI-17",
+  "lesson_id": "L11",
+  "presenter_track": {
+    "file": "/incoming/ai-17-data-engineering-for-ai_M3_L11_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 279.0
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 13.3,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-17-data-engineering-for-ai_M3_L11_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 13.3,
+      "end": 28.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 28.3,
+      "end": 49.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 49.3,
+      "end": 66.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 66.4,
+      "end": 84.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 84.0,
+      "end": 106.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 106.7,
+      "end": 119.1,
+      "visual_type": "stock",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L11_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "doctor measuring patient blood pressure"
+    },
+    {
+      "scene": 8,
+      "start": 119.1,
+      "end": 136.7,
+      "visual_type": "stock",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L11_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "health data analyst reviewing charts on laptop"
+    },
+    {
+      "scene": 9,
+      "start": 136.7,
+      "end": 152.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L11_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open Python, import duckdb and connect",
+        "Load the visits export into a table called visits",
+        "Run: SUMMARIZE visits;",
+        "Highlight the null percentage for patient_id and temp_c, and max temp_c = 73.0"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 152.1,
+      "end": 172.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L11_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Type the targeted profile query from content.md (total_rows, missing_patient, missing_temp, duplicate_rows, temp_out_of_range)",
+        "Run it and show the result exactly: 11 | 1 | 1 | 3 | 1"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 172.2,
+      "end": 183.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L11_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Type the malaria query from content.md: malaria_raw and malaria_real",
+        "Run it and show the result exactly: 6 | 3"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 183.8,
+      "end": 195.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 195.4,
+      "end": 219.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 219.4,
+      "end": 235.7,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 235.7,
+      "end": 258.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 258.0,
+      "end": 279.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-17-data-engineering-for-ai_M3_L11_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

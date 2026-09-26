@@ -1,0 +1,164 @@
+{
+  "course_id": "AI-01",
+  "lesson_id": "L07",
+  "presenter_track": {
+    "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_M2_L07_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 294.1
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "RENDERED"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.7,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_M2_L07_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 16.7,
+      "end": 28.3,
+      "visual_type": "slide",
+      "file": "assets/slides/s02.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 28.3,
+      "end": 40.7,
+      "visual_type": "slide",
+      "file": "assets/slides/s03.png",
+      "status": "RENDERED",
+      "needs_design": true
+    },
+    {
+      "scene": 4,
+      "start": 40.7,
+      "end": 63.4,
+      "visual_type": "slide",
+      "file": "assets/slides/s04.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 63.4,
+      "end": 87.0,
+      "visual_type": "slide",
+      "file": "assets/slides/s05.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 87.0,
+      "end": 100.7,
+      "visual_type": "text",
+      "file": "assets/slides/s06.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 100.7,
+      "end": 121.3,
+      "visual_type": "stock",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_L07_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "sound engineer adjusting mixing desk sliders"
+    },
+    {
+      "scene": 8,
+      "start": 121.3,
+      "end": 143.6,
+      "visual_type": "slide",
+      "file": "assets/slides/s08.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 9,
+      "start": 143.6,
+      "end": 157.7,
+      "visual_type": "stock",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_L07_stock_09.mp4",
+      "status": "PENDING_STOCK",
+      "query": "cocoa beans drying farmers sorting"
+    },
+    {
+      "scene": 10,
+      "start": 157.7,
+      "end": 174.4,
+      "visual_type": "slide",
+      "file": "assets/slides/s10.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 11,
+      "start": 174.4,
+      "end": 189.0,
+      "visual_type": "slide",
+      "file": "assets/slides/s11.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 12,
+      "start": 189.0,
+      "end": 211.3,
+      "visual_type": "slide",
+      "file": "assets/slides/s12.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 13,
+      "start": 211.3,
+      "end": 228.9,
+      "visual_type": "slide",
+      "file": "assets/slides/s13.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 228.9,
+      "end": 246.9,
+      "visual_type": "text",
+      "file": "assets/slides/s14.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 246.9,
+      "end": 268.8,
+      "visual_type": "slide",
+      "file": "assets/slides/s15.png",
+      "status": "RENDERED",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 268.8,
+      "end": 294.1,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-01-ai-fundamentals-how-machines-learn_M2_L07_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

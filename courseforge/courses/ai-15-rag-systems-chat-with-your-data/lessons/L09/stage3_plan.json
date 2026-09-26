@@ -10,8 +10,8 @@
     }
   },
   "production_notes": [
-    "[VERSION] Claude API document citations feature (document content blocks, citation response format), structured outputs and forced tool use, and whether citations and structured outputs can be used in the same request. The voiceover only says to check the current documentation.",
-    "Content check: content.md says 'use a forced tool call, as in L08', but L08 uses a JSON Schema in output_config and warns that some current models reject a forced tool_choice. The voiceover says 'structured output, as in the last lesson'. Record the demo with the same method as L08, and ask the content owner to align the L09 text. [VERSION]",
+    "[VERSION] Claude API document citations feature (document content blocks, citation response format), structured outputs (output_config), and whether citations and structured outputs can be used in the same request. The voiceover only says to check the current documentation.",
+    "RESOLVED 2026-09-26: content.md now uses structured output (output_config JSON Schema) instead of a forced tool call.",
     "[REGION] Rental rules differ by state and country; the example uses a hypothetical guide and names no law. Do not show a real legal text on screen.",
     "check_citations is tested plain Python: its example call must print exactly True.",
     "API answers in the demo are from a real run; the voiceover says 'you'll see something like'. The 'I don't know' sentence must match the SYSTEM prompt exactly.",

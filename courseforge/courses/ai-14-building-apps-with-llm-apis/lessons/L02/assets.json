@@ -1,0 +1,172 @@
+{
+  "course_id": "AI-14",
+  "lesson_id": "L02",
+  "presenter_track": {
+    "file": "/incoming/ai-14-building-apps-with-llm-apis_M1_L02_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 294.8
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 19.3,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_M1_L02_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 19.3,
+      "end": 42.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 42.0,
+      "end": 65.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 65.6,
+      "end": 90.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 90.0,
+      "end": 113.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 113.1,
+      "end": 134.5,
+      "visual_type": "stock",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L02_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "teenager paying with card at shop"
+    },
+    {
+      "scene": 7,
+      "start": 134.5,
+      "end": 144.8,
+      "visual_type": "stock",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L02_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "developer working on laptop in cafe"
+    },
+    {
+      "scene": 8,
+      "start": 144.8,
+      "end": 164.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L02_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open the Claude Console and go to the billing or limits settings",
+        "Set a low monthly spend limit and save it",
+        "Go to API keys and click to create a key",
+        "Name the key meilin-laptop-dev",
+        "Copy the key once (the key is blurred on screen)"
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 164.1,
+      "end": 176.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L02_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "In the terminal (macOS or Linux), run export ANTHROPIC_API_KEY=\"sk-ant-...\" with the value blurred",
+        "Show a caption with the Windows PowerShell form: $env:ANTHROPIC_API_KEY=\"sk-ant-...\"",
+        "Create and activate a virtual environment",
+        "Run pip install anthropic and show it finish"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 176.5,
+      "end": 197.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L02_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open first_call.py in VS Code",
+        "Highlight the MODEL constant with the placeholder your-small-model-id and its comment to check the models page",
+        "Highlight anthropic.Anthropic() with the comment that it reads ANTHROPIC_API_KEY",
+        "Highlight messages.create with max_tokens=300 and the question 'Suggest one day trip from Penang.'",
+        "Highlight the loop that prints text blocks, then the stop_reason and usage prints"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 197.5,
+      "end": 221.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L02_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run python first_call.py in the terminal",
+        "Show the reply text, 'Stop reason: end_turn' and the input and output token counts",
+        "Change max_tokens to 20 and run the script again",
+        "Show the cut-off reply and 'Stop reason: max_tokens'"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 221.5,
+      "end": 242.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L02_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run git status in the terminal",
+        "Show that only first_call.py and .gitignore are listed, with no .env file",
+        "Show a red-cross caption over the pattern api_key=\"sk-ant-...\" inside code"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 242.1,
+      "end": 269.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 269.5,
+      "end": 294.8,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_M1_L02_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

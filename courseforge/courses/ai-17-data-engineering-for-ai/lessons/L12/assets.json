@@ -1,0 +1,183 @@
+{
+  "course_id": "AI-17",
+  "lesson_id": "L12",
+  "presenter_track": {
+    "file": "/incoming/ai-17-data-engineering-for-ai_M3_L12_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 286.3
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.4,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-17-data-engineering-for-ai_M3_L12_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 15.4,
+      "end": 31.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 31.3,
+      "end": 55.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 55.3,
+      "end": 68.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 68.6,
+      "end": 95.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 95.2,
+      "end": 111.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 111.1,
+      "end": 124.8,
+      "visual_type": "stock",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L12_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "smoke alarm on ceiling close up"
+    },
+    {
+      "scene": 8,
+      "start": 124.8,
+      "end": 138.5,
+      "visual_type": "stock",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L12_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "coffee sacks stacked for export shipping"
+    },
+    {
+      "scene": 9,
+      "start": 138.5,
+      "end": 156.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L12_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open models/staging/schema.yml",
+        "Type the stg_shipments tests from content.md: unique and not_null on shipment_id",
+        "Add accepted_values ['packed', 'shipped', 'delivered'] on shipment_status",
+        "Add relationships to ref('stg_exporters') on exporter_id, and not_null with severity warn on bags"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 156.5,
+      "end": 167.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L12_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Create tests/assert_bags_positive_and_ship_after_pack.sql",
+        "Type the select from content.md: where bags <= 0 or ship_date < packed_date"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 167.2,
+      "end": 191.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L12_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: dbt test --select stg_shipments",
+        "Show the singular test failing with 2 rows: shipment 502 and shipment 503",
+        "Show accepted_values failing on shipment 503 with status 'pending'"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 191.2,
+      "end": 210.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L12_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "In schema.yml, add 'pending' to the accepted_values list",
+        "Leave the singular test unchanged, severity error",
+        "Caption: 502 and 503 sent back to the source team"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 210.9,
+      "end": 219.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-17-data-engineering-for-ai_L12_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run: dbt build",
+        "Highlight the failing test and the downstream feature table marked as skipped"
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 219.5,
+      "end": 239.6,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 239.6,
+      "end": 262.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 262.3,
+      "end": 286.3,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-17-data-engineering-for-ai_M3_L12_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

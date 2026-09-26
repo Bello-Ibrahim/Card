@@ -1,0 +1,190 @@
+{
+  "course_id": "AI-06",
+  "lesson_id": "L02",
+  "presenter_track": {
+    "file": "/incoming/ai-06-ai-for-everyday-work-documents-email-and-research_M1_L02_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 316.8
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 19.7,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-06-ai-for-everyday-work-documents-email-and-research_M1_L02_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 19.7,
+      "end": 43.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 43.3,
+      "end": 64.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 64.3,
+      "end": 83.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 83.6,
+      "end": 104.2,
+      "visual_type": "stock",
+      "file": "/incoming/ai-06-ai-for-everyday-work-documents-email-and-research_L02_stock_05.mp4",
+      "status": "PENDING_STOCK",
+      "query": "manager briefing new colleague at desk"
+    },
+    {
+      "scene": 6,
+      "start": 104.2,
+      "end": 126.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 126.9,
+      "end": 141.0,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 141.0,
+      "end": 156.9,
+      "visual_type": "stock",
+      "file": "/incoming/ai-06-ai-for-everyday-work-documents-email-and-research_L02_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "office manager packing boxes office move"
+    },
+    {
+      "scene": 9,
+      "start": 156.9,
+      "end": 163.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 10,
+      "start": 163.3,
+      "end": 180.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-06-ai-for-everyday-work-documents-email-and-research_L02_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open Claude (free tier) in a web browser and start a new chat",
+        "Type 'Write a notice about the office move.' and press Enter",
+        "Scroll slowly through the answer",
+        "Highlight any invented or missing details, for example a new city location or no date"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 180.0,
+      "end": 206.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 12,
+      "start": 206.6,
+      "end": 218.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-06-ai-for-everyday-work-documents-email-and-research_L02_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Start a second new chat",
+        "Type the improved prompt with Task, Context, Format and Example each on its own line",
+        "Press Enter and wait for the answer"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 218.2,
+      "end": 233.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-06-ai-for-everyday-work-documents-email-and-research_L02_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Place the two chats in two browser windows side by side",
+        "Highlight the correct floors and dates in the second answer",
+        "Compare the length of the two answers",
+        "Point to the friendly opening line in the second answer"
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 233.2,
+      "end": 245.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-06-ai-for-everyday-work-documents-email-and-research_L02_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "In the second chat, type 'Make it 20 words shorter.' and press Enter",
+        "Show the new, shorter answer"
+      ]
+    },
+    {
+      "scene": 15,
+      "start": 245.6,
+      "end": 266.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 266.2,
+      "end": 291.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 17,
+      "start": 291.9,
+      "end": 316.8,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-06-ai-for-everyday-work-documents-email-and-research_M1_L02_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

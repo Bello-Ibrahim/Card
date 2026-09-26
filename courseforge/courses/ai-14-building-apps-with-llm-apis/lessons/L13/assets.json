@@ -1,0 +1,172 @@
+{
+  "course_id": "AI-14",
+  "lesson_id": "L13",
+  "presenter_track": {
+    "file": "/incoming/ai-14-building-apps-with-llm-apis_M4_L13_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 294.0
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.1,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_M4_L13_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 17.1,
+      "end": 33.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 33.0,
+      "end": 57.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 57.9,
+      "end": 77.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 77.6,
+      "end": 106.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 106.3,
+      "end": 125.6,
+      "visual_type": "stock",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L13_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "chef preparing sauce in restaurant kitchen"
+    },
+    {
+      "scene": 7,
+      "start": 125.6,
+      "end": 138.0,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 138.0,
+      "end": 160.7,
+      "visual_type": "stock",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L13_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "student studying with tutor laptop New Zealand"
+    },
+    {
+      "scene": 9,
+      "start": 160.7,
+      "end": 171.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L13_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open cache_test.py in VS Code with caching turned off",
+        "Run it twice with the same question",
+        "Show the usage lines: input about 3,600 tokens, cache write 0, cache read 0 (example output)"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 171.0,
+      "end": 192.9,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L13_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Change system to a list with one text block and cache_control {\"type\": \"ephemeral\"}",
+        "Highlight the print of input_tokens, cache_creation_input_tokens and cache_read_input_tokens",
+        "Run with two different questions within a minute",
+        "Show call 1: cache write about 3,500; call 2: cache read about 3,500 (example output)"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 192.9,
+      "end": 212.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L13_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open log_helper.py and add constants for cache write and cache read prices, left as placeholders with a comment to copy them from the pricing page",
+        "Extend the cost formula with the two cache fields",
+        "Run run_eval.py with caching on and show the unchanged pass rate (example output)"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 212.2,
+      "end": 223.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L13_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show the nightly report script switched to a message batch with custom_id per request",
+        "Show the MODEL constant for topic classification changed to a smaller model placeholder",
+        "Show a 20-case eval result for the classification step (example output)"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 223.3,
+      "end": 243.0,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 243.0,
+      "end": 268.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 268.3,
+      "end": 294.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_M4_L13_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

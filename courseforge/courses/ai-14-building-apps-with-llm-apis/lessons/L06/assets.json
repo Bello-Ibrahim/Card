@@ -1,0 +1,177 @@
+{
+  "course_id": "AI-14",
+  "lesson_id": "L06",
+  "presenter_track": {
+    "file": "/incoming/ai-14-building-apps-with-llm-apis_M2_L06_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 298.3
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.4,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_M2_L06_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.4,
+      "end": 33.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 33.0,
+      "end": 56.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 56.6,
+      "end": 79.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 79.3,
+      "end": 106.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 106.3,
+      "end": 120.9,
+      "visual_type": "stock",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L06_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "courier knocking on apartment door with parcel"
+    },
+    {
+      "scene": 7,
+      "start": 120.9,
+      "end": 134.6,
+      "visual_type": "stock",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L06_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "logistics office worker at computer warehouse"
+    },
+    {
+      "scene": 8,
+      "start": 134.6,
+      "end": 161.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L06_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open extract.py and scroll to the extract() function",
+        "Highlight the stop_reason checks for max_tokens and refusal",
+        "Highlight Invoice.model_validate_json(raw) and check_business_rules(inv)",
+        "Highlight the line that appends 'Your last answer failed a check' to the content",
+        "Highlight return None with the comment 'send to human review'"
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 161.2,
+      "end": 182.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L06_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight the try block around messages.create",
+        "Highlight each except clause in order: AuthenticationError, BadRequestError, RateLimitError, APIStatusError, APIConnectionError"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 182.2,
+      "end": 194.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L06_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Change max_tokens to 10",
+        "Run the extractor on one invoice",
+        "Show the message 'Output cut off. Raise max_tokens.'"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 194.2,
+      "end": 208.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L06_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "In a new terminal, set ANTHROPIC_API_KEY to an obviously fake value",
+        "Run the extractor",
+        "Show 'Invalid API key. Check ANTHROPIC_API_KEY.' and no retry messages",
+        "Close that terminal"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 208.3,
+      "end": 230.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_L06_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run the extractor on a text file with a shopping list",
+        "Show the first validation failure and the retry",
+        "Show the result None and the 'sent to review' message"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 230.2,
+      "end": 247.3,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 247.3,
+      "end": 274.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 274.3,
+      "end": 298.3,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-14-building-apps-with-llm-apis_M2_L06_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

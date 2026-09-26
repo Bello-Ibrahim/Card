@@ -1,0 +1,169 @@
+{
+  "course_id": "AI-19",
+  "lesson_id": "L13",
+  "presenter_track": {
+    "file": "/incoming/ai-19-computer-vision-essentials_M4_L13_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 300.1
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-19-computer-vision-essentials_M4_L13_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.0,
+      "end": 35.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 35.6,
+      "end": 57.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 57.9,
+      "end": 79.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 79.8,
+      "end": 105.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 105.1,
+      "end": 118.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 118.0,
+      "end": 138.1,
+      "visual_type": "stock",
+      "file": "/incoming/ai-19-computer-vision-essentials_L13_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "school children walking through gate"
+    },
+    {
+      "scene": 8,
+      "start": 138.1,
+      "end": 154.8,
+      "visual_type": "stock",
+      "file": "/incoming/ai-19-computer-vision-essentials_L13_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "high angle view of busy road junction"
+    },
+    {
+      "scene": 9,
+      "start": 154.8,
+      "end": 175.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L13_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Load the model and play the first seconds of junction.mp4 in the notebook",
+        "Scroll through the cell: LINE_Y, the VEHICLES class filter, model.track with stream and persist",
+        "Highlight the if line that counts each ID once when it crosses the line"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 175.4,
+      "end": 195.1,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L13_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Run the cell and show the printed counts",
+        "Add save=True to model.track() and run again",
+        "Open the saved video and show the IDs above each box"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 195.1,
+      "end": 214.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L13_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Draw the counting line on one frame with cv2.line and display it",
+        "Show a small table comparing automatic and manual counts per class"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 214.4,
+      "end": 232.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-19-computer-vision-essentials_L13_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Step through the saved video to the frames where the three cars were missed",
+        "Change LINE_Y to 80 pixels lower and run the cell again"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 232.0,
+      "end": 250.4,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 250.4,
+      "end": 273.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 273.1,
+      "end": 300.1,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-19-computer-vision-essentials_M4_L13_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

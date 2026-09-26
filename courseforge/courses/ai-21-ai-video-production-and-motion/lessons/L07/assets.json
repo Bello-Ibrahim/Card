@@ -1,0 +1,206 @@
+{
+  "course_id": "AI-21",
+  "lesson_id": "L07",
+  "presenter_track": {
+    "file": "/incoming/ai-21-ai-video-production-and-motion_M2_L07_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 294.5
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 12.9,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_M2_L07_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 12.9,
+      "end": 21.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 21.5,
+      "end": 40.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 40.8,
+      "end": 57.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 57.9,
+      "end": 78.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 78.5,
+      "end": 91.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 91.8,
+      "end": 108.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 108.9,
+      "end": 125.6,
+      "visual_type": "stock",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L07_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "puppeteer moving a wooden puppet on strings"
+    },
+    {
+      "scene": 9,
+      "start": 125.6,
+      "end": 144.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L07_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show Pim's generated keyframe of the night market stall full screen for 3 seconds.",
+        "Open Kling in a web browser and sign in with the demo account."
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 144.0,
+      "end": 162.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L07_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Point to the credit balance shown on screen.",
+        "Choose AI Video, then the image-to-video option.",
+        "Upload the keyframe.",
+        "Check the preview: the image is not cropped."
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 162.4,
+      "end": 178.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L07_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Type Pim's motion-only prompt from content.md into the prompt box and hold on it for 3 seconds.",
+        "Type 'distorted hands, flicker, text' into the negative prompt field."
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 178.3,
+      "end": 190.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L07_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Choose the duration and mode; point to the credit cost.",
+        "Leave the camera controls on default.",
+        "Click Generate and wait."
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 190.7,
+      "end": 207.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L07_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Play the first clip; pause where the cook's hands blur.",
+        "Show the log: attempt 1, hands blur.",
+        "Edit the prompt: delete 'The cook stirs the wok with steady movements.' and generate again.",
+        "Play attempt 2: hands still, steam and lamps move, clean shot."
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 207.4,
+      "end": 214.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L07_screen_6.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Download the attempt 2 clip.",
+        "Point to the resolution and any watermark.",
+        "Rename the file 'S05_stall_dolly_v2.mp4'."
+      ]
+    },
+    {
+      "scene": 15,
+      "start": 214.3,
+      "end": 231.9,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 231.9,
+      "end": 251.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 17,
+      "start": 251.6,
+      "end": 273.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 18,
+      "start": 273.5,
+      "end": 294.5,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_M2_L07_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

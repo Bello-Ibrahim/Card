@@ -1,0 +1,180 @@
+{
+  "course_id": "AI-16",
+  "lesson_id": "L04",
+  "presenter_track": {
+    "file": "/incoming/ai-16-ai-agents-and-automation-workflows_M1_L04_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 293.2
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 14.6,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_M1_L04_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 14.6,
+      "end": 27.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 27.5,
+      "end": 49.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 49.4,
+      "end": 60.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 60.1,
+      "end": 85.4,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 85.4,
+      "end": 105.5,
+      "visual_type": "stock",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L04_stock_06.mp4",
+      "status": "PENDING_STOCK",
+      "query": "clerk with clipboard checking paper ledger"
+    },
+    {
+      "scene": 7,
+      "start": 105.5,
+      "end": 117.9,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 117.9,
+      "end": 137.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L04_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open Google Sheets in a test account",
+        "Create a sheet named 'orders' with columns order_id, customer, item, amount, flag",
+        "Show 15 rows of invented sample orders (no phone numbers)"
+      ]
+    },
+    {
+      "scene": 9,
+      "start": 137.2,
+      "end": 155.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L04_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Open Credentials and create a Google Sheets credential following the current n8n OAuth steps (blur client ID and secret)",
+        "Click to test the connection",
+        "New workflow: add a Manual Trigger",
+        "Add a Google Sheets node, operation get rows, select the 'orders' document and sheet",
+        "Run the node: output shows 15 items"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 155.6,
+      "end": 184.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L04_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add a Code node after the Sheets node",
+        "Paste the JavaScript from content.md (LIMIT = 5000; flag = 'check' or 'ok')",
+        "Run the node",
+        "Show the output: flag 'check' on 4 items, 'ok' on the rest"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 184.3,
+      "end": 202.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L04_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add a second Google Sheets node, operation update row",
+        "Set 'column to match on' to order_id",
+        "Map the flag field",
+        "Run the whole workflow",
+        "Switch to the sheet: the flag column is filled"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 202.7,
+      "end": 220.7,
+      "visual_type": "screen",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_L04_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Point to the row where amount is '6,200' as text and the flag is wrong",
+        "Edit the Code node to clean the value: Number(String(item.json.amount).replace(/,/g, ''))",
+        "Run again: that row is now flagged 'check'"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 220.7,
+      "end": 245.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 245.6,
+      "end": 269.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 269.6,
+      "end": 293.2,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-16-ai-agents-and-automation-workflows_M1_L04_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

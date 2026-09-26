@@ -1,0 +1,181 @@
+{
+  "course_id": "AI-21",
+  "lesson_id": "L08",
+  "presenter_track": {
+    "file": "/incoming/ai-21-ai-video-production-and-motion_M2_L08_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 294.2
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.4,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_M2_L08_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 15.4,
+      "end": 25.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 25.7,
+      "end": 45.0,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 45.0,
+      "end": 59.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 59.6,
+      "end": 77.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 77.2,
+      "end": 92.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 92.6,
+      "end": 111.5,
+      "visual_type": "stock",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L08_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "video editor cutting clips on timeline"
+    },
+    {
+      "scene": 8,
+      "start": 111.5,
+      "end": 121.8,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 9,
+      "start": 121.8,
+      "end": 140.2,
+      "visual_type": "stock",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L08_stock_09.mp4",
+      "status": "PENDING_STOCK",
+      "query": "person taking photos of film set props"
+    },
+    {
+      "scene": 10,
+      "start": 140.2,
+      "end": 152.2,
+      "visual_type": "stock",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L08_stock_10.mp4",
+      "status": "PENDING_STOCK",
+      "query": "cosy small bookshop interior with wooden shelves"
+    },
+    {
+      "scene": 11,
+      "start": 152.2,
+      "end": 165.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 12,
+      "start": 165.1,
+      "end": 176.7,
+      "visual_type": "hero_broll",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_L08_broll_1.mp4",
+      "status": "PENDING_UPLOAD"
+    },
+    {
+      "scene": 13,
+      "start": 176.7,
+      "end": 197.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 197.7,
+      "end": 219.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 219.6,
+      "end": 229.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 229.9,
+      "end": 247.0,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 17,
+      "start": 247.0,
+      "end": 269.3,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 18,
+      "start": 269.3,
+      "end": 294.2,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-21-ai-video-production-and-motion_M2_L08_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

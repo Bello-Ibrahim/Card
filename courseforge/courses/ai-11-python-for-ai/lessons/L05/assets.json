@@ -1,0 +1,179 @@
+{
+  "course_id": "AI-11",
+  "lesson_id": "L05",
+  "presenter_track": {
+    "file": "/incoming/ai-11-python-for-ai_M1_L05_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 298.8
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.0,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-11-python-for-ai_M1_L05_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 18.0,
+      "end": 36.9,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 36.9,
+      "end": 53.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 53.6,
+      "end": 75.5,
+      "visual_type": "stock",
+      "file": "/incoming/ai-11-python-for-ai_L05_stock_04.mp4",
+      "status": "PENDING_STOCK",
+      "query": "supermarket cashier scanning items at checkout"
+    },
+    {
+      "scene": 5,
+      "start": 75.5,
+      "end": 96.5,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 96.5,
+      "end": 119.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 119.6,
+      "end": 143.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 8,
+      "start": 143.6,
+      "end": 158.2,
+      "visual_type": "stock",
+      "file": "/incoming/ai-11-python-for-ai_L05_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "folded towels packed in cardboard boxes"
+    },
+    {
+      "scene": 9,
+      "start": 158.2,
+      "end": 174.5,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L05_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add a new code cell",
+        "Type: boxes = [12, 9, 15, 11]",
+        "Type: total = 0",
+        "Type: for count in boxes: / total = total + count (indented) / print(\"Running total:\", total) (indented)",
+        "Type (not indented): print(\"Average:\", total / len(boxes))"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 174.5,
+      "end": 188.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L05_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Press Shift + Enter",
+        "Output: Running total: 12 / 21 / 36 / 47",
+        "Output: Average: 11.75",
+        "Highlight the indentation of the two print lines"
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 188.2,
+      "end": 208.8,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L05_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Add a new code cell",
+        "Type: for day in range(1, 4): / print(\"Day\", day)",
+        "Type: stock = 5 / while stock > 0: / stock = stock - 2",
+        "Type: print(\"Stock after loop:\", stock)",
+        "Press Shift + Enter",
+        "Output: Day 1 / Day 2 / Day 3 / Stock after loop: -1"
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 208.8,
+      "end": 226.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-11-python-for-ai_L05_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Show trace overlay: 5 → 3 → 1 → -1",
+        "Add a new code cell",
+        "Type: print(sum(boxes), max(boxes))",
+        "Press Shift + Enter",
+        "Output: 47 15"
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 226.4,
+      "end": 251.7,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 14,
+      "start": 251.7,
+      "end": 276.1,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 276.1,
+      "end": 298.8,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-11-python-for-ai_M1_L05_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}

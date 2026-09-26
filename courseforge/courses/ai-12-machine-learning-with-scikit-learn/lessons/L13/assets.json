@@ -1,0 +1,178 @@
+{
+  "course_id": "AI-12",
+  "lesson_id": "L13",
+  "presenter_track": {
+    "file": "/incoming/ai-12-machine-learning-with-scikit-learn_M3_L13_presenter.mp4",
+    "status": "PENDING_UPLOAD",
+    "expected_s": 322.8
+  },
+  "thumbnail": {
+    "file": "assets/slides/thumbnail.png",
+    "status": "PENDING_RENDER"
+  },
+  "music": {
+    "file": null,
+    "status": "PENDING_SELECTION",
+    "note": "Choose one track from /assets/music/ (royalty-free) and record its licence."
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 19.7,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_M3_L13_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    },
+    {
+      "scene": 2,
+      "start": 19.7,
+      "end": 42.8,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 3,
+      "start": 42.8,
+      "end": 61.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 4,
+      "start": 61.7,
+      "end": 80.6,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 5,
+      "start": 80.6,
+      "end": 98.2,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 6,
+      "start": 98.2,
+      "end": 117.1,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 7,
+      "start": 117.1,
+      "end": 133.4,
+      "visual_type": "stock",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L13_stock_07.mp4",
+      "status": "PENDING_STOCK",
+      "query": "chef chopping fresh vegetables kitchen"
+    },
+    {
+      "scene": 8,
+      "start": 133.4,
+      "end": 152.3,
+      "visual_type": "stock",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L13_stock_08.mp4",
+      "status": "PENDING_STOCK",
+      "query": "cyclists shared bikes city square Europe"
+    },
+    {
+      "scene": 9,
+      "start": 152.3,
+      "end": 175.0,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L13_screen_1.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Scroll past the L11 and L12 cells, already executed.",
+        "Type this exact code cell from content.md and run it with Shift+Enter:\nfeats = bikes[[\"temp\", \"humidity\"]].assign(\n    hour=bikes[\"timestamp\"].dt.hour,\n    weekday=bikes[\"timestamp\"].dt.dayofweek,\n    is_weekend=(bikes[\"timestamp\"].dt.dayofweek >= 5).astype(int),\n    temp_x_humidity=bikes[\"temp\"] * bikes[\"humidity\"],\n)\ntrain_idx = X_train.index            # same rows as the L11 split\nmodel = HistGradientBoostingRegressor(random_state=0)\n\ndef cv_rmse(cols):\n    scores = cross_val_score(model, feats.loc[train_idx, cols], y_train, cv=cv,\n                             scoring=\"neg_root_mean_squared_error\")\n    return round(-scores.mean(), 1)\n\nbase = [\"temp\", \"humidity\", \"hour\"]\nprint(\"base\", cv_rmse(base))\nfor extra in [\"weekday\", \"is_weekend\", \"temp_x_humidity\"]:\n    print(\"+\", extra, cv_rmse(base + [extra]))"
+      ]
+    },
+    {
+      "scene": 10,
+      "start": 175.0,
+      "end": 196.4,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L13_screen_2.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight the output lines base 122.6 and + weekday 57.2.",
+        "Add the overlay: error cut by more than half."
+      ]
+    },
+    {
+      "scene": 11,
+      "start": 196.4,
+      "end": 209.3,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L13_screen_3.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight the output line + is_weekend 57.1."
+      ]
+    },
+    {
+      "scene": 12,
+      "start": 209.3,
+      "end": 225.2,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L13_screen_4.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Highlight the output line + temp_x_humidity 122.8.",
+        "Strike it through and label it 'drop'."
+      ]
+    },
+    {
+      "scene": 13,
+      "start": 225.2,
+      "end": 246.6,
+      "visual_type": "screen",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_L13_screen_5.mp4",
+      "status": "PENDING_UPLOAD",
+      "steps": [
+        "Scroll up to the L11 setup cell and highlight rng.normal(0, 60, len(ts)).",
+        "Add a text cell: Noise std 60, so RMSE near 57 is close to the limit."
+      ]
+    },
+    {
+      "scene": 14,
+      "start": 246.6,
+      "end": 270.6,
+      "visual_type": "text",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 15,
+      "start": 270.6,
+      "end": 296.7,
+      "visual_type": "slide",
+      "file": null,
+      "status": "PENDING_RENDER",
+      "needs_design": false
+    },
+    {
+      "scene": 16,
+      "start": 296.7,
+      "end": 322.8,
+      "visual_type": "presenter_full",
+      "file": "/incoming/ai-12-machine-learning-with-scikit-learn_M3_L13_presenter.mp4",
+      "status": "PENDING_UPLOAD",
+      "source": "presenter"
+    }
+  ]
+}
