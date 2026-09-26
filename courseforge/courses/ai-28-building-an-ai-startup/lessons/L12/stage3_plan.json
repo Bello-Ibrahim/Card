@@ -1,0 +1,73 @@
+{
+  "title": "Funding Options and What Investors Look For",
+  "thumbnail": {
+    "headline": "Every Funding Has a Price",
+    "image": "Navy background, three travel icons (walking figure, bus, fast train) on a path, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Every Funding Has a Price", "body": "Three icons along a road: walking person, bus, fast train. Small tag: Building an AI Startup · Lesson 12."}
+  },
+  "production_notes": [
+    "[REGION] [VERIFY] Funding programmes, grants and accelerators differ by country and change over time. No real programme, investor or accelerator is named; Ravi's 'regional innovation grant for manufacturing' is hypothetical and the voiceover calls it made up.",
+    "The descriptions of accelerators, angel investors and venture capital are general; a reviewer may confirm they suit all target regions.",
+    "No statistics on funding volumes or startup success rates, per the course judgement call.",
+    "Ravi (Pune, India) is fictional; his 12 pilots and 3 paying customers are part of the example. Stock footage of textile workshops must not show real company names or logos."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "How much money should I raise? That is often a new founder's first question. A better first question is: do I need outside money at all, and what will I give in return? Every type of funding has a price, even when it looks free.",
+       "on_screen_text": "Do you need outside money?"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "In the last lesson, you checked your risks. Now we look at money. Here are the main funding routes, from the least outside control to the most.",
+       "slide": {"layout": "title", "title": "Funding Options and What Investors Look For", "body": "Building an AI Startup · Lesson 12 of 15"}},
+      {"visual_type": "slide",
+       "voiceover": "Bootstrapping means you fund the company yourself, with savings or revenue from early customers. You keep full control, but growth may be slower. Grants come from governments, foundations or development organisations, and you usually do not repay them. In return, they often expect reports and a specific use of the money.",
+       "slide": {"layout": "bullets", "title": "Less outside control", "body": "Bootstrapping: your savings or customer revenue · full control · slower growth. Grants: usually not repaid · reports, agreed uses, often social impact · applications take time."}},
+      {"visual_type": "slide",
+       "voiceover": "Accelerators give small teams training, mentors and contacts for a fixed period, sometimes with a small investment. Angel investors are individuals who invest their own money, usually for equity. Equity means part ownership of the company. Venture capital firms invest other people's money in startups that could grow very large, and they expect very fast growth.",
+       "slide": {"layout": "bullets", "title": "More outside control", "body": "Accelerators: training, mentors, contacts; some take a share. Angel investors: own money for equity (part-ownership); advice. Venture capital: other people's money; expects very fast growth and a large return."}},
+      {"visual_type": "slide",
+       "voiceover": "When you sell equity, your share gets smaller. This is called dilution. For example, if you own one hundred percent and sell ten percent to an angel, you now own ninety percent.",
+       "slide": {"layout": "diagram", "title": "Dilution", "body": "Pie chart before: 100% founder. Pie chart after: 90% founder, 10% angel investor."}},
+      {"visual_type": "slide",
+       "voiceover": "What do investors usually look for at this stage? A real problem that customers feel. Evidence of demand, such as sign ups, pilots or paying customers, not only opinions. A strong team with the right skills and industry knowledge. And a path to a defensible business, with a moat and healthy unit economics.",
+       "slide": {"layout": "bullets", "title": "What investors look for", "body": "1. A real problem (L02, L03) · 2. Evidence of demand (L04) · 3. A strong team · 4. A defensible path: moat (L05) + unit economics (L09)"}},
+      {"visual_type": "stock",
+       "voiceover": "Choosing funding is like choosing how to travel. Walking is slow, but you choose every step. That is bootstrapping. A bus follows its own route and timetable, like grants and accelerators. A fast train goes far quickly, but you cannot get off when you want, and it only goes to large destinations. That is venture capital.",
+       "stock_query": "high speed train passing through countryside",
+       "on_screen_text": "Walk, bus or fast train?"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's compare routes for one founder. Ravi is a made up founder in Pune, India. His MVP helps small textile workshops check fabric quality from phone photos. He has twelve pilot workshops and three paying customers.",
+       "stock_query": "textile workshop worker inspecting fabric",
+       "on_screen_text": "Ravi · Pune · fabric quality"},
+      {"visual_type": "slide",
+       "voiceover": "First, bootstrapping with customer revenue. It gives full control, but growth is slow, and Ravi keeps a part time job. It is a good fit for the next six months.",
+       "slide": {"layout": "bullets", "title": "Route 1: Bootstrapping", "body": "Gives: full control · Expects: slow growth; Ravi keeps a part-time job · Fit: good for the next 6 months"}},
+      {"visual_type": "slide",
+       "voiceover": "Second, a regional grant for manufacturing. It is made up for this example. The money is not repaid, but it needs a detailed application, reports, and spending on agreed activities. It fits well, because his product helps small manufacturers.",
+       "slide": {"layout": "bullets", "title": "Route 2: A regional grant (hypothetical)", "body": "Gives: money not repaid · Expects: detailed application, reports, agreed spending · Fit: good, helps small manufacturers"}},
+      {"visual_type": "slide",
+       "voiceover": "Third, an angel investor from the textile industry. That brings money, contacts and advice, but also a share of the company, regular updates and clear growth plans. It is possible later, once he has more paying customers.",
+       "slide": {"layout": "bullets", "title": "Route 3: An industry angel", "body": "Gives: money, contacts, advice · Expects: equity, regular updates, growth plans · Fit: later, with more paying customers"}},
+      {"visual_type": "text",
+       "voiceover": "Ravi does not consider venture capital yet. He does not have the evidence of very fast growth that venture firms expect. So he applies for the grant, and aims to grow from three to fifteen paying customers in six months.",
+       "on_screen_text": "Grant now. From 3 to 15 customers."},
+      {"visual_type": "slide",
+       "voiceover": "A common mistake is thinking that raising money is a sign of success. It is not. It is a tool with a cost. Some businesses grow well on customer revenue alone. Another mistake is pitching before you have evidence. Without evidence, a pitch is mostly opinion.",
+       "slide": {"layout": "comparison", "title": "Common mistakes", "body": "Red crosses: 'Raising money = success' · pitching without evidence. Green tick: funding is a tool with a cost; evidence first."}}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, the main routes are bootstrapping, grants, accelerators, angel investors and venture capital, and each asks for something in return. Second, selling equity dilutes your ownership. Third, investors usually look for a real problem, evidence of demand, a strong team and a path to a defensible business.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Five routes, each with a price. 2. Equity means dilution. 3. Problem, evidence, team, defensible path."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below this video, list three funding routes that could fit your startup in your region. Check each one on its official pages, and note what it requires and expects. Next, we start your capstone with finishing your MVP demo. See you there.",
+       "on_screen_text": "Next: Finishing Your MVP Demo"}
+    ]
+  }
+}

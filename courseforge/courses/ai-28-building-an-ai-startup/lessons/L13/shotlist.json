@@ -1,0 +1,201 @@
+{
+  "course_id": "AI-28",
+  "lesson_id": "L13",
+  "duration_s": 293.5,
+  "thumbnail": {
+    "headline": "Your Two-Minute Demo",
+    "slide": {
+      "layout": "title",
+      "title": "Your Two-Minute Demo",
+      "body": "Laptop icon with a play button and a stopwatch showing 2:00. Small tag: Building an AI Startup · Lesson 13 · Capstone step 1."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 14.1,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Two minutes. What will they remember?",
+      "voiceover": "You have two minutes. Someone important is watching your screen. You could show every button and every setting. Or you could show one person solving one real problem. Which one will they remember?"
+    },
+    {
+      "scene": 2,
+      "start": 14.1,
+      "end": 38.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Your capstone in three steps",
+        "body": "Step 1 (L13): 2-minute demo + one-page validation summary (highlighted) → Step 2 (L14): 10-slide deck in Canva → Step 3 (L15): practise, improve, submit."
+      },
+      "voiceover": "In the last lesson, you looked at funding. Now your capstone begins: a validated AI startup concept, an MVP demo and a ten slide pitch deck. Step one, today, is a two minute demo and a one page validation summary. Step two is the pitch deck in Canva. Step three is pitch practice and your final submission."
+    },
+    {
+      "scene": 3,
+      "start": 38.5,
+      "end": 52.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "The capstone rubric",
+        "body": "Validation evidence · MVP and quality checks · Unit economics and business model · Risk and readiness · Final deck and demo"
+      },
+      "voiceover": "The rubric scores five areas: validation evidence, the MVP and its quality checks, unit economics and business model, risk and readiness, and the final deck and demo. Read it before you start."
+    },
+    {
+      "scene": 4,
+      "start": 52.2,
+      "end": 81.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Six-part demo structure",
+        "body": "Timeline bar: Problem (15 s) · User (10 s) · Core task (60–70 s, largest block) · Result (15 s) · Quality and safety (15 s) · Close (5 s)"
+      },
+      "voiceover": "A good demo shows one user completing the core job from start to finish. It is not a tour of features. Start with the problem, in about fifteen seconds. Introduce a made up user. Then spend a minute or more on the core task, and talk through what is happening in plain language. Show the result, then briefly show how you check quality, and close with what comes next."
+    },
+    {
+      "scene": 5,
+      "start": 81.8,
+      "end": 96.4,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Fake data. Notifications off.",
+      "voiceover": "Use fake data only. Record your screen with a free screen recorder. Many computers already have one built in. Close other tabs and hide notifications, so no personal or confidential information appears on screen."
+    },
+    {
+      "scene": 6,
+      "start": 96.4,
+      "end": 112.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "One-page validation summary",
+        "body": "Problem statement · Interviews + top 3 patterns · Demand test vs threshold · Test-set pass rate · One lesson that changed the product"
+      },
+      "voiceover": "Your one page validation summary includes your problem statement, your interviews and top three patterns, your demand test and whether it met the threshold, your test set pass rate, and one thing you learned that changed your product."
+    },
+    {
+      "scene": 7,
+      "start": 112.7,
+      "end": 129.0,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "audience watching film in dark cinema",
+      "on_screen_text": "Your demo is a trailer",
+      "voiceover": "Think of a film trailer. It does not show the whole film. It shows the main character, the main problem and one exciting moment, so people want to see more. Your demo is a trailer for your product."
+    },
+    {
+      "scene": 8,
+      "start": 129.0,
+      "end": 143.6,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "woman photographing handmade scarves for online shop",
+      "on_screen_text": "Yasmin · Cairo · product descriptions",
+      "voiceover": "Let's plan a demo. Yasmin is a made up founder in Cairo, Egypt. Her MVP helps small online clothing shops write product descriptions in Arabic and English, from a photo and a few notes."
+    },
+    {
+      "scene": 9,
+      "start": 143.6,
+      "end": 161.2,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "0:00 to 0:25",
+        "body": "Left: problem slide, 'Hours writing descriptions in two languages · 7 of 9 owners: delays new stock'. Right: persona card, 'Nadia (made up) · handmade scarves'."
+      },
+      "voiceover": "She opens with the problem. Small online shops spend hours writing descriptions in two languages. In her interviews, seven of nine owners said this delays new stock. Then a persona card: Nadia, a made up shop owner who sells handmade scarves."
+    },
+    {
+      "scene": 10,
+      "start": 161.2,
+      "end": 178.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "0:25 to 1:45",
+        "body": "Mock-up sequence: upload photo → three notes (material, size) → Create → Arabic and English drafts side by side → Edit one word → Copy."
+      },
+      "voiceover": "The core task takes about a minute. Nadia uploads a photo, adds three notes about material and size, and presses create. The product drafts both descriptions, using only her notes. Then she edits one word and copies it to her shop."
+    },
+    {
+      "scene": 11,
+      "start": 178.8,
+      "end": 192.9,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "1:45 to 2:00",
+        "body": "Small test table: 15 cases, 13 passed · missing size → tool asks, no guessing. Closing line: 'Next, a pilot with 10 shops.'"
+      },
+      "voiceover": "Next, quality. I tested fifteen cases, and thirteen passed. When the notes are missing the size, the tool asks for it instead of guessing. And the close: next, a pilot with ten shops."
+    },
+    {
+      "scene": 12,
+      "start": 192.9,
+      "end": 202.8,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Cut the settings page",
+      "voiceover": "In her first recording, Yasmin spent forty seconds on the settings page. She removed it. Settings are not part of the core job."
+    },
+    {
+      "scene": 13,
+      "start": 202.8,
+      "end": 228.9,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Yasmin's one-page summary",
+        "body": "9 interviews · top 3 patterns with quotes · demand test vs threshold · test pass rate 13 of 15 · one lesson that changed the product"
+      },
+      "voiceover": "Yasmin also writes her one page summary. Nine interviews, with the top three patterns and a quote for each. Her demand test, and whether it met the threshold. Her pass rate of thirteen out of fifteen. And one thing she learned that changed her product. The summary gives the demo its proof, so every number must come from her real notes."
+    },
+    {
+      "scene": 14,
+      "start": 228.9,
+      "end": 252.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Common mistakes",
+        "body": "Red crosses: showing everything · risky live demo. Green ticks: record in advance · practise · honest summary, clean example."
+      },
+      "voiceover": "The most common mistake is trying to show everything. The second is a live demo that fails because of a slow connection or an unexpected AI answer. So record in advance, practise several times, and keep the recording. Never hide failures in your written summary, but choose a clean, realistic example for the demo."
+    },
+    {
+      "scene": 15,
+      "start": 252.0,
+      "end": 273.4,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. One user, one core job, two minutes. 2. Problem → user → task → result → quality → close. 3. Record in advance; add a one-page summary."
+      },
+      "voiceover": "Let's recap. First, a demo shows one user completing the core job, from problem to result, in about two minutes. Second, use a clear structure: problem, user, core task, result, quality check and close. Third, record in advance with fake data, and add a one page summary of your evidence."
+    },
+    {
+      "scene": 16,
+      "start": 273.4,
+      "end": 293.5,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Building the 10-Slide Pitch Deck",
+      "voiceover": "Now it is your turn. This is capstone step one. In the exercise below this video, record a two minute demo of your MVP, and summarise your validation evidence on one page. Read the rubric first. Next, we build the ten slide pitch deck. See you there."
+    }
+  ]
+}

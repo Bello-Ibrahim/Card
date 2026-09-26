@@ -1,0 +1,70 @@
+{
+  "title": "Rating and Prioritising Risks",
+  "thumbnail": {
+    "headline": "Which Risk First?",
+    "image": "Navy background, a three-by-three grid glowing from green in the bottom-left to red in the top-right, with a pin in the red corner, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Which Risk First?", "body": "A 3-by-3 risk grid shaded green to red, likelihood up the side and impact along the bottom, with a pin in the top-right cell. Small tag: AI Ethics, Bias and Safety · Lesson 9 · Capstone step 2."}
+  },
+  "production_notes": [
+    "No facts to verify: the telecom chatbot and its four risks are hypothetical on purpose, with no real companies, incidents or statistics (content.md Review Flags: None).",
+    "Dewi Lestari and her telecom company in Indonesia are fictional; stock footage must not show a real operator name, logo or network brand.",
+    "Scene 3 matrix must match the content.md grid exactly: top-right = highest priority, bottom-left = lowest priority.",
+    "Risk ratings in scenes 9 and 10: Risk 1 wrong prices High/Medium; Risk 2 ID numbers stored Medium/High; Risk 3 regional languages High/Medium; Risk 4 phone fire Low/High."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "After a good audit, you may have a list of ten risks. You cannot fix all ten this week. So which two do you fix first, and how do you explain that choice to your manager?",
+       "on_screen_text": "Ten risks. Which two first?"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "In the last lesson, you tested a tool with paired prompts. Now you need to decide what matters most. Not all risks are equal. A useful way to compare them is a risk matrix, which rates each risk on two scales. Likelihood asks how often this could happen. Impact asks how badly it could hurt someone. Each is rated low, medium or high.",
+       "slide": {"layout": "comparison", "title": "Two scales", "body": "Left: Likelihood: how often? Low (rare) · Medium (sometimes) · High (often). Right: Impact: how badly? Low (small annoyance) · Medium (real cost or stress) · High (serious harm to health, money, rights, safety or trust)."}},
+      {"visual_type": "slide",
+       "voiceover": "Place each risk in a three by three grid. Risks in the top-right corner, high likelihood and high impact, are fixed first. And a high-impact risk usually deserves attention even when it is rare, because the harm is serious. Always ask who is harmed. A risk that falls mainly on one group is also a fairness problem.",
+       "slide": {"layout": "diagram", "title": "The risk matrix", "body": "3x3 grid. Rows (top to bottom): high, medium, low likelihood. Columns (left to right): low, medium, high impact. Cells shaded green to red: bottom-left 'Lowest priority', top-right 'Highest priority', high-impact column all at least 'Medium'."}},
+      {"visual_type": "text",
+       "voiceover": "Your ratings are judgements, not exact measurements. So write a short reason for each one, so others can understand and question it.",
+       "on_screen_text": "Give a reason for every rating"},
+      {"visual_type": "slide",
+       "voiceover": "Then choose ways to reduce the risks. There are five common options. Better data, which includes the missing groups. Clear limits, which stop the tool from handling some tasks. Human review before outputs are used. User warnings about what the tool can and cannot do. And monitoring, because tools and uses change. Choose options the team can do in weeks, not only in an ideal world.",
+       "slide": {"layout": "bullets", "title": "Five ways to reduce risk", "body": "Better data · Clear limits · Human review · User warnings · Monitoring. Footer: choose what is realistic in weeks."}},
+      {"visual_type": "stock",
+       "voiceover": "Think of a hospital emergency room deciding who to see first. A small cut that happens often is less urgent than a rare but serious chest pain. Staff treat the most urgent first. Nobody is ignored, but not everyone is seen at the same time.",
+       "stock_query": "hospital emergency room nurses triage patients",
+       "on_screen_text": "Most urgent first, nobody ignored"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's rate some real-looking risks. Dewi Lestari leads quality at a telecom company in Indonesia. Its customer-service chatbot answers questions about bills, data plans and network problems. Her team has tested it and found four risks.",
+       "stock_query": "customer service team meeting modern office",
+       "on_screen_text": "Dewi's telecom chatbot · Indonesia"},
+      {"visual_type": "slide",
+       "voiceover": "Risk one. The chatbot gives wrong prices for data plans. That is high likelihood, medium impact. Risk two. Customers type their full ID number into the chat, and it is stored. That is medium likelihood, but high impact, because stored numbers could be misused.",
+       "slide": {"layout": "bullets", "title": "Rating risks 1 and 2", "body": "1. Wrong data-plan prices: Likelihood High · Impact Medium · 2. ID numbers typed and stored: Likelihood Medium · Impact High (could be misused)"}},
+      {"visual_type": "slide",
+       "voiceover": "Risk three. The chatbot understands regional languages less well, so those customers get weaker answers. That is high likelihood, medium impact, and also a fairness problem. Risk four. It tells a customer who reports a phone fire to restart the device. It was seen only once, but the impact is high, because it is a physical danger.",
+       "slide": {"layout": "bullets", "title": "Rating risks 3 and 4", "body": "3. Weaker answers in regional languages: Likelihood High · Impact Medium · fairness flag · 4. 'Restart the device' after a phone fire: Likelihood Low · Impact High (physical danger)"}},
+      {"visual_type": "slide",
+       "voiceover": "Dewi's team fixes two first. For the ID numbers, the chatbot warns customers not to share them, hides long number sequences, and the IT team checks what is stored. For the fire risk, a clear limit. Any message about fire, smoke or injury gets a fixed safety message and passes to a human agent.",
+       "slide": {"layout": "comparison", "title": "Fix first", "body": "Risk 2, privacy: warning + hide long numbers + IT checks storage. Risk 4, safety: clear limit: fire, smoke or injury → fixed safety message → human agent."}},
+      {"visual_type": "slide",
+       "voiceover": "Risks one and three are planned for next month, with better price data and weekly checks, more testing in regional languages, and a talk to a person button. Dewi records all four, so none is forgotten.",
+       "slide": {"layout": "diagram", "title": "The full plan", "body": "Matrix with four pins: Risks 2 and 4 marked 'Now'; Risks 1 and 3 marked 'Next month' (price data + weekly checks; regional-language tests + talk-to-a-person button)."}},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is to fix the most frequent risk first, because it is the most visible. But a rare, high-impact risk can matter more. Always rate both scales.",
+       "on_screen_text": "Frequent is not always most urgent"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, a risk matrix rates each risk by likelihood and impact, and the highest combinations are fixed first. Second, serious, high-impact risks need attention even when they are rare, and risks that fall mainly on one group are also fairness problems. Third, realistic ways to reduce risk are better data, clear limits, human review, user warnings and monitoring.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Rate likelihood and impact; fix the top-right first. 2. Rare but serious still matters; watch who is harmed. 3. Data, limits, review, warnings, monitoring."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. This exercise is step two of your capstone. List at least five risks for the tool you tested, place each one on the matrix, and pick your top three. It takes about thirty minutes. In the next and final lesson, we will write your audit and recommendations. See you there.",
+       "on_screen_text": "Next: Writing Your Audit"}
+    ]
+  }
+}

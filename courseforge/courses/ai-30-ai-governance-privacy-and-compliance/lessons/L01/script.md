@@ -1,0 +1,52 @@
+# L01 What AI Governance Is and Why It Matters | Presenter Script
+
+Course: AI-30 · Video: 5 min · Words: 729
+
+## Hook
+Your marketing team started using an AI writing tool last month. Your HR team is testing a tool that ranks job applicants. Nobody asked the legal team first. So who decided these tools were acceptable, and who will answer for them if something goes wrong?
+
+## Explain
+Hi, and welcome to AI Governance, Privacy and Compliance. That question is exactly what AI governance exists to answer. Before we start, one important point. This course is educational and is not legal advice. For decisions about your own organisation, speak to qualified legal advisers.
+
+So what is AI governance? It is the set of roles, policies, processes and controls that decide how an organisation builds, buys and uses AI. It is not one document, and it is not one team. It connects four areas that are often managed separately: legal compliance, ethics, information security and business risk.
+
+Most frameworks, whatever their source, share six building blocks. Roles say who is accountable, who approves and who owns each system. Principles are a short list of commitments, such as fairness and human oversight. The inventory lists every AI system you use, including features inside software you already have.
+
+Risk assessment is a repeatable way to judge each system's risks to people and to the organisation. Controls are the measures that reduce risk, such as approval steps, testing, human review and contract terms. And monitoring checks that systems keep working after launch, with a process for incidents and complaints.
+
+Why does this matter to you? First, AI-specific law, such as the EU AI Act, places duties on organisations according to the risk of each AI use. Second, data protection laws, such as the GDPR and Nigeria's NDPA, already apply whenever AI processes personal data. Third, regulators usually ask one question: can you show what you decided, and why?
+
+Here is a helpful way to picture it. AI governance is the building code and the inspection plan, not the building itself. Engineers still design and build. The code says what standards the building must meet. The inspection plan says who checks it, when, and what happens if a check fails.
+
+Good governance is also proportionate. A spelling assistant does not need the same review as a system that decides who gets a loan. The building blocks help you match your effort to the level of risk.
+
+## Demonstrate
+Let's see this in practice. Farida Haddad is the new compliance manager at a fictional engineering consultancy with offices in Amman and Dublin. She is asked to sort out AI. So she checks the six building blocks, one by one.
+
+Roles: nobody is named, and each department chooses its own tools. Principles: the code of conduct does not mention AI. Inventory: a short staff survey finds eleven AI tools in use, and four were bought by individual staff with company cards.
+
+Risk assessment: there is none, and the records of processing do not mention the AI tools. Controls: one team bans pasting client drawings into public chatbots, but other teams do not. Monitoring: nothing is reviewed after purchase.
+
+Farida does not try to fix everything at once. She proposes an accountable executive, a small review group and a short interim rule, while a full policy is drafted. Her gap list becomes the plan for the next quarter.
+
+One common mistake is to treat AI governance as simply writing an AI policy. A policy is only one control. If nobody owns the inventory, and nobody assesses new tools, the policy has no effect. Start with roles and the inventory, because everything else depends on them.
+
+## Recap
+Let's recap. First, AI governance is the set of roles, policies, processes and controls that decide how an organisation builds, buys and uses AI. Second, six building blocks appear in most frameworks: roles, principles, inventory, risk assessment, controls and monitoring. Third, governance helps you show what you decided and why.
+
+## CTA
+Now it is your turn. In the exercise below this video, you will use a free policy template to list the six building blocks, and write one honest sentence on how your own organisation handles each today. Please do not paste confidential information into any AI tool.
+
+By the end of the course, you will draft a governance policy and a risk register for a fictional company, Velmora Tradeways. In the next lesson, we look at the regulatory map: three laws, different jobs. See you there.
+
+## Thumbnail
+Headline: Who Decides About AI?
+Image: Navy background, a simple org chart with a question mark over the top box and small AI chip icons below it, headline in teal Inter Bold.
+
+## Production Notes
+- Legal/compliance reviewer sign-off required before release.
+- RELEASE BLOCKER (curriculum): a qualified reviewer with EU and Nigerian data protection expertise must sign off on the whole course, including this script, before release.
+- Disclaimer: the educational, not legal advice statement is spoken once in scene 2 and shown as on-screen text. It must also appear on the course page and in the capstone brief.
+- [VERIFY] The free policy template named in the exercise must be chosen from an official or reputable free source, with licence and date recorded.
+- Farida Haddad and her Amman and Dublin consultancy are fictional. Velmora Tradeways Ltd, previewed in the CTA, is fictional [VERIFY] that the name does not match a real company before release (see L11).
+- No screen demos in this course. All documents are shown on slides. Stock footage must not show readable company names, logos or real documents.

@@ -1,0 +1,153 @@
+{
+  "title": "Testing Your Assistant: Accuracy, Tone and Safety",
+  "thumbnail": {
+    "headline": "Test for Real Customers",
+    "image": "Navy background, a chat window on a test track with road signs shaped like a question mark, an angry face and a globe, headline in teal Inter Bold.",
+    "slide": {
+      "layout": "title",
+      "title": "Test for Real Customers",
+      "body": "A chat window driving along a winding road with three signs: question mark (tricky), angry face (emotional), globe (other languages). Small tag: AI for Customer Experience and Support · Lesson 11 · Capstone step 3."
+    }
+  },
+  "production_notes": [
+    "No facts to verify: the lesson uses a hypothetical example and a general scoring method with no tool-specific steps, figures or legal claims (content.md Review Flags: None).",
+    "Not a screen demo lesson: Mateo's test sheet is shown as slides (scenes 11 to 13), not as a live recording.",
+    "Mateo and the Córdoba fitness chain are fictional. Pronunciation: Córdoba (KOR-doh-bah). Stock footage must show no real gym brand names or logos.",
+    "The full scoring table and the eight-point checklist are on the lesson page; scene 5 shows the scoring table and scene 7 shows the checklist as a slide for learners to pause on.",
+    "Judgement call carried from curriculum: test questions are made up or rewritten without personal details."
+  ],
+  "sections": {
+    "Hook": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Your assistant answers your three test questions perfectly. Is it ready? Probably not. Real customers make spelling mistakes, write in other languages, ask two things at once, and get angry. Today you learn to test for real customers.",
+        "on_screen_text": "Perfect on three questions. Ready?"
+      }
+    ],
+    "Explain": [
+      {
+        "visual_type": "slide",
+        "voiceover": "This is capstone step three. You have an assistant and a hand-off flow. Now you need a test set, a fixed list of questions, each with the answer or behaviour you expect. About twenty questions is a good size for a first prototype.",
+        "slide": {
+          "layout": "title",
+          "title": "Testing Your Assistant: Accuracy, Tone and Safety",
+          "body": "AI for Customer Experience and Support · Lesson 11 of 12 · Capstone step 3"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Mix six types. About six standard questions from your scope. About four tricky ones, with spelling mistakes, very short messages, or two questions in one. About three out-of-scope questions, where you expect, I'm not sure, and an offer of a person.",
+        "slide": {
+          "layout": "bullets",
+          "title": "A test set of about 20",
+          "body": "Standard ~6 · Tricky ~4 (typos, 'refund??', two questions in one) · Out of scope ~3 (expect 'I'm not sure' + a person) · ..."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Then about three emotional questions from angry, worried or sad customers. About two hand-off and safety questions, such as a legal threat or a request for a person. And about two questions in the other languages your customers use.",
+        "slide": {
+          "layout": "bullets",
+          "title": "A test set of about 20 (continued)",
+          "body": "... Emotional ~3 · Hand-off and safety ~2 (legal threat, 'I want a person', refund above limit) · Non-English ~2"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Score each answer from zero to two, on three points. Accuracy: is it correct and from the knowledge base? Tone: does it follow the tone guide, with empathy where needed? And hand-off: does it hand off when it should, and not when it should not?",
+        "slide": {
+          "layout": "diagram",
+          "title": "Score 0 to 2",
+          "body": "Table: rows 2 / 1 / 0; columns Accuracy (correct → small gap → wrong or invented) · Tone (follows guide → too formal or cold → rude) · Hand-off (correct → late or unclear → missing or wrong)."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Also note fairness. Is the answer just as good with spelling mistakes, or in another language? And note privacy. Does the assistant ask for more personal data than it needs?",
+        "slide": {
+          "layout": "comparison",
+          "title": "Fairness and privacy",
+          "body": "Fairness: same quality for simple English, typos and other languages. Privacy: asks only for the personal data it needs."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "The lesson page has an eight-point checklist for every test conversation. For example, did it use only facts from the knowledge base? Did it hand off for every trigger? Did it say that it is an AI assistant?",
+        "slide": {
+          "layout": "bullets",
+          "title": "Test-conversation checklist",
+          "body": "1. Only knowledge-base facts? 2. 'I'm not sure' when needed? 3. Tone guide? 4. Hand-off for every trigger? 5. Customer knows what's next? 6. Only needed data? 7. Non-English as good? 8. Says it's AI?"
+        }
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "Then fix the biggest problems first. An invented answer or a missed safety hand-off matters more than a reply that is a little too long. And run the full test set again, because one fix can break something else.",
+        "on_screen_text": "Fix the highest risk first, then retest"
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "Think of a driving test. A fair test does not only use an empty car park. It includes busy junctions, bad weather and a sudden stop. An assistant that only passes easy questions is not ready for real customers.",
+        "stock_query": "learner driver on busy city road",
+        "on_screen_text": "Test the busy roads too"
+      }
+    ],
+    "Demonstrate": [
+      {
+        "visual_type": "stock",
+        "voiceover": "Let's look at an example. Mateo is testing an assistant for a hypothetical chain of fitness centres in Córdoba, Argentina. It covers opening hours, membership types, and how to freeze a membership. He runs twenty questions and scores them in a sheet. Most standard questions score well. But three problems stand out.",
+        "stock_query": "man reviewing spreadsheet in gym office",
+        "on_screen_text": "Fitness centres · Córdoba, Argentina"
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "First, an invented answer. Asked, can I bring my dog, the assistant said yes, in the outdoor area. There is no such policy. Accuracy, zero. Second, a missed hand-off. A customer wrote: I hurt my back on your machine yesterday, and I want compensation. The assistant explained how to freeze a membership. Hand-off, zero.",
+        "slide": {
+          "layout": "comparison",
+          "title": "Three problems: 1 and 2",
+          "body": "1. 'Can I bring my dog?' → 'Yes, in the outdoor area.' (no such policy) Accuracy 0. 2. 'I hurt my back on your machine... I want compensation.' → explains membership freeze. Hand-off 0 (safety + possible legal issue)."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Third, the answers in Spanish were shorter, and left out a step about freezing a membership. That is a fairness problem.",
+        "slide": {
+          "layout": "comparison",
+          "title": "Problem 3: fairness",
+          "body": "English answer: all steps to freeze a membership. Spanish answer: shorter, one step missing (highlighted)."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Mateo fixes them in order of risk. He adds injury, hurt and compensation, and the Spanish words, to the hand-off triggers. He strengthens the rule: if the answer is not in the knowledge base, do not guess. He adds the full Spanish article. Then he runs all twenty questions again, and records the new scores in a second column.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Fix in order of risk, then retest",
+          "body": "1. Add triggers: injury, hurt, compensation (+ Spanish) → 2. 'Do not guess' rule → 3. Full Spanish article → rerun all 20: sheet with 'Before' and 'After' score columns."
+        }
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "A common mistake is to write test questions that match your articles word for word. Real customers do not write like help articles. Ask a colleague who did not build the assistant to write some of your questions. Include the messy, emotional and unexpected messages you see in real work, without personal details.",
+        "on_screen_text": "Customers don't write like help articles"
+      }
+    ],
+    "Recap": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, a test set of about twenty questions should mix standard, tricky, out-of-scope, emotional, hand-off and non-English questions. Second, score each answer for accuracy, tone and hand-off, and check fairness and privacy. Third, fix the highest-risk problems first, then run the full test set again.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. About 20 mixed questions. 2. Score accuracy, tone, hand-off; check fairness and privacy. 3. Fix highest risk first, then retest everything."
+        }
+      }
+    ],
+    "CTA": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "This is capstone step three. In the exercise, you will write twenty made-up test questions, score every answer in a sheet, fix the three biggest problems, and test again. Your capstone is almost complete. In the final lesson, we look at measuring success and keeping the human touch. See you there.",
+        "on_screen_text": "Next: Measuring Success"
+      }
+    ]
+  }
+}

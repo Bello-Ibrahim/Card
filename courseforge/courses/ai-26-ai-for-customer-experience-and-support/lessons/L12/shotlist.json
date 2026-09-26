@@ -1,0 +1,188 @@
+{
+  "course_id": "AI-26",
+  "lesson_id": "L12",
+  "duration_s": 296.1,
+  "thumbnail": {
+    "headline": "Read the Numbers Together",
+    "slide": {
+      "layout": "title",
+      "title": "Read the Numbers Together",
+      "body": "Four small dials grouped together: clock (response time), tick (resolution), arrow to a person (hand-off rate), smiley (satisfaction), around a small heart. Small tag: AI for Customer Experience and Support · Lesson 12 · Capstone step 4."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.7,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Handled, or gave up?",
+      "voiceover": "Imagine your new assistant handles almost every conversation without a person. It looks like a great result. But what if many of those customers simply gave up and closed the chat? The numbers you choose decide what you see."
+    },
+    {
+      "scene": 2,
+      "start": 16.7,
+      "end": 33.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Measuring Success and Keeping the Human Touch",
+        "body": "AI for Customer Experience and Support · Lesson 12 of 12 · Capstone step 4"
+      },
+      "voiceover": "In the last lesson, you tested your assistant before launch. In this final lesson, we look at how to measure it after launch, and how to keep the human touch. Four measures are useful for most support assistants."
+    },
+    {
+      "scene": 3,
+      "start": 33.0,
+      "end": 55.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Measures 1 and 2",
+        "body": "1. First response time: wait for the first useful reply. 2. Resolution rate: problem actually solved ('Did this answer your question?' · no repeat contact soon after)."
+      },
+      "voiceover": "First response time is how long a customer waits for the first useful reply. But a fast wrong answer is not a success. Resolution rate is the share of conversations where the problem was actually solved. You can ask, did this answer your question, or check if the customer contacted you again soon."
+    },
+    {
+      "scene": 4,
+      "start": 55.7,
+      "end": 75.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Measures 3 and 4",
+        "body": "3. Hand-off rate: are the right conversations handed off? 4. Customer satisfaction: short rating for AI-only and handed-off conversations."
+      },
+      "voiceover": "Hand-off rate is the share of conversations passed to a person. A hand-off is not a failure. The question is whether the right conversations are handed off. And customer satisfaction is a short rating at the end, for both AI-only and handed-off conversations."
+    },
+    {
+      "scene": 5,
+      "start": 75.8,
+      "end": 93.8,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Compare with yourself, not a benchmark",
+      "voiceover": "This course gives no target numbers. Good values depend on your industry, customers and channels. Compare with your own team's results before launch, and follow the trend. And keep checking the points from lesson eleven: accuracy, tone, fairness across languages, and privacy."
+    },
+    {
+      "scene": 6,
+      "start": 93.8,
+      "end": 116.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Containment can mislead",
+        "body": "Arrow up: Containment. Arrows down: Satisfaction, Resolution. Warning signs: chats that end suddenly · repeat contacts by email or phone · low ratings after AI-only chats."
+      },
+      "voiceover": "Always read the measures together. The rate of conversations that never reach a person is sometimes called containment. If customers leave without an answer, containment goes up, while satisfaction and resolution go down. Watch for warning signs: chats that end suddenly, repeat contacts by email or phone, and low ratings after AI-only chats."
+    },
+    {
+      "scene": 7,
+      "start": 116.9,
+      "end": 140.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Principles, not extras",
+        "body": "Tell customers it's AI + how to reach a person · collect only the data you need · follow local data protection rules; ask your legal team · no real customer data in free test tools"
+      },
+      "voiceover": "Privacy and transparency are principles, not extras. Tell customers they are talking to AI, and how to reach a person. Collect only the data you need, follow the data protection rules where your customers live, and ask your legal team before any real launch. And keep real customer data out of free test tools."
+    },
+    {
+      "scene": 8,
+      "start": 140.0,
+      "end": 155.4,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "doctor checking patient heart rate monitor",
+      "on_screen_text": "Look at all the signs together",
+      "voiceover": "Think of a doctor checking a patient. A normal temperature with a very high heart rate still means something is wrong. In the same way, high containment with low satisfaction means customers are not being helped."
+    },
+    {
+      "scene": 9,
+      "start": 155.4,
+      "end": 170.4,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "row of rental bicycles in european city",
+      "on_screen_text": "Bicycle rental · Ghent, Belgium",
+      "voiceover": "Let's see a launch note. Sofie runs support for a hypothetical bicycle rental company in Ghent, Belgium. Customers write in Dutch, French and English. She prepares a one-page note for a two-month pilot."
+    },
+    {
+      "scene": 10,
+      "start": 170.4,
+      "end": 194.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Sofie's launch note: part 1",
+        "body": "Scope: availability, prices, opening hours; everything else → a person. Measures: response time, resolution, hand-off rate, satisfaction vs the two months before. Warning signs: one-message chats · repeat contact within two days · 'hard to leave' complaints."
+      },
+      "voiceover": "Her scope is bike availability, prices and opening hours. Everything else goes to a person. Her measures are the four you just saw, compared with the two months before launch. Her warning signs include chats that end after one message, repeat contacts within two days, and any complaint that the assistant was hard to leave."
+    },
+    {
+      "scene": 11,
+      "start": 194.0,
+      "end": 215.9,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Sofie's launch note: part 2",
+        "body": "Quality checks: 20 random conversations a week, all three languages, L11 checklist. Transparency and privacy: AI welcome message; data protection officer approves data. Review: weekly quality · monthly measures · decision after two months."
+      },
+      "voiceover": "For quality, a team member reads twenty random conversations each week, in all three languages. The welcome message says it is an AI assistant, and the data protection officer approves what data is collected. She reviews quality weekly, the measures monthly, and after two months decides to continue, change or stop."
+    },
+    {
+      "scene": 12,
+      "start": 215.9,
+      "end": 230.5,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Reading the results",
+        "body": "Containment: high. Satisfaction: lower for French chats (highlighted). Cause found by reading conversations: two French articles missing → added."
+      },
+      "voiceover": "After the first month, containment is high, but satisfaction for French conversations is lower. Sofie reads those conversations and finds two French articles are missing. She adds them, and watches the next month's results."
+    },
+    {
+      "scene": 13,
+      "start": 230.5,
+      "end": 246.4,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "A good hand-off is good service",
+      "voiceover": "A common mistake is to report only one number, the conversations the assistant handled. That rewards keeping customers away from people. Report containment with resolution and satisfaction, and treat a well-timed hand-off as good service."
+    },
+    {
+      "scene": 14,
+      "start": 246.4,
+      "end": 269.1,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Four measures, read together, vs your own baseline. 2. High containment can hide customers who gave up. 3. Say it's AI · a person is easy to reach · only the data you need."
+      },
+      "voiceover": "Let's recap. First, track response time, resolution, hand-off rate and satisfaction together, compared with your own results. Second, high containment is not always good, because customers who give up also count. Third, tell customers they are talking to AI, make a person easy to reach, and collect only the data you need."
+    },
+    {
+      "scene": 15,
+      "start": 269.1,
+      "end": 296.1,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Submit your capstone",
+      "voiceover": "Congratulations, you have finished the course! You designed a working assistant with a real hand-off to a human. For capstone step four, make your final fixes and write your one-page launch note. Then check the rubric checklist and submit your capstone: your assistant, your hand-off flow, your test sheet and your launch note. Well done, and keep the human touch."
+    }
+  ]
+}

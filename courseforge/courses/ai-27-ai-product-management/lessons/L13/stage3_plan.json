@@ -1,0 +1,69 @@
+{
+  "title": "Writing the AI PRD: Structure and Scope",
+  "thumbnail": {
+    "headline": "The AI PRD Template",
+    "image": "Navy background, a document with twelve numbered section lines, sections 2 to 11 highlighted in teal, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "The AI PRD Template", "body": "A document outline with 12 numbered lines; lines 2 to 11 highlighted in teal as 'what AI adds'. Small tag: AI Product Management · Lesson 13 · Capstone step 1."}
+  },
+  "production_notes": [
+    "[VERSION] FigJam free-plan limits and Claude free-plan limits and data-use terms must be checked before recording (exercise tools).",
+    "The AI PRD template must appear on slides with all 12 section names exactly as in content.md: 1 Problem and users; 2 Scope and capability; 3 Experience; 4 Data needs; 5 Model behaviour spec; 6 Build approach and cost; 7 Evaluation plan; 8 Failure modes; 9 Human oversight; 10 Risks and launch guardrails; 11 Rollout and monitoring; 12 Open questions.",
+    "The voiceover does not reteach standard PRD sections (problem, users, open questions); it names them and focuses on sections 2 to 11.",
+    "Haruto Sato and the industrial equipment company in Japan are hypothetical; stock footage must not show a real machine brand or logo. Error code E12 and 'Model B' are invented."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "A standard PRD describes what the product should do. An AI PRD must also describe what it should do when it is wrong, unsure, or asked something it should not answer. This week, you write one.",
+       "on_screen_text": "What should it do when wrong?"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "This is where your capstone begins. You will write a complete PRD and evaluation plan for one AI feature, in three steps. The product sections now, the evaluation plan in the next lesson, and a review and final version in the last lesson. Read the capstone rubric before you start, because it shows how your work is marked.",
+       "slide": {"layout": "diagram", "title": "Your capstone in three steps", "body": "Step 1 (L13): product sections + FigJam flow → Step 2 (L14): evaluation plan → Step 3 (L15): review and final version. Side card: read the capstone rubric first."}},
+      {"visual_type": "slide",
+       "voiceover": "Here is the AI PRD template. You already know the standard sections, such as problem and users, and open questions. So look at what sits between them. Scope and capability. Experience, with the happy path and four failure paths. Data needs. The model behaviour spec. And build approach and cost.",
+       "slide": {"layout": "bullets", "title": "AI PRD template, sections 1 to 6", "body": "1. Problem and users (standard) · 2. Scope and capability · 3. Experience: happy path + four failure paths · 4. Data needs · 5. Model behaviour spec · 6. Build approach and cost (placeholder prices marked)"}},
+      {"visual_type": "slide",
+       "voiceover": "Then the evaluation plan, which you write next time. Failure modes, and how the design reduces each one. Human oversight: who reviews what, and who can stop outputs. Risks and launch guardrails, with owners. Rollout and monitoring. And finally, open questions, each with an owner and a date.",
+       "slide": {"layout": "bullets", "title": "AI PRD template, sections 7 to 12", "body": "7. Evaluation plan (L14) · 8. Failure modes · 9. Human oversight · 10. Risks and launch guardrails · 11. Rollout and monitoring · 12. Open questions (standard), each with an owner and a date"}},
+      {"visual_type": "slide",
+       "voiceover": "Sections two to eleven are what an AI PRD adds or changes. Each one reuses work from earlier lessons. Your scope, your failure flow, your data table, your cost estimate, your risk table and your rollout plan all have a place here.",
+       "slide": {"layout": "diagram", "title": "What an AI PRD adds", "body": "The 12-section outline with sections 2 to 11 highlighted; small arrows from earlier lessons: L02/L05 → 2 and 3 · L06 → 4 · L07 → 6 · L08/L09 → 7 · L11 → 10 · L12 → 11."}},
+      {"visual_type": "slide",
+       "voiceover": "The most useful new section is the model behaviour spec. It turns vague wishes, such as helpful and accurate, into specific rules. What the AI must do. What it must never do. How it behaves when unsure, when it refuses, its tone and format, and three to five example inputs with good outputs.",
+       "slide": {"layout": "bullets", "title": "Model behaviour spec", "body": "Must · Must never · When unsure · Refuse · Tone and format · 3 to 5 example inputs with good outputs"}},
+      {"visual_type": "text",
+       "voiceover": "Remember the talented new colleague from lesson one? A normal PRD is like a job description. An AI PRD is more like their induction guide. It explains the tasks, and also what to do when unsure, what they must never do, who checks their work, and when to call a manager.",
+       "on_screen_text": "An induction guide, not a job description"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's look at an example. Haruto Sato is a PM at a hypothetical industrial equipment company in Japan. Field technicians repair packaging machines at customer sites, and often search long manuals on their phones.",
+       "stock_query": "technician repairing factory machine with phone",
+       "on_screen_text": "Haruto · industrial equipment · Japan"},
+      {"visual_type": "slide",
+       "voiceover": "His scope: technicians with at least one year of experience, and one task, finding and summarising repair steps for the three most common machine models, with links to the source pages. Machines without digital manuals are out of scope. The capability is retrieval plus generation.",
+       "slide": {"layout": "bullets", "title": "Section 2: Scope and capability", "body": "User: technicians with 1+ year of experience · Task: find and summarise repair procedures for the 3 most common models · Out of scope: models without digital manuals, anything not in a manual · Capability: retrieval + generation"}},
+      {"visual_type": "slide",
+       "voiceover": "His behaviour spec says the assistant must answer only from retrieved manual sections, and show the source page for every step. It must never invent a step, a part number or a torque value. When unsure, it says it could not find this in the manual, and suggests calling support. And it refuses requests to bypass safety locks.",
+       "slide": {"layout": "code", "title": "Section 5: Behaviour spec (extract)", "body": "MUST: answer only from retrieved sections; source page for every step; Japanese or English to match\nMUST NEVER: invent a step, part number or torque value\nWHEN UNSURE: 'I could not find this in the manual for model X' + closest sections + call support\nREFUSE: bypassing safety locks → point to the safety procedure\nEXAMPLE: 'Model B, error E12, film not cutting' → steps from the cutter section with page links"}},
+      {"visual_type": "slide",
+       "voiceover": "For human oversight, a senior technician reviews thirty random answers each week, and can block a manual section that often gives wrong answers. In his FigJam flow, when no section matches, the technician sees the closest sections, and a call support button with the fault already filled in.",
+       "slide": {"layout": "comparison", "title": "Sections 9 and 3", "body": "Human oversight: senior technician reviews 30 random answers weekly; can block a manual section. Failure path: no match → closest sections + 'Call support' button with the fault description filled in."}},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is filling the template with general statements, such as the model will be accurate and safe. Every rule should be specific enough that a tester could write a test case for it.",
+       "on_screen_text": "Every rule could become a test"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, an AI PRD keeps the standard sections, and adds scope, experience for errors, data, a behaviour spec, evaluation, failure modes, oversight, guardrails and monitoring. Second, the behaviour spec turns vague goals into must, must never, unsure and refusal rules, with examples. Third, every statement should be specific enough to build and to test.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Standard sections + sections 2 to 11. 2. Behaviour spec: must, must never, unsure, refuse, examples. 3. Specific enough to build and test."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. This is capstone step one. In the exercise below, write the problem, users, scope and experience sections of your PRD, update your FigJam flow, and draft your behaviour spec. It takes about forty five minutes. In the next lesson, we write the evaluation plan. See you there.",
+       "on_screen_text": "Next: Writing the Evaluation Plan"}
+    ]
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "course_id": "AI-29",
+  "lesson_id": "L07",
+  "duration_s": 292.8,
+  "thumbnail": {
+    "headline": "Six Questions, Every Time",
+    "slide": {
+      "layout": "title",
+      "title": "Six Questions, Every Time",
+      "body": "A stack of thick framework documents on the left; on the right, one small card with six tick boxes. Small tag: AI Ethics, Bias and Safety · Lesson 7."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.9,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Many documents, a few ideas",
+      "voiceover": "Governments, international organisations and companies have written many documents about responsible AI. They have different names and lengths. But read them side by side, and you find the same few ideas again and again. Those ideas can fit on a card on your desk."
+    },
+    {
+      "scene": 2,
+      "start": 18.9,
+      "end": 41.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Who writes frameworks?",
+        "body": "Three sources feeding one 'Principles' box: International organisations · Governments · Companies (for their own staff)."
+      },
+      "voiceover": "In the last lesson, we looked at safety and human oversight. Now we bring the course together. A responsible AI framework is a set of principles that describes how AI should be built and used. Some are written by international organisations, some by governments, and many by companies for their own staff."
+    },
+    {
+      "scene": 3,
+      "start": 41.2,
+      "end": 56.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "International examples",
+        "body": "OECD AI Principles · UNESCO Recommendation on the Ethics of Artificial Intelligence. Caption: we focus on the shared ideas, not the exact wording."
+      },
+      "voiceover": "Two well-known international examples come from the OECD and from UNESCO. In this beginner course, we do not study their exact wording. Instead, we look at the ideas that they and many company frameworks share."
+    },
+    {
+      "scene": 4,
+      "start": 56.6,
+      "end": 82.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Six shared principles",
+        "body": "Fairness · Transparency · Privacy · Safety · Accountability · Human oversight (each with a small icon and the lesson where we met it)"
+      },
+      "voiceover": "Six core principles appear in most frameworks. Fairness, so AI does not treat people unjustly. Transparency, so people know when AI is used. Privacy, so personal and confidential data is protected. Safety, so AI does not cause harm, and outputs are checked. Accountability, so a named person is responsible. And human oversight, so a capable person can question and change decisions."
+    },
+    {
+      "scene": 5,
+      "start": 82.7,
+      "end": 105.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "From principle to question",
+        "body": "Principle (e.g. Privacy) → arrow → one yes/no question → Responsible-use checklist. Footnote: supports your organisation's rules; legal duties in AI-30."
+      },
+      "voiceover": "Frameworks can feel far away from daily work. So the practical step is to turn each principle into one question you ask yourself, before, during or after you use an AI tool. That is a responsible-use checklist. It does not replace your organisation's rules. Legal duties are covered in course AI thirty."
+    },
+    {
+      "scene": 6,
+      "start": 105.4,
+      "end": 130.3,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "pilot reading preflight checklist in cockpit",
+      "on_screen_text": "A checklist for busy days",
+      "voiceover": "Before take-off, pilots use a short checklist, even after thousands of flights. It does not teach them to fly. It makes sure they do not forget something important when they are busy. Your checklist does the same for AI. It gives you a few quick questions that stop you from skipping a step on a busy day."
+    },
+    {
+      "scene": 7,
+      "start": 130.3,
+      "end": 146.6,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "marketing team working on social posts",
+      "on_screen_text": "Katarzyna's agency · Poland",
+      "voiceover": "Let's see one in use. Katarzyna Nowak works at a marketing agency in Poland. Her team uses a chatbot to draft social media posts and client reports. After this course, she writes six questions, one for each principle."
+    },
+    {
+      "scene": 8,
+      "start": 146.6,
+      "end": 168.9,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Katarzyna's checklist",
+        "body": "Privacy: personal and client details removed? · Safety: facts and numbers checked? · Fairness: any stereotypes? · Transparency: disclosed where rules require? · Human oversight: did I edit it? · Accountability: who fixes problems?"
+      },
+      "voiceover": "For example. For privacy, have I removed all personal and client-confidential details? For safety, have I checked every fact and number against a trusted source? For fairness, could this output use stereotypes? And for human oversight, did I read and edit the output myself? Transparency and accountability get a question too."
+    },
+    {
+      "scene": 9,
+      "start": 168.9,
+      "end": 196.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Three problems caught",
+        "body": "Privacy: unreleased price → placeholder. Safety: '40% less energy' claim, not in client material → struck through. Fairness: only young people shown → wider description."
+      },
+      "voiceover": "She uses it on a real task, an AI-drafted post for a client's new product. Her prompt included the client's unreleased price, so she replaces it with a placeholder. The draft claims the product reduces energy use by forty percent. She cannot find this in the client's material, so she deletes it. And the draft shows only young people, so she widens the description."
+    },
+    {
+      "scene": 10,
+      "start": 196.8,
+      "end": 219.5,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Five minutes, all six checked",
+        "body": "Transparency: note to client · Human oversight: she edits the text · Accountability: she signs off as account manager"
+      },
+      "voiceover": "Her agency's rule is to tell clients when AI helped, so she adds a note to her email. She edits the final text herself, and she signs off the post as account manager. The whole checklist takes about five minutes, and it catches three real problems that would otherwise have reached the client."
+    },
+    {
+      "scene": 11,
+      "start": 219.5,
+      "end": 241.8,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Use it every time",
+      "voiceover": "A common mistake is to read a framework once and file it away. Principles only help if they change what you do, so use your questions every time. Write each question so you can answer yes or no for a real task. And always check official sources before quoting a named framework."
+    },
+    {
+      "scene": 12,
+      "start": 241.8,
+      "end": 264.9,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Six shared principles across frameworks. 2. Turn each into a short question. 3. A checklist supports, not replaces, rules and the law."
+      },
+      "voiceover": "Let's recap. First, many international and company frameworks share the same core principles: fairness, transparency, privacy, safety, accountability and human oversight. Second, principles become useful when you turn each one into a short question for a real task. Third, a responsible-use checklist supports, but does not replace, your organisation's rules and the law."
+    },
+    {
+      "scene": 13,
+      "start": 264.9,
+      "end": 292.8,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Testing an AI Tool for Bias",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will build your own six-question checklist and use it on one real task you did with an AI tool this month. Keep it, because you will use it again in your capstone audit. In the next lesson, we will start that capstone by testing an AI tool for bias. See you there."
+    }
+  ]
+}

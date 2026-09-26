@@ -1,0 +1,180 @@
+{
+  "course_id": "AI-28",
+  "lesson_id": "L11",
+  "duration_s": 281.6,
+  "thumbnail": {
+    "headline": "Spot Risks Early",
+    "slide": {
+      "layout": "title",
+      "title": "Spot Risks Early",
+      "body": "A risk checklist with coloured tags (low green, medium amber, high red) and a shield icon. Small tag: Building an AI Startup · Lesson 11."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.7,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Where does my data go?",
+      "voiceover": "Your MVP works, and your first customers are happy. Then one asks, where does my data go? Who owns the text your AI writes? What happens if it gives wrong advice? If you cannot answer, that customer may leave."
+    },
+    {
+      "scene": 2,
+      "start": 16.7,
+      "end": 36.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Legal, Ethical and Data Risks",
+        "body": "Building an AI Startup · Lesson 11 of 15 · Not legal advice"
+      },
+      "on_screen_text": "Not legal advice",
+      "voiceover": "Welcome to the final week. Before you launch, we look at risk. This lesson helps you spot risks early. It is not legal advice. Laws differ by country and change over time, so before you launch, get advice from a qualified lawyer where you operate."
+    },
+    {
+      "scene": 3,
+      "start": 36.0,
+      "end": 59.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "1. Data protection principles",
+        "body": "Personal data: name, phone number, health record · Collect only what you need · Tell people how you use it · Keep it secure · Delete it when no longer needed"
+      },
+      "voiceover": "The first area is data protection. Personal data is information that can identify a person, like a name, phone number or health record. Many countries have laws about it. Common principles are: collect only what you need, tell people how you use it, keep it secure, and delete it when you no longer need it."
+    },
+    {
+      "scene": 4,
+      "start": 59.6,
+      "end": 81.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "2. Consent",
+        "body": "Ask before: recording interviews · using data to improve the product · sharing data with others, including the model supplier. Not hidden in long terms."
+      },
+      "voiceover": "The second is consent, meaning a person clearly agrees. Ask before you record interviews, use customer data to improve your product, or share data with another company, including your model supplier. Do not hide it in long terms nobody reads. Clear, simple words build trust, and trust is part of your moat."
+    },
+    {
+      "scene": 5,
+      "start": 81.9,
+      "end": 106.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "3. Outputs · 4. Supplier terms",
+        "body": "Outputs: agree in your terms who may use them; ask a lawyer. · Supplier terms: how data is stored and used; allowed uses; free and paid plans may differ."
+      },
+      "voiceover": "The third is ownership of AI outputs. Agree in your customer terms who may use the outputs and how, and ask a lawyer what applies in your country. The fourth is model supplier terms. They decide how your data may be stored or used. Read the terms for your plan, because free and paid plans may differ."
+    },
+    {
+      "scene": 6,
+      "start": 106.3,
+      "end": 127.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "5. Sector rules · Ethics",
+        "body": "Sector rules: health, finance, law, education, employment; some regions have AI-specific rules. Ethical risks: bias · overconfident answers · replacing needed human judgement."
+      },
+      "voiceover": "The fifth is sector rules. Health, finance, law, education and employment often have extra rules, and some regions also have rules specific to AI. Then there are ethical risks, which may not be illegal but still cause harm: biased results, overconfident answers, and replacing human judgement where it is needed."
+    },
+    {
+      "scene": 7,
+      "start": 127.7,
+      "end": 145.3,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "street food vendor cooking with gloves",
+      "on_screen_text": "The hygiene rules of a startup",
+      "voiceover": "Think of a food stall. Cooking well is not enough. You also follow hygiene rules and label allergens. A great recipe does not protect you if customers become ill. Legal and data risks are the hygiene rules of an AI startup."
+    },
+    {
+      "scene": 8,
+      "start": 145.3,
+      "end": 161.2,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "hiring manager reviewing job applications laptop",
+      "on_screen_text": "Zofia · Kraków · job applications",
+      "voiceover": "Let's fill in a checklist. Zofia is a made up founder in Kraków, Poland. Her MVP reads job applications for small companies and suggests which candidates to interview. She rates each risk as low, medium or high."
+    },
+    {
+      "scene": 9,
+      "start": 161.2,
+      "end": 185.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Zofia's checklist (1)",
+        "body": "Personal data in applications: HIGH (red) → legal advice · collect only what's needed · deletion period. Screening applicants may be higher-risk AI: HIGH (red) → ask a lawyer · a person makes every final decision."
+      },
+      "voiceover": "Applications contain personal data. That is high. Her next step is legal advice, collecting only what employers need, and setting a deletion period. Screening job applicants may count as a higher risk use of AI in her region. Also high. She will ask a lawyer which duties apply, and make sure a person makes every final decision."
+    },
+    {
+      "scene": 10,
+      "start": 185.6,
+      "end": 207.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Zofia's checklist (2)",
+        "body": "Unfair bias (age, gender): HIGH (red) → remove names, photos, ages; test across groups. Supplier terms: MEDIUM (amber) → read terms; turn off training use if available. Ownership of summaries: LOW (green) → customers may use freely."
+      },
+      "voiceover": "The model may favour some groups unfairly, for example by age or gender. High. So she removes names, photos and ages before the AI sees them, and tests results across groups. She will also publish how she checks for fairness. Model supplier terms are medium. Ownership of summaries is low."
+    },
+    {
+      "scene": 11,
+      "start": 207.0,
+      "end": 220.7,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Summarise, don't rank. Humans decide.",
+      "voiceover": "Then Zofia changes her product. Instead of ranking candidates, it summarises each application against the employer's criteria, and a person makes every decision. That reduces risk, and the product is still useful."
+    },
+    {
+      "scene": 12,
+      "start": 220.7,
+      "end": 240.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Common mistakes",
+        "body": "Red crosses: 'We'll deal with it later' · copying another company's terms and privacy pages. Green tick: decide data and promises early, with local advice."
+      },
+      "voiceover": "A common mistake is thinking legal questions matter later, when you are bigger. But what data you collect and what you promise are hard to change later. Another mistake is copying another company's privacy pages. Their business and country may be very different from yours."
+    },
+    {
+      "scene": 13,
+      "start": 240.0,
+      "end": 261.0,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Five areas: data, consent, outputs, supplier terms, sector rules. 2. Laws differ; not legal advice. 3. Low, medium, high; a next step for every high."
+      },
+      "voiceover": "Let's recap. First, check five areas early: data protection, consent, ownership of outputs, model supplier terms and sector rules. Second, laws differ by country, and this lesson is not legal advice. Third, rate each risk as low, medium or high, and give every high risk a concrete next step."
+    },
+    {
+      "scene": 14,
+      "start": 261.0,
+      "end": 281.6,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Funding Options",
+      "voiceover": "Now it is your turn. In the exercise below this video, complete a risk checklist for your startup, with a next step for each high risk, and write three questions for a local lawyer. Next, we look at funding options and what investors look for. See you there."
+    }
+  ]
+}

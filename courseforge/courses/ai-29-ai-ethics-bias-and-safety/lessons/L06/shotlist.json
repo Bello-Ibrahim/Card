@@ -1,0 +1,179 @@
+{
+  "course_id": "AI-29",
+  "lesson_id": "L06",
+  "duration_s": 293.5,
+  "thumbnail": {
+    "headline": "Is Anyone Really Checking?",
+    "slide": {
+      "layout": "title",
+      "title": "Is Anyone Really Checking?",
+      "body": "A person icon beside a very tall stack of cards marked with ticks; behind, a simple cockpit outline. Small tag: AI Ethics, Bias and Safety · Module 2 · Lesson 6."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.4,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Is that really human control?",
+      "voiceover": "A human is in the loop, the vendor says. But what if that human has four hundred AI decisions to approve before lunch, and no power to change any of them? Is that really human control?"
+    },
+    {
+      "scene": 2,
+      "start": 15.4,
+      "end": 37.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Four safety risks, part one",
+        "body": "1. Harmful advice: wrong dose, risky money tip · 2. Unsafe instructions: how to do something dangerous"
+      },
+      "voiceover": "Welcome to week two. In AI, safety means avoiding physical, financial, emotional or social harm. Four kinds of safety risk appear again and again. The first is harmful advice, such as a wrong medicine dose or a risky money tip. The second is unsafe instructions, such as how to mix dangerous chemicals."
+    },
+    {
+      "scene": 3,
+      "start": 37.7,
+      "end": 56.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Four safety risks, part two",
+        "body": "3. Over-trust: fast, confident, usually right, so nobody checks · 4. High-stakes use without checks: health · credit · hiring · public services"
+      },
+      "voiceover": "The third is over-trust. People accept the AI's answer without checking, because it is fast, confident and usually right. When it is wrong, nobody notices. The fourth is high-stakes use without checks, in areas like health, credit, hiring or public services."
+    },
+    {
+      "scene": 4,
+      "start": 56.1,
+      "end": 83.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Real human oversight",
+        "body": "Person icon at the centre with three supports: Time (clock) · Knowledge (book) · Authority (key: can change or stop the decision)."
+      },
+      "voiceover": "Many AI tools have safety filters, but filters are not perfect. The strongest protection is often human oversight. That means a person can question and change the AI's decision. For this to be real, and not just a signature, the person needs three things. Time, knowledge and authority. Authority means the power to change or stop the decision, without being punished for it."
+    },
+    {
+      "scene": 5,
+      "start": 83.1,
+      "end": 102.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Higher impact, closer review",
+        "body": "A rising line from low to high impact: Blog post title → occasional spot checks · Loan rejection or patient flag → review before the decision, plus easy appeal."
+      },
+      "voiceover": "Where should a person review the output? A simple rule. The higher the impact of a mistake, the closer the human review. A blog title may need only spot checks. A loan rejection needs review before it takes effect, or an easy way to appeal."
+    },
+    {
+      "scene": 6,
+      "start": 102.4,
+      "end": 130.7,
+      "section": "Explain",
+      "visual_type": "hero_broll",
+      "broll_tool": "KLING",
+      "broll_prompt": "A Southeast Asian woman pilot in her forties sits alert in a cockpit during flight, calmly watching the instruments with one hand resting near the controls while clouds pass outside; slow push-in from over-the-shoulder shot to side close-up; soft diffused daylight through the cockpit windows; cinematic, realistic, natural colours; 7 seconds; no readable text on instruments, no airline logos.",
+      "voiceover": "Think of an aeroplane autopilot. It is very useful, and it flies smoothly for hours. But the pilot is still trained, alert and able to take control at any moment, especially at take-off, landing and in bad weather. Human oversight of AI works the same way. The system does the routine work, and a capable person stays ready to step in when it matters most."
+    },
+    {
+      "scene": 7,
+      "start": 130.7,
+      "end": 148.7,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "pharmacy manager reviewing chats on computer",
+      "on_screen_text": "Youssef's pharmacies · Morocco",
+      "voiceover": "Let's look at an example. Youssef Benali runs customer support for a chain of pharmacies in Morocco. The company launches a website chatbot to answer questions about opening hours, stock and deliveries. In the first month, Youssef reviews a sample of chats."
+    },
+    {
+      "scene": 8,
+      "start": 148.7,
+      "end": 163.7,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Risk 1: harmful advice",
+        "body": "Chat bubble (placeholder text): 'How many tablets a day?' → answer with a number, no questions about age or other medicines → Harmful advice"
+      },
+      "voiceover": "He finds three safety risks. A customer asks how many pain tablets they can take in a day, and the chatbot gives a number without asking about age or other medicines. That is harmful advice."
+    },
+    {
+      "scene": 9,
+      "start": 163.7,
+      "end": 183.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Risks 2 and 3",
+        "body": "'Can I take these together?' answered 'yes', unchecked → High-stakes use without checks · Staff copy answers unread → Over-trust"
+      },
+      "voiceover": "Another customer asks if two medicines can be taken together, and the chatbot says yes, with nobody checking. That is high-stakes use without checks. And staff copy the chatbot's answers into emails without reading them, because it is usually right. That is over-trust."
+    },
+    {
+      "scene": 10,
+      "start": 183.0,
+      "end": 202.7,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Where the human goes",
+        "body": "Low impact: hours, stock, deliveries → chatbot answers, weekly sample review. High impact: doses, side effects, combining medicines → handed to pharmacist on duty."
+      },
+      "voiceover": "Youssef decides where oversight is needed. For opening hours, stock and deliveries, the chatbot answers alone, and staff review a weekly sample. For any question about doses, side effects or combining medicines, the chatbot does not answer. It passes the question to a pharmacist on duty."
+    },
+    {
+      "scene": 11,
+      "start": 202.7,
+      "end": 218.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Oversight that works",
+        "body": "Pharmacist icon with three ticks: time in schedule · training to answer · authority to contact customer. Below: new rule: read every AI-drafted reply before sending."
+      },
+      "voiceover": "The pharmacist has time in their schedule for this, the training to answer, and the authority to contact the customer directly. And a new rule says staff must read every AI-drafted reply before sending it."
+    },
+    {
+      "scene": 12,
+      "start": 218.1,
+      "end": 241.2,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "A signature is not oversight",
+      "voiceover": "A common mistake is to believe that adding a person anywhere solves the problem. A person with no time, training or power only approves what the machine already decided. The correction is to check that the reviewer has enough time, knowledge and authority, and to place the review where a mistake would hurt most."
+    },
+    {
+      "scene": 13,
+      "start": 241.2,
+      "end": 265.2,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Harmful advice, unsafe instructions, over-trust, high-stakes use without checks. 2. Oversight needs time, knowledge and authority. 3. Higher impact, closer and earlier review."
+      },
+      "voiceover": "Let's recap. First, key AI safety risks include harmful advice, unsafe instructions, over-trust in automated decisions, and high-stakes use without checks. Second, human oversight is real only when the reviewer has enough time, knowledge and authority. Third, the higher the impact of a possible mistake, the closer and earlier the human review should be."
+    },
+    {
+      "scene": 14,
+      "start": 265.2,
+      "end": 293.5,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Responsible AI Frameworks",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will look at three uses of AI, an essay grader in Egypt, a bank chatbot in India and a crop-disease app in Ghana, and decide where a human should review the output. It takes about fifteen minutes. In the next lesson, we will look at responsible AI frameworks in practice. See you there."
+    }
+  ]
+}

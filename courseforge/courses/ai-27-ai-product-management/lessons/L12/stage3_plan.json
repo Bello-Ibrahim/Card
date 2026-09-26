@@ -1,0 +1,72 @@
+{
+  "title": "Launch Strategy: Pilots, Rollouts and Monitoring",
+  "thumbnail": {
+    "headline": "Decide When to Stop",
+    "image": "Navy background, three stepping stones labelled 1, 2, 3 leading to a door, with a red stop switch beside them, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Decide When to Stop", "body": "Three rollout steps rising left to right, with a red kill switch icon beside them. Small tag: AI Product Management · Lesson 12."}
+  },
+  "production_notes": [
+    "[VERSION] FigJam free-plan limits must be checked before recording (optional exercise tool).",
+    "Elif Yilmaz and the ride-hailing app in Turkey are hypothetical; stock footage must not show a real ride-hailing brand, app screen or logo.",
+    "The rollout table figures (10 agents for 2 weeks, 80 percent accepted, 4-week pilot, 25, 50 then 100 percent, 50 random drafts a week) come from the content.md worked example."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "The most important launch decision is one you make before launch. Which result would make you stop? If you decide that only after you see the data, it is very easy to find a reason to continue.",
+       "on_screen_text": "Which result would make you stop?"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Last time, you wrote your risks and guardrails. Now we plan the launch. You already know how to launch features. AI features need four additions.",
+       "slide": {"layout": "title", "title": "Launch Strategy: Pilots, Rollouts and Monitoring", "body": "AI Product Management · Lesson 12 of 15"}},
+      {"visual_type": "slide",
+       "voiceover": "First, a staged rollout. Release to internal users, then a small pilot group, then a share of all users, then everyone. Move to the next stage only when a gate metric, agreed in advance, is met. Second, A B tests where they make sense. Compare users with and without the feature on your online metrics, to see whether it helps, not only whether people use it.",
+       "slide": {"layout": "diagram", "title": "Staged rollout", "body": "Steps: Internal → Pilot group → Share of users → Everyone, with a gate between each step labelled 'gate metric met?'. Side note: A/B test with vs without the feature."}},
+      {"visual_type": "slide",
+       "voiceover": "Third, feedback loops. Collect signals such as helpful or wrong buttons, edits and reports. And review a sample of real outputs by hand every week, because users do not report most errors.",
+       "slide": {"layout": "bullets", "title": "Feedback loops", "body": "Helpful / wrong buttons · Edits · Reports · Weekly human review of a sample of real outputs"}},
+      {"visual_type": "slide",
+       "voiceover": "Fourth, monitoring over time. AI quality can change after launch even if you change nothing. User behaviour changes, new topics appear, and a provider may update a model. This is called drift. So track quality, guardrails, cost and response time on a dashboard, and rerun your test set whenever the model, prompt or data changes.",
+       "slide": {"layout": "diagram", "title": "Watching for drift", "body": "Dashboard with four small line charts: quality, guardrail metrics, cost, response time. A marker on the timeline: 'model, prompt or data changed → rerun test set'."}},
+      {"visual_type": "slide",
+       "voiceover": "Two more parts are essential. Stop criteria, written in advance, such as the complaint rate doubling from the baseline. And a kill switch, a way to turn the AI feature off quickly and return users to the non AI fallback, without a new app release. Test it before launch.",
+       "slide": {"layout": "comparison", "title": "Before launch, always", "body": "Stop criteria: specific numbers written in advance (e.g. complaint rate doubles from baseline). Kill switch: turns AI off fast, returns users to the non-AI fallback, no new release, tested before launch."}},
+      {"visual_type": "stock",
+       "voiceover": "Think of a new restaurant with a soft launch. First it serves friends and family, then a few public evenings with a small menu, then the full opening. And the owners decide in advance that if the kitchen cannot serve safely, they close for the evening, whoever is waiting at the door.",
+       "stock_query": "restaurant soft opening small group dinner",
+       "on_screen_text": "Soft launch before the full opening"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's see a plan. Elif Yilmaz is a PM at a hypothetical ride hailing app in Turkey. Her feature reads a rider's complaint after a trip, and suggests a category and a draft reply to the support agent, who edits and sends it.",
+       "stock_query": "support agent with headset typing reply",
+       "on_screen_text": "Elif · ride-hailing app · Turkey"},
+      {"visual_type": "slide",
+       "voiceover": "Stage one is internal: ten agents in one city for two weeks. To move on, at least eighty percent of suggested categories must be accepted without change, with no invented refund promises in the weekly sample. Any draft that exposes another rider's personal data stops the rollout.",
+       "slide": {"layout": "comparison", "title": "Stage 1: Internal", "body": "Who: 10 agents, one city, 2 weeks. Gate: ≥ 80% of categories accepted unchanged; no invented refund promises in the weekly sample. Stop: any draft exposing another rider's personal data."}},
+      {"visual_type": "slide",
+       "voiceover": "Stage two is a pilot with all agents in one city, for four weeks. Handling time must be lower than the baseline, and the complaint re open rate no higher. If the re open rate is above the baseline for two weeks in a row, or harmful output passes the agreed limit, the rollout stops.",
+       "slide": {"layout": "comparison", "title": "Stage 2: Pilot", "body": "Who: all agents, one city, 4 weeks. Gate: median handling time below baseline; re-open rate not above baseline. Stop: re-open rate above baseline 2 weeks in a row; harmful output above the agreed limit."}},
+      {"visual_type": "slide",
+       "voiceover": "Stage three widens to twenty five, then fifty, then one hundred percent of agents in all cities. The same metrics must stay within limits at each step, with quality above target in both Turkish and English. A quality drop after a model update also stops the rollout.",
+       "slide": {"layout": "comparison", "title": "Stage 3: Wider rollout", "body": "Who: 25% → 50% → 100% of agents, all cities. Gate: same metrics within limits; Turkish and English quality above target. Stop: any stage 2 criterion; quality drop after a model update."}},
+      {"visual_type": "slide",
+       "voiceover": "After launch, Elif watches a weekly dashboard, a senior agent reviews fifty random drafts each week, and the test set is rerun after every change. The support operations lead owns the kill switch, which returns agents to the normal empty reply form.",
+       "slide": {"layout": "bullets", "title": "Monitoring after launch", "body": "Weekly dashboard: acceptance, handling time, re-open rate, cost per complaint, response time · 50 random drafts reviewed weekly · Test-set rerun after every change · Kill switch owner: support operations lead"}},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is a vague stop criterion, such as if quality drops significantly. Nobody agrees what significantly means. Write numbers against a baseline, and name who presses the kill switch.",
+       "on_screen_text": "Stop criteria are numbers"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, roll out AI features in stages, with a gate metric that must be met before each next stage. Second, monitor for drift with dashboards, weekly human review of samples, and test set reruns after every change. Third, write numeric stop criteria before launch, and have a tested kill switch that returns users to the fallback.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Stages with gate metrics. 2. Monitor for drift: dashboards, samples, reruns. 3. Numeric stop criteria and a tested kill switch."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below, write a rollout plan with three stages, a gate metric for each, and numeric stop criteria. It takes about twenty five minutes. From the next lesson, you start your capstone: writing the AI PRD, its structure and scope. See you there.",
+       "on_screen_text": "Next: Writing the AI PRD"}
+    ]
+  }
+}

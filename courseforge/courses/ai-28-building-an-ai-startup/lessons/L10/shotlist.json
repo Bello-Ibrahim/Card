@@ -1,0 +1,192 @@
+{
+  "course_id": "AI-28",
+  "lesson_id": "L10",
+  "duration_s": 288.3,
+  "thumbnail": {
+    "headline": "How Will Customers Pay?",
+    "slide": {
+      "layout": "title",
+      "title": "How Will Customers Pay?",
+      "body": "Two icons: a monthly membership card and a single ticket, with a question mark between them. Small tag: Building an AI Startup · Lesson 10."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.1,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Same product, different results",
+      "voiceover": "Two founders build the same product. One charges a monthly subscription. The other charges for each use. A year later, one business is healthy and the other is losing money. The only difference was how they asked customers to pay."
+    },
+    {
+      "scene": 2,
+      "start": 17.1,
+      "end": 29.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Choosing a Business Model",
+        "body": "Building an AI Startup · Lesson 10 of 15"
+      },
+      "voiceover": "In the last lesson, you worked out what one customer costs. Now we decide how customers pay. A business model describes who pays you, for what, and how."
+    },
+    {
+      "scene": 3,
+      "start": 29.1,
+      "end": 56.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Subscription vs pay per use",
+        "body": "Subscription: fixed monthly price · predictable · risk: heavy users. Pay per use: price per action · revenue rises with costs · risk: unpredictable income, customers use less."
+      },
+      "voiceover": "There are four common models for AI products. A subscription is a fixed price each month or year. It is predictable for you and the customer, but heavy users can cost more than they pay, as we saw last time. Pay per use charges for each action, such as each page translated. Your revenue rises with your costs, but income is harder to predict."
+    },
+    {
+      "scene": 4,
+      "start": 56.5,
+      "end": 76.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Pay per result vs freemium",
+        "body": "Pay per result: pay only for an outcome · risk: you carry it when results don't come. Freemium: free basic version, pay for more · risk: free users still cost money."
+      },
+      "voiceover": "Pay per result charges only when an outcome happens, such as a recovered unpaid invoice. Customers like it, but you carry the risk. And freemium offers a free basic version, with payment for more. It can attract many users, but free users still create model costs."
+    },
+    {
+      "scene": 5,
+      "start": 76.2,
+      "end": 93.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Who pays?",
+        "body": "B2B (business to business): higher prices, customers stay longer, slower sales. B2C (business to consumer): faster sales, more price sensitive, may stop quickly."
+      },
+      "voiceover": "You also choose who pays. B2B means business to business, selling to companies. Prices can be higher, but sales take longer. B2C means business to consumer, selling to individuals. Sales are faster, but people are often more sensitive to price."
+    },
+    {
+      "scene": 6,
+      "start": 93.3,
+      "end": 108.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Local payment habits",
+        "body": "Fewer credit cards in many markets · Mobile money = payments from a phone account · Small, frequent payments can feel safer · Providers and fees differ by country"
+      },
+      "voiceover": "Local habits matter too. In many emerging markets, fewer people use credit cards, and mobile money, meaning payments from a phone account, may be more common. Small, frequent payments can feel safer than a monthly commitment."
+    },
+    {
+      "scene": 7,
+      "start": 108.7,
+      "end": 127.6,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "people swimming laps in public pool",
+      "on_screen_text": "Membership or single ticket?",
+      "voiceover": "Think of a gym and a swimming pool. The gym sells monthly memberships and hopes most members come only sometimes. The pool sells single tickets, so it earns more when people swim more. Neither is wrong. Each works for a different kind of customer."
+    },
+    {
+      "scene": 8,
+      "start": 127.6,
+      "end": 151.6,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "small business owner using phone in shop",
+      "on_screen_text": "Awa · Dakar · placeholder prices",
+      "voiceover": "Let's compare. Awa is a made up founder in Dakar, Senegal. Her tool translates documents for small businesses between French, English and Wolof. All prices are placeholders. Each page costs her one cent in model usage. Each customer costs one dollar twenty a month in hosting and support. And the mobile money provider keeps two percent."
+    },
+    {
+      "scene": 9,
+      "start": 151.6,
+      "end": 173.9,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Typical customer: 200 pages",
+        "body": "Subscription $8: cost 200 × $0.01 + $1.20 + 2% of $8 = $3.36 → profit $4.64. Pay per use $0.05/page: revenue $10.00, cost $3.40 → profit $6.60. Label: Placeholder prices."
+      },
+      "voiceover": "She compares a subscription of eight dollars a month for unlimited pages, with pay per use at five cents a page. For a typical customer with two hundred pages, the subscription costs her three dollars thirty six and earns four dollars sixty four. Pay per use earns six dollars sixty. Both work."
+    },
+    {
+      "scene": 10,
+      "start": 173.9,
+      "end": 193.2,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Each model has a weak spot",
+        "body": "Table. Light (20 pages): subscription +$6.44 · pay per use −$0.42 (red). Heavy (1,000 pages): subscription −$3.36 (red) · pay per use +$37.80. Label: Placeholder prices."
+      },
+      "voiceover": "But look at the edges. A heavy customer with a thousand pages makes the subscription lose three dollars thirty six a month. A light customer with twenty pages makes pay per use lose forty two cents, because the fixed cost is bigger than the revenue."
+    },
+    {
+      "scene": 11,
+      "start": 193.2,
+      "end": 216.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "Awa's choice",
+        "body": "Pay per use + $2 monthly minimum. Why: customers prefer small mobile-money payments; usage varies month to month; minimum covers the $1.20 fixed cost."
+      },
+      "voiceover": "So each model loses money on a different kind of customer. Awa's interviews showed that her customers prefer small mobile money payments, and their use changes a lot from month to month. So she chooses pay per use, with a minimum charge of two dollars a month. That covers the fixed cost for light users."
+    },
+    {
+      "scene": 12,
+      "start": 216.8,
+      "end": 232.2,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Test light, typical and heavy",
+      "voiceover": "A common mistake is copying a famous software company's model, usually a low monthly subscription, without checking your own costs or how your customers like to pay. Test every model against light, typical and heavy customers."
+    },
+    {
+      "scene": 13,
+      "start": 232.2,
+      "end": 247.2,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Model and moat",
+        "body": "Harder to replace: paid per result · built into daily process. Easier to replace: cheap subscription, cancel in one click."
+      },
+      "voiceover": "The model also affects defensibility, from lesson five. A product paid per result, or built deep into a company's daily process, is harder to replace than a cheap subscription anyone can cancel in one click."
+    },
+    {
+      "scene": 14,
+      "start": 247.2,
+      "end": 268.6,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Subscription, pay per use, pay per result, freemium; B2B or B2C. 2. Test light, typical, heavy. 3. Local payment habits matter."
+      },
+      "voiceover": "Let's recap. First, common models are subscription, pay per use, pay per result and freemium, sold to businesses or consumers. Second, test each model against light, typical and heavy users, because each loses money on a different customer. Third, local payment habits, like mobile money, can decide which model works."
+    },
+    {
+      "scene": 15,
+      "start": 268.6,
+      "end": 288.3,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Legal, Ethical and Data Risks",
+      "voiceover": "Now it is your turn. In the exercise below this video, compare two business models for your idea in a table, with price, cost to serve, margin and the main risk of each. Next week, we look at legal, ethical and data risks. See you there."
+    }
+  ]
+}

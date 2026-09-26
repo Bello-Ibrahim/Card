@@ -1,0 +1,82 @@
+{
+  "title": "The Regulatory Map: Three Laws, Different Jobs",
+  "thumbnail": {
+    "headline": "Three Laws, Different Jobs",
+    "image": "Navy background, three overlapping teal-outlined circles labelled AI Act, GDPR and NDPA over a faint world map, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Three Laws, Different Jobs", "body": "Three overlapping circles labelled EU AI Act, GDPR, NDPA over a faint map line from Nigeria to Portugal. Small tag: AI Governance, Privacy and Compliance · Lesson 2."}
+  },
+  "production_notes": [
+    "Legal/compliance reviewer sign-off required before release.",
+    "Disclaimer spoken once in scene 2 (educational, not legal advice).",
+    "[VERIFY] [REGION] Territorial scope: content.md placeholder [the relevant scope articles and sections] for the EU AI Act, the GDPR and the NDPA. The voiceover says only each law's scope provisions and describes the tests at a high level (scenes 7 and 8); the reviewer must confirm these summaries against the official texts.",
+    "[VERIFY] [REGION] Regulators: content.md placeholders [the EU-level AI body and the national market surveillance authorities], [the national data protection authorities and the EU-level board] and [Nigeria's national data protection regulator]. No regulator is named in the voiceover or on slides; scene 9 slide uses generic labels only.",
+    "[VERIFY] [REGION] Worked example: whether credit scoring falls in a high-risk category, whether the GDPR applies to the Lagos lender, and whether an EU representative is needed. The EU representative point is left out of the voiceover.",
+    "[VERIFY] Official guidance sources for the exercise must be chosen, with licence and date recorded.",
+    "Adaeze Okonkwo and her lending app are fictional. Stock footage must not show a real bank or app brand."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "A lending app is built in Lagos, runs on servers in Ireland and approves loans for customers in Portugal. Which law applies? The honest answer is often more than one, and each law asks different questions.",
+       "on_screen_text": "Which law applies?"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "In the last lesson, we met the six building blocks of governance. Now let's map the laws they serve. As always, this course is educational and is not legal advice. We work with three legal frameworks, and each one has a different job.",
+       "slide": {"layout": "title", "title": "The Regulatory Map", "body": "Three laws, different jobs · Lesson 2 of 14. Footer line: Educational, not legal advice."}},
+      {"visual_type": "slide",
+       "voiceover": "The EU AI Act regulates AI systems and certain AI models. Its main tool is risk: the greater the possible harm of an AI use, the stricter the rules. It places duties on roles such as providers, who develop a system and place it on the market, and deployers, who use it under their own authority.",
+       "slide": {"layout": "bullets", "title": "EU AI Act", "body": "Regulates: AI systems and certain AI models · Main tool: risk (more harm → stricter rules) · Key roles: provider (develops, places on market) · deployer (uses under own authority)"}},
+      {"visual_type": "slide",
+       "voiceover": "The GDPR regulates the processing of personal data about people in the EU. It does not care whether that processing is done by AI or by a spreadsheet. Its key roles are the controller, who decides why and how data is processed, and the processor, who processes data on the controller's behalf.",
+       "slide": {"layout": "bullets", "title": "GDPR", "body": "Regulates: processing of personal data about people in the EU · AI or spreadsheet, the same rules · Key roles: controller (decides why and how) · processor (acts on controller's behalf)"}},
+      {"visual_type": "slide",
+       "voiceover": "Nigeria's Data Protection Act, the NDPA, also regulates the processing of personal data. It has a similar structure of principles, lawful bases, rights and duties for data controllers and processors, with its own regulator, its own transfer rules and extra duties for some organisations.",
+       "slide": {"layout": "bullets", "title": "NDPA", "body": "Regulates: processing of personal data · Similar structure: principles, lawful bases, rights · Key roles: data controller · data processor · Local features: own regulator, transfer rules, extra duties for some"}},
+      {"visual_type": "stock",
+       "voiceover": "Think of a lorry carrying food across a border. Vehicle safety rules check the lorry itself. Food hygiene rules check what it carries. Customs rules check where it goes. The AI Act is like the vehicle rules for the AI system. The GDPR and the NDPA are like the hygiene rules for the personal data inside.",
+       "stock_query": "cargo truck waiting at border checkpoint",
+       "on_screen_text": "One journey, several inspectors"},
+      {"visual_type": "slide",
+       "voiceover": "Each law also decides for itself when it applies, and each one can reach organisations outside its home territory. The EU AI Act can reach providers that place systems on the EU market, and sometimes organisations whose system output is used in the EU.",
+       "slide": {"layout": "comparison", "title": "Reach beyond home territory", "body": "Three columns, first highlighted. EU AI Act: providers placing systems on the EU market; deployers in the EU; some non-EU organisations whose output is used in the EU. Footer: exact tests to be checked in each law's scope provisions."}},
+      {"visual_type": "slide",
+       "voiceover": "The GDPR can reach organisations outside the EU that offer goods or services to people in the EU, or monitor their behaviour. The NDPA can reach some organisations outside Nigeria that process data of people in Nigeria. The exact tests are in each law's scope provisions, and they must be checked.",
+       "slide": {"layout": "comparison", "title": "Reach beyond home territory", "body": "Columns two and three highlighted. GDPR: offering goods or services to people in the EU, or monitoring their behaviour. NDPA: some organisations outside Nigeria processing data of people in Nigeria. Footer: exact tests to be checked in each law's scope provisions."}},
+      {"visual_type": "slide",
+       "voiceover": "Each law also has its own supervisors, at national level and, in the EU, at EU level too. Names and designations can change, so always confirm who supervises what from official sources.",
+       "slide": {"layout": "diagram", "title": "Who supervises?", "body": "Three columns with generic icons only: EU AI Act → EU level + national authorities · GDPR → national authorities + EU level · NDPA → national regulator. Caption: confirm names from official sources"}}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Back to our lending app. Adaeze Okonkwo founds a fictional lending app in Lagos. It uses an AI model to score applicants. Then the company decides to accept customers in Portugal.",
+       "stock_query": "young African woman entrepreneur working on laptop",
+       "on_screen_text": "Adaeze's lending app · Lagos"},
+      {"visual_type": "slide",
+       "voiceover": "First, the NDPA. The company is based in Nigeria and processes data of Nigerian customers as a data controller, so the NDPA very likely applies. Second, the GDPR. By offering loans to people in Portugal, the company may fall within the GDPR's reach, even without an office in the EU.",
+       "slide": {"layout": "diagram", "title": "One app, three laws", "body": "Map line Lagos → Portugal. Three cards, first two revealed: NDPA: Nigerian controller, very likely applies · GDPR: offers loans to people in Portugal, may apply without an EU office"}},
+      {"visual_type": "slide",
+       "voiceover": "Third, the EU AI Act. The company developed the scoring model, so it is likely a provider. Credit scoring of individuals is an example of a use that may be high-risk. And when it uses the model on its EU customers, it may also be a deployer.",
+       "slide": {"layout": "diagram", "title": "One app, three laws", "body": "Third card revealed: EU AI Act: built the model → likely provider; uses it on EU customers → may also be deployer; credit scoring may be high-risk (to confirm)"}},
+      {"visual_type": "slide",
+       "voiceover": "Adaeze's first task is to record which law applies to which activity, and why. That record becomes the start of her compliance map.",
+       "slide": {"layout": "comparison", "title": "Start the compliance map", "body": "Table with rows Activity | Law | Why. Example row: Scoring EU applicants | GDPR, EU AI Act | offers loans in Portugal; built the model"}},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is to say, we comply with the GDPR, so our AI is covered. The GDPR protects personal data. It does not set the AI Act's rules on risk management, documentation or human oversight. Map each law separately, then look for overlaps you can handle together.",
+       "on_screen_text": "Map each law separately."}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, the EU AI Act regulates AI systems and models by risk, while the GDPR and the NDPA regulate the processing of personal data. Second, each law has its own territorial scope, so one AI system can fall under all three. Third, roles differ: provider and deployer under the AI Act, controller and processor under the data protection laws.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. AI Act regulates AI by risk; GDPR and NDPA regulate personal data. 2. Each law has its own reach, so all three can apply. 3. Roles: provider and deployer; controller and processor."}}
+    ],
+    "CTA": [
+      {"visual_type": "slide",
+       "voiceover": "In the exercise below this video, you will fill in a comparison table for the three laws: who each one protects, what it regulates, its key roles and who supervises it. Use official guidance only, write the source and the date, and mark anything you could not confirm.",
+       "slide": {"layout": "bullets", "title": "Your exercise", "body": "Columns: EU AI Act · GDPR · NDPA. Rows: who it protects · what it regulates · key roles · main regulator · reach outside home territory. Official sources only, with dates. Mark 'not confirmed'. About 25 minutes"}},
+      {"visual_type": "presenter_full",
+       "voiceover": "In the next lesson, we look closely at the EU AI Act and its risk-based approach. See you there.",
+       "on_screen_text": "Next: The EU AI Act"}
+    ]
+  }
+}

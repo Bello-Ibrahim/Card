@@ -1,6 +1,6 @@
 # L09 Build Your Support Assistant | Presenter Script
 
-Course: AI-26 · Video: 5 min · Words: 703
+Course: AI-26 · Video: 5 min · Words: 701
 
 ## Hook
 You have a clean knowledge base, a tone guide and hand-off rules. This week you combine them into a working support assistant. And here is the secret. A good first version is not clever. It is small, and it is honest.
@@ -16,7 +16,7 @@ The third is instructions. Write short, clear rules. Answer only questions about
 
 And one more instruction, the most important. If the customer asks for a person, is very upset, or mentions a legal or safety issue, offer a person at once. These are your hand-off rules from lesson seven.
 
-The fourth decision is transparency. Tell customers they are talking to AI, right in the welcome message, and tell them they can ask for a person at any time. It builds trust, and in some places it is also a legal duty, which we look at in lesson twelve.
+The fourth decision is transparency. Tell customers they are talking to AI, right in the welcome message, and tell them they can ask for a person at any time. It builds trust. Your region may also have its own rules, which we look at in lesson twelve.
 
 Think of opening a small food stall before a full restaurant. You serve a few dishes you make well, you show the menu clearly, and you point people next door for anything else.
 
@@ -46,10 +46,10 @@ Headline: Small and Honest Wins
 Image: Navy background, a friendly chat window with a small 'AI assistant' badge and a clear 'Talk to a person' button, headline in teal Inter Bold.
 
 ## Production Notes
-- Screen demo lesson: record scenes 11 to 15 live in Botpress (free plan), the chatbot builder chosen in DECISIONS.md; content.md says 'a free chatbot builder of your choice', and the voiceover tells learners any free builder works. The screen_steps are content.md's step list adapted to Botpress.
+- Screen demo lesson: record scenes 10 to 14 live in Botpress (free plan), the chatbot builder chosen in DECISIONS.md; content.md says 'a free chatbot builder of your choice', and the voiceover tells learners any free builder works. The screen_steps are content.md's step list adapted to Botpress.
 - [VERSION] Botpress interface names in the screen_steps ('Create Bot', 'Knowledge Bases', 'Add source', 'Instructions', welcome message setting, 'Emulator' test chat, 'Publish' and share link) must be checked in the live tool on the recording day; update the steps if they differ.
 - [VERSION] Free-plan limits of Botpress (number of bots, messages, knowledge size) and its data-use terms. Upload only the three made-up articles; paste text rather than uploading large files.
 - [REGION] [VERIFY] Rules requiring customers to be told they are talking to AI (for example the EU AI Act transparency obligations) and local data protection laws. The voiceover treats AI disclosure and data protection as principles only and states no legal detail; L12 returns to this.
-- NATIVE-SPEAKER CHECK NEEDED: the Arabic sample question in scene 14 (متى تبدأ الدورة القادمة؟, 'When does the next course start?') must be checked by a native Arabic speaker before recording, together with the Arabic answer Noor gives on screen.
+- NATIVE-SPEAKER CHECK NEEDED: the Arabic sample question in scene 13 (متى تبدأ الدورة القادمة؟, 'When does the next course start?') must be checked by a native Arabic speaker before recording, together with the Arabic answer Noor gives on screen.
 - Leila, the Amman language school and the assistant 'Noor' are fictional. Name the bot 'Noor – Language school assistant (test)' and keep it in test mode.
 - Kestrel Bikes is the made-up company from the L03 exercise; the instructions slide quotes its example rules from content.md.

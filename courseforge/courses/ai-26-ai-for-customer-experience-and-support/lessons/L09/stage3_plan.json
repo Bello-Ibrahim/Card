@@ -3,107 +3,173 @@
   "thumbnail": {
     "headline": "Small and Honest Wins",
     "image": "Navy background, a friendly chat window with a small 'AI assistant' badge and a clear 'Talk to a person' button, headline in teal Inter Bold.",
-    "slide": {"layout": "title", "title": "Small and Honest Wins", "body": "A simple chat window: welcome bubble with an 'AI assistant' badge and a visible 'Ask for a person' button. Small tag: AI for Customer Experience and Support · Lesson 9 · Capstone step 1."}
+    "slide": {
+      "layout": "title",
+      "title": "Small and Honest Wins",
+      "body": "A simple chat window: welcome bubble with an 'AI assistant' badge and a visible 'Ask for a person' button. Small tag: AI for Customer Experience and Support · Lesson 9 · Capstone step 1."
+    }
   },
   "production_notes": [
-    "Screen demo lesson: record scenes 11 to 15 live in Botpress (free plan), the chatbot builder chosen in DECISIONS.md; content.md says 'a free chatbot builder of your choice', and the voiceover tells learners any free builder works. The screen_steps are content.md's step list adapted to Botpress.",
+    "Screen demo lesson: record scenes 10 to 14 live in Botpress (free plan), the chatbot builder chosen in DECISIONS.md; content.md says 'a free chatbot builder of your choice', and the voiceover tells learners any free builder works. The screen_steps are content.md's step list adapted to Botpress.",
     "[VERSION] Botpress interface names in the screen_steps ('Create Bot', 'Knowledge Bases', 'Add source', 'Instructions', welcome message setting, 'Emulator' test chat, 'Publish' and share link) must be checked in the live tool on the recording day; update the steps if they differ.",
     "[VERSION] Free-plan limits of Botpress (number of bots, messages, knowledge size) and its data-use terms. Upload only the three made-up articles; paste text rather than uploading large files.",
     "[REGION] [VERIFY] Rules requiring customers to be told they are talking to AI (for example the EU AI Act transparency obligations) and local data protection laws. The voiceover treats AI disclosure and data protection as principles only and states no legal detail; L12 returns to this.",
-    "NATIVE-SPEAKER CHECK NEEDED: the Arabic sample question in scene 14 (متى تبدأ الدورة القادمة؟, 'When does the next course start?') must be checked by a native Arabic speaker before recording, together with the Arabic answer Noor gives on screen.",
+    "NATIVE-SPEAKER CHECK NEEDED: the Arabic sample question in scene 13 (متى تبدأ الدورة القادمة؟, 'When does the next course start?') must be checked by a native Arabic speaker before recording, together with the Arabic answer Noor gives on screen.",
     "Leila, the Amman language school and the assistant 'Noor' are fictional. Name the bot 'Noor – Language school assistant (test)' and keep it in test mode.",
     "Kestrel Bikes is the made-up company from the L03 exercise; the instructions slide quotes its example rules from content.md."
   ],
   "sections": {
     "Hook": [
-      {"visual_type": "presenter_full",
-       "voiceover": "You have a clean knowledge base, a tone guide and hand-off rules. This week you combine them into a working support assistant. And here is the secret. A good first version is not clever. It is small, and it is honest.",
-       "on_screen_text": "Small and honest beats clever"}
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "You have a clean knowledge base, a tone guide and hand-off rules. This week you combine them into a working support assistant. And here is the secret. A good first version is not clever. It is small, and it is honest.",
+        "on_screen_text": "Small and honest beats clever"
+      }
     ],
     "Explain": [
-      {"visual_type": "slide",
-       "voiceover": "Welcome to week three, where you build your capstone, a support assistant with a hand-off to a human. In this lesson, we set up the assistant itself. You can use any free chatbot builder. I will use Botpress. Every builder asks you to make four decisions.",
-       "slide": {"layout": "title", "title": "Build Your Support Assistant", "body": "AI for Customer Experience and Support · Lesson 9 of 12 · Capstone step 1"}},
-      {"visual_type": "slide",
-       "voiceover": "The first decision is scope. Choose three to five frequent, low-risk topics from the list you made in lesson one, such as opening hours, order tracking and returns. Everything else is out of scope, and goes to a person.",
-       "slide": {"layout": "diagram", "title": "1. Scope", "body": "Inner circle: 3–5 frequent, low-risk topics (opening hours · order tracking · returns). Outside the circle: everything else → a person."}},
-      {"visual_type": "slide",
-       "voiceover": "The second is knowledge. Add the clean articles you wrote in lesson three, only for your scope. And never upload real customer data or confidential documents to a free tool.",
-       "slide": {"layout": "bullets", "title": "2. Knowledge", "body": "Clean articles from L03 · only topics in scope · no real customer data · no confidential documents"}},
-      {"visual_type": "slide",
-       "voiceover": "The third is instructions. Write short, clear rules. Answer only questions about your topics. Use only the knowledge base, and if the answer is not there, say you are not sure and offer a person. Follow the tone guide. Never promise refunds, discounts or dates that are not in the knowledge base.",
-       "slide": {"layout": "code", "title": "3. Instructions", "body": "You are the support assistant for Kestrel Bikes. Answer only questions about opening hours, repair bookings and express repairs.\nUse only the knowledge base. If the answer is not there, say you are not sure and offer a person.\nFollow this tone guide: ...\nNever promise refunds, discounts or dates not in the knowledge base."}},
-      {"visual_type": "slide",
-       "voiceover": "And one more instruction, the most important. If the customer asks for a person, is very upset, or mentions a legal or safety issue, offer a person at once. These are your hand-off rules from lesson seven.",
-       "slide": {"layout": "code", "title": "The hand-off instruction", "body": "If the customer asks for a person, is very upset, or mentions a legal or safety issue, offer a person at once."}},
-      {"visual_type": "slide",
-       "voiceover": "The fourth decision is transparency. Tell customers they are talking to AI, right in the welcome message, and tell them they can ask for a person at any time. It builds trust, and in some places it is also a legal duty, which we look at in lesson twelve.",
-       "slide": {"layout": "quote", "title": "4. Transparency", "body": "\"Hi, I'm Kestrel's AI assistant. I can help with opening hours and repairs. You can ask for a person at any time.\""}},
-      {"visual_type": "stock",
-       "voiceover": "Think of opening a small food stall before a full restaurant. You serve a few dishes you make well, you show the menu clearly, and you point people next door for anything else.",
-       "stock_query": "small street food stall serving customers",
-       "on_screen_text": "A small menu, done well"}
+      {
+        "visual_type": "slide",
+        "voiceover": "Welcome to week three, where you build your capstone, a support assistant with a hand-off to a human. In this lesson, we set up the assistant itself. You can use any free chatbot builder. I will use Botpress. Every builder asks you to make four decisions.",
+        "slide": {
+          "layout": "title",
+          "title": "Build Your Support Assistant",
+          "body": "AI for Customer Experience and Support · Lesson 9 of 12 · Capstone step 1"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "The first decision is scope. Choose three to five frequent, low-risk topics from the list you made in lesson one, such as opening hours, order tracking and returns. Everything else is out of scope, and goes to a person.",
+        "slide": {
+          "layout": "diagram",
+          "title": "1. Scope",
+          "body": "Inner circle: 3–5 frequent, low-risk topics (opening hours · order tracking · returns). Outside the circle: everything else → a person."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "The second is knowledge. Add the clean articles you wrote in lesson three, only for your scope. And never upload real customer data or confidential documents to a free tool.",
+        "slide": {
+          "layout": "bullets",
+          "title": "2. Knowledge",
+          "body": "Clean articles from L03 · only topics in scope · no real customer data · no confidential documents"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "The third is instructions. Write short, clear rules. Answer only questions about your topics. Use only the knowledge base, and if the answer is not there, say you are not sure and offer a person. Follow the tone guide. Never promise refunds, discounts or dates that are not in the knowledge base.",
+        "slide": {
+          "layout": "code",
+          "title": "3. Instructions",
+          "body": "You are the support assistant for Kestrel Bikes. Answer only questions about opening hours, repair bookings and express repairs.\nUse only the knowledge base. If the answer is not there, say you are not sure and offer a person.\nFollow this tone guide: ...\nNever promise refunds, discounts or dates not in the knowledge base."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "And one more instruction, the most important. If the customer asks for a person, is very upset, or mentions a legal or safety issue, offer a person at once. These are your hand-off rules from lesson seven.",
+        "slide": {
+          "layout": "code",
+          "title": "The hand-off instruction",
+          "body": "If the customer asks for a person, is very upset, or mentions a legal or safety issue, offer a person at once."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "The fourth decision is transparency. Tell customers they are talking to AI, right in the welcome message, and tell them they can ask for a person at any time. It builds trust. Your region may also have its own rules, which we look at in lesson twelve.",
+        "slide": {
+          "layout": "quote",
+          "title": "4. Transparency",
+          "body": "\"Hi, I'm Kestrel's AI assistant. I can help with opening hours and repairs. You can ask for a person at any time.\""
+        }
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "Think of opening a small food stall before a full restaurant. You serve a few dishes you make well, you show the menu clearly, and you point people next door for anything else.",
+        "stock_query": "small street food stall serving customers",
+        "on_screen_text": "A small menu, done well"
+      }
     ],
     "Demonstrate": [
-      {"visual_type": "stock",
-       "voiceover": "Let's build one. Leila works at a hypothetical language school in Amman, Jordan. Her assistant covers three topics: course start dates, choosing a level, and payment methods.",
-       "stock_query": "language school classroom adult students",
-       "on_screen_text": "Language school · Amman, Jordan"},
-      {"visual_type": "screen",
-       "voiceover": "I sign in to the free plan and create a new bot. I name it Noor, language school assistant, test. Then, in the knowledge section, I add three short articles: when do courses start, how do I choose my level, and how can I pay. I paste the text instead of uploading big files.",
-       "screen_steps": [
-         "Sign in to Botpress on the free plan and click 'Create Bot'",
-         "Name the bot 'Noor – Language school assistant (test)'",
-         "Open 'Knowledge Bases' and click 'Add source', then choose text",
-         "Paste three short articles: 'When do courses start?', 'How do I choose my level?', 'How can I pay?'"
-       ],
-       "on_screen_text": "Scope and knowledge"},
-      {"visual_type": "screen",
-       "voiceover": "Next, the instructions. I paste the scope, the knowledge only rule, the tone guide and the hand-off rules. Then the welcome message: hello, I am Noor, the school's AI assistant. I can help with course dates, levels and payment. You can ask for a person at any time.",
-       "screen_steps": [
-         "Open the 'Instructions' box of the bot",
-         "Paste the scope, the knowledge-only rule, the tone guide and the hand-off rules",
-         "Open the welcome message setting and type: 'Hello, I am Noor, the school's AI assistant. I can help with course dates, levels and payment. You can ask for a person at any time.'"
-       ],
-       "on_screen_text": "Instructions and an honest welcome"},
-      {"visual_type": "screen",
-       "voiceover": "Now I test in the preview chat. I ask one question for each topic, and check each answer against the articles. Then an out-of-scope question: can you help with my visa? Noor should say it is not sure, and offer a person.",
-       "screen_steps": [
-         "Open the 'Emulator' test chat",
-         "Ask one question per topic and show each article beside the answer",
-         "Ask the out-of-scope question 'Can you help with my visa?'",
-         "Pause on Noor's answer"
-       ],
-       "on_screen_text": "Test each topic, then out of scope"},
-      {"visual_type": "screen",
-       "voiceover": "But Noor gives general visa advice. So Leila adds an instruction: do not give advice on visas or legal matters, offer a person. The retest passes. Then I ask the next course date in Arabic, and check both the answer and the tone.",
-       "screen_steps": [
-         "Show Noor's first reply giving general visa advice (highlight it in red)",
-         "Add to Instructions: 'Do not give advice on visas or legal matters; offer a person.'",
-         "Ask the visa question again and show Noor offering a person",
-         "Type the Arabic question: متى تبدأ الدورة القادمة؟ and show the answer with an English subtitle"
-       ],
-       "on_screen_text": "Fix, retest, try another language"},
-      {"visual_type": "screen",
-       "voiceover": "Finally, I publish the bot in test mode only, and copy its share link for testing.",
-       "screen_steps": [
-         "Click 'Publish' and keep the bot in test mode",
-         "Copy the share link and paste it into a notes file for L11 testing"
-       ],
-       "on_screen_text": "Publish in test mode only"},
-      {"visual_type": "text",
-       "voiceover": "A common mistake is to add every document you have, hoping the assistant will answer everything. Old or overlapping content gives it more chances to find the wrong text. Start small, and add topics only when the current ones work.",
-       "on_screen_text": "Start small, then grow"}
+      {
+        "visual_type": "stock",
+        "voiceover": "Let's build one. Leila works at a hypothetical language school in Amman, Jordan. Her assistant covers three topics: course start dates, choosing a level, and payment methods.",
+        "stock_query": "language school classroom adult students",
+        "on_screen_text": "Language school · Amman, Jordan"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "I sign in to the free plan and create a new bot. I name it Noor, language school assistant, test. Then, in the knowledge section, I add three short articles: when do courses start, how do I choose my level, and how can I pay. I paste the text instead of uploading big files.",
+        "screen_steps": [
+          "Sign in to Botpress on the free plan and click 'Create Bot'",
+          "Name the bot 'Noor – Language school assistant (test)'",
+          "Open 'Knowledge Bases' and click 'Add source', then choose text",
+          "Paste three short articles: 'When do courses start?', 'How do I choose my level?', 'How can I pay?'"
+        ],
+        "on_screen_text": "Scope and knowledge"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Next, the instructions. I paste the scope, the knowledge only rule, the tone guide and the hand-off rules. Then the welcome message: hello, I am Noor, the school's AI assistant. I can help with course dates, levels and payment. You can ask for a person at any time.",
+        "screen_steps": [
+          "Open the 'Instructions' box of the bot",
+          "Paste the scope, the knowledge-only rule, the tone guide and the hand-off rules",
+          "Open the welcome message setting and type: 'Hello, I am Noor, the school's AI assistant. I can help with course dates, levels and payment. You can ask for a person at any time.'"
+        ],
+        "on_screen_text": "Instructions and an honest welcome"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Now I test in the preview chat. I ask one question for each topic, and check each answer against the articles. Then an out-of-scope question: can you help with my visa? Noor should say it is not sure, and offer a person.",
+        "screen_steps": [
+          "Open the 'Emulator' test chat",
+          "Ask one question per topic and show each article beside the answer",
+          "Ask the out-of-scope question 'Can you help with my visa?'",
+          "Pause on Noor's answer"
+        ],
+        "on_screen_text": "Test each topic, then out of scope"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "But Noor gives general visa advice. So Leila adds an instruction: do not give advice on visas or legal matters, offer a person. The retest passes. Then I ask the next course date in Arabic, and check both the answer and the tone.",
+        "screen_steps": [
+          "Show Noor's first reply giving general visa advice (highlight it in red)",
+          "Add to Instructions: 'Do not give advice on visas or legal matters; offer a person.'",
+          "Ask the visa question again and show Noor offering a person",
+          "Type the Arabic question: متى تبدأ الدورة القادمة؟ and show the answer with an English subtitle"
+        ],
+        "on_screen_text": "Fix, retest, try another language"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Finally, I publish the bot in test mode only, and copy its share link for testing.",
+        "screen_steps": [
+          "Click 'Publish' and keep the bot in test mode",
+          "Copy the share link and paste it into a notes file for L11 testing"
+        ],
+        "on_screen_text": "Publish in test mode only"
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "A common mistake is to add every document you have, hoping the assistant will answer everything. Old or overlapping content gives it more chances to find the wrong text. Start small, and add topics only when the current ones work.",
+        "on_screen_text": "Start small, then grow"
+      }
     ],
     "Recap": [
-      {"visual_type": "slide",
-       "voiceover": "Let's recap. First, every chatbot builder asks for four decisions: scope, knowledge, instructions and transparency. Second, start with three to five frequent, low-risk topics and clean content. Third, tell customers they are talking to AI, and that they can ask for a person at any time.",
-       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Scope · knowledge · instructions · transparency. 2. Three to five low-risk topics, clean content. 3. Say it's AI; a person is always available."}}
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, every chatbot builder asks for four decisions: scope, knowledge, instructions and transparency. Second, start with three to five frequent, low-risk topics and clean content. Third, tell customers they are talking to AI, and that they can ask for a person at any time.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. Scope · knowledge · instructions · transparency. 2. Three to five low-risk topics, clean content. 3. Say it's AI; a person is always available."
+        }
+      }
     ],
     "CTA": [
-      {"visual_type": "presenter_full",
-       "voiceover": "This is capstone step one. In the exercise, you will build your own assistant for at least three topics, with an honest welcome message, and test it with one out-of-scope question. Take screenshots for your capstone. In the next lesson, we are adding the hand-off flow. See you there.",
-       "on_screen_text": "Next: Adding the Hand-off Flow"}
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "This is capstone step one. In the exercise, you will build your own assistant for at least three topics, with an honest welcome message, and test it with one out-of-scope question. Take screenshots for your capstone. In the next lesson, we are adding the hand-off flow. See you there.",
+        "on_screen_text": "Next: Adding the Hand-off Flow"
+      }
     ]
   }
 }
