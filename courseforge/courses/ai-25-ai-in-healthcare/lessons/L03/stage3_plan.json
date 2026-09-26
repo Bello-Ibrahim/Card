@@ -1,0 +1,70 @@
+{
+  "title": "How Clinical AI Models Are Built",
+  "thumbnail": {
+    "headline": "Who Labelled the Data?",
+    "image": "Navy background, a stack of ECG strips with small teal tick labels and a clinician's hand holding a pen, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Who Labelled the Data?", "body": "Icon of ECG strips with label tags, a clinician icon holding a pen beside them. Small tag: AI in Healthcare · Lesson 3."}
+  },
+  "production_notes": [
+    "Clinical reviewer sign-off required.",
+    "A clinical reviewer should confirm that flagging atrial fibrillation on 12-lead ECGs for cardiologist review is a reasonable illustrative use case and that no clinical advice is given (content.md Review Flags).",
+    "Dr. Beatriz Nogueira (Brazil) and the health-tech team are hypothetical. ECG images on slides must be generic illustrations, not real patient tracings, with no readable names or dates.",
+    "The script describes the tool as supporting review only: it never diagnoses. Keep on-screen text consistent."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "A supplier tells you their tool was trained on one hundred thousand images. That sounds impressive. But who labelled those images? How were the right answers decided? And was the tool ever tested in a hospital like yours?",
+       "on_screen_text": "Trained on 100,000 images. So what?"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "In the last lesson, we saw how the quality of health data shapes what a model learns. Now we follow the steps behind one sentence in a supplier's brochure. A clinical AI model is built in a sequence of steps, and at almost every step, clinicians have a role that data scientists cannot fill alone.",
+       "slide": {"layout": "title", "title": "How Clinical AI Models Are Built", "body": "AI in Healthcare · Lesson 3 of 14"}},
+      {"visual_type": "slide",
+       "voiceover": "Step one is the clinical question and intended use. What decision should the tool support, for which patients, in which setting, and by whom? Step two is data collection, with ethics approval and data protection in place. Clinicians judge whether the patients and devices in the data match real practice.",
+       "slide": {"layout": "diagram", "title": "Eight steps, with clinicians throughout", "body": "Horizontal pipeline of eight boxes. Steps 1 and 2 highlighted: 1 Intended use (clinician defines question) · 2 Data and governance (clinician checks patients and devices match practice). Clinician icon under each highlighted box."}},
+      {"visual_type": "slide",
+       "voiceover": "Step three is labelling. Each example needs a correct answer, called a label. The method used to decide that answer is the reference standard, for example agreement between two specialists, or a later confirmed diagnosis. Clinicians set the labelling rules and resolve disagreements. Step four splits the data into training, validation and test sets, and data from one patient must stay in one set.",
+       "slide": {"layout": "diagram", "title": "Labels and the split", "body": "Steps 3 and 4 highlighted: 3 Labelling and reference standard (two specialists agree; third decides) · 4 Split by patient into Training / Validation / Test, with one patient's records kept together in a single set."}},
+      {"visual_type": "slide",
+       "voiceover": "Step five is training, which is mainly technical. Step six is internal testing on the held-back test set, where clinicians review errors and judge which ones are serious. Step seven is external validation on data from other hospitals, devices or populations. This is where many tools perform worse. Step eight is clinical evaluation in the real workflow, followed by monitoring.",
+       "slide": {"layout": "diagram", "title": "Testing, then real use", "body": "Steps 5 to 8 highlighted: 5 Training (technical) · 6 Internal testing (clinician reviews errors) · 7 External validation (other sites, devices, populations; warning icon 'often worse') · 8 Clinical evaluation and monitoring."}},
+      {"visual_type": "stock",
+       "voiceover": "Here is a simple way to picture it. A model in training is like a trainee who studies thousands of annotated images under supervision. The trainee is only as good as the teachers' notes. And before anyone relies on the trainee, a senior colleague checks their work, first on familiar cases, then in new settings.",
+       "stock_query": "senior clinician supervising trainee at workstation",
+       "on_screen_text": "A model is a supervised trainee"},
+      {"visual_type": "text",
+       "voiceover": "A tool that has only passed the first check is still a trainee.",
+       "on_screen_text": "Only tested at home? Still a trainee."}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's follow one hypothetical project. Doctor Beatriz Nogueira is a cardiologist in Brazil. A health-tech team asks her to join the development of a tool that flags ECGs that may show atrial fibrillation, for specialist review.",
+       "stock_query": "cardiologist examining ecg printout in clinic",
+       "on_screen_text": "Hypothetical project · Brazil"},
+      {"visual_type": "slide",
+       "voiceover": "At step one, the team's draft intended use says, diagnose arrhythmia. Beatriz changes it to: flag twelve-lead ECGs from adult outpatients for cardiologist review. This is narrower and testable, and it makes clear that a cardiologist decides.",
+       "slide": {"layout": "comparison", "title": "Step 1: a clear intended use", "body": "Before (red cross): 'Diagnose arrhythmia'. After (green tick): 'Flag 12-lead ECGs from adult outpatients for cardiologist review'. Note: the cardiologist decides."}},
+      {"visual_type": "slide",
+       "voiceover": "At step three, the team planned to use the automatic interpretation printed by the ECG machine as the label. Beatriz explains that this would teach the model to copy the machine, including its mistakes. They agree that two cardiologists will label each ECG, and a third will decide when they disagree.",
+       "slide": {"layout": "comparison", "title": "Step 3: a better reference standard", "body": "Before: machine's printed interpretation as label → model copies machine errors. After: two cardiologists label each ECG; a third resolves disagreements."}},
+      {"visual_type": "slide",
+       "voiceover": "At step four, she asks whether ECGs from the same patient appear in both the training and test sets. They do, so the split is redone by patient. At step seven, the team only has data from one private hospital in a large city. Beatriz asks for an external test set from a public hospital with different ECG machines, before anyone discusses clinical use.",
+       "slide": {"layout": "bullets", "title": "Steps 4 and 7", "body": "Step 4: same patient in training and test → redo split by patient · Step 7: only one private city hospital → add external test set from a public hospital with different ECG machines"}},
+      {"visual_type": "text",
+       "voiceover": "None of these points needed programming skill. All of them needed clinical knowledge. And notice a common mistake. A large dataset does not guarantee a good model. Size cannot fix poor labels, or data from only one type of hospital. Ask how the labels were made before you ask how many there are.",
+       "on_screen_text": "Ask how labels were made first"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, clinical AI is built in a sequence: intended use, data and governance, labelling, splitting, training, internal testing, external validation, and clinical evaluation with monitoring. Second, the reference standard and the quality of labels set the upper limit on how good a model can be. Third, clinicians are needed at almost every step.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Eight steps from intended use to monitoring. 2. Labels and the reference standard set the upper limit. 3. Clinicians are needed at almost every step."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below this video, you will ask Claude or ChatGPT to outline the steps for a hypothetical eye-screening support tool. You will mark where clinician input is needed, and correct what the assistant gets wrong. It takes about twenty-five minutes. In the next lesson, we learn how to read performance claims. See you there.",
+       "on_screen_text": "Next: Reading Performance Claims"}
+    ]
+  }
+}

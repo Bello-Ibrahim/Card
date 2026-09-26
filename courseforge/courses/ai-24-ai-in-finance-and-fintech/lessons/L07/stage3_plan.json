@@ -1,0 +1,75 @@
+{
+  "title": "Measuring and Reducing Bias",
+  "thumbnail": {
+    "headline": "Two Analysts, Two Answers",
+    "image": "Navy background, two report cards side by side with different teal and red bar charts for Group A and Group B, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Two Analysts, Two Answers", "body": "Two small bar charts side by side: approval rates on the left, error rates on the right, Group A and Group B. Small tag: AI in Finance and Fintech · Lesson 7."}
+  },
+  "production_notes": [
+    "[REGION] [VERIFY] The 'four-fifths' ratio comes from US employment practice and is not a general credit rule. The script presents it only as a rough rule of thumb and says it is not a legal safe harbour for lending; keep that wording and do not show any legal citation on screen.",
+    "[VERSION] Google Colab free-tier limits and menu names (File > Save a copy in Drive, Runtime > Run all) must be checked against the live tool before recording.",
+    "Screen demo: follow content.md Exercise steps 1 to 6 with the course's ready-made notebook on the 1,300 synthetic loan decisions. Record in a clean Google account with no personal files visible.",
+    "Output figures must match content.md exactly: Group A 800 applicants, approval 0.725, false rejection 0.133, bad loans approved 0.300; Group B 500, 0.560, 0.264, 0.107; ratio 0.772 (spoken 'zero point seven seven two'). After the step 6 edit: ratio 0.91 and Group B false rejection 12.5%.",
+    "Alejandro Ruiz and Crédito Solar are fictional. The presenter describes the code; it is never read aloud."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Two analysts check the same credit model. One reports that it is unfair to Group B. The other reports that it protects Group B from bad loans. Both used correct numbers. How can that be?",
+       "on_screen_text": "Same model, two correct answers"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "In the last lesson, we measured the approval-rate ratio. But that only looks at decisions, not whether they were right. Error rates by group add that view. Today we measure them, and look at ways to reduce bias.",
+       "slide": {"layout": "title", "title": "Measuring and Reducing Bias", "body": "AI in Finance and Fintech · Lesson 7 of 14 · Screen demo"}},
+      {"visual_type": "slide",
+       "voiceover": "The false rejection rate asks: of the applicants who would have repaid, what share did the model decline? These are good customers wrongly turned away. The bad-loan approval rate asks: of the applicants who would not have repaid, what share did the model approve? These cause losses, and can leave borrowers with debt they cannot manage.",
+       "slide": {"layout": "comparison", "title": "Two error rates by group", "body": "False rejection rate: of those who would repay, share declined (good customers turned away). Bad-loan approval rate: of those who would not repay, share approved (losses, harmful debt)."}},
+      {"visual_type": "slide",
+       "voiceover": "These measures can disagree. In general, you cannot make them all equal at once. So a team must choose which measure matters most for the decision, and explain why. Also, in real data we never see whether declined applicants would have repaid. In our synthetic data, we know the answer, which makes it good for learning.",
+       "slide": {"layout": "bullets", "title": "Measures can disagree", "body": "You cannot make all measures equal at once · Choose the main measure and explain why · Real data: false rejection rates are estimates · Synthetic data: we know the answer"}},
+      {"visual_type": "text",
+       "voiceover": "You may hear of the four-fifths ratio, or zero point eight. It comes from US employment practice, not credit law. Treat it only as a rough rule of thumb that a gap needs investigating, never as a legal safe harbour for lending.",
+       "on_screen_text": "Four-fifths: a rule of thumb only"},
+      {"visual_type": "slide",
+       "voiceover": "There are four main ways to reduce bias. Remove or change proxies. Rebalance the data, so the model learns from enough cases in each group. Add human review for applications near the threshold. And monitor the same fairness numbers every month, because they can change after launch.",
+       "slide": {"layout": "bullets", "title": "Four ways to reduce bias", "body": "1. Remove or change proxies · 2. Rebalance the data · 3. Add human review near the threshold · 4. Monitor results every month"}}
+    ],
+    "Demonstrate": [
+      {"visual_type": "screen",
+       "voiceover": "Let's see this in Google Colab. Alejandro Ruiz is a risk analyst at Crédito Solar, a hypothetical consumer lender in Mexico. He uses the course's ready-made notebook, with one thousand three hundred synthetic loan decisions. No coding is needed. First, open the notebook link from the course page.",
+       "on_screen_text": "Crédito Solar · 1,300 synthetic decisions",
+       "screen_steps": ["Show the course page and click the ready-made notebook link", "The notebook opens in Google Colab; point to the title and the single code cell"]},
+      {"visual_type": "screen",
+       "voiceover": "Next, save your own copy. Open the File menu and choose Save a copy in Drive. Now you can change it without affecting anyone else.",
+       "screen_steps": ["Open the File menu", "Click Save a copy in Drive", "Show the new tab with the copy's name"]},
+      {"visual_type": "screen",
+       "voiceover": "Here is what the code does. The first line lists how many applicants in each group repaid or not, and were approved or not. The rest builds a table and calculates three rates for each group, plus the approval-rate ratio. You do not need to change any of it yet.",
+       "screen_steps": ["Scroll slowly through the code cell", "Highlight the counts line", "Highlight the lines that calculate approval_rate, false_rejection_rate and bad_loans_approved_rate", "Highlight the final print line for the approval-rate ratio"]},
+      {"visual_type": "screen",
+       "voiceover": "Now open the Runtime menu and choose Run all. Wait a few seconds until the output table appears under the code. Check that your numbers match the table on the lesson page.",
+       "screen_steps": ["Open the Runtime menu", "Click Run all", "Wait for the output table to appear under the cell", "Split screen briefly with the lesson page table to show the numbers match"]},
+      {"visual_type": "screen",
+       "voiceover": "Group B's approval rate is fifty-six percent, against seventy-two point five percent for Group A. The ratio is zero point seven seven two. Group B's good payers are declined about twice as often: twenty-six point four percent, against thirteen point three. But the model approves far fewer bad loans for Group B: ten point seven percent, against thirty.",
+       "on_screen_text": "Ratio 0.772 · FRR 26.4% vs 13.3%",
+       "screen_steps": ["Zoom in on the output table", "Highlight approval_rate: A 0.725, B 0.560", "Highlight Approval-rate ratio: 0.772", "Highlight false_rejection_rate: A 0.133, B 0.264", "Highlight bad_loans_approved_rate: A 0.300, B 0.107"]},
+      {"visual_type": "screen",
+       "voiceover": "So both analysts were right. Alejandro reports the false rejection rate to his credit committee as the main measure, because it shows good customers being turned away. He recommends human review for Group B applications near the threshold.",
+       "screen_steps": ["Keep the output table on screen", "Draw a teal box around Group B false_rejection_rate", "Show a short caption: Main measure: false rejection rate"]},
+      {"visual_type": "screen",
+       "voiceover": "Finally, try a change. In the counts line, change the number ninety-five to forty-five, and two hundred and sixty-five to three hundred and fifteen. Run all again. The ratio rises to zero point nine one, and Group B's false rejection rate falls to twelve point five percent.",
+       "on_screen_text": "After edit: ratio 0.91, FRR 12.5%",
+       "screen_steps": ["Click in the counts line", "Change 95 to 45", "Change 265 to 315", "Open Runtime and click Run all", "Highlight the new ratio 0.91 and Group B false_rejection_rate 0.125"]}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, approval-rate ratios compare decisions, while error rates by group show whether those decisions were right. Second, fairness measures can disagree, so choose and justify the main measure, and treat the four-fifths ratio only as a rule of thumb. Third, reduce bias by removing proxies, rebalancing data, adding human review and monitoring results, and test again after every change.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Ratios compare decisions; error rates check them. 2. Choose and justify one main measure. 3. Remove proxies, rebalance, review, monitor, retest."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below this video, you will run the same notebook, compare false rejection rates by group, and write three sentences on which fairness measure you would report to a credit committee, and why. Report at least two measures, including the ones that look bad. It takes about thirty minutes. In the next lesson, we look at AI for customer service in banking. See you there.",
+       "on_screen_text": "Next: AI for Customer Service"}
+    ]
+  }
+}
