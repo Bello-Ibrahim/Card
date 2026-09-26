@@ -1,7 +1,7 @@
 {
   "course_id": "AI-24",
   "lesson_id": "L09",
-  "duration_s": 270.9,
+  "duration_s": 294.4,
   "thumbnail": {
     "headline": "Check Every Number",
     "slide": {
@@ -133,29 +133,42 @@
     {
       "scene": 11,
       "start": 183.5,
-      "end": 203.2,
+      "end": 197.6,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
         "layout": "diagram",
         "title": "The real reason",
-        "body": "Operating profit −618 split into two bars: Lower gross profit −468 (large, teal) + Higher operating expenses −150 (small). Caption: corrected commentary uses 5.0%, 40.0% → 38.0%, 468, 150, 618 (34.3%)."
+        "body": "Operating profit −618 split into two bars: Lower gross profit −468 (large, teal) + Higher operating expenses −150 (small)."
       },
-      "voiceover": "Six hundred and eighteen below budget is correct, but the reason is wrong. Lower gross profit explains four hundred and sixty-eight of it. Higher operating expenses explain only one hundred and fifty. So Arjun rewrites the commentary with the correct figures and the correct reasons."
+      "voiceover": "Six hundred and eighteen below budget is correct, but the reason is wrong. Lower gross profit explains four hundred and sixty-eight of it. Higher operating expenses explain only one hundred and fifty."
     },
     {
       "scene": 12,
-      "start": 203.2,
-      "end": 215.2,
+      "start": 197.6,
+      "end": 222.0,
       "section": "Demonstrate",
-      "visual_type": "text",
-      "on_screen_text": "Check every number and every 'because'",
-      "voiceover": "A common mistake is to check only the numbers you expect to be wrong. Errors often hide in the reasons and comparisons. Check every number, and every because."
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "Arjun's corrected commentary",
+        "body": "\"Revenue was 5.0% below budget. Gross margin fell from 40.0% to 38.0%, so gross profit was 468 below budget. Operating expenses were 150 above budget. Together, operating profit was 618 (34.3%) below budget.\""
+      },
+      "voiceover": "So Arjun rewrites the commentary. Revenue was five percent below budget. Gross margin fell from forty percent to thirty-eight percent, so gross profit was four hundred and sixty-eight below budget. Operating expenses were one hundred and fifty above budget. Together, operating profit was six hundred and eighteen, or thirty-four point three percent, below budget."
     },
     {
       "scene": 13,
-      "start": 215.2,
-      "end": 243.5,
+      "start": 222.0,
+      "end": 238.7,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Check every number and every 'because'",
+      "voiceover": "A common mistake is to check only the numbers you expect to be wrong, or only the first paragraph. Errors often hide in the reasons and comparisons, not only in the raw figures. Check every number, and every because."
+    },
+    {
+      "scene": 14,
+      "start": 238.7,
+      "end": 267.0,
       "section": "Recap",
       "visual_type": "slide",
       "slide": {
@@ -166,9 +179,9 @@
       "voiceover": "Let's recap. First, AI assistants are good at summarising, explaining variances and drafting commentary in a set format. Second, language models can invent, misread or miscalculate numbers, and give convincing but wrong reasons, so every figure and every reason must be checked against the source. Third, calculate variances in the spreadsheet first, use only synthetic or approved data, and keep commentary factual, with no investment advice."
     },
     {
-      "scene": 14,
-      "start": 243.5,
-      "end": 270.9,
+      "scene": 15,
+      "start": 267.0,
+      "end": 294.4,
       "section": "CTA",
       "visual_type": "presenter_full",
       "on_screen_text": "Next: Why Was I Declined?",

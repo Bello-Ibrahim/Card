@@ -1,6 +1,6 @@
 # L09 AI for Financial Analysis and Reporting | Presenter Script
 
-Course: AI-24 · Video: 5 min · Words: 632
+Course: AI-24 · Video: 5 min · Words: 687
 
 ## Hook
 It is the last day of the quarter-end close. You have a profit-and-loss sheet, a budget, and two hours to write the management commentary. An AI assistant can write a first draft in thirty seconds. Can you trust the numbers in it?
@@ -25,9 +25,11 @@ The AI's draft says revenue fell six percent below budget, gross margin improved
 
 Arjun checks each figure. Revenue fell six percent is wrong. Six hundred on twelve thousand is five percent. Gross margin improved is also wrong. It was forty percent in the budget and thirty-eight percent in the actual results, because costs fell less than revenue.
 
-Six hundred and eighteen below budget is correct, but the reason is wrong. Lower gross profit explains four hundred and sixty-eight of it. Higher operating expenses explain only one hundred and fifty. So Arjun rewrites the commentary with the correct figures and the correct reasons.
+Six hundred and eighteen below budget is correct, but the reason is wrong. Lower gross profit explains four hundred and sixty-eight of it. Higher operating expenses explain only one hundred and fifty.
 
-A common mistake is to check only the numbers you expect to be wrong. Errors often hide in the reasons and comparisons. Check every number, and every because.
+So Arjun rewrites the commentary. Revenue was five percent below budget. Gross margin fell from forty percent to thirty-eight percent, so gross profit was four hundred and sixty-eight below budget. Operating expenses were one hundred and fifty above budget. Together, operating profit was six hundred and eighteen, or thirty-four point three percent, below budget.
+
+A common mistake is to check only the numbers you expect to be wrong, or only the first paragraph. Errors often hide in the reasons and comparisons, not only in the raw figures. Check every number, and every because.
 
 ## Recap
 Let's recap. First, AI assistants are good at summarising, explaining variances and drafting commentary in a set format. Second, language models can invent, misread or miscalculate numbers, and give convincing but wrong reasons, so every figure and every reason must be checked against the source. Third, calculate variances in the spreadsheet first, use only synthetic or approved data, and keep commentary factual, with no investment advice.
