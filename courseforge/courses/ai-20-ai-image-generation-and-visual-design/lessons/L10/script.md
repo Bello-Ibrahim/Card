@@ -1,6 +1,6 @@
 # L10 Copyright, Licences and Ethics | Presenter Script
 
-Course: AI-20 · Video: 5 min · Words: 663
+Course: AI-20 · Video: 5 min · Words: 682
 
 ## Hook
 Your image looks great, and the client loves it. But can they put it on a billboard? Can they stop a competitor from copying it? Does anyone need to know it was made with AI? Before you publish, ask the right questions.
@@ -14,7 +14,7 @@ Two, tool licence terms. Each tool has its own terms of use. They say whether yo
 
 Three, people's likeness. Do not create images that look like real, identifiable people without their consent, and never make images that could mislead viewers about a real person. Four, trademarks and characters. Keep other companies' logos, brand names and copyrighted characters out of your prompts and images.
 
-Five, bias. Models can repeat stereotypes, like showing only one gender as doctors. Review who appears in your set, and prompt for the variety your audience really has. Six, disclosure. Some tools add visible or invisible signals that show an image was made with AI. Some platforms ask for labels. Do not try to remove these signals.
+Five, bias. Models can repeat stereotypes, like showing only one gender as doctors, or only one skin colour as professional. Review who appears in your set, and prompt for the variety your audience really has. Six, disclosure. Some tools add visible or invisible signals that show an image was made with AI. Some platforms ask for labels. Do not try to remove these signals.
 
 Publishing an AI image is like using a rented car for business. You can drive it, but the agreement says where you may go and for what purpose. Before a long trip, you read the agreement, and if something is unclear, you ask.
 
@@ -25,7 +25,7 @@ First, he opens the terms of use for his tool, and finds the section about comme
 
 Third, he finds a prompt line that describes a famous athlete. He removes it, and writes a runner in her forties instead. Fourth, he reviews the draft set for bias. All four family images show the same type of family, so he adds variety.
 
-Fifth, he writes down the questions he cannot answer, and books a short call with a legal adviser. He does not guess.
+Fifth, he writes down the questions he cannot answer, and books a short call with a legal adviser. He does not guess. Writing the questions down also shows him exactly what is still uncertain.
 
 A common mistake is to think, the tool let me make it, so I can use it however I want. The tool's ability says nothing about whether you may publish the image. Another mistake is to trust a summary on a blog or social post. Always read the current official terms yourself.
 

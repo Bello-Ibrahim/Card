@@ -1,0 +1,198 @@
+{
+  "course_id": "AI-18",
+  "lesson_id": "L15",
+  "duration_s": 295.9,
+  "thumbnail": {
+    "headline": "Healthy Service, Wrong Answers?",
+    "slide": {
+      "layout": "title",
+      "title": "Healthy Service, Wrong Answers?",
+      "body": "Left: green light labelled 'status 200'. Right: a histogram of predictions drifting to one side with a small warning icon. Small tag: MLOps · Lesson 15."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.3,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Watch two layers",
+      "voiceover": "Your service has returned status two hundred for every request this week. Is the model working? Not necessarily. A service can be perfectly healthy while its predictions slowly become wrong. You need to watch two layers, not one."
+    },
+    {
+      "scene": 2,
+      "start": 16.3,
+      "end": 44.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Layer 1: service health",
+        "body": "Three gauges: Traffic (requests per hour) · Error rate (status 400+, split 422 client vs 500 server) · Latency (median and p95 per hour)"
+      },
+      "voiceover": "Welcome to the final week. The first layer is service health. It tells you whether the API works. Watch traffic, meaning requests per hour. A sudden drop may mean a broken client, and a sudden rise may mean a retry loop. Watch the error rate, and separate client errors from server errors. And watch latency, the median and p ninety-five, as in lesson nine."
+    },
+    {
+      "scene": 3,
+      "start": 44.2,
+      "end": 67.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Layer 2: model behaviour",
+        "body": "Three panels: Prediction distribution (share predicted 'good') · Input values vs training · Accuracy when labels arrive (join on request_id)"
+      },
+      "voiceover": "The second layer is model behaviour. It tells you whether the predictions still make sense. Watch the prediction distribution, for example the share of wines predicted good. Watch the input values compared with training. And when the true labels arrive, weeks later, join them to the log by request ID and compute the real metric."
+    },
+    {
+      "scene": 4,
+      "start": 67.8,
+      "end": 93.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Logs to dashboard",
+        "body": "Request → middleware logs {path, status, latency_ms} → predictions.jsonl → pandas script → hourly table and charts"
+      },
+      "voiceover": "Our prediction log from lesson seven records predictions only. To measure every request, including rejected ones, we add a small middleware that logs the path, the status and the latency. Without it, rejected requests would never appear in our numbers. Then a short pandas script reads the log. Structured logs and a script are enough to learn the ideas."
+    },
+    {
+      "scene": 5,
+      "start": 93.1,
+      "end": 112.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Anatomy of an alert",
+        "body": "Metric: server error rate · Threshold: above 1% · Window: 15 minutes · Owner: on-call engineer. Footnote: example values, not a standard"
+      },
+      "voiceover": "Alerts turn charts into action. Each alert needs a metric, a threshold, a time window and an owner. For example, server error rate above one percent for fifteen minutes, page the on-call engineer. That number is only an example. Start from your own normal values."
+    },
+    {
+      "scene": 6,
+      "start": 112.8,
+      "end": 124.8,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "doctor checking patient heart rate",
+      "on_screen_text": "Vital signs and blood tests",
+      "voiceover": "Think of a patient. The heart rate and temperature can be normal while a slow illness develops that only a blood test shows. A good doctor checks both."
+    },
+    {
+      "scene": 7,
+      "start": 124.8,
+      "end": 134.2,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "young engineer working on laptop in office",
+      "on_screen_text": "Amara · telecom · Dakar",
+      "voiceover": "Amara Diallo is an ML engineer at a hypothetical telecom company in Dakar, Senegal. She builds a dashboard for the wine service."
+    },
+    {
+      "scene": 8,
+      "start": 134.2,
+      "end": 156.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open app.py and add the log_requests middleware",
+        "Restart the service",
+        "Run the traffic script: 300 requests with random valid inputs, every 25th with alcohol = 40",
+        "Show a few JSON request lines in predictions.jsonl"
+      ],
+      "on_screen_text": "Send test traffic",
+      "voiceover": "She adds the middleware to the app and restarts the service. Then a short script sends three hundred requests with random valid inputs. Every twenty-fifth request has an alcohol value of forty, so it should be rejected. Each request line records the time, the path, the status and the latency in milliseconds."
+    },
+    {
+      "scene": 9,
+      "start": 156.9,
+      "end": 178.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open a Jupyter notebook in the project folder",
+        "Run the dashboard cell that reads predictions.jsonl with pandas",
+        "Highlight the hourly table: requests 300, error_rate 0.04, p95_ms 3.9",
+        "Filter to show the 12 rejected requests with status 422"
+      ],
+      "on_screen_text": "300 requests, 4% errors, p95 3.9 ms",
+      "voiceover": "In a Jupyter notebook, she loads the log and builds the hourly table. It shows three hundred requests, an error rate of zero point zero four, that is twelve rejected requests, all with status four twenty-two, and a p ninety-five latency of three point nine milliseconds on our machine."
+    },
+    {
+      "scene": 10,
+      "start": 178.8,
+      "end": 202.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Highlight the value counts: 94, 64, 59, 71 across the four probability bands",
+        "Run hourly['requests'].plot(kind='bar')",
+        "Plot a histogram of pred.probability"
+      ],
+      "on_screen_text": "288 predictions in four bands",
+      "voiceover": "Next, the prediction distribution. The four probability bands hold ninety-four, sixty-four, fifty-nine and seventy-one predictions, two hundred and eighty-eight in total. She adds a bar chart of requests per hour and a histogram of the probabilities. Later, a large change in these bands without a known reason would be a warning."
+    },
+    {
+      "scene": 11,
+      "start": 202.8,
+      "end": 220.4,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Add a markdown cell under the charts",
+        "Write alert rule 1 with metric, threshold, time window and owner",
+        "Write alert rule 2 for the prediction distribution with metric, threshold, window and owner"
+      ],
+      "on_screen_text": "Two alert rules",
+      "voiceover": "Under the charts, she writes two alert rules, each with a metric, a threshold, a window and an owner. The four percent error rate here was caused on purpose. In production, she would find out which client sends the bad inputs."
+    },
+    {
+      "scene": 12,
+      "start": 220.4,
+      "end": 241.0,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "One model signal from day one",
+      "voiceover": "The common mistake is to monitor only service health, because platforms show it by default. Add at least one model-behaviour signal from day one. And avoid too many sensitive alerts. People start to ignore them. Start with a few alerts that each lead to a clear action."
+    },
+    {
+      "scene": 13,
+      "start": 241.0,
+      "end": 265.9,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Two layers: service health and model behaviour. 2. JSON logs + pandas = useful dashboard. 3. Alert = metric, threshold, window, owner."
+      },
+      "voiceover": "Let's recap. First, monitor two layers: service health, meaning traffic, errors and latency, and model behaviour, meaning predictions, inputs and accuracy when labels arrive. Second, structured logs and a short pandas script are enough for a useful dashboard. Third, every alert needs a metric, a threshold, a time window and an owner, based on your own normal values."
+    },
+    {
+      "scene": 14,
+      "start": 265.9,
+      "end": 286.9,
+      "section": "CTA",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Exercise: your first dashboard",
+        "body": "Middleware · 200+ synthetic requests, some invalid · hourly table · requests chart + probability histogram · error rate and p95 · two alert rules · about 40 minutes"
+      },
+      "voiceover": "In the exercise below this video, you will add the middleware, send at least two hundred synthetic requests with some invalid ones, and build a notebook with a table, two charts and two alert rules. It takes about forty minutes. This dashboard will also be part of your capstone."
+    },
+    {
+      "scene": 15,
+      "start": 286.9,
+      "end": 295.9,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Detecting Drift",
+      "voiceover": "Next, we check whether today's data still looks like the training data, in Detecting Data and Prediction Drift. See you there."
+    }
+  ]
+}
