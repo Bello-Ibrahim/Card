@@ -1,7 +1,7 @@
 {
   "course_id": "AI-27",
   "lesson_id": "L07",
-  "duration_s": 296.6,
+  "duration_s": 299.6,
   "thumbnail": {
     "headline": "Taxi or Buy a Car?",
     "slide": {
@@ -36,20 +36,20 @@
     {
       "scene": 3,
       "start": 26.2,
-      "end": 38.6,
+      "end": 41.6,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
         "layout": "bullets",
         "title": "Option 1: Foundation model API",
-        "body": "Send requests to a general model (e.g. Claude) · pay per use · fastest start · depends on one supplier"
+        "body": "Send requests to a general model (e.g. Claude) · pay per use · fastest start · depends on one supplier · check data terms"
       },
-      "voiceover": "A foundation model API: you send requests to a general model, such as Claude, and pay per use. It is the fastest start, but you depend on one supplier."
+      "voiceover": "A foundation model API: you send requests to a general model, such as Claude, and pay per use. It is the fastest start, but you depend on one supplier. You must also check its data terms."
     },
     {
       "scene": 4,
-      "start": 38.6,
-      "end": 58.7,
+      "start": 41.6,
+      "end": 61.7,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -61,8 +61,8 @@
     },
     {
       "scene": 5,
-      "start": 58.7,
-      "end": 78.4,
+      "start": 61.7,
+      "end": 81.4,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -74,8 +74,8 @@
     },
     {
       "scene": 6,
-      "start": 78.4,
-      "end": 104.5,
+      "start": 81.4,
+      "end": 107.5,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -87,8 +87,8 @@
     },
     {
       "scene": 7,
-      "start": 104.5,
-      "end": 119.1,
+      "start": 107.5,
+      "end": 122.1,
       "section": "Explain",
       "visual_type": "text",
       "on_screen_text": "All prices here are placeholders",
@@ -96,8 +96,8 @@
     },
     {
       "scene": 8,
-      "start": 119.1,
-      "end": 141.8,
+      "start": 122.1,
+      "end": 144.8,
       "section": "Explain",
       "visual_type": "stock",
       "stock_query": "taxi waiting on city street",
@@ -106,8 +106,8 @@
     },
     {
       "scene": 9,
-      "start": 141.8,
-      "end": 153.4,
+      "start": 144.8,
+      "end": 156.4,
       "section": "Demonstrate",
       "visual_type": "stock",
       "stock_query": "accountant reviewing invoices on laptop",
@@ -116,8 +116,8 @@
     },
     {
       "scene": 10,
-      "start": 153.4,
-      "end": 174.4,
+      "start": 156.4,
+      "end": 177.4,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -129,8 +129,8 @@
     },
     {
       "scene": 11,
-      "start": 174.4,
-      "end": 193.3,
+      "start": 177.4,
+      "end": 196.3,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -142,8 +142,8 @@
     },
     {
       "scene": 12,
-      "start": 193.3,
-      "end": 206.6,
+      "start": 196.3,
+      "end": 209.6,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -155,8 +155,8 @@
     },
     {
       "scene": 13,
-      "start": 206.6,
-      "end": 234.0,
+      "start": 209.6,
+      "end": 237.0,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -168,8 +168,8 @@
     },
     {
       "scene": 14,
-      "start": 234.0,
-      "end": 246.4,
+      "start": 237.0,
+      "end": 249.4,
       "section": "Demonstrate",
       "visual_type": "text",
       "on_screen_text": "Estimate with realistic request sizes",
@@ -177,8 +177,8 @@
     },
     {
       "scene": 15,
-      "start": 246.4,
-      "end": 271.7,
+      "start": 249.4,
+      "end": 274.7,
       "section": "Recap",
       "visual_type": "slide",
       "slide": {
@@ -190,8 +190,8 @@
     },
     {
       "scene": 16,
-      "start": 271.7,
-      "end": 296.6,
+      "start": 274.7,
+      "end": 299.6,
       "section": "CTA",
       "visual_type": "presenter_full",
       "on_screen_text": "Next: Designing Evaluation",

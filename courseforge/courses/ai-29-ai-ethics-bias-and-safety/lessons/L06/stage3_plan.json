@@ -1,0 +1,67 @@
+{
+  "title": "Safety Risks and Human Oversight",
+  "thumbnail": {
+    "headline": "Is Anyone Really Checking?",
+    "image": "Navy background, a tall stack of 'approve' cards in front of a tired reviewer silhouette, with a pilot's cockpit outline behind, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Is Anyone Really Checking?", "body": "A person icon beside a very tall stack of cards marked with ticks; behind, a simple cockpit outline. Small tag: AI Ethics, Bias and Safety · Module 2 · Lesson 6."}
+  },
+  "production_notes": [
+    "No facts to verify: the pharmacy chatbot and the three exercise uses are hypothetical on purpose, with no real incidents or statistics (content.md Review Flags: None).",
+    "Youssef Benali and his pharmacy chain in Morocco are fictional; stock footage must not show a real pharmacy name, logo or readable medicine brand.",
+    "Never show a real medicine dose or a real drug-combination answer on screen; chat examples use blurred or placeholder text.",
+    "Scene 7 hero clip is 7 seconds and the scene is about 24 seconds: hold the clip with a slow push-in, then continue on a soft blur behind the presenter."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "A human is in the loop, the vendor says. But what if that human has four hundred AI decisions to approve before lunch, and no power to change any of them? Is that really human control?",
+       "on_screen_text": "Is that really human control?"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Welcome to week two. In AI, safety means avoiding physical, financial, emotional or social harm. Four kinds of safety risk appear again and again. The first is harmful advice, such as a wrong medicine dose or a risky money tip. The second is unsafe instructions, such as how to mix dangerous chemicals.",
+       "slide": {"layout": "bullets", "title": "Four safety risks, part one", "body": "1. Harmful advice: wrong dose, risky money tip · 2. Unsafe instructions: how to do something dangerous"}},
+      {"visual_type": "slide",
+       "voiceover": "The third is over-trust. People accept the AI's answer without checking, because it is fast, confident and usually right. When it is wrong, nobody notices. The fourth is high-stakes use without checks, in areas like health, credit, hiring or public services.",
+       "slide": {"layout": "bullets", "title": "Four safety risks, part two", "body": "3. Over-trust: fast, confident, usually right, so nobody checks · 4. High-stakes use without checks: health · credit · hiring · public services"}},
+      {"visual_type": "slide",
+       "voiceover": "Many AI tools have safety filters, but filters are not perfect. The strongest protection is often human oversight. That means a person can question and change the AI's decision. For this to be real, and not just a signature, the person needs three things. Time, knowledge and authority.",
+       "slide": {"layout": "diagram", "title": "Real human oversight", "body": "Person icon at the centre with three supports: Time (clock) · Knowledge (book) · Authority (key: can change or stop the decision)."}},
+      {"visual_type": "slide",
+       "voiceover": "Where should a person review the output? A simple rule. The higher the impact of a mistake, the closer the human review. A blog title may need only spot checks. A loan rejection needs review before it takes effect, or an easy way to appeal.",
+       "slide": {"layout": "diagram", "title": "Higher impact, closer review", "body": "A rising line from low to high impact: Blog post title → occasional spot checks · Loan rejection or patient flag → review before the decision, plus easy appeal."}},
+      {"visual_type": "hero_broll",
+       "voiceover": "Think of an aeroplane autopilot. It is very useful, and it flies smoothly for hours. But the pilot is still trained, alert and able to take control at any moment, especially at take-off, landing and in bad weather. Human oversight of AI works the same way.",
+       "broll_tool": "KLING",
+       "broll_prompt": "A Southeast Asian woman pilot in her forties sits alert in a cockpit during flight, calmly watching the instruments with one hand resting near the controls while clouds pass outside; slow push-in from over-the-shoulder shot to side close-up; soft diffused daylight through the cockpit windows; cinematic, realistic, natural colours; 7 seconds; no readable text on instruments, no airline logos."}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's look at an example. Youssef Benali runs customer support for a chain of pharmacies in Morocco. The company launches a website chatbot to answer questions about opening hours, stock and deliveries. In the first month, Youssef reviews a sample of chats.",
+       "stock_query": "pharmacy manager reviewing chats on computer",
+       "on_screen_text": "Youssef's pharmacies · Morocco"},
+      {"visual_type": "slide",
+       "voiceover": "He finds three safety risks. A customer asks how many pain tablets they can take in a day, and the chatbot gives a number without asking about age or other medicines. That is harmful advice. Another asks if two medicines can be taken together, and the chatbot says yes, with nobody checking. That is high-stakes use without checks. And staff copy the chatbot's answers into emails without reading them. That is over-trust.",
+       "slide": {"layout": "bullets", "title": "Three risks found", "body": "Dose question answered with no checks → Harmful advice · 'Can I take these together?' answered 'yes' → High-stakes use without checks · Staff copy answers unread → Over-trust"}},
+      {"visual_type": "slide",
+       "voiceover": "Youssef decides where oversight is needed. For opening hours, stock and deliveries, the chatbot answers alone, and staff review a weekly sample. For any question about doses, side effects or combining medicines, the chatbot does not answer. It passes the question to a pharmacist on duty.",
+       "slide": {"layout": "comparison", "title": "Where the human goes", "body": "Low impact: hours, stock, deliveries → chatbot answers, weekly sample review. High impact: doses, side effects, combining medicines → handed to pharmacist on duty."}},
+      {"visual_type": "slide",
+       "voiceover": "The pharmacist has time in their schedule for this, the training to answer, and the authority to contact the customer directly. And a new rule says staff must read every AI-drafted reply before sending it.",
+       "slide": {"layout": "diagram", "title": "Oversight that works", "body": "Pharmacist icon with three ticks: time in schedule · training to answer · authority to contact customer. Below: new rule: read every AI-drafted reply before sending."}},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is to believe that adding a person anywhere solves the problem. A person with no time, training or power only approves what the machine already decided.",
+       "on_screen_text": "A signature is not oversight"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, key AI safety risks include harmful advice, unsafe instructions, over-trust in automated decisions, and high-stakes use without checks. Second, human oversight is real only when the reviewer has enough time, knowledge and authority. Third, the higher the impact of a possible mistake, the closer and earlier the human review should be.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Harmful advice, unsafe instructions, over-trust, high-stakes use without checks. 2. Oversight needs time, knowledge and authority. 3. Higher impact, closer and earlier review."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below this video, you will look at three uses of AI, an essay grader in Egypt, a bank chatbot in India and a crop-disease app in Ghana, and decide where a human should review the output. It takes about fifteen minutes. In the next lesson, we will look at responsible AI frameworks in practice. See you there.",
+       "on_screen_text": "Next: Responsible AI Frameworks"}
+    ]
+  }
+}

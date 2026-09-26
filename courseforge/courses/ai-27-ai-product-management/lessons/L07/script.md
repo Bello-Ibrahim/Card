@@ -1,6 +1,6 @@
 # L07 Build, Buy or Use an API? | Presenter Script
 
-Course: AI-27 · Video: 5 min · Words: 692
+Course: AI-27 · Video: 5 min · Words: 699
 
 ## Hook
 A feature that costs almost nothing in a demo can become one of your largest monthly bills at scale. The way to avoid that surprise is a simple calculation you can do in a spreadsheet, before you commit.
@@ -8,7 +8,7 @@ A feature that costs almost nothing in a demo can become one of your largest mon
 ## Explain
 Last time, we looked at the data your feature needs. Now, where does the AI part come from? There are four common ways.
 
-A foundation model API: you send requests to a general model, such as Claude, and pay per use. It is the fastest start, but you depend on one supplier.
+A foundation model API: you send requests to a general model, such as Claude, and pay per use. It is the fastest start, but you depend on one supplier. You must also check its data terms.
 
 A vendor product: you buy a finished tool. It is fast to launch, with less control. Fine tuning: you adapt a model with your own examples, which needs good labelled data. And an in house model: the most control, but it needs specialist skills, data and time.
 
