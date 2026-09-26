@@ -1,0 +1,179 @@
+{
+  "course_id": "AI-27",
+  "lesson_id": "L15",
+  "duration_s": 274.4,
+  "thumbnail": {
+    "headline": "Find the Weak Point First",
+    "slide": {
+      "layout": "title",
+      "title": "Find the Weak Point First",
+      "body": "Clipboard checklist with ten lines and ticks, next to a PRD document. Small tag: AI Product Management · Lesson 15 · Capstone step 3."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.3,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Find it before they do",
+      "voiceover": "The best time to find the weak point in your AI PRD is before the engineering lead, the legal team or your users find it. A structured review, and an honest presentation of trade offs, make that possible."
+    },
+    {
+      "scene": 2,
+      "start": 16.3,
+      "end": 31.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Reviewing and Presenting Your PRD",
+        "body": "AI Product Management · Lesson 15 of 15 · Capstone step 3"
+      },
+      "voiceover": "You now have a full PRD and an evaluation plan. In this final lesson, capstone step three, you review it and present it. Start with a checklist of ten questions that AI features often fail."
+    },
+    {
+      "scene": 3,
+      "start": 31.3,
+      "end": 50.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Review checklist, 1 to 5",
+        "body": "1. Is the problem real? · 2. Is AI the right tool? · 3. Is the scope narrow? · 4. Is the data available? · 5. Are failure paths designed?"
+      },
+      "voiceover": "Is the problem real, with evidence of user pain? Is AI the right tool, or would a rule be simpler? Is the scope narrow? Is the data available, with owners, coverage and consent? And are the failure paths designed, each with a user action?"
+    },
+    {
+      "scene": 4,
+      "start": 50.2,
+      "end": 69.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Review checklist, 6 to 10",
+        "body": "6. Is the behaviour spec testable? · 7. Are metrics and thresholds clear? · 8. Are the guardrails owned? · 9. Is the rollout safe? · 10. Is the cost realistic?"
+      },
+      "voiceover": "Is the behaviour spec testable? Are the metrics and thresholds clear, and set in advance for each group? Does every guardrail have an owner? Is the rollout safe, with numeric stop criteria and a tested kill switch? And is the cost realistic, with current prices checked?"
+    },
+    {
+      "scene": 5,
+      "start": 69.9,
+      "end": 85.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "Critical review",
+        "body": "'Act as a critical engineering lead. List the 10 most important questions you would ask before building this feature.' Caption: prompts for your thinking, not final judgements."
+      },
+      "voiceover": "Then ask for a critical review. A peer, or Claude acting as a critical engineering lead, can find questions you did not expect. Treat those questions as prompts for your own thinking, not as final judgements."
+    },
+    {
+      "scene": 6,
+      "start": 85.3,
+      "end": 111.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Presenting trade-offs honestly",
+        "body": "What it will and will not do · Results, or the thresholds to meet · The main trade-off and the option not chosen · What you do not know yet, and when you will · One specific decision"
+      },
+      "voiceover": "When you present, be honest about trade offs. Say what the feature will do, and what it will not do. Show the evaluation results, or the thresholds that must be met. Name the main trade off, and the option you did not choose. Say what you do not know yet, and when you will know it. Then ask for one specific decision."
+    },
+    {
+      "scene": 7,
+      "start": 111.9,
+      "end": 130.8,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "pilot walking around airplane with checklist",
+      "on_screen_text": "A checklist catches what is easy to miss",
+      "voiceover": "Before a long flight, pilots walk around the aircraft with a checklist, even after thousands of flights. The checklist does not assume they are careless. It catches the one thing that is easy to miss. Your review checklist does the same for your PRD."
+    },
+    {
+      "scene": 8,
+      "start": 130.8,
+      "end": 147.1,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "farmer typing message on phone outdoors",
+      "on_screen_text": "Lucía · agricultural supplies · Argentina",
+      "voiceover": "Let's see it in action. Lucía Romero is a PM at a hypothetical agricultural supply distributor in Argentina. Farmers send orders as free text messages. Her feature reads each message and fills a draft order, which staff confirm."
+    },
+    {
+      "scene": 9,
+      "start": 147.1,
+      "end": 163.4,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Checklist finds two gaps",
+        "body": "Q4 Data: local product nicknames not covered → coverage note added. Q7 Metrics: no fail threshold for wrong quantities → zero-tolerance threshold added."
+      },
+      "voiceover": "The checklist finds two gaps. There is no plan for messages that mix product names with local nicknames, and no fail threshold for wrong quantities. She adds a coverage note, and a zero tolerance threshold for quantity errors."
+    },
+    {
+      "scene": 10,
+      "start": 163.4,
+      "end": 190.4,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Critical review → decisions",
+        "body": "Two orders for different farms in one message? → new failure path. Catalogue changes, old names? → catalogue-change trigger for test-set reruns. Who is responsible for a wrong confirmed quantity? → staff confirmation is the final check; confirm screen highlights quantities."
+      },
+      "voiceover": "Then Claude, acting as a critical engineering lead, asks questions such as, what happens when a message contains two orders for different farms? And who is responsible when a confirmed order has a wrong quantity? Lucía adds a failure path for multi order messages. And she writes a clear rule: staff confirmation is the final check, and the confirm screen highlights all quantities."
+    },
+    {
+      "scene": 11,
+      "start": 190.4,
+      "end": 216.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "Lucía's summary",
+        "body": "'The feature drafts orders, and staff still confirm each one. We chose this over automatic orders because a wrong quantity is costly. We do not yet know quality for local nicknames; the pilot will tell us in four weeks. I am asking for approval of a four-week pilot with two staff members.'"
+      },
+      "voiceover": "To the operations director, she says: the feature drafts orders, and staff still confirm each one. We chose this over automatic orders, because a wrong quantity is costly. We do not yet know quality for local nicknames, and the pilot will tell us in four weeks. I am asking for approval of a four week pilot with two staff members."
+    },
+    {
+      "scene": 12,
+      "start": 216.1,
+      "end": 226.8,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Show the limits and the unknowns",
+      "voiceover": "A common mistake is presenting only the benefits. Stakeholders can approve an honest pilot much more easily than they can recover from a surprise failure."
+    },
+    {
+      "scene": 13,
+      "start": 226.8,
+      "end": 249.5,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Ten-question review checklist. 2. A critical reviewer; you decide what matters. 3. Honest trade-offs and one clear decision."
+      },
+      "voiceover": "Let's recap. First, review your AI PRD with a checklist covering problem, tool choice, scope, data, failure paths, behaviour spec, metrics, guardrails, rollout and cost. Second, use a peer or Claude as a critical engineering lead, and decide yourself which questions matter. Third, present trade offs honestly, and ask for one clear decision."
+    },
+    {
+      "scene": 14,
+      "start": 249.5,
+      "end": 274.4,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Submit your capstone PRD",
+      "voiceover": "Congratulations! You have reached the end of AI Product Management. For capstone step three, review your PRD with the checklist, ask Claude for its critical questions, and record your decision for each one. Then check the submission checklist in the capstone rubric, and submit your PRD and evaluation plan. Well done, and good luck with your AI feature."
+    }
+  ]
+}
