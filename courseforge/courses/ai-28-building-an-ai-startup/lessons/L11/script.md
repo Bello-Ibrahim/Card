@@ -1,6 +1,6 @@
 # L11 Legal, Ethical and Data Risks | Presenter Script
 
-Course: AI-28 · Video: 5 min · Words: 670
+Course: AI-28 · Video: 5 min · Words: 680
 
 ## Hook
 Your MVP works, and your first customers are happy. Then one asks, where does my data go? Who owns the text your AI writes? What happens if it gives wrong advice? If you cannot answer, that customer may leave.
@@ -25,7 +25,7 @@ Applications contain personal data. That is high. Her next step is legal advice,
 
 The model may favour some groups unfairly, for example by age or gender. High. So she removes names, photos and ages before the AI sees them, and tests results across groups. She will also publish how she checks for fairness. Model supplier terms are medium. Ownership of summaries is low.
 
-Then Zofia changes her product. Instead of ranking candidates, it summarises each application against the employer's criteria, and a person makes every decision. That reduces risk, and the product is still useful.
+Then Zofia changes her product. Instead of ranking candidates, it summarises each application against the employer's criteria, and a person makes every decision. That reduces risk, and the product is still useful. Notice that one design choice solved several risks at once.
 
 A common mistake is thinking legal questions matter later, when you are bigger. But what data you collect and what you promise are hard to change later. Another mistake is copying another company's privacy pages. Their business and country may be very different from yours.
 

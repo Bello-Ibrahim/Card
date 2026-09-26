@@ -1,6 +1,6 @@
 # L12 Funding Options and What Investors Look For | Presenter Script
 
-Course: AI-28 · Video: 5 min · Words: 671
+Course: AI-28 · Video: 5 min · Words: 679
 
 ## Hook
 How much money should I raise? That is often a new founder's first question. A better first question is: do I need outside money at all, and what will I give in return? Every type of funding has a price, even when it looks free.
@@ -14,7 +14,7 @@ Accelerators give small teams training, mentors and contacts for a fixed period,
 
 When you sell equity, your share gets smaller. This is called dilution. For example, if you own one hundred percent and sell ten percent to an angel, you now own ninety percent.
 
-What do investors usually look for at this stage? A real problem that customers feel. Evidence of demand, such as sign ups, pilots or paying customers, not only opinions. A strong team with the right skills and industry knowledge. And a path to a defensible business, with a moat and healthy unit economics.
+What do investors usually look for at this stage? A real problem that customers feel. Evidence of demand, such as sign ups, pilots or paying customers, not only opinions. A strong team with the right skills and industry knowledge, which shows why you are the right people. And a path to a defensible business, with a moat and healthy unit economics.
 
 Choosing funding is like choosing how to travel. Walking is slow, but you choose every step. That is bootstrapping. A bus follows its own route and timetable, like grants and accelerators. A fast train goes far quickly, but you cannot get off when you want, and it only goes to large destinations. That is venture capital.
 

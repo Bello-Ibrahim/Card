@@ -1,6 +1,6 @@
 # L15 Pitching to Customers and Investors | Presenter Script
 
-Course: AI-28 · Video: 5 min · Words: 666
+Course: AI-28 · Video: 5 min · Words: 669
 
 ## Hook
 You tell the same story to a shop owner and to an investor. The shop owner asks, will this save me time on Monday morning? The investor asks, why can't a large company copy this? Are you ready for both?
@@ -14,7 +14,7 @@ You will get questions you cannot fully answer. Admit what you do not know, and 
 
 So for customers, lead with the problem, the demo and the price. For investors, lead with the problem and your evidence, then the business model, the moat and the ask.
 
-Never invent numbers, customers or partnerships. People often check, and one discovered exaggeration can end the relationship.
+Never invent numbers, customers or partnerships, even small ones. People often check, and one discovered exaggeration can end the relationship.
 
 Think of a tour guide showing the same old city to schoolchildren and to architects. The streets do not change. For children, she talks about stories and people. For architects, she talks about materials and structure. A good pitch is the same city, guided for a different group.
 

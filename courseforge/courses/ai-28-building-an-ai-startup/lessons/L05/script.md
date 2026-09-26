@@ -1,12 +1,12 @@
 # L05 Is It Defensible? Moats for AI Startups | Presenter Script
 
-Course: AI-28 · Video: 5 min · Words: 679
+Course: AI-28 · Video: 5 min · Words: 676
 
 ## Hook
-Imagine you spend three months building an AI tool that writes perfect job adverts. Customers like it. Then a competitor copies it in a weekend, and your model supplier adds the same feature for free. What do you have left? Today, we look at what makes an AI business hard to copy.
+Imagine you spend three months building an AI tool that writes perfect job adverts. Customers like it. Then a competitor copies it in a weekend, and your model supplier adds the same feature for free. What do you have left?
 
 ## Explain
-In the last lesson, you tested demand. Now we ask whether your business can last. A moat is anything that makes your business hard to copy or replace. The word comes from the water around a castle. A business with a strong moat is called defensible.
+In the last lesson, you tested demand. Now we ask whether your business can last, and what makes an AI business hard to copy. A moat is anything that makes your business hard to copy or replace. The word comes from the water around a castle. A business with a strong moat is called defensible.
 
 Many AI products are wrappers: a simple screen and some instructions around a public model. A wrapper is a fine way to start, test demand and learn what customers need. But let's be honest. On its own, it is easy to copy, because anyone can use the same model and write similar instructions.
 
