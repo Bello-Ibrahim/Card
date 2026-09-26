@@ -19,7 +19,7 @@
     ],
     "Explain": [
       {"visual_type": "slide",
-       "voiceover": "Welcome to week two. We start with data. Every AI feature depends on data in up to three ways, and as a PM, you own the questions about all three.",
+       "voiceover": "This is week two, and we start with data. Every AI feature depends on data in up to three ways, and as a PM, you own the questions about all three.",
        "slide": {"layout": "title", "title": "Data Needs: What Your Feature Learns From", "body": "AI Product Management · Lesson 6 of 15"}},
       {"visual_type": "slide",
        "voiceover": "Training or tuning data is the examples a model learns from, if you train or adapt a model. Context data is information given to the model at the moment of use, such as a product catalogue or a user's order history. And evaluation data is examples with known good answers, used to test quality. Even with a ready made model, you still need context and evaluation data.",

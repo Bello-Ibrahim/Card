@@ -1,0 +1,214 @@
+{
+  "course_id": "AI-30",
+  "lesson_id": "L03",
+  "duration_s": 310.7,
+  "thumbnail": {
+    "headline": "How Much Harm?",
+    "slide": {
+      "layout": "title",
+      "title": "How Much Harm?",
+      "body": "Four-level pyramid icon: minimal (base), transparency, high-risk, prohibited (top, red). Small tag: AI Governance, Privacy and Compliance · Lesson 3."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.6,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "How much harm could it cause?",
+      "voiceover": "A spam filter and a tool that decides who gets a job interview are both AI. Should they face the same rules? The EU AI Act says no. It asks one main question first: how much harm could this use cause?"
+    },
+    {
+      "scene": 2,
+      "start": 17.6,
+      "end": 34.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "The EU AI Act: A Risk-Based Approach",
+        "body": "Lesson 3 of 14. Footer line: Educational, not legal advice."
+      },
+      "voiceover": "Last time, we mapped three laws. Today, we focus on the structure of the EU AI Act. A quick reminder: this course is educational and is not legal advice. Precise wording and references must always come from the official text."
+    },
+    {
+      "scene": 3,
+      "start": 34.7,
+      "end": 51.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Purpose decides the tier",
+        "body": "One model icon in the centre. Left arrow: writing product text → minimal risk. Right arrow: ranking job applicants → high-risk."
+      },
+      "voiceover": "The Act sorts AI uses into tiers. The tier depends mainly on the intended purpose and the context of use, not on the technology. So the same model can be minimal risk in one use, and high-risk in another."
+    },
+    {
+      "scene": 4,
+      "start": 51.8,
+      "end": 71.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Tier 1: Prohibited",
+        "body": "Four-level pyramid, top level highlighted red. Side notes: harmful manipulation · exploiting vulnerable groups · some social scoring · some biometric identification. Footer: full list and exceptions in the official text"
+      },
+      "voiceover": "At the top are prohibited practices, a short list of uses considered unacceptable. The kinds of practices that may be on it include certain manipulative techniques that cause significant harm, exploiting the vulnerabilities of specific groups, some forms of social scoring and some uses of biometric identification."
+    },
+    {
+      "scene": 5,
+      "start": 71.9,
+      "end": 92.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Tier 2: High-risk",
+        "body": "Pyramid, second level highlighted amber. Two routes: 1. Safety component of a regulated product · 2. Listed areas: employment, education, essential services such as credit, critical infrastructure and others"
+      },
+      "voiceover": "Next come high-risk systems, which can significantly affect health, safety or fundamental rights. There are two main routes in: AI that is a safety component of certain regulated products, and AI used in listed areas, such as employment, education, access to essential services like credit, and critical infrastructure."
+    },
+    {
+      "scene": 6,
+      "start": 92.9,
+      "end": 114.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Tiers 3 and 4",
+        "body": "Pyramid, lower two levels highlighted. Transparency: tell people it is AI; label AI-made content (chatbots, synthetic media). Minimal: everything else, e.g. spam filters; other laws still apply"
+      },
+      "voiceover": "Then there are transparency duties. Some systems must tell people they are dealing with AI, or label content that AI created or changed, such as chatbots and synthetic video. Everything else is minimal risk, like spam filters. The Act adds no specific duties there, but data protection law still applies."
+    },
+    {
+      "scene": 7,
+      "start": 114.3,
+      "end": 129.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "General-purpose AI models",
+        "body": "Separate rules, beside the pyramid · Duties mainly on model providers · Extra duties for models with systemic risk"
+      },
+      "voiceover": "Separately, the Act has rules for general-purpose AI models, the large models that can be adapted to many tasks. These duties fall mainly on the model providers, with extra duties for the most powerful models."
+    },
+    {
+      "scene": 8,
+      "start": 129.7,
+      "end": 149.0,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "product safety testing laboratory technician",
+      "on_screen_text": "Stricter checks where harm is greater",
+      "voiceover": "Think of product safety rules. A child's toy, a kitchen knife and a car seat are all products, but they get different checks, because the possible harm is different. Some products are banned completely. Most carry a warning label, or no special rule at all."
+    },
+    {
+      "scene": 9,
+      "start": 149.0,
+      "end": 166.1,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Check dates in the official text.",
+      "voiceover": "One more point. The Act applies in phases, and the timeline has been the subject of proposed changes. So never rely on a date from memory or a news article. Check the official text on the day you give advice."
+    },
+    {
+      "scene": 10,
+      "start": 166.1,
+      "end": 175.1,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "risk analyst working at laptop in office",
+      "on_screen_text": "Sara · retail group, Sweden",
+      "voiceover": "Let's apply this. Sara Lindqvist is a risk analyst at a fictional retail group in Sweden. She reviews four AI uses."
+    },
+    {
+      "scene": 11,
+      "start": 175.1,
+      "end": 197.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Sara's four AI uses",
+        "body": "Four cards, first two filled: 1. Product description writer → likely minimal (check if published unreviewed) · 2. Website chatbot → likely transparency duties"
+      },
+      "voiceover": "First, a product description writer. Staff check its text before publishing, so it is likely minimal risk, though transparency duties may apply if AI text is ever published without review. Second, a customer chatbot on the website. People must know they are talking with AI, so it likely has transparency duties."
+    },
+    {
+      "scene": 12,
+      "start": 197.0,
+      "end": 218.9,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Sara's four AI uses",
+        "body": "Cards 3 and 4 filled: 3. CV-ranking tool → likely high-risk (employment) · 4. Emotion-reading camera → flag: possibly prohibited or high-risk, send to counsel"
+      },
+      "voiceover": "Third, a tool that ranks CVs to shortlist candidates. Employment is a listed area, so it is likely high-risk. Fourth, a camera system proposed to read shoppers' emotions and target offers. Sara flags it for legal review as possibly prohibited or high-risk, depending on the exact purpose and setting."
+    },
+    {
+      "scene": 13,
+      "start": 218.9,
+      "end": 233.5,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Record every decision",
+        "body": "Tier · Reason · Confidence (high, medium, low) · Escalate when unsure"
+      },
+      "voiceover": "For each use, Sara records the tier, the reason and her confidence. She sends the fourth case to external counsel. That is not a weakness. Knowing when to escalate is part of the method."
+    },
+    {
+      "scene": 14,
+      "start": 233.5,
+      "end": 255.8,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Classify by purpose, not technology.",
+      "voiceover": "A common mistake is to classify by technology. It uses a large language model, so it must be high-risk. Or, it is a small model, so it must be minimal risk. The Act looks mainly at purpose and context. Always ask what the system is used for, and who it affects."
+    },
+    {
+      "scene": 15,
+      "start": 255.8,
+      "end": 279.8,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Four tiers, plus rules for general-purpose models. 2. Purpose and context decide the tier. 3. Check every date and reference in the official text."
+      },
+      "voiceover": "Let's recap. First, the EU AI Act sorts AI uses into prohibited, high-risk, transparency and minimal-risk tiers, with separate rules for general-purpose models. Second, the tier depends mainly on intended purpose and context, not technology. Third, the Act applies in phases, so every date and reference must be checked against the official text."
+    },
+    {
+      "scene": 16,
+      "start": 279.8,
+      "end": 301.7,
+      "section": "CTA",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Your exercise",
+        "body": "8 fictional use cases → 4 tiers · One reason each · Confidence: high, medium, low · Missing fact for low-confidence cases · About 20 minutes"
+      },
+      "voiceover": "In the exercise below this video, you will sort eight short, fictional AI use cases into the four tiers, from a spam filter to a webcam exam checker. Give each one a reason and a confidence level, and for every uncertain case, write down the fact you would need to know."
+    },
+    {
+      "scene": 17,
+      "start": 301.7,
+      "end": 310.7,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Roles and Obligations",
+      "voiceover": "In the next lesson, we look at EU AI Act roles and obligations: who has to do what. See you there."
+    }
+  ]
+}

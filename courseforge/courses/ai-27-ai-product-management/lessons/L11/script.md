@@ -6,7 +6,7 @@ Course: AI-27 · Video: 5 min · Words: 682
 Most AI harms do not come from bad intentions. They come from a reasonable feature, used at scale, with a risk nobody wrote down. A risk table with a named owner for each guardrail is one of the most useful documents a PM can write.
 
 ## Explain
-Welcome to week three. You have a scoped feature, a data plan and an evaluation design. Now we make it safe to launch. Five risk types appear in most AI features.
+This is week three. You have a scoped feature, a data plan and an evaluation design. Now we make it safe to launch. Five risk types appear in most AI features.
 
 Unfair outcomes: the feature works worse for some groups, such as speakers of a language, older users or people from certain regions. Privacy: personal data is used or exposed in ways users did not expect. Misuse: people use the feature for harm, such as generating spam or extracting other users' data.
 

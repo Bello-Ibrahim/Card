@@ -1,12 +1,12 @@
 # L06 Data Needs: What Your Feature Learns From | Presenter Script
 
-Course: AI-27 · Video: 5 min · Words: 723
+Course: AI-27 · Video: 5 min · Words: 724
 
 ## Hook
 Your team can choose the best model available and still ship a poor feature. If the data behind it is old, incomplete or collected without permission, the model will faithfully repeat those problems to your users.
 
 ## Explain
-Welcome to week two. We start with data. Every AI feature depends on data in up to three ways, and as a PM, you own the questions about all three.
+This is week two, and we start with data. Every AI feature depends on data in up to three ways, and as a PM, you own the questions about all three.
 
 Training or tuning data is the examples a model learns from, if you train or adapt a model. Context data is information given to the model at the moment of use, such as a product catalogue or a user's order history. And evaluation data is examples with known good answers, used to test quality. Even with a ready made model, you still need context and evaluation data.
 
