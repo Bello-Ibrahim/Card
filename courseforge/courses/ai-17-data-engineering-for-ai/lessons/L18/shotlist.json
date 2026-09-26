@@ -1,0 +1,192 @@
+{
+  "course_id": "AI-17",
+  "lesson_id": "L18",
+  "duration_s": 295.1,
+  "thumbnail": {
+    "headline": "From Prototype to Product",
+    "slide": {
+      "layout": "title",
+      "title": "From Prototype to Product",
+      "body": "Four green task boxes: load_raw → dbt_build → dbt_docs and export_dataset side by side, with a small play button and a datasheet icon. Small tag: Data Engineering for AI · Lesson 18 · Capstone 3 of 3."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.3,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "From prototype to product",
+      "voiceover": "A pipeline that only runs when you type commands is a prototype. A pipeline that runs every night, stops on bad data, explains itself and delivers a ready dataset is a product. Today, your capstone becomes a product."
+    },
+    {
+      "scene": 2,
+      "start": 16.3,
+      "end": 24.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Capstone Part 3: Orchestrate, Document and Present",
+        "body": "Data Engineering for AI · Lesson 18 of 18 · Capstone step 3 of 3"
+      },
+      "voiceover": "In step two, you built and tested your dbt layers. This last step has three pieces: orchestrate, document and present."
+    },
+    {
+      "scene": 3,
+      "start": 24.9,
+      "end": 51.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "1. Orchestrate",
+        "body": "load_raw ({{ ds }}) → dbt_build (models + tests) → [dbt_docs, export_dataset] in parallel. A red cross on a failed test blocks the arrow to export. Retries + idempotent tasks."
+      },
+      "voiceover": "First, orchestrate. One Airflow DAG runs the whole pipeline in order. It loads the raw data for the logical date, runs the dbt build, generates the documentation and exports the dataset. Because the build stops on failed error tests, a bad load never reaches the export. Use retries with a delay, and keep every task idempotent, so a rerun is always safe."
+    },
+    {
+      "scene": 4,
+      "start": 51.5,
+      "end": 73.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "2. Document",
+        "body": "dbt docs generate · every model described · lineage from each source to the mart · datasheet with real counts, date range and split"
+      },
+      "voiceover": "Second, document. Generate the dbt documentation, and check that every model has a description, and that the lineage graph connects each source to the final mart. Then finish your datasheet with the real row counts, date range and split of your export. The numbers in the datasheet must match the files."
+    },
+    {
+      "scene": 5,
+      "start": 73.4,
+      "end": 99.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "3. Present in 3 minutes",
+        "body": "Timeline bar: 30s use case and label · 60s lineage · 45s tests and one caught problem · 30s green Airflow run · 15s files and main limit."
+      },
+      "voiceover": "Third, present. Record a three-minute walkthrough for a colleague who did not build the pipeline. Spend half a minute on the use case and label, one minute on the lineage, forty-five seconds on the tests and a problem they caught, half a minute on the green Airflow run, and fifteen seconds on the files and the main limit."
+    },
+    {
+      "scene": 6,
+      "start": 99.1,
+      "end": 118.0,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "handing over house keys to new owner",
+      "on_screen_text": "Keys plus the manual",
+      "voiceover": "The walkthrough is like handing over the keys of a house with its manual. You show where the water and electricity come in, which switch does what, and what to check when something stops working. The new owner should not need to call you."
+    },
+    {
+      "scene": 7,
+      "start": 118.0,
+      "end": 132.6,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "dairy farmers collecting fresh milk cans",
+      "on_screen_text": "Hana · dairy cooperative · Addis Ababa",
+      "voiceover": "Hana is a data engineer at a dairy cooperative near Addis Ababa, Ethiopia. Her capstone predicts tomorrow's milk collection at each collection centre, so the cooperative can send the right number of cooling trucks."
+    },
+    {
+      "scene": 8,
+      "start": 132.6,
+      "end": 159.2,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open dags/milk_capstone.py and show the code from content.md, with the Airflow 2 import comments",
+        "Highlight schedule=\"0 2 * * *\" (every day at 02:00) and default_args retries 2, retry_delay 10 minutes",
+        "Highlight the four BashOperator tasks and load_raw >> dbt_build >> [dbt_docs, export]"
+      ],
+      "voiceover": "She opens her DAG file. It runs every day at two in the morning, with two retries, ten minutes apart. There are four bash tasks: load the raw data for the logical date, build with dbt, generate the docs, and export the split. The last line runs the load, then the build, and then the docs and the export side by side."
+    },
+    {
+      "scene": 9,
+      "start": 159.2,
+      "end": 171.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Trigger milk_capstone in the web interface",
+        "Open the graph view: load_raw, then dbt_build, then dbt_docs and export_dataset side by side, all green"
+      ],
+      "on_screen_text": "All tasks green",
+      "voiceover": "She triggers the DAG in the web interface. In the graph view, the load runs first, then the build, and then the docs and the export run in parallel."
+    },
+    {
+      "scene": 10,
+      "start": 171.6,
+      "end": 189.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open the dbt_build task log and highlight the summary line: passed tests and one expected warning",
+        "Show the output folder: train.parquet, test.parquet, datasheet.md",
+        "Run a count query on train.parquet and test.parquet and compare with the datasheet numbers"
+      ],
+      "voiceover": "In the build log, the summary line shows the passed tests and one expected warning. The output folder holds the training file, the test file and the datasheet. She checks the files with a count query, and the numbers match the datasheet."
+    },
+    {
+      "scene": 11,
+      "start": 189.6,
+      "end": 198.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open the dbt documentation site",
+        "Follow the lineage graph from raw.collections to fct_centre_features"
+      ],
+      "voiceover": "Then she opens the dbt documentation site, and follows the lineage from the raw collections table to the centre features table."
+    },
+    {
+      "scene": 12,
+      "start": 198.6,
+      "end": 216.2,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Start the screen recording",
+        "Walk through use case, lineage, tests, green run and output files, following the timing plan",
+        "Caption: limit, two new centres need a human check"
+      ],
+      "on_screen_text": "Name the main limit",
+      "voiceover": "Finally, she starts her screen recorder and gives the three-minute walkthrough, with the timing plan. She names one limit clearly. Two collection centres opened recently, so the model has little history for them, and their predictions need a human check."
+    },
+    {
+      "scene": 13,
+      "start": 216.2,
+      "end": 245.3,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Show results, not every line",
+      "voiceover": "A common mistake is to read code line by line and run out of time before showing the result. Show the lineage, the tests and a green run, and open code only to answer a specific question. The viewer needs to understand what the pipeline does, how it protects data quality, and how to check that it worked. Before recording, close any window with passwords or personal data."
+    },
+    {
+      "scene": 14,
+      "start": 245.3,
+      "end": 270.2,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. One DAG: load, dbt build, docs, export; retries + idempotent tasks. 2. Failed error tests stop bad data before export. 3. Walkthrough: lineage, tests, green run."
+      },
+      "voiceover": "Let's recap. First, one Airflow DAG runs the full pipeline: load, build, documentation and export, with retries and idempotent tasks. Second, the build stops on failed error tests, so bad data never reaches your AI-ready dataset. Third, a short walkthrough of lineage, tests and a green run lets a colleague understand and trust your pipeline without you."
+    },
+    {
+      "scene": 15,
+      "start": 270.2,
+      "end": 295.1,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Submit your capstone",
+      "voiceover": "Now it is your turn, for the last capstone step. Run your full pipeline from Airflow, export the dataset and the datasheet, and record your walkthrough. Then submit your project folder, your files, your design page and your recording, with the rubric's checklist. Congratulations on finishing Data Engineering for AI. You now build pipelines that AI can trust."
+    }
+  ]
+}

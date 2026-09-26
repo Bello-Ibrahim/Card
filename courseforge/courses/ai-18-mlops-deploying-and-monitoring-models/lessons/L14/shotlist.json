@@ -1,0 +1,229 @@
+{
+  "course_id": "AI-18",
+  "lesson_id": "L14",
+  "duration_s": 291.4,
+  "thumbnail": {
+    "headline": "Challenger vs Champion",
+    "slide": {
+      "layout": "title",
+      "title": "Challenger vs Champion",
+      "body": "Two model icons on a scoreboard: 'champion' and 'challenger', with an F1 score under each. A small person icon with an 'Approve' button. Small tag: MLOps · Lesson 14."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.6,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Automate the work, own the decision",
+      "voiceover": "Every month, someone retrains the model by hand, looks at one number, and deploys it. What if the new model is worse, and that person is on holiday? Automation can do the routine work. A person should still own the decision."
+    },
+    {
+      "scene": 2,
+      "start": 17.6,
+      "end": 33.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "A retraining pipeline",
+        "body": "Three boxes: 1 Retrain → register as 'challenger'. 2 Compare with 'champion'. 3 Promote after approval. Box 1 highlighted."
+      },
+      "voiceover": "Last lesson, we published images automatically. Now we automate the model itself. A retraining pipeline has three steps. First, retrain on the latest data, and register the result as a new version with the alias challenger."
+    },
+    {
+      "scene": 3,
+      "start": 33.0,
+      "end": 52.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Compare fairly",
+        "body": "Champion and challenger → same fixed test set (random_state=42) → F1 each. Rule: promote only if challenger > champion + 0.01. compare.py exits 0 (win) or 1 (lose)."
+      },
+      "voiceover": "Second, compare the challenger with the current champion, on the same fixed test set, with the same metric. The challenger must win by a clear margin, not by noise. In our script, it must beat the champion's F1 score by more than zero point zero one."
+    },
+    {
+      "scene": 4,
+      "start": 52.7,
+      "end": 67.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Promote with aliases",
+        "body": "Registry versions v1, v2. Before: champion → v1, challenger → v2. After: champion → v2, previous → v1. Label: rollback = move champion back to previous."
+      },
+      "voiceover": "Third, promote only if the challenger wins, and only after a person approves. Promotion moves the champion alias to the new version, and keeps the old one as previous. So rollback stays one simple step."
+    },
+    {
+      "scene": 5,
+      "start": 67.7,
+      "end": 94.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Schedule and approval",
+        "body": "Calendar icon: schedule, Mondays 03:00 UTC · button icon: workflow_dispatch. Job retrain → (only if promote = true) → job promote, environment: production, paused for reviewer approval."
+      },
+      "voiceover": "In GitHub Actions, a schedule trigger runs the workflow on a timetable, for example every Monday at three in the morning, UTC. A manual trigger adds a run button for testing. For the approval, the promote job uses an environment with required reviewers. It waits until an approved person clicks approve. The timetable uses UTC, so check the time in your own country."
+    },
+    {
+      "scene": 6,
+      "start": 94.7,
+      "end": 110.1,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "goalkeeper training on football pitch",
+      "on_screen_text": "Same match, coach decides",
+      "voiceover": "Think of a sports team choosing a goalkeeper. The challenger and the champion play the same training match. The challenger replaces the champion only after a clearly better performance, and the coach still signs the decision."
+    },
+    {
+      "scene": 7,
+      "start": 110.1,
+      "end": 120.0,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "tea plantation hills in morning light",
+      "on_screen_text": "Nimal · tea exporter · Kandy",
+      "voiceover": "Nimal Perera is an ML engineer at a hypothetical tea exporter in Kandy, Sri Lanka. He builds the pipeline for the wine model."
+    },
+    {
+      "scene": 8,
+      "start": 120.0,
+      "end": 141.0,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open add_challenger.py and highlight the challenger alias being set",
+        "Open compare.py and highlight score('champion'), score('challenger') and the exit rule chall > champ + 0.01",
+        "Open promote.py and highlight the two set_registered_model_alias lines",
+        "Run the three scripts locally against the tracking server"
+      ],
+      "on_screen_text": "Three small scripts",
+      "voiceover": "Before the workflow, he tests the three scripts locally. The first trains and registers a challenger, using the training script from lesson four. The second loads both models by alias, scores them on the fixed test set, and succeeds only on a clear win. The third moves the aliases."
+    },
+    {
+      "scene": 9,
+      "start": 141.0,
+      "end": 155.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open Settings, then Environments",
+        "Create the environment production",
+        "Add himself as a required reviewer and save",
+        "Open .github/workflows/retrain.yml and highlight the schedule, workflow_dispatch, the retrain job and the promote job with environment: production",
+        "Commit the workflow"
+      ],
+      "on_screen_text": "Environment with a reviewer",
+      "voiceover": "First, he creates an environment called production in the repository settings, and adds himself as a required reviewer. Then he adds the retrain workflow, with the schedule, the manual trigger, and the two jobs."
+    },
+    {
+      "scene": 10,
+      "start": 155.6,
+      "end": 177.0,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open the Actions tab and choose the retrain workflow",
+        "Click Run workflow",
+        "Open the retrain job log",
+        "Highlight 'champion F1=0.5568  challenger F1=0.5380'"
+      ],
+      "on_screen_text": "Challenger lost",
+      "voiceover": "He does not wait for Monday. In the Actions tab, he chooses the retrain workflow and clicks run workflow. In the job log, the comparison prints the champion F1 as zero point five five six eight, and the challenger F1 as zero point five three eight zero. The challenger lost."
+    },
+    {
+      "scene": 11,
+      "start": 177.0,
+      "end": 187.3,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Show the promote job marked as skipped in the run summary",
+        "Open the MLflow UI, Models, wine-quality-clf",
+        "Show the champion alias on the same version as before"
+      ],
+      "on_screen_text": "Promotion skipped",
+      "voiceover": "So the promote job is skipped. In the MLflow registry, champion still points to the same version. Nothing changed, and nobody had to check."
+    },
+    {
+      "scene": 12,
+      "start": 187.3,
+      "end": 207.4,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Change the training settings in add_challenger.py and commit",
+        "Click Run workflow again",
+        "Show the promote job waiting for review",
+        "Click Review deployments, select production, click Approve"
+      ],
+      "on_screen_text": "A person approves",
+      "voiceover": "Next, he changes the challenger's training settings so that it wins, and runs the workflow again. This time, the promote job stops and waits for review. Everything before this step ran on its own, but the final step needs a person. He clicks review deployments, then approve."
+    },
+    {
+      "scene": 13,
+      "start": 207.4,
+      "end": 219.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Refresh the MLflow registry page",
+        "Show champion on the new version",
+        "Show previous on the old version"
+      ],
+      "on_screen_text": "Champion moved, previous kept",
+      "voiceover": "He refreshes the registry. Champion now points to the new version, and previous points to the old one. If the new model causes trouble, rollback is one alias change."
+    },
+    {
+      "scene": 14,
+      "start": 219.8,
+      "end": 239.5,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Score both now, same test set",
+      "voiceover": "The common mistake is to compare the challenger's score from its own training run with the champion's score from months ago. Different test data makes the comparison meaningless. Score both models now, on the same fixed test set. If fairness across groups matters, compare that too."
+    },
+    {
+      "scene": 15,
+      "start": 239.5,
+      "end": 263.9,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Retrain, compare on the same test set, promote on a clear win. 2. Move champion, keep previous. 3. Schedule the work, a person approves."
+      },
+      "voiceover": "Let's recap. First, a retraining pipeline retrains, compares challenger and champion on the same test set, and promotes only on a clear win. Second, promotion moves the champion alias and keeps the old version as previous, so rollback stays one step. Third, a scheduled workflow can do the routine work, but a person approves the final promotion."
+    },
+    {
+      "scene": 16,
+      "start": 263.9,
+      "end": 282.8,
+      "section": "CTA",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Exercise: retrain and promote",
+        "body": "add_challenger.py · compare.py · promote.py · production environment with reviewer · retrain.yml · one losing run, one winning run · check champion and previous · about 45 minutes"
+      },
+      "voiceover": "In the exercise below this video, you will build this scheduled workflow, run it once when the challenger loses and once when it wins, approve the promotion, and check the aliases. Add two sentences on your winning margin. It takes about forty-five minutes."
+    },
+    {
+      "scene": 17,
+      "start": 282.8,
+      "end": 291.4,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Monitoring Model Services",
+      "voiceover": "That completes week three. Next week we watch our model in production, starting with Monitoring Model Services. See you there."
+    }
+  ]
+}

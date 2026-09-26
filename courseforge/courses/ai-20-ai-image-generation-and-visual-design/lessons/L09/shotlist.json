@@ -1,0 +1,195 @@
+{
+  "course_id": "AI-20",
+  "lesson_id": "L09",
+  "duration_s": 295.2,
+  "thumbnail": {
+    "headline": "Find the Flaws Fast",
+    "slide": {
+      "layout": "title",
+      "title": "Find the Flaws Fast",
+      "body": "Generated image of a restaurant table with mezze dishes and a menu card, five numbered teal circles marking flaws. Small tag: AI Image Generation · Lesson 9."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.4,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Six fingers? Chiken?",
+      "voiceover": "At first glance, the image looks perfect. Then a customer points out that the waiter has six fingers, and the menu spells chicken wrong. Small flaws like these make a brand look careless. The good news is that most of them follow patterns."
+    },
+    {
+      "scene": 2,
+      "start": 18.4,
+      "end": 34.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Spotting and Fixing Common Flaws",
+        "body": "AI Image Generation and Visual Design · Lesson 9 of 12. A five-item checklist with empty tick boxes."
+      },
+      "voiceover": "Remember from lesson one, generators learn what things usually look like, not how they work. That is why some flaws appear again and again. So use this five-point quality checklist on every image before you publish it."
+    },
+    {
+      "scene": 3,
+      "start": 34.7,
+      "end": 57.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "The quality checklist, part 1",
+        "body": "1. Hands and faces: count fingers, check eyes, teeth, ears · cause: many small parts. 2. Text and logos: misspellings, fake logos · cause: models do not spell reliably. 3. Reflections and shadows · cause: the model imitates light, it does not calculate it."
+      },
+      "voiceover": "One, hands and faces. Count the fingers, and check the eyes, teeth and ears. They have many small parts and positions. Two, text and logos. Look for misspelled words and fake logo shapes, because most models do not spell reliably. Three, reflections and shadows. The model does not calculate real light. It imitates patterns."
+    },
+    {
+      "scene": 4,
+      "start": 57.8,
+      "end": 79.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "The quality checklist, part 2",
+        "body": "4. Repeated patterns and objects · cause: large areas filled with similar patterns, often after Expand (L07). 5. Style drift across a set · cause: changed style block or no reference image (L06)."
+      },
+      "voiceover": "Four, repeated patterns, like identical faces in a crowd, copied tiles, or a chair leg that joins the floor twice. The model fills large areas with similar patterns, especially after an expand. And five, style drift across a set, when the style block changed or there was no reference image."
+    },
+    {
+      "scene": 5,
+      "start": 79.2,
+      "end": 102.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Choose a fix",
+        "body": "Decision flow from 'Flaw found': large or in main subject → Regenerate · small, rest is good → Edit the area (generative fill) · near the edge → Crop · text → remove and add in Canva (L08)."
+      },
+      "voiceover": "For each flaw, choose one of three fixes. Regenerate when the flaw is large, in the main subject, or when many things are wrong. Edit the area with generative fill when the flaw is small. Crop it out when it is near the edge. And for text, remove it and add real text in Canva."
+    },
+    {
+      "scene": 6,
+      "start": 102.8,
+      "end": 121.2,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "person proofreading a printed letter",
+      "on_screen_text": "Proofread every image",
+      "voiceover": "Checking an AI image is like proofreading a letter before you send it. You read slowly, line by line, looking for the mistakes you know are common. A quick look at the whole page is not enough. The same is true for images."
+    },
+    {
+      "scene": 7,
+      "start": 121.2,
+      "end": 141.3,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Layla's lunch image",
+        "body": "The generated table with mezze dishes and a menu card, shown full size. Label: family restaurant · Amman, Jordan."
+      },
+      "voiceover": "Let's work through an example. Layla manages a family restaurant in Amman, Jordan. She generated an image of a table with mezze dishes and a printed menu card for her new lunch offer. She checks it with the checklist, one point at a time, at full size."
+    },
+    {
+      "scene": 8,
+      "start": 141.3,
+      "end": 161.4,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "1 Hands: crop",
+        "body": "Before: zoom on the hand at the edge, with a bent thumb circled. After: the cropped image without the hand. Fix label: Crop."
+      },
+      "voiceover": "Hands and faces. A waiter's hand at the edge has four fingers and a thumb that bends the wrong way. It is at the edge, and not needed, so she crops it out. Cropping uses no credits, and the rest of the image stays exactly the same."
+    },
+    {
+      "scene": 9,
+      "start": 161.4,
+      "end": 176.4,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "2 Text: fill, then Canva",
+        "body": "Before: menu card reading 'Lucnh' with warped letters. Middle: plain cream card after generative fill. After: card with clean 'Lunch' text added in Canva."
+      },
+      "voiceover": "Text. The menu card has warped letters, and the word lunch is spelled wrong. She uses generative fill to replace the lettering with a plain cream card, then adds the real menu text in Canva."
+    },
+    {
+      "scene": 10,
+      "start": 176.4,
+      "end": 194.4,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "3 Shadows: regenerate",
+        "body": "Before: arrows show light from the left and shadows also to the left (wrong). After: regenerated image, shadows to the right. Prompt line added: 'soft window light from the left, shadows falling to the right'."
+      },
+      "voiceover": "Shadows. The bowls' shadows fall to the left, but the window light also comes from the left. That is a large, noticeable error, so she regenerates, and adds soft window light from the left, shadows falling to the right, to the prompt."
+    },
+    {
+      "scene": 11,
+      "start": 194.4,
+      "end": 205.5,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "4 Repeats: edit the area",
+        "body": "Before: two identical olive dishes circled. After: one replaced by 'small bowl of pickled vegetables' using generative fill."
+      },
+      "voiceover": "Repeated patterns. Two olive dishes are identical in shape and position. She uses generative fill on one dish, with the prompt small bowl of pickled vegetables."
+    },
+    {
+      "scene": 12,
+      "start": 205.5,
+      "end": 221.4,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "5 Drift: palette line",
+        "body": "Three menu images in a row; the new one is visibly cooler. After: the regenerated image matches the warm palette of the other two. Label: palette line from the style block added."
+      },
+      "voiceover": "Style drift. Next to her other two menu images, the new one is cooler in colour. So she adds the palette line from her style block, and regenerates. After these fixes, the image is ready for Canva."
+    },
+    {
+      "scene": 13,
+      "start": 221.4,
+      "end": 251.0,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Full size, zoom in, smallest fix",
+      "voiceover": "A common mistake is to check images only on a small phone preview. Flaws like extra fingers or broken letters are easy to miss at that size. Always view each image at full size, and zoom into hands, text and edges. Another mistake is to regenerate the whole image for every small flaw. That can create new flaws and waste credits. Choose the smallest fix that solves the problem."
+    },
+    {
+      "scene": 14,
+      "start": 251.0,
+      "end": 274.6,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Five flaws: hands and faces, text, shadows, repeats, drift. 2. Know the cause to choose the fix. 3. Smallest fix first; real text in a design tool."
+      },
+      "voiceover": "Let's recap. First, check every image for five common flaws: hands and faces, text and logos, reflections and shadows, repeated patterns, and style drift. Second, each flaw has a likely cause, and knowing it helps you choose the right fix. Third, use the smallest fix that works, and add real text in a design tool."
+    },
+    {
+      "scene": 15,
+      "start": 274.6,
+      "end": 295.2,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Copyright, Licences and Ethics",
+      "voiceover": "Now it is your turn. In the exercise below, you will review six sample images with the checklist, name each flaw and its likely cause, and choose a fix. It takes about twenty minutes. In the next lesson, we look at copyright, licences and ethics. See you there."
+    }
+  ]
+}

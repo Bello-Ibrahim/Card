@@ -1,0 +1,231 @@
+{
+  "course_id": "AI-21",
+  "lesson_id": "L05",
+  "duration_s": 301.7,
+  "thumbnail": {
+    "headline": "Fix the Look First",
+    "slide": {
+      "layout": "title",
+      "title": "Fix the Look First",
+      "body": "Three small still frames in a row, same warm palette, a teal play arrow on the third. Small tag: AI Video Production and Motion · Lesson 5."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.0,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Why does every clip look different?",
+      "voiceover": "You generate a beautiful clip. Then the next clip has different colours, a different room and a different person. Many creators solve this before they generate any motion at all. They start with still images."
+    },
+    {
+      "scene": 2,
+      "start": 15.0,
+      "end": 25.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Keyframes: From Still Image to Motion",
+        "body": "AI Video Production and Motion · Lesson 5 of 14"
+      },
+      "voiceover": "In the last lesson, you learned to write video prompts. Today, you learn a way to fix the look of your video before anything moves."
+    },
+    {
+      "scene": 3,
+      "start": 25.7,
+      "end": 41.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "What is a keyframe?",
+        "body": "Three steps with arrows: Image generator → Check the still → Image-to-video tool adds motion."
+      },
+      "voiceover": "A keyframe is a still image that shows exactly how a shot should look. You create it with an image generator and check it. Only then do you add motion, with an image-to-video tool."
+    },
+    {
+      "scene": 4,
+      "start": 41.1,
+      "end": 62.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Why start from a still?",
+        "body": "Control: fix composition, colours and characters · Cost: quicker to try many versions · Consistency: one look across all clips"
+      },
+      "voiceover": "Why start from a still? There are three reasons. Control, because you fix the composition, colours and characters first. Cost, because images are usually quicker to try, so you can test many versions. And consistency. When all keyframes share one look, the clips made from them usually share it too."
+    },
+    {
+      "scene": 5,
+      "start": 62.5,
+      "end": 84.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "The style block",
+        "body": "Style: warm cinematic photography, golden hour light, terracotta and teal colour palette, shallow depth of field, soft film grain, 16:9."
+      },
+      "voiceover": "The key to consistent keyframes is a style block. This is a fixed piece of text that you paste, unchanged, at the end of every image prompt. It describes the look, not the content. You can see an example on screen, with warm cinematic light and a terracotta and teal palette."
+    },
+    {
+      "scene": 6,
+      "start": 84.4,
+      "end": 98.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Two parts of every prompt",
+        "body": "Three prompt bars stacked. Left segment of each is different (subject, action, setting) in grey. Right segment of each is identical, in teal, labelled: style block, never changes."
+      },
+      "voiceover": "So every prompt has two parts. The first part changes each time. It says the subject, the action and the setting. The second part is the style block, and it never changes."
+    },
+    {
+      "scene": 7,
+      "start": 98.1,
+      "end": 119.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "A fixed character description",
+        "body": "Age range · hair · clothing · one or two clear details. Reuse it word for word. Fictional characters only."
+      },
+      "voiceover": "The same idea works for people. If a person appears in more than one shot, write one fixed character description, and reuse it word for word. Include an age range, hair, clothing and one or two clear details. Use fictional characters only. Do not create keyframes of real, identifiable people."
+    },
+    {
+      "scene": 8,
+      "start": 119.5,
+      "end": 134.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Choose the shape first",
+        "body": "Left: wide 16:9 frame, labelled horizontal. Right: tall 9:16 frame, labelled vertical. Note: changing later means cropping."
+      },
+      "voiceover": "One more thing. Generate keyframes in the aspect ratio of your final video. That is usually sixteen by nine for horizontal, or nine by sixteen for vertical. If you change it later, you have to crop."
+    },
+    {
+      "scene": 9,
+      "start": 134.9,
+      "end": 152.5,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "film crew reviewing set photos on a board",
+      "on_screen_text": "Agree on the look first",
+      "voiceover": "Keyframes are like the costume and set photos a film team takes before shooting. Everyone agrees on the look from the photos. So on the day of filming, nobody needs to guess what the room or the actor should look like."
+    },
+    {
+      "scene": 10,
+      "start": 152.5,
+      "end": 166.6,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "tiled courtyard with fountain and orange trees",
+      "on_screen_text": "Youssef's riad hotel · Marrakech",
+      "voiceover": "Let's see an example. Youssef is a marketing assistant at a riad hotel in Marrakech, Morocco. The hotel is made up for this lesson. He needs three shots that feel like one place."
+    },
+    {
+      "scene": 11,
+      "start": 166.6,
+      "end": 178.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Youssef's style block",
+        "body": "Style: warm editorial travel photography, late afternoon sun, terracotta, cream and deep green palette, soft shadows, gentle film grain, 16:9."
+      },
+      "voiceover": "First, he writes his style block. Warm travel photography, late afternoon sun, and a palette of terracotta, cream and deep green. He will paste it into every prompt."
+    },
+    {
+      "scene": 12,
+      "start": 178.6,
+      "end": 191.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Character description",
+        "body": "A woman in her thirties with curly black hair tied back, wearing a loose white linen shirt and a thin gold bracelet."
+      },
+      "voiceover": "Then a character description for the third shot. A woman in her thirties with curly black hair tied back, a loose white linen shirt and a thin gold bracelet."
+    },
+    {
+      "scene": 13,
+      "start": 191.0,
+      "end": 207.7,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Keyframes 1 and 2",
+        "body": "Left: generated keyframe 1, wide tiled courtyard with fountain, orange trees and carved doors. Right: keyframe 2, close-up of mint tea poured from a silver teapot into a decorated glass. Under each, the prompt ending in '[style block]'."
+      },
+      "voiceover": "Now his three prompts. Keyframe one is a wide view of a tiled courtyard with a small fountain and orange trees. Keyframe two is a close-up of mint tea poured from a silver teapot into a small glass."
+    },
+    {
+      "scene": 14,
+      "start": 207.7,
+      "end": 219.7,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Keyframe 3",
+        "body": "Generated keyframe 3: medium shot of the fictional woman reading on a rooftop terrace with low cushions, city in soft focus. Prompt below: 'Medium shot of [character description] reading a book on a rooftop terrace… [style block]'"
+      },
+      "voiceover": "Keyframe three is a medium shot of his character reading on a rooftop terrace, with the city soft behind her. Each prompt ends with the same style block."
+    },
+    {
+      "scene": 15,
+      "start": 219.7,
+      "end": 238.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Check side by side",
+        "body": "The three chosen keyframes in a row. A small red circle on an earlier version of keyframe 2 marks the warped handle, then the fixed version. Tick below the row: colours and light match."
+      },
+      "voiceover": "He generates four versions of each keyframe and chooses the best. Keyframe two has a warped teapot handle, so he regenerates it. Then he puts the three images side by side. The colours and light match. They are ready for Kling, in lesson seven."
+    },
+    {
+      "scene": 16,
+      "start": 238.6,
+      "end": 254.5,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Same style block, every time",
+      "voiceover": "A common mistake is changing the style words a little each time. Warm light in one prompt, sunset glow in the next. Each change moves the look. Copy and paste the exact same style block every time."
+    },
+    {
+      "scene": 17,
+      "start": 254.5,
+      "end": 278.1,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. A keyframe fixes the look before motion. 2. Unchanged style block + fixed character description = consistency. 3. Final aspect ratio, side-by-side check, fictional people only."
+      },
+      "voiceover": "Let's recap. First, a keyframe is a still image that fixes the look of a shot before motion is added. Second, a style block pasted unchanged into every prompt, and a fixed character description, keep your images consistent. Third, use your final aspect ratio, check the images side by side, and use fictional people only."
+    },
+    {
+      "scene": 18,
+      "start": 278.1,
+      "end": 301.7,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Text-to-Video in Google Flow",
+      "voiceover": "Now it is your turn. Choose three shots you plan to animate. Write one style block, and a character description if you need one. Then generate three keyframes with any image generator, and check them side by side. It takes about thirty minutes. Next, we start generating motion in Text-to-Video in Google Flow."
+    }
+  ]
+}

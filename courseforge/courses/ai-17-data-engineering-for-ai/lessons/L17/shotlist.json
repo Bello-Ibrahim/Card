@@ -1,0 +1,217 @@
+{
+  "course_id": "AI-17",
+  "lesson_id": "L17",
+  "duration_s": 297.1,
+  "thumbnail": {
+    "headline": "Every Problem Becomes a Test",
+    "slide": {
+      "layout": "title",
+      "title": "Every Problem Becomes a Test",
+      "body": "Three layer bars stacked left to right (stg_, int_, fct_), each with a small check badge, and one yellow warning badge on staging. Small tag: Data Engineering for AI · Lesson 17 · Capstone 2 of 3."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.0,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Problems become rules and tests",
+      "voiceover": "Your raw data is loaded, and your problems are listed. This step turns that list into a pipeline. Every problem becomes either a cleaning rule or a test, and every layer has a clear job."
+    },
+    {
+      "scene": 2,
+      "start": 15.0,
+      "end": 26.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Capstone Part 2: Transform and Test",
+        "body": "Data Engineering for AI · Lesson 17 of 18 · Capstone step 2 of 3"
+      },
+      "voiceover": "In capstone step one, you designed your pipeline and loaded the raw data. Now you build the dbt project, in the three layers you already know."
+    },
+    {
+      "scene": 3,
+      "start": 26.1,
+      "end": 51.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Three layers",
+        "body": "stg_ (one per raw table: rename, cast, dedupe, no joins) → int_ (join and reshape: one row per delivered shipment with label) → fct_ / mart_ (feature table)."
+      },
+      "voiceover": "Staging has one model per raw table. It renames, casts, removes exact duplicates and tests rows, with no joins. Intermediate models join and reshape staging models into useful building blocks, such as one row per delivered shipment with its label. Learners often skip this layer, but it keeps marts short and lets two marts share the same logic."
+    },
+    {
+      "scene": 4,
+      "start": 51.0,
+      "end": 61.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "The mart",
+        "body": "One row per entity per feature date · features only from data before that date · the label"
+      },
+      "voiceover": "The mart is the final feature table, with one row per entity per feature date. Its features use only data from before that date."
+    },
+    {
+      "scene": 5,
+      "start": 61.3,
+      "end": 87.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "The week 3 checklist",
+        "body": "Makes the dataset wrong → error. Needs review, still usable → warn. Business rule, not a column rule → singular test."
+      },
+      "voiceover": "Then add tests at each layer, with the checklist from week three. Would this problem make the AI dataset wrong? Then make it an error, so the build stops before the mart. Does a person need to review it, but the data is still usable? Make it a warning. Is it a business rule, not a column rule? Write a singular test."
+    },
+    {
+      "scene": 6,
+      "start": 87.9,
+      "end": 98.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Build often",
+        "body": "dbt build → build and test each model in dependency order"
+      },
+      "voiceover": "Run the build command often. It builds and tests each model in dependency order, so you find each problem in the layer where it starts."
+    },
+    {
+      "scene": 7,
+      "start": 98.6,
+      "end": 119.2,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "car factory assembly line inspection",
+      "on_screen_text": "Check early, check often",
+      "voiceover": "Layers with tests are like the checkpoints in a car factory. The engine is tested before it goes into the car, and the car is tested before it leaves the factory. A fault found at the engine check costs much less than a fault found by the customer."
+    },
+    {
+      "scene": 8,
+      "start": 119.2,
+      "end": 129.1,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "delivery trucks at logistics warehouse",
+      "on_screen_text": "Yusuf · logistics company · Istanbul",
+      "voiceover": "Yusuf is a data analyst at a logistics company in Istanbul, Türkiye. His capstone predicts whether a shipment will arrive later than promised."
+    },
+    {
+      "scene": 9,
+      "start": 129.1,
+      "end": 139.4,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Show the project tree: models/staging/stg_shipments.sql",
+        "models/intermediate/int_shipments_labelled.sql",
+        "models/marts/fct_shipment_features.sql"
+      ],
+      "voiceover": "He shows his project tree: one staging model for shipments, one intermediate model that adds the label, and one mart for the shipment features."
+    },
+    {
+      "scene": 10,
+      "start": 139.4,
+      "end": 156.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open int_shipments_labelled.sql and show the model from content.md",
+        "Highlight promised_hours, is_late and where delivered_at is not null"
+      ],
+      "voiceover": "He opens the intermediate model. It reads the staging model, calculates the promised hours between pick-up and the promised time, and marks a shipment as late when it was delivered after the promised time. It keeps only delivered shipments."
+    },
+    {
+      "scene": 11,
+      "start": 156.5,
+      "end": 181.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run the compiled SQL in DuckDB",
+        "Show three rows: S1 27 false, S2 32 true, S3 28 false",
+        "Caption: S4 has no delivery time, so no label"
+      ],
+      "on_screen_text": "Three labelled shipments",
+      "voiceover": "On four invented shipments, the compiled query in DuckDB returns three rows. S one has twenty-seven promised hours and is not late. S two has thirty-two hours and is late. S three has twenty-eight hours and is not late. S four has no delivery time yet, so it has no label and stays out of training."
+    },
+    {
+      "scene": 12,
+      "start": 181.8,
+      "end": 196.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open fct_shipment_features.sql",
+        "Highlight features: promised_hours, vehicle_type, 30-day route late rate before pick-up, label is_late"
+      ],
+      "voiceover": "The mart has one row per shipment at pick-up time. Its features include the promised hours, the vehicle type, and the late rate on the same route in the thirty days before pick-up."
+    },
+    {
+      "scene": 13,
+      "start": 196.8,
+      "end": 219.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open schema.yml",
+        "Show the test plan table from content.md: staging, intermediate and mart tests with their severity",
+        "Highlight the warn on delivered_at and the leakage singular test in the mart"
+      ],
+      "voiceover": "In the schema file, he shows his test plan. Staging has unique and not null IDs, accepted vehicle types, and a warning for missing delivery times. Intermediate has a unique ID and a singular test for delivery before pick-up. The mart checks the label, and has a leakage test for route features."
+    },
+    {
+      "scene": 14,
+      "start": 219.5,
+      "end": 228.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run: dbt build",
+        "Show one warning for S4's missing delivered_at and all error tests passing"
+      ],
+      "on_screen_text": "One warning, zero errors",
+      "voiceover": "He runs the build. One warning appears, for the missing delivery time of S four, as expected. Every error test passes."
+    },
+    {
+      "scene": 15,
+      "start": 228.5,
+      "end": 249.5,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Short models, one job each",
+      "voiceover": "A common mistake is to write all the logic in one large mart. When a test fails, nobody can see which part caused it. Keep each model short, with one job. And do not paste your raw data into an AI tool for test ideas. Describe the columns instead."
+    },
+    {
+      "scene": 16,
+      "start": 249.5,
+      "end": 273.5,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Staging, intermediate, mart: one job, one grain each. 2. Every problem → cleaning rule or test; error or warn on purpose. 3. dbt build often."
+      },
+      "voiceover": "Let's recap. First, build staging, intermediate and mart models, each with one clear job and one clear grain. Second, turn every known problem into a cleaning rule or a test, and choose error or warn with the week three checklist. Third, run the build often, so each problem is caught in the layer where it starts."
+    },
+    {
+      "scene": 17,
+      "start": 273.5,
+      "end": 297.1,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Capstone Part 3",
+      "voiceover": "Now it is your turn. This is capstone step two. Build staging, intermediate and mart models for your dataset, with at least eight tests, including one singular test and one leakage check. Make every test pass, and explain each warning. It takes about seventy-five minutes. Next lesson: Capstone Part Three, Orchestrate, Document and Present."
+    }
+  ]
+}

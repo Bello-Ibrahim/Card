@@ -1,0 +1,206 @@
+{
+  "course_id": "AI-22",
+  "lesson_id": "L03",
+  "duration_s": 302.9,
+  "thumbnail": {
+    "headline": "Direct Your AI Voice",
+    "slide": {
+      "layout": "title",
+      "title": "Direct Your AI Voice",
+      "body": "Simple laptop outline with a teal waveform and three small red markers at problem points; headphones icon beside it. Small tag: AI Voice, Audio and Music · Lesson 3."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 20.1,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "The skill is listening and fixing",
+      "voiceover": "You have a clear script. Now you want it spoken in a calm, natural voice, without a studio or a voice actor. A free text-to-speech tool can make a first version in minutes. The skill is not pressing generate. The skill is listening and fixing."
+    },
+    {
+      "scene": 2,
+      "start": 20.1,
+      "end": 40.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Making a Voiceover with Free Text-to-Speech",
+        "body": "AI Voice, Audio and Music · Lesson 3 of 10"
+      },
+      "voiceover": "In the last lesson, you wrote a script for the ear. Today, you give it a voice. Most free text-to-speech tools follow the same workflow, even though their screens look different. We show ElevenLabs on its free plan, but these steps work in most tools."
+    },
+    {
+      "scene": 3,
+      "start": 40.2,
+      "end": 58.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "The TTS workflow",
+        "body": "Six steps in a row, revealed one by one: 1 Choose language, accent, voice → 2 Set speed → 3 Add pauses → 4 Fix pronunciation → 5 Listen → 6 Export"
+      },
+      "voiceover": "There are six steps. Choose the language, the accent and the voice. Set the speed. Add pauses. Fix pronunciation. Listen for problems. And export. When you choose a voice, test three or four with your own script, not only the demo sentence."
+    },
+    {
+      "scene": 4,
+      "start": 58.2,
+      "end": 77.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Listen for five problems",
+        "body": "Robotic rhythm · Wrong stress · Wrong pronunciation · Pace (too fast, too slow, rushed) · Odd sounds (clicks, strange ending)"
+      },
+      "voiceover": "When you listen, check for five things. Robotic rhythm, where every sentence has the same shape. Wrong stress on a word or syllable. Wrong pronunciation. Pace that is too fast, too slow or rushed at the end. And odd sounds, like clicks or a strange ending."
+    },
+    {
+      "scene": 5,
+      "start": 77.9,
+      "end": 103.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Speed, pauses, pronunciation",
+        "body": "Speed: slightly slower for teaching; change in small steps · Pauses: full stops and new paragraphs (some tools accept SSML) · Pronunciation fixes, in order: phonetic spelling ('Wrocław' → 'VROTS-waff') → hyphen or space → pronunciation dictionary"
+      },
+      "voiceover": "A few tips for the middle steps. For teaching content, a slightly slower speed is often clearer, so change it in small steps. Full stops and new paragraphs usually create pauses. And when a name is wrong, try a phonetic spelling first, then a hyphen or space to split the word, then the tool's pronunciation dictionary if it has one."
+    },
+    {
+      "scene": 6,
+      "start": 103.6,
+      "end": 126.3,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "director giving notes to actor rehearsal",
+      "on_screen_text": "You are the director",
+      "voiceover": "Here is a way to think about it. Working with a voice tool is like directing a talented actor who has never seen your script. The actor reads well, but does not know which word matters most, or how to say your company's name. So you give short, clear directions and try again."
+    },
+    {
+      "scene": 7,
+      "start": 126.3,
+      "end": 146.0,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "warehouse forklift safety training",
+      "on_screen_text": "Agnieszka · safety video · Poland",
+      "voiceover": "Let's watch this in action. Agnieszka runs training at a logistics company in Poland. She needs a sixty-second English voiceover for a warehouse safety video. The script mentions a depot in Wrocław, and a rule to keep one and a half metres from moving forklifts."
+    },
+    {
+      "scene": 8,
+      "start": 146.0,
+      "end": 165.3,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "on_screen_text": "Test voices with your own script",
+      "screen_steps": [
+        "Open ElevenLabs text-to-speech and sign in with the demo account",
+        "Paste Agnieszka's ear-ready safety script into the text box",
+        "Set the language to English",
+        "Play four voices on the first paragraph only, one after another",
+        "Select a calm, mid-pitch voice with a neutral international accent"
+      ],
+      "voiceover": "She signs in and pastes her script into the text box. She has already rewritten it for the ear. She sets the language to English, and tests four voices on her first paragraph. She chooses a calm, mid-pitch voice with a neutral international accent."
+    },
+    {
+      "scene": 9,
+      "start": 165.3,
+      "end": 186.7,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "on_screen_text": "Write down each problem and time",
+      "screen_steps": [
+        "Click Generate for the full script",
+        "Play the result from the start with headphones on",
+        "Pause at 0:08 and note: 'Wrocław' sounds like 'Rock-law'",
+        "Pause at 0:21 and note: '1.5 metres' read too quickly",
+        "Pause at 0:50 and note: last three sentences rushed",
+        "Show the three notes with times in a notes app beside the tool"
+      ],
+      "voiceover": "Now she generates the full script and listens with headphones. She writes down three problems, with the time of each one. At eight seconds, Wrocław sounds like rock law. At twenty-one seconds, the safety distance is read too quickly. And at fifty seconds, the last three sentences feel rushed."
+    },
+    {
+      "scene": 10,
+      "start": 186.7,
+      "end": 205.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "on_screen_text": "Fix 1: spelling. Fix 2: words and pause.",
+      "screen_steps": [
+        "Replace 'Wrocław' with 'VROTS-waff' in the text box",
+        "Regenerate the first paragraph and play it: the name now sounds right",
+        "Replace '1.5 metres' with 'one and a half metres'",
+        "Add a full stop straight after the safety rule",
+        "Regenerate and play the rule: the voice now pauses after it"
+      ],
+      "voiceover": "Fix one. In the tool only, she types a phonetic spelling of Wrocław, and generates that paragraph again. Fix two. She changes the number to the words one and a half metres, and adds a full stop after the rule, so the voice pauses."
+    },
+    {
+      "scene": 11,
+      "start": 205.6,
+      "end": 223.2,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "on_screen_text": "Fix 3: slower, with a break",
+      "screen_steps": [
+        "Move the speed slider down one small step",
+        "Add a paragraph break before the final sentence",
+        "Regenerate the full script",
+        "Play the whole file from 0:00 to the end with headphones",
+        "Tick off the three notes as each fix is heard"
+      ],
+      "voiceover": "Fix three. She lowers the speed a little, and adds a paragraph break before the final sentence. Then comes the most important step. She listens again from the very beginning, not only to the parts she changed. All three fixes work."
+    },
+    {
+      "scene": 12,
+      "start": 223.2,
+      "end": 237.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "on_screen_text": "Note tool, plan and date",
+      "screen_steps": [
+        "Open the download options and choose WAV, or the best quality the free plan allows",
+        "Download the file",
+        "Type the tool name, plan, voice name and date into the project notes"
+      ],
+      "voiceover": "Finally, she exports the file as a WAV and writes the tool name, the plan and the date in her project notes. You will need these for your rights log later in the course."
+    },
+    {
+      "scene": 13,
+      "start": 237.8,
+      "end": 257.5,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Listen again from the start",
+      "voiceover": "One common mistake is to fix a problem and export without listening to the whole file again. A change in one place can create a new problem somewhere else. And never paste personal or confidential information into an online tool unless your organisation has approved it."
+    },
+    {
+      "scene": 14,
+      "start": 257.5,
+      "end": 281.5,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Voice → speed → pauses → pronunciation → listen → export. 2. Listen for rhythm, stress, pronunciation, pace, odd sounds; note the time. 3. Check plan limits; note tool, plan and date."
+      },
+      "voiceover": "Let's recap. First, the workflow is choose the voice, set the speed, add pauses, fix pronunciation, listen and export. Second, listen for rhythm, stress, pronunciation, pace and odd sounds, and note the time of each problem. Third, free plans often limit characters, voices and commercial use, so check the plan and note the tool and date."
+    },
+    {
+      "scene": 15,
+      "start": 281.5,
+      "end": 302.9,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Transcripts and Captions",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will make a sixty-second voiceover of your own script, then fix three problems in pace or pronunciation. It takes about thirty minutes. In the next lesson, Transcripts and Captions with Whisper, we turn speech back into text."
+    }
+  ]
+}

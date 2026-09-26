@@ -1,0 +1,193 @@
+{
+  "course_id": "AI-19",
+  "lesson_id": "L08",
+  "duration_s": 295.2,
+  "thumbnail": {
+    "headline": "What Accuracy Hides",
+    "slide": {
+      "layout": "title",
+      "title": "What Accuracy Hides",
+      "body": "Big number 86% on the left. On the right, a 3 × 3 confusion matrix with the glass row highlighted in red. Small tag: Computer Vision Essentials · Lesson 8."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.4,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "86% accurate. Still failing.",
+      "voiceover": "A model reports eighty-six percent accuracy. That sounds good, until you learn that it misses most of the glass bottles it was built to find. One number can hide the most important failure. Today, you learn to see what that number hides."
+    },
+    {
+      "scene": 2,
+      "start": 18.4,
+      "end": 34.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Measuring Classification Quality",
+        "body": "Computer Vision Essentials · Lesson 8 of 16"
+      },
+      "voiceover": "In the last lesson, you fine-tuned a model and saw one accuracy number. Accuracy is the share of all predictions that are correct. It is a useful first number, but it treats every image the same."
+    },
+    {
+      "scene": 3,
+      "start": 34.3,
+      "end": 48.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Unbalanced data",
+        "body": "Bar chart: a tall bar for the large class, two short bars for small classes. The tall bar is mostly green (correct); the short bars are mostly red (wrong)."
+      },
+      "voiceover": "When one class is much larger than the others, we call the data unbalanced. Then a model can reach high accuracy by doing well on the large class and badly on the small ones."
+    },
+    {
+      "scene": 4,
+      "start": 48.9,
+      "end": 68.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "The confusion matrix",
+        "body": "3 × 3 grid. Rows: true class. Columns: predicted class. Diagonal cells green (correct). One off-diagonal cell highlighted: 'glass predicted as plastic'."
+      },
+      "voiceover": "A confusion matrix shows every combination of true class and predicted class. The rows are the true classes, and the columns are the predictions. The diagonal holds the correct answers. Every cell off the diagonal is a specific kind of mistake, like glass predicted as plastic."
+    },
+    {
+      "scene": 5,
+      "start": 68.6,
+      "end": 90.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Precision and recall",
+        "body": "Precision: of everything called 'glass', how much was glass? Low = false alarms. Recall: of all real glass, how much was found? Low = missed cases."
+      },
+      "voiceover": "From it, you get two numbers per class. Precision asks, of all the images the model called this class, how many really were? Low precision means false alarms. Recall asks, of all the images that really were this class, how many did the model find? Low recall means missed cases."
+    },
+    {
+      "scene": 6,
+      "start": 90.0,
+      "end": 111.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Which one matters?",
+        "body": "Missed case is costly → recall · False alarm is costly → precision · F1 = both in one number · Macro average: every class counts equally"
+      },
+      "voiceover": "Which matters more depends on the cost of each mistake. If a missed diseased leaf can spread to a whole field, focus on recall. If a false alarm stops a production line, focus on precision. The F1 score combines both, and the macro average gives every class the same weight."
+    },
+    {
+      "scene": 7,
+      "start": 111.4,
+      "end": 131.5,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "teacher reviewing exam papers at desk",
+      "on_screen_text": "One pass rate hides a class",
+      "voiceover": "Think of a school's overall exam pass rate. A school with ninety percent passes may still fail almost every student in one small class. The confusion matrix is the report for each class, and looking at the wrong images is like talking to the students who failed."
+    },
+    {
+      "scene": 8,
+      "start": 131.5,
+      "end": 149.9,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "plastic bottles and cans on recycling conveyor",
+      "on_screen_text": "Sipho's recycling sorter · Durban",
+      "voiceover": "Sipho Dlamini builds a recycling sorter for a waste company in Durban, South Africa. His model classifies items on a belt as plastic, glass or metal. His test set has eighty plastic, fifteen glass and five metal items, just like the real belt."
+    },
+    {
+      "scene": 9,
+      "start": 149.9,
+      "end": 163.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run the worked-example cell with the labels list, y_true and y_pred",
+        "Show the printed confusion matrix and classification report",
+        "Highlight accuracy 0.86 and recall 0.40 for glass and metal"
+      ],
+      "on_screen_text": "Accuracy 0.86, glass recall 0.40",
+      "voiceover": "In Colab, he prints the confusion matrix and the classification report. Accuracy is zero point eight six. But look at recall. For glass and metal, it is only zero point four zero."
+    },
+    {
+      "scene": 10,
+      "start": 163.6,
+      "end": 179.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Plot the matrix with ConfusionMatrixDisplay.from_predictions",
+        "Point to the plastic column: 9 glass and 3 metal items"
+      ],
+      "on_screen_text": "When unsure, it says plastic",
+      "voiceover": "He plots the matrix, and the reason is clear. Nine glass items and three metal items were predicted as plastic. The model has learned to say plastic when it is unsure, because plastic dominates the training data."
+    },
+    {
+      "scene": 11,
+      "start": 179.5,
+      "end": 194.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Filter the test images where the true and predicted class differ",
+        "Show 8 of them in a grid with both labels"
+      ],
+      "on_screen_text": "Look at the wrong images",
+      "voiceover": "Numbers tell you which classes fail. To learn why, you look at the images. He filters the wrong predictions and shows eight of them in a grid, with the true and the predicted label on each."
+    },
+    {
+      "scene": 12,
+      "start": 194.9,
+      "end": 218.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Group the wrong images by likely cause: lighting, angle, blur, hidden, background, label error",
+        "Count each group and show that 7 of 9 glass errors are strong top lighting"
+      ],
+      "on_screen_text": "Seven of nine: top lighting",
+      "voiceover": "Then he groups the wrong images by likely cause and counts each group. Of the nine wrong glass images, seven show clear bottles under strong top lighting, where glass looks shiny, like plastic. So he plans two fixes. More glass images under the belt's real lighting, and class weights, so mistakes on small classes cost more."
+    },
+    {
+      "scene": 13,
+      "start": 218.9,
+      "end": 245.9,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Keep the test set realistic",
+      "voiceover": "A common mistake is to balance the test set by removing images from the large class. The test set should reflect the real data, or your numbers promise results you will not get. Keep a realistic test set, and report precision and recall for each class, plus the macro average. If the small classes matter, balance the training data, or use class weights."
+    },
+    {
+      "scene": 14,
+      "start": 245.9,
+      "end": 270.3,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Accuracy hides small-class failures. 2. Confusion matrix; precision = false alarms, recall = missed cases. 3. Group wrong images by cause, fix the biggest group."
+      },
+      "voiceover": "Let's recap. First, accuracy can hide poor results on small classes when data is unbalanced, so always check per-class results. Second, the confusion matrix shows which classes are mixed up, precision counts false alarms, and recall counts missed cases. Third, look at the wrong images and group them by cause, to decide what to fix first."
+    },
+    {
+      "scene": 15,
+      "start": 270.3,
+      "end": 295.2,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Object Detection, Boxes and IoU",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will build a confusion matrix for your fine-tuned model, calculate precision and recall, and explain its most common mistake. It takes about thirty minutes. Next week, we find where objects are, not just what they are. Object Detection: Boxes, Classes and IoU. See you there."
+    }
+  ]
+}

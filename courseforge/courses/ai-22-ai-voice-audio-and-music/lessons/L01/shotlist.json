@@ -1,0 +1,202 @@
+{
+  "course_id": "AI-22",
+  "lesson_id": "L01",
+  "duration_s": 317.2,
+  "thumbnail": {
+    "headline": "Human or AI Voice?",
+    "slide": {
+      "layout": "title",
+      "title": "Human or AI Voice?",
+      "body": "A single sound wave across the card: left half drawn as a simple human profile speaking, right half as a clean teal digital waveform. Small tag: AI Voice, Audio and Music · Lesson 1."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.9,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Real person or computer?",
+      "voiceover": "Close your eyes and listen to a short advert on the radio. Was the voice a real person in a studio, or a computer? Was the music played by a band, or made by software in seconds? Today, it can be hard to tell."
+    },
+    {
+      "scene": 2,
+      "start": 18.9,
+      "end": 35.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "How AI Hears and Speaks",
+        "body": "AI Voice, Audio and Music · Lesson 1 of 10"
+      },
+      "voiceover": "Hi, and welcome to AI Voice, Audio and Music. In this first lesson, we look inside the tools that make these sounds. In this course, we use three families of audio AI, and each one does a different job."
+    },
+    {
+      "scene": 3,
+      "start": 35.6,
+      "end": 57.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "1. Text-to-speech",
+        "body": "Icon of a typed sentence → arrow → 'Voice model' box → arrow → speaker icon with sound waves. Label under the box: voice model = a learned voice"
+      },
+      "voiceover": "The first family is text-to-speech. It turns written text into spoken audio. You type a sentence, choose a voice, and the tool reads it aloud. Each voice comes from a voice model. That is a system that has learned how one voice, or one style of voice, sounds."
+    },
+    {
+      "scene": 4,
+      "start": 57.0,
+      "end": 78.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "2. Speech-to-text",
+        "body": "Microphone with sound waves → arrow → page of text labelled 'Transcript' → arrow → video frame with a caption line at the bottom labelled 'Captions = transcript + timings'"
+      },
+      "voiceover": "The second family is speech-to-text, also called speech recognition. It does the opposite. It listens to spoken audio and writes down the words. The result is a transcript. When each line of the transcript has timings, so it appears on screen at the right moment, it becomes captions."
+    },
+    {
+      "scene": 5,
+      "start": 78.4,
+      "end": 100.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "3. Audio generation",
+        "body": "Short description card (calm · acoustic · slow · guitar) → arrow → music notes → a quiet music track drawn under a voice track, labelled 'Music bed'"
+      },
+      "voiceover": "The third family is audio generation. It creates new sound from a description. The type we use most is AI music. You describe the mood, genre, tempo and instruments, and the tool makes a short piece. A quiet piece of music that plays under a voice is called a music bed."
+    },
+    {
+      "scene": 6,
+      "start": 100.3,
+      "end": 122.2,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "sound waveform on studio computer screen",
+      "on_screen_text": "It learns patterns, not recordings",
+      "voiceover": "All three families work in a similar way. They are trained on many hours of recorded sound. But the system does not store the recordings like a library. It learns patterns. For example, how a voice rises at the end of a question, or how a calm piano piece usually moves."
+    },
+    {
+      "scene": 7,
+      "start": 122.2,
+      "end": 141.9,
+      "section": "Explain",
+      "visual_type": "hero_broll",
+      "broll_tool": "FLOW",
+      "broll_prompt": "A South Asian woman in her thirties sits by a window in a small, warm apartment, wearing headphones and listening closely to an old radio while quietly repeating words to herself; slow dolly-in from medium shot to close-up; soft late-afternoon window light; cinematic, natural colours, shallow depth of field; 7 seconds; no readable text, no logos.",
+      "voiceover": "Think of a language learner who has listened to thousands of speakers on the radio for years. Now they can understand almost anyone. And they can also imitate natural speech, with the right rhythm and tone. They did not memorise every programme. They learned the patterns."
+    },
+    {
+      "scene": 8,
+      "start": 141.9,
+      "end": 149.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "The language learner",
+        "body": "Left: ear icon, 'Understanding = speech-to-text'. Right: mouth icon, 'Imitating = text-to-speech'."
+      },
+      "voiceover": "Speech-to-text is the understanding side of this learner. Text-to-speech is the imitating side."
+    },
+    {
+      "scene": 9,
+      "start": 149.2,
+      "end": 172.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Noise floor",
+        "body": "Waveform with loud speech peaks and a thin flat band of background sound between them, the band labelled 'Noise floor: fan, traffic, hum'. A second waveform below with a lower band, labelled 'Clean recording'."
+      },
+      "voiceover": "One more term will help you later. The noise floor is the level of quiet background sound in a recording when nobody is speaking. That could be a fan, traffic or an electrical hum. A low noise floor means a clean recording. AI clean-up tools try to lower it without damaging the voice."
+    },
+    {
+      "scene": 10,
+      "start": 172.3,
+      "end": 191.2,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "radio presenter at microphone in small studio",
+      "on_screen_text": "Tomás · community radio · Valparaíso",
+      "voiceover": "Let's see how this helps in real work. Tomás produces a weekly community radio programme in Valparaíso, in Chile. He wants AI to save him time. But first, he wants to know which tool does which job. So he writes down his three tasks."
+    },
+    {
+      "scene": 11,
+      "start": 191.2,
+      "end": 215.2,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Tomás's tasks",
+        "body": "Row 1: weekly weather and events update → text in, voice out → Text-to-speech. Row 2: interviews with fishermen → audio in, transcript out → Speech-to-text."
+      },
+      "voiceover": "First, he writes a weekly weather and events update, but has no time to record it. Text goes in, and a voice comes out. That is text-to-speech. Second, he interviews local fishermen and wants a written version for the station's website. Audio goes in, and a transcript comes out. That is speech-to-text."
+    },
+    {
+      "scene": 12,
+      "start": 215.2,
+      "end": 227.2,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Tomás's tasks",
+        "body": "Row 3 added: 20-second intro music bed, gentle acoustic guitar → description in, music out → Audio generation."
+      },
+      "voiceover": "Third, he needs a gentle twenty-second music bed with acoustic guitar under his introduction. A description goes in, and new music comes out. That is audio generation."
+    },
+    {
+      "scene": 13,
+      "start": 227.2,
+      "end": 248.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "One check per task",
+        "body": "Text-to-speech → place names said wrongly · Transcript → names and numbers checked by hand · Music bed → calm enough to sit under speech"
+      },
+      "voiceover": "Then Tomás lists one thing to check for each task. For the update, he will listen for place names the voice says wrongly. For the transcript, he will check names and numbers by hand. And for the music, he will check that it is calm enough to sit under speech."
+    },
+    {
+      "scene": 14,
+      "start": 248.6,
+      "end": 270.9,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "AI predicts sound. It does not understand.",
+      "voiceover": "Now, a common mistake. Many beginners think an AI voice understands the text. It does not. It predicts how the words probably sound. So it may read S T dot as street when you meant saint. The fix is to write clearly for the ear, and always listen to the full result."
+    },
+    {
+      "scene": 15,
+      "start": 270.9,
+      "end": 295.3,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. TTS: text → voice · STT: voice → transcript · Audio generation: description → sound. 2. They learn patterns, not meaning. 3. Key terms: voice model · transcript · captions · noise floor · music bed"
+      },
+      "voiceover": "Let's recap. First, text-to-speech turns text into voice, speech-to-text turns voice into a transcript, and audio generation creates new sound from a description. Second, these tools learn patterns from many hours of sound, but they do not understand meaning. Third, your key terms are voice model, transcript, captions, noise floor and music bed."
+    },
+    {
+      "scene": 16,
+      "start": 295.3,
+      "end": 317.2,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Writing for the Ear",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will listen to four short clips and decide if each one is a human recording, AI speech or AI music. It takes about fifteen minutes. In the next lesson, we learn about writing for the ear. See you there."
+    }
+  ]
+}

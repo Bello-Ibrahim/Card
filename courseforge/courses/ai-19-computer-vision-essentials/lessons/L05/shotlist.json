@@ -1,0 +1,192 @@
+{
+  "course_id": "AI-19",
+  "lesson_id": "L05",
+  "duration_s": 302.6,
+  "thumbnail": {
+    "headline": "Filters That Learn Themselves",
+    "slide": {
+      "layout": "title",
+      "title": "Filters That Learn Themselves",
+      "body": "Left: fabric photo. Right: a 4 × 4 grid of small coloured filter tiles, some showing edge stripes. Small tag: Computer Vision Essentials · Lesson 5."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 19.7,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Who writes the rules?",
+      "voiceover": "In lesson three, you chose the blur size and the edge thresholds yourself. But who could write the rules that separate a healthy leaf from a leaf with early rust, in every light and at every angle? A convolutional neural network does not need those rules."
+    },
+    {
+      "scene": 2,
+      "start": 19.7,
+      "end": 30.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "How CNNs Learn Visual Features",
+        "body": "Computer Vision Essentials · Lesson 5 of 16"
+      },
+      "voiceover": "Welcome to week two. This week, we move from hand-made processing to models that learn. And it all starts with one small idea, the filter."
+    },
+    {
+      "scene": 3,
+      "start": 30.8,
+      "end": 56.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Convolution",
+        "body": "A 3 × 3 grid of numbers slides across a greyscale image, step by step. At each position: multiply and add. Output: a feature map, bright where the pattern matches."
+      },
+      "voiceover": "A filter, also called a kernel, is a small grid of numbers, for example three by three. Convolution slides the filter across the image. At each position, it multiplies the filter values by the pixels underneath and adds the results. The output is a new image, called a feature map. It is bright wherever the image matches the filter's pattern."
+    },
+    {
+      "scene": 4,
+      "start": 56.5,
+      "end": 78.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "The numbers decide",
+        "body": "Vertical edge: [-1 0 1 / -2 0 2 / -1 0 1] → bright at dark-to-light edges. Blur: all values 1/9 → soft average."
+      },
+      "voiceover": "The numbers decide what the filter detects. Negative values on the left and positive values on the right respond to vertical edges, where dark changes to light. Equal values average the neighbours, which is a blur. The Gaussian blur and Canny functions from lesson three are built from filters like these."
+    },
+    {
+      "scene": 5,
+      "start": 78.4,
+      "end": 102.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Layers of filters",
+        "body": "Left to right: image → early layers (edges, colour, texture) → middle layers (corners, circles, stripes) → later layers (wheel, leaf veins) → classification layer (scores per class). Pooling layers shrink the maps in between."
+      },
+      "voiceover": "A convolutional neural network, or CNN, stacks many layers of filters. Early layers find edges, colour changes and small textures. Middle layers combine them into corners, circles and stripes. Later layers combine shapes into object parts, like a wheel or the veins of a leaf. A final layer turns all this into a score for each class."
+    },
+    {
+      "scene": 6,
+      "start": 102.8,
+      "end": 129.4,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Filters are learned, not designed",
+      "voiceover": "Here is the most important idea. Nobody designs these filters by hand. They start as random numbers, and training adjusts them until the predictions match the labels. If rust spots help separate the classes, some filters become rust spot detectors. This is why a CNN trained on many general photos already has useful early filters, which you will reuse in lesson seven."
+    },
+    {
+      "scene": 7,
+      "start": 129.4,
+      "end": 151.7,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "hands sliding stencil over paper",
+      "on_screen_text": "Blank stencils, cut by examples",
+      "voiceover": "Think of a set of stencils, each cut with a small pattern, like a line, a curve or a dot. You slide each stencil across a picture, and it lights up where the picture matches. A CNN starts with blank stencils and cuts its own patterns by studying thousands of labelled pictures."
+    },
+    {
+      "scene": 8,
+      "start": 151.7,
+      "end": 165.8,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "close up of striped woven fabric",
+      "on_screen_text": "Leila's fabric · Tripoli",
+      "voiceover": "Let's see filters at work. Leila Haddad inspects printed fabric at a textile workshop in Tripoli, Lebanon. Before training any model, she wants to see what simple filters detect on a fabric photo."
+    },
+    {
+      "scene": 9,
+      "start": 165.8,
+      "end": 180.4,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Upload fabric.jpg to a Colab notebook",
+        "Show the kernels dictionary: vertical_edge, blur, sharpen",
+        "Run the cell with cv2.filter2D and cv2.convertScaleAbs"
+      ],
+      "on_screen_text": "Three hand-made filters",
+      "voiceover": "In Colab, she uploads the photo in greyscale and defines three small filters, one for vertical edges, one for blur and one for sharpening. A short loop applies each filter and saves the result."
+    },
+    {
+      "scene": 10,
+      "start": 180.4,
+      "end": 201.0,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Display the original and the three outputs in a 2 × 2 Matplotlib grid",
+        "Point to the bright vertical threads in the edge map",
+        "Point to a pulled thread in the sharpened image"
+      ],
+      "on_screen_text": "Edge, blur, sharpen",
+      "voiceover": "She shows the original and the three outputs in a two by two grid. The edge map is bright along vertical threads and stripes, and dark on flat areas. The blur softens the weave. And the sharpen filter makes a small defect, like a pulled thread, stand out."
+    },
+    {
+      "scene": 11,
+      "start": 201.0,
+      "end": 214.7,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Change the edge kernel to its transpose, k.T",
+        "Run the cell again and display the new edge map",
+        "Show that horizontal edges are now bright"
+      ],
+      "on_screen_text": "Transpose: horizontal edges",
+      "voiceover": "Now she turns the edge filter on its side, by transposing it. Run it again, and the vertical lines fade, while the horizontal threads light up. Same numbers, new direction, new feature."
+    },
+    {
+      "scene": 12,
+      "start": 214.7,
+      "end": 231.0,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Show the prepared image of the first 16 first-layer filters of a pre-trained CNN",
+        "Point to two edge-like filters",
+        "Point to one colour-blob filter"
+      ],
+      "on_screen_text": "Learned first-layer filters",
+      "voiceover": "Finally, she shows the first-layer filters of a pre-trained CNN. Some look like edge detectors at different angles, similar to her hand-made ones. Others are colour blobs. Nobody drew them. They were learned from data."
+    },
+    {
+      "scene": 13,
+      "start": 231.0,
+      "end": 251.6,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "No wheel filter. Watch for shortcuts.",
+      "voiceover": "A common mistake is to believe that each filter detects one named thing, like a wheel filter. Deeper filters usually respond to mixtures of patterns with no simple name. And a CNN learns whatever separates the labels, including shortcuts, like a background colour found in only one class."
+    },
+    {
+      "scene": 14,
+      "start": 251.6,
+      "end": 277.3,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Filter + convolution → feature map. 2. Layers: edges → shapes → parts → class scores. 3. Filters are learned from data, so they can be reused."
+      },
+      "voiceover": "Let's recap. First, a filter is a small grid of numbers, and convolution slides it over the image to make a feature map. Second, CNNs stack layers of filters, from edges to shapes to object parts, with a classification layer at the end. Third, those filters are learned from labelled data, which is why pre-trained filters can be reused."
+    },
+    {
+      "scene": 15,
+      "start": 277.3,
+      "end": 302.6,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Classifying Images with Hugging Face",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will apply edge, blur and sharpen filters to your own photo, then compare them with the filters a real CNN has learned. It takes about thirty minutes. In the next lesson, we use a complete pre-trained model. Classifying Images with Hugging Face Models. See you there."
+    }
+  ]
+}

@@ -1,0 +1,232 @@
+{
+  "course_id": "AI-17",
+  "lesson_id": "L13",
+  "duration_s": 308.1,
+  "thumbnail": {
+    "headline": "Pipelines That Run Themselves",
+    "slide": {
+      "layout": "title",
+      "title": "Pipelines That Run Themselves",
+      "body": "Three task boxes joined by arrows: load_raw, dbt_run, dbt_test, all green, with a small clock showing 03:00 above them. Small tag: Data Engineering for AI · Lesson 13."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.0,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Who runs it at 3 AM?",
+      "voiceover": "Your pipeline works when you type three commands in the right order. But who types them at three in the morning, every night? And who notices when the second one fails? An orchestrator does both."
+    },
+    {
+      "scene": 2,
+      "start": 15.0,
+      "end": 33.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Orchestrating with Apache Airflow",
+        "body": "Data Engineering for AI · Lesson 13 of 18"
+      },
+      "voiceover": "In the last lesson, you added tests to your dbt project. Today, you make the whole pipeline run by itself. The tool is Apache Airflow, an orchestrator. It runs pipelines written as Python files, and it shows every run in a web interface."
+    },
+    {
+      "scene": 3,
+      "start": 33.4,
+      "end": 48.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "A DAG is one pipeline",
+        "body": "Three boxes left to right: load raw → run dbt → test dbt, with one-way arrows. A crossed-out arrow looping back from the last box to the first, labelled 'no loops'."
+      },
+      "voiceover": "Four ideas explain Airflow. The first is the DAG, short for directed acyclic graph. A DAG is one pipeline: a set of tasks and the arrows between them. Acyclic means the arrows never loop back."
+    },
+    {
+      "scene": 4,
+      "start": 48.4,
+      "end": 62.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Tasks and operators",
+        "body": "Task = one step (load raw data, run dbt) · Operator = the type of task · BashOperator = runs a shell command"
+      },
+      "voiceover": "The second idea is the task, one step, such as load raw data or run dbt. An operator is the type of task. The bash operator, for example, runs a shell command."
+    },
+    {
+      "scene": 5,
+      "start": 62.1,
+      "end": 83.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Dependencies and schedule",
+        "body": "load_raw >> dbt_run >> dbt_test\nschedule=\"@daily\"\n{{ ds }} → the run's logical date"
+      },
+      "voiceover": "The third idea is dependencies. They set the order. Each task starts only after the one before it succeeds. The fourth is the schedule, which says when the DAG runs, for example daily. Each run also has a logical date, which tells the task which day of data to process."
+    },
+    {
+      "scene": 6,
+      "start": 83.5,
+      "end": 104.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Parts of Airflow",
+        "body": "Four boxes around a DAG file: scheduler, web or API server, metadata database, workers. Caption: local setup = official Docker Compose file."
+      },
+      "voiceover": "Behind the scenes, several parts run together: a scheduler, a web server, a database for Airflow's own records, and workers that run the tasks. The simplest local setup is the official Docker Compose file. It needs Docker and enough free memory, so check the documentation for your version."
+    },
+    {
+      "scene": 7,
+      "start": 104.1,
+      "end": 116.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Airflow 2 or 3?",
+        "body": "Airflow 3: from airflow.sdk import DAG. Airflow 2: from airflow import DAG. Also different: some commands and the web interface. Follow the docs for your version."
+      },
+      "voiceover": "Airflow two and Airflow three differ in imports, some command names and the web interface. Our code targets Airflow three, and shows the Airflow two imports as comments."
+    },
+    {
+      "scene": 8,
+      "start": 116.1,
+      "end": 134.1,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "train station departure board with trains",
+      "on_screen_text": "Timetable plus station manager",
+      "voiceover": "Think of Airflow as a train timetable with a station manager. The timetable says when each train leaves. The rail lines say which train must arrive before another departs. And the manager watches every train and reports delays on the station board."
+    },
+    {
+      "scene": 9,
+      "start": 134.1,
+      "end": 148.7,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "bakery shelves with fresh bread loaves",
+      "on_screen_text": "Katarzyna · bakery chain · Kraków",
+      "voiceover": "Let's build it. Katarzyna is a data engineer at a bakery chain in Kraków, Poland. Her dbt project is in a folder called dbt slash shop, and a Python script loads each day's orders."
+    },
+    {
+      "scene": 10,
+      "start": 148.7,
+      "end": 162.4,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Download the official docker-compose.yaml for the Airflow version from the Airflow documentation",
+        "In the same folder, create dags, logs, plugins and config folders",
+        "On Linux, create .env with AIRFLOW_UID= followed by the output of id -u"
+      ],
+      "voiceover": "First, she downloads the official Docker Compose file for her Airflow version, and creates four folders next to it. On Linux, she also writes her user ID into a small environment file."
+    },
+    {
+      "scene": 11,
+      "start": 162.4,
+      "end": 174.0,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "In docker-compose.yaml, add volumes such as ./dbt:/opt/airflow/dbt and the scripts folder",
+        "Add dbt through _PIP_ADDITIONAL_REQUIREMENTS, with a 'local testing only' caption",
+        "Run: docker compose up airflow-init",
+        "Run: docker compose up -d"
+      ],
+      "voiceover": "She mounts her dbt project and scripts into the containers, and makes dbt available inside them, for local testing only. Then she starts Airflow with two commands."
+    },
+    {
+      "scene": 12,
+      "start": 174.0,
+      "end": 198.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Create dags/shop_elt.py",
+        "Paste the DAG code from content.md, with the Airflow 2 import comments visible",
+        "Highlight dag_id, start_date, schedule=\"@daily\" and catchup=False",
+        "Highlight the three BashOperator tasks and {{ ds }} in load_raw"
+      ],
+      "voiceover": "Now the DAG file. It creates a DAG called shop E L T that starts on the first of September, runs daily, and does not catch up on old dates. Inside are three bash tasks. The first runs the load script and passes it the logical date. The second runs dbt, and the third runs the dbt tests."
+    },
+    {
+      "scene": 13,
+      "start": 198.9,
+      "end": 209.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Highlight the last line: load_raw >> dbt_run >> dbt_test"
+      ],
+      "on_screen_text": "Load, then run, then test",
+      "voiceover": "The last line sets the order: load, then run, then test. The file only defines tasks and dependencies. No real work happens outside a task."
+    },
+    {
+      "scene": 14,
+      "start": 209.6,
+      "end": 223.3,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open http://localhost:8080 and sign in with the default local account from the documentation",
+        "Find shop_elt in the DAG list",
+        "Switch it on and trigger it manually"
+      ],
+      "voiceover": "She opens the web interface on port eight thousand and eighty, and signs in with the default local account. She finds shop E L T, switches it on and triggers it manually."
+    },
+    {
+      "scene": 15,
+      "start": 223.3,
+      "end": 235.3,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open the graph view and show load_raw, dbt_run and dbt_test turning green in order",
+        "Open the dbt_run task log and show the dbt output"
+      ],
+      "on_screen_text": "Three green tasks, in order",
+      "voiceover": "In the graph view, the three tasks turn green, one after another. She opens the log of the dbt run task, and there is the familiar dbt output."
+    },
+    {
+      "scene": 16,
+      "start": 235.3,
+      "end": 258.4,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Keep the DAG file light",
+      "voiceover": "A common mistake is to put heavy work at the top of the DAG file, such as reading a database outside any task. Airflow reads DAG files often to find changes, so that code runs again and again and slows the scheduler. Keep the file light, and put the real work inside the tasks."
+    },
+    {
+      "scene": 17,
+      "start": 258.4,
+      "end": 284.5,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. DAG = tasks + dependencies + schedule, in Python. 2. BashOperator runs load and dbt; >> sets the order. 3. Docker needs memory; Airflow 2 and 3 differ, follow your version's docs."
+      },
+      "voiceover": "Let's recap. First, an Airflow DAG is a pipeline written in Python: tasks, the dependencies between them, and a schedule. Second, the bash operator can run your load script and your dbt commands, and one short line sets their order. Third, the local Docker setup needs enough memory, and Airflow two and three differ, so follow the documentation for your version."
+    },
+    {
+      "scene": 18,
+      "start": 284.5,
+      "end": 308.1,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Retries, Backfills and Alerts",
+      "voiceover": "Now it is your turn. In the exercise, you write a DAG with three tasks that load raw data, run your dbt models and run your dbt tests, every day. You trigger it manually, and check that the tasks run in the right order. It takes about forty minutes. Next lesson: Retries, Backfills and Alerts."
+    }
+  ]
+}

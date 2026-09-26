@@ -1,0 +1,83 @@
+{
+  "title": "Building and Publishing Images Automatically",
+  "thumbnail": {
+    "headline": "What Is Running Now?",
+    "image": "Navy background, a shipping container with two labels, a commit ID and 'model-v1', headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "What Is Running Now?", "body": "A container icon with two tags: 'a1b2c3d' (commit) and 'model-v1'. A crossed-out tag reads 'latest'. Small tag: MLOps · Lesson 13."}
+  },
+  "production_notes": [
+    "[VERSION] GitHub Container Registry permissions (packages: write, GITHUB_TOKEN access), package visibility defaults and the Secrets and Packages interface depend on plan and repository settings. Check them before recording.",
+    "[VERSION] Action versions (docker/login-action@v3, docker/build-push-action@v6) should be checked for newer releases. The YAML was checked for valid syntax with PyYAML but was not run on GitHub in the content review, so the publish run, the Packages page and the masked log must be recorded from a real run.",
+    "No secrets on screen: when adding the MLFLOW_TRACKING_URI secret, type the value off camera or blur the value field. Show only the secret name. In the job log, show the masked '***' value. Blur account names and the real tracking server address if they appear.",
+    "The export_model.py step was run locally against a SQLite tracking store and produced model/ and model_version.txt. The workflow file is shown on screen and never read aloud. The commit ID tag on screen will differ from the thumbnail example.",
+    "Learners without a shared tracking server may use the course-only fallback (train.py and export_ci_model.py with a hand-written model_version.txt); the voiceover mentions it briefly and the lesson page has the details.",
+    "Diego Hernández and the Guadalajara payments start-up are hypothetical."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Production is running an image called wine API latest. Which model version is inside it? Which commit built it? If the tag cannot answer those questions, a rollback becomes guesswork.",
+       "on_screen_text": "Which model is running?"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Continuous delivery extends CI. After the tests pass on main, the pipeline builds the Docker image and pushes it to a container registry, which is a store for images. We use GitHub Container Registry, because it works with the token that GitHub Actions gives to each run. Every merge to main then produces a new image, without anyone typing a Docker command.",
+       "slide": {"layout": "diagram", "title": "From CI to delivery", "body": "Merge to main → tests pass → build Docker image → push to container registry (ghcr.io). Label on the push arrow: built-in GITHUB_TOKEN"}},
+      {"visual_type": "slide",
+       "voiceover": "Two rules make images traceable. First, tag every image with the Git commit ID. This tag is unique and never reused. Second, also tag it with the model version from the MLflow registry, for example model v three. Now the image name tells you both the code and the model. Avoid relying on latest. It moves with every build, so it cannot tell you what is running.",
+       "slide": {"layout": "comparison", "title": "Traceable tags", "body": "Good: image:<commit ID> (unique, never reused) + image:model-v3 (model version). Bad: image:latest (moves with every build, tells you nothing)."}},
+      {"visual_type": "slide",
+       "voiceover": "The workflow needs two kinds of credentials. To push to the registry, it uses the built-in token, with permission to write packages and nothing more. To read the champion model, it needs the address of your shared MLflow server. Store that as an encrypted repository secret, and never print it.",
+       "slide": {"layout": "comparison", "title": "Two kinds of credentials", "body": "Push to GHCR: built-in GITHUB_TOKEN, permissions contents: read, packages: write. Read the champion: MLFLOW_TRACKING_URI stored as an encrypted repository secret. Warning icon: never echo secrets."}},
+      {"visual_type": "slide",
+       "voiceover": "The steps are simple. Export the champion model with the script from lesson eight, which writes the model folder and a version file. Log in to the registry, then build and push the image with both tags. Image names must be lower case, so the workflow converts the repository name. If you have no shared tracking server, the lesson page shows a course-only fallback.",
+       "slide": {"layout": "diagram", "title": "The publish workflow", "body": "export_model.py (models:/wine-quality-clf@champion → model/ + model_version.txt) → log in to ghcr.io → build and push with two tags: commit ID and model-vN"}},
+      {"visual_type": "stock",
+       "voiceover": "Tagging images is like labelling medicine batches with a batch number and the formula version. If a patient reports a problem, the pharmacy can find exactly which batch it was, and remove it, instead of removing every box on the shelf.",
+       "stock_query": "pharmacist checking medicine box labels",
+       "on_screen_text": "Batch number and formula version"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Diego Hernández runs the platform team at a hypothetical payments start-up in Guadalajara, Mexico. He publishes the wine API image.",
+       "stock_query": "platform engineer at desk with two monitors",
+       "on_screen_text": "Diego · payments · Guadalajara"},
+      {"visual_type": "screen",
+       "voiceover": "First, the secret. In the repository settings, under secrets and variables, he adds a secret for the tracking server address. We only show its name. GitHub stores the value encrypted.",
+       "screen_steps": ["Open Settings, then Secrets and variables, then Actions", "Click New repository secret", "Enter the name MLFLOW_TRACKING_URI (value typed off screen or blurred)", "Save and show the secret listed by name only"],
+       "on_screen_text": "Add a repository secret"},
+      {"visual_type": "screen",
+       "voiceover": "He adds the publish workflow. It runs only on pushes to main, asks for permission to write packages, exports the model, logs in, and builds and pushes the image with the commit tag and the model tag. He commits it through a pull request, so CI runs first.",
+       "screen_steps": ["Create .github/workflows/publish.yml with the workflow from content.md", "Highlight the permissions block (contents: read, packages: write)", "Highlight the two tags lines", "Open a pull request and wait for the ci check"],
+       "on_screen_text": "The publish workflow"},
+      {"visual_type": "screen",
+       "voiceover": "He merges the pull request. In the Actions tab, the publish run shows each step: export, login, build and push. In the Packages section, the new image has two tags, the commit ID and model v one.",
+       "screen_steps": ["Merge the pull request", "Open the Actions tab and the publish run", "Show the export, login, build and push steps completing", "Open the repository's Packages section and show the two tags"],
+       "on_screen_text": "Two tags: commit and model"},
+      {"visual_type": "screen",
+       "voiceover": "On his laptop, he pulls the image by its model tag, runs it, and calls the health endpoint. It answers. The image in the registry is the same one that passed the tests.",
+       "screen_steps": ["Run: docker pull ghcr.io/<owner>/wine-api:model-v1", "Run the container on port 8000", "Call /health and show the response"],
+       "on_screen_text": "Pull by model tag"},
+      {"visual_type": "screen",
+       "voiceover": "Finally, he opens the job log. Where the tracking server address would appear, GitHub shows three stars. The secret value never reaches the log.",
+       "screen_steps": ["Open the publish job log", "Scroll to the export step", "Highlight the masked value shown as ***"],
+       "on_screen_text": "Secrets are masked"},
+      {"visual_type": "text",
+       "voiceover": "The common mistake is to pass credentials into the image with a build argument or an environment line. Anyone who pulls the image can read them. Our image needs no secret at runtime, because the model is copied in. If a service needs one, give it when the container starts.",
+       "on_screen_text": "Never put secrets in images"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, after CI passes on main, build the image and push it to a container registry automatically. Second, tag each image with the commit ID and the model version, so you always know what is running and can roll back precisely. Third, store credentials as encrypted secrets, give the workflow the smallest permissions it needs, and never put secrets in images.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. CI passes → build and push automatically. 2. Tag with commit ID + model version. 3. Encrypted secrets, smallest permissions, no secrets in images."}}
+    ],
+    "CTA": [
+      {"visual_type": "slide",
+       "voiceover": "In the exercise below this video, you will extend your workflow to push your image to the registry on every merge, with both tags. Then you pull it by its model tag, call predict, and write one sentence on how you would roll back. It takes about forty minutes.",
+       "slide": {"layout": "bullets", "title": "Exercise: publish your image", "body": "Secret or course-only fallback · publish.yml with packages: write · merge via pull request · image with commit + model tags · pull, run, call /predict · one-sentence rollback plan · about 40 minutes"}},
+      {"visual_type": "presenter_full",
+       "voiceover": "Next, we let the pipeline train and promote models too, with a human in the loop, in Automating Retraining and Promotion. See you there.",
+       "on_screen_text": "Next: Automating Retraining and Promotion"}
+    ]
+  }
+}

@@ -1,0 +1,218 @@
+{
+  "course_id": "AI-17",
+  "lesson_id": "L14",
+  "duration_s": 292.4,
+  "thumbnail": {
+    "headline": "Safe to Fail",
+    "slide": {
+      "layout": "title",
+      "title": "Safe to Fail",
+      "body": "A red task box with a circular retry arrow turning it green, a small alert bell, and a calendar with three past nights filled in. Small tag: Data Engineering for AI · Lesson 14."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.9,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "It will fail. Then what?",
+      "voiceover": "Your pipeline will fail. A server restarts, a file arrives late, a password expires. The question is not whether it fails, but what happens next. Does it recover by itself? And does it leave clean data behind?"
+    },
+    {
+      "scene": 2,
+      "start": 15.9,
+      "end": 28.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Retries, Backfills and Alerts",
+        "body": "Data Engineering for AI · Lesson 14 of 18"
+      },
+      "voiceover": "In the last lesson, you built a DAG that runs every night. Today, you make it safe to fail. Four design choices help: retries, idempotent tasks, backfills and alerts."
+    },
+    {
+      "scene": 3,
+      "start": 28.3,
+      "end": 45.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "1. Retries",
+        "body": "Temporary failures: network timeout, restart · retries = how many times · retry_delay = how long to wait between tries"
+      },
+      "voiceover": "First, retries. Many failures are temporary, such as a network timeout. Airflow can try a task again automatically. You set how many times, and how long to wait between tries. The wait gives the other system time to recover."
+    },
+    {
+      "scene": 4,
+      "start": 45.0,
+      "end": 71.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "2. Idempotent tasks",
+        "body": "Append only: run twice → 6 rows instead of 3 (not idempotent). Delete that date, then insert: run twice → still 3 rows (idempotent)."
+      },
+      "voiceover": "Second, idempotent tasks. A task is idempotent when running it twice for the same date gives the same result as running it once. A load that only adds rows is not idempotent, because a retry doubles the data. A load that first deletes that date's rows, and then inserts them again, is idempotent. Retries are only safe when tasks are idempotent."
+    },
+    {
+      "scene": 5,
+      "start": 71.1,
+      "end": 87.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "3. Backfills",
+        "body": "A calendar row with three missed nights marked red, then arrows showing each night rerun with its own logical date {{ ds }}, turning green."
+      },
+      "voiceover": "Third, backfills. When a pipeline was down, or a rule changed, you rerun it for past dates. Each run receives its logical date, so the task loads the right day. Again, this is only safe with idempotent tasks."
+    },
+    {
+      "scene": 6,
+      "start": 87.4,
+      "end": 102.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "4. Alerts",
+        "body": "Task → retry → retry → retry → failed → on_failure_callback → email or chat message to the team."
+      },
+      "voiceover": "Fourth, alerts. When a task still fails after all its retries, a person must know. Airflow can call a Python function on failure, and that function can send an email or a chat message."
+    },
+    {
+      "scene": 7,
+      "start": 102.0,
+      "end": 123.0,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "courier delivering parcel at front door",
+      "on_screen_text": "Retry, track, inform",
+      "voiceover": "A good pipeline is like a postal service. If nobody is home, the courier tries again tomorrow, not twice at the same door today. Every parcel has a tracking number, so a second attempt never creates a second parcel. And if delivery fails three times, the sender is told."
+    },
+    {
+      "scene": 8,
+      "start": 123.0,
+      "end": 138.0,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "pharmacy shelves with medicine boxes",
+      "on_screen_text": "Tariq · pharmacy chain · Karachi",
+      "voiceover": "Tariq is a data engineer at a pharmacy chain in Karachi, Pakistan. Every night, each store's sales file arrives with the date in its name. Last week, the file server was down for three nights."
+    },
+    {
+      "scene": 9,
+      "start": 138.0,
+      "end": 150.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open load_sales.py",
+        "Show the script from content.md: ds = sys.argv[1], connect to pharmacy.duckdb",
+        "Highlight DELETE FROM raw.sales WHERE load_date = ? and the INSERT from read_csv of sales_{ds}.csv"
+      ],
+      "voiceover": "First, he makes the load script idempotent. It receives the logical date, deletes that date's rows from the raw sales table, and then inserts the rows from that day's file."
+    },
+    {
+      "scene": 10,
+      "start": 150.9,
+      "end": 161.2,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run: python load_sales.py 2026-09-01, then count rows in raw.sales: 3",
+        "Run the same command again and count again: still 3"
+      ],
+      "on_screen_text": "Run twice: still three rows",
+      "voiceover": "He runs it twice for the first of September, on a small sample file. The table holds three rows after each run, not six."
+    },
+    {
+      "scene": 11,
+      "start": 161.2,
+      "end": 177.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open the DAG file and add the default_args block from content.md: retries 3, retry_delay timedelta(minutes=10), on_failure_callback notify_failure",
+        "Show notify_failure printing the ALERT line",
+        "Pass default_args=default_args to the DAG"
+      ],
+      "voiceover": "Next, he adds default arguments to the DAG from the last lesson: three retries, ten minutes apart, and a failure function. Here it only prints an alert line. In real use, it would send a message to the team."
+    },
+    {
+      "scene": 12,
+      "start": 177.9,
+      "end": 193.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Rename the sales file for one date",
+        "Trigger the DAG and show the task in the up for retry state",
+        "Show the task failed after 3 retries and the ALERT line in the task log"
+      ],
+      "voiceover": "Now he breaks it on purpose. He renames the sales file for one date and triggers the DAG. The task waits and tries again. After three retries, it fails, and the alert line appears in the log."
+    },
+    {
+      "scene": 13,
+      "start": 193.8,
+      "end": 199.4,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Restore the file name",
+        "Clear the failed task and show it turning green"
+      ],
+      "voiceover": "He restores the file and clears the failed task. This time it succeeds."
+    },
+    {
+      "scene": 14,
+      "start": 199.4,
+      "end": 222.1,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run with docker compose exec: airflow backfill create --dag-id pharmacy_sales --from-date 2026-09-01 --to-date 2026-09-03 (show the Airflow 2 command as a caption)",
+        "Run: SELECT load_date, count(*) FROM raw.sales GROUP BY load_date ORDER BY load_date;",
+        "Highlight that each date appears once"
+      ],
+      "on_screen_text": "Each date appears once",
+      "voiceover": "Then he backfills the three missed nights, from the first to the third of September, with the backfill command for his Airflow version, inside the container. Finally, he counts rows per load date. Each date appears once, with its own count. Running the backfill again would change nothing, because the load is idempotent."
+    },
+    {
+      "scene": 15,
+      "start": 222.1,
+      "end": 243.1,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Idempotent first, then few retries",
+      "voiceover": "A common mistake is to set many retries and think the pipeline is now reliable. If a task adds data, a retry can leave doubled rows. And if the error is permanent, retries only delay the alert. Make tasks idempotent first, and use a few retries with a delay."
+    },
+    {
+      "scene": 16,
+      "start": 243.1,
+      "end": 269.7,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Retries + delay for temporary failures, only with idempotent tasks. 2. Idempotent = same result twice: delete and reload one date. 3. Backfills use the logical date; alerts tell a person."
+      },
+      "voiceover": "Let's recap. First, retries with a delay handle temporary failures, but they are only safe when tasks are idempotent. Second, an idempotent task gives the same result when you run it twice, for example by deleting and reloading one date's rows. Third, backfills rerun past dates using the logical date, and alerts make sure a person knows when retries are not enough."
+    },
+    {
+      "scene": 17,
+      "start": 269.7,
+      "end": 292.4,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Preparing Datasets for ML",
+      "voiceover": "Now it is your turn. In the exercise, you make one task fail on purpose and watch the retries. Then you fix it, run a backfill for three past dates, and run it again to check that no rows are doubled. It takes about forty minutes. Next lesson: Preparing Datasets for Machine Learning."
+    }
+  ]
+}

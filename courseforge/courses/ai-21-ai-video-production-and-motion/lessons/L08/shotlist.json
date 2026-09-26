@@ -1,0 +1,222 @@
+{
+  "course_id": "AI-21",
+  "lesson_id": "L08",
+  "duration_s": 294.2,
+  "thumbnail": {
+    "headline": "Why Did the Scarf Change?",
+    "slide": {
+      "layout": "title",
+      "title": "Why Did the Scarf Change?",
+      "body": "Two frames of the same illustrated character side by side: blue scarf, then green scarf. Teal question mark between. Small tag: AI Video Production and Motion · Lesson 8."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.4,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Something feels wrong",
+      "voiceover": "In shot two, your character wears a blue scarf. In shot three, the scarf is green. In shot four, her hair is shorter. Viewers may not name the problem, but they feel that something is wrong."
+    },
+    {
+      "scene": 2,
+      "start": 15.4,
+      "end": 25.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Keeping Characters and Scenes Consistent",
+        "body": "AI Video Production and Motion · Lesson 8 of 14"
+      },
+      "voiceover": "In the last two lessons, you generated your first clips. Today, you learn why clips drift apart, and five ways to keep them together."
+    },
+    {
+      "scene": 3,
+      "start": 25.7,
+      "end": 45.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Why clips drift",
+        "body": "One prompt, 'a woman in a scarf', with three arrows to three slightly different women: different scarf colours, hair lengths and faces. Caption: each generation starts again."
+      },
+      "voiceover": "Why do clips drift? A video model does not remember your previous clip. Each generation starts again from your prompt, and sometimes an image. Words like a woman in a scarf allow many possible results, so the model chooses a slightly different one each time."
+    },
+    {
+      "scene": 4,
+      "start": 45.0,
+      "end": 59.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "What drifts",
+        "body": "Faces: shape, age, features · Clothes: colours, patterns, accessories · Colours and light: warm then cool · Props: a cup becomes a glass · Setting: a window moves"
+      },
+      "voiceover": "The common changes are faces, clothes, colours and light, props, and the setting. A cup becomes a glass. One shot is warm and the next is cool. A window moves to the other wall."
+    },
+    {
+      "scene": 5,
+      "start": 59.6,
+      "end": 77.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Reduce drift, part 1",
+        "body": "1. Reuse matching keyframes (strongest for beginners) · 2. A fixed character description, pasted word for word"
+      },
+      "voiceover": "So how do you reduce drift? The strongest technique for beginners is to reuse keyframes. Start clips from keyframes that already match, as you learned in lesson five. Then use a fixed character description, and paste the same words every time."
+    },
+    {
+      "scene": 6,
+      "start": 77.2,
+      "end": 92.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Reduce drift, part 2",
+        "body": "3. Reference features, where the tool offers them: fictional characters or images you have rights to · 4. The same style block in every prompt"
+      },
+      "voiceover": "Some tools also let you give a reference image of a character or object to reuse. Use only fictional characters, or images you have the rights to. And keep your style block fixed in every prompt."
+    },
+    {
+      "scene": 7,
+      "start": 92.6,
+      "end": 111.5,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "video editor cutting clips on timeline",
+      "on_screen_text": "5. Hide small changes in the edit",
+      "voiceover": "The last technique happens in the edit. Cut from a wide shot to a close-up of hands, so a small face change is less visible. Keep shots of the same character short. And avoid placing two very similar shots next to each other."
+    },
+    {
+      "scene": 8,
+      "start": 111.5,
+      "end": 121.8,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Small enough not to notice",
+      "voiceover": "Perfect consistency is not always possible with current tools. Your job is to make the changes small enough that viewers do not notice them."
+    },
+    {
+      "scene": 9,
+      "start": 121.8,
+      "end": 140.2,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "person taking photos of film set props",
+      "on_screen_text": "You are the continuity supervisor",
+      "voiceover": "Film crews have a continuity supervisor. This person photographs every actor and set before each take, so the coffee cup is still half full, and the collar is still open, in the next shot. With AI video, you are your own continuity supervisor."
+    },
+    {
+      "scene": 10,
+      "start": 140.2,
+      "end": 152.2,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "cosy small bookshop interior with wooden shelves",
+      "on_screen_text": "Tomás's bookshop · Córdoba",
+      "voiceover": "Let's see an example. Tomás runs a bookshop in Córdoba, Argentina. The shop is made up for this lesson. He wants a friendly bookseller character in three shots."
+    },
+    {
+      "scene": 11,
+      "start": 152.2,
+      "end": 165.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "The bookseller",
+        "body": "A man in his fifties with short grey hair, a neat grey beard, round black glasses, a dark green apron over a white shirt with rolled sleeves."
+      },
+      "voiceover": "He writes a fixed description. A man in his fifties with short grey hair, a neat grey beard, round black glasses, and a dark green apron over a white shirt."
+    },
+    {
+      "scene": 12,
+      "start": 165.1,
+      "end": 176.7,
+      "section": "Demonstrate",
+      "visual_type": "hero_broll",
+      "broll_tool": "FLOW",
+      "broll_prompt": "A man in his fifties with short grey hair, a neat grey beard, round black glasses and a dark green apron over a white shirt with rolled sleeves takes a book from a tall wooden shelf in a small, cosy bookshop; slow dolly-in from medium shot; warm afternoon light through a window; realistic cinematic style, warm natural colours; 6 seconds; no readable book titles, no signs, no text, no logos.",
+      "on_screen_text": "Shot 1: text only",
+      "voiceover": "He generates three clips from text only. The man takes a book from a shelf, reads at a counter, and hands a paper bag to a customer."
+    },
+    {
+      "scene": 13,
+      "start": 176.7,
+      "end": 197.7,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Continuity list",
+        "body": "Table: Shot 2 · glasses thinner and gold · visible in close-up. Shot 3 · apron dark blue, not green · visible. Shot 3 · beard longer · small. Shots 2–3 · counter wood, then white · visible. Still frames beside each row."
+      },
+      "voiceover": "Then he puts them side by side and makes a continuity list. In shot two, the glasses are thinner and gold. In shot three, the apron is dark blue, not green, and the beard is longer. And the counter is wood in one shot, and white in the next."
+    },
+    {
+      "scene": 14,
+      "start": 197.7,
+      "end": 219.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Three fixes",
+        "body": "One keyframe of the bookseller → arrows to shots 1, 2 and 3. Tag: 'wooden counter' in every prompt. Shot 3 reframed as a close-up of hands and a paper bag."
+      },
+      "voiceover": "Now his fixes. He generates one keyframe of the bookseller, and uses it as the starting image for all three shots. He adds wooden counter to every prompt. For shot three, he changes the framing to a close-up of hands and the paper bag, so the face is not needed."
+    },
+    {
+      "scene": 15,
+      "start": 219.6,
+      "end": 229.9,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Before and after",
+        "body": "Left: three text-only frames with four changes circled. Right: three keyframe-based frames with one small change circled. Tick: accepted."
+      },
+      "voiceover": "The new version has only one small change. He accepts it, because a viewer watching at normal speed is very unlikely to notice it."
+    },
+    {
+      "scene": 16,
+      "start": 229.9,
+      "end": 247.0,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Review clips in order",
+      "voiceover": "A common mistake is to check each clip on its own and decide it is good. Continuity problems only appear when clips are next to each other. So always review clips in order, before you decide which ones to keep."
+    },
+    {
+      "scene": 17,
+      "start": 247.0,
+      "end": 269.3,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Each generation starts again, so clips drift. 2. Keyframes, fixed descriptions, references, style block. 3. Review in order; hide small changes in the edit."
+      },
+      "voiceover": "Let's recap. First, clips drift because each generation starts again, so faces, clothes, colours, props and settings can change. Second, reused keyframes, a fixed character description, reference features and a fixed style block all reduce drift. Third, review clips in order, and use editing choices to hide small changes you cannot fix."
+    },
+    {
+      "scene": 18,
+      "start": 269.3,
+      "end": 294.2,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Avatar Presenters in HeyGen",
+      "voiceover": "Now it is your turn. Generate three clips of the same fictional character, in Google Flow or Kling. Put them in order, and list every change you notice, and whether a viewer would notice it. Then choose one technique from this lesson to fix the biggest change. It takes about thirty minutes. Next lesson: Avatar Presenters in HeyGen."
+    }
+  ]
+}

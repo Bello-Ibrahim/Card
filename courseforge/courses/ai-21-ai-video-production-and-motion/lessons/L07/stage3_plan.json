@@ -1,0 +1,181 @@
+{
+ "title": "Image-to-Video and Motion Control in Kling",
+ "thumbnail": {
+  "headline": "Only Describe the Motion",
+  "image": "Navy background, a still frame of a night market stall with a teal arrow moving into it, headline in teal Inter Bold.",
+  "slide": {
+   "layout": "title",
+   "title": "Only Describe the Motion",
+   "body": "A still frame of a lamp-lit market stall with steam, a teal dolly-in arrow pointing into it. Small tag: AI Video Production and Motion · Lesson 7."
+  }
+ },
+ "production_notes": [
+  "[VERSION] Before recording, check every Kling interface detail against the live tool: menu names, the image-to-video option, camera movement controls, the creativity or relevance setting, the negative prompt field, duration and quality modes, free credits and daily limits, watermarks and export options. Adjust the screen_steps to match; the voiceover describes settings by what they do, not by exact button names.",
+  "Pim's keyframe of the Bangkok market stall must be a generated image (Google Gemini, following Lesson 5), not a photo of a real stall or vendor. The cook is a fictional generated character; show no readable signs or brand names.",
+  "Scene 11 shows Pim's motion-only prompt from content.md word for word; the voiceover only summarises it.",
+  "Record with a demo account that shows no real name, email or personal data.",
+  "Pim and her street-food tour company in Bangkok are fictional."
+ ],
+ "sections": {
+  "Hook": [
+   {
+    "visual_type": "presenter_full",
+    "voiceover": "Your keyframe already looks right. Now you only need it to move. With image-to-video, your prompt becomes much shorter, because the picture already answers most of the questions.",
+    "on_screen_text": "The picture does most of the work"
+   }
+  ],
+  "Explain": [
+   {
+    "visual_type": "slide",
+    "voiceover": "In the last lesson, you generated clips from text alone. Today, you bring your keyframes from lesson five to life.",
+    "slide": {
+     "layout": "title",
+     "title": "Image-to-Video and Motion Control in Kling",
+     "body": "AI Video Production and Motion · Lesson 7 of 14"
+    }
+   },
+   {
+    "visual_type": "slide",
+    "voiceover": "In image-to-video, you upload a still image and describe only the motion. The subject, the setting, the lighting and the style are already in the image. If you describe them again, the model may try to change the image to match your words.",
+    "slide": {
+     "layout": "comparison",
+     "title": "The image already says it",
+     "body": "Left, in the image: subject · setting · lighting · style. Right, in the prompt: motion only."
+    }
+   },
+   {
+    "visual_type": "slide",
+    "voiceover": "So a good image-to-video prompt answers two questions. What moves in the scene? For example, steam rises, or a person turns their head. And what does the camera do? A slow dolly-in, a gentle pan, or static.",
+    "slide": {
+     "layout": "bullets",
+     "title": "Two questions",
+     "body": "1. What moves in the scene? Steam rises · leaves move · a person turns their head. 2. What does the camera do? Slow dolly-in · gentle pan · static."
+    }
+   },
+   {
+    "visual_type": "slide",
+    "voiceover": "Kling offers settings that help you control motion. The names change, but they usually include camera movement controls, a setting for how closely the result follows your prompt, duration and quality, and a negative prompt for things to avoid. Longer or higher-quality clips often cost more credits.",
+    "slide": {
+     "layout": "bullets",
+     "title": "Kling motion settings",
+     "body": "Camera movement controls · How closely to follow the prompt · Duration and quality mode (costs more credits) · Negative prompt: things to avoid. Note: names change, check the live tool."
+    }
+   },
+   {
+    "visual_type": "slide",
+    "voiceover": "Free credits, daily limits, watermarks and export options also change often. So check what your account has before you start, and generate the shots that matter most to your video first.",
+    "slide": {
+     "layout": "bullets",
+     "title": "Check your account first",
+     "body": "Free credits · daily limits · watermarks · export options: all change often. Plan: generate the most important shots first."
+    }
+   },
+   {
+    "visual_type": "slide",
+    "voiceover": "Here is an important principle. Small motion is safer. Large movements, like a person walking across the frame, give the model more chances to distort faces, hands or objects. For products and places, a slow camera move is often enough.",
+    "slide": {
+     "layout": "diagram",
+     "title": "Motion strength",
+     "body": "A slider from small to large. Small end, green: slow camera move, steam, lamps. Large end, red: person walking across the frame, more risk of distorted faces and hands."
+    }
+   },
+   {
+    "visual_type": "stock",
+    "voiceover": "Think of a puppeteer. The puppet is already built and painted. You do not describe its face or clothes again. You only say how it should move. Raise the left arm slowly, and turn the head towards the window.",
+    "stock_query": "puppeteer moving a wooden puppet on strings",
+    "on_screen_text": "Only say how it moves"
+   }
+  ],
+  "Demonstrate": [
+   {
+    "visual_type": "screen",
+    "voiceover": "Let's try it. Pim runs a small street-food tour company in Bangkok, Thailand. She has a keyframe of a market stall at night, with coloured lamps, a cook behind a wok and steam in the air. She wants a slow dolly-in.",
+    "screen_steps": [
+     "Show Pim's generated keyframe of the night market stall full screen for 3 seconds.",
+     "Open Kling in a web browser and sign in with the demo account."
+    ],
+    "on_screen_text": "Pim's food tours · Bangkok"
+   },
+   {
+    "visual_type": "screen",
+    "voiceover": "She checks her credit balance first. Then she opens the image-to-video option and uploads her keyframe. She checks the preview, to make sure nothing is cropped. A cropped preview can cut off the edges of the composition she planned so carefully.",
+    "screen_steps": [
+     "Point to the credit balance shown on screen.",
+     "Choose AI Video, then the image-to-video option.",
+     "Upload the keyframe.",
+     "Check the preview: the image is not cropped."
+    ]
+   },
+   {
+    "visual_type": "screen",
+    "voiceover": "Now the prompt. It describes only motion. A slow dolly-in towards the cook, steam rising gently, lamps swaying slightly, and the cook stirring the wok. She adds a negative prompt for distorted hands, flicker and text.",
+    "screen_steps": [
+     "Type Pim's motion-only prompt from content.md into the prompt box and hold on it for 3 seconds.",
+     "Type 'distorted hands, flicker, text' into the negative prompt field."
+    ],
+    "on_screen_text": "Motion only"
+   },
+   {
+    "visual_type": "screen",
+    "voiceover": "She chooses the duration and mode, and notes the credit cost. She leaves the camera controls on default, because the prompt already describes the camera. Then she clicks generate.",
+    "screen_steps": [
+     "Choose the duration and mode; point to the credit cost.",
+     "Leave the camera controls on default.",
+     "Click Generate and wait."
+    ]
+   },
+   {
+    "visual_type": "screen",
+    "voiceover": "The camera moves smoothly, but the cook's hands blur. Pim writes this down. In her second attempt, she removes the stirring and keeps only the steam and the lamps moving. The hands stay still, and the shot is clean.",
+    "screen_steps": [
+     "Play the first clip; pause where the cook's hands blur.",
+     "Show the log: attempt 1, hands blur.",
+     "Edit the prompt: delete 'The cook stirs the wok with steady movements.' and generate again.",
+     "Play attempt 2: hands still, steam and lamps move, clean shot."
+    ]
+   },
+   {
+    "visual_type": "screen",
+    "voiceover": "She downloads the clip, checks the resolution and any watermark, and names it by shot number.",
+    "screen_steps": [
+     "Download the attempt 2 clip.",
+     "Point to the resolution and any watermark.",
+     "Rename the file 'S05_stall_dolly_v2.mp4'."
+    ],
+    "on_screen_text": "S05_stall_dolly_v2.mp4"
+   },
+   {
+    "visual_type": "text",
+    "voiceover": "Pim's lesson is simple. Less subject movement gave a cleaner result, and the camera movement alone made the shot feel alive. For your own shots, start with a camera move, and add subject movement only when the shot really needs it.",
+    "on_screen_text": "Less movement, cleaner shot"
+   },
+   {
+    "visual_type": "slide",
+    "voiceover": "A common mistake is to paste your full text-to-video prompt into image-to-video, with the setting, lighting and style. The model tries to follow both the image and the text, and the look shifts. Describe only what moves, and what the camera does.",
+    "slide": {
+     "layout": "comparison",
+     "title": "Too much prompt",
+     "body": "Left, crossed out: a long prompt repeating setting, lighting and style. Right, ticked: a short prompt with subject motion and camera motion only."
+    }
+   }
+  ],
+  "Recap": [
+   {
+    "visual_type": "slide",
+    "voiceover": "Let's recap. First, in image-to-video the image fixes the look, so your prompt describes only subject motion and camera motion. Second, motion controls, duration and negative prompts help, but names and costs change, so check the live tool. Third, small, slow motion is safer, especially for hands and faces.",
+    "slide": {
+     "layout": "bullets",
+     "title": "Key takeaways",
+     "body": "1. The image fixes the look; the prompt describes motion. 2. Settings help, but check the live tool. 3. Small, slow motion is safer."
+    }
+   }
+  ],
+  "CTA": [
+   {
+    "visual_type": "presenter_full",
+    "voiceover": "Now it is your turn. Animate two of your keyframes in Kling. Give one a camera movement only, and the other subject movement only, with a static camera. Log any problems and reduce motion if something distorts. It takes about thirty minutes. Next lesson: Keeping Characters and Scenes Consistent.",
+    "on_screen_text": "Next: Keeping Characters Consistent"
+   }
+  ]
+ }
+}

@@ -1,0 +1,175 @@
+{
+  "course_id": "AI-22",
+  "lesson_id": "L05",
+  "duration_s": 299.6,
+  "thumbnail": {
+    "headline": "Your Voice, Your Consent",
+    "slide": {
+      "layout": "title",
+      "title": "Your Voice, Your Consent",
+      "body": "A teal sound wave on the left flows into a simple one-page form with two signature lines and a tick on the right. Small tag: AI Voice, Audio and Music · Lesson 5."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.7,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "People first, then tools",
+      "voiceover": "Your voice is part of who you are. Now imagine hearing your voice in an advert you never recorded, saying things you never said. Voice cloning makes this possible. That is why this lesson starts with people, not tools."
+    },
+    {
+      "scene": 2,
+      "start": 16.7,
+      "end": 35.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Voice Cloning: Consent Comes First",
+        "body": "AI Voice, Audio and Music · Lesson 5 of 10"
+      },
+      "voiceover": "In the last lesson, you worked with transcripts. Today, we look at something more personal. Voice cloning means training or adapting a voice model so that it sounds like one specific real person. The model can then read any text in that person's voice."
+    },
+    {
+      "scene": 3,
+      "start": 35.6,
+      "end": 51.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Helpful or harmful?",
+        "body": "Left (green): podcaster who lost their voice through illness keeps publishing. Right (red): fake phone calls · fake endorsements · fake statements."
+      },
+      "voiceover": "Cloning has helpful uses. A podcaster who loses their voice through illness can still publish episodes. But the same technology can deceive. Think of fake phone calls, fake endorsements, or fake statements that damage someone's reputation."
+    },
+    {
+      "scene": 4,
+      "start": 51.0,
+      "end": 68.1,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "No legal advice. Five good principles.",
+      "voiceover": "The rules about voices and deepfakes are different from country to country. This course gives no legal advice. Instead, it teaches five principles that are good practice everywhere. Always check local rules and your tool's terms before a real project."
+    },
+    {
+      "scene": 5,
+      "start": 68.1,
+      "end": 92.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Principles 1 and 2",
+        "body": "1. Clear, informed, recorded consent: in writing, after a plain-language explanation. 2. Limit the use: purpose · time period · specific uses."
+      },
+      "voiceover": "Principle one. Get clear, informed and recorded consent. The person agrees in writing, after you explain in plain language what will happen. Informed means they understand what a clone is, what it could say and who will hear it. Principle two. Limit the use to what was agreed, meaning a purpose, a time period and specific uses."
+    },
+    {
+      "scene": 6,
+      "start": 92.5,
+      "end": 114.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Principles 3 and 4",
+        "body": "3. Allow withdrawal: what happens to the model and files. 4. Disclose AI and cloned voices: a short line in the show notes or at the start of the episode."
+      },
+      "voiceover": "Principle three. Allow withdrawal. The person can change their mind, and the agreement says what happens to the voice model and files. Principle four. Disclose. Tell your audience when a voice is AI or cloned. A short line in the show notes, or at the start of an episode, is often enough."
+    },
+    {
+      "scene": 7,
+      "start": 114.8,
+      "end": 129.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Principle 5",
+        "body": "Never clone without permission: famous people · colleagues · family members · people who have died. In this course: no cloning, a consent form instead."
+      },
+      "voiceover": "Principle five. Never clone anyone without permission. That includes famous people, colleagues, family members and people who have died. In this course, we do not clone anyone's voice. You will write a consent form instead."
+    },
+    {
+      "scene": 8,
+      "start": 129.8,
+      "end": 152.1,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "handing car keys to friend",
+      "on_screen_text": "Borrowing is not keeping",
+      "voiceover": "Here is a way to remember it. Consent for a voice clone is like lending someone your car. You agree who will drive it, where, for how long, and when they give it back. Yes, you can borrow it, does not mean you can keep it forever and lend it to strangers."
+    },
+    {
+      "scene": 9,
+      "start": 152.1,
+      "end": 177.0,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "two podcast hosts talking at microphones",
+      "on_screen_text": "Kwame and Efua · podcast · Accra",
+      "voiceover": "Let's see the principles in a real plan. Kwame and Efua host a weekly business podcast in Accra, in Ghana. Efua will travel for six weeks. She suggests that Kwame uses a clone of her voice to read the short introduction to each episode while she is away. Kwame starts with a one-page agreement, not a tool."
+    },
+    {
+      "scene": 10,
+      "start": 177.0,
+      "end": 202.7,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Kwame's one-page agreement",
+        "body": "Purpose: 30-second episode intro during Efua's travel · Duration: six weeks, then the model is deleted · Allowed: intro script approved by Efua each week · Not allowed: adverts, social clips, other podcasts, unapproved text"
+      },
+      "voiceover": "The purpose is to read the thirty-second introduction during Efua's travel. The duration is six weeks from a stated start date, and after that the voice model is deleted. The only allowed use is the introduction script, which Efua reads and approves each week. Adverts, social media clips, other podcasts and anything she has not approved are not allowed."
+    },
+    {
+      "scene": 11,
+      "start": 202.7,
+      "end": 226.3,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Kwame's one-page agreement",
+        "body": "Disclosure: 'The introduction uses an AI version of Efua's voice, with her permission.' · Withdrawal: by message, any time; stop at once, delete model and samples · Two signatures and dates · Tool terms checked"
+      },
+      "voiceover": "Each episode's notes say the introduction uses an AI version of Efua's voice, with her permission. And Efua can withdraw at any time by message. Kwame will stop at once and delete the model and samples within a stated number of days. Both sign and date the page, and Kwame checks the tool's terms too."
+    },
+    {
+      "scene": 12,
+      "start": 226.3,
+      "end": 248.6,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Hearing a voice is not permission",
+      "voiceover": "A common mistake is to think that a public voice is free to clone. It is not. Being able to hear a voice does not give you permission to copy it. Another mistake is to treat a quick verbal yes as consent. Without a written record, nobody can show what was agreed."
+    },
+    {
+      "scene": 13,
+      "start": 248.6,
+      "end": 273.5,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Clear, informed, recorded consent; never clone without permission. 2. Limits: purpose · duration · allowed uses · withdrawal. 3. Disclose; check local rules and tool terms."
+      },
+      "voiceover": "Let's recap. First, only clone a voice with clear, informed and recorded consent, and never clone anyone without permission. Second, consent has limits: a purpose, a duration, allowed uses and a way to withdraw. Third, disclose AI and cloned voices to your audience, and check local rules and tool terms, because they differ by country and change often."
+    },
+    {
+      "scene": 14,
+      "start": 273.5,
+      "end": 299.6,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Cleaning Up in Audacity",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will draft a one-page voice consent form for a podcast co-host. It states the purpose, the duration, the allowed uses and how to withdraw. It takes about twenty-five minutes. That completes week one. In the next lesson, Cleaning Up Recordings in Audacity, we start week two."
+    }
+  ]
+}

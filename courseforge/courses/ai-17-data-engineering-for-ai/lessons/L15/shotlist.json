@@ -1,0 +1,203 @@
+{
+  "course_id": "AI-17",
+  "lesson_id": "L15",
+  "duration_s": 311.6,
+  "thumbnail": {
+    "headline": "Ready for the Model?",
+    "slide": {
+      "layout": "title",
+      "title": "Ready for the Model?",
+      "body": "A horizontal timeline from January to May: January to March labelled train, April to May labelled test, a small shield icon for protected data and a page icon for the datasheet. Small tag: Data Engineering for AI · Lesson 15."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.6,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Clean is not yet ready",
+      "voiceover": "You have a clean, tested feature table. It is still not ready for a model. How you split it, what personal data it still contains, and what you tell people about it decide whether the model's test results can be trusted."
+    },
+    {
+      "scene": 2,
+      "start": 17.6,
+      "end": 28.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Preparing Datasets for Machine Learning",
+        "body": "Data Engineering for AI · Lesson 15 of 18"
+      },
+      "voiceover": "Your pipeline now runs, retries and backfills by itself. In this lesson, you prepare its output for machine learning. An AI-ready dataset has four properties."
+    },
+    {
+      "scene": 3,
+      "start": 28.7,
+      "end": 49.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "An AI-ready dataset is",
+        "body": "1. Clean and tested · 2. Split correctly (train / test) · 3. Protected (personal data removed or reduced) · 4. Documented and versioned"
+      },
+      "voiceover": "It is clean and tested, so your quality checks pass. It is split correctly into training data, which teaches the model, and test data, which checks it on rows it has never seen. It is protected, so personal data is removed or reduced. And it is documented and versioned."
+    },
+    {
+      "scene": 4,
+      "start": 49.7,
+      "end": 79.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Random or by time?",
+        "body": "Random split: rows from all dates mixed, fine when time does not matter. Time split: train on earlier dates, test on later dates, needed when the model predicts the future."
+      },
+      "voiceover": "Let's start with splitting. A random split mixes rows from all dates. That is fine when time does not matter. But when the model predicts the future, such as next month's loan defaults, split by time. Train on earlier dates, and test on later ones. This copies real use. A random split lets the model learn from future rows, so the test results look better than they will be."
+    },
+    {
+      "scene": 5,
+      "start": 79.3,
+      "end": 94.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Leave a gap",
+        "body": "Timeline: train block, then a shaded gap of about 90 days, then test block. Label: training labels must not reach into the test period."
+      },
+      "voiceover": "If the label looks ahead, for example default in the next ninety days, leave a gap between the last training date and the first test date. Then training labels do not overlap the test period."
+    },
+    {
+      "scene": 6,
+      "start": 94.3,
+      "end": 123.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Protect personal data",
+        "body": "Drop: full_name, phone. Replace: borrower_id → md5(ID + secret salt) = borrower_key. Pseudonymisation, not anonymisation."
+      },
+      "voiceover": "Next, personal data. Remove columns the model does not need, such as names and phone numbers. Replace IDs with a key made from a hash and a secret value, called a salt. Rows can still be joined, but the original ID is hidden. This is pseudonymisation, not anonymisation, because with the salt, the ID can be matched again. Rules differ by country, so check your organisation's rules."
+    },
+    {
+      "scene": 7,
+      "start": 123.0,
+      "end": 140.6,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "weather forecast map on screen",
+      "on_screen_text": "Test on the future, not the past",
+      "voiceover": "A time-based split is like a weather forecaster who tests a new method on last month's weather, using only data from before last month. Testing it on days mixed from the whole year would let the method remember the answers."
+    },
+    {
+      "scene": 8,
+      "start": 140.6,
+      "end": 158.2,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "loan officer reviewing documents at desk",
+      "on_screen_text": "Mei Lin · consumer lender · Penang",
+      "voiceover": "Mei Lin is a data engineer at a consumer lender in Penang, Malaysia. Her feature table has one row per borrower per month, with the full name, the phone number, some features, and the label: default in the next ninety days."
+    },
+    {
+      "scene": 9,
+      "start": 158.2,
+      "end": 179.2,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open a Python session and connect to DuckDB",
+        "Run the CREATE TABLE ml_ready AS SELECT md5(borrower_id || 'course-salt-2026') AS borrower_key ... query from content.md",
+        "Caption: in real use the salt is a secret stored outside the code"
+      ],
+      "voiceover": "In Python, she connects to DuckDB and creates a protected table. It hashes the borrower ID with a salt, and keeps only the feature date, two features and the label. The name and phone columns are gone. In real use, the salt is a secret stored outside the code."
+    },
+    {
+      "scene": 10,
+      "start": 179.2,
+      "end": 193.3,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run COPY (SELECT * FROM ml_ready WHERE feature_date < DATE '2026-04-01') TO 'train.parquet' (FORMAT parquet)",
+        "Run COPY (SELECT * FROM ml_ready WHERE feature_date >= DATE '2026-04-01') TO 'test.parquet' (FORMAT parquet)"
+      ],
+      "voiceover": "Next, she exports a time-based split as Parquet files. Everything before the first of April goes to the training file, and everything from the first of April goes to the test file."
+    },
+    {
+      "scene": 11,
+      "start": 193.3,
+      "end": 209.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run the check query from content.md with UNION ALL over 'train.parquet' and 'test.parquet'",
+        "Show the output: train | 3 | 2026-01-01 | 2026-03-01 and test | 3 | 2026-04-01 | 2026-05-01"
+      ],
+      "on_screen_text": "No date in both files",
+      "voiceover": "Then she checks both files with one query. On six invented rows, the training file has three rows, from January to March. The test file has three rows, from April to May. No date appears in both files."
+    },
+    {
+      "scene": 12,
+      "start": 209.6,
+      "end": 220.7,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Highlight the 2026-03-01 train row and the 90-day label window overlapping April",
+        "Add a note: real dataset needs a gap"
+      ],
+      "voiceover": "She also notes one limit. The March labels look ninety days ahead, into the test period. So for the real dataset, she will leave a gap."
+    },
+    {
+      "scene": 13,
+      "start": 220.7,
+      "end": 243.0,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open a new datasheet file in the editor",
+        "Fill in: source (loan system, nightly), grain (one borrower per month), date range, split rule, personal data removed",
+        "Add known issues (few borrowers from rural branches) and intended use (payment reminder ranking, not rejecting loans)"
+      ],
+      "voiceover": "Last, she writes a short datasheet. It gives the source, what one row means, the date range, the split rule and the personal data removed. It lists known issues, such as few borrowers from rural branches. And it states the intended use: ranking borrowers for a friendly payment reminder, not rejecting loans."
+    },
+    {
+      "scene": 14,
+      "start": 243.0,
+      "end": 267.0,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Random split and hidden identities",
+      "voiceover": "Two common mistakes. The first is a random split for a model that predicts the future, which gives a test score that is too optimistic. The second is thinking that dropping the name makes data anonymous. IDs, exact dates and rare combinations can still identify people. And never paste real personal records into AI chat tools."
+    },
+    {
+      "scene": 15,
+      "start": 267.0,
+      "end": 288.9,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Clean, split, protected, documented. 2. Predicting the future → split by time, gap for look-ahead labels. 3. Remove personal data; hashed IDs = pseudonymisation."
+      },
+      "voiceover": "Let's recap. First, an AI-ready dataset is clean, split correctly, protected and documented with a datasheet. Second, when a model predicts the future, split by time, and leave a gap when labels look ahead. Third, remove personal data the model does not need, and remember that hashing IDs is pseudonymisation."
+    },
+    {
+      "scene": 16,
+      "start": 288.9,
+      "end": 311.6,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Capstone Part 1",
+      "voiceover": "Now it is your turn. In the exercise, you create a time-based train and test split of your feature table in DuckDB, export both as Parquet files, and write a half-page datasheet. It takes about thirty-five minutes. After this, the capstone begins. Next lesson: Capstone Part One, Design and Ingest."
+    }
+  ]
+}

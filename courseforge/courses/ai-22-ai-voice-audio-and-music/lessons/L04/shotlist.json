@@ -1,0 +1,203 @@
+{
+  "course_id": "AI-22",
+  "lesson_id": "L04",
+  "duration_s": 295.0,
+  "thumbnail": {
+    "headline": "Captions in Minutes",
+    "slide": {
+      "layout": "title",
+      "title": "Captions in Minutes",
+      "body": "A simple video frame with a teal caption bar across the bottom and a small stopwatch icon in the corner. Small tag: AI Voice, Audio and Music · Lesson 4."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 20.1,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Captions help everyone",
+      "voiceover": "Many people watch videos with the sound off, and some cannot hear the audio at all. Captions help all of them. Typing captions by hand can take hours. With a speech-to-text model, you get a first draft in minutes, and spend your time checking it."
+    },
+    {
+      "scene": 2,
+      "start": 20.1,
+      "end": 42.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Transcripts and Captions with Whisper",
+        "body": "AI Voice, Audio and Music · Lesson 4 of 10"
+      },
+      "voiceover": "In the last lesson, you turned text into speech. Today, we go the other way. Whisper is a speech-to-text model. It listens to audio and produces a transcript. The easiest way to use it is a free app on your own computer, so your audio does not leave your device."
+    },
+    {
+      "scene": 3,
+      "start": 42.4,
+      "end": 63.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Two ways to use Whisper",
+        "body": "Left: free desktop app (Buzz), runs on your computer, no code, shown today. Right: local command, optional. Below: model size slider, small = faster · large = more accurate."
+      },
+      "voiceover": "We use an app called Buzz. If you like the terminal, you can also run Whisper with one command, but that is optional. Whisper comes in several sizes. Smaller models are faster but make more mistakes. A small or medium model is a good start on a normal laptop."
+    },
+    {
+      "scene": 4,
+      "start": 63.4,
+      "end": 82.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Check these by hand",
+        "body": "Names · Numbers (fifteen / fifty) · Technical terms · Noise and overlapping speakers"
+      },
+      "voiceover": "Whisper makes predictable mistakes. It often gets names wrong. It mixes up numbers, like fifteen and fifty. And it writes common words in place of technical terms. Noise and people talking at the same time also cause trouble. So always check the transcript by hand."
+    },
+    {
+      "scene": 5,
+      "start": 82.7,
+      "end": 101.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "An SRT caption",
+        "body": "12\n00:00:41,200 --> 00:00:44,900\nToday we visit a coffee farm near Manizales.\n(Labels: caption number · start --> end time · text)"
+      },
+      "voiceover": "Captions are a transcript split into short lines, each with a start and end time. The most common caption file is called SRT. It is plain text. Each caption has a number, then a timing line, then the words. Most video editors accept it."
+    },
+    {
+      "scene": 6,
+      "start": 101.6,
+      "end": 122.6,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "assistant typing notes in meeting",
+      "on_screen_text": "Fast, but check the notes",
+      "voiceover": "Think of Whisper as a fast assistant who types everything they hear in a meeting. They are quick and usually right. But they do not know your guests' names or the special words of your field. So you read their notes and correct them before anyone else sees them."
+    },
+    {
+      "scene": 7,
+      "start": 122.6,
+      "end": 142.3,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "teacher recording video lesson at desk",
+      "on_screen_text": "Mateus · science teacher · Recife",
+      "voiceover": "Let's follow Mateus. He is a science teacher in Recife, in Brazil, and he records short videos in Portuguese for his students. He wants captions for a two-minute video about the water cycle. First, he exports the audio of his video as an MP3 file."
+    },
+    {
+      "scene": 8,
+      "start": 142.3,
+      "end": 158.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "on_screen_text": "Language: Portuguese · Model: medium",
+      "screen_steps": [
+        "Open Buzz on the desktop",
+        "Add the file water-cycle.mp3",
+        "Set the language to Portuguese",
+        "Select the Whisper medium model",
+        "Click the button to start transcribing",
+        "Open the finished transcript: each line shows start and end times"
+      ],
+      "voiceover": "He opens Buzz on his computer and chooses the file. He sets the language to Portuguese and selects the medium model. Then he clicks transcribe. After a short wait, the transcript appears, with a timestamp on every line."
+    },
+    {
+      "scene": 9,
+      "start": 158.6,
+      "end": 183.0,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "on_screen_text": "Read along while you listen",
+      "screen_steps": [
+        "Play the audio while the transcript scrolls",
+        "Highlight error 1: 'evapotranspiração' split into two wrong words",
+        "Highlight error 2: '32 graus' written as '30 e 2 graus'",
+        "Highlight error 3: one sentence repeated on two lines"
+      ],
+      "voiceover": "Now the real work. He plays the audio and reads along at the same time. He finds three errors. A long scientific word about water rising from plants and soil was split into two wrong words. The temperature thirty-two degrees was written in a strange way. And one sentence appears twice, although he said it once."
+    },
+    {
+      "scene": 10,
+      "start": 183.0,
+      "end": 198.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "on_screen_text": "Correct, export SRT, watch once",
+      "screen_steps": [
+        "Double-click each wrong line in the Buzz editor and type the correct text",
+        "Delete the repeated sentence",
+        "Export the transcript as SRT",
+        "Import the SRT into the video editor",
+        "Play the full video with captions on"
+      ],
+      "voiceover": "He corrects each error in the app's editor, and deletes the repeated sentence. Then he exports the result as an SRT file, imports it into his video editor, and watches the whole video once with captions on."
+    },
+    {
+      "scene": 11,
+      "start": 198.9,
+      "end": 216.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "on_screen_text": "Check numbers, timings, line length",
+      "screen_steps": [
+        "Open the exported SRT file in a plain text editor",
+        "Scroll through: point to a caption number, a timing line and a text line",
+        "Point to one long caption line and split it into two shorter lines",
+        "Save the file"
+      ],
+      "voiceover": "You can also open the SRT file in a plain text editor before you use it. Check the caption numbers, the timings and the length of each line. Short lines are much easier to read, especially on a small phone screen."
+    },
+    {
+      "scene": 12,
+      "start": 216.5,
+      "end": 230.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Optional: one command",
+        "body": "whisper aula.mp3 --model medium --language pt --output_format srt\n(Labels: file · model · language · output format. Tag: optional)"
+      },
+      "voiceover": "If you prefer the terminal, the same job takes one command, with the file name, the model, the language and SRT as the output. You can see it on screen. This is optional."
+    },
+    {
+      "scene": 13,
+      "start": 230.6,
+      "end": 249.5,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Errors hide in the key words",
+      "voiceover": "A common mistake is to trust the transcript because most of it is correct. But the errors are usually in the most important words. One wrong number can change the meaning. And never upload other people's recordings to an online service without their permission."
+    },
+    {
+      "scene": 14,
+      "start": 249.5,
+      "end": 273.1,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Whisper: free app (Buzz) or optional command. 2. Check names, numbers, terms, repeats while listening. 3. SRT = numbered captions with start and end times."
+      },
+      "voiceover": "Let's recap. First, Whisper is a speech-to-text model you can use through a free app, or optionally with one command. Second, always check names, numbers, technical terms and repeated sentences by hand while you listen. Third, an SRT file holds numbered captions with start and end times, and most video editors accept it."
+    },
+    {
+      "scene": 15,
+      "start": 273.1,
+      "end": 295.0,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Voice Cloning and Consent",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will transcribe a two-minute recording of your own voice, correct every error, and export an SRT caption file. It takes about thirty minutes. In the next lesson, Voice Cloning: Consent Comes First, we talk about people before tools."
+    }
+  ]
+}

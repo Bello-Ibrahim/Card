@@ -1,0 +1,238 @@
+{
+  "course_id": "AI-21",
+  "lesson_id": "L06",
+  "duration_s": 298.6,
+  "thumbnail": {
+    "headline": "Change One Thing",
+    "slide": {
+      "layout": "title",
+      "title": "Change One Thing",
+      "body": "Three small frames of a hiker on a snowy ridge, labelled attempt 1, 2, 3, with one teal arrow between each. Small tag: AI Video Production and Motion · Lesson 6."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 13.7,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "A method, not luck",
+      "voiceover": "Today you generate your first real clips. But the goal is not one lucky result. The goal is a method. Change one thing at a time, and learn what each change does."
+    },
+    {
+      "scene": 2,
+      "start": 13.7,
+      "end": 22.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Text-to-Video in Google Flow (Veo)",
+        "body": "AI Video Production and Motion · Lesson 6 of 14"
+      },
+      "voiceover": "In the last lesson, you created keyframes. Now we turn to text-to-video, where you start from words alone."
+    },
+    {
+      "scene": 3,
+      "start": 22.3,
+      "end": 40.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Google Flow in four steps",
+        "body": "Four boxes with arrows: Write a prompt → Choose settings → Generate and review → Extend a scene. Small note: features change often, check the live tool."
+      },
+      "voiceover": "Google Flow is a web tool for AI filmmaking. It uses Google's Veo video models. You write a prompt, choose settings, generate clips, and you can extend a scene. Models, features and credit costs change often, so always check the live tool."
+    },
+    {
+      "scene": 4,
+      "start": 40.3,
+      "end": 57.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "No access? Use the fallback",
+        "body": "Left: Google Flow (Veo), main tool. Right: Kling text-to-video, fallback. Banner below: the same method works in any text-to-video tool."
+      },
+      "voiceover": "Flow is not available in every country. If you cannot use it, try the text-to-video mode in Kling, which you meet in the next lesson. The method you learn today works in any text-to-video tool."
+    },
+    {
+      "scene": 5,
+      "start": 57.0,
+      "end": 78.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Before you start",
+        "body": "Personal Google account; check age and country rules · Check your credits and the cost per generation · Prompts from Lesson 4 ready · No personal or confidential data in prompts"
+      },
+      "voiceover": "Before you start, sign in with a personal Google account, and check the age and country rules on the Flow page. Check how many credits you have and what one generation costs. Have your prompts from lesson four ready. And never type personal or confidential information into a prompt."
+    },
+    {
+      "scene": 6,
+      "start": 78.0,
+      "end": 95.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "The one-change method",
+        "body": "Small log table with three columns: Attempt · What I changed · What happened. One row highlighted: 2 · action only · legs clearer."
+      },
+      "voiceover": "Now the method. When a clip is not right, do not rewrite the whole prompt. Change one element, like the camera, the lighting or the action, and generate again. Keep a simple log. Attempt number, what you changed, and what happened."
+    },
+    {
+      "scene": 7,
+      "start": 95.6,
+      "end": 113.6,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "scientist examining small plants in greenhouse",
+      "on_screen_text": "Change one thing, learn one thing",
+      "voiceover": "Think of a scientist testing a plant. If she changes the water, the light and the soil at once, and the plant grows better, she does not know why. If she changes only the light, she learns something she can use again."
+    },
+    {
+      "scene": 8,
+      "start": 113.6,
+      "end": 133.3,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open Flow in a web browser and sign in with the demo Google account.",
+        "Create a new project and name it 'Ridge test'."
+      ],
+      "on_screen_text": "Ingrid's shop · Tromsø",
+      "voiceover": "Let's try it. Ingrid makes videos for an outdoor-gear shop in Tromsø, Norway. The shop is made up for this lesson. Her shot list needs a wide shot of a hiker on a snowy ridge at dawn. Button names in your version may look different."
+    },
+    {
+      "scene": 9,
+      "start": 133.3,
+      "end": 147.4,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Choose the text-to-video mode.",
+        "Open the settings panel.",
+        "Choose the model, the aspect ratio 16:9 and the number of outputs per prompt.",
+        "Point to the credit cost shown and note it."
+      ],
+      "voiceover": "She chooses the text-to-video mode and opens the settings. She picks the model, a sixteen by nine aspect ratio, and the number of outputs. She also notes the credit cost shown."
+    },
+    {
+      "scene": 10,
+      "start": 147.4,
+      "end": 164.1,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Paste Ingrid's prompt from content.md into the prompt box and hold on it for 3 seconds.",
+        "Click Generate."
+      ],
+      "on_screen_text": "Prompt: all seven parts",
+      "voiceover": "Then she pastes her prompt and clicks generate. You can see it on screen. A hiker in a red jacket walks along a snowy ridge, with a slow pan, soft dawn light, a realistic cinematic style and eight seconds."
+    },
+    {
+      "scene": 11,
+      "start": 164.1,
+      "end": 179.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Wait for the results.",
+        "Play each clip once for the whole picture.",
+        "Play again and zoom in on the feet, the snow and the horizon.",
+        "Show the log document: attempt 1, no change, legs blur at the end."
+      ],
+      "voiceover": "She plays each clip twice. Once for the whole picture, and once for details like feet, snow and the horizon. In attempt one, the hiker's legs blur at the end. She writes that in her log."
+    },
+    {
+      "scene": 12,
+      "start": 179.5,
+      "end": 198.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Attempt 2: change only the action to 'walks slowly and steadily' and generate.",
+        "Compare with attempt 1; log: action changed, legs clearer.",
+        "Attempt 3: change only the camera to 'static wide shot' and generate.",
+        "Log: camera changed, calmer but flat; keep attempt 2."
+      ],
+      "voiceover": "In attempt two, she changes only the action, to walks slowly and steadily. The legs are clearer. In attempt three, she changes only the camera, to a static wide shot. It is calmer, but it feels flat. So she keeps the pan from attempt two."
+    },
+    {
+      "scene": 13,
+      "start": 198.8,
+      "end": 208.2,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Select the attempt 2 clip.",
+        "Use extend to add a few seconds: the hiker stops and looks at the view."
+      ],
+      "voiceover": "Next, she uses extend on the best clip, to add a few seconds where the hiker stops and looks at the view."
+    },
+    {
+      "scene": 14,
+      "start": 208.2,
+      "end": 225.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Download the chosen clip and point to the resolution options and any watermark.",
+        "Rename the file 'S03_ridge_v2.mp4'.",
+        "Save the final prompt in a text file next to the clip.",
+        "Show the finished log with three attempts."
+      ],
+      "on_screen_text": "S03_ridge_v2.mp4 + prompt",
+      "voiceover": "Finally, she downloads the clip and checks the resolution and any watermark. She names the file with the shot number, and saves the prompt with it. Her log shows that the word slowly did more for quality than any style word."
+    },
+    {
+      "scene": 15,
+      "start": 225.8,
+      "end": 236.5,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Never remove watermarks",
+      "voiceover": "One more rule. Never try to remove a watermark. Watermarks help viewers know that content is AI-generated. Lesson thirteen covers disclosure in more detail."
+    },
+    {
+      "scene": 16,
+      "start": 236.5,
+      "end": 251.9,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Two ways to waste credits",
+        "body": "Left: same prompt, Generate × 5, crossed out. Right: five changes at once, crossed out. Bottom, ticked: one change per attempt, logged."
+      },
+      "voiceover": "A common mistake is pressing generate again and again with the same prompt, hoping for luck. It spends credits and teaches you nothing. Others change five things at once, and then cannot repeat a good result."
+    },
+    {
+      "scene": 17,
+      "start": 251.9,
+      "end": 274.2,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Flow + Veo: check the live tool, have a fallback. 2. One change per attempt, logged. 3. Name by shot number, save the prompt, keep watermarks."
+      },
+      "voiceover": "Let's recap. First, Flow generates clips from text with Veo models, but features, credits and availability change, so check the live tool and have a fallback. Second, change one element per attempt, and log what happened. Third, name files by shot number, save each prompt with its clip, and never remove watermarks."
+    },
+    {
+      "scene": 18,
+      "start": 274.2,
+      "end": 298.6,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Image-to-Video in Kling",
+      "voiceover": "Now it is your turn. Generate two shots from your shot list in Google Flow, or in Kling if Flow is not available to you. Log at least four attempts, one change each. Then save the best clips with their prompts. It takes about thirty-five minutes. Next lesson: Image-to-Video and Motion Control in Kling."
+    }
+  ]
+}

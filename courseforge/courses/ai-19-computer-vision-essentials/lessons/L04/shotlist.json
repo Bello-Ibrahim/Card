@@ -1,7 +1,7 @@
 {
   "course_id": "AI-19",
   "lesson_id": "L04",
-  "duration_s": 302.1,
+  "duration_s": 305.6,
   "thumbnail": {
     "headline": "Video Is Just Frames",
     "slide": {
@@ -62,20 +62,33 @@
     {
       "scene": 5,
       "start": 81.4,
-      "end": 112.7,
+      "end": 94.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Writing frames",
+        "body": "fourcc = cv2.VideoWriter_fourcc(*\"mp4v\")\nout = cv2.VideoWriter(\"belt_gray.mp4\", fourcc, fps, (w, h), isColor=False)"
+      },
+      "voiceover": "To save a result, you create a video writer with a file name, a codec, the frame rate and the frame size. The codec decides how the frames are compressed."
+    },
+    {
+      "scene": 6,
+      "start": 94.3,
+      "end": 116.2,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
         "layout": "bullets",
         "title": "Writing video: two rules",
-        "body": "cv2.VideoWriter(name, codec, fps, (width, height), isColor) · Rule 1: frame size must match exactly · Rule 2: isColor must match the frames · Always release() both objects"
+        "body": "Rule 1: frame size must match (width, height) exactly · Rule 2: isColor must match the frames · Mismatch = frames skipped, no exception · Always release() both objects"
       },
-      "voiceover": "To save a result, you create a video writer with a file name, a codec, the frame rate and the frame size. Two rules prevent most problems. Every frame must have exactly the size you gave the writer. And the colour setting must match: colour frames need colour on, greyscale frames need it off. If not, OpenCV skips the frames without any error. At the end, release both the reader and the writer."
+      "voiceover": "Two rules prevent most problems. Every frame must have exactly the size you gave the writer. And the colour setting must match: colour frames need colour on, greyscale frames need it off. If not, OpenCV skips the frames without any error. At the end, release both the reader and the writer."
     },
     {
-      "scene": 6,
-      "start": 112.7,
-      "end": 130.3,
+      "scene": 7,
+      "start": 116.2,
+      "end": 133.8,
       "section": "Explain",
       "visual_type": "stock",
       "stock_query": "factory conveyor belt with packages moving",
@@ -83,9 +96,9 @@
       "voiceover": "Picture a factory conveyor belt. Frames arrive one at a time. Each worker does the same job on every item, and a packer at the end puts them back in order. If one worker is slow, the whole line slows down."
     },
     {
-      "scene": 7,
-      "start": 130.3,
-      "end": 154.3,
+      "scene": 8,
+      "start": 133.8,
+      "end": 157.8,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -96,9 +109,9 @@
       "voiceover": "Two practical points. Colab runs on a remote server, so it cannot stream your webcam. We use recorded video files, which also make results repeatable. And speed matters. At one hundred milliseconds per frame, a twenty-five frames per second clip runs four times slower than real time. Skip frames, or resize them before heavy steps."
     },
     {
-      "scene": 8,
-      "start": 154.3,
-      "end": 169.7,
+      "scene": 9,
+      "start": 157.8,
+      "end": 173.2,
       "section": "Demonstrate",
       "visual_type": "stock",
       "stock_query": "mangoes moving on fruit sorting belt",
@@ -106,9 +119,9 @@
       "voiceover": "Let's build it. Mateus Oliveira works at a fruit packing plant in Petrolina, Brazil. A fixed camera films the sorting belt. He wants a greyscale copy of each clip, with a frame number on every frame."
     },
     {
-      "scene": 9,
-      "start": 169.7,
-      "end": 183.4,
+      "scene": 10,
+      "start": 173.2,
+      "end": 186.9,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -120,9 +133,9 @@
       "voiceover": "He uploads a ten-second clip to Colab and runs only the first few lines. They open the video and read its frame rate, width and height, which he prints to check."
     },
     {
-      "scene": 10,
-      "start": 183.4,
-      "end": 210.0,
+      "scene": 11,
+      "start": 186.9,
+      "end": 213.5,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -134,9 +147,9 @@
       "voiceover": "Then he runs the full cell. It creates a writer with colour switched off, and loops through the frames. Each frame is turned grey, gets its number written in white, and is saved. Finally, both objects are released. The summary reads two hundred and fifty frames at twenty-five frames per second, size six hundred and forty by three hundred and sixty."
     },
     {
-      "scene": 11,
-      "start": 210.0,
-      "end": 219.4,
+      "scene": 12,
+      "start": 213.5,
+      "end": 222.9,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -147,9 +160,9 @@
       "voiceover": "He downloads the new file from the file panel and plays it. Every frame is grey, with its number in the corner."
     },
     {
-      "scene": 12,
-      "start": 219.4,
-      "end": 234.8,
+      "scene": 13,
+      "start": 222.9,
+      "end": 238.3,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -162,18 +175,18 @@
       "voiceover": "Now he breaks it on purpose. He switches colour on in the writer and runs the cell again. There is no error message, but the output file is broken or very small. He switches it back."
     },
     {
-      "scene": 13,
-      "start": 234.8,
-      "end": 254.1,
+      "scene": 14,
+      "start": 238.3,
+      "end": 257.6,
       "section": "Demonstrate",
       "visual_type": "text",
       "on_screen_text": "Writer size is width, height",
       "voiceover": "Another common mistake is to give the writer height first, because that is the array shape. The writer, like resize, expects width first. When an output video is empty, compare the writer size with the frame shape, then check the colour setting and the codec."
     },
     {
-      "scene": 14,
-      "start": 254.1,
-      "end": 281.5,
+      "scene": 15,
+      "start": 257.6,
+      "end": 285.0,
       "section": "Recap",
       "visual_type": "slide",
       "slide": {
@@ -184,9 +197,9 @@
       "voiceover": "Let's recap. First, a video is a sequence of frames, and each frame you read is a normal image array. Second, a video writer needs a codec, the frame rate, the size as width and height, and the right colour setting, and both objects must be released. Third, in Colab, work with recorded clips, and reduce the work per frame when processing is slow."
     },
     {
-      "scene": 15,
-      "start": 281.5,
-      "end": 302.1,
+      "scene": 16,
+      "start": 285.0,
+      "end": 305.6,
       "section": "CTA",
       "visual_type": "presenter_full",
       "on_screen_text": "Next: How CNNs Learn Visual Features",

@@ -1,0 +1,75 @@
+{
+  "title": "Writing a Design Brief with AI as a Sparring Partner",
+  "thumbnail": {
+    "headline": "Let AI Question Your Brief",
+    "image": "Navy background, a one-page brief with five teal question marks in the margin, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Let AI Question Your Brief", "body": "A one-page design brief with five teal question-mark notes in the margin. Small tag: AI for Brand and Product Design · Lesson 4."}
+  },
+  "production_notes": [
+    "No facts to verify: the example is hypothetical, and the legal label question is sent to an expert source, not answered (content.md Review Flags: None).",
+    "Yasmine Trabelsi and the olive oil company are fictional; olive stock footage must not show a real bottle label, brand or logo.",
+    "Scene 6 slide shows the sparring-partner prompt from content.md; the presenter paraphrases it."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Most projects that go wrong in week six were already going wrong in week one, in the brief. What if you could find the gaps in your brief before your client does?",
+       "on_screen_text": "Find the gaps first"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "In the last lesson, we turned research into personas and job statements. Now we use them in a design brief, with AI as a sparring partner.",
+       "slide": {"layout": "title", "title": "Writing a Design Brief with AI as a Sparring Partner", "body": "AI for Brand and Product Design · Lesson 4 of 14"}},
+      {"visual_type": "slide",
+       "voiceover": "A design brief is the agreement that guides every later decision. A good one-page brief covers six things. Background. Problem and goals. Audience, based on research. Scope and deliverables. Constraints, like budget, timeline, languages and markets. And success measures, meaning how you and the client will judge the result.",
+       "slide": {"layout": "bullets", "title": "A one-page brief", "body": "Background · Problem and goals · Audience (from research) · Scope and deliverables · Constraints: budget, timeline, languages, markets · Success measures"}},
+      {"visual_type": "slide",
+       "voiceover": "You can use Claude in two ways here. The first is to ask it to write the brief. That is fast, but the result is generic, because Claude does not know the client, the politics or the budget. The second, more useful way is to ask it to question your draft.",
+       "slide": {"layout": "comparison", "title": "Write it, or question it?", "body": "Left: 'Claude, write my brief' → fast but generic (no client, politics or budget). Right, highlighted: 'Claude, question my draft' → sparring partner."}},
+      {"visual_type": "slide",
+       "voiceover": "In this role, Claude looks for four things. Missing constraints, such as which markets and languages the brand must work in. Unclear success measures, such as what more modern really means. Conflicting goals, like a premium look with the lowest packaging cost. And hidden assumptions, where you have no evidence.",
+       "slide": {"layout": "bullets", "title": "What the sparring partner finds", "body": "Missing constraints · Unclear success measures ('more modern'?) · Conflicting goals (premium look vs lowest packaging cost) · Hidden assumptions"}},
+      {"visual_type": "slide",
+       "voiceover": "A useful prompt sets the role and the limits. It asks Claude to act as a senior creative director, and to ask the five most important critical questions. It also says: do not rewrite the brief, and do not suggest design solutions.",
+       "slide": {"layout": "code", "title": "The sparring-partner prompt", "body": "You are a senior creative director reviewing this brief. Ask me the 5 most important critical questions. Do not rewrite the brief and do not suggest design solutions."}},
+      {"visual_type": "text",
+       "voiceover": "That last rule matters. You want questions, not answers. The designer keeps the decisions. You answer each question yourself, with the client when needed. And remember to remove confidential numbers, or replace them with ranges, like a small budget.",
+       "on_screen_text": "Questions, not answers."},
+      {"visual_type": "stock",
+       "voiceover": "Think of Claude as a training partner in boxing. The partner does not fight your match for you. They test your defence, so you find the weak points before the real fight. And you decide what to change.",
+       "stock_query": "boxing training partners sparring in gym",
+       "on_screen_text": "A sparring partner tests your defence"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's watch this work. Yasmine Trabelsi is a brand designer in Tunis, Tunisia. A family-owned olive oil company wants a rebrand. Her draft brief says: modernise the brand for younger buyers and export markets, keep the family heritage, and launch new labels in six months.",
+       "stock_query": "olive grove harvest in sunlight",
+       "on_screen_text": "Yasmine · olive oil rebrand · Tunis"},
+      {"visual_type": "slide",
+       "voiceover": "She removes the owner's name and the revenue figures, pastes the brief into Claude, and asks for five critical questions. Claude asks which export markets, and whether labels must work in Arabic, French and English. It asks what younger buyers means, and how success will be measured after six months.",
+       "slide": {"layout": "bullets", "title": "Claude's critical questions", "body": "1. Which export markets? Arabic, French and English on one label? · 2. 'Younger buyers': which ages and channels? · 3. How will success be measured after six months?"}},
+      {"visual_type": "slide",
+       "voiceover": "Then comes the sharpest question. Modernise and keep heritage can conflict. Which heritage elements are fixed, and which can change? The fifth question asks about legal label rules in the export markets.",
+       "slide": {"layout": "quote", "title": "Question 4 of 5", "body": "\"'Modernise' and 'keep heritage' can conflict. Which heritage elements are fixed, and which can change?\" Below, smaller: 5. Legal label requirements in export markets?"}},
+      {"visual_type": "slide",
+       "voiceover": "Yasmine answers each one herself. After a call with the client, she adds two European countries and the Gulf region as target markets, and trilingual labels. The family name and the olive tree must stay. And success means new distributor listings.",
+       "slide": {"layout": "comparison", "title": "The brief, revised", "body": "Before: 'Modernise for younger buyers and export markets'. After: markets = two European countries + Gulf region · trilingual labels · family name and olive tree stay · success = distributor listings"}},
+      {"visual_type": "text",
+       "voiceover": "For the legal question, she does not ask Claude for an answer. Label rules differ by country, so the client's export agent will confirm them. Expert questions go to expert sources. Her brief is now clearer, and every decision belongs to her and the client.",
+       "on_screen_text": "Expert questions go to expert sources."},
+      {"visual_type": "slide",
+       "voiceover": "A common mistake is to ask Claude to improve the brief, and accept a longer, more polished text. Polished is not the same as correct. The new text can add goals the client never agreed to. So ask for questions, not rewrites, and choose the questions that change decisions.",
+       "slide": {"layout": "comparison", "title": "Polished is not correct", "body": "Red cross: 'Improve my brief' → longer text with goals the client never agreed. Green tick: 'Ask me questions' → you make every change."}}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, a strong brief covers background, goals, audience, scope, constraints and success measures, on one page. Second, use Claude to question your draft, looking for missing constraints, unclear measures and conflicting goals, not to write it for you. Third, you and the client make every decision, and expert questions go to expert sources.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. One page: background, goals, audience, scope, constraints, success. 2. Claude questions; it does not write. 3. You and the client decide; experts answer expert questions."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below this video, you will draft a one-page brief for your capstone brand, ask Claude for five critical questions, and revise the brief to answer them. It takes about thirty minutes. In the next lesson, we look at protecting client data and confidentiality. See you there.",
+       "on_screen_text": "Next: Protecting Client Data"}
+    ]
+  }
+}

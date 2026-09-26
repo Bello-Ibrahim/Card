@@ -1,6 +1,6 @@
 # L04 Working with Video Frames | Presenter Script
 
-Course: AI-19 · Video: 5 min · Words: 705
+Course: AI-19 · Video: 5 min · Words: 713
 
 ## Hook
 A one-minute video clip can contain well over a thousand images. Every video tool, from traffic counters to sports replays, starts with the same simple loop. Read a frame, do something with it, move to the next one. Today, you write that loop.
@@ -12,7 +12,9 @@ The frame rate is frames per second. A clip at twenty-five frames per second has
 
 OpenCV reads video with a video capture object. Each read returns two values. The first says whether a frame was found, and becomes false at the end of the file. The second is the frame itself, a normal image array in blue, green, red order. Everything from the last lesson works on each frame.
 
-To save a result, you create a video writer with a file name, a codec, the frame rate and the frame size. Two rules prevent most problems. Every frame must have exactly the size you gave the writer. And the colour setting must match: colour frames need colour on, greyscale frames need it off. If not, OpenCV skips the frames without any error. At the end, release both the reader and the writer.
+To save a result, you create a video writer with a file name, a codec, the frame rate and the frame size. The codec decides how the frames are compressed.
+
+Two rules prevent most problems. Every frame must have exactly the size you gave the writer. And the colour setting must match: colour frames need colour on, greyscale frames need it off. If not, OpenCV skips the frames without any error. At the end, release both the reader and the writer.
 
 Picture a factory conveyor belt. Frames arrive one at a time. Each worker does the same job on every item, and a packer at the end puts them back in order. If one worker is slow, the whole line slows down.
 

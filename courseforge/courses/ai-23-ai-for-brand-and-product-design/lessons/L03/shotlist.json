@@ -1,0 +1,202 @@
+{
+  "course_id": "AI-23",
+  "lesson_id": "L03",
+  "duration_s": 302.6,
+  "thumbnail": {
+    "headline": "Research or Assumption?",
+    "slide": {
+      "layout": "title",
+      "title": "Research or Assumption?",
+      "body": "A lightweight persona card; each line carries a small chip, teal 'From research' or amber 'Assumption'. Small tag: AI for Brand and Product Design · Lesson 3."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.9,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Where did this persona come from?",
+      "voiceover": "Ask an AI tool for a persona, and you get one in seconds. A name, an age, a job, a favourite coffee order and three frustrations. It sounds real. But where did any of it come from?"
+    },
+    {
+      "scene": 2,
+      "start": 15.9,
+      "end": 27.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "From Insights to Personas and Jobs to Be Done",
+        "body": "AI for Brand and Product Design · Lesson 3 of 14"
+      },
+      "voiceover": "Last time, we turned interview notes into verified themes. Now we make those themes useful for a team, with jobs to be done statements and personas."
+    },
+    {
+      "scene": 3,
+      "start": 27.0,
+      "end": 48.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Job-to-be-done structure",
+        "body": "When [situation], I want to [motivation], so I can [expected outcome]."
+      },
+      "voiceover": "A job to be done statement describes what a person is trying to achieve in a situation, without describing a solution. A common structure is: when this situation happens, I want to do this, so I can reach this outcome. It keeps the team focused on needs, not features."
+    },
+    {
+      "scene": 4,
+      "start": 48.0,
+      "end": 62.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "A JTBD example",
+        "body": "\"When my child has a fever at night, I want to see which clinic has an open slot tomorrow morning, so I can plan my day before I go to sleep.\""
+      },
+      "voiceover": "For example: when my child has a fever at night, I want to see which clinic has an open slot tomorrow morning, so I can plan my day before I go to sleep."
+    },
+    {
+      "scene": 5,
+      "start": 62.1,
+      "end": 82.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "A lightweight persona",
+        "body": "Name and role · Goal · Key behaviours · Pain points · Evidence behind each point. Crossed-out extra: favourite film"
+      },
+      "voiceover": "A persona is a short profile that represents a group of real users. A lightweight persona needs only a few parts: a name and role, a goal, key behaviours, pain points, and the evidence behind each point. A favourite film is not useful, unless research shows it matters."
+    },
+    {
+      "scene": 6,
+      "start": 82.7,
+      "end": 106.3,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "blurred silhouette of person behind frosted glass",
+      "on_screen_text": "Synthetic users are not data",
+      "voiceover": "Claude is good at drafting these, because it phrases ideas clearly and quickly. The risk is synthetic users. These are personas or user quotes that the model invents to fill gaps. They sound realistic, but they are not based on data. Design for a synthetic user, and you design for someone who may not exist."
+    },
+    {
+      "scene": 7,
+      "start": 106.3,
+      "end": 123.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Label every claim",
+        "body": "Left, teal: From research, supported by themes or participant IDs. Right, amber: Assumption, reasonable but unsupported, becomes a research question."
+      },
+      "voiceover": "The protection is simple. Label every claim. Each line is either from research, supported by named themes or participant IDs, or it is an assumption. An assumption may be reasonable, but it becomes a question for the next round of research."
+    },
+    {
+      "scene": 8,
+      "start": 123.9,
+      "end": 144.9,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "artist drawing pencil portrait sketch close up",
+      "on_screen_text": "Draw only what witnesses described",
+      "voiceover": "Think of a persona as a composite sketch made from witness statements. A good sketch artist draws only what the witnesses described. If the artist adds a scar that nobody mentioned, the sketch looks more complete, but now it is misleading. Labels show which parts came from the witnesses."
+    },
+    {
+      "scene": 9,
+      "start": 144.9,
+      "end": 161.6,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "patients waiting in clinic using phones",
+      "on_screen_text": "Dewi · clinic booking app · Surabaya",
+      "voiceover": "Let's see it in action. Dewi Santoso is a product designer at a health-tech company in Surabaya, Indonesia. Her team is designing a clinic booking app for patients. She has four verified themes from interviews with ten patients."
+    },
+    {
+      "scene": 10,
+      "start": 161.6,
+      "end": 177.9,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Dewi's verified themes",
+        "body": "T1: book for family more than for themselves (7 participants) · T2: uncertain waiting times cause stress (6) · T3: prefer confirmations by messaging app (5) · T4: older patients ask younger relatives to book (3)"
+      },
+      "voiceover": "One. Patients book for family members more often than for themselves. Two. Uncertain waiting times cause stress. Three. Many prefer to confirm bookings through a messaging app. Four. Some older patients ask younger relatives to book for them."
+    },
+    {
+      "scene": 11,
+      "start": 177.9,
+      "end": 189.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Dewi's prompt",
+        "body": "Using only these themes, write 3 JTBD statements and one lightweight persona. After every claim, cite the theme in brackets or write (assumption)."
+      },
+      "voiceover": "She asks Claude to use only these themes, write three job statements and one lightweight persona, and cite the theme after every claim, or write assumption."
+    },
+    {
+      "scene": 12,
+      "start": 189.0,
+      "end": 214.7,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Claude's draft persona",
+        "body": "Persona card 'Rina, 34', lines revealed with tags: books for two children and her mother (T1, T4) · anxious when wait time is unknown (T2) · prefers messaging-app confirmations (T3) · teacher, books in lunch breaks (assumption, amber)"
+      },
+      "voiceover": "Claude's persona is Rina, thirty-four. She books appointments for her two children and her mother. She gets anxious when she cannot see how long she will wait. She prefers confirmations by messaging app. Each of these cites a theme. Then one line says she is a teacher who books during lunch breaks. That one is marked as an assumption."
+    },
+    {
+      "scene": 13,
+      "start": 214.7,
+      "end": 236.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Dewi's review",
+        "body": "Before: persona with job title and 'paying online' JTBD. After: job title removed · 'books during short breaks' → research question · 'paying online' → research backlog. Caption: shorter, but every line defensible"
+      },
+      "voiceover": "Dewi reviews the output. She removes the job title, and keeps books during short breaks as a question for research. One job statement mentions paying online, which is not in any theme, so it moves to the research backlog. The final persona is shorter, but every line can be defended."
+    },
+    {
+      "scene": 14,
+      "start": 236.1,
+      "end": 254.1,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "More detail is not more truth.",
+      "voiceover": "A common mistake is to accept a long, detailed AI persona because it feels more real. More detail does not mean more truth. And AI interviews with imaginary users can help you prepare questions, but they are not evidence about real people."
+    },
+    {
+      "scene": 15,
+      "start": 254.1,
+      "end": 279.0,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. JTBD: situation, motivation, outcome; personas with evidence. 2. Synthetic users are not data. 3. Label every claim: research or assumption."
+      },
+      "voiceover": "Let's recap. First, job statements describe a situation, a motivation and an outcome, and lightweight personas summarise goals, behaviours and pain points with evidence. Second, synthetic users invented by AI sound real, but they are not data, so they must never replace research. Third, label every claim as from research or assumption, and turn assumptions into research questions."
+    },
+    {
+      "scene": 16,
+      "start": 279.0,
+      "end": 302.6,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Writing a Design Brief",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will write three job statements and one persona with Claude, then mark each claim as from research or assumption. It takes about twenty-five minutes. In the next lesson, we write a design brief with AI as a sparring partner. See you there."
+    }
+  ]
+}

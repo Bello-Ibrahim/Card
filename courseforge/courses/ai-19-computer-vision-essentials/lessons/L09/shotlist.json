@@ -1,0 +1,201 @@
+{
+  "course_id": "AI-19",
+  "lesson_id": "L09",
+  "duration_s": 310.8,
+  "thumbnail": {
+    "headline": "Is This Box Correct?",
+    "slide": {
+      "layout": "title",
+      "title": "Is This Box Correct?",
+      "body": "Top-down car with a green ground-truth box and a teal predicted box shifted right and down; overlap area shaded. Small tag: Computer Vision Essentials · Lesson 9."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.3,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Correct, or a mistake?",
+      "voiceover": "A detector draws a box around a car, but cuts off the back of it. Is that correct, or a mistake? Without a clear rule, two people will score the same model differently. That rule is called IoU."
+    },
+    {
+      "scene": 2,
+      "start": 16.3,
+      "end": 30.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Object Detection: Boxes, Classes and IoU",
+        "body": "Computer Vision Essentials · Lesson 9 of 16"
+      },
+      "voiceover": "Welcome to week three. So far, our models said what is in an image. Now we also ask where. An object detector returns a list of detections, and each one has three parts."
+    },
+    {
+      "scene": 3,
+      "start": 30.4,
+      "end": 49.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "One detection, three parts",
+        "body": "A car with a box. Labels: box (x1, y1) top-left and (x2, y2) bottom-right · class: car · confidence: 0.91. Side note: some formats use centre, width, height."
+      },
+      "voiceover": "First, a bounding box, usually the top left and bottom right corners in pixels. Some tools use the centre, width and height instead, so always check the format. Second, a class, such as car or bus. Third, a confidence score from zero to one."
+    },
+    {
+      "scene": 4,
+      "start": 49.3,
+      "end": 63.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Non-maximum suppression",
+        "body": "Before: three overlapping boxes on one bus (0.92, 0.85, 0.60). After: one box, 0.92."
+      },
+      "voiceover": "Detectors often draw several overlapping boxes for one object. Non-maximum suppression keeps the box with the highest score and removes boxes that overlap it strongly. Libraries usually do this for you."
+    },
+    {
+      "scene": 5,
+      "start": 63.0,
+      "end": 85.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "IoU = overlap ÷ union",
+        "body": "Two overlapping rectangles. Overlap shaded dark teal. Union outlined. Formula: IoU = overlap ÷ (area A + area B − overlap). Scale: 0 (no touch) to 1 (perfect)."
+      },
+      "voiceover": "Intersection over union, or IoU, measures how well a predicted box matches the true box that a person drew. It is the area of overlap divided by the area of the union, which is everything either box covers. IoU is one for a perfect match, and zero when the boxes do not touch."
+    },
+    {
+      "scene": 6,
+      "start": 85.7,
+      "end": 108.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Threshold 0.5",
+        "body": "Right class + IoU ≥ 0.5 → true positive · Otherwise → false positive · Unmatched true box → false negative · → precision and recall"
+      },
+      "voiceover": "To score a detector, you pick an IoU threshold, often zero point five. A prediction with the right class and enough overlap is a true positive. Otherwise it is a false positive. And every true box with no match is a false negative. From these counts, you get precision and recall, like last week."
+    },
+    {
+      "scene": 7,
+      "start": 108.8,
+      "end": 129.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Two kinds of mAP",
+        "body": "mAP50: IoU threshold 0.5. mAP50-95: average over 0.5 to 0.95, rewards very accurate boxes, always ≤ mAP50."
+      },
+      "voiceover": "Average precision summarises precision and recall for one class, and mAP averages it over all classes. There are two common versions. mAP fifty uses a threshold of zero point five. mAP fifty to ninety-five averages stricter thresholds, so it is always lower or equal for the same model."
+    },
+    {
+      "scene": 8,
+      "start": 129.8,
+      "end": 148.7,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "transparent sheet on light table",
+      "on_screen_text": "Too big or too small loses",
+      "voiceover": "Picture laying a transparent sheet with your box over the true box on a light table. Measure where they overlap, and divide by the total area they cover. A box that is too big and a box that is too small both lose points."
+    },
+    {
+      "scene": 9,
+      "start": 148.7,
+      "end": 170.1,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "aerial view of cars in car park",
+      "on_screen_text": "Nadia's car park · Dhaka",
+      "voiceover": "Nadia Rahman evaluates a parking detector for a shopping centre in Dhaka, Bangladesh. For one car, the true box runs from one hundred, fifty to three hundred, one hundred and fifty. The predicted box runs from one hundred and fifty, seventy to three hundred and thirty, one hundred and seventy."
+    },
+    {
+      "scene": 10,
+      "start": 170.1,
+      "end": 189.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Step by step",
+        "body": "Box A (100, 50, 300, 150): 200 × 100 = 20,000. Box B (150, 70, 330, 170): 180 × 100 = 18,000. Overlap x 150→300, y 70→150: 150 × 80 = 12,000."
+      },
+      "voiceover": "The true box is two hundred by one hundred, so its area is twenty thousand. The predicted box is one hundred and eighty by one hundred, so eighteen thousand. The overlap is one hundred and fifty wide and eighty high, which is twelve thousand."
+    },
+    {
+      "scene": 11,
+      "start": 189.0,
+      "end": 202.3,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Union and IoU",
+        "body": "Union = 20,000 + 18,000 − 12,000 = 26,000 · IoU = 12,000 ÷ 26,000 ≈ 0.46"
+      },
+      "voiceover": "The union is twenty thousand plus eighteen thousand, minus the overlap, so twenty-six thousand. Twelve thousand divided by twenty-six thousand gives an IoU of about zero point four six."
+    },
+    {
+      "scene": 12,
+      "start": 202.3,
+      "end": 222.9,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "0.46: on the car, still wrong",
+      "voiceover": "At a threshold of zero point five, this prediction is a false positive, and the car counts as a false negative, even though the box is clearly on the car. Nadia notices that the boxes often shift towards the car's shadow, something to fix with more training images."
+    },
+    {
+      "scene": 13,
+      "start": 222.9,
+      "end": 246.9,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Check it in Python",
+        "body": "def iou(a, b):\n    ix1, iy1 = max(a[0], b[0]), max(a[1], b[1])\n    ix2, iy2 = min(a[2], b[2]), min(a[3], b[3])\n    inter = max(0, ix2 - ix1) * max(0, iy2 - iy1)\n    ...\n    return inter / (area_a + area_b - inter)\n# 0.462"
+      },
+      "voiceover": "She checks her answer with a short function. It finds the corners of the overlap, multiplies width by height, and divides by the union. It prints zero point four six two. Note the parts that stop the width or height going below zero. Without them, two boxes that do not touch could show a false overlap."
+    },
+    {
+      "scene": 14,
+      "start": 246.9,
+      "end": 262.8,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Same mAP version, same test set",
+      "voiceover": "A common mistake is to compare mAP numbers from different sources. Only compare the same version, on the same test set. And never mix box formats, because the wrong format gives wrong IoU values without any error."
+    },
+    {
+      "scene": 15,
+      "start": 262.8,
+      "end": 287.7,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Box + class + confidence; NMS removes duplicates. 2. IoU = overlap ÷ union; threshold decides a match. 3. Compare mAP only like with like."
+      },
+      "voiceover": "Let's recap. First, a detector returns a box, a class and a confidence score for each object, and non-maximum suppression removes duplicate boxes. Second, IoU is overlap divided by union, and a threshold such as zero point five decides whether a prediction counts. Third, compare mAP values only with the same version and the same test set."
+    },
+    {
+      "scene": 16,
+      "start": 287.7,
+      "end": 310.8,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Running YOLO on Images and Video",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will calculate IoU by hand for three pairs of boxes, then check your answers with a short Python function. It takes about twenty minutes. In the next lesson, we run a real detector. Running YOLO on Images and Video. See you there."
+    }
+  ]
+}

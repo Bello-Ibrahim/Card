@@ -1,0 +1,74 @@
+{
+  "title": "Research Synthesis with Claude",
+  "thumbnail": {
+    "headline": "Trust, but Check Themes",
+    "image": "Navy background, a column of sticky-note themes on the left linked by teal lines to highlighted quotes on the right, one link marked with a small warning icon, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Trust, but Check Themes", "body": "Sticky-note themes on the left, each joined by a line to a quote on the right; one line carries a small warning icon. Small tag: AI for Brand and Product Design · Lesson 2."}
+  },
+  "production_notes": [
+    "No facts to verify: hypothetical data and general prompting practice (content.md Review Flags: None).",
+    "Wanjiru Kamau and the savings start-up are fictional; stock footage must not show a real app, bank or brand.",
+    "Participant IDs are spoken as 'P zero one' and 'P twelve'; slides show P01 to P12.",
+    "Scene 10 code slide shows the prompt from content.md (Context, Task, Rules, Notes); the presenter describes it and does not read it."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "You have twelve interview notes, a deadline tomorrow and a wall of sticky notes that is still empty. Claude can suggest themes in under a minute. But can you trust a theme if you have not checked where it came from?",
+       "on_screen_text": "Can you trust the theme?"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "In the last lesson, we mapped where AI fits. Now we start at the beginning, with research. This lesson is about research synthesis with Claude.",
+       "slide": {"layout": "title", "title": "Research Synthesis with Claude", "body": "AI for Brand and Product Design · Lesson 2 of 14"}},
+      {"visual_type": "slide",
+       "voiceover": "Research synthesis means turning raw material, such as interview notes, app store reviews or open survey answers, into a few clear patterns. It is slow work. And it suits a language model like Claude, because the task is about reading a lot of text and grouping similar ideas.",
+       "slide": {"layout": "diagram", "title": "What synthesis means", "body": "Three piles on the left (interview notes · app reviews · survey answers) → arrow → three to five labelled theme cards on the right"}},
+      {"visual_type": "slide",
+       "voiceover": "A reliable synthesis prompt has four parts. Context: who the research is about, and what decision it supports. Material: the anonymised notes, with an ID for each participant, like P zero one. Task: find up to five themes, each with a name, a description, the supporting participant IDs and two exact quotes. And finally, rules.",
+       "slide": {"layout": "bullets", "title": "Four parts of a synthesis prompt", "body": "1. Context: who, and what decision · 2. Material: anonymised notes with IDs (P01, P02 …) · 3. Task: up to 5 themes, name, description, IDs, 2 exact quotes · 4. Rules"}},
+      {"visual_type": "slide",
+       "voiceover": "The rules say: only use quotes that appear word for word in the notes. Mark any theme with fewer than three participants. And do not add information that is not in the notes. IDs and exact quotes make the output checkable, and they make weak themes easy to see.",
+       "slide": {"layout": "quote", "title": "The rules", "body": "Quotes must appear word for word. Mark any theme with fewer than 3 participants. Do not add facts that are not in the notes."}},
+      {"visual_type": "stock",
+       "voiceover": "Why does checking matter? Language models produce text that sounds right. They can merge two complaints into one theme, turn some people into most users, or slightly reword a quote. Sometimes they invent a quote that nobody said. It is not deliberate, but the result is a false insight in your deck.",
+       "stock_query": "designer comparing notes on sticky note wall",
+       "on_screen_text": "Sounding right is not evidence"},
+      {"visual_type": "text",
+       "voiceover": "So protect the data first. Before you paste anything, remove names, phone numbers, email addresses, exact locations and employer names. Replace them with IDs or general terms. And only use research data with participant consent and client approval. Lesson five covers this in more detail.",
+       "on_screen_text": "Anonymise first. Consent and approval always."},
+      {"visual_type": "stock",
+       "voiceover": "Here is a way to think about it. Claude is like a colleague who read all the notes very quickly, and now tells you what they remember. That is useful. But you would still ask, who said that? Show me the page. Asking for IDs and quotes is how you ask Claude to show you the page.",
+       "stock_query": "two colleagues discussing printed notes office",
+       "on_screen_text": "Show me the page."}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's try it. Wanjiru Kamau is a UX researcher at a start-up building a group savings app for users in Kenya and Ghana. She has twelve anonymised interview notes, labelled P zero one to P twelve.",
+       "stock_query": "young woman researcher reading notes laptop",
+       "on_screen_text": "Wanjiru · savings app · Kenya and Ghana"},
+      {"visual_type": "slide",
+       "voiceover": "She writes a prompt in Claude with the context, the task and the rules, and then pastes the notes. Claude returns five themes. For example, trust in the group treasurer, supported by five participants, and fear of hidden fees, supported by three.",
+       "slide": {"layout": "code", "title": "Wanjiru's prompt", "body": "Context: interviews with 12 people in Kenya and Ghana about saving money in groups. The goal is to decide the first features of a savings app.\nTask: find up to 5 themes. For each: name, one-sentence description, supporting participant IDs, and 2 exact quotes.\nRules: quotes must appear word for word in the notes. Mark any theme with fewer than 3 participants as \"weak\". Do not add facts that are not in the notes.\nNotes: [P01] ... [P12] ...\n\nResult cards: Trust in the group treasurer (P02, P05, P07, P09, P11) · Fear of hidden fees (P03, P06, P10)"}},
+      {"visual_type": "slide",
+       "voiceover": "Now Wanjiru checks each quote with a text search in her original notes. Four themes are correct. But in fear of hidden fees, one quote has changed. The note says, I think there might be charges. Claude wrote, I know there are hidden charges. The meaning is stronger than the original.",
+       "slide": {"layout": "comparison", "title": "One quote changed", "body": "Left, original note: 'I think there might be charges' · Right, Claude's version (highlighted in red): 'I know there are hidden charges' · Caption: stronger than the source"}},
+      {"visual_type": "slide",
+       "voiceover": "She also finds that participant six talked about bank fees, not app fees. So she corrects the quote, removes that participant and relabels the theme as weak, with two participants. In her report, it becomes a question for the next round of research, not a finding.",
+       "slide": {"layout": "diagram", "title": "From finding to question", "body": "Theme card 'Fear of hidden fees (P03, P06, P10)' → P06 crossed out (talked about bank fees) → card relabelled 'Weak: 2 participants' → moved to a column named 'Next research round'"}},
+      {"visual_type": "slide",
+       "voiceover": "The most common mistake is to copy Claude's themes straight into a deck because they sound right. A theme is only a finding when you can point to the evidence. Another mistake is pasting raw notes with real names, because it is only a summary. The task does not change the data you shared.",
+       "slide": {"layout": "comparison", "title": "Two common mistakes", "body": "Red cross: themes copied into the deck because they sound right → Green tick: a finding points to evidence · Red cross: raw notes with real names → Green tick: anonymised notes only"}}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, ask Claude for themes with participant IDs and exact quotes, so every claim can be checked. Second, verify every quote and every participant before you use a theme, because models can reword, merge or invent evidence. Third, anonymise research data, and only use it in AI tools with consent and client approval.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Ask for themes with IDs and exact quotes. 2. Verify every quote and participant. 3. Anonymise; use only with consent and client approval."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below this video, you will give Claude a set of sample interview notes, ask for five themes with quotes, and check every quote against the original text. It takes about thirty minutes. In the next lesson, we go from insights to personas and jobs to be done. See you there.",
+       "on_screen_text": "Next: From Insights to Personas"}
+    ]
+  }
+}
