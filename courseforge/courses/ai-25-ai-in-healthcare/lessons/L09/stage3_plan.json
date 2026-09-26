@@ -1,0 +1,73 @@
+{
+  "title": "Bias, Equity and Dataset Shift",
+  "thumbnail": {
+    "headline": "One Number Hides Many",
+    "image": "Navy background, one large figure 80% splitting into smaller bars of different heights for different patient groups and sites, the shortest bar in teal, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "One Number Hides Many", "body": "A single bar labelled 'overall' fanning out into several bars of different heights labelled by group and site. Small tag: AI in Healthcare · Lesson 9 · synthetic figures."}
+  },
+  "production_notes": [
+    "All figures are synthetic; the voiceover says so where numbers appear. On-screen numbers must match content.md: city hospitals 200 with the condition, 184 flagged, sensitivity 92.0%; rural clinics 150 with the condition, 114 flagged, sensitivity 76.0%. Hook figures (80% overall, 90% and 65% by group) are illustrative. Calculations were checked with python3 in Stage 2.",
+    "[VERIFY] Published real cases of bias or dataset shift in health AI are left out of the script. Add any real case only after checking it against its source.",
+    "Dr. Neema Mwakasege, the Tanzanian health authority and the tuberculosis tool are hypothetical. X-ray images on slides must be generic illustrations with no readable patient details.",
+    "The script tells clinicians not to treat a negative result as ruling out disease, which is a statement about the tool's limits, not clinical advice. A clinical reviewer may wish to confirm this wording."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "A tool reports an overall sensitivity of eighty percent. That single number can hide a tool that finds ninety percent of cases in one group of patients, and only sixty-five percent in another. Who are the patients inside that missing thirty-five percent?",
+       "on_screen_text": "Who is in the missing 35%?"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "In the last lesson, we saw how generative AI can fail inside a single document. Now we look at how a tool can fail whole groups of patients. A tool's performance can differ between groups and between care settings, and two related problems cause this.",
+       "slide": {"layout": "title", "title": "Bias, Equity and Dataset Shift", "body": "AI in Healthcare · Lesson 9 of 14"}},
+      {"visual_type": "slide",
+       "voiceover": "The first problem is bias across patient groups. Performance may differ by sex, age, skin tone, ethnicity, language, disability or income. One cause is under-representation, where some groups appear rarely in the training data. Another is label bias, where the correct answers reflect unequal care. For example, if one group was diagnosed later in the past, the labels teach the model that pattern.",
+       "slide": {"layout": "bullets", "title": "Bias across patient groups (1)", "body": "Can differ by sex, age, skin tone, ethnicity, language, disability, income. Causes: Under-representation (few examples) · Label bias (answers reflect unequal care)"}},
+      {"visual_type": "slide",
+       "voiceover": "A third cause is proxy variables. Something like past healthcare cost or postcode can stand in for income or ethnicity, and carry existing inequality into predictions. A fourth cause is measurement differences, where some devices work less well for some groups, for example image quality on different skin tones.",
+       "slide": {"layout": "bullets", "title": "Bias across patient groups (2)", "body": "Proxy variables: past cost or postcode stand in for income or ethnicity · Measurement differences: devices work less well for some groups, e.g. images on different skin tones"}},
+      {"visual_type": "slide",
+       "voiceover": "The second problem is dataset shift. Performance can fall when the setting changes after training. The population may change, with different ages, disease mix or prevalence. Equipment and processes may change, such as new scanners or laboratory methods. And over time, clinical practice and coding rules change too.",
+       "slide": {"layout": "diagram", "title": "Dataset shift", "body": "Model trained in Setting A → arrow → used in Setting B. Three labelled arrows of change: Population (age, disease mix, prevalence) · Equipment and process (scanners, lab methods, recording) · Time (practice, coding rules, disease patterns)."}},
+      {"visual_type": "text",
+       "voiceover": "So the practical rule is simple. Never accept one overall figure. Ask for results broken down by patient group and by site, with the number of patients in each group, because figures from small groups are uncertain.",
+       "on_screen_text": "Never accept one overall figure"},
+      {"visual_type": "stock",
+       "voiceover": "Here is a way to picture it. A shoe factory that measures only city customers may make excellent shoes that fit badly on people who walk long distances on rough roads. The shoes are not bad, but they were not designed or tested for everyone who will wear them.",
+       "stock_query": "person walking on rural dirt road",
+       "on_screen_text": "Not tested for everyone who wears them"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's look at a hypothetical case. Doctor Neema Mwakasege works for a regional health authority in Tanzania. A supplier offers a tool that flags chest X-rays that may show tuberculosis, for clinician review. It was developed with data from large city hospitals using fixed digital X-ray machines.",
+       "stock_query": "portable x-ray machine in rural clinic",
+       "on_screen_text": "Hypothetical case · Tanzania"},
+      {"visual_type": "slide",
+       "voiceover": "The region wants to use it in rural clinics. These clinics use portable machines, and serve more older patients and more people living with HIV. So Neema asks for a synthetic local check, set up to show the risk.",
+       "slide": {"layout": "comparison", "title": "Where it was built vs. where it will be used", "body": "City hospitals: fixed digital X-ray machines, developer's data. Rural clinics: portable machines, more older patients, more people living with HIV."}},
+      {"visual_type": "slide",
+       "voiceover": "Remember, these figures are synthetic. In the city hospitals, two hundred patients have the condition, and the tool flags one hundred and eighty-four. That is a sensitivity of ninety-two percent. In the rural clinics, one hundred and fifty patients have the condition, and the tool flags one hundred and fourteen. That is a sensitivity of seventy-six percent.",
+       "slide": {"layout": "code", "title": "Local check · synthetic figures", "body": "Site            With condition   Flagged   Sensitivity\nCity hospitals  200              184       92.0%\nRural clinics   150              114       76.0%"}},
+      {"visual_type": "slide",
+       "voiceover": "So the tool misses about one in four cases in rural clinics, compared with about one in twelve in city hospitals. Possible reasons include image quality from portable machines, a different patient mix, and a different disease appearance in people living with HIV.",
+       "slide": {"layout": "diagram", "title": "Why the drop?", "body": "Missed cases: rural about 1 in 4 vs. city about 1 in 12. Three possible reasons as icons: portable machine image quality · different patient mix · different disease appearance in people living with HIV."}},
+      {"visual_type": "slide",
+       "voiceover": "Neema does not simply reject the tool. She asks the supplier for results by device type and by HIV status. She requests a local silent-mode test in three rural clinics. And she makes it clear that clinicians must not treat a negative result from the tool as ruling out disease.",
+       "slide": {"layout": "bullets", "title": "Neema's next steps", "body": "Ask supplier for results by device type and HIV status · Local silent-mode test in 3 rural clinics · Negative result from the tool does not rule out disease"}},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is to think that removing sex or ethnicity from the data makes a model fair. It does not. Other variables, such as postcode or device type, can carry the same information. Fairness has to be measured in the results for each group, not assumed.",
+       "on_screen_text": "Measure fairness, don't assume it"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, performance can differ across patient groups because of under-representation, label bias, proxy variables and measurement differences. Second, dataset shift in population, equipment, process or time can reduce performance in a new setting. Third, always ask for results by patient group and by site, with group sizes, and never rely on one overall figure.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Bias: under-representation, label bias, proxies, measurement. 2. Dataset shift: population, equipment, process, time. 3. Results by group and site, with group sizes."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below this video, you will compare sensitivity across three patient groups and two sites in a synthetic results table, and write three questions for the tool's supplier. It takes about twenty-five minutes. In the next lesson, we look at patient safety and failure modes. See you there.",
+       "on_screen_text": "Next: Patient Safety and Failure Modes"}
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "title": "Build, Buy or Use an API?",
+  "thumbnail": {
+    "headline": "Taxi or Buy a Car?",
+    "image": "Navy background, a taxi icon and a car-with-keys icon on either side of a simple cost chart, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Taxi or Buy a Car?", "body": "Taxi icon on the left, car with keys on the right, a small rising cost line between them labelled 'placeholder prices'. Small tag: AI Product Management · Lesson 7."}
+  },
+  "production_notes": [
+    "[VERSION] All model API prices are placeholders for teaching only (1.50 US dollars per million input tokens, 6.00 US dollars per million output tokens). The voiceover calls them placeholders; every cost slide must carry the label 'Placeholder prices, check the provider's pricing page'. Do not replace them with real prices without checking on the day of recording.",
+    "[VERSION] Google Sheets formula features used in the exercise must be checked before recording.",
+    "The figures must be spoken and shown exactly as in content.md: 450 dollars input, 360 dollars output, 810 dollars a month, 1,620 dollars a month when usage doubles, about 0.08 dollars per user and 0.004 dollars per request.",
+    "Claude is named only as an example of a foundation model API, as in content.md. Lena Fischer and the accounting software company in Germany are hypothetical."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "A feature that costs almost nothing in a demo can become one of your largest monthly bills at scale. The way to avoid that surprise is a simple calculation you can do in a spreadsheet, before you commit.",
+       "on_screen_text": "Cheap demo, expensive at scale?"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Last time, we looked at the data your feature needs. Now, where does the AI part come from? There are four common ways.",
+       "slide": {"layout": "title", "title": "Build, Buy or Use an API?", "body": "AI Product Management · Lesson 7 of 15"}},
+      {"visual_type": "slide",
+       "voiceover": "A foundation model API: you send requests to a general model, such as Claude, and pay per use. It is the fastest start, but you depend on one supplier. A vendor product: you buy a finished tool. It is fast to launch, with less control. Fine tuning: you adapt a model with your own examples, which needs good labelled data. And an in house model: the most control, but it needs specialist skills, data and time.",
+       "slide": {"layout": "bullets", "title": "Four options", "body": "Foundation model API: fastest start, supplier dependence · Vendor product: fast launch, less control · Fine-tuning: needs good labelled data · In-house model: most control, needs skills, data and time"}},
+      {"visual_type": "slide",
+       "voiceover": "Compare the options on five trade offs: cost per request, speed, quality on your test set, data terms, and how hard it is to switch supplier. Many teams start with an API to learn quickly, then revisit the choice when volume and evaluation results are known.",
+       "slide": {"layout": "bullets", "title": "Five trade-offs", "body": "Cost per request · Speed (response time) · Quality on your test set · Data terms (stored? used for training?) · Supplier dependence"}},
+      {"visual_type": "slide",
+       "voiceover": "Model APIs usually charge per token. A token is a small piece of text, often part of a word. Input tokens are what you send, including instructions and context. Output tokens are what the model writes. They usually have different prices. So monthly cost is requests, times tokens per request, times price per token, worked out for input and output separately.",
+       "slide": {"layout": "code", "title": "Estimating API cost", "body": "Requests = users × requests per user per month\nInput cost = requests × input tokens × input price\nOutput cost = requests × output tokens × output price\nMonthly cost = input cost + output cost"}},
+      {"visual_type": "text",
+       "voiceover": "One important note. All the prices in this lesson are placeholders for teaching. Real prices differ by model and change over time, so always check the provider's pricing page on the day you plan.",
+       "on_screen_text": "All prices here are placeholders"},
+      {"visual_type": "stock",
+       "voiceover": "Choosing between an API and your own model is like choosing between a taxi and buying a car. The taxi costs more per trip, but nothing to start, and you can change companies. The car costs a lot at the start and needs maintenance, but may be cheaper if you drive every day.",
+       "stock_query": "taxi waiting on city street",
+       "on_screen_text": "API = taxi. Own model = car."}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's calculate. Lena Fischer is a PM at a hypothetical accounting software company in Germany. She plans a feature that explains each invoice error in plain language.",
+       "stock_query": "accountant reviewing invoices on laptop",
+       "on_screen_text": "Lena · accounting software · Germany"},
+      {"visual_type": "slide",
+       "voiceover": "She has ten thousand users, each making twenty requests a month. That is two hundred thousand requests. Each request sends fifteen hundred input tokens and gets three hundred output tokens back. Her placeholder prices are one dollar fifty per million input tokens, and six dollars per million output tokens.",
+       "slide": {"layout": "bullets", "title": "Lena's inputs", "body": "Users: 10,000 · Requests per user per month: 20 → 200,000 requests · Input tokens per request: 1,500 · Output tokens: 300 · Placeholder prices: $1.50 per million input, $6.00 per million output"}},
+      {"visual_type": "slide",
+       "voiceover": "Input is three hundred million tokens, so four hundred and fifty dollars. Output is sixty million tokens, so three hundred and sixty dollars. The monthly total is eight hundred and ten dollars, with placeholder prices. That is about eight cents per user per month.",
+       "slide": {"layout": "comparison", "title": "Monthly cost (placeholder prices)", "body": "Table: Input tokens 200,000 × 1,500 = 300 million → $450 · Output tokens 200,000 × 300 = 60 million → $360 · Monthly total $810 · About $0.08 per user, $0.004 per request. Label: placeholder prices."}},
+      {"visual_type": "slide",
+       "voiceover": "What if usage doubles to forty requests per user? The cost doubles to one thousand six hundred and twenty dollars a month, because cost grows in a straight line with requests.",
+       "slide": {"layout": "diagram", "title": "If usage doubles", "body": "Straight line chart: 20 requests per user → $810 a month; 40 requests per user → $1,620 a month. Label: placeholder prices."}},
+      {"visual_type": "slide",
+       "voiceover": "Lena notices that input tokens are most of the volume. Shorter instructions, or sending only the relevant invoice lines, would lower the cost. She also adds costs that are not model costs: engineering time, evaluation work and monitoring. And she asks the provider whether invoice data is stored or used for training. Legal must approve the data terms before any real data is sent.",
+       "slide": {"layout": "bullets", "title": "Beyond the number", "body": "Input tokens drive the volume → shorter instructions, only relevant lines · Add non-model costs: engineering, evaluation, monitoring · Data terms: stored? used for training? Legal approves first"}},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is estimating cost from a demo with short prompts and a few users. Real requests carry long instructions and documents. Test at double and triple usage.",
+       "on_screen_text": "Estimate with realistic request sizes"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, the four options are an API, a vendor product, fine tuning and an in house model, compared on cost, speed, quality, data terms and supplier dependence. Second, API cost is requests times tokens times price, for input and output separately. Third, always use current prices, test higher usage, and check data terms before sending real data.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Four options, five trade-offs. 2. Cost = requests × tokens × price, input and output separately. 3. Current prices, higher usage, data terms first."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below, estimate the monthly cost of your feature for ten thousand users in Google Sheets, using the placeholder prices provided. Then see what happens when usage doubles. It takes about twenty five minutes. In the next lesson, we look at designing evaluation, and the metrics that matter. See you there.",
+       "on_screen_text": "Next: Designing Evaluation"}
+    ]
+  }
+}

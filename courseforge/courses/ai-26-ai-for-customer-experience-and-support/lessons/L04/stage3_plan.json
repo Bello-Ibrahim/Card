@@ -1,0 +1,144 @@
+{
+  "title": "Brand Voice and Reply Drafting",
+  "thumbnail": {
+    "headline": "Same Words, Different Feeling",
+    "image": "Navy background, two reply cards side by side, one cold grey and one warm teal, with a small heart icon on the warm one, headline in teal Inter Bold.",
+    "slide": {
+      "layout": "title",
+      "title": "Same Words, Different Feeling",
+      "body": "Two reply cards with the same line 'Your refund will arrive in 5 working days': left card grey and cold, right card warm teal. Small tag: AI for Customer Experience and Support · Lesson 4."
+    }
+  },
+  "production_notes": [
+    "[VERSION] Free-plan access and data-use terms of Claude and ChatGPT, including multi-language support, must be checked before recording.",
+    "Ana Paula and the São Paulo meal-kit company are fictional; the customer message and policy are made up. Stock footage must show no real brand packaging.",
+    "Pronunciation: Ana Paula (AH-nah POW-lah), São Paulo (sow POW-loo).",
+    "Judgement call carried from curriculum: the exercise uses made-up customer messages; learners do not paste real customer data."
+  ],
+  "sections": {
+    "Hook": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Two replies say the same thing: your refund will arrive in five working days. One makes the customer feel heard. The other makes them feel like a ticket number. The difference is tone. Today we help AI draft replies that sound like you.",
+        "on_screen_text": "Same message, different feeling"
+      }
+    ],
+    "Explain": [
+      {
+        "visual_type": "slide",
+        "voiceover": "In the last lesson, we built clean knowledge base articles. Now we use that content to reply to customers, in your own brand voice, with a person responsible for every message.",
+        "slide": {
+          "layout": "title",
+          "title": "Brand Voice and Reply Drafting",
+          "body": "AI for Customer Experience and Support · Lesson 4 of 12"
+        }
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "Brand voice is the way your company sounds when it writes. Some companies are formal and careful. Others are friendly and relaxed. Customers notice when replies sound completely different from one agent to the next.",
+        "stock_query": "customer reading message on phone at home",
+        "on_screen_text": "Brand voice: how you sound"
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Without guidance, AI tends to write in a general style that is often too long and too formal. A short tone guide fixes much of this. It is about five lines long, and it answers five questions. Who are we? How formal are we? How do we show empathy? How long are replies? And what do we never do?",
+        "slide": {
+          "layout": "bullets",
+          "title": "A five-line tone guide",
+          "body": "1. Who are we? 2. How formal are we? 3. How do we show empathy? 4. How long are replies? 5. What do we never do?"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "For example: we speak to customers as neighbours. We use first names. We name the customer's problem before the solution. Replies stay under one hundred and twenty words. And we never promise dates or compensation that are not in the policy.",
+        "slide": {
+          "layout": "code",
+          "title": "Example tone guide",
+          "body": "Friendly local company; customers are neighbours.\nFirst names. No slang.\nName the problem in one sentence first.\nUnder 120 words.\nNever promise dates or compensation not in the policy."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "You give the AI the tone guide, the customer message and the relevant policy. It drafts a reply in your voice. The same guide works in several languages. But politeness rules differ, so a person who reads the language well should check important replies.",
+        "slide": {
+          "layout": "diagram",
+          "title": "What the AI needs",
+          "body": "Three inputs: Tone guide + Customer message + Policy → AI draft → agent reviews. Side note: other languages → a fluent reader checks important replies."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "The order of importance is clear. Accuracy first, then empathy and clarity, then speed. A fast reply with a wrong promise creates a second, bigger problem. So an agent always checks facts, adjusts the tone and removes anything the company cannot promise.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Order of importance",
+          "body": "Three steps, largest first: 1. Accuracy · 2. Empathy and clarity · 3. Speed"
+        }
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "Think of a recipe card in a restaurant chain. Cooks in different cities make a dish that tastes the same, because they follow the same card. But the cook still tastes the dish before it leaves the kitchen. The AI drafts from the recipe card. The agent tastes before serving.",
+        "stock_query": "chef tasting dish in restaurant kitchen",
+        "on_screen_text": "AI drafts. The agent tastes."
+      }
+    ],
+    "Demonstrate": [
+      {
+        "visual_type": "stock",
+        "voiceover": "Here is an example. Ana Paula leads support for a hypothetical meal-kit company in São Paulo, Brazil. Her tone guide says: warm and direct, first names, name the problem first, under one hundred words, and never promise credits that are not in the policy.",
+        "stock_query": "fresh vegetables meal kit box on table",
+        "on_screen_text": "Meal-kit company · São Paulo"
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "A customer writes: third time this month my box arrived without the vegetables. I'm paying for nothing. Cancel everything. Ana Paula removes the name and order number, then gives the AI the tone guide, the message and the policy. The policy gives a credit for missing items, and cancellation is possible any time in the account settings.",
+        "slide": {
+          "layout": "quote",
+          "title": "The customer message",
+          "body": "\"Third time this month my box arrived without the vegetables. I'm paying for nothing. Cancel everything.\" Below: policy card: credit for missing items · cancel any time in account settings."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "The first draft starts: we sincerely apologise for any inconvenience. It is too formal. It does not name the problem. And it offers a full refund for the month, which the policy does not allow.",
+        "slide": {
+          "layout": "bullets",
+          "title": "AI draft: three problems",
+          "body": "'We sincerely apologise for any inconvenience...' → too formal · does not name the problem · offers a full refund for the month (not in policy, red)."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Ana Paula edits it. Three incomplete boxes in one month is not acceptable, and I understand why you want to cancel. I have added a credit for the missing vegetables. You can cancel in your account settings, or I can ask our warehouse to check your next box personally.",
+        "slide": {
+          "layout": "comparison",
+          "title": "Edited reply",
+          "body": "Edited reply text with changes highlighted: names the problem first · credit from the policy · cancel option · warehouse check. Struck out: 'full refund for the month'."
+        }
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "A common mistake is to send AI drafts after a quick look, because they sound professional. A draft can sound perfect and still contain a wrong date, or a promise the company cannot keep. Read every draft as the customer would. Check every fact, and change at least the first sentence so it answers this person's real problem.",
+        "on_screen_text": "Read every draft as the customer"
+      }
+    ],
+    "Recap": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, a short tone guide of about five lines helps AI draft replies that sound like your company, in several languages. Second, accuracy comes first, then empathy and clarity, then speed. Third, an agent always reviews, checks and edits an AI draft before it is sent.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. A five-line tone guide keeps AI drafts in your voice. 2. Accuracy → empathy and clarity → speed. 3. An agent reviews and edits every draft."
+        }
+      }
+    ],
+    "CTA": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Now it is your turn. In the exercise, you will write a five-line tone guide, then ask an AI assistant to draft replies to three upset, made-up customers. You will edit each draft and note what you changed and why. Next week begins with ticket triage, sorting and routing with AI. See you there.",
+        "on_screen_text": "Next: Ticket Triage with AI"
+      }
+    ]
+  }
+}

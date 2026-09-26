@@ -1,0 +1,202 @@
+{
+  "course_id": "AI-28",
+  "lesson_id": "L02",
+  "duration_s": 299.5,
+  "thumbnail": {
+    "headline": "Problem First, AI Second",
+    "slide": {
+      "layout": "title",
+      "title": "Problem First, AI Second",
+      "body": "Icon of a stethoscope (listen first) with an arrow to a small AI chip icon. Small tag: Building an AI Startup · Lesson 2."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.4,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Customers pay to lose a problem",
+      "voiceover": "I want to build something with AI. Many founders start with this sentence. But customers do not pay for AI. They pay to make a problem go away. Today you will learn how to find a problem that is really worth your time."
+    },
+    {
+      "scene": 2,
+      "start": 18.4,
+      "end": 30.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Finding a Problem Worth Solving",
+        "body": "Building an AI Startup · Lesson 2 of 15"
+      },
+      "voiceover": "In the last lesson, we looked at the layers of AI startups. Now we go one step back, to the very start of the journey: the problem."
+    },
+    {
+      "scene": 3,
+      "start": 30.0,
+      "end": 54.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Two ways to start",
+        "body": "Left (red): Technology first → 'a solution looking for a problem' → works, but nobody needs it. Right (green): Problem first → people → their difficulty → then ask: can AI help?"
+      },
+      "voiceover": "Starting with the technology is sometimes called a solution looking for a problem. The result often works, but nobody needs it. Starting with the problem is the opposite. You find a group of people, learn what makes their work difficult, and only then ask whether AI can help. Sometimes the best answer is not AI at all."
+    },
+    {
+      "scene": 4,
+      "start": 54.4,
+      "end": 76.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Three tests",
+        "body": "1. Pain: does it cost money, time, customers or sleep? 2. Frequency: every day beats once a year. 3. Willingness to pay (next)"
+      },
+      "voiceover": "A problem worth solving usually passes three tests. The first is pain. Does it cost people money, time, customers or sleep? A small annoyance is not enough. The second is frequency. A problem that happens every day is easier to build a business around than one that happens once a year."
+    },
+    {
+      "scene": 5,
+      "start": 76.3,
+      "end": 92.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Willingness to pay",
+        "body": "Look for what people already spend: a paid assistant · a homemade spreadsheet · a tool they complain about"
+      },
+      "voiceover": "The third is willingness to pay. A good sign is that people already spend money or time on a solution, even a poor one. For example, a paid assistant, a homemade spreadsheet, or a tool they complain about."
+    },
+    {
+      "scene": 6,
+      "start": 92.6,
+      "end": 115.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "Problem statement",
+        "body": "[Specific group] struggle to [task] because [reason], which costs them [time, money or risk]. Below: 'Small businesses' crossed out; 'Owners of family-run pharmacies in secondary cities' ticked."
+      },
+      "voiceover": "Write each problem as a short problem statement. A specific group of people struggle to do a task, because of a reason, which costs them time, money or risk. Be specific. Small businesses is too wide. Owners of family run pharmacies in smaller cities is a group you can find and talk to."
+    },
+    {
+      "scene": 7,
+      "start": 115.3,
+      "end": 126.4,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "two people talking over coffee small business",
+      "on_screen_text": "Pick people you can reach",
+      "voiceover": "Choose a group you can reach: people from your job, your family business or your community. You will need to interview them in the next lesson."
+    },
+    {
+      "scene": 8,
+      "start": 126.4,
+      "end": 152.1,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "doctor listening carefully to patient",
+      "on_screen_text": "Listen to the symptoms first",
+      "voiceover": "Think of a good doctor. She listens to the patient's symptoms before she chooses a treatment. Where does it hurt? How often? Since when? A doctor who gives every patient the same medicine, because she likes it, helps very few people. A founder who starts with I want to use AI is like that doctor. Listen to the symptoms first."
+    },
+    {
+      "scene": 9,
+      "start": 152.1,
+      "end": 170.5,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "woman working on accounts at desk",
+      "on_screen_text": "Lan · Da Nang · former bookkeeper",
+      "voiceover": "Let's see this in action. Lan is a made up founder in Da Nang, Vietnam. She used to work as a bookkeeper, so she knows small companies and their accountants well. She writes three problem statements and scores each from one to five."
+    },
+    {
+      "scene": 10,
+      "start": 170.5,
+      "end": 187.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Lan's three problems",
+        "body": "1. Accounting firms: sorting messy photographed receipts, several staff hours a week. 2. Young professionals: planning a monthly budget. 3. Tour guides: writing social media posts."
+      },
+      "voiceover": "First, small accounting firms struggle to sort clients' photos of receipts, because the images are messy, which costs staff several hours a week. Second, young professionals struggle to plan a budget. Third, tour guides struggle to write social media posts."
+    },
+    {
+      "scene": 11,
+      "start": 187.6,
+      "end": 203.5,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Scores: pain, frequency, pay",
+        "body": "Table. Receipts: 4, 5, 4 = 13 (highlighted). Budgeting: 3, 3, 1 = 7. Tour guides: 2, 3, 2 = 7."
+      },
+      "voiceover": "The receipts problem scores thirteen out of fifteen. The other two score seven each. Why? Accounting firms already pay junior staff to do this work. It happens every week. And mistakes can cause problems with tax filings."
+    },
+    {
+      "scene": 12,
+      "start": 203.5,
+      "end": 216.4,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Why the others lose",
+        "body": "Budgeting: real, but low willingness to pay; many free apps. · Tour guides: not painful enough."
+      },
+      "voiceover": "The budgeting problem is real, but many young professionals say they would not pay for help, and free apps already exist. The tour guide problem is simply not painful enough."
+    },
+    {
+      "scene": 13,
+      "start": 216.4,
+      "end": 234.4,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "No model yet. Scores are guesses.",
+      "voiceover": "Notice that Lan has not mentioned a model or an app yet. She has a problem, a group she can reach, and early reasons to believe it matters. But these scores are still guesses. In the next lesson, she will test them."
+    },
+    {
+      "scene": 14,
+      "start": 234.4,
+      "end": 256.7,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Hope or evidence?",
+        "body": "Left (red): 'I would definitely pay for that' (a kind friend). Right (green): money, time and tools people already spend on the problem today."
+      },
+      "voiceover": "A common mistake is to choose the problem that excites you most, or where AI looks impressive. Another is to score willingness to pay from hope. Friends say I would definitely pay for that, just to be kind. Better evidence is what people spend today. If nobody spends anything, ask yourself why."
+    },
+    {
+      "scene": 15,
+      "start": 256.7,
+      "end": 276.4,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Specific people and their problem, not technology. 2. Painful, frequent, worth paying for. 3. Evidence = what people already spend."
+      },
+      "voiceover": "Let's recap. First, start with a specific group of people and their problem, not with the technology. Second, a problem worth solving is painful, frequent, and something people will pay to solve. Third, the best evidence of willingness to pay is what people already spend today."
+    },
+    {
+      "scene": 16,
+      "start": 276.4,
+      "end": 299.5,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Customer Discovery Interviews",
+      "voiceover": "Now it is your turn. In the exercise below this video, write three problem statements for people you can reach, and score each on pain, frequency and willingness to pay. Mark any score without evidence as a guess. It takes about twenty five minutes. Next, we look at customer discovery interviews. See you there."
+    }
+  ]
+}

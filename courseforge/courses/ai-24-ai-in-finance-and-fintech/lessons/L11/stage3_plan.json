@@ -1,0 +1,137 @@
+{
+  "title": "Regulatory Principles for AI in Finance",
+  "thumbnail": {
+    "headline": "Six Principles, Many Countries",
+    "image": "Navy background, six teal icons in a ring (scales, speech bubble, lock, gauge, person with badge, handshake) around a simple globe, headline in teal Inter Bold.",
+    "slide": {
+      "layout": "title",
+      "title": "Six Principles, Many Countries",
+      "body": "Six icons in a ring around a globe outline: fair treatment, explainability, data protection, model risk, accountability, third-party risk. Small tag: AI in Finance and Fintech · Lesson 11."
+    }
+  },
+  "production_notes": [
+    "Not legal advice. The script names laws only as examples to check with experts, with no article numbers, dates or penalties. Do not add any legal detail to slides or captions.",
+    "[REGION] [VERIFY] EU AI Act: treatment of creditworthiness assessment as high-risk, the requirements listed in content.md, scope and application dates. The voiceover names the Act only as an example and does not state these claims.",
+    "[REGION] [VERIFY] US adverse action notice requirements under the Equal Credit Opportunity Act and Regulation B. The voiceover names 'adverse action notices in the United States' only as an example.",
+    "[REGION] [VERIFY] Names and scope of the example data protection laws: GDPR (EU), LGPD (Brazil), NDPA (Nigeria), POPIA (South Africa). On-screen table cell 'POPIA, NDPA and LGPD' keeps a 'to confirm' tag.",
+    "[VERSION] Free-plan access and data-use terms of Claude and ChatGPT (optional in the exercise) must be checked before recording.",
+    "Pronunciation: GDPR, LGPD, NDPA and POPIA are spelled out letter by letter, except POPIA, which is usually said 'po-PEE-ya'; confirm with the reviewer.",
+    "Thandiwe Nkosi and Kopano Credit are fictional."
+  ],
+  "sections": {
+    "Hook": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Your fintech is launching an AI credit product in three countries. Each has different laws, different regulators and different languages. Do you need to learn three rulebooks from zero? Not completely. Most rulebooks are built on the same small set of principles.",
+        "on_screen_text": "Three countries, one set of principles"
+      }
+    ],
+    "Explain": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Welcome to the final week. This lesson teaches principles that appear, in different words, in the rules of many countries. It is not legal advice. For any real product, always confirm the local rules with your compliance or legal team.",
+        "slide": {
+          "layout": "title",
+          "title": "Regulatory Principles for AI in Finance",
+          "body": "AI in Finance and Fintech · Lesson 11 of 14 · Not legal advice"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Principle one is fair treatment. Decisions must not discriminate against protected groups, directly or indirectly. Principle two is explainability and transparency. Customers should know when automated systems support important decisions, and receive understandable reasons, especially for declines. Staff and supervisors must also be able to understand how the model works.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Principles 1 and 2",
+          "body": "1. Fair treatment: no direct or indirect discrimination (L06, L07). 2. Explainability and transparency: customers told about automated decisions; understandable reasons (L10)."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Principle three is data protection. Personal data must be collected for a clear purpose, on a lawful basis, kept to the minimum needed, stored securely, and kept only as long as necessary. People often have rights to access and correct their data. Principle four is model risk management: an inventory of models, independent validation, and ongoing monitoring.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Principles 3 and 4",
+          "body": "3. Data protection: clear purpose · lawful basis · minimum data · secure storage · limited retention. 4. Model risk management: inventory · independent validation · monitoring · limits (L12)."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Principle five is accountability. A named person or committee is responsible for each model and its outcomes. The AI decided is never an acceptable answer. Principle six is third-party risk. When a tool comes from a vendor, the institution is still responsible, so it must check the vendor's data use, security, testing, and the right to audit.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Principles 5 and 6",
+          "body": "5. Accountability: a named owner for every model; never 'the AI decided'. 6. Third-party risk: check vendor data use, security, testing, right to audit."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "You will also hear named laws. Examples include the EU AI Act, adverse action notices in the United States, and data protection laws such as the GDPR in Europe, the LGPD in Brazil, the NDPA in Nigeria and POPIA in South Africa. Treat these only as examples to check with experts, because scope and dates change.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Named examples: check before use",
+          "body": "EU AI Act · US adverse action notices · Data protection: GDPR (EU), LGPD (Brazil), NDPA (Nigeria), POPIA (South Africa). Tag on every item: to confirm with compliance."
+        }
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "The principles are like the rules of the road. Countries drive on different sides and have different speed limits. But almost all of them require a licence, working brakes and responsibility for accidents. Understand the shared principles, and learning the local version is much faster.",
+        "stock_query": "cars driving on busy city road",
+        "on_screen_text": "Shared principles, local details"
+      }
+    ],
+    "Demonstrate": [
+      {
+        "visual_type": "stock",
+        "voiceover": "Thandiwe Nkosi is head of compliance at Kopano Credit, a hypothetical fintech in Johannesburg, South Africa. The company plans an AI-supported small-business loan in South Africa, Nigeria and Brazil. So she builds a principles table for the product.",
+        "stock_query": "compliance officer working at desk Johannesburg",
+        "on_screen_text": "Kopano Credit · three countries"
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "For each principle, she notes what the company already does, and what she must check locally. For fair treatment, they already track approval and error rates by group every month. But she must check which characteristics are protected in each country. For explainability, they already give three plain-language decline reasons. She must check the required content and timing of decline notices.",
+        "slide": {
+          "layout": "comparison",
+          "title": "Thandiwe's principles table (1)",
+          "body": "Columns: Principle · What we already do · What I must check locally. Fair treatment: monthly approval and error rates by group · protected characteristics in each country. Explainability: top-three plain-language decline reasons · content and timing of decline notices."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "For data protection, they have a consent screen for bank-statement data. She must confirm the lawful basis and customer rights under each country's law. For accountability, the chief risk officer owns the model, and she must check who signs off for each licence. And for third-party risk, she must check the rules on sending data across borders.",
+        "slide": {
+          "layout": "comparison",
+          "title": "Thandiwe's principles table (2)",
+          "body": "Data protection: consent screen for bank-statement data · lawful basis and rights under POPIA, NDPA and LGPD (to confirm). Model risk: annual validation · supervisor expectations. Accountability: chief risk officer owns the model · sign-off per licence. Third-party: vendor contract · cross-border data rules."
+        }
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "The table does not answer every question. But it shows her exactly which questions to ask local lawyers, which saves time and money.",
+        "on_screen_text": "The right questions save time"
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "A common mistake is to assume that a product that follows one country's rules can launch anywhere. Principles travel well. Details do not. Consent rules, data transfer limits and notice requirements can differ a lot.",
+        "on_screen_text": "Principles travel. Details do not."
+      }
+    ],
+    "Recap": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, six principles appear in many countries: fair treatment, explainability, data protection, model risk management, accountability and third-party risk. Second, named laws are examples to check with experts, not rules to copy. Third, a principles table turns general knowledge into a clear list of questions for your compliance or legal team.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. Six shared principles. 2. Named laws: examples to check, not copy. 3. Principles table → questions for compliance."
+        }
+      }
+    ],
+    "CTA": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Now it is your turn. In the exercise below this video, you will complete a principles table for your own country. For each principle, note what you already know and what you must check with your compliance or legal team. It takes about twenty-five minutes, and it will help with your capstone. In the next lesson, we look at model risk management and monitoring. See you there.",
+        "on_screen_text": "Next: Model Risk and Monitoring"
+      }
+    ]
+  }
+}

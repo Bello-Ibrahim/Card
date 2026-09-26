@@ -1,0 +1,136 @@
+{
+  "title": "Generative AI in Clinical Work: Uses and Limits",
+  "thumbnail": {
+    "headline": "Fluent Is Not Correct",
+    "image": "Navy background, a neat AI summary card beside a longer note, with one line on each linked by a teal line and a red mark on the mismatch, headline in teal Inter Bold.",
+    "slide": {
+      "layout": "title",
+      "title": "Fluent Is Not Correct",
+      "body": "Two documents side by side, source note and short summary, with one mismatched line circled in red. Small tag: AI in Healthcare · Lesson 8 · synthetic note."
+    }
+  },
+  "production_notes": [
+    "Clinical reviewer sign-off required.",
+    "A clinical reviewer should confirm that the synthetic pneumonia note and the audit contain no clinical advice and that the 'invented antibiotic' example (oral amoxicillin, a penicillin-type antibiotic, unsafe with a recorded penicillin allergy) is described correctly (content.md Review Flags).",
+    "On-screen note: use only the course file assets/L08_synthetic_discharge_note.md (fictional patient Taro Sample, Brookfield General Hospital), with its 'FICTIONAL TEXT FOR TEACHING ONLY' banner visible. That file carries its own [VERIFY] clinical reviewer approval flag, which must be cleared before release. NEVER show assets/L08_instructor_notes.md on screen.",
+    "The AI summary and its errors shown on the audit slide are the hypothetical results described in content.md (omitted glucose check, invented oral amoxicillin, six months instead of six weeks). Build them as a slide; do not present them as live output of any named tool.",
+    "[VERSION] Data-use and retention terms of free AI assistant plans (whether conversations are stored or used for training, and available settings) must be checked for each tool before recording. The voiceover only says free plans may store conversations depending on their terms.",
+    "Dr. Mei Takahashi (Japan) is fictional."
+  ],
+  "sections": {
+    "Hook": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "An AI summary of a long discharge note reads perfectly. It is clear, well organised and confident. It also says the patient's allergy is none known, when the note says penicillin. How would you catch that?",
+        "on_screen_text": "Allergy: none known?"
+      }
+    ],
+    "Explain": [
+      {
+        "visual_type": "slide",
+        "voiceover": "In the last lesson, we used generative AI to draft messages for patients. Now we look at clinical work itself. Large language models are used to summarise notes, for example into a short handover. They draft referral or discharge letters that a clinician edits and signs. And they support literature searches, by suggesting search terms or summarising abstracts that a person then reads.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Generative AI in clinical work",
+          "body": "Summarising notes → short handover · Drafting letters → clinician edits and signs · Supporting literature searches → a person reads the sources"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "These uses can save time. But language models have four typical failure types. Omission, where an important fact is left out, such as an allergy or a pending result. Invention, often called hallucination, where the model adds a fact that is not in the source. Distortion, where a fact is changed, such as left becoming right. And loss of uncertainty, where possible pneumonia becomes pneumonia.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Four failure types",
+          "body": "Four cards: Omission (fact missing: allergy, pending result) · Invention (fact added: medicine, dose, fake paper) · Distortion (fact changed: left → right, 'no chest pain' → 'chest pain') · Loss of uncertainty ('possible pneumonia' → 'pneumonia')"
+        }
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "Because these errors look fluent, they are easy to miss. So every output needs review by a qualified person, who checks it against the source before it is used. The clinician who signs the document remains responsible for its content.",
+        "on_screen_text": "Every output reviewed against the source"
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "There is also a firm privacy rule. Identifiable patient data must never be pasted into public AI tools. Depending on their terms and settings, free plans may store conversations. Clinical use of real patient data needs a tool your organisation has approved, with the right contracts and data protection. In this course, you only use synthetic notes.",
+        "slide": {
+          "layout": "comparison",
+          "title": "The privacy rule",
+          "body": "Left (red cross): identifiable patient data → public AI tool. Right (green tick): organisation-approved tool with contracts and data protection. Footer: in this course, synthetic notes only."
+        }
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "Here is a simple way to picture it. A language model summary is like a first draft from a fast new junior colleague, who writes confidently even when unsure. The draft saves time. But the senior clinician reads it line by line against the record before signing.",
+        "stock_query": "doctor carefully reading document at hospital desk",
+        "on_screen_text": "A confident junior's first draft"
+      }
+    ],
+    "Demonstrate": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's see this with an example. Doctor Mei Takahashi is a hospital doctor in Japan, testing whether an AI assistant could help draft discharge summaries. She uses a synthetic note written for training, about a sixty-seven-year-old patient admitted with pneumonia.",
+        "slide": {
+          "layout": "quote",
+          "title": "The synthetic discharge note",
+          "body": "Top of the course file L08_synthetic_discharge_note.md with its 'FICTIONAL TEXT FOR TEACHING ONLY' banner: fictional patient, 67, male, community-acquired pneumonia."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Among other facts, the note records a penicillin allergy, oxygen stopped on day three, high blood glucose to be checked by the family doctor, and a chest X-ray to repeat in six weeks. Keep those four facts in mind.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key facts in the note · synthetic",
+          "body": "Excerpt from L08_synthetic_discharge_note.md, highlighted: Allergy: penicillin (rash) · Oxygen stopped on Day 3 · Family doctor: please check blood glucose · Repeat chest X-ray in six weeks"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "She asks the assistant to summarise the note in under one hundred and twenty words for the family doctor, using only information in the note. Then she audits the summary against the note, line by line, with four columns: correct, omitted, invented and distorted.",
+        "slide": {
+          "layout": "code",
+          "title": "Prompt and audit table",
+          "body": "Prompt: \"Summarise this note in under 120 words for the patient's family doctor. Use only information in the note.\"\nAudit table columns: Correct | Omitted | Invented | Distorted"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Here is what she finds. Omitted: the request for the family doctor to check blood glucose. Invented: discharged on oral amoxicillin, a penicillin-type antibiotic that is not in the note, and unsafe for this patient. Distorted: repeat chest X-ray in six months, instead of six weeks. Correct: the diagnosis, the allergy, oxygen stopped, and the length of stay.",
+        "slide": {
+          "layout": "comparison",
+          "title": "Mei's audit · synthetic",
+          "body": "Omitted (amber): blood glucose check by family doctor. Invented (red): 'discharged on oral amoxicillin', penicillin-type, not in note, unsafe. Distorted (red): '6 months' instead of '6 weeks'. Correct (green): diagnosis · allergy · oxygen stopped · length of stay."
+        }
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "The invented antibiotic could cause harm if a busy reader trusted it. Mei concludes that a tool like this might save time only inside an approved system, with a mandatory line-by-line check.",
+        "on_screen_text": "One invented fact can harm"
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "A common mistake is to check an AI summary by reading it and asking, does this sound right? Fluent text almost always sounds right. Check it against the source, fact by fact. A quick read will not find omissions at all, because you cannot see what is not there.",
+        "stock_query": "clinician comparing two documents side by side",
+        "on_screen_text": "You cannot see what is missing"
+      }
+    ],
+    "Recap": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, generative AI can help summarise notes, draft letters and support literature searches, but it can omit, invent or distort facts, and remove uncertainty. Second, every output must be checked against the source by a qualified person, who stays responsible for the final document. Third, never paste identifiable patient data into public AI tools.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. Useful, but can omit, invent, distort and remove uncertainty. 2. A qualified person checks against the source and stays responsible. 3. No identifiable patient data in public AI tools."
+        }
+      }
+    ],
+    "CTA": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Now it is your turn. In the exercise below this video, you will summarise the course's synthetic discharge note with an AI assistant, then audit the summary for errors, missing facts and invented details. It takes about thirty minutes. In the next lesson, we look at bias, equity and dataset shift. See you there.",
+        "on_screen_text": "Next: Bias, Equity and Dataset Shift"
+      }
+    ]
+  }
+}

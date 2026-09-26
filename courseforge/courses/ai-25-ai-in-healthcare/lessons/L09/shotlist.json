@@ -1,0 +1,188 @@
+{
+  "course_id": "AI-25",
+  "lesson_id": "L09",
+  "duration_s": 316.3,
+  "thumbnail": {
+    "headline": "One Number Hides Many",
+    "slide": {
+      "layout": "title",
+      "title": "One Number Hides Many",
+      "body": "A single bar labelled 'overall' fanning out into several bars of different heights labelled by group and site. Small tag: AI in Healthcare · Lesson 9 · synthetic figures."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.9,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Who is in the missing 35%?",
+      "voiceover": "A tool reports an overall sensitivity of eighty percent. That single number can hide a tool that finds ninety percent of cases in one group of patients, and only sixty-five percent in another. Who are the patients inside that missing thirty-five percent?"
+    },
+    {
+      "scene": 2,
+      "start": 18.9,
+      "end": 38.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Bias, Equity and Dataset Shift",
+        "body": "AI in Healthcare · Lesson 9 of 14"
+      },
+      "voiceover": "In the last lesson, we saw how generative AI can fail inside a single document. Now we look at how a tool can fail whole groups of patients. A tool's performance can differ between groups and between care settings, and two related problems cause this."
+    },
+    {
+      "scene": 3,
+      "start": 38.2,
+      "end": 65.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Bias across patient groups (1)",
+        "body": "Can differ by sex, age, skin tone, ethnicity, language, disability, income. Causes: Under-representation (few examples) · Label bias (answers reflect unequal care)"
+      },
+      "voiceover": "The first problem is bias across patient groups. Performance may differ by sex, age, skin tone, ethnicity, language, disability or income. One cause is under-representation, where some groups appear rarely in the training data. Another is label bias, where the correct answers reflect unequal care. For example, if one group was diagnosed later in the past, the labels teach the model that pattern."
+    },
+    {
+      "scene": 4,
+      "start": 65.6,
+      "end": 86.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Bias across patient groups (2)",
+        "body": "Proxy variables: past cost or postcode stand in for income or ethnicity · Measurement differences: devices work less well for some groups, e.g. images on different skin tones"
+      },
+      "voiceover": "A third cause is proxy variables. Something like past healthcare cost or postcode can stand in for income or ethnicity, and carry existing inequality into predictions. A fourth cause is measurement differences, where some devices work less well for some groups, for example image quality on different skin tones."
+    },
+    {
+      "scene": 5,
+      "start": 86.6,
+      "end": 107.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Dataset shift",
+        "body": "Model trained in Setting A → arrow → used in Setting B. Three labelled arrows of change: Population (age, disease mix, prevalence) · Equipment and process (scanners, lab methods, recording) · Time (practice, coding rules, disease patterns)."
+      },
+      "voiceover": "The second problem is dataset shift. Performance can fall when the setting changes after training. The population may change, with different ages, disease mix or prevalence. Equipment and processes may change, such as new scanners or laboratory methods. And over time, clinical practice and coding rules change too."
+    },
+    {
+      "scene": 6,
+      "start": 107.2,
+      "end": 123.1,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Never accept one overall figure",
+      "voiceover": "So the practical rule is simple. Never accept one overall figure. Ask for results broken down by patient group and by site, with the number of patients in each group, because figures from small groups are uncertain."
+    },
+    {
+      "scene": 7,
+      "start": 123.1,
+      "end": 144.1,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "person walking on rural dirt road",
+      "on_screen_text": "Not tested for everyone who wears them",
+      "voiceover": "Here is a way to picture it. A shoe factory that measures only city customers may make excellent shoes that fit badly on people who walk long distances on rough roads. The shoes are not bad, but they were not designed or tested for everyone who will wear them."
+    },
+    {
+      "scene": 8,
+      "start": 144.1,
+      "end": 165.1,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "portable x-ray machine in rural clinic",
+      "on_screen_text": "Hypothetical case · Tanzania",
+      "voiceover": "Let's look at a hypothetical case. Doctor Neema Mwakasege works for a regional health authority in Tanzania. A supplier offers a tool that flags chest X-rays that may show tuberculosis, for clinician review. It was developed with data from large city hospitals using fixed digital X-ray machines."
+    },
+    {
+      "scene": 9,
+      "start": 165.1,
+      "end": 181.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Where it was built vs. where it will be used",
+        "body": "City hospitals: fixed digital X-ray machines, developer's data. Rural clinics: portable machines, more older patients, more people living with HIV."
+      },
+      "voiceover": "The region wants to use it in rural clinics. These clinics use portable machines, and serve more older patients and more people living with HIV. So Neema asks for a synthetic local check, set up to show the risk."
+    },
+    {
+      "scene": 10,
+      "start": 181.8,
+      "end": 207.5,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Local check · synthetic figures",
+        "body": "Site            With condition   Flagged   Sensitivity\nCity hospitals  200              184       92.0%\nRural clinics   150              114       76.0%"
+      },
+      "voiceover": "Remember, these figures are synthetic. In the city hospitals, two hundred patients have the condition, and the tool flags one hundred and eighty-four. That is a sensitivity of ninety-two percent. In the rural clinics, one hundred and fifty patients have the condition, and the tool flags one hundred and fourteen. That is a sensitivity of seventy-six percent."
+    },
+    {
+      "scene": 11,
+      "start": 207.5,
+      "end": 225.9,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Why the drop?",
+        "body": "Missed cases: rural about 1 in 4 vs. city about 1 in 12. Three possible reasons as icons: portable machine image quality · different patient mix · different disease appearance in people living with HIV."
+      },
+      "voiceover": "So the tool misses about one in four cases in rural clinics, compared with about one in twelve in city hospitals. Possible reasons include image quality from portable machines, a different patient mix, and a different disease appearance in people living with HIV."
+    },
+    {
+      "scene": 12,
+      "start": 225.9,
+      "end": 247.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Neema's next steps",
+        "body": "Ask supplier for results by device type and HIV status · Local silent-mode test in 3 rural clinics · Negative result from the tool does not rule out disease"
+      },
+      "voiceover": "Neema does not simply reject the tool. She asks the supplier for results by device type and by HIV status. She requests a local silent-mode test in three rural clinics. And she makes it clear that clinicians must not treat a negative result from the tool as ruling out disease."
+    },
+    {
+      "scene": 13,
+      "start": 247.8,
+      "end": 267.9,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Measure fairness, don't assume it",
+      "voiceover": "A common mistake is to think that removing sex or ethnicity from the data makes a model fair. It does not. Other variables, such as postcode or device type, can carry the same information. Fairness has to be measured in the results for each group, not assumed."
+    },
+    {
+      "scene": 14,
+      "start": 267.9,
+      "end": 292.3,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Bias: under-representation, label bias, proxies, measurement. 2. Dataset shift: population, equipment, process, time. 3. Results by group and site, with group sizes."
+      },
+      "voiceover": "Let's recap. First, performance can differ across patient groups because of under-representation, label bias, proxy variables and measurement differences. Second, dataset shift in population, equipment, process or time can reduce performance in a new setting. Third, always ask for results by patient group and by site, with group sizes, and never rely on one overall figure."
+    },
+    {
+      "scene": 15,
+      "start": 292.3,
+      "end": 316.3,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Patient Safety and Failure Modes",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will compare sensitivity across three patient groups and two sites in a synthetic results table, and write three questions for the tool's supplier. It takes about twenty-five minutes. In the next lesson, we look at patient safety and failure modes. See you there."
+    }
+  ]
+}

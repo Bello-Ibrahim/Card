@@ -1,0 +1,185 @@
+{
+  "course_id": "AI-29",
+  "lesson_id": "L01",
+  "duration_s": 301.8,
+  "thumbnail": {
+    "headline": "Who Checks the Machine?",
+    "slide": {
+      "layout": "title",
+      "title": "Who Checks the Machine?",
+      "body": "Icon of an application form passing through a machine into two piles, yes and no, with a magnifying glass over the machine. Small tag: AI Ethics, Bias and Safety · Lesson 1."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.4,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Who decided? And how?",
+      "voiceover": "Imagine you apply for a job and never get an interview. No person read your application. A computer system sorted it into the no pile, and nobody can tell you why. Would you want to know how that system was built and checked?"
+    },
+    {
+      "scene": 2,
+      "start": 18.4,
+      "end": 29.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Why AI Ethics Matters to Everyone",
+        "body": "AI Ethics, Bias and Safety · Lesson 1 of 10"
+      },
+      "voiceover": "Hi, and welcome to AI Ethics, Bias and Safety. In this first lesson, we look at why AI ethics matters to everyone, not only to experts."
+    },
+    {
+      "scene": 3,
+      "start": 29.5,
+      "end": 50.1,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "people waiting in office reception area",
+      "on_screen_text": "Mistakes reach real people",
+      "voiceover": "AI systems now help decide who gets a job interview, a loan, an insurance price or a medical appointment. When an AI system makes a mistake, the mistake does not stay inside the computer. It reaches real people, and it can repeat thousands of times before anyone notices."
+    },
+    {
+      "scene": 4,
+      "start": 50.1,
+      "end": 72.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Everyone has a part",
+        "body": "Three connected icons: Build (gear) · Buy (shopping bag) · Use (hand on laptop). Centre question: Fair? Honest? Safe? Under human control?"
+      },
+      "voiceover": "AI ethics means asking a few simple questions. Is this system fair, honest, safe and under human control? You do not need to be a programmer to ask them. People who build AI, people who buy it, and people who simply use it every day all make choices that affect others."
+    },
+    {
+      "scene": 5,
+      "start": 72.0,
+      "end": 99.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key terms, part one",
+        "body": "Bias: worse for some groups (accents) · Fairness: just treatment of groups · Hallucination: confident but false (invented book) · Misinformation: false information that spreads"
+      },
+      "voiceover": "This course uses eight key terms. The first four. Bias means results that are better or worse for some groups, like a voice assistant that struggles with some accents. Fairness is the goal of treating people and groups in a just way. A hallucination is confident information that is false, like a book that does not exist. And misinformation is false information that spreads."
+    },
+    {
+      "scene": 6,
+      "start": 99.4,
+      "end": 121.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key terms, part two",
+        "body": "Privacy: control over personal information · Safety: avoiding harm · Transparency: people know AI is used, and how · Accountability: a named person is responsible"
+      },
+      "voiceover": "Now the other four. Privacy is people's control over their personal information. Safety means avoiding physical, financial, emotional or social harm. Transparency means people can find out that AI is being used, and how it works in simple terms. And accountability means a named person or team is responsible for the results."
+    },
+    {
+      "scene": 7,
+      "start": 121.7,
+      "end": 148.3,
+      "section": "Explain",
+      "visual_type": "hero_broll",
+      "broll_tool": "FLOW",
+      "broll_prompt": "A new South Asian colleague in his twenties types very quickly at a desk while an older East African woman manager watches over his shoulder with a thoughtful expression, in a bright modern open-plan office; slow dolly-in from medium shot to close-up on the manager's face; soft natural window light; cinematic, warm natural colours, shallow depth of field; 7 seconds; no readable text on screens, no logos.",
+      "voiceover": "Here is a simple way to think about it. An AI system is like a new colleague who works very fast, but was trained by someone else. The colleague can be very helpful. But you did not see their training. So you do not know which habits they learned, or which customers they misunderstand. Before you trust their work, you check it."
+    },
+    {
+      "scene": 8,
+      "start": 148.3,
+      "end": 164.6,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "hotel customer service team at desk",
+      "on_screen_text": "Linh's hotel group · Vietnam",
+      "voiceover": "Let's see the terms at work. Linh Tran manages customer service for a hotel group in Vietnam. Her company buys an AI tool that reads guest reviews and flags urgent complaints, so her team can handle them first."
+    },
+    {
+      "scene": 9,
+      "start": 164.6,
+      "end": 180.5,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Who gets flagged?",
+        "body": "Left: formal English review → flagged fast (green tick). Right: Vietnamese or simple English review about a broken door lock → missed (red cross)."
+      },
+      "voiceover": "After two months, Linh notices a pattern. Reviews in formal English are flagged quickly. Reviews in Vietnamese, or in short, simple English, are often missed, even when they describe serious problems, such as a broken door lock."
+    },
+    {
+      "scene": 10,
+      "start": 180.5,
+      "end": 209.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Naming the problem",
+        "body": "Bias: works worse by language · Fairness: some guests wait longer · Safety: broken lock · Transparency: which languages were tested? · Accountability: who checks the list?"
+      },
+      "voiceover": "Linh uses the eight terms to describe the problem. It is bias, because the tool works worse for some guests. It is a fairness problem, because those guests wait longer for help. It is a safety problem, because a broken lock is a real risk. It raises transparency questions, because the vendor never explained which languages it tested. And it raises accountability questions. Who checks the flagged list?"
+    },
+    {
+      "scene": 11,
+      "start": 209.6,
+      "end": 225.9,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Simple questions, safer service",
+        "body": "Two steps with arrows: Daily human check of unflagged reviews → Ask vendor for results by language → Safer service (shield icon)"
+      },
+      "voiceover": "Her team starts a daily manual check of reviews the tool did not flag, and asks the vendor for test results by language. Nobody on the team is a programmer, but their questions lead to a safer service."
+    },
+    {
+      "scene": 12,
+      "start": 225.9,
+      "end": 251.2,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Ethics is everyone's job",
+      "voiceover": "One common mistake is to think AI ethics is only for engineers or lawyers. Many harms come from how a tool is bought and used. A manager who uses a tool for a task it was not built for, or a staff member who copies a chatbot answer without checking it, can cause harm with a well-built system."
+    },
+    {
+      "scene": 13,
+      "start": 251.2,
+      "end": 257.2,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Legal duties: see AI-30",
+      "voiceover": "Legal duties are covered in course AI thirty. In this course, we stay practical."
+    },
+    {
+      "scene": 14,
+      "start": 257.2,
+      "end": 279.9,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. AI mistakes reach real people, at scale. 2. Eight terms: bias, fairness, hallucination, misinformation, privacy, safety, transparency, accountability. 3. Builders, buyers and users all share responsibility."
+      },
+      "voiceover": "Let's recap. First, AI now affects decisions about jobs, money and health, so its mistakes reach real people, often at large scale. Second, the eight key terms are bias, fairness, hallucination, misinformation, privacy, safety, transparency and accountability. Third, builders, buyers and everyday users all make choices that affect whether AI is used responsibly."
+    },
+    {
+      "scene": 15,
+      "start": 279.9,
+      "end": 301.8,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: How Bias Gets into AI",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will match the eight key terms to eight short scenarios, then check your answers with the answer key. It takes about ten minutes. In the next lesson, we will find out how bias gets into AI. See you there."
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "title": "Mapping the Workflow: Automate, Assist or Human",
+  "thumbnail": {
+    "headline": "Automate, Assist or Human?",
+    "image": "Navy background, a chain of six step boxes, each tagged with a coloured label: teal Automate, amber Assist, coral Human, headline in teal Inter Bold.",
+    "slide": {
+      "layout": "title",
+      "title": "Automate, Assist or Human?",
+      "body": "A chain of six step boxes with coloured tags (teal Automate, amber Assist, coral Human). Small tag: AI for Customer Experience and Support · Lesson 6."
+    }
+  },
+  "production_notes": [
+    "No facts to verify: the worked example is hypothetical and makes no claims about specific tools, figures or laws (content.md Review Flags: None).",
+    "Farah and the Kuala Lumpur electronics retailer are fictional. The refund limit is set with the finance team and deliberately has no number: do not add one to slides.",
+    "The full six-step table from content.md is split over two diagram slides (scenes 10 and 11) and revealed row by row; the voiceover covers the key reason for each step, and the lesson page carries the full table.",
+    "Airport stock clip: avoid footage with readable airport or airline names."
+  ],
+  "sections": {
+    "Hook": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Should AI handle refunds? That is the wrong question. A refund is not one task. It is a chain of small steps. Some are perfect for AI, and others must stay with a person. Today you learn to tell them apart.",
+        "on_screen_text": "A refund is a chain of steps"
+      }
+    ],
+    "Explain": [
+      {
+        "visual_type": "slide",
+        "voiceover": "In the last lesson, we sorted tickets with AI. Now we look at the whole journey of a case. A workflow is the list of steps from the moment a customer contacts you until the case is closed.",
+        "slide": {
+          "layout": "title",
+          "title": "Mapping the Workflow: Automate, Assist or Human",
+          "body": "AI for Customer Experience and Support · Lesson 6 of 12"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "First, write down the steps. Then give each step one of three labels. Automate means AI or a simple automation does the step, with no person involved each time, although people still check samples. Assist means AI prepares a draft, a summary or a suggestion, and a person checks and decides. Human means a person does the step.",
+        "slide": {
+          "layout": "comparison",
+          "title": "Three labels",
+          "body": "Automate (teal): no person each time; samples checked. Assist (amber): AI prepares, a person decides. Human (coral): a person does the step."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "To choose a label, ask four questions about each step. How risky is a mistake? How emotional is the situation? How complex is the case? And could the customer be vulnerable? If a wrong answer costs a lot of money, breaks a law or harms someone, the step needs a person, or at least a person's approval.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Four questions",
+          "body": "1. Risk: how costly is a mistake? 2. Emotion: how upset could the customer be? 3. Complexity: one rule or judgement? 4. Vulnerability: could the customer need extra care?"
+        }
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "A vulnerable customer could be an older person who is confused, someone in financial difficulty, or someone who mentions illness. These customers need extra care, and they should reach a person easily.",
+        "stock_query": "older man on phone looking confused at home",
+        "on_screen_text": "Vulnerable customers reach a person easily"
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Here is a simple rule of thumb. If all four answers are low, the step is a good candidate to automate. If one or two are medium, assist is often right. If any answer is high, the step usually stays human.",
+        "slide": {
+          "layout": "diagram",
+          "title": "From answers to labels",
+          "body": "All four low → Automate. One or two medium → Assist. Any high → Human. Shown as three coloured lanes."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "The labels are not fixed forever. You might start a step as assist, check the results for a while, and then move it to automate. It is safer to move slowly than to automate first and discover problems from customer complaints.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Move slowly",
+          "body": "Arrow from Assist → Automate, with a checkpoint icon in between: 'Check results first'."
+        }
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "Think of an airport. Automatic gates check passports in simple cases. When a passport is damaged, or a case is unusual, the gate sends the traveller to an officer. The airport did not ask if machines should do border control. It asked which part a machine can do safely.",
+        "stock_query": "travellers at automatic passport gates airport",
+        "on_screen_text": "Which part can a machine do safely?"
+      }
+    ],
+    "Demonstrate": [
+      {
+        "visual_type": "stock",
+        "voiceover": "Let's map a real process. Farah manages customer service for a hypothetical electronics retailer in Kuala Lumpur, Malaysia. She maps the refund process for items returned within the return period.",
+        "stock_query": "customer service manager planning on whiteboard",
+        "on_screen_text": "Electronics retailer · Kuala Lumpur"
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Step one, the customer asks for a refund in chat. A chatbot collects the order number and reason, so she labels it automate. Step two, checking the order date against the return period, is a fixed rule, so that is automate too. Step three, classifying the reason as faulty, unwanted or damaged, is assist. AI suggests, and the agent confirms.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Farah's refund map: steps 1 to 3",
+          "body": "Table rows revealed one by one: 1. Refund request in chat → Automate · 2. Check date and return period → Automate · 3. Classify reason → Assist. Columns: Risk · Emotion · Complexity · Vulnerable? · Label · Reason."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Step four, deciding on refunds above a set amount, involves money and exceptions, so it is human, and a supervisor approves. Step five, the reply, is assist, because a refusal can be emotional. And step six, a disputed decision, needs judgement and empathy, so it stays human.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Farah's refund map: steps 4 to 6",
+          "body": "Rows continue: 4. Refunds above a set amount → Human (supervisor) · 5. Reply with decision → Assist (AI drafts, agent edits refusals) · 6. Customer disputes → Human."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Then Farah notices something. Step one can become emotional. If a customer writes that the product caught fire, it is a safety issue, not a normal refund. So she adds a rule: any mention of fire, injury or smoke goes straight to a person. She also sets the refund limit together with the finance team.",
+        "slide": {
+          "layout": "code",
+          "title": "A safety rule",
+          "body": "IF message mentions fire, injury or smoke\n→ send straight to a person\n(even at step 1, which is usually automated)"
+        }
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "A common mistake is to label a whole process, such as refunds or complaints, as automated or human. That hides the details. Always label each step, and write the reason next to it, so others can question and improve it.",
+        "on_screen_text": "Label each step, with a reason"
+      }
+    ],
+    "Recap": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, break each support process into steps, and label each one automate, assist or human. Second, choose the label with four questions: risk, emotion, complexity and vulnerability. Third, start carefully, write down your reasons, and move steps towards automation only after checking the results.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. Steps, not whole processes: automate · assist · human. 2. Four questions: risk, emotion, complexity, vulnerability. 3. Write reasons; automate only after checking results."
+        }
+      }
+    ],
+    "CTA": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Your turn. In the exercise, choose one process from the list you made in lesson one. Write five to eight steps, answer the four questions for each, and give each step a label and a reason. Mark at least one point where a case must move to a person. In the next lesson, we design that hand-off to a human. See you there.",
+        "on_screen_text": "Next: Designing the Hand-off"
+      }
+    ]
+  }
+}

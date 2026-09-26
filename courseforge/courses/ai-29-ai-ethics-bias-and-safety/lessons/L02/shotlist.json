@@ -1,0 +1,163 @@
+{
+  "course_id": "AI-29",
+  "lesson_id": "L02",
+  "duration_s": 294.4,
+  "thumbnail": {
+    "headline": "Where Does Bias Start?",
+    "slide": {
+      "layout": "title",
+      "title": "Where Does Bias Start?",
+      "body": "Three doorway icons in a row: data (stack of records), design (blueprint), use (hand pressing a button), joined by a red thread. Small tag: AI Ethics, Bias and Safety · Lesson 2."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 14.1,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Where does bias come from?",
+      "voiceover": "Nobody sits down and writes treat women worse, or ignore rural customers, into an AI system. Yet biased systems appear again and again. If nobody plans the bias, where does it come from?"
+    },
+    {
+      "scene": 2,
+      "start": 14.1,
+      "end": 31.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Three ways in",
+        "body": "Three boxes in a row, revealed one by one: 1 Data · 2 Design · 3 Use, each with an arrow into a central 'AI system' box."
+      },
+      "voiceover": "In the last lesson, you met bias. Results that are better or worse for some groups. Bias rarely comes from one bad decision. It usually enters quietly, at one or more of three points. The data, the design, and the use."
+    },
+    {
+      "scene": 3,
+      "start": 31.7,
+      "end": 57.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "1. The data",
+        "body": "Missing groups: few photos of darker skin · Over-represented groups: mostly city speakers · Past unfairness recorded as 'correct'"
+      },
+      "voiceover": "First, the data. An AI system learns patterns from examples. If the examples are unbalanced, the patterns will be too. Some groups may be missing, like darker skin in a skin-condition app. Some may be over-represented, like city speakers in a speech tool. And if past decisions were unfair, the data records that unfairness as if it were correct."
+    },
+    {
+      "scene": 4,
+      "start": 57.8,
+      "end": 85.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "2. The design",
+        "body": "Left: Target 'who will cost the most' vs Right: 'who needs the most care'. Below: Proxies: postcode · school name · career gap → can stand in for gender or background."
+      },
+      "voiceover": "Second, the design. People decide what the system should predict, and which details it may use. A tool that predicts who will cost the most is not the same as one that predicts who needs the most care. And even if the system never sees gender, details like a postcode or a gap in employment can stand in for it. We call these proxies."
+    },
+    {
+      "scene": 5,
+      "start": 85.2,
+      "end": 103.2,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "office worker clicking approve without reading",
+      "on_screen_text": "3. The use",
+      "voiceover": "Third, the use. A system can be fair in one place and unfair in another. It may be used for a different purpose, or in a group it was never tested on. And people may trust it too much and stop checking."
+    },
+    {
+      "scene": 6,
+      "start": 103.2,
+      "end": 123.8,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "cook reading old recipe book kitchen",
+      "on_screen_text": "Old recipe, same mistakes",
+      "voiceover": "Here is a simple picture. A recipe copied from an old cookbook repeats its mistakes, however carefully you cook. If the cookbook used too much salt, your dish will be too salty, even if you measure perfectly. Careful training cannot fix mistakes that were already in the recipe."
+    },
+    {
+      "scene": 7,
+      "start": 123.8,
+      "end": 147.4,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "recruiter reviewing job applications on laptop",
+      "on_screen_text": "Claire's CV tool · Canada",
+      "voiceover": "Let's follow one example. Claire Tremblay leads recruitment at an engineering company in Canada. To save time, the company builds a CV-screening tool, trained on ten years of past hires. CVs of people who were hired are labelled good, and all the others are labelled not selected. It sounds sensible. Let's see what happens."
+    },
+    {
+      "scene": 8,
+      "start": 147.4,
+      "end": 174.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "How bias entered",
+        "body": "Data: ten years of hires, mostly men from three universities → Design: target 'people like our past hires' + hobbies and clubs as proxies → (Use appears next)"
+      },
+      "voiceover": "Now watch the three points. The data: most engineers hired in those ten years were men from three local universities, so the tool learns that CVs like theirs are good. The design: the team asked it to predict people like our past hires, not people who will do the job well. It also reads hobbies and clubs, which can act as proxies."
+    },
+    {
+      "scene": 9,
+      "start": 174.0,
+      "end": 193.3,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "The use",
+        "body": "Stack of CVs: top 20 highlighted and read; the rest greyed out and never opened. Caption: old patterns, repeated at speed."
+      },
+      "voiceover": "The use: recruiters start to trust the tool's top twenty list and stop reading the other CVs. Qualified people from other universities, and many women, are never seen by a person. Nobody wanted this. But the tool now repeats old hiring patterns at high speed."
+    },
+    {
+      "scene": 10,
+      "start": 193.3,
+      "end": 209.2,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Three fixes",
+        "body": "Check who is in the data · Target = skills in the job description · Weekly human review of rejected CVs"
+      },
+      "voiceover": "Claire's team makes three changes. They check which groups are in the training data. They change the goal to match the skills in the job description. And a person reviews a sample of rejected CVs every week."
+    },
+    {
+      "scene": 11,
+      "start": 209.2,
+      "end": 238.3,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Removing names is not enough",
+      "voiceover": "A common mistake is to think that removing names, gender or age makes a system fair. Other details can still act as proxies, A women's sports club, a school for girls, or a career gap for childcare can all carry the same pattern. So removing details can be one step, but you still need to test results for different groups, as you will learn later in this course."
+    },
+    {
+      "scene": 12,
+      "start": 238.3,
+      "end": 267.0,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Bias enters through data, design and use. 2. Past decisions can carry past unfairness. 3. Proxies remain: always test results."
+      },
+      "voiceover": "Let's recap. First, bias can enter through the data, the design and the use. Second, data that records past decisions can also record past unfairness, and the system learns it as if it were correct. Third, removing names or gender is not enough, because other details can act as proxies. Results must be tested. Keep these three points in mind whenever you meet a new AI tool."
+    },
+    {
+      "scene": 13,
+      "start": 267.0,
+      "end": 294.4,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Fairness",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will look at a loan-approval model at a bank in Kenya, and list one way bias could enter through the data, the design and the use. It takes about fifteen minutes. In the next lesson, we will look at fairness, and who gets helped and who gets hurt. See you there."
+    }
+  ]
+}

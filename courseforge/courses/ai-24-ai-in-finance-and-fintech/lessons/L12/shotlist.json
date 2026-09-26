@@ -1,0 +1,165 @@
+{
+  "course_id": "AI-24",
+  "lesson_id": "L12",
+  "duration_s": 292.2,
+  "thumbnail": {
+    "headline": "Who Can Pause the Model?",
+    "slide": {
+      "layout": "title",
+      "title": "Who Can Pause the Model?",
+      "body": "Three gauges (green, amber, red) beside a large pause button icon. Small tag: AI in Finance and Fintech · Lesson 12."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.3,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Nobody changed it. What changed?",
+      "voiceover": "A fraud model passes every test at launch. Six months later, false alarms have doubled, and a new type of fraud is getting through. Nobody changed the model. So what changed, and whose job was it to notice?"
+    },
+    {
+      "scene": 2,
+      "start": 16.3,
+      "end": 35.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Model Risk Management and Monitoring",
+        "body": "AI in Finance and Fintech · Lesson 12 of 14"
+      },
+      "voiceover": "Last time, model risk management was one of our six principles. Now we look at it closely. Model risk is the risk of loss or harm because a model is wrong, is used wrongly, or stops working as intended. Managing it has four main parts."
+    },
+    {
+      "scene": 3,
+      "start": 35.6,
+      "end": 64.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Parts 1 and 2",
+        "body": "1. Model inventory: purpose, owner, data, validation date, risk rating, status (include vendor models and assistants). 2. Independent validation: data, method, performance, fairness, limits of use."
+      },
+      "voiceover": "Part one is a model inventory: a list of every model in use, with its purpose, owner, data, validation date and risk rating. You cannot manage a model you do not know exists, and that includes vendor models and AI assistants. Part two is independent validation. Before launch, and at regular intervals, people who did not build the model test it, and they can require changes before approval."
+    },
+    {
+      "scene": 4,
+      "start": 64.7,
+      "end": 93.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Part 3: Monitoring with limits",
+        "body": "Four measures: performance · data drift · score drift · fairness. Traffic light: green = normal · amber = investigate · red = act (retrain, change threshold, pause)."
+      },
+      "voiceover": "Part three is performance and drift monitoring. After launch, the owner measures the model regularly. For fraud, performance means the share of fraud caught and the false alarm rate. For credit, it means default rates by score band. The owner also watches data drift, score drift and fairness. An amber limit triggers investigation. A red limit triggers action, such as retraining, changing the threshold, or pausing the model."
+    },
+    {
+      "scene": 5,
+      "start": 93.8,
+      "end": 116.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Part 4: Three lines of defence",
+        "body": "Three stacked layers: 1st line: business and model owners (build, use, monitor) · 2nd line: risk and compliance (standards, validation, challenge) · 3rd line: internal audit (checks the whole system)"
+      },
+      "voiceover": "Part four is the three lines of defence. The first line is the business and model owners, who build, use and monitor the model every day. The second line is independent risk and compliance, who set standards, validate and challenge. The third line is internal audit, which checks that the whole system works."
+    },
+    {
+      "scene": 6,
+      "start": 116.5,
+      "end": 129.8,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Name the pause authority before launch",
+      "voiceover": "One question matters in every institution. Who has the authority to pause a model? Write it down before launch, with a fallback process ready, such as rules only or manual review."
+    },
+    {
+      "scene": 7,
+      "start": 129.8,
+      "end": 149.5,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "mechanic inspecting car brakes in garage",
+      "on_screen_text": "Inspect on a schedule",
+      "voiceover": "Think of a regular vehicle safety inspection. A car that was safe when it left the factory can develop worn brakes and weak tyres. You inspect on a schedule, with clear pass and fail limits, and an inspector can take an unsafe car off the road."
+    },
+    {
+      "scene": 8,
+      "start": 149.5,
+      "end": 175.2,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Ifeoma's monitoring plan (1)",
+        "body": "Columns: Measure · How often · Amber · Red · Who acts. Share of fraud caught (labels matured after 60 days) · Monthly · below 80% · below 70% · Fraud model owner (1st line)."
+      },
+      "voiceover": "Remember the Lagos card issuer from lesson three? Ifeoma Eze is its head of model risk, and she writes a monitoring plan for the fraud model. Her limits are illustrative, set by the issuer for this model. First, the share of fraud caught, measured monthly once labels mature after sixty days. Amber is below eighty percent. Red is below seventy."
+    },
+    {
+      "scene": 9,
+      "start": 175.2,
+      "end": 201.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Ifeoma's monitoring plan (2)",
+        "body": "False alarm rate · Weekly · above 3% · above 5% · Model owner. Score distribution vs launch · Monthly · moderate · large shift · Model owner → model risk. Missing values · Daily · above 2% · above 5% · Data engineering. False alarms by group · Quarterly · ratio above 1.25 · above 1.5 · Model risk (2nd line)."
+      },
+      "voiceover": "The false alarm rate is checked weekly, with amber above three percent and red above five. The score distribution is compared with launch every month. Missing values in key fields are checked daily. And every quarter, the second line compares false alarm rates across customer groups. Amber is a ratio above one point two five, and red is above one point five."
+    },
+    {
+      "scene": 10,
+      "start": 201.8,
+      "end": 222.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Escalation and pause",
+        "body": "Red limit → model risk committee (within 2 working days) → chief risk officer can pause → fallback: fraud rules + extra manual review. Internal audit reviews yearly."
+      },
+      "voiceover": "Red limits go to the model risk committee within two working days. The chief risk officer has the authority to pause the model. If it is paused, the issuer falls back to its fraud rules and extra manual review. And internal audit reviews the whole process once a year."
+    },
+    {
+      "scene": 11,
+      "start": 222.8,
+      "end": 240.8,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Launch is the start, not the end",
+      "voiceover": "A common mistake is to treat validation at launch as the end of model risk work. It is the start. Data, customers and fraud patterns change. And a plan without named people, limits and a pause authority is not a monitoring plan."
+    },
+    {
+      "scene": 12,
+      "start": 240.8,
+      "end": 266.1,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Inventory, validation, monitoring with limits, owners. 2. Three lines: build and use · challenge · audit. 3. Pause authority and fallback decided before launch."
+      },
+      "voiceover": "Let's recap. First, model risk management needs an inventory, independent validation, ongoing monitoring with limits, and clear owners. Second, the three lines of defence separate the people who build and use models, the people who challenge them, and the people who audit the system. Third, decide before launch who can pause a model, and what the fallback process is."
+    },
+    {
+      "scene": 13,
+      "start": 266.1,
+      "end": 292.2,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Scoping Your Proposal",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will draft a one-page monitoring plan for the fraud model from lesson three: what to measure, how often, which limits trigger action, and who acts. It takes about thirty minutes. In the next lesson, we start your capstone, by scoping your AI use case proposal. See you there."
+    }
+  ]
+}

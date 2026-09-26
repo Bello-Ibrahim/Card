@@ -1,0 +1,166 @@
+{
+  "course_id": "AI-25",
+  "lesson_id": "L07",
+  "duration_s": 293.9,
+  "thumbnail": {
+    "headline": "Inform, Never Diagnose",
+    "slide": {
+      "layout": "title",
+      "title": "Inform, Never Diagnose",
+      "body": "Phone icon with two message bubbles, a teal arrow leading to a nurse icon. Small tag: AI in Healthcare · Lesson 7."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.1,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "What must the reply never say?",
+      "voiceover": "A patient sends a message at eleven at night. I have a bad headache since my new tablets. Should I stop them? The clinic's automated service replies within seconds. What should that reply say, and what must it never say?"
+    },
+    {
+      "scene": 2,
+      "start": 17.1,
+      "end": 40.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Patient engagement tools",
+        "body": "Reminders: appointments, vaccinations, refills, tests · Health education in plain language, from approved content · Multilingual information services"
+      },
+      "voiceover": "In the last lesson, we saw operational AI working behind the scenes. Now we look at a different kind of tool, the kind that talks directly to patients. Common uses are reminders for appointments, vaccinations and tests, health education in plain language, and information services that answer general questions in the patient's preferred language."
+    },
+    {
+      "scene": 3,
+      "start": 40.2,
+      "end": 65.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Clear limits (1)",
+        "body": "1. No diagnosis, no individual clinical advice · 2. Draft only from a clinician-approved source, not the model's general knowledge"
+      },
+      "voiceover": "Generative AI makes these tools faster to build, but it adds risk. A language model can write fluent text that is wrong, out of date, or unsuitable for the patient. So these tools need clear limits. First, they do not diagnose or give individual clinical advice. Second, they work only from a source that a clinician has approved."
+    },
+    {
+      "scene": 4,
+      "start": 65.1,
+      "end": 87.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Clear limits (2)",
+        "body": "Incoming question → matched to approved content? Yes → general approved answer. No, or emergency / medicine change / pregnancy → red arrow to qualified person. Side notes: 4. every language checked · 5. no patient data in public AI."
+      },
+      "voiceover": "Third, they pass urgent or complex questions to a human. Possible emergencies, medicine changes, pregnancy concerns, or anything the tool cannot match to approved content goes to a qualified person. Fourth, every language version is checked by a qualified speaker. Fifth, staff never paste identifiable patient information into public AI tools."
+    },
+    {
+      "scene": 5,
+      "start": 87.0,
+      "end": 109.7,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "friendly clinic receptionist helping patient at desk",
+      "on_screen_text": "A good receptionist gets a nurse",
+      "voiceover": "Here is a simple way to picture it. A patient engagement tool is like a well-trained clinic receptionist. The receptionist can remind you of your appointment, give you the approved leaflet, and explain the opening hours. When you describe a worrying symptom, a good receptionist does not guess. They get a nurse."
+    },
+    {
+      "scene": 6,
+      "start": 109.7,
+      "end": 127.7,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "nurse educator writing notes at desk",
+      "on_screen_text": "Hypothetical service · Morocco",
+      "voiceover": "Let's see this in practice. Youssef Benali is a nurse educator for a hypothetical community health service in Morocco. Patients speak Moroccan Arabic or French, and many prefer short messages. The service wants education messages about preparing for a fasting blood test."
+    },
+    {
+      "scene": 7,
+      "start": 127.7,
+      "end": 153.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Steps 1 and 2: source, then draft",
+        "body": "Approved source text (French, signed by lab lead) → AI assistant (no patient details) → two SMS drafts, French and Arabic, max 300 characters, 'only facts in the source'."
+      },
+      "voiceover": "First, the laboratory lead, Doctor Salma Idrissi, writes a short source text in French and approves it. Then Youssef pastes only that approved text, with no patient details, into an AI assistant. He asks for a plain-language text message of no more than three hundred characters, in French and in Arabic, using only the facts in the source."
+    },
+    {
+      "scene": 8,
+      "start": 153.0,
+      "end": 179.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Step 3: check against the source",
+        "body": "French draft: matches source (green tick). Arabic draft: extra sentence 'you may drink tea without sugar' highlighted in red, not in source → removed. Step 4: native speaker review, one word simplified."
+      },
+      "voiceover": "Next, he checks each draft against the source. The French draft is accurate. But the Arabic draft adds a sentence saying that you may drink tea without sugar. This is not in the source, so Youssef removes it. Then a colleague who is a native Arabic speaker checks the wording, and changes one formal word to one patients use every day."
+    },
+    {
+      "scene": 9,
+      "start": 179.1,
+      "end": 203.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Steps 5 and 6: escalate and sign off",
+        "body": "Go to a nurse: stopping or changing medicines · feeling unwell while fasting · pregnancy · diabetes medicines · anything not in the source. Every message: clinic phone number + how to get emergency help. Sign-off: lab lead approves both versions."
+      },
+      "voiceover": "Youssef also writes an escalation list. Questions about stopping or changing medicines, feeling unwell while fasting, pregnancy, diabetes medicines, or anything not covered by the source must go to a nurse. Every message ends with the clinic's phone number and a line on how to get emergency help. Finally, Doctor Idrissi approves both versions before use."
+    },
+    {
+      "scene": 10,
+      "start": 203.1,
+      "end": 226.2,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Every added fact is an error",
+      "voiceover": "The AI saved drafting time. The safety came from the approved source, the checks and the escalation rules. And here is a common mistake. Teams think that if the AI sounds medical, its extra details are helpful. Treat every added fact as an error until a clinician approves it, and check each language separately."
+    },
+    {
+      "scene": 11,
+      "start": 226.2,
+      "end": 251.9,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Remind, educate, inform; never diagnose. 2. Approved source → check every language → clinical sign-off. 3. Escalation list and a clear route to urgent help."
+      },
+      "voiceover": "Let's recap. First, patient engagement tools send reminders, education and multilingual information, but they do not diagnose or give individual clinical advice. Second, draft from a clinician-approved source, check every language version against it, and get clinical sign-off before use. Third, decide in advance which situations go to a human, and make the route to urgent help clear."
+    },
+    {
+      "scene": 12,
+      "start": 251.9,
+      "end": 268.6,
+      "section": "CTA",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "Your source text",
+        "body": "Top section of the course file L07_sample_source_text.md: banner 'FICTIONAL TEXT FOR TEACHING ONLY', title 'Approved Source Text: Preparing for Your Clinic Visit', fictional Brookfield Community Clinic. Tag: exercise material."
+      },
+      "voiceover": "Now it is your turn. In the exercise below this video, you will use Claude or ChatGPT to draft a reminder and a short leaflet in two languages, from the course's approved sample source text for a fictional clinic."
+    },
+    {
+      "scene": 13,
+      "start": 268.6,
+      "end": 293.9,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Generative AI in Clinical Work",
+      "voiceover": "You will check both drafts against the source, and list the situations that must go to a human. Then you will note who would need to approve the final versions in a real service. It takes about thirty minutes. In the next lesson, we look at generative AI in clinical work, its uses and its limits. See you there."
+    }
+  ]
+}

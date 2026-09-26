@@ -1,0 +1,70 @@
+{
+  "title": "Data Needs: What Your Feature Learns From",
+  "thumbnail": {
+    "headline": "Check Your Ingredients",
+    "image": "Navy background, a recipe card next to a basket of fresh vegetables, with a small data-table icon on the card, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Check Your Ingredients", "body": "Recipe card with a small data table printed on it, beside a basket of fresh ingredients. Small tag: AI Product Management · Lesson 6."}
+  },
+  "production_notes": [
+    "[VERSION] Claude free-plan limits and data-use terms must be checked before recording (optional exercise tool).",
+    "Data protection is described only as general principles; no country's law is named, as in content.md.",
+    "Mateo Fuentes and the online grocery service in Chile are hypothetical; stock footage must not show a real supermarket brand or logo.",
+    "Do not show real customer data on any slide; the data requirements table uses only the invented rows from content.md."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Your team can choose the best model available and still ship a poor feature. If the data behind it is old, incomplete or collected without permission, the model will faithfully repeat those problems to your users.",
+       "on_screen_text": "Good model, bad data, poor feature"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Welcome to week two. We start with data. Every AI feature depends on data in up to three ways, and as a PM, you own the questions about all three.",
+       "slide": {"layout": "title", "title": "Data Needs: What Your Feature Learns From", "body": "AI Product Management · Lesson 6 of 15"}},
+      {"visual_type": "slide",
+       "voiceover": "Training or tuning data is the examples a model learns from, if you train or adapt a model. Context data is information given to the model at the moment of use, such as a product catalogue or a user's order history. And evaluation data is examples with known good answers, used to test quality. Even with a ready made model, you still need context and evaluation data.",
+       "slide": {"layout": "diagram", "title": "Three kinds of data", "body": "Three boxes feeding a model: Training or tuning data (only if you train or adapt) · Context data (at the moment of use) · Evaluation data (known good answers, see L09)."}},
+      {"visual_type": "slide",
+       "voiceover": "Check each source against six points. Source and owner: where does it come from, and who can approve its use? Labels: do the examples include the correct answer, and how consistent are they? Quality: is it accurate, complete and current? Old prices or deleted products create wrong answers.",
+       "slide": {"layout": "bullets", "title": "Six checks, part 1", "body": "1. Source and owner · 2. Labels: correct answers, consistent? · 3. Quality: accurate, complete, current"}},
+      {"visual_type": "slide",
+       "voiceover": "Coverage: does it represent all your users, such as regions, languages and new customers? Gaps in coverage become quality gaps for those users. Consent and privacy: did users agree to this use, and is any personal data really necessary? Rules differ by country, so involve your privacy or legal team early. And access and cost: how long will it take to get?",
+       "slide": {"layout": "bullets", "title": "Six checks, part 2", "body": "4. Coverage: regions, languages, devices, new and old customers · 5. Consent and privacy: involve privacy or legal early · 6. Access and cost"}},
+      {"visual_type": "slide",
+       "voiceover": "A new product, or a new market, often has no usage data yet. This is the cold start problem. You can start with a rule based version and collect data from it. You can use a general model with good context data. You can label a small set of examples by hand. Or you can run a human in the loop version first, so human decisions become labels.",
+       "slide": {"layout": "bullets", "title": "Cold start: four ways in", "body": "Rule-based version first · General model + good context data · Hand-label a small set · Human-in-the-loop version whose decisions become labels"}},
+      {"visual_type": "stock",
+       "voiceover": "Think of a recipe. It is only as good as its ingredients. A skilled chef with old vegetables still serves a poor meal. And if the kitchen only stocks ingredients for one dish, guests who want something else go hungry. Quality is the freshness of your ingredients. Coverage is the range of dishes you can make.",
+       "stock_query": "chef choosing fresh vegetables in kitchen",
+       "on_screen_text": "Quality = freshness. Coverage = range."}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's see an example. Mateo Fuentes is a PM at a hypothetical online grocery service in Chile. When an item is out of stock, pickers in the store choose a substitute. Mateo wants AI to suggest the best substitute, and the picker confirms it.",
+       "stock_query": "grocery picker scanning items in supermarket aisle",
+       "on_screen_text": "Mateo · online grocery · Chile"},
+      {"visual_type": "slide",
+       "voiceover": "He fills in a data requirements table. The product catalogue has no personal data, but sizes are missing and categories are used inconsistently. So the team cleans the top five hundred products first. Past substitutions record whether customers accepted or refunded, but not why. They are linked to accounts, so identity is removed, and only the item pair and outcome are used.",
+       "slide": {"layout": "comparison", "title": "Data requirements, part 1", "body": "Table columns: Source · Owner · Quality risks · Privacy · Fill gaps. Row 1: Product catalogue · Catalogue team · missing sizes, inconsistent categories · none · clean top 500 first. Row 2: Past substitutions · Operations · outcome but no reason · linked to accounts, remove identity · use item pair and outcome only."}},
+      {"visual_type": "slide",
+       "voiceover": "Customer dietary preferences are sensitive personal data, and few customers fill them in. They need clear consent and a legal review. And a new store in the south has almost no substitution history at all.",
+       "slide": {"layout": "comparison", "title": "Data requirements, part 2", "body": "Row 3: Dietary preferences · Customer team · few filled in · sensitive, needs consent and legal review · not in the MVP. Row 4: New southern store · Operations · almost no history · same as above · catalogue similarity rules, collect picker choices as labels."}},
+      {"visual_type": "slide",
+       "voiceover": "The table leads to two decisions. First, the MVP will not use dietary preferences, because the privacy questions need more time, and the feature works without them. Second, the new store has a cold start problem. So it begins with simple catalogue rules, and picker confirmations build labelled data over time.",
+       "slide": {"layout": "bullets", "title": "Two decisions", "body": "1. No dietary preferences in the MVP (privacy needs more time; feature works without them) · 2. New store starts with catalogue rules; picker confirmations become labels"}},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is thinking lots of data means the right data. A large data set can still lack labels, miss whole user groups, or contain personal data you may not use. And never paste real customer data into an AI tool to check it quickly. Use invented or anonymised examples.",
+       "on_screen_text": "Lots of data is not the right data"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, an AI feature needs context and evaluation data even with a ready made model, and sometimes training data too. Second, check every source for owner, labels, quality, coverage, consent and access, because each gap becomes a product problem. Third, plan for cold start with rules, hand labelled examples, or a human in the loop version.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Context and evaluation data, sometimes training data. 2. Six checks for every source. 3. Plan for cold start."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below, complete a data requirements table for your feature, with sources, owners, quality risks, privacy questions and how you would fill the gaps. It takes about twenty five minutes. In the next lesson, we ask a big question: build, buy or use an API? See you there.",
+       "on_screen_text": "Next: Build, Buy or Use an API?"}
+    ]
+  }
+}

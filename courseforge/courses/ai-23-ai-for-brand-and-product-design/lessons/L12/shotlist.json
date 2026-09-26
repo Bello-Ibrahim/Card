@@ -1,0 +1,227 @@
+{
+  "course_id": "AI-23",
+  "lesson_id": "L12",
+  "duration_s": 313.5,
+  "thumbnail": {
+    "headline": "Prototype the Error Too",
+    "slide": {
+      "layout": "title",
+      "title": "Prototype the Error Too",
+      "body": "Five phone screens linked by arrows (menu → item → pickup time → confirm → success), one branch to an amber error screen. Small tag: AI for Brand and Product Design · Lesson 12."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.0,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "What happens when things go wrong?",
+      "voiceover": "Your screens look good in a row. But what happens when the user types the wrong phone number, or has no past orders yet? A prototype shows the answer before a developer writes any code."
+    },
+    {
+      "scene": 2,
+      "start": 15.0,
+      "end": 26.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "From Draft to Clickable Prototype",
+        "body": "AI for Brand and Product Design · Lesson 12 of 14 · Capstone step 3"
+      },
+      "voiceover": "In the last lesson, you rebuilt your draft screens with your own components. Now we connect them. This lesson is about going from draft to clickable prototype."
+    },
+    {
+      "scene": 3,
+      "start": 26.6,
+      "end": 47.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Layer 1: The happy path",
+        "body": "Four screens linked by arrows: Home → Choose item → Confirm → Success. Each arrow labelled 'On tap'."
+      },
+      "voiceover": "A clickable prototype connects your screens into a flow that a person can use. It has three layers. The first is the happy path. Connect the main screens in order, such as home, choose item, confirm and success. In prototype mode, you link each button to the next screen."
+    },
+    {
+      "scene": 4,
+      "start": 47.6,
+      "end": 66.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Layer 2: States",
+        "body": "Error: wrong input, network failure, payment declined · Empty: no orders, no results · Loading: while waiting · Component: default, pressed, disabled, selected"
+      },
+      "voiceover": "The second layer is states. Real products have more than one state per screen. Error states, like wrong input or a declined payment. Empty states, like no orders yet. Loading states, while the user waits. And component states, such as pressed, disabled or selected."
+    },
+    {
+      "scene": 5,
+      "start": 66.5,
+      "end": 87.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Layer 3: Microcopy",
+        "body": "Write 5 options for an error message when the phone number has the wrong number of digits. Tone: calm and practical. Maximum 60 characters. Tell the user how to fix it. No blame."
+      },
+      "voiceover": "The third layer is microcopy, the small text on buttons, hints and messages. Claude can give you many options in your brand's tone. Give it the situation and the rules, such as a calm tone, a maximum length, and a clear fix with no blame. Then choose and edit."
+    },
+    {
+      "scene": 6,
+      "start": 87.5,
+      "end": 97.8,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "What can go wrong in this flow?",
+      "voiceover": "Also ask Claude to list edge cases you may have missed. It often finds cases like the shop closing while the user is ordering."
+    },
+    {
+      "scene": 7,
+      "start": 97.8,
+      "end": 119.7,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "person testing mobile app while designer observes",
+      "on_screen_text": "A task, not instructions",
+      "voiceover": "When the flow works, test it with one person. Give them a task, not instructions. Watch without helping, and note where they hesitate. One test will not prove the design works, but it often finds the biggest problem. Ask for consent before you record, and keep recordings out of AI tools."
+    },
+    {
+      "scene": 8,
+      "start": 119.7,
+      "end": 135.6,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "theatre actors rehearsing on empty stage",
+      "on_screen_text": "Rehearsal problems are cheap to fix",
+      "voiceover": "Think of a prototype as a rehearsal before a play. The set is not finished, but the actors walk through every scene, including the moment when something goes wrong. Problems found in rehearsal are cheap to fix."
+    },
+    {
+      "scene": 9,
+      "start": 135.6,
+      "end": 154.5,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "busy street food stall at lunchtime",
+      "on_screen_text": "Minh Anh · lunch pre-order · Hanoi",
+      "voiceover": "Let's build one. Nguyen Minh Anh is a UI designer in Hanoi, Viet Nam. Her client is a street-food stall network with a pre-order app for office workers. Her key flow has five screens: menu, item detail, pickup time, confirm and success."
+    },
+    {
+      "scene": 10,
+      "start": 154.5,
+      "end": 171.2,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open the 'final' page with the 5 rebuilt screens from L11",
+        "Switch to Prototype mode",
+        "Select the 'Order' button on the item detail screen and drag the connection to the pickup time screen",
+        "Set the trigger to 'On tap' and choose a slide animation",
+        "Repeat for the other screens"
+      ],
+      "on_screen_text": "Connect the happy path",
+      "voiceover": "Minh Anh opens her final page with the five rebuilt screens, and switches to prototype mode. She links the order button to the pickup time screen, on tap, with a slide animation, and repeats this for the other screens."
+    },
+    {
+      "scene": 11,
+      "start": 171.2,
+      "end": 187.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Set the menu screen as the flow's starting point and name the flow 'Pre-order lunch'",
+        "Switch to Claude and type: 'List 8 edge cases in a lunch pre-order flow.'",
+        "Highlight two items in the answer: 'chosen pickup time is now full' and 'no past orders' (empty state)"
+      ],
+      "voiceover": "She sets the menu as the starting point, and names the flow pre-order lunch. Then she asks Claude to list eight edge cases. She picks two. The chosen pickup time is now full, and no past orders."
+    },
+    {
+      "scene": 12,
+      "start": 187.5,
+      "end": 201.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "In Claude, ask for 5 microcopy options for the full-time-slot error, with the tone and length rules",
+        "Pick one option and edit it to: '12:30 is full. Choose 12:45 or later.'"
+      ],
+      "on_screen_text": "Edited: 12:30 is full…",
+      "voiceover": "She asks Claude for five error messages for the full time slot, with her tone and length rules. She edits one to say: twelve thirty is full. Choose twelve forty-five or later."
+    },
+    {
+      "scene": 13,
+      "start": 201.6,
+      "end": 217.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Back in Figma, duplicate the pickup time screen",
+        "Add the error message and a disabled 12:30 option, then connect the new screen in the flow",
+        "Create the empty state for 'My orders' with an illustration and a button to the menu"
+      ],
+      "voiceover": "She duplicates the pickup time screen, adds the error message and a disabled twelve thirty option, and connects it. Then she creates the empty state for my orders, with an illustration and a button back to the menu."
+    },
+    {
+      "scene": 14,
+      "start": 217.9,
+      "end": 227.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Make the time-slot component interactive with two variants: selected and not selected",
+        "Click Present and run the whole flow once, from menu to success"
+      ],
+      "voiceover": "She makes the time-slot component interactive, with selected and not selected states. Then she clicks present, and runs the whole flow once."
+    },
+    {
+      "scene": 15,
+      "start": 227.8,
+      "end": 246.7,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Show the task card: 'Order a bowl of noodles for 12:30.'",
+        "Play the tester's taps on the prototype: two taps on the disabled 12:30 slot before reading the message",
+        "In Figma, move the error message above the time slots"
+      ],
+      "on_screen_text": "One test, one big fix",
+      "voiceover": "Finally, she tests it with a colleague who agreed to take part. The task is: order a bowl of noodles for twelve thirty. He taps the disabled slot twice before he reads the message. So Minh Anh moves the message above the time slots."
+    },
+    {
+      "scene": 16,
+      "start": 246.7,
+      "end": 266.4,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Design the error, not just the path.",
+      "voiceover": "A common mistake is to prototype only the happy path. The demo looks smooth, but the first real user meets an error nobody designed. Add at least one error and one empty state. And never paste AI microcopy straight in. Check its tone, length and accuracy."
+    },
+    {
+      "scene": 17,
+      "start": 266.4,
+      "end": 289.5,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Happy path + error, empty, loading, component states. 2. Claude drafts microcopy and edge cases; you edit. 3. One consented task test finds the biggest problem."
+      },
+      "voiceover": "Let's recap. First, a clickable prototype connects the happy path, and adds error, empty, loading and component states. Second, use Claude to draft microcopy options and list edge cases, then choose and edit the text yourself. Third, a quick task-based test with one person, with their consent, often finds the biggest usability problem."
+    },
+    {
+      "scene": 18,
+      "start": 289.5,
+      "end": 313.5,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Critiquing AI Output",
+      "voiceover": "Now it is your turn. This is step three of your capstone. You will turn your key flow of four to six screens into a clickable prototype, and test it with one person. It takes about fifty minutes. In the next lesson, we learn to critique AI output for usability, accessibility and originality. See you there."
+    }
+  ]
+}

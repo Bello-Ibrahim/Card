@@ -1,0 +1,78 @@
+{
+  "title": "Critiquing AI Output: Usability, Accessibility and Originality",
+  "thumbnail": {
+    "headline": "Can You Defend It?",
+    "image": "Navy background, a five-item critique checklist beside a small asset log table with teal, amber and red status chips, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Can You Defend It?", "body": "A five-point checklist (usability, accessibility, consistency, originality, rights) beside an asset log with status chips: clear, needs check, do not use. Small tag: AI for Brand and Product Design · Lesson 13."}
+  },
+  "production_notes": [
+    "[VERIFY] The WCAG contrast guidance referred to from L09 is not given as a number in the voiceover; confirm it against the current WCAG version before showing any threshold on screen.",
+    "[VERSION] Figma features for finding detached instances or unused styles, contrast plugins, and image-generator commercial-use terms change; check them against the live tools. The script mentions them only in general terms.",
+    "[REGION] Trademark and ownership checks for AI-assisted assets differ by country; the script gives no legal conclusion and keeps the logo at 'needs check: trademark search recommended'.",
+    "The 'very similar' illustration in scene 12 must not show or name any real brand's packaging: show only Aroha's removed leaf illustration with a 'do not use' stamp, generated fresh for the video.",
+    "Aroha Wiremu and the plant nursery are fictional; stock footage must not show a real nursery name or brand.",
+    "This lesson is capstone step 4; the CTA says so."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Your brand and flow are finished. Or are they? Before anything reaches a client, one question matters. Can you defend every asset, and do you know where each one came from?",
+       "on_screen_text": "Can you defend every asset?"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Last time, you built and tested a clickable prototype. Now we step back and review everything. This lesson is about critiquing AI output for usability, accessibility and originality.",
+       "slide": {"layout": "title", "title": "Critiquing AI Output: Usability, Accessibility and Originality", "body": "AI for Brand and Product Design · Lesson 13 of 14 · Capstone step 4"}},
+      {"visual_type": "slide",
+       "voiceover": "AI-assisted work needs the same critique as any design work, plus a few extra checks. Use one checklist with five areas. First, usability. Can a person finish the key task without help? Second, accessibility. Do text pairs meet the contrast guidance from lesson nine, and are touch targets large enough? Third, consistency. Does every screen use your components, styles and variables?",
+       "slide": {"layout": "bullets", "title": "The critique checklist, 1 to 3", "body": "1. Usability: key task without help? clear labels, next step, error and empty states · 2. Accessibility: contrast (L09), touch targets, not colour alone, reading order, other scripts · 3. Consistency: components, styles, variables; no loose layers"}},
+      {"visual_type": "slide",
+       "voiceover": "Fourth, originality. Does any asset look close to an existing brand, logo or illustration? Is the logo redrawn, not traced? Fifth, rights. For each asset, which tool helped make it, what do its current terms allow, and are trademark or ownership checks still needed?",
+       "slide": {"layout": "bullets", "title": "The critique checklist, 4 and 5", "body": "4. Originality: close to an existing mark? prompts free of artist or brand names? logo redrawn, not traced · 5. Rights: which tool, what current terms allow, trademark or ownership checks still needed"}},
+      {"visual_type": "slide",
+       "voiceover": "You can use Claude as a second reviewer. Share screenshots with no confidential content, and ask for the five most serious problems against your checklist, with a reason for each. Claude often notices unclear labels, missing states or uneven spacing.",
+       "slide": {"layout": "code", "title": "Claude as second reviewer", "body": "Review this screen against this checklist. List the 5 most serious problems with a reason for each."}},
+      {"visual_type": "text",
+       "voiceover": "But it can also miss problems, misread colours from an image, and give contrast values without measuring. Treat its review as a list of things to check. And keep the final judgement.",
+       "on_screen_text": "A list to check, not a verdict."},
+      {"visual_type": "slide",
+       "voiceover": "Finally, keep an asset log. It is a simple table that records every asset in the deliverable. Its name, its source, the tool, what you changed, the risk checks you did, and its status: clear, needs check, or do not use. The log protects you and your client, and it is the basis of your case study.",
+       "slide": {"layout": "diagram", "title": "The asset log", "body": "Table header: Asset · Source (human, AI-assisted, AI-generated, stock, font licence) · Tool · Changes · Checks · Status. Status chips: Clear (teal) · Needs check (amber) · Do not use (red)"}},
+      {"visual_type": "stock",
+       "voiceover": "Think of an asset log as the ingredient list on food packaging. Most people never read it. But when someone has an allergy or a question, it must be complete and correct.",
+       "stock_query": "person reading ingredient label on food package",
+       "on_screen_text": "Complete and correct, like an ingredient list"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's run a review. Aroha Wiremu is a product designer in Wellington, New Zealand. Her client is a plant nursery, with an app for ordering plants and booking garden advice.",
+       "stock_query": "plant nursery greenhouse with rows of plants",
+       "on_screen_text": "Aroha · plant nursery app · Wellington"},
+      {"visual_type": "slide",
+       "voiceover": "She runs the checklist on her brand and flow, and also asks Claude to review three screenshots. Claude lists six issues, and Aroha checks each one. Four are real. One is wrong. Claude says a button label is too small, but it meets her type scale. And one is not relevant.",
+       "slide": {"layout": "comparison", "title": "Checking Claude's six issues", "body": "Six issue cards: four with green ticks (real) · one with a red cross ('button label too small', but it meets her type scale) · one greyed out (not relevant)"}},
+      {"visual_type": "slide",
+       "voiceover": "Then she makes her top three fixes. For accessibility, the green in stock label on a light green card fails the contrast check, so she darkens the text. For consistency, two screens still use a detached card from the AI draft, so she replaces them with her card component.",
+       "slide": {"layout": "comparison", "title": "Top fixes 1 and 2", "body": "Accessibility: green 'In stock' text on light green card, fail → darker text, pass · Consistency: detached AI-draft card on two screens → replaced by the Card component"}},
+      {"visual_type": "slide",
+       "voiceover": "For originality, one illustration from an image generator looks very similar to the packaging style of a well-known garden brand. She removes it, and draws a simple illustration herself.",
+       "slide": {"layout": "comparison", "title": "Top fix 3: Originality", "body": "Left: the AI leaf illustration with a red 'Do not use' stamp (no real brand shown). Right: Aroha's own simple hand-drawn illustration."}},
+      {"visual_type": "slide",
+       "voiceover": "Her asset log shows the result. The logo is an AI-assisted concept, fully redrawn, but a trademark search is still recommended, so its status is needs check. The onboarding copy was drafted with Claude and every line was edited, so it is clear. And the AI leaf illustration is marked do not use.",
+       "slide": {"layout": "diagram", "title": "Aroha's asset log", "body": "Logo: AI-assisted concept, redrawn · image generator, Figma · full vector redraw · reverse image search; trademark search recommended · Needs check. Hero illustration: human · Clear. Onboarding copy: AI-assisted · Claude · all lines edited · Clear. Leaf illustration: AI-generated · similar to existing packaging · Do not use."}},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is to ask Claude, is this design good, and accept a general, positive answer. Ask for specific problems against a checklist instead, then verify each one. Another mistake is to write the asset log at the end, from memory. Keep it as you work.",
+       "on_screen_text": "Log assets as you work."}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, critique AI-assisted work for usability, accessibility, design-system consistency, originality and rights. Second, Claude can act as a second reviewer that lists specific problems, but you verify each point, and you keep the final judgement. Third, an asset log records the source, tool, changes, checks and status of every asset, and supports what you can deliver.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Five checks: usability, accessibility, consistency, originality, rights. 2. Claude reviews; you verify and decide. 3. The asset log: source, tool, changes, checks, status."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. This is step four of your capstone. Run the checklist on your brand and flow, fix the top three issues, and complete an asset log with the source and risk status of each asset. It takes about forty-five minutes. In the final lesson, we bring it all together in the capstone: writing the AI-assisted design case study. See you there.",
+       "on_screen_text": "Next: Writing the Case Study"}
+    ]
+  }
+}

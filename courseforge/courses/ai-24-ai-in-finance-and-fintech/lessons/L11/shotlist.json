@@ -1,0 +1,175 @@
+{
+  "course_id": "AI-24",
+  "lesson_id": "L11",
+  "duration_s": 295.2,
+  "thumbnail": {
+    "headline": "Six Principles, Many Countries",
+    "slide": {
+      "layout": "title",
+      "title": "Six Principles, Many Countries",
+      "body": "Six icons in a ring around a globe outline: fair treatment, explainability, data protection, model risk, accountability, third-party risk. Small tag: AI in Finance and Fintech · Lesson 11."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.0,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Three countries, one set of principles",
+      "voiceover": "Your fintech is launching an AI credit product in three countries. Each has different laws, different regulators and different languages. Do you need to learn three rulebooks from zero? Not completely. Most rulebooks are built on the same small set of principles."
+    },
+    {
+      "scene": 2,
+      "start": 18.0,
+      "end": 35.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Regulatory Principles for AI in Finance",
+        "body": "AI in Finance and Fintech · Lesson 11 of 14 · Not legal advice"
+      },
+      "voiceover": "Welcome to the final week. This lesson teaches principles that appear, in different words, in the rules of many countries. It is not legal advice. For any real product, always confirm the local rules with your compliance or legal team."
+    },
+    {
+      "scene": 3,
+      "start": 35.1,
+      "end": 56.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Principles 1 and 2",
+        "body": "1. Fair treatment: no direct or indirect discrimination (L06, L07). 2. Explainability and transparency: customers told about automated decisions; understandable reasons (L10)."
+      },
+      "voiceover": "Principle one is fair treatment. Decisions must not discriminate against protected groups, directly or indirectly. Principle two is explainability and transparency. Customers should know when automated systems support important decisions, and receive understandable reasons, especially for declines. Staff and supervisors must also be able to understand how the model works."
+    },
+    {
+      "scene": 4,
+      "start": 56.5,
+      "end": 80.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Principles 3 and 4",
+        "body": "3. Data protection: clear purpose · lawful basis · minimum data · secure storage · limited retention. 4. Model risk management: inventory · independent validation · monitoring · limits (L12)."
+      },
+      "voiceover": "Principle three is data protection. Personal data must be collected for a clear purpose, on a lawful basis, kept to the minimum needed, stored securely, and kept only as long as necessary. People often have rights to access and correct their data. Principle four is model risk management: an inventory of models, independent validation, and ongoing monitoring."
+    },
+    {
+      "scene": 5,
+      "start": 80.9,
+      "end": 105.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Principles 5 and 6",
+        "body": "5. Accountability: a named owner for every model; never 'the AI decided'. 6. Third-party risk: check vendor data use, security, testing, right to audit."
+      },
+      "voiceover": "Principle five is accountability. A named person or committee is responsible for each model and its outcomes. The AI decided is never an acceptable answer. Principle six is third-party risk. When a tool comes from a vendor, the institution is still responsible, so it must check the vendor's data use, security, testing, and the right to audit."
+    },
+    {
+      "scene": 6,
+      "start": 105.8,
+      "end": 129.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Named examples: check before use",
+        "body": "EU AI Act · US adverse action notices · Data protection: GDPR (EU), LGPD (Brazil), NDPA (Nigeria), POPIA (South Africa). Tag on every item: to confirm with compliance."
+      },
+      "voiceover": "You will also hear named laws. Examples include the EU AI Act, adverse action notices in the United States, and data protection laws such as the GDPR in Europe, the LGPD in Brazil, the NDPA in Nigeria and POPIA in South Africa. Treat these only as examples to check with experts, because scope and dates change."
+    },
+    {
+      "scene": 7,
+      "start": 129.8,
+      "end": 149.1,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "cars driving on busy city road",
+      "on_screen_text": "Shared principles, local details",
+      "voiceover": "The principles are like the rules of the road. Countries drive on different sides and have different speed limits. But almost all of them require a licence, working brakes and responsibility for accidents. Understand the shared principles, and learning the local version is much faster."
+    },
+    {
+      "scene": 8,
+      "start": 149.1,
+      "end": 166.2,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "compliance officer working at desk Johannesburg",
+      "on_screen_text": "Kopano Credit · three countries",
+      "voiceover": "Thandiwe Nkosi is head of compliance at Kopano Credit, a hypothetical fintech in Johannesburg, South Africa. The company plans an AI-supported small-business loan in South Africa, Nigeria and Brazil. So she builds a principles table for the product."
+    },
+    {
+      "scene": 9,
+      "start": 166.2,
+      "end": 192.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Thandiwe's principles table (1)",
+        "body": "Columns: Principle · What we already do · What I must check locally. Fair treatment: monthly approval and error rates by group · protected characteristics in each country. Explainability: top-three plain-language decline reasons · content and timing of decline notices."
+      },
+      "voiceover": "For each principle, she notes what the company already does, and what she must check locally. For fair treatment, they already track approval and error rates by group every month. But she must check which characteristics are protected in each country. For explainability, they already give three plain-language decline reasons. She must check the required content and timing of decline notices."
+    },
+    {
+      "scene": 10,
+      "start": 192.8,
+      "end": 218.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Thandiwe's principles table (2)",
+        "body": "Data protection: consent screen for bank-statement data · lawful basis and rights under POPIA, NDPA and LGPD (to confirm). Model risk: annual validation · supervisor expectations. Accountability: chief risk officer owns the model · sign-off per licence. Third-party: vendor contract · cross-border data rules."
+      },
+      "voiceover": "For data protection, they have a consent screen for bank-statement data. She must confirm the lawful basis and customer rights under each country's law. For accountability, the chief risk officer owns the model, and she must check who signs off for each licence. And for third-party risk, she must check the rules on sending data across borders."
+    },
+    {
+      "scene": 11,
+      "start": 218.1,
+      "end": 228.0,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "The right questions save time",
+      "voiceover": "The table does not answer every question. But it shows her exactly which questions to ask local lawyers, which saves time and money."
+    },
+    {
+      "scene": 12,
+      "start": 228.0,
+      "end": 243.0,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Principles travel. Details do not.",
+      "voiceover": "A common mistake is to assume that a product that follows one country's rules can launch anywhere. Principles travel well. Details do not. Consent rules, data transfer limits and notice requirements can differ a lot."
+    },
+    {
+      "scene": 13,
+      "start": 243.0,
+      "end": 266.1,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Six shared principles. 2. Named laws: examples to check, not copy. 3. Principles table → questions for compliance."
+      },
+      "voiceover": "Let's recap. First, six principles appear in many countries: fair treatment, explainability, data protection, model risk management, accountability and third-party risk. Second, named laws are examples to check with experts, not rules to copy. Third, a principles table turns general knowledge into a clear list of questions for your compliance or legal team."
+    },
+    {
+      "scene": 14,
+      "start": 266.1,
+      "end": 295.2,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Model Risk and Monitoring",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will complete a principles table for your own country. For each principle, note what you already know and what you must check with your compliance or legal team. It takes about twenty-five minutes, and it will help with your capstone. In the next lesson, we look at model risk management and monitoring. See you there."
+    }
+  ]
+}

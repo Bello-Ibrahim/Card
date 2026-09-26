@@ -3,7 +3,11 @@
   "thumbnail": {
     "headline": "Pick the Simplest Tool",
     "image": "Navy background, a menu card with six small teal icons (chart, tag, pen, magnifier, star list, robot arm) and a seventh greyed-out 'no AI' icon, headline in teal Inter Bold.",
-    "slide": {"layout": "title", "title": "Pick the Simplest Tool", "body": "A restaurant-style menu card listing six capability icons, with a seventh line 'No AI needed' highlighted. Small tag: AI Product Management · Lesson 2."}
+    "slide": {
+      "layout": "title",
+      "title": "Pick the Simplest Tool",
+      "body": "A restaurant-style menu card listing six capability icons, with a seventh line 'No AI needed' highlighted. Small tag: AI Product Management · Lesson 2."
+    }
   },
   "production_notes": [
     "[VERSION] FigJam free-plan limits must be checked before recording (exercise tool).",
@@ -12,61 +16,127 @@
   ],
   "sections": {
     "Hook": [
-      {"visual_type": "presenter_full",
-       "voiceover": "Let's add AI is not a product decision. Let's predict delivery time from past trips is. The first step from a vague idea to a real feature is naming the capability you need, and sometimes finding that you need none.",
-       "on_screen_text": "Name the capability you need"}
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Let's add AI is not a product decision. Let's predict delivery time from past trips is. The first step from a vague idea to a real feature is naming the capability you need, and sometimes finding that you need none.",
+        "on_screen_text": "Name the capability you need"
+      }
     ],
     "Explain": [
-      {"visual_type": "slide",
-       "voiceover": "In the last lesson, we saw that AI features give likely answers. Today we look at the menu. Most AI features use one of six capability types. Knowing them helps you talk clearly with engineers, and choose the simplest option.",
-       "slide": {"layout": "title", "title": "The AI Capability Menu", "body": "AI Product Management · Lesson 2 of 15"}},
-      {"visual_type": "slide",
-       "voiceover": "Prediction estimates a number or a future value from past data, such as a price, a time or a demand level. Ideally it gives a range. Classification puts an input into one of a fixed set of groups, such as urgent or normal. It gives a label, and often a confidence score.",
-       "slide": {"layout": "bullets", "title": "Fixed outputs", "body": "Prediction → a number, ideally with a range · Classification → a label from a fixed set, often with a confidence score"}},
-      {"visual_type": "slide",
-       "voiceover": "Generation creates new content, such as text, images, code or audio. Large language models like Claude belong here. Because the content is new, it can contain invented details. Retrieval finds the most relevant existing items, such as help articles. It is often combined with generation, so the model answers from real sources instead of from memory.",
-       "slide": {"layout": "bullets", "title": "Content outputs", "body": "Generation → new text, images, code or audio (can invent details) · Retrieval → the most relevant existing items; often paired with generation"}},
-      {"visual_type": "slide",
-       "voiceover": "Recommendation ranks items for a specific user, based on their behaviour and similar users. And agents are systems where a model plans steps and uses tools to finish a task, such as searching, filling a form and sending a message. They can do more, so they can also go wrong in more ways.",
-       "slide": {"layout": "bullets", "title": "Ranking and action", "body": "Recommendation → a ranked list for one user · Agents → a model plans steps and uses tools to complete a task (more power, more ways to fail)"}},
-      {"visual_type": "slide",
-       "voiceover": "These types differ in risk. Prediction and classification have fixed output types, so they are easier to test. Generation and agents produce open outputs and actions, so testing and guardrails take more work.",
-       "slide": {"layout": "diagram", "title": "Testing effort grows", "body": "Horizontal scale from 'easier to test' to 'more testing and guardrails': Prediction, Classification → Retrieval, Recommendation → Generation, Agents."}},
-      {"visual_type": "stock",
-       "voiceover": "Think of a hardware shop. A saw, a drill and a power multi tool can all make a hole in wood. The multi tool can do the most, but it is heavier, more expensive and easier to use badly. A good builder picks the simplest tool that does the job. Agents and generation are the multi tools of AI.",
-       "stock_query": "hand tools on workshop wall",
-       "on_screen_text": "Pick the simplest tool for the job"},
-      {"visual_type": "text",
-       "voiceover": "And many problems need no AI at all. A fixed rule, a sort order or a good form may be clearer, cheaper and always correct.",
-       "on_screen_text": "Many problems need no AI"}
+      {
+        "visual_type": "slide",
+        "voiceover": "In the last lesson, we saw that AI features give likely answers. Today we look at the menu. Most AI features use one of six capability types. Knowing them helps you talk clearly with engineers, and choose the simplest option.",
+        "slide": {
+          "layout": "title",
+          "title": "The AI Capability Menu",
+          "body": "AI Product Management · Lesson 2 of 15"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Prediction estimates a number or a future value from past data, such as a price, a time or a demand level. Ideally it gives a range. Classification puts an input into one of a fixed set of groups, such as urgent or normal. It gives a label, and often a confidence score.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Fixed outputs",
+          "body": "Prediction → a number, ideally with a range · Classification → a label from a fixed set, often with a confidence score"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Generation creates new content, such as text, images, code or audio. Large language models like Claude belong here. Because the content is new, it can contain invented details. Retrieval finds the most relevant existing items, such as help articles. It is often combined with generation, so the model answers from real sources instead of from memory.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Content outputs",
+          "body": "Generation → new text, images, code or audio (can invent details) · Retrieval → the most relevant existing items; often paired with generation"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Recommendation ranks items for a specific user, based on their behaviour and similar users. And agents are systems where a model plans steps and uses tools to finish a task, such as searching, filling a form and sending a message. They can do more, so they can also go wrong in more ways.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Ranking and action",
+          "body": "Recommendation → a ranked list for one user · Agents → a model plans steps and uses tools to complete a task (more power, more ways to fail)"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "These types differ in risk. Prediction and classification have fixed output types, so they are easier to test. Generation and agents produce open outputs and actions, so testing and guardrails take more work. Keep this in mind when you estimate the work.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Testing effort grows",
+          "body": "Horizontal scale from 'easier to test' to 'more testing and guardrails': Prediction, Classification → Retrieval, Recommendation → Generation, Agents."
+        }
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "Think of a hardware shop. A saw, a drill and a power multi tool can all make a hole in wood. The multi tool can do the most, but it is heavier, more expensive and easier to use badly. A good builder picks the simplest tool that does the job. Agents and generation are the multi tools of AI.",
+        "stock_query": "hand tools on workshop wall",
+        "on_screen_text": "Pick the simplest tool for the job"
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "And many problems need no AI at all. A fixed rule, a sort order or a good form may be clearer, cheaper and always correct. Use AI when the task needs judgement across many varied cases that people cannot write rules for.",
+        "on_screen_text": "Many problems need no AI"
+      }
     ],
     "Demonstrate": [
-      {"visual_type": "stock",
-       "voiceover": "Let's use the menu with three hypothetical teams. Priya Raman builds an agriculture app in India. Farmers ask whether they should sell their onions now or in two weeks. The team first imagined a chatbot.",
-       "stock_query": "farmer with onion harvest in field",
-       "on_screen_text": "Priya · agriculture app · India"},
-      {"visual_type": "slide",
-       "voiceover": "But the real need is prediction: an expected price range for the next two weeks, from past market prices, season and local supply. A chatbot could explain it later. The value comes from the number and its range.",
-       "slide": {"layout": "comparison", "title": "Chatbot or prediction?", "body": "First idea: a chatbot. Real need: prediction → expected onion price range for the next two weeks, from past prices, season and supply."}},
-      {"visual_type": "slide",
-       "voiceover": "Emeka Obi runs a delivery service in Nigeria. Customers want to know when their parcel will arrive in Lagos traffic. That is prediction again. He also wants to sort complaints into late, damaged and wrong address. That is classification, a separate feature with its own data and tests.",
-       "slide": {"layout": "diagram", "title": "Emeka · delivery · Nigeria", "body": "Two boxes. Delivery-time estimate → Prediction. Complaints sorted into late / damaged / wrong address → Classification. Note: separate data and tests."}},
-      {"visual_type": "slide",
-       "voiceover": "Agnieszka Nowak runs an online home goods shop in Poland. Customers who bought this also liked is recommendation. A help assistant that answers from the shop's policy pages is retrieval plus generation. And an AI discount calculator? She drops it. Discounts follow fixed rules, so normal code is the right tool.",
-       "slide": {"layout": "diagram", "title": "Agnieszka · online shop · Poland", "body": "Three boxes. 'Also liked' → Recommendation. Help assistant from policy pages → Retrieval + Generation. Discount calculator → No AI needed (fixed rules, crossed-out AI icon)."}},
-      {"visual_type": "text",
-       "voiceover": "The common mistake is to start from the most exciting capability, often a chatbot or an agent, and then look for a problem. Start from the user task. Name the output the user needs, and let that output choose the capability.",
-       "on_screen_text": "Let the output choose the capability"}
+      {
+        "visual_type": "stock",
+        "voiceover": "Let's use the menu with three hypothetical teams. Priya Raman builds an agriculture app in India. Farmers ask whether they should sell their onions now or in two weeks. The team first imagined a chatbot.",
+        "stock_query": "farmer with onion harvest in field",
+        "on_screen_text": "Priya · agriculture app · India"
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "But the real need is prediction: an expected price range for the next two weeks, from past market prices, season and local supply. A chatbot could explain it later. The value comes from the number and its range.",
+        "slide": {
+          "layout": "comparison",
+          "title": "Chatbot or prediction?",
+          "body": "First idea: a chatbot. Real need: prediction → expected onion price range for the next two weeks, from past prices, season and supply."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Emeka Obi runs a delivery service in Nigeria. Customers want to know when their parcel will arrive in Lagos traffic. That is prediction again. He also wants to sort complaints into late, damaged and wrong address. That is classification, a separate feature with its own data and tests.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Emeka · delivery · Nigeria",
+          "body": "Two boxes. Delivery-time estimate → Prediction. Complaints sorted into late / damaged / wrong address → Classification. Note: separate data and tests."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Agnieszka Nowak runs an online home goods shop in Poland. Customers who bought this also liked is recommendation. A help assistant that answers from the shop's policy pages is retrieval plus generation. And an AI discount calculator? She drops it. Discounts follow fixed rules, so normal code is the right tool.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Agnieszka · online shop · Poland",
+          "body": "Three boxes. 'Also liked' → Recommendation. Help assistant from policy pages → Retrieval + Generation. Discount calculator → No AI needed (fixed rules, crossed-out AI icon)."
+        }
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "The common mistake is to start from the most exciting capability, often a chatbot or an agent, and then look for a problem. Start from the user task. Name the output the user needs, and let that output choose the capability.",
+        "on_screen_text": "Let the output choose the capability"
+      }
     ],
     "Recap": [
-      {"visual_type": "slide",
-       "voiceover": "Let's recap. First, the six types are prediction, classification, generation, retrieval, recommendation and agents, and each gives a different output. Second, generation and agents are flexible, but need more testing and guardrails. Third, choose the simplest capability that solves the problem, and remember that many ideas need a rule instead of AI.",
-       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Six types, six kinds of output. 2. Generation and agents need more testing and guardrails. 3. Choose the simplest option; sometimes no AI."}}
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, the six types are prediction, classification, generation, retrieval, recommendation and agents, and each gives a different output. Second, generation and agents are flexible, but need more testing and guardrails. Third, choose the simplest capability that solves the problem, and remember that many ideas need a rule instead of AI.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. Six types, six kinds of output. 2. Generation and agents need more testing and guardrails. 3. Choose the simplest option; sometimes no AI."
+        }
+      }
     ],
     "CTA": [
-      {"visual_type": "presenter_full",
-       "voiceover": "Now it is your turn. In the exercise below, you will sort twelve product ideas by capability type on a FigJam board, and mark the ones that need no AI. It takes about twenty minutes. In the next lesson, we look at finding AI opportunities in your product. See you there.",
-       "on_screen_text": "Next: Finding AI Opportunities"}
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Now it is your turn. In the exercise below, you will sort twelve product ideas by capability type on a FigJam board, and mark the ones that need no AI. It takes about twenty minutes. In the next lesson, we look at finding AI opportunities in your product. See you there.",
+        "on_screen_text": "Next: Finding AI Opportunities"
+      }
     ]
   }
 }

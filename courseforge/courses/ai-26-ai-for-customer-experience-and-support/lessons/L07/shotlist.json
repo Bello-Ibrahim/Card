@@ -1,0 +1,192 @@
+{
+  "course_id": "AI-26",
+  "lesson_id": "L07",
+  "duration_s": 296.7,
+  "thumbnail": {
+    "headline": "Don't Drop the Baton",
+    "slide": {
+      "layout": "title",
+      "title": "Don't Drop the Baton",
+      "body": "Two hands passing a relay baton: left hand shaped like a chat bubble (AI), right hand a person. Small tag: AI for Customer Experience and Support · Lesson 7."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.0,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Never make customers repeat themselves",
+      "voiceover": "After ten minutes with a chatbot, you finally reach a person. And the first thing they ask is, how can I help you today? You have to tell your whole story again. Today we design a hand-off that never does that."
+    },
+    {
+      "scene": 2,
+      "start": 18.0,
+      "end": 39.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Designing the Hand-off to a Human",
+        "body": "AI for Customer Experience and Support · Lesson 7 of 12 · Triggers + Summary"
+      },
+      "voiceover": "In the last lesson, you marked the points where a case must move to a person. That moment is the hand-off, also called escalation. It is the most important moment in an AI support conversation. A good hand-off has two parts: clear triggers, and a clear summary."
+    },
+    {
+      "scene": 3,
+      "start": 39.0,
+      "end": 60.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Hand-off triggers 1 and 2",
+        "body": "1. Customer asks for a person ('real agent', 'human', in every language) · 2. Assistant is unsure (not in the knowledge base, no clear answer)"
+      },
+      "voiceover": "There are six triggers. First, the customer asks for a person. Words like real agent or human should always work, in every language you support. Never make the customer ask three times. Second, the assistant is unsure, because the question is not covered, or there is no clear answer."
+    },
+    {
+      "scene": 4,
+      "start": 60.0,
+      "end": 82.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "All six triggers",
+        "body": "1. Asks for a person · 2. Assistant unsure · 3. Very upset · 4. Sensitive topic (bereavement, fraud, health, safety, legal, discrimination) · 5. Money or policy limit · 6. Same question fails twice"
+      },
+      "voiceover": "Third, the customer is very upset: strong anger, repeated complaints, capital letters or threats to leave. Fourth, the topic is sensitive, such as bereavement, fraud, health, safety, legal threats or discrimination. Fifth, a money or policy limit is reached. And sixth, the same question fails twice. Then stop trying, and hand off."
+    },
+    {
+      "scene": 5,
+      "start": 82.3,
+      "end": 96.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Part 2: The summary",
+        "body": "So the customer never repeats their story."
+      },
+      "voiceover": "The second part is the hand-off summary. When the conversation moves, the assistant sends the person a short summary, so the customer does not repeat anything. A simple template has six fields."
+    },
+    {
+      "scene": 6,
+      "start": 96.4,
+      "end": 112.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Hand-off summary template",
+        "body": "Need: one sentence\nTrigger: why the hand-off happened\nDetails collected: only what is needed\nAssistant said or tried:\nMood: calm / worried / upset\nUrgency: normal or high, and why"
+      },
+      "voiceover": "The customer's need, in one sentence. The trigger, meaning why the hand-off happened. The details collected, only what is needed. What the assistant already said or tried. The customer's mood. And the urgency, with the reason."
+    },
+    {
+      "scene": 7,
+      "start": 112.3,
+      "end": 125.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "Tell the customer what happens next",
+        "body": "\"I'm passing you to a colleague. They will see our conversation, so you won't need to repeat it.\""
+      },
+      "voiceover": "The customer should also know what happens next. For example: I am passing you to a colleague. They will see our conversation, so you will not need to repeat it."
+    },
+    {
+      "scene": 8,
+      "start": 125.2,
+      "end": 144.9,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "relay runners passing baton on track",
+      "on_screen_text": "Don't drop the baton",
+      "voiceover": "Think of the baton pass in a relay race. The first runner does not stop suddenly. They run beside the next runner and place the baton in their hand. A fast chatbot and a skilled agent still give a poor experience if the baton is dropped."
+    },
+    {
+      "scene": 9,
+      "start": 144.9,
+      "end": 160.8,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "pharmacy delivery parcel handed to customer",
+      "on_screen_text": "Online pharmacy · Pune, India",
+      "voiceover": "Let's see it in practice. Priya runs support for a hypothetical online pharmacy in Pune, India. Her chatbot answers questions about delivery, opening hours and uploading a prescription. She designs clear hand-off rules for everything else."
+    },
+    {
+      "scene": 10,
+      "start": 160.8,
+      "end": 184.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Priya's hand-off rules",
+        "body": "Asks for a person (English, Hindi, Marathi) → at once · Doses, side effects, medicines together → pharmacist, no medical advice · Emergency words → show local emergency number + alert a person · Refund above finance limit → hand off · Two failed tries → hand off"
+      },
+      "voiceover": "Her rules: a request for a person, in English, Hindi or Marathi, means hand off at once. Any question about doses or side effects goes to a pharmacist, because the chatbot must never give medical advice. Emergency words show the local emergency number and alert a person. Large refunds, and two failed tries, also hand off."
+    },
+    {
+      "scene": 11,
+      "start": 184.8,
+      "end": 206.7,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Two triggers at once",
+        "body": "Customer: 'My order has not arrived and my mother needs this medicine tonight, she is very unwell.' Tags: Health · Urgency. Chatbot: 'I'm sorry to hear your mother is unwell. I'm connecting you with a colleague now, who will see this conversation.'"
+      },
+      "voiceover": "A customer writes: my order has not arrived, and my mother needs this medicine tonight. She is very unwell. The chatbot sees two triggers, urgency and health. It replies: I am sorry to hear your mother is unwell. I am connecting you with a colleague now, who will see this conversation."
+    },
+    {
+      "scene": 12,
+      "start": 206.7,
+      "end": 223.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "What the agent sees",
+        "body": "Need: missing delivery of medicine needed tonight\nTrigger: health + urgency\nDetails: order number provided\nAssistant said: connecting to a colleague\nMood: worried\nUrgency: high, medicine needed today"
+      },
+      "voiceover": "The agent receives the summary. Missing delivery of medicine needed tonight. Trigger, health and urgency. Order number provided. Mood, worried. Urgency, high. The agent starts helping in the very first message. The customer does not have to explain anything again."
+    },
+    {
+      "scene": 13,
+      "start": 223.8,
+      "end": 246.5,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Make reaching a person easy",
+      "voiceover": "A common mistake is to hide the way to reach a person, so the chatbot handles more conversations. Customers give up, or come back angrier. The chatbot's numbers look good, while the customer experience gets worse. Make asking for a person easy, and treat hand-offs as a normal part of good service."
+    },
+    {
+      "scene": 14,
+      "start": 246.5,
+      "end": 273.1,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Six triggers: asks · unsure · upset · sensitive · limit · fails twice. 2. A short summary: no repeating the story. 3. Say what happens next; never hide the person."
+      },
+      "voiceover": "Let's recap. First, hand off when the customer asks for a person, the assistant is unsure, the customer is very upset, the topic is sensitive, a limit is reached, or a question fails twice. Second, a short summary means the customer does not repeat their story. Third, tell the customer what happens next, and never make it hard to reach a person."
+    },
+    {
+      "scene": 15,
+      "start": 273.1,
+      "end": 296.7,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Automating with n8n or Zapier",
+      "voiceover": "Now it is your turn. In the exercise, you will write five hand-off rules and a summary template. Then you will test the template on two made-up conversations. Keep them, because they are the heart of your capstone. In the next lesson, we automate simple tasks with n8n or Zapier. See you there."
+    }
+  ]
+}
