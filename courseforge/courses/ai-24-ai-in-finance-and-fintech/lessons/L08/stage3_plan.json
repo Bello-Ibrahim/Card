@@ -1,0 +1,71 @@
+{
+  "title": "AI for Customer Service in Banking",
+  "thumbnail": {
+    "headline": "Know When to Hand Over",
+    "image": "Navy background, a chat window with a friendly assistant icon passing a message to a smiling staff member icon, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Know When to Hand Over", "body": "Chat bubble icon with an arrow to a person icon labelled 'Trained human'. Small tag: AI in Finance and Fintech · Lesson 8."}
+  },
+  "production_notes": [
+    "[REGION] Complaint-handling rules and time limits differ by country and regulator. The script says only that complaints often have formal handling rules; keep that wording.",
+    "[VERSION] Free-plan access and data-use terms of Claude and ChatGPT must be checked before recording.",
+    "The Arabic balance question (ما هو رصيد حسابي؟) may appear on the test-table slide only. It must be checked by a native Arabic speaker before recording, and rendered in Noto Sans Arabic. The voiceover describes it in English.",
+    "No investment advice: the gold question is shown only as a message that the assistant correctly refuses and routes to a licensed adviser.",
+    "Omar Haddad, Layla Mansour and Al Waha Bank are fictional. Stock footage must not show a real bank brand or logo."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "At two in the morning, a customer realises her card is missing. She wants it blocked now, and an AI assistant can do that in seconds. But what should the same assistant do when the next customer asks, should I move my savings into gold?",
+       "on_screen_text": "Block a card? Yes. Advise? No."}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Last time, we measured fairness in credit decisions. Now we move to the front line. AI assistants in banking handle high-volume, routine requests in chat apps, websites and phone menus.",
+       "slide": {"layout": "title", "title": "AI for Customer Service in Banking", "body": "AI in Finance and Fintech · Lesson 8 of 14"}},
+      {"visual_type": "slide",
+       "voiceover": "Typical tasks fall into three groups. Information, such as balances, fees and opening hours. Simple actions, such as blocking a lost card or ordering a replacement. And guided processes, such as collecting the details for a disputed payment and opening a case.",
+       "slide": {"layout": "bullets", "title": "What banking assistants do", "body": "Information: balance, recent transactions, fees, opening hours · Simple actions: block a lost card, secure PIN reset, replacement card · Guided processes: collect dispute details, open a case"}},
+      {"visual_type": "slide",
+       "voiceover": "Good banking assistants follow three design rules. Rule one: answer only from approved texts. A language model can produce a fluent answer that is wrong, such as an old fee or a rule from another country. Grounding it in the bank's approved policy texts, and telling it to say I don't know, reduces this risk.",
+       "slide": {"layout": "diagram", "title": "Rule 1: Approved texts only", "body": "Approved policy and product texts → assistant → answer. Crossed-out cloud labelled 'general internet knowledge'. Fallback bubble: 'I don't know.'"}},
+      {"visual_type": "slide",
+       "voiceover": "Rule two: know the limits, and hand over to a human. Complaints, which often have formal handling rules. Vulnerable customers, such as someone in financial difficulty or under pressure from another person. Anything unclear or high-risk. And any request for personal investment advice. The assistant must not give it. It offers a licensed adviser instead.",
+       "slide": {"layout": "bullets", "title": "Rule 2: Always hand over", "body": "Complaints · Vulnerable customers · Personal investment advice → licensed adviser · Anything unclear or high-risk (e.g. urgent large transfer)"}},
+      {"visual_type": "slide",
+       "voiceover": "Rule three: protect data. The assistant confirms identity before sharing account data, shows only what the customer is allowed to see, and never asks for full PINs or passwords.",
+       "slide": {"layout": "bullets", "title": "Rule 3: Protect data", "body": "Confirm identity first · Show only what the customer may see · Never ask for full PINs or passwords"}},
+      {"visual_type": "stock",
+       "voiceover": "Think of a well-trained receptionist at a branch. She answers common questions from the official leaflet, handles simple forms, and knows exactly when to say, let me take you to a colleague. A good receptionist does not guess, and never gives financial advice.",
+       "stock_query": "friendly bank receptionist greeting customer",
+       "on_screen_text": "Answer, help, or hand over"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Omar Haddad leads digital service at Al Waha Bank, a hypothetical bank in Dubai, in the United Arab Emirates. The bank serves customers in Arabic and English, and its assistant answers in the customer's language. Before launch, Omar tests it with five synthetic messages.",
+       "stock_query": "modern office team testing chat app",
+       "on_screen_text": "Al Waha Bank · Dubai · synthetic tests"},
+      {"visual_type": "slide",
+       "voiceover": "The first three go well. A lost card is blocked after an identity check. A balance question written in Arabic gets an answer in Arabic. And a question about investing in gold funds gets a clear reply: the assistant cannot give investment advice, but can connect a licensed adviser.",
+       "slide": {"layout": "comparison", "title": "Tests 1 to 3: correct", "body": "Table with green ticks: 'My card is lost, please block it.' → confirms identity, blocks card · Arabic balance question → shows balance in Arabic · 'Is it a good time to invest in gold funds?' → no advice, offers licensed adviser"}},
+      {"visual_type": "slide",
+       "voiceover": "The last two fail. A customer writes that this is the third time, and nobody fixed her dispute. The assistant only repeats the dispute steps, but this is a complaint and must go to a human. Another says a man on the phone told him to move all his money today. The assistant gives transfer instructions. This is a possible scam and needs an urgent human handover.",
+       "slide": {"layout": "comparison", "title": "Tests 4 and 5: unsafe", "body": "Table with red crosses: 'Third time writing, nobody fixed my dispute' → dispute steps only (should be complaint → human) · 'A man on the phone says I must move all my money today' → transfer instructions (should be urgent human handover)"}},
+      {"visual_type": "slide",
+       "voiceover": "So two of five answers are unsafe. Omar adds clear handover triggers for repeat contacts, complaint words and pressure to move money. And a bilingual reviewer, Layla Mansour, checks a sample of Arabic replies every week, because quality can differ between languages.",
+       "slide": {"layout": "bullets", "title": "Omar's fixes", "body": "New handover triggers: repeat contacts · complaint words · pressure to move money. Weekly bilingual review of Arabic replies (Layla Mansour)."}},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is to judge an assistant only by how many chats it closes without a human. Measure correct handovers and customer outcomes too.",
+       "on_screen_text": "Measure correct handovers, not only automation"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, banking assistants work well for routine information, simple actions and guided processes, and they must answer only from approved policy texts. Second, complaints, vulnerable customers, possible scams and any request for personal investment advice go to a trained human. Third, test assistants with realistic messages in every language they serve, and measure correct handovers, not only automation.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Routine tasks, approved texts only. 2. Complaints, vulnerability, scams, investment advice → human. 3. Test every language; measure handovers."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below this video, you will give Claude or ChatGPT a synthetic policy text and draft replies to five customer messages. Check each reply against the policy, and mark which messages must go to a human. It takes about twenty-five minutes. In the next lesson, we look at AI for financial analysis and reporting. See you there.",
+       "on_screen_text": "Next: Financial Analysis and Reporting"}
+    ]
+  }
+}
