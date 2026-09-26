@@ -1,0 +1,178 @@
+{
+  "course_id": "AI-25",
+  "lesson_id": "L02",
+  "duration_s": 313.4,
+  "thumbnail": {
+    "headline": "Every Record Is a Diary",
+    "slide": {
+      "layout": "title",
+      "title": "Every Record Is a Diary",
+      "body": "Icon of a diary with a small lock next to a spreadsheet grid with a few empty cells marked in teal. Small tag: AI in Healthcare · Lesson 2."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.9,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "What did the tool really learn?",
+      "voiceover": "An AI tool is only as good as the data it learned from. If blood pressure was missing for half of the older patients in the training data, what has the tool really learned about older patients?"
+    },
+    {
+      "scene": 2,
+      "start": 15.9,
+      "end": 34.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Health Data: Types, Quality and Privacy",
+        "body": "AI in Healthcare · Lesson 2 of 14"
+      },
+      "voiceover": "In the last lesson, we mapped four areas of AI in healthcare. Every one of them runs on data. So in this lesson, we look at the main types of health data, the quality problems they bring, and why they need extra privacy protection."
+    },
+    {
+      "scene": 3,
+      "start": 34.8,
+      "end": 54.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Six types of health data (1)",
+        "body": "Electronic health records: rich, often incomplete · Images: depend on device and operator · Laboratory results: structured, but units and methods differ"
+      },
+      "voiceover": "Health AI uses six main types of data. Electronic health records are rich, but often incomplete, and recorded for care or billing, not research. Images depend on the device and the person taking them. Laboratory results are well structured, but units and methods differ between laboratories."
+    },
+    {
+      "scene": 4,
+      "start": 54.5,
+      "end": 76.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Six types of health data (2)",
+        "body": "Wearables: continuous, but owners are often younger and wealthier · Claims and billing: large, but show payment, not care · Surveys: reach non-users, depend on memory"
+      },
+      "voiceover": "Wearables give continuous readings, but the people who own them are often younger and wealthier than the general population. Claims data is large and consistent, but shows what was paid for, not always what happened. Surveys reach people who do not use health services, but depend on memory and honest answers."
+    },
+    {
+      "scene": 5,
+      "start": 76.4,
+      "end": 103.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Three quality problems",
+        "body": "Three cards: Missing values (grid with empty cells, 'rarely random') · Different coding systems (two code lists with a broken link) · Unrepresentative samples (crowd of icons, mostly one colour; 'see L09')"
+      },
+      "voiceover": "Three quality problems appear again and again. First, missing values. Data is rarely missing at random. A test may be missing because the clinician thought it was not needed, and that is information too. Second, different coding systems. Combining hospitals that record diagnoses differently creates errors. Third, unrepresentative samples. A model may work less well for groups that are rare in its data."
+    },
+    {
+      "scene": 6,
+      "start": 103.4,
+      "end": 127.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "A patient record is like a diary",
+        "body": "Left: diary held by care team → helps (green tick). Right: diary in the wrong hands → discrimination, stigma, loss of work (red cross)."
+      },
+      "voiceover": "Health data can reveal illness, pregnancy, mental health or genetic information. Exposure can lead to discrimination, stigma or loss of work. Here is a simple way to think about it. A patient record is like a diary. In the hands of the patient's care team, it helps. In the wrong hands, it can cause real harm."
+    },
+    {
+      "scene": 7,
+      "start": 127.4,
+      "end": 150.1,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Never paste patient data into public AI",
+      "voiceover": "So treat every dataset as someone's diary, even when it looks like a table of numbers. In this course, you only use public or synthetic data. Synthetic data is made by a computer to look realistic, but it describes no real person. And never paste identifiable patient data into a public AI tool."
+    },
+    {
+      "scene": 8,
+      "start": 150.1,
+      "end": 168.1,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "researcher studying spreadsheet on laptop office",
+      "on_screen_text": "Synthetic dataset · 500 fictional patients",
+      "voiceover": "Let's see this with an example. Nguyen Thi Lan is a public health researcher in Vietnam. She is given a synthetic dataset of five hundred adult clinic patients, to plan an analysis of blood pressure control. Before any modelling, she explores it."
+    },
+    {
+      "scene": 9,
+      "start": 168.1,
+      "end": 195.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "synthetic_patients.csv · missing values",
+        "body": "Header row of the course file synthetic_patients.csv, then a small table: Smoking status 31% · HbA1c 58% · BMI 12% · Systolic BP 4%. Label: SYNTHETIC DATA FOR TEACHING ONLY."
+      },
+      "voiceover": "She lists the variables: age, sex, district, body mass index, systolic blood pressure, smoking status, HbA1c, and the date of the last visit. Then she counts the missing values. Remember, all of these numbers are synthetic. Smoking status is missing for thirty-one percent of patients. HbA1c for fifty-eight percent. Body mass index for twelve percent. Systolic blood pressure for four percent."
+    },
+    {
+      "scene": 10,
+      "start": 195.1,
+      "end": 217.4,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "A pattern in the recording, not the patients",
+        "body": "Two groups: patients with diabetes (HbA1c cells mostly filled) and without diabetes (HbA1c cells mostly empty). Arrow to a model icon: 'HbA1c present = diabetes?' with a warning sign."
+      },
+      "voiceover": "HbA1c is missing for more than half of the patients. Lan checks, and sees that it is recorded mostly for patients who already have a diabetes diagnosis. A model trained on this data might learn that HbA1c present means diabetes. That is a pattern in the recording process, not in the patients."
+    },
+    {
+      "scene": 11,
+      "start": 217.4,
+      "end": 241.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Lan's notes",
+        "body": "80% of rows from two urban districts → may not apply to rural districts · Privacy risk: district + exact age + rare diagnosis could identify one person"
+      },
+      "voiceover": "She also sees that eighty percent of rows come from two urban districts. She writes a note: results may not apply to rural districts. Finally, she asks the privacy question. If this data were real, could a person be identified? District, exact age and a rare diagnosis together could point to one person in a small district."
+    },
+    {
+      "scene": 12,
+      "start": 241.8,
+      "end": 262.8,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Removing names is not enough",
+      "voiceover": "For real data, she would group ages into bands, remove exact dates, and follow her institution's data protection rules. This links to a common mistake. Many people believe data is anonymous once names are removed. In health data, this is often false. Treat de-identified data as still sensitive."
+    },
+    {
+      "scene": 13,
+      "start": 262.8,
+      "end": 288.5,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Six data types, each with its own gaps and biases. 2. Missing values, coding and samples can mislead a model. 3. Extra privacy: removing names is not enough; no patient data in public AI tools."
+      },
+      "voiceover": "Let's recap. First, health AI uses records, images, laboratory results, wearables, claims and surveys, and each type has its own gaps and biases. Second, missing values, different coding systems and unrepresentative samples can teach a model patterns from the recording process, not from patients. Third, health data needs extra privacy protection, and identifiable data never goes into public AI tools."
+    },
+    {
+      "scene": 14,
+      "start": 288.5,
+      "end": 313.4,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: How Clinical AI Models Are Built",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will open the course's synthetic patient dataset, list its variables, count the missing values, and describe one privacy risk if the data were real. It takes about twenty-five minutes. In the next lesson, we look at how clinical AI models are built. See you there."
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "course_id": "AI-19",
+  "lesson_id": "L14",
+  "duration_s": 299.7,
+  "thumbnail": {
+    "headline": "Is It Ready to Deploy?",
+    "slide": {
+      "layout": "title",
+      "title": "Is It Ready to Deploy?",
+      "body": "Left: yard with vans in boxes and whole people blurred. Right: checklist Privacy · Bias · Licences · Fitness. Small tag: Computer Vision Essentials · Lesson 14."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.0,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Good mAP is not enough",
+      "voiceover": "Your vehicle counter works. Then someone asks. Who is visible in your videos, and did they agree? Does it work at night? Are you allowed to sell it? If you cannot answer, the project is not ready, however good the mAP is."
+    },
+    {
+      "scene": 2,
+      "start": 18.0,
+      "end": 29.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Four checks before deployment",
+        "body": "Four tiles around a camera icon: Privacy · Bias · Licences · Fitness for use. Tag: Lesson 14 of 16"
+      },
+      "voiceover": "In the last lesson, you counted vehicles in video. Before you deploy a system like that, check four areas. Privacy, bias, licences, and fitness for use."
+    },
+    {
+      "scene": 3,
+      "start": 29.1,
+      "end": 53.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Privacy",
+        "body": "Collect less: counts over stored video · Blur people before storing or sharing · Limit access and storage time · Inform and ask: notices, consent where required"
+      },
+      "voiceover": "Privacy first. Cameras record people, even when you only want cars or shelves. Good practice has four parts. Collect less, and prefer counts over stored video. Blur people before you store or share frames. Limit who can access video, and when it is deleted. And inform people, with clear notices and consent where the law requires it."
+    },
+    {
+      "scene": 4,
+      "start": 53.5,
+      "end": 70.6,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "General guidance, not legal advice",
+      "voiceover": "Laws on cameras, consent and storage differ by country, and sometimes by city. This is general guidance, not legal advice, so check the rules where you deploy. And never upload real footage of people to online AI tools for testing."
+    },
+    {
+      "scene": 5,
+      "start": 70.6,
+      "end": 92.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Bias: test every condition",
+        "body": "Trained on: daytime, one country. Test also: night, rain, other vehicle types, other layouts. Report each condition separately."
+      },
+      "voiceover": "Bias. A model works best on data like its training data. A detector trained mostly on daytime images from one country may miss vehicle types, shop layouts or lighting it rarely saw. So test in the real place, at different times and in different weather, and report each condition separately."
+    },
+    {
+      "scene": 6,
+      "start": 92.0,
+      "end": 117.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Licences and fitness",
+        "body": "Check the licence of every model, dataset and library · Ultralytics YOLO: check before commercial use · Some models: research use only · Fitness: acceptable errors? enough speed? what if it is wrong?"
+      },
+      "voiceover": "Licences. Check every model, dataset and library before commercial use. The Ultralytics YOLO licence must be checked before any commercial use, and Hugging Face models and datasets each have their own licence. Some allow research use only. Finally, fitness for use. Are the errors acceptable for this decision? Is the speed enough? And what happens when the system is wrong?"
+    },
+    {
+      "scene": 7,
+      "start": 117.7,
+      "end": 135.7,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "mechanic inspecting bus in depot",
+      "on_screen_text": "Fail one check, stay in depot",
+      "voiceover": "A fitness check is like a safety inspection before a new bus goes into service. The engine may be excellent, but the inspector also checks the brakes, the doors and the insurance. A bus that fails any check stays in the depot."
+    },
+    {
+      "scene": 8,
+      "start": 135.7,
+      "end": 152.8,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "delivery vans parked in logistics yard",
+      "on_screen_text": "Oluwaseun's depot · Lagos",
+      "voiceover": "Oluwaseun Adeyemi builds a system to count delivery vans at a logistics depot in Lagos, Nigeria. The camera also records workers walking across the yard. So he adds a step that blurs every detected person before any frame is saved."
+    },
+    {
+      "scene": 9,
+      "start": 152.8,
+      "end": 175.1,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Add the blur_boxes function to the L13 notebook",
+        "In the YOLO loop, select person boxes with the class filter and call blur_boxes on a copy of the frame",
+        "Run the cell so each frame is blurred before it is written"
+      ],
+      "on_screen_text": "Blur people before saving",
+      "voiceover": "He adds a small blur function to his notebook from the last lesson. It takes a frame and a list of boxes, keeps each box inside the image, and applies a strong blur inside it. In the tracking loop, he selects the person boxes and blurs them before each frame is written."
+    },
+    {
+      "scene": 10,
+      "start": 175.1,
+      "end": 195.2,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Play the output video",
+        "Pause on a frame with blurred people and point to the whole-body blur"
+      ],
+      "on_screen_text": "Blur the whole person",
+      "voiceover": "He plays the output and pauses on a frame with workers in the yard. Each person is blurred from head to foot. He blurs the whole person box, not only the face, because face detectors miss small, turned or shadowed faces, and clothes can also identify people."
+    },
+    {
+      "scene": 11,
+      "start": 195.2,
+      "end": 209.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Step through sample frames and check every person is blurred",
+        "Show the fitness check text cell with the headings Accuracy, Speed, Privacy, Licence, Decision"
+      ],
+      "on_screen_text": "Five-heading fitness check",
+      "voiceover": "He also checks sample frames by eye, because one missed detection means one unblurred person. Then he writes his fitness check in a text cell, with five headings. Accuracy, speed, privacy, licence, and decision."
+    },
+    {
+      "scene": 12,
+      "start": 209.8,
+      "end": 238.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Fitness check (example)",
+        "body": "Accuracy: within 5% on 10 daytime clips; night untested · Speed: 1-min clip in about 40 s; hourly batches · Privacy: blurred, deleted after 24 h, notices · Licence: legal review first · Decision: daytime internal pilot only"
+      },
+      "voiceover": "His example results. The van count is within five percent of a manual count on ten daytime clips, but night is untested. A one-minute clip takes about forty seconds, and hourly batches are enough. People are blurred, and raw video is deleted after twenty-four hours. The licence needs legal review before other depots use it. His decision? Fit for a daytime internal pilot only."
+    },
+    {
+      "scene": 13,
+      "start": 238.1,
+      "end": 255.2,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Privacy and licences come first",
+      "voiceover": "A common mistake is to treat privacy and licences as paperwork for later. By then, the video is already stored, and the model may be inside a product its licence does not allow. Check licences before you choose a model."
+    },
+    {
+      "scene": 14,
+      "start": 255.2,
+      "end": 273.6,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Collect less, blur people, limit storage, follow local rules. 2. Measure each condition separately. 3. Fitness check ends with a clear decision."
+      },
+      "voiceover": "Let's recap. First, collect less, blur people, limit storage and follow local rules. Second, test for bias by measuring results separately for different conditions, places and times. Third, a fitness check covers accuracy, speed, privacy and licences, and ends with a clear decision."
+    },
+    {
+      "scene": 15,
+      "start": 273.6,
+      "end": 299.7,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Capstone Part 1",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will add person blurring to your video output, list the licences of everything you use, and write a half-page fitness check. It takes about thirty-five minutes, and it becomes part of your capstone. In the next lesson, Capstone Part 1: Build Your Detection App. See you there."
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # L14 Capstone: Finishing and Presenting Your Video | Presenter Script
 
-Course: AI-21 · Video: 5 min · Words: 660
+Course: AI-21 · Video: 5 min · Words: 679
 
 ## Hook
 You have a script, a shot list, clips, an avatar, an edit, sound, two exports and a checklist. The last step is not about adding more. It is about checking carefully, fixing what matters, and explaining how you made it.
@@ -31,7 +31,7 @@ Here is one of her shots. A young woman in a white helmet rides a blue bicycle a
 
 Now her production note. Her tools were Flow for four text-to-video shots, Kling for three image-to-video shots from keyframes, a HeyGen stock avatar for the intro, and CapCut for the edit, captions and export.
 
-She shows her key prompt exactly, as you can see on screen. She explains the problems she solved, like the helmet drift. And she lists her checks. A disclosure line, a stock avatar only, no real people, a saved music licence, and tool terms checked for her plan.
+She shows her key prompt exactly, as you can see on screen. She explains the problems she solved, like the helmet drift, and a hands artifact she fixed by adding hands on handlebars, steady ride. And she lists her checks. A disclosure line, a stock avatar only, no real people, a saved music licence, and tool terms checked for her plan.
 
 A common mistake is to spend the last hours generating new clips, and then run out of time for the quality pass and the note. A simpler video that is checked and well documented is stronger. Stop generating early.
 
@@ -39,7 +39,7 @@ A common mistake is to spend the last hours generating new clips, and then run o
 Let's recap. First, the capstone is a sixty to ninety second video from script to final export, plus a half-page production note. Second, do the final quality pass in four viewings: artifacts, continuity, audio and captions. Third, the note lists your tools, key prompts, problems solved and checks.
 
 ## CTA
-Congratulations. You have gone from an idea to a finished video, and you directed every step. Now complete capstone step four. Do your final pass, export both versions, and write your production note. Then submit your video, the note, your shot list and your checklist. Well done, and good luck with your capstone.
+Congratulations. You have gone from an idea to a finished video, and you directed every step. Now complete capstone step four. Do your final pass, export both versions, and write your production note. It takes about forty-five minutes. Then submit your video, the note, your shot list and your checklist. Well done, and good luck with your capstone.
 
 ## Thumbnail
 Headline: Check, Fix, Explain
