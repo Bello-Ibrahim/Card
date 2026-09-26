@@ -1,0 +1,188 @@
+{
+  "course_id": "AI-24",
+  "lesson_id": "L03",
+  "duration_s": 306.4,
+  "thumbnail": {
+    "headline": "Lagos to Singapore?",
+    "slide": {
+      "layout": "title",
+      "title": "Lagos to Singapore?",
+      "body": "Simple world map outline with a dotted teal line from Lagos to Singapore and a small clock icon: '20 minutes'. Small tag: AI in Finance and Fintech · Lesson 3."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.9,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Lagos, then Singapore, 20 minutes later",
+      "voiceover": "A card buys groceries in Lagos. Twenty minutes later, the same card buys a laptop in Singapore. No person can travel that far in twenty minutes. So how does a bank notice, in the fraction of a second before it approves the second payment?"
+    },
+    {
+      "scene": 2,
+      "start": 18.9,
+      "end": 32.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Fraud Detection: Rules and Models",
+        "body": "AI in Finance and Fintech · Lesson 3 of 14"
+      },
+      "voiceover": "Last time, we saw how fraud labels arrive late. Today we look at how fraud detection actually works. There are two main approaches, rules and models, and most institutions combine them."
+    },
+    {
+      "scene": 3,
+      "start": 32.2,
+      "end": 54.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Approach 1: Rules",
+        "body": "IF amount > set limit AND device is new → Block. Notes: easy to explain · quick to change · only known patterns"
+      },
+      "voiceover": "Rules are fixed instructions written by fraud analysts. For example, block any payment above a set amount from a device the customer has never used. Rules are easy to explain and quick to change. But they only catch patterns someone has already thought of, and criminals learn to stay just below the limits."
+    },
+    {
+      "scene": 4,
+      "start": 54.9,
+      "end": 77.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Approach 2: Models",
+        "body": "Past labelled transactions → model learns patterns → new transaction → risk score gauge from 0 to 1000"
+      },
+      "voiceover": "Models learn patterns from past transactions labelled fraud or genuine. For each new transaction, the model produces a risk score, for example a number from zero to one thousand. A higher score means the transaction looks more like past fraud. And the score is ready while the payment is still being authorised."
+    },
+    {
+      "scene": 5,
+      "start": 77.2,
+      "end": 95.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Signals a model combines",
+        "body": "Behaviour · Velocity · Device and channel · Location"
+      },
+      "voiceover": "A model weighs many signals together. Behaviour: is this amount normal for this customer? Velocity: how many payments in the last hour? Device and channel: is the phone new? And location: is the distance between two payments possible in the time between them?"
+    },
+    {
+      "scene": 6,
+      "start": 95.6,
+      "end": 114.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Score bands: a business choice",
+        "body": "Horizontal bar 0–1000, example only: green 'Approve' below 600 · amber 'Verify' 600–850 · red 'Decline' above 850"
+      },
+      "voiceover": "The institution then sets actions by score band. For example, approve below six hundred, ask for a one-time code between six hundred and eight hundred and fifty, and decline above that. These bands are a business choice, not a feature of the model."
+    },
+    {
+      "scene": 7,
+      "start": 114.5,
+      "end": 135.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Drift",
+        "body": "Line chart sketch: model accuracy slowly falling over months, then rising after 'Retrain with new labels'. Side note: rules = fast response to a new attack."
+      },
+      "voiceover": "Fraud patterns also change. When one method is blocked, criminals try another. A model trained on last year's fraud slowly becomes less accurate. This is called drift. So models need new labelled data and regular retraining, and rules stay useful as a fast response while the model catches up."
+    },
+    {
+      "scene": 8,
+      "start": 135.5,
+      "end": 153.1,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "security guard watching building entrance",
+      "on_screen_text": "Best entrance: both guards",
+      "voiceover": "Think of rules as a security guard with a printed list of banned faces, reliable for the list and blind to everyone else. A model is an experienced guard who notices when behaviour feels wrong. The best entrance has both guards."
+    },
+    {
+      "scene": 9,
+      "start": 153.1,
+      "end": 170.2,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "fraud analyst looking at monitors office",
+      "on_screen_text": "Lagos 14:02 · Singapore 14:22",
+      "voiceover": "Chinedu Okafor is a fraud analyst at a hypothetical card issuer in Lagos, Nigeria. A customer's card pays at a supermarket in Lagos at two minutes past two. At twenty-two minutes past two, it buys a laptop in Singapore."
+    },
+    {
+      "scene": 10,
+      "start": 170.2,
+      "end": 197.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Score: 930 out of 1000",
+        "body": "Gauge pointing to 930 in the red Decline band. Three signal tags: impossible travel time · new merchant type · unusual amount. Result: declined, customer sent a confirmation text."
+      },
+      "voiceover": "A simple rule, two countries within one hour, flags the second payment. The model scores it nine hundred and thirty out of one thousand. Its main signals are the impossible travel time, a merchant type the customer has never used, and an amount far above their usual spending. The payment is declined, and the customer gets a text asking them to confirm recent activity."
+    },
+    {
+      "scene": 11,
+      "start": 197.6,
+      "end": 220.7,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Three rules, 5,000 transactions",
+        "body": "Table: Rule · Flagged · Fraud among flagged · Share. High amount: 120 · 12 · 10%. New device + foreign country: 60 · 18 · 30%. Two countries in one hour: 15 · 11 · about 73%."
+      },
+      "voiceover": "Chinedu then tests three rules on a synthetic sample of five thousand transactions, with forty known fraud cases. A high-amount rule flags one hundred and twenty, but only twelve are fraud. New device and foreign country flags sixty, and eighteen are fraud. Two countries within one hour flags fifteen, and eleven are fraud."
+    },
+    {
+      "scene": 12,
+      "start": 220.7,
+      "end": 235.7,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "No single rule catches most fraud",
+      "voiceover": "The third rule is precise but rare. The first creates many false alarms. No single rule catches most of the forty cases. That is why the issuer also uses a model that combines the signals."
+    },
+    {
+      "scene": 13,
+      "start": 235.7,
+      "end": 250.3,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "A score is not an accusation",
+      "voiceover": "One warning. A fraud model does not know which payments are fraud. A genuine customer who travels suddenly can get a high score. So the score leads to a friendly check, not an accusation."
+    },
+    {
+      "scene": 14,
+      "start": 250.3,
+      "end": 279.0,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Rules = known patterns; models = many signals into one score. 2. Score bands are a business decision. 3. Drift: retrain with new labels; rules as backup."
+      },
+      "voiceover": "Let's recap. First, rules catch known patterns and are easy to explain, while models combine many signals into a risk score in a fraction of a second. Second, score bands for approve, verify and decline are a business decision that sits on top of the model. Third, fraud patterns change, so models drift and need new labelled data and regular retraining, with rules as a fast backup."
+    },
+    {
+      "scene": 15,
+      "start": 279.0,
+      "end": 306.4,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: False Alarms and Missed Fraud",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will write three fraud rules in Google Sheets, count how many transactions each one flags, and compare the flags with the fraud labels, just like Chinedu's table. It takes about thirty minutes. In the next lesson, we look at false alarms and missed fraud, and the cost trade-off. See you there."
+    }
+  ]
+}

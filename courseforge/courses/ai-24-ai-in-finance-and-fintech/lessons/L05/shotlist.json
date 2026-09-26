@@ -1,0 +1,184 @@
+{
+  "course_id": "AI-24",
+  "lesson_id": "L05",
+  "duration_s": 298.2,
+  "thumbnail": {
+    "headline": "Invisible to the Bureau?",
+    "slide": {
+      "layout": "title",
+      "title": "Invisible to the Bureau?",
+      "body": "Left: empty credit file icon. Right: scorecard icon with the number 440 in teal. Small tag: AI in Finance and Fintech · Lesson 5."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 19.7,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Can AI see her?",
+      "voiceover": "A vegetable trader has sold at the same market for eight years and has never missed a supplier payment. But she has never had a bank loan, so the credit bureau has nothing on her. To a traditional scorecard, she is invisible. Can AI see her?"
+    },
+    {
+      "scene": 2,
+      "start": 19.7,
+      "end": 39.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Credit Scoring with AI",
+        "body": "Applicant data → probability of default → decision (approve / decline / refer to a person) · limit · price. Tag: Lesson 5 of 14"
+      },
+      "voiceover": "We have spent two lessons on fraud. Now we turn to lending. Credit scoring estimates the probability of default: the chance that a borrower will not repay as agreed within a set period. The lender turns that estimate into a decision, a limit, and sometimes a price."
+    },
+    {
+      "scene": 3,
+      "start": 39.8,
+      "end": 57.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Approach 1: Scorecards",
+        "body": "Each factor adds or removes fixed points · points usually set with logistic regression · easy to read and explain"
+      },
+      "voiceover": "There are two common approaches. Scorecards are the traditional method. Each factor, such as repayment history or existing debt, adds or removes a fixed number of points. Scorecards are easy to read. You can see exactly why an applicant received their score."
+    },
+    {
+      "scene": 4,
+      "start": 57.8,
+      "end": 77.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Scorecard or machine learning?",
+        "body": "Scorecard: fewer factors, fully readable. Machine learning (e.g. gradient-boosted trees): more factors and patterns, possibly more accurate, harder to explain (see L10)."
+      },
+      "voiceover": "Machine learning models can combine many more factors, and find patterns a scorecard misses, for example how spending changes in the months before a missed payment. They can be more accurate, but they are harder to explain. We come back to explanations in lesson ten."
+    },
+    {
+      "scene": 5,
+      "start": 77.1,
+      "end": 87.4,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Past decisions shape future scores",
+      "voiceover": "Both approaches learn from past borrowers. So both can copy patterns from the past, including unfair ones. That is the subject of lesson six."
+    },
+    {
+      "scene": 6,
+      "start": 87.4,
+      "end": 107.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Thin files and alternative data",
+        "body": "Thin-file customers: little or no credit history. Alternative data: mobile-wallet activity · airtime top-ups · rent · utility payments"
+      },
+      "voiceover": "Thin-file customers have little or no credit history. Many people in emerging markets, young adults and new arrivals in a country are in this group. Alternative data, such as mobile-wallet activity, airtime top-ups, rent or utility payments, can give lenders evidence of reliable behaviour."
+    },
+    {
+      "scene": 7,
+      "start": 107.5,
+      "end": 126.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Risks of alternative data",
+        "body": "Customers may not know it is used · Some data acts as a proxy (e.g. phone type) · Needs a lawful basis and often consent"
+      },
+      "voiceover": "But alternative data brings risks. Customers may not know it is being used. Some data, such as phone type, can act as a proxy for income, age or ethnicity. And its use needs a lawful basis, and often consent, under local data protection law."
+    },
+    {
+      "scene": 8,
+      "start": 126.4,
+      "end": 147.4,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "job interview two people talking office",
+      "on_screen_text": "References: relevant, permitted, checked",
+      "voiceover": "Here is a picture. A traditional scorecard is like an interviewer who only reads CVs. No CV, no interview. Alternative data is like also asking for references. It can open the door to good candidates, but only if the references are relevant, collected with permission, and checked for bias."
+    },
+    {
+      "scene": 9,
+      "start": 147.4,
+      "end": 165.4,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "woman selling vegetables at market stall",
+      "on_screen_text": "Dewi · Surabaya · approval at 420",
+      "voiceover": "Meet Dewi Lestari. She sells vegetables at a market in Surabaya, Indonesia, and applies for a small working-capital loan at a hypothetical digital lender. She has no bureau history. The lender approves applications that score four hundred and twenty or more."
+    },
+    {
+      "scene": 10,
+      "start": 165.4,
+      "end": 188.5,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Dewi's scorecard",
+        "body": "Table: Starting points 300 · Mobile-wallet sales, 18 months +90 · Utility bills on time, 11 of 12 +70 · Existing loan paid on time +20 · Income variability high −40 · Bureau history none 0 · Total 440 (approval line 420)"
+      },
+      "voiceover": "Dewi starts with three hundred points. Eighteen months of regular mobile-wallet sales add ninety. Utility bills paid on time, eleven out of twelve, add seventy. One small loan, always paid on time, adds twenty. High monthly income variability removes forty. And no bureau history adds nothing. Her total is four hundred and forty."
+    },
+    {
+      "scene": 11,
+      "start": 188.5,
+      "end": 209.5,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Drivers of Dewi's score",
+        "body": "Bar chart: up bars for Mobile-wallet sales (+90) and Utility bills (+70), small up bar for Existing loan (+20), down bar for Income variability (−40), zero-height bar for Bureau history (0, labelled 'added nothing')."
+      },
+      "voiceover": "Dewi is approved with a modest starting limit. Her main positive drivers are her wallet sales and on-time utility payments. Her main negative driver is her variable income, which is common for market traders. Notice that missing bureau history did not lower her score. It simply added nothing."
+    },
+    {
+      "scene": 12,
+      "start": 209.5,
+      "end": 220.6,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Check consent before approval",
+      "voiceover": "Before final approval, the credit officer, Hendra Wijaya, checks one thing: that the mobile-wallet data was shared with Dewi's consent, as the lender's policy requires."
+    },
+    {
+      "scene": 13,
+      "start": 220.6,
+      "end": 238.2,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "A score is an estimate",
+      "voiceover": "A common mistake is to think a model score is more objective than a person. A model is only as fair as the past decisions and data it learned from. A score is an estimate, not a fact about the person."
+    },
+    {
+      "scene": 14,
+      "start": 238.2,
+      "end": 266.5,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Probability of default → decision, limit, price. 2. Scorecards explain easily; ML needs extra work. 3. Alternative data: consent, relevance, fairness, sources."
+      },
+      "voiceover": "Let's recap. First, credit scoring estimates the probability of default, and the lender turns it into a decision, a limit and a price. Second, scorecards are easy to explain, while machine learning models can be more accurate but need extra work to explain. Third, alternative data can help thin-file customers, but it needs consent, relevance and fairness checks, and any inclusion claim needs a source."
+    },
+    {
+      "scene": 15,
+      "start": 266.5,
+      "end": 298.2,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Fairness in Credit Decisions",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will give Claude or ChatGPT the synthetic applicant table and ask it to explain the main drivers of the score. Then check every claim against the data, and mark any that are wrong. Never paste real applicant data into a public AI tool. It takes about twenty minutes. In the next lesson, we look at fairness in credit decisions. See you there."
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "course_id": "AI-24",
+  "lesson_id": "L04",
+  "duration_s": 280.6,
+  "thumbnail": {
+    "headline": "Who Pays for Mistakes?",
+    "slide": {
+      "layout": "title",
+      "title": "Who Pays for Mistakes?",
+      "body": "Balance scale: left pan 'False alarm' (blocked card icon), right pan 'Missed fraud' (money icon). Small tag: AI in Finance and Fintech · Lesson 4."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 14.6,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Where should the line be?",
+      "voiceover": "A fraud model that blocks every payment catches all the fraud. It also stops every honest customer from buying anything. So where exactly should the line be drawn, and who pays for each mistake?"
+    },
+    {
+      "scene": 2,
+      "start": 14.6,
+      "end": 27.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "False Alarms and Missed Fraud",
+        "body": "AI in Finance and Fintech · Lesson 4 of 14"
+      },
+      "voiceover": "In the last lesson, a fraud model gave each payment a risk score. Today we decide what to do with that score, and what each kind of mistake costs."
+    },
+    {
+      "scene": 3,
+      "start": 27.0,
+      "end": 50.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Two kinds of error",
+        "body": "False positive = false alarm: genuine payment blocked; call costs, lost fee, lost customer. False negative = missed fraud: money lost; investigation and chargeback costs."
+      },
+      "voiceover": "Every fraud model makes two kinds of error. A false positive is a false alarm. A genuine payment is blocked, the customer is embarrassed at the till, calls the contact centre, and may move to another bank. A false negative is missed fraud. The money is lost, and there are investigation and chargeback costs."
+    },
+    {
+      "scene": 4,
+      "start": 50.1,
+      "end": 68.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Confusion matrix",
+        "body": "2×2 grid. Rows: Actually fraud / Actually genuine. Columns: Model says fraud / Model says genuine. Cells: True positive (caught) · False negative (missed) · False positive (false alarm) · True negative (correct approval)."
+      },
+      "voiceover": "A confusion matrix puts all outcomes in one table. Fraud the model catches is a true positive. Fraud it misses is a false negative. A genuine payment it blocks is a false positive. And a genuine payment it approves is a true negative."
+    },
+    {
+      "scene": 5,
+      "start": 68.5,
+      "end": 92.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Moving the threshold",
+        "body": "Slider from Strict to Relaxed. Strict side: more fraud caught, more false alarms. Relaxed side: fewer false alarms, more missed fraud. Caption: only a better model or data reduces both."
+      },
+      "voiceover": "The institution picks a threshold. Any score above it is treated as fraud. A strict threshold flags more payments. It catches more fraud, but creates more false alarms. A relaxed threshold creates fewer false alarms, but misses more fraud. Moving the threshold alone cannot reduce both errors. Only a better model or better data does that."
+    },
+    {
+      "scene": 6,
+      "start": 92.5,
+      "end": 108.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Total cost",
+        "body": "Total cost = (missed fraud × cost of one missed fraud) + (false alarms × cost of one false alarm)"
+      },
+      "voiceover": "So the right threshold depends on costs, not only on accuracy. Total cost equals missed fraud times the cost of one missed fraud, plus false alarms times the cost of one false alarm. Then you compare the totals."
+    },
+    {
+      "scene": 7,
+      "start": 108.8,
+      "end": 128.5,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "smoke alarm on kitchen ceiling",
+      "on_screen_text": "Every fire, or every toast?",
+      "voiceover": "A threshold is like the sensitivity setting on a smoke alarm. Set it very sensitive and it warns you about every real fire, and also every time you make toast. Set it less sensitive and the toast is quiet, but a small fire may be missed."
+    },
+    {
+      "scene": 8,
+      "start": 128.5,
+      "end": 154.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "10,000 payments, 50 fraud",
+        "body": "Table: Threshold · Caught · Missed · False alarms. Strict: 45 · 5 · 400. Relaxed: 35 · 15 · 100."
+      },
+      "voiceover": "Marta Kowalska is a risk manager at a hypothetical payments company in Warsaw, Poland. She studies a synthetic set of ten thousand card payments. Fifty of them are fraud. At a strict threshold, she catches forty-five, misses five, and has four hundred false alarms. At a relaxed threshold, she catches thirty-five, misses fifteen, and has one hundred false alarms."
+    },
+    {
+      "scene": 9,
+      "start": 154.6,
+      "end": 176.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Assumption A: false alarm costs 5",
+        "body": "Strict: 5 × 300 + 400 × 5 = 1,500 + 2,000 = 3,500 ✓ cheaper. Relaxed: 15 × 300 + 100 × 5 = 4,500 + 500 = 5,000"
+      },
+      "voiceover": "Each missed fraud costs three hundred on average. The cost of a false alarm is less certain, so she tests two assumptions. In assumption A, a false alarm costs five. The strict threshold then costs three thousand five hundred in total. The relaxed one costs five thousand. Strict is cheaper."
+    },
+    {
+      "scene": 10,
+      "start": 176.0,
+      "end": 193.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Assumption B: false alarm costs 20",
+        "body": "Strict: 5 × 300 + 400 × 20 = 1,500 + 8,000 = 9,500. Relaxed: 15 × 300 + 100 × 20 = 4,500 + 2,000 = 6,500 ✓ cheaper"
+      },
+      "voiceover": "In assumption B, a false alarm costs twenty, because the payment is blocked at the till and the customer may leave. Now the strict threshold costs nine thousand five hundred. The relaxed one costs six thousand five hundred. Relaxed is cheaper."
+    },
+    {
+      "scene": 11,
+      "start": 193.6,
+      "end": 209.5,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Same model. Different assumption. Different answer.",
+      "voiceover": "The model has not changed. Only the business assumption has changed. So Marta's recommendation starts with the cost assumptions, and she asks the customer experience team for better evidence on the true cost of a false alarm."
+    },
+    {
+      "scene": 12,
+      "start": 209.5,
+      "end": 225.8,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "99.5% accurate, zero fraud caught",
+      "voiceover": "A common mistake is to choose the threshold with the highest accuracy. With fifty fraud cases in ten thousand payments, a model that approves everything is ninety-nine point five percent accurate, and catches no fraud at all."
+    },
+    {
+      "scene": 13,
+      "start": 225.8,
+      "end": 251.9,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. False alarms and missed fraud both cost money and trust. 2. Thresholds trade one error for the other. 3. Choose by total cost under stated assumptions."
+      },
+      "voiceover": "Let's recap. First, false positives block genuine customers, and false negatives let fraud through. Both have real costs for the institution and the customer. Second, moving the threshold trades one error for the other, and only a better model or better data reduces both. Third, choose the threshold by comparing total costs under clear, stated cost assumptions, not by accuracy alone."
+    },
+    {
+      "scene": 14,
+      "start": 251.9,
+      "end": 280.6,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Credit Scoring with AI",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will use the confusion-matrix sheet to try two thresholds and calculate the total cost per ten thousand transactions under two cost assumptions. Then write one sentence on which threshold you would choose, and why. It takes about twenty-five minutes. In the next lesson, we look at credit scoring with AI. See you there."
+    }
+  ]
+}
