@@ -1,6 +1,6 @@
 # L14 Building the 10-Slide Pitch Deck | Presenter Script
 
-Course: AI-28 · Video: 5 min · Words: 670
+Course: AI-28 · Video: 5 min · Words: 688
 
 ## Hook
 A person reading your deck may give each slide only a few seconds. If a slide tries to say five things, they will remember none. If each slide says one thing clearly, they can follow your whole story in minutes.
@@ -31,7 +31,7 @@ Now a check. The first draft of slide seven said, we use the latest AI. That is 
 
 Finally, we use present mode to read through the whole deck, checking that each slide has one message. Then we download it as a PDF, or share a view only link.
 
-A common mistake is filling slides with long sentences and reading them aloud. Another is using a large market number from the internet that you cannot explain. Use a small, realistic number you can defend. And never skip the ask.
+A common mistake is filling slides with long sentences and reading them aloud. Another is using a large market number from the internet that you cannot explain. Use a small, realistic number you can defend. And never skip the ask. Every pitch should end with a clear request, such as a pilot, an introduction or a specific investment.
 
 ## Recap
 Let's recap. First, use ten slides: problem, solution, demo, evidence, market, business model, moat, competition, team and the ask. Second, give every slide one message, written as a full sentence title. Third, use your own evidence and unit economics, and keep backup detail ready for questions.

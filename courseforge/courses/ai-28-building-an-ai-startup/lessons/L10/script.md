@@ -1,6 +1,6 @@
 # L10 Choosing a Business Model | Presenter Script
 
-Course: AI-28 · Video: 5 min · Words: 673
+Course: AI-28 · Video: 5 min · Words: 682
 
 ## Hook
 Two founders build the same product. One charges a monthly subscription. The other charges for each use. A year later, one business is healthy and the other is losing money. The only difference was how they asked customers to pay.
@@ -27,7 +27,7 @@ But look at the edges. A heavy customer with a thousand pages makes the subscrip
 
 So each model loses money on a different kind of customer. Awa's interviews showed that her customers prefer small mobile money payments, and their use changes a lot from month to month. So she chooses pay per use, with a minimum charge of two dollars a month. That covers the fixed cost for light users.
 
-A common mistake is copying a famous software company's model, usually a low monthly subscription, without checking your own costs or how your customers like to pay. Test every model against light, typical and heavy customers.
+A common mistake is copying a famous software company's model, usually a low monthly subscription, without checking your own costs or how your customers like to pay. Test every model against light, typical and heavy customers, and against how your customers actually prefer to pay.
 
 The model also affects defensibility, from lesson five. A product paid per result, or built deep into a company's daily process, is harder to replace than a cheap subscription anyone can cancel in one click.
 

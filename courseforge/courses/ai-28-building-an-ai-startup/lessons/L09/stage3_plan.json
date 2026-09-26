@@ -31,7 +31,7 @@
        "voiceover": "Two more terms. CAC, or customer acquisition cost, is what you spend on marketing and sales to win one new customer. The payback period is how many months of gross profit it takes to earn that back.",
        "slide": {"layout": "code", "title": "CAC and payback", "body": "CAC = marketing and sales spend ÷ new customers / Payback period (months) = CAC ÷ monthly gross profit per customer"}},
       {"visual_type": "stock",
-       "voiceover": "Think of an all you can eat restaurant. The price is fixed, but the cost depends on how much each guest eats. Most guests are profitable. A few very hungry guests cost more than they pay. The owner must know both before setting the price.",
+       "voiceover": "Think of an all you can eat restaurant. The price is fixed, but the cost depends on how much each guest eats. Most guests are profitable. A few very hungry guests cost more than they pay. The owner must know the average guest and the hungriest guest before setting the price. Your AI product works in the same way.",
        "stock_query": "guests at buffet restaurant filling plates",
        "on_screen_text": "Know your hungriest guest"}
     ],
@@ -53,7 +53,7 @@
        "voiceover": "Finally, CAC and payback. Karim spent three hundred dollars on local advertising and won ten customers. So his CAC is thirty dollars. Thirty divided by thirteen fifty gives a payback period of about two point two months. An average customer must stay more than two months before he earns back the cost of winning them.",
        "slide": {"layout": "code", "title": "CAC and payback", "body": "CAC = $300 ÷ 10 customers = $30 / Payback = $30 ÷ $13.50 per month ≈ 2.2 months. Label: Placeholder prices."}},
       {"visual_type": "slide",
-       "voiceover": "So Karim makes three decisions. He adds a usage limit to the twenty dollar plan. He creates a higher priced plan for large guesthouses. And he shortens his prompts to reduce model usage per request.",
+       "voiceover": "So Karim makes three decisions. He adds a usage limit to the twenty dollar plan. He creates a higher priced plan for large guesthouses. And he shortens his prompts to reduce model usage per request. Each change protects his margin without making the product worse for most customers.",
        "slide": {"layout": "bullets", "title": "Karim's decisions", "body": "Usage limit on the $20 plan (for example 1,500 requests) · Higher-priced plan for large guesthouses · Shorter prompts, lower model cost per request"}},
       {"visual_type": "text",
        "voiceover": "The common mistake is calculating only the average user. With AI, a few heavy users can remove your profit. Always calculate at least two cases, and do not forget support and payment fees.",

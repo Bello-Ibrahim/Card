@@ -1,6 +1,6 @@
 # L11 Legal, Ethical and Data Risks | Presenter Script
 
-Course: AI-28 · Video: 5 min · Words: 657
+Course: AI-28 · Video: 5 min · Words: 670
 
 ## Hook
 Your MVP works, and your first customers are happy. Then one asks, where does my data go? Who owns the text your AI writes? What happens if it gives wrong advice? If you cannot answer, that customer may leave.
@@ -19,7 +19,7 @@ The fifth is sector rules. Health, finance, law, education and employment often 
 Think of a food stall. Cooking well is not enough. You also follow hygiene rules and label allergens. A great recipe does not protect you if customers become ill. Legal and data risks are the hygiene rules of an AI startup.
 
 ## Demonstrate
-Let's fill in a checklist. Zofia is a made up founder in Kraków, Poland. Her MVP reads job applications for small companies and suggests which candidates to interview. She rates each risk as low, medium or high.
+Let's fill in a checklist. Zofia is a made up founder in Kraków, Poland. Her MVP reads job applications for small companies and suggests which candidates to interview. She rates each risk as low, medium or high, thinking about how likely it is and how much harm it could cause.
 
 Applications contain personal data. That is high. Her next step is legal advice, collecting only what employers need, and setting a deletion period. Screening job applicants may count as a higher risk use of AI in her region. Also high. She will ask a lawyer which duties apply, and make sure a person makes every final decision.
 

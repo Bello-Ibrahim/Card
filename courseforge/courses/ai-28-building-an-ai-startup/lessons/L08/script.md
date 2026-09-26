@@ -1,6 +1,6 @@
 # L08 Making the AI Part Work: Prompts and Quality Checks | Presenter Script
 
-Course: AI-28 · Video: 5 min · Words: 656
+Course: AI-28 · Video: 5 min · Words: 685
 
 ## Hook
 Your prototype works on the example you tried. But your users will not type your example. They will write in a hurry, make spelling mistakes, and ask for things you never imagined. How do you know the AI part will still work?
@@ -10,7 +10,7 @@ In the last lesson, you built a working prototype. Now we make the AI part relia
 
 The first tool is clear instructions. A good product prompt gives the role and the task, the rules, the format, and what to do when unsure. For example: if a review mentions food poisoning or a legal threat, do not reply. Output only, needs human.
 
-The second tool is good examples. Show the model one or two examples of a good input and a good output. Examples often teach style better than long explanations.
+The second tool is good examples. Show the model one or two examples of a good input and a good output. Examples often teach style and format better than long explanations. Keep them short, and make sure they follow every rule in your prompt.
 
 The third tool is a small test set: a list of inputs, each with a description of a good answer. Include normal cases, difficult cases, and cases the AI should refuse. Every time you change the prompt, run the whole set again, because fixing one case can break another. Score each result as pass, partial or fail. Your pass rate is passes divided by cases.
 
@@ -27,7 +27,7 @@ Prompt version one passes nine of fifteen. Two replies offered a free dessert. T
 
 For version two, she adds a rule, never offer anything for free. She adds one example of a sarcastic review with a good reply, and a clearer list of topics that need a human. Now thirteen of fifteen pass, and both refusal failures are fixed.
 
-Putri decides thirteen of fifteen is good enough for a first test, because the restaurant owner approves every draft before it is posted. That human approval is her fallback plan. She keeps the two failures for the next round.
+Putri decides thirteen of fifteen is good enough for a first test, because the restaurant owner approves every draft before it is posted. That human approval is her fallback plan. She keeps the two failures in her test set for the next round, so she can see if a later change fixes them.
 
 A common mistake is testing on two or three easy examples, then moving on. Another is assuming a bigger model fixes everything. You only know if it helps by running the same test set. And never use real customer data in tests without permission.
 

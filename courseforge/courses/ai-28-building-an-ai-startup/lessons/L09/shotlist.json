@@ -1,7 +1,7 @@
 {
   "course_id": "AI-28",
   "lesson_id": "L09",
-  "duration_s": 284.2,
+  "duration_s": 295.8,
   "thumbnail": {
     "headline": "Which Customers Cost You?",
     "slide": {
@@ -75,17 +75,17 @@
     {
       "scene": 6,
       "start": 92.2,
-      "end": 111.5,
+      "end": 117.5,
       "section": "Explain",
       "visual_type": "stock",
       "stock_query": "guests at buffet restaurant filling plates",
       "on_screen_text": "Know your hungriest guest",
-      "voiceover": "Think of an all you can eat restaurant. The price is fixed, but the cost depends on how much each guest eats. Most guests are profitable. A few very hungry guests cost more than they pay. The owner must know both before setting the price."
+      "voiceover": "Think of an all you can eat restaurant. The price is fixed, but the cost depends on how much each guest eats. Most guests are profitable. A few very hungry guests cost more than they pay. The owner must know the average guest and the hungriest guest before setting the price. Your AI product works in the same way."
     },
     {
       "scene": 7,
-      "start": 111.5,
-      "end": 129.1,
+      "start": 117.5,
+      "end": 135.1,
       "section": "Demonstrate",
       "visual_type": "stock",
       "stock_query": "small guesthouse courtyard with host at desk",
@@ -94,8 +94,8 @@
     },
     {
       "scene": 8,
-      "start": 129.1,
-      "end": 152.2,
+      "start": 135.1,
+      "end": 158.2,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -107,8 +107,8 @@
     },
     {
       "scene": 9,
-      "start": 152.2,
-      "end": 168.5,
+      "start": 158.2,
+      "end": 174.5,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -120,8 +120,8 @@
     },
     {
       "scene": 10,
-      "start": 168.5,
-      "end": 185.2,
+      "start": 174.5,
+      "end": 191.2,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -133,8 +133,8 @@
     },
     {
       "scene": 11,
-      "start": 185.2,
-      "end": 208.8,
+      "start": 191.2,
+      "end": 214.8,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -146,8 +146,8 @@
     },
     {
       "scene": 12,
-      "start": 208.8,
-      "end": 223.8,
+      "start": 214.8,
+      "end": 235.4,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -155,12 +155,12 @@
         "title": "Karim's decisions",
         "body": "Usage limit on the $20 plan (for example 1,500 requests) · Higher-priced plan for large guesthouses · Shorter prompts, lower model cost per request"
       },
-      "voiceover": "So Karim makes three decisions. He adds a usage limit to the twenty dollar plan. He creates a higher priced plan for large guesthouses. And he shortens his prompts to reduce model usage per request."
+      "voiceover": "So Karim makes three decisions. He adds a usage limit to the twenty dollar plan. He creates a higher priced plan for large guesthouses. And he shortens his prompts to reduce model usage per request. Each change protects his margin without making the product worse for most customers."
     },
     {
       "scene": 13,
-      "start": 223.8,
-      "end": 237.9,
+      "start": 235.4,
+      "end": 249.5,
       "section": "Demonstrate",
       "visual_type": "text",
       "on_screen_text": "Always calculate average and heavy",
@@ -168,8 +168,8 @@
     },
     {
       "scene": 14,
-      "start": 237.9,
-      "end": 262.3,
+      "start": 249.5,
+      "end": 273.9,
       "section": "Recap",
       "visual_type": "slide",
       "slide": {
@@ -181,8 +181,8 @@
     },
     {
       "scene": 15,
-      "start": 262.3,
-      "end": 284.2,
+      "start": 273.9,
+      "end": 295.8,
       "section": "CTA",
       "visual_type": "presenter_full",
       "on_screen_text": "Next: Choosing a Business Model",

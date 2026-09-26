@@ -1,6 +1,6 @@
 # L15 Pitching to Customers and Investors | Presenter Script
 
-Course: AI-28 · Video: 5 min · Words: 657
+Course: AI-28 · Video: 5 min · Words: 666
 
 ## Hook
 You tell the same story to a shop owner and to an investor. The shop owner asks, will this save me time on Monday morning? The investor asks, why can't a large company copy this? Are you ready for both?
@@ -29,7 +29,7 @@ Then she practises with Claude. She asks it to act as a sceptical investor, some
 
 The hardest question: your pilot is small, and the traders know you personally. How do you know strangers will pay? Achieng has no strong answer. So she adds a next step to her deck: a test with twenty traders in a market where nobody knows her.
 
-A common mistake is giving customers an investor pitch, full of market size. Customers do not care. Another is defending every weak point. An honest, we have not tested that yet, and here is how we will, builds more trust.
+A common mistake is giving customers an investor pitch, full of market size. Customers do not care about your market size. They care about Monday morning. Another is defending every weak point. An honest, we have not tested that yet, and here is how we will, builds more trust.
 
 ## Recap
 Let's recap. First, keep the facts the same, but lead with value for customers, and with evidence, moat and economics for investors. Second, answer hard questions honestly. Third, practise with Claude as a sceptical investor, and use its hardest questions to improve your deck.

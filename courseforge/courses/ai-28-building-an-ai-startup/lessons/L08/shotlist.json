@@ -1,7 +1,7 @@
 {
   "course_id": "AI-28",
   "lesson_id": "L08",
-  "duration_s": 281.0,
+  "duration_s": 293.5,
   "thumbnail": {
     "headline": "Test the AI Part",
     "slide": {
@@ -49,7 +49,7 @@
     {
       "scene": 4,
       "start": 57.4,
-      "end": 69.8,
+      "end": 76.3,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -57,12 +57,12 @@
         "title": "Tool 2: Good examples",
         "body": "Example input (a short review) → example output (a good three-sentence reply)."
       },
-      "voiceover": "The second tool is good examples. Show the model one or two examples of a good input and a good output. Examples often teach style better than long explanations."
+      "voiceover": "The second tool is good examples. Show the model one or two examples of a good input and a good output. Examples often teach style and format better than long explanations. Keep them short, and make sure they follow every rule in your prompt."
     },
     {
       "scene": 5,
-      "start": 69.8,
-      "end": 97.7,
+      "start": 76.3,
+      "end": 104.2,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -74,8 +74,8 @@
     },
     {
       "scene": 6,
-      "start": 97.7,
-      "end": 120.0,
+      "start": 104.2,
+      "end": 126.5,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -87,8 +87,8 @@
     },
     {
       "scene": 7,
-      "start": 120.0,
-      "end": 142.7,
+      "start": 126.5,
+      "end": 149.2,
       "section": "Explain",
       "visual_type": "stock",
       "stock_query": "head chef tasting dish in busy kitchen",
@@ -97,8 +97,8 @@
     },
     {
       "scene": 8,
-      "start": 142.7,
-      "end": 155.1,
+      "start": 149.2,
+      "end": 161.6,
       "section": "Demonstrate",
       "visual_type": "stock",
       "stock_query": "small restaurant owner reading reviews on phone",
@@ -107,8 +107,8 @@
     },
     {
       "scene": 9,
-      "start": 155.1,
-      "end": 172.2,
+      "start": 161.6,
+      "end": 178.7,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -120,8 +120,8 @@
     },
     {
       "scene": 10,
-      "start": 172.2,
-      "end": 184.6,
+      "start": 178.7,
+      "end": 191.1,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -133,8 +133,8 @@
     },
     {
       "scene": 11,
-      "start": 184.6,
-      "end": 203.9,
+      "start": 191.1,
+      "end": 210.4,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -146,17 +146,17 @@
     },
     {
       "scene": 12,
-      "start": 203.9,
-      "end": 220.6,
+      "start": 210.4,
+      "end": 233.1,
       "section": "Demonstrate",
       "visual_type": "text",
       "on_screen_text": "13 of 15, plus human approval",
-      "voiceover": "Putri decides thirteen of fifteen is good enough for a first test, because the restaurant owner approves every draft before it is posted. That human approval is her fallback plan. She keeps the two failures for the next round."
+      "voiceover": "Putri decides thirteen of fifteen is good enough for a first test, because the restaurant owner approves every draft before it is posted. That human approval is her fallback plan. She keeps the two failures in her test set for the next round, so she can see if a later change fixes them."
     },
     {
       "scene": 13,
-      "start": 220.6,
-      "end": 239.5,
+      "start": 233.1,
+      "end": 252.0,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -168,8 +168,8 @@
     },
     {
       "scene": 14,
-      "start": 239.5,
-      "end": 259.6,
+      "start": 252.0,
+      "end": 272.1,
       "section": "Recap",
       "visual_type": "slide",
       "slide": {
@@ -181,8 +181,8 @@
     },
     {
       "scene": 15,
-      "start": 259.6,
-      "end": 281.0,
+      "start": 272.1,
+      "end": 293.5,
       "section": "CTA",
       "visual_type": "presenter_full",
       "on_screen_text": "Next: Unit Economics of an AI Product",

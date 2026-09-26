@@ -1,12 +1,12 @@
 # L12 Funding Options and What Investors Look For | Presenter Script
 
-Course: AI-28 · Video: 5 min · Words: 647
+Course: AI-28 · Video: 5 min · Words: 671
 
 ## Hook
 How much money should I raise? That is often a new founder's first question. A better first question is: do I need outside money at all, and what will I give in return? Every type of funding has a price, even when it looks free.
 
 ## Explain
-In the last lesson, you checked your risks. Now we look at money. Here are the main funding routes, from the least outside control to the most.
+In the last lesson, you checked your risks. Now we look at money. Every route gives you something, and every route asks for something back. Here are the main funding routes, from the least outside control to the most.
 
 Bootstrapping means you fund the company yourself, with savings or revenue from early customers. You keep full control, but growth may be slower. Grants come from governments, foundations or development organisations, and you usually do not repay them. In return, they often expect reports and a specific use of the money.
 
@@ -29,7 +29,7 @@ Third, an angel investor from the textile industry. That brings money, contacts 
 
 Ravi does not consider venture capital yet. He does not have the evidence of very fast growth that venture firms expect. So he applies for the grant, and aims to grow from three to fifteen paying customers in six months.
 
-A common mistake is thinking that raising money is a sign of success. It is not. It is a tool with a cost. Some businesses grow well on customer revenue alone. Another mistake is pitching before you have evidence. Without evidence, a pitch is mostly opinion.
+A common mistake is thinking that raising money is a sign of success. It is not. It is a tool with a cost. Some businesses grow well on customer revenue alone. Another mistake is pitching before you have evidence. Without evidence, a pitch is mostly opinion. Your validation work from the first week is what makes investors listen.
 
 ## Recap
 Let's recap. First, the main routes are bootstrapping, grants, accelerators, angel investors and venture capital, and each asks for something in return. Second, selling equity dilutes your ownership. Third, investors usually look for a real problem, evidence of demand, a strong team and a path to a defensible business.

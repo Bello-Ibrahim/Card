@@ -1,6 +1,6 @@
 # L06 Scoping the MVP | Presenter Script
 
-Course: AI-28 · Video: 5 min · Words: 665
+Course: AI-28 · Video: 5 min · Words: 677
 
 ## Hook
 Your list of features is probably long: accounts, a dashboard, five languages, a mobile app, reports. If you build all of it, months may pass before anyone uses it. What is the smallest thing you could build next week that would teach you the most?
@@ -21,7 +21,7 @@ Think of a road engineer who wants to know whether a new bridge is needed. She d
 ## Demonstrate
 Let's scope a real idea. Valentina is a made up founder in Buenos Aires, Argentina. Her interviews showed that many tenants sign rental contracts they do not fully understand. Her big vision is an AI assistant that explains any legal document in plain Spanish.
 
-That vision is too wide for an MVP. There are hundreds of document types, each with its own rules. So she writes a one page scope.
+That vision is too wide for an MVP. There are hundreds of document types, each with its own rules. So she narrows it to one document type, for one kind of user, and writes a one page scope.
 
 The core job: a tenant uploads one rental contract and gets a plain language summary of the key terms, with a list of clauses to ask a lawyer about. The riskiest assumption: tenants find the summary clear and useful before signing, and it is accurate.
 

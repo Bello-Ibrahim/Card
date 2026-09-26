@@ -1,6 +1,6 @@
 # L09 Unit Economics of an AI Product | Presenter Script
 
-Course: AI-28 · Video: 5 min · Words: 663
+Course: AI-28 · Video: 5 min · Words: 690
 
 ## Hook
 A traditional app costs almost nothing extra when one more customer uses it. An AI product is different. Every time a customer presses the button, you pay the model supplier. So do you know which of your customers are making you money?
@@ -14,7 +14,7 @@ Gross profit is revenue minus cost to serve. Gross margin is gross profit as a p
 
 Two more terms. CAC, or customer acquisition cost, is what you spend on marketing and sales to win one new customer. The payback period is how many months of gross profit it takes to earn that back.
 
-Think of an all you can eat restaurant. The price is fixed, but the cost depends on how much each guest eats. Most guests are profitable. A few very hungry guests cost more than they pay. The owner must know both before setting the price.
+Think of an all you can eat restaurant. The price is fixed, but the cost depends on how much each guest eats. Most guests are profitable. A few very hungry guests cost more than they pay. The owner must know the average guest and the hungriest guest before setting the price. Your AI product works in the same way.
 
 ## Demonstrate
 Let's do the maths. Karim is a made up founder in Marrakech, Morocco. His product drafts replies to guest messages for small guesthouses. All the prices here are placeholders, not real prices. Always check current prices on the day you calculate.
@@ -27,7 +27,7 @@ Now the heavy user. One large guesthouse sends five thousand requests a month. M
 
 Finally, CAC and payback. Karim spent three hundred dollars on local advertising and won ten customers. So his CAC is thirty dollars. Thirty divided by thirteen fifty gives a payback period of about two point two months. An average customer must stay more than two months before he earns back the cost of winning them.
 
-So Karim makes three decisions. He adds a usage limit to the twenty dollar plan. He creates a higher priced plan for large guesthouses. And he shortens his prompts to reduce model usage per request.
+So Karim makes three decisions. He adds a usage limit to the twenty dollar plan. He creates a higher priced plan for large guesthouses. And he shortens his prompts to reduce model usage per request. Each change protects his margin without making the product worse for most customers.
 
 The common mistake is calculating only the average user. With AI, a few heavy users can remove your profit. Always calculate at least two cases, and do not forget support and payment fees.
 
