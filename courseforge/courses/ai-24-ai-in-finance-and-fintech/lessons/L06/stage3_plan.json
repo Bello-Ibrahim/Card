@@ -1,0 +1,69 @@
+{
+  "title": "Fairness in Credit Decisions",
+  "thumbnail": {
+    "headline": "Fair Without Gender Data?",
+    "image": "Navy background, a market scale tipped slightly to one side with two groups of simple person icons, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Fair Without Gender Data?", "body": "A market scale tipped slightly to one side, two groups of person icons below. Small tag: AI in Finance and Fintech · Lesson 6."}
+  },
+  "production_notes": [
+    "[REGION] The list of protected characteristics, and the legal tests for direct and indirect discrimination, differ by country. The script says 'in many countries' and tells learners to check with their compliance team; keep that wording.",
+    "[REGION] Rules on collecting or estimating protected characteristics for fairness testing differ by country and data protection law. The script mentions only that this raises privacy questions.",
+    "Figures must match content.md exactly: men 400 applicants, 280 approved, 70.0%; women 300 applicants, 165 approved, 55.0%; ratio 0.79 (spoken 'zero point seven nine'); gap 15 percentage points.",
+    "Priya Raman and Maple Ridge Credit are fictional; the sample is synthetic and grouped by gender for testing only. Do not name or suggest any real lender."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "A credit model never sees an applicant's gender or ethnicity. Its designers removed those columns on purpose. Can it still treat one group of customers unfairly? Yes. And this lesson shows how.",
+       "on_screen_text": "No gender column. Still unfair?"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Welcome to week two. Last time, we saw that credit models learn from past decisions. A credit decision affects whether a person can start a business, buy a home or handle an emergency. That is why fairness is a central question for any credit model.",
+       "slide": {"layout": "title", "title": "Fairness in Credit Decisions", "body": "AI in Finance and Fintech · Lesson 6 of 14 · Week 2"}},
+      {"visual_type": "slide",
+       "voiceover": "Protected characteristics are personal traits that the law in many countries says must not be the basis for unfair treatment. Common examples include gender, ethnicity, religion, age, disability and marital status. The exact list differs by country, so always check it with your compliance team.",
+       "slide": {"layout": "bullets", "title": "Protected characteristics", "body": "Common examples: sex or gender · race or ethnicity · religion · age · disability · marital status. The list differs by country: check with compliance."}},
+      {"visual_type": "slide",
+       "voiceover": "There are two forms of discrimination. Direct discrimination means treating someone less favourably because of a protected characteristic. It is usually easy to see. Indirect discrimination means a rule that looks neutral, but puts one protected group at a clear disadvantage without a good reason. In AI, this is the more common risk, and it is harder to see.",
+       "slide": {"layout": "comparison", "title": "Direct and indirect", "body": "Direct: less favourable treatment because of a protected characteristic; easy to see in a rule or field. Indirect: neutral-looking rule or feature that disadvantages a protected group; more common in AI, harder to see."}},
+      {"visual_type": "slide",
+       "voiceover": "Indirect discrimination often comes through proxy variables. A proxy is a feature closely linked to a protected characteristic. Postcode can be linked to ethnicity or income. Phone type can be linked to income or age. And gaps in employment can be linked to caring responsibilities, and therefore to gender.",
+       "slide": {"layout": "diagram", "title": "Proxy variables", "body": "Three arrows: Postcode → ethnicity or income · Phone type → income or age · Employment gaps → caring responsibilities → gender. Also: first name or language settings."}},
+      {"visual_type": "text",
+       "voiceover": "Removing the protected column does not remove the pattern. The model can rebuild it from proxies. So fairness must be checked by looking at outcomes by group, not only at the list of inputs.",
+       "on_screen_text": "Check outcomes, not just inputs"},
+      {"visual_type": "slide",
+       "voiceover": "A first, simple measure is the approval rate for each group, and the ratio between the lowest and the highest rate. A ratio of one means equal approval rates. A lower ratio means a larger gap. A gap is not automatic proof of discrimination. But it is a signal that must be investigated and explained.",
+       "slide": {"layout": "code", "title": "Approval-rate ratio", "body": "Ratio = lowest approval rate ÷ highest approval rate. 1.0 = equal rates. Lower = larger gap → investigate."}},
+      {"visual_type": "stock",
+       "voiceover": "Imagine a set of market scales that is slightly wrong for one type of container. Every time a customer uses that container, the weight is wrong. The error is small, but it happens every time, to the same customers. A biased model works the same way, on thousands of decisions.",
+       "stock_query": "market vendor weighing produce on scale",
+       "on_screen_text": "Small error, repeated every time"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "slide",
+       "voiceover": "Priya Raman is a credit risk analyst at Maple Ridge Credit, a hypothetical consumer lender. The model does not use gender. Priya tests its decisions on a synthetic sample, grouped by gender for testing only. Of four hundred men, two hundred and eighty were approved. That is seventy percent. Of three hundred women, one hundred and sixty-five were approved. That is fifty-five percent.",
+       "slide": {"layout": "comparison", "title": "Maple Ridge Credit · synthetic sample", "body": "Table: Group · Applicants · Approved · Approval rate. Men: 400 · 280 · 70.0%. Women: 300 · 165 · 55.0%."}},
+      {"visual_type": "slide",
+       "voiceover": "The ratio is fifty-five divided by seventy, which is about zero point seven nine. So Priya looks for explanations. One of the model's strongest features is months in continuous employment. In the sample, women more often have short career breaks for childcare. So employment gaps may be acting as a proxy for gender.",
+       "slide": {"layout": "diagram", "title": "Ratio ≈ 0.79", "body": "55.0 ÷ 70.0 ≈ 0.79. Arrow to feature 'Months in continuous employment' → career breaks for childcare → possible proxy for gender."}},
+      {"visual_type": "slide",
+       "voiceover": "She also checks whether the groups differ in actual repayment, because that would be a legitimate reason for part of the gap. Her note to the credit committee does not say the model is sexist. It says there is a fifteen percentage point gap, one feature may act as a proxy, and the team should test the model without it and compare error rates by group.",
+       "slide": {"layout": "quote", "title": "Priya's note to the committee", "body": "\"There is a 15-percentage-point gap in approval rates. One feature may act as a proxy. We recommend testing the model without it and comparing error rates by group.\""}},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is to believe a model is fair if it does not use protected characteristics. This is called fairness through unawareness, and it does not work well, because proxies carry the same information.",
+       "on_screen_text": "Unawareness is not fairness"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, direct discrimination uses a protected characteristic, while indirect discrimination uses a neutral-looking rule or feature that disadvantages a protected group. Second, proxy variables such as postcode, phone type or employment gaps can bring bias back into a model. Third, check fairness by measuring outcomes by group, such as approval rates and their ratio, then investigate the reasons behind any gap.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Direct vs indirect discrimination. 2. Proxies bring bias back. 3. Measure outcomes by group; investigate every gap."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below this video, you will open a synthetic set of loan decisions in Google Sheets, calculate the approval rate for each group, and the ratio between the lowest and highest rate. Then note what could explain the gap. It takes about twenty-five minutes. In the next lesson, we look at measuring and reducing bias. See you there.",
+       "on_screen_text": "Next: Measuring and Reducing Bias"}
+    ]
+  }
+}

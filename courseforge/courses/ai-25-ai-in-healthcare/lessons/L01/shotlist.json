@@ -1,0 +1,172 @@
+{
+  "course_id": "AI-25",
+  "lesson_id": "L01",
+  "duration_s": 303.1,
+  "thumbnail": {
+    "headline": "Who Decides: AI or Clinician?",
+    "slide": {
+      "layout": "title",
+      "title": "Who Decides: AI or Clinician?",
+      "body": "Simple icon of a patient list with three highlighted rows, a small software icon and a clinician icon, with a question mark between them. Small tag: AI in Healthcare · Lesson 1."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.9,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Who decided?",
+      "voiceover": "A nurse opens the morning list and sees that a software tool has moved three patients to the top. Who decided that they should be seen first? The software, the nurse, or the doctor on duty? In healthcare, the answer must always be clear."
+    },
+    {
+      "scene": 2,
+      "start": 18.9,
+      "end": 42.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "The Landscape of AI in Healthcare",
+        "body": "AI in Healthcare · Lesson 1 of 14"
+      },
+      "voiceover": "Hello, and welcome to AI in Healthcare. You already work in or near healthcare, so you know that care depends on data, people and processes. AI is now used in all three. In this first lesson, we map where it is used, and we set the one rule that runs through the whole course."
+    },
+    {
+      "scene": 3,
+      "start": 42.0,
+      "end": 65.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Four areas of AI in healthcare",
+        "body": "Four quadrants, revealed one by one. Quadrant 1 lit: Diagnostic support. Data icons: medical images, ECG and signals, lab results, clinical notes. Other quadrants greyed: Operations, Patient engagement, Public health."
+      },
+      "voiceover": "It helps to group the uses into four areas, because each area uses different data and carries different risks. The first area is diagnostic support. These tools help clinicians read images, signals or test results. For example, a tool may highlight a possible abnormality on a scan, or flag a worrying pattern in vital signs."
+    },
+    {
+      "scene": 4,
+      "start": 65.6,
+      "end": 86.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Four areas of AI in healthcare",
+        "body": "Quadrant 2 lit: Operations. Data icons: appointments, admission and discharge times, stock levels, staff rotas. Quadrant 3 lit: Patient engagement. Data icons: contact details, preferred language, approved content, patient messages."
+      },
+      "voiceover": "The second area is operations. These tools help the organisation run, for example scheduling, predicting missed appointments, planning beds and supplies, and drafting documents for staff to review. The third area is patient engagement. These tools talk to patients through reminders, health education and information services in several languages."
+    },
+    {
+      "scene": 5,
+      "start": 86.6,
+      "end": 102.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Four areas of AI in healthcare",
+        "body": "Quadrant 4 lit: Public health. Data icons: surveillance reports, surveys, anonymised or aggregated records, environmental data. All four quadrants now visible."
+      },
+      "voiceover": "The fourth area is public health. These tools look at populations rather than individuals. For example, they spot unusual rises in reported symptoms, or help plan vaccination outreach. They use surveillance reports, surveys, and anonymised or grouped records."
+    },
+    {
+      "scene": 6,
+      "start": 102.9,
+      "end": 128.2,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "AI supports. A qualified person decides.",
+      "voiceover": "Now the core principle of this course. AI supports decisions, and a qualified person remains responsible for them. A diagnostic tool can suggest, but a clinician decides. An operations tool can predict, but a manager decides what to do with the prediction. This course never gives clinical advice, and it never treats AI as a replacement for clinical judgement."
+    },
+    {
+      "scene": 7,
+      "start": 128.2,
+      "end": 150.1,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "senior doctor reviewing notes with junior colleague",
+      "on_screen_text": "A fast assistant who never met the patient",
+      "voiceover": "Here is a simple way to picture it. Think of AI as a well-read assistant who works very fast, but has never met the patient. The assistant can point out things worth checking, and prepare drafts. The senior clinician still examines the patient, weighs the context, and signs the decision."
+    },
+    {
+      "scene": 8,
+      "start": 150.1,
+      "end": 170.2,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "radiologist looking at chest x-ray screen",
+      "on_screen_text": "District hospital · Ghana · hypothetical",
+      "voiceover": "Let's look at three hypothetical settings. None of them describes a real organisation. First, a district hospital in Ghana. Doctor Kwame Asante leads the outpatient department. A diagnostic support tool marks chest X-rays that may need urgent review, so radiology staff can look at those first."
+    },
+    {
+      "scene": 9,
+      "start": 170.2,
+      "end": 189.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Tool suggests, person decides",
+        "body": "Ghana · Diagnostic support: tool marks X-rays for urgent review → radiologist reads every image and is accountable. India · Operations: tool predicts missed appointments → (next scene) clinic manager decides."
+      },
+      "voiceover": "The tool does not write the report. The radiologist reads every image, and remains accountable for the result. Second, a clinic network in India. Priya Raghunathan manages twelve primary care clinics. A prediction tool estimates which booked patients are likely to miss their appointment."
+    },
+    {
+      "scene": 10,
+      "start": 189.1,
+      "end": 201.1,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "clinic receptionist calling patient on phone",
+      "on_screen_text": "Extra reminders, not cancelled bookings",
+      "voiceover": "Priya's team uses these predictions to send extra reminders and offer phone consultations, not to cancel bookings. The clinic manager is accountable for how the predictions are used."
+    },
+    {
+      "scene": 11,
+      "start": 201.1,
+      "end": 228.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Chile · Patient engagement",
+        "body": "Incoming text message → AI assistant drafts answer from clinician-approved content. Red branch: mentions chest pain, breathing problems or self-harm → straight to a nurse. Label: clinical lead accountable for content and escalation rules."
+      },
+      "voiceover": "Third, a telehealth service in Chile. Valentina Soto coordinates a service that answers patient questions by text message. An AI assistant drafts answers to general questions, using content that clinicians have approved. Any message that mentions chest pain, breathing problems or thoughts of self-harm goes straight to a nurse. The clinical lead is accountable for the approved content and the escalation rules."
+    },
+    {
+      "scene": 12,
+      "start": 228.1,
+      "end": 254.7,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "A named person approves every decision",
+      "voiceover": "One common mistake is to think that a highly accurate tool can decide by itself, and the clinician only checks the difficult cases. This is not safe. Even an accurate tool makes errors, often in cases that look easy to the tool. And accountability cannot pass to software. Design every use so that a named person makes, or clearly approves, each decision."
+    },
+    {
+      "scene": 13,
+      "start": 254.7,
+      "end": 278.7,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Four areas: diagnostic support · operations · patient engagement · public health. 2. AI supports; a qualified person is responsible. 3. Ask: which decision? who decides? how are errors noticed?"
+      },
+      "voiceover": "Let's recap. First, AI in healthcare falls into four main areas: diagnostic support, operations, patient engagement and public health, and each uses different data. Second, AI supports decisions, and a qualified person remains responsible for every one. Third, for any tool, ask what decision it supports, who makes that decision, and how errors would be noticed."
+    },
+    {
+      "scene": 14,
+      "start": 278.7,
+      "end": 303.1,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Health Data: Types, Quality and Privacy",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will sort eight AI health applications into the four areas, and name the person who is accountable for each final decision. It takes about fifteen minutes. In the next lesson, we look at health data: its types, its quality, and its privacy. See you there."
+    }
+  ]
+}

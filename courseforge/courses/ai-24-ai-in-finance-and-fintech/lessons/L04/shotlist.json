@@ -1,7 +1,7 @@
 {
   "course_id": "AI-24",
   "lesson_id": "L04",
-  "duration_s": 280.6,
+  "duration_s": 295.6,
   "thumbnail": {
     "headline": "Who Pays for Mistakes?",
     "slide": {
@@ -155,7 +155,20 @@
     {
       "scene": 13,
       "start": 225.8,
-      "end": 251.9,
+      "end": 240.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Look beyond accuracy",
+        "body": "Count false alarms and missed fraud separately · Put a cost on each · Check who receives the false alarms (L06, L07)"
+      },
+      "voiceover": "Always look at the two error types separately, and put a cost on each. Also remember that false alarms may not fall evenly on all customers. We look at that in lessons six and seven."
+    },
+    {
+      "scene": 14,
+      "start": 240.8,
+      "end": 266.9,
       "section": "Recap",
       "visual_type": "slide",
       "slide": {
@@ -166,9 +179,9 @@
       "voiceover": "Let's recap. First, false positives block genuine customers, and false negatives let fraud through. Both have real costs for the institution and the customer. Second, moving the threshold trades one error for the other, and only a better model or better data reduces both. Third, choose the threshold by comparing total costs under clear, stated cost assumptions, not by accuracy alone."
     },
     {
-      "scene": 14,
-      "start": 251.9,
-      "end": 280.6,
+      "scene": 15,
+      "start": 266.9,
+      "end": 295.6,
       "section": "CTA",
       "visual_type": "presenter_full",
       "on_screen_text": "Next: Credit Scoring with AI",

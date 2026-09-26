@@ -3,7 +3,7 @@
 Course: AI-22 · Video: 5 min · Words: 684
 
 ## Hook
-You recorded a great interview. But when you play it back, you hear a fan, long gaps, and some words much louder than others. Listeners notice this in seconds. The good news is, a free editor and a simple order of steps can fix most of it.
+You recorded a great interview. But when you play it back, you hear a humming fan, long gaps, and some words louder than others. Listeners notice this in seconds. The good news is, a free editor and a simple order of steps can fix most of it.
 
 ## Explain
 Welcome to week two. Audacity is a free, open-source audio editor. We use it for a clean-up chain. That is a fixed order of steps that you apply to every voice recording. The order matters, because each step prepares the audio for the next one.

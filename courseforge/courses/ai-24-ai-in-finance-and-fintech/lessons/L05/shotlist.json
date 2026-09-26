@@ -1,7 +1,7 @@
 {
   "course_id": "AI-24",
   "lesson_id": "L05",
-  "duration_s": 298.2,
+  "duration_s": 300.4,
   "thumbnail": {
     "headline": "Invisible to the Bureau?",
     "slide": {
@@ -143,16 +143,16 @@
     {
       "scene": 12,
       "start": 209.5,
-      "end": 220.6,
+      "end": 227.1,
       "section": "Demonstrate",
       "visual_type": "text",
       "on_screen_text": "Check consent before approval",
-      "voiceover": "Before final approval, the credit officer, Hendra Wijaya, checks one thing: that the mobile-wallet data was shared with Dewi's consent, as the lender's policy requires."
+      "voiceover": "Before final approval, the credit officer, Hendra Wijaya, checks one thing: that the mobile-wallet data was shared with Dewi's consent, as the lender's policy requires. And in the exercise, remember: never paste real applicant data into a public AI tool."
     },
     {
       "scene": 13,
-      "start": 220.6,
-      "end": 238.2,
+      "start": 227.1,
+      "end": 244.7,
       "section": "Demonstrate",
       "visual_type": "text",
       "on_screen_text": "A score is an estimate",
@@ -160,8 +160,8 @@
     },
     {
       "scene": 14,
-      "start": 238.2,
-      "end": 266.5,
+      "start": 244.7,
+      "end": 273.0,
       "section": "Recap",
       "visual_type": "slide",
       "slide": {
@@ -173,12 +173,12 @@
     },
     {
       "scene": 15,
-      "start": 266.5,
-      "end": 298.2,
+      "start": 273.0,
+      "end": 300.4,
       "section": "CTA",
       "visual_type": "presenter_full",
       "on_screen_text": "Next: Fairness in Credit Decisions",
-      "voiceover": "Now it is your turn. In the exercise below this video, you will give Claude or ChatGPT the synthetic applicant table and ask it to explain the main drivers of the score. Then check every claim against the data, and mark any that are wrong. Never paste real applicant data into a public AI tool. It takes about twenty minutes. In the next lesson, we look at fairness in credit decisions. See you there."
+      "voiceover": "Now it is your turn. In the exercise below this video, you will give Claude or ChatGPT the synthetic applicant table and ask it to explain the main drivers of the score. Then check every claim against the data, and mark any that are wrong. It takes about twenty minutes. In the next lesson, we look at fairness in credit decisions. See you there."
     }
   ]
 }

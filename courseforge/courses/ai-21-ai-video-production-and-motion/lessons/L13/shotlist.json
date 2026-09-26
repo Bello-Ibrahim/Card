@@ -1,0 +1,204 @@
+{
+  "course_id": "AI-21",
+  "lesson_id": "L13",
+  "duration_s": 293.1,
+  "thumbnail": {
+    "headline": "Four Checks Before Publish",
+    "slide": {
+      "layout": "title",
+      "title": "Four Checks Before Publish",
+      "body": "A large rounded publish button with four teal ticks above it: disclosure · consent · rights · misleading content. Small tag: AI Video Production and Motion · Lesson 13."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.0,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Four questions before publish",
+      "voiceover": "Your video looks finished. Before you press publish, ask four questions. Would a viewer be misled? Did every real person agree? Do you have the right to use every piece? Does the platform allow it?"
+    },
+    {
+      "scene": 2,
+      "start": 15.0,
+      "end": 31.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Publishing Responsibly: Disclosure, Consent and Rights",
+        "body": "AI Video Production and Motion · Lesson 13 of 14 · Capstone step 3"
+      },
+      "voiceover": "In the last lesson, you exported your video. Today, you check it before anyone else sees it. This is capstone step three. A few minutes of checking can prevent a problem that is very hard to fix after publication."
+    },
+    {
+      "scene": 3,
+      "start": 31.7,
+      "end": 44.6,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Principles, not legal advice",
+      "voiceover": "This lesson gives principles, not legal advice. Rules for AI content differ by country and by platform, and they change often. Always check the current rules that apply to you."
+    },
+    {
+      "scene": 4,
+      "start": 44.6,
+      "end": 65.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "1. Disclosure",
+        "body": "Example label: \"This video includes AI-generated scenes and an AI presenter.\" Small note below: keep AI tool watermarks."
+      },
+      "voiceover": "The first check is disclosure. As a principle, if a viewer could think an AI-generated scene or person is real, label it. A short line in the description or on screen is a good habit, even where no rule requires it. And never remove watermarks from AI tools."
+    },
+    {
+      "scene": 5,
+      "start": 65.6,
+      "end": 86.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "2. Consent",
+        "body": "Every real face or voice: clear consent for this use · Includes your own footage of staff and customers · Avatar or voice of a real person: clear, recorded consent · Stock avatars and fictional characters avoid the problem"
+      },
+      "voiceover": "The second check is consent. Every real person whose face or voice appears must agree to this use. That includes your own footage of staff or customers. An avatar or voice of a real person needs their clear, recorded consent. Stock avatars and fictional characters avoid this problem."
+    },
+    {
+      "scene": 6,
+      "start": 86.2,
+      "end": 105.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "3. Rights and tool terms",
+        "body": "Music licence covers this use? · Each AI tool allows commercial use on your plan? · Uploaded images, logos and footage: yours or licensed?"
+      },
+      "voiceover": "The third check is rights. Does your music licence allow this use? Do the terms of each AI tool allow commercial use on your plan? Free plans can have different terms from paid ones. And are the images, logos and footage you uploaded yours, or licensed?"
+    },
+    {
+      "scene": 7,
+      "start": 105.9,
+      "end": 124.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "4. Misleading content",
+        "body": "Avoid: fake testimonials · products doing what they cannot do · real places or events shown falsely · real people saying words they never said"
+      },
+      "voiceover": "The fourth check is misleading content. Avoid realistic scenes that could deceive. A fake customer testimonial, a product doing something it cannot do, or a real person saying words they never said. Even with a label, these can harm viewers and your brand."
+    },
+    {
+      "scene": 8,
+      "start": 124.3,
+      "end": 144.4,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "pilot doing pre flight checklist in cockpit",
+      "on_screen_text": "Check the list every time",
+      "voiceover": "Keep records, too. Save your prompts, tool names, licences and consent forms in your project folder. Think of a pilot before take-off. She has flown many times, but she checks the list every time, because a missed item is much harder to fix in the air."
+    },
+    {
+      "scene": 9,
+      "start": 144.4,
+      "end": 162.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Case 1: Anna, Kraków",
+        "body": "Left, problem: a realistic AI 'patient' giving a testimonial no patient gave. Tag: misleading."
+      },
+      "voiceover": "Let's look at three made-up cases. Case one. Anna, a marketer in Kraków, Poland, makes a video for a dental clinic. She generates a realistic patient saying the treatment was painless. But no patient said it. It looks like a real testimonial."
+    },
+    {
+      "scene": 10,
+      "start": 162.8,
+      "end": 176.5,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Case 1: the fix",
+        "body": "Left, crossed out: fake patient testimonial. Right, ticked: stock avatar presented as the clinic's presenter, with the line 'This video includes an AI presenter'."
+      },
+      "voiceover": "Her fix is to remove it. She uses a stock avatar, clearly presented as the clinic's presenter, with an AI disclosure line. Nothing on screen now pretends to be a real patient."
+    },
+    {
+      "scene": 11,
+      "start": 176.5,
+      "end": 202.2,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Case 2: Samir, Amman",
+        "body": "Left, problem: popular song, 'only 20 seconds', no licence. Right, fix: royalty-free track, licence allows commercial use, licence saved."
+      },
+      "voiceover": "Case two. Samir, a freelancer in Amman, Jordan, uses a popular song in a hotel video, because it is only twenty seconds. The problem is that he has no licence for it, and he cannot assume that a short clip is allowed. So he replaces it with a royalty-free track whose licence allows commercial use, and saves the licence."
+    },
+    {
+      "scene": 12,
+      "start": 202.2,
+      "end": 217.2,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Case 3: Mei Lin, Penang",
+        "body": "Left, problem: colleague agreed to filming only. Arrow to 'avatar' crossed out."
+      },
+      "voiceover": "Case three. Mei Lin, a content creator in Penang, Malaysia, films her colleague, and wants to turn the footage into an avatar. But the colleague agreed to be filmed, not to have an avatar made."
+    },
+    {
+      "scene": 13,
+      "start": 217.2,
+      "end": 230.5,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Case 3: the fix",
+        "body": "Right, ticked: stock avatar now. Later, only with clear, recorded consent for that specific use, after checking local rules."
+      },
+      "voiceover": "So Mei Lin uses a stock avatar. If her colleague later wants an avatar, Mei Lin will get clear, recorded consent for that specific use, and check the local rules first."
+    },
+    {
+      "scene": 14,
+      "start": 230.5,
+      "end": 246.4,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "A label does not replace consent",
+      "voiceover": "A common mistake is to think a label solves every problem. A label does not replace consent, and it does not make a misleading scene acceptable. Use all four checks together: disclosure, consent, rights and misleading content."
+    },
+    {
+      "scene": 15,
+      "start": 246.4,
+      "end": 268.7,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Label what could look real; check current rules. 2. Clear consent for every real face or voice. 3. Licences, tool terms, no misleading scenes, keep records."
+      },
+      "voiceover": "Let's recap. First, label AI-generated or altered content where a viewer could think it is real, and check the current rules, because they differ and change. Second, every real person's face or voice needs their clear consent. Third, check music licences and tool terms, avoid misleading realistic scenes, and keep records."
+    },
+    {
+      "scene": 16,
+      "start": 268.7,
+      "end": 293.1,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Finishing and Presenting Your Video",
+      "voiceover": "Now it is your turn, with capstone step three. Complete a pre-publish checklist for your video. List every AI-generated part, plan your disclosure, confirm consent, and check your music licence and tool terms. Save the evidence in your project folder. It takes about thirty minutes. Next, the final lesson: Capstone, Finishing and Presenting Your Video."
+    }
+  ]
+}

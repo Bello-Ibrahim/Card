@@ -1,0 +1,198 @@
+{
+  "course_id": "AI-22",
+  "lesson_id": "L09",
+  "duration_s": 298.3,
+  "thumbnail": {
+    "headline": "Voice on Top",
+    "slide": {
+      "layout": "title",
+      "title": "Voice on Top",
+      "body": "Two stacked tracks: a bold voice waveform on top and a teal music track below that rises in the gaps and dips while the voice speaks. Small tag: AI Voice, Audio and Music · Lesson 9."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.9,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "A few simple mixing steps",
+      "voiceover": "You have a clean voice and a music bed you like. Put them together without care, and the music may cover your words, or suddenly stop. Put them together well, and the episode sounds finished and professional. The difference is a few simple steps."
+    },
+    {
+      "scene": 2,
+      "start": 18.9,
+      "end": 37.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Mixing Voice and Music",
+        "body": "AI Voice, Audio and Music · Lesson 9 of 10"
+      },
+      "voiceover": "In the last lesson, you started your rights log. Now, we mix. Mixing means combining separate audio tracks into one balanced file. For a podcast or narrated video, the main rule is simple. The voice is on top. Every other sound supports it."
+    },
+    {
+      "scene": 3,
+      "start": 37.3,
+      "end": 54.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "1. Arrange the tracks",
+        "body": "Two tracks on a timeline: music starts at 0:00, voice starts a few seconds later. Arrow between the two starts labelled 'time to settle'."
+      },
+      "voiceover": "A basic mix in Audacity has five steps. First, arrange the tracks. Put the voice on one track and the music on another, and start the music a few seconds before the first word. That gives the listener time to settle."
+    },
+    {
+      "scene": 4,
+      "start": 54.9,
+      "end": 77.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "2. Lower the music under speech",
+        "body": "Music track volume line: high in the intro, dips low under the voice section, rises again in the outro. Labels: Envelope tool (draw by hand) · Auto Duck (automatic)."
+      },
+      "voiceover": "Second, lower the music under speech. You can do this by hand, or with the Envelope tool, which lets you draw volume changes over time. Audacity also has an effect called Auto Duck, which lowers the music whenever the voice is playing. The music can be louder in the intro and outro."
+    },
+    {
+      "scene": 5,
+      "start": 77.2,
+      "end": 99.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Steps 3 to 5",
+        "body": "3. Fades: short fade-in, longer fade-out; no sudden stops · 4. Loudness: follow the platform's current guidance; normalise the final mix · 5. Check on headphones and a phone speaker, then export"
+      },
+      "voiceover": "Third, fade in and fade out. A fade is a smooth change in volume. Use a short fade-in and a longer fade-out. Fourth, set consistent loudness. Follow the platform's current guidance, and apply Loudness Normalization to the final mix, not to each track. Fifth, check on two systems, then export."
+    },
+    {
+      "scene": 6,
+      "start": 99.5,
+      "end": 113.2,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "No sudden stops. No volume surprises.",
+      "voiceover": "Never let music stop suddenly, unless the track has a clean ending of its own. And remember, listeners should not need to change the volume between your episode and the next one."
+    },
+    {
+      "scene": 7,
+      "start": 113.2,
+      "end": 126.1,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "person listening to phone speaker in kitchen",
+      "on_screen_text": "Headphones and a phone speaker",
+      "voiceover": "Why two systems? Headphones show small details, like clicks and noise. A phone speaker shows whether the voice is still clear when the bass disappears and the room is noisy."
+    },
+    {
+      "scene": 8,
+      "start": 126.1,
+      "end": 141.5,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "friends talking at dinner table candles",
+      "on_screen_text": "Music sets the mood. Voice leads.",
+      "voiceover": "Think of a dinner party with soft music in the room. The music helps the mood. But when someone speaks, everyone can hear them. If the music is too loud, guests lean in and stop listening."
+    },
+    {
+      "scene": 9,
+      "start": 141.5,
+      "end": 161.2,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "woman podcast host small business microphone",
+      "on_screen_text": "Marisol · business podcast · Cebu",
+      "voiceover": "Let's see a full mix. Marisol hosts a small-business podcast in Cebu, in the Philippines. Her three-minute episode has a cleaned recording of her voice, an AI music bed for the intro and outro, and a short text-to-speech announcement at the end."
+    },
+    {
+      "scene": 10,
+      "start": 161.2,
+      "end": 183.5,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Marisol's mix: tracks and ducking",
+        "body": "Three tracks: Voice (starts at 0:04) · Music (Auto Duck, controlled by voice; then lowered slightly) · TTS announcement (at the end)."
+      },
+      "voiceover": "She imports the voice, the music and the announcement onto three tracks, and moves the voice so it starts four seconds after the music. She applies Auto Duck to the music, controlled by the voice track. But the music is still too strong, so she lowers it a little more by hand."
+    },
+    {
+      "scene": 11,
+      "start": 183.5,
+      "end": 200.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Marisol's mix: the ending",
+        "body": "Timeline end: music rises for 5 seconds after the last sentence, then a 3-second fade-out. TTS announcement track lowered to match the voice level."
+      },
+      "voiceover": "With the Envelope tool, she brings the music up again for five seconds after her last sentence, then adds a three-second fade-out. The announcement is louder than her voice, so she lowers that track until they sound equal."
+    },
+    {
+      "scene": 12,
+      "start": 200.6,
+      "end": 222.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Normalise, check, fix",
+        "body": "Mixed WAV → Loudness Normalization (target: platform's current guidance) → final MP3 → headphones ✓ → phone speaker: one word hidden at 1:12 → lower music there → export again"
+      },
+      "voiceover": "She exports a mixed file, applies Loudness Normalization using her podcast host's current guidance, and exports the final version. Then she listens on headphones, and on her phone. On the phone, the music hides one quiet word at one minute twelve. So she lowers the music there, and exports again."
+    },
+    {
+      "scene": 13,
+      "start": 222.0,
+      "end": 230.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Log the final file",
+        "body": "Rights log: new row for the final episode file · file name · date"
+      },
+      "voiceover": "Finally, she adds the final file name and the date to her rights log. The draft is ready for review."
+    },
+    {
+      "scene": 14,
+      "start": 230.6,
+      "end": 250.7,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "If listeners strain, lower the music",
+      "voiceover": "A common mistake is to mix only on good headphones, or only on laptop speakers. The mix then fails somewhere else. Another is making the music too loud because you like it. If a listener has to work to hear the words, the music is too loud."
+    },
+    {
+      "scene": 15,
+      "start": 250.7,
+      "end": 275.6,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Voice on top: hand, Envelope tool or Auto Duck. 2. Fades in and out; loudness from the platform's current guidance. 3. Check on headphones and a phone speaker."
+      },
+      "voiceover": "Let's recap. First, the voice is always on top, so lower the music under speech by hand, with the Envelope tool or with Auto Duck. Second, use fades at the start and end, and set the final loudness by following the platform's current guidance. Third, check the mix on headphones and on a phone speaker before you export."
+    },
+    {
+      "scene": 16,
+      "start": 275.6,
+      "end": 298.3,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Producing Your Episode",
+      "voiceover": "Now it is your turn. This exercise is step one of your capstone. You will mix your voiceover or recording with a music bed in Audacity, and export a first draft. It takes about thirty-five minutes. In the final lesson, Capstone: Producing and Reviewing Your Episode, you will finish and submit it."
+    }
+  ]
+}

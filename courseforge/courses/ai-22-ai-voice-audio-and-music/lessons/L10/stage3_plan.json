@@ -3,7 +3,11 @@
   "thumbnail": {
     "headline": "Review, Then Publish",
     "image": "Navy background, a finished episode card with a play button beside a short checklist with teal ticks, headline in teal Inter Bold.",
-    "slide": {"layout": "title", "title": "Review, Then Publish", "body": "Left: a simple episode card with a large play button. Right: a short checklist with five teal ticks. Small tag: AI Voice, Audio and Music · Lesson 10 · Capstone."}
+    "slide": {
+      "layout": "title",
+      "title": "Review, Then Publish",
+      "body": "Left: a simple episode card with a large play button. Right: a short checklist with five teal ticks. Small tag: AI Voice, Audio and Music · Lesson 10 · Capstone."
+    }
   },
   "production_notes": [
     "[VERIFY] [REGION] Platform and country rules on labelling AI-generated audio and video differ and change. The voiceover tells learners to check whether their platform asks for its own label and states no rule as settled.",
@@ -13,55 +17,123 @@
   ],
   "sections": {
     "Hook": [
-      {"visual_type": "presenter_full",
-       "voiceover": "You now have every part. A script for the ear, a voice, clean audio, a music bed, captions and a rights log. The last step is to bring them together, review them with fresh ears, and publish something you can be proud of.",
-       "on_screen_text": "Bring it all together"}
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "You now have every part. A script for the ear, a voice, clean audio, a music bed, captions and a rights log. The last step is to bring them together, review them with fresh ears, and publish something you can be proud of.",
+        "on_screen_text": "Bring it all together"
+      }
     ],
     "Explain": [
-      {"visual_type": "slide",
-       "voiceover": "In the last lesson, you mixed your first draft. Now, the capstone. You produce a two to four minute podcast episode or narrated video, with AI-assisted voice, clean-up and music. You submit it with captions, a completed rights log and a disclosure line. You choose the topic.",
-       "slide": {"layout": "title", "title": "Capstone: Producing and Reviewing Your Episode", "body": "AI Voice, Audio and Music · Lesson 10 of 10"}},
-      {"visual_type": "slide",
-       "voiceover": "AI-assisted means at least two of these: a text-to-speech voiceover, Whisper captions, AI or plugin clean-up, and an AI music bed. You may use your own recorded voice for the narration. But you must not use a cloned voice of anyone else. If you use a clone of your own voice, record it in your rights log.",
-       "slide": {"layout": "bullets", "title": "What counts as AI-assisted", "body": "At least two of: TTS voiceover · Whisper captions · AI or plugin clean-up · AI music bed. Your own voice is fine. No clones of anyone else. A clone of your own voice goes in the rights log."}},
-      {"visual_type": "slide",
-       "voiceover": "Before you export, review five areas in one full listen, without stopping to fix things. Clarity, can you understand every word on a phone? Pacing, is there time to breathe? Captions, do they match the final audio? Consent, does every real voice have written permission? And licences, does every row in your log allow this use?",
-       "slide": {"layout": "bullets", "title": "The final review", "body": "Clarity: every word clear on a phone? · Pacing: time to breathe? · Captions: match the final audio? · Consent: written permission for every real voice? · Licences: every row allows this use?"}},
-      {"visual_type": "slide",
-       "voiceover": "Then write a disclosure line. In one or two plain sentences, tell your audience where AI was used. For example, the narration uses a text-to-speech voice, music was made with an AI music tool, and captions were created with Whisper and checked by hand. Also check whether your platform asks for its own label.",
-       "slide": {"layout": "quote", "title": "A disclosure line", "body": "\"The narration uses a text-to-speech voice. Music was generated with an AI music tool. Captions were created with Whisper and checked by hand.\" Where: show notes · video description · end credits"}},
-      {"visual_type": "stock",
-       "voiceover": "Think of a pilot's checklist before take-off. The pilot knows the plane well, but still checks every item. The list catches the small problems that experience can miss when you are busy.",
-       "stock_query": "pilot checking cockpit checklist before takeoff",
-       "on_screen_text": "Check every item, every time"}
+      {
+        "visual_type": "slide",
+        "voiceover": "In the last lesson, you mixed your first draft. Now, the capstone. You produce a two to four minute podcast episode or narrated video, with AI-assisted voice, clean-up and music. You submit it with captions, a completed rights log and a disclosure line. You choose the topic.",
+        "slide": {
+          "layout": "title",
+          "title": "Capstone: Producing and Reviewing Your Episode",
+          "body": "AI Voice, Audio and Music · Lesson 10 of 10"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "AI-assisted means at least two of these: a text-to-speech voiceover, Whisper captions, AI or plugin clean-up, and an AI music bed. You may use your own recorded voice for the narration. But you must not use a cloned voice of anyone else. If you use a clone of your own voice, record it in your rights log.",
+        "slide": {
+          "layout": "bullets",
+          "title": "What counts as AI-assisted",
+          "body": "At least two of: TTS voiceover · Whisper captions · AI or plugin clean-up · AI music bed. Your own voice is fine. No clones of anyone else. A clone of your own voice goes in the rights log."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Before you export, review five areas in one full listen, without stopping to fix things. Clarity, can you understand every word on a phone? Pacing, is there time to breathe? Captions, do they match the final audio? Consent, does every real voice have written permission? And licences, does every row in your log allow this use?",
+        "slide": {
+          "layout": "bullets",
+          "title": "The final review",
+          "body": "Clarity: every word clear on a phone? · Pacing: time to breathe? · Captions: match the final audio? · Consent: written permission for every real voice? · Licences: every row allows this use?"
+        }
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "Take notes as you listen. Then fix what you found, and listen to the whole piece again from the start.",
+        "on_screen_text": "Listen, note, fix, listen again"
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Then write a disclosure line. In one or two plain sentences, tell your audience where AI was used. For example, the narration uses a text-to-speech voice, music was made with an AI music tool, and captions were created with Whisper and checked by hand. Also check whether your platform asks for its own label.",
+        "slide": {
+          "layout": "quote",
+          "title": "A disclosure line",
+          "body": "\"The narration uses a text-to-speech voice. Music was generated with an AI music tool. Captions were created with Whisper and checked by hand.\" Where: show notes · video description · end credits"
+        }
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "Think of a pilot's checklist before take-off. The pilot knows the plane well, but still checks every item. The list catches the small problems that experience can miss when you are busy. The final review works the same way.",
+        "stock_query": "pilot checking cockpit checklist before takeoff",
+        "on_screen_text": "Check every item, every time"
+      }
     ],
     "Demonstrate": [
-      {"visual_type": "stock",
-       "voiceover": "Let's watch a final review. Dilnoza is a geography teacher in Tashkent, in Uzbekistan. She makes a three-minute narrated video about the Aral Sea region for her students, using her own photos.",
-       "stock_query": "teacher preparing geography lesson with photos",
-       "on_screen_text": "Dilnoza · geography video · Tashkent"},
-      {"visual_type": "slide",
-       "voiceover": "She works through a production checklist. The script is written for the ear. The voice is her own, cleaned in Audacity. The music bed is instrumental, with no artist names in the prompt. The mix has the voice on top. The captions are checked by hand, and every asset has a row in her rights log.",
-       "slide": {"layout": "bullets", "title": "Dilnoza's checklist", "body": "Script ✓ · Voice: own recording, cleaned ✓ · Music: instrumental, no artist names ✓ · Mix: voice on top, fades, loudness ✓ · Captions: checked by hand ✓ · Rights log ✓ · Disclosure ✓ · Final checks ✓"}},
-      {"visual_type": "slide",
-       "voiceover": "Her review still finds two problems. First, she cut one sentence from the final mix, but it is still in the caption file. So after one minute forty, the captions drift out of time. She makes the captions again from the final audio, and checks them.",
-       "slide": {"layout": "diagram", "title": "Problem 1: captions drift", "body": "Audio timeline with one sentence cut out; caption timeline below still has it, so captions after 1:40 are shifted (red). Fix arrow: regenerate captions from the final audio (green)."}},
-      {"visual_type": "slide",
-       "voiceover": "Second, her rights log shows that the music tool requires a credit, which she had not added. She adds it to the video description, next to her disclosure line.",
-       "slide": {"layout": "diagram", "title": "Problem 2: missing credit", "body": "Rights log row: Music bed · credit required · credit added? No (red) → video description now shows the credit line next to the disclosure line (green)."}},
-      {"visual_type": "text",
-       "voiceover": "A common mistake is to make captions early, and then keep editing the audio. Always make captions from the final audio. Another is a vague disclosure line, like AI may have been used. Be specific about what AI did, so your audience can trust you.",
-       "on_screen_text": "Captions last. Disclosure specific."}
+      {
+        "visual_type": "stock",
+        "voiceover": "Let's watch a final review. Dilnoza is a geography teacher in Tashkent, in Uzbekistan. She makes a three-minute narrated video about the Aral Sea region for her students, using her own photos. Every part of the capstone is in it, so her review is a good model for yours.",
+        "stock_query": "teacher preparing geography lesson with photos",
+        "on_screen_text": "Dilnoza · geography video · Tashkent"
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "She works through a production checklist. The script is written for the ear. The voice is her own, cleaned in Audacity. The music bed is instrumental, with no artist names in the prompt. The mix has the voice on top. The captions are checked by hand, and every asset has a row in her rights log.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Dilnoza's checklist",
+          "body": "Script ✓ · Voice: own recording, cleaned ✓ · Music: instrumental, no artist names ✓ · Mix: voice on top, fades, loudness ✓ · Captions: checked by hand ✓ · Rights log ✓ · Disclosure ✓ · Final checks ✓"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Her review still finds two problems. First, she cut one sentence from the final mix, but it is still in the caption file. So after one minute forty, the captions drift out of time. She makes the captions again from the final audio, and checks them.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Problem 1: captions drift",
+          "body": "Audio timeline with one sentence cut out; caption timeline below still has it, so captions after 1:40 are shifted (red). Fix arrow: regenerate captions from the final audio (green)."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Second, her rights log shows that the music tool requires a credit, which she had not added. She adds it to the video description, next to her disclosure line. Without the log, she might have missed it.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Problem 2: missing credit",
+          "body": "Rights log row: Music bed · credit required · credit added? No (red) → video description now shows the credit line next to the disclosure line (green)."
+        }
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "Two small problems, both caught before publishing. That is exactly what the checklist is for.",
+        "on_screen_text": "Caught before publishing"
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "A common mistake is to make captions early, and then keep editing the audio. Always make captions from the final audio. Another is a vague disclosure line, like AI may have been used. Be specific about what AI did, so your audience can trust you.",
+        "on_screen_text": "Captions last. Disclosure specific."
+      }
     ],
     "Recap": [
-      {"visual_type": "slide",
-       "voiceover": "Let's recap. First, the capstone is a two to four minute AI-assisted episode or narrated video, with captions, a rights log and a disclosure line. Second, review clarity, pacing, captions, consent and licences in one full listen, then fix and listen again. Third, make captions from the final audio, and say specifically where AI was used.",
-       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. 2–4 minutes, AI-assisted, with captions, rights log and disclosure line. 2. Review clarity · pacing · captions · consent · licences. 3. Captions from the final audio; specific disclosure."}}
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, the capstone is a two to four minute AI-assisted episode or narrated video, with captions, a rights log and a disclosure line. Second, review clarity, pacing, captions, consent and licences in one full listen, then fix and listen again. Third, make captions from the final audio, and say specifically where AI was used.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. 2–4 minutes, AI-assisted, with captions, rights log and disclosure line. 2. Review clarity · pacing · captions · consent · licences. 3. Captions from the final audio; specific disclosure."
+        }
+      }
     ],
     "CTA": [
-      {"visual_type": "presenter_full",
-       "voiceover": "Congratulations. You have completed AI Voice, Audio and Music. Now it is time for step two of your capstone. Export your final episode or video with captions. Then submit it with your rights log, your disclosure line and your checklist. Allow about an hour. I cannot wait to hear what you make. Well done.",
-       "on_screen_text": "Submit your capstone"}
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Congratulations. You have completed AI Voice, Audio and Music. Now it is time for step two of your capstone. Export your final episode or video with captions. Then submit it with your rights log, your disclosure line and your checklist. Allow about an hour, and use the rubric to check your work first. I cannot wait to hear what you make. Well done.",
+        "on_screen_text": "Submit your capstone"
+      }
     ]
   }
 }

@@ -1,6 +1,6 @@
 # L04 False Alarms and Missed Fraud: The Cost Trade-off | Presenter Script
 
-Course: AI-24 · Video: 5 min · Words: 655
+Course: AI-24 · Video: 5 min · Words: 690
 
 ## Hook
 A fraud model that blocks every payment catches all the fraud. It also stops every honest customer from buying anything. So where exactly should the line be drawn, and who pays for each mistake?
@@ -28,6 +28,8 @@ In assumption B, a false alarm costs twenty, because the payment is blocked at t
 The model has not changed. Only the business assumption has changed. So Marta's recommendation starts with the cost assumptions, and she asks the customer experience team for better evidence on the true cost of a false alarm.
 
 A common mistake is to choose the threshold with the highest accuracy. With fifty fraud cases in ten thousand payments, a model that approves everything is ninety-nine point five percent accurate, and catches no fraud at all.
+
+Always look at the two error types separately, and put a cost on each. Also remember that false alarms may not fall evenly on all customers. We look at that in lessons six and seven.
 
 ## Recap
 Let's recap. First, false positives block genuine customers, and false negatives let fraud through. Both have real costs for the institution and the customer. Second, moving the threshold trades one error for the other, and only a better model or better data reduces both. Third, choose the threshold by comparing total costs under clear, stated cost assumptions, not by accuracy alone.

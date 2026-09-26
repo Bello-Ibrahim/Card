@@ -45,7 +45,7 @@ Image: Navy background, a video frame with a teal caption bar at the bottom and 
 - Screen demo tool: Buzz, the free open-source desktop app for Whisper (DECISIONS.md). Backup: the Whisper command line, shown only as an optional slide.
 - [VERIFY] content.md states that Whisper is an OpenAI model, free to download, works in many languages, produces timed output and can sometimes add words that were never said. The voiceover does not state these as facts: it says only that Whisper is a speech-to-text model and that the app creates a timed transcript. Confirm before adding any of these claims.
 - [VERSION] Before recording, check Buzz's interface, local processing, language and model options (small, medium), the transcript editor and SRT export against the live app. Check model sizes and hardware needs.
-- [VERSION] The optional command on scene 11 must be checked against current package documentation, including the ffmpeg requirement, before the slide is rendered.
+- [VERSION] The optional command on scene 12 must be checked against current package documentation, including the ffmpeg requirement, before the slide is rendered.
 - Judgement call carried: the command line is presented as optional because it may be too technical for this audience; a reviewer should confirm this.
 - The demo needs a 2-minute Portuguese water-cycle recording by a consenting speaker, with the three errors present in the transcript (or staged by editing). Mateus in Recife is fictional.
 - Pronunciation: Mateus = ma-TAY-oos; Recife = heh-SEE-fee; Manizales = man-ee-SAH-les.

@@ -1,0 +1,150 @@
+{
+  "title": "Counting and Tracking Objects in Video",
+  "thumbnail": {
+    "headline": "Count Each Bus Once",
+    "image": "Navy background, a high-angle junction shot with vehicles in teal boxes carrying ID numbers and a bright counting line across the road, headline in teal Inter Bold.",
+    "slide": {
+      "layout": "title",
+      "title": "Count Each Bus Once",
+      "body": "High-angle road junction, vehicles in boxes labelled ID 7, ID 12, ID 15, a teal horizontal counting line, counter in the corner. Small tag: Computer Vision Essentials · Lesson 13."
+    }
+  },
+  "production_notes": [
+    "[VERSION] ultralytics tracking interface (model.track, persist, classes, boxes.id), the included trackers (BoT-SORT, ByteTrack), the model name yolo11n.pt and the COCO class IDs used (2 car, 5 bus, 7 truck) must be checked at recording time. The counting logic was run on synthetic tracks; the YOLO calls were checked for syntax only.",
+    "Run outputs: content.md gives {'car': 41, 'bus': 6, 'truck': 3} only as example output. The voiceover says 'you'll see something like' before these counts. Camila's manual count (44 cars, 6 buses, 3 trucks) and the cause of the three missed cars are described as her results; if the recorded run differs, show the real counts and keep the 'something like' wording, and re-record the comparison scene.",
+    "Footage: junction.mp4 must be a public traffic clip, filmed from a height, showing vehicles only, with no visible faces and no readable number plates. Check that its licence allows reuse.",
+    "Camila Restrepo and the Bogotá transport office are fictional; no real agency names or logos.",
+    "Screen recording: clean browser profile, no account names or other tabs visible."
+  ],
+  "sections": {
+    "Hook": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "A bus takes three seconds to cross a junction. At twenty-five frames per second, a detector sees it in about seventy-five frames. If you count detections, you count one bus seventy-five times. So how do you count it once?",
+        "on_screen_text": "One bus, seventy-five detections"
+      }
+    ],
+    "Explain": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Welcome to the final week, where you build your capstone app. We start with counting. Detection works on single frames. It says there is a bus here, but it does not know that it saw the same bus one frame earlier.",
+        "slide": {
+          "layout": "title",
+          "title": "Counting and Tracking Objects in Video",
+          "body": "Computer Vision Essentials · Lesson 13 of 16"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Tracking links detections across frames, and gives each object a track ID that stays the same while it is visible. Most trackers use two clues. Motion, to predict where each object should be next. And overlap, often with IoU, to match new boxes to those predictions. Some also compare how objects look.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Tracking links frames",
+          "body": "Three frames side by side. The same bus has the label ID 7 in each. Arrows show predicted motion. Labels: motion · overlap (IoU) · appearance."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "The Ultralytics package includes trackers. You call track instead of predict, and each box then has an ID. With IDs, counting is simple. Draw a counting line across the road. When a box centre moves from one side of the line to the other, count that ID once, and never again.",
+        "slide": {
+          "layout": "diagram",
+          "title": "The counting line",
+          "body": "Road seen from above, horizontal line across it. A car's centre dot moves from above the line to below it; counter goes +1 for ID 12. Code note: model.track() instead of model.predict()."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Tracking fails in predictable ways. In an ID switch, two objects pass close and swap IDs. In a lost track, an object is hidden, maybe behind a bus, and gets a new ID when it reappears. Near the line, it may be counted twice. And if the detector misses a small or dark object, the tracker cannot follow it.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Three ways tracking fails",
+          "body": "ID switch: two objects swap IDs · Lost track: hidden object gets a new ID · Missed detection: nothing to track"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "So where should the line go? Place it where objects are large, clearly separated and rarely hidden. Then compare your automatic count with a manual count on a sample clip.",
+        "slide": {
+          "layout": "comparison",
+          "title": "Where to place the line",
+          "body": "Good: objects large, well separated, rarely hidden. Poor: far away, crowded, often behind other vehicles. Always: compare with a manual count."
+        }
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "Tracking is like a teacher counting children back from a school trip. The teacher does not count every head every second. Each child has a name, and the teacher ticks each name once at the gate. If two children swap coats, the wrong name may be ticked.",
+        "stock_query": "school children walking through gate",
+        "on_screen_text": "Tick each name once"
+      }
+    ],
+    "Demonstrate": [
+      {
+        "visual_type": "stock",
+        "voiceover": "Camila Restrepo works for a transport planning office in Bogotá, Colombia. She wants to count cars and buses entering a junction from one direction. She uses a public traffic clip filmed from a height, where faces cannot be seen.",
+        "stock_query": "high angle view of busy road junction",
+        "on_screen_text": "Camila's junction · Bogotá"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "In Colab, she loads the model and plays the first seconds of the clip. Her cell tracks only cars, buses and trucks. For each tracked vehicle, it remembers the box centre from the last frame, and counts the ID once when the centre moves down across the line.",
+        "screen_steps": [
+          "Load the model and play the first seconds of junction.mp4 in the notebook",
+          "Scroll through the cell: LINE_Y, the VEHICLES class filter, model.track with stream and persist",
+          "Highlight the if line that counts each ID once when it crosses the line"
+        ],
+        "on_screen_text": "Track, then count crossings"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "She runs it. You'll see something like forty-one cars, six buses and three trucks. Then she saves the annotated video and opens it. Every vehicle has an ID above its box. The IDs make it easy to see where tracking works, and where it breaks.",
+        "screen_steps": [
+          "Run the cell and show the printed counts",
+          "Add save=True to model.track() and run again",
+          "Open the saved video and show the IDs above each box"
+        ],
+        "on_screen_text": "IDs above every box"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "She draws the counting line on one frame, so everyone can see where it is. Then she compares the result with her own count by hand. In her case, the hand count found forty-four cars, six buses and three trucks. Three cars are missing.",
+        "screen_steps": [
+          "Draw the counting line on one frame with cv2.line and display it",
+          "Show a small table comparing automatic and manual counts per class"
+        ],
+        "on_screen_text": "Automatic versus manual count"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "She checks the three missed cars. Two were hidden behind a bus while crossing the line. One was a dark car in shadow. So she moves the line eighty pixels lower, where vehicles are more separated, and runs the test again.",
+        "screen_steps": [
+          "Step through the saved video to the frames where the three cars were missed",
+          "Change LINE_Y to 80 pixels lower and run the cell again"
+        ],
+        "on_screen_text": "Move the line, test again"
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "A common mistake is to count unique IDs across the whole video. That counts parked cars and vehicles at the edge, and every lost track adds a new ID. Count only line crossings in the right direction, and check against a manual count.",
+        "on_screen_text": "Count crossings, not IDs"
+      }
+    ],
+    "Recap": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, detection works frame by frame, while tracking gives each object a stable ID across frames. Second, to count, record when each tracked object crosses a line, and count each ID only once. Third, ID switches, lost tracks and missed detections cause counting errors, so always compare with a manual count.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. Detection = per frame; tracking = stable IDs. 2. Count line crossings, once per ID. 3. Check against a manual count."
+        }
+      }
+    ],
+    "CTA": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Now it is your turn. In the exercise below this video, you will add tracking and a counting line to your YOLO pipeline, count vehicles in a short public clip, and compare with your own count. This is a core part of your capstone app. It takes about forty minutes. In the next lesson, Responsible Vision: Privacy, Bias and Licences. See you there.",
+        "on_screen_text": "Next: Responsible Vision"
+      }
+    ]
+  }
+}

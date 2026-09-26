@@ -1,6 +1,6 @@
 # L05 Credit Scoring with AI | Presenter Script
 
-Course: AI-24 · Video: 5 min · Words: 696
+Course: AI-24 · Video: 5 min · Words: 701
 
 ## Hook
 A vegetable trader has sold at the same market for eight years and has never missed a supplier payment. But she has never had a bank loan, so the credit bureau has nothing on her. To a traditional scorecard, she is invisible. Can AI see her?
@@ -27,7 +27,7 @@ Dewi starts with three hundred points. Eighteen months of regular mobile-wallet 
 
 Dewi is approved with a modest starting limit. Her main positive drivers are her wallet sales and on-time utility payments. Her main negative driver is her variable income, which is common for market traders. Notice that missing bureau history did not lower her score. It simply added nothing.
 
-Before final approval, the credit officer, Hendra Wijaya, checks one thing: that the mobile-wallet data was shared with Dewi's consent, as the lender's policy requires.
+Before final approval, the credit officer, Hendra Wijaya, checks one thing: that the mobile-wallet data was shared with Dewi's consent, as the lender's policy requires. And in the exercise, remember: never paste real applicant data into a public AI tool.
 
 A common mistake is to think a model score is more objective than a person. A model is only as fair as the past decisions and data it learned from. A score is an estimate, not a fact about the person.
 
@@ -35,7 +35,7 @@ A common mistake is to think a model score is more objective than a person. A mo
 Let's recap. First, credit scoring estimates the probability of default, and the lender turns it into a decision, a limit and a price. Second, scorecards are easy to explain, while machine learning models can be more accurate but need extra work to explain. Third, alternative data can help thin-file customers, but it needs consent, relevance and fairness checks, and any inclusion claim needs a source.
 
 ## CTA
-Now it is your turn. In the exercise below this video, you will give Claude or ChatGPT the synthetic applicant table and ask it to explain the main drivers of the score. Then check every claim against the data, and mark any that are wrong. Never paste real applicant data into a public AI tool. It takes about twenty minutes. In the next lesson, we look at fairness in credit decisions. See you there.
+Now it is your turn. In the exercise below this video, you will give Claude or ChatGPT the synthetic applicant table and ask it to explain the main drivers of the score. Then check every claim against the data, and mark any that are wrong. It takes about twenty minutes. In the next lesson, we look at fairness in credit decisions. See you there.
 
 ## Thumbnail
 Headline: Invisible to the Bureau?

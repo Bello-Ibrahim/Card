@@ -1,0 +1,83 @@
+{
+  "title": "Capstone: Finishing and Presenting Your Video",
+  "thumbnail": {
+    "headline": "Check, Fix, Explain",
+    "image": "Navy background, a finished video frame with a small teal tick and a half-page note beside it, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Check, Fix, Explain", "body": "Left: a video frame with a teal tick. Right: a half-page note with four short lines. Small tag: AI Video Production and Motion · Lesson 14."}
+  },
+  "production_notes": [
+    "[VERIFY] content.md's script template uses a pace of about 140 words per minute (about 130 to 225 words for 60 to 90 seconds). The voiceover does not state these numbers; the template slide can show them marked 'rough guide' once the reviewer confirms them.",
+    "[VERSION] Export options in CapCut and the fallback editors must be checked against the live tools.",
+    "[REGION] CapCut availability differs by country; learners may use the fallback editor from Lesson 11.",
+    "Scene 12 hero clip is generated in Google Flow from Lan's key prompt in content.md. The rider is a fictional generated character; the bicycle and app show no brand, logo or readable text.",
+    "Scene 14 shows Lan's key prompt from content.md word for word; the voiceover summarises it.",
+    "Lan and the bicycle-rental app in Da Nang are hypothetical; stock footage must show no real rental brand or logo."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "You have a script, a shot list, clips, an avatar, an edit, sound, two exports and a checklist. The last step is not about adding more. It is about checking carefully, fixing what matters, and explaining how you made it.",
+       "on_screen_text": "Check, fix, explain"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "In the last lesson, you completed your pre-publish checklist. This is the final lesson, and capstone step four.",
+       "slide": {"layout": "title", "title": "Capstone: Finishing and Presenting Your Video", "body": "AI Video Production and Motion · Lesson 14 of 14 · Capstone step 4"}},
+      {"visual_type": "slide",
+       "voiceover": "Here is the capstone brief. Produce a sixty to ninety second AI-assisted brand or explainer video, from script to final export. Add a half-page production note that lists your tools, key prompts and pre-publish checks. The rubric on the course page shows how it is assessed.",
+       "slide": {"layout": "quote", "title": "The capstone brief", "body": "\"A 60 to 90 second AI-assisted brand or explainer video, from script to final export, plus a half-page production note: tools, key prompts, pre-publish checks.\""}},
+      {"visual_type": "slide",
+       "voiceover": "If you want to rebuild or check your plan, the lesson page has two templates. A two-column script template, and a shot-list template with a status column. The status is keep, trim, regenerate or replace, as in lesson ten.",
+       "slide": {"layout": "comparison", "title": "Two templates", "body": "Left: script template with rows Hook · Point 1 · Point 2 · Point 3 · Call to action, and columns Viewer sees / Viewer hears. Right: shot-list template with columns #, Time, Dur., Shot type, Camera movement, Viewer sees, Narration, Source, Status."}},
+      {"visual_type": "slide",
+       "voiceover": "Now the final quality pass. Watch the whole video four times, each time for one thing. First, artifacts, like hands, faces, melting objects and flicker. Second, continuity of characters, clothes, colours and settings.",
+       "slide": {"layout": "bullets", "title": "Final pass: four viewings", "body": "1. Artifacts: hands, faces, melting, flicker, text, physics (L10) · 2. Continuity: characters, clothes, colours, settings (L08)"}},
+      {"visual_type": "slide",
+       "voiceover": "Third, audio. Every word must be clear over the music, on phone speakers. Fourth, captions. Every line must be correct and inside the safe area. Fix the most visible problems first. Then do the final export of both versions.",
+       "slide": {"layout": "bullets", "title": "Final pass, continued", "body": "3. Audio: every word clear on phone speakers (L12) · 4. Captions: correct, inside the safe area (L11, L12). Then: fix the most visible problems, export 16:9 and 9:16."}},
+      {"visual_type": "slide",
+       "voiceover": "Then write the production note. Half a page, with four parts. The tools you used and what each did. Two or three key prompts, shown exactly. The main problems and how you solved them. And your pre-publish checks.",
+       "slide": {"layout": "bullets", "title": "The production note", "body": "1. Tools and what each did · 2. Two or three key prompts, exactly · 3. Problems and how you solved them · 4. Pre-publish checks"}},
+      {"visual_type": "stock",
+       "voiceover": "The production note is like the notes an engineer leaves with a finished machine. Someone else, or you in six months, can see what was used, how it was built and what was checked.",
+       "stock_query": "engineer writing notes beside finished machine",
+       "on_screen_text": "Notes someone else can follow"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's see an example. Lan is a content creator in Da Nang, Vietnam. Her capstone is a seventy-two second explainer for a bicycle-rental app. The app is made up for this lesson.",
+       "stock_query": "woman riding bicycle along seaside road",
+       "on_screen_text": "Lan's capstone · Da Nang"},
+      {"visual_type": "slide",
+       "voiceover": "In her final pass, she finds four problems. A wheel bends for half a second in shot seven, so she trims it. The rider's helmet changes from white to grey between shots four and five, so she replaces shot five with a close-up of the phone screen.",
+       "slide": {"layout": "comparison", "title": "Lan's final pass, part 1", "body": "Shot 7: wheel bends for half a second → Trim. Shots 4–5: helmet white, then grey → Replace shot 5 with a close-up of the phone screen."}},
+      {"visual_type": "slide",
+       "voiceover": "The music is too loud under the call to action, so she lowers it. And the caption Da Nang is split badly over two lines, so she edits it.",
+       "slide": {"layout": "comparison", "title": "Lan's final pass, part 2", "body": "Call to action: music too loud → Lower it. Caption 'Da / Nang' split over two lines → Edit onto one line."}},
+      {"visual_type": "hero_broll",
+       "voiceover": "Here is one of her shots. A young woman in a white helmet rides a blue bicycle along a seaside road, with a slow tracking shot beside her.",
+       "broll_tool": "FLOW",
+       "broll_prompt": "A young Vietnamese woman in a white helmet rides a blue bicycle along a seaside road; medium shot; slow tracking shot beside her; bright morning sun with soft shadows; clean modern commercial style, natural colours; 6 seconds; no readable text, no brand names, no logos.",
+       "on_screen_text": "One of Lan's key shots"},
+      {"visual_type": "slide",
+       "voiceover": "Now her production note. Her tools were Flow for four text-to-video shots, Kling for three image-to-video shots from keyframes, a HeyGen stock avatar for the intro, and CapCut for the edit, captions and export.",
+       "slide": {"layout": "bullets", "title": "Production note: tools", "body": "Flow: 4 text-to-video shots · Kling: 3 image-to-video shots from keyframes · HeyGen: stock avatar, 15-second intro · CapCut: edit, captions, export"}},
+      {"visual_type": "slide",
+       "voiceover": "She shows her key prompt exactly, as you can see on screen. She explains the problems she solved, like the helmet drift. And she lists her checks. A disclosure line, a stock avatar only, no real people, a saved music licence, and tool terms checked for her plan.",
+       "slide": {"layout": "code", "title": "Key prompt and checks", "body": "Lan's key prompt from content.md word for word: 'A young woman in a white helmet rides a blue rental bicycle along a seaside road. Medium shot. Slow tracking shot beside her. Bright morning sun, soft shadows. Clean modern commercial style. 6 seconds.' Below: Problems solved: helmet drift, hands artifact. Checks: AI disclosure · stock avatar only · no real people · music licence saved · tool terms checked."}},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is to spend the last hours generating new clips, and then run out of time for the quality pass and the note. A simpler video that is checked and well documented is stronger. Stop generating early.",
+       "on_screen_text": "Stop generating early"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, the capstone is a sixty to ninety second video from script to final export, plus a half-page production note. Second, do the final quality pass in four viewings: artifacts, continuity, audio and captions. Third, the note lists your tools, key prompts, problems solved and checks.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. 60–90 second video + half-page production note. 2. Four viewings: artifacts · continuity · audio · captions. 3. Note: tools, prompts, problems, checks."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Congratulations. You have gone from an idea to a finished video, and you directed every step. Now complete capstone step four. Do your final pass, export both versions, and write your production note. Then submit your video, the note, your shot list and your checklist. Well done, and good luck with your capstone.",
+       "on_screen_text": "Submit your capstone"}
+    ]
+  }
+}
