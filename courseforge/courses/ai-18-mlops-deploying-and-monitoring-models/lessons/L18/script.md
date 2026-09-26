@@ -1,6 +1,6 @@
 # L18 Capstone Part 2: Monitor, Document and Present | Presenter Script
 
-Course: AI-18 · Video: 5 min · Words: 666
+Course: AI-18 · Video: 5 min · Words: 681
 
 ## Hook
 It is two in the morning. An alert fires, and the person who built the service is asleep. Can a colleague who has never seen your code understand the alert, and roll back safely in ten minutes? Your runbook and demo must make the answer yes.
@@ -12,12 +12,12 @@ Second, a one-page runbook. It is a short operational guide for the people who r
 
 The rollback section can be short. Find the previous tags. Move the champion alias back with a small rollback script, which is the promote script from lesson fourteen in reverse. Start the previous image, check the health endpoint, send one known request, and record what happened. Aim for under ten minutes.
 
-Third, a four-minute demo. Show the system working, not slides about it. Start with the problem and the dataset, then a merge that publishes an image, a prediction and a rejected input, the dashboard and a drift report, a rollback, and one lesson learned.
+Third, a four-minute demo. Show the system working, not slides about it. Start with the problem and the dataset, then a merge that publishes an image, a prediction and a rejected input, the dashboard and a drift report, a rollback, and one lesson learned. Keep each part short, and practise the order before you record.
 
 The runbook is like the emergency card in an aircraft seat pocket. It is short, it uses plain steps, and someone under stress who has never read it before can follow it.
 
 ## Demonstrate
-Kofi Mensah is an ML engineer at a hypothetical solar-energy distributor in Kumasi, Ghana. His capstone predicts which customer solar kits will need a service visit. Here is his demo.
+Kofi Mensah is an ML engineer at a hypothetical solar-energy distributor in Kumasi, Ghana. His capstone predicts which customer solar kits will need a service visit. Here is his demo, in the suggested order.
 
 He shows the README with the dataset licence note, and a simple architecture picture. Then he merges a small change, and the publish run creates an image tagged model v three. In the docs page, one valid request succeeds, and an out-of-range value returns four twenty-two.
 

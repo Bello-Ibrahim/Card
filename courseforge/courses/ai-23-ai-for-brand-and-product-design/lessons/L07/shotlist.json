@@ -1,0 +1,228 @@
+{
+  "course_id": "AI-23",
+  "lesson_id": "L07",
+  "duration_s": 318.8,
+  "thumbnail": {
+    "headline": "Three Directions, One Brief",
+    "slide": {
+      "layout": "title",
+      "title": "Three Directions, One Brief",
+      "body": "Three moodboard frames side by side: A soft morning ceramics, B bright cobalt courtyard, C dark evening quiet. Small tag: AI for Brand and Product Design · Lesson 7."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.3,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "What does warm but modern look like?",
+      "voiceover": "A client says: we want it to feel warm but modern. What does that look like? In this lesson, you will see three different answers on screen, in less time than it takes to search a stock library."
+    },
+    {
+      "scene": 2,
+      "start": 16.3,
+      "end": 25.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Moodboards and Visual Direction with Image Generators",
+        "body": "AI for Brand and Product Design · Lesson 7 of 14"
+      },
+      "voiceover": "Last time, we worked with words. Now we move to images. This lesson is about moodboards and visual direction with image generators."
+    },
+    {
+      "scene": 3,
+      "start": 25.7,
+      "end": 39.4,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "designer arranging moodboard images on table",
+      "on_screen_text": "Direction before logos or screens",
+      "voiceover": "A moodboard sets the visual direction before any logo or screen exists. Image generators make moodboards faster and more specific, because you can create images for the exact mood in your brief."
+    },
+    {
+      "scene": 4,
+      "start": 39.4,
+      "end": 60.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Prompt with visual qualities",
+        "body": "Materials and textures: raw clay, recycled paper · Colour: muted terracotta and sage green · Light: soft morning window light · Era and context · Composition: close-up, flat lay, empty space"
+      },
+      "voiceover": "The key is to prompt with visual qualities. Describe materials and textures, like raw clay or recycled paper. Colour, like muted terracotta and sage green. Light, like soft morning window light. Era and context. And composition, such as close-up, flat lay, or a lot of empty space."
+    },
+    {
+      "scene": 5,
+      "start": 60.0,
+      "end": 78.4,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Qualities, never names.",
+      "voiceover": "Never prompt with the name of a living artist, a photographer or an existing brand. It is unfair to the people whose work is copied. It can create rights problems. And it makes your direction look borrowed. Qualities give you better control anyway."
+    },
+    {
+      "scene": 6,
+      "start": 78.4,
+      "end": 98.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Contrast, not variations",
+        "body": "Left (red cross): one direction, 18 similar images. Right (green tick): three directions, same brief, with one or two big variables changed (light, era)."
+      },
+      "voiceover": "Next, create contrast, not variations. One direction with eighteen images tells the client nothing. Three clearly different directions for the same brief start a real conversation. Change one or two big variables between directions, such as the light and the era, and keep the brief the same."
+    },
+    {
+      "scene": 7,
+      "start": 98.5,
+      "end": 120.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Know the tool's limits",
+        "body": "Daily limits · Quality and resolution · Public or private images · Commercial-use terms. They change: check before client use. Label: 'AI-generated reference, not final artwork'"
+      },
+      "voiceover": "And know the tool's limits. Free image generators differ in daily limits, quality, whether images are public, and what their terms allow for commercial use. These things change often. So read the current terms before you show images to a client, and label every moodboard as AI-generated reference, not final artwork."
+    },
+    {
+      "scene": 8,
+      "start": 120.8,
+      "end": 140.5,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "chef arranging colourful spices and ingredients",
+      "on_screen_text": "Write the recipe by ingredient",
+      "voiceover": "Think of a moodboard prompt as a recipe written by ingredient, not by restaurant. Tastes like that famous restaurant gives the cook nothing to work with, and copies someone else. Smoked paprika, charred peppers and lime describe the result you want. And the dish becomes yours."
+    },
+    {
+      "scene": 9,
+      "start": 140.5,
+      "end": 156.4,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "handmade ceramic bowls in pottery studio",
+      "on_screen_text": "Diego · ceramics studio · Oaxaca",
+      "voiceover": "Let's build one. Diego Hernández is a brand designer in Oaxaca, Mexico. His client is a small ceramics studio that sells tableware online. The brief says: handmade, calm, contemporary, for young professionals setting up their first home."
+    },
+    {
+      "scene": 10,
+      "start": 156.4,
+      "end": 167.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open Google Gemini in a browser and sign in with a Google account",
+        "Check the image visibility or sharing settings and keep images private",
+        "Choose a square aspect ratio for moodboard tiles (if there is no setting, add 'square format' to each prompt)"
+      ],
+      "on_screen_text": "Check visibility and format first",
+      "voiceover": "Diego opens Google Gemini in his browser and signs in. First, he checks the settings he needs, and chooses a square format for the moodboard tiles."
+    },
+    {
+      "scene": 11,
+      "start": 167.5,
+      "end": 187.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Type the Direction A prompt: 'Handmade ceramic bowls on a pale oak table, soft morning window light, muted terracotta and cream, a lot of empty space, calm contemporary kitchen, close-up photograph.'",
+        "Generate a set of images",
+        "Keep the 2 strongest images and type a short note on why each works"
+      ],
+      "on_screen_text": "Direction A: Morning Studio",
+      "voiceover": "He types the prompt for direction A. Handmade ceramic bowls on a pale oak table, soft morning window light, muted terracotta and cream, a lot of empty space, a calm contemporary kitchen, close-up photograph. He generates a set, keeps the two strongest images, and notes why."
+    },
+    {
+      "scene": 12,
+      "start": 187.6,
+      "end": 196.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Change the prompt to: 'Hands shaping raw clay, same light and palette.'",
+        "Generate and keep 2 more images for Direction A"
+      ],
+      "voiceover": "Then he varies the subject, but keeps the direction. Hands shaping raw clay, same light and palette. He keeps two more."
+    },
+    {
+      "scene": 13,
+      "start": 196.6,
+      "end": 217.2,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Type the Direction B prompt: 'Glazed ceramic plates in deep cobalt and white, hard midday shadows, bright outdoor courtyard, bold geometric composition.'",
+        "Generate images for Direction B",
+        "Type the Direction C prompt: 'Matte charcoal ceramics on dark slate, a single warm lamp at night, quiet and minimal, wide shot.'",
+        "Generate images for Direction C"
+      ],
+      "on_screen_text": "B: Courtyard Colour · C: Evening Quiet",
+      "voiceover": "Direction B changes the light and the mood. Glazed plates in deep cobalt and white, hard midday shadows, a bright outdoor courtyard, bold geometric composition. Direction C goes the other way. Matte charcoal ceramics on dark slate, a single warm lamp at night, quiet and minimal, wide shot."
+    },
+    {
+      "scene": 14,
+      "start": 217.2,
+      "end": 230.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Generate 6 images for each direction and download them",
+        "Open Figma and create three frames named 'A: Morning Studio', 'B: Courtyard Colour' and 'C: Evening Quiet'",
+        "Place 6 images in each frame"
+      ],
+      "voiceover": "He generates six images for each direction and downloads them. In Figma, he creates three frames. A, Morning Studio. B, Courtyard Colour. C, Evening Quiet. He places six images in each frame."
+    },
+    {
+      "scene": 15,
+      "start": 230.9,
+      "end": 247.2,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Under each frame, type one sentence on the idea behind the direction",
+        "Add the label 'AI-generated reference' under each frame",
+        "Zoom out to show all three frames side by side; highlight Direction A and the cobalt accent from B"
+      ],
+      "on_screen_text": "Client picks A, with B's cobalt",
+      "voiceover": "Under each frame, he writes one sentence on the idea, and adds the label AI-generated reference. The client sees three clearly different answers to warm but modern, and chooses direction A, with the cobalt accent from B."
+    },
+    {
+      "scene": 16,
+      "start": 247.2,
+      "end": 267.3,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Many images, one idea: not a moodboard",
+      "voiceover": "A common mistake is to generate dozens of images from one prompt and call it a moodboard. That shows one idea many times. Another is to prompt in the style of a well-known artist to get a quick result. Describe materials, colour, light and era instead."
+    },
+    {
+      "scene": 17,
+      "start": 267.3,
+      "end": 293.9,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Prompt with qualities, never names. 2. Three contrasting directions, same brief. 3. Check limits and terms; label 'AI-generated reference'."
+      },
+      "voiceover": "Let's recap. First, prompt with visual qualities, such as materials, colour, light, era and composition, never with the names of living artists or existing brands. Second, create three contrasting directions for the same brief, by changing one or two big variables. Third, free image generators change their limits and terms often, so check them, and label moodboard images as AI-generated references."
+    },
+    {
+      "scene": 18,
+      "start": 293.9,
+      "end": 318.8,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Logo Exploration",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will create three contrasting moodboards of six images each for your capstone brand, and write one sentence on the idea behind each. It takes about thirty-five minutes. In the next lesson, we explore logos, using AI as a sketchbook, not final art. See you there."
+    }
+  ]
+}

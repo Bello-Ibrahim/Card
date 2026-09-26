@@ -30,7 +30,7 @@
        "voiceover": "The rollback section can be short. Find the previous tags. Move the champion alias back with a small rollback script, which is the promote script from lesson fourteen in reverse. Start the previous image, check the health endpoint, send one known request, and record what happened. Aim for under ten minutes.",
        "slide": {"layout": "code", "title": "Rollback (target: under 10 minutes)", "body": "1. Find previous tags (MLflow alias previous, GHCR). 2. python rollback.py (champion → previous). 3. docker run the model-v<previous> image with MODEL_VERSION set. 4. Check /health, send one test request. 5. Record time, reason, versions."}},
       {"visual_type": "slide",
-       "voiceover": "Third, a four-minute demo. Show the system working, not slides about it. Start with the problem and the dataset, then a merge that publishes an image, a prediction and a rejected input, the dashboard and a drift report, a rollback, and one lesson learned.",
+       "voiceover": "Third, a four-minute demo. Show the system working, not slides about it. Start with the problem and the dataset, then a merge that publishes an image, a prediction and a rejected input, the dashboard and a drift report, a rollback, and one lesson learned. Keep each part short, and practise the order before you record.",
        "slide": {"layout": "diagram", "title": "3. A 4-minute demo", "body": "Timeline: problem and dataset 20s → merge publishes image 40s → prediction and rejected input 40s → dashboard and drift report 60s → rollback 60s → lesson learned 20s"}},
       {"visual_type": "stock",
        "voiceover": "The runbook is like the emergency card in an aircraft seat pocket. It is short, it uses plain steps, and someone under stress who has never read it before can follow it.",
@@ -39,7 +39,7 @@
     ],
     "Demonstrate": [
       {"visual_type": "stock",
-       "voiceover": "Kofi Mensah is an ML engineer at a hypothetical solar-energy distributor in Kumasi, Ghana. His capstone predicts which customer solar kits will need a service visit. Here is his demo.",
+       "voiceover": "Kofi Mensah is an ML engineer at a hypothetical solar-energy distributor in Kumasi, Ghana. His capstone predicts which customer solar kits will need a service visit. Here is his demo, in the suggested order.",
        "stock_query": "technician installing solar panel on house",
        "on_screen_text": "Kofi · solar energy · Kumasi"},
       {"visual_type": "screen",

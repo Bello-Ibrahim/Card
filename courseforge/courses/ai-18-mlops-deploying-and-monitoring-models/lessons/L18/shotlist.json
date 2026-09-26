@@ -1,7 +1,7 @@
 {
   "course_id": "AI-18",
   "lesson_id": "L18",
-  "duration_s": 285.4,
+  "duration_s": 291.8,
   "thumbnail": {
     "headline": "Ready for 2 a.m.?",
     "slide": {
@@ -62,7 +62,7 @@
     {
       "scene": 5,
       "start": 90.0,
-      "end": 109.3,
+      "end": 114.0,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -70,12 +70,12 @@
         "title": "3. A 4-minute demo",
         "body": "Timeline: problem and dataset 20s → merge publishes image 40s → prediction and rejected input 40s → dashboard and drift report 60s → rollback 60s → lesson learned 20s"
       },
-      "voiceover": "Third, a four-minute demo. Show the system working, not slides about it. Start with the problem and the dataset, then a merge that publishes an image, a prediction and a rejected input, the dashboard and a drift report, a rollback, and one lesson learned."
+      "voiceover": "Third, a four-minute demo. Show the system working, not slides about it. Start with the problem and the dataset, then a merge that publishes an image, a prediction and a rejected input, the dashboard and a drift report, a rollback, and one lesson learned. Keep each part short, and practise the order before you record."
     },
     {
       "scene": 6,
-      "start": 109.3,
-      "end": 123.0,
+      "start": 114.0,
+      "end": 127.7,
       "section": "Explain",
       "visual_type": "stock",
       "stock_query": "passenger reading safety card on airplane",
@@ -84,18 +84,18 @@
     },
     {
       "scene": 7,
-      "start": 123.0,
-      "end": 136.3,
+      "start": 127.7,
+      "end": 142.7,
       "section": "Demonstrate",
       "visual_type": "stock",
       "stock_query": "technician installing solar panel on house",
       "on_screen_text": "Kofi · solar energy · Kumasi",
-      "voiceover": "Kofi Mensah is an ML engineer at a hypothetical solar-energy distributor in Kumasi, Ghana. His capstone predicts which customer solar kits will need a service visit. Here is his demo."
+      "voiceover": "Kofi Mensah is an ML engineer at a hypothetical solar-energy distributor in Kumasi, Ghana. His capstone predicts which customer solar kits will need a service visit. Here is his demo, in the suggested order."
     },
     {
       "scene": 8,
-      "start": 136.3,
-      "end": 157.3,
+      "start": 142.7,
+      "end": 163.7,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -109,8 +109,8 @@
     },
     {
       "scene": 9,
-      "start": 157.3,
-      "end": 175.7,
+      "start": 163.7,
+      "end": 182.1,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -124,8 +124,8 @@
     },
     {
       "scene": 10,
-      "start": 175.7,
-      "end": 189.4,
+      "start": 182.1,
+      "end": 195.8,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -139,8 +139,8 @@
     },
     {
       "scene": 11,
-      "start": 189.4,
-      "end": 207.8,
+      "start": 195.8,
+      "end": 214.2,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -152,8 +152,8 @@
     },
     {
       "scene": 12,
-      "start": 207.8,
-      "end": 226.2,
+      "start": 214.2,
+      "end": 232.6,
       "section": "Demonstrate",
       "visual_type": "text",
       "on_screen_text": "Exact commands, tested",
@@ -161,8 +161,8 @@
     },
     {
       "scene": 13,
-      "start": 226.2,
-      "end": 249.8,
+      "start": 232.6,
+      "end": 256.2,
       "section": "Recap",
       "visual_type": "slide",
       "slide": {
@@ -174,8 +174,8 @@
     },
     {
       "scene": 14,
-      "start": 249.8,
-      "end": 270.8,
+      "start": 256.2,
+      "end": 277.2,
       "section": "CTA",
       "visual_type": "slide",
       "slide": {
@@ -187,8 +187,8 @@
     },
     {
       "scene": 15,
-      "start": 270.8,
-      "end": 285.4,
+      "start": 277.2,
+      "end": 291.8,
       "section": "CTA",
       "visual_type": "presenter_full",
       "on_screen_text": "Congratulations! Submit your capstone",
