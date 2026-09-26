@@ -1,6 +1,6 @@
 # L09 Rating and Prioritising Risks | Presenter Script
 
-Course: AI-29 · Video: 5 min · Words: 666
+Course: AI-29 · Video: 5 min · Words: 685
 
 ## Hook
 After a good audit, you may have a list of ten risks. You cannot fix all ten this week. So which two do you fix first, and how do you explain that choice to your manager?
@@ -27,7 +27,7 @@ Dewi's team fixes two first. For the ID numbers, the chatbot warns customers not
 
 Risks one and three are planned for next month, with better price data and weekly checks, more testing in regional languages, and a talk to a person button. Dewi records all four, so none is forgotten.
 
-A common mistake is to fix the most frequent risk first, because it is the most visible. But a rare, high-impact risk can matter more. Always rate both scales.
+A common mistake is to fix the most frequent risk first, because it is the most visible. But a rare, high-impact risk can matter more. Always rate both scales. Another mistake is to choose unrealistic fixes, such as rebuild the model. Pick actions the team can take soon.
 
 ## Recap
 Let's recap. First, a risk matrix rates each risk by likelihood and impact, and the highest combinations are fixed first. Second, serious, high-impact risks need attention even when they are rare, and risks that fall mainly on one group are also fairness problems. Third, realistic ways to reduce risk are better data, clear limits, human review, user warnings and monitoring.

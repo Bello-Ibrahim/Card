@@ -1,7 +1,7 @@
 {
   "course_id": "AI-27",
   "lesson_id": "L13",
-  "duration_s": 285.6,
+  "duration_s": 295.0,
   "thumbnail": {
     "headline": "The AI PRD Template",
     "slide": {
@@ -107,7 +107,7 @@
     {
       "scene": 9,
       "start": 159.5,
-      "end": 178.8,
+      "end": 182.2,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -115,12 +115,12 @@
         "title": "Section 2: Scope and capability",
         "body": "User: technicians with 1+ year of experience · Task: find and summarise repair procedures for the 3 most common models · Out of scope: models without digital manuals, anything not in a manual · Capability: retrieval + generation"
       },
-      "voiceover": "His scope: technicians with at least one year of experience, and one task, finding and summarising repair steps for the three most common machine models, with links to the source pages. Machines without digital manuals are out of scope. The capability is retrieval plus generation."
+      "voiceover": "His scope: technicians with at least one year of experience, and one task, finding and summarising repair steps for the three most common machine models, with links to the source pages. Machines without digital manuals, and any instruction not found in a manual, are out of scope. The capability is retrieval plus generation."
     },
     {
       "scene": 10,
-      "start": 178.8,
-      "end": 203.7,
+      "start": 182.2,
+      "end": 207.1,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -132,8 +132,8 @@
     },
     {
       "scene": 11,
-      "start": 203.7,
-      "end": 224.3,
+      "start": 207.1,
+      "end": 227.7,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -145,17 +145,17 @@
     },
     {
       "scene": 12,
-      "start": 224.3,
-      "end": 239.3,
+      "start": 227.7,
+      "end": 248.7,
       "section": "Demonstrate",
       "visual_type": "text",
       "on_screen_text": "Every rule could become a test",
-      "voiceover": "A common mistake is filling the template with general statements, such as the model will be accurate and safe. Every rule should be specific enough that a tester could write a test case for it."
+      "voiceover": "A common mistake is filling the template with general statements, such as the model will be accurate and safe. Every rule should be specific enough that a tester could write a test case for it. For example, never gives a torque value that is not in the retrieved section."
     },
     {
       "scene": 13,
-      "start": 239.3,
-      "end": 263.3,
+      "start": 248.7,
+      "end": 272.7,
       "section": "Recap",
       "visual_type": "slide",
       "slide": {
@@ -167,8 +167,8 @@
     },
     {
       "scene": 14,
-      "start": 263.3,
-      "end": 285.6,
+      "start": 272.7,
+      "end": 295.0,
       "section": "CTA",
       "visual_type": "presenter_full",
       "on_screen_text": "Next: Writing the Evaluation Plan",

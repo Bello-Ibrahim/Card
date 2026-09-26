@@ -25,6 +25,9 @@
        "voiceover": "For your capstone, use a template with seven headings, and keep it to one or two pages. Scope, test design, paired prompts, findings, severity, limitations and recommendations. Limitations matter. They say what your test could not show, such as few runs, one tool version, or invented cases only.",
        "slide": {"layout": "diagram", "title": "The audit template", "body": "Seven stacked blocks on a two-page outline: Scope · Test design · Paired prompts · Findings · Severity · Limitations · Recommendations. Footer: 1–2 pages."}},
       {"visual_type": "slide",
+       "voiceover": "Scope says the tool, the plan, the date, and the uses you looked at. Test design says how you tested. The paired prompts section gives a short table of your key pairs, with the full table in an appendix. Findings are three to five clear statements, each with evidence, including what worked well. Severity comes from your risk matrix.",
+       "slide": {"layout": "bullets", "title": "Filling in the template", "body": "Scope: tool, plan, date, uses · Test design: how you tested · Paired prompts: short table, full table in appendix · Findings: 3–5 statements with evidence, incl. what worked · Severity: from your L09 matrix"}},
+      {"visual_type": "slide",
        "voiceover": "Good recommendations are specific, realistic and assigned. Compare these. A weak one says, make the tool fairer. A strong one says, the HR team reviews every AI-drafted reference before sending, and checks for differences in describing words, from next month.",
        "slide": {"layout": "comparison", "title": "Weak or strong?", "body": "Weak: 'Make the tool fairer.' Strong: 'The HR team reviews every AI-drafted reference before sending, and checks for differences in describing words, from next month.' Tags on strong: specific · realistic · assigned."}},
       {"visual_type": "text",
@@ -47,10 +50,13 @@
        "voiceover": "Her findings. The chatbot gave a wrong deadline in two of five fact checks. Replies to international students added visa warnings nobody asked for, in three of three runs. Staff would need to share student ID numbers for some tasks. And the tone was polite and clear in every test.",
        "slide": {"layout": "bullets", "title": "Findings", "body": "Wrong deadline: 2 of 5 checks · Unrequested visa warnings: 3 of 3 runs · Student ID numbers needed for some tasks · Tone polite and clear (what worked well)"}},
       {"visual_type": "slide",
-       "voiceover": "Wrong deadlines are the highest priority, because students could miss one. Then she writes three recommendations. Staff check every date and fee on the university website, owned by the team lead. Staff use placeholders instead of names or ID numbers, owned by Rania. And the paired tests are repeated each term, owned by the quality officer.",
-       "slide": {"layout": "comparison", "title": "Severity and recommendations", "body": "Left: Highest priority: wrong deadlines · High: student IDs · High: visa warnings. Right: 1. Check dates and fees (team lead, next week) · 2. Placeholders only (Rania, this month) · 3. Repeat tests each term (quality officer)."}},
+       "voiceover": "Wrong deadlines are the highest priority, because students could miss one. Student ID sharing and the visa warnings are high priority. Her limitations are honest. A small number of runs, one tool version, and invented cases only.",
+       "slide": {"layout": "bullets", "title": "Severity and limitations", "body": "Highest priority: wrong deadlines · High: student ID sharing · High: visa warnings. Limitations: few runs · one tool version · invented cases only"}},
+      {"visual_type": "slide",
+       "voiceover": "Then she writes three recommendations. Staff check every date and fee on the university website, owned by the team lead. Staff use placeholders instead of names or ID numbers, owned by Rania. And the paired tests are repeated each term, owned by the quality officer.",
+       "slide": {"layout": "bullets", "title": "Recommendations", "body": "Three recommendation cards with owners: 1. Check dates and fees (team lead, next week) · 2. Placeholders only (Rania, this month) · 3. Repeat tests each term (quality officer)."}},
       {"visual_type": "text",
-       "voiceover": "A common mistake is a long report with strong claims. Keep it short, lead with the most serious findings, and state your limitations. Legal questions belong to course AI thirty.",
+       "voiceover": "A common mistake is a long report with strong claims. Keep it short, lead with the most serious findings, and state your limitations. Make every recommendation specific, realistic and assigned. This is a practical audit, not a legal review. Legal questions belong to course AI thirty and to your organisation's legal team.",
        "on_screen_text": "Short, evidenced, honest"}
     ],
     "Recap": [
@@ -59,8 +65,11 @@
        "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Short: tested, found, how serious, what changes. 2. Seven-part template. 3. Specific, realistic, assigned; limited-test language."}}
     ],
     "CTA": [
+      {"visual_type": "slide",
+       "voiceover": "Now it is your turn. This exercise is the final step of your capstone. Write a one to two page audit report on your chosen tool, with your test results, your risk ratings and at least three recommendations. Check it against the capstone rubric, then submit it.",
+       "slide": {"layout": "bullets", "title": "Your capstone: final step", "body": "1–2 page audit report · test results · risk ratings · 3+ recommendations · check against the rubric · submit"}},
       {"visual_type": "presenter_full",
-       "voiceover": "Now it is your turn. This exercise is the final step of your capstone. Write a one to two page audit report on your chosen tool, with your test results, your risk ratings and at least three recommendations. Check it against the capstone rubric, then submit it. Congratulations on finishing AI Ethics, Bias and Safety. You now have the skills to question, test and improve the AI tools around you. Well done.",
+       "voiceover": "Congratulations on finishing AI Ethics, Bias and Safety. You now have the skills to question, test and improve the AI tools around you. Well done.",
        "on_screen_text": "Submit your capstone audit"}
     ]
   }

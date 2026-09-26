@@ -1,7 +1,7 @@
 {
   "course_id": "AI-29",
   "lesson_id": "L10",
-  "duration_s": 250.8,
+  "duration_s": 296.6,
   "thumbnail": {
     "headline": "Five Minutes to Decide",
     "slide": {
@@ -49,7 +49,20 @@
     {
       "scene": 4,
       "start": 54.5,
-      "end": 72.1,
+      "end": 79.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Filling in the template",
+        "body": "Scope: tool, plan, date, uses · Test design: how you tested · Paired prompts: short table, full table in appendix · Findings: 3–5 statements with evidence, incl. what worked · Severity: from your L09 matrix"
+      },
+      "voiceover": "Scope says the tool, the plan, the date, and the uses you looked at. Test design says how you tested. The paired prompts section gives a short table of your key pairs, with the full table in an appendix. Findings are three to five clear statements, each with evidence, including what worked well. Severity comes from your risk matrix."
+    },
+    {
+      "scene": 5,
+      "start": 79.8,
+      "end": 97.4,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -60,18 +73,18 @@
       "voiceover": "Good recommendations are specific, realistic and assigned. Compare these. A weak one says, make the tool fairer. A strong one says, the HR team reviews every AI-drafted reference before sending, and checks for differences in describing words, from next month."
     },
     {
-      "scene": 5,
-      "start": 72.1,
-      "end": 82.8,
+      "scene": 6,
+      "start": 97.4,
+      "end": 108.1,
       "section": "Explain",
       "visual_type": "text",
       "on_screen_text": "Write 'in 4 of 5 runs'",
       "voiceover": "And write carefully. Say in four of five runs, not the tool is biased. This is honest, and it makes your report harder to dismiss."
     },
     {
-      "scene": 6,
-      "start": 82.8,
-      "end": 102.9,
+      "scene": 7,
+      "start": 108.1,
+      "end": 128.2,
       "section": "Explain",
       "visual_type": "stock",
       "stock_query": "mechanic writing inspection report next to car",
@@ -79,9 +92,9 @@
       "voiceover": "Think of a car inspection report. The mechanic does not write a novel. They list what they checked, what is wrong, how urgent each problem is, and what to repair first. They also say what they could not check. Then the owner can make a clear decision."
     },
     {
-      "scene": 7,
-      "start": 102.9,
-      "end": 119.6,
+      "scene": 8,
+      "start": 128.2,
+      "end": 144.9,
       "section": "Demonstrate",
       "visual_type": "stock",
       "stock_query": "university staff member working at desk",
@@ -89,9 +102,9 @@
       "voiceover": "Let's look at a short audit. Rania Haddad works in student services at a university in Jordan. Her team plans to use a free chatbot to draft replies to student questions. First, she writes her scope and test design."
     },
     {
-      "scene": 8,
-      "start": 119.6,
-      "end": 138.0,
+      "scene": 9,
+      "start": 144.9,
+      "end": 163.3,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -102,9 +115,9 @@
       "voiceover": "She tested replies about fees, deadlines and student support, but not questions in other languages. She ran six paired prompts, changing name, nationality, age or disability, three runs each. She also did five fact checks against the university website, and a privacy review."
     },
     {
-      "scene": 9,
-      "start": 138.0,
-      "end": 159.4,
+      "scene": 10,
+      "start": 163.3,
+      "end": 184.7,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -115,31 +128,44 @@
       "voiceover": "Her findings. The chatbot gave a wrong deadline in two of five fact checks. Replies to international students added visa warnings nobody asked for, in three of three runs. Staff would need to share student ID numbers for some tasks. And the tone was polite and clear in every test."
     },
     {
-      "scene": 10,
-      "start": 159.4,
-      "end": 183.4,
+      "scene": 11,
+      "start": 184.7,
+      "end": 200.6,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
-        "layout": "comparison",
-        "title": "Severity and recommendations",
-        "body": "Left: Highest priority: wrong deadlines · High: student IDs · High: visa warnings. Right: 1. Check dates and fees (team lead, next week) · 2. Placeholders only (Rania, this month) · 3. Repeat tests each term (quality officer)."
+        "layout": "bullets",
+        "title": "Severity and limitations",
+        "body": "Highest priority: wrong deadlines · High: student ID sharing · High: visa warnings. Limitations: few runs · one tool version · invented cases only"
       },
-      "voiceover": "Wrong deadlines are the highest priority, because students could miss one. Then she writes three recommendations. Staff check every date and fee on the university website, owned by the team lead. Staff use placeholders instead of names or ID numbers, owned by Rania. And the paired tests are repeated each term, owned by the quality officer."
-    },
-    {
-      "scene": 11,
-      "start": 183.4,
-      "end": 196.3,
-      "section": "Demonstrate",
-      "visual_type": "text",
-      "on_screen_text": "Short, evidenced, honest",
-      "voiceover": "A common mistake is a long report with strong claims. Keep it short, lead with the most serious findings, and state your limitations. Legal questions belong to course AI thirty."
+      "voiceover": "Wrong deadlines are the highest priority, because students could miss one. Student ID sharing and the visa warnings are high priority. Her limitations are honest. A small number of runs, one tool version, and invented cases only."
     },
     {
       "scene": 12,
-      "start": 196.3,
+      "start": 200.6,
       "end": 219.9,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Recommendations",
+        "body": "Three recommendation cards with owners: 1. Check dates and fees (team lead, next week) · 2. Placeholders only (Rania, this month) · 3. Repeat tests each term (quality officer)."
+      },
+      "voiceover": "Then she writes three recommendations. Staff check every date and fee on the university website, owned by the team lead. Staff use placeholders instead of names or ID numbers, owned by Rania. And the paired tests are repeated each term, owned by the quality officer."
+    },
+    {
+      "scene": 13,
+      "start": 219.9,
+      "end": 242.2,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Short, evidenced, honest",
+      "voiceover": "A common mistake is a long report with strong claims. Keep it short, lead with the most serious findings, and state your limitations. Make every recommendation specific, realistic and assigned. This is a practical audit, not a legal review. Legal questions belong to course AI thirty and to your organisation's legal team."
+    },
+    {
+      "scene": 14,
+      "start": 242.2,
+      "end": 265.8,
       "section": "Recap",
       "visual_type": "slide",
       "slide": {
@@ -150,13 +176,26 @@
       "voiceover": "Let's recap. First, a good audit report is short, and says what you tested, what you found, how serious it is and what should change. Second, use the template: scope, test design, paired prompts, findings, severity, limitations and recommendations. Third, recommendations should be specific, realistic and assigned, and findings should be described as limited tests."
     },
     {
-      "scene": 13,
-      "start": 219.9,
-      "end": 250.8,
+      "scene": 15,
+      "start": 265.8,
+      "end": 285.9,
+      "section": "CTA",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Your capstone: final step",
+        "body": "1–2 page audit report · test results · risk ratings · 3+ recommendations · check against the rubric · submit"
+      },
+      "voiceover": "Now it is your turn. This exercise is the final step of your capstone. Write a one to two page audit report on your chosen tool, with your test results, your risk ratings and at least three recommendations. Check it against the capstone rubric, then submit it."
+    },
+    {
+      "scene": 16,
+      "start": 285.9,
+      "end": 296.6,
       "section": "CTA",
       "visual_type": "presenter_full",
       "on_screen_text": "Submit your capstone audit",
-      "voiceover": "Now it is your turn. This exercise is the final step of your capstone. Write a one to two page audit report on your chosen tool, with your test results, your risk ratings and at least three recommendations. Check it against the capstone rubric, then submit it. Congratulations on finishing AI Ethics, Bias and Safety. You now have the skills to question, test and improve the AI tools around you. Well done."
+      "voiceover": "Congratulations on finishing AI Ethics, Bias and Safety. You now have the skills to question, test and improve the AI tools around you. Well done."
     }
   ]
 }

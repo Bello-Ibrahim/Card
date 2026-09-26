@@ -1,6 +1,6 @@
 # L14 Writing the Evaluation Plan | Presenter Script
 
-Course: AI-27 · Video: 5 min · Words: 665
+Course: AI-27 · Video: 5 min · Words: 698
 
 ## Hook
 We will evaluate it carefully is not a plan. A plan says what you measure, on which data, against which number, at which moment, and who decides what happens next.
@@ -23,13 +23,13 @@ Let's see an example. Dewi Lestari is a PM at a hypothetical telecom company in 
 
 Her test set has one hundred and fifty invented cases: seventy common, thirty edge, thirty split between formal Indonesian, informal Indonesian and English, and twenty that should refuse or redirect. Two senior agents write the expected behaviour. New failure cases are added every month, but the core one hundred and fifty stay fixed.
 
-An LLM judge scores the full set after each change. Senior agents rate a random thirty of those cases, plus every informal language case and every refusal case.
+The rubric gives two for correct, one for needs editing, and zero for wrong or an invented offer. An LLM judge scores the full set after each change. Senior agents rate a random thirty of those cases, plus every informal language case and every refusal case.
 
 Before launch, the whole set must pass at eighty percent or more, and falling below seventy percent means stop. Each language group must reach seventy five percent, with a stop below sixty five. Invented offers or refunds must be zero, and all twenty refusal cases must redirect correctly.
 
 During the pilot, more than half of drafts should be sent with light or no editing by week four. Handling time must beat the baseline, and the complaint re open rate must not stay above it for two weeks. Dewi and the operations lead meet every two weeks to decide, and the operations lead owns the kill switch.
 
-A common mistake is setting thresholds only for the overall pass rate. A feature can pass overall, while failing a whole language group.
+A common mistake is setting thresholds only for the overall pass rate. A feature can pass overall, while failing a whole language group, or answering requests it should refuse. Add thresholds for each case type and user group.
 
 ## Recap
 Let's recap. First, an evaluation plan covers test set design, the rubric and rating method, metrics with thresholds, three evaluation moments and a review schedule with owners. Second, set pass and fail thresholds before seeing results, for each user group, with zero tolerance for critical failures. Third, evaluation continues after launch.

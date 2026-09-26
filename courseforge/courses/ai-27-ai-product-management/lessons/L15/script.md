@@ -1,6 +1,6 @@
 # L15 Reviewing and Presenting Your PRD | Presenter Script
 
-Course: AI-27 · Video: 5 min · Words: 640
+Course: AI-27 · Video: 5 min · Words: 695
 
 ## Hook
 The best time to find the weak point in your AI PRD is before the engineering lead, the legal team or your users find it. A structured review, and an honest presentation of trade offs, make that possible.
@@ -21,13 +21,15 @@ Before a long flight, pilots walk around the aircraft with a checklist, even aft
 ## Demonstrate
 Let's see it in action. Lucía Romero is a PM at a hypothetical agricultural supply distributor in Argentina. Farmers send orders as free text messages. Her feature reads each message and fills a draft order, which staff confirm.
 
-The checklist finds two gaps. There is no plan for messages that mix product names with local nicknames, and no fail threshold for wrong quantities. She adds a coverage note, and a zero tolerance threshold for quantity errors.
+The checklist finds two gaps. There is no plan for messages that mix product names with local nicknames, and no fail threshold for wrong quantities. She adds a coverage note, and a zero tolerance threshold for quantity errors. Both gaps were easy to miss, and both were cheap to fix on paper.
 
 Then Claude, acting as a critical engineering lead, asks questions such as, what happens when a message contains two orders for different farms? And who is responsible when a confirmed order has a wrong quantity? Lucía adds a failure path for multi order messages. And she writes a clear rule: staff confirmation is the final check, and the confirm screen highlights all quantities.
 
+Claude also asks how she will know if the product catalogue changes, and the model starts using old names. So she adds a catalogue change trigger for test set reruns.
+
 To the operations director, she says: the feature drafts orders, and staff still confirm each one. We chose this over automatic orders, because a wrong quantity is costly. We do not yet know quality for local nicknames, and the pilot will tell us in four weeks. I am asking for approval of a four week pilot with two staff members.
 
-A common mistake is presenting only the benefits. Stakeholders can approve an honest pilot much more easily than they can recover from a surprise failure.
+A common mistake is presenting only the benefits. Stakeholders can approve an honest pilot much more easily than they can recover from a surprise failure. Present the known limits, and a plan to learn the unknowns.
 
 ## Recap
 Let's recap. First, review your AI PRD with a checklist covering problem, tool choice, scope, data, failure paths, behaviour spec, metrics, guardrails, rollout and cost. Second, use a peer or Claude as a critical engineering lead, and decide yourself which questions matter. Third, present trade offs honestly, and ask for one clear decision.

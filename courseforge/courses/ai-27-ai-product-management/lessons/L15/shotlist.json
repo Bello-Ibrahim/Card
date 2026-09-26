@@ -1,7 +1,7 @@
 {
   "course_id": "AI-27",
   "lesson_id": "L15",
-  "duration_s": 274.4,
+  "duration_s": 298.0,
   "thumbnail": {
     "headline": "Find the Weak Point First",
     "slide": {
@@ -108,7 +108,7 @@
     {
       "scene": 9,
       "start": 147.1,
-      "end": 163.4,
+      "end": 169.4,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -116,12 +116,12 @@
         "title": "Checklist finds two gaps",
         "body": "Q4 Data: local product nicknames not covered → coverage note added. Q7 Metrics: no fail threshold for wrong quantities → zero-tolerance threshold added."
       },
-      "voiceover": "The checklist finds two gaps. There is no plan for messages that mix product names with local nicknames, and no fail threshold for wrong quantities. She adds a coverage note, and a zero tolerance threshold for quantity errors."
+      "voiceover": "The checklist finds two gaps. There is no plan for messages that mix product names with local nicknames, and no fail threshold for wrong quantities. She adds a coverage note, and a zero tolerance threshold for quantity errors. Both gaps were easy to miss, and both were cheap to fix on paper."
     },
     {
       "scene": 10,
-      "start": 163.4,
-      "end": 190.4,
+      "start": 169.4,
+      "end": 196.4,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -133,8 +133,17 @@
     },
     {
       "scene": 11,
-      "start": 190.4,
-      "end": 216.1,
+      "start": 196.4,
+      "end": 209.3,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Catalogue changes trigger a test rerun",
+      "voiceover": "Claude also asks how she will know if the product catalogue changes, and the model starts using old names. So she adds a catalogue change trigger for test set reruns."
+    },
+    {
+      "scene": 12,
+      "start": 209.3,
+      "end": 235.0,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -145,18 +154,18 @@
       "voiceover": "To the operations director, she says: the feature drafts orders, and staff still confirm each one. We chose this over automatic orders, because a wrong quantity is costly. We do not yet know quality for local nicknames, and the pilot will tell us in four weeks. I am asking for approval of a four week pilot with two staff members."
     },
     {
-      "scene": 12,
-      "start": 216.1,
-      "end": 226.8,
+      "scene": 13,
+      "start": 235.0,
+      "end": 250.4,
       "section": "Demonstrate",
       "visual_type": "text",
       "on_screen_text": "Show the limits and the unknowns",
-      "voiceover": "A common mistake is presenting only the benefits. Stakeholders can approve an honest pilot much more easily than they can recover from a surprise failure."
+      "voiceover": "A common mistake is presenting only the benefits. Stakeholders can approve an honest pilot much more easily than they can recover from a surprise failure. Present the known limits, and a plan to learn the unknowns."
     },
     {
-      "scene": 13,
-      "start": 226.8,
-      "end": 249.5,
+      "scene": 14,
+      "start": 250.4,
+      "end": 273.1,
       "section": "Recap",
       "visual_type": "slide",
       "slide": {
@@ -167,9 +176,9 @@
       "voiceover": "Let's recap. First, review your AI PRD with a checklist covering problem, tool choice, scope, data, failure paths, behaviour spec, metrics, guardrails, rollout and cost. Second, use a peer or Claude as a critical engineering lead, and decide yourself which questions matter. Third, present trade offs honestly, and ask for one clear decision."
     },
     {
-      "scene": 14,
-      "start": 249.5,
-      "end": 274.4,
+      "scene": 15,
+      "start": 273.1,
+      "end": 298.0,
       "section": "CTA",
       "visual_type": "presenter_full",
       "on_screen_text": "Submit your capstone PRD",

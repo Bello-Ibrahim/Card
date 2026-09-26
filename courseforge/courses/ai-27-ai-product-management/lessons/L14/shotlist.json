@@ -1,7 +1,7 @@
 {
   "course_id": "AI-27",
   "lesson_id": "L14",
-  "duration_s": 285.2,
+  "duration_s": 299.3,
   "thumbnail": {
     "headline": "Limits Before the Cracks",
     "slide": {
@@ -121,7 +121,7 @@
     {
       "scene": 10,
       "start": 168.9,
-      "end": 180.9,
+      "end": 188.6,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -129,12 +129,12 @@
         "title": "Rating method",
         "body": "Rubric: 2 correct and follows policy · 1 needs editing · 0 wrong, invents an offer or refund, or answers when it should redirect · LLM judge scores all cases · Humans rate a random 30 + every informal-language and refusal case"
       },
-      "voiceover": "An LLM judge scores the full set after each change. Senior agents rate a random thirty of those cases, plus every informal language case and every refusal case."
+      "voiceover": "The rubric gives two for correct, one for needs editing, and zero for wrong or an invented offer. An LLM judge scores the full set after each change. Senior agents rate a random thirty of those cases, plus every informal language case and every refusal case."
     },
     {
       "scene": 11,
-      "start": 180.9,
-      "end": 201.5,
+      "start": 188.6,
+      "end": 209.2,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -146,8 +146,8 @@
     },
     {
       "scene": 12,
-      "start": 201.5,
-      "end": 226.4,
+      "start": 209.2,
+      "end": 234.1,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -159,17 +159,17 @@
     },
     {
       "scene": 13,
-      "start": 226.4,
-      "end": 236.3,
+      "start": 234.1,
+      "end": 250.4,
       "section": "Demonstrate",
       "visual_type": "text",
       "on_screen_text": "Thresholds for every group",
-      "voiceover": "A common mistake is setting thresholds only for the overall pass rate. A feature can pass overall, while failing a whole language group."
+      "voiceover": "A common mistake is setting thresholds only for the overall pass rate. A feature can pass overall, while failing a whole language group, or answering requests it should refuse. Add thresholds for each case type and user group."
     },
     {
       "scene": 14,
-      "start": 236.3,
-      "end": 258.2,
+      "start": 250.4,
+      "end": 272.3,
       "section": "Recap",
       "visual_type": "slide",
       "slide": {
@@ -181,8 +181,8 @@
     },
     {
       "scene": 15,
-      "start": 258.2,
-      "end": 285.2,
+      "start": 272.3,
+      "end": 299.3,
       "section": "CTA",
       "visual_type": "presenter_full",
       "on_screen_text": "Next: Reviewing and Presenting Your PRD",

@@ -1,6 +1,6 @@
 # L13 Writing the AI PRD: Structure and Scope | Presenter Script
 
-Course: AI-27 · Video: 5 min · Words: 666
+Course: AI-27 · Video: 5 min · Words: 688
 
 ## Hook
 A standard PRD describes what the product should do. An AI PRD must also describe what it should do when it is wrong, unsure, or asked something it should not answer. This week, you write one.
@@ -21,13 +21,13 @@ Remember the talented new colleague from lesson one? A normal PRD is like a job 
 ## Demonstrate
 Let's look at an example. Haruto Sato is a PM at a hypothetical industrial equipment company in Japan. Field technicians repair packaging machines at customer sites, and often search long manuals on their phones.
 
-His scope: technicians with at least one year of experience, and one task, finding and summarising repair steps for the three most common machine models, with links to the source pages. Machines without digital manuals are out of scope. The capability is retrieval plus generation.
+His scope: technicians with at least one year of experience, and one task, finding and summarising repair steps for the three most common machine models, with links to the source pages. Machines without digital manuals, and any instruction not found in a manual, are out of scope. The capability is retrieval plus generation.
 
 His behaviour spec says the assistant must answer only from retrieved manual sections, and show the source page for every step. It must never invent a step, a part number or a torque value. When unsure, it says it could not find this in the manual, and suggests calling support. And it refuses requests to bypass safety locks.
 
 For human oversight, a senior technician reviews thirty random answers each week, and can block a manual section that often gives wrong answers. In his FigJam flow, when no section matches, the technician sees the closest sections, and a call support button with the fault already filled in.
 
-A common mistake is filling the template with general statements, such as the model will be accurate and safe. Every rule should be specific enough that a tester could write a test case for it.
+A common mistake is filling the template with general statements, such as the model will be accurate and safe. Every rule should be specific enough that a tester could write a test case for it. For example, never gives a torque value that is not in the retrieved section.
 
 ## Recap
 Let's recap. First, an AI PRD keeps the standard sections, and adds scope, experience for errors, data, a behaviour spec, evaluation, failure modes, oversight, guardrails and monitoring. Second, the behaviour spec turns vague goals into must, must never, unsure and refusal rules, with examples. Third, every statement should be specific enough to build and to test.

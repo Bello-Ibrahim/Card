@@ -38,7 +38,7 @@ Let's recap. First, the main risks are unfair outcomes, privacy, misuse, harmful
 Now it is your turn. In the exercise below, complete a risk and guardrail table for your feature, with at least one row for each risk type, and an owner for every guardrail. It takes about twenty five minutes. You will reuse it in your capstone PRD. In the next lesson, we plan the launch: pilots, rollouts and monitoring. See you there.
 
 ## Thumbnail
-Headline: Every Guardrail Needs Owner
+Headline: Guardrails Need Owners
 Image: Navy background, a building cross-section with a smoke detector, fire door and exit sign, each with a small name tag, headline in teal Inter Bold.
 
 ## Production Notes
