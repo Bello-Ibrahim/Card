@@ -1,0 +1,73 @@
+{
+  "title": "Finding AI Opportunities in Your Product",
+  "thumbnail": {
+    "headline": "Start From the Pain",
+    "image": "Navy background, a user journey line with six dots; two dots glow teal with a small warning icon above them, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Start From the Pain", "body": "A horizontal user journey with six steps; two steps highlighted in teal as pain points. Small tag: AI Product Management · Lesson 3."}
+  },
+  "production_notes": [
+    "[VERSION] Claude free-plan limits and data-use terms must be checked before recording (exercise tool).",
+    "Camila Rocha and the language-learning app in Brazil are hypothetical; stock footage must not show a real app interface or logo.",
+    "Scene with the opportunity table shows the five ideas from content.md with Keep or Remove marked."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Ask any team to find places for AI, and you will get a long list in an hour. Most of the list will be features nobody asked for. The skill is not generating ideas. It is finding the few that start from a real user problem.",
+       "on_screen_text": "Find the few that matter"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Last time, we looked at the capability menu. Now, where do you use it? A strong AI opportunity usually has three ingredients at the same time.",
+       "slide": {"layout": "title", "title": "Finding AI Opportunities in Your Product", "body": "AI Product Management · Lesson 3 of 15"}},
+      {"visual_type": "slide",
+       "voiceover": "First, a real user pain. Users already lose time, money or confidence at this step, and you can point to evidence, such as support tickets, funnel drop off or interview notes. Second, a repeated judgement task. Someone makes the same kind of decision again and again, across varied cases. Third, available data. Could you get examples of good and bad outcomes?",
+       "slide": {"layout": "diagram", "title": "Three ingredients", "body": "Three overlapping circles: Real user pain (with evidence) · Repeated judgement task · Available data. The centre overlap is labelled 'Strong opportunity'."}},
+      {"visual_type": "slide",
+       "voiceover": "A useful method is to walk the user journey. At each step, ask where users struggle, where they wait, where they make a judgement, and where your staff do repetitive reviewing. Mark those points, then check each one against the three ingredients.",
+       "slide": {"layout": "diagram", "title": "Walk the user journey", "body": "Journey line with steps; question tags above each: struggle? wait? judgement? repetitive review? Marked points flow into a three-ingredient check."}},
+      {"visual_type": "stock",
+       "voiceover": "Also look behind the product. Some of the best opportunities are internal, helping support staff or moderators with repeated judgement tasks. These often carry lower risk, because a trained employee sees the output before any customer does.",
+       "stock_query": "customer support team working at computers",
+       "on_screen_text": "Look at internal workflows too"},
+      {"visual_type": "stock",
+       "voiceover": "Think of a good doctor. A good doctor does not start with the newest medicine and look for a patient. They start with the symptoms, find the cause, and then choose a treatment. AI is one possible treatment. The user pain is the symptom, and the journey walk is the examination.",
+       "stock_query": "doctor listening to patient in clinic",
+       "on_screen_text": "Symptoms first, treatment second"},
+      {"visual_type": "text",
+       "voiceover": "The common trap is solution first thinking: adding AI because it is popular, or because leadership asked for it. When you hear we need AI, translate it into a question. Which user problem, at which step, would this solve?",
+       "on_screen_text": "Which user problem, at which step?"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's see an example. Camila Rocha is a PM at a hypothetical language learning app in Brazil. Learners study English and Spanish on their phones, and leadership wants more AI in the product.",
+       "stock_query": "young person studying language on phone",
+       "on_screen_text": "Camila · language app · Brazil"},
+      {"visual_type": "slide",
+       "voiceover": "Camila walks the journey with her team: sign up, placement test, daily lessons, speaking practice, reviewing mistakes and renewing. At each step, she collects evidence from support tickets, app reviews and interview notes.",
+       "slide": {"layout": "diagram", "title": "Camila's journey walk", "body": "Six steps: Sign-up → Placement test → Daily lessons → Speaking practice → Reviewing mistakes → Renewal. Evidence icons below: tickets, app reviews, interview notes."}},
+      {"visual_type": "slide",
+       "voiceover": "Three ideas pass the check. Feedback on spoken answers, because learners do not know if their speaking is correct, although consent to use recordings must be checked. Explanations of each mistake, because many tickets ask why is this wrong. And a review plan based on past mistakes, because learners forget old words.",
+       "slide": {"layout": "bullets", "title": "Keep", "body": "Feedback on spoken answers (data question: consent for recordings) · Explanation of each mistake (tickets ask 'why is this wrong?') · Review plan from past mistakes (learners forget old words)"}},
+      {"visual_type": "slide",
+       "voiceover": "Two ideas are removed. AI written push notifications have no clear user problem. And an AI mascot that chats about the weather has no evidence of pain at all. The mascot was leadership's favourite idea.",
+       "slide": {"layout": "comparison", "title": "Remove", "body": "AI-written push notifications: weak pain, low judgement → remove for now. AI mascot that chats about the weather: no evidence of pain → remove."}},
+      {"visual_type": "slide",
+       "voiceover": "Camila does not argue about taste. She shows that no user evidence supports it, and that each kept idea connects to a measurable problem. The discussion moves from do we have AI, to which learner problem do we solve first.",
+       "slide": {"layout": "quote", "title": "The conversation changes", "body": "From: 'Do we have AI?' To: 'Which learner problem do we solve first?'"}},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is judging an opportunity by how impressive the demo would be. Start every description with the user and the pain, before you name any AI capability.",
+       "on_screen_text": "User and pain before capability"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, a strong opportunity combines a real user pain, a repeated judgement task and data you can get. Second, walk the user journey and internal workflows to find judgement points. Third, translate we need AI into which user problem at which step, and remove ideas with no evidence of pain.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Pain + repeated judgement + data. 2. Walk the journey and internal workflows. 3. Remove ideas with no evidence of pain."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below, ask Claude for ten AI opportunities for a product you know, then remove any that do not start from a real user problem. It takes about twenty five minutes. In the next lesson, we score your opportunities on value, feasibility and risk. See you there.",
+       "on_screen_text": "Next: Scoring Opportunities"}
+    ]
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "title": "Scoring Opportunities: Value, Feasibility and Risk",
+  "thumbnail": {
+    "headline": "Score the Cost of Errors",
+    "image": "Navy background, a three-column score card labelled V, F and E with teal bars, the E column highlighted, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Score the Cost of Errors", "body": "Score card with three bars: Value, Feasibility, Error cost (highlighted). Formula underneath: V + F + (6 − E). Small tag: AI Product Management · Lesson 4."}
+  },
+  "production_notes": [
+    "[VERSION] Google Sheets formula and sorting features used in the exercise must be checked before recording.",
+    "Youssef Amrani and the car insurance company in Morocco are hypothetical; no real insurer names or logos in stock footage.",
+    "The scoring table slide must match content.md exactly: A 13, B 8, C 13, D 10, E 9, E2 11. The formula is shown on screen, not read symbol by symbol."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Two AI ideas can promise the same value. One costs staff a few minutes when it is wrong. The other pays money to the wrong person when it is wrong. A good scoring method sees that difference before anyone writes code.",
+       "on_screen_text": "Same value, very different risk"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Last time, you found opportunities that start from real user pain. Now you need to choose. You already know how to prioritise a backlog. For AI features, add one dimension that normal scoring often ignores: the cost of errors.",
+       "slide": {"layout": "title", "title": "Scoring Opportunities: Value, Feasibility and Risk", "body": "AI Product Management · Lesson 4 of 15"}},
+      {"visual_type": "slide",
+       "voiceover": "Score each idea from one to five on three dimensions. Value: how much it helps users and the business. Feasibility: do you have the data, the skills and a realistic technical path? And error cost: how bad is a wrong output? One means a user loses a few seconds. Five means financial, legal, safety or serious trust harm.",
+       "slide": {"layout": "bullets", "title": "Three scores, 1 to 5", "body": "Value (V): users, frequency, pain · Feasibility (F): data, skills, technical path · Error cost (E): 1 = a few seconds lost … 5 = financial, legal, safety or trust harm"}},
+      {"visual_type": "slide",
+       "voiceover": "Because a high error cost is bad, flip it before you add. The total is value plus feasibility plus six minus error cost, with a maximum of fifteen. Keep the formula visible and the same for every idea, and write one sentence of reasoning next to each score.",
+       "slide": {"layout": "code", "title": "The formula", "body": "Total = V + F + (6 − E)   · maximum 15 · same formula for every idea · one sentence of reasoning per score"}},
+      {"visual_type": "slide",
+       "voiceover": "The most useful insight comes from ideas with high value and high error cost. Do not simply drop them. Ask whether a narrower scope lowers the error cost. Suggest instead of decide. Keep a human in the loop. Limit it to low stakes cases, or help staff instead of customers. Then score the narrow version as a new row.",
+       "slide": {"layout": "bullets", "title": "High value, high risk? Narrow it", "body": "Suggest instead of decide · Human in the loop · Low-stakes cases only · Help staff instead of customers → score it as a new row"}},
+      {"visual_type": "stock",
+       "voiceover": "Think of an investment committee. It does not only ask how much a project could earn. It also asks what could go wrong, and how much it would lose. A risky project might still be approved, but with a smaller first investment. Narrowing an AI feature is that smaller first investment.",
+       "stock_query": "business committee meeting around table",
+       "on_screen_text": "Narrow scope = smaller first investment"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's see it in action. Youssef Amrani is a PM at a hypothetical car insurance company in Morocco. His team has five AI ideas for the claims journey, and they score each one.",
+       "stock_query": "car insurance claim paperwork on desk",
+       "on_screen_text": "Youssef · car insurance · Morocco"},
+      {"visual_type": "slide",
+       "voiceover": "A plain language summary of claim status scores thirteen. A checklist of missing documents also scores thirteen. Both use data the company already has, and a wrong output is easy to notice and correct. Flagging possible fraud for human reviewers scores ten.",
+       "slide": {"layout": "comparison", "title": "Scoring five ideas", "body": "Table V / F / E / 6−E / Total: A. Claim status summary 4/5/2/4/13 · B. Repair cost from photos 5/2/5/1/8 · C. Missing documents checklist 3/5/1/5/13 · D. Fraud flags for reviewers 4/3/3/3/10 · E. Auto-approve small claims 5/3/5/1/9. Highlight A and C."}},
+      {"visual_type": "slide",
+       "voiceover": "Automatically approving small claims has the highest value, but a very high error cost. A wrong approval pays money, and a wrong rejection harms a customer. It scores nine. So Youssef writes a narrower version: suggest approve or refer, and a claims officer confirms every decision.",
+       "slide": {"layout": "comparison", "title": "Narrow the risky idea", "body": "E. Auto-approve small claims: V5 F3 E5 → 9. E2. Suggest approve or refer; officer confirms every decision: V4 F3 E2 → 11."}},
+      {"visual_type": "slide",
+       "voiceover": "The narrow version scores four, three and two, for a total of eleven. It is now a serious candidate, and it creates labelled data from officer decisions that could support a wider version later.",
+       "slide": {"layout": "diagram", "title": "E2 creates data", "body": "E2 suggestion → officer confirms or changes → labelled decision stored → arrow to 'wider version later?'"}},
+      {"visual_type": "slide",
+       "voiceover": "Repair cost from photos scores only eight, because the company has few labelled photos. Youssef notes it as a data problem to revisit, not a dead idea. His top three are the status summary, the checklist and the narrow approval suggestion.",
+       "slide": {"layout": "bullets", "title": "Youssef's top 3", "body": "A. Claim status summary · C. Missing documents checklist · E2. Approve-or-refer suggestion with officer review. Parked: B. Repair cost from photos (data problem to revisit)"}},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is scoring only value and feasibility, so the most dangerous ideas rise to the top. Always score error cost separately, and test a narrower scope first.",
+       "on_screen_text": "Score error cost separately"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, score AI opportunities on value, feasibility and error cost, with the same formula for every idea. Second, feasibility depends mostly on data. An idea without examples is not ready, however valuable. Third, for high value, high risk ideas, score a narrower version with human confirmation before you decide.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Value, feasibility and error cost, one formula. 2. Feasibility depends mostly on data. 3. Score a narrower version of risky ideas."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below, score your ideas from the last lesson in a Google Sheets matrix and choose your top three, with one sentence of reasoning each. It takes about twenty five minutes. In the next lesson, we look at scoping an MVP AI feature. See you there.",
+       "on_screen_text": "Next: Scoping an MVP AI Feature"}
+    ]
+  }
+}

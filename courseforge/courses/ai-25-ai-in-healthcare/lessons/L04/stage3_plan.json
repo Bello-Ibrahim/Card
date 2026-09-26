@@ -1,0 +1,138 @@
+{
+  "title": "Reading Performance Claims",
+  "thumbnail": {
+    "headline": "90% Accurate? Check Again",
+    "image": "Navy background, a brochure badge reading 90% next to a grid of 1,000 small dots with a few teal true alerts and many grey false alerts, headline in teal Inter Bold.",
+    "slide": {
+      "layout": "title",
+      "title": "90% Accurate? Check Again",
+      "body": "A badge '90%' beside a 2x2 confusion matrix icon and a smoke alarm icon. Small tag: AI in Healthcare · Lesson 4 · synthetic figures."
+    }
+  },
+  "production_notes": [
+    "Clinical reviewer sign-off required.",
+    "All figures are synthetic, created for teaching; the voiceover says so where numbers appear. Every number on screen must match content.md exactly: Setting 1 (prevalence 10%): TP 90, FP 90, FN 10, TN 810; sensitivity 90.0%, specificity 90.0%, PPV 50.0%, NPV 98.8%. Setting 2 (prevalence 1%): TP 9, FP 99, FN 1, TN 891; sensitivity 90.0%, specificity 90.0%, PPV 8.3%, NPV 99.9%. Calculations were checked with python3 in Stage 2.",
+    "Label every data slide 'Synthetic figures for teaching'.",
+    "[VERIFY] Any real diagnostic performance figure for a named tool must be checked against its published source before it is added. No real tool or figure appears in this lesson.",
+    "Dr. Aigerim Seitkali (Kazakhstan) and the tool are hypothetical. The lesson explains how to read claims; it gives no advice on whether to use any real tool."
+  ],
+  "sections": {
+    "Hook": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "A brochure says a tool is ninety percent accurate. You use it on a thousand patients in a screening clinic, and for every correct alert, there are about eleven false ones. Nobody lied. This lesson explains how that happens.",
+        "on_screen_text": "Nobody lied. So what happened?"
+      }
+    ],
+    "Explain": [
+      {
+        "visual_type": "slide",
+        "voiceover": "In the last lesson, we followed how a clinical model is built and tested. Now we learn to read the numbers that come out of that testing. Every result from a yes or no tool falls into one of four boxes, called a confusion matrix.",
+        "slide": {
+          "layout": "diagram",
+          "title": "The confusion matrix",
+          "body": "2x2 grid. Columns: Condition present / Condition absent. Rows: Tool positive / Tool negative. Cells: True positive (TP) · False positive (FP) · False negative (FN) · True negative (TN)."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "From these four boxes come the measures in performance claims. Sensitivity asks: of the people who have the condition, what share does the tool find? Specificity asks: of the people who do not have it, what share does the tool correctly clear? Positive predictive value asks: when the tool says positive, how often is it right?",
+        "slide": {
+          "layout": "code",
+          "title": "Three key measures",
+          "body": "Sensitivity = TP / (TP + FN)\nSpecificity = TN / (TN + FP)\nPPV = TP / (TP + FP)\nNPV = TN / (TN + FN)"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Sensitivity and specificity describe the tool. But predictive values depend on the tool and on how common the condition is in the people tested. This is called prevalence. When a condition is rare, even a small false positive rate produces many false alarms, compared with the few true cases. A single accuracy number can hide this.",
+        "slide": {
+          "layout": "comparison",
+          "title": "Tool vs. setting",
+          "body": "Left: Sensitivity, Specificity → describe the tool. Right: PPV, NPV → depend on the tool AND prevalence. Footnote: 'Accuracy' alone can hide false alarms."
+        }
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "When a condition is rare, a tool that says negative for everyone can have very high accuracy, and still miss every case.",
+        "on_screen_text": "High accuracy can miss every case"
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "Here is a simple way to picture it. Think of a smoke alarm. A sensitive alarm rarely misses a fire. But in a kitchen where people cook every day, it will often sound for toast. Real fires are rare, so most alarms are false, even though the alarm works exactly as designed.",
+        "stock_query": "smoke alarm on kitchen ceiling toast",
+        "on_screen_text": "Rare fires, many alarms for toast"
+      }
+    ],
+    "Demonstrate": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's work through an example. All the numbers here are synthetic, created for teaching. Doctor Aigerim Seitkali, a hospital physician in Kazakhstan, is reviewing a hypothetical tool that flags a condition for specialist review. The supplier states a sensitivity of ninety percent and a specificity of ninety percent. She works through a thousand synthetic patients in two settings.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Aigerim's review · synthetic figures",
+          "body": "Hypothetical tool · Supplier claim: sensitivity 90%, specificity 90% · 1,000 synthetic patients · Two settings: specialist clinic and general screening"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Setting one is a specialist clinic, where the prevalence is ten percent. So one hundred of the thousand patients have the condition. The tool finds ninety of them, and misses ten. Of the nine hundred without the condition, it wrongly flags ninety.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Setting 1 · prevalence 10% · synthetic",
+          "body": "Confusion matrix: Present (100) / Absent (900). Tool positive: TP 90 | FP 90. Tool negative: FN 10 | TN 810."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "So when the tool says positive, it is right ninety times out of one hundred and eighty. The positive predictive value is fifty percent. Half of the flags are real cases. And when it says negative, it is right ninety-eight point eight percent of the time.",
+        "slide": {
+          "layout": "code",
+          "title": "Setting 1 results · synthetic",
+          "body": "Sensitivity = 90 / 100 = 90.0%\nSpecificity = 810 / 900 = 90.0%\nPPV = 90 / (90 + 90) = 50.0%\nNPV = 810 / (810 + 10) = 98.8%"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Setting two is general screening, where the prevalence is one percent. Now only ten of the thousand patients have the condition. The tool finds nine and misses one. But of the nine hundred and ninety without the condition, it wrongly flags ninety-nine.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Setting 2 · prevalence 1% · synthetic",
+          "body": "Confusion matrix: Present (10) / Absent (990). Tool positive: TP 9 | FP 99. Tool negative: FN 1 | TN 891."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Sensitivity is still ninety percent, and specificity is still ninety percent. But the positive predictive value falls to eight point three percent, while the negative predictive value is ninety-nine point nine percent. Only about one in twelve flags is a true case, and specialists would review about eleven false alarms for each real one.",
+        "slide": {
+          "layout": "comparison",
+          "title": "Same tool, different setting · synthetic",
+          "body": "Setting 1 (prevalence 10%): sensitivity 90.0% · specificity 90.0% · PPV 50.0%. Setting 2 (prevalence 1%): sensitivity 90.0% · specificity 90.0% · PPV 8.3%. Highlight the PPV drop."
+        }
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "The tool is identical in both settings. Aigerim concludes that it may be useful in the specialist clinic, but needs a careful review of workload and harm before any use in screening. A common mistake is to read sensitivity as the chance that a positive result is correct. That is positive predictive value, and it falls sharply when a condition is rare.",
+        "on_screen_text": "Sensitivity is not PPV"
+      }
+    ],
+    "Recap": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, sensitivity and specificity describe how the tool behaves in people with and without the condition, while predictive values tell you how far to trust a result. Second, positive predictive value depends on prevalence, so the same tool gives many more false alarms when a condition is rare. Third, check any real figure against its published source and setting.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. Sensitivity and specificity describe the tool; PPV and NPV describe trust in a result. 2. PPV depends on prevalence. 3. Check real figures against the published source and setting."
+        }
+      }
+    ],
+    "CTA": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Now it is your turn. In the exercise below this video, you will use a synthetic results table to calculate sensitivity, specificity and positive predictive value at two prevalence levels, and explain the difference in two sentences. It takes about twenty minutes. In the next lesson, we look at levels of evidence, from study to real-world use. See you there.",
+        "on_screen_text": "Next: Levels of Evidence"
+      }
+    ]
+  }
+}

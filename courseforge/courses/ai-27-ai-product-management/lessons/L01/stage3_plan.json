@@ -1,0 +1,74 @@
+{
+  "title": "What Changes When the Product Is AI",
+  "thumbnail": {
+    "headline": "Calculator or New Colleague?",
+    "image": "Navy background, split card: a simple calculator icon on the left and a friendly colleague silhouette with a speech bubble on the right, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Calculator or New Colleague?", "body": "Left half: calculator icon with a tick. Right half: colleague silhouette with a speech bubble and a small question mark. Small tag: AI Product Management · Lesson 1."}
+  },
+  "production_notes": [
+    "[VERSION] Claude free-plan limits and data-use terms must be checked before recording (the exercise mentions Claude as optional).",
+    "Linh Nguyen and the hotel booking site in Vietnam are hypothetical; stock footage must not show a real booking brand, app or logo.",
+    "The audience is product managers: the script covers only what AI changes and does not reteach core PM skills.",
+    "The failure table on scenes 9 and 10 comes from the content.md worked example; show it as two columns, price filter and AI review summary."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "A search filter for hotels under one hundred dollars will never show a hotel at one hundred and forty. But an AI summary of reviews can say guests love the quiet rooms, when three guests complained about noise. Only one feature can be confidently wrong.",
+       "on_screen_text": "Only one can be confidently wrong"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Hi, and welcome to AI Product Management. You already know how to discover, design and deliver a feature. So in this course, we focus only on what changes when the feature depends on an AI model.",
+       "slide": {"layout": "title", "title": "What Changes When the Product Is AI", "body": "AI Product Management · Lesson 1 of 15"}},
+      {"visual_type": "slide",
+       "voiceover": "Traditional software is deterministic. The same input gives the same output every time. If a filter shows the wrong hotels, there is a bug. An engineer fixes it, and it stays fixed.",
+       "slide": {"layout": "diagram", "title": "Deterministic", "body": "Input box → arrow → same output every time (three identical output cards). Small note: a bug is found, fixed and stays fixed."}},
+      {"visual_type": "slide",
+       "voiceover": "AI features are probabilistic. A model gives the most likely answer, based on patterns it learned from data. Most answers are useful. Some are wrong, and a wrong answer often looks just as confident as a right one. The same input can even give a slightly different answer on a second run.",
+       "slide": {"layout": "diagram", "title": "Probabilistic", "body": "Input box → model → three slightly different output cards; two with green ticks, one with a red cross that looks just as confident."}},
+      {"visual_type": "slide",
+       "voiceover": "Three things follow for product work. First, quality is a rate, not a yes or no. You cannot say the summary works. You can say nine out of ten summaries on our test set were accurate. Second, quality depends on data. Missing languages or old information show up as product problems.",
+       "slide": {"layout": "bullets", "title": "What follows for product work", "body": "1. Quality is a rate, not yes or no (e.g. 9 of 10 accurate on a test set) · 2. Quality depends on data · 3. Model limits shape the design"}},
+      {"visual_type": "slide",
+       "voiceover": "Third, model limits shape the design. You must design what the user sees when the model is wrong, unsure or unable to answer. That failure experience is part of the feature, not an edge case for later. And done now means the quality rate is high enough, with a plan to keep checking after launch.",
+       "slide": {"layout": "comparison", "title": "What does done mean?", "body": "Normal feature: code passes its tests. AI feature: quality rate is high enough for this use + a plan to keep checking after launch."}},
+      {"visual_type": "stock",
+       "voiceover": "Here is a simple way to picture it. A normal feature is like a calculator. It is always right, or it is broken.",
+       "stock_query": "hand using calculator on office desk",
+       "on_screen_text": "Normal feature = calculator"},
+      {"visual_type": "stock",
+       "voiceover": "An AI feature is like a talented new colleague. They are fast and often impressive. But they need clear instructions, they sometimes make mistakes with great confidence, and you check their work until you know where to trust them. You would not fire them for one mistake. And you would not let them sign contracts on their first day.",
+       "stock_query": "new employee presenting work to manager",
+       "on_screen_text": "AI feature = talented new colleague"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's see this in practice. Linh Nguyen is a product manager at a hypothetical hotel booking site in Vietnam. Her team is adding an AI summary of guest reviews to each hotel page, next to the existing price filter.",
+       "stock_query": "hotel booking website on laptop screen",
+       "on_screen_text": "Linh · hotel booking site · Vietnam"},
+      {"visual_type": "slide",
+       "voiceover": "Linh builds a simple table for her team. How can each feature fail? The price filter fails when a bug shows the wrong hotels. The summary can invent a detail, miss a common complaint, or reflect only recent reviews. And the filter fails every time until it is fixed, while the summary fails for some share of hotels.",
+       "slide": {"layout": "comparison", "title": "How can it fail?", "body": "Price filter: a bug shows hotels outside the range; fails every time until fixed. AI review summary: invents a detail, misses a common complaint, reflects only recent reviews; fails for some share of summaries."}},
+      {"visual_type": "slide",
+       "voiceover": "How do users notice? With the filter, the price on the page looks wrong. With the summary, users often notice only when they arrive at the hotel. So the product must respond differently. Link each claim to real reviews, label the summary as generated by AI, add a report button, and check a sample every week.",
+       "slide": {"layout": "comparison", "title": "Notice and respond", "body": "Price filter: price looks wrong → fix the bug, add a test. AI summary: noticed at the hotel → link claims to reviews · 'Summary generated by AI' label · report button · weekly sample check."}},
+      {"visual_type": "slide",
+       "voiceover": "The table changes the conversation. The engineering lead had estimated two weeks, like any other feature. Now the team adds a set of test hotels to measure quality, the report button and a weekly review. Linh also sees reviews in Vietnamese, English and Korean, so she asks about quality for each language.",
+       "slide": {"layout": "bullets", "title": "New work a filter never needed", "body": "Test hotels to measure summary quality · Report button · Weekly sample review · Open question: summary quality for each language (Vietnamese, English, Korean)"}},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is writing acceptance criteria like the summary is accurate. That cannot be tested as one yes or no. Write a rate on a defined test set instead, such as at least nine of ten summaries contain no invented claims. Then design what happens for the rest.",
+       "on_screen_text": "Write criteria as rates on a test set"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, AI features are probabilistic. They give likely answers, and some are wrong while looking confident. Second, quality becomes a rate you measure on test data and keep watching after launch. Third, the experience for errors, such as sources, labels and fallbacks, is part of the feature from the start.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. AI features are probabilistic: some confident answers are wrong. 2. Quality is a rate measured on test data, watched after launch. 3. Design the error experience from the start."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below, compare a normal feature with an AI feature in a failure table, and find one AI failure that users would not notice. It takes about twenty minutes. In the next lesson, we look at the AI capability menu. See you there.",
+       "on_screen_text": "Next: The AI Capability Menu"}
+    ]
+  }
+}

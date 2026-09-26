@@ -1,9 +1,9 @@
 # L15 Capstone Part 1: Build Your Detection App | Presenter Script
 
-Course: AI-19 · Video: 5 min · Words: 622
+Course: AI-19 · Video: 5 min · Words: 702
 
 ## Hook
-A notebook that only you can run is an experiment. An app where a shop manager uploads a photo and sees fourteen cartons is a product. Today, you start building that app.
+A notebook that only you can run is an experiment. An app where a shop manager uploads a photo and sees fourteen cartons is a product. Today, you start building that app. And every choice you make today should serve that one number.
 
 ## Explain
 This is the first of two capstone lessons. Your capstone is an object detection and counting app for one real use case. Choose one that is narrow, and that counts objects, not people. For example, stock on shop shelves in Casablanca, or vehicles on a road in Manila.
@@ -14,6 +14,8 @@ Third, write one counting function that returns an annotated image and the total
 
 Watch the colour order. Gradio gives your function red, green, blue. But the Ultralytics package treats arrays as blue, green, red, like OpenCV. So convert on the way in, and convert the annotated result back on the way out.
 
+Over this lesson and the next, you deliver five things. The working app, a test table on at least twenty new images or clips, one measured improvement, a fitness check, and a three-minute demo. The rubric scores each of these, so keep them in mind as you build.
+
 Think of the model as the engine, and the interface as the dashboard. The driver does not need to see the engine. They need a clear speed reading and a warning light.
 
 ## Demonstrate
@@ -23,7 +25,7 @@ In Colab, he installs Ultralytics and Gradio, and uploads his trained model file
 
 He runs the cell and opens the temporary link. He uploads a shelf photo with fourteen cartons, and moves the slider. You'll see something like count thirteen. A carton behind a price label is missed, just as in training. He notes it for the next lesson.
 
-To keep the app running, he creates a new Space on Hugging Face, with Gradio and free CPU hardware. He uploads three files. The app code, the model file, and a requirements file that lists Ultralytics and Gradio.
+To keep the app running, he creates a new Space on Hugging Face, with Gradio and free CPU hardware. He uploads three files. The app code, the model file, and a requirements file that lists Ultralytics and Gradio. Free Space hardware has no GPU and has limits, so he uses the smallest model and keeps any videos short.
 
 When the build finishes, he tests the Space with a new photo. Before he makes it public, he checks two things. The app shows no people, and the detector's licence allows public use. Remember, the Ultralytics YOLO licence must be checked before commercial use.
 

@@ -1,0 +1,165 @@
+{
+  "course_id": "AI-24",
+  "lesson_id": "L10",
+  "duration_s": 269.0,
+  "thumbnail": {
+    "headline": "Why Was I Declined?",
+    "slide": {
+      "layout": "title",
+      "title": "Why Was I Declined?",
+      "body": "A decline letter: vague grey line crossed out, three clear numbered reasons in teal below. Small tag: AI in Finance and Fintech · Lesson 10."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.4,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Based on a number of factors?",
+      "voiceover": "Your application was unsuccessful. This decision was based on a number of factors. Imagine receiving that message after applying for a loan for your family business. What would you do next? You would not know. And that is the problem this lesson solves."
+    },
+    {
+      "scene": 2,
+      "start": 18.4,
+      "end": 43.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Explainability: Why Was I Declined?",
+        "body": "Lesson 10 of 14. Three audience icons: Customers (why, what to change) · Staff (explain and check) · Supervisors and auditors (evidence it works and is fair)"
+      },
+      "voiceover": "In lessons six and seven, we measured whether decisions are fair. Now we ask whether they can be explained. Three groups need to understand a credit decision. Customers need to know why they were declined, and what they could change. Staff need to explain and check decisions. And supervisors and auditors need evidence that the model works as intended."
+    },
+    {
+      "scene": 3,
+      "start": 43.7,
+      "end": 54.8,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Rules differ by country",
+      "voiceover": "In many countries, lenders must give applicants the main reasons for a decline. The rules differ from place to place, and lesson eleven looks at examples."
+    },
+    {
+      "scene": 4,
+      "start": 54.8,
+      "end": 76.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Tool 1: Reason codes",
+        "body": "Short standard statements for the factors that lowered the score most. Examples: 'Payments missed in the last 12 months' · 'High level of existing debt compared with income'"
+      },
+      "voiceover": "Lenders use two main tools. Reason codes are short, standard statements linked to the factors that lowered a score the most. For example, high level of existing debt compared with income. In a scorecard, they come directly from the points. In a machine learning model, they come from an explanation method."
+    },
+    {
+      "scene": 5,
+      "start": 76.7,
+      "end": 97.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Tool 2: Feature importance",
+        "body": "Global: which features matter most across all decisions (model owner, validator). Local: which features moved this applicant's score (decline reasons). Both are estimates: test them."
+      },
+      "voiceover": "The second tool is feature importance. Global importance shows which features matter most across all decisions. Local importance shows which features pushed one applicant's score up or down. That is what a decline reason needs. These methods give estimates, not perfect truth, so they must be tested too."
+    },
+    {
+      "scene": 6,
+      "start": 97.3,
+      "end": 126.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "A good decline reason is",
+        "body": "True · Specific · Understandable (no jargon) · Actionable where possible · Respectful. Never a protected characteristic or proxy."
+      },
+      "voiceover": "There is a big difference between an accurate explanation and a comforting one. We had a very high number of applications this month may feel kind. But if it is not the real reason, it is misleading, and it stops the customer fixing the real problem. A good reason is true, specific, understandable, actionable where possible, and respectful. And it never names a protected characteristic or a proxy."
+    },
+    {
+      "scene": 7,
+      "start": 126.4,
+      "end": 140.5,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "doctor explaining results to patient",
+      "on_screen_text": "True, specific, useful",
+      "voiceover": "It is like a doctor explaining a test result. Your results were not ideal is kind but useless. Your blood pressure is high, and reducing salt could help, is true, specific and useful."
+    },
+    {
+      "scene": 8,
+      "start": 140.5,
+      "end": 164.5,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Youssef's top three factors",
+        "body": "Table: Debt payments ÷ income 52% → large negative · Missed payments, last 12 months: 2 → medium negative · Card balance ÷ limit 95% → small negative"
+      },
+      "voiceover": "Youssef Hassan applies for a personal loan at Nile Gate Finance, a hypothetical lender in Cairo, Egypt. The model declines him. The top three factors are his debt payments, at fifty-two percent of his income, two missed payments in the last twelve months, and a credit card balance at ninety-five percent of its limit."
+    },
+    {
+      "scene": 9,
+      "start": 164.5,
+      "end": 172.2,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "System draft",
+        "body": "Declined: DTI > threshold; delinquency_12m = 2; utilisation high."
+      },
+      "voiceover": "The system's first draft is accurate, but full of jargon and abbreviations. A customer would not understand it."
+    },
+    {
+      "scene": 10,
+      "start": 172.2,
+      "end": 198.3,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "Nour's rewrite",
+        "body": "\"We could not approve your application at this time. The main reasons were: 1. Your current monthly debt payments are high compared with your income. 2. Two payments were missed on your existing accounts in the last 12 months. 3. Your credit card balance is close to its limit. You can apply again later.\""
+      },
+      "voiceover": "The credit officer, Nour El-Sayed, rewrites it. We could not approve your application at this time. The main reasons were: your monthly debt payments are high compared with your income. Two payments were missed in the last twelve months. And your credit card balance is close to its limit. Reducing your debt and paying on time can improve future applications."
+    },
+    {
+      "scene": 11,
+      "start": 198.3,
+      "end": 218.0,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Trace every reason to the data",
+      "voiceover": "She checks that each reason matches the data and the order of importance, and that the letter makes no promise of future approval. A common mistake is to let a tool write reasons with no check. Every reason must be traced back to that applicant's data."
+    },
+    {
+      "scene": 12,
+      "start": 218.0,
+      "end": 242.0,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Three audiences need explanations. 2. Reason codes and local importance: test and check. 3. True, specific, understandable, actionable, respectful."
+      },
+      "voiceover": "Let's recap. First, customers, staff and supervisors all need explanations, and many countries require decline reasons. Second, reason codes and local feature importance show which factors lowered one applicant's score, and they must be tested and checked. Third, a good decline reason is true, specific, understandable, actionable and respectful. A comforting but inaccurate reason is misleading."
+    },
+    {
+      "scene": 13,
+      "start": 242.0,
+      "end": 269.0,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Regulatory Principles",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will write customer-friendly decline reasons for three synthetic applicants. Ask an AI assistant to check them for jargon, without adding new reasons. Then confirm that each reason matches the data. It takes about twenty-five minutes. Next week, we start with regulatory principles for AI in finance. See you there."
+    }
+  ]
+}

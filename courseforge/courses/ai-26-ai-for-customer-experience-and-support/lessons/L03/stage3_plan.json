@@ -1,0 +1,79 @@
+{
+  "title": "Writing a Knowledge Base That AI Can Use",
+  "thumbnail": {
+    "headline": "Clean Content, Better Answers",
+    "image": "Navy background, a messy pile of papers on the left turning into three neat labelled article cards on the right, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Clean Content, Better Answers", "body": "Left: tangled pile of notes and emails. Arrow. Right: three tidy article cards, each with a title, a date and an owner line. Small tag: AI for Customer Experience and Support · Lesson 3."}
+  },
+  "production_notes": [
+    "[VERSION] Free-plan access and data-use terms of Claude and ChatGPT: check current plans and how chat content is used before recording.",
+    "Chukwuemeka and the Lagos electronics shop are fictional; the 'up to 5 extra working days' and 'some states' details come from the made-up internal email.",
+    "Kestrel Bikes (exercise) is a made-up company. Learners remove personal and confidential data before pasting anything into an AI tool.",
+    "Slide 'AI draft vs source note' must show a clearly fake tracking address (for example 'track-new-courier-example'), never a real web address."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Most support teams have plenty of content. But it lives in long emails, old documents and the heads of experienced colleagues. An AI assistant cannot use that. Today we turn it into short, clear articles that customers and AI can both use.",
+       "on_screen_text": "From messy notes to clear articles"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "In the last lesson, we saw that an AI assistant is only as good as the content it can find. So how do we write that content? An article that works well for AI has the same features as one that works well for a busy customer. Five features matter most.",
+       "slide": {"layout": "title", "title": "Writing a Knowledge Base That AI Can Use", "body": "AI for Customer Experience and Support · Lesson 3 of 12"}},
+      {"visual_type": "slide",
+       "voiceover": "First, one topic per article. An article called delivery information that covers prices, times, tracking, damaged parcels and returns is hard to search. Split it into separate articles, such as how to track your order, and what to do if your parcel is damaged.",
+       "slide": {"layout": "diagram", "title": "1. One topic per article", "body": "One large box 'Delivery information' (prices, times, tracking, damage, returns) splits into small boxes: 'How to track your order' · 'What to do if your parcel is damaged' · more."}},
+      {"visual_type": "slide",
+       "voiceover": "Second, a clear title in the customer's words. How do I change my delivery address, is better than address modification procedure.",
+       "slide": {"layout": "comparison", "title": "2. Titles in the customer's words", "body": "Better (green): 'How do I change my delivery address?' Worse (grey): 'Address modification procedure'."}},
+      {"visual_type": "slide",
+       "voiceover": "Third, short steps and plain language. Use numbered steps, short sentences and one idea per sentence. Be careful with words like usually, or in most cases. AI may repeat a vague rule as if it were a firm promise.",
+       "slide": {"layout": "bullets", "title": "3. Short steps, plain language", "body": "Numbered steps · short sentences · one idea per sentence · watch vague words: 'usually', 'in most cases'."}},
+      {"visual_type": "slide",
+       "voiceover": "Fourth, a review date, because old articles are a main reason for wrong answers. And fifth, an owner, such as the logistics team. When something changes, everybody knows who must update the article.",
+       "slide": {"layout": "code", "title": "4 and 5. Review date and owner", "body": "Last reviewed: 12 March\nOwner: Logistics team"}},
+      {"visual_type": "slide",
+       "voiceover": "AI can help you write these articles. Paste an internal note into Claude or ChatGPT, and ask for a clean article with a set structure. But AI can also add details, drop an exception, or make a rule sound more certain than it is. So there is one firm rule. A person checks every fact against the source before publishing.",
+       "slide": {"layout": "diagram", "title": "AI drafts, a person checks", "body": "Internal note → AI assistant → draft article → person with a checklist compares every fact with the note → publish. Warning icons on the draft: added detail · missing exception · rule too certain."}},
+      {"visual_type": "text",
+       "voiceover": "And before you paste anything, remove personal data, such as customer names, phone numbers and order numbers, and anything confidential. Follow your company's AI tool policy.",
+       "on_screen_text": "Remove personal data before you paste"},
+      {"visual_type": "stock",
+       "voiceover": "Think of a well-organised pharmacy shelf. Each medicine has its own box, a clear label and an expiry date. If all the medicines were mixed in one big bag, even an expert would make mistakes.",
+       "stock_query": "neat pharmacy shelves with labelled boxes",
+       "on_screen_text": "One box, one label, one date"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's see an example. Chukwuemeka leads support at a hypothetical online electronics shop in Lagos, Nigeria. The logistics manager sends a long email about delivery delays. It mixes several topics.",
+       "stock_query": "team leader reading long email on laptop",
+       "on_screen_text": "Electronics shop · Lagos, Nigeria"},
+      {"visual_type": "slide",
+       "voiceover": "Heavy rain has slowed deliveries to some states. A courier partner has changed. Customers in affected areas should expect up to five extra working days. Old tracking links no longer work. And agents may offer free re-delivery if a parcel is returned by mistake.",
+       "slide": {"layout": "bullets", "title": "One email, five topics", "body": "Rain delays in some states · new courier partner · up to 5 extra working days · old tracking links broken · free re-delivery (agents only)"}},
+      {"visual_type": "slide",
+       "voiceover": "He removes staff names and internal phone numbers. Then he asks the AI assistant for two customer articles, one on delivery delays, one on tracking after the courier change. He asks for question titles, short numbered steps, review and owner lines, and only facts from the note.",
+       "slide": {"layout": "code", "title": "His prompt", "body": "Turn this note into two customer help articles.\n1: delivery delays in affected areas.\n2: how to track your order after the courier change.\nQuestion titles, short numbered steps, plain language.\nAdd 'Last reviewed' and 'Owner'. Use only facts in the note."}},
+      {"visual_type": "slide",
+       "voiceover": "The drafts look good. But when he checks them against the email, he finds two problems. The first draft says all deliveries are delayed, but the email says some states. The second draft invents a new tracking website address.",
+       "slide": {"layout": "comparison", "title": "AI draft vs source note", "body": "Draft: 'All deliveries are delayed' ↔ Note: 'some states' (red). Draft: invented tracking address ↔ Note: no address given (red)."}},
+      {"visual_type": "slide",
+       "voiceover": "He corrects both, adds the list of affected states, and publishes. The free re-delivery rule is for agents, not customers, so he keeps it in an internal article.",
+       "slide": {"layout": "diagram", "title": "The result", "body": "Two published customer articles (green ticks) + one internal article for agents: 'Free re-delivery'."}},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is to paste a whole knowledge base into an AI tool and call it ready. Long, mixed, out-of-date articles give long, mixed, out-of-date answers. Cleaning the content is the most important part of the project.",
+       "on_screen_text": "Clean the content first"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, good articles have one topic, a clear title in the customer's words, short steps, a review date and an owner. Second, AI can turn messy notes into clean drafts quickly, but it may add, remove or change facts. Third, a person checks every fact against the source, and personal data is removed before pasting.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. One topic · customer's words · short steps · review date · owner. 2. AI drafts fast but can add, drop or change facts. 3. A person checks every fact; remove personal data first."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Your turn. In the exercise, you will use an AI assistant to turn a messy note from a made-up bike shop into two clean articles. Then you will check every fact against the note, and list what you corrected. In the next lesson, we look at brand voice and reply drafting. See you there.",
+       "on_screen_text": "Next: Brand Voice and Reply Drafting"}
+    ]
+  }
+}

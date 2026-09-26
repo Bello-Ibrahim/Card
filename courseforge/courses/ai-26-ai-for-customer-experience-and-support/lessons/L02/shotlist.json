@@ -1,0 +1,192 @@
+{
+  "course_id": "AI-26",
+  "lesson_id": "L02",
+  "duration_s": 299.9,
+  "thumbnail": {
+    "headline": "Why Did It Say 60?",
+    "slide": {
+      "layout": "title",
+      "title": "Why Did It Say 60?",
+      "body": "Chat bubble with '60 days' and a red question mark; next to it a policy card reading '30 days'. Small tag: AI for Customer Experience and Support · Lesson 2."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.0,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Where did sixty days come from?",
+      "voiceover": "A customer asks a chatbot, can I get a refund after forty-five days? The chatbot replies at once, politely and with confidence: yes, you have sixty days. The real policy says thirty. So where did sixty come from? Let's find out."
+    },
+    {
+      "scene": 2,
+      "start": 18.0,
+      "end": 27.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "How AI Assistants Answer Questions",
+        "body": "AI for Customer Experience and Support · Lesson 2 of 12"
+      },
+      "voiceover": "In the last lesson, we saw where AI helps in support. Today we look inside an AI assistant. It has two main parts."
+    },
+    {
+      "scene": 3,
+      "start": 27.9,
+      "end": 52.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Part 1: The language model",
+        "body": "Knows: grammar, tone, many languages (green ticks). Does not know: your refund policy, your prices, your delivery times (grey crosses)."
+      },
+      "voiceover": "The first part is the language model. This is the part that reads and writes text, like the model behind Claude or ChatGPT. It learned from a huge amount of text, so it is good at language. But it does not know your company. It has never seen your refund policy, your prices or your delivery times."
+    },
+    {
+      "scene": 4,
+      "start": 52.3,
+      "end": 75.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Part 2: Your content",
+        "body": "Customer question → search the knowledge base → most relevant articles + instruction 'Answer using only this text' → language model → answer. Caption: Grounding."
+      },
+      "voiceover": "The second part is your own content: help articles, policies, product guides and approved answers. When a customer asks a question, a well-built assistant first searches your content for the most relevant parts. Then it gives them to the model with an instruction: answer using only this text. This is often called grounding."
+    },
+    {
+      "scene": 5,
+      "start": 75.4,
+      "end": 93.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "When grounding fails: 1",
+        "body": "Content missing → the model fills the gap → confident, invented answer. Label: Hallucination."
+      },
+      "voiceover": "Problems happen when this process fails. If the content is missing, the model may fill the gap with something that sounds likely. A guessed answer sounds just as confident as a correct one. This invented answer is often called a hallucination."
+    },
+    {
+      "scene": 6,
+      "start": 93.0,
+      "end": 117.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "When grounding fails: 2 to 4",
+        "body": "Out-of-date content → old answer repeated · Wrong article found → another country or product · Weak instructions → no permission to say 'I don't know'"
+      },
+      "voiceover": "There are three other problems. The content can be out of date, so an old article that says sixty days is repeated faithfully, but it is still wrong. The search can find the wrong article, for another country or product. And weak instructions can push the assistant to answer anyway, instead of saying, I don't know."
+    },
+    {
+      "scene": 7,
+      "start": 117.0,
+      "end": 134.1,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "new employee reading handbook at desk",
+      "on_screen_text": "A new agent with a handbook",
+      "voiceover": "Here is a simple way to picture it. Imagine a new support agent on their first day. They write well and are very polite. With a correct handbook, they give good answers. With an old handbook, they give old answers."
+    },
+    {
+      "scene": 8,
+      "start": 134.1,
+      "end": 153.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "Permission to say",
+        "body": "\"I'm not sure. Let me ask a colleague.\""
+      },
+      "voiceover": "And if the page they need is missing, a nervous new agent may guess, instead of admitting they do not know. An AI assistant is similar. It is only as good as its handbook, and it needs clear permission to say, I will ask a colleague."
+    },
+    {
+      "scene": 9,
+      "start": 153.8,
+      "end": 164.9,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "woman testing chat on laptop in bright office",
+      "on_screen_text": "Furniture retailer · Norway",
+      "voiceover": "Let's see this in practice. Ingrid works in support for a hypothetical furniture retailer in Norway. She is testing an AI assistant before it goes live."
+    },
+    {
+      "scene": 10,
+      "start": 164.9,
+      "end": 186.3,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Test 1: an invented answer",
+        "body": "Chat: 'Do you deliver to the islands in the north?' → 'Yes, everywhere in Norway, 5 working days, no extra cost.' Beside it, the real article: mainland cities only. '5 days' and 'no extra cost' highlighted in red as invented."
+      },
+      "voiceover": "She asks, do you deliver to the islands in the north? The assistant answers: yes, we deliver everywhere in Norway within five working days, at no extra cost. But the delivery article only covers mainland cities. The assistant invented a delivery time and a free delivery promise that nobody approved."
+    },
+    {
+      "scene": 11,
+      "start": 186.3,
+      "end": 207.3,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Two fixes",
+        "body": "1. Add the missing article: island delivery rules from the delivery team. 2. Add an instruction: 'If the answer is not in the knowledge base, say you are not sure and offer a person.'"
+      },
+      "voiceover": "Ingrid makes two changes. First, she asks the delivery team for the correct island delivery rules, and adds a short article. Second, she adds an instruction: if the answer is not in the knowledge base, say you are not sure, and offer to connect the customer with a person."
+    },
+    {
+      "scene": 12,
+      "start": 207.3,
+      "end": 224.9,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Test 2: after the fixes",
+        "body": "Island delivery → approved answer (green tick). Delivery to Sweden → 'I'm not sure. Shall I connect you with a colleague?' (green tick)."
+      },
+      "voiceover": "She tests again. For island delivery, the assistant now gives the approved answer. For a question about delivery to Sweden, which is still not covered, it says it is not sure, and offers a person. That is exactly what she wants."
+    },
+    {
+      "scene": 13,
+      "start": 224.9,
+      "end": 248.5,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Confident is not the same as correct",
+      "voiceover": "One common mistake is to believe that a confident, well-written answer is probably correct. With language models, tone tells you nothing about accuracy. A model writes a wrong answer with the same calm confidence as a right one. So always check answers against your source content, and make, I don't know, an acceptable answer."
+    },
+    {
+      "scene": 14,
+      "start": 248.5,
+      "end": 273.8,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Language model (language) + your content (facts). 2. Missing, old or hard-to-find content → hallucinations. 3. Good content + clear instructions + 'I don't know' → fewer invented answers."
+      },
+      "voiceover": "Let's recap. First, an AI support assistant combines a language model, which is good at language, with your own content, which holds the facts. Second, when content is missing, out of date or hard to find, the assistant may invent a confident answer. Third, good content and clear instructions, including permission to say I don't know, reduce invented answers."
+    },
+    {
+      "scene": 15,
+      "start": 273.8,
+      "end": 299.9,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Writing a Knowledge Base",
+      "voiceover": "Now try it yourself. In the exercise, you will ask Claude or ChatGPT about the refund policy of a made-up company, first without the policy, then with the policy pasted in. You will compare the two answers and note every invented detail. In the next lesson, we look at writing a knowledge base that AI can use. See you there."
+    }
+  ]
+}

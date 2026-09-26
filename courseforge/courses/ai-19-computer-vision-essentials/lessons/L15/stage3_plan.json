@@ -3,7 +3,11 @@
   "thumbnail": {
     "headline": "From Notebook to App",
     "image": "Navy background, a simple web app window showing a shelf photo with teal boxes around juice cartons and a large count number, headline in teal Inter Bold.",
-    "slide": {"layout": "title", "title": "From Notebook to App", "body": "A browser window with an upload box, a confidence slider, a shelf photo with teal boxes and 'Count: 13'. Small tag: Computer Vision Essentials · Lesson 15 · Capstone."}
+    "slide": {
+      "layout": "title",
+      "title": "From Notebook to App",
+      "body": "A browser window with an upload box, a confidence slider, a shelf photo with teal boxes and 'Count: 13'. Small tag: Computer Vision Essentials · Lesson 15 · Capstone."
+    }
   },
   "production_notes": [
     "[VERSION] Hugging Face Spaces free hardware and Space creation steps; the Gradio interface (gr.Interface, gr.Image(type=\"numpy\"), gr.Slider, gr.Number) and temporary link; ultralytics treating NumPy input as BGR and Results.plot() returning BGR. Gradio is not in the brief's tool list; content.md uses it as the interface layer. Code was checked for syntax only.",
@@ -15,76 +19,133 @@
   ],
   "sections": {
     "Hook": [
-      {"visual_type": "presenter_full",
-       "voiceover": "A notebook that only you can run is an experiment. An app where a shop manager uploads a photo and sees fourteen cartons is a product. Today, you start building that app.",
-       "on_screen_text": "Experiment or product?"}
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "A notebook that only you can run is an experiment. An app where a shop manager uploads a photo and sees fourteen cartons is a product. Today, you start building that app. And every choice you make today should serve that one number.",
+        "on_screen_text": "Experiment or product?"
+      }
     ],
     "Explain": [
-      {"visual_type": "slide",
-       "voiceover": "This is the first of two capstone lessons. Your capstone is an object detection and counting app for one real use case. Choose one that is narrow, and that counts objects, not people. For example, stock on shop shelves in Casablanca, or vehicles on a road in Manila.",
-       "slide": {"layout": "comparison", "title": "Your capstone use case", "body": "Example 1: counting stock on shelves, Casablanca, Morocco. Example 2: counting vehicles on a road, Manila, the Philippines. Rule: narrow, objects not people."}},
-      {"visual_type": "slide",
-       "voiceover": "Build it in four steps. First, define the target. Count juice cartons on the drinks shelf is a good target. Count everything in any shop is not. Second, choose the model. If a pre-trained class fits, use it with a tested threshold. If not, fine-tune on your own images, and check every licence.",
-       "slide": {"layout": "bullets", "title": "Steps 1 and 2", "body": "1. Define the target: which objects, which scene, what number · 2. Choose the model: pre-trained class (lesson 10) or fine-tuned (lesson 11) · Check every licence"}},
-      {"visual_type": "slide",
-       "voiceover": "Third, write one counting function that returns an annotated image and the total. For video, reuse the line counting from lesson thirteen. Fourth, add a simple interface with Gradio, which builds a web page from a Python function. It runs in Colab with a temporary link, or on a free Hugging Face Space.",
-       "slide": {"layout": "diagram", "title": "Steps 3 and 4", "body": "Image → count function (model + boxes + total) → Gradio interface: upload box, confidence slider, annotated image, count. Runs in Colab or on a free Hugging Face Space (CPU only: use the smallest model)."}},
-      {"visual_type": "slide",
-       "voiceover": "Watch the colour order. Gradio gives your function red, green, blue. But the Ultralytics package treats arrays as blue, green, red, like OpenCV. So convert on the way in, and convert the annotated result back on the way out.",
-       "slide": {"layout": "diagram", "title": "Mind the colour order", "body": "Gradio (RGB) → flip → model (BGR) → annotated result (BGR) → flip → Gradio (RGB)"}},
-      {"visual_type": "stock",
-       "voiceover": "Think of the model as the engine, and the interface as the dashboard. The driver does not need to see the engine. They need a clear speed reading and a warning light.",
-       "stock_query": "car dashboard speedometer while driving",
-       "on_screen_text": "Model = engine. App = dashboard."}
+      {
+        "visual_type": "slide",
+        "voiceover": "This is the first of two capstone lessons. Your capstone is an object detection and counting app for one real use case. Choose one that is narrow, and that counts objects, not people. For example, stock on shop shelves in Casablanca, or vehicles on a road in Manila.",
+        "slide": {
+          "layout": "comparison",
+          "title": "Your capstone use case",
+          "body": "Example 1: counting stock on shelves, Casablanca, Morocco. Example 2: counting vehicles on a road, Manila, the Philippines. Rule: narrow, objects not people."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Build it in four steps. First, define the target. Count juice cartons on the drinks shelf is a good target. Count everything in any shop is not. Second, choose the model. If a pre-trained class fits, use it with a tested threshold. If not, fine-tune on your own images, and check every licence.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Steps 1 and 2",
+          "body": "1. Define the target: which objects, which scene, what number · 2. Choose the model: pre-trained class (lesson 10) or fine-tuned (lesson 11) · Check every licence"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Third, write one counting function that returns an annotated image and the total. For video, reuse the line counting from lesson thirteen. Fourth, add a simple interface with Gradio, which builds a web page from a Python function. It runs in Colab with a temporary link, or on a free Hugging Face Space.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Steps 3 and 4",
+          "body": "Image → count function (model + boxes + total) → Gradio interface: upload box, confidence slider, annotated image, count. Runs in Colab or on a free Hugging Face Space (CPU only: use the smallest model)."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Watch the colour order. Gradio gives your function red, green, blue. But the Ultralytics package treats arrays as blue, green, red, like OpenCV. So convert on the way in, and convert the annotated result back on the way out.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Mind the colour order",
+          "body": "Gradio (RGB) → flip → model (BGR) → annotated result (BGR) → flip → Gradio (RGB)"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Over this lesson and the next, you deliver five things. The working app, a test table on at least twenty new images or clips, one measured improvement, a fitness check, and a three-minute demo. The rubric scores each of these, so keep them in mind as you build.",
+        "slide": {
+          "layout": "bullets",
+          "title": "The capstone brief",
+          "body": "1. Working app · 2. Test table: 20+ new images or clips · 3. One measured improvement · 4. Fitness check (lesson 14) · 5. Three-minute demo"
+        }
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "Think of the model as the engine, and the interface as the dashboard. The driver does not need to see the engine. They need a clear speed reading and a warning light.",
+        "stock_query": "car dashboard speedometer while driving",
+        "on_screen_text": "Model = engine. App = dashboard."
+      }
     ],
     "Demonstrate": [
-      {"visual_type": "stock",
-       "voiceover": "Karim El Amrani manages three grocery shops in Casablanca. He fine-tuned a detector on eighty labelled shelf photos, using the steps from lesson eleven. Now he wraps it in an app.",
-       "stock_query": "grocery shelf with rows of drink cartons",
-       "on_screen_text": "Karim's shelf counter · Casablanca"},
-      {"visual_type": "screen",
-       "voiceover": "In Colab, he installs Ultralytics and Gradio, and uploads his trained model file. His counting function flips the colour order, runs the model, counts the juice cartons, and flips the annotated picture back. The interface has an image input, a confidence slider, the annotated picture and the count.",
-       "screen_steps": [
-         "In Colab, run !pip install ultralytics gradio",
-         "Upload best.pt",
-         "Scroll through the cell: the count function with the RGB to BGR flips, and gr.Interface with gr.Image, gr.Slider and gr.Number"
-       ],
-       "on_screen_text": "One function, one interface"},
-      {"visual_type": "screen",
-       "voiceover": "He runs the cell and opens the temporary link. He uploads a shelf photo with fourteen cartons, and moves the slider. You'll see something like count thirteen. A carton behind a price label is missed, just as in training. He notes it for the next lesson.",
-       "screen_steps": [
-         "Run the cell and open the temporary link that Gradio prints",
-         "Upload a shelf photo and move the confidence slider",
-         "Point to the count and to the missed carton behind the price label"
-       ],
-       "on_screen_text": "Upload, slide, count"},
-      {"visual_type": "screen",
-       "voiceover": "To keep the app running, he creates a new Space on Hugging Face, with Gradio and free CPU hardware. He uploads three files. The app code, the model file, and a requirements file that lists Ultralytics and Gradio.",
-       "screen_steps": [
-         "On huggingface.co, create a new Space with the Gradio SDK and free CPU hardware",
-         "Upload app.py, best.pt and requirements.txt listing ultralytics and gradio"
-       ],
-       "on_screen_text": "Deploy to a free Space"},
-      {"visual_type": "screen",
-       "voiceover": "When the build finishes, he tests the Space with a new photo. Before he makes it public, he checks two things. The app shows no people, and the detector's licence allows public use. Remember, the Ultralytics YOLO licence must be checked before commercial use.",
-       "screen_steps": [
-         "Wait for the Space build to finish",
-         "Upload a new shelf photo and show the result"
-       ],
-       "on_screen_text": "No people. Licence checked."},
-      {"visual_type": "text",
-       "voiceover": "A common mistake is to spend capstone time on colours and extra buttons. The rubric rewards a correct count, honest evaluation and a clear fitness judgement. So get a plain interface working first. And do not forget the colour conversion.",
-       "on_screen_text": "Plain and correct first"}
+      {
+        "visual_type": "stock",
+        "voiceover": "Karim El Amrani manages three grocery shops in Casablanca. He fine-tuned a detector on eighty labelled shelf photos, using the steps from lesson eleven. Now he wraps it in an app.",
+        "stock_query": "grocery shelf with rows of drink cartons",
+        "on_screen_text": "Karim's shelf counter · Casablanca"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "In Colab, he installs Ultralytics and Gradio, and uploads his trained model file. His counting function flips the colour order, runs the model, counts the juice cartons, and flips the annotated picture back. The interface has an image input, a confidence slider, the annotated picture and the count.",
+        "screen_steps": [
+          "In Colab, run !pip install ultralytics gradio",
+          "Upload best.pt",
+          "Scroll through the cell: the count function with the RGB to BGR flips, and gr.Interface with gr.Image, gr.Slider and gr.Number"
+        ],
+        "on_screen_text": "One function, one interface"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "He runs the cell and opens the temporary link. He uploads a shelf photo with fourteen cartons, and moves the slider. You'll see something like count thirteen. A carton behind a price label is missed, just as in training. He notes it for the next lesson.",
+        "screen_steps": [
+          "Run the cell and open the temporary link that Gradio prints",
+          "Upload a shelf photo and move the confidence slider",
+          "Point to the count and to the missed carton behind the price label"
+        ],
+        "on_screen_text": "Upload, slide, count"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "To keep the app running, he creates a new Space on Hugging Face, with Gradio and free CPU hardware. He uploads three files. The app code, the model file, and a requirements file that lists Ultralytics and Gradio. Free Space hardware has no GPU and has limits, so he uses the smallest model and keeps any videos short.",
+        "screen_steps": [
+          "On huggingface.co, create a new Space with the Gradio SDK and free CPU hardware",
+          "Upload app.py, best.pt and requirements.txt listing ultralytics and gradio"
+        ],
+        "on_screen_text": "Deploy to a free Space"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "When the build finishes, he tests the Space with a new photo. Before he makes it public, he checks two things. The app shows no people, and the detector's licence allows public use. Remember, the Ultralytics YOLO licence must be checked before commercial use.",
+        "screen_steps": [
+          "Wait for the Space build to finish",
+          "Upload a new shelf photo and show the result"
+        ],
+        "on_screen_text": "No people. Licence checked."
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "A common mistake is to spend capstone time on colours and extra buttons. The rubric rewards a correct count, honest evaluation and a clear fitness judgement. So get a plain interface working first. And do not forget the colour conversion.",
+        "on_screen_text": "Plain and correct first"
+      }
     ],
     "Recap": [
-      {"visual_type": "slide",
-       "voiceover": "Let's recap. First, choose one narrow use case, with a clear target object and a number the user needs. Second, wrap one counting function in a Gradio interface, and convert between the two colour orders at the edges. Third, deploy on a free Hugging Face Space with a small model, and check licences before you go public.",
-       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. One narrow use case, one clear number. 2. One function + Gradio; convert RGB ↔ BGR. 3. Free Space, small model, licences checked."}}
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, choose one narrow use case, with a clear target object and a number the user needs. Second, wrap one counting function in a Gradio interface, and convert between the two colour orders at the edges. Third, deploy on a free Hugging Face Space with a small model, and check licences before you go public.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. One narrow use case, one clear number. 2. One function + Gradio; convert RGB ↔ BGR. 3. Free Space, small model, licences checked."
+        }
+      }
     ],
     "CTA": [
-      {"visual_type": "presenter_full",
-       "voiceover": "Now it is your turn. In the exercise below this video, you complete capstone step one. Build an app that takes an image or a short video, detects and counts your target objects, and shows boxes and a total. It takes about an hour. In the next lesson, Capstone Part 2: Evaluate, Improve and Present. See you there.",
-       "on_screen_text": "Next: Capstone Part 2"}
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Now it is your turn. In the exercise below this video, you complete capstone step one. Build an app that takes an image or a short video, detects and counts your target objects, and shows boxes and a total. It takes about an hour. In the next lesson, Capstone Part 2: Evaluate, Improve and Present. See you there.",
+        "on_screen_text": "Next: Capstone Part 2"
+      }
     ]
   }
 }

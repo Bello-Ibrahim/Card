@@ -1,0 +1,201 @@
+{
+  "course_id": "AI-23",
+  "lesson_id": "L10",
+  "duration_s": 304.1,
+  "thumbnail": {
+    "headline": "One Page, Clear Rules",
+    "slide": {
+      "layout": "title",
+      "title": "One Page, Clear Rules",
+      "body": "A one-page brand guidelines frame: logo with clear space, five swatches, a type scale, a cup sleeve and an app screen. Small tag: AI for Brand and Product Design · Lesson 10."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 14.6,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "What will they open?",
+      "voiceover": "A brand is only as consistent as the people who use it after you leave the project. What will they open when they need the right blue, or the correct space around the logo?"
+    },
+    {
+      "scene": 2,
+      "start": 14.6,
+      "end": 30.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Building Brand Guidelines in Figma",
+        "body": "AI for Brand and Product Design · Lesson 10 of 14 · Capstone step 1"
+      },
+      "voiceover": "Last time, we tested colour and type. Now we collect all your brand decisions in one place. This lesson is about building brand guidelines in Figma, and it is also the first step of your capstone."
+    },
+    {
+      "scene": 3,
+      "start": 30.0,
+      "end": 55.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "One guidelines page",
+        "body": "Logo usage: versions, minimum size, clear space, incorrect use · Colour: name, role, hex, tested text pairs · Type: fonts, size scale, line heights, every script · Applications: 2 or more examples"
+      },
+      "voiceover": "Brand guidelines turn your decisions into rules that other people can follow. One clear Figma page is enough to start. It covers four things. Logo usage, with versions, minimum size, clear space and examples of incorrect use. Colour, with names, roles, hex codes and tested text pairs. Type, with fonts, a size scale and line heights. And example applications."
+    },
+    {
+      "scene": 4,
+      "start": 55.3,
+      "end": 73.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Make the rules live",
+        "body": "Colour and type styles or variables + logo components → linked into example applications → change one colour → all examples update (arrows light up)"
+      },
+      "voiceover": "Now, make the rules live in Figma. Instead of drawing swatches, set up colours and type as reusable styles or variables. Turn the logo versions into components. Then every example uses the real values. If you change a colour later, every example updates."
+    },
+    {
+      "scene": 5,
+      "start": 73.7,
+      "end": 92.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Give Claude the facts",
+        "body": "Logo minimum size is 24 pixels on screen. Clear space equals the height of the bean shape. Never place the logo on the saffron colour. Write short, direct usage rules in plain language."
+      },
+      "voiceover": "Writing rules is slow, so let Claude draft short usage notes from your decisions. Give it the facts, such as the minimum logo size, the clear space, and colours the logo must never sit on. Ask for short, direct rules in plain language."
+    },
+    {
+      "scene": 6,
+      "start": 92.1,
+      "end": 102.8,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "The AI drafts. You set the rules.",
+      "voiceover": "Then edit. Remove anything you did not decide, check every number, and make the tone match the brand. The AI drafts. You set the rules."
+    },
+    {
+      "scene": 7,
+      "start": 102.8,
+      "end": 125.1,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "players on sports field with white lines",
+      "on_screen_text": "Guidelines are the rules of play",
+      "voiceover": "Think of brand guidelines as the rules of a sport. Players do not need the history of the game. But they need to know the size of the field, the lines they cannot cross, and what counts as a foul. Clear examples of allowed and not allowed work better than long explanations."
+    },
+    {
+      "scene": 8,
+      "start": 125.1,
+      "end": 135.8,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Find the answer in under a minute.",
+      "voiceover": "And keep the page easy to scan, with headings, short rules and visual examples. A person should find the right answer in under a minute."
+    },
+    {
+      "scene": 9,
+      "start": 135.8,
+      "end": 152.9,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "bicycle repair workshop cafe with coffee",
+      "on_screen_text": "Sanne · cycling café · Utrecht",
+      "voiceover": "Let's build one. Sanne de Vries is a freelance designer in Utrecht, in the Netherlands. Her client is a cycling café, where people have coffee while their bike is repaired. She already has the logo, the palette and the type."
+    },
+    {
+      "scene": 10,
+      "start": 152.9,
+      "end": 172.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Styles named by role",
+        "body": "Figma screenshot: page 'Brand Guidelines', 1440 px frame. Colour styles panel: Brand/Primary, Text/Default and three more. Text styles: H1, H2, Body, Caption."
+      },
+      "voiceover": "In Figma, she creates a page called Brand Guidelines, with a frame fourteen hundred and forty pixels wide. She creates colour styles for her five colours, named by role, such as brand primary and text default. Then text styles for two heading levels, body and caption."
+    },
+    {
+      "scene": 11,
+      "start": 172.6,
+      "end": 191.5,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "The logo section",
+        "body": "Three logo components (full, icon, one-colour) · clear-space diagram · four 'do not' tiles with red crosses: stretched, recoloured, rotated, on a busy photo"
+      },
+      "voiceover": "She turns the logo versions into components: the full logo, the icon only, and a one-colour version. Then she builds the logo section, with a clear-space diagram and four examples of incorrect use. Stretched, recoloured, rotated, and placed on a busy photo."
+    },
+    {
+      "scene": 12,
+      "start": 191.5,
+      "end": 212.5,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Editing Claude's draft",
+        "body": "Kept (green tick): 'Always use the logo on a plain background.' · 'Never add effects such as shadows.' Deleted (strikethrough): 'Use the logo in black and white for newspapers.' Note: not her decision"
+      },
+      "voiceover": "Next, she asks Claude to draft usage notes from her facts. Most are good. Always use the logo on a plain background. Never add effects such as shadows. But Claude also adds a rule about black and white logos for newspapers. She never decided that, so she deletes it."
+    },
+    {
+      "scene": 13,
+      "start": 212.5,
+      "end": 232.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Testing the system",
+        "body": "Before and after: a cup sleeve and a repair-ticket screen, both built from styles and components; the primary colour changes slightly and both update together"
+      },
+      "voiceover": "She builds two applications, a coffee cup sleeve and a repair-ticket screen, using only her styles and components. Then she tests the system. She changes the primary colour slightly, and both applications update. Now the client's staff can use the page without asking her every time."
+    },
+    {
+      "scene": 14,
+      "start": 232.6,
+      "end": 254.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "A picture is not a system",
+        "body": "Red cross: rectangles and manual text, nothing connected · Red cross: AI rules pasted unchecked. Green tick: styles, variables, components · Green tick: every rule checked"
+      },
+      "voiceover": "A common mistake is to build guidelines as a picture, with colours drawn as rectangles and text set by hand. It looks correct, but nothing is connected, so later changes create inconsistency. Another mistake is pasting AI-drafted rules without checking them. The draft may include rules you never made."
+    },
+    {
+      "scene": 15,
+      "start": 254.0,
+      "end": 280.1,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. One scannable page: logo, colour, type, applications. 2. Styles, variables and components keep it connected. 3. Claude drafts notes; you check and cut."
+      },
+      "voiceover": "Let's recap. First, a one-page guidelines frame covers logo usage, colour, type and example applications, and it should be easy to scan. Second, set up colours and type as styles or variables, and the logo as components, so everything updates together. Third, let Claude draft usage notes, then check every rule and number, and remove anything you did not decide."
+    },
+    {
+      "scene": 16,
+      "start": 280.1,
+      "end": 304.1,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Generating UI Drafts in Figma",
+      "voiceover": "Now it is your turn. This exercise is step one of your capstone. You will build a one-page brand guidelines frame in Figma, with your logo, colours, type and two example applications. It takes about forty-five minutes. In the next lesson, we start module three, with generating UI drafts in Figma. See you there."
+    }
+  ]
+}

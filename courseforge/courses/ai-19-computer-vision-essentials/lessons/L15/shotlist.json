@@ -1,7 +1,7 @@
 {
   "course_id": "AI-19",
   "lesson_id": "L15",
-  "duration_s": 266.6,
+  "duration_s": 300.9,
   "thumbnail": {
     "headline": "From Notebook to App",
     "slide": {
@@ -14,16 +14,16 @@
     {
       "scene": 1,
       "start": 0.0,
-      "end": 13.7,
+      "end": 18.4,
       "section": "Hook",
       "visual_type": "presenter_full",
       "on_screen_text": "Experiment or product?",
-      "voiceover": "A notebook that only you can run is an experiment. An app where a shop manager uploads a photo and sees fourteen cartons is a product. Today, you start building that app."
+      "voiceover": "A notebook that only you can run is an experiment. An app where a shop manager uploads a photo and sees fourteen cartons is a product. Today, you start building that app. And every choice you make today should serve that one number."
     },
     {
       "scene": 2,
-      "start": 13.7,
-      "end": 34.3,
+      "start": 18.4,
+      "end": 39.0,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -35,8 +35,8 @@
     },
     {
       "scene": 3,
-      "start": 34.3,
-      "end": 57.9,
+      "start": 39.0,
+      "end": 62.6,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -48,8 +48,8 @@
     },
     {
       "scene": 4,
-      "start": 57.9,
-      "end": 80.6,
+      "start": 62.6,
+      "end": 85.3,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -61,8 +61,8 @@
     },
     {
       "scene": 5,
-      "start": 80.6,
-      "end": 97.3,
+      "start": 85.3,
+      "end": 102.0,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -74,8 +74,21 @@
     },
     {
       "scene": 6,
-      "start": 97.3,
-      "end": 111.0,
+      "start": 102.0,
+      "end": 123.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "The capstone brief",
+        "body": "1. Working app · 2. Test table: 20+ new images or clips · 3. One measured improvement · 4. Fitness check (lesson 14) · 5. Three-minute demo"
+      },
+      "voiceover": "Over this lesson and the next, you deliver five things. The working app, a test table on at least twenty new images or clips, one measured improvement, a fitness check, and a three-minute demo. The rubric scores each of these, so keep them in mind as you build."
+    },
+    {
+      "scene": 7,
+      "start": 123.0,
+      "end": 136.7,
       "section": "Explain",
       "visual_type": "stock",
       "stock_query": "car dashboard speedometer while driving",
@@ -83,9 +96,9 @@
       "voiceover": "Think of the model as the engine, and the interface as the dashboard. The driver does not need to see the engine. They need a clear speed reading and a warning light."
     },
     {
-      "scene": 7,
-      "start": 111.0,
-      "end": 124.7,
+      "scene": 8,
+      "start": 136.7,
+      "end": 150.4,
       "section": "Demonstrate",
       "visual_type": "stock",
       "stock_query": "grocery shelf with rows of drink cartons",
@@ -93,9 +106,9 @@
       "voiceover": "Karim El Amrani manages three grocery shops in Casablanca. He fine-tuned a detector on eighty labelled shelf photos, using the steps from lesson eleven. Now he wraps it in an app."
     },
     {
-      "scene": 8,
-      "start": 124.7,
-      "end": 145.3,
+      "scene": 9,
+      "start": 150.4,
+      "end": 171.0,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -107,9 +120,9 @@
       "voiceover": "In Colab, he installs Ultralytics and Gradio, and uploads his trained model file. His counting function flips the colour order, runs the model, counts the juice cartons, and flips the annotated picture back. The interface has an image input, a confidence slider, the annotated picture and the count."
     },
     {
-      "scene": 9,
-      "start": 145.3,
-      "end": 165.0,
+      "scene": 10,
+      "start": 171.0,
+      "end": 190.7,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -121,9 +134,9 @@
       "voiceover": "He runs the cell and opens the temporary link. He uploads a shelf photo with fourteen cartons, and moves the slider. You'll see something like count thirteen. A carton behind a price label is missed, just as in training. He notes it for the next lesson."
     },
     {
-      "scene": 10,
-      "start": 165.0,
-      "end": 181.3,
+      "scene": 11,
+      "start": 190.7,
+      "end": 215.6,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -131,12 +144,12 @@
         "Upload app.py, best.pt and requirements.txt listing ultralytics and gradio"
       ],
       "on_screen_text": "Deploy to a free Space",
-      "voiceover": "To keep the app running, he creates a new Space on Hugging Face, with Gradio and free CPU hardware. He uploads three files. The app code, the model file, and a requirements file that lists Ultralytics and Gradio."
+      "voiceover": "To keep the app running, he creates a new Space on Hugging Face, with Gradio and free CPU hardware. He uploads three files. The app code, the model file, and a requirements file that lists Ultralytics and Gradio. Free Space hardware has no GPU and has limits, so he uses the smallest model and keeps any videos short."
     },
     {
-      "scene": 11,
-      "start": 181.3,
-      "end": 200.2,
+      "scene": 12,
+      "start": 215.6,
+      "end": 234.5,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -147,18 +160,18 @@
       "voiceover": "When the build finishes, he tests the Space with a new photo. Before he makes it public, he checks two things. The app shows no people, and the detector's licence allows public use. Remember, the Ultralytics YOLO licence must be checked before commercial use."
     },
     {
-      "scene": 12,
-      "start": 200.2,
-      "end": 217.3,
+      "scene": 13,
+      "start": 234.5,
+      "end": 251.6,
       "section": "Demonstrate",
       "visual_type": "text",
       "on_screen_text": "Plain and correct first",
       "voiceover": "A common mistake is to spend capstone time on colours and extra buttons. The rubric rewards a correct count, honest evaluation and a clear fitness judgement. So get a plain interface working first. And do not forget the colour conversion."
     },
     {
-      "scene": 13,
-      "start": 217.3,
-      "end": 241.7,
+      "scene": 14,
+      "start": 251.6,
+      "end": 276.0,
       "section": "Recap",
       "visual_type": "slide",
       "slide": {
@@ -169,9 +182,9 @@
       "voiceover": "Let's recap. First, choose one narrow use case, with a clear target object and a number the user needs. Second, wrap one counting function in a Gradio interface, and convert between the two colour orders at the edges. Third, deploy on a free Hugging Face Space with a small model, and check licences before you go public."
     },
     {
-      "scene": 14,
-      "start": 241.7,
-      "end": 266.6,
+      "scene": 15,
+      "start": 276.0,
+      "end": 300.9,
       "section": "CTA",
       "visual_type": "presenter_full",
       "on_screen_text": "Next: Capstone Part 2",

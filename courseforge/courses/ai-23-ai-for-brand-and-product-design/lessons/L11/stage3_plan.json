@@ -1,0 +1,110 @@
+{
+  "title": "Generating UI Drafts in Figma",
+  "thumbnail": {
+    "headline": "Generate, Review, Rebuild",
+    "image": "Navy background, a generic grey AI-drafted phone screen on the left and the same screen rebuilt in brand colours with components on the right, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Generate, Review, Rebuild", "body": "Left: a generic grey AI-drafted onboarding screen. Right: the same screen rebuilt with brand components. Arrow between them. Small tag: AI for Brand and Product Design · Lesson 11."}
+  },
+  "production_notes": [
+    "[VERSION] Figma AI feature names, menus (such as an Actions or AI menu), draft generation, alternatives, plan availability and usage limits must be checked against the live tool before recording. The voiceover names no specific button or menu; the screen_steps follow content.md and must be updated to the live labels.",
+    "[VERSION] The reviewer chooses the community content plugin and contrast plugin shown in scenes 13 and 14, and checks their current data terms; do not show confidential data in the demo file.",
+    "The demo file needs Camila's brand guidelines page (styles, colour variables, and Button, Card and Progress components) prepared before recording.",
+    "The onboarding screen shows language names with a small icon, not flags; the Portuguese headline and the 'Continuar' button text should be checked by a Portuguese speaker.",
+    "Camila Souza and the language-learning app are fictional; stock footage must not show a real app.",
+    "This lesson is capstone step 2; the CTA says so."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Type one sentence, and Figma gives you a full screen, with a header, buttons and text. It looks like a design. But is it your design, in your brand, with your components?",
+       "on_screen_text": "Is it your design?"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Welcome to module three. Your brand is ready, so now we design the product. This lesson is about generating UI drafts in Figma.",
+       "slide": {"layout": "title", "title": "Generating UI Drafts in Figma", "body": "AI for Brand and Product Design · Module 3 · Lesson 11 of 14"}},
+      {"visual_type": "slide",
+       "voiceover": "Figma includes AI features that can draft a screen from a text prompt, fill in realistic content and suggest variations. Community plugins add more options, such as realistic text, placeholder images or data. Names and features change often, so this lesson teaches a workflow, not a specific button.",
+       "slide": {"layout": "bullets", "title": "AI in Figma", "body": "Draft a screen from a prompt · Fill realistic content · Suggest variations · Community plugins: text, images, data. Footer: a workflow, not a button"}},
+      {"visual_type": "slide",
+       "voiceover": "AI drafts are good for speed, for realistic content instead of placeholder text, and for variations to compare. But a draft is not your brand. It uses generic colours and fonts. It is not your design system, because it is built from loose layers. And it is not checked for contrast, touch targets or content.",
+       "slide": {"layout": "comparison", "title": "What drafts are, and are not", "body": "Good for (green): speed · realistic content · variations. Not (red): your brand · your design system · checked for contrast, touch targets, content"}},
+      {"visual_type": "slide",
+       "voiceover": "So the workflow is generate, review, rebuild. Generate a draft from a clear prompt. Review its structure. Which elements does this screen need, and in what order? Then rebuild it with your own styles, variables and components from lesson ten. Keep the useful ideas, and replace everything else.",
+       "slide": {"layout": "diagram", "title": "Generate → Review → Rebuild", "body": "Three steps in a loop: Generate (clear prompt) → Review (which elements, what order?) → Rebuild (your styles, variables, components from L10)"}},
+      {"visual_type": "slide",
+       "voiceover": "A good UI prompt names the user, the goal of the screen, the key content and the platform. And, as in lesson five, keep confidential client data out of prompts and plugins.",
+       "slide": {"layout": "code", "title": "A good UI prompt", "body": "Mobile onboarding screen for a language-learning app. Goal: the user picks the language they want to learn. Show 6 language options with flags, a short headline, and a 'Continue' button. iOS size.\n\nLabels: user · goal · key content · platform"}},
+      {"visual_type": "stock",
+       "voiceover": "Think of an AI draft as a builder's scaffolding. It shows the shape of the building quickly. But nobody lives in scaffolding. You replace it with the real, strong materials, which are your components.",
+       "stock_query": "construction scaffolding around a building",
+       "on_screen_text": "Nobody lives in scaffolding"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's see it in Figma. Camila Souza is a product designer in São Paulo, Brazil. Her client is a language-learning app for adults. She needs an onboarding screen where users choose a language to learn.",
+       "stock_query": "adult learning a language on smartphone",
+       "on_screen_text": "Camila · language app · São Paulo"},
+      {"visual_type": "screen",
+       "voiceover": "Camila opens the Figma file with her brand guidelines, styles and components. She creates a new page for AI drafts, then opens Figma's AI features and chooses to generate a design from a prompt.",
+       "screen_steps": [
+         "Open the Figma file that contains the brand guidelines page, with styles and components",
+         "Create a new page called 'Onboarding: AI drafts'",
+         "Open Figma's AI features (for example, from the Actions or AI menu) and choose the option to generate a design from a prompt"
+       ]},
+      {"visual_type": "screen",
+       "voiceover": "Her prompt asks for a mobile onboarding screen for adults in Brazil, with a headline in Portuguese, six language options as cards, a progress indicator for step one of three, and a continue button. She generates a draft and one alternative, and places them side by side.",
+       "screen_steps": [
+         "Type the prompt: 'Mobile onboarding screen for a language-learning app for adults in Brazil. Goal: choose a language to learn. Headline in Portuguese, 6 language options as cards, a progress indicator showing step 1 of 3, and a \"Continuar\" button.'",
+         "Generate the draft",
+         "Generate one alternative",
+         "Place the two drafts side by side"
+       ],
+       "on_screen_text": "Draft and one alternative"},
+      {"visual_type": "screen",
+       "voiceover": "Then she reviews both drafts, and writes sticky notes. Keep the card grid and the progress indicator. Change the flags, because some languages are spoken in many countries. And move the button, which sits too low.",
+       "screen_steps": [
+         "Review both drafts",
+         "Add a sticky note: 'Keep: card grid, progress indicator.'",
+         "Add a sticky note: 'Change: flags only (some languages are spoken in many countries), button too low.'"
+       ],
+       "on_screen_text": "Review the structure"},
+      {"visual_type": "screen",
+       "voiceover": "Now she rebuilds. On a new page for the final screen, she creates a frame of the same size. She uses her own button, card and progress components, and applies her text styles and colour variables.",
+       "screen_steps": [
+         "Create a page called 'Onboarding: final' and add a new frame at the same size",
+         "Insert the Button, Card and Progress components from the brand library",
+         "Apply text styles and colour variables"
+       ],
+       "on_screen_text": "Rebuild with your components"},
+      {"visual_type": "screen",
+       "voiceover": "She replaces the flags with language names and a small icon, because a flag represents a country, not a language. Then she runs a community plugin to fill in realistic content, and reads every line it adds.",
+       "screen_steps": [
+         "Replace the flags with language names and a small icon",
+         "Run a community content plugin to fill realistic content, such as learner names in the progress messages",
+         "Read and correct the generated text"
+       ]},
+      {"visual_type": "screen",
+       "voiceover": "Finally, she checks the contrast of text on the cards with a contrast plugin, and checks that the buttons meet the touch-target size in her design system. The draft stays on its own page, as a record for her case study.",
+       "screen_steps": [
+         "Run a contrast plugin on the text on the cards",
+         "Check the button size against the touch-target size in the design system",
+         "Show the two pages: 'Onboarding: AI drafts' kept as a record, 'Onboarding: final' built only from components"
+       ],
+       "on_screen_text": "Draft kept as a record"},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is to polish the AI draft directly, recolouring its layers one by one. It looks right, but it is not connected to your system. Rebuild with components instead. And always read AI content. It can be wrong, or culturally unsuitable.",
+       "on_screen_text": "Rebuild with components. Don't polish drafts."}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, Figma's AI features and plugins give fast drafts, realistic content and variations, but their names and availability change often. Second, treat drafts as starting points. Generate, review the structure, then rebuild with your own styles, variables and components. Third, check every draft for contrast, touch targets, content accuracy and cultural fit.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Fast drafts, content, variations; features change. 2. Generate, review, rebuild with your components. 3. Check contrast, touch targets, content and cultural fit."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. This is step two of your capstone. You will generate draft screens for your key flow, then rebuild them with your brand styles and components. It takes about fifty minutes. In the next lesson, we go from draft to clickable prototype. See you there.",
+       "on_screen_text": "Next: From Draft to Clickable Prototype"}
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+# L10 Building Brand Guidelines in Figma | Presenter Script
+
+Course: AI-23 · Video: 5 min · Words: 710
+
+## Hook
+A brand is only as consistent as the people who use it after you leave the project. What will they open when they need the right blue, or the correct space around the logo?
+
+## Explain
+Last time, we tested colour and type. Now we collect all your brand decisions in one place. This lesson is about building brand guidelines in Figma, and it is also the first step of your capstone.
+
+Brand guidelines turn your decisions into rules that other people can follow. One clear Figma page is enough to start. It covers four things. Logo usage, with versions, minimum size, clear space and examples of incorrect use. Colour, with names, roles, hex codes and tested text pairs. Type, with fonts, a size scale and line heights. And example applications.
+
+Now, make the rules live in Figma. Instead of drawing swatches, set up colours and type as reusable styles or variables. Turn the logo versions into components. Then every example uses the real values. If you change a colour later, every example updates.
+
+Writing rules is slow, so let Claude draft short usage notes from your decisions. Give it the facts, such as the minimum logo size, the clear space, and colours the logo must never sit on. Ask for short, direct rules in plain language.
+
+Then edit. Remove anything you did not decide, check every number, and make the tone match the brand. The AI drafts. You set the rules.
+
+Think of brand guidelines as the rules of a sport. Players do not need the history of the game. But they need to know the size of the field, the lines they cannot cross, and what counts as a foul. Clear examples of allowed and not allowed work better than long explanations.
+
+And keep the page easy to scan, with headings, short rules and visual examples. A person should find the right answer in under a minute.
+
+## Demonstrate
+Let's build one. Sanne de Vries is a freelance designer in Utrecht, in the Netherlands. Her client is a cycling café, where people have coffee while their bike is repaired. She already has the logo, the palette and the type.
+
+In Figma, she creates a page called Brand Guidelines, with a frame fourteen hundred and forty pixels wide. She creates colour styles for her five colours, named by role, such as brand primary and text default. Then text styles for two heading levels, body and caption.
+
+She turns the logo versions into components: the full logo, the icon only, and a one-colour version. Then she builds the logo section, with a clear-space diagram and four examples of incorrect use. Stretched, recoloured, rotated, and placed on a busy photo.
+
+Next, she asks Claude to draft usage notes from her facts. Most are good. Always use the logo on a plain background. Never add effects such as shadows. But Claude also adds a rule about black and white logos for newspapers. She never decided that, so she deletes it.
+
+She builds two applications, a coffee cup sleeve and a repair-ticket screen, using only her styles and components. Then she tests the system. She changes the primary colour slightly, and both applications update. Now the client's staff can use the page without asking her every time.
+
+A common mistake is to build guidelines as a picture, with colours drawn as rectangles and text set by hand. It looks correct, but nothing is connected, so later changes create inconsistency. Another mistake is pasting AI-drafted rules without checking them. The draft may include rules you never made.
+
+## Recap
+Let's recap. First, a one-page guidelines frame covers logo usage, colour, type and example applications, and it should be easy to scan. Second, set up colours and type as styles or variables, and the logo as components, so everything updates together. Third, let Claude draft usage notes, then check every rule and number, and remove anything you did not decide.
+
+## CTA
+Now it is your turn. This exercise is step one of your capstone. You will build a one-page brand guidelines frame in Figma, with your logo, colours, type and two example applications. It takes about forty-five minutes. In the next lesson, we start module three, with generating UI drafts in Figma. See you there.
+
+## Thumbnail
+Headline: One Page, Clear Rules
+Image: Navy background, a single tidy brand guidelines page with logo, five colour swatches, type scale and two small applications, headline in teal Inter Bold.
+
+## Production Notes
+- [VERSION] Figma styles, variables, variable modes and their availability on the free plan change; confirm current names and plan limits before building the scene 10 to 13 slides. The script mentions styles, variables and components only in general terms and does not mention variable modes.
+- L10 is not a screen-demo lesson: the Figma steps are shown as slides made from screenshots of Sanne's guidelines file.
+- Sanne de Vries and the cycling café are fictional; stock footage must not show a real café name, bike brand or logo.
+- This lesson starts the capstone (capstone step 1); the CTA says so.

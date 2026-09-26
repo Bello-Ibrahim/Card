@@ -1,0 +1,188 @@
+{
+  "course_id": "AI-25",
+  "lesson_id": "L05",
+  "duration_s": 314.3,
+  "thumbnail": {
+    "headline": "Same Number, Different Evidence",
+    "slide": {
+      "layout": "title",
+      "title": "Same Number, Different Evidence",
+      "body": "Four-step staircase: past data, other hospitals, new patients, randomised trial. Top step in teal. Small tag: AI in Healthcare · Lesson 5."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.9,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Same figure. Equally strong?",
+      "voiceover": "Two suppliers show you the same sensitivity figure. One measured it on old images from a single hospital. The other measured it in a trial where patients' care was actually affected. Are these claims equally strong? No, and knowing why is a vital skill."
+    },
+    {
+      "scene": 2,
+      "start": 18.9,
+      "end": 37.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Levels of Evidence",
+        "body": "From study to real-world use · AI in Healthcare · Lesson 5 of 14"
+      },
+      "voiceover": "In the last lesson, we learned to read performance numbers. Now we ask a different question. How strong is the study behind those numbers? Evidence for a clinical AI tool builds up in stages, and each stage answers a harder and more important question."
+    },
+    {
+      "scene": 3,
+      "start": 37.8,
+      "end": 60.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Stage 1: Retrospective, single site",
+        "body": "Staircase, step 1 lit: past data from the same hospital. Question: 'Can the model find the pattern at all?' Warning: often too optimistic."
+      },
+      "voiceover": "The first stage is a retrospective study at a single site. The model is tested on past data from the same source it was trained on. It answers the question: can the model find the pattern at all? But the test data looks very like the training data, so results are often too optimistic."
+    },
+    {
+      "scene": 4,
+      "start": 60.9,
+      "end": 86.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Stages 2 and 3",
+        "body": "Step 2 lit: External validation, past data from other hospitals, devices, countries ('Does it hold in new settings?'). Step 3 lit: Prospective study, new patients in real time, often silent mode."
+      },
+      "voiceover": "The second stage is external validation. The model is tested on past data from other hospitals, devices or countries. It asks: does the performance hold in new settings? This often shows a drop. The third stage is a prospective study. The tool runs on new patients as they arrive, often in silent mode, where clinicians do not see its output."
+    },
+    {
+      "scene": 5,
+      "start": 86.6,
+      "end": 106.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Stage 4: Randomised or comparative trial",
+        "body": "Step 4 lit in teal: care with tool vs. care without tool, randomly assigned. Question: 'Does it improve patient outcomes compared with current practice?'"
+      },
+      "voiceover": "The fourth stage is a randomised controlled trial, or a similar comparative study. Patients or sites are randomly assigned to care with or without the tool. It asks the most important question: does using the tool improve outcomes that matter to patients, compared with current practice?"
+    },
+    {
+      "scene": 6,
+      "start": 106.3,
+      "end": 127.3,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Higher accuracy is not better care",
+      "voiceover": "Higher accuracy is not the same as better care. A tool can find more cases and still not help, if clinicians ignore its alerts, or if it delays other work. And accuracy in one study often falls in a new hospital, because of different patients, devices, prevalence and workflows."
+    },
+    {
+      "scene": 7,
+      "start": 127.3,
+      "end": 148.3,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "scientist working in medical research laboratory",
+      "on_screen_text": "Retrospective only = laboratory stage",
+      "voiceover": "Here is a simple way to picture it. A new medicine is not trusted on laboratory results alone. It must show that it is safe and helps real patients in careful clinical studies. An AI tool that has only passed a retrospective test is still at the laboratory stage."
+    },
+    {
+      "scene": 8,
+      "start": 148.3,
+      "end": 164.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Reporting guidelines for AI studies",
+        "body": "Help authors report completely · Help readers judge studies · A good sign, not a guarantee: still read the design and setting"
+      },
+      "voiceover": "Reporting guidelines also exist to help authors describe AI studies completely, and help readers judge them. A statement that a study followed one is a good sign, but you still need to read what the study actually did."
+    },
+    {
+      "scene": 9,
+      "start": 164.6,
+      "end": 180.5,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "hospital committee meeting around conference table",
+      "on_screen_text": "Hypothetical committee · Nigeria",
+      "voiceover": "Let's see this in practice. Doctor Olusegun Adeyemi chairs a hypothetical digital health committee at a teaching hospital in Nigeria. Three suppliers present tools that flag possible sepsis for rapid clinical review. The committee sorts the evidence."
+    },
+    {
+      "scene": 10,
+      "start": 180.5,
+      "end": 196.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Supplier 1",
+        "body": "20,000 past records, one hospital abroad → Level: retrospective, single site. Concern: different patients, lab tests and observation schedules."
+      },
+      "voiceover": "Supplier one reports high sensitivity on twenty thousand past records from one hospital abroad. That is a retrospective, single-site study. The committee notes that the patients, laboratory tests and nursing observation schedules may differ from its own."
+    },
+    {
+      "scene": 11,
+      "start": 196.8,
+      "end": 219.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Suppliers 2 and 3",
+        "body": "Supplier 2: past records, 5 hospitals, 3 countries → external validation. Supplier 3: prospective, 2 hospitals, silent mode for 6 months, compared with confirmed diagnoses → real-time performance."
+      },
+      "voiceover": "Supplier two reports results on past records from five hospitals in three countries, with a lower but stable sensitivity. That is external validation, which is stronger. Supplier three reports a prospective study in two hospitals, where the tool ran silently for six months, and its alerts were compared with later confirmed diagnoses."
+    },
+    {
+      "scene": 12,
+      "start": 219.1,
+      "end": 244.4,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "The committee's decision",
+        "body": "Staircase with Supplier 1 on step 1, Supplier 2 on step 2, Supplier 3 on step 3, step 4 empty. Arrow from Supplier 3: local silent-mode evaluation (see L14) → decision point before clinicians see alerts."
+      },
+      "voiceover": "That shows real-time performance, but not whether patient outcomes improve. None of the suppliers has a randomised trial. The committee does not reject all three. It picks supplier three's tool for a local silent-mode evaluation, with a decision point before any clinician sees the alerts. It also asks all suppliers whether they followed a recognised reporting guideline."
+    },
+    {
+      "scene": 13,
+      "start": 244.4,
+      "end": 266.3,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Design first, then size",
+      "voiceover": "A common mistake is to treat a large retrospective study as strong evidence because the numbers are big. A study on one million past images still only shows that the model can find a pattern in data like its training data. Look at the study design first, then at the size."
+    },
+    {
+      "scene": 14,
+      "start": 266.3,
+      "end": 290.3,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Four levels: retrospective → external validation → prospective → randomised or comparative trial. 2. Performance often falls in new settings. 3. Guidelines help, but read the design and setting."
+      },
+      "voiceover": "Let's recap. First, evidence builds from retrospective single-site studies, to external validation, to prospective studies, to randomised or comparative trials of patient outcomes. Second, performance often falls in new settings because of different patients, devices, prevalence and workflows. Third, reporting guidelines help you judge a study, but you must still read its design and setting."
+    },
+    {
+      "scene": 15,
+      "start": 290.3,
+      "end": 314.3,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: AI for Hospital and Clinic Operations",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will rank four hypothetical evidence summaries from weakest to strongest, and write what extra evidence each would need before clinical use. It takes about twenty minutes. This completes week one. Next week, we start with AI for hospital and clinic operations. See you there."
+    }
+  ]
+}
