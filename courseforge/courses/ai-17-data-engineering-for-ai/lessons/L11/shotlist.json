@@ -1,0 +1,206 @@
+{
+  "course_id": "AI-17",
+  "lesson_id": "L11",
+  "duration_s": 279.0,
+  "thumbnail": {
+    "headline": "Bad Data Never Crashes",
+    "slide": {
+      "layout": "title",
+      "title": "Bad Data Never Crashes",
+      "body": "A green success tick beside a table where two rows glow red as duplicates. Small tag: Data Engineering for AI · Lesson 11."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 13.3,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Bad data does not crash. It misleads.",
+      "voiceover": "Bad data rarely crashes anything. The pipeline finishes. The dashboard loads. The model trains. It simply learns the wrong thing, and nobody notices until a decision based on it goes wrong."
+    },
+    {
+      "scene": 2,
+      "start": 13.3,
+      "end": 28.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "What Makes Data Bad?",
+        "body": "Data Engineering for AI · Lesson 11 of 18 · Week 3"
+      },
+      "voiceover": "Welcome to week three, on data quality and orchestration. You can now build models in layers. But how do you know the data inside them is good? It helps to break quality into six dimensions."
+    },
+    {
+      "scene": 3,
+      "start": 28.3,
+      "end": 49.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Six dimensions of quality (1 to 4)",
+        "body": "Completeness: missing customer ID · Uniqueness: same visit loaded twice · Validity: body temperature 73 °C · Consistency: delivery date before order date"
+      },
+      "voiceover": "Completeness asks: are required values present? Uniqueness asks: is each real event recorded once? Validity asks: do values follow the rules for their type and range, so no body temperature of seventy-three degrees? And consistency asks: do related values agree, so no delivery before the order was placed?"
+    },
+    {
+      "scene": 4,
+      "start": 49.3,
+      "end": 66.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Six dimensions of quality (5 and 6)",
+        "body": "Timeliness: yesterday's file has not arrived · Accuracy: wrong price typed by a clerk. Footer: first five checkable with SQL; accuracy needs a trusted source or a person"
+      },
+      "voiceover": "Timeliness asks: is the data recent enough, or has yesterday's file not arrived? And accuracy asks: does the value match reality? The first five can usually be checked with SQL. Accuracy often needs another trusted source, or a human check."
+    },
+    {
+      "scene": 5,
+      "start": 66.4,
+      "end": 84.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "What bad data does to a model",
+        "body": "Duplicates → events look more common · Missing values in one group → weaker model for that group · Invalid values → stretched averages and scales. No error messages."
+      },
+      "voiceover": "For AI, each problem has a specific effect. Duplicates make some events look more common. Missing values in one group make the model less reliable for that group. Invalid values stretch averages and scales. None of these produce an error message."
+    },
+    {
+      "scene": 6,
+      "start": 84.0,
+      "end": 106.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Profiling with DuckDB",
+        "body": "SUMMARIZE table; → min, max, approximate distinct count, null percentage per column. Then targeted count(*) queries."
+      },
+      "voiceover": "So you must look for problems on purpose. This is called profiling: counting missing values, duplicates and out-of-range values per column, before you trust a dataset. DuckDB is a good tool for it. Its summarize command describes every column in one step, and targeted queries count exactly what you care about."
+    },
+    {
+      "scene": 7,
+      "start": 106.7,
+      "end": 119.1,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "doctor measuring patient blood pressure",
+      "on_screen_text": "Profiling = a health check-up",
+      "voiceover": "Profiling is like a health check-up. Most people feel fine before one. The doctor still measures blood pressure, because some problems have no symptoms until they are serious."
+    },
+    {
+      "scene": 8,
+      "start": 119.1,
+      "end": 136.7,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "health data analyst reviewing charts on laptop",
+      "on_screen_text": "Hypothetical example · clinics near Irbid",
+      "voiceover": "Here is an invented example. Doctor Samira Haddad leads a small health data team for a network of clinics near Irbid, Jordan. A report shows malaria cases twice as high as last season. Before anyone reacts, she profiles the visits table."
+    },
+    {
+      "scene": 9,
+      "start": 136.7,
+      "end": 152.1,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open Python, import duckdb and connect",
+        "Load the visits export into a table called visits",
+        "Run: SUMMARIZE visits;",
+        "Highlight the null percentage for patient_id and temp_c, and max temp_c = 73.0"
+      ],
+      "voiceover": "She opens Python, connects to DuckDB, and loads the visits export. Then she runs summarize. Two columns have missing values, the patient ID and the temperature. And the maximum temperature is seventy-three, which is impossible."
+    },
+    {
+      "scene": 10,
+      "start": 152.1,
+      "end": 172.2,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Type the targeted profile query from content.md (total_rows, missing_patient, missing_temp, duplicate_rows, temp_out_of_range)",
+        "Run it and show the result exactly: 11 | 1 | 1 | 3 | 1"
+      ],
+      "on_screen_text": "11 rows · 3 duplicates",
+      "voiceover": "Next, a targeted profile in one query. It counts the total rows, the missing patient IDs, the missing temperatures, the extra rows beyond distinct visit IDs, and the temperatures outside a normal human range. On her eleven invented rows, it returns eleven, one, one, three and one."
+    },
+    {
+      "scene": 11,
+      "start": 172.2,
+      "end": 183.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Type the malaria query from content.md: malaria_raw and malaria_real",
+        "Run it and show the result exactly: 6 | 3"
+      ],
+      "on_screen_text": "Malaria: 6 rows, 3 real visits",
+      "voiceover": "Three duplicate rows. So she compares the malaria count before and after removing duplicates. The raw count is six. The real count, by distinct visit, is three."
+    },
+    {
+      "scene": 12,
+      "start": 183.8,
+      "end": 195.4,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Twice the rows, not twice the disease",
+        "body": "Sync job → network error → sync job runs again → each malaria visit appears twice. 6 rows → 3 real visits."
+      },
+      "voiceover": "Every malaria visit had been loaded twice, because a sync job ran again after a network error. The disease was not twice as common. The rows were."
+    },
+    {
+      "scene": 13,
+      "start": 195.4,
+      "end": 219.4,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Issues, in order of risk",
+        "body": "1. Duplicated visits (uniqueness) · 2. Temperature 73.0, likely 37.3 (validity) · 3. Missing patient ID (completeness) · 4. Missing temperature (completeness). Footer: raw unchanged → rules for staging and tests"
+      },
+      "voiceover": "Samira lists her issues in order of risk. First, the duplicated visits, which change the disease count. Second, the impossible temperature, probably thirty-seven point three typed wrongly. Third, a visit without a patient ID. Fourth, a missing temperature. She deletes nothing in the raw table. Instead, she writes rules that staging and tests must enforce."
+    },
+    {
+      "scene": 14,
+      "start": 219.4,
+      "end": 235.7,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Ran successfully is not correct",
+      "voiceover": "A common mistake is to check only that the pipeline ran successfully. That tells you the SQL was valid, not that the data is right. Profile every new source, and turn each problem into a rule in code."
+    },
+    {
+      "scene": 15,
+      "start": 235.7,
+      "end": 258.0,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Six dimensions of data quality. 2. Bad data misleads quietly; profile on purpose. 3. SUMMARIZE + targeted counts find problems fast."
+      },
+      "voiceover": "Let's recap. First, six dimensions describe data quality: completeness, uniqueness, validity, consistency, timeliness and accuracy. Second, bad data does not crash a model. It quietly teaches it the wrong thing, so profile data on purpose. Third, DuckDB's summarize and targeted count queries find missing values, duplicates and out-of-range values quickly."
+    },
+    {
+      "scene": 16,
+      "start": 258.0,
+      "end": 279.0,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Testing Data with dbt",
+      "voiceover": "Now it is your turn. In the exercise, you will profile the course orders table with DuckDB, count missing values, duplicates and out-of-range values, and list your five most serious issues, with the dimension of each. It takes about thirty minutes. Next lesson: Testing Data with dbt."
+    }
+  ]
+}

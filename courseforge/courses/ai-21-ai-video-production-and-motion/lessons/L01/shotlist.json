@@ -1,0 +1,220 @@
+{
+  "course_id": "AI-21",
+  "lesson_id": "L01",
+  "duration_s": 309.3,
+  "thumbnail": {
+    "headline": "You Are the Director",
+    "slide": {
+      "layout": "title",
+      "title": "You Are the Director",
+      "body": "Centre: simple icon of a director's chair. Around it, four small icons: a camera (text-to-video), a moving picture frame (image-to-video), a presenter (avatar), a timeline (editing). Small tag: AI Video Production and Motion · Lesson 1."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.6,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "One laptop. Many decisions.",
+      "voiceover": "A sixty-second video used to need a camera, a crew, actors and several days of editing. Today, one person with a laptop can make something similar in a few evenings. But that person still makes most of the important decisions."
+    },
+    {
+      "scene": 2,
+      "start": 17.6,
+      "end": 29.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "The AI Video Toolkit and Workflow",
+        "body": "AI Video Production and Motion · Lesson 1 of 14"
+      },
+      "voiceover": "Hi, and welcome to AI Video Production and Motion. In this first lesson, you will see which tools do which job, and which jobs stay with you."
+    },
+    {
+      "scene": 3,
+      "start": 29.2,
+      "end": 56.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "1. Text-to-video",
+        "body": "Write a description → get a short clip. For scenes you cannot film: drone shot over a forest · product floating in space · city at night. Course tool: Google Flow (Veo)"
+      },
+      "voiceover": "AI video tools fall into four main kinds, and each one solves a different problem. The first is text-to-video. You write a description, and the model generates a short clip. It is useful for scenes you cannot film, like a drone shot over a forest, or a city at night. In this course, you use Google Flow, which runs Google's Veo models."
+    },
+    {
+      "scene": 4,
+      "start": 56.6,
+      "end": 73.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "2. Image-to-video",
+        "body": "Still photo → arrow labelled 'add motion' → same photo with small motion lines. Caption: the image fixes the look. Course tool: Kling"
+      },
+      "voiceover": "The second is image-to-video. You upload a still image, and the model adds motion to it. Because the image already fixes the look, the results are easier to control. In this course, you use Kling for this."
+    },
+    {
+      "scene": 5,
+      "start": 73.3,
+      "end": 89.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "3. Avatar video",
+        "body": "Script page + presenter icon + voice icon → video frame with a speaking presenter. Caption: stock avatars and stock voices only. Course tool: HeyGen"
+      },
+      "voiceover": "The third is avatar video. You type a script, choose a digital presenter and a voice, and the tool produces a person speaking to the camera. You will use HeyGen, with stock avatars and stock voices only."
+    },
+    {
+      "scene": 6,
+      "start": 89.2,
+      "end": 104.2,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "video editor working on timeline laptop",
+      "on_screen_text": "4. AI-assisted editing · CapCut",
+      "voiceover": "The fourth is AI-assisted editing. An editor places your clips on a timeline, and AI features help with jobs like automatic captions, background removal and audio clean-up. In this course, you use CapCut."
+    },
+    {
+      "scene": 7,
+      "start": 104.2,
+      "end": 116.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "The six-stage workflow",
+        "body": "Six boxes left to right with arrows: 1 Idea → 2 Script → 3 Shot list → 4 Generation → 5 Edit → 6 Export and review. Stages 1 to 3 highlighted in teal as 'plan'."
+      },
+      "voiceover": "These tools fit into a workflow with six stages. Idea, script, shot list, generation, edit, and finally export and review, where you check quality, disclosure, consent and rights."
+    },
+    {
+      "scene": 8,
+      "start": 116.2,
+      "end": 134.6,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Plan first. Generate second.",
+      "voiceover": "Most beginners want to start at stage four, because generation is the exciting part. But a clip without a plan is usually a clip you cannot use. The first three stages cost almost nothing, and they save many hours of generation credits later."
+    },
+    {
+      "scene": 9,
+      "start": 134.6,
+      "end": 153.0,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "small film crew preparing a shoot",
+      "on_screen_text": "Your tools are a film crew",
+      "voiceover": "Here is a way to picture it. Think of the tools as a small film crew. The text-to-video model is a camera operator who can film anywhere. The image-to-video model is an animator who brings your drawings to life."
+    },
+    {
+      "scene": 10,
+      "start": 153.0,
+      "end": 169.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "You are the director",
+        "body": "Director's chair in the centre. Around it: camera operator (text-to-video) · animator (image-to-video) · presenter (avatar) · editor (editing). Caption: none of them knows the story."
+      },
+      "voiceover": "The avatar tool is a presenter who reads your lines. The editor cuts the film together. But none of them knows the story. You are the director. You decide what each crew member does, and you check their work."
+    },
+    {
+      "scene": 11,
+      "start": 169.7,
+      "end": 181.7,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "baker shaping sourdough bread small bakery",
+      "on_screen_text": "Lindiwe's bakery · Durban",
+      "voiceover": "Let's see this in practice. Lindiwe runs a small bakery in Durban, South Africa. She wants a sixty-second video for her website about her new sourdough bread."
+    },
+    {
+      "scene": 12,
+      "start": 181.7,
+      "end": 193.3,
+      "section": "Demonstrate",
+      "visual_type": "hero_broll",
+      "broll_tool": "FLOW",
+      "broll_prompt": "A wide golden wheat field with gentle hills in the distance, the wheat moving softly in the wind; slow lateral tracking shot across the field at low height; warm sunrise light with long shadows and light mist; realistic cinematic style, natural warm colours; 7 seconds; no people, no readable text, no logos.",
+      "on_screen_text": "Text-to-video: the wheat field",
+      "voiceover": "Her opening shot is a slow move across a wheat field at sunrise. She cannot film that herself, so it is a job for text-to-video."
+    },
+    {
+      "scene": 13,
+      "start": 193.3,
+      "end": 207.0,
+      "section": "Demonstrate",
+      "visual_type": "hero_broll",
+      "broll_tool": "KLING",
+      "broll_prompt": "A freshly baked round sourdough loaf, cut open, on a wooden board on a rustic kitchen table, soft steam rising slowly from the crumb; static close-up with a very slight push-in; soft warm window light from the left; realistic food photography style, warm natural colours; 6 seconds; no people, no readable text, no logos.",
+      "on_screen_text": "Image-to-video: her own photo",
+      "voiceover": "Next, she has her own photo of the bread on a wooden board. She wants gentle steam rising from it. She already has the perfect still, so that is image-to-video."
+    },
+    {
+      "scene": 14,
+      "start": 207.0,
+      "end": 225.4,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Lindiwe's plan: shot → tool",
+        "body": "Wheat field at sunrise → Text-to-video · Her bread photo with steam → Image-to-video · Presenter explains fermentation → Stock avatar · Captions, music, final cut → AI-assisted editor"
+      },
+      "voiceover": "A presenter explains the three-day fermentation process. Lindiwe does not want to appear on camera, so she uses a stock avatar, not a copy of herself or of any real person. Then captions, music and the final cut happen in the editor."
+    },
+    {
+      "scene": 15,
+      "start": 225.4,
+      "end": 242.5,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "One message",
+        "body": "\"Our sourdough takes three days, and you can taste the difference.\" Below, small: a city street shot crossed out."
+      },
+      "voiceover": "Before she opens any tool, Lindiwe writes one sentence. Our sourdough takes three days, and you can taste the difference. Every shot must support that sentence. A beautiful shot of a busy city street does not, so it stays out."
+    },
+    {
+      "scene": 16,
+      "start": 242.5,
+      "end": 260.5,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Many short clips, not one prompt",
+      "voiceover": "A common mistake is to think one tool can make the whole video from one long prompt. Current tools generate short clips, not finished films. A video that feels complete is many short clips, planned in advance and joined in an editor."
+    },
+    {
+      "scene": 17,
+      "start": 260.5,
+      "end": 284.9,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Four tool kinds: text-to-video · image-to-video · avatar · AI-assisted editing. 2. Six stages: idea → script → shot list → generation → edit → export and review. 3. Tools are the crew; you are the director."
+      },
+      "voiceover": "Let's recap. First, the four kinds of AI video tools are text-to-video, image-to-video, avatar video and AI-assisted editing. Second, the workflow has six stages: idea, script, shot list, generation, edit, and export and review. Third, the tools are your crew, but you are the director. Planning before generation saves time and credits."
+    },
+    {
+      "scene": 18,
+      "start": 284.9,
+      "end": 309.3,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Writing a Short-Form Script",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will watch three short AI-assisted videos and guess which kind of tool made each part, with a clue for each guess. It takes about twenty minutes. In the next lesson, we start your own project with Writing a Short-Form Script. See you there."
+    }
+  ]
+}

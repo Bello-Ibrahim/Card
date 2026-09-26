@@ -1,0 +1,95 @@
+{
+  "title": "Images as Numbers: Pixels, Channels and Colour",
+  "thumbnail": {
+    "headline": "Why Is Red Blue?",
+    "image": "Navy background, a small tile photo with a bright square that is red on the left half and blue on the right half, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Why Is Red Blue?", "body": "Two copies of the same tile photo side by side: one with a red square, one with a blue square. Between them: 'BGR ↔ RGB'. Small tag: Computer Vision Essentials · Lesson 2."}
+  },
+  "production_notes": [
+    "[VERSION] Google Colab interface: the new-notebook flow, the folder icon for uploads, and the pre-installed OpenCV and Matplotlib packages. Check against the live tool before recording and adjust screen_steps to the live labels. The voiceover avoids exact menu names except the folder icon.",
+    "[VERSION] OpenCV function names (imread, cvtColor, colour conversion codes): check against the OpenCV version installed in Colab at recording time. Code in content.md was tested with opencv-python-headless on a synthetic image.",
+    "Run outputs: the voiceover states the shape 480, 640, 3 and the type uint8 exactly as content.md reports. Prepare tile.jpg at exactly 640 × 480 pixels so the recorded output matches. The top-left pixel value is NOT read aloud: content.md gives it only as an example, so the voiceover says 'something like'.",
+    "Hiroshi Tanaka and the Osaka tile factory are fictional. Use an unbranded photo of ceramic tiles with no people in it.",
+    "Screen recording: clean browser profile, no account names, bookmarks or other tabs visible. Speed up any waiting time for the Colab runtime to connect."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "You paint a square red in your code. You display the image, and the square is blue. Nothing is broken. You have just met one of the most common surprises in computer vision. By the end of this lesson, you will know exactly why it happens.",
+       "on_screen_text": "Red in code, blue on screen?"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Last time, we saw that every vision task starts with a grid of pixel values. Today we look inside that grid. For a computer, an image is a grid of numbers, and each cell is a pixel. OpenCV loads it as a NumPy array, so everything you know about arrays still applies.",
+       "slide": {"layout": "diagram", "title": "An image is a grid of numbers", "body": "A photo zooms in until single pixels are visible; each square shows a number. Label: NumPy array."}},
+      {"visual_type": "slide",
+       "voiceover": "The array has a shape of height, width and channels. Height is the number of rows. Width is the number of columns. Channels hold the colour. A colour image has three channels, and a greyscale image has only height and width.",
+       "slide": {"layout": "code", "title": "The shape", "body": "img.shape → (height, width, channels)\nColour: (480, 640, 3)\nGreyscale: (480, 640)"}},
+      {"visual_type": "slide",
+       "voiceover": "Each value is usually an eight-bit integer, from zero to two hundred and fifty-five. Zero means none of that colour, and two hundred and fifty-five means the maximum. So a pixel with three zeros is black, and a pixel with three values of two hundred and fifty-five is white.",
+       "slide": {"layout": "diagram", "title": "Values from 0 to 255", "body": "A gradient bar from 0 (black) to 255 (white). Two pixel swatches: (0, 0, 0) = black · (255, 255, 255) = white. Label: uint8"}},
+      {"visual_type": "slide",
+       "voiceover": "Now the important part. OpenCV stores colour in the order blue, green, red. Most other libraries, including Matplotlib and most deep learning models, expect red, green, blue. If you pass one order to a tool that expects the other, red and blue swap places. So always convert with one colour conversion call when you move an image out of OpenCV.",
+       "slide": {"layout": "comparison", "title": "BGR or RGB?", "body": "Left: OpenCV → B G R. Right: Matplotlib, Pillow, most models → R G B. Middle arrow: cv2.cvtColor(img, cv2.COLOR_BGR2RGB)"}},
+      {"visual_type": "stock",
+       "voiceover": "Here is a simple picture. Think of an image as a large egg box with three layers. Each cup holds a number that says how strong one colour is at that spot. OpenCV stacks the layers blue, green, red. Most other tools expect red on top. Every number is correct, but the colours come out wrong.",
+       "stock_query": "empty cardboard egg trays stacked",
+       "on_screen_text": "Same numbers, different layer order"},
+      {"visual_type": "slide",
+       "voiceover": "One more rule. To reach a pixel, you give the row first and then the column. The origin is the top-left corner, and the row number grows as you move down. We do all of this in Google Colab, which is free.",
+       "slide": {"layout": "diagram", "title": "img[y, x]: row first", "body": "Grid with (0, 0) marked at the top-left. Arrow right: x (column). Arrow down: y (row). One highlighted pixel labelled img[y, x]."}}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's try it. Hiroshi Tanaka checks photos of ceramic tiles at a small factory in Osaka, Japan. Before he trains any model, he wants to understand his data.",
+       "stock_query": "rows of ceramic tiles close up",
+       "on_screen_text": "Hiroshi's tiles · Osaka"},
+      {"visual_type": "screen",
+       "voiceover": "He opens Google Colab and creates a new notebook. Then he clicks the folder icon on the left and uploads one photo, called tile dot j p g. Menus in Colab change, so follow the idea rather than the exact screen.",
+       "screen_steps": [
+         "Open colab.research.google.com and create a new notebook",
+         "Click the folder icon in the left panel",
+         "Upload tile.jpg and show it in the file list"
+       ],
+       "on_screen_text": "Step 1: new notebook, upload photo"},
+      {"visual_type": "screen",
+       "voiceover": "He pastes a short cell. It loads the photo with OpenCV, prints the shape and the data type, and prints the top-left pixel. Then it paints a block of pixels red, using blue, green, red order, and displays the image with Matplotlib after converting it to RGB.",
+       "screen_steps": [
+         "Paste the code from content.md into a cell: cv2.imread, print shape and dtype, print img[0, 0], set img[50:150, 100:200] = (0, 0, 255), plt.imshow with cv2.cvtColor(img, cv2.COLOR_BGR2RGB)",
+         "Highlight the line that sets the block to (0, 0, 255)",
+         "Run the cell with Shift+Enter"
+       ],
+       "on_screen_text": "Step 2: load, inspect, paint"},
+      {"visual_type": "screen",
+       "voiceover": "The output shows four hundred and eighty, six hundred and forty, three, and the type is u-int-eight. That is four hundred and eighty rows of height, six hundred and forty columns of width, and three colour channels. The top-left pixel shows three numbers, something like one hundred and eighty, in blue, green, red order.",
+       "screen_steps": [
+         "Point to the printed output (480, 640, 3) uint8",
+         "Name each number in turn: height, width, channels",
+         "Point to the printed top-left pixel values and label them B, G, R"
+       ],
+       "on_screen_text": "(height, width, channels)"},
+      {"visual_type": "screen",
+       "voiceover": "The image shows a red square, as expected. Now he deletes the conversion call and runs the cell again. The square is blue. Matplotlib read the first channel, which is blue, as red. He puts the call back.",
+       "screen_steps": [
+         "Show the displayed image with the red square",
+         "Delete the cv2.cvtColor call so plt.imshow(img) receives BGR",
+         "Run again and show the blue square",
+         "Put the cvtColor call back and run once more"
+       ],
+       "on_screen_text": "No conversion: red turns blue"},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is to read the shape as width and height, because we say screen sizes that way. Arrays are rows first. But careful: the resize function takes width first. Also, if the file is missing, OpenCV returns None instead of an error, so always check.",
+       "on_screen_text": "Shape is height first. Check for None."}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, an image is a NumPy array with a shape of height, width and channels, and usually values from zero to two hundred and fifty-five. Second, OpenCV uses blue, green, red order, so convert to RGB before you display the image or pass it to most models. Third, index pixels row first, from the top-left corner, and check that the image actually loaded.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Image = array (height, width, channels), uint8 0–255. 2. OpenCV is BGR → convert to RGB. 3. img[y, x], row first from top-left; check imread did not return None."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below this video, you will load your own photo, print its shape, paint a red block and display it correctly. Choose a photo of an object with no people in it. It takes about twenty minutes. In the next lesson, we clean and shape images. Image Processing with OpenCV. See you there.",
+       "on_screen_text": "Next: Image Processing with OpenCV"}
+    ]
+  }
+}

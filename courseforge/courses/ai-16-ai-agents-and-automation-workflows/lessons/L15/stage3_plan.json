@@ -1,0 +1,162 @@
+{
+  "title": "Capstone Build: Design and Build Your Agent",
+  "thumbnail": {
+    "headline": "Design, Then Build",
+    "image": "Navy background, a one-page floor-plan style design sheet on the left and a connected n8n-style workflow on the right, headline in teal Inter Bold.",
+    "slide": {
+      "layout": "title",
+      "title": "Design, Then Build",
+      "body": "Left: a one-page design sheet with six labelled sections. Right: a connected workflow with a trigger, a switch and an agent node. Small tag: AI Agents and Automation Workflows · Lesson 15 · Capstone."
+    }
+  },
+  "production_notes": [
+    "[VERSION] n8n Webhook node (test and production URLs), Schedule Trigger, Chat Trigger, AI Agent node and Anthropic Chat Model node must be checked against the current release.",
+    "[REGION] Capstone data: storing personal data (such as attendee names and emails) in Google Sheets and sending it to an external API may be restricted by local data protection law. Learners must use invented or anonymised sample data; the demo uses invented attendees only.",
+    "Screen recording: the 'free API client' used to send test submissions is shown generically; do not name or show a brand. Blur the webhook URL if it contains a host name.",
+    "Nguyen Thi Lan and her Hanoi events company are fictional; the event and attendees are invented."
+  ],
+  "sections": {
+    "Hook": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "You now have every part: triggers, Sheets, the Claude API, validation, routing, tools, memory, approval and error handling. In the capstone, you put them together to automate one real business process, from the first input to the final action.",
+        "on_screen_text": "Every part, one real process"
+      }
+    ],
+    "Explain": [
+      {
+        "visual_type": "slide",
+        "voiceover": "The capstone has two steps. In this lesson, you design and build a first working version. In the next lesson, you test it, make it reliable, and present it.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Two capstone steps",
+          "body": "Step 1 (this lesson): design + first working version. Step 2 (Lesson 16): test, harden, present."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Choose a process that is real, repeated, and has clear inputs and outputs. For example, supplier invoice intake, event registration, or customer enquiry triage.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Choose a process",
+          "body": "Real, repeated, clear inputs and outputs. Examples: supplier invoice intake · event registration · customer enquiry triage"
+        }
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "Avoid processes that make automated decisions about people. If yours touches hiring, credit, insurance or housing, the agent may only collect and summarise. A person decides, and your design must show that approval step.",
+        "on_screen_text": "Decisions about people stay with people"
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Before you build, write a one-page design with six parts. The trigger that starts a run. The steps in order, marking which are rules and which use the model. The tools, and whether each one reads or writes. The approval points, and who approves. The failure modes, and what happens then. And the data: what flows where, and confirmation that it is sample data.",
+        "slide": {
+          "layout": "bullets",
+          "title": "The one-page design",
+          "body": "1 Trigger · 2 Steps (rule or model?) · 3 Tools (read or write?) · 4 Approval points and who approves · 5 Failure modes and responses · 6 Data: where it flows, sample data only"
+        }
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "Think of an architect's floor plan. You can move a wall on paper in a minute. Moving it after the concrete is poured takes weeks. Ten minutes on the design page saves hours of rebuilding nodes.",
+        "stock_query": "architect sketching floor plan on paper",
+        "on_screen_text": "Move walls on paper first"
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Then build the simplest version first. Start with a fixed workflow, and add an AI step where needed. Use the agent node only for the part where the steps really depend on the input. Get it running end to end on five inputs, before you add polish.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Simplest version first",
+          "body": "Fixed workflow backbone → one AI step → agent only where steps depend on input. Checkpoint flag: runs end to end on 5 inputs."
+        }
+      }
+    ],
+    "Demonstrate": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's see an example. Nguyen Thi Lan organises conferences for an events company in Hanoi, Vietnam. She automates registration questions for a sample event. Her design starts with a webhook that receives form submissions. A rule rejects empty ones. Claude classifies each message, as validated data. A Switch routes it.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Lan's design: the path",
+          "body": "Webhook (form submissions) → rule: reject empty → Claude: registration · session_change · dietary_request · refund_request · not_sure (validated JSON) → Switch → drafts to 'approvals'."
+        },
+        "on_screen_text": "Lan · events company · Hanoi"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Session changes go to an agent with three tools. Two only read: registrations and session capacity. The third only writes a proposal row. Every reply needs approval, and every refund request goes to finance staff, never to the agent. And she uses only invented attendee names and emails.",
+        "screen_steps": [
+          "Open Lan's one-page design in a document editor",
+          "Scroll to Tools: get_registration (read), get_session_capacity (read), propose_session_change (writes a proposal only)",
+          "Scroll to Approval points: all replies; refund requests → finance staff",
+          "Scroll to Data: invented attendee names and emails only"
+        ]
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "She also plans for failure. If the JSON is not valid, the workflow retries once, then sends the item to review. If the API is down, it retries, then the error workflow takes over. And if a session is full, the agent says so, and proposes alternatives.",
+        "screen_steps": [
+          "Scroll to Failure modes in the design page",
+          "Highlight: invalid JSON → retry once, then review",
+          "Highlight: API down → retry, then error workflow",
+          "Highlight: session full → agent says so, proposes alternatives"
+        ]
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Now she builds. She adds a webhook node, copies its test address, and sends one sample submission from a free API client. Then she adds the rule, the Claude request, and the validation code from lesson six.",
+        "screen_steps": [
+          "Add a Webhook node and copy its test URL",
+          "Send one sample submission from a free API client",
+          "Add the IF rule rejecting empty submissions",
+          "Add the Claude HTTP Request with the classification prompt",
+          "Add the validation Code node from L06"
+        ]
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "She adds a Switch, and connects session changes to an AI Agent, with the Anthropic chat model and her three tools. Every branch ends in the approvals tab, marked pending.",
+        "screen_steps": [
+          "Add a Switch node on category",
+          "Connect session_change to an AI Agent with the Anthropic Chat Model",
+          "Attach the three tools: get_registration, get_session_capacity, propose_session_change",
+          "Connect every branch to Google Sheets append to 'approvals' with status = pending"
+        ],
+        "on_screen_text": "Every branch ends in approvals"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Finally, she sends five test submissions, one of each type. Each one lands in the approvals tab. In each row, you'll see something like a sensible draft. It works end to end. Error handling and the full test set come next.",
+        "screen_steps": [
+          "Send 5 test submissions, one per category",
+          "Open the executions list: 5 successful runs",
+          "Open the 'approvals' tab: 5 pending rows with drafts (example output)"
+        ]
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "A common mistake is to design one agent that does everything, with ten tools and a long system message. It is hard to test, and hard to explain. Most of your process should be a clear workflow. Use the agent only where it is really needed, and keep write actions behind approval.",
+        "on_screen_text": "Mostly workflow. Agent only where needed."
+      }
+    ],
+    "Recap": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, choose a real, repeated process, and keep a person in charge of any decision about people. Second, write a one-page design: trigger, steps, tools, approval points, failure modes and data. Third, build the simplest version that runs end to end on five inputs.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. A real, repeated process; people decide about people. 2. One-page design: trigger, steps, tools, approvals, failures, data. 3. Simplest version, end to end on 5 inputs."
+        }
+      }
+    ],
+    "CTA": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Now it is your turn. This is step one of your capstone. In the exercise below this video, you will write your design page, and build a working version of your agent that runs end to end on five test inputs, with Google Sheets and the Claude API. Allow about ninety minutes. In the next lesson, the final one, we cover Capstone: Test, Harden and Present. See you there.",
+        "on_screen_text": "Next: Test, Harden and Present"
+      }
+    ]
+  }
+}

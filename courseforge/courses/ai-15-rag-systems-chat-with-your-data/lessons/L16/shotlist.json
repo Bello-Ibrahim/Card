@@ -1,0 +1,184 @@
+{
+  "course_id": "AI-15",
+  "lesson_id": "L16",
+  "duration_s": 291.8,
+  "thumbnail": {
+    "headline": "Prove It Works",
+    "slide": {
+      "layout": "title",
+      "title": "Prove It Works",
+      "body": "A report page with a results table v1 → v2 → v3 and an upward teal line. Small tag: RAG Systems · Capstone Step 2."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.0,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "How good is it, really?",
+      "voiceover": "Your assistant works in a demo. Now a team lead asks: how good is it, what did you change, and what will it cost? In this final step, you answer with evidence, and a short report that someone else can act on."
+    },
+    {
+      "scene": 2,
+      "start": 18.0,
+      "end": 35.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "The improvement loop",
+        "body": "Circle of four arrows: Measure → Diagnose → Change one thing → Measure again. Label: RAG Systems · Lesson 16 of 16"
+      },
+      "voiceover": "In the last lesson, you built your assistant. Step two follows a simple loop. Measure, diagnose, change one thing, and measure again. It sounds simple, but it is the habit that separates a demo from a system people can trust."
+    },
+    {
+      "scene": 3,
+      "start": 35.1,
+      "end": 52.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "1. Baseline",
+        "body": "Frozen test set · hit@k, recall@k, MRR · faithfulness + relevance (judge checked by you) · correct refusal rate · cost and latency per query"
+      },
+      "voiceover": "First, the baseline. Freeze your test set and run the full pipeline once. Record retrieval metrics at the k you use, faithfulness and relevance from your checked judge, the correct refusal rate on unanswerable questions, and cost and latency per query."
+    },
+    {
+      "scene": 4,
+      "start": 52.7,
+      "end": 77.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "2–3. Diagnose and improve",
+        "body": "Split tables → structure-aware chunking · missed codes → hybrid search · low ranks → reranker · vague follow-ups → rewriting · unfaithful → stricter prompt · cost → smaller k, caching. Log every run."
+      },
+      "voiceover": "Then diagnose. Classify failures by cause, and choose improvements that target the most common cause, not the technique you like most. Make at least two improvements, one at a time, and re-run the same test set after each. Log every run's settings and scores in one results file, so your report tables come straight from data."
+    },
+    {
+      "scene": 5,
+      "start": 77.1,
+      "end": 96.0,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "building inspector checking new house clipboard",
+      "on_screen_text": "Tested, measured, repaired, still to fix",
+      "voiceover": "Think of a building inspector's report on a new house. It does not only say the house is good. It lists what was tested, the measurements, the repairs made, and the problems still to fix, so the owner can decide what to do next."
+    },
+    {
+      "scene": 6,
+      "start": 96.0,
+      "end": 115.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "4. Deploy",
+        "body": "Where your users can reach it · internal server or free hosting for the demo · API key on the server · access-control filter on"
+      },
+      "voiceover": "Next, deploy. Run the assistant where your user group could reach it, even if that is only a shared internal server, or a free hosting plan for the demo. Keep the API key on the server, and apply your access control filter from lesson thirteen."
+    },
+    {
+      "scene": 7,
+      "start": 115.3,
+      "end": 142.3,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Show the frozen test set file and its version tag.",
+        "Run the baseline evaluation and log it with log_run as v1.",
+        "Show the v1 line: hit@5 0.70, MRR 0.52, faithfulness 0.80, refusals 4 of 6."
+      ],
+      "on_screen_text": "Camila · framework docs · Belo Horizonte",
+      "voiceover": "Let's follow Camila in Belo Horizonte, Brazil. She builds an assistant over a web framework's English documentation, for Brazilian developers who ask in Portuguese. Here are her example results. Her baseline, version one, has a hit rate at five of zero point seven zero, an MRR of zero point five two, faithfulness of zero point eight zero, and four of six correct refusals."
+    },
+    {
+      "scene": 8,
+      "start": 142.3,
+      "end": 162.4,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Show the classified failures: mostly function names, two Portuguese technical-term questions.",
+        "Switch retrieval to hybrid with RRF, re-run, and log v2.",
+        "Show hit@5 0.83 with faithfulness unchanged."
+      ],
+      "voiceover": "Her diagnosis: most failures are code names, such as function names, plus two Portuguese questions with technical terms. So change one is hybrid search with rank fusion. The hit rate rises to zero point eight three, and faithfulness stays the same. Hybrid search targets exactly that cause."
+    },
+    {
+      "scene": 9,
+      "start": 162.4,
+      "end": 180.0,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Show the prompt change: 'reply exactly' refusal sentence and claim-by-claim citations.",
+        "Re-run and log v3.",
+        "Show refusals 6 of 6 and faithfulness 0.90."
+      ],
+      "on_screen_text": "Six of six correct refusals",
+      "voiceover": "Change two is a stricter prompt, with reply exactly for refusals, and a citation for every claim. Correct refusals rise to six of six, and faithfulness to zero point nine zero. Every I don't know is now a real, correct answer."
+    },
+    {
+      "scene": 10,
+      "start": 180.0,
+      "end": 203.1,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Show the rejected reranker run in the log with higher latency and no hit@5 gain.",
+        "Run compare('runs.jsonl') and show one line per version with hit@5, faithfulness and cost.",
+        "Show the deployed v3 answering a Portuguese question with sources."
+      ],
+      "voiceover": "She also tried a reranker. It added time, with no gain on her test set, so she removed it, and she reports that too. Then she prints all runs side by side from her results file, deploys version three, and writes her report. Her report has one results table and five real failure examples."
+    },
+    {
+      "scene": 11,
+      "start": 203.1,
+      "end": 225.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "The two-page report",
+        "body": "1. Purpose · 2. Design choices + evidence · 3. Metrics before and after · 4. Improvements, incl. failed ones · 5. Known failures · 6. Risks and next steps"
+      },
+      "voiceover": "The report is about two pages, with six parts. Purpose. Design choices, each with its evidence. Metrics before and after. Improvements, including the ones that did not help. Known failures, with real examples. And risks and next steps. A team lead should be able to read it and decide what to do next."
+    },
+    {
+      "scene": 12,
+      "start": 225.8,
+      "end": 241.2,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "One change per run",
+      "voiceover": "A common mistake is to change several things at once, and then not know which one helped. Change one thing per run, log every run, and report the failed attempts. Honest negative results are evidence too."
+    },
+    {
+      "scene": 13,
+      "start": 241.2,
+      "end": 266.5,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Measure → diagnose → change one thing → measure. 2. Two targeted improvements; report every run. 3. Report: purpose, choices, metrics, cost, failures, next steps."
+      },
+      "voiceover": "Let's recap. First, measure a baseline on a frozen test set, diagnose failures by cause, change one thing, and measure again. Second, make at least two improvements that target the most common causes, and report every run. Third, your report states purpose, design choices, before and after metrics, cost per query, known failures and next steps. Evidence first, always."
+    },
+    {
+      "scene": 14,
+      "start": 266.5,
+      "end": 291.8,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Submit your capstone",
+      "voiceover": "Congratulations. You have finished RAG Systems: Chat with Your Data. You can now build assistants that find the right passages, cite their sources, and say I don't know when they should. Your last task is capstone step two. Evaluate, improve and deploy your assistant, write your two-page report, and submit your capstone using the checklist below. Well done."
+    }
+  ]
+}

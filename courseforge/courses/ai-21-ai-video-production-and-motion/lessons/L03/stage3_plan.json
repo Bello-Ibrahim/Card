@@ -1,0 +1,78 @@
+{
+  "title": "Storyboards and Shot Lists",
+  "thumbnail": {
+    "headline": "Every Row Becomes a Prompt",
+    "image": "Navy background, a simple table with rows glowing teal one by one, each row turning into a small film frame, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Every Row Becomes a Prompt", "body": "A shot-list table on the left; arrows from three rows to three small film frames on the right. Small tag: AI Video Production and Motion · Lesson 3."}
+  },
+  "production_notes": [
+    "[VERSION] Typical maximum clip lengths of video models must be checked against the live tools before recording. The voiceover says only that generated clips are often short.",
+    "Valeria and the coffee brand in Oaxaca are fictional. Shot 8 on the slide shows 'Logo' and 'website' as placeholders only, not a real brand.",
+    "Scene 11 hero clip is generated in Google Flow from Valeria's shot 1 (misty coffee slopes at sunrise)."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "You have a script. Now imagine sending it to a video model line by line. What should the first shot look like? How long should it last? If you cannot answer, the model will answer for you, and you may not like its answers.",
+       "on_screen_text": "Who decides the shot?"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "In the last lesson, you wrote a short script. Now we turn that script into a plan the tools can follow.",
+       "slide": {"layout": "title", "title": "Storyboards and Shot Lists", "body": "AI Video Production and Motion · Lesson 3 of 14"}},
+      {"visual_type": "slide",
+       "voiceover": "A storyboard is a row of rough pictures that shows the video shot by shot. A shot list is the same plan as a table. For AI video, the shot list is more useful, because every row becomes a prompt later.",
+       "slide": {"layout": "comparison", "title": "Storyboard vs shot list", "body": "Left: row of four stick-figure sketches (Storyboard). Right: table with rows (Shot list). Arrow from a table row to a prompt box: every row becomes a prompt."}},
+      {"visual_type": "slide",
+       "voiceover": "A simple shot list has seven columns. The shot number. The time where it starts. Its duration. The shot type, such as wide, medium or close-up. What the viewer sees, in one specific line. The narration at the same time. And the source, like text-to-video, image-to-video, an avatar, your own footage, or a simple graphic.",
+       "slide": {"layout": "bullets", "title": "Seven columns", "body": "# · Time · Duration · Shot type · What the viewer sees · Narration at the same time · Source"}},
+      {"visual_type": "slide",
+       "voiceover": "For short-form video, three to eight seconds per shot is common. Generated clips are often short, so a longer shot needs a plan, such as two clips, or a slower edit.",
+       "slide": {"layout": "diagram", "title": "Shot length", "body": "Timeline with blocks of 3–8 seconds. One long block split into two clips, labelled 'two clips or a slower edit'."}},
+      {"visual_type": "slide",
+       "voiceover": "How do you build it? Take your two-column script. Split it where the picture should change, usually every one or two sentences. Read each piece aloud to get its duration. Then check that the durations add up to your target length.",
+       "slide": {"layout": "diagram", "title": "Script to shot list", "body": "Two-column script → scissors icon splitting it into pieces → each piece becomes a row with a stopwatch duration → total adds up to target length."}},
+      {"visual_type": "stock",
+       "voiceover": "Think about rhythm, too. Three wide shots in a row feel slow. A wide shot followed by a close-up feels like the story is moving. Put your strongest image in the hook. And quick stick-figure sketches still help you see whether shots work together before you spend credits.",
+       "stock_query": "hands sketching storyboard frames on paper",
+       "on_screen_text": "Vary shots. Sketch before generating."},
+      {"visual_type": "stock",
+       "voiceover": "A shot list is like a recipe card. The script tells you what dish you are cooking. The shot list gives each step, in order, with its time. Without a recipe, it is hard to cook the same dish twice, or to find what went wrong.",
+       "stock_query": "cook following recipe card in kitchen",
+       "on_screen_text": "A shot list is a recipe card"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's look at an example. Valeria is a freelance creator in Oaxaca, Mexico. A small coffee brand asks her for a forty-five second video. Here are her first shots.",
+       "stock_query": "coffee farm mountains Mexico morning",
+       "on_screen_text": "Valeria · coffee brand · Oaxaca"},
+      {"visual_type": "hero_broll",
+       "voiceover": "Shot one lasts four seconds. It is a wide shot of misty mountain slopes with coffee plants at sunrise. The narration says, our coffee starts in the clouds. The source is text-to-video.",
+       "broll_tool": "FLOW",
+       "broll_prompt": "Misty green mountain slopes covered with rows of coffee plants, clouds drifting slowly through the valley; slow wide aerial push forward over the slopes; soft golden sunrise light breaking through the mist; realistic cinematic documentary style, natural greens and gold; 6 seconds; no people, no readable text, no logos.",
+       "on_screen_text": "Shot 1 · wide · 4 s"},
+      {"visual_type": "slide",
+       "voiceover": "Then come close-ups and medium shots. Hands picking red coffee cherries. Beans drying in the sun. Beans turning brown in a roaster. The bag on a kitchen table. Coffee pouring into a clay cup. Two friends smiling over coffee.",
+       "slide": {"layout": "bullets", "title": "Valeria's shots 2 to 7", "body": "2 · 5 s · Close-up · Hands picking red coffee cherries · Text-to-video. 3 · 6 s · Medium · Beans drying, a rake moving through · Text-to-video. 4 · 5 s · Close-up · Beans browning in roaster · Image-to-video. 5 · 6 s · Medium · Bag on kitchen table · Image-to-video from product photo. 6 · 7 s · Close-up · Coffee into clay cup · Image-to-video. 7 · 4 s · Medium · Two friends smiling · Text-to-video"}},
+      {"visual_type": "slide",
+       "voiceover": "Notice that each viewer-sees line names a subject, an action and a setting. That makes the next lesson much easier. The durations add up to exactly forty-five seconds.",
+       "slide": {"layout": "diagram", "title": "Specific rows", "body": "Row 2 highlighted: 'Hands' (subject) · 'picking red coffee cherries' (action) · coffee farm (setting). Total bar: 4+5+6+5+6+7+4+8 = 45 s."}},
+      {"visual_type": "slide",
+       "voiceover": "Shot eight is the logo and the website address, for eight seconds. It needs no AI at all. Text generated inside video is often unreadable, so Valeria adds logos and web addresses in the editor.",
+       "slide": {"layout": "comparison", "title": "Shot 8: text goes in the editor", "body": "Left: AI-generated frame with garbled letters (red cross). Right: clean editor text 'Logo · website' (green tick). Row: 8 · 8 s · Graphic · Editor text"}},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is vague rows, like nice coffee shot, or happy people. They give you nothing to prompt with. Make every row specific. Who or what, doing what, and where. If you cannot picture the shot, the model cannot either.",
+       "on_screen_text": "Who or what, doing what, where"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, a shot list turns your script into rows with time, duration, shot type, what the viewer sees, narration and source. Second, durations must add up to your target length, and most short-form shots last about three to eight seconds. Third, specific rows become good prompts later, and text such as logos is best added in the editor.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Rows: time · duration · shot type · viewer sees · narration · source. 2. Durations add up; most shots 3–8 s. 3. Specific rows = good prompts; text goes in the editor."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. Turn your script into a shot list of eight to twelve shots, with duration, shot type and one specific line for each. Check the total, and do not use the same shot type more than twice in a row. It takes about thirty minutes. Next, we learn to speak the language of the camera.",
+       "on_screen_text": "Next: Speaking the Language of the Camera"}
+    ]
+  }
+}

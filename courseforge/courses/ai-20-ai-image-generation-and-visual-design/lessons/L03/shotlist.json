@@ -1,0 +1,241 @@
+{
+  "course_id": "AI-20",
+  "lesson_id": "L03",
+  "duration_s": 313.8,
+  "thumbnail": {
+    "headline": "One Prompt, Two Tools",
+    "slide": {
+      "layout": "title",
+      "title": "One Prompt, Two Tools",
+      "body": "Left: generated image of sugar bread and meat pies on a bakery counter, labelled 'Gemini'. Right: the same prompt's result labelled 'Adobe Firefly'. Small tag: AI Image Generation · Lesson 3."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.3,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Same prompt, two tools",
+      "voiceover": "You now know how to write a strong prompt. Today, you will put the same prompt into two different tools, and watch them produce two different images. By the end, you will know where the main controls are."
+    },
+    {
+      "scene": 2,
+      "start": 16.3,
+      "end": 23.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Your First Images in Gemini and Firefly",
+        "body": "AI Image Generation and Visual Design · Lesson 3 of 12 · Screen demo"
+      },
+      "voiceover": "This course uses two generators that you can start with for free: Gemini and Adobe Firefly."
+    },
+    {
+      "scene": 3,
+      "start": 23.2,
+      "end": 44.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Gemini",
+        "body": "Create images by chatting · Ask for changes in plain language: 'make the background lighter' · Alternative: Google AI Studio, more settings"
+      },
+      "voiceover": "Gemini is Google's AI assistant. You create images by chatting. You write a request, see the result, then ask for changes in plain language, like make the background lighter. Google AI Studio is a more technical Google workspace with more settings, and you can use it as an alternative."
+    },
+    {
+      "scene": 4,
+      "start": 44.2,
+      "end": 63.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Adobe Firefly",
+        "body": "Prompt box plus a settings panel · Aspect ratio · Content type: photo or art · Style effects · Free tier: limited generative credits"
+      },
+      "voiceover": "Adobe Firefly is Adobe's image tool. It works more like a control panel. You write a prompt, then choose settings from menus, such as aspect ratio, content type, photo or art, and style effects. The free tier gives you a limited number of generative credits."
+    },
+    {
+      "scene": 5,
+      "start": 63.5,
+      "end": 90.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Gemini vs Firefly",
+        "body": "Two columns. Gemini: changes by conversation · aspect ratio written in the prompt · its own default look. Firefly: buttons and menus · aspect ratio from a menu · its own default look. Footer: some tools add AI labels (see L10)."
+      },
+      "voiceover": "So what is the difference for a beginner? In Gemini, you change images through conversation, and you often ask for the aspect ratio in the prompt. In Firefly, you use buttons and menus. Each tool also has its own default look. And some tools add labels that show an image was made with AI. We come back to that in lesson ten."
+    },
+    {
+      "scene": 6,
+      "start": 90.1,
+      "end": 106.8,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "designer desk with control panel switches",
+      "on_screen_text": "Assistant or studio desk",
+      "voiceover": "Gemini is like asking a helpful assistant to draw for you, and giving feedback as you talk. Firefly is like working at a studio desk with labelled switches. Both can produce good work. They simply feel different to use."
+    },
+    {
+      "scene": 7,
+      "start": 106.8,
+      "end": 117.9,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "No real people or client files",
+      "voiceover": "One safety note before we start. While you practise, do not upload photos of real people, client files or anything confidential. Use your own simple prompts."
+    },
+    {
+      "scene": 8,
+      "start": 117.9,
+      "end": 140.2,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Efua's bakery prompt",
+        "body": "A wooden tray of freshly baked sugar bread loaves and meat pies on a bakery counter,\nproduct photograph, eye-level close-up, soft warm light from the left,\ngolden brown and cream colours with a small green plant in the background"
+      },
+      "voiceover": "Let's make an image for Efua, who runs a small bakery in Accra, Ghana. You can read the prompt on screen. It asks for a wooden tray of sugar bread and meat pies on a bakery counter, as an eye-level product photograph with soft warm light, in golden brown and cream."
+    },
+    {
+      "scene": 9,
+      "start": 140.2,
+      "end": 162.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open Gemini in a web browser and sign in with a Google account",
+        "Start a new chat",
+        "If there is an image option or tool menu, select image creation",
+        "Paste the bakery prompt and add: 'Make it a square 1:1 image.'",
+        "Press send"
+      ],
+      "on_screen_text": "Gemini: ask for the shape in words",
+      "voiceover": "We start in Gemini. I open it in the browser and sign in with a Google account. I start a new chat, and if there is an image option in the tools menu, I select it. Then I paste the prompt and add one sentence: make it a square, one to one image."
+    },
+    {
+      "scene": 10,
+      "start": 162.9,
+      "end": 180.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Wait for the result",
+        "Point out which details from the prompt appear: tray, bread, meat pies, light from the left, green plant",
+        "Type the follow-up: 'Keep everything the same, but make the background slightly darker.'",
+        "Press send"
+      ],
+      "voiceover": "Here is the result. Look at the details from the prompt. The tray, the loaves, the warm light from the left, and the small green plant. Now I type a follow-up. Keep everything the same, but make the background slightly darker."
+    },
+    {
+      "scene": 11,
+      "start": 180.9,
+      "end": 197.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Show how the image changed after the follow-up",
+        "Open the image",
+        "Use the download option to save it"
+      ],
+      "voiceover": "The background is darker, and the bakes stand out more. That is the Gemini way. You improve the image by talking to it. When I am happy, I open the image and use the download option to save it."
+    },
+    {
+      "scene": 12,
+      "start": 197.6,
+      "end": 215.2,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open the Adobe Firefly website and sign in with a free Adobe account",
+        "Choose the text-to-image option",
+        "Paste the same prompt, without the aspect-ratio sentence"
+      ],
+      "on_screen_text": "Firefly: settings in the panel",
+      "voiceover": "Now Adobe Firefly. I open the Firefly website, sign in with a free Adobe account, and choose text to image. I paste the same prompt, but without the sentence about the aspect ratio, because here we use the settings panel instead."
+    },
+    {
+      "scene": 13,
+      "start": 215.2,
+      "end": 230.2,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "In the settings panel, set aspect ratio to square (1:1)",
+        "Set content type to photo",
+        "Point out the credit counter, if visible, and explain that each generation uses credits",
+        "Click Generate"
+      ],
+      "voiceover": "In the panel, I set the aspect ratio to square, and the content type to photo. Notice the credit counter. Each generation uses credits, so plan your prompt before you click. Now I click generate."
+    },
+    {
+      "scene": 14,
+      "start": 230.2,
+      "end": 240.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Hover over the best Firefly result",
+        "Download it",
+        "Place the Gemini image and the Firefly image side by side"
+      ],
+      "voiceover": "Here are the Firefly results. I hover over the best one and download it. Now let's place both images side by side and compare."
+    },
+    {
+      "scene": 15,
+      "start": 240.5,
+      "end": 255.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "With both images side by side, point to the difference in lighting",
+        "Point to how much of the counter each image shows",
+        "Name the two differences out loud"
+      ],
+      "on_screen_text": "Judge against the brief",
+      "voiceover": "Two differences stand out here. The lighting feels different in each image, and one tool shows more of the counter than the other. Neither is simply better. The right choice depends on what Efua's bakery needs."
+    },
+    {
+      "scene": 16,
+      "start": 255.9,
+      "end": 271.3,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Avoid these mistakes",
+        "body": "One test tells you very little: compare several results · Judge against your brief, not your first impression · Plan the prompt first, then spend credits"
+      },
+      "voiceover": "A common mistake is to decide that one tool is better after one test. Every generation is random, so compare several results against your brief. And do not spend all your free credits on quick experiments."
+    },
+    {
+      "scene": 17,
+      "start": 271.3,
+      "end": 293.2,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Gemini = conversation · Firefly = settings panel. 2. Same prompt, different results: judge against the brief. 3. Free tiers have limits: plan before you generate."
+      },
+      "voiceover": "Let's recap. First, Gemini works through conversation, while Adobe Firefly works through a panel of settings like aspect ratio and content type. Second, the same prompt gives different results in different tools, so judge them against your brief. Third, free tiers have limits that change often, so plan before you generate."
+    },
+    {
+      "scene": 18,
+      "start": 293.2,
+      "end": 313.8,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Composition, Lighting and Colour Words",
+      "voiceover": "Now it is your turn. In the exercise below, you will create one image for the Accra bakery in both tools from the same prompt, and note two differences. It takes about twenty minutes. In the next lesson, we explore composition, lighting and colour words. See you there."
+    }
+  ]
+}

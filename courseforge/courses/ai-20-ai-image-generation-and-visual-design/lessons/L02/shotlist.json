@@ -1,0 +1,192 @@
+{
+  "course_id": "AI-20",
+  "lesson_id": "L02",
+  "duration_s": 297.9,
+  "thumbnail": {
+    "headline": "Same Tool, Better Prompt",
+    "slide": {
+      "layout": "title",
+      "title": "Same Tool, Better Prompt",
+      "body": "Left: plain generated cup on grey, labelled 'a coffee cup'. Right: warm generated café cup with gold rim and tiles. Small tag: AI Image Generation · Lesson 2."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.1,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Same tool. Different prompt.",
+      "voiceover": "Two people type a coffee cup into the same tool. One gets a flat, forgettable picture. The other gets a warm image that could go on a café menu tomorrow. The tool is the same. The difference is the prompt."
+    },
+    {
+      "scene": 2,
+      "start": 17.1,
+      "end": 32.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "The Anatomy of a Strong Prompt",
+        "body": "AI Image Generation and Visual Design · Lesson 2 of 12"
+      },
+      "voiceover": "In the last lesson, you saw that anything you do not describe is filled in by the model, often differently each time. A strong prompt reduces this guessing. It tells the model what matters to you."
+    },
+    {
+      "scene": 3,
+      "start": 32.5,
+      "end": 46.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "The prompt formula",
+        "body": "Seven labelled blocks in a row, each a different colour: Subject · Action · Setting · Style · Composition · Lighting · Colour. Caption: a checklist, not a strict order."
+      },
+      "voiceover": "A simple formula helps you remember what to include. Subject, action, setting, style, composition, lighting and colour. Read it as a checklist, not as a rule you must follow in exact order."
+    },
+    {
+      "scene": 4,
+      "start": 46.2,
+      "end": 64.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "The formula in action, part 1",
+        "body": "Subject: a white ceramic coffee cup · Action: steam rising from the coffee · Setting: on a marble café counter · Style: product photograph"
+      },
+      "voiceover": "Here is each part for a cup of coffee. The subject is a white ceramic cup. The action is steam rising. The setting is a marble café counter. The style is a product photograph. Each part answers one simple question about the picture."
+    },
+    {
+      "scene": 5,
+      "start": 64.6,
+      "end": 86.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "The formula in action, part 2",
+        "body": "Composition: close-up, seen from slightly above · Lighting: soft morning light from a window on the right · Colour: warm browns and cream, one small touch of blue. Footer: quick idea = 3 parts · client image = all 7"
+      },
+      "voiceover": "The composition is a close-up from slightly above. The lighting is soft morning light from a window. And the colour is warm browns and cream. You do not need all seven every time. A quick idea may need three parts. A picture for a client usually needs all of them."
+    },
+    {
+      "scene": 6,
+      "start": 86.5,
+      "end": 108.8,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "taxi driver listening to passenger directions",
+      "on_screen_text": "Each detail removes a wrong destination",
+      "voiceover": "Think of a prompt as instructions for a taxi driver in a city they do not know. Take me to the centre gets you somewhere. Take me to the north entrance of the central station, near the bus stop, gets you to the right door. Each extra detail removes one wrong destination."
+    },
+    {
+      "scene": 7,
+      "start": 108.8,
+      "end": 130.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Specific beats stunning",
+        "body": "Left, crossed out: 'beautiful, stunning, amazing, high quality'. Right, ticked: 'a cup with a thin gold rim' with a small generated close-up of the gold rim. Caption: replace praise words with visible details."
+      },
+      "voiceover": "Specific words beat long lists of adjectives. Beginners often add words like beautiful, stunning or high quality. But these words do not tell the model anything it can draw. Compare a beautiful cup with a cup with a thin gold rim. The second phrase gives the model something it can show."
+    },
+    {
+      "scene": 8,
+      "start": 130.7,
+      "end": 147.4,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Describe what the viewer can see",
+      "voiceover": "So replace praise words with visible details. A material, a shape, a light direction, a colour. And keep the language plain, in short phrases or sentences. Most tools handle natural language well, so you do not need special codes."
+    },
+    {
+      "scene": 9,
+      "start": 147.4,
+      "end": 162.0,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "small cafe counter with pastries",
+      "on_screen_text": "Inês's café · Lisbon",
+      "voiceover": "Let's see the formula at work. Inês owns a small café in Lisbon, Portugal. She wants a photo-style image for her online menu. Her first prompt is just three words: a coffee cup."
+    },
+    {
+      "scene": 10,
+      "start": 162.0,
+      "end": 173.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Before",
+        "body": "Prompt in a code box: 'A coffee cup'. Next to it, the generated result: a plain cup on a flat grey background. Label: 'Could be any café'."
+      },
+      "voiceover": "The result is a plain cup on a grey background. It could belong to any café in the world. So she uses the formula to rewrite it."
+    },
+    {
+      "scene": 11,
+      "start": 173.6,
+      "end": 202.7,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "After: Inês's rewritten prompt",
+        "body": "A white ceramic cup of coffee with a thin gold rim, light steam rising,\non a pale marble café counter with a small plate of custard tarts behind it,\nproduct photograph, close-up from slightly above, cup in the left third,\nsoft morning light from a window on the right,\nwarm cream and brown tones with a small blue-and-white tile pattern in the background\n(each line tagged in the margin: subject/action · setting · style/composition · lighting · colour)"
+      },
+      "voiceover": "You can read her new prompt on screen. In short, she asks for a white cup with a thin gold rim and light steam, on a pale marble counter, with custard tarts behind it. It is a close-up product photograph from slightly above, with the cup in the left third, soft morning window light, and warm cream and brown tones with a blue and white tile pattern."
+    },
+    {
+      "scene": 12,
+      "start": 202.7,
+      "end": 227.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "After",
+        "body": "The generated rewritten image, with three callouts: 'tiles suggest Lisbon', 'morning window light', 'empty space for the price'."
+      },
+      "voiceover": "Now the image looks like it belongs to her café. The tiles suggest Lisbon. The light feels like early morning. And there is empty space on the right, where she can add the price later in a design tool. Notice what she did not write. No amazing, and no masterpiece. Every word describes something the viewer can see."
+    },
+    {
+      "scene": 13,
+      "start": 227.6,
+      "end": 255.9,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Change one part at a time",
+        "body": "Left, red: a long prompt with 'dark moody lighting' and 'bright sunny day' highlighted as a clash. Right, green: the formula blocks with only the Lighting block swapped, arrow to 'generate and compare'."
+      },
+      "voiceover": "A common mistake is to fix a weak result by adding more and more words. Soon the prompt is long, and details start to fight, like dark moody lighting and bright sunny day. Instead, find the part of the formula that caused the problem, and change only that part. Then generate again and compare. Changing one thing at a time shows you what each word does."
+    },
+    {
+      "scene": 14,
+      "start": 255.9,
+      "end": 276.0,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Use the formula: subject · action · setting · style · composition · lighting · colour. 2. Visible details beat praise words. 3. Fix one part at a time, then compare."
+      },
+      "voiceover": "Let's recap. First, a strong prompt covers subject, action, setting, style, composition, lighting and colour, as the task needs. Second, visible details like materials, angles and light direction work better than praise words. Third, when a result is wrong, change one part at a time and compare."
+    },
+    {
+      "scene": 15,
+      "start": 276.0,
+      "end": 297.9,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Your First Images in Gemini and Firefly",
+      "voiceover": "Now it is your turn. In the exercise below, you will rewrite three weak prompts with the formula, generate both versions in Gemini, and compare them side by side. It takes about twenty minutes. In the next lesson, you will make your first images in Gemini and Firefly. See you there."
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "title": "Incremental Models and Changing Data",
+  "thumbnail": {
+    "headline": "Only Process What Changed",
+    "image": "Navy background, a tall grey stack of existing rows with two new teal rows being added on top, headline in teal Inter Bold.",
+    "slide": {
+      "layout": "title",
+      "title": "Only Process What Changed",
+      "body": "A stack of grey rows labelled 'already built' and two teal rows sliding on top labelled 'new'. Small tag: Data Engineering for AI · Lesson 9."
+    }
+  },
+  "production_notes": [
+    "[VERSION] Incremental strategies and unique_key behaviour (merge, or delete and insert) differ between adapters (dbt-postgres, dbt-duckdb) and releases; the voiceover does not name a strategy.",
+    "[VERSION] The YAML snapshot syntax (relation, config, strategy: check) is only available in recent dbt Core releases; older releases use a Jinja snapshot block. Check before recording the snapshot slide.",
+    "Screen output must match content.md: first run 3 events, second run selects 2 rows, third run selects 0, final table 5 rows and 5 distinct event_id values, duplicate check returns no rows, first 3 rows keep their original dbt_loaded_at.",
+    "An and the language-learning app in Hanoi, Vietnam are fictional; the events are invented."
+  ],
+  "sections": {
+    "Hook": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Your events table grows every day. On the first day, the model builds in seconds. A year later, it rebuilds the whole history every night, even though only yesterday's rows are new. Incremental models let dbt process only what changed.",
+        "on_screen_text": "Rebuild everything, or only what changed?"
+      }
+    ],
+    "Explain": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Last time, you built a feature table. So far, every model was rebuilt completely on each run. That is simple and safe, and it is the right default. But for large tables that only grow, it becomes slow, and on cloud warehouses, expensive.",
+        "slide": {
+          "layout": "title",
+          "title": "Incremental Models and Changing Data",
+          "body": "Data Engineering for AI · Lesson 9 of 18"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "An incremental model is built in full the first time. On later runs, dbt selects only new or changed rows, and adds them to the existing table. Two pieces of Jinja control this. The first is true when the table already exists and this is not a full refresh. The second refers to the existing table, so you can ask: what is my latest timestamp?",
+        "slide": {
+          "layout": "code",
+          "title": "Two Jinja helpers",
+          "body": "is_incremental() → true when the table exists and this is not a full refresh. {{ this }} → the existing table: 'what is my latest timestamp?'"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "A unique key tells dbt which column identifies a row. If a row with the same key arrives again, dbt replaces it, instead of adding a duplicate.",
+        "slide": {
+          "layout": "diagram",
+          "title": "unique_key prevents duplicates",
+          "body": "Existing row event_id 42 + arriving row event_id 42 → one row (replaced), not two"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "A different problem is data that changes. A customer moves to a new city, and the source simply overwrites the old address. If a model needs to know where the customer lived in January, the history is gone. A dbt snapshot solves this. On every run, it compares the source with the last version, and keeps old versions with valid from and valid to dates.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Snapshots keep history",
+          "body": "Customer row: city Hanoi (valid from Jan 1, valid to Mar 3) → new row: city Da Nang (valid from Mar 3, valid to empty). Columns dbt_valid_from, dbt_valid_to. Caption: slowly changing dimension"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "The trade-off is complexity. Late rows can be missed, a wrong filter can create duplicates, and a change in logic only applies to new rows, until you run a full refresh.",
+        "slide": {
+          "layout": "bullets",
+          "title": "New ways to fail",
+          "body": "Late-arriving rows missed · Wrong filter → duplicates · Logic change only hits new rows until dbt run --full-refresh"
+        }
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "Think of a phone book. A full rebuild reprints the whole book every day. An incremental model prints only the new pages and adds them to the binder. And a snapshot keeps the old pages when a number changes, stamped with the dates they were valid.",
+        "stock_query": "adding pages to a ring binder",
+        "on_screen_text": "Print only the new pages"
+      }
+    ],
+    "Demonstrate": [
+      {
+        "visual_type": "stock",
+        "voiceover": "Let's try it. An is an analytics engineer at a language-learning app in Hanoi, Vietnam. The raw events table receives app events every day.",
+        "stock_query": "person learning language on smartphone app",
+        "on_screen_text": "An · language app · Hanoi"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "She creates an events model, and its first line sets the materialisation to incremental, with the event ID as the unique key. The model selects the event columns, casts the timestamp, and adds a column that records when dbt loaded each row.",
+        "screen_steps": [
+          "Create models/marts/fct_events.sql",
+          "Type the config line: materialized='incremental', unique_key='event_id'",
+          "Type the select of event_id, user_id, event_type, event_ts and current_timestamp as dbt_loaded_at from the raw events source, as in content.md"
+        ]
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Then the key part. Only on incremental runs, a filter keeps events newer than the latest timestamp already in the table.",
+        "screen_steps": [
+          "Type the if is_incremental() block with: where event_ts > (select max(event_ts) from {{ this }})",
+          "Highlight the whole block"
+        ]
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "The first run builds the full table, with three events. She inserts two new events for the next day, and runs the same command again. This time, only the two new rows are selected. A third run, with no new data, selects nothing.",
+        "screen_steps": [
+          "Run: dbt run --select fct_events  (full build: 3 events)",
+          "Insert 2 new events for the next day into raw.events",
+          "Run the same command again: 2 rows selected",
+          "Run it a third time: 0 rows selected"
+        ],
+        "on_screen_text": "3 rows, then 2 new, then 0"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Now she checks for duplicates, grouping by event ID and keeping any ID that appears more than once. The check returns no rows. The table has five rows and five distinct IDs, and the loaded at column shows that the first three rows kept their original load time.",
+        "screen_steps": [
+          "Run the duplicate check from content.md: select event_id, count(*) from main.fct_events group by event_id having count(*) > 1;",
+          "Show: no rows returned",
+          "Run select * from main.fct_events; show 5 rows and highlight dbt_loaded_at on the first 3"
+        ],
+        "on_screen_text": "5 rows · no duplicates"
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "An also tracks changes in user profiles with a snapshot. In recent dbt releases, it can be defined in YAML. It watches the country and plan columns, and she runs the snapshot command every day, before the models.",
+        "slide": {
+          "layout": "code",
+          "title": "users_snapshot",
+          "body": "YAML from content.md: snapshots: name users_snapshot, relation source('raw', 'users'), unique_key user_id, strategy check, check_cols ['country', 'plan']. Footer: run dbt snapshot daily, before dbt run"
+        }
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "A common mistake is to make every model incremental from day one. On small tables, it saves nothing and adds risk. Start with full rebuilds. Switch only large, slow models, and add a small look-back window, such as the last three days, with a unique key.",
+        "on_screen_text": "Full rebuild first. Incremental when needed."
+      }
+    ],
+    "Recap": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, incremental models build the full table once, then process only new or changed rows. Second, a unique key prevents duplicates when rows arrive again, and snapshots keep the history of records that change. Third, incremental logic adds new ways to fail, so use it only for large, slow tables, and always test for duplicates.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. Build once, then only new rows. 2. unique_key stops duplicates; snapshots keep history. 3. Only for large, slow tables; test for duplicates."
+        }
+      }
+    ],
+    "CTA": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Now it is your turn. In the exercise, you will turn your orders mart into an incremental model, add two new orders, and run it twice. You should see seven rows, then nine, then nine again, with no duplicates. It takes about thirty-five minutes. Next lesson: Documentation and Lineage.",
+        "on_screen_text": "Next: Documentation and Lineage"
+      }
+    ]
+  }
+}

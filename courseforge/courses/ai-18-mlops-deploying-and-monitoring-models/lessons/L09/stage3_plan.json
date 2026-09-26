@@ -1,0 +1,73 @@
+{
+  "title": "Batch vs Online Serving and Performance",
+  "thumbnail": {
+    "headline": "Now or Tomorrow Morning?",
+    "image": "Navy background, a stopwatch on the left and a moon over a stack of rows on the right, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Now or Tomorrow Morning?", "body": "Left: stopwatch icon labelled 'online · p95'. Right: moon and stacked table rows labelled 'batch · nightly'. Small tag: MLOps · Lesson 9."}
+  },
+  "production_notes": [
+    "[VERSION] Locust is not in the brief's tool list; it is used as a free load-testing tool. Its web interface (port 8089, Statistics tab) and HttpUser API were checked against Locust 2.46.6 only. Check the current interface before recording.",
+    "Load-test results (5 users: 16 requests per second, median 6 ms, p95 11 ms; 50 users: 145 requests per second, median 9 ms, p95 30 ms) and 'scored 500 rows' are real outputs from one laptop test with a local Uvicorn process (not the container), one worker and the synthetic model. The voiceover says 'on our machine'. If the recording gives different numbers, show the recorded numbers and update the voiceover to match.",
+    "Katarzyna Nowak and the Kraków online shop are hypothetical."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Does your model need to answer in fifty milliseconds, or is tomorrow morning fast enough? The answer changes your architecture, your costs, and what you must measure.",
+       "on_screen_text": "Fifty milliseconds or tomorrow?"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "In the last lesson, we packed our API into a container. Now we ask how it should serve, and how fast it is. There are two main ways to serve predictions. Online serving answers one request at a time, while a user or a system waits. Our API is online serving. It needs low latency, and it must stay available all day.",
+       "slide": {"layout": "diagram", "title": "Online serving", "body": "A user icon sends one request → API → one answer back in milliseconds. Labels: low latency · available all day"}},
+      {"visual_type": "slide",
+       "voiceover": "Batch serving scores many rows together, on a schedule, and stores the results in a file or a table. Nobody waits for a single answer. It is simpler to run, easier to retry, and usually cheaper. But the predictions are only as fresh as the last run. Choose online when the input exists only at request time. Choose batch when a delay of hours is fine.",
+       "slide": {"layout": "comparison", "title": "Online vs batch", "body": "Online: one request, user waits, input exists only now. Batch: many rows on a schedule, results stored in a table, simpler and cheaper, only as fresh as the last run"}},
+      {"visual_type": "slide",
+       "voiceover": "For online services, measure two things under load. First, latency percentiles. The median is the typical request. The ninety-fifth percentile, or p ninety-five, is the time that ninety-five percent of requests stay under. Averages hide slow requests, and users notice the slow ones. Second, throughput: how many requests per second the service handles without errors.",
+       "slide": {"layout": "diagram", "title": "Median, p95 and throughput", "body": "A latency histogram with a line at the median (typical request) and a line at p95 (95% of requests are faster). Side box: throughput = requests per second without errors"}},
+      {"visual_type": "stock",
+       "voiceover": "Think of a coffee bar and a bakery. The coffee bar makes each drink while the customer waits. That is online. The bakery bakes all the bread at night for the morning. That is batch. It is efficient, but it cannot make a fresh loaf at three in the afternoon for one customer.",
+       "stock_query": "barista making coffee for waiting customer",
+       "on_screen_text": "Coffee bar vs night bakery"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Katarzyna Nowak leads data science at a hypothetical online shop in Kraków, Poland. She owns two models. A delivery time model shows arrives in two days on the checkout page. The customer is waiting, so it needs online serving. A monthly churn score gives marketing a list once a month. One scheduled batch job is enough.",
+       "stock_query": "online shop parcels packed in warehouse",
+       "on_screen_text": "Katarzyna · online shop · Kraków"},
+      {"visual_type": "screen",
+       "voiceover": "She load-tests the online service with Locust, a free, open-source tool. A short Python file describes one user who keeps sending a valid wine to the predict endpoint. She starts the service, starts Locust, and opens its web page.",
+       "screen_steps": ["Start the service: uvicorn app:app --port 8000", "Show locustfile.py with the ApiUser class posting a valid wine to /predict", "Run: locust -f locustfile.py --host http://127.0.0.1:8000", "Open http://localhost:8089"],
+       "on_screen_text": "Load test with Locust"},
+      {"visual_type": "screen",
+       "voiceover": "The first test uses five users for twenty seconds. On our machine, the service handled sixteen requests per second, with a median of six milliseconds and a p ninety-five of eleven milliseconds.",
+       "screen_steps": ["Start a test with 5 users and a spawn rate of 10", "Let it run for 20 seconds", "Open the Statistics tab and highlight 16 requests per second, median 6 ms, 95th percentile 11 ms"],
+       "on_screen_text": "5 users: median 6 ms, p95 11 ms"},
+      {"visual_type": "screen",
+       "voiceover": "Then she repeats with fifty users. Now it handled one hundred and forty-five requests per second. The median rose only to nine milliseconds, but the p ninety-five nearly tripled, to thirty milliseconds. That is queueing, and an average from one user would hide it.",
+       "screen_steps": ["Stop the test", "Start a new test with 50 users", "Open the Statistics tab and highlight 145 requests per second, median 9 ms, 95th percentile 30 ms", "Place the two results side by side"],
+       "on_screen_text": "50 users: median 9 ms, p95 30 ms"},
+      {"visual_type": "screen",
+       "voiceover": "Finally, the batch path. A short script loads the same champion model, scores a whole file, and writes a probability column. It prints scored five hundred rows. Because both paths use the same model version, online and batch predictions agree.",
+       "screen_steps": ["Show batch_score.py loading models:/wine-quality-clf@champion", "Run: python batch_score.py new_batch.csv scored.csv", "Show the output 'scored 500 rows -> scored.csv'", "Open scored.csv and show the probability column"],
+       "on_screen_text": "Same model, batch path"},
+      {"visual_type": "text",
+       "voiceover": "The common mistake is to report only the average latency from a single user. Always test at more than one load level, report the median and p ninety-five, and test the way you will deploy. Your numbers will differ with hardware, model and container settings.",
+       "on_screen_text": "Two load levels, median and p95"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, online serving answers each request at once, while batch serving scores many rows on a schedule, and is simpler and cheaper when a delay is acceptable. Second, measure median latency, p ninety-five latency and throughput at more than one load level. Third, use the same registered model version for both paths.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Online = answer now; batch = many rows on a schedule. 2. Median, p95 and throughput at 2+ load levels. 3. Same model version for both paths."}}
+    ],
+    "CTA": [
+      {"visual_type": "slide",
+       "voiceover": "In the exercise below this video, you will load-test your own container at two load levels, record the median and p ninety-five, and write a batch scoring script for the same model. It takes about forty minutes.",
+       "slide": {"layout": "bullets", "title": "Exercise: measure and batch", "body": "Locust at 5 and 50 users · record requests/s, median, p95 · batch_score.py on 100+ rows · 3 sentences on your serving choice · about 40 minutes"}},
+      {"visual_type": "presenter_full",
+       "voiceover": "In the next lesson, we decide where models run and how new versions reach users safely, in Deployment Targets and Release Strategies. See you there.",
+       "on_screen_text": "Next: Deployment and Release Strategies"}
+    ]
+  }
+}

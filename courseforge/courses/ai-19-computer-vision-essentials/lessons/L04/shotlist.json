@@ -1,0 +1,196 @@
+{
+  "course_id": "AI-19",
+  "lesson_id": "L04",
+  "duration_s": 302.1,
+  "thumbnail": {
+    "headline": "Video Is Just Frames",
+    "slide": {
+      "layout": "title",
+      "title": "Video Is Just Frames",
+      "body": "A film strip of five greyscale frames of fruit on a belt, labelled frame 0 to frame 4. Small tag: Computer Vision Essentials · Lesson 4."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.9,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Read, process, repeat",
+      "voiceover": "A one-minute video clip can contain well over a thousand images. Every video tool, from traffic counters to sports replays, starts with the same simple loop. Read a frame, do something with it, move to the next one. Today, you write that loop."
+    },
+    {
+      "scene": 2,
+      "start": 18.9,
+      "end": 33.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "A video is a sequence of frames",
+        "body": "A row of image arrays on a timeline. Labels: frame rate (FPS) · frame size (width × height) · frame count."
+      },
+      "voiceover": "So far, we have worked with single images. A video is a sequence of images, called frames, shown quickly one after another. Three properties matter. The frame rate, the frame size, and the frame count."
+    },
+    {
+      "scene": 3,
+      "start": 33.9,
+      "end": 58.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Three properties",
+        "body": "FPS: 25 FPS = 25 frames per second · Size: same for every frame · Count: sometimes approximate, so do not rely on it"
+      },
+      "voiceover": "The frame rate is frames per second. A clip at twenty-five frames per second has twenty-five frames for every second of video. The frame size is the same for the whole file. And the frame count is the total, but some files report it only approximately, so do not rely on it for exact loops."
+    },
+    {
+      "scene": 4,
+      "start": 58.3,
+      "end": 81.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Reading frames",
+        "body": "cap = cv2.VideoCapture(\"belt.mp4\")\nok, frame = cap.read()   # ok is False at the end\nframe → normal BGR array"
+      },
+      "voiceover": "OpenCV reads video with a video capture object. Each read returns two values. The first says whether a frame was found, and becomes false at the end of the file. The second is the frame itself, a normal image array in blue, green, red order. Everything from the last lesson works on each frame."
+    },
+    {
+      "scene": 5,
+      "start": 81.4,
+      "end": 112.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Writing video: two rules",
+        "body": "cv2.VideoWriter(name, codec, fps, (width, height), isColor) · Rule 1: frame size must match exactly · Rule 2: isColor must match the frames · Always release() both objects"
+      },
+      "voiceover": "To save a result, you create a video writer with a file name, a codec, the frame rate and the frame size. Two rules prevent most problems. Every frame must have exactly the size you gave the writer. And the colour setting must match: colour frames need colour on, greyscale frames need it off. If not, OpenCV skips the frames without any error. At the end, release both the reader and the writer."
+    },
+    {
+      "scene": 6,
+      "start": 112.7,
+      "end": 130.3,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "factory conveyor belt with packages moving",
+      "on_screen_text": "Frames on a conveyor belt",
+      "voiceover": "Picture a factory conveyor belt. Frames arrive one at a time. Each worker does the same job on every item, and a packer at the end puts them back in order. If one worker is slow, the whole line slows down."
+    },
+    {
+      "scene": 7,
+      "start": 130.3,
+      "end": 154.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Colab and speed",
+        "body": "Colab: no webcam stream → use recorded files. Speed: 100 ms per frame at 25 FPS = 4× slower than real time → skip frames or resize first."
+      },
+      "voiceover": "Two practical points. Colab runs on a remote server, so it cannot stream your webcam. We use recorded video files, which also make results repeatable. And speed matters. At one hundred milliseconds per frame, a twenty-five frames per second clip runs four times slower than real time. Skip frames, or resize them before heavy steps."
+    },
+    {
+      "scene": 8,
+      "start": 154.3,
+      "end": 169.7,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "mangoes moving on fruit sorting belt",
+      "on_screen_text": "Mateus's sorting belt · Petrolina",
+      "voiceover": "Let's build it. Mateus Oliveira works at a fruit packing plant in Petrolina, Brazil. A fixed camera films the sorting belt. He wants a greyscale copy of each clip, with a frame number on every frame."
+    },
+    {
+      "scene": 9,
+      "start": 169.7,
+      "end": 183.4,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Upload belt.mp4 (a 10-second clip) to Colab",
+        "Run only the first four lines: cv2.VideoCapture, CAP_PROP_FPS, CAP_PROP_FRAME_WIDTH, CAP_PROP_FRAME_HEIGHT",
+        "Print fps, w and h"
+      ],
+      "on_screen_text": "Step 1: read the video's properties",
+      "voiceover": "He uploads a ten-second clip to Colab and runs only the first few lines. They open the video and read its frame rate, width and height, which he prints to check."
+    },
+    {
+      "scene": 10,
+      "start": 183.4,
+      "end": 210.0,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Paste and run the full cell from content.md: VideoWriter with mp4v and isColor=False, the while loop with cap.read, cvtColor to grey, putText 'frame n', out.write",
+        "Highlight cap.release() and out.release()",
+        "Point to the printed summary: 250 frames at 25 FPS, size 640x360"
+      ],
+      "on_screen_text": "Step 2: loop, write, release",
+      "voiceover": "Then he runs the full cell. It creates a writer with colour switched off, and loops through the frames. Each frame is turned grey, gets its number written in white, and is saved. Finally, both objects are released. The summary reads two hundred and fifty frames at twenty-five frames per second, size six hundred and forty by three hundred and sixty."
+    },
+    {
+      "scene": 11,
+      "start": 210.0,
+      "end": 219.4,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open the file panel and download belt_gray.mp4",
+        "Play the video and pause on one frame to show the frame number"
+      ],
+      "on_screen_text": "Step 3: check the output",
+      "voiceover": "He downloads the new file from the file panel and plays it. Every frame is grey, with its number in the corner."
+    },
+    {
+      "scene": 12,
+      "start": 219.4,
+      "end": 234.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Change isColor=False to isColor=True",
+        "Run the cell again and show that no exception appears",
+        "Show that belt_gray.mp4 is broken or very small in the file panel",
+        "Change it back to isColor=False"
+      ],
+      "on_screen_text": "Silent failure: wrong colour setting",
+      "voiceover": "Now he breaks it on purpose. He switches colour on in the writer and runs the cell again. There is no error message, but the output file is broken or very small. He switches it back."
+    },
+    {
+      "scene": 13,
+      "start": 234.8,
+      "end": 254.1,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Writer size is width, height",
+      "voiceover": "Another common mistake is to give the writer height first, because that is the array shape. The writer, like resize, expects width first. When an output video is empty, compare the writer size with the frame shape, then check the colour setting and the codec."
+    },
+    {
+      "scene": 14,
+      "start": 254.1,
+      "end": 281.5,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Video = frames; each frame is an image array. 2. VideoWriter: codec, FPS, (width, height), isColor; release() both. 3. Colab: recorded clips; resize or skip frames for speed."
+      },
+      "voiceover": "Let's recap. First, a video is a sequence of frames, and each frame you read is a normal image array. Second, a video writer needs a codec, the frame rate, the size as width and height, and the right colour setting, and both objects must be released. Third, in Colab, work with recorded clips, and reduce the work per frame when processing is slow."
+    },
+    {
+      "scene": 15,
+      "start": 281.5,
+      "end": 302.1,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: How CNNs Learn Visual Features",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will read a short public clip, add frame numbers, convert it to greyscale and save it. It takes about twenty-five minutes. Next week, we start using models. How CNNs Learn Visual Features. See you there."
+    }
+  ]
+}

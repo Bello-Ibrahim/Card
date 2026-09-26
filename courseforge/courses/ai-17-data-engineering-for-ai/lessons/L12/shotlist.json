@@ -1,0 +1,206 @@
+{
+  "course_id": "AI-17",
+  "lesson_id": "L12",
+  "duration_s": 286.3,
+  "thumbnail": {
+    "headline": "Tests That Never Sleep",
+    "slide": {
+      "layout": "title",
+      "title": "Tests That Never Sleep",
+      "body": "Four model boxes, each with a small test badge: three green ticks and one red cross that stops the arrow to the feature table. Small tag: Data Engineering for AI · Lesson 12."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.4,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Look once. Test every time.",
+      "voiceover": "In the last lesson, you found problems by looking. That works once. Tomorrow a new file arrives, and nobody will look. dbt tests turn every problem you found into a check that runs automatically, every time."
+    },
+    {
+      "scene": 2,
+      "start": 15.4,
+      "end": 31.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Testing Data with dbt",
+        "body": "Data Engineering for AI · Lesson 12 of 18"
+      },
+      "voiceover": "A dbt test is a query that looks for bad rows. If it returns zero rows, the test passes. If it returns rows, the test fails, and dbt shows how many. There are two kinds of tests."
+    },
+    {
+      "scene": 3,
+      "start": 31.3,
+      "end": 55.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Four built-in generic tests",
+        "body": "unique → uniqueness · not_null → completeness · accepted_values → validity · relationships → consistency"
+      },
+      "voiceover": "Generic tests are ready-made, and you configure them in YAML, next to your descriptions. dbt Core includes four. Unique means no value appears twice. Not null means no value is missing. Accepted values means every value is in a list you give. And relationships means every value exists in another model, like a foreign key."
+    },
+    {
+      "scene": 4,
+      "start": 55.3,
+      "end": 68.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Singular tests",
+        "body": "tests/ folder → one .sql file per business rule → selects the rows that break it. Example rule: a shipment cannot leave before it is packed."
+      },
+      "voiceover": "Singular tests are your own SQL files in the tests folder. Each one selects the rows that break a business rule, such as: a shipment cannot leave before it is packed."
+    },
+    {
+      "scene": 5,
+      "start": 68.6,
+      "end": 95.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Error or warn?",
+        "body": "Error (default): dbt build stops downstream models, bad data never reaches the feature table. Warn: reported, pipeline continues."
+      },
+      "voiceover": "You also decide what a failure means. By default, a failing test is an error. With the build command, which runs and tests models in order, an error stops every model that depends on the failed one. So bad data does not reach the feature table. For less serious problems, you set the severity to warn. dbt reports the problem, but continues."
+    },
+    {
+      "scene": 6,
+      "start": 95.2,
+      "end": 111.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "A simple rule",
+        "body": "Error: duplicates, broken keys, impossible values. Warn: a few missing optional values for a person to review."
+      },
+      "voiceover": "A good rule: use error for anything that would make the AI dataset wrong, such as duplicates, broken keys or impossible values. Use warn for things a person should review, such as a few missing optional values."
+    },
+    {
+      "scene": 7,
+      "start": 111.1,
+      "end": 124.8,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "smoke alarm on ceiling close up",
+      "on_screen_text": "Tests = smoke alarms",
+      "voiceover": "Tests are like smoke alarms. You install them once, where fire is most likely. After that, you do not check each room every night. The alarm tells you when something is wrong."
+    },
+    {
+      "scene": 8,
+      "start": 124.8,
+      "end": 138.5,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "coffee sacks stacked for export shipping",
+      "on_screen_text": "Mateo · coffee exporter · Medellín",
+      "voiceover": "Let's add tests. Mateo is a data engineer at a coffee exporter in Medellín, Colombia. His staging model for shipments must be reliable, because it feeds a model that predicts shipping delays."
+    },
+    {
+      "scene": 9,
+      "start": 138.5,
+      "end": 156.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open models/staging/schema.yml",
+        "Type the stg_shipments tests from content.md: unique and not_null on shipment_id",
+        "Add accepted_values ['packed', 'shipped', 'delivered'] on shipment_status",
+        "Add relationships to ref('stg_exporters') on exporter_id, and not_null with severity warn on bags"
+      ],
+      "voiceover": "He opens the staging schema file. The shipment ID must be unique and not null. The status must be packed, shipped or delivered. The exporter ID must exist in the exporters model. And a missing number of bags only gives a warning."
+    },
+    {
+      "scene": 10,
+      "start": 156.5,
+      "end": 167.2,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Create tests/assert_bags_positive_and_ship_after_pack.sql",
+        "Type the select from content.md: where bags <= 0 or ship_date < packed_date"
+      ],
+      "voiceover": "Next, a singular test for a business rule. It selects any shipment with zero or fewer bags, or a ship date before the packed date."
+    },
+    {
+      "scene": 11,
+      "start": 167.2,
+      "end": 191.2,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run: dbt test --select stg_shipments",
+        "Show the singular test failing with 2 rows: shipment 502 and shipment 503",
+        "Show accepted_values failing on shipment 503 with status 'pending'"
+      ],
+      "on_screen_text": "Two tests fail",
+      "voiceover": "He runs the tests for the shipments model. On his three invented rows, the singular test finds two bad rows. Shipment five o two was shipped two days before it was packed, and shipment five o three has minus five bags. The accepted values test also fails, because shipment five o three has the status pending."
+    },
+    {
+      "scene": 12,
+      "start": 191.2,
+      "end": 210.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "In schema.yml, add 'pending' to the accepted_values list",
+        "Leave the singular test unchanged, severity error",
+        "Caption: 502 and 503 sent back to the source team"
+      ],
+      "voiceover": "Mateo discusses each failure with the business team. Pending is a real status that was missing from the list, so he adds it. The other two are data entry errors, so he asks the source team to correct them, and he leaves the tests as errors."
+    },
+    {
+      "scene": 13,
+      "start": 210.9,
+      "end": 219.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run: dbt build",
+        "Highlight the failing test and the downstream feature table marked as skipped"
+      ],
+      "on_screen_text": "Error stops the feature table",
+      "voiceover": "Finally, he runs build. While the error test fails, the feature table is skipped. Bad rows never reach the model."
+    },
+    {
+      "scene": 14,
+      "start": 219.5,
+      "end": 239.6,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Test every layer. Ask why it failed.",
+      "voiceover": "A common mistake is to test only the final table. When a test fails there, it is hard to know which step caused it. Test at every layer. And never make a test pass by deleting it, or changing it to warn, without asking why it failed."
+    },
+    {
+      "scene": 15,
+      "start": 239.6,
+      "end": 262.3,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Test = query for bad rows; zero rows = pass. 2. Generic tests in YAML; singular tests in SQL. 3. Error or warn on purpose; test every layer."
+      },
+      "voiceover": "Let's recap. First, a dbt test is a query that returns bad rows, and zero rows means it passes. Second, generic tests are set in YAML, and singular tests are SQL files for business rules. Third, decide on purpose which failures stop the pipeline and which only warn, and test at every layer."
+    },
+    {
+      "scene": 16,
+      "start": 262.3,
+      "end": 286.3,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Orchestrating with Airflow",
+      "voiceover": "Now it is your turn. In the exercise, you will add at least six tests to your project, including one business rule. Then you break the data on purpose with a lost order, watch a test fail, and fix it in the right place. It takes about thirty-five minutes. Next lesson: Orchestrating with Apache Airflow."
+    }
+  ]
+}

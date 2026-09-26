@@ -1,0 +1,80 @@
+{
+  "title": "Writing a Short-Form Script",
+  "thumbnail": {
+    "headline": "One Message, Sixty Seconds",
+    "image": "Navy background, a stopwatch at 0:60 next to a single teal speech bubble, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "One Message, Sixty Seconds", "body": "Left: simple stopwatch icon showing sixty seconds. Right: one speech bubble with a single line. Small tag: AI Video Production and Motion · Lesson 2."}
+  },
+  "production_notes": [
+    "[VERIFY] content.md gives a narration pace of about 140 words per minute, so 60 seconds is roughly 130 to 150 words and 90 seconds roughly 195 to 225 words. The voiceover does not state these numbers as fact; it tells learners to time a read-aloud. If the reviewer confirms the guide, the ranges can be added to the scene 7 slide as 'rough guide'.",
+    "The payment app in Lagos is hypothetical; stock footage must show no real bank or payment brand, and phone screens must be blank or generic.",
+    "Scene 12 shows the chatbot prompt from content.md word for word; the voiceover only summarises it. Use any free chatbot for the screenshot, with a generic interface and no personal data."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Most viewers decide in the first few seconds whether to keep watching. If your first line is, hello, and welcome to our company, many of them are already gone.",
+       "on_screen_text": "You have a few seconds"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "In the last lesson, you met the tools and the workflow. Now we start your project with stage two, the script. A good short script earns attention quickly, says one thing clearly, and tells the viewer what to do next.",
+       "slide": {"layout": "title", "title": "Writing a Short-Form Script", "body": "AI Video Production and Motion · Lesson 2 of 14"}},
+      {"visual_type": "slide",
+       "voiceover": "A sixty to ninety second script has three parts. First, the hook, in the first three to five seconds. It is a question, a problem or a surprising picture. For example, still waiting three days for a bank transfer?",
+       "slide": {"layout": "diagram", "title": "Three parts", "body": "Horizontal bar split in three: Hook (first 3–5 s) highlighted · One message (middle) · Call to action (last 5–10 s). Example under Hook: 'Still waiting three days for a bank transfer?'"}},
+      {"visual_type": "slide",
+       "voiceover": "Second, one clear message in the middle. One idea, supported by two or three points. Not five features. One idea. Third, the call to action, in the last five to ten seconds. One thing the viewer should do, like download the app today.",
+       "slide": {"layout": "diagram", "title": "Three parts", "body": "Same bar, now 'One message' and 'Call to action' highlighted. Under message: one idea + 2–3 points. Under CTA: 'Download the app today.'"}},
+      {"visual_type": "stock",
+       "voiceover": "Next, write for the ear. Viewers hear your script only once. So use short sentences, common words, and one idea per sentence. Avoid lists of numbers. One number per sentence is enough.",
+       "stock_query": "person recording voice over microphone home studio",
+       "on_screen_text": "Write for the ear"},
+      {"visual_type": "slide",
+       "voiceover": "And write for the screen at the same time. Every line happens while the viewer is looking at something. A useful habit is a two-column script. On the left, what the viewer sees. On the right, what they hear. If a line has nothing good to show, it may not belong in the video.",
+       "slide": {"layout": "comparison", "title": "The two-column script", "body": "Two columns: 'Viewer sees' | 'Viewer hears'. Two empty example rows with pencil icons."}},
+      {"visual_type": "slide",
+       "voiceover": "How long is sixty seconds of script? Do not guess from the word count alone. A calm voice is slower, and pauses for visuals take time. Read it aloud with a timer. Your timer is the final judge.",
+       "slide": {"layout": "title", "title": "Your timer is the judge", "body": "Stopwatch icon, with a person reading a script aloud. Caption: read aloud at a natural pace, then cut."}},
+      {"visual_type": "slide",
+       "voiceover": "A free chatbot can help you write a first draft quickly. But the draft is where your work starts, not where it ends. Chatbots often write too many words, use general phrases, and repeat ideas. Always edit by hand, and never paste confidential plans or personal data into a chatbot.",
+       "slide": {"layout": "bullets", "title": "Chatbot drafts: start, not finish", "body": "Often too long · general phrases · repeated ideas. Always edit by hand and read aloud. Never paste confidential plans, customer data or personal information."}},
+      {"visual_type": "stock",
+       "voiceover": "Think of a short script as a small suitcase. You cannot bring everything. So you choose the few things you really need, and you put the most important one where you can reach it first.",
+       "stock_query": "packing a small suitcase carefully",
+       "on_screen_text": "Pack only what you need"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's see an example. Chukwuemeka is a marketer at a mobile payment app in Lagos, Nigeria. The app is made up for this lesson. He needs a sixty-second explainer for market traders who use cash today.",
+       "stock_query": "market traders busy street market Lagos",
+       "on_screen_text": "Chukwuemeka · payment app · Lagos"},
+      {"visual_type": "slide",
+       "voiceover": "He asks a free chatbot for a draft. You can see his prompt on screen. It names the audience, the structure with a hook, one message and a call to action, a word limit, and a friendly, clear tone.",
+       "slide": {"layout": "code", "title": "Chukwuemeka's prompt", "body": "Write a 60-second voice-over script for a mobile payment app in Nigeria.\nAudience: market traders aged 25-45 who use cash today.\nStructure: hook in the first 5 seconds, one message, one call to action.\nMaximum 150 words. Short sentences. Friendly, clear tone."}},
+      {"visual_type": "slide",
+       "voiceover": "The draft has a hundred and ninety words and five features. Payments, savings, loans, airtime and bill payment. So he edits by hand. He keeps one message. Get paid instantly, without cash. He removes loans and savings. They can have their own videos.",
+       "slide": {"layout": "comparison", "title": "Edit by hand", "body": "Left, draft: 190 words · 5 features (payments, savings, loans, airtime, bills). Right, edit: one message 'Get paid instantly, without cash.' Loans and savings crossed out."}},
+      {"visual_type": "slide",
+       "voiceover": "He replaces a phrase like seamless financial experience with money arrives in seconds. Then he adds a visual note to each line. A trader counts coins while a customer waits. The voice asks, still counting change while customers walk away?",
+       "slide": {"layout": "comparison", "title": "Two-column opening", "body": "Viewer sees: A trader counts coins while a customer waits | Viewer hears: 'Still counting change while customers walk away?' · Viewer sees: A phone screen shows 'Payment received' | Viewer hears: 'Now your customers can pay you in seconds.'"}},
+      {"visual_type": "stock",
+       "voiceover": "He reads it aloud with a timer. Seventy-one seconds. Too long. He cuts one example and a repeated sentence. Second reading, fifty-nine seconds, and a hundred and forty-one words.",
+       "stock_query": "man reading script aloud with phone timer",
+       "on_screen_text": "71 seconds → 59 seconds"},
+      {"visual_type": "text",
+       "voiceover": "The most common mistake is trying to say everything, and then speaking fast to make it fit. The result feels rushed, and nobody remembers anything. If your script is too long, do not speak faster. Cut ideas until one clear message remains.",
+       "on_screen_text": "Too long? Cut ideas, not speed."}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, a short script has a hook in the first seconds, one clear message, and one call to action. Second, a timed read-aloud is the real test of length. Third, write for the ear and the screen at the same time, and always edit a chatbot draft by hand.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Hook · one message · one call to action. 2. A timed read-aloud is the real test. 3. Write for ear and screen; edit chatbot drafts by hand."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. Choose a real or fictional product that you will use for the whole course. Write a sixty-second, two-column script, read it aloud with a timer, and cut it to length. Save both versions. It takes about thirty minutes. Next, we turn your script into pictures in Storyboards and Shot Lists.",
+       "on_screen_text": "Next: Storyboards and Shot Lists"}
+    ]
+  }
+}

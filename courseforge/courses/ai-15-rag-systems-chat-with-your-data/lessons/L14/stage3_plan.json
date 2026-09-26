@@ -115,7 +115,7 @@
     "Recap": [
       {
         "visual_type": "slide",
-        "voiceover": "Let's recap. First, generation usually dominates cost and time, local embeddings are free, and rerankers add time per candidate. Second, choose top k, chunk size, answer length and model size using your evaluation results together with measured cost and latency. Third, cache the stable part of the prompt, read prices and model names from configuration, and deploy with Streamlit or FastAPI.",
+        "voiceover": "Let's recap. First, generation usually dominates cost and time, local embeddings are free, and rerankers add time per candidate. Second, choose top k, chunk size, answer length and model size using your evaluation results together with measured cost and latency. Third, cache the stable part of the prompt, read prices and model names from configuration, and deploy with Streamlit or FastAPI. Measure first, then decide.",
         "slide": {
           "layout": "bullets",
           "title": "Key takeaways",

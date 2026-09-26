@@ -1,0 +1,189 @@
+{
+  "course_id": "AI-18",
+  "lesson_id": "L10",
+  "duration_s": 311.4,
+  "thumbnail": {
+    "headline": "Release Safely, Roll Back Fast",
+    "slide": {
+      "layout": "title",
+      "title": "Release Safely, Roll Back Fast",
+      "body": "Three small traffic diagrams side by side: blue-green switch, canary 5% split, shadow copy. A teal curved arrow labelled 'rollback' under all three. Small tag: MLOps · Lesson 10."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.6,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Who decides when to switch back?",
+      "voiceover": "You have a new model version that scored better offline. Do you switch all users to it at once? If it fails, how fast can you switch back, and who decides? A release strategy answers these questions before anything goes wrong."
+    },
+    {
+      "scene": 2,
+      "start": 17.6,
+      "end": 41.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Where the model runs",
+        "body": "Single server: simple, you handle restarts and scaling. Container platform: restarts, copies, traffic shifting; more set-up. Managed ML service: least work; you depend on the provider's features, limits and prices."
+      },
+      "voiceover": "In the last lesson, we measured our container's speed. Now, where does it run? There are three common targets. A single server is simple, but you handle restarts, updates and scaling yourself. A container platform restarts failed containers, runs several copies and can shift traffic between versions, but it takes more set-up and knowledge."
+    },
+    {
+      "scene": 3,
+      "start": 41.2,
+      "end": 62.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Free tiers: learn, don't depend",
+        "body": "Useful for learning · limits change often · check current terms · not for critical services"
+      },
+      "voiceover": "A managed ML service from a cloud provider does much of the serving for you, but you depend on its features, limits and prices. Free tiers are useful for learning, but they change often. Check the current terms, and never rely on a free tier for a critical service."
+    },
+    {
+      "scene": 4,
+      "start": 62.2,
+      "end": 86.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Blue-green and canary",
+        "body": "Left: router switching 100% of traffic from Blue (old) to Green (new), with a return arrow. Right: router sending 95% to old and 5% to new, then 25%, then 100%"
+      },
+      "voiceover": "Now, how do new versions reach users? Blue-green runs the old and new versions side by side, then switches all traffic at once. Rollback is switching back. Canary sends a small share of real traffic, say five percent, to the new version. You watch errors, latency and prediction quality, then increase the share step by step."
+    },
+    {
+      "scene": 5,
+      "start": 86.6,
+      "end": 109.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Shadow and the rollback plan",
+        "body": "Router sends traffic to Old (answers shown to user) and a copy to New (answers only logged and compared). Below: Rollback plan = signal · who · how, tested in advance"
+      },
+      "voiceover": "Shadow sends a copy of real traffic to the new version, but users only see the old version's answers. You compare both sets of predictions with no risk to users, but serving costs double for that period. And every release needs a rollback plan: what signal triggers it, who can trigger it, and how."
+    },
+    {
+      "scene": 6,
+      "start": 109.7,
+      "end": 129.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "A measurable trigger",
+        "body": "\"Error rate above 2% for 10 minutes\" (example, not a standard). Rollback = run the previous image, or move @champion back."
+      },
+      "voiceover": "A rollback trigger must be measurable. For example, an error rate above two percent for ten minutes. Choose the numbers for your own service. These are examples, not standards. With our registry and image tags, rollback means running the previous image, or moving the champion alias back."
+    },
+    {
+      "scene": 7,
+      "start": 129.8,
+      "end": 151.2,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "chefs tasting dish in restaurant kitchen",
+      "on_screen_text": "Second kitchen, one branch, back room",
+      "voiceover": "Think of a restaurant chain changing a recipe. Blue-green prepares a second kitchen and switches all orders at once. Canary serves the new recipe in one branch first. Shadow cooks the new dish in the back for every order and tastes it, while guests still receive the old dish."
+    },
+    {
+      "scene": 8,
+      "start": 151.2,
+      "end": 173.9,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "nurse reviewing tablet in hospital waiting area",
+      "on_screen_text": "Hospital triage · Kisumu, Kenya",
+      "voiceover": "Let's look at two hypothetical teams. In Kisumu, Kenya, Doctor Achieng Odhiambo's team uses a model that suggests how urgent each patient is, to help nurses order the waiting list. A nurse always makes the final decision. But a wrong new model could delay urgent care, so the risk to people is high."
+    },
+    {
+      "scene": 9,
+      "start": 173.9,
+      "end": 197.5,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Triage: shadow, then blue-green",
+        "body": "Timeline: two weeks shadow (clinicians review disagreements) → blue-green release with old version ready. Trigger: any urgent patient marked non-urgent, or disagreement above the agreed level"
+      },
+      "voiceover": "So the team starts with shadow deployment. For two weeks, the new model scores every case, but only the old suggestion appears on screen. Clinicians review the cases where the two models disagree. Only then do they release with blue-green, keeping the old version ready. Local regulations may also require approval before any change."
+    },
+    {
+      "scene": 10,
+      "start": 197.5,
+      "end": 218.5,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "person shopping for clothes on smartphone",
+      "on_screen_text": "Fashion recommender · Recife, Brazil",
+      "voiceover": "In Recife, Brazil, Lucas Ferreira's team runs product recommendations for an online fashion shop. A weaker recommendation costs some sales, but harms nobody, and they want to learn from real clicks quickly. They choose a canary: five percent of traffic for one day, then twenty-five percent, then everyone."
+    },
+    {
+      "scene": 11,
+      "start": 218.5,
+      "end": 238.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Cost of a mistake decides",
+        "body": "Triage (high risk to people): shadow → blue-green. Recommender (lost sales only): canary 5% → 25% → 100%, trigger: click-through falls or p95 over budget."
+      },
+      "voiceover": "Their rollback trigger is simple. If the canary group's click-through rate falls clearly below the old version, or the p ninety-five latency goes over the page's budget, they switch back. The same technology leads to different choices, because the cost of a mistake is different."
+    },
+    {
+      "scene": 12,
+      "start": 238.6,
+      "end": 258.3,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Test your rollback on a calm day",
+      "voiceover": "A common mistake is to write a rollback plan but never test it. Then, in the first real incident, the old image was deleted, or nobody has permission to deploy. Practise the rollback on a normal day, and keep the previous image and model version available."
+    },
+    {
+      "scene": 13,
+      "start": 258.3,
+      "end": 282.7,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Server, platform or managed service: control vs convenience. 2. Blue-green, canary, shadow: choose by cost of a mistake. 3. Measurable trigger + tested rollback."
+      },
+      "voiceover": "Let's recap. First, models can run on a single server, a container platform or a managed ML service, and each trades control for convenience. Second, blue-green, canary and shadow releases reduce risk in different ways, so choose by the cost of a mistake. Third, every release needs a measurable rollback trigger and a tested rollback procedure."
+    },
+    {
+      "scene": 14,
+      "start": 282.7,
+      "end": 303.3,
+      "section": "CTA",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Exercise: three release decisions",
+        "body": "Card payments · Morocco | Headlines · Indonesia | Pipe inspection (batch) · Peru. Strategy + measurable trigger + two-sentence reason · about 25 minutes"
+      },
+      "voiceover": "In the exercise below this video, you will choose a release strategy and a rollback trigger for three scenarios, a bank in Morocco, a news site in Indonesia and a water utility in Peru. It takes about twenty-five minutes. Your capstone demo will include a real rollback."
+    },
+    {
+      "scene": 15,
+      "start": 303.3,
+      "end": 311.4,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Testing ML Code and Models",
+      "voiceover": "That completes week two. Next week we automate everything, starting with Testing ML Code and Models. See you there."
+    }
+  ]
+}

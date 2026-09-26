@@ -1,0 +1,165 @@
+{
+  "title": "Documentation and Lineage",
+  "thumbnail": {
+    "headline": "Where Does This Come From?",
+    "image": "Navy background, a lineage graph of teal boxes and arrows from raw tables to a feature table, one path highlighted, headline in teal Inter Bold.",
+    "slide": {
+      "layout": "title",
+      "title": "Where Does This Come From?",
+      "body": "Lineage graph: raw.repayments and raw.borrowers → staging boxes → fct_borrower_features, one path glowing teal. Small tag: Data Engineering for AI · Lesson 10."
+    }
+  },
+  "production_notes": [
+    "[VERSION] dbt docs generate and dbt docs serve behaviour (default port, browser opening) and the layout of the documentation site and lineage graph view must be checked against the current dbt Core release before recording.",
+    "Priya and the microfinance lender in Pune, India are fictional; borrower data is invented. The borrower_id description stresses that it is not a national ID; keep that visible on screen.",
+    "Screen lineage must show exactly: raw.repayments → stg_repayments → fct_borrower_features and raw.borrowers → stg_borrowers → fct_borrower_features."
+  ],
+  "sections": {
+    "Hook": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "A data scientist asks: where does days since last come from, and does it include cancelled orders? If the answer lives only in your memory, every question interrupts you. And when you leave the team, the answer leaves with you.",
+        "on_screen_text": "Where does this column come from?"
+      }
+    ],
+    "Explain": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Last time, we made models incremental. Today we make them understandable. In dbt, documentation lives next to the code. You add a description to each model and its important columns, in a YAML file. The same file will hold your tests later.",
+        "slide": {
+          "layout": "title",
+          "title": "Documentation and Lineage",
+          "body": "Data Engineering for AI · Lesson 10 of 18"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Because descriptions sit in the project, they are reviewed and versioned with the SQL. When the SQL changes, the description changes in the same step.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Docs live next to the code",
+          "body": "Project folder: model .sql file and schema.yml side by side, both inside one Git commit box"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Two commands build a documentation site. The first, generate, reads the project and the database, and writes a catalogue of every model, column, type and description. The second, serve, starts a small local web server and opens the site in your browser.",
+        "slide": {
+          "layout": "code",
+          "title": "Two commands",
+          "body": "dbt docs generate → catalogue of models, columns, types, descriptions. dbt docs serve → local web server, opens the site"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "The site includes the lineage graph. It shows every source and model as a box, with arrows that follow your source and ref calls. You did not draw this graph. dbt built it from your code. That is why using ref instead of written table names matters.",
+        "slide": {
+          "layout": "diagram",
+          "title": "The lineage graph",
+          "body": "Boxes: sources (green) → staging models → marts, arrows labelled source() and ref(). Caption: built from your code, not drawn by hand"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Lineage helps in two directions. Upstream: a number looks wrong, so you follow the arrows back to its staging model and source. Downstream: a source is about to change a column, so you follow the arrows forward to see every model and consumer it will affect.",
+        "slide": {
+          "layout": "comparison",
+          "title": "Upstream and downstream",
+          "body": "Left arrow (upstream): wrong number → staging → source. Right arrow (downstream): source change → models → consumers affected."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Good descriptions are short and specific. Say what one row means, the unit of each number, the time window of each feature, and anything a reader might misunderstand, such as excludes cancelled orders.",
+        "slide": {
+          "layout": "bullets",
+          "title": "A good description says",
+          "body": "Grain: what one row means · Unit of each number · Time window of each feature · Traps, e.g. 'excludes cancelled orders'"
+        }
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "Lineage is like the family tree at the front of a long novel. When a character appears in chapter twenty, you check the tree to see who their parents are. You do not reread the whole book.",
+        "stock_query": "reading a thick novel family tree",
+        "on_screen_text": "Lineage = the family tree"
+      }
+    ],
+    "Demonstrate": [
+      {
+        "visual_type": "stock",
+        "voiceover": "Let's document a feature table. Priya is an analytics engineer at a microfinance lender in Pune, India. Loan officers ask many questions about her borrower feature table.",
+        "stock_query": "loan officer meeting small business owner",
+        "on_screen_text": "Priya · microfinance · Pune"
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "She opens the schema file in the marts folder. For the model, she writes the grain, one row per borrower per feature date, the rule that it uses only repayments before that date, and what it is used for.",
+        "screen_steps": [
+          "Open models/marts/schema.yml (create it if needed)",
+          "Type the fct_borrower_features model description from content.md",
+          "Highlight: 'One row per borrower per feature_date'"
+        ]
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Then she describes two columns. The borrower ID is an internal ID, not a national ID. And late payments in one hundred and eighty days counts instalments paid more than seven days late, in the hundred and eighty days before the feature date.",
+        "screen_steps": [
+          "Type the borrower_id column description: internal ID from stg_borrowers, not a national ID",
+          "Type the late_payments_180d description from content.md",
+          "Add short descriptions for stg_repayments and stg_borrowers in models/staging/schema.yml"
+        ]
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "She runs generate, then serve, and the site opens in her browser. She opens the feature table, and shows the descriptions and column types.",
+        "screen_steps": [
+          "Run: dbt docs generate",
+          "Run: dbt docs serve",
+          "In the browser, open fct_borrower_features and show the descriptions and column types"
+        ]
+      },
+      {
+        "visual_type": "screen",
+        "voiceover": "Now the lineage graph. Two paths lead into the feature table: raw repayments through staging repayments, and raw borrowers through staging borrowers. She clicks staging repayments to show every model downstream of it.",
+        "screen_steps": [
+          "Open the lineage graph view",
+          "Show raw.repayments → stg_repayments → fct_borrower_features and raw.borrowers → stg_borrowers → fct_borrower_features",
+          "Click stg_repayments and show its downstream models"
+        ],
+        "on_screen_text": "Upstream to source, downstream to impact"
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Now Priya can answer in three sentences. The feature comes from raw repayments, received every night from the loan system. Staging converts the dates and removes test loans. The feature table counts instalments paid more than seven days late, in the hundred and eighty days before the feature date.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Answer in three sentences",
+          "body": "1. Source: raw.repayments, nightly from the loan system. 2. stg_repayments: dates to DATE, test loans removed. 3. Feature: instalments > 7 days late in the 180 days before feature_date."
+        }
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "A common mistake is a description that only repeats the column name, such as late payments in one hundred and eighty days. That adds nothing. Answer what a new reader would ask: what counts as late, which dates are included, and where the value comes from. And update descriptions in the same change as the SQL, not once and then forget.",
+        "on_screen_text": "Don't repeat the name. Explain it."
+      }
+    ],
+    "Recap": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, dbt descriptions live in YAML next to the models, so documentation is versioned and reviewed with the code. Second, generate and serve build a documentation site, with a lineage graph created from source and ref. Third, lineage lets you trace a value upstream to its source, and see what a change affects downstream.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. Descriptions in YAML, versioned with code. 2. dbt docs generate + serve → site and lineage. 3. Trace upstream; check impact downstream."
+        }
+      }
+    ],
+    "CTA": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Now it is your turn. In the exercise, you will document three models and their key columns, generate the site, and use the lineage graph to explain where one feature column comes from, in three sentences. It takes about thirty minutes. Next week is about data quality, starting with: What Makes Data Bad?",
+        "on_screen_text": "Next: What Makes Data Bad?"
+      }
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 # L14 Cost, Latency and Deployment | Presenter Script
 
-Course: AI-15 · Video: 5 min · Words: 677
+Course: AI-15 · Video: 5 min · Words: 681
 
 ## Hook
 Your assistant is accurate, but each answer takes eight seconds, and your manager asks what it will cost for a thousand users. You cannot answer either question by guessing. You need to measure where the time and money go.
@@ -28,7 +28,7 @@ Then he deploys. For a demo or internal tool, Streamlit gives a chat interface i
 A common mistake is to measure only average latency and guess the cost. Averages hide slow queries. Report a slow case too, such as the ninetieth percentile, and calculate cost from the real usage numbers. Remember that real token counts include the system prompt, all the chunks and the rewriting step.
 
 ## Recap
-Let's recap. First, generation usually dominates cost and time, local embeddings are free, and rerankers add time per candidate. Second, choose top k, chunk size, answer length and model size using your evaluation results together with measured cost and latency. Third, cache the stable part of the prompt, read prices and model names from configuration, and deploy with Streamlit or FastAPI.
+Let's recap. First, generation usually dominates cost and time, local embeddings are free, and rerankers add time per candidate. Second, choose top k, chunk size, answer length and model size using your evaluation results together with measured cost and latency. Third, cache the stable part of the prompt, read prices and model names from configuration, and deploy with Streamlit or FastAPI. Measure first, then decide.
 
 ## CTA
 Now it is your turn. In the exercise below, measure latency and cost per query for three top k settings, try prompt caching, and choose one setting with a short justification. Keep these numbers, because your capstone report needs them. In the next lesson, Capstone Step One: Build Your RAG Assistant, you start your final project.

@@ -1,0 +1,198 @@
+{
+  "course_id": "AI-18",
+  "lesson_id": "L07",
+  "duration_s": 277.3,
+  "thumbnail": {
+    "headline": "Stop Bad Inputs Early",
+    "slide": {
+      "layout": "title",
+      "title": "Stop Bad Inputs Early",
+      "body": "A gate icon: a red input card 'alcohol: 40' bounces back with '422', a teal card 'alcohol: 12.5' passes through into a file icon 'predictions.jsonl'. Small tag: MLOps · Lesson 7."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.1,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "A wine that cannot exist",
+      "voiceover": "A client sends an alcohol value of forty instead of twelve point five. Your model does not complain. It returns a confident prediction for a wine that cannot exist. Nobody sees an error, and nobody can find the request later."
+    },
+    {
+      "scene": 2,
+      "start": 17.1,
+      "end": 39.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "The API checks, not the model",
+        "body": "Request → gate labelled 'Schema checks' → model. A red request stops at the gate with 422. Caption: the model never sees bad input"
+      },
+      "voiceover": "In the last lesson, we built a prediction API. Today we close two gaps: bad input and missing records. A model will produce a number for almost any input. It cannot tell you that the input makes no sense. So the API must check the data before the model sees it."
+    },
+    {
+      "scene": 3,
+      "start": 39.0,
+      "end": 62.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Three kinds of bad input",
+        "body": "1. Missing field: sulphates absent. 2. Wrong type: citric_acid = \"high\". 3. Outside training range: alcohol = 40 (limits from training min and max)"
+      },
+      "voiceover": "Reject three kinds of bad input early. Missing fields, where a required feature is absent. Wrong types, such as the word high where a number is expected. And values outside the training range, where the model's behaviour is unknown. Take the limits from your own training data, and write down where they came from."
+    },
+    {
+      "scene": 4,
+      "start": 62.1,
+      "end": 83.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Rules in the schema",
+        "body": "class WineIn(BaseModel): model_config = ConfigDict(extra=\"forbid\") · alcohol: float = Field(ge=8, le=15) · volatile_acidity: Field(ge=0.1, le=1.6) · sulphates: Field(ge=0.3, le=2.0) · citric_acid: Field(ge=0, le=1)"
+      },
+      "voiceover": "With Pydantic, you add these rules to the schema. Each feature gets a lower and an upper limit. A setting forbids extra fields, which also stops clients from sending personal data by mistake. FastAPI then returns status four two two with a clear message, and the model is never called."
+    },
+    {
+      "scene": 5,
+      "start": 83.5,
+      "end": 105.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "One JSON line per prediction",
+        "body": "request_id · ts · model_version · features · probability · latency_ms. Used later in L15 (dashboard) and L16 (drift)"
+      },
+      "voiceover": "The second job is structured logging. Write one JSON line per prediction, with the same fields every time. Include a request ID, a timestamp, the model version, the input features, the prediction and the latency. Later in the course, you will read these lines to build a dashboard and to detect drift."
+    },
+    {
+      "scene": 6,
+      "start": 105.8,
+      "end": 116.9,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "No personal data in logs",
+      "voiceover": "Never log personal data, such as names, emails, addresses or free-text notes. If a feature is personal, log a coarse group, or leave it out."
+    },
+    {
+      "scene": 7,
+      "start": 116.9,
+      "end": 134.5,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "airport security checkpoint travellers queue",
+      "on_screen_text": "Security check and boarding record",
+      "voiceover": "Think of an airport. Validation is the security check at the entrance. It stops items that should not go on the plane. Logging is the boarding record. It tells you later exactly who boarded which flight, without storing their private conversations."
+    },
+    {
+      "scene": 8,
+      "start": 134.5,
+      "end": 150.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open app.py and replace the WineIn class with the validated version",
+        "Add the logging setup and the log call in /predict",
+        "Restart uvicorn app:app --reload",
+        "Open http://127.0.0.1:8000/docs and expand POST /predict"
+      ],
+      "on_screen_text": "Chidi · farm marketplace · Lagos",
+      "voiceover": "Let's watch Chidi Okafor, who maintains a hypothetical price prediction API for a farm marketplace in Lagos. He replaces the wine schema with the validated version, adds the logging code, restarts the server and opens the docs page."
+    },
+    {
+      "scene": 9,
+      "start": 150.8,
+      "end": 164.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Try it out with \"alcohol\": 40 and click Execute",
+        "Highlight status 422 and the message 'Input should be less than or equal to 15'",
+        "Remove the sulphates field and click Execute",
+        "Highlight 422 and 'Field required'"
+      ],
+      "on_screen_text": "Out of range, missing field: 422",
+      "voiceover": "First, he sends an alcohol value of forty. The answer is four two two: input should be less than or equal to fifteen. Then he removes sulphates. Four two two again: field required."
+    },
+    {
+      "scene": 10,
+      "start": 164.9,
+      "end": 182.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Set \"citric_acid\": \"high\" and click Execute",
+        "Highlight 422 and 'Input should be a valid number, unable to parse string as a number'",
+        "Restore a valid body, add \"email\": \"a@b.c\" and click Execute",
+        "Highlight 422 and 'Extra inputs are not permitted'"
+      ],
+      "on_screen_text": "Wrong type, extra field: 422",
+      "voiceover": "Next, he sets citric acid to the word high. The service says the input should be a valid number. Finally, he adds an email field. The answer: extra inputs are not permitted. Four clear errors, and the model was never called."
+    },
+    {
+      "scene": 11,
+      "start": 182.5,
+      "end": 201.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Send the valid body from L06 and show status 200",
+        "Open predictions.jsonl in the editor",
+        "Highlight model_version \"1\", the features, probability 0.9318 and latency_ms 18.83"
+      ],
+      "on_screen_text": "One clean JSON line",
+      "voiceover": "Now he sends a valid request, and opens the log file. There is one new line. It shows the event, model version one, the four features, a probability of zero point nine three one eight, and a latency of about nineteen milliseconds on our machine."
+    },
+    {
+      "scene": 12,
+      "start": 201.8,
+      "end": 222.4,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Fixed fields, chosen on purpose",
+      "voiceover": "Two common mistakes. The first is free-text logs. A person can read them, but a program cannot analyse them reliably. The second is logging the whole raw request, just in case. That often captures personal data. Log a fixed list of fields that you chose on purpose."
+    },
+    {
+      "scene": 13,
+      "start": 222.4,
+      "end": 246.4,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Schema checks → clear 422 before the model runs. 2. One JSON log line per prediction. 3. No personal data; forbid extra fields."
+      },
+      "voiceover": "Let's recap. First, validate input in the schema, so missing fields, wrong types and out-of-range values return a clear four two two before the model runs. Second, write one structured JSON line per prediction, with a request ID, timestamp, model version, inputs, prediction and latency. Third, never log personal data, and forbid unexpected fields."
+    },
+    {
+      "scene": 14,
+      "start": 246.4,
+      "end": 267.4,
+      "section": "CTA",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Exercise: validate and log",
+        "body": "Field limits from your training data · extra=\"forbid\" · 10 requests: 6 valid, 4 bad · expect 4 × 422 and 6 log lines · about 35 minutes"
+      },
+      "voiceover": "In the exercise below this video, you will add these rules to your own service and send ten test requests, six valid and four bad. Then you check that the log has exactly six clean lines. It takes about thirty-five minutes. Your capstone monitoring will read this log."
+    },
+    {
+      "scene": 15,
+      "start": 267.4,
+      "end": 277.3,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Containerising the Model Service",
+      "voiceover": "In the next lesson, we package this service so it runs the same way everywhere, in Containerising the Model Service. See you there."
+    }
+  ]
+}
