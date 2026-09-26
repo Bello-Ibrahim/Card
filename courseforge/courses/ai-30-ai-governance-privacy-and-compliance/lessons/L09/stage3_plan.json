@@ -1,0 +1,80 @@
+{
+  "title": "Data Subject Rights and Automated Decisions",
+  "thumbnail": {
+    "headline": "Why Was I Refused?",
+    "image": "Navy background, a phone screen showing a red refused stamp next to a person icon raising a hand, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Why Was I Refused?", "body": "Phone icon with a red 'refused' stamp; beside it a person icon raising a hand and a second person icon (human reviewer). Small tag: AI Governance, Privacy and Compliance · Lesson 9."}
+  },
+  "production_notes": [
+    "Legal/compliance reviewer sign-off required before release.",
+    "Disclaimer spoken once in scene 2 (educational, not legal advice).",
+    "[VERIFY] [REGION] Rights: content.md placeholders [the GDPR rights articles] and [the NDPA rights sections]. Rights, their exceptions and response deadlines must be checked. No response deadline is spoken or shown.",
+    "[VERIFY] [REGION] Access to meaningful information about the logic involved in automated decisions (scene 3) must be confirmed.",
+    "[VERIFY] [REGION] Automated decisions: content.md placeholders [the GDPR article on automated decisions] and [the NDPA section on automated decisions]. When such decisions are allowed and the safeguards (human intervention, expressing a view, contesting) in scene 5 must be checked.",
+    "[VERIFY] [REGION] Worked example step 6: content.md placeholder [the statutory deadline]. The voiceover says only within the legal time limit (scene 12).",
+    "[VERIFY] Official regulator guidance source for the exercise must be chosen, with date recorded.",
+    "Funmilayo Adeyemi and the Lagos digital lender are fictional. Stock footage must not show a real lender's app or logo."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "A customer writes: your system refused my loan in two seconds. Why? And I want a real person to look at it. Your team has a response deadline, and a trained model that nobody can easily explain. What do you do first?",
+       "on_screen_text": "I want a real person."}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Last time, we looked at the NDPA's structure. Today, we look at people's rights under both data protection laws, and at automated decisions. As always, this lesson is educational and is not legal advice.",
+       "slide": {"layout": "title", "title": "Data Subject Rights and Automated Decisions", "body": "Lesson 9 of 14. Footer line: Educational, not legal advice."}},
+      {"visual_type": "slide",
+       "voiceover": "You know the main rights already: information, access, correction, erasure, restriction, objection and portability. AI makes some of them harder. For access, people can ask for their data, including the inputs used about them, outputs such as a score, and meaningful information about the logic involved.",
+       "slide": {"layout": "bullets", "title": "Rights meet AI", "body": "Information · Access · Correction · Erasure · Restriction · Objection · Portability. Access for AI: inputs used · outputs such as a score · meaningful information about the logic"}},
+      {"visual_type": "slide",
+       "voiceover": "If input data is wrong, correct it, and consider whether the decision must be made again. Erasure is harder. Deleting a record from a database is simple. Removing its influence from a trained model is not. So decide in advance how you will respond, for example by removing the data from future training sets.",
+       "slide": {"layout": "comparison", "title": "Correction and erasure", "body": "Left: database record, delete (easy, tick). Right: trained model, remove influence (hard). Plan ahead: exclude from future training · record when the model will be retrained"}},
+      {"visual_type": "slide",
+       "voiceover": "Both laws include protections for decisions based solely on automated processing that have legal or similarly significant effects, such as refusing credit. These decisions are allowed only in certain situations, and people usually have safeguards: the right to human intervention, to express their point of view and to contest the decision.",
+       "slide": {"layout": "diagram", "title": "Solely automated decisions", "body": "Box: solely automated + significant effect (e.g. credit refusal). Three safeguard arrows: human intervention · express a view · contest the decision. Footer: check the relevant provisions in each law"}},
+      {"visual_type": "text",
+       "voiceover": "And human review must be meaningful. A reviewer who simply approves every AI output does not make the decision any less automated. The reviewer needs authority to change the outcome, access to the relevant information, and enough time and training to use them.",
+       "on_screen_text": "Authority, information, time and training"},
+      {"visual_type": "stock",
+       "voiceover": "Think of a ticket machine that rejects your payment with no staff nearby. The right to human intervention puts a person next to the machine, who can look at your case, explain what happened and override the machine if it made a mistake.",
+       "stock_query": "person frustrated at ticket machine station",
+       "on_screen_text": "A person next to the machine"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's follow one request. Funmilayo Adeyemi applies online for a personal loan from a fictional digital lender in Lagos. The AI system refuses her in seconds. She writes asking why, and asks for a human review.",
+       "stock_query": "woman applying for loan on smartphone",
+       "on_screen_text": "Funmilayo · digital lender, Lagos"},
+      {"visual_type": "slide",
+       "voiceover": "The lender's data protection officer follows its procedure. First, the request is logged with the date received, and her identity is confirmed using details the lender already holds. Second, the team identifies the rights: an access request, and a request for human intervention in a solely automated decision.",
+       "slide": {"layout": "diagram", "title": "The procedure", "body": "Seven numbered steps down the side, first two highlighted: 1 Log and verify identity · 2 Identify the rights (access + human intervention)"}},
+      {"visual_type": "slide",
+       "voiceover": "Third, the team gathers the facts: the input data, her score and the main factors, such as a short credit history and many recent applications. Fourth, it checks the data. Funmilayo says one recorded loan was repaid. The record is out of date, so the team corrects it.",
+       "slide": {"layout": "diagram", "title": "The procedure", "body": "Steps 3 and 4 highlighted: 3 Gather the facts (inputs, score, main factors) · 4 Check the data (out-of-date loan record corrected)"}},
+      {"visual_type": "slide",
+       "voiceover": "Fifth, a trained credit officer with authority to change the outcome reviews the application with the corrected data and her comments. The officer approves a smaller loan.",
+       "slide": {"layout": "diagram", "title": "The procedure", "body": "Step 5 highlighted: Human review by a trained credit officer with authority → smaller loan approved"}},
+      {"visual_type": "slide",
+       "voiceover": "Sixth, the lender replies within the legal time limit, in a plain-language letter that explains the main factors, the correction and the new decision, and how to complain to the regulator. Seventh, the officer reports the out-of-date data source for a wider check.",
+       "slide": {"layout": "diagram", "title": "The procedure", "body": "Steps 6 and 7 highlighted: 6 Respond in plain language within the legal time limit · 7 Learn: report the data source for a wider check"}},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is to think that explaining an AI decision means publishing the model's code or maths. People rarely need that. A meaningful explanation describes the main factors behind this person's outcome, in words they understand, and what they could do differently. Another mistake is to treat any human involvement as enough.",
+       "on_screen_text": "Explain factors, not code."}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, rights such as access, correction, erasure and objection still apply to AI, but are harder to honour inside a trained model, so plan your responses in advance. Second, both laws protect people from solely automated decisions with significant effects. Third, human review must be meaningful, with authority, information and training.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Rights still apply to AI; plan responses in advance. 2. Protections for solely automated decisions. 3. Human review must be meaningful."}}
+    ],
+    "CTA": [
+      {"visual_type": "slide",
+       "voiceover": "In the exercise below this video, you will write a step-by-step internal procedure for a fictional AI system. It should cover two requests: an access request, and a request for human review of an automated decision. Keep it practical, so that a new team member could follow it.",
+       "slide": {"layout": "bullets", "title": "Your exercise", "body": "Fictional AI system · Procedure 1: access request · Procedure 2: human review of an automated decision · Use placeholders for any deadline"}},
+      {"visual_type": "presenter_full",
+       "voiceover": "In the next lesson, we look at impact assessments: DPIAs and AI risk assessments. See you there.",
+       "on_screen_text": "Next: Impact Assessments"}
+    ]
+  }
+}

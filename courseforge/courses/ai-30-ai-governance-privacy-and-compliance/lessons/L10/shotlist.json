@@ -1,0 +1,205 @@
+{
+  "course_id": "AI-30",
+  "lesson_id": "L10",
+  "duration_s": 293.9,
+  "thumbnail": {
+    "headline": "Assess Before You Build",
+    "slide": {
+      "layout": "title",
+      "title": "Assess Before You Build",
+      "body": "Blueprint icon with a teal magnifying glass over one wall and a small pencil moving it. Small tag: AI Governance, Privacy and Compliance · Lesson 10."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.1,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Please sign by Friday.",
+      "voiceover": "A project team says, the system is ready, we just need you to sign the DPIA by Friday. If the assessment starts when the system is finished, it can only describe risks, not prevent them. So when should it start?"
+    },
+    {
+      "scene": 2,
+      "start": 17.1,
+      "end": 38.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Impact Assessments: DPIAs and AI Risk Assessments",
+        "body": "Lesson 10 of 14. Footer line: Educational, not legal advice."
+      },
+      "voiceover": "In the last lesson, we handled rights requests. Today, we look at impact assessments, and how to judge whether the remaining risk is acceptable. This lesson is educational and is not legal advice. When each assessment is required, and what it must contain, must be checked for each law."
+    },
+    {
+      "scene": 3,
+      "start": 38.1,
+      "end": 60.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "When a DPIA is needed",
+        "body": "Likely high risk to people's rights and freedoms. Common AI triggers: new technology · large-scale data · profiling · automated decisions · sensitive data · monitoring"
+      },
+      "voiceover": "Under both the GDPR and the NDPA, a data protection impact assessment, or DPIA, is required when processing is likely to result in a high risk to people's rights and freedoms. Many AI uses meet that test, because they often involve new technology, large-scale data, profiling, automated decisions, sensitive data or monitoring."
+    },
+    {
+      "scene": 4,
+      "start": 60.8,
+      "end": 80.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Four parts of a DPIA",
+        "body": "Four stacked blocks, first three highlighted: 1 Description · 2 Necessity and proportionality · 3 Risks to people (likelihood × severity)"
+      },
+      "voiceover": "A DPIA usually has four parts. First, a description of the processing, its purpose, data, people affected and recipients. Second, necessity and proportionality: why the processing is needed, its lawful basis and how rights are respected. Third, the risks to people, rated by likelihood and severity."
+    },
+    {
+      "scene": 5,
+      "start": 80.5,
+      "end": 93.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Four parts of a DPIA",
+        "body": "Block 4 highlighted: Measures and residual risk. Side note: high residual risk → possible prior consultation with the regulator"
+      },
+      "voiceover": "Fourth, the measures that reduce each risk, and the residual risk that remains after them. If high residual risk remains, you may need to consult the regulator before you start."
+    },
+    {
+      "scene": 6,
+      "start": 93.4,
+      "end": 116.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "DPIA and FRIA",
+        "body": "Left circle: DPIA (GDPR, NDPA): risks to people from processing personal data. Right circle: FRIA (EU AI Act, some deployers): wider fundamental rights. Overlap: one combined process"
+      },
+      "voiceover": "The EU AI Act adds its own assessment. Some deployers of high-risk systems must carry out a fundamental rights impact assessment before use. It looks wider than privacy, at issues like non-discrimination and access to services. It can build on an existing DPIA, and many organisations combine both in one process."
+    },
+    {
+      "scene": 7,
+      "start": 116.1,
+      "end": 134.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Is the residual risk acceptable?",
+        "body": "Low enough given the benefit? · Within risk appetite? · Meaningful safeguards for people? · Record who decided, and why"
+      },
+      "voiceover": "To judge residual risk, ask three questions. After the controls, is the remaining risk low enough, given the benefit? Is it within the organisation's risk appetite? Are the people affected protected by meaningful safeguards? Then record who made the judgement, and why."
+    },
+    {
+      "scene": 8,
+      "start": 134.1,
+      "end": 153.4,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "architect reviewing building plans on desk",
+      "on_screen_text": "Start while the design can change",
+      "voiceover": "Think of an architect's structural review, done while the plans are still on paper. Moving a wall at the drawing stage costs little. Moving it after the building is finished is expensive, and sometimes impossible. So start the assessment while the design can still change."
+    },
+    {
+      "scene": 9,
+      "start": 153.4,
+      "end": 169.7,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "office entrance face recognition scanner",
+      "on_screen_text": "Thandiwe · office, Johannesburg",
+      "voiceover": "Let's look at a short DPIA. Thandiwe Mokoena is privacy manager for a fictional company whose office in Johannesburg plans a facial-recognition entry system to replace staff access cards. Local data protection law must also be checked."
+    },
+    {
+      "scene": 10,
+      "start": 169.7,
+      "end": 188.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Thandiwe's DPIA: parts 1 and 2",
+        "body": "Description: face matching for about 300 staff; biometric data for identification · Necessity: is card + PIN enough? · Power imbalance: can staff really refuse?"
+      },
+      "voiceover": "Description: cameras match the faces of about three hundred staff against enrolled templates, which is biometric data used for identification. Necessity: cards work but are often shared. Would a card plus a PIN be enough? And staff may feel they cannot refuse their employer."
+    },
+    {
+      "scene": 11,
+      "start": 188.6,
+      "end": 200.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Thandiwe's DPIA: part 3",
+        "body": "Leaked biometric templates (high severity) · Unequal false rejections across groups · Function creep: attendance tracking"
+      },
+      "voiceover": "Risks: leaked biometric templates, which is high severity. False rejections that affect some groups more than others. And function creep, such as using the cameras to track attendance."
+    },
+    {
+      "scene": 12,
+      "start": 200.6,
+      "end": 223.7,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Thandiwe's DPIA: part 4",
+        "body": "Card + PIN alternative · Encrypted, on-site templates, deleted on leaving · Error-rate tests by group · Written ban on attendance use. Residual risk: medium → volunteer pilot, review after 3 months"
+      },
+      "voiceover": "Measures: a card-plus-PIN alternative with no disadvantage, encrypted templates stored on-site and deleted when staff leave, error-rate tests across groups, and a written ban on using the system for attendance. With these, Thandiwe rates the residual risk as medium, and recommends a volunteer pilot with a review after three months."
+    },
+    {
+      "scene": 13,
+      "start": 223.7,
+      "end": 244.7,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Focus on risks to people.",
+      "voiceover": "A common mistake is to treat a DPIA as a form to complete at the end. Its value is in the changes it causes. Another mistake is to rate risks to the organisation, such as fines, instead of risks to people. A DPIA must focus on the people affected."
+    },
+    {
+      "scene": 14,
+      "start": 244.7,
+      "end": 271.7,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. High risk to people → DPIA; many AI uses qualify. 2. Some high-risk deployers also need a FRIA; combine them. 3. Start early; record who accepted the residual risk."
+      },
+      "voiceover": "Let's recap. First, a DPIA is required when processing is likely to result in high risk to people, and many AI uses meet that test. Second, some deployers of high-risk AI systems must also carry out a fundamental rights impact assessment, which can be combined with the DPIA. Third, start early, focus on people, and record who judged the residual risk acceptable."
+    },
+    {
+      "scene": 15,
+      "start": 271.7,
+      "end": 285.8,
+      "section": "CTA",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Your exercise",
+        "body": "Free DPIA template from an official regulator · Fictional complaints chatbot · All four parts · Residual risk: acceptable or not, and why"
+      },
+      "voiceover": "In the exercise below this video, you will complete a free DPIA template for a fictional AI chatbot that handles customer complaints. Then judge whether the remaining risk is acceptable, and explain why."
+    },
+    {
+      "scene": 16,
+      "start": 285.8,
+      "end": 293.9,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Designing Your Framework",
+      "voiceover": "That completes module two. In the next lesson, we start building: designing an AI governance framework. See you there."
+    }
+  ]
+}

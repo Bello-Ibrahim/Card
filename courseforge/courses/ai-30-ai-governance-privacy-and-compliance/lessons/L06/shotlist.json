@@ -1,0 +1,205 @@
+{
+  "course_id": "AI-30",
+  "lesson_id": "L06",
+  "duration_s": 295.1,
+  "thumbnail": {
+    "headline": "Principles at Every Stage",
+    "slide": {
+      "layout": "title",
+      "title": "Principles at Every Stage",
+      "body": "Five-stage loop: collect → train → test → deploy → retire, a small shield icon at each stage. Small tag: AI Governance, Privacy and Compliance · Lesson 6."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.9,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Give the model everything?",
+      "voiceover": "You already know the data protection principles. But what does data minimisation mean when a data scientist says, the model will be better if we give it everything? Today we see how the familiar principles apply at each stage of an AI system's life."
+    },
+    {
+      "scene": 2,
+      "start": 18.9,
+      "end": 37.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Data Protection Principles Across the AI Lifecycle",
+        "body": "Module 2 · Lesson 6 of 14. Footer line: Educational, not legal advice."
+      },
+      "voiceover": "Welcome to module two, on data protection law and AI. As always, this course is educational and is not legal advice. The GDPR and the NDPA both set out core principles. Their wording is similar, but not identical, so always check both texts."
+    },
+    {
+      "scene": 3,
+      "start": 37.3,
+      "end": 50.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "The principles you know",
+        "body": "Lawfulness, fairness, transparency · Purpose limitation · Data minimisation · Accuracy · Storage limitation · Integrity and confidentiality (security) · Accountability"
+      },
+      "voiceover": "The principles you know are lawfulness, fairness and transparency, purpose limitation, data minimisation, accuracy, storage limitation, security, and accountability. AI does not change these principles. It changes where the pressure falls."
+    },
+    {
+      "scene": 4,
+      "start": 50.6,
+      "end": 72.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Stage 1: Collection",
+        "body": "Five-stage line: Collect → Train → Test → Deploy → Retire. Collect highlighted. Pressure point: purpose limitation. Question: is the new purpose compatible?"
+      },
+      "voiceover": "A simple AI lifecycle has five stages. First, data collection, where data is gathered or reused from other systems. The main pressure here is purpose limitation. Data collected to handle claims is now used for a new purpose, so you must check whether that purpose is compatible or needs its own basis."
+    },
+    {
+      "scene": 5,
+      "start": 72.9,
+      "end": 88.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Stage 2: Training",
+        "body": "Train highlighted. Pressure points: data minimisation · fairness. Example: postcode field with arrow to 'proxy for ethnicity or income'"
+      },
+      "voiceover": "Second, training. Here the pressure is on data minimisation and fairness. Teams want more fields and more history. And some fields, such as postcode, can act as a proxy for ethnicity or income, and create unfair outcomes."
+    },
+    {
+      "scene": 6,
+      "start": 88.8,
+      "end": 108.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Stages 3 and 4",
+        "body": "Test highlighted: accuracy · fairness (error rates by group). Deploy highlighted: transparency (clear notice) · security (protect against attacks)"
+      },
+      "voiceover": "Third, testing, where the pressure is on accuracy and fairness. Test error rates for different groups, not only the overall score. Fourth, deployment, where the pressure is on transparency and security. Tell people about the processing in clear words, and protect the system against attacks."
+    },
+    {
+      "scene": 7,
+      "start": 108.1,
+      "end": 126.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Stage 5 and accountability",
+        "body": "Retire highlighted: storage limitation (old datasets, copies, models). A teal bar under all five stages labelled: Accountability, show how you applied each principle"
+      },
+      "voiceover": "Fifth, retirement. The pressure is on storage limitation, because old datasets, copies and models may still hold personal data long after they are needed. And accountability runs across all five stages. You must be able to show how you applied each principle."
+    },
+    {
+      "scene": 8,
+      "start": 126.1,
+      "end": 147.1,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "water treatment plant pipes and tanks",
+      "on_screen_text": "Same standard, different pressure points",
+      "voiceover": "Think of water flowing through a treatment plant. The safety standards are the same at every point, but each stage has its own main danger: dirt at the intake, chemicals at treatment, leaks in the pipes. Inspectors check where the danger is greatest. The principles work the same way."
+    },
+    {
+      "scene": 9,
+      "start": 147.1,
+      "end": 163.0,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "insurance office professional reviewing files",
+      "on_screen_text": "Youssef · insurer, Casablanca",
+      "voiceover": "Let's see data minimisation in action. Youssef Benali is the data protection officer at a fictional insurer in Casablanca, Morocco, which also sells travel insurance to customers in France. So the GDPR may apply, alongside Moroccan law."
+    },
+    {
+      "scene": 10,
+      "start": 163.0,
+      "end": 185.3,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "How much history?",
+        "body": "Left: 10 years of claim files (greyed older years, old products). Right: 5 years, test for similar results. Label: minimisation at collection"
+      },
+      "voiceover": "The claims team wants to train a model to flag possibly fraudulent claims, using ten years of claim files. Youssef asks: does the model need all ten years? Fraud patterns change, and older files reflect products the company no longer sells. The team agrees to test whether five years give similar results."
+    },
+    {
+      "scene": 11,
+      "start": 185.3,
+      "end": 207.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Which fields?",
+        "body": "Field list: Names → replaced with codes · ID numbers → replaced with codes · Medical notes → excluded (special category) unless need and condition shown · Free-text comments → review"
+      },
+      "voiceover": "Next, the fields. The files contain names, ID numbers, medical notes from travel claims and free-text comments. The team replaces names and ID numbers with codes before training. Medical notes are health data, a special category, so they are left out unless a clear need and a valid condition are shown."
+    },
+    {
+      "scene": 12,
+      "start": 207.6,
+      "end": 226.9,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Test and retire",
+        "body": "Test: flag rates by nationality · Retire: delete training copy at retraining · Result: smaller dataset, a reason for every field"
+      },
+      "voiceover": "For testing, the team checks whether the model flags claims from some nationalities more often. And for retirement, it sets a rule to delete the training copy when the model is retrained. The result is a smaller dataset, with a documented reason for each field."
+    },
+    {
+      "scene": 13,
+      "start": 226.9,
+      "end": 248.3,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Pseudonymised data is still personal data.",
+      "voiceover": "A common mistake is to think that removing names makes data anonymous. Coded, or pseudonymised, data is still personal data if someone can link it back to a person. True anonymisation is hard. So treat pseudonymisation as a security control, not as a way to leave data protection law behind."
+    },
+    {
+      "scene": 14,
+      "start": 248.3,
+      "end": 267.6,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Same principles at all five stages. 2. Each stage has a main pressure point. 3. Pseudonymised data is still personal data."
+      },
+      "voiceover": "Let's recap. First, the same data protection principles apply at every AI stage: collection, training, testing, deployment and retirement. Second, each stage has a main pressure point, such as purpose limitation at collection and storage limitation at retirement. Third, pseudonymised data is still personal data."
+    },
+    {
+      "scene": 15,
+      "start": 267.6,
+      "end": 286.5,
+      "section": "CTA",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Your exercise",
+        "body": "Draw five stages · One principle most at risk per stage · One protecting control per stage · Official texts of the GDPR and the NDPA"
+      },
+      "voiceover": "In the exercise below this video, you will draw the five stages of an AI lifecycle. For each stage, write the one principle most at risk, and one control that protects it. Use the principles as written in the official texts of both laws."
+    },
+    {
+      "scene": 16,
+      "start": 286.5,
+      "end": 295.1,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Lawful Basis for AI",
+      "voiceover": "In the next lesson, we look at one principle more closely: the lawful basis for AI processing. See you there."
+    }
+  ]
+}

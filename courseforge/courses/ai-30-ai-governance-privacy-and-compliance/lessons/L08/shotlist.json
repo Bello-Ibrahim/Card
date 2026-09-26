@@ -1,0 +1,218 @@
+{
+  "course_id": "AI-30",
+  "lesson_id": "L08",
+  "duration_s": 294.1,
+  "thumbnail": {
+    "headline": "Nigeria's NDPA Explained",
+    "slide": {
+      "layout": "title",
+      "title": "Nigeria's NDPA Explained",
+      "body": "Outline map of Nigeria with a shield icon and a small credit-score gauge. Small tag: AI Governance, Privacy and Compliance · Lesson 8."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 20.1,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Beyond the EU",
+      "voiceover": "Many AI governance courses stop at the EU. But if your organisation processes personal data of people in Nigeria, the NDPA has its own structure, its own regulator and its own duties. How does it apply when a Nigerian fintech uses AI to decide who gets credit?"
+    },
+    {
+      "scene": 2,
+      "start": 20.1,
+      "end": 40.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Nigeria's NDPA: Structure and Key Duties",
+        "body": "Lesson 8 of 14. Footer line: Educational, not legal advice."
+      },
+      "voiceover": "In the last lesson, we compared lawful bases under both laws. Now we look at the NDPA on its own terms. This lesson is educational and is not legal advice. Nigerian rules are developing, and implementing guidance may add detail, so check every point against current official sources."
+    },
+    {
+      "scene": 3,
+      "start": 40.7,
+      "end": 57.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "1. A national regulator",
+        "body": "Regulator icon (generic, no name) with three arrows: issues regulations and guidance · investigates complaints · imposes sanctions. Note: read guidance with the Act"
+      },
+      "voiceover": "GDPR professionals will recognise the structure. First, the Act sets up a national regulator, with powers to issue regulations and guidance, investigate complaints and impose sanctions. Its guidance can add practical duties, so read it alongside the Act."
+    },
+    {
+      "scene": 4,
+      "start": 57.0,
+      "end": 73.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Familiar foundations",
+        "body": "Roles: data controller · data processor · Principles: similar to the GDPR · Lawful bases: comparable list · Sensitive personal data: extra conditions"
+      },
+      "voiceover": "Duties fall on data controllers and data processors. The principles are similar to the GDPR, from lawful, fair and transparent processing to accountability. There is a comparable list of lawful bases, with extra conditions for sensitive personal data."
+    },
+    {
+      "scene": 5,
+      "start": 73.3,
+      "end": 88.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Rights",
+        "body": "Information · Access · Correction · Erasure · Objection · Protections on automated decisions (next lesson)"
+      },
+      "voiceover": "People have rights such as information, access, correction, erasure and objection, and protections about automated decisions, which we cover in the next lesson. These rights still apply when the data sits inside an AI system."
+    },
+    {
+      "scene": 6,
+      "start": 88.3,
+      "end": 102.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Security and assessments",
+        "body": "Security: technical and organisational measures · Breaches: notification in some cases (L14) · High-risk processing: impact assessment (L10)"
+      },
+      "voiceover": "Controllers must apply appropriate security measures and handle personal data breaches, including notification in some cases. And processing likely to create a high risk to people requires a data protection impact assessment."
+    },
+    {
+      "scene": 7,
+      "start": 102.0,
+      "end": 120.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Cross-border transfers",
+        "body": "Arrow from Nigeria to a cloud icon abroad. Gate on the arrow labelled: permitted ground? (adequate protection · recognised safeguards)"
+      },
+      "voiceover": "Transfers of personal data out of Nigeria are allowed only on permitted grounds, such as adequate protection in the receiving country or other recognised safeguards. AI projects often send data abroad, for example to cloud hosting or model providers, so this duty matters."
+    },
+    {
+      "scene": 8,
+      "start": 120.4,
+      "end": 138.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Extra duties for some",
+        "body": "Classification by the regulator · Possible extra duties: registration · data protection officer · regular filings or audits · Criteria and sanctions: check the relevant provisions"
+      },
+      "voiceover": "Finally, the regulator can classify some organisations as being of greater importance, which may bring extra duties, such as registration, a data protection officer, or regular filings. The classification criteria and the sanctions for breaches must be checked in the relevant provisions."
+    },
+    {
+      "scene": 9,
+      "start": 138.4,
+      "end": 159.0,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "car driving on busy city road",
+      "on_screen_text": "Familiar shape, local rules",
+      "voiceover": "Think of driving in a new country. The steering wheel, pedals and main road signs are familiar. But the speed limits, licence rules and the police who enforce them are local. The NDPA is familiar in shape, but its local rules must be learned on their own terms."
+    },
+    {
+      "scene": 10,
+      "start": 159.0,
+      "end": 174.9,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "Nigerian professional woman working in modern office",
+      "on_screen_text": "Hauwa · fintech, Abuja",
+      "voiceover": "Hauwa Bello is head of compliance at a fictional fintech in Abuja. It plans to use an AI model to score applicants for small business loans, using bank statements, mobile phone usage data and information from applicants."
+    },
+    {
+      "scene": 11,
+      "start": 174.9,
+      "end": 198.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Hauwa's duty list",
+        "body": "1. Lawful basis for training and scoring; plain-words privacy notice · 2. Automated refusals: protections and human review route"
+      },
+      "voiceover": "Hauwa lists the duties that are likely to apply. First, choose and record a lawful basis for training and for scoring, and explain the AI scoring in plain words in the privacy notice. Second, if loans are refused without human involvement, apply the automated decision protections, including a way to ask for human review."
+    },
+    {
+      "scene": 12,
+      "start": 198.0,
+      "end": 221.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Hauwa's duty list",
+        "body": "3. DPIA before launch · 4. Cloud hosting abroad: confirm and record transfer ground · 5. Check classification: registration, DPO, filings?"
+      },
+      "voiceover": "Third, credit scoring with new data types is likely high risk, so a DPIA should be completed before launch. Fourth, the model is hosted by a cloud provider outside Nigeria, so a valid transfer ground must be confirmed and recorded. Fifth, the fintech must check whether it falls into a category with extra duties."
+    },
+    {
+      "scene": 13,
+      "start": 221.1,
+      "end": 231.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "One more point",
+        "body": "Mobile usage data may reveal sensitive facts → justify every field"
+      },
+      "voiceover": "She adds one more point. The mobile usage data may reveal sensitive facts, so she asks the data team to justify each field."
+    },
+    {
+      "scene": 14,
+      "start": 231.0,
+      "end": 249.4,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Keep a separate NDPA column.",
+      "voiceover": "A common mistake is to assume that complying with the GDPR means complying with the NDPA. The principles overlap, but local duties such as registration, filings, transfer grounds and the regulator's guidance can differ. Keep a separate NDPA column in your compliance map."
+    },
+    {
+      "scene": 15,
+      "start": 249.4,
+      "end": 271.3,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. National regulator; duties on controllers and processors. 2. Principles, bases, rights, security, assessments, transfers. 3. Extra duties for some organisations."
+      },
+      "voiceover": "Let's recap. First, the NDPA sets up a national regulator and places duties on data controllers and processors, in a structure similar to the GDPR. Second, key duties cover principles, lawful bases, rights, security, impact assessments and cross-border transfers. Third, some organisations may carry extra duties, depending on their classification."
+    },
+    {
+      "scene": 16,
+      "start": 271.3,
+      "end": 287.2,
+      "section": "CTA",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Your exercise",
+        "body": "Official NDPA summary or guidance note · 5 duties for a fictional Abuja fintech using AI credit scoring · Note source and date"
+      },
+      "voiceover": "In the exercise below this video, you will read an official NDPA summary or guidance note from the regulator, and list five duties that would apply to a fictional fintech in Abuja using AI for credit scoring."
+    },
+    {
+      "scene": 17,
+      "start": 287.2,
+      "end": 294.1,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Rights and Automated Decisions",
+      "voiceover": "In the next lesson, we look at data subject rights and automated decisions. See you there."
+    }
+  ]
+}

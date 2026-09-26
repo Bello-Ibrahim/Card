@@ -1,0 +1,76 @@
+{
+  "title": "Building an AI Inventory and Risk Register",
+  "thumbnail": {
+    "headline": "Answer in Minutes",
+    "image": "Navy background, two stacked spreadsheet cards labelled inventory and risk register with a teal stopwatch, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Answer in Minutes", "body": "Two stacked table icons, 'AI inventory' and 'Risk register', with a teal stopwatch. Small tag: AI Governance, Privacy and Compliance · Lesson 12."}
+  },
+  "production_notes": [
+    "Legal/compliance reviewer sign-off required before release.",
+    "Disclaimer spoken once in scene 2 (educational, not legal advice).",
+    "[VERIFY] [REGION] The likely AI Act tiers and roles for the CV-screening tool (likely high-risk, deployer) and the translation tool (likely minimal risk, deployer) in scenes 9 and 12 must be confirmed by the legal reviewer.",
+    "[VERIFY] The free risk register template for the exercise must be chosen from an official or reputable source, with licence and date recorded.",
+    "[VERIFY] Fictional organisation: Velmora Tradeways Ltd must be checked so it does not match a real company (see L11). Priya Raman is fictional.",
+    "No screen demos. The inventory columns, the risk register columns and both register entries are shown on slides (scenes 3, 4, 9, 10 and 11); render the register as a clean table with large type. The 1 to 5 scores and review frequencies are Velmora's own fictional choices, not legal thresholds.",
+    "Capstone step 1 is set in this lesson's exercise."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "A regulator asks: which AI systems do you use, and what are their main risks? If the answer takes three weeks and ten emails, your governance is not working. Two simple documents let you answer in minutes.",
+       "on_screen_text": "Which AI systems do you use?"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Last time, we met Velmora Tradeways and designed its approval path. Today, we build its two core records: an AI inventory and a risk register. This lesson is educational and is not legal advice. The classifications you record are your own judgements, and qualified advisers should review them.",
+       "slide": {"layout": "title", "title": "Building an AI Inventory and Risk Register", "body": "Lesson 12 of 14 · Capstone step 1. Footer line: Educational, not legal advice."}},
+      {"visual_type": "slide",
+       "voiceover": "The AI inventory lists every AI system in use or in development, one row per system. Useful columns are the system, its owner, its purpose, the personal data used, its role and tier under the AI Act, its role under the GDPR and the NDPA, and the assessments done. It answers the question, what do we have?",
+       "slide": {"layout": "code", "title": "AI inventory: columns", "body": "Table header row: System | Owner | Purpose | Personal data used | EU AI Act role and tier | GDPR / NDPA role | Assessments done. One empty example row below."}},
+      {"visual_type": "slide",
+       "voiceover": "The risk register records the risks those systems create, one row per risk. Its columns are the risk, the AI system, likelihood, impact, owner, control and review date. For this course, add one more column, laws, to show whether each risk connects to the AI Act, the GDPR, the NDPA, or several.",
+       "slide": {"layout": "code", "title": "Risk register: columns", "body": "Table header row: Risk | AI system | Likelihood | Impact | Owner | Control | Review date | Law(s). The Law(s) column highlighted in teal."}},
+      {"visual_type": "slide",
+       "voiceover": "Some practical rules. Write each risk as cause, event and effect. For example, biased training data leads the tool to rank some groups lower, so qualified candidates are rejected unfairly. A risk written as one word, like bias, cannot be managed.",
+       "slide": {"layout": "diagram", "title": "Cause → event → effect", "body": "Three linked boxes: Biased training data (cause) → tool ranks some groups lower (event) → qualified candidates rejected unfairly (effect). Crossed-out tag beside: 'bias'"}},
+      {"visual_type": "slide",
+       "voiceover": "Use a simple scale, such as one to five for likelihood and impact, and define what each number means. Name one owner per risk: a role that can act, not a committee. Write only the controls that actually exist today, and mark planned ones as planned. And set review dates by risk level.",
+       "slide": {"layout": "bullets", "title": "Register rules", "body": "Scale 1 to 5, each number defined · One owner: a role that can act · Real controls today; mark 'planned' · Review dates by risk level"}},
+      {"visual_type": "stock",
+       "voiceover": "Think of a hospital. The inventory is the list of rooms and equipment. The risk register is the list of what could go wrong in each room, who is responsible and what protects patients. You need the first list to write the second.",
+       "stock_query": "hospital corridor with medical equipment",
+       "on_screen_text": "First the rooms, then the risks"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's see two entries. Priya Raman is the privacy analyst at Velmora. She starts with two rows in the inventory.",
+       "stock_query": "analyst working on spreadsheet in office",
+       "on_screen_text": "Priya · privacy analyst, Velmora"},
+      {"visual_type": "slide",
+       "voiceover": "The CV-screening tool is owned by the Head of HR, ranks applicants and uses CVs and application data. Velmora is the deployer of a likely high-risk system, and a controller under both data protection laws. No DPIA is done yet. The translation tool is owned by the Head of IT, may contain personal data, and is likely minimal risk.",
+       "slide": {"layout": "code", "title": "Velmora inventory (extract)", "body": "Row 1: CV-screening tool | Head of HR | ranks applicants | CVs, application data | deployer, likely high-risk | controller | DPIA not done. Row 2: Translation tool | Head of IT | translates emails and documents | may include personal data | deployer, likely minimal | controller, vendor = processor | no DPIA"}},
+      {"visual_type": "slide",
+       "voiceover": "Her first register entry: the CV tool ranks candidates from some groups lower, because of patterns in past hiring data, which leads to unfair rejection. Likelihood three, impact five, owned by the Head of HR. Planned controls include vendor bias-test results, recruiter review of every rejection and a DPIA. It is reviewed every three months, and maps to all three laws.",
+       "slide": {"layout": "code", "title": "Risk register: entry 1", "body": "Risk: historical hiring patterns → some groups ranked lower → unfair rejection | CV-screening tool | L 3 | I 5 | Head of HR | Planned: vendor bias tests, recruiter reviews every rejection, DPIA | Every 3 months | EU AI Act, GDPR, NDPA"}},
+      {"visual_type": "slide",
+       "voiceover": "Her second entry: staff paste confidential contracts containing personal data into the translation tool, and the vendor stores or reuses them. Likelihood three, impact four, owned by the Head of IT. Controls include a no-training contract term, a data processing agreement, staff guidance and a transfer check. It maps to the GDPR and the NDPA.",
+       "slide": {"layout": "code", "title": "Risk register: entry 2", "body": "Risk: staff paste contracts with personal data → vendor stores or reuses them → breach or unlawful transfer | Translation tool | L 3 | I 4 | Head of IT | No-training term, data processing agreement, staff guidance, transfer check | Every 6 months | GDPR, NDPA"}},
+      {"visual_type": "text",
+       "voiceover": "Priya notices something. The translation tool is minimal risk under the AI Act, yet it carries a real data protection risk. Tier and risk level are not the same thing. And a common mistake is to build the register once for an audit, and never update it. Keep it working.",
+       "on_screen_text": "Low tier does not mean low risk."}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, the AI inventory lists every AI system with its owner, purpose, data, role under each law and risk tier. Second, the risk register records each risk with likelihood, impact, owner, control, review date and the relevant laws. Third, a low AI Act tier does not mean low data protection risk.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Inventory: every system, owner, purpose, data, roles, tier. 2. Register: risk, likelihood, impact, owner, control, review date, laws. 3. Low tier ≠ low data protection risk."}}
+    ],
+    "CTA": [
+      {"visual_type": "slide",
+       "voiceover": "Now for capstone step one. In the exercise below this video, you will build an inventory of all six Velmora systems, and a register of at least six risks across at least four systems, each mapped to the relevant laws. Keep every detail fictional.",
+       "slide": {"layout": "bullets", "title": "Capstone step 1", "body": "Inventory: all 6 Velmora systems · Register: at least 6 risks, 4+ systems · Cause, event, effect · Scores 1 to 5 with a defined scale · Map each risk to the laws · Fictional data only · About 60 minutes"}},
+      {"visual_type": "presenter_full",
+       "voiceover": "In the next lesson, capstone step two: drafting the AI governance policy. See you there.",
+       "on_screen_text": "Next: Drafting the Policy"}
+    ]
+  }
+}

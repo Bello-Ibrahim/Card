@@ -1,0 +1,79 @@
+{
+  "title": "Lawful Basis for AI Processing",
+  "thumbnail": {
+    "headline": "Is Consent Enough?",
+    "image": "Navy background, a train ticket icon split into two halves labelled train and use, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Is Consent Enough?", "body": "A train ticket icon torn into two parts: 'Training the model' and 'Using the model'. Small tag: AI Governance, Privacy and Compliance · Lesson 7."}
+  },
+  "production_notes": [
+    "Legal/compliance reviewer sign-off required before release.",
+    "Disclaimer spoken once in scene 2 (educational, not legal advice).",
+    "[VERIFY] [REGION] Lawful bases: content.md placeholders [the GDPR article on lawful basis] and [the NDPA section on lawful basis]. The voiceover lists the GDPR bases in general terms and says only that the NDPA has a comparable list; any NDPA differences in the list must be checked.",
+    "[VERIFY] [REGION] Special categories: content.md placeholder [the special categories article and section] (scene 7).",
+    "[VERIFY] [REGION] Current EU and national regulator guidance on legitimate interests and AI model training must be checked (scenes 5 and 12). No regulator or guidance document is named in the voiceover.",
+    "[VERIFY] Official sources for the exercise must be chosen, with date recorded.",
+    "Magdalena Nowak and the Poznań fashion retailer are fictional. Stock footage must not show a real retailer's website or logo."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "A retailer says, customers accepted our terms, so we can use their data to train our AI. Is that enough? Often it is not, because training a model and using it are different processing activities, and each one needs its own lawful basis.",
+       "on_screen_text": "They accepted our terms. Enough?"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Last time, we followed the principles across the AI lifecycle. Now we focus on lawfulness. Remember, this course is educational and is not legal advice. The GDPR and the NDPA both list lawful bases. The lists are similar, but check the exact wording and conditions in each.",
+       "slide": {"layout": "title", "title": "Lawful Basis for AI Processing", "body": "Lesson 7 of 14. Footer line: Educational, not legal advice."}},
+      {"visual_type": "slide",
+       "voiceover": "Under the GDPR, the lawful bases are consent, contract, legal obligation, vital interests, public task and legitimate interests. The NDPA contains a comparable list. For private-sector AI, three bases come up most often.",
+       "slide": {"layout": "bullets", "title": "Lawful bases", "body": "Consent · Contract · Legal obligation · Vital interests · Public task · Legitimate interests. Highlighted for private-sector AI: consent, contract, legitimate interests. Note: NDPA has a comparable list"}},
+      {"visual_type": "slide",
+       "voiceover": "Consent must be freely given, specific, informed and unambiguous, and easy to withdraw. That makes it hard to use for training, because withdrawal may mean removing a person's data from a model. Contract covers only what is genuinely necessary to deliver a contract with the person. Training a general model usually is not.",
+       "slide": {"layout": "comparison", "title": "Consent and contract", "body": "Consent: freely given, specific, informed, unambiguous, easy to withdraw; hard for training. Contract: only what is necessary to deliver the contract; training a general model usually not"}},
+      {"visual_type": "slide",
+       "voiceover": "Legitimate interests needs a three-part test. Is the purpose legitimate? Is the processing necessary for that purpose? And in a balancing test, are the organisation's interests overridden by the person's interests, rights and freedoms? Regulators have published guidance on using this basis for AI.",
+       "slide": {"layout": "diagram", "title": "Legitimate interests: three parts", "body": "Three steps: 1 Purpose, is it legitimate? → 2 Necessity, is the processing needed? → 3 Balancing, do the person's rights override it?"}},
+      {"visual_type": "slide",
+       "voiceover": "So split your AI processing into separate activities, such as collecting data, training the model and using the model on a person. Each activity needs a basis, and the answer may be different for each one.",
+       "slide": {"layout": "diagram", "title": "Separate activities, separate bases", "body": "Three boxes: Collect data → Train model → Use model on a person. A basis tag under each box, each one a question mark"}},
+      {"visual_type": "slide",
+       "voiceover": "Special category data, such as health data, biometric data used for identification, ethnic origin or religion, needs a lawful basis and an extra condition, such as explicit consent. And AI can infer special category data from ordinary data, which may bring it into scope.",
+       "slide": {"layout": "bullets", "title": "Special categories", "body": "Health · Biometric data for identification · Racial or ethnic origin · Religion · Sexual orientation. Needs: lawful basis + extra condition. Watch: AI can infer these from ordinary data"}},
+      {"visual_type": "stock",
+       "voiceover": "Think of a lawful basis as a ticket for a specific train. A ticket from Warsaw to Kraków does not let you continue to Vienna. If you want to take the data further, to a new purpose, check whether your ticket covers that journey, or whether you need a new one.",
+       "stock_query": "passenger holding train ticket on platform",
+       "on_screen_text": "A basis covers a specific journey"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's see this in practice. Magdalena Nowak is a privacy lawyer for a fictional online fashion retailer in Poznań, Poland. The retailer wants an AI system that recommends products based on browsing and purchase history.",
+       "stock_query": "online fashion shopping on smartphone",
+       "on_screen_text": "Magdalena · fashion retailer, Poznań"},
+      {"visual_type": "slide",
+       "voiceover": "Magdalena separates two activities: training the model on past purchases, and showing recommendations to a logged-in customer. For both, contract is weak, and consent is possible but hard to manage in a trained model. Legitimate interests looks possible, if the balancing test is met.",
+       "slide": {"layout": "comparison", "title": "Two activities, three bases", "body": "Table. Rows: Training on past purchases · Showing recommendations. Columns: Consent (possible, withdrawal hard) · Contract (weak) · Legitimate interests (possible if balanced; clear opt-out)"}},
+      {"visual_type": "slide",
+       "voiceover": "So she runs the test. The purpose, relevant product suggestions, is legitimate. For necessity, history in the retailer's own shop is needed, but data bought from third parties is not. For balancing, customers would reasonably expect some suggestions from a shop they use.",
+       "slide": {"layout": "diagram", "title": "Magdalena's balancing test", "body": "1 Purpose: relevant suggestions, legitimate (tick) · 2 Necessity: own-shop history yes, third-party data no · 3 Balancing: customers expect some suggestions"}},
+      {"visual_type": "slide",
+       "voiceover": "But risks rise if the model infers sensitive facts, such as pregnancy or health conditions. Her controls: exclude sensitive product categories from training, give a simple opt-out and explain it clearly in the privacy notice. She records her conclusion and marks it for review against regulator guidance.",
+       "slide": {"layout": "bullets", "title": "Controls recorded", "body": "Risk: inferring pregnancy or health from purchases. Controls: exclude sensitive categories · simple opt-out · clear privacy notice. Status: legitimate interests, marked for review"}},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is to choose consent to be safe. Consent is not safer if people cannot really refuse, or if you cannot honour a withdrawal. And if consent is withdrawn, you usually cannot simply switch to another basis. Choose the most suitable basis at the start, and document why.",
+       "on_screen_text": "Consent is not automatically safer."}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, every processing activity needs a lawful basis, and training a model may need a different basis from using it. Second, legitimate interests needs a documented three-part test: purpose, necessity and balancing, with controls that protect people. Third, special category data needs an extra condition, and AI may infer it.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. One basis per activity; training and use can differ. 2. Legitimate interests: purpose, necessity, balancing. 3. Special categories need an extra condition; AI may infer them."}}
+    ],
+    "CTA": [
+      {"visual_type": "slide",
+       "voiceover": "In the exercise below this video, you will take three fictional AI processing activities and choose the most suitable lawful basis for each, under the GDPR and under the NDPA. Justify each choice in two sentences.",
+       "slide": {"layout": "bullets", "title": "Your exercise", "body": "3 fictional AI activities · Best basis under the GDPR · Best basis under the NDPA · Two-sentence justification each"}},
+      {"visual_type": "presenter_full",
+       "voiceover": "In the next lesson, we turn to Nigeria: the NDPA's structure and key duties. See you there.",
+       "on_screen_text": "Next: Nigeria's NDPA"}
+    ]
+  }
+}

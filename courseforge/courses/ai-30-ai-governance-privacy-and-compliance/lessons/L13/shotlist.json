@@ -1,0 +1,205 @@
+{
+  "course_id": "AI-30",
+  "lesson_id": "L13",
+  "duration_s": 293.2,
+  "thumbnail": {
+    "headline": "Make the Policy True",
+    "slide": {
+      "layout": "title",
+      "title": "Make the Policy True",
+      "body": "Policy document icon with tracked-change marks: ticks, one crossed-out line and a teal pen. Small tag: AI Governance, Privacy and Compliance · Lesson 13."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.4,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Your job: make it true.",
+      "voiceover": "An AI tool can write a ten-page AI policy in less than a minute. It will look professional. It may also cite laws incorrectly and invent duties. Your job is not to generate the policy. Your job is to make it true."
+    },
+    {
+      "scene": 2,
+      "start": 18.4,
+      "end": 36.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Drafting the AI Governance Policy",
+        "body": "Lesson 13 of 14 · Capstone step 2. Footer line: Educational, not legal advice."
+      },
+      "voiceover": "Last time, you built Velmora's inventory and risk register. Today, we draft its policy. This course is educational and is not legal advice, so any policy you draft here is a learning exercise that qualified advisers must review before real use."
+    },
+    {
+      "scene": 3,
+      "start": 36.0,
+      "end": 52.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Short, specific, usable",
+        "body": "Left: 'We believe in responsible AI' (vague, crossed out). Right: 'Register every new AI tool in the inventory before use' (specific, tick)."
+      },
+      "voiceover": "A good AI governance policy is short, specific and usable. It tells staff what they must do, not only what the organisation believes. Each section should fit your organisation's real facts. Here is an outline with eleven sections."
+    },
+    {
+      "scene": 4,
+      "start": 52.3,
+      "end": 71.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Policy outline (1 to 6)",
+        "body": "1. Purpose and scope · 2. Definitions · 3. Principles · 4. Roles and responsibilities · 5. Approval process · 6. Acceptable and prohibited uses"
+      },
+      "voiceover": "It starts with purpose and scope, covering built, bought and embedded AI. Then definitions, principles, and roles and responsibilities. Then the approval process, with its lifecycle gates, and acceptable and prohibited uses, including uses banned by law and uses the organisation bans by choice."
+    },
+    {
+      "scene": 5,
+      "start": 71.2,
+      "end": 88.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Policy outline (7 to 11)",
+        "body": "7. Personal data rules · 8. Assessment triggers · 9. Training · 10. Monitoring and incidents (next lesson) · 11. Review cycle and ownership"
+      },
+      "voiceover": "Next come personal data rules, including a clear rule never to paste personal or confidential data into unapproved AI tools. Then assessment triggers, training, monitoring and incidents, which you will add next lesson, and finally the review cycle and ownership."
+    },
+    {
+      "scene": 6,
+      "start": 88.3,
+      "end": 110.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Using Claude safely",
+        "body": "Four steps: 1 Outline + template + fictional facts only → 2 Plain clauses with placeholders → 3 Check every clause against law and facts → 4 Mark changes and reasons"
+      },
+      "voiceover": "Claude can speed up a first draft of a section. Here is a safe approach. Give it the outline, a template's structure and fictional facts only. Ask for plain-language clauses, with placeholders instead of legal references or deadlines. Then check every clause yourself, and mark what you changed and why."
+    },
+    {
+      "scene": 7,
+      "start": 110.2,
+      "end": 126.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Sample prompt",
+        "body": "Draft the 'Roles and responsibilities' section of an AI governance policy for a fictional logistics company with offices in the Netherlands and Nigeria. Use plain English, short numbered clauses, and write [placeholder] wherever a legal reference or deadline would appear. Do not invent legal requirements."
+      },
+      "voiceover": "For example, you might ask it to draft the roles section for a fictional logistics company in the Netherlands and Nigeria, in short, plain clauses, with a placeholder wherever a legal reference would appear, and without inventing legal requirements."
+    },
+    {
+      "scene": 8,
+      "start": 126.9,
+      "end": 144.9,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "senior colleague reviewing junior colleague's document",
+      "on_screen_text": "Read every line",
+      "voiceover": "Think of an AI draft as a junior colleague's work on their first day. It saves time and gives you a structure, but you would never send it to the board without reading every line and correcting what they could not know."
+    },
+    {
+      "scene": 9,
+      "start": 144.9,
+      "end": 158.6,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "lawyer reviewing printed document with pen",
+      "on_screen_text": "Diego · legal counsel, Velmora",
+      "voiceover": "Diego Álvarez is legal counsel at Velmora. He uses Claude to draft section six, acceptable and prohibited uses. The draft is clear and well organised. Then he reviews it, clause by clause."
+    },
+    {
+      "scene": 10,
+      "start": 158.6,
+      "end": 183.5,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Kept and changed",
+        "body": "Kept (tick): approved tools for internal drafts, with human review. Changed (pen): 'must obtain consent' → 'documented lawful basis, confirmed by the DPO'"
+      },
+      "voiceover": "He keeps a clause allowing staff to use approved AI tools for internal drafts, if a person reviews the output. He changes a clause that said staff must get consent before using AI on customer data. Consent is not always the right basis, so the new clause requires a documented lawful basis, confirmed by the data protection officer."
+    },
+    {
+      "scene": 11,
+      "start": 183.5,
+      "end": 202.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Removed and added",
+        "body": "Removed (cross): cited article number → placeholder pointing to the legal register. Added (plus): no driver-monitoring camera for performance ratings"
+      },
+      "voiceover": "He removes a specific article number the draft had cited, and replaces it with a placeholder that points to the legal register. And he adds a Velmora rule banning use of the driver-monitoring camera for performance ratings, which the AI could not know about."
+    },
+    {
+      "scene": 12,
+      "start": 202.8,
+      "end": 216.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Diego's change log",
+        "body": "14 clauses drafted · 6 kept · 5 changed · 2 removed · 1 added"
+      },
+      "voiceover": "His change log shows fourteen clauses drafted: six kept, five changed, two removed and one added. That record shows his professional judgement, and it gives reviewers a clear trail to follow."
+    },
+    {
+      "scene": 13,
+      "start": 216.1,
+      "end": 238.8,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Check substance, not only style.",
+      "voiceover": "A common mistake is to check an AI-drafted policy only for style and grammar. The dangerous errors are in the substance. A policy that describes processes that do not exist is worse than no policy, because it records promises you do not keep. Check every clause against the law and the facts."
+    },
+    {
+      "scene": 14,
+      "start": 238.8,
+      "end": 264.5,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Eleven-section outline, short and specific. 2. AI first draft from fictional facts only. 3. A person checks every clause."
+      },
+      "voiceover": "Let's recap. First, a good policy covers scope, principles, roles, approval, acceptable and prohibited uses, personal data rules, assessment triggers, training and review. Second, Claude can produce a useful first draft from fictional facts and a template, but never paste in personal or confidential data. Third, a person must check every AI-drafted clause against the law and the facts."
+    },
+    {
+      "scene": 15,
+      "start": 264.5,
+      "end": 286.8,
+      "section": "CTA",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Capstone step 2",
+        "body": "2 to 3 page policy for Velmora · 11-section outline, section 10 left for L14 · Claude drafts at least one section · Track changes + change log · Placeholders for all legal references · About 60 minutes"
+      },
+      "voiceover": "Now for capstone step two. In the exercise below this video, you will draft a two to three page policy for Velmora, using the outline. Ask Claude for a first draft of at least one section, then track every change and write a short change log. Use placeholders for all legal references."
+    },
+    {
+      "scene": 16,
+      "start": 286.8,
+      "end": 293.2,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Accountability and Monitoring",
+      "voiceover": "In the final lesson, we cover accountability, monitoring and finalising your framework. See you there."
+    }
+  ]
+}

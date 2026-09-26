@@ -1,0 +1,192 @@
+{
+  "course_id": "AI-30",
+  "lesson_id": "L14",
+  "duration_s": 293.6,
+  "thumbnail": {
+    "headline": "When Something Goes Wrong",
+    "slide": {
+      "layout": "title",
+      "title": "When Something Goes Wrong",
+      "body": "Chatbot speech bubble with a red warning icon beside an open logbook and teal pen. Small tag: AI Governance, Privacy and Compliance · Lesson 14."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.0,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Who is called first?",
+      "voiceover": "It is Friday evening. A customer reports that your chatbot showed them another customer's address and phone number. Who is called first? Who decides whether to notify a regulator? If you need to invent the answers tonight, your framework is not finished."
+    },
+    {
+      "scene": 2,
+      "start": 18.0,
+      "end": 36.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Accountability, Monitoring and Finalising Your Framework",
+        "body": "Lesson 14 of 14 · Capstone step 3. Footer line: Educational, not legal advice."
+      },
+      "voiceover": "Welcome to the final lesson. Last time, you drafted Velmora's policy. Today, we finish the framework with accountability, monitoring and incident response. A final reminder: this course is educational and is not legal advice, and notification duties differ between laws, so always check them."
+    },
+    {
+      "scene": 3,
+      "start": 36.9,
+      "end": 58.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Accountability = records",
+        "body": "Decisions (classification notes, approvals) · Assessments (DPIAs, AI Act assessments, residual risk) · Training · Audits and reviews · Incident logs, including unreported ones"
+      },
+      "voiceover": "Accountability means being able to show compliance, not only to claim it. It rests on records: decisions, such as classification notes and approvals; assessments and residual-risk judgements; training records; audits and reviews; and incident logs, including incidents you did not report. If it is not recorded, you cannot show it."
+    },
+    {
+      "scene": 4,
+      "start": 58.8,
+      "end": 80.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Monitoring",
+        "body": "Performance and error rates by group · Complaints and human-review outcomes · Vendor change notices · Regular inventory and risk register review"
+      },
+      "voiceover": "Monitoring checks that systems keep working as expected after launch. Models drift as the world changes, vendors update tools and staff find new uses. So check performance and error rates for different groups, review complaints and human-review outcomes, watch vendor changes, and review the inventory and risk register regularly."
+    },
+    {
+      "scene": 5,
+      "start": 80.2,
+      "end": 102.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Incident response",
+        "body": "Five steps in a row, first three highlighted: 1 Detect and report → 2 Contain (pause or switch off) → 3 Assess (personal data breach? serious AI incident? both?)"
+      },
+      "voiceover": "An incident process has five steps. First, detect and report: how staff and customers report problems, and to whom. Second, contain: who can pause or switch off a system, and how fast. Third, assess: is personal data involved, or is it a serious incident with a high-risk AI system? Both can apply."
+    },
+    {
+      "scene": 6,
+      "start": 102.9,
+      "end": 124.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Incident response",
+        "body": "Steps 4 and 5 highlighted: 4 Notify (DPO + legal decide; time limits per law, check the relevant provisions) → 5 Recover and learn (fix cause, update register)"
+      },
+      "voiceover": "Fourth, notify: decide with the data protection officer and legal team whether to notify regulators and affected people, within the legal time limits under each law. Providers and deployers of high-risk systems may have separate reporting duties. Fifth, recover and learn: fix the cause and update the risk register."
+    },
+    {
+      "scene": 7,
+      "start": 124.3,
+      "end": 144.0,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "ship captain writing in logbook on bridge",
+      "on_screen_text": "Log, watch, practise",
+      "voiceover": "Think of a ship's logbook. It does not steer the ship, but after a storm it shows what the crew saw, what they decided and why. Monitoring is the crew watching the weather. And the incident process is the emergency drill everyone practised before the storm."
+    },
+    {
+      "scene": 8,
+      "start": 144.0,
+      "end": 161.1,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "incident manager on phone in office at night",
+      "on_screen_text": "Ngozi · incident manager, Velmora",
+      "voiceover": "Ngozi Eze is the incident manager at Velmora, and the chatbot incident from the start of this lesson happens. In the first hour, the chatbot owner switches it to hand over every conversation to a human, and informs the vendor."
+    },
+    {
+      "scene": 9,
+      "start": 161.1,
+      "end": 183.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Contain and assess",
+        "body": "Timeline: Contain (chatbot → human handover; vendor informed) → Assess (personal data breach; affected customer in Nigeria, viewer in the Netherlands; NDPA, GDPR or both?)"
+      },
+      "voiceover": "Assess: a name, address and phone number were shown, so this is a personal data breach. The affected customer lives in Nigeria, and the viewing customer in the Netherlands. The data protection officer checks whether it must be reported under the NDPA, the GDPR or both, and within which time limits."
+    },
+    {
+      "scene": 10,
+      "start": 183.0,
+      "end": 201.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Notify and record",
+        "body": "Notify: likely risk to the person → relevant regulator(s) + affected customer, with legal advice. Record: every step, time, decision and reason logged"
+      },
+      "voiceover": "Notify: the officer judges that the breach is likely to create a risk to the affected person, and recommends notifying the relevant regulator or regulators and the customer, with advice from counsel. Every step, time and decision is logged, including the reasons."
+    },
+    {
+      "scene": 11,
+      "start": 201.0,
+      "end": 217.3,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "New risk register row",
+        "body": "Risk: vendor update changes chatbot behaviour without testing → customer data shown to others | Customer chatbot | Owner: chatbot owner | Control: test results required before updates go live | Law(s): GDPR, NDPA, EU AI Act (to confirm)"
+      },
+      "voiceover": "Learn: the cause is a session error in a vendor update. So Velmora adds a new register risk, vendor updates change chatbot behaviour without testing, with a new control that requires test results before any update goes live."
+    },
+    {
+      "scene": 12,
+      "start": 217.3,
+      "end": 240.0,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Log near misses and decisions.",
+      "voiceover": "A common mistake is to log only the incidents you report. Log near misses too, and the incidents you decided not to report, with the reason. An empty log does not show that nothing happened. It may show that nobody was watching. So agree the roles and the log before anything goes wrong."
+    },
+    {
+      "scene": 13,
+      "start": 240.0,
+      "end": 259.7,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Accountability = records you can show. 2. Monitor, and know who contains, assesses and notifies. 3. Notification duties differ by law; check them."
+      },
+      "voiceover": "Let's recap. First, accountability means showing compliance with records: decisions, assessments, training, audits and incident logs. Second, monitoring checks that systems keep working, and an incident process says who contains, assesses and decides on notification. Third, notification duties differ by law and must always be checked."
+    },
+    {
+      "scene": 14,
+      "start": 259.7,
+      "end": 277.7,
+      "section": "CTA",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Capstone step 3",
+        "body": "Write section 10: monitoring and incidents · Placeholders for all deadlines · Add at least one incident risk · Self-check against the rubric · Add the 'educational, not legal advice' line · Submit policy + register"
+      },
+      "voiceover": "Now for capstone step three. Add a monitoring and incident section to your policy, add at least one incident risk to your register, and check both against the rubric. Add the disclaimer line from the rubric to both documents. Then submit both."
+    },
+    {
+      "scene": 15,
+      "start": 277.7,
+      "end": 293.6,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Submit your capstone",
+      "voiceover": "Congratulations on finishing AI Governance, Privacy and Compliance. You can now map the laws, classify AI systems, assess risks and build a framework. Submit your capstone. It has been a pleasure learning with you, and well done."
+    }
+  ]
+}
