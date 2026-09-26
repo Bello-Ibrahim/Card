@@ -1,0 +1,216 @@
+{
+  "course_id": "AI-18",
+  "lesson_id": "L17",
+  "duration_s": 293.0,
+  "thumbnail": {
+    "headline": "One Merge, Whole Pipeline",
+    "slide": {
+      "layout": "title",
+      "title": "One Merge, Whole Pipeline",
+      "body": "A merge arrow into 'main', then a chain: tests → Docker image → registry with two tags. Small tag: MLOps · Capstone Part 1."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.0,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "One merge, whole pipeline",
+      "voiceover": "You have built each part of a production ML system separately. Now you connect them, in one repository, where a single merge to main produces a tested, versioned, deployable model API, without any manual copying."
+    },
+    {
+      "scene": 2,
+      "start": 15.0,
+      "end": 30.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "The capstone in two parts",
+        "body": "Part 1 (this lesson): build and automate. Part 2 (next lesson): monitor, runbook, demo. Arrow between them."
+      },
+      "voiceover": "Welcome to the capstone. You will deploy and monitor a model API. Part one, this lesson, covers the build and the automation. Part two, the final lesson, adds monitoring, a runbook and a short demo."
+    },
+    {
+      "scene": 3,
+      "start": 30.0,
+      "end": 58.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Choose your dataset",
+        "body": "Public and tabular · clear prediction target · licence allows your use · no personal data · source and licence in README · no download? synthetic data with a fixed seed"
+      },
+      "voiceover": "First, choose a dataset and a problem. Pick a public tabular dataset with a clear prediction target, a licence that allows your use, and no personal data. Write the source and licence in your README. You may continue with the wine example, but a new dataset shows more skill. If you cannot download data, use a synthetic dataset with a fixed seed, as in lesson three."
+    },
+    {
+      "scene": 4,
+      "start": 58.3,
+      "end": 81.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Required parts, 1 to 4",
+        "body": "1. Reproducible training (L03). 2. MLflow runs + registry: champion, data hash, commit tags (L04, L05). 3. FastAPI with validation and logs (L06, L07). 4. Multi-stage Dockerfile, slim base, non-root user (L08)."
+      },
+      "voiceover": "Your repository needs seven parts. Reproducible training with pinned packages and fixed seeds. Tracking and a registry, with at least three runs and a champion model tagged with its data hash and Git commit. A FastAPI service with validation and structured logs. And a slim container that runs as a non-root user."
+    },
+    {
+      "scene": 5,
+      "start": 81.0,
+      "end": 98.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Required parts, 5 to 7",
+        "body": "5. Unit, data, quality gate and API tests (L11). 6. CI on push and pull request, protected main (L12). 7. Publish image with commit + model tags (L13)."
+      },
+      "voiceover": "Then the automation. Tests of all four types. CI that runs them on every push and pull request, with main protected. And publishing, so every merge builds and pushes an image tagged with the commit ID and the model version."
+    },
+    {
+      "scene": 6,
+      "start": 98.1,
+      "end": 122.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Collect evidence as you go",
+        "body": "Screenshots: MLflow runs · registry page · blocked pull request · published image. Keep an evidence list in the README."
+      },
+      "voiceover": "The rubric gives points for training and versioning, the containerised API with tests and CI and CD, monitoring and drift, the release and rollback plan, and the runbook and demo. Read it now, so you collect evidence while you build. Keep screenshots of your MLflow runs, the registry page, a blocked pull request and the published image."
+    },
+    {
+      "scene": 7,
+      "start": 122.5,
+      "end": 140.1,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "mechanics assembling car in workshop",
+      "on_screen_text": "Parts on the bench, car on the road",
+      "voiceover": "The capstone is like assembling a car from parts you have already tested one by one. The engine, brakes and lights each worked on the bench. Now you fit them together, connect the wires, and prove that the whole car drives."
+    },
+    {
+      "scene": 8,
+      "start": 140.1,
+      "end": 156.4,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "technician repairing washing machine at home",
+      "on_screen_text": "Leila · insurance · Casablanca",
+      "voiceover": "Leila Haddad is a data scientist at a hypothetical insurance company in Casablanca, Morocco. For her capstone, she predicts whether a household appliance will need repair within a year, using a public tabular dataset with no personal data."
+    },
+    {
+      "scene": 9,
+      "start": 156.4,
+      "end": 170.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Create the capstone-api repository from the L03 template",
+        "Replace data.py with a loader for her dataset",
+        "Show the source and licence lines in README.md",
+        "Run python train.py twice and show identical metrics"
+      ],
+      "on_screen_text": "Reproducible from the start",
+      "voiceover": "She starts from her template from lesson three, replaces the data loader with one for her dataset, and writes the source and licence in the README. She trains twice and shows identical metrics."
+    },
+    {
+      "scene": 10,
+      "start": 170.5,
+      "end": 181.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Log 4 runs to MLflow",
+        "Open the MLflow UI and compare the runs",
+        "Run python register.py",
+        "Show the registered model with the champion alias, data hash tag and Git commit tag"
+      ],
+      "on_screen_text": "Champion with two tags",
+      "voiceover": "She logs four runs to MLflow, compares them, and registers the best. The registry shows the champion alias, the data hash tag and the commit tag."
+    },
+    {
+      "scene": 11,
+      "start": 181.6,
+      "end": 195.7,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run: python export_model.py",
+        "Run: docker build -t repair-api:dev .",
+        "Run: docker run -p 8000:8000 repair-api:dev",
+        "Open /docs and send one valid and one invalid request",
+        "Run: pytest -q and show all tests passing"
+      ],
+      "on_screen_text": "Container and tests work",
+      "voiceover": "She exports the model, builds the image and runs the container. From the interactive docs page, she sends one valid request and one invalid request. Then she runs pytest, and all tests pass."
+    },
+    {
+      "scene": 12,
+      "start": 195.7,
+      "end": 219.3,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Push a branch with a deliberately broken quality gate",
+        "Open a pull request and show the blocked merge",
+        "Fix the gate, wait for the green check and merge",
+        "Open Actions and show the publish run",
+        "Open Packages and show the image with commit and model tags",
+        "Show the evidence list in README.md"
+      ],
+      "on_screen_text": "Blocked, fixed, published",
+      "voiceover": "She pushes a branch with a broken quality gate and opens a pull request. The merge is blocked. She fixes it and merges. In Actions and Packages, the new image appears with its commit tag and model tag. She adds each screenshot to her evidence list, with one link or screenshot for each rubric criterion."
+    },
+    {
+      "scene": 13,
+      "start": 219.3,
+      "end": 239.4,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Connect a thin pipeline early",
+      "voiceover": "The common mistake is to build all the parts first and connect them on the last day. Then all the integration problems appear together. Connect the pipeline early, even with a simple model. A working thin pipeline is worth more than perfect parts that do not connect."
+    },
+    {
+      "scene": 14,
+      "start": 239.4,
+      "end": 264.3,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. One repository: training, MLflow, FastAPI, Docker, tests, CI/CD. 2. Public dataset, clear licence, no personal data. 3. Connect early, collect evidence."
+      },
+      "voiceover": "Let's recap. First, capstone part one connects reproducible training, MLflow tracking and registry, a FastAPI service, Docker, tests and CI and CD, in one repository. Second, choose a public dataset with a clear licence and no personal data, and document the source. Third, connect the whole pipeline early, and collect evidence for each rubric criterion as you build."
+    },
+    {
+      "scene": 15,
+      "start": 264.3,
+      "end": 283.6,
+      "section": "CTA",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Capstone step 1",
+        "body": "Dataset + licence · 3+ MLflow runs · champion with tags · FastAPI + Docker · 5+ tests · CI + publish, protected main · evidence list · about 120 minutes"
+      },
+      "voiceover": "Your exercise is capstone step one. Build a repository where every push runs tests, a failing test blocks merging, and every merge publishes an image tagged with the commit and model version. Commit no secrets, personal data or large data files. Plan about two hours."
+    },
+    {
+      "scene": 16,
+      "start": 283.6,
+      "end": 293.0,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Capstone Part 2",
+      "voiceover": "In the final lesson, Capstone Part 2: Monitor, Document and Present, you add monitoring, a runbook and your demo. See you there."
+    }
+  ]
+}

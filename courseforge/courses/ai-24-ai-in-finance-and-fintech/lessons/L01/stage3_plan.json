@@ -1,0 +1,79 @@
+{
+  "title": "The AI Map of Financial Services",
+  "thumbnail": {
+    "headline": "Where AI Fits in Finance",
+    "image": "Navy background, a simple horizontal value chain of five teal icons (ID card, card payment, loan document, chat bubble, report), headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Where AI Fits in Finance", "body": "Row of five icons along a line: ID card, payment card, loan document, chat bubble, report. Small tag: AI in Finance and Fintech · Lesson 1."}
+  },
+  "production_notes": [
+    "No facts to verify: all institutions and people are hypothetical, and the lesson states no statistics or country-specific rules (content.md Review Flags: None).",
+    "Mavuno Pay, Aurora Digital, Rheinfeld Insurance and Juliana Costa are fictional. Stock footage must not show a real bank, insurer or mobile-money brand, logo or card design.",
+    "No investment advice anywhere in this course. Any data shown on screen is synthetic.",
+    "Scene 7 hero clip is about 7 seconds and the scene is about 17 seconds: hold the clip with a slow push-in, then cut to scene 8."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "A customer opens an account on her phone, pays a supplier, applies for a loan, asks a question at midnight, and repays on time. At how many of those steps did an AI system look at her data? The answer can be every one.",
+       "on_screen_text": "How many steps used AI?"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Hello, and welcome to AI in Finance and Fintech. In this first lesson, we draw a map. Where does AI actually fit inside a financial institution, and what data does each use depend on?",
+       "slide": {"layout": "title", "title": "The AI Map of Financial Services", "body": "AI in Finance and Fintech · Lesson 1 of 14"}},
+      {"visual_type": "slide",
+       "voiceover": "AI in finance is not one product. It is a set of tools that support different steps of the value chain. In this course, we group them into five families.",
+       "slide": {"layout": "diagram", "title": "Five families of use cases", "body": "Horizontal value chain with five boxes, revealed one by one: Onboarding and identity → Payments and fraud → Lending and credit → Customer service → Back-office analysis and compliance"}},
+      {"visual_type": "slide",
+       "voiceover": "The first family is onboarding and identity. For example, matching a selfie to an ID photo and screening new customers against watch lists. The second is payments and fraud detection, where each card payment, transfer or mobile-money transaction gets a fraud score in real time.",
+       "slide": {"layout": "bullets", "title": "Families 1 and 2", "body": "1. Onboarding and identity: ID images, application forms, screening lists. 2. Payments and fraud: transaction history, device and location details, past fraud labels."}},
+      {"visual_type": "slide",
+       "voiceover": "The third family is lending and credit scoring. It estimates how likely an applicant is to repay, and spots early signs of arrears. The fourth is customer service, with assistants that answer routine questions, block lost cards and guide disputes.",
+       "slide": {"layout": "bullets", "title": "Families 3 and 4", "body": "3. Lending and credit: bureau records, income, account behaviour, sometimes alternative data. 4. Customer service: approved policy texts, chat and call transcripts, account data the customer may see."}},
+      {"visual_type": "slide",
+       "voiceover": "The fifth family is back-office analysis and compliance. That means summarising reports, drafting management commentary, reconciling accounts, and flagging unusual activity for anti-money-laundering teams.",
+       "slide": {"layout": "bullets", "title": "Family 5", "body": "5. Back-office analysis and compliance: ledgers, reports, investigators' case notes. Tasks: summaries, commentary, reconciliation, AML alerts."}},
+      {"visual_type": "slide",
+       "voiceover": "Two points apply to all five families. First, each use case is only as good as the data behind it. Second, each one produces an output that a person or a process must act on. Approve, block, reply or report. The quality of that human step matters as much as the model.",
+       "slide": {"layout": "diagram", "title": "Two points for every use case", "body": "Data box → Model box → Output box → Human or process acts (approve · block · reply · report). Caption: Good data in, good human step out."}},
+      {"visual_type": "hero_broll",
+       "voiceover": "Here is a useful way to picture it. Think of AI as an extra pair of eyes at each step of a loan's journey. One pair checks the applicant's documents. Another looks at the risk of non-payment.",
+       "broll_tool": "FLOW",
+       "broll_prompt": "A South Asian woman loan officer and an older East African male customer sit at a bright bank desk reviewing a paper application together, the officer glancing at a laptop; slow dolly-in from medium shot to close-up on their hands and the documents; soft natural window light; cinematic, warm realistic colours, shallow depth of field; 7 seconds; no readable text on paper or screen, no logos, no brand names."},
+      {"visual_type": "stock",
+       "voiceover": "Another watches repayments for early warning signs. Another reads the customer's messages. None of these eyes makes the final decision alone. Each one helps the responsible person at that step to see more, and faster.",
+       "stock_query": "bank employee reviewing documents at desk",
+       "on_screen_text": "Extra eyes, not the final decision"},
+      {"visual_type": "text",
+       "voiceover": "And not every task needs AI. A fee that follows a fixed table is better done with a simple formula. AI helps most when there are many cases, patterns change, and speed matters.",
+       "on_screen_text": "Fixed table? Use a formula."}
+    ],
+    "Demonstrate": [
+      {"visual_type": "slide",
+       "voiceover": "Let's look at three hypothetical institutions. Mavuno Pay is a mobile-money provider in Kenya. Its main use case is fraud detection. A model scores each transfer and holds the riskiest ones for a quick check. A simple classifier also sorts complaints into wrong transfer, PIN problem, and other.",
+       "slide": {"layout": "diagram", "title": "Mavuno Pay · Kenya", "body": "Mobile-money provider. Transfer → fraud score → riskiest held for a quick check. Complaint texts → sorted into: Wrong transfer · PIN problem · Other. Key data: transaction history, complaint text."}},
+      {"visual_type": "slide",
+       "voiceover": "Aurora Digital is a digital bank in Brazil. It uses AI in onboarding, to match selfies to ID documents, and in lending, for small personal loans. A human credit officer reviews every application that the model places near the decision boundary.",
+       "slide": {"layout": "diagram", "title": "Aurora Digital · Brazil", "body": "Digital bank. Onboarding: selfie matched to ID. Lending: model supports small personal loans; applications near the decision boundary go to a human credit officer. Key data: ID images, bureau records, account behaviour."}},
+      {"visual_type": "slide",
+       "voiceover": "Rheinfeld Insurance is an insurer in Germany. It uses AI in the back office. An assistant drafts summaries of long claim files, and a model flags unusual claims for the fraud team. Handlers make every final decision.",
+       "slide": {"layout": "diagram", "title": "Rheinfeld Insurance · Germany", "body": "Insurer. Assistant drafts claim-file summaries. Model flags unusual claims for the fraud team. Handlers make every final decision. Key data: claim documents, past claim outcomes."}},
+      {"visual_type": "slide",
+       "voiceover": "Juliana Costa is a product manager at Aurora Digital. She maps all of this in a simple table: the step, the use case family, the data needed, and who acts on the output. The table quickly shows her a gap. The bank has no AI support in customer service, which is exactly where queue times are longest.",
+       "slide": {"layout": "comparison", "title": "Juliana's map", "body": "Table with columns Step · Family · Data needed · Who acts. Rows: Onboarding (filled), Lending (filled), Customer service (empty, highlighted in teal: 'Gap: longest queues')."}},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is to think AI in finance means one large model that runs the whole bank. In practice, institutions run many small, separate models, each with its own data, owner and risks. So always assess one specific task, not AI in general.",
+       "on_screen_text": "Many small models, not one big one"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, AI use cases in finance fall into five families: onboarding and identity, payments and fraud, lending and credit, customer service, and back-office analysis and compliance. Second, each use case depends on specific data, and on the human step that acts on the output. Third, assess AI one task at a time, and use a simple formula when a task follows fixed rules.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Five families: onboarding, payments and fraud, lending, customer service, back office and compliance. 2. Value depends on data quality and the human step. 3. One task at a time; formula for fixed rules."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below this video, you will list eight finance tasks from your own work in Google Sheets, place each one in a family, and note the data it would need. Describe data types only, never real customer data. It takes about twenty minutes. In the next lesson, we look at financial data, and what models learn from. See you there.",
+       "on_screen_text": "Next: Financial Data"}
+    ]
+  }
+}

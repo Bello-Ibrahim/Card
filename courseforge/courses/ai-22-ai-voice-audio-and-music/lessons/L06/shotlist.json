@@ -1,0 +1,211 @@
+{
+  "course_id": "AI-22",
+  "lesson_id": "L06",
+  "duration_s": 292.9,
+  "thumbnail": {
+    "headline": "Clean Audio in Six Steps",
+    "slide": {
+      "layout": "title",
+      "title": "Clean Audio in Six Steps",
+      "body": "Left: a rough grey waveform with a thick noise band. Right: a clean teal waveform. Between them, a chain of six numbered dots. Small tag: AI Voice, Audio and Music · Lesson 6."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 20.1,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Fix it in a fixed order",
+      "voiceover": "You recorded a great interview. But when you play it back, you hear a fan, long gaps, and some words much louder than others. Listeners notice this in seconds. The good news is, a free editor and a simple order of steps can fix most of it."
+    },
+    {
+      "scene": 2,
+      "start": 20.1,
+      "end": 40.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Cleaning Up Recordings in Audacity",
+        "body": "AI Voice, Audio and Music · Lesson 6 of 10"
+      },
+      "voiceover": "Welcome to week two. Audacity is a free, open-source audio editor. We use it for a clean-up chain. That is a fixed order of steps that you apply to every voice recording. The order matters, because each step prepares the audio for the next one."
+    },
+    {
+      "scene": 3,
+      "start": 40.2,
+      "end": 58.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "The clean-up chain",
+        "body": "Six linked boxes, revealed one by one: 1 Listen and look → 2 Remove noise → 3 Cut mistakes and silences → 4 Even out levels → 5 Reduce harsh sounds → 6 Compare and export"
+      },
+      "voiceover": "Here is the chain. One, listen and look at the waveform, and find a quiet section. Two, remove background noise. Three, cut mistakes and long silences. Four, even out the levels. Five, reduce harsh sounds. And six, compare with the original and export."
+    },
+    {
+      "scene": 4,
+      "start": 58.6,
+      "end": 79.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Three key tools",
+        "body": "Noise Reduction: lowers background sound; gentle settings only · Compressor: smaller gap between loud and quiet words · EQ: gently lowers harsh high sounds ('s', 'sh')"
+      },
+      "voiceover": "Three tools do most of the work. Noise Reduction lowers background sound, but only with gentle settings, or the voice sounds thin and metallic. A compressor reduces the gap between loud and quiet words. And an equaliser, or EQ, can gently lower harsh high sounds, like strong s sounds."
+    },
+    {
+      "scene": 5,
+      "start": 79.6,
+      "end": 90.7,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "The basic chain is enough",
+      "voiceover": "Audacity can also use optional AI plugins, for example for noise suppression. But the basic chain in this lesson is all you need for this course."
+    },
+    {
+      "scene": 6,
+      "start": 90.7,
+      "end": 110.0,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "person editing photo brightness on laptop",
+      "on_screen_text": "Fix the light before the filters",
+      "voiceover": "Think of it like editing a photo. You fix the light and remove dust first, and only then add filters. If you add a filter to a dark, dusty photo, the problems become stronger. In audio, you remove noise and fix levels before anything creative."
+    },
+    {
+      "scene": 7,
+      "start": 110.0,
+      "end": 123.7,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "woman recording podcast at home microphone",
+      "on_screen_text": "Hina · poetry podcast · Lahore",
+      "voiceover": "Let's clean a real recording. Hina records a poetry podcast at home in Lahore, in Pakistan. Her one-minute test has a ceiling fan hum, two long pauses and some quiet lines."
+    },
+    {
+      "scene": 8,
+      "start": 123.7,
+      "end": 141.3,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "on_screen_text": "Step 1: listen, look, keep the original",
+      "screen_steps": [
+        "Open Audacity and drag the recording into the window",
+        "Save a copy of the original file",
+        "Play the recording with headphones",
+        "Zoom in on the first two seconds: a thin band of fan noise before the voice starts"
+      ],
+      "voiceover": "She opens Audacity, drags in her recording, and saves a copy of the original first. Then she listens with headphones, and looks at the waveform. Before she starts speaking, there are two seconds of fan noise. That is her noise floor."
+    },
+    {
+      "scene": 9,
+      "start": 141.3,
+      "end": 161.4,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "on_screen_text": "Step 2: learn the noise, then remove it",
+      "screen_steps": [
+        "Select the two seconds of fan noise",
+        "Open Effect > Noise Removal and Repair > Noise Reduction and click Get Noise Profile",
+        "Select the whole track with Ctrl+A, or Cmd+A on a Mac",
+        "Open Noise Reduction again, keep gentle settings and click Preview",
+        "Click OK and play a few seconds: the hum is almost gone"
+      ],
+      "voiceover": "Noise Reduction works in two passes. She selects the two quiet seconds and lets the effect learn the noise profile. Then she selects the whole track, keeps gentle settings, and previews before she applies it. The fan hum becomes almost silent, and her voice still sounds natural."
+    },
+    {
+      "scene": 10,
+      "start": 161.4,
+      "end": 178.1,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "on_screen_text": "Step 3: cut mistakes and long silences",
+      "screen_steps": [
+        "Select the false start at the beginning and press Delete",
+        "Select the whole track and open Truncate Silence",
+        "Set long pauses to be shortened to under one second, then click Apply",
+        "Show the two gaps in the waveform are now shorter"
+      ],
+      "voiceover": "Next, she deletes a false start, where she began a line and stopped. She uses Truncate Silence to shorten the two long pauses to under one second. But she keeps short, natural pauses, because speech with none sounds rushed."
+    },
+    {
+      "scene": 11,
+      "start": 178.1,
+      "end": 196.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "on_screen_text": "Step 4: Compressor, then Normalize",
+      "screen_steps": [
+        "Select the whole track and apply Compressor with default settings",
+        "Apply Normalize so the peak stays below 0 dB",
+        "Show the waveform: quiet lines are now closer in size to loud ones"
+      ],
+      "voiceover": "To even out the levels, she applies Compressor with the default settings. This reduces the difference between loud and quiet words. Then she uses Normalize, so the loudest point stays just below the top. You will set the final loudness in lesson nine."
+    },
+    {
+      "scene": 12,
+      "start": 196.5,
+      "end": 213.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "on_screen_text": "Steps 5 and 6: soften, compare, export",
+      "screen_steps": [
+        "Open Filter Curve EQ and lower the high frequencies slightly",
+        "Preview, then click Apply",
+        "Play ten seconds of the original copy, then the same ten seconds of the cleaned track",
+        "Choose File > Export Audio and export as WAV"
+      ],
+      "voiceover": "Her s sounds are sharp on headphones, so she uses Filter Curve EQ to lower the high frequencies slightly. Small changes only. Finally, she plays the original and the cleaned version one after the other, and exports a WAV file."
+    },
+    {
+      "scene": 13,
+      "start": 213.6,
+      "end": 228.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Hina's notes",
+        "body": "Noise Reduction → fan removed · Truncate Silence → tighter pace · Compressor + Normalize → quiet lines clearer · Filter Curve EQ → softer 's' sounds"
+      },
+      "voiceover": "Hina writes one note for each step. Noise reduction removed the fan. Truncate Silence made the pace tighter. Compressor and Normalize made quiet lines easier to hear. And the EQ made the s sounds softer."
+    },
+    {
+      "scene": 14,
+      "start": 228.6,
+      "end": 246.6,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Gentle settings protect the voice",
+      "voiceover": "The most common mistake is too much noise reduction. Push the settings high, and the voice starts to sound robotic, thin or underwater. A little background noise is much less distracting than a damaged voice. So use gentle settings, preview, and compare."
+    },
+    {
+      "scene": 15,
+      "start": 246.6,
+      "end": 268.5,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Listen → noise → cuts → levels → harsh sounds → compare and export. 2. Noise Reduction: learn from a quiet section, then apply gently. 3. Keep the original; compare before and after."
+      },
+      "voiceover": "Let's recap. First, use a fixed chain: listen, remove noise, cut mistakes and silences, even out levels, reduce harsh sounds, then compare and export. Second, noise reduction learns the noise from a quiet section, then removes it from the whole file. Third, always keep the original, and compare before and after."
+    },
+    {
+      "scene": 16,
+      "start": 268.5,
+      "end": 292.9,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Generating Music Beds",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will clean up a noisy one-minute voice recording in Audacity. Use your own, or the practice file on the course page. Then describe what each step changed. It takes about thirty minutes. In the next lesson, Generating Music Beds with AI, we add music."
+    }
+  ]
+}

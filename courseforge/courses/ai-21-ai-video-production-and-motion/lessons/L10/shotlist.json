@@ -1,0 +1,228 @@
+{
+  "course_id": "AI-21",
+  "lesson_id": "L10",
+  "duration_s": 300.4,
+  "thumbnail": {
+    "headline": "Keep, Trim or Replace?",
+    "slide": {
+      "layout": "title",
+      "title": "Keep, Trim or Replace?",
+      "body": "Four film frames in a row, each with a small label: keep · trim · regenerate · replace. Small tag: AI Video Production and Motion · Lesson 10."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 18.0,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Decide, with reasons",
+      "voiceover": "You now have a folder full of clips. Some are excellent, some are strange, and some are almost right. The skill today is not generating more clips. It is deciding, quickly and with reasons, what to do with the clips you have."
+    },
+    {
+      "scene": 2,
+      "start": 18.0,
+      "end": 27.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Diagnosing Artifacts: Regenerate, Edit or Replace?",
+        "body": "AI Video Production and Motion · Lesson 10 of 14"
+      },
+      "voiceover": "In the last lesson, you added an avatar presenter. Now it is time to review everything you have made so far."
+    },
+    {
+      "scene": 3,
+      "start": 27.0,
+      "end": 40.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Five common artifacts",
+        "body": "Warped hands and faces · Melting or morphing objects · Flicker · Unreadable text · Wrong physics"
+      },
+      "voiceover": "An artifact is a visual error caused by the generation process. There are five common types. Warped hands and faces. Melting or morphing objects. Flicker. Unreadable text. And physics that looks wrong."
+    },
+    {
+      "scene": 4,
+      "start": 40.7,
+      "end": 54.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "What they look like, part 1",
+        "body": "Three still frames with a red circle on each problem: a hand with an extra finger · a cup changing shape across two frames · a textured wall with a patch that jumps in brightness."
+      },
+      "voiceover": "Let's look closer. Hands may have extra fingers, or fingers that merge. A cup changes shape, or a bicycle wheel bends. Flicker is when light, colours or textures jump from frame to frame."
+    },
+    {
+      "scene": 5,
+      "start": 54.8,
+      "end": 68.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "What they look like, part 2",
+        "body": "Two still frames with red circles: a shop sign with random letter shapes · a person's arm passing through a railing."
+      },
+      "voiceover": "Unreadable text means signs and labels with letters that do not form words. And wrong physics means water flowing upwards, people walking without moving forward, or objects passing through each other."
+    },
+    {
+      "scene": 6,
+      "start": 68.1,
+      "end": 85.2,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "person reviewing video frame by frame on monitor",
+      "on_screen_text": "Full size, at least twice",
+      "voiceover": "How do you review? Watch each clip at full size, at least twice. Then step through the problem areas slowly, or pause at several points. Many artifacts appear only for a moment, but viewers notice them on a large screen."
+    },
+    {
+      "scene": 7,
+      "start": 85.2,
+      "end": 103.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Decision guide, part 1",
+        "body": "Keep: no visible problems at normal speed · Trim: problem only at the start or end, and the good part is long enough"
+      },
+      "voiceover": "Now the decision guide. For each clip, choose one of four actions. Keep it, when there are no visible problems at normal speed. Trim it, when the problem is only at the start or end, and the good part is long enough."
+    },
+    {
+      "scene": 8,
+      "start": 103.2,
+      "end": 126.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Decision guide, part 2",
+        "body": "Regenerate: problem runs through the clip; try less motion, a simpler action or a keyframe · Replace: attempts failed or readable text needed; use a graphic, a still with slow zoom, licensed stock or your own footage"
+      },
+      "voiceover": "Regenerate it, when the problem runs through the clip and a prompt change could fix it, like less motion or a simpler action. And replace it when several attempts have failed, or the shot needs readable text. Use a graphic, a still with a slow zoom, a licensed stock clip, or your own footage."
+    },
+    {
+      "scene": 9,
+      "start": 126.3,
+      "end": 145.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Crop, and set a limit",
+        "body": "Left: a frame with a problem at the edge and a crop box around the main subject. Right: a counter showing 1, 2, 3 regenerations, then an arrow to 'replace'."
+      },
+      "voiceover": "You can also crop. Reframing a clip in the editor can remove a problem at the edge of the picture, if the quality stays good enough. And set a limit, such as three regenerations per shot. After that, replacing is usually faster and cheaper."
+    },
+    {
+      "scene": 10,
+      "start": 145.2,
+      "end": 161.9,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "doctor talking with patient in clinic",
+      "on_screen_text": "Different problems, different treatments",
+      "voiceover": "Think of a doctor at a clinic. Some patients need nothing. Some need a small treatment, some need a second test, and some need a specialist. The doctor does not keep repeating a test that already failed three times."
+    },
+    {
+      "scene": 11,
+      "start": 161.9,
+      "end": 176.5,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "solar panels on city rooftop sunrise",
+      "on_screen_text": "Priya's solar explainer · Pune",
+      "voiceover": "Let's see an example. Priya is producing a seventy-second explainer about rooftop solar panels for a small installer in Pune, India. The installer is made up for this lesson. She reviews six clips."
+    },
+    {
+      "scene": 12,
+      "start": 176.5,
+      "end": 195.4,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Shots 1 and 2",
+        "body": "Shot 1: wide city at sunrise → Keep (clean). Shot 2: hand with six fingers mid-clip → Regenerate ('hands out of frame', focus on the panel)."
+      },
+      "voiceover": "Shot one, a wide city at sunrise, is clean, so she keeps it. In shot two, a technician's hand has six fingers for about one second in the middle. She will regenerate, with the hands out of frame and the focus on the panel."
+    },
+    {
+      "scene": 13,
+      "start": 195.4,
+      "end": 215.5,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Shots 3 and 4",
+        "body": "Shot 3: flicker in the last 2 s → Trim (first 4 s are clean). Shot 4: meter shows random symbols → Replace with a simple animated graphic."
+      },
+      "voiceover": "In shot three, the panels flicker in the last two seconds. The first four seconds are clean, so she trims it. In shot four, an electricity meter shows random symbols. Readable numbers need a graphic, so she replaces it with a simple animation made in the editor."
+    },
+    {
+      "scene": 14,
+      "start": 215.5,
+      "end": 231.4,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Shots 5 and 6",
+        "body": "Shot 5: arm passes through a railing → Regenerate × 3, then Replace with a still and slow zoom. Shot 6: bird melts at the edge → Crop."
+      },
+      "voiceover": "In shot five, a child's arm passes through a railing. After three failed attempts, she uses a still keyframe with a slow zoom. In shot six, a bird near the edge melts. A slight crop removes it."
+    },
+    {
+      "scene": 15,
+      "start": 231.4,
+      "end": 238.7,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Priya's review",
+        "body": "Table of 6 rows with coloured tags: 1 Keep · 2 Regenerate · 3 Trim · 4 Replace · 5 Replace · 6 Crop. Two columns below: ready for the edit (1, 3, 4, 5, 6) · needs work (2)."
+      },
+      "voiceover": "Now Priya knows exactly which shots need more work, and which ones are ready for the edit."
+    },
+    {
+      "scene": 16,
+      "start": 238.7,
+      "end": 255.4,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "A still is often the best choice",
+      "voiceover": "A common mistake is to keep every clip because you spent credits on it. Another is to regenerate every problem again and again, hoping for perfection. Both waste time. A simple still or graphic is often the best choice."
+    },
+    {
+      "scene": 17,
+      "start": 255.4,
+      "end": 276.0,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Five artifacts: hands and faces · melting · flicker · text · physics. 2. Keep, trim, regenerate or replace, with a reason. 3. Set a limit; replace text shots and repeat failures."
+      },
+      "voiceover": "Let's recap. First, common artifacts are warped hands and faces, melting objects, flicker, unreadable text and wrong physics. Second, for each clip, decide to keep, trim, regenerate or replace, and write a reason. Third, set a regeneration limit, and replace shots that need readable text or keep failing."
+    },
+    {
+      "scene": 18,
+      "start": 276.0,
+      "end": 300.4,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Editing in CapCut",
+      "voiceover": "Now it is your turn. Put all your clips in one folder, and review each one at full size. Mark it keep, trim, regenerate or replace, with a reason. Keep your table, because you will need it for your capstone production note. It takes about twenty-five minutes. Next lesson: Editing in CapCut, Assembly, Pacing and Captions."
+    }
+  ]
+}

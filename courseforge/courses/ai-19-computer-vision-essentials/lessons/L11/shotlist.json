@@ -1,0 +1,192 @@
+{
+  "course_id": "AI-19",
+  "lesson_id": "L11",
+  "duration_s": 298.4,
+  "thumbnail": {
+    "headline": "Teach YOLO Your Products",
+    "slide": {
+      "layout": "title",
+      "title": "Teach YOLO Your Products",
+      "body": "Shop shelf with plain, unbranded juice cartons and rice bags, each in a tight teal box labelled juice_carton or rice_bag. Small tag: Computer Vision Essentials · Lesson 11."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.7,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Your objects, your boxes",
+      "voiceover": "The pre-trained model knows bottle, but not your brand of mango juice. To detect your own objects, you draw boxes on your own images and fine-tune a detector. About fifty labelled images can be enough to start."
+    },
+    {
+      "scene": 2,
+      "start": 16.7,
+      "end": 29.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Four stages",
+        "body": "Collect images → Label boxes → Export in YOLO format → Fine-tune and read results. Tag: Computer Vision Essentials · Lesson 11 of 16"
+      },
+      "voiceover": "In the last lesson, YOLO found common objects straight away. Today, we teach it new ones. Training a custom detector has four stages. Collect, label, export, and fine-tune."
+    },
+    {
+      "scene": 3,
+      "start": 29.1,
+      "end": 52.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Collect and label",
+        "body": "Real conditions, with variety · No customers or staff without consent · Tight box around every visible object, even partly hidden ones"
+      },
+      "voiceover": "First, collect images in the real conditions of your use case, with variety. Full and half-empty shelves, different angles, some blur. Keep customers and staff out of the photos, or ask for their consent. Second, label them. In a free annotation tool, draw a tight box around every visible object, even partly hidden ones."
+    },
+    {
+      "scene": 4,
+      "start": 52.7,
+      "end": 62.6,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Unlabelled object = background",
+      "voiceover": "This point matters a lot. An object that you do not label teaches the model that it is background. So label every one."
+    },
+    {
+      "scene": 5,
+      "start": 62.6,
+      "end": 84.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "YOLO format",
+        "body": "labels/img01.txt:\n0 0.412 0.530 0.110 0.240\n(class, centre x, centre y, width, height, scaled 0 to 1)\n\nshelf.yaml:\npath: /content/shelf\ntrain: images/train\nval: images/val\nnames: {0: juice_carton, 1: rice_bag}"
+      },
+      "voiceover": "Third, export in YOLO format. Each image gets a text file, with one line per object. The line holds the class number, then the box centre, width and height, all scaled from zero to one. A small settings file tells YOLO where the images are and what the classes are called."
+    },
+    {
+      "scene": 6,
+      "start": 84.5,
+      "end": 112.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Split and fine-tune",
+        "body": "80% train · 20% validation · no photo in both · Start from a pre-trained model · Read mAP50, mAP50-95 and per-class results"
+      },
+      "voiceover": "Put about eighty percent of the images in training and twenty percent in validation, and never the same photo in both. Fourth, fine-tune from a pre-trained model, as in lesson seven. Then read mAP fifty, mAP fifty to ninety-five, and the results for each class. Free Colab GPUs are not guaranteed, so save your trained weights to Google Drive when training ends."
+    },
+    {
+      "scene": 7,
+      "start": 112.4,
+      "end": 126.1,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "teacher marking exam answer sheet",
+      "on_screen_text": "Your labels are the answer key",
+      "voiceover": "Labelling is like preparing the answer key for an exam. If the key has missing answers, or careless ones, even a clever student learns the wrong things. So careful labels come first."
+    },
+    {
+      "scene": 8,
+      "start": 126.1,
+      "end": 139.4,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "convenience store shelf with packaged goods",
+      "on_screen_text": "Mei Ling's shelves · Kuala Lumpur",
+      "voiceover": "Mei Ling Chen runs convenience shops in Kuala Lumpur, Malaysia. She wants to detect two products, juice cartons and rice bags. She takes sixty shelf photos, with no customers in view."
+    },
+    {
+      "scene": 9,
+      "start": 139.4,
+      "end": 154.4,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "In Label Studio, create a project with the labels juice_carton and rice_bag",
+        "Import the images",
+        "Draw boxes on one image, including a half-hidden carton"
+      ],
+      "on_screen_text": "Label every visible object",
+      "voiceover": "In Label Studio, she creates a project with two labels, juice carton and rice bag. She imports her images and draws boxes on one of them, including a carton that is half hidden behind another."
+    },
+    {
+      "scene": 10,
+      "start": 154.4,
+      "end": 174.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Export in YOLO format and download the zip file",
+        "Open two exported .txt label files and compare them with their images",
+        "In Colab, unzip into /content/shelf with images/ and labels/ split into train and val",
+        "Create shelf.yaml"
+      ],
+      "on_screen_text": "Export, unzip, settings file",
+      "voiceover": "She exports in YOLO format and downloads the zip file. In Colab, she unzips it into folders for training and validation, and writes the small settings file with her two class names. She also checks a few exported label files against their images, because export options change."
+    },
+    {
+      "scene": 11,
+      "start": 174.5,
+      "end": 198.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Run the training cell: YOLO('yolo11n.pt'), model.train(data='shelf.yaml', epochs=50, imgsz=640)",
+        "Run model.val() and show the printed mAP50 and mAP50-95"
+      ],
+      "on_screen_text": "Train, then validate",
+      "voiceover": "Then she runs the training cell. It starts from the pre-trained nano model and trains for fifty epochs. When it finishes, she validates. You'll see something like zero point eight one for mAP fifty, and zero point five two for mAP fifty to ninety-five. With only twelve validation images, these are a rough guide."
+    },
+    {
+      "scene": 12,
+      "start": 198.5,
+      "end": 222.1,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open results.png from the results folder",
+        "Open one validation image with boxes",
+        "Point to the missed bottom-shelf rice bags, the merged carton box and the carton behind the price label"
+      ],
+      "on_screen_text": "Three failures to fix",
+      "voiceover": "She opens the training curves and a validation image. Three failures stand out. Rice bags on the bottom shelf, seen from above, are missed. Two cartons side by side get one big box. And a carton behind a price label is not found. So she will add twenty bottom-shelf photos, and check her labels."
+    },
+    {
+      "scene": 13,
+      "start": 222.1,
+      "end": 244.0,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Split by session. Check the licence.",
+      "voiceover": "A common mistake is to trust a high score from validation photos taken seconds after the training photos. Near-identical photos make the model look much better than it is. Split by shooting session or by shelf. And before any commercial use of your trained model, check the Ultralytics YOLO licence."
+    },
+    {
+      "scene": 14,
+      "start": 244.0,
+      "end": 271.0,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Real images, tight boxes, YOLO export, YAML. 2. Start from pre-trained: small data can work. 3. mAP + per-class + failure images; truly separate splits."
+      },
+      "voiceover": "Let's recap. First, a custom detector needs real-condition images, tight boxes around every object, a YOLO-format export and a settings file with the class names. Second, fine-tuning starts from a pre-trained model, so a small dataset can give useful first results. Third, read mAP with per-class results and failure images, and keep training and validation photos truly separate."
+    },
+    {
+      "scene": 15,
+      "start": 271.0,
+      "end": 298.4,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Reading Text with OCR",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will label about fifty images of your own objects, fine-tune a small YOLO model, and report its mAP and three failures. Save your best weights, because you will use them in the capstone. It takes about an hour. In the next lesson, Reading Text in Images with OCR. See you there."
+    }
+  ]
+}

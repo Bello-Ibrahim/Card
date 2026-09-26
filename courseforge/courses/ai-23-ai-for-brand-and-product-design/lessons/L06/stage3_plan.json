@@ -1,0 +1,82 @@
+{
+  "title": "Naming and Verbal Identity",
+  "thumbnail": {
+    "headline": "100 Names, 3 Survivors",
+    "image": "Navy background, a funnel with many small name tags entering at the top and three teal tags leaving at the bottom, one stamped 'not yet cleared', headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "100 Names, 3 Survivors", "body": "A funnel: many name tags in, three teal tags out; a small stamp reads 'Not yet cleared'. Small tag: AI for Brand and Product Design · Lesson 6."}
+  },
+  "production_notes": [
+    "[VERIFY] Native-speaker check needed before recording: the isiZulu name 'Gcwalisa' and its meaning 'fill up' are hypothetical in content.md. Confirm meaning and spelling with a native isiZulu speaker; if it fails, replace the name in content.md and the script together.",
+    "Pronunciation: 'Gcwalisa' contains a click consonant (gc). Get a native-speaker recording and set a HeyGen pronunciation override, or have the editor check the avatar's reading; do not publish a mispronounced version.",
+    "[REGION] Trademark rules, registers and search processes differ by country; the script gives no legal conclusion and says only that official checks happen outside the AI tool, in each market.",
+    "[VERIFY] The general statement that official trademark searches (and usually professional advice) are needed before launch, and that AI tools cannot reliably search trademark registers, is kept as a principle only: the script says 'AI cannot clear a name' and does not describe any legal process.",
+    "Refilla, Full Circle Pantry and the refill-station client are fictional. Stock footage must not show a real shop sign, brand or logo. No existing brand is named or imitated.",
+    "Thandi Mokoena is fictional."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Claude can give you a hundred brand names in ten seconds. The hard part is the next step. Finding the three that mean the right thing, sound right in every market, and that your client can actually use.",
+       "on_screen_text": "A hundred names. Which three?"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Welcome to module two, where we build a brand identity. We start with words. This lesson is about naming and verbal identity.",
+       "slide": {"layout": "title", "title": "Naming and Verbal Identity", "body": "AI for Brand and Product Design · Module 2 · Lesson 6 of 14"}},
+      {"visual_type": "stock",
+       "voiceover": "Naming is one of the best tasks for AI in brand design, because it needs a lot of variation. It is also one of the riskiest. A name must be meaningful, easy to say, and legally available.",
+       "stock_query": "designer writing name ideas in notebook",
+       "on_screen_text": "Great for variation. Risky for rights."},
+      {"visual_type": "slide",
+       "voiceover": "Step one is to generate from the brief. Give Claude your audience, markets, languages, personality, and what the name must avoid. Then ask for names in four categories. Descriptive names say what the business does. Evocative names suggest a feeling. Invented names are new words. Compound names join two real words.",
+       "slide": {"layout": "bullets", "title": "Step 1: Generate from the brief", "body": "Input: audience · markets · languages · personality · what to avoid. Four categories: Descriptive · Evocative · Invented · Compound"}},
+      {"visual_type": "text",
+       "voiceover": "Ask for a one-line reason for each name, so you can reject weak logic quickly. And never ask for names like an existing brand. Describe qualities instead.",
+       "on_screen_text": "Describe qualities, not other brands."},
+      {"visual_type": "slide",
+       "voiceover": "Step two is tone of voice, because a verbal identity is more than a name. Ask Claude for three short directions, like calm and expert, or playful and local. Ask for three sample lines each, such as a welcome message and an error message. Then choose one direction, and edit the lines yourself.",
+       "slide": {"layout": "comparison", "title": "Step 2: Tone of voice", "body": "Three columns: Calm and expert · Playful and local · Direct and practical. Each shows a sample welcome line and error line. One column is ticked: 'you choose and edit'."}},
+      {"visual_type": "slide",
+       "voiceover": "Step three is to filter. Check meaning in other languages. Does the word mean something negative in your markets? Claude can do a first screen, but confirm with native speakers, because models miss slang. Then check pronunciation, and whether the main domain names and social handles are free.",
+       "slide": {"layout": "bullets", "title": "Step 3: Filter", "body": "Meaning in other languages (confirm with native speakers) · Pronunciation after one reading · Basic availability: domains and social handles"}},
+      {"visual_type": "slide",
+       "voiceover": "Now the most important point. AI cannot confirm that a name is free to use. It cannot give a legal opinion, and trademark rules differ by country. So your shortlist should be clearly marked, not yet cleared. Official trademark checks happen outside the AI tool.",
+       "slide": {"layout": "quote", "title": "AI cannot clear a name", "body": "Every shortlist is marked: NOT YET CLEARED. Official trademark checks happen outside the AI tool, in each market."}},
+      {"visual_type": "stock",
+       "voiceover": "Think of AI naming as a brainstorm with a very fast colleague who has read a lot of dictionaries, but never visited a trademark office. Their ideas start the conversation. The legal check happens somewhere else.",
+       "stock_query": "colleagues brainstorming words on whiteboard",
+       "on_screen_text": "Ideas here. Legal checks elsewhere."}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's follow a real naming round. Thandi Mokoena is a brand designer in Johannesburg, South Africa. Her client runs refill stations, where customers bring their own containers for soap, oil and grains.",
+       "stock_query": "refill station with bulk grains in jars",
+       "on_screen_text": "Thandi · refill stations · Johannesburg"},
+      {"visual_type": "slide",
+       "voiceover": "She asks Claude for twenty names in four categories, with a reason for each. She adds two rules. The name must be easy to say in English, isiZulu and Afrikaans. And it must avoid words that suggest luxury.",
+       "slide": {"layout": "code", "title": "Thandi's naming prompt", "body": "Give 20 names in four categories (descriptive, evocative, invented, compound), with a one-line reason for each. The name must be easy to say in English, isiZulu and Afrikaans. Avoid words that suggest luxury."}},
+      {"visual_type": "slide",
+       "voiceover": "She shortlists three. Refilla, an invented name. Full Circle Pantry, a compound. And Gcwalisa, an evocative name that Claude suggests means fill up in isiZulu.",
+       "slide": {"layout": "bullets", "title": "The shortlist", "body": "Refilla (invented) · Full Circle Pantry (compound) · Gcwalisa (evocative; suggested meaning 'fill up' in isiZulu)"}},
+      {"visual_type": "slide",
+       "voiceover": "Then she filters. Two isiZulu-speaking colleagues confirm the meaning of Gcwalisa, but say the click sound may be hard in other markets. So it stays a local option. For Refilla, she finds a similar business name in a related field, and marks it high risk. Full Circle Pantry has free domains in her basic check.",
+       "slide": {"layout": "comparison", "title": "Filter results", "body": "Gcwalisa: meaning confirmed by native speakers; click sound hard elsewhere → local option (amber) · Refilla: similar name found → high risk (red) · Full Circle Pantry: domains free in basic check (green)"}},
+      {"visual_type": "slide",
+       "voiceover": "Her shortlist slide says it clearly. These names have passed meaning and basic domain checks. None has been cleared as a trademark. The client should order official searches in each launch market before choosing.",
+       "slide": {"layout": "quote", "title": "Thandi's shortlist note", "body": "\"These names have passed meaning and basic domain checks. None has been cleared as a trademark. The client should order official searches in each launch market before choosing.\""}},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is to ask Claude whether a name is trademarked, and trust the answer. It may say it found no conflicts, but it has not searched the official registers. Another mistake is testing a name only in English. Check every language with real speakers.",
+       "on_screen_text": "AI cannot clear a name."}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, generate names from the brief in several categories, with a reason for each, and develop tone of voice with sample lines that you edit. Second, filter by meaning, pronunciation and basic domain availability, and confirm language checks with native speakers. Third, AI cannot clear a name. Trademark searches are still needed, and rules differ by country.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Names in categories, with reasons; tone of voice you edit. 2. Filter: meaning, pronunciation, domains; native speakers confirm. 3. AI cannot clear a name."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below this video, you will generate twenty names for your capstone brand, shortlist three, and check each one for meaning in two other languages, and for basic domain availability. It takes about thirty minutes. In the next lesson, we create moodboards and visual direction with image generators. See you there.",
+       "on_screen_text": "Next: Moodboards and Visual Direction"}
+    ]
+  }
+}

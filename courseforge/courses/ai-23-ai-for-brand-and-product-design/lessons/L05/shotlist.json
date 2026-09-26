@@ -1,0 +1,202 @@
+{
+  "course_id": "AI-23",
+  "lesson_id": "L05",
+  "duration_s": 312.4,
+  "thumbnail": {
+    "headline": "What Not to Paste",
+    "slide": {
+      "layout": "title",
+      "title": "What Not to Paste",
+      "body": "A prompt box with a locked document held back above it, beside a small stop icon. Small tag: AI for Brand and Product Design · Lesson 5."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 12.9,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Which tools have seen our plans?",
+      "voiceover": "You paste an unreleased product name into an AI tool to get tagline ideas. Two weeks later, the client asks: which tools have seen our launch plans? Can you answer?"
+    },
+    {
+      "scene": 2,
+      "start": 12.9,
+      "end": 27.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Protecting Client Data and Confidentiality",
+        "body": "AI for Brand and Product Design · Lesson 5 of 14"
+      },
+      "voiceover": "So far in this module, we have used Claude with research and briefs. Before we go further, let's make sure that client data stays safe. This lesson is about protecting client data and confidentiality."
+    },
+    {
+      "scene": 3,
+      "start": 27.5,
+      "end": 47.6,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "designer desk with confidential documents and laptop",
+      "on_screen_text": "A deliberate, permitted choice",
+      "voiceover": "Designers see sensitive material every day. Research recordings, customer lists, unreleased products, pricing and strategy. When you use an AI tool, you share some of this with a third-party service. That is not always wrong. But it must be a deliberate choice, and a permitted one."
+    },
+    {
+      "scene": 4,
+      "start": 47.6,
+      "end": 66.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Not without permission",
+        "body": "Personal data: names, contacts, photos, voices, anything that identifies a participant · Unreleased work: product names, launch dates, prototypes, campaigns · Client secrets: strategy, prices, contracts, sales figures"
+      },
+      "voiceover": "So, what should you not paste without permission? First, personal data: names, contact details, photos, voice recordings, and anything that identifies a research participant. Second, unreleased work: product names, launch dates, prototypes and campaign ideas. Third, client secrets: strategy, prices, contracts and sales figures."
+    },
+    {
+      "scene": 5,
+      "start": 66.5,
+      "end": 91.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Check every tool",
+        "body": "Four cards, each with a checklist icon: Claude · Figma AI features · Image generator · Plugins (highlighted: may send content to its own service). Checklist: current privacy info · data-use · account settings"
+      },
+      "voiceover": "Next, check each tool's settings. Before you use a tool for client work, read its current privacy and data-use information, and check your own account settings. Do this for every tool, including Claude, Figma's AI features and image generators. And do not forget plugins. A plugin may send your content to its own service, with its own terms."
+    },
+    {
+      "scene": 6,
+      "start": 91.8,
+      "end": 104.2,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Anonymise. Keep the key outside AI.",
+      "voiceover": "Then anonymise research, as we did in lesson two. Replace names with IDs before any AI step, and keep the key that links IDs to people outside AI tools."
+    },
+    {
+      "scene": 7,
+      "start": 104.2,
+      "end": 118.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "Local rules",
+        "body": "Principles, not legal advice. Working with personal data? Ask your client or a data-protection specialist which rules apply."
+      },
+      "voiceover": "Data-protection law also differs by country and region. This course teaches principles, not legal advice. If you work with personal data, ask your client or a data-protection specialist which rules apply."
+    },
+    {
+      "scene": 8,
+      "start": 118.3,
+      "end": 138.9,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "print shop worker using large printer",
+      "on_screen_text": "An AI tool is an outside print shop",
+      "voiceover": "Think of an AI tool as a print shop outside your studio. You would not send a client's secret launch poster to any print shop without checking who can see it, how long they keep the files, and whether the client agreed. AI tools need the same checks."
+    },
+    {
+      "scene": 9,
+      "start": 138.9,
+      "end": 155.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Agree AI use in writing",
+        "body": "Which tools, and for what · What data you will not share · How the client can say no"
+      },
+      "voiceover": "The simplest protection is to agree AI use in writing. Put a short statement in your proposal or contract. Which tools you use, and for what. What data you will not share. And how the client can say no."
+    },
+    {
+      "scene": 10,
+      "start": 155.6,
+      "end": 169.3,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "small design studio team meeting",
+      "on_screen_text": "Katarzyna · clinic app · Kraków",
+      "voiceover": "Let's see a real plan. Katarzyna Nowak runs a small design studio in Kraków, Poland. A physiotherapy clinic network asks her to redesign its patient app, and the work includes patient interviews."
+    },
+    {
+      "scene": 11,
+      "start": 169.3,
+      "end": 192.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Katarzyna's tool list",
+        "body": "Claude: research synthesis, microcopy · Figma AI features: layouts · Free image generator: moodboards. Each gets a tick: data-use info read, settings checked. Note: health data → ask the clinic's data-protection contact"
+      },
+      "voiceover": "First, she lists her tools. Claude for synthesis and microcopy, Figma with its AI features, and a free image generator for moodboards. For each one, she reads the current data-use information and checks her account settings. Health data is especially sensitive, so she asks the clinic's data-protection contact which rules apply."
+    },
+    {
+      "scene": 12,
+      "start": 192.0,
+      "end": 212.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Three decisions",
+        "body": "Never in AI: recordings, names (notes anonymised first) · Placeholder: [SERVICE] instead of the new name · Moodboard prompts: mood and materials, not the client's plans"
+      },
+      "voiceover": "Then she makes three decisions. Interview recordings and names never go into AI tools, and notes are anonymised first. The new service name stays out of prompts until the client approves it, so she uses a placeholder. And moodboard prompts describe mood and materials, not the client's plans."
+    },
+    {
+      "scene": 13,
+      "start": 212.6,
+      "end": 236.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "Her AI-use statement",
+        "body": "\"We use AI tools (Claude, Figma AI features and an image generator) to speed up research synthesis, early concepts and draft copy. We never enter patient names, recordings, health details or unreleased product names into these tools. Research notes are anonymised first. All final designs are reviewed and finished by our designers. You can ask us not to use AI tools for any part of the project.\""
+      },
+      "voiceover": "Finally, she adds a statement to her proposal. It names the tools and what they are used for. It says that patient names, recordings, health details and unreleased names never go into these tools. It says designers finish all final work, and the client can say no to AI. The client asks one question, and signs."
+    },
+    {
+      "scene": 14,
+      "start": 236.6,
+      "end": 261.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Don't assume, check",
+        "body": "Red cross: 'Paid means safe' · Red cross: 'Free always trains on my data' · Green tick: check current terms for tool, plan and account; share less by default; agree in writing"
+      },
+      "voiceover": "A common mistake is to assume that a paid plan always protects client data, or that a free plan always uses it for training. Do not assume either. Settings depend on the tool, the plan and the account, and they change. Check the current terms, and share less data by default. And put your agreement in writing."
+    },
+    {
+      "scene": 15,
+      "start": 261.0,
+      "end": 286.3,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. No personal data, unreleased work or secrets without permission. 2. Check every tool's current settings, plugins too. 3. Agree AI use in writing; ask a specialist for personal data."
+      },
+      "voiceover": "Let's recap. First, do not paste personal data, unreleased work or client secrets into AI tools without permission, and anonymise research first. Second, check each tool's current data-use and training settings for your plan, including plugins. Third, rules differ by country, so agree AI use with clients in writing, and ask a specialist when personal data is involved."
+    },
+    {
+      "scene": 16,
+      "start": 286.3,
+      "end": 312.4,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Naming and Verbal Identity",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will write a short AI-use statement for a client proposal, covering which tools you use and how you protect their data. It takes about twenty-five minutes. That completes module one. In the next lesson, we start on brand identity, with naming and verbal identity. See you there."
+    }
+  ]
+}

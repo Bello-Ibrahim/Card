@@ -1,0 +1,210 @@
+{
+  "course_id": "AI-18",
+  "lesson_id": "L16",
+  "duration_s": 298.2,
+  "thumbnail": {
+    "headline": "Same Code, Different Data",
+    "slide": {
+      "layout": "title",
+      "title": "Same Code, Different Data",
+      "body": "Two overlapping histograms: 'training' in navy outline, 'today' in teal, shifted right. Small label: PSI. Small tag: MLOps · Lesson 16."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 14.1,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Same code, different data",
+      "voiceover": "Nothing in your code changed, and your tests still pass. But the data your model sees today is not the data it learned from. How do you notice, and what should you do?"
+    },
+    {
+      "scene": 2,
+      "start": 14.1,
+      "end": 37.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Three kinds of drift",
+        "body": "Three cards: Data drift (an input distribution moves) · Prediction drift (the output distribution moves) · Concept drift (the input-outcome relationship changes; needs true labels). First two highlighted."
+      },
+      "voiceover": "In the last lesson, we watched our service. Now we look for drift. Drift means production data no longer looks like the training data. Three kinds matter. Data drift is when an input feature changes, for example average alcohol rises. Prediction drift is when the model's outputs change, for example many more good predictions."
+    },
+    {
+      "scene": 3,
+      "start": 37.2,
+      "end": 57.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Reference vs current",
+        "body": "Left: reference sample (training data). Right: current sample (recent requests from the log). Arrow: compare feature by feature."
+      },
+      "voiceover": "Concept drift is when the relationship between the inputs and the true outcome changes. You can only measure it when true labels arrive. To detect data and prediction drift, compare a reference sample, your training data, with a current sample, your recent requests, one feature at a time."
+    },
+    {
+      "scene": 4,
+      "start": 57.8,
+      "end": 75.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "The KS test",
+        "body": "Two cumulative curves (reference and current) with the largest vertical gap marked. Note: with many rows, tiny differences give small p-values."
+      },
+      "voiceover": "Two methods are common. The Kolmogorov-Smirnov test, or KS, measures the largest gap between two distributions and gives a p-value. But with thousands of rows, even tiny, harmless differences look significant. So do not use the p-value alone."
+    },
+    {
+      "scene": 5,
+      "start": 75.4,
+      "end": 100.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Population stability index",
+        "body": "Reference split into 10 bins; bars for reference share and current share per bin. PSI sums the differences, weighted. Note: calibrate on two normal weeks."
+      },
+      "voiceover": "The population stability index, or PSI, splits the reference into bins, and compares the share of rows in each bin. It measures the size of the shift, not only whether one exists. You will read common rules of thumb for PSI, but they are not a standard. Calibrate on your own data, for example between two normal weeks."
+    },
+    {
+      "scene": 6,
+      "start": 100.3,
+      "end": 123.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Retrain, investigate or ignore",
+        "body": "Retrain: real, lasting, important, new labels. Investigate: cause unclear, maybe a pipeline bug such as a unit change. Ignore: low-impact feature, or expected and temporary."
+      },
+      "voiceover": "Drift is a signal, not a decision. For each alert, choose one of three responses. Retrain when the change is real, lasting and important, and you have new labels. Investigate when the cause is unclear, because it may be a pipeline bug. Ignore when the feature matters little, or the change is expected and short."
+    },
+    {
+      "scene": 7,
+      "start": 123.9,
+      "end": 136.3,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "shop owner watching customers enter clothing store",
+      "on_screen_text": "Ask why before changing stock",
+      "voiceover": "Think of a shop that sells winter coats and notices who walks in. If the customers suddenly look different, the shop first asks why, before it changes its stock."
+    },
+    {
+      "scene": 8,
+      "start": 136.3,
+      "end": 159.4,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "young people applying for loan online",
+      "on_screen_text": "Sofía · lender · Medellín",
+      "voiceover": "Sofía Castro is a risk analyst at a hypothetical lender in Medellín, Colombia. After an online campaign, many younger applicants with shorter credit histories apply. PSI for age and credit history rises above her calibrated level. Her team investigates first, confirms the change is real, then retrains and reviews fairness, following local lending rules."
+    },
+    {
+      "scene": 9,
+      "start": 159.4,
+      "end": 175.7,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open a Jupyter notebook in the wine-api project",
+        "Run: train, _ = load_data(seed=42)",
+        "Run: new, _ = load_data(seed=7)",
+        "Run: new['alcohol'] = new['alcohol'] + 0.8"
+      ],
+      "on_screen_text": "Simulate drift in one feature",
+      "voiceover": "Let's simulate the same idea with the wine model. In a notebook, we load a reference sample and a new batch with a different seed. Then we add zero point eight to alcohol in the new batch only."
+    },
+    {
+      "scene": 10,
+      "start": 175.7,
+      "end": 199.7,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Show the psi() function cell",
+        "Run the loop over train.columns",
+        "Highlight: alcohol PSI=0.505 KS p=1.54e-65",
+        "Highlight the other three rows: PSI 0.003, 0.011, 0.006"
+      ],
+      "on_screen_text": "Alcohol PSI 0.505",
+      "voiceover": "We run the PSI and KS loop for every feature. Alcohol has a PSI of zero point five zero five, and a KS p-value that is almost zero. The other features have PSI close to zero: zero point zero zero three, zero point zero one one and zero point zero zero six. Only alcohol shifted."
+    },
+    {
+      "scene": 11,
+      "start": 199.7,
+      "end": 211.7,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Load the champion model",
+        "Predict probabilities for train and new",
+        "Run psi() on the two probability arrays and show the result"
+      ],
+      "on_screen_text": "Check prediction drift",
+      "voiceover": "Next, we check prediction drift. We compute PSI on the model's predicted probabilities for both batches. This tells us whether the input shift is also changing the answers."
+    },
+    {
+      "scene": 12,
+      "start": 211.7,
+      "end": 225.0,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Add a markdown cell",
+        "Type the decision: Investigate: check whether the alcohol measurement or unit changed at the source; retrain only if the change is real and labels are available"
+      ],
+      "on_screen_text": "Decision: investigate",
+      "voiceover": "Finally, we write the decision in the notebook. Investigate. Check whether the alcohol measurement or unit changed at the source. Retrain only if the change is real and labels are available."
+    },
+    {
+      "scene": 13,
+      "start": 225.0,
+      "end": 242.1,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Investigate before retraining",
+      "voiceover": "The common mistake is to retrain automatically every time a drift test fires. If the cause is a broken pipeline, retraining teaches the model the bug. Investigate first, and keep retraining behind the champion and challenger comparison from lesson fourteen."
+    },
+    {
+      "scene": 14,
+      "start": 242.1,
+      "end": 265.7,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Data, prediction and concept drift differ. 2. PSI for size, KS as support, calibrate thresholds. 3. Retrain, investigate or ignore; investigate first."
+      },
+      "voiceover": "Let's recap. First, data drift, prediction drift and concept drift are different, and only concept drift needs true labels. Second, use PSI for the size of a shift and KS as support, and calibrate any thresholds on your own data. Third, for each drift alert, decide to retrain, investigate or ignore, and investigate before retraining."
+    },
+    {
+      "scene": 15,
+      "start": 265.7,
+      "end": 288.8,
+      "section": "CTA",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Exercise: find the drift",
+        "body": "Reference + new batch (500+ rows) · change one feature · PSI and KS per feature · prediction PSI · calibration on unchanged data · 3–5 sentence decision · about 35 minutes"
+      },
+      "voiceover": "In the exercise below this video, you will change one feature in a batch of at least five hundred rows, compute PSI and KS for every feature and for the predictions, calibrate on unchanged data, and write a short decision. It takes about thirty-five minutes. Your capstone needs two drift reports like this."
+    },
+    {
+      "scene": 16,
+      "start": 288.8,
+      "end": 298.2,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Capstone Part 1",
+      "voiceover": "Now you have every piece. In the next lesson, Capstone Part 1: Build and Automate, you put them together. See you there."
+    }
+  ]
+}

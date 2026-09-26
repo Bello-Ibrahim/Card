@@ -1,0 +1,246 @@
+{
+  "course_id": "AI-21",
+  "lesson_id": "L11",
+  "duration_s": 292.6,
+  "thumbnail": {
+    "headline": "Voice First, Then Pictures",
+    "slide": {
+      "layout": "title",
+      "title": "Voice First, Then Pictures",
+      "body": "Simple timeline: teal audio waveform on the bottom track, video clip blocks snapping into place above it. Small tag: AI Video Production and Motion · Lesson 11."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.4,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Capstone step 1: the rough cut",
+      "voiceover": "Your clips, your avatar segment and your script are ready. On their own, they are pieces. In the editor, they become a video. Today, you build your rough cut. This is step one of your capstone."
+    },
+    {
+      "scene": 2,
+      "start": 15.4,
+      "end": 24.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Editing in CapCut: Assembly, Pacing and Captions",
+        "body": "AI Video Production and Motion · Lesson 11 of 14"
+      },
+      "voiceover": "In the last lesson, you decided which clips to keep. Welcome to week three, where everything comes together into one finished video."
+    },
+    {
+      "scene": 3,
+      "start": 24.8,
+      "end": 41.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "CapCut",
+        "body": "Video editor with a free option · AI-assisted features such as auto captions · Desktop, web and mobile · Features and availability vary"
+      },
+      "voiceover": "CapCut is a video editor with a free option and AI-assisted features, like automatic captions. It comes as a desktop app, a web version and a mobile app. But features and availability differ by version and by country."
+    },
+    {
+      "scene": 4,
+      "start": 41.5,
+      "end": 54.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "No CapCut? Use a fallback",
+        "body": "Left: CapCut, main tool. Right: DaVinci Resolve · Shotcut · Clipchamp, fallbacks. Banner: the same steps work in any timeline editor."
+      },
+      "voiceover": "If CapCut is not available to you, use a free editor such as DaVinci Resolve, Shotcut or Clipchamp. The steps in this lesson are the same in any timeline editor."
+    },
+    {
+      "scene": 5,
+      "start": 54.4,
+      "end": 72.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "What is a rough cut?",
+        "body": "Has: every shot in order · narration · about the right length. Not yet: music · colour work · perfect timing"
+      },
+      "voiceover": "A rough cut is the first full version of your video. Every shot is in order, with the narration, at about the right length. It does not need music, colour work or perfect timing yet. Music and sound come in the next lesson."
+    },
+    {
+      "scene": 6,
+      "start": 72.8,
+      "end": 92.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Three editing rules",
+        "body": "Timeline sketch with three labels: 1. Voice track placed first · 2. Clip edges trimmed · 3. Mostly plain cuts, one short cross-fade where the place changes."
+      },
+      "voiceover": "Here are three rules. First, build from the voice. Put the narration on the timeline first, because the voice sets the timing. Second, trim for pace. Start each clip when something is already happening. Third, use few transitions. A simple cut is right for most shots."
+    },
+    {
+      "scene": 7,
+      "start": 92.5,
+      "end": 109.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Cuts, not effects",
+        "body": "Left, crossed out: a timeline full of different transition icons. Right, ticked: plain cuts with one short cross-fade where the place changes."
+      },
+      "voiceover": "A word about transitions. Use a short cross-fade only where time or place changes. Many different transition effects make a video look less professional, not more. And a shot that stays after its words have finished feels slow."
+    },
+    {
+      "scene": 8,
+      "start": 109.2,
+      "end": 121.2,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "person watching video on phone without sound",
+      "on_screen_text": "Read every caption line",
+      "voiceover": "Captions matter, because many viewers watch without sound. Automatic captions save time, but they make mistakes with names, brands, numbers and accents. Always read and correct every line."
+    },
+    {
+      "scene": 9,
+      "start": 121.2,
+      "end": 136.6,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "tailor fitting a suit jacket on customer",
+      "on_screen_text": "First fitting, not the final suit",
+      "voiceover": "A rough cut is like the first fitting of a tailored suit. The pieces are sewn together loosely, so you can see the shape. You adjust the length and fit before you add the final buttons."
+    },
+    {
+      "scene": 10,
+      "start": 136.6,
+      "end": 152.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Show Kwame's project folder: voice-over, avatar segment and 9 clips named by shot number.",
+        "Open the CapCut desktop app and create a new project.",
+        "Set the project to 16:9."
+      ],
+      "on_screen_text": "Kwame's cooperative · Kumasi",
+      "voiceover": "Let's build one. Kwame is making a seventy-five second explainer for a cocoa farmers' cooperative in Kumasi, Ghana. The cooperative is made up for this lesson. He has a voice-over, a HeyGen introduction and nine clips."
+    },
+    {
+      "scene": 11,
+      "start": 152.9,
+      "end": 166.2,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Click Import and add the voice-over, the avatar segment and all clips.",
+        "Drag the avatar segment to the start of the main track.",
+        "Drag the voice-over to the audio track after the avatar segment."
+      ],
+      "voiceover": "He imports all his files. Then he puts the avatar segment at the start, and the voice-over on the audio track after it. The voice is on the timeline first."
+    },
+    {
+      "scene": 12,
+      "start": 166.2,
+      "end": 178.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open the shot list beside the timeline.",
+        "Drag shot 2 to the video track above the voice-over, where its words begin.",
+        "Repeat quickly for shots 3 to 9 (speed up the recording)."
+      ],
+      "voiceover": "Now he places each clip above the voice, where its words begin, following his shot list. Shot two goes where its line starts, then shot three, and so on."
+    },
+    {
+      "scene": 13,
+      "start": 178.6,
+      "end": 194.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Select shot 4 and drag its left edge to cut the first second.",
+        "Play the timeline from the start.",
+        "Pause at the end of shot 6's line and trim 2 seconds from its end."
+      ],
+      "voiceover": "Next, he trims. He cuts the first second of shot four, where the camera had not started moving. When he plays the timeline, shot six stays on screen after its line ends. So he trims two seconds."
+    },
+    {
+      "scene": 14,
+      "start": 194.5,
+      "end": 205.2,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open transitions and drag one short cross-fade between the last farm shot and the city market shot.",
+        "Play across the transition once."
+      ],
+      "voiceover": "He adds one short cross-fade, only where the video moves from the farm scenes to the city market. Everywhere else, he uses plain cuts."
+    },
+    {
+      "scene": 15,
+      "start": 205.2,
+      "end": 220.2,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open Text, then Auto captions; choose English and generate.",
+        "Scroll through the caption lines.",
+        "Correct 'Kumasee' to 'Kumasi' and 'cocoon' to 'cocoa'.",
+        "Set a plain font with high contrast, placed in the lower third."
+      ],
+      "on_screen_text": "Correct every caption",
+      "voiceover": "Then he generates automatic captions and reads every line. Kumasi is spelled wrongly, and cocoa has become cocoon. He corrects both. He chooses a plain, high-contrast style in the lower third of the screen."
+    },
+    {
+      "scene": 16,
+      "start": 220.2,
+      "end": 229.2,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Play the whole rough cut from the start.",
+        "Point to the total length: 78 seconds.",
+        "Save the project."
+      ],
+      "voiceover": "Finally, he plays the whole rough cut and notes the length. Seventy-eight seconds, inside his target. He saves the project."
+    },
+    {
+      "scene": 17,
+      "start": 229.2,
+      "end": 251.5,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Voice first, then pictures",
+      "voiceover": "A common mistake is to place clips first, and then try to fit the voice under them. The pictures stop matching the words. Put the voice down first, then place pictures against it. And never trust automatic captions without reading them. One wrong brand name in a caption looks careless to viewers."
+    },
+    {
+      "scene": 18,
+      "start": 251.5,
+      "end": 271.6,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Rough cut: every shot in order, with narration. 2. Voice first · trim for pace · few transitions. 3. Auto captions, then correct every line."
+      },
+      "voiceover": "Let's recap. First, a rough cut is the first full version of your video, with every shot in order and the narration. Second, build from the voice, trim each clip for pace, and use very few transitions. Third, generate automatic captions, then read and correct every line."
+    },
+    {
+      "scene": 19,
+      "start": 271.6,
+      "end": 292.6,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Sound, Music and Export Settings",
+      "voiceover": "Now it is your turn, with capstone step one. Put the voice on the timeline first, place and trim your clips, use cuts, and add corrected captions. Your rough cut should be sixty to ninety seconds long. It takes about forty minutes. Next lesson: Sound, Music and Export Settings."
+    }
+  ]
+}

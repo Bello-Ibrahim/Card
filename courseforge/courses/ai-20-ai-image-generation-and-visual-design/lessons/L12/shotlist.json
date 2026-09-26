@@ -1,0 +1,195 @@
+{
+  "course_id": "AI-20",
+  "lesson_id": "L12",
+  "duration_s": 296.0,
+  "thumbnail": {
+    "headline": "Twelve Images, One Campaign",
+    "slide": {
+      "layout": "title",
+      "title": "Twelve Images, One Campaign",
+      "body": "A 3 × 4 grid of twelve generated juice bar images in bright coral, mango yellow and palm green, no brand marks inside the images. Small tag: AI Image Generation · Lesson 12 · Capstone."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.4,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Nine more images to go",
+      "voiceover": "You have a plan, and three test images that match. Now comes the real work. Nine more images, each checked, edited and finished, and a style guide that lets someone else continue your campaign next month."
+    },
+    {
+      "scene": 2,
+      "start": 15.4,
+      "end": 39.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Capstone: Producing and Reviewing the Set",
+        "body": "AI Image Generation and Visual Design · Lesson 12 of 12 · Capstone. Four stages: 1 Batches (highlighted) · 2 Prompt log · 3 Check and fix · 4 Finish in Canva."
+      },
+      "voiceover": "You produce the set in four stages. First, generate in batches of three or four images. Use the exact style block from the last lesson in every prompt, and add your best test image as a reference where your tool allows it. After each batch, place all the images side by side and check for drift."
+    },
+    {
+      "scene": 3,
+      "start": 39.4,
+      "end": 60.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "Prompt log",
+        "body": "PROMPT LOG\n# | Shot | Tool + model/settings | Aspect ratio | Full prompt | Reference used | Edits made | Checklist result | Final file name\n01 | Tea tin close-up | Gemini, default | 1:1 | \"A round green tea tin...\" + style block | none | removed extra leaf (fill) | pass | hm_01_tin.png"
+      },
+      "voiceover": "Second, keep a prompt log. Record every final image as you go: the shot, the tool and settings, the aspect ratio, the full prompt, any reference, the edits, the checklist result and the file name. It is your evidence for the rubric, and it shows your own creative decisions."
+    },
+    {
+      "scene": 4,
+      "start": 60.4,
+      "end": 78.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Check, fix and finish",
+        "body": "3. Five-point checklist (L09) · smallest fix: crop, fill or expand (L07), or regenerate · 4. Canva (L08): real headlines, own logos, exact hex colours · resize to planned formats · check every size by eye"
+      },
+      "voiceover": "Third, check and fix each image with the five-point checklist from lesson nine, and choose the smallest fix. Fourth, finish in Canva, with real headlines, logos you own and exact colours. Resize to the planned formats, and check every size by eye."
+    },
+    {
+      "scene": 5,
+      "start": 78.8,
+      "end": 102.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Final review: four questions",
+        "body": "Consistency: palette, light, framing, recurring elements · Brand fit: serves its use, space for text · Rights: tool terms checked; no real people's likeness, logos or characters · Disclosure: how will viewers know it is AI? Keep any watermark or content credential."
+      },
+      "voiceover": "Before you submit, review the whole set with four questions. Consistency: do all twelve share the palette, light, framing and recurring elements? Brand fit: does each image serve its use? Rights: did you check every tool's terms, and avoid real people, logos and characters? Disclosure: how will you tell viewers the images were made with AI?"
+    },
+    {
+      "scene": 6,
+      "start": 102.8,
+      "end": 119.9,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "busy restaurant kitchen plating dishes",
+      "on_screen_text": "Fixed recipe, every plate checked",
+      "voiceover": "Producing the set is like a kitchen during a busy dinner service. The recipe is fixed, each plate is checked before it leaves, and the head cook writes down any change so the next shift can cook the same dish."
+    },
+    {
+      "scene": 7,
+      "start": 119.9,
+      "end": 135.3,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Sunbird Juice · Cartagena",
+        "body": "Fictional juice bar in Cartagena, Colombia. Team: Mateo and Valentina. Palette swatches: bright coral · mango yellow · palm green."
+      },
+      "voiceover": "Let's see it in action. Mateo and his colleague Valentina are producing twelve images for Sunbird Juice, a fictional juice bar in Cartagena, Colombia. Their tested style block uses bright coral, mango yellow and palm green."
+    },
+    {
+      "scene": 8,
+      "start": 135.3,
+      "end": 151.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Batch 1: two flaws",
+        "body": "Before: straw bending through the glass, circled; sign with broken letters, circled. After: straw fixed with generative fill; plain sign, ready for Canva text."
+      },
+      "voiceover": "In batch one, the checklist finds a straw that bends through a glass, and a sign with broken letters. Mateo fixes the straw with generative fill, and removes the sign lettering, to add real text later in Canva."
+    },
+    {
+      "scene": 9,
+      "start": 151.6,
+      "end": 170.9,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Batch 2: drift fixed",
+        "body": "Left: two images with light from the wrong side, arrows showing direction. Right: regenerated with the batch 1 hero image as reference, light now matches. A prompt log row being filled in."
+      },
+      "voiceover": "In batch two, the light direction drifts in two images. Valentina adds the hero image from batch one as a reference, and the next results match. Because they checked after the batch, only two images needed fixing. They log every final prompt, including the edits."
+    },
+    {
+      "scene": 10,
+      "start": 170.9,
+      "end": 186.3,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Finished in Canva",
+        "body": "One juice image as a square post with the headline 'Fresh from the coast', plus its story and banner versions."
+      },
+      "voiceover": "In Canva, they add the headline Fresh from the coast in exact brand colours, then make story and banner versions. They check each size by eye, so the headline never covers a face or a glass."
+    },
+    {
+      "scene": 11,
+      "start": 186.3,
+      "end": 206.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Final review: who is shown?",
+        "body": "Before: five generated images, all young adults. After: two replaced with 'an older couple sharing juice at a beach café' and 'a father and daughter at the counter'. All people generated and fictional."
+      },
+      "voiceover": "In the final review, they notice that all five images with people show only young adults. So they regenerate two shots, an older couple sharing juice at a beach café, and a father and daughter at the counter. None of them shows an identifiable real person."
+    },
+    {
+      "scene": 12,
+      "start": 206.0,
+      "end": 218.4,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "Style guide: disclosure",
+        "body": "\"All images created with AI; disclosed in campaign captions.\" Beside it: a small table of tools, terms checked and dates."
+      },
+      "voiceover": "Finally, they record the tool terms they checked, with dates. And they add a line to the style guide. All images created with AI, and disclosed in campaign captions."
+    },
+    {
+      "scene": 13,
+      "start": 218.4,
+      "end": 244.1,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Check after every batch",
+      "voiceover": "A common mistake is to do all the checking at the very end. By then, a drift in batch one has been copied into eleven images. Check after every batch. Another mistake is a style guide that lists only prompts. A useful guide also records settings, references, edits and the terms you checked, so another person can repeat your work."
+    },
+    {
+      "scene": 14,
+      "start": 244.1,
+      "end": 269.0,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Small batches, fixed style block, check after each. 2. Prompt log: evidence and guide. 3. Finish in a design tool; review consistency, fit, rights, disclosure."
+      },
+      "voiceover": "Let's recap. First, generate in small batches with a fixed style block, and check for drift after every batch. Second, keep a prompt log with prompts, settings, references and edits. It is both your evidence and your guide. Third, finish every image in a design tool, then review the full set for consistency, brand fit, rights and disclosure."
+    },
+    {
+      "scene": 15,
+      "start": 269.0,
+      "end": 296.0,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Submit your capstone",
+      "voiceover": "Congratulations, you have reached the end of the course. Your last step is to produce and finish all twelve images, and write your one-page style guide. It takes about an hour. Then submit your capstone on the course page, where the rubric shows how it is assessed. Good style guides let someone else make a thirteenth image in your style. Well done."
+    }
+  ]
+}

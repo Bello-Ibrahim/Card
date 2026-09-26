@@ -1,0 +1,196 @@
+{
+  "course_id": "AI-22",
+  "lesson_id": "L07",
+  "duration_s": 295.3,
+  "thumbnail": {
+    "headline": "Music That Supports Voice",
+    "slide": {
+      "layout": "title",
+      "title": "Music That Supports Voice",
+      "body": "Two stacked tracks: a bold voice waveform on top and a low, gentle teal music wave underneath. Small tag: AI Voice, Audio and Music · Lesson 7."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 19.3,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Describe the music you want",
+      "voiceover": "The first ten seconds of a podcast set the mood. A calm piano says relax and learn. A fast drum beat says something exciting is coming. Finding the right music used to take hours. Now you can describe it and hear several options in minutes."
+    },
+    {
+      "scene": 2,
+      "start": 19.3,
+      "end": 40.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Generating Music Beds with AI",
+        "body": "AI Voice, Audio and Music · Lesson 7 of 10"
+      },
+      "voiceover": "In the last lesson, you cleaned up a voice. Now, let's give it music. An AI music tool creates new music from a text description, called a prompt. We show Suno on its free plan. Free plans usually limit how many tracks you make and how you may use them."
+    },
+    {
+      "scene": 3,
+      "start": 40.7,
+      "end": 60.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "What makes a good music bed",
+        "body": "Voice track on top, music track below at a lower level. Labels on the music: simple · steady · no vocals"
+      },
+      "voiceover": "For podcasts and narrated videos, we need a music bed. That is music that sits quietly under a voice. A good music bed is simple and steady, and does not compete with speech. It usually has no singing, because lyrics fight with the spoken words."
+    },
+    {
+      "scene": 4,
+      "start": 60.0,
+      "end": 82.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Five parts of a music prompt",
+        "body": "Mood: calm, hopeful, warm · Genre: acoustic folk, ambient, light jazz · Tempo: slow / medium / fast, or about 80 BPM · Instruments: piano, guitar, marimba + 'instrumental, no vocals' · Length and shape: 30 seconds, gentle ending"
+      },
+      "voiceover": "Describe the music with five parts. The mood, like calm or hopeful. The genre, like acoustic folk or ambient. The tempo, slow, medium or fast, or a number of beats per minute. The instruments, plus the words instrumental, no vocals. And the length and shape, like thirty seconds with a gentle ending."
+    },
+    {
+      "scene": 5,
+      "start": 82.3,
+      "end": 96.9,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Describe the sound. Never name artists.",
+      "voiceover": "And one firm rule. Never name a living artist or a specific song in your prompt. Asking a tool to copy a real musician can raise legal and ethical problems. Describe the sound instead."
+    },
+    {
+      "scene": 6,
+      "start": 96.9,
+      "end": 119.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Compare several options",
+        "body": "Mood fit: matches the message? · Tempo fit: matches the voice's pace? · Busy parts: fast melodies or sudden drums under speech? · Ending: clean finish or sudden stop?"
+      },
+      "voiceover": "AI music varies each time, so always generate several options. Then compare them for four things. Mood fit, does it match the message? Tempo fit, does it match the pace of the voice? Busy parts, like fast melodies or sudden drums under speech. And the ending. Does it finish cleanly, or stop suddenly?"
+    },
+    {
+      "scene": 7,
+      "start": 119.6,
+      "end": 136.7,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "plain tablecloth with dinner dishes",
+      "on_screen_text": "Support the voice, do not distract",
+      "voiceover": "Choosing a music bed is like choosing a tablecloth for a special meal. It should support the food, not distract from it. A bright pattern may look beautiful alone, but on the table it makes the dishes hard to see."
+    },
+    {
+      "scene": 8,
+      "start": 136.7,
+      "end": 152.6,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "young woman podcaster with headphones smiling",
+      "on_screen_text": "Valentina · science podcast · Colombia",
+      "voiceover": "Let's try it. Valentina produces an education podcast in Medellín, in Colombia, about science for teenagers. She needs a thirty-second intro bed that feels calm but curious. Her spoken intro is warm, at a medium pace."
+    },
+    {
+      "scene": 9,
+      "start": 152.6,
+      "end": 174.0,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "on_screen_text": "Mood · genre · tempo · instruments · length",
+      "screen_steps": [
+        "Open Suno and sign in with the demo account",
+        "Open the free plan limits and the licence page, then return to Create",
+        "Type the prompt: 'Calm and curious, light Latin folk, about 90 BPM, nylon-string guitar and soft marimba, light shaker, instrumental, no vocals, 30 seconds, gentle ending.'",
+        "Highlight each of the five parts of the prompt in turn"
+      ],
+      "voiceover": "She opens Suno and checks the free plan limits and the licence page first. Then she types a prompt with all five parts. Calm and curious, light Latin folk, about ninety beats per minute, nylon-string guitar and soft marimba, a light shaker, instrumental, no vocals, thirty seconds, gentle ending."
+    },
+    {
+      "scene": 10,
+      "start": 174.0,
+      "end": 192.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "on_screen_text": "Always listen under your voice",
+      "screen_steps": [
+        "Click Create and wait for the options",
+        "Generate until there are three options, A, B and C, then download each one",
+        "In Audacity, import the voiceover and the three options onto separate tracks",
+        "Lower the gain of each music track so the voice is clearly on top"
+      ],
+      "voiceover": "She generates three options and downloads each one. Each option sounds a little different, even from the same prompt. Then she imports her voiceover and each option into Audacity, on separate tracks. She lowers the music track, so she can hear her voice clearly."
+    },
+    {
+      "scene": 11,
+      "start": 192.9,
+      "end": 210.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "on_screen_text": "A: too busy. C: too slow.",
+      "screen_steps": [
+        "Solo the voice and option A, then play: the melody jumps in on the podcast name",
+        "Type a note: 'A: good mood, loud marimba under the podcast name'",
+        "Solo the voice and option C, then play",
+        "Type a note: 'C: too slow and a little sad'"
+      ],
+      "voiceover": "Now she plays each option under her voice. Option A has a good mood, but a loud marimba melody starts exactly when she says the podcast name. Option C is too slow, and a little sad for a curious science show."
+    },
+    {
+      "scene": 12,
+      "start": 210.5,
+      "end": 226.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "on_screen_text": "B: steady, matching tempo, clean ending",
+      "screen_steps": [
+        "Solo the voice and option B, then play to the end",
+        "Type a note: 'B: steady warm guitar, tempo matches, clean ending'",
+        "Mute A and C and keep B",
+        "Type the prompt, tool, plan and date into the project notes"
+      ],
+      "voiceover": "Option B has steady, warm guitar. Its tempo matches her speaking pace, and it has a clean ending. So she chooses option B, and writes the prompt, the tool, the plan and the date in her project notes."
+    },
+    {
+      "scene": 13,
+      "start": 226.8,
+      "end": 246.5,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Judge music under the voice",
+      "voiceover": "A common mistake is to choose the track you like best when you hear it alone. Under the voice, the melody fights with the words. So always judge a music bed with your voiceover playing. And avoid vague prompts like nice music, which give random results."
+    },
+    {
+      "scene": 14,
+      "start": 246.5,
+      "end": 269.2,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Mood · genre · tempo · instruments · length; no artist or song names. 2. Simple, steady, usually instrumental. 3. Several options, judged under the voice: mood, tempo, busy parts, ending."
+      },
+      "voiceover": "Let's recap. First, describe music by mood, genre, tempo, instruments and length, and never by the name of an artist or a song. Second, a good music bed is simple, steady and usually instrumental. Third, generate several options, and judge each one under your voiceover for mood, tempo, busy parts and the ending."
+    },
+    {
+      "scene": 15,
+      "start": 269.2,
+      "end": 295.3,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Licences for Voices and Music",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will generate three short music beds for the same intro and choose one. Then explain how its mood and tempo fit your voiceover. It takes about thirty minutes. Save your prompt and notes, because in the next lesson, Licences for AI Voices and Music, we start your rights log."
+    }
+  ]
+}

@@ -1,0 +1,238 @@
+{
+  "course_id": "AI-21",
+  "lesson_id": "L09",
+  "duration_s": 292.2,
+  "thumbnail": {
+    "headline": "Stock Avatar, Real Consent",
+    "slide": {
+      "layout": "title",
+      "title": "Stock Avatar, Real Consent",
+      "body": "Left: simple presenter silhouette inside a video frame. Right: teal shield with a tick. Small tag: AI Video Production and Motion · Lesson 9."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.0,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Powerful, with responsibilities",
+      "voiceover": "Not everyone wants to appear on camera. An avatar tool can turn a typed script into a person speaking to the camera. It is powerful, and for the same reason, it comes with clear responsibilities."
+    },
+    {
+      "scene": 2,
+      "start": 15.0,
+      "end": 23.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Avatar Presenters in HeyGen",
+        "body": "AI Video Production and Motion · Lesson 9 of 14"
+      },
+      "voiceover": "In the last lesson, you learned to keep your clips consistent. Today, you add a presenter to your video."
+    },
+    {
+      "scene": 3,
+      "start": 23.1,
+      "end": 36.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "How HeyGen works",
+        "body": "Three inputs: stock avatar · stock voice · typed script → arrow → presenter video with lip-sync."
+      },
+      "voiceover": "HeyGen creates avatar videos. You choose a digital presenter and a voice, and type a script. The tool produces a video of the presenter speaking your words, with matching lip movements."
+    },
+    {
+      "scene": 4,
+      "start": 36.4,
+      "end": 56.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Stock only",
+        "body": "Stock avatars and stock voices, provided by the tool · Check the terms of use · No custom avatars · No voice clones"
+      },
+      "voiceover": "In this course, you use stock avatars and stock voices only. These are presenters and voices the tool provides for its users. Check the tool's terms for how you may use them. You do not create a custom avatar or clone a voice in this course."
+    },
+    {
+      "scene": 5,
+      "start": 56.1,
+      "end": 76.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "Consent is a principle",
+        "body": "\"A real person's face or voice: only that person, with clear, recorded consent for that specific use.\""
+      },
+      "voiceover": "Consent is a principle, not a detail. If an avatar or voice is ever made from a real person, it must be that person, with their clear and recorded consent for that specific use. Never make one of a colleague, a celebrity or a family member without it."
+    },
+    {
+      "scene": 6,
+      "start": 76.7,
+      "end": 87.4,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Clear, recorded consent is the minimum",
+      "voiceover": "Laws about a person's face and voice differ by country, and this course does not give legal advice. Treat clear, recorded consent as the minimum."
+    },
+    {
+      "scene": 7,
+      "start": 87.4,
+      "end": 103.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Free plan",
+        "body": "Limits on length, number of videos, avatars and export quality · May add a watermark · Check before you start · No personal data in scripts"
+      },
+      "voiceover": "The free plan has limits on video length, the number of videos, avatars and export quality, and it may add a watermark. Check the current limits first. And do not paste confidential or personal data into your script."
+    },
+    {
+      "scene": 8,
+      "start": 103.7,
+      "end": 123.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Three quality checks",
+        "body": "Problem → fix. Lip-sync out of time → regenerate or shorten lines · Wrong pronunciation → spell it as it sounds · Flat pacing → add punctuation or pauses."
+      },
+      "voiceover": "Avatar videos often have small problems. Lip-sync, where the mouth is slightly out of time. Pronunciation, where names or numbers sound wrong. And pacing, where there are no pauses. You can often fix pronunciation by spelling a word as it sounds, and pacing with punctuation."
+    },
+    {
+      "scene": 9,
+      "start": 123.4,
+      "end": 141.0,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "presenter speaking to camera in studio",
+      "on_screen_text": "Like hiring through an agency",
+      "voiceover": "A stock avatar is like hiring a presenter through an agency. The agency has already agreed with the presenter how their image can be used. Using someone's face without asking is like putting a person in your advert without telling them."
+    },
+    {
+      "scene": 10,
+      "start": 141.0,
+      "end": 157.7,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Sign in to HeyGen with the demo account.",
+        "Open the account area and point to the free-plan limits."
+      ],
+      "on_screen_text": "Mariam's school · Cairo",
+      "voiceover": "Let's try it. Mariam runs an online Arabic-language school in Cairo, Egypt. The school is made up for this lesson. She needs a twenty-five second introduction from a presenter. Button names in your version may be different."
+    },
+    {
+      "scene": 11,
+      "start": 157.7,
+      "end": 171.4,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Click Create video.",
+        "Choose the landscape 16:9 format.",
+        "Open the avatars list and filter to stock or public avatars.",
+        "Choose a friendly, professional stock presenter."
+      ],
+      "voiceover": "She creates a new video in landscape format. Then she opens the avatar list and filters it to stock avatars only. She chooses a presenter whose style fits a friendly language school."
+    },
+    {
+      "scene": 12,
+      "start": 171.4,
+      "end": 186.0,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Paste Mariam's script from content.md into the script box and hold on it for 3 seconds.",
+        "Open the voice list and choose a stock voice with a suitable language and accent.",
+        "Play the voice preview."
+      ],
+      "on_screen_text": "Stock avatar + stock voice",
+      "voiceover": "She pastes her script. It welcomes viewers to Nile Words, says that learning Arabic can feel hard, and promises short, practical and fun lessons. Then she chooses a stock voice and plays the preview."
+    },
+    {
+      "scene": 13,
+      "start": 186.0,
+      "end": 200.1,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Replay the preview at the word 'Nile'.",
+        "Change 'Nile Words' to 'Nyle Words' in the script box.",
+        "Add a short pause before 'Let's begin.' and check the full stop after it.",
+        "Play the preview again."
+      ],
+      "voiceover": "She hears the name Nile pronounced wrongly. So she spells it as it sounds, only in the script, not on screen. She also adds a short pause before the last line, let's begin."
+    },
+    {
+      "scene": 14,
+      "start": 200.1,
+      "end": 213.4,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Click Submit or Generate.",
+        "Point to the time used from the allowance.",
+        "Play the result three times, with a caption for each pass: lip-sync, pronunciation, pacing."
+      ],
+      "voiceover": "She generates the video, and notes the time it used from her allowance. Then she watches the result three times. Once for lip-sync, once for pronunciation, and once for pacing."
+    },
+    {
+      "scene": 15,
+      "start": 213.4,
+      "end": 220.7,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Download the video.",
+        "Point to the resolution and any watermark.",
+        "Rename the file 'S01_avatar_intro.mp4'."
+      ],
+      "on_screen_text": "S01_avatar_intro.mp4",
+      "voiceover": "Finally, she downloads it, checks the resolution and any watermark, and names the file by shot number."
+    },
+    {
+      "scene": 16,
+      "start": 220.7,
+      "end": 243.4,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Allowed is not the same as OK",
+        "body": "Left: 'The tool lets me upload it', crossed out. Right: 'I have that person's clear, recorded consent', ticked. Caption: consent is your responsibility."
+      },
+      "voiceover": "A common mistake is thinking that if a tool allows something, it must be acceptable. A tool may let you upload a photo or recording of another person. That does not give you their consent, and it does not answer the legal question in your country. Consent is your responsibility, not the tool's."
+    },
+    {
+      "scene": 17,
+      "start": 243.4,
+      "end": 266.1,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Script + stock avatar + stock voice; check the limits. 2. A real person needs clear, recorded consent. 3. Check lip-sync, pronunciation, pacing."
+      },
+      "voiceover": "Let's recap. First, HeyGen turns a script into a presenter video with a stock avatar and a stock voice, within free-plan limits that change often. Second, an avatar or voice of a real person needs that person's clear, recorded consent. Third, check every segment three times, for lip-sync, pronunciation and pacing."
+    },
+    {
+      "scene": 18,
+      "start": 266.1,
+      "end": 292.2,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Diagnosing Artifacts",
+      "voiceover": "Now it is your turn. Write a short introduction for your video, and create a twenty to thirty second segment with a stock avatar and a stock voice. Do not upload any real person's photo or voice. Then write one note each on lip-sync, pronunciation and pacing. It takes about thirty minutes. Next lesson: Diagnosing Artifacts, Regenerate, Edit or Replace?"
+    }
+  ]
+}
