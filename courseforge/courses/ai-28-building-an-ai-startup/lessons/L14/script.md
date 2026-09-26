@@ -1,6 +1,6 @@
 # L14 Building the 10-Slide Pitch Deck | Presenter Script
 
-Course: AI-28 · Video: 5 min · Words: 622
+Course: AI-28 · Video: 5 min · Words: 670
 
 ## Hook
 A person reading your deck may give each slide only a few seconds. If a slide tries to say five things, they will remember none. If each slide says one thing clearly, they can follow your whole story in minutes.
@@ -12,10 +12,12 @@ Here is the outline. Problem, solution, and a demo with screenshots. Then custom
 
 Then business model, with your margin and your plan for heavy users. Moat, where you are honest that the model itself is not the moat. Competition, including spreadsheets, manual work and general AI chat apps. Team. And finally the ask: exactly what you want from this audience.
 
+Keep the text short, use large fonts and simple visuals. And keep your risk checklist and unit economics sheet ready as backup, because good questions will come after the last slide.
+
 A pitch deck is like road signs on a motorway. Each sign gives one piece of information, large and clear, because drivers see it only for a moment. A sign with a paragraph of text would be useless.
 
 ## Demonstrate
-Let's build one. Olumide is a made up founder in Ibadan, Nigeria. His MVP helps pharmacies check stock and expiry dates by reading photos of shelves and invoices. We build his deck in Canva.
+Let's build one. Olumide is a made up founder in Ibadan, Nigeria. His MVP helps pharmacies check stock and expiry dates by reading photos of shelves and invoices. We build his deck in Canva. The menus may look a little different when you try it, but the steps are the same.
 
 We open Canva with a free account, search for pitch deck, and choose a simple template with plenty of white space. Then we set it to exactly ten slides, deleting or duplicating slides as needed.
 

@@ -1,7 +1,7 @@
 {
   "course_id": "AI-28",
   "lesson_id": "L14",
-  "duration_s": 266.5,
+  "duration_s": 287.1,
   "thumbnail": {
     "headline": "Ten Slides, One Story",
     "slide": {
@@ -62,7 +62,16 @@
     {
       "scene": 5,
       "start": 77.9,
-      "end": 94.2,
+      "end": 91.2,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "Short text. Large fonts. Backup ready.",
+      "voiceover": "Keep the text short, use large fonts and simple visuals. And keep your risk checklist and unit economics sheet ready as backup, because good questions will come after the last slide."
+    },
+    {
+      "scene": 6,
+      "start": 91.2,
+      "end": 107.5,
       "section": "Explain",
       "visual_type": "stock",
       "stock_query": "large road signs over busy motorway",
@@ -70,9 +79,9 @@
       "voiceover": "A pitch deck is like road signs on a motorway. Each sign gives one piece of information, large and clear, because drivers see it only for a moment. A sign with a paragraph of text would be useless."
     },
     {
-      "scene": 6,
-      "start": 94.2,
-      "end": 108.8,
+      "scene": 7,
+      "start": 107.5,
+      "end": 129.4,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -80,12 +89,12 @@
         "title": "Olumide's startup",
         "body": "'Pharmacies check stock and expiry dates from photos of shelves and invoices.' Caption: Olumide · Ibadan · made up founder"
       },
-      "voiceover": "Let's build one. Olumide is a made up founder in Ibadan, Nigeria. His MVP helps pharmacies check stock and expiry dates by reading photos of shelves and invoices. We build his deck in Canva."
+      "voiceover": "Let's build one. Olumide is a made up founder in Ibadan, Nigeria. His MVP helps pharmacies check stock and expiry dates by reading photos of shelves and invoices. We build his deck in Canva. The menus may look a little different when you try it, but the steps are the same."
     },
     {
-      "scene": 7,
-      "start": 108.8,
-      "end": 123.8,
+      "scene": 8,
+      "start": 129.4,
+      "end": 144.4,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -98,9 +107,9 @@
       "voiceover": "We open Canva with a free account, search for pitch deck, and choose a simple template with plenty of white space. Then we set it to exactly ten slides, deleting or duplicating slides as needed."
     },
     {
-      "scene": 8,
-      "start": 123.8,
-      "end": 139.2,
+      "scene": 9,
+      "start": 144.4,
+      "end": 159.8,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -111,9 +120,9 @@
       "voiceover": "Next, we apply the brand colours and font once, so every slide matches. Then we write all the slide titles first. For slide one, small pharmacies lose stock to expiry because they track dates on paper."
     },
     {
-      "scene": 9,
-      "start": 139.2,
-      "end": 153.8,
+      "scene": 10,
+      "start": 159.8,
+      "end": 174.4,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -125,9 +134,9 @@
       "voiceover": "On slide four, we add the evidence. Eleven interviews. A waitlist of thirty four out of one hundred and twenty visitors, against a threshold of twenty five. And four pharmacies in a paid pilot."
     },
     {
-      "scene": 10,
-      "start": 153.8,
-      "end": 171.4,
+      "scene": 11,
+      "start": 174.4,
+      "end": 192.0,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -139,9 +148,9 @@
       "voiceover": "On slide three, we add screenshots from the MVP with the uploads option. First, we check that they contain no real customer data. On slide six, we add a simple chart of revenue and cost to serve for a typical customer."
     },
     {
-      "scene": 11,
-      "start": 171.4,
-      "end": 190.7,
+      "scene": 12,
+      "start": 192.0,
+      "end": 211.3,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -153,9 +162,9 @@
       "voiceover": "Now a check. The first draft of slide seven said, we use the latest AI. That is not a moat. So we change it: a growing set of corrected shelf photos from partner pharmacies, used with permission, and a distribution deal with a pharmacists' association."
     },
     {
-      "scene": 12,
-      "start": 190.7,
-      "end": 204.0,
+      "scene": 13,
+      "start": 211.3,
+      "end": 224.6,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -166,9 +175,9 @@
       "voiceover": "Finally, we use present mode to read through the whole deck, checking that each slide has one message. Then we download it as a PDF, or share a view only link."
     },
     {
-      "scene": 13,
-      "start": 204.0,
-      "end": 221.1,
+      "scene": 14,
+      "start": 224.6,
+      "end": 241.7,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -179,9 +188,9 @@
       "voiceover": "A common mistake is filling slides with long sentences and reading them aloud. Another is using a large market number from the internet that you cannot explain. Use a small, realistic number you can defend. And never skip the ask."
     },
     {
-      "scene": 14,
-      "start": 221.1,
-      "end": 240.8,
+      "scene": 15,
+      "start": 241.7,
+      "end": 261.4,
       "section": "Recap",
       "visual_type": "slide",
       "slide": {
@@ -192,9 +201,9 @@
       "voiceover": "Let's recap. First, use ten slides: problem, solution, demo, evidence, market, business model, moat, competition, team and the ask. Second, give every slide one message, written as a full sentence title. Third, use your own evidence and unit economics, and keep backup detail ready for questions."
     },
     {
-      "scene": 15,
-      "start": 240.8,
-      "end": 266.5,
+      "scene": 16,
+      "start": 261.4,
+      "end": 287.1,
       "section": "CTA",
       "visual_type": "presenter_full",
       "on_screen_text": "Next: Pitching to Customers and Investors",

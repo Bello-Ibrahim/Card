@@ -1,7 +1,7 @@
 {
   "course_id": "AI-28",
   "lesson_id": "L15",
-  "duration_s": 263.2,
+  "duration_s": 281.6,
   "thumbnail": {
     "headline": "Same Story, Two Audiences",
     "slide": {
@@ -62,16 +62,29 @@
     {
       "scene": 5,
       "start": 77.6,
-      "end": 84.9,
+      "end": 90.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "What to lead with",
+        "body": "Customers: problem → demo → price. Investors: problem → evidence → business model → moat → ask."
+      },
+      "voiceover": "So for customers, lead with the problem, the demo and the price. For investors, lead with the problem and your evidence, then the business model, the moat and the ask."
+    },
+    {
+      "scene": 6,
+      "start": 90.5,
+      "end": 97.8,
       "section": "Explain",
       "visual_type": "text",
       "on_screen_text": "Never invent numbers",
       "voiceover": "Never invent numbers, customers or partnerships. People often check, and one discovered exaggeration can end the relationship."
     },
     {
-      "scene": 6,
-      "start": 84.9,
-      "end": 105.5,
+      "scene": 7,
+      "start": 97.8,
+      "end": 118.4,
       "section": "Explain",
       "visual_type": "stock",
       "stock_query": "tour guide leading group through old city",
@@ -79,9 +92,9 @@
       "voiceover": "Think of a tour guide showing the same old city to schoolchildren and to architects. The streets do not change. For children, she talks about stories and people. For architects, she talks about materials and structure. A good pitch is the same city, guided for a different group."
     },
     {
-      "scene": 7,
-      "start": 105.5,
-      "end": 119.6,
+      "scene": 8,
+      "start": 118.4,
+      "end": 132.5,
       "section": "Demonstrate",
       "visual_type": "stock",
       "stock_query": "fish trader at lakeside market stall",
@@ -89,9 +102,9 @@
       "voiceover": "Let's hear two pitches. Achieng is a made up founder in Kisumu, Kenya. Her MVP helps small fish traders record sales and predict weekly demand, using voice notes in Swahili, Dholuo or English."
     },
     {
-      "scene": 8,
-      "start": 119.6,
-      "end": 142.3,
+      "scene": 9,
+      "start": 132.5,
+      "end": 155.2,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -102,9 +115,9 @@
       "voiceover": "Her customer pitch: you lose money when fish is left unsold. Send a voice note after each sale, and every Sunday you get a message saying how much to buy each day. It costs less than one kilogram of fish a week, which is a placeholder price, and you can stop any time."
     },
     {
-      "scene": 9,
-      "start": 142.3,
-      "end": 159.9,
+      "scene": 10,
+      "start": 155.2,
+      "end": 172.8,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -115,9 +128,9 @@
       "voiceover": "Her investor opening: we interviewed eighteen traders. Twelve joined our pilot, and seven now pay weekly by mobile money. Our moat is a growing record of local sales patterns, collected with consent, and a partnership with a traders' group for distribution."
     },
     {
-      "scene": 10,
-      "start": 159.9,
-      "end": 178.8,
+      "scene": 11,
+      "start": 172.8,
+      "end": 197.2,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -125,12 +138,12 @@
         "title": "Practice prompt for Claude",
         "body": "Act as a sceptical early-stage investor. I will give you a summary of my startup. Ask me one hard question at a time about demand, defensibility, unit economics and risks. After each answer, tell me what was weak and what evidence would make it stronger. Do not be polite for the sake of it."
       },
-      "voiceover": "Then she practises with Claude. She asks it to act as a sceptical investor, someone who doubts her claims. It asks one hard question at a time, about demand, defensibility, unit economics and risks, and after each answer it tells her what was weak."
+      "voiceover": "Then she practises with Claude. She asks it to act as a sceptical investor, someone who doubts her claims. It asks one hard question at a time, about demand, defensibility, unit economics and risks, and after each answer it tells her what was weak. She pastes only a short summary of her startup, with no confidential data."
     },
     {
-      "scene": 11,
-      "start": 178.8,
-      "end": 198.5,
+      "scene": 12,
+      "start": 197.2,
+      "end": 216.9,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -141,18 +154,18 @@
       "voiceover": "The hardest question: your pilot is small, and the traders know you personally. How do you know strangers will pay? Achieng has no strong answer. So she adds a next step to her deck: a test with twenty traders in a market where nobody knows her."
     },
     {
-      "scene": 12,
-      "start": 198.5,
-      "end": 215.6,
+      "scene": 13,
+      "start": 216.9,
+      "end": 234.0,
       "section": "Demonstrate",
       "visual_type": "text",
       "on_screen_text": "Honesty builds trust",
       "voiceover": "A common mistake is giving customers an investor pitch, full of market size. Customers do not care. Another is defending every weak point. An honest, we have not tested that yet, and here is how we will, builds more trust."
     },
     {
-      "scene": 13,
-      "start": 215.6,
-      "end": 234.5,
+      "scene": 14,
+      "start": 234.0,
+      "end": 252.9,
       "section": "Recap",
       "visual_type": "slide",
       "slide": {
@@ -163,9 +176,9 @@
       "voiceover": "Let's recap. First, keep the facts the same, but lead with value for customers, and with evidence, moat and economics for investors. Second, answer hard questions honestly. Third, practise with Claude as a sceptical investor, and use its hardest questions to improve your deck."
     },
     {
-      "scene": 14,
-      "start": 234.5,
-      "end": 263.2,
+      "scene": 15,
+      "start": 252.9,
+      "end": 281.6,
       "section": "CTA",
       "visual_type": "presenter_full",
       "on_screen_text": "Submit your capstone",

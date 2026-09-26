@@ -1,6 +1,6 @@
 # L15 Pitching to Customers and Investors | Presenter Script
 
-Course: AI-28 · Video: 5 min · Words: 614
+Course: AI-28 · Video: 5 min · Words: 657
 
 ## Hook
 You tell the same story to a shop owner and to an investor. The shop owner asks, will this save me time on Monday morning? The investor asks, why can't a large company copy this? Are you ready for both?
@@ -11,6 +11,8 @@ In the last lesson, you built your deck. Now, in this final lesson, you learn to
 Customers care about their own problem. Does it solve it, and how quickly? What does it cost? Is my data safe? How much work is it to start? Investors care about the business. How large can it become? Why this team? What evidence exists? Is it defensible, and are the unit economics healthy?
 
 You will get questions you cannot fully answer. Admit what you do not know, and say how you will find out. Use evidence, not hope. Four of five pilot customers renewed is stronger than everyone loves it. And name the risk with your plan.
+
+So for customers, lead with the problem, the demo and the price. For investors, lead with the problem and your evidence, then the business model, the moat and the ask.
 
 Never invent numbers, customers or partnerships. People often check, and one discovered exaggeration can end the relationship.
 
@@ -23,7 +25,7 @@ Her customer pitch: you lose money when fish is left unsold. Send a voice note a
 
 Her investor opening: we interviewed eighteen traders. Twelve joined our pilot, and seven now pay weekly by mobile money. Our moat is a growing record of local sales patterns, collected with consent, and a partnership with a traders' group for distribution.
 
-Then she practises with Claude. She asks it to act as a sceptical investor, someone who doubts her claims. It asks one hard question at a time, about demand, defensibility, unit economics and risks, and after each answer it tells her what was weak.
+Then she practises with Claude. She asks it to act as a sceptical investor, someone who doubts her claims. It asks one hard question at a time, about demand, defensibility, unit economics and risks, and after each answer it tells her what was weak. She pastes only a short summary of her startup, with no confidential data.
 
 The hardest question: your pilot is small, and the traders know you personally. How do you know strangers will pay? Achieng has no strong answer. So she adds a next step to her deck: a test with twenty traders in a market where nobody knows her.
 

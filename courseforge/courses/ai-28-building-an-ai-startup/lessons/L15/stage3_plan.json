@@ -3,7 +3,11 @@
   "thumbnail": {
     "headline": "Same Story, Two Audiences",
     "image": "Navy background, one speech bubble splitting into two, one toward a shop icon and one toward a briefcase icon, headline in teal Inter Bold.",
-    "slide": {"layout": "title", "title": "Same Story, Two Audiences", "body": "A single speech bubble splitting toward a small shop icon and a briefcase icon. Small tag: Building an AI Startup · Lesson 15 · Capstone step 3."}
+    "slide": {
+      "layout": "title",
+      "title": "Same Story, Two Audiences",
+      "body": "A single speech bubble splitting toward a small shop icon and a briefcase icon. Small tag: Building an AI Startup · Lesson 15 · Capstone step 3."
+    }
   },
   "production_notes": [
     "[VERSION] The customer price in the Kenya example ('less than one kilogram of fish per week') is a placeholder comparison, not a real price; the voiceover calls it a placeholder. A reviewer may replace it.",
@@ -14,58 +18,127 @@
   ],
   "sections": {
     "Hook": [
-      {"visual_type": "presenter_full",
-       "voiceover": "You tell the same story to a shop owner and to an investor. The shop owner asks, will this save me time on Monday morning? The investor asks, why can't a large company copy this? Are you ready for both?",
-       "on_screen_text": "Two audiences, two questions"}
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "You tell the same story to a shop owner and to an investor. The shop owner asks, will this save me time on Monday morning? The investor asks, why can't a large company copy this? Are you ready for both?",
+        "on_screen_text": "Two audiences, two questions"
+      }
     ],
     "Explain": [
-      {"visual_type": "slide",
-       "voiceover": "In the last lesson, you built your deck. Now, in this final lesson, you learn to pitch it. A pitch is a short, clear explanation of why your product matters, told to a specific audience. The facts stay the same, but the emphasis changes.",
-       "slide": {"layout": "title", "title": "Pitching to Customers and Investors", "body": "Building an AI Startup · Lesson 15 of 15 · Capstone step 3"}},
-      {"visual_type": "slide",
-       "voiceover": "Customers care about their own problem. Does it solve it, and how quickly? What does it cost? Is my data safe? How much work is it to start? Investors care about the business. How large can it become? Why this team? What evidence exists? Is it defensible, and are the unit economics healthy?",
-       "slide": {"layout": "comparison", "title": "What each audience asks", "body": "Customers: solves my problem? how fast? cost? data safe? effort to start? · Investors: how large? why this team? evidence? defensible? unit economics? risks?"}},
-      {"visual_type": "slide",
-       "voiceover": "You will get questions you cannot fully answer. Admit what you do not know, and say how you will find out. Use evidence, not hope. Four of five pilot customers renewed is stronger than everyone loves it. And name the risk with your plan.",
-       "slide": {"layout": "bullets", "title": "Answering hard questions", "body": "Admit what you don't know + your next test · Evidence, not hope: '4 of 5 renewed' beats 'everyone loves it' · Name the risk and your plan"}},
-      {"visual_type": "text",
-       "voiceover": "Never invent numbers, customers or partnerships. People often check, and one discovered exaggeration can end the relationship.",
-       "on_screen_text": "Never invent numbers"},
-      {"visual_type": "stock",
-       "voiceover": "Think of a tour guide showing the same old city to schoolchildren and to architects. The streets do not change. For children, she talks about stories and people. For architects, she talks about materials and structure. A good pitch is the same city, guided for a different group.",
-       "stock_query": "tour guide leading group through old city",
-       "on_screen_text": "Same city, different tour"}
+      {
+        "visual_type": "slide",
+        "voiceover": "In the last lesson, you built your deck. Now, in this final lesson, you learn to pitch it. A pitch is a short, clear explanation of why your product matters, told to a specific audience. The facts stay the same, but the emphasis changes.",
+        "slide": {
+          "layout": "title",
+          "title": "Pitching to Customers and Investors",
+          "body": "Building an AI Startup · Lesson 15 of 15 · Capstone step 3"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Customers care about their own problem. Does it solve it, and how quickly? What does it cost? Is my data safe? How much work is it to start? Investors care about the business. How large can it become? Why this team? What evidence exists? Is it defensible, and are the unit economics healthy?",
+        "slide": {
+          "layout": "comparison",
+          "title": "What each audience asks",
+          "body": "Customers: solves my problem? how fast? cost? data safe? effort to start? · Investors: how large? why this team? evidence? defensible? unit economics? risks?"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "You will get questions you cannot fully answer. Admit what you do not know, and say how you will find out. Use evidence, not hope. Four of five pilot customers renewed is stronger than everyone loves it. And name the risk with your plan.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Answering hard questions",
+          "body": "Admit what you don't know + your next test · Evidence, not hope: '4 of 5 renewed' beats 'everyone loves it' · Name the risk and your plan"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "So for customers, lead with the problem, the demo and the price. For investors, lead with the problem and your evidence, then the business model, the moat and the ask.",
+        "slide": {
+          "layout": "comparison",
+          "title": "What to lead with",
+          "body": "Customers: problem → demo → price. Investors: problem → evidence → business model → moat → ask."
+        }
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "Never invent numbers, customers or partnerships. People often check, and one discovered exaggeration can end the relationship.",
+        "on_screen_text": "Never invent numbers"
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "Think of a tour guide showing the same old city to schoolchildren and to architects. The streets do not change. For children, she talks about stories and people. For architects, she talks about materials and structure. A good pitch is the same city, guided for a different group.",
+        "stock_query": "tour guide leading group through old city",
+        "on_screen_text": "Same city, different tour"
+      }
     ],
     "Demonstrate": [
-      {"visual_type": "stock",
-       "voiceover": "Let's hear two pitches. Achieng is a made up founder in Kisumu, Kenya. Her MVP helps small fish traders record sales and predict weekly demand, using voice notes in Swahili, Dholuo or English.",
-       "stock_query": "fish trader at lakeside market stall",
-       "on_screen_text": "Achieng · Kisumu · fish traders"},
-      {"visual_type": "slide",
-       "voiceover": "Her customer pitch: you lose money when fish is left unsold. Send a voice note after each sale, and every Sunday you get a message saying how much to buy each day. It costs less than one kilogram of fish a week, which is a placeholder price, and you can stop any time.",
-       "slide": {"layout": "quote", "title": "Customer pitch (30 seconds)", "body": "'You lose money when fish is left unsold. Send a voice note after each sale; every Sunday, get a message saying how much to buy each day. Less than 1 kg of fish per week. Stop any time.' Label: placeholder price."}},
-      {"visual_type": "slide",
-       "voiceover": "Her investor opening: we interviewed eighteen traders. Twelve joined our pilot, and seven now pay weekly by mobile money. Our moat is a growing record of local sales patterns, collected with consent, and a partnership with a traders' group for distribution.",
-       "slide": {"layout": "quote", "title": "Investor opening (30 seconds)", "body": "'18 traders interviewed · 12 in the pilot · 7 pay weekly by mobile money. Moat: local sales records collected with consent + a traders' group partnership.'"}},
-      {"visual_type": "slide",
-       "voiceover": "Then she practises with Claude. She asks it to act as a sceptical investor, someone who doubts her claims. It asks one hard question at a time, about demand, defensibility, unit economics and risks, and after each answer it tells her what was weak.",
-       "slide": {"layout": "code", "title": "Practice prompt for Claude", "body": "Act as a sceptical early-stage investor. I will give you a summary of my startup. Ask me one hard question at a time about demand, defensibility, unit economics and risks. After each answer, tell me what was weak and what evidence would make it stronger. Do not be polite for the sake of it."}},
-      {"visual_type": "slide",
-       "voiceover": "The hardest question: your pilot is small, and the traders know you personally. How do you know strangers will pay? Achieng has no strong answer. So she adds a next step to her deck: a test with twenty traders in a market where nobody knows her.",
-       "slide": {"layout": "comparison", "title": "The hardest question", "body": "Claude: 'Your pilot is small and the traders know you. How do you know strangers will pay?' → Achieng's new next step: test with 20 traders in a market where nobody knows her."}},
-      {"visual_type": "text",
-       "voiceover": "A common mistake is giving customers an investor pitch, full of market size. Customers do not care. Another is defending every weak point. An honest, we have not tested that yet, and here is how we will, builds more trust.",
-       "on_screen_text": "Honesty builds trust"}
+      {
+        "visual_type": "stock",
+        "voiceover": "Let's hear two pitches. Achieng is a made up founder in Kisumu, Kenya. Her MVP helps small fish traders record sales and predict weekly demand, using voice notes in Swahili, Dholuo or English.",
+        "stock_query": "fish trader at lakeside market stall",
+        "on_screen_text": "Achieng · Kisumu · fish traders"
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Her customer pitch: you lose money when fish is left unsold. Send a voice note after each sale, and every Sunday you get a message saying how much to buy each day. It costs less than one kilogram of fish a week, which is a placeholder price, and you can stop any time.",
+        "slide": {
+          "layout": "quote",
+          "title": "Customer pitch (30 seconds)",
+          "body": "'You lose money when fish is left unsold. Send a voice note after each sale; every Sunday, get a message saying how much to buy each day. Less than 1 kg of fish per week. Stop any time.' Label: placeholder price."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Her investor opening: we interviewed eighteen traders. Twelve joined our pilot, and seven now pay weekly by mobile money. Our moat is a growing record of local sales patterns, collected with consent, and a partnership with a traders' group for distribution.",
+        "slide": {
+          "layout": "quote",
+          "title": "Investor opening (30 seconds)",
+          "body": "'18 traders interviewed · 12 in the pilot · 7 pay weekly by mobile money. Moat: local sales records collected with consent + a traders' group partnership.'"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Then she practises with Claude. She asks it to act as a sceptical investor, someone who doubts her claims. It asks one hard question at a time, about demand, defensibility, unit economics and risks, and after each answer it tells her what was weak. She pastes only a short summary of her startup, with no confidential data.",
+        "slide": {
+          "layout": "code",
+          "title": "Practice prompt for Claude",
+          "body": "Act as a sceptical early-stage investor. I will give you a summary of my startup. Ask me one hard question at a time about demand, defensibility, unit economics and risks. After each answer, tell me what was weak and what evidence would make it stronger. Do not be polite for the sake of it."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "The hardest question: your pilot is small, and the traders know you personally. How do you know strangers will pay? Achieng has no strong answer. So she adds a next step to her deck: a test with twenty traders in a market where nobody knows her.",
+        "slide": {
+          "layout": "comparison",
+          "title": "The hardest question",
+          "body": "Claude: 'Your pilot is small and the traders know you. How do you know strangers will pay?' → Achieng's new next step: test with 20 traders in a market where nobody knows her."
+        }
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "A common mistake is giving customers an investor pitch, full of market size. Customers do not care. Another is defending every weak point. An honest, we have not tested that yet, and here is how we will, builds more trust.",
+        "on_screen_text": "Honesty builds trust"
+      }
     ],
     "Recap": [
-      {"visual_type": "slide",
-       "voiceover": "Let's recap. First, keep the facts the same, but lead with value for customers, and with evidence, moat and economics for investors. Second, answer hard questions honestly. Third, practise with Claude as a sceptical investor, and use its hardest questions to improve your deck.",
-       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Same facts, different emphasis. 2. Honest answers: unknowns, evidence, risks with plans. 3. Practise with a sceptical investor."}}
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, keep the facts the same, but lead with value for customers, and with evidence, moat and economics for investors. Second, answer hard questions honestly. Third, practise with Claude as a sceptical investor, and use its hardest questions to improve your deck.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. Same facts, different emphasis. 2. Honest answers: unknowns, evidence, risks with plans. 3. Practise with a sceptical investor."
+        }
+      }
     ],
     "CTA": [
-      {"visual_type": "presenter_full",
-       "voiceover": "This is capstone step three. In the exercise below, practise your pitch with Claude, improve at least two slides, and then submit your validation summary, your demo and your final deck. Check it against the rubric first. Congratulations on finishing Building an AI Startup. You started with a problem, and now you have evidence, a working MVP and a pitch. I look forward to seeing your capstone.",
-       "on_screen_text": "Submit your capstone"}
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "This is capstone step three. In the exercise below, practise your pitch with Claude, improve at least two slides, and then submit your validation summary, your demo and your final deck. Check it against the rubric first. Congratulations on finishing Building an AI Startup. You started with a problem, and now you have evidence, a working MVP and a pitch. I look forward to seeing your capstone.",
+        "on_screen_text": "Submit your capstone"
+      }
     ]
   }
 }

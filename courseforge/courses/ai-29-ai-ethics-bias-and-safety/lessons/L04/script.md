@@ -43,4 +43,4 @@ Image: Navy background, a chat bubble with three neat citation cards, each fadin
 - [VERSION] Free access to Claude and ChatGPT, and whether the free versions can search the web, differ by plan and change often. The voiceover names the tools only as examples and makes no claim about search features; check the live tools before recording the exercise mention.
 - Aigerim Bekova and her farming cooperative in Kazakhstan are fictional. The wheat-yield number and the 'study' are never shown as real figures; any on-screen number must be a clearly invented placeholder labelled 'Hypothetical'.
 - Deepfake scenes use stock or slides only: never show a real public figure, a real voice or a manipulated image of a real person.
-- Scene 6 hero clip is 7 seconds and the scene is about 20 seconds: hold the clip, then continue on a soft blur behind the presenter.
+- Scene 6 hero clip is 7 seconds and the scene is about 23 seconds: hold the clip, then continue on a soft blur behind the presenter.
