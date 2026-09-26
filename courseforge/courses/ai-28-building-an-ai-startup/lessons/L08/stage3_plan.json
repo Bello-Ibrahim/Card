@@ -1,0 +1,72 @@
+{
+  "title": "Making the AI Part Work: Prompts and Quality Checks",
+  "thumbnail": {
+    "headline": "Test the AI Part",
+    "image": "Navy background, a checklist with green ticks, one amber half-tick and one red cross beside a chat bubble, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Test the AI Part", "body": "A small sheet with rows marked pass (green), partial (amber) and fail (red), next to a chat bubble icon. Small tag: Building an AI Startup · Lesson 8."}
+  },
+  "production_notes": [
+    "No facts to verify: Putri and her test cases are hypothetical; the lesson names no model, price or tool feature (content.md Review Flags: None).",
+    "Putri (Yogyakarta, Indonesia) is fictional. Review texts on screen are made up; no real restaurant names or reviewer names.",
+    "Pass rates spoken: 9 of 15 (v1), 13 of 15 (v2). Keep slide numbers in sync if the example changes."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Your prototype works on the example you tried. But your users will not type your example. They will write in a hurry, make spelling mistakes, and ask for things you never imagined. How do you know the AI part will still work?",
+       "on_screen_text": "Will it work for real users?"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "In the last lesson, you built a working prototype. Now we make the AI part reliable. AI models do not give the same quality every time, and they can be confidently wrong. You cannot remove this risk completely, but you can reduce it and plan for it.",
+       "slide": {"layout": "title", "title": "Making the AI Part Work", "body": "Prompts and Quality Checks · Building an AI Startup · Lesson 8 of 15"}},
+      {"visual_type": "slide",
+       "voiceover": "The first tool is clear instructions. A good product prompt gives the role and the task, the rules, the format, and what to do when unsure. For example: if a review mentions food poisoning or a legal threat, do not reply. Output only, needs human.",
+       "slide": {"layout": "code", "title": "Tool 1: Clear instructions", "body": "Role and task: You write replies to customer reviews for a small restaurant. / Rules: Never offer refunds or discounts. Never argue. / Format: Three sentences at most. Friendly, professional. / When unsure: food poisoning, illness or legal threat → output only NEEDS HUMAN."}},
+      {"visual_type": "slide",
+       "voiceover": "The second tool is good examples. Show the model one or two examples of a good input and a good output. Examples often teach style better than long explanations.",
+       "slide": {"layout": "comparison", "title": "Tool 2: Good examples", "body": "Example input (a short review) → example output (a good three-sentence reply)."}},
+      {"visual_type": "slide",
+       "voiceover": "The third tool is a small test set: a list of inputs, each with a description of a good answer. Include normal cases, difficult cases, and cases the AI should refuse. Every time you change the prompt, run the whole set again, because fixing one case can break another. Score each result as pass, partial or fail. Your pass rate is passes divided by cases.",
+       "slide": {"layout": "diagram", "title": "Tool 3: A test set", "body": "Sheet with columns: input · good answer · result · score. Rows tagged Normal, Difficult, Should refuse. Scores: pass (green), partial (amber), fail (red). Formula: pass rate = passes ÷ cases."}},
+      {"visual_type": "slide",
+       "voiceover": "You also need a fallback plan, what the product does when the AI is wrong or unsure. It can send the case to a person, ask the user for more information, or show a draft only after a human approves it. In health, money or law, a human check is often necessary.",
+       "slide": {"layout": "bullets", "title": "Fallback plan", "body": "Send to a person · Ask the user for more information · Human approves before sending. High stakes (health, money, law): human check often necessary."}},
+      {"visual_type": "stock",
+       "voiceover": "Picture a busy restaurant. A new chef follows the recipe card exactly. That is your prompt. The head chef tastes each dish before it leaves the kitchen. That is your quality check. And if a dish is wrong, it goes back to the kitchen, not to the customer. That is your fallback plan.",
+       "stock_query": "head chef tasting dish in busy kitchen",
+       "on_screen_text": "Recipe, tasting, send it back"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's see it in practice. Putri is a made up founder in Yogyakarta, Indonesia. Her MVP writes draft replies to online reviews for small restaurants, in Indonesian or English.",
+       "stock_query": "small restaurant owner reading reviews on phone",
+       "on_screen_text": "Putri · Yogyakarta · review replies"},
+      {"visual_type": "slide",
+       "voiceover": "She writes fifteen made up test cases. Six are normal reviews. Four are difficult, with mixed languages, spelling mistakes or sarcasm. Three should be refused, such as food poisoning. And two are tricky, like a review asking for a discount.",
+       "slide": {"layout": "bullets", "title": "Putri's 15 test cases", "body": "1–6 Normal: polite, specific, 3 sentences · 7–10 Difficult: mixed languages, spelling, sarcasm · 11–13 Should refuse: only 'NEEDS HUMAN' · 14–15 Tricky: discount request; wrong restaurant"}},
+      {"visual_type": "slide",
+       "voiceover": "Prompt version one passes nine of fifteen. Two replies offered a free dessert. Two sarcastic reviews got cheerful thanks. And two cases that should be refused got normal replies.",
+       "slide": {"layout": "bullets", "title": "Prompt v1: 9 of 15", "body": "Fails: free dessert offered (2) · sarcasm answered cheerfully (2) · 'should refuse' answered normally (2)"}},
+      {"visual_type": "slide",
+       "voiceover": "For version two, she adds a rule, never offer anything for free. She adds one example of a sarcastic review with a good reply, and a clearer list of topics that need a human. Now thirteen of fifteen pass, and both refusal failures are fixed.",
+       "slide": {"layout": "comparison", "title": "Prompt v1 → v2", "body": "Changes: + 'Never offer anything for free' · + one sarcastic example · + clearer NEEDS HUMAN list. Pass rate bar: 9/15 → 13/15. Refusal failures: fixed."}},
+      {"visual_type": "text",
+       "voiceover": "Putri decides thirteen of fifteen is good enough for a first test, because the restaurant owner approves every draft before it is posted. That human approval is her fallback plan. She keeps the two failures for the next round.",
+       "on_screen_text": "13 of 15, plus human approval"},
+      {"visual_type": "slide",
+       "voiceover": "A common mistake is testing on two or three easy examples, then moving on. Another is assuming a bigger model fixes everything. You only know if it helps by running the same test set. And never use real customer data in tests without permission.",
+       "slide": {"layout": "comparison", "title": "Common mistakes", "body": "Red crosses: testing only easy examples · 'a bigger model will fix it' · real customer data without permission. Green tick: same test set, every change."}}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, clear instructions, one or two good examples, and a small test set make AI output more reliable. Second, run the whole test set after every prompt change, and score each case. Third, plan what the product does when the AI is wrong or unsure.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Instructions, examples, test set. 2. Rerun all cases after every change. 3. A fallback plan for wrong or unsure answers."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below this video, write fifteen test cases for your MVP, run them, score the results, and improve your prompt until most cases pass. It takes about fifty minutes. Next, we look at the unit economics of an AI product. See you there.",
+       "on_screen_text": "Next: Unit Economics of an AI Product"}
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "title": "Regulation, Privacy and Ethics Frameworks",
+  "thumbnail": {
+    "headline": "Same Questions, Every Country",
+    "image": "Navy background, a simple world outline with small question-mark pins in several regions linked to a single checklist in teal, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Same Questions, Every Country", "body": "World outline with question-mark pins, all connected to one six-item checklist. Small tag: AI in Healthcare · Lesson 11."}
+  },
+  "production_notes": [
+    "Regulations are examples only. The voiceover names no regulator, law or guidance document; it teaches six common principles and tells learners to confirm local rules. Any named example added on screen must carry its tags and be checked first:",
+    "[VERIFY] WHO guidance on ethics and governance of AI for health: confirm the exact title, year and the list of principles before it appears in any on-screen text.",
+    "[REGION] [VERIFY] US FDA oversight of software as a medical device.",
+    "[REGION] [VERIFY] EU Medical Device Regulation and EU AI Act, including how AI medical tools are classified.",
+    "[REGION] [VERIFY] HIPAA (US), GDPR (EU) and Kenya's Data Protection Act: confirm names and that they apply to health data as described. No article numbers or dates are given.",
+    "The lesson gives no legal advice. Achieng Otieno and her Kenyan start-up are hypothetical; the antenatal tool supports midwives' review only.",
+    "Map or flag graphics must be neutral outlines with no official seals or government logos."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Is your AI tool a medical device? Can patient photos leave the country? The answers depend on where you are. But the questions are almost the same everywhere. This lesson teaches the questions.",
+       "on_screen_text": "Learn the questions, not one rulebook"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "Welcome to week three, where you build your capstone. We start with the rules around AI tools. Rules differ by country and change over time. So this course teaches the common principles found in most frameworks, not the rules of one country. There are six of them.",
+       "slide": {"layout": "title", "title": "Regulation, Privacy and Ethics Frameworks", "body": "Six common principles · AI in Healthcare · Lesson 11 of 14"}},
+      {"visual_type": "slide",
+       "voiceover": "The first is software as a medical device. In many countries, software intended to diagnose, treat, monitor or prevent disease can be regulated as a device, even with no hardware. Intended use is central. A scheduling tool is usually not a medical device. A tool that flags possible cancer on images usually is.",
+       "slide": {"layout": "comparison", "title": "1. Software as a medical device", "body": "Intended use decides. Usually not a device: scheduling tool (calendar icon). Usually a device: tool flagging possible cancer on images (scan icon)."}},
+      {"visual_type": "slide",
+       "voiceover": "The second is risk-based classification. A tool that informs a serious diagnosis or drives treatment usually sits in a higher class, with stricter evidence and oversight. The third is data protection. Health data is usually a sensitive category, with rules on lawful use, collecting only what is needed, security, transfer across borders, and patients' right to access their data.",
+       "slide": {"layout": "bullets", "title": "2. Risk classes · 3. Data protection", "body": "Higher risk → stricter evidence and oversight. Data protection: lawful basis · only data needed · security · limits on cross-border transfer · patient access rights"}},
+      {"visual_type": "slide",
+       "voiceover": "The fourth is consent. Depending on the law and the use, patients may need to consent, be informed, or be able to object. Consent for care is not automatically consent for training an AI model. The fifth is transparency. Patients and clinicians should know when AI is used, what it is for, and its limits. The sixth is accountability, meaning clear responsibility for performance, decisions and fixing problems.",
+       "slide": {"layout": "bullets", "title": "4. Consent · 5. Transparency · 6. Accountability", "body": "Consent for care ≠ consent for training · Know when AI is used, what for, and its limits · Clear responsibility for performance, decisions and fixing problems"}},
+      {"visual_type": "text",
+       "voiceover": "International guidance brings principles like these together, and the lesson page gives examples of regulators and laws in some regions. But they are examples only. Always confirm local rules with your organisation's regulatory affairs lead or data protection officer.",
+       "on_screen_text": "Examples only. Confirm locally."},
+      {"visual_type": "stock",
+       "voiceover": "Here is a simple way to picture it. Regulation is like building safety codes. The details differ from city to city. But every code asks similar questions. What is the building for? How many people will use it? What happens in a fire? And who signs off?",
+       "stock_query": "building inspector checking construction site plans",
+       "on_screen_text": "Different codes, similar questions"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's see how to use the principles. Achieng Otieno is the product lead for a hypothetical health-tech start-up in Kenya. Her team is building a tool that suggests which antenatal patients may need earlier review, for midwives to consider. She plans to sell it in Kenya, and possibly in Europe.",
+       "stock_query": "young african product manager working on laptop",
+       "on_screen_text": "Hypothetical start-up · Kenya"},
+      {"visual_type": "slide",
+       "voiceover": "She does not try to become a lawyer. Instead, she uses the six principles to prepare questions. On medical devices, she asks: our intended use is to support midwives in prioritising review. Does this make it a medical device here, and in which risk class? On data protection: is antenatal data a sensitive category, and can we store it with a cloud provider outside the country?",
+       "slide": {"layout": "bullets", "title": "Achieng's questions (1)", "body": "Medical device: 'Does supporting midwives' prioritisation make it a device here? Which risk class?' TO CHECK LOCALLY · Data protection: 'Is antenatal data sensitive? Can it be stored outside the country?' TO CHECK LOCALLY"}},
+      {"visual_type": "slide",
+       "voiceover": "On consent: do we need separate consent to use past records to train the model? On transparency: what must we tell patients about the tool? And on accountability: if the tool misses a high-risk patient, who is responsible, and how do we report it? Next to every question, she writes the same words: to check locally.",
+       "slide": {"layout": "bullets", "title": "Achieng's questions (2)", "body": "Consent: 'Separate consent to train on past records?' · Transparency: 'What must we tell patients?' · Accountability: 'If it misses a high-risk patient, who is responsible and how do we report it?' Each stamped TO CHECK LOCALLY"}},
+      {"visual_type": "slide",
+       "voiceover": "She takes the list to the company's legal adviser and a data protection specialist. For Europe, she plans separate advice.",
+       "slide": {"layout": "diagram", "title": "Who answers", "body": "Question list → legal adviser and data protection specialist (Kenya). Separate arrow → separate advice for Europe."}},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is to believe that decision support cannot be a medical device, because a clinician makes the final decision. This is often not true. Many frameworks regulate decision support based on its intended use and risk. Do not decide this yourself. Ask your regulatory lead.",
+       "on_screen_text": "Decision support can still be a device"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, the common principles are software as a medical device, risk-based classification, data protection, consent, transparency and accountability. Second, intended use is central to whether and how a tool is regulated. Third, named laws and regulators are only examples, so always confirm local rules with your regulatory or data protection officer.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Six principles: device · risk class · data protection · consent · transparency · accountability. 2. Intended use is central. 3. Examples only: confirm local rules."}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below this video, you will choose one AI health tool category and write questions for your local regulator or data protection officer, marking each one to check locally. It takes about twenty minutes. Your answers will feed your capstone evaluation. In the next lesson, we cover choosing a tool and assessing clinical value. See you there.",
+       "on_screen_text": "Next: Choosing a Tool and Assessing Clinical Value"}
+    ]
+  }
+}

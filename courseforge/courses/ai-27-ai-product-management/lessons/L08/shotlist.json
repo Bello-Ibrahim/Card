@@ -1,0 +1,188 @@
+{
+  "course_id": "AI-27",
+  "lesson_id": "L08",
+  "duration_s": 297.1,
+  "thumbnail": {
+    "headline": "One Number Is Never Enough",
+    "slide": {
+      "layout": "title",
+      "title": "One Number Is Never Enough",
+      "body": "Metric tree icon: goal at the top, two layers of branches, a guardrail fence beside it. Small tag: AI Product Management · Lesson 8."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.4,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "A good model is not a good product",
+      "voiceover": "Your summary feature scores ninety five on an accuracy test. Users still stop using it, and nobody knows why. One number told you the model was good. It did not tell you whether the product was."
+    },
+    {
+      "scene": 2,
+      "start": 15.4,
+      "end": 30.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Designing Evaluation: Metrics That Matter",
+        "body": "AI Product Management · Lesson 8 of 15"
+      },
+      "voiceover": "So far, you have scoped a feature and checked its data and cost. Now, how will you know if it is good? Evaluate an AI feature on three layers. Each layer answers a different question."
+    },
+    {
+      "scene": 3,
+      "start": 30.4,
+      "end": 55.7,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Layers 1 and 2",
+        "body": "Offline quality: 'Is the output good?' → accuracy, rubric scores on a test set · Online product results: 'Does it help users?' → task success, time saved, adoption, repeat use, edits and rejections"
+      },
+      "voiceover": "Offline quality asks, is the output good? You measure it on a test set before launch and after each change, for example accuracy, or rubric scores for generated text. Online product results ask, does it help users? You measure them with real users: task success, time saved, adoption, repeat use, and how often users edit or reject the output."
+    },
+    {
+      "scene": 4,
+      "start": 55.7,
+      "end": 70.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Layer 3: guardrails",
+        "body": "'Is it safe and sustainable?' → harmful or invented content rate · response time · cost per request · complaint rate. Must stay inside limits."
+      },
+      "voiceover": "Guardrail metrics ask, is it safe and sustainable? These must stay inside limits, even if quality improves. Examples are the rate of harmful or invented content, response time, cost per request and complaint rate."
+    },
+    {
+      "scene": 5,
+      "start": 70.3,
+      "end": 93.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "The metric tree",
+        "body": "Top: Product goal → Online metrics (targets) → Offline metrics (targets). Beside the tree: Guardrails (limits)."
+      },
+      "voiceover": "Connect the layers in a metric tree. The product goal sits at the top. Under it are the online metrics that show progress. Under those are the offline metrics you expect to drive them. The guardrails sit beside the tree. Each metric gets a target, and each guardrail gets a limit you will not accept."
+    },
+    {
+      "scene": 6,
+      "start": 93.9,
+      "end": 114.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Each layer catches different failures",
+        "body": "High offline quality + low adoption → wrong problem or hard to find · High adoption + rising complaints → disappointed users · Good quality + unaffordable cost → not a product"
+      },
+      "voiceover": "Why is one number never enough? High offline quality with low adoption means the feature solves the wrong problem, or is hard to find. High adoption with rising complaints means users try it and are disappointed. And good quality at a cost you cannot afford is not a product."
+    },
+    {
+      "scene": 7,
+      "start": 114.9,
+      "end": 136.8,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "hospital doctors reviewing patient chart",
+      "on_screen_text": "Exams, outcomes and safety rules",
+      "voiceover": "Think of a hospital. It does not judge a doctor only by exam results. It also looks at whether patients recover, and whether safety rules are followed. A doctor with excellent exams but poor patient outcomes needs attention. So does a feature with a high offline score but poor product results."
+    },
+    {
+      "scene": 8,
+      "start": 136.8,
+      "end": 158.2,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "lawyer reading long contract in office",
+      "on_screen_text": "Thandiwe · law firm · South Africa",
+      "voiceover": "Let's build a tree. Thandiwe Mokoena is a PM at a hypothetical law firm in South Africa that builds internal tools. Lawyers want an AI summary of key terms in long contracts, such as parties, dates, payment terms and termination rights. A lawyer always reads the summary before using it."
+    },
+    {
+      "scene": 9,
+      "start": 158.2,
+      "end": 178.3,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Goal and online metrics",
+        "body": "Goal: review contracts faster without missing key terms → Online: median review time (below baseline) · summary opened on a majority of eligible contracts in the pilot · 'needed major correction' rate (low and falling)"
+      },
+      "voiceover": "Her goal is that lawyers review contracts faster without missing key terms. Online, she tracks median review time against the current baseline, how often lawyers open the summary, and how often they mark it as needing major correction. Each metric has a target set before the pilot."
+    },
+    {
+      "scene": 10,
+      "start": 178.3,
+      "end": 202.3,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Offline metrics and guardrails",
+        "body": "Offline (60 contracts labelled by senior lawyers): key terms captured ≥ 95% · invented terms = 0. Guardrails beside the tree: response time < 30 s · cost per summary within budget · only legally approved providers."
+      },
+      "voiceover": "Offline, she uses sixty contracts labelled by senior lawyers. The target is at least ninety five percent of key terms captured correctly, and zero summaries with an invented term. Her guardrails are a response time under thirty seconds, cost within the agreed budget, and no data sent to a provider whose terms legal has not approved."
+    },
+    {
+      "scene": 11,
+      "start": 202.3,
+      "end": 222.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "Why a separate metric?",
+        "body": "'A summary can capture 9 of 10 key terms and still invent a termination date that does not exist.'"
+      },
+      "voiceover": "Her most important metric is invented terms, kept separate from correct terms. A summary can capture nine of ten key terms and still invent a termination date. For lawyers, an invented term is much worse than a missing one, so it gets its own strict target."
+    },
+    {
+      "scene": 12,
+      "start": 222.0,
+      "end": 229.3,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Measure the baseline first",
+      "voiceover": "She also records the baseline review time before the pilot starts. Without it, faster cannot be measured."
+    },
+    {
+      "scene": 13,
+      "start": 229.3,
+      "end": 248.6,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Targets before results",
+      "voiceover": "A common mistake is choosing metrics that are easy to count, such as summaries generated. Usage only shows that the feature runs. Set every target before you see the results. Tie every metric to a question in the tree, and measure a baseline before launch."
+    },
+    {
+      "scene": 14,
+      "start": 248.6,
+      "end": 272.2,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Offline, online and guardrail metrics. 2. A metric tree with a target or limit for each. 3. No single metric is enough."
+      },
+      "voiceover": "Let's recap. First, evaluate AI features on three layers: offline quality, online product results and guardrail metrics. Second, a metric tree connects the product goal to online and offline metrics, with guardrails beside it, and a target or limit for each. Third, no single metric is enough, because each layer catches failures the others miss."
+    },
+    {
+      "scene": 15,
+      "start": 272.2,
+      "end": 297.1,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Building a Test Set",
+      "voiceover": "Now it is your turn. In the exercise below, build a metric tree for your feature, with at least one metric in each layer, a target for each, and one stop metric clearly marked. It takes about twenty five minutes. In the next lesson, we build a test set and run evaluations, live on screen. See you there."
+    }
+  ]
+}

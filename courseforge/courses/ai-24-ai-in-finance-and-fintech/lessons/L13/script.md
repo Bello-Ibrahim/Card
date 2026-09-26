@@ -1,6 +1,6 @@
 # L13 Scoping Your AI Use Case Proposal | Presenter Script
 
-Course: AI-24 · Video: 5 min · Words: 660
+Course: AI-24 · Video: 5 min · Words: 688
 
 ## Hook
 We should use AI for lending. That is not a proposal. It is a wish. A committee can only say yes to something specific: a clear problem, a clear user, clear data, and a clear way to measure success.
@@ -27,7 +27,7 @@ The data is visit notes, application forms and repayment history. Known problems
 
 Her success measures are time from visit to decision, the share of summaries with errors, officer satisfaction, and approval and error rates by client group. That last one checks that clients who write in local languages are not disadvantaged.
 
-The assistant helped Joy notice an assumption she had missed: that all notes are written in one language. She did not copy its wording. She used its questions.
+The assistant helped Joy notice an assumption she had missed: that all notes are written in one language. She did not copy its wording. She used its questions. A common mistake is to describe the technology first and the problem last. Committees fund solutions to problems, not technologies. And never claim exact savings without a baseline.
 
 ## Recap
 Let's recap. First, a strong proposal answers seven questions: problem, value, users, data, model approach, human oversight and success measures. Second, a narrow, specific scope makes data, risks and success easier to define and approve. Third, use an AI assistant to test your assumptions, but write the proposal in your own words and check every fact.
@@ -43,4 +43,4 @@ Image: Navy background, a vague thought cloud on the left turning into a neat se
 - [VERSION] Free-plan access and data-use terms of Claude and ChatGPT must be checked before recording.
 - Joy Villanueva and Bayanihan Microfinance are fictional. No savings figures are claimed; the business value is measured against a four-week baseline study, as in content.md.
 - Any AI prompts shown on screen are the three examples from content.md. Learners use only synthetic or described data, never real customer data.
-- Scene 7 hero clip is about 7 seconds and the scene is about 17 seconds: hold the clip with a slow push-in, then cut to scene 8.
+- Scene 7 hero clip is about 7 seconds and the scene is about 18 seconds: hold the clip with a slow push-in, then cut to scene 8.

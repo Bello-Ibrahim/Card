@@ -49,4 +49,4 @@ Image: Navy background, a simple horizontal value chain of five teal icons (ID c
 - No facts to verify: all institutions and people are hypothetical, and the lesson states no statistics or country-specific rules (content.md Review Flags: None).
 - Mavuno Pay, Aurora Digital, Rheinfeld Insurance and Juliana Costa are fictional. Stock footage must not show a real bank, insurer or mobile-money brand, logo or card design.
 - No investment advice anywhere in this course. Any data shown on screen is synthetic.
-- Scene 7 hero clip is about 7 seconds and the scene is about 17 seconds: hold the clip with a slow push-in, then cut to scene 8.
+- Scene 8 hero clip is about 7 seconds and the scene is about 16 seconds: hold the clip with a slow push-in, then cut to scene 9.

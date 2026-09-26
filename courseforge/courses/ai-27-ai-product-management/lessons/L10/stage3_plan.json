@@ -1,0 +1,147 @@
+{
+  "title": "Working with Data Scientists and Engineers",
+  "thumbnail": {
+    "headline": "Ports, Not Timetables",
+    "image": "Navy background, a sailing boat on a route line with three port markers, headline in teal Inter Bold.",
+    "slide": {
+      "layout": "title",
+      "title": "Ports, Not Timetables",
+      "body": "A sailing route with three port markers labelled 'decide'. Small tag: AI Product Management · Lesson 10."
+    }
+  },
+  "production_notes": [
+    "[VERSION] Claude free-plan limits and data-use terms must be checked before recording (optional exercise tool).",
+    "Wanjiru Kamau, the data scientist Otieno and the savings and loans cooperative app in Kenya are hypothetical; no real app or logo in stock footage.",
+    "The experiment numbers (85 percent accuracy, 200 test messages, at least 60 in Kiswahili or mixed language, two weeks) come from the content.md worked example."
+  ],
+  "sections": {
+    "Hook": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "When will it be ready? For an AI feature, the honest answer is often, we do not know yet if it will be good enough. A PM who plans for that answer builds trust. A PM who ignores it gets surprises.",
+        "on_screen_text": "When will it be ready?"
+      }
+    ],
+    "Explain": [
+      {
+        "visual_type": "slide",
+        "voiceover": "You now have metrics and a test set. The next step is working well with the people who build the feature.",
+        "slide": {
+          "layout": "title",
+          "title": "Working with Data Scientists and Engineers",
+          "body": "AI Product Management · Lesson 10 of 15"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "AI work is less predictable than traditional feature work. The team does not know in advance if a model, a prompt or a data set will reach the quality target. Some ideas reach it quickly. Others need several attempts, and a few never reach it with the available data. This is normal, not a sign of a weak team.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Why AI timelines vary",
+          "body": "Three paths from 'start' to a quality target line: one reaches it fast, one after several attempts, one never reaches it with the available data."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "So plan in experiment cycles instead of fixed launch dates. Each cycle has a question, such as can we reach an eighty five percent pass rate on common cases? It has a time box, for example two weeks. It has an agreed evaluation. And it ends with a decision: continue, change the approach, or stop.",
+        "slide": {
+          "layout": "diagram",
+          "title": "An experiment cycle",
+          "body": "Circle of four steps: Question → Time box (e.g. two weeks) → Agreed evaluation (test set and metrics) → Decision: continue · change · stop."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Shared vocabulary makes these talks faster. You do not need to build models, but use these terms correctly: test set, baseline, precision and recall, latency, prompt, context, fine tuning, and drift, which is quality changing over time because inputs change.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Shared vocabulary",
+          "body": "Test set · Baseline · Precision and recall · Latency · Prompt · Context · Fine-tuning · Drift (quality changes as inputs change)"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Ask the team for four things: written assumptions, evaluation results broken down by case type and user group, known limits, and model documentation, including the model version, data terms and what changed. In return, give them a clear problem, the scope, the failure design, the cost limits and fast decisions.",
+        "slide": {
+          "layout": "comparison",
+          "title": "What each side gives",
+          "body": "PM asks for: assumptions · evaluation results by group · known limits · model documentation. PM gives: clear problem · scope and failure design · cost limits · fast decisions."
+        }
+      },
+      {
+        "visual_type": "hero_broll",
+        "voiceover": "Think of crossing the sea by sailing boat instead of by train. A train has a timetable. A sailing crew knows the destination and the route, but checks the wind every day. They agree in advance at which ports they will decide to continue or wait. Experiment cycles are those ports.",
+        "broll_tool": "FLOW",
+        "broll_prompt": "A small mixed crew of three, an East African woman, a Southeast Asian man and a Latin American woman, adjust the sails of a sailing boat on open blue water and look towards a distant harbour; slow aerial orbit from wide to medium shot; bright late-afternoon sunlight with gentle sea sparkle; cinematic, natural colours; 8 seconds; no readable text, no logos, no boat names.",
+        "on_screen_text": "Experiment cycles are the ports"
+      }
+    ],
+    "Demonstrate": [
+      {
+        "visual_type": "stock",
+        "voiceover": "Let's see an example. Wanjiru Kamau is a PM at a hypothetical savings and loans cooperative app in Kenya. She wants to sort member messages into topics, such as loan question, payment problem and account access, so the right staff member replies first.",
+        "stock_query": "person sending message on phone in Nairobi",
+        "on_screen_text": "Wanjiru · cooperative app · Kenya"
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Her head of product asks for a launch date. The data scientist, Otieno, cannot promise quality in a fixed time. Messages arrive in English, Kiswahili and a mix of both, and there are only a few hundred labelled examples.",
+        "slide": {
+          "layout": "comparison",
+          "title": "Date or experiment?",
+          "body": "Head of product: 'What is the launch date?' Otieno: English, Kiswahili and mixed messages · only a few hundred labelled examples."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "So they agree on a two week experiment. Can a classifier reach at least eighty five percent accuracy on two hundred test messages, with at least sixty in Kiswahili or mixed language? They will measure accuracy by language, and precision for payment problems, because wrong urgent flags waste staff time.",
+        "slide": {
+          "layout": "bullets",
+          "title": "The two-week experiment",
+          "body": "Question: ≥ 85% accuracy on 200 labelled test messages (≥ 60 Kiswahili or mixed) · Evaluation: accuracy overall and by language · precision for 'payment problem'"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "The decision rule is written first. If the target is met, run a pilot with one support team. If it is close, spend one more cycle labelling messages. If it is far below, switch to simple rule based routing, and collect labels.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Decision rule",
+          "body": "Result → three arrows: Met → pilot with one support team · Close → one more cycle, label more messages · Far below → rule-based routing, collect labels."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "After two weeks, Otieno shares the results: good accuracy in English, lower in mixed language messages. Wanjiru does not treat this as a failure. She chooses the close path. Her head of product gets a clear update: what was learned, the next decision point, and the fallback.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Week two results",
+          "body": "English: good accuracy · Mixed language: lower → 'Close' path: label more mixed-language messages. Update to leadership: what we learned · next decision point · fallback."
+        }
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "A common mistake is passing a fixed date straight from leadership to the team, then treating a missed quality target as a delivery failure. That pushes teams to launch below the bar. Instead, share a time boxed experiment, a quality target and a decision rule with leadership before the work starts.",
+        "on_screen_text": "Replace the date with an experiment"
+      }
+    ],
+    "Recap": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, AI timelines are less predictable, because quality is not known in advance, so plan in time boxed experiment cycles with a decision at the end. Second, ask the team for assumptions, results by group, known limits and model documentation. Third, give them a clear problem, scope, failure design, cost limits and fast decisions in return.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. Time-boxed experiment cycles with a decision. 2. Ask for assumptions, results, limits, documentation. 3. Give problem, scope, failure design, cost limits, fast decisions."
+        }
+      }
+    ],
+    "CTA": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Now it is your turn. In the exercise below, write a one page brief for your technical team, with the feature goal, your assumptions, one experiment cycle and five open questions. It takes about twenty five minutes. Next week, we start with responsible AI risks and guardrails. See you there.",
+        "on_screen_text": "Next: Responsible AI Risks and Guardrails"
+      }
+    ]
+  }
+}

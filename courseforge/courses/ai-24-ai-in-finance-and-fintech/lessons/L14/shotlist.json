@@ -1,7 +1,7 @@
 {
   "course_id": "AI-24",
   "lesson_id": "L14",
-  "duration_s": 247.4,
+  "duration_s": 295.0,
   "thumbnail": {
     "headline": "Go, Pilot or No-Go?",
     "slide": {
@@ -49,20 +49,33 @@
     {
       "scene": 4,
       "start": 53.6,
-      "end": 66.5,
+      "end": 69.5,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
         "layout": "diagram",
-        "title": "Six risk categories",
-        "body": "Six tiles with lesson links: Fairness (L06, L07) · Privacy (L11) · Explainability (L10) · Security · Third-party · Operational (L12)"
+        "title": "Six risk categories (1)",
+        "body": "Three tiles: Fairness: worse outcomes for some groups (L06, L07) · Privacy: no lawful basis or shared too widely (L11) · Explainability: outputs not understood (L10)"
       },
-      "voiceover": "Cover all six categories from this course. Fairness, privacy and data protection, explainability, security, third-party, and operational risks, such as drift, staff over-trusting outputs, or no fallback process."
+      "voiceover": "Cover all six categories from this course. Fairness means outcomes are worse for some groups. Privacy means data is used without a lawful basis, or shared too widely. Explainability means staff or customers cannot understand the outputs."
     },
     {
       "scene": 5,
-      "start": 66.5,
-      "end": 89.6,
+      "start": 69.5,
+      "end": 89.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Six risk categories (2)",
+        "body": "Three tiles: Security: leaks, model manipulation, misuse · Third-party: vendor changes model, reuses data, stops service · Operational: errors, drift, over-trust, no fallback (L12)"
+      },
+      "voiceover": "Security covers data leaks, manipulation of the model, or misuse of the assistant. Third-party covers a vendor that changes its model, uses your data for its own purposes, or stops the service. And operational covers errors, drift, staff over-trusting outputs, or no fallback process."
+    },
+    {
+      "scene": 6,
+      "start": 89.2,
+      "end": 112.3,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -73,28 +86,28 @@
       "voiceover": "Then make a recommendation. Go means risks are low or well controlled, so you launch with monitoring. Pilot means the value looks real, but some risks are uncertain, so you test at small scale for a set time. No-go means a high risk cannot be controlled, or the value does not justify it."
     },
     {
-      "scene": 6,
-      "start": 89.6,
-      "end": 101.2,
+      "scene": 7,
+      "start": 112.3,
+      "end": 123.9,
       "section": "Explain",
       "visual_type": "text",
       "on_screen_text": "A pilot needs an end date",
       "voiceover": "A pilot is not a way to avoid a decision. It needs a clear end date, clear measures, and a named person who decides what happens next."
     },
     {
-      "scene": 7,
-      "start": 101.2,
-      "end": 117.5,
+      "scene": 8,
+      "start": 123.9,
+      "end": 143.6,
       "section": "Explain",
       "visual_type": "stock",
       "stock_query": "airline pilot checking cockpit checklist",
       "on_screen_text": "Check every control before take-off",
-      "voiceover": "A risk register is like a pre-flight checklist. The pilot does not refuse to fly because things can go wrong. She lists what could go wrong, checks each control, and flies only when the list is complete."
+      "voiceover": "A risk register is like a pre-flight checklist. The pilot does not refuse to fly because things can go wrong. She lists what could go wrong, checks each control, and flies only when the list is complete. If a critical item fails, the flight waits."
     },
     {
-      "scene": 8,
-      "start": 117.5,
-      "end": 141.1,
+      "scene": 9,
+      "start": 143.6,
+      "end": 167.2,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -105,9 +118,9 @@
       "voiceover": "Rafael Dizon is a compliance officer at Bayanihan Microfinance. He builds the register for Joy's visit-note assistant from the last lesson. The fairness risk: summaries of notes in local languages contain more errors. Likelihood two, impact three, score six. Controls: test error rates by language before launch, and officers check every summary. Residual three."
     },
     {
-      "scene": 9,
-      "start": 141.1,
-      "end": 161.2,
+      "scene": 10,
+      "start": 167.2,
+      "end": 186.9,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -115,12 +128,12 @@
         "title": "Rafael's register (2)",
         "body": "Explainability 2 × 2 = 4 → residual 2. Security 2 × 3 = 6 → residual 3. Third-party 2 × 2 = 4 → residual 2. Operational: officers sign without reading · 3 × 2 = 6 · random supervisor checks, error-rate monitoring · Branch supervisor · residual 4 (highest)."
       },
-      "voiceover": "Other rows cover privacy, explainability, staff pasting data into public tools, and a vendor changing its model. The operational risk is officers signing summaries without reading them. Likelihood three, impact two. With random supervisor checks and error monitoring, the residual is four, the highest in the register."
+      "voiceover": "Other rows cover explainability, staff pasting data into public tools, and a vendor changing its model. The operational risk is officers signing summaries without reading them. Likelihood three, impact two. With random supervisor checks and error monitoring, the residual is four, the highest in the register."
     },
     {
-      "scene": 10,
-      "start": 161.2,
-      "end": 182.2,
+      "scene": 11,
+      "start": 186.9,
+      "end": 207.9,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -131,18 +144,31 @@
       "voiceover": "The fairness risk needs evidence that only a real test can give. So Rafael recommends a pilot: two branches, three months, with a stop rule if the summary error rate for any language group is clearly higher than for English notes. The credit committee chair decides at the end."
     },
     {
-      "scene": 11,
-      "start": 182.2,
-      "end": 199.8,
+      "scene": 12,
+      "start": 207.9,
+      "end": 229.8,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Finishing your capstone",
+        "body": "Principles check: six lines (L11), each 'how we meet it' + 'to confirm locally' · Recommendation paragraph: go, pilot or no-go, with reasons · Pilot: scope, length, stop rule"
+      },
+      "voiceover": "Your capstone also needs a short principles check. For each of the six principles from lesson eleven, write one line on how your proposal meets it, and what must be confirmed locally. Then write your recommendation in one paragraph, with reasons. For a pilot, give its scope, length and stop rule."
+    },
+    {
+      "scene": 13,
+      "start": 229.8,
+      "end": 247.4,
       "section": "Demonstrate",
       "visual_type": "text",
       "on_screen_text": "Specific controls, honest scores",
       "voiceover": "A common mistake is weak controls, such as be careful or monitor the model. A control says who does what, how often, and what happens at a limit. And do not score every risk as one. Committees trust honest registers more."
     },
     {
-      "scene": 12,
-      "start": 199.8,
-      "end": 225.5,
+      "scene": 14,
+      "start": 247.4,
+      "end": 273.1,
       "section": "Recap",
       "visual_type": "slide",
       "slide": {
@@ -153,9 +179,9 @@
       "voiceover": "Let's recap. First, a risk register records each risk with its category, likelihood, impact, score, controls, owner and residual rating. Second, cover fairness, privacy, explainability, security, third-party and operational risks, with specific controls for each. Third, end with a clear go, pilot or no-go recommendation, and give any pilot an end date, measures and a named decision-maker."
     },
     {
-      "scene": 13,
-      "start": 225.5,
-      "end": 247.4,
+      "scene": 15,
+      "start": 273.1,
+      "end": 295.0,
       "section": "CTA",
       "visual_type": "presenter_full",
       "on_screen_text": "Submit your capstone proposal",

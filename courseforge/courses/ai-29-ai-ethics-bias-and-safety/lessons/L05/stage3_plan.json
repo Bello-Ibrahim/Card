@@ -33,16 +33,16 @@
        "voiceover": "And removing names is often not enough. Think of a forty-seven-year-old female teacher at the only secondary school in a small town, admitted with a broken wrist. There is no name, but many people in that town would know who it is.",
        "slide": {"layout": "quote", "title": "No name, still identifiable", "body": "\"A 47-year-old female teacher at the only secondary school in a small town, admitted with a broken wrist.\" Caption: combined details can identify a person."}},
       {"visual_type": "slide",
-       "voiceover": "So ask one question. Does the AI need this detail to do the task? Often it does not. You can replace real details with placeholders, describe a general situation instead of a real case, or use tools your organisation has approved.",
+       "voiceover": "So ask one question. Does the AI need this detail to do the task? Often it does not. You can replace real details with placeholders, describe a general situation instead of a real case, or use tools your organisation has approved. The task still gets done, but the private details stay with you.",
        "slide": {"layout": "bullets", "title": "Does the AI need this detail?", "body": "Use placeholders: [PATIENT], [DATE], [CLIENT] · Describe a general situation · Use approved tools for sensitive data"}},
       {"visual_type": "stock",
-       "voiceover": "Typing into an AI tool is like sending a letter through a large postal company. Most letters arrive safely. But depending on the service, the letter may be opened for checks, copied or kept in an archive. You would not put your bank PIN in a normal letter.",
+       "voiceover": "Typing into an AI tool is like sending a letter through a large postal company. Most letters arrive safely. But depending on the service, the letter may be opened for checks, copied or kept in an archive. You would not put your bank PIN in a normal letter. Apply the same care to what you type.",
        "stock_query": "letters sorted in large post office",
        "on_screen_text": "Would you post it?"}
     ],
     "Demonstrate": [
       {"visual_type": "stock",
-       "voiceover": "Let's look at an example. Maricel Santos is a nurse at a hospital in the Philippines. At the end of a long shift, she wants a quick summary of a patient's notes for the next shift.",
+       "voiceover": "Let's look at an example. Maricel Santos is a nurse at a hospital in the Philippines. At the end of a long shift, she wants a quick summary of a patient's notes for the next shift. She is tired, and she wants to save time.",
        "stock_query": "tired nurse at hospital station night",
        "on_screen_text": "Maricel's shift · the Philippines"},
       {"visual_type": "slide",
@@ -52,15 +52,15 @@
        "voiceover": "The better way. Maricel realises the chatbot does not need the patient's details at all. What she really needs is a clear handover structure. So she asks for a short template for a general adult patient, with headings for condition, medicines, observations, concerns and next actions.",
        "slide": {"layout": "quote", "title": "The better way", "body": "\"I am a nurse writing an end-of-shift handover. Give me a short template with headings for a general adult patient on a medical ward, with space for condition, medicines, observations, concerns and actions for the next shift.\""}},
       {"visual_type": "slide",
-       "voiceover": "The chatbot gives her a template. She fills it in herself, on the hospital's own system. The patient data never leaves the hospital.",
+       "voiceover": "The chatbot gives her a template. She fills it in herself, on the hospital's own system. The patient data never leaves the hospital. She gets the help she needed, and she protects her patient.",
        "slide": {"layout": "diagram", "title": "Data stays inside", "body": "Chatbot → empty template → Maricel fills it in on the hospital system (building icon with a padlock). Caption: patient data never leaves."}},
       {"visual_type": "text",
-       "voiceover": "A common mistake is to think that removing a name, or deleting a chat afterwards, makes a prompt safe. Instead, decide what to share before you type. Legal duties about personal data are covered in course AI thirty.",
+       "voiceover": "A common mistake is to think that removing a name, or deleting a chat afterwards, makes a prompt safe. Instead, decide what to share before you type. As you saw, a person can be identified from other details. Remove every detail the task does not need, and use approved tools for sensitive work. Legal duties about personal data are covered in course AI thirty.",
        "on_screen_text": "Decide before you type"}
     ],
     "Recap": [
       {"visual_type": "slide",
-       "voiceover": "Let's recap. First, what you type into an AI tool may be stored, reviewed or used to improve the service, depending on the tool, the plan and your settings. Second, personal and confidential data need special care, and removing names alone is often not enough. Third, before you type, ask whether the AI needs each detail.",
+       "voiceover": "Let's recap. First, what you type into an AI tool may be stored, reviewed or used to improve the service, depending on the tool, the plan and your settings. Second, personal and confidential data need special care, and removing names alone is often not enough. Third, before you type, ask whether the AI needs each detail. Use placeholders, general descriptions or approved tools instead.",
        "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Your text may be stored, reviewed or used. 2. Personal and confidential data need care; names alone are not enough. 3. Ask: does the AI need this detail?"}}
     ],
     "CTA": [

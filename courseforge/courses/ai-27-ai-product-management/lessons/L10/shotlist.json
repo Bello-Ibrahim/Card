@@ -1,0 +1,193 @@
+{
+  "course_id": "AI-27",
+  "lesson_id": "L10",
+  "duration_s": 298.7,
+  "thumbnail": {
+    "headline": "Ports, Not Timetables",
+    "slide": {
+      "layout": "title",
+      "title": "Ports, Not Timetables",
+      "body": "A sailing route with three port markers labelled 'decide'. Small tag: AI Product Management · Lesson 10."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 17.6,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "When will it be ready?",
+      "voiceover": "When will it be ready? For an AI feature, the honest answer is often, we do not know yet if it will be good enough. A PM who plans for that answer builds trust. A PM who ignores it gets surprises."
+    },
+    {
+      "scene": 2,
+      "start": 17.6,
+      "end": 26.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Working with Data Scientists and Engineers",
+        "body": "AI Product Management · Lesson 10 of 15"
+      },
+      "voiceover": "You now have metrics and a test set. The next step is working well with the people who build the feature."
+    },
+    {
+      "scene": 3,
+      "start": 26.6,
+      "end": 51.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Why AI timelines vary",
+        "body": "Three paths from 'start' to a quality target line: one reaches it fast, one after several attempts, one never reaches it with the available data."
+      },
+      "voiceover": "AI work is less predictable than traditional feature work. The team does not know in advance if a model, a prompt or a data set will reach the quality target. Some ideas reach it quickly. Others need several attempts, and a few never reach it with the available data. This is normal, not a sign of a weak team."
+    },
+    {
+      "scene": 4,
+      "start": 51.9,
+      "end": 75.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "An experiment cycle",
+        "body": "Circle of four steps: Question → Time box (e.g. two weeks) → Agreed evaluation (test set and metrics) → Decision: continue · change · stop."
+      },
+      "voiceover": "So plan in experiment cycles instead of fixed launch dates. Each cycle has a question, such as can we reach an eighty five percent pass rate on common cases? It has a time box, for example two weeks. It has an agreed evaluation. And it ends with a decision: continue, change the approach, or stop."
+    },
+    {
+      "scene": 5,
+      "start": 75.5,
+      "end": 92.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Shared vocabulary",
+        "body": "Test set · Baseline · Precision and recall · Latency · Prompt · Context · Fine-tuning · Drift (quality changes as inputs change)"
+      },
+      "voiceover": "Shared vocabulary makes these talks faster. You do not need to build models, but use these terms correctly: test set, baseline, precision and recall, latency, prompt, context, fine tuning, and drift, which is quality changing over time because inputs change."
+    },
+    {
+      "scene": 6,
+      "start": 92.6,
+      "end": 114.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "What each side gives",
+        "body": "PM asks for: assumptions · evaluation results by group · known limits · model documentation. PM gives: clear problem · scope and failure design · cost limits · fast decisions."
+      },
+      "voiceover": "Ask the team for four things: written assumptions, evaluation results broken down by case type and user group, known limits, and model documentation, including the model version, data terms and what changed. In return, give them a clear problem, the scope, the failure design, the cost limits and fast decisions."
+    },
+    {
+      "scene": 7,
+      "start": 114.0,
+      "end": 135.9,
+      "section": "Explain",
+      "visual_type": "hero_broll",
+      "broll_tool": "FLOW",
+      "broll_prompt": "A small mixed crew of three, an East African woman, a Southeast Asian man and a Latin American woman, adjust the sails of a sailing boat on open blue water and look towards a distant harbour; slow aerial orbit from wide to medium shot; bright late-afternoon sunlight with gentle sea sparkle; cinematic, natural colours; 8 seconds; no readable text, no logos, no boat names.",
+      "on_screen_text": "Experiment cycles are the ports",
+      "voiceover": "Think of crossing the sea by sailing boat instead of by train. A train has a timetable. A sailing crew knows the destination and the route, but checks the wind every day. They agree in advance at which ports they will decide to continue or wait. Experiment cycles are those ports."
+    },
+    {
+      "scene": 8,
+      "start": 135.9,
+      "end": 154.3,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "person sending message on phone in Nairobi",
+      "on_screen_text": "Wanjiru · cooperative app · Kenya",
+      "voiceover": "Let's see an example. Wanjiru Kamau is a PM at a hypothetical savings and loans cooperative app in Kenya. She wants to sort member messages into topics, such as loan question, payment problem and account access, so the right staff member replies first."
+    },
+    {
+      "scene": 9,
+      "start": 154.3,
+      "end": 171.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Date or experiment?",
+        "body": "Head of product: 'What is the launch date?' Otieno: English, Kiswahili and mixed messages · only a few hundred labelled examples."
+      },
+      "voiceover": "Her head of product asks for a launch date. The data scientist, Otieno, cannot promise quality in a fixed time. Messages arrive in English, Kiswahili and a mix of both, and there are only a few hundred labelled examples."
+    },
+    {
+      "scene": 10,
+      "start": 171.0,
+      "end": 192.4,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "The two-week experiment",
+        "body": "Question: ≥ 85% accuracy on 200 labelled test messages (≥ 60 Kiswahili or mixed) · Evaluation: accuracy overall and by language · precision for 'payment problem'"
+      },
+      "voiceover": "So they agree on a two week experiment. Can a classifier reach at least eighty five percent accuracy on two hundred test messages, with at least sixty in Kiswahili or mixed language? They will measure accuracy by language, and precision for payment problems, because wrong urgent flags waste staff time."
+    },
+    {
+      "scene": 11,
+      "start": 192.4,
+      "end": 210.4,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Decision rule",
+        "body": "Result → three arrows: Met → pilot with one support team · Close → one more cycle, label more messages · Far below → rule-based routing, collect labels."
+      },
+      "voiceover": "The decision rule is written first. If the target is met, run a pilot with one support team. If it is close, spend one more cycle labelling messages. If it is far below, switch to simple rule based routing, and collect labels."
+    },
+    {
+      "scene": 12,
+      "start": 210.4,
+      "end": 230.5,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Week two results",
+        "body": "English: good accuracy · Mixed language: lower → 'Close' path: label more mixed-language messages. Update to leadership: what we learned · next decision point · fallback."
+      },
+      "voiceover": "After two weeks, Otieno shares the results: good accuracy in English, lower in mixed language messages. Wanjiru does not treat this as a failure. She chooses the close path. Her head of product gets a clear update: what was learned, the next decision point, and the fallback."
+    },
+    {
+      "scene": 13,
+      "start": 230.5,
+      "end": 252.4,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Replace the date with an experiment",
+      "voiceover": "A common mistake is passing a fixed date straight from leadership to the team, then treating a missed quality target as a delivery failure. That pushes teams to launch below the bar. Instead, share a time boxed experiment, a quality target and a decision rule with leadership before the work starts."
+    },
+    {
+      "scene": 14,
+      "start": 252.4,
+      "end": 277.3,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Time-boxed experiment cycles with a decision. 2. Ask for assumptions, results, limits, documentation. 3. Give problem, scope, failure design, cost limits, fast decisions."
+      },
+      "voiceover": "Let's recap. First, AI timelines are less predictable, because quality is not known in advance, so plan in time boxed experiment cycles with a decision at the end. Second, ask the team for assumptions, results by group, known limits and model documentation. Third, give them a clear problem, scope, failure design, cost limits and fast decisions in return."
+    },
+    {
+      "scene": 15,
+      "start": 277.3,
+      "end": 298.7,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Responsible AI Risks and Guardrails",
+      "voiceover": "Now it is your turn. In the exercise below, write a one page brief for your technical team, with the feature goal, your assumptions, one experiment cycle and five open questions. It takes about twenty five minutes. Next week, we start with responsible AI risks and guardrails. See you there."
+    }
+  ]
+}

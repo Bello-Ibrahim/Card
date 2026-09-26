@@ -45,4 +45,4 @@ Image: Navy background, a profit-and-loss table with one AI-drafted sentence und
 - [VERSION] Free-plan access and data-use terms of Claude and ChatGPT must be checked before recording.
 - Kaveri Home Appliances and Arjun Mehta are synthetic and fictional. Figures are in thousands of rupees and must match content.md exactly (revenue 12,000 vs 11,400; gross margin 40.0% vs 38.0%; gross profit −468; operating expenses +150; operating profit −618, −34.3%).
 - No forecasts or investment advice on screen or in captions; the commentary describes past results only.
-- Scene 11 hero clip is about 7 seconds and the scene is about 20 seconds: hold the clip with a slow push-in, then cut to scene 12.
+- Scene 7 hero clip is about 7 seconds and the scene is about 18 seconds: hold the clip with a slow push-in, then cut to scene 8.

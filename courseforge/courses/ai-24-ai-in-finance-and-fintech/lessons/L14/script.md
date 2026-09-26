@@ -1,6 +1,6 @@
 # L14 Risk and Compliance Assessment | Presenter Script
 
-Course: AI-24 · Video: 5 min · Words: 577
+Course: AI-24 · Video: 5 min · Words: 688
 
 ## Hook
 Every AI proposal promises benefits. But the committee's real question is different. What could go wrong, how bad would it be, and what will you do about it? A clear risk register answers that question on one page.
@@ -10,20 +10,24 @@ In the last lesson, you scoped your proposal. Now, in this final lesson, you ass
 
 For each risk, you write what could go wrong, as a cause and an effect. You give it a category. You rate likelihood and impact from one to three, and multiply them for a score from one to nine. Then you add controls, an owner, and a residual rating after the controls.
 
-Cover all six categories from this course. Fairness, privacy and data protection, explainability, security, third-party, and operational risks, such as drift, staff over-trusting outputs, or no fallback process.
+Cover all six categories from this course. Fairness means outcomes are worse for some groups. Privacy means data is used without a lawful basis, or shared too widely. Explainability means staff or customers cannot understand the outputs.
+
+Security covers data leaks, manipulation of the model, or misuse of the assistant. Third-party covers a vendor that changes its model, uses your data for its own purposes, or stops the service. And operational covers errors, drift, staff over-trusting outputs, or no fallback process.
 
 Then make a recommendation. Go means risks are low or well controlled, so you launch with monitoring. Pilot means the value looks real, but some risks are uncertain, so you test at small scale for a set time. No-go means a high risk cannot be controlled, or the value does not justify it.
 
 A pilot is not a way to avoid a decision. It needs a clear end date, clear measures, and a named person who decides what happens next.
 
-A risk register is like a pre-flight checklist. The pilot does not refuse to fly because things can go wrong. She lists what could go wrong, checks each control, and flies only when the list is complete.
+A risk register is like a pre-flight checklist. The pilot does not refuse to fly because things can go wrong. She lists what could go wrong, checks each control, and flies only when the list is complete. If a critical item fails, the flight waits.
 
 ## Demonstrate
 Rafael Dizon is a compliance officer at Bayanihan Microfinance. He builds the register for Joy's visit-note assistant from the last lesson. The fairness risk: summaries of notes in local languages contain more errors. Likelihood two, impact three, score six. Controls: test error rates by language before launch, and officers check every summary. Residual three.
 
-Other rows cover privacy, explainability, staff pasting data into public tools, and a vendor changing its model. The operational risk is officers signing summaries without reading them. Likelihood three, impact two. With random supervisor checks and error monitoring, the residual is four, the highest in the register.
+Other rows cover explainability, staff pasting data into public tools, and a vendor changing its model. The operational risk is officers signing summaries without reading them. Likelihood three, impact two. With random supervisor checks and error monitoring, the residual is four, the highest in the register.
 
 The fairness risk needs evidence that only a real test can give. So Rafael recommends a pilot: two branches, three months, with a stop rule if the summary error rate for any language group is clearly higher than for English notes. The credit committee chair decides at the end.
+
+Your capstone also needs a short principles check. For each of the six principles from lesson eleven, write one line on how your proposal meets it, and what must be confirmed locally. Then write your recommendation in one paragraph, with reasons. For a pilot, give its scope, length and stop rule.
 
 A common mistake is weak controls, such as be careful or monitor the model. A control says who does what, how often, and what happens at a limit. And do not score every risk as one. Committees trust honest registers more.
 

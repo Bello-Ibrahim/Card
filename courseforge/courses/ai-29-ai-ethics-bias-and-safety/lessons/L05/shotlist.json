@@ -1,7 +1,7 @@
 {
   "course_id": "AI-29",
   "lesson_id": "L05",
-  "duration_s": 266.2,
+  "duration_s": 297.8,
   "thumbnail": {
     "headline": "Where Does Your Prompt Go?",
     "slide": {
@@ -72,7 +72,7 @@
     {
       "scene": 6,
       "start": 97.3,
-      "end": 114.9,
+      "end": 120.0,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -80,32 +80,32 @@
         "title": "Does the AI need this detail?",
         "body": "Use placeholders: [PATIENT], [DATE], [CLIENT] · Describe a general situation · Use approved tools for sensitive data"
       },
-      "voiceover": "So ask one question. Does the AI need this detail to do the task? Often it does not. You can replace real details with placeholders, describe a general situation instead of a real case, or use tools your organisation has approved."
+      "voiceover": "So ask one question. Does the AI need this detail to do the task? Often it does not. You can replace real details with placeholders, describe a general situation instead of a real case, or use tools your organisation has approved. The task still gets done, but the private details stay with you."
     },
     {
       "scene": 7,
-      "start": 114.9,
-      "end": 135.5,
+      "start": 120.0,
+      "end": 144.0,
       "section": "Explain",
       "visual_type": "stock",
       "stock_query": "letters sorted in large post office",
       "on_screen_text": "Would you post it?",
-      "voiceover": "Typing into an AI tool is like sending a letter through a large postal company. Most letters arrive safely. But depending on the service, the letter may be opened for checks, copied or kept in an archive. You would not put your bank PIN in a normal letter."
+      "voiceover": "Typing into an AI tool is like sending a letter through a large postal company. Most letters arrive safely. But depending on the service, the letter may be opened for checks, copied or kept in an archive. You would not put your bank PIN in a normal letter. Apply the same care to what you type."
     },
     {
       "scene": 8,
-      "start": 135.5,
-      "end": 150.9,
+      "start": 144.0,
+      "end": 163.3,
       "section": "Demonstrate",
       "visual_type": "stock",
       "stock_query": "tired nurse at hospital station night",
       "on_screen_text": "Maricel's shift · the Philippines",
-      "voiceover": "Let's look at an example. Maricel Santos is a nurse at a hospital in the Philippines. At the end of a long shift, she wants a quick summary of a patient's notes for the next shift."
+      "voiceover": "Let's look at an example. Maricel Santos is a nurse at a hospital in the Philippines. At the end of a long shift, she wants a quick summary of a patient's notes for the next shift. She is tired, and she wants to save time."
     },
     {
       "scene": 9,
-      "start": 150.9,
-      "end": 170.2,
+      "start": 163.3,
+      "end": 182.6,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -117,8 +117,8 @@
     },
     {
       "scene": 10,
-      "start": 170.2,
-      "end": 189.9,
+      "start": 182.6,
+      "end": 202.3,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -130,8 +130,8 @@
     },
     {
       "scene": 11,
-      "start": 189.9,
-      "end": 199.8,
+      "start": 202.3,
+      "end": 216.9,
       "section": "Demonstrate",
       "visual_type": "slide",
       "slide": {
@@ -139,21 +139,21 @@
         "title": "Data stays inside",
         "body": "Chatbot → empty template → Maricel fills it in on the hospital system (building icon with a padlock). Caption: patient data never leaves."
       },
-      "voiceover": "The chatbot gives her a template. She fills it in herself, on the hospital's own system. The patient data never leaves the hospital."
+      "voiceover": "The chatbot gives her a template. She fills it in herself, on the hospital's own system. The patient data never leaves the hospital. She gets the help she needed, and she protects her patient."
     },
     {
       "scene": 12,
-      "start": 199.8,
-      "end": 216.1,
+      "start": 216.9,
+      "end": 244.3,
       "section": "Demonstrate",
       "visual_type": "text",
       "on_screen_text": "Decide before you type",
-      "voiceover": "A common mistake is to think that removing a name, or deleting a chat afterwards, makes a prompt safe. Instead, decide what to share before you type. Legal duties about personal data are covered in course AI thirty."
+      "voiceover": "A common mistake is to think that removing a name, or deleting a chat afterwards, makes a prompt safe. Instead, decide what to share before you type. As you saw, a person can be identified from other details. Remove every detail the task does not need, and use approved tools for sensitive work. Legal duties about personal data are covered in course AI thirty."
     },
     {
       "scene": 13,
-      "start": 216.1,
-      "end": 240.1,
+      "start": 244.3,
+      "end": 271.7,
       "section": "Recap",
       "visual_type": "slide",
       "slide": {
@@ -161,12 +161,12 @@
         "title": "Key takeaways",
         "body": "1. Your text may be stored, reviewed or used. 2. Personal and confidential data need care; names alone are not enough. 3. Ask: does the AI need this detail?"
       },
-      "voiceover": "Let's recap. First, what you type into an AI tool may be stored, reviewed or used to improve the service, depending on the tool, the plan and your settings. Second, personal and confidential data need special care, and removing names alone is often not enough. Third, before you type, ask whether the AI needs each detail."
+      "voiceover": "Let's recap. First, what you type into an AI tool may be stored, reviewed or used to improve the service, depending on the tool, the plan and your settings. Second, personal and confidential data need special care, and removing names alone is often not enough. Third, before you type, ask whether the AI needs each detail. Use placeholders, general descriptions or approved tools instead."
     },
     {
       "scene": 14,
-      "start": 240.1,
-      "end": 266.2,
+      "start": 271.7,
+      "end": 297.8,
       "section": "CTA",
       "visual_type": "presenter_full",
       "on_screen_text": "Next: Safety and Human Oversight",

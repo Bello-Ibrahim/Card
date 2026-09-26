@@ -1,0 +1,200 @@
+{
+  "course_id": "AI-27",
+  "lesson_id": "L09",
+  "duration_s": 298.3,
+  "thumbnail": {
+    "headline": "Test for Night Driving",
+    "slide": {
+      "layout": "title",
+      "title": "Test for Night Driving",
+      "body": "Night road with rain on the left; a small score sheet with columns Human and Judge on the right. Small tag: AI Product Management · Lesson 9."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 14.6,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Meet your users before launch",
+      "voiceover": "Test an AI feature only with questions from a team meeting, and it will pass. Real users will ask everything else. A good test set is your chance to meet those users before launch."
+    },
+    {
+      "scene": 2,
+      "start": 14.6,
+      "end": 32.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Building a Test Set and Running Evaluations",
+        "body": "AI Product Management · Lesson 9 of 15"
+      },
+      "voiceover": "Last time, you designed a metric tree. Today, we build the test set behind your offline metrics, and run it live. A test set is a fixed list of inputs, with a clear idea of what a good output looks like."
+    },
+    {
+      "scene": 3,
+      "start": 32.2,
+      "end": 53.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Four types of case",
+        "body": "Common · Edge (e.g. deadline passed by one day) · Different users and languages · Should refuse (e.g. another person's data)"
+      },
+      "voiceover": "Include four types of case. Common cases, the questions most users ask. Edge cases, unusual but valid inputs, such as a deadline passed by one day. Different users and languages, every group you serve. And should refuse cases, requests the feature must decline, such as asking for another person's data."
+    },
+    {
+      "scene": 4,
+      "start": 53.6,
+      "end": 77.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "3-point rubric",
+        "body": "2 = pass: correct, complete, follows policy · 1 = partial: correct but misses a step or unclear · 0 = fail: wrong, invents policy, or answers what it should refuse. Report pass rate overall and by type."
+      },
+      "voiceover": "Score each output with a three point rubric. Two is a pass: correct, complete and following policy. One is partial. Zero is a fail: wrong, inventing policy, or answering something it should refuse. Write the criteria before you run anything, and report the pass rate for each case type, because an average hides weak groups."
+    },
+    {
+      "scene": 5,
+      "start": 77.2,
+      "end": 97.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Human rating vs LLM-as-judge",
+        "body": "Human rating: the reference. LLM-as-judge: fast, but can be too generous, prefer long answers, miss policy errors → always with human spot checks and a review of every disagreement."
+      },
+      "voiceover": "Human rating is the reference. LLM as judge means asking a model to score outputs against your rubric. It is fast, but it can be too generous, prefer long answers and miss policy errors. So use it only with human spot checks, and look at every disagreement."
+    },
+    {
+      "scene": 6,
+      "start": 97.3,
+      "end": 114.9,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "car driving on wet road at night",
+      "on_screen_text": "Edge cases are the night driving",
+      "voiceover": "Think of a driving test. A test only on empty roads on sunny days tells you little. A good test includes night driving, rain and a sudden obstacle. Your edge cases and refusal cases are the night driving and the rain."
+    },
+    {
+      "scene": 7,
+      "start": 114.9,
+      "end": 134.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open a new Google Sheets file",
+        "Type headers in columns A to F: ID, Type, Input, Expected behaviour, Output, Human score",
+        "Add column G: Judge score"
+      ],
+      "on_screen_text": "Maria · home goods shop · Philippines",
+      "voiceover": "Let's run one. Maria Santos is a PM at a hypothetical home goods shop in the Philippines. Her feature answers questions about returns, using the shop's return policy. In Google Sheets, she creates columns for ID, type, input, expected behaviour, output, human score and judge score."
+    },
+    {
+      "scene": 8,
+      "start": 134.6,
+      "end": 156.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Fill 20 rows with invented cases: 8 Common, 5 Edge, 4 Language, 3 Refuse",
+        "Paste each input into Claude together with the return policy",
+        "Paste Claude's answer into column E (Output)",
+        "Score column F (Human score) with the 0, 1, 2 rubric"
+      ],
+      "voiceover": "She fills twenty rows with invented cases: eight common, five edge, four language, and three should refuse. All cases are invented, with no real customer data. She pastes each input into Claude with the policy, and copies the answer into the output column. Then she scores each answer with the rubric."
+    },
+    {
+      "scene": 9,
+      "start": 156.5,
+      "end": 172.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open a new Claude chat and paste the rubric",
+        "Send one case at a time: \"Score this answer 0, 1 or 2 using the rubric. Give the score and one reason.\"",
+        "Record each score in column G (Judge score)"
+      ],
+      "voiceover": "Next, she opens a new Claude chat, gives it the rubric, and sends one case at a time, asking for a score of zero, one or two with one reason. She records each score in the judge column."
+    },
+    {
+      "scene": 10,
+      "start": 172.8,
+      "end": 193.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Add pass rate formula: =COUNTIF(F2:F21,2)/20",
+        "Add pass rate by type: =COUNTIFS(B2:B21,\"Edge\",F2:F21,2)/COUNTIF(B2:B21,\"Edge\") and repeat for each type",
+        "Add agreement formula: =SUMPRODUCT(--(F2:F21=G2:G21))/20",
+        "Highlight results: 60% overall, Common 75%, Edge 40%, Language 50%, Refuse 67%"
+      ],
+      "on_screen_text": "Human pass rate: 60 percent",
+      "voiceover": "Now she adds formulas for the pass rate, the pass rate for each type, and the agreement between her and the judge. Her human pass rate is twelve of twenty, or sixty percent. By type, common cases pass at seventy five percent, but edge cases only at forty percent."
+    },
+    {
+      "scene": 11,
+      "start": 193.8,
+      "end": 208.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Show the judge pass rate cell: 14 of 20, 70%",
+        "Show the agreement cell: 15 of 20, 75%"
+      ],
+      "on_screen_text": "Judge 70 percent · agreement 75 percent",
+      "voiceover": "The judge gives fourteen passes, which is seventy percent. It agrees with Maria on fifteen of twenty cases, which is seventy five percent. It scores higher than Maria on four cases, and lower on one."
+    },
+    {
+      "scene": 12,
+      "start": 208.8,
+      "end": 231.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Filter rows where column F and column G differ",
+        "Read each of the 5 disagreement rows",
+        "Highlight row 16: Cebuano return question, Human 0, Judge 2"
+      ],
+      "on_screen_text": "Case 16: judge missed a wrong answer",
+      "voiceover": "She filters the rows where the two scores differ, and reads each one. The biggest miss is case sixteen. The answer in Cebuano was wrong, but the judge gave it a two. So the judge is too generous, and weak on less common languages. Every judge score in those languages needs human review."
+    },
+    {
+      "scene": 13,
+      "start": 231.5,
+      "end": 249.5,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Humans stay the reference",
+      "voiceover": "A common mistake is letting the judge replace human rating because it is faster. Keep humans as the reference, and never report a judge only score without saying so. The judge then inherits blind spots, such as a language it handles poorly."
+    },
+    {
+      "scene": 14,
+      "start": 249.5,
+      "end": 273.9,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Four case types, rubric written first. 2. Pass rate by type, not only overall. 3. LLM-as-judge only with human agreement checks."
+      },
+      "voiceover": "Let's recap. First, a test set needs common cases, edge cases, different users and languages, and cases that should be refused, with the rubric written first. Second, report the pass rate for each case type, because averages hide weak groups. Third, LLM as judge is useful but limited. Measure its agreement with humans, and review every disagreement."
+    },
+    {
+      "scene": 15,
+      "start": 273.9,
+      "end": 298.3,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Working with Data Scientists",
+      "voiceover": "Now it is your turn. In the exercise below, write a twenty case test set in Google Sheets, run each case through Claude, and score the outputs with a three point rubric, just as Maria did. It takes about forty minutes. In the next lesson, we look at working with data scientists and engineers. See you there."
+    }
+  ]
+}

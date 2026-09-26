@@ -3,68 +3,136 @@
   "thumbnail": {
     "headline": "From Wish to Proposal",
     "image": "Navy background, a vague thought cloud on the left turning into a neat seven-row template on the right, headline in teal Inter Bold.",
-    "slide": {"layout": "title", "title": "From Wish to Proposal", "body": "Left: cloud icon 'AI for lending?'. Arrow. Right: clean template with seven numbered rows. Small tag: AI in Finance and Fintech · Lesson 13 · Capstone step 1."}
+    "slide": {
+      "layout": "title",
+      "title": "From Wish to Proposal",
+      "body": "Left: cloud icon 'AI for lending?'. Arrow. Right: clean template with seven numbered rows. Small tag: AI in Finance and Fintech · Lesson 13 · Capstone step 1."
+    }
   },
   "production_notes": [
     "[VERSION] Free-plan access and data-use terms of Claude and ChatGPT must be checked before recording.",
     "Joy Villanueva and Bayanihan Microfinance are fictional. No savings figures are claimed; the business value is measured against a four-week baseline study, as in content.md.",
     "Any AI prompts shown on screen are the three examples from content.md. Learners use only synthetic or described data, never real customer data.",
-    "Scene 7 hero clip is about 7 seconds and the scene is about 17 seconds: hold the clip with a slow push-in, then cut to scene 8."
+    "Scene 7 hero clip is about 7 seconds and the scene is about 18 seconds: hold the clip with a slow push-in, then cut to scene 8."
   ],
   "sections": {
     "Hook": [
-      {"visual_type": "presenter_full",
-       "voiceover": "We should use AI for lending. That is not a proposal. It is a wish. A committee can only say yes to something specific: a clear problem, a clear user, clear data, and a clear way to measure success.",
-       "on_screen_text": "A wish is not a proposal"}
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "We should use AI for lending. That is not a proposal. It is a wish. A committee can only say yes to something specific: a clear problem, a clear user, clear data, and a clear way to measure success.",
+        "on_screen_text": "A wish is not a proposal"
+      }
     ],
     "Explain": [
-      {"visual_type": "slide",
-       "voiceover": "Now we start your capstone: an AI use case proposal for a financial institution, with a risk and compliance assessment. You build it in two steps. The scope in this lesson, and the risk assessment in the next. Choose a use case you know, and use only synthetic or described data, never real customer data.",
-       "slide": {"layout": "title", "title": "Scoping Your AI Use Case Proposal", "body": "AI in Finance and Fintech · Lesson 13 of 14 · Capstone step 1 of 2"}},
-      {"visual_type": "slide",
-       "voiceover": "The proposal template has seven sections. The problem: what is going wrong today, and for whom? The business value. The users, and the decision they make with the output. And the data: which data, from where, with what quality problems and what legal basis?",
-       "slide": {"layout": "bullets", "title": "The template: sections 1 to 4", "body": "1. Problem · 2. Business value · 3. Users · 4. Data (source, history, quality, legal basis)"}},
-      {"visual_type": "slide",
-       "voiceover": "Then the model approach: rules, a scorecard, a machine learning model, or a language model assistant, and why. Human oversight: where a person reviews, overrides or stops the output. And three to five success measures, including at least one customer or fairness measure.",
-       "slide": {"layout": "bullets", "title": "The template: sections 5 to 7", "body": "5. Model approach (and why) · 6. Human oversight · 7. Success measures: 3–5 numbers, at least one customer or fairness measure"}},
-      {"visual_type": "slide",
-       "voiceover": "Keep the scope narrow. Support loan officers in reviewing first-time business loans under a set amount is much better than AI for all lending. A narrow scope makes data, risks and success easier to define.",
-       "slide": {"layout": "comparison", "title": "Keep it narrow", "body": "Too broad (red): 'AI for all lending'. Narrow (teal): 'Support loan officers in reviewing first-time business loans under a set amount'."}},
-      {"visual_type": "slide",
-       "voiceover": "A free AI assistant can be a useful thinking partner. Ask it what assumptions you are making, what data problems a lender might face, or how your success measures could be misleading. Then write the proposal in your own words. Do not copy its text, do not trust its legal facts without a source, and never paste confidential information.",
-       "slide": {"layout": "bullets", "title": "AI as a thinking partner", "body": "Ask: 'What assumptions am I making?' · 'What data problems might a lender face?' · 'Suggest three success measures and how each could mislead.' Then: own words · check facts · no confidential data."}},
-      {"visual_type": "hero_broll",
-       "voiceover": "Scoping is like an architect's first drawing. Before anyone orders bricks, the drawing shows who will live in the house, how many rooms it needs, and where the doors go. Changing a drawing is cheap. Changing a finished building is expensive.",
-       "broll_tool": "FLOW",
-       "broll_prompt": "A middle-aged East Asian male architect and a young Black woman client lean over a large sheet of hand-drawn house plans on a wooden table, the architect sketching a doorway with a pencil; slow top-down crane move easing into a three-quarter angle; warm soft daylight from a nearby window; cinematic, natural colours, shallow depth of field; 7 seconds; no readable text or numbers on the plans, no logos."}
+      {
+        "visual_type": "slide",
+        "voiceover": "Now we start your capstone: an AI use case proposal for a financial institution, with a risk and compliance assessment. You build it in two steps. The scope in this lesson, and the risk assessment in the next. Choose a use case you know, and use only synthetic or described data, never real customer data.",
+        "slide": {
+          "layout": "title",
+          "title": "Scoping Your AI Use Case Proposal",
+          "body": "AI in Finance and Fintech · Lesson 13 of 14 · Capstone step 1 of 2"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "The proposal template has seven sections. The problem: what is going wrong today, and for whom? The business value. The users, and the decision they make with the output. And the data: which data, from where, with what quality problems and what legal basis?",
+        "slide": {
+          "layout": "bullets",
+          "title": "The template: sections 1 to 4",
+          "body": "1. Problem · 2. Business value · 3. Users · 4. Data (source, history, quality, legal basis)"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Then the model approach: rules, a scorecard, a machine learning model, or a language model assistant, and why. Human oversight: where a person reviews, overrides or stops the output. And three to five success measures, including at least one customer or fairness measure.",
+        "slide": {
+          "layout": "bullets",
+          "title": "The template: sections 5 to 7",
+          "body": "5. Model approach (and why) · 6. Human oversight · 7. Success measures: 3–5 numbers, at least one customer or fairness measure"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Keep the scope narrow. Support loan officers in reviewing first-time business loans under a set amount is much better than AI for all lending. A narrow scope makes data, risks and success easier to define.",
+        "slide": {
+          "layout": "comparison",
+          "title": "Keep it narrow",
+          "body": "Too broad (red): 'AI for all lending'. Narrow (teal): 'Support loan officers in reviewing first-time business loans under a set amount'."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "A free AI assistant can be a useful thinking partner. Ask it what assumptions you are making, what data problems a lender might face, or how your success measures could be misleading. Then write the proposal in your own words. Do not copy its text, do not trust its legal facts without a source, and never paste confidential information.",
+        "slide": {
+          "layout": "bullets",
+          "title": "AI as a thinking partner",
+          "body": "Ask: 'What assumptions am I making?' · 'What data problems might a lender face?' · 'Suggest three success measures and how each could mislead.' Then: own words · check facts · no confidential data."
+        }
+      },
+      {
+        "visual_type": "hero_broll",
+        "voiceover": "Scoping is like an architect's first drawing. Before anyone orders bricks, the drawing shows who will live in the house, how many rooms it needs, and where the doors go. Changing a drawing is cheap. Changing a finished building is expensive.",
+        "broll_tool": "FLOW",
+        "broll_prompt": "A middle-aged East Asian male architect and a young Black woman client lean over a large sheet of hand-drawn house plans on a wooden table, the architect sketching a doorway with a pencil; slow top-down crane move easing into a three-quarter angle; warm soft daylight from a nearby window; cinematic, natural colours, shallow depth of field; 7 seconds; no readable text or numbers on the plans, no logos."
+      }
     ],
     "Demonstrate": [
-      {"visual_type": "stock",
-       "voiceover": "Joy Villanueva is operations manager at Bayanihan Microfinance, a hypothetical microfinance institution in the Philippines. Its loan officers visit small businesses and write long visit notes. Reviewing applications takes too long. Her first idea is an AI that approves loans. After testing her assumptions with an AI assistant, she narrows it down.",
-       "stock_query": "loan officer visiting small shop owner",
-       "on_screen_text": "Bayanihan Microfinance · Philippines"},
-      {"visual_type": "slide",
-       "voiceover": "The problem: officers spend a large part of each day summarising notes, and applicants wait too long. The value: faster decisions and more visits per officer. She will measure the current baseline in a four-week study before claiming any saving. The users are loan officers and branch supervisors, and the supervisor still makes every lending decision.",
-       "slide": {"layout": "bullets", "title": "Joy's scope: sections 1 to 3", "body": "Problem: officers spend much of the day summarising notes; applicants wait. Value: faster decisions, more visits (baseline: 4-week study first). Users: loan officers and branch supervisors; supervisor decides."}},
-      {"visual_type": "slide",
-       "voiceover": "The data is visit notes, application forms and repayment history. Known problems: notes in English, Filipino and local languages, and handwritten forms. The approach is a language model assistant that summarises notes and lists missing documents. No credit score, and no approval decisions. The officer checks and signs every summary.",
-       "slide": {"layout": "bullets", "title": "Joy's scope: sections 4 to 6", "body": "Data: visit notes, forms, repayment history; mixed languages, handwriting; consent wording reviewed by compliance. Approach: assistant summarises notes, lists missing documents; no score, no approvals. Oversight: officer checks and signs; supervisor decides."}},
-      {"visual_type": "slide",
-       "voiceover": "Her success measures are time from visit to decision, the share of summaries with errors, officer satisfaction, and approval and error rates by client group. That last one checks that clients who write in local languages are not disadvantaged.",
-       "slide": {"layout": "bullets", "title": "Joy's success measures", "body": "Time from visit to decision · Share of summaries with errors · Officer satisfaction · Approval and error rates by client group (local-language check)"}},
-      {"visual_type": "text",
-       "voiceover": "The assistant helped Joy notice an assumption she had missed: that all notes are written in one language. She did not copy its wording. She used its questions.",
-       "on_screen_text": "Use its questions, not its words"}
+      {
+        "visual_type": "stock",
+        "voiceover": "Joy Villanueva is operations manager at Bayanihan Microfinance, a hypothetical microfinance institution in the Philippines. Its loan officers visit small businesses and write long visit notes. Reviewing applications takes too long. Her first idea is an AI that approves loans. After testing her assumptions with an AI assistant, she narrows it down.",
+        "stock_query": "loan officer visiting small shop owner",
+        "on_screen_text": "Bayanihan Microfinance · Philippines"
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "The problem: officers spend a large part of each day summarising notes, and applicants wait too long. The value: faster decisions and more visits per officer. She will measure the current baseline in a four-week study before claiming any saving. The users are loan officers and branch supervisors, and the supervisor still makes every lending decision.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Joy's scope: sections 1 to 3",
+          "body": "Problem: officers spend much of the day summarising notes; applicants wait. Value: faster decisions, more visits (baseline: 4-week study first). Users: loan officers and branch supervisors; supervisor decides."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "The data is visit notes, application forms and repayment history. Known problems: notes in English, Filipino and local languages, and handwritten forms. The approach is a language model assistant that summarises notes and lists missing documents. No credit score, and no approval decisions. The officer checks and signs every summary.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Joy's scope: sections 4 to 6",
+          "body": "Data: visit notes, forms, repayment history; mixed languages, handwriting; consent wording reviewed by compliance. Approach: assistant summarises notes, lists missing documents; no score, no approvals. Oversight: officer checks and signs; supervisor decides."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Her success measures are time from visit to decision, the share of summaries with errors, officer satisfaction, and approval and error rates by client group. That last one checks that clients who write in local languages are not disadvantaged.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Joy's success measures",
+          "body": "Time from visit to decision · Share of summaries with errors · Officer satisfaction · Approval and error rates by client group (local-language check)"
+        }
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "The assistant helped Joy notice an assumption she had missed: that all notes are written in one language. She did not copy its wording. She used its questions. A common mistake is to describe the technology first and the problem last. Committees fund solutions to problems, not technologies. And never claim exact savings without a baseline.",
+        "on_screen_text": "Problem first, technology second"
+      }
     ],
     "Recap": [
-      {"visual_type": "slide",
-       "voiceover": "Let's recap. First, a strong proposal answers seven questions: problem, value, users, data, model approach, human oversight and success measures. Second, a narrow, specific scope makes data, risks and success easier to define and approve. Third, use an AI assistant to test your assumptions, but write the proposal in your own words and check every fact.",
-       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Seven questions, problem first. 2. Narrow scope. 3. AI tests assumptions; you write and check."}}
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, a strong proposal answers seven questions: problem, value, users, data, model approach, human oversight and success measures. Second, a narrow, specific scope makes data, risks and success easier to define and approve. Third, use an AI assistant to test your assumptions, but write the proposal in your own words and check every fact.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. Seven questions, problem first. 2. Narrow scope. 3. AI tests assumptions; you write and check."
+        }
+      }
     ],
     "CTA": [
-      {"visual_type": "presenter_full",
-       "voiceover": "Now it is your turn. This exercise is capstone step one. Fill in the problem, value, data and success-measure sections of the template, and use Claude or ChatGPT to test your assumptions. Keep a short log of what it suggested. It takes about forty-five minutes. In the final lesson, we build the risk and compliance assessment. See you there.",
-       "on_screen_text": "Next: Risk and Compliance Assessment"}
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Now it is your turn. This exercise is capstone step one. Fill in the problem, value, data and success-measure sections of the template, and use Claude or ChatGPT to test your assumptions. Keep a short log of what it suggested. It takes about forty-five minutes. In the final lesson, we build the risk and compliance assessment. See you there.",
+        "on_screen_text": "Next: Risk and Compliance Assessment"
+      }
     ]
   }
 }
