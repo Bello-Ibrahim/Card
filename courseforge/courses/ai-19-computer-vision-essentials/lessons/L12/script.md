@@ -1,14 +1,14 @@
 # L12 Reading Text in Images with OCR | Presenter Script
 
-Course: AI-19 · Video: 5 min · Words: 652
+Course: AI-19 · Video: 5 min · Words: 692
 
 ## Hook
-A program cannot search or add up a photo of a receipt. OCR turns the picture of text into real text. On a clean scan it can work well. On a creased receipt in a dim café, it can fail badly.
+A program cannot search or add up a photo of a receipt. OCR turns the picture of text into real text. On a clean scan it can work well. On a creased receipt in a dim café, it can fail badly. Preprocessing makes much of the difference.
 
 ## Explain
 In the last two lessons, we detected objects. Today, the objects are letters. Optical character recognition, or OCR, usually has two steps. Text detection finds the areas that contain text, and text recognition reads the characters in each area.
 
-We use Tesseract, a free, open-source OCR engine, through a small Python wrapper. You install the engine and one language pack for each language. The codes are f r a for French, p o r for Portuguese and a r a for Arabic, and you can combine them.
+We use Tesseract, a free, open-source OCR engine, through a small Python wrapper. You install the engine and one language pack for each language. The codes are f r a for French, p o r for Portuguese and a r a for Arabic, and you can combine them. Other open-source engines, such as EasyOCR and PaddleOCR, may handle photos better, so compare them if Tesseract fails.
 
 Quality depends strongly on the image, and the steps from lesson three help. Enlarge small text, for example to twice the size. Threshold it to black on white, which also removes shadows. Crop away the table and background. And straighten tilted lines, because tilted text is often misread.
 
@@ -23,7 +23,7 @@ Amira Ben Salem manages expenses for a design studio in Tunis, Tunisia. Her rece
 
 In Colab, she installs the Tesseract engine with its French, Arabic and Portuguese packs, and then the Python wrapper. She uploads the receipt photo.
 
-The cell reads the raw photo in French and Arabic. Then it cleans a copy. It turns it grey, doubles its size, and applies an adaptive threshold. And it reads the clean version too. She shows both images and both outputs side by side.
+The cell reads the raw photo in French and Arabic. Then it cleans a copy. It turns it grey, doubles its size, and applies an adaptive threshold. The threshold makes the text black on white and removes the shadow of the fold. And it reads the clean version too. She shows both images and both outputs side by side.
 
 On the raw photo, you'll see something like this for the total line. The letter O is read as a zero, and the comma is read as a full stop. That is two wrong characters out of fifteen. The error function gives zero point one three three.
 

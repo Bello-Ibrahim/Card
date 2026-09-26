@@ -1,7 +1,7 @@
 {
   "course_id": "AI-19",
   "lesson_id": "L12",
-  "duration_s": 279.6,
+  "duration_s": 296.6,
   "thumbnail": {
     "headline": "From Photo to Text",
     "slide": {
@@ -14,16 +14,16 @@
     {
       "scene": 1,
       "start": 0.0,
-      "end": 17.6,
+      "end": 20.1,
       "section": "Hook",
       "visual_type": "presenter_full",
       "on_screen_text": "Picture of text, or real text?",
-      "voiceover": "A program cannot search or add up a photo of a receipt. OCR turns the picture of text into real text. On a clean scan it can work well. On a creased receipt in a dim café, it can fail badly."
+      "voiceover": "A program cannot search or add up a photo of a receipt. OCR turns the picture of text into real text. On a clean scan it can work well. On a creased receipt in a dim café, it can fail badly. Preprocessing makes much of the difference."
     },
     {
       "scene": 2,
-      "start": 17.6,
-      "end": 34.3,
+      "start": 20.1,
+      "end": 36.8,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -35,8 +35,8 @@
     },
     {
       "scene": 3,
-      "start": 34.3,
-      "end": 55.3,
+      "start": 36.8,
+      "end": 65.9,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -44,12 +44,12 @@
         "title": "Tesseract",
         "body": "Free, open-source OCR engine · Python wrapper: pytesseract · Language packs: fra · por · ara · Combine: lang=\"fra+ara\""
       },
-      "voiceover": "We use Tesseract, a free, open-source OCR engine, through a small Python wrapper. You install the engine and one language pack for each language. The codes are f r a for French, p o r for Portuguese and a r a for Arabic, and you can combine them."
+      "voiceover": "We use Tesseract, a free, open-source OCR engine, through a small Python wrapper. You install the engine and one language pack for each language. The codes are f r a for French, p o r for Portuguese and a r a for Arabic, and you can combine them. Other open-source engines, such as EasyOCR and PaddleOCR, may handle photos better, so compare them if Tesseract fails."
     },
     {
       "scene": 4,
-      "start": 55.3,
-      "end": 75.9,
+      "start": 65.9,
+      "end": 86.5,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -61,8 +61,8 @@
     },
     {
       "scene": 5,
-      "start": 75.9,
-      "end": 102.0,
+      "start": 86.5,
+      "end": 112.6,
       "section": "Explain",
       "visual_type": "slide",
       "slide": {
@@ -74,8 +74,8 @@
     },
     {
       "scene": 6,
-      "start": 102.0,
-      "end": 116.6,
+      "start": 112.6,
+      "end": 127.2,
       "section": "Explain",
       "visual_type": "stock",
       "stock_query": "rain streaked window with paper note",
@@ -84,8 +84,8 @@
     },
     {
       "scene": 7,
-      "start": 116.6,
-      "end": 129.9,
+      "start": 127.2,
+      "end": 140.5,
       "section": "Explain",
       "visual_type": "text",
       "on_screen_text": "Protect personal data on receipts",
@@ -93,8 +93,8 @@
     },
     {
       "scene": 8,
-      "start": 129.9,
-      "end": 145.8,
+      "start": 140.5,
+      "end": 156.4,
       "section": "Demonstrate",
       "visual_type": "stock",
       "stock_query": "paper receipt on cafe table",
@@ -103,8 +103,8 @@
     },
     {
       "scene": 9,
-      "start": 145.8,
-      "end": 156.1,
+      "start": 156.4,
+      "end": 166.7,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -117,8 +117,8 @@
     },
     {
       "scene": 10,
-      "start": 156.1,
-      "end": 175.0,
+      "start": 166.7,
+      "end": 192.0,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -127,12 +127,12 @@
         "Show both OCR outputs side by side"
       ],
       "on_screen_text": "Raw versus cleaned",
-      "voiceover": "The cell reads the raw photo in French and Arabic. Then it cleans a copy. It turns it grey, doubles its size, and applies an adaptive threshold. And it reads the clean version too. She shows both images and both outputs side by side."
+      "voiceover": "The cell reads the raw photo in French and Arabic. Then it cleans a copy. It turns it grey, doubles its size, and applies an adaptive threshold. The threshold makes the text black on white and removes the shadow of the fold. And it reads the clean version too. She shows both images and both outputs side by side."
     },
     {
       "scene": 11,
-      "start": 175.0,
-      "end": 195.1,
+      "start": 192.0,
+      "end": 212.1,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -145,8 +145,8 @@
     },
     {
       "scene": 12,
-      "start": 195.1,
-      "end": 211.0,
+      "start": 212.1,
+      "end": 228.0,
       "section": "Demonstrate",
       "visual_type": "screen",
       "screen_steps": [
@@ -158,8 +158,8 @@
     },
     {
       "scene": 13,
-      "start": 211.0,
-      "end": 232.0,
+      "start": 228.0,
+      "end": 249.0,
       "section": "Demonstrate",
       "visual_type": "text",
       "on_screen_text": "Real photos. Always set the language.",
@@ -167,8 +167,8 @@
     },
     {
       "scene": 14,
-      "start": 232.0,
-      "end": 254.3,
+      "start": 249.0,
+      "end": 271.3,
       "section": "Recap",
       "visual_type": "slide",
       "slide": {
@@ -180,8 +180,8 @@
     },
     {
       "scene": 15,
-      "start": 254.3,
-      "end": 279.6,
+      "start": 271.3,
+      "end": 296.6,
       "section": "CTA",
       "visual_type": "presenter_full",
       "on_screen_text": "Next: Counting and Tracking in Video",

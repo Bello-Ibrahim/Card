@@ -1,9 +1,9 @@
 # L07 Moodboards and Visual Direction with Image Generators | Presenter Script
 
-Course: AI-23 · Video: 5 min · Words: 744
+Course: AI-23 · Video: 5 min · Words: 736
 
 ## Hook
-A client says: we want it to feel warm but modern. What does that look like? In this lesson, you will see three different answers on screen, in less time than it takes to search a stock library.
+A client says: we want it to feel warm but modern. What does that look like? You will see three different answers on screen, in less time than it takes to search a stock library.
 
 ## Explain
 Last time, we worked with words. Now we move to images. This lesson is about moodboards and visual direction with image generators.
@@ -35,7 +35,7 @@ He generates six images for each direction and downloads them. In Figma, he crea
 
 Under each frame, he writes one sentence on the idea, and adds the label AI-generated reference. The client sees three clearly different answers to warm but modern, and chooses direction A, with the cobalt accent from B.
 
-A common mistake is to generate dozens of images from one prompt and call it a moodboard. That shows one idea many times. Another is to prompt in the style of a well-known artist to get a quick result. Describe materials, colour, light and era instead.
+A common mistake is to generate dozens of images from one prompt and call it a moodboard. That shows one idea many times. Another is to prompt in the style of a well-known artist. Describe materials, colour, light and era instead.
 
 ## Recap
 Let's recap. First, prompt with visual qualities, such as materials, colour, light, era and composition, never with the names of living artists or existing brands. Second, create three contrasting directions for the same brief, by changing one or two big variables. Third, free image generators change their limits and terms often, so check them, and label moodboard images as AI-generated references.
@@ -53,4 +53,4 @@ Image: Navy background, three moodboard frames side by side in clearly different
 - The script does not name Gemini's specific limits or terms; it tells learners to check current terms and to label moodboards 'AI-generated reference'.
 - Prompts describe visual qualities only. No living artist, photographer or existing brand is named or imitated, in the voiceover, on screen or in any prompt typed during the demo.
 - Diego Hernández and the ceramics studio are fictional; stock footage must not show a real studio name or logo.
-- Scene 8 (Demonstrate) and all screen scenes are recorded as one continuous screen capture and cut to the scene timings.
+- Screen scenes 10 to 15 are recorded as one continuous screen capture and cut to the scene timings.
