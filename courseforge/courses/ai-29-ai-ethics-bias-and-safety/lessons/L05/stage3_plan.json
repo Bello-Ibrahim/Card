@@ -1,0 +1,72 @@
+{
+  "title": "Privacy: What Happens to the Data You Share",
+  "thumbnail": {
+    "headline": "Where Does Your Prompt Go?",
+    "image": "Navy background, a sealed envelope flying from a laptop towards a large building, with a small padlock icon, headline in teal Inter Bold.",
+    "slide": {"layout": "title", "title": "Where Does Your Prompt Go?", "body": "A letter icon travelling from a laptop to a large postal building, with three small icons along the way: archive box, magnifying glass, copy. Small tag: AI Ethics, Bias and Safety · Lesson 5."}
+  },
+  "production_notes": [
+    "[VERSION] Data-use, chat-history and training settings in Claude and ChatGPT differ between free and paid plans and change often. The voiceover names no setting and says only that settings differ and must be checked; check the live tools before recording.",
+    "[VERIFY] Whether deleting a chat removes all copies at the company straight away, and how long data is kept, is left out of the voiceover. Do not add it unless checked against each tool's current privacy policy.",
+    "Maricel Santos and her hospital in the Philippines are fictional. Never show real patient notes: any notes on screen must be obviously invented and blurred, or replaced by placeholders such as [PATIENT].",
+    "Legal duties about personal data are out of scope and point to AI-30.",
+    "Scene 11 shows the safe template prompt word for word from content.md."
+  ],
+  "sections": {
+    "Hook": [
+      {"visual_type": "presenter_full",
+       "voiceover": "You would not read a patient's medical notes aloud in a busy café. But when you paste the same notes into a chatbot, where do they go, who can see them, and how long do they stay there?",
+       "on_screen_text": "Where do your words go?"}
+    ],
+    "Explain": [
+      {"visual_type": "slide",
+       "voiceover": "When you type into an AI tool, your text is sent to the company that runs it. Depending on the tool, the plan and your settings, that text may be stored in your chat history, reviewed by people at the company, or used to improve the service, which can include training future models.",
+       "slide": {"layout": "diagram", "title": "What can happen to your text", "body": "Your prompt → company that runs the tool → three branches: Stored (archive box) · Reviewed (magnifying glass) · Used to improve the service (gear). Footnote: depends on tool, plan and settings."}},
+      {"visual_type": "stock",
+       "voiceover": "Settings differ between tools and plans, and they change often. Many tools let you control chat history or training, but you have to look for these settings. So check the tool and your organisation's rules before you share anything sensitive.",
+       "stock_query": "person adjusting privacy settings on laptop",
+       "on_screen_text": "Check settings and your rules"},
+      {"visual_type": "slide",
+       "voiceover": "Two kinds of data need special care. Personal data is any information about a person who can be identified, such as a name, phone number, photo, address, health details or bank details. Confidential data is information your organisation or client has not made public, such as contracts, prices, plans and passwords.",
+       "slide": {"layout": "comparison", "title": "Handle with care", "body": "Left: Personal data: name · phone · photo · address · health · bank details. Right: Confidential data: contracts · prices · plans · passwords."}},
+      {"visual_type": "slide",
+       "voiceover": "And removing names is often not enough. Think of a forty-seven-year-old female teacher at the only secondary school in a small town, admitted with a broken wrist. There is no name, but many people in that town would know who it is.",
+       "slide": {"layout": "quote", "title": "No name, still identifiable", "body": "\"A 47-year-old female teacher at the only secondary school in a small town, admitted with a broken wrist.\" Caption: combined details can identify a person."}},
+      {"visual_type": "slide",
+       "voiceover": "So ask one question. Does the AI need this detail to do the task? Often it does not. You can replace real details with placeholders, describe a general situation instead of a real case, or use tools your organisation has approved.",
+       "slide": {"layout": "bullets", "title": "Does the AI need this detail?", "body": "Use placeholders: [PATIENT], [DATE], [CLIENT] · Describe a general situation · Use approved tools for sensitive data"}},
+      {"visual_type": "stock",
+       "voiceover": "Typing into an AI tool is like sending a letter through a large postal company. Most letters arrive safely. But depending on the service, the letter may be opened for checks, copied or kept in an archive. You would not put your bank PIN in a normal letter.",
+       "stock_query": "letters sorted in large post office",
+       "on_screen_text": "Would you post it?"}
+    ],
+    "Demonstrate": [
+      {"visual_type": "stock",
+       "voiceover": "Let's look at an example. Maricel Santos is a nurse at a hospital in the Philippines. At the end of a long shift, she wants a quick summary of a patient's notes for the next shift.",
+       "stock_query": "tired nurse at hospital station night",
+       "on_screen_text": "Maricel's shift · the Philippines"},
+      {"visual_type": "slide",
+       "voiceover": "The risky way. She pastes the full notes, with the patient's name, age, address, diagnosis and medicines, into a free public chatbot. The summary is useful. But she has now shared a patient's health data with an outside service that her hospital has not approved.",
+       "slide": {"layout": "comparison", "title": "The risky way", "body": "Blurred placeholder notes (name, age, address, diagnosis, medicines) → public chatbot (red warning). Caption: health data shared outside the hospital."}},
+      {"visual_type": "slide",
+       "voiceover": "The better way. Maricel realises the chatbot does not need the patient's details at all. What she really needs is a clear handover structure. So she asks for a short template for a general adult patient, with headings for condition, medicines, observations, concerns and next actions.",
+       "slide": {"layout": "quote", "title": "The better way", "body": "\"I am a nurse writing an end-of-shift handover. Give me a short template with headings for a general adult patient on a medical ward, with space for condition, medicines, observations, concerns and actions for the next shift.\""}},
+      {"visual_type": "slide",
+       "voiceover": "The chatbot gives her a template. She fills it in herself, on the hospital's own system. The patient data never leaves the hospital.",
+       "slide": {"layout": "diagram", "title": "Data stays inside", "body": "Chatbot → empty template → Maricel fills it in on the hospital system (building icon with a padlock). Caption: patient data never leaves."}},
+      {"visual_type": "text",
+       "voiceover": "A common mistake is to think that removing a name, or deleting a chat afterwards, makes a prompt safe. Instead, decide what to share before you type. Legal duties about personal data are covered in course AI thirty.",
+       "on_screen_text": "Decide before you type"}
+    ],
+    "Recap": [
+      {"visual_type": "slide",
+       "voiceover": "Let's recap. First, what you type into an AI tool may be stored, reviewed or used to improve the service, depending on the tool, the plan and your settings. Second, personal and confidential data need special care, and removing names alone is often not enough. Third, before you type, ask whether the AI needs each detail.",
+       "slide": {"layout": "bullets", "title": "Key takeaways", "body": "1. Your text may be stored, reviewed or used. 2. Personal and confidential data need care; names alone are not enough. 3. Ask: does the AI need this detail?"}}
+    ],
+    "CTA": [
+      {"visual_type": "presenter_full",
+       "voiceover": "Now it is your turn. In the exercise below this video, you will find the data and chat-history settings in your chatbot, and rewrite one work prompt so it has no personal or confidential data. It takes about twenty minutes. That completes week one. In the next lesson, we will look at safety risks and human oversight. See you there.",
+       "on_screen_text": "Next: Safety and Human Oversight"}
+    ]
+  }
+}

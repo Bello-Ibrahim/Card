@@ -1,0 +1,173 @@
+{
+  "course_id": "AI-29",
+  "lesson_id": "L04",
+  "duration_s": 261.5,
+  "thumbnail": {
+    "headline": "Confident, But Wrong",
+    "slide": {
+      "layout": "title",
+      "title": "Confident, But Wrong",
+      "body": "A chat bubble listing three tidy citation cards; the cards dissolve into dotted outlines with a small question mark. Small tag: AI Ethics, Bias and Safety · Lesson 4."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 15.0,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Three sources. None exists.",
+      "voiceover": "You ask a chatbot for three research articles on your topic. It gives you three titles, three author names and three publication years, all in perfect format. You search for them. None of them exists."
+    },
+    {
+      "scene": 2,
+      "start": 15.0,
+      "end": 36.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "How a chatbot writes",
+        "body": "Prompt → 'predict the next likely word' loop (word, word, word) → answer. Side note: patterns, not a fact database."
+      },
+      "voiceover": "To understand why, you need to know one thing about how chatbots work. A chatbot, such as Claude or ChatGPT, is built on a large language model. It writes by predicting the next likely words, based on patterns in the text it learned from. It does not simply look up facts."
+    },
+    {
+      "scene": 3,
+      "start": 36.9,
+      "end": 58.8,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Where hallucinations hide",
+        "body": "Exact numbers, dates, quotes · Sources: articles, books, court cases, links · Local or specialist topics · Very recent events"
+      },
+      "voiceover": "So a chatbot can produce text that sounds right, but is wrong. This is called a hallucination. It is most common with exact numbers, dates and quotes, with sources, with local or specialist topics, and with very recent events. And it comes in the same confident voice as a correct answer."
+    },
+    {
+      "scene": 4,
+      "start": 58.8,
+      "end": 72.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "How AI adds to misinformation",
+        "body": "Left: copied answers (unchecked chatbot text pasted into a report). Right: mass production (many convincing fake posts appearing at once)."
+      },
+      "voiceover": "Misinformation is false or misleading information that spreads. AI adds to it in two ways. People copy hallucinated answers without checking. And AI can quickly produce large amounts of convincing false content."
+    },
+    {
+      "scene": 5,
+      "start": 72.5,
+      "end": 89.2,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "worried person listening to phone voicemail",
+      "on_screen_text": "Deepfakes: fake voices, faces, videos",
+      "voiceover": "Deepfakes are AI-made images, voices or videos that show people saying or doing things they never did. A fake voice message from a manager could ask for an urgent payment. Deepfakes make false stories look and sound real."
+    },
+    {
+      "scene": 6,
+      "start": 89.2,
+      "end": 108.5,
+      "section": "Explain",
+      "visual_type": "hero_broll",
+      "broll_tool": "KLING",
+      "broll_prompt": "Two friends in their thirties, a Latin American man and a Middle Eastern woman, chat at a small café table; the man speaks with easy confidence and open hands while the woman listens and quietly checks something on her phone; slow orbit from medium shot; warm late-afternoon window light; cinematic, natural colours, shallow depth of field; 7 seconds; no readable text, no logos.",
+      "voiceover": "Here is a simple way to think about it. A chatbot is like a very confident friend who has read a lot, but never checks notes. Sometimes they fill a gap in their memory with something that sounds right, in exactly the same calm voice."
+    },
+    {
+      "scene": 7,
+      "start": 108.5,
+      "end": 122.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Three habits",
+        "body": "1. Check against a trusted source · 2. Ask for sources, then open them · 3. Slow down when you feel a strong emotion"
+      },
+      "voiceover": "Three habits help. Check claims against a trusted source. Ask for sources, then open them. And slow down when content makes you feel a strong emotion, such as anger, fear or excitement."
+    },
+    {
+      "scene": 8,
+      "start": 122.2,
+      "end": 141.1,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "woman writing newsletter laptop rural office",
+      "on_screen_text": "Aigerim's cooperative · Kazakhstan",
+      "voiceover": "Let's see the habits in action. Aigerim Bekova writes a newsletter for a farming cooperative in Kazakhstan. She asks a chatbot for the average wheat yield in her region, and which study shows it. The chatbot gives a precise number and names a study."
+    },
+    {
+      "scene": 9,
+      "start": 141.1,
+      "end": 162.5,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Checking the answer",
+        "body": "Chatbot answer: number + study (placeholder values, labelled Hypothetical) → Habit 1: official figure differs (red cross) → Habit 2: study not found (red cross) → Habit 3: confidence is not proof."
+      },
+      "voiceover": "Aigerim follows the three habits. She checks the number on her country's official agriculture website, and the official figure is different. She searches for the study, and cannot find it. The source was invented. And she notices that the answer felt reliable only because it was so specific and confident."
+    },
+    {
+      "scene": 10,
+      "start": 162.5,
+      "end": 177.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "New team rule",
+        "body": "\"Never publish a number or a source from a chatbot until you have opened the original.\""
+      },
+      "voiceover": "She uses the official figure, links to the official source, and adds one line to her team's guidance. Never publish a number or a source from a chatbot until you have opened the original."
+    },
+    {
+      "scene": 11,
+      "start": 177.1,
+      "end": 193.8,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "woman making phone call at office desk",
+      "on_screen_text": "Confirm through a different channel",
+      "voiceover": "The same week, a member forwards a voice message that claims to be from the director, asking for a quick payment to a new supplier. Aigerim calls the director on a known number. The director did not send it."
+    },
+    {
+      "scene": 12,
+      "start": 193.8,
+      "end": 208.4,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "A source counts only when opened",
+      "voiceover": "A common mistake is to think that if a chatbot gives a source, the answer must be correct. A source only counts after you have opened it and found the claim in it yourself."
+    },
+    {
+      "scene": 13,
+      "start": 208.4,
+      "end": 234.5,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Chatbots predict text: confident answers can be false. 2. Deepfakes make false stories look real. 3. Check, open sources, slow down."
+      },
+      "voiceover": "Let's recap. First, chatbots predict likely text, so they can produce confident answers that are false, including invented sources. This is a hallucination. Second, deepfakes are AI-made images, voices or videos that can make false stories look real. Third, check claims against a trusted source, open every source yourself, and slow down when content makes you feel a strong emotion."
+    },
+    {
+      "scene": 14,
+      "start": 234.5,
+      "end": 261.5,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Privacy and Your Data",
+      "voiceover": "Now it is your turn. In the exercise below this video, you will ask a chatbot three factual questions about your own country or industry, check every answer against a trusted source, and record each error you find. It takes about twenty minutes. In the next lesson, we will look at privacy, and what happens to the data you share. See you there."
+    }
+  ]
+}

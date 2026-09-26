@@ -1,0 +1,192 @@
+{
+  "course_id": "AI-28",
+  "lesson_id": "L06",
+  "duration_s": 285.1,
+  "thumbnail": {
+    "headline": "Build Less, Learn More",
+    "slide": {
+      "layout": "title",
+      "title": "Build Less, Learn More",
+      "body": "A long feature list, most lines crossed out, one line circled: 'Core job'. Small tag: Building an AI Startup · Lesson 6."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 19.3,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "What is the smallest useful thing?",
+      "voiceover": "Your list of features is probably long: accounts, a dashboard, five languages, a mobile app, reports. If you build all of it, months may pass before anyone uses it. What is the smallest thing you could build next week that would teach you the most?"
+    },
+    {
+      "scene": 2,
+      "start": 19.3,
+      "end": 33.4,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Scoping the MVP",
+        "body": "Building an AI Startup · Lesson 6 of 15 · Week 2"
+      },
+      "voiceover": "Welcome to week two. Last week, you found and tested a problem, and asked how to defend your idea. Now we start building, and the first step is deciding what not to build."
+    },
+    {
+      "scene": 3,
+      "start": 33.4,
+      "end": 55.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "MVP and the riskiest assumption",
+        "body": "MVP: the smallest product that lets users do one important job. · Assumption: believed, not yet proved. · Riskiest assumption: if wrong, the business fails."
+      },
+      "voiceover": "MVP means minimum viable product. It is the smallest product that lets real users do one important job, so you can test your riskiest assumption. An assumption is something you believe but have not proved. The riskiest one is the belief that would sink the whole business if it were wrong."
+    },
+    {
+      "scene": 4,
+      "start": 55.3,
+      "end": 66.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "Examples of risky assumptions",
+        "body": "'Users will trust the AI's answer enough to act on it.' · 'The AI can produce a good enough result for this document type.'"
+      },
+      "voiceover": "For example, users will trust the AI's answer enough to act on it. Or, the AI can produce a good enough result for this type of document."
+    },
+    {
+      "scene": 5,
+      "start": 66.9,
+      "end": 87.9,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Five scoping questions",
+        "body": "Five cards in a row: Core job · Riskiest assumption · In · By hand · Out"
+      },
+      "voiceover": "To scope an MVP, answer five questions. What is the core job, the one task the user must complete? What is the riskiest assumption? What is in, meaning what you must build? What can you do by hand for now? And what is out, even if it is attractive?"
+    },
+    {
+      "scene": 6,
+      "start": 87.9,
+      "end": 108.0,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "Success measure",
+        "body": "'8 of 10 test users complete the core job without help, and 6 say they would use it again next month.' Footer: narrow, not poor quality."
+      },
+      "voiceover": "Then define a success measure, the number that tells you whether the assumption is true. For example, eight of ten test users complete the core job without help. A lean MVP is not a poor product. The part you build should work well. It is simply narrow."
+    },
+    {
+      "scene": 7,
+      "start": 108.0,
+      "end": 129.9,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "small ferry crossing a river with passengers",
+      "on_screen_text": "A ferry before the bridge",
+      "voiceover": "Think of a road engineer who wants to know whether a new bridge is needed. She does not build the whole bridge. First, she runs a small ferry and counts the people who use it. The ferry is small, but it answers the real question: do people need to cross here?"
+    },
+    {
+      "scene": 8,
+      "start": 129.9,
+      "end": 148.8,
+      "section": "Demonstrate",
+      "visual_type": "stock",
+      "stock_query": "young woman reading rental contract at kitchen table",
+      "on_screen_text": "Valentina · Buenos Aires · rental contracts",
+      "voiceover": "Let's scope a real idea. Valentina is a made up founder in Buenos Aires, Argentina. Her interviews showed that many tenants sign rental contracts they do not fully understand. Her big vision is an AI assistant that explains any legal document in plain Spanish."
+    },
+    {
+      "scene": 9,
+      "start": 148.8,
+      "end": 159.9,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Any legal document? Too wide.",
+      "voiceover": "That vision is too wide for an MVP. There are hundreds of document types, each with its own rules. So she writes a one page scope."
+    },
+    {
+      "scene": 10,
+      "start": 159.9,
+      "end": 179.2,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Valentina's scope (1)",
+        "body": "Core job: upload one residential rental contract → plain-language summary + clauses to ask a lawyer about. · Riskiest assumption: clear, useful and accurate enough to use before signing."
+      },
+      "voiceover": "The core job: a tenant uploads one rental contract and gets a plain language summary of the key terms, with a list of clauses to ask a lawyer about. The riskiest assumption: tenants find the summary clear and useful before signing, and it is accurate."
+    },
+    {
+      "scene": 11,
+      "start": 179.2,
+      "end": 201.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Valentina's scope (2)",
+        "body": "Three columns. In: upload form · one AI step · results page with 'not legal advice' notice. By hand: lawyer reviews every summary · results by email. Out: other documents · accounts · payments · mobile app · other languages."
+      },
+      "voiceover": "In: an upload form, one AI step with a fixed structure, and a results page that clearly says this is not legal advice. By hand: a lawyer friend reviews every summary in the first month, and results go by email. Out: other documents, accounts, payments, a mobile app and other languages."
+    },
+    {
+      "scene": 12,
+      "start": 201.1,
+      "end": 220.0,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Success measure, one month",
+        "body": "20 tenants use it · at least 17 summaries rated accurate by the lawyer · at least 12 tenants say it helped · personal details removed before any AI step"
+      },
+      "voiceover": "Her success measure: in one month, twenty tenants use it, the lawyer rates at least seventeen summaries as accurate, and at least twelve tenants say it helped them ask better questions. She also removes personal details before sending any contract to an AI model."
+    },
+    {
+      "scene": 13,
+      "start": 220.0,
+      "end": 242.3,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Common mistakes",
+        "body": "Left (red): accounts, payments and settings first → nothing tested. Right (green): core job first; do the rest by hand until you know it is worth automating."
+      },
+      "voiceover": "A common mistake is treating the MVP as version one of the full product, only faster. Founders build accounts, payments and settings first, and none of it tests the riskiest assumption. Another mistake is refusing manual work because it does not scale. At this stage, manual work is a tool for learning."
+    },
+    {
+      "scene": 14,
+      "start": 242.3,
+      "end": 262.4,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. One core job, one riskiest assumption. 2. In · By hand · Out. 3. A success measure with numbers, set first."
+      },
+      "voiceover": "Let's recap. First, an MVP is the smallest product that lets users complete one core job and tests your riskiest assumption. Second, decide clearly what is in, what is done by hand, and what is out. Third, set a success measure with numbers before you start building."
+    },
+    {
+      "scene": 15,
+      "start": 262.4,
+      "end": 285.1,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Building with No-Code Tools",
+      "voiceover": "Now it is your turn. In the exercise below this video, write a one page MVP scope: the core job, the assumption you are testing, what is in, what is out, and the success measure. Try to cut at least one item. Next, we start building with no-code tools. See you there."
+    }
+  ]
+}

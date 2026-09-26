@@ -1,0 +1,138 @@
+{
+  "title": "Patient Safety and Failure Modes",
+  "thumbnail": {
+    "headline": "The Quiet Failures",
+    "image": "Navy background, a hospital monitor with a small unread alert badge and a faded clock, a teal warning triangle beside it, headline in teal Inter Bold.",
+    "slide": {
+      "layout": "title",
+      "title": "The Quiet Failures",
+      "body": "Icons: an ignored alert bell, a screen with a broken data cable, a tired clinician. Small tag: AI in Healthcare · Lesson 10."
+    }
+  },
+  "production_notes": [
+    "Clinical reviewer sign-off required.",
+    "A clinical reviewer should confirm that the failure mode table contains no clinical advice and that the aviation analogy is described in general, accurate terms (content.md Review Flags).",
+    "Carlo Villanueva and the hospital in the Philippines are hypothetical. The deterioration tool supports review by the nurse in charge; it never replaces standard observations.",
+    "Aircraft stock footage must show no airline names or logos."
+  ],
+  "sections": {
+    "Hook": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Most harm from AI in healthcare will not look dramatic. It will look like a busy nurse accepting a suggestion without checking, or an alert that nobody reads anymore, or a tool that stopped working last Tuesday, and nobody noticed.",
+        "on_screen_text": "Quiet failures"
+      }
+    ],
+    "Explain": [
+      {
+        "visual_type": "slide",
+        "voiceover": "In the last lesson, we saw how a tool can work less well for some patients and settings. Now we look at what goes wrong in daily work. A tool can be accurate in a study and still cause harm on the ward. Four failure modes are especially common.",
+        "slide": {
+          "layout": "title",
+          "title": "Patient Safety and Failure Modes",
+          "body": "AI in Healthcare · Lesson 10 of 14"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "The first is automation bias. People trust a tool's output too much, especially when they are tired or busy. They may accept a wrong suggestion, or stop looking for problems the tool does not flag. The second is alert fatigue. When most alerts are false, as we saw with low predictive value, staff begin to ignore them, including the true ones.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Four failure modes (1)",
+          "body": "Card 1: Automation bias (tired clinician clicking 'accept'). Card 2: Alert fatigue (pile of alerts, most false; link to L04)."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "The third is silent failure. The tool stops working, or gets worse, without any visible sign. A software update, a new device or a broken data connection can cause it. The screen still shows results, but they are wrong or missing. The fourth is a workflow gap. For example, an alert goes to a shared inbox that nobody checks at night.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Four failure modes (2)",
+          "body": "Card 3: Silent failure (screen still showing results, broken cable behind it). Card 4: Workflow gap (alert arriving in an empty room at night)."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Two approaches reduce harm. The first is human factors design. Design around how people really work. Show uncertainty, make it easy to disagree with the tool, limit alerts to those that need action, and send outputs to a named role. The second is incident reporting and monitoring. Staff report problems and near misses, a named group reviews them, and performance is checked over time.",
+        "slide": {
+          "layout": "comparison",
+          "title": "Two ways to reduce harm",
+          "body": "Human factors design: show uncertainty · easy to disagree · fewer, actionable alerts · named role. Incident reporting and monitoring: report near misses · named review group · monitor over time, not only at launch."
+        }
+      },
+      {
+        "visual_type": "stock",
+        "voiceover": "Here is a simple way to picture it. Aircraft autopilot flies much of a modern flight. Yet pilots are still trained to monitor it, to notice when it behaves strangely, and to take control. Clinical AI needs the same approach, a trained person who stays alert and knows how to take over.",
+        "stock_query": "pilots monitoring instruments in aircraft cockpit",
+        "on_screen_text": "Stay alert, ready to take over"
+      }
+    ],
+    "Demonstrate": [
+      {
+        "visual_type": "stock",
+        "voiceover": "Let's see how to plan for this. Carlo Villanueva is a patient safety nurse at a hypothetical hospital in the Philippines. The hospital is piloting a tool that flags possible deterioration from vital signs, for review by the nurse in charge. Before the pilot, Carlo leads a review using a failure mode table.",
+        "stock_query": "nurse team meeting on hospital ward",
+        "on_screen_text": "Hypothetical pilot · the Philippines"
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "For each step, the table asks four questions. What can go wrong? What is the effect? How would we detect it? And how can we prevent it?",
+        "slide": {
+          "layout": "bullets",
+          "title": "Four questions per step",
+          "body": "What can go wrong? · What is the effect? · How would we detect it? · How can we prevent it?"
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Take the alert step. An alert could go to a shared screen that nobody watches at night. The effect is a delay. They detect it by auditing the time from alert to review, and prevent it by sending alerts to the named nurse in charge on each shift.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Failure mode table",
+          "body": "Table header: Step | What can go wrong | Effect | Detection | Prevention. Row highlighted: Alert sent | shared screen nobody watches at night | delay in review | audit time from alert to review | alert to named nurse in charge each shift."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Next, alert volume. Too many false alerts, and staff ignore them. They track how many alerts are dismissed in under ten seconds, and review the alert threshold with clinicians during the pilot. Then staff response. A nurse might rely on no alert, and not act on a worried feeling. So training makes one thing clear: clinical concern always overrides the tool.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Failure mode table",
+          "body": "Row: Alert volume | too many false alerts | staff ignore alerts | track alerts dismissed in under 10 seconds | review threshold with clinicians. Row: Staff response | relies on 'no alert' | delay | incident reports, case reviews | training: clinical concern overrides the tool."
+        }
+      },
+      {
+        "visual_type": "slide",
+        "voiceover": "Finally, software. The data feed could stop after a system update, a silent failure. They detect it with an automatic check that data arrived in the last hour, and a daily test case. A named IT owner is responsible, and the pilot stops if the check fails.",
+        "slide": {
+          "layout": "diagram",
+          "title": "Failure mode table",
+          "body": "Row: Software | data feed stops after update | silent failure | automatic check that data arrived in the last hour, daily test case | named IT owner; stop the pilot if the check fails."
+        }
+      },
+      {
+        "visual_type": "text",
+        "voiceover": "The table makes every risk visible, and shows that many protections are about people and process, not software. A common mistake is to think the safety work is done once a tool passes validation. Most failure modes only appear in daily use. Plan monitoring before launch, and keep checking after it.",
+        "on_screen_text": "Safety work continues after launch"
+      }
+    ],
+    "Recap": [
+      {
+        "visual_type": "slide",
+        "voiceover": "Let's recap. First, common failure modes are automation bias, alert fatigue, silent failure and workflow gaps. Second, human factors design and incident reporting reduce harm, and the clinician's own judgement must always be able to override the tool. Third, a failure mode table lists what can go wrong, its effect, how it is detected and how it is prevented, with named owners.",
+        "slide": {
+          "layout": "bullets",
+          "title": "Key takeaways",
+          "body": "1. Automation bias · alert fatigue · silent failure · workflow gaps. 2. Human factors design + incident reporting; clinical judgement overrides. 3. Failure mode table with named owners."
+        }
+      }
+    ],
+    "CTA": [
+      {
+        "visual_type": "presenter_full",
+        "voiceover": "Now it is your turn. In the exercise below this video, you will complete a failure mode table for the patient engagement assistant from lesson seven. It takes about thirty minutes. This completes week two. Next week, we start the capstone journey with regulation, privacy and ethics frameworks. See you there.",
+        "on_screen_text": "Next: Regulation, Privacy and Ethics Frameworks"
+      }
+    ]
+  }
+}

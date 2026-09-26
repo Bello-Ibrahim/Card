@@ -1,0 +1,246 @@
+{
+  "course_id": "AI-28",
+  "lesson_id": "L07",
+  "duration_s": 306.9,
+  "thumbnail": {
+    "headline": "An AI App, No Code",
+    "slide": {
+      "layout": "title",
+      "title": "An AI App, No Code",
+      "body": "Four blocks connected left to right: Form → Table → AI step → Output page, drawn like toy bricks. Small tag: Building an AI Startup · Lesson 7."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 14.6,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "A working AI app, no code",
+      "voiceover": "Can you build a working AI product without writing a single line of code? In this lesson, you will watch a prototype being built from start to finish. Then you will build your own."
+    },
+    {
+      "scene": 2,
+      "start": 14.6,
+      "end": 29.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Building with No-Code Tools",
+        "body": "Building an AI Startup · Lesson 7 of 15"
+      },
+      "voiceover": "In the last lesson, you scoped your MVP. Now we build it. A no-code builder is a tool where you build apps by choosing and connecting blocks on screen, instead of writing code."
+    },
+    {
+      "scene": 3,
+      "start": 29.2,
+      "end": 50.2,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Four parts of a prototype",
+        "body": "Left to right with arrows: Form (input) → Database table (storage) → AI step (processing, with 'your prompt' attached) → Output page (result)."
+      },
+      "voiceover": "Most no-code prototypes use four parts. A form, where the user enters information. A database, a table that saves each request, like a spreadsheet. An AI step, which sends the input and your instructions to an AI model. And an output page, where the user sees the result."
+    },
+    {
+      "scene": 4,
+      "start": 50.2,
+      "end": 75.1,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "The prompt is part of the product",
+        "body": "Runs every time a user presses the button · Save every version: v1, v2, v3 · API key = secret password between programs; may cost money per request; never share it"
+      },
+      "voiceover": "The AI step runs on a prompt, the instructions you give the model. In a product, the prompt runs every time a user presses the button, so it is part of your product. Write it carefully and save every version. Some builders connect to a provider with an API key, a secret password between programs. Keep it private."
+    },
+    {
+      "scene": 5,
+      "start": 75.1,
+      "end": 89.7,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "hands building house model with toy bricks",
+      "on_screen_text": "A model house before the concrete",
+      "voiceover": "A no-code builder is like construction toy bricks. You cannot make every shape, but you can quickly build a working model of a house and show it to people before you pour concrete."
+    },
+    {
+      "scene": 6,
+      "start": 89.7,
+      "end": 106.4,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "quote",
+        "title": "Sipho's core job",
+        "body": "'A plumber enters job details and gets a clear, professional quote to send to the customer.' Caption: Sipho · Durban · plumbing quotes"
+      },
+      "voiceover": "Let's build one. Sipho is a made up founder in Durban, South Africa. Small plumbing businesses lose jobs because they send price quotes too slowly. His core job: a plumber enters job details and gets a clear, professional quote."
+    },
+    {
+      "scene": 7,
+      "start": 106.4,
+      "end": 125.3,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open Claude in the browser and start a new chat.",
+        "Type: 'Help me write instructions for an AI step that turns a plumber's short job notes into a clear, polite price quote. Use only the prices the plumber enters. Never invent prices. If information is missing, list what is missing.'",
+        "Highlight the two rules in the reply: only entered prices; list what is missing.",
+        "Copy the reply into a blank document and title it 'Prompt v1'."
+      ],
+      "on_screen_text": "Prompt v1, drafted with Claude",
+      "voiceover": "First, we draft the prompt with Claude. We ask for instructions that turn a plumber's short notes into a polite quote. Two rules matter most. Use only the prices the plumber enters, and never invent prices. If something is missing, list what is missing."
+    },
+    {
+      "scene": 8,
+      "start": 125.3,
+      "end": 140.7,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open Glide and sign in with a free account.",
+        "Click New app and choose to start from a blank Glide Table [VERSION].",
+        "Name the app 'Quick Quotes'."
+      ],
+      "on_screen_text": "Demo tool: Glide (free plan)",
+      "voiceover": "Next, in Glide, the builder we use here, we create a new blank app. Any no-code builder with a table, a form and an AI step will work. The buttons may simply have different names."
+    },
+    {
+      "scene": 9,
+      "start": 140.7,
+      "end": 151.8,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Open the Data editor and rename the table 'Quotes'.",
+        "Add columns: Job description, Materials and prices, Labour hours, Hourly rate, Quote text, Status.",
+        "Set Labour hours and Hourly rate to number columns."
+      ],
+      "voiceover": "We add a table called Quotes. It has fields for the job description, materials and prices, labour hours, hourly rate, the quote text, and a status."
+    },
+    {
+      "scene": 10,
+      "start": 151.8,
+      "end": 162.9,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "In the Layout editor, add a Form (or Form button) linked to the Quotes table [VERSION].",
+        "Add fields for Job description, Materials and prices, Labour hours and Hourly rate.",
+        "Toggle Required on for all four fields."
+      ],
+      "voiceover": "Then we add a form linked to the table, with the first four fields. All four are required, so a plumber cannot send an empty request."
+    },
+    {
+      "scene": 11,
+      "start": 162.9,
+      "end": 182.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "In the Quotes table, add a new AI column that generates text (for example 'Generate text') [VERSION].",
+        "Paste Prompt v1 as the instructions.",
+        "Insert the four form fields into the prompt as inputs, for example 'Job notes: {Job description}'.",
+        "Map the AI result to Quote text, and set Status to 'draft' when the form is submitted (via an Action or default value) [VERSION]."
+      ],
+      "on_screen_text": "AI step: prompt plus form fields",
+      "voiceover": "Now the AI step. We add an AI column that generates text from each new row. We paste Prompt version one and insert the form fields where the builder allows. The answer is saved into the quote text field, and the status is set to draft."
+    },
+    {
+      "scene": 12,
+      "start": 182.6,
+      "end": 195.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Add a Details screen for a Quotes row that shows Quote text and Status.",
+        "Add a button with a Copy to clipboard action for Quote text [VERSION].",
+        "Open Preview to show the whole flow: form, submit, quote."
+      ],
+      "voiceover": "Next, an output page shows the quote text, with a button to copy it. The core flow now runs from start to finish. It looks plain, and that is fine."
+    },
+    {
+      "scene": 13,
+      "start": 195.5,
+      "end": 209.2,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "In Preview, fill the form: 'Replace kitchen tap'; materials 'tap 450'; labour hours 1; hourly rate 350.",
+        "Submit and open the new quote.",
+        "Zoom in on the prices in the quote and compare them with the inputs."
+      ],
+      "on_screen_text": "Fake data only",
+      "voiceover": "Time to test, with fake data only. Replace kitchen tap, tap four hundred and fifty, labour one hour at three hundred and fifty. We check that the quote uses only these numbers."
+    },
+    {
+      "scene": 14,
+      "start": 209.2,
+      "end": 227.6,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Highlight the invented 'call-out fee' line in the quote.",
+        "Open the AI column settings and add: 'Do not add any fee that is not listed.'",
+        "Save the new text in the prompt document as 'Prompt v2'.",
+        "Submit the same test again and show the quote now has only the tap and labour."
+      ],
+      "on_screen_text": "Invented fee found. Prompt v2.",
+      "voiceover": "And here is a problem. The AI added a call out fee that Sipho never entered. So we add a rule to the prompt: do not add any fee that is not listed. We save it as Prompt version two and test again."
+    },
+    {
+      "scene": 15,
+      "start": 227.6,
+      "end": 243.5,
+      "section": "Demonstrate",
+      "visual_type": "screen",
+      "screen_steps": [
+        "Remove the hourly rate from the prompt input for one test row and run it.",
+        "Show the output listing 'Hourly rate is missing' instead of a made-up number.",
+        "Click Share or Publish and copy the preview link [VERSION]."
+      ],
+      "voiceover": "We also test a missing field. Without the hourly rate, the quote should ask for it, not invent it. Finally, we share the preview link with one test user and watch them finish the task without help."
+    },
+    {
+      "scene": 16,
+      "start": 243.5,
+      "end": 260.6,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "No AI step on your plan?",
+        "body": "Form → you paste the input into Claude → you send the result back. Caption: Wizard of Oz test (Lesson 4)."
+      },
+      "voiceover": "If your free plan cannot run an AI step, you can still test the flow. Collect inputs with the form, make the result yourself with Claude, and send it back. That is the Wizard of Oz test from lesson four."
+    },
+    {
+      "scene": 17,
+      "start": 260.6,
+      "end": 282.9,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Form → table → AI step → output. 2. The prompt is product: test it, version it. 3. Core flow first, looks later."
+      },
+      "voiceover": "Let's recap. First, a no-code prototype usually connects a form, a database, an AI step and an output page. Second, the prompt is part of your product, so write it carefully, test it and save each version. Third, build and test the core flow before you add colours or extra pages."
+    },
+    {
+      "scene": 18,
+      "start": 282.9,
+      "end": 306.9,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Next: Prompts and Quality Checks",
+      "voiceover": "Now it is your turn. In the exercise below this video, build a working prototype of your core flow with a free no-code builder and Claude. Test it with fake data, and watch one real user try it. Next, we look at making the AI part work, with prompts and quality checks. See you there."
+    }
+  ]
+}

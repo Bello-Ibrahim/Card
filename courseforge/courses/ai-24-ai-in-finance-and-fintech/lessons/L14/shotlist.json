@@ -1,0 +1,165 @@
+{
+  "course_id": "AI-24",
+  "lesson_id": "L14",
+  "duration_s": 247.4,
+  "thumbnail": {
+    "headline": "Go, Pilot or No-Go?",
+    "slide": {
+      "layout": "title",
+      "title": "Go, Pilot or No-Go?",
+      "body": "One-page risk register sketch with coloured score cells; three buttons below: Go · Pilot · No-Go (Pilot highlighted). Small tag: AI in Finance and Fintech · Lesson 14 · Capstone step 2."
+    }
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "end": 16.3,
+      "section": "Hook",
+      "visual_type": "presenter_full",
+      "on_screen_text": "What could go wrong?",
+      "voiceover": "Every AI proposal promises benefits. But the committee's real question is different. What could go wrong, how bad would it be, and what will you do about it? A clear risk register answers that question on one page."
+    },
+    {
+      "scene": 2,
+      "start": 16.3,
+      "end": 31.3,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "title",
+        "title": "Risk and Compliance Assessment",
+        "body": "AI in Finance and Fintech · Lesson 14 of 14 · Capstone step 2 of 2"
+      },
+      "voiceover": "In the last lesson, you scoped your proposal. Now, in this final lesson, you assess its risks. A risk register lists the main risks of your use case in a table, one row per risk."
+    },
+    {
+      "scene": 3,
+      "start": 31.3,
+      "end": 53.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "code",
+        "title": "One row of the register",
+        "body": "Risk (cause → effect) · Category · Likelihood 1–3 · Impact 1–3 · Score = L × I (1–9) · Controls · Owner · Residual rating"
+      },
+      "voiceover": "For each risk, you write what could go wrong, as a cause and an effect. You give it a category. You rate likelihood and impact from one to three, and multiply them for a score from one to nine. Then you add controls, an owner, and a residual rating after the controls."
+    },
+    {
+      "scene": 4,
+      "start": 53.6,
+      "end": 66.5,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Six risk categories",
+        "body": "Six tiles with lesson links: Fairness (L06, L07) · Privacy (L11) · Explainability (L10) · Security · Third-party · Operational (L12)"
+      },
+      "voiceover": "Cover all six categories from this course. Fairness, privacy and data protection, explainability, security, third-party, and operational risks, such as drift, staff over-trusting outputs, or no fallback process."
+    },
+    {
+      "scene": 5,
+      "start": 66.5,
+      "end": 89.6,
+      "section": "Explain",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Three recommendations",
+        "body": "Go: risks low or controlled → launch with monitoring. Pilot: value real, risks uncertain → small scale, set time, success and stop criteria. No-go: uncontrollable high risk or too little value."
+      },
+      "voiceover": "Then make a recommendation. Go means risks are low or well controlled, so you launch with monitoring. Pilot means the value looks real, but some risks are uncertain, so you test at small scale for a set time. No-go means a high risk cannot be controlled, or the value does not justify it."
+    },
+    {
+      "scene": 6,
+      "start": 89.6,
+      "end": 101.2,
+      "section": "Explain",
+      "visual_type": "text",
+      "on_screen_text": "A pilot needs an end date",
+      "voiceover": "A pilot is not a way to avoid a decision. It needs a clear end date, clear measures, and a named person who decides what happens next."
+    },
+    {
+      "scene": 7,
+      "start": 101.2,
+      "end": 117.5,
+      "section": "Explain",
+      "visual_type": "stock",
+      "stock_query": "airline pilot checking cockpit checklist",
+      "on_screen_text": "Check every control before take-off",
+      "voiceover": "A risk register is like a pre-flight checklist. The pilot does not refuse to fly because things can go wrong. She lists what could go wrong, checks each control, and flies only when the list is complete."
+    },
+    {
+      "scene": 8,
+      "start": 117.5,
+      "end": 141.1,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Rafael's register (1)",
+        "body": "Fairness: local-language summaries contain more errors · L2 × I3 = 6 · test error rates by language; officer checks every summary · Operations manager · residual 3. Privacy: client data sent to external service without lawful basis · 2 × 3 = 6 · approved enterprise tool, data processing agreement, consent wording reviewed (confirm locally) · Data protection officer · residual 2."
+      },
+      "voiceover": "Rafael Dizon is a compliance officer at Bayanihan Microfinance. He builds the register for Joy's visit-note assistant from the last lesson. The fairness risk: summaries of notes in local languages contain more errors. Likelihood two, impact three, score six. Controls: test error rates by language before launch, and officers check every summary. Residual three."
+    },
+    {
+      "scene": 9,
+      "start": 141.1,
+      "end": 161.2,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "comparison",
+        "title": "Rafael's register (2)",
+        "body": "Explainability 2 × 2 = 4 → residual 2. Security 2 × 3 = 6 → residual 3. Third-party 2 × 2 = 4 → residual 2. Operational: officers sign without reading · 3 × 2 = 6 · random supervisor checks, error-rate monitoring · Branch supervisor · residual 4 (highest)."
+      },
+      "voiceover": "Other rows cover privacy, explainability, staff pasting data into public tools, and a vendor changing its model. The operational risk is officers signing summaries without reading them. Likelihood three, impact two. With random supervisor checks and error monitoring, the residual is four, the highest in the register."
+    },
+    {
+      "scene": 10,
+      "start": 161.2,
+      "end": 182.2,
+      "section": "Demonstrate",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "diagram",
+        "title": "Recommendation: Pilot",
+        "body": "Pilot box: 2 branches · 3 months · stop rule: error rate for any language group clearly higher than for English notes · decision-maker: credit committee chair."
+      },
+      "voiceover": "The fairness risk needs evidence that only a real test can give. So Rafael recommends a pilot: two branches, three months, with a stop rule if the summary error rate for any language group is clearly higher than for English notes. The credit committee chair decides at the end."
+    },
+    {
+      "scene": 11,
+      "start": 182.2,
+      "end": 199.8,
+      "section": "Demonstrate",
+      "visual_type": "text",
+      "on_screen_text": "Specific controls, honest scores",
+      "voiceover": "A common mistake is weak controls, such as be careful or monitor the model. A control says who does what, how often, and what happens at a limit. And do not score every risk as one. Committees trust honest registers more."
+    },
+    {
+      "scene": 12,
+      "start": 199.8,
+      "end": 225.5,
+      "section": "Recap",
+      "visual_type": "slide",
+      "slide": {
+        "layout": "bullets",
+        "title": "Key takeaways",
+        "body": "1. Every risk: category, L × I, controls, owner, residual. 2. Cover all six categories. 3. Go, pilot or no-go, with a clear decision path."
+      },
+      "voiceover": "Let's recap. First, a risk register records each risk with its category, likelihood, impact, score, controls, owner and residual rating. Second, cover fairness, privacy, explainability, security, third-party and operational risks, with specific controls for each. Third, end with a clear go, pilot or no-go recommendation, and give any pilot an end date, measures and a named decision-maker."
+    },
+    {
+      "scene": 13,
+      "start": 225.5,
+      "end": 247.4,
+      "section": "CTA",
+      "visual_type": "presenter_full",
+      "on_screen_text": "Submit your capstone proposal",
+      "voiceover": "Congratulations on reaching the end of AI in Finance and Fintech. Your last exercise is capstone step two. Complete the risk register in Google Sheets, add a principles check, and finish with your recommendation. Check it against the rubric and checklist, then submit your capstone proposal. Well done, and good luck."
+    }
+  ]
+}
